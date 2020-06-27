@@ -1,3 +1,5 @@
 import { Box } from 'theme-ui';
 
-export default Box;
+const View = Box;
+
+export default View;

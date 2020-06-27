@@ -1,3 +1,1 @@
-import { is } from '@itsjonq/is';
-
-export default is;
+export * from '@itsjonq/is';

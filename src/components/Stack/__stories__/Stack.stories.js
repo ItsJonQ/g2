@@ -19,8 +19,8 @@ export const _default = () => {
 					<ItemView>Item</ItemView>
 				</Stack>
 			</Spacer>
-			<Stack direction="row" spacing={3}>
-				<ItemView>Item</ItemView>
+			<Stack direction={['column', 'row']} spacing={3}>
+				<ItemView sx={{ width: '180px' }}>Item</ItemView>
 				<Stack.Item isBlock>
 					<ItemView>Item</ItemView>
 				</Stack.Item>

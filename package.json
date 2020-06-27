@@ -48,13 +48,16 @@
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "styled-providers": "0.0.8"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "@itsjonq/is": "0.0.2",
+    "@theme-ui/match-media": "0.3.1",
+    "@theme-ui/preset-base": "0.3.0",
     "theme-ui": "0.3.1"
   }
 }

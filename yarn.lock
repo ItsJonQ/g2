@@ -995,7 +995,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@emotion/cache@^10.0.27":
+"@emotion/cache@^10.0.19", "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
   integrity sha512-fU2VtSVlHiF27empSbxi1O2JFdNWZO+2NFHfwO0pxgTep6Xa3uGb+3pVKfLww2l/IBGLNEZl5Xf/++A4wAYDYQ==
@@ -1092,7 +1092,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.11.3.tgz#a759863867befa7e583400d322652a3f44820924"
   integrity sha512-0o4l6pZC+hI88+bzuaX/6BgOvQVhbt2PfmxauVaYOGgbsAw14wdKyvMCZXnsnsHys94iadcF+RG/wZyx6+ZZBw==
 
-"@emotion/weak-memoize@0.2.5":
+"@emotion/weak-memoize@0.2.5", "@emotion/weak-memoize@^0.2.4":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
@@ -2028,6 +2028,11 @@
   resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.3.1.tgz#b85c7e8fae948dc0de65aa30b853368993e25cb3"
   integrity sha512-QB2/fZBpo4inaLHL3OrB8NOBgNfwnj8GtHzXWHb9iQSRjmtNX8zPXBe32jLT7qQP0+y8JxPT4YChZIkm5ZyIdg==
 
+"@theme-ui/match-media@0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/match-media/-/match-media-0.3.1.tgz#05af6a71cf14368e1b3bd7180fc382c72d5ba53b"
+  integrity sha512-PHvSRB1vqUgDnPkGlXLa+qadmOMOy3LKSOzovwpTi+wzCUyyOGAsUY/fJQ7nufBrmU3vdYeUTrKplLn5VIEmlg==
+
 "@theme-ui/mdx@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@theme-ui/mdx/-/mdx-0.3.0.tgz#8bb1342204acfaa69914d6b6567c5c49d9a8c1e6"
@@ -2036,6 +2041,11 @@
     "@emotion/core" "^10.0.0"
     "@emotion/styled" "^10.0.0"
     "@mdx-js/react" "^1.0.0"
+
+"@theme-ui/preset-base@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.3.0.tgz#853a78195beead04ece4391c5672d690899bec47"
+  integrity sha512-bFCYoxfe/Ugr5k5BEy3Gv5jg8+idZHWDt/NM95jgla4qITlaOAMuEL6afoQ5HXbJjp5TnZFZ73qO6cKI8/BFfQ==
 
 "@theme-ui/theme-provider@^0.3.1":
   version "0.3.1"
@@ -11970,6 +11980,15 @@ style-loader@^1.0.0:
     loader-utils "^2.0.0"
     schema-utils "^2.6.6"
 
+styled-providers@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/styled-providers/-/styled-providers-0.0.8.tgz#afe214a6cce39659c99a7982ff6c04da3110c93d"
+  integrity sha512-Yv/g+SLb1T7NuN6x1Uhe9dqAQ5qQpcUEhL3C8jARJf3d1aMKRDe7duf4zNx7v/Q2AfWpNnxacIwBG/1TtMG2fw==
+  dependencies:
+    "@emotion/cache" "^10.0.19"
+    "@emotion/weak-memoize" "^0.2.4"
+    stylis-plugin-extra-scope "0.1.1"
+
 styled-system@^5.1.5:
   version "5.1.5"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-5.1.5.tgz#e362d73e1dbb5641a2fd749a6eba1263dc85075e"
@@ -11988,6 +12007,11 @@ styled-system@^5.1.5:
     "@styled-system/typography" "^5.1.2"
     "@styled-system/variant" "^5.1.5"
     object-assign "^4.1.1"
+
+stylis-plugin-extra-scope@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/stylis-plugin-extra-scope/-/stylis-plugin-extra-scope-0.1.1.tgz#57899046899aa5102632b8e1f4b3d71c575395b5"
+  integrity sha512-0dRLrsgLb8H4qnzDwoMAMfm4sayeMrG9SpI/NycWR7Cx1hPf4byj8SeA8x7gzensvEDk94tut0lQn9hX3DBGiw==
 
 supports-color@^2.0.0:
   version "2.0.0"

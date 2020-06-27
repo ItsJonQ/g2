@@ -1,19 +1,22 @@
 import React from 'react';
-import { getValidChildren } from '../../utils';
-import View from '../View';
+import Flex from '../Flex';
 import StackItem from './Stack.Item';
+import { getValidChildren } from '../../utils';
+import { useResponsiveValue } from '../../hooks';
 
 function Stack({
-	align,
+	align = null,
 	justify = 'space-between',
 	children,
 	direction = 'column',
 	spacing = 2,
+	...props
 }) {
 	const validChildren = getValidChildren(children);
+	const _direction = useResponsiveValue(direction);
 
 	const clonedChildren = validChildren.map((child, index) => {
-		const isColumn = direction === 'column';
+		const isColumn = _direction === 'column';
 		const isLast = index + 1 === validChildren.length;
 
 		const _key = child.key || index;
@@ -40,16 +43,9 @@ function Stack({
 	});
 
 	return (
-		<View
-			sx={{
-				display: 'flex',
-				flexDirection: direction,
-				alignItems: align,
-				justifyContent: justify,
-			}}
-		>
+		<Flex align={align} direction={direction} justify={justify} {...props}>
 			{clonedChildren}
-		</View>
+		</Flex>
 	);
 }
 
