@@ -1,14 +1,14 @@
 import React from 'react';
 import Stack from '../Stack';
 import Spacer from '../../Spacer';
-import View from '../../View';
+import BaseView from '../../BaseView';
 
 export default {
 	title: 'Stack',
 	component: Stack,
 };
 
-const ItemView = (props) => <View {...props} p={3} bg="#eee" />;
+const ItemView = (props) => <BaseView {...props} p={3} bg="#eee" />;
 
 export const _default = () => {
 	return (

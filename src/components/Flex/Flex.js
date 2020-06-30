@@ -1,5 +1,6 @@
 import React from 'react';
-import View from '../View';
+import BaseView from '../BaseView';
+import FlexBlock from './Flex.Block';
 import FlexItem from './Flex.Item';
 
 function Flex({
@@ -7,9 +8,11 @@ function Flex({
 	justify = 'space-between',
 	children,
 	direction = 'column',
+	...props
 }) {
 	return (
-		<View
+		<BaseView
+			{...props}
 			sx={{
 				alignItems: align,
 				display: 'flex',
@@ -18,10 +21,11 @@ function Flex({
 			}}
 		>
 			{children}
-		</View>
+		</BaseView>
 	);
 }
 
+Flex.Block = FlexBlock;
 Flex.Item = FlexItem;
 
 export default Flex;

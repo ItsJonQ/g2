@@ -1,7 +1,6 @@
-import baseTheme from '@theme-ui/preset-base';
 import { useResponsiveValue as useBaseResponsiveValue } from '@theme-ui/match-media';
 import { useThemeUI } from 'theme-ui';
-import { is, toPx } from '../utils';
+import { is, toPx, baseTheme } from '../utils';
 
 export function useTheme() {
 	const themeContext = useThemeUI() || {};

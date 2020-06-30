@@ -1,5 +1,5 @@
 import React from 'react';
-import View from '../View';
+import BaseView from '../BaseView';
 import { useResponsiveValue } from '../../hooks';
 
 function Grid({
@@ -19,7 +19,7 @@ function Grid({
 	const gridTemplateRows = templateRows || (rows && `repeat(${row}, 1fr)`);
 
 	return (
-		<View
+		<BaseView
 			sx={{
 				...sx,
 				display: 'grid',

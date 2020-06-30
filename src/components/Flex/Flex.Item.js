@@ -1,9 +1,9 @@
 import React from 'react';
-import View from '../View';
+import BaseView from '../BaseView';
 
 function FlexItem({ display, isBlock = false, sx, ...props }) {
 	return (
-		<View
+		<BaseView
 			sx={{
 				display: isBlock ? 'block' : display,
 				flex: isBlock ? 1 : null,
