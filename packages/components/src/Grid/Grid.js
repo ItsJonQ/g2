@@ -4,8 +4,10 @@ import { BaseView } from '../BaseView';
 
 export function Grid({
 	columns = 2,
+	align,
+	justify,
 	rows,
-	spacing = 5,
+	spacing = 3,
 	templateColumns,
 	templateRows,
 	...props
@@ -20,10 +22,12 @@ export function Grid({
 	return (
 		<BaseView
 			__sx={{
+				alignItems: align,
 				display: 'grid',
 				gridTemplateColumns,
 				gridTemplateRows,
 				gap: spacing,
+				justifyContent: justify,
 			}}
 			{...props}
 		/>

@@ -1,9 +1,9 @@
-import { styled, css, getTheme } from '@g2/css';
+import { styled, css } from '@g2/css';
 import { BaseView } from '../BaseView';
 import { Flex } from '../Flex';
 
 const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
-	const { config } = getTheme(theme);
+	const { config } = theme;
 
 	const hoverStyles =
 		!isFocused &&
@@ -52,7 +52,7 @@ const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
 
 const focusStyles = ({ isFocused, theme }) => {
 	if (!isFocused) return '';
-	const { config } = getTheme(theme);
+	const { config } = theme;
 
 	return css`
 		border-color: ${config.inputBorderColorFocus};
@@ -62,7 +62,7 @@ const focusStyles = ({ isFocused, theme }) => {
 
 const seamlessStyles = ({ isSeamless, theme }) => {
 	if (!isSeamless) return '';
-	const { config } = getTheme(theme);
+	const { config } = theme;
 	const { isDark } = config;
 
 	return css`
@@ -79,7 +79,7 @@ const seamlessStyles = ({ isSeamless, theme }) => {
 
 const focusSeamlessStyles = ({ isSeamless, isFocused, theme }) => {
 	if (!isSeamless && !isFocused) return '';
-	const { config } = getTheme(theme);
+	const { config } = theme;
 	const { isDark } = config;
 
 	return css`
@@ -91,7 +91,7 @@ const focusSeamlessStyles = ({ isSeamless, isFocused, theme }) => {
 };
 
 const darkStyles = ({ isFocused, isSeamless, theme }) => {
-	const { config } = getTheme(theme);
+	const { config } = theme;
 	const { isDark } = config;
 
 	if (!isDark) return;
@@ -123,7 +123,7 @@ export const RootView = styled(Flex)`
 `;
 
 const sizeStyles = ({ size, theme }) => {
-	const { config } = getTheme(theme);
+	const { config } = theme;
 	switch (size) {
 		case 'large':
 			return css`
@@ -145,7 +145,7 @@ const sizeStyles = ({ size, theme }) => {
 };
 
 const inputStyles = ({ theme }) => {
-	const { config } = getTheme(theme);
+	const { config } = theme;
 
 	return css`
 		background: transparent;

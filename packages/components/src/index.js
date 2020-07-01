@@ -6,3 +6,4 @@ export * from './Grid';
 export * from './InputControl';
 export * from './Spacer';
 export * from './Stack';
+export * from './Text';
