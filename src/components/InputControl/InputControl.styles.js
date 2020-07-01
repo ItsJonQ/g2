@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { styled, css } from '../../styled';
 import BaseView from '../BaseView';
 import Flex from '../Flex';
 import { getTheme } from '../../utils';

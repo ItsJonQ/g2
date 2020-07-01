@@ -1,10 +1,9 @@
 import { Box } from 'theme-ui';
-import { baseTheme } from '../../utils';
+import { withTheme } from '../../styled';
 
-const BaseView = Box;
+const BaseView = withTheme(Box);
 
 BaseView.defaultProps = {
-	theme: baseTheme,
 	__css: {
 		fontFamily: 'body',
 		fontSize: 2,
