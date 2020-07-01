@@ -4,7 +4,7 @@ import { is } from '@g2/utils';
 import { toPx } from '../utils';
 import { baseTheme } from '../theme';
 
-export function useTheme() {
+export function useThemeContext() {
 	const themeContext = useThemeUI() || {};
 
 	return {
@@ -16,13 +16,17 @@ export function useTheme() {
 	};
 }
 
+export function useTheme() {
+	return useThemeContext().theme;
+}
+
 export function useResponsiveValue(values = 0) {
 	const responsiveValues = useBaseResponsiveValue(values);
 	return is.array(values) ? responsiveValues : values;
 }
 
 export function useSpacing(value) {
-	const themeSpace = useTheme()?.theme?.space;
+	const themeSpace = useThemeContext()?.theme?.space;
 	const baseValue = useResponsiveValue(value);
 
 	const values = is.array(themeSpace) ? themeSpace : [];

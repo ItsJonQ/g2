@@ -31,3 +31,4 @@ const EnhancedBaseBox = (
 };
 
 export const Box = forwardRef(EnhancedBaseBox);
+export const BaseView = Box;

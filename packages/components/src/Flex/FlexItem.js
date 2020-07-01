@@ -1,7 +1,8 @@
 import React from 'react';
-import { BaseView } from '../BaseView';
+import { BaseView } from '@g2/css';
+import { connect } from '@g2/provider';
 
-export function FlexItem({ display, isBlock = false, ...props }) {
+function FlexItem({ display, isBlock = false, ...props }) {
 	return (
 		<BaseView
 			__sx={{
@@ -15,4 +16,4 @@ export function FlexItem({ display, isBlock = false, ...props }) {
 	);
 }
 
-FlexItem.displayName = 'FlexItem';
+export default connect(FlexItem);

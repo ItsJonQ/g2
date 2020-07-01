@@ -1,5 +1,5 @@
 import { styled, css } from '@g2/css';
-import { BaseView } from '../BaseView';
+import { BaseView } from '@g2/css';
 
 const baseStyles = ({ theme }) => {
 	const { config } = theme;

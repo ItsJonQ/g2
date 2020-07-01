@@ -1,3 +1,3 @@
-export * from './Flex';
-export * from './Flex.Block';
-export * from './Flex.Item';
+export { default as Flex } from './Flex';
+export { default as FlexBlock } from './FlexBlock';
+export { default as FlexItem } from './FlexItem';

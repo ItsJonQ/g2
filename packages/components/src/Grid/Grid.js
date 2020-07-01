@@ -1,8 +1,8 @@
 import React from 'react';
-import { useResponsiveValue } from '@g2/css';
-import { BaseView } from '../BaseView';
+import { BaseView, useResponsiveValue } from '@g2/css';
+import { connect } from '@g2/provider';
 
-export function Grid({
+function Grid({
 	columns = 2,
 	align,
 	justify,
@@ -33,3 +33,5 @@ export function Grid({
 		/>
 	);
 }
+
+export default connect(Grid);

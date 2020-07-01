@@ -1,6 +1,9 @@
 import React from 'react';
-import { BaseView } from '../BaseView';
+import { BaseView } from '@g2/css';
+import { connect } from '@g2/provider';
 
-export function Spacer({ mb = 2, ...props }) {
+function Spacer({ mb = 2, ...props }) {
 	return <BaseView mb={mb} {...props} />;
 }
+
+export default connect(Spacer);

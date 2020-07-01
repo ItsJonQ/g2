@@ -1,6 +1,8 @@
 import React from 'react';
 import { is } from './is';
 
+export { default as hoistNonReactStatics } from 'hoist-non-react-statics';
+
 export function getValidChildren(children) {
 	return React.Children.toArray(children).filter((child) =>
 		React.isValidElement(child),
@@ -27,4 +29,12 @@ export function mergeRefs(...refs) {
 	return (value) => {
 		refs.forEach((ref) => assignRef(ref, value));
 	};
+}
+
+export function getDisplayName(tagName) {
+	const displayName = is.string(tagName)
+		? tagName
+		: tagName.displayName || tagName.name || 'Component';
+
+	return displayName;
 }

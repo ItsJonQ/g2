@@ -1,5 +1,6 @@
 import React from 'react';
-import { BaseView } from '../BaseView';
+import { BaseView } from '@g2/css';
+import { connect } from '@g2/provider';
 
 export function Flex({
 	align = 'center',
@@ -23,4 +24,4 @@ export function Flex({
 	);
 }
 
-export default Flex;
+export default connect(Flex);

@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { cx } from '@g2/css';
+import { connect } from '@g2/provider';
 import { noop } from '@g2/utils';
-import { Flex } from '../Flex';
+import { FlexItem } from '../Flex';
 import { RootView, InputView } from './InputControl.styles';
 
-export function InputControl({
+function InputControl({
 	align,
 	className,
 	gap = 2.5,
@@ -49,7 +50,7 @@ export function InputControl({
 			onClick={handleOnRootClick}
 			size={size}
 		>
-			{prefix && <Flex.Item>{prefix}</Flex.Item>}
+			{prefix && <FlexItem>{prefix}</FlexItem>}
 			<InputView
 				as="input"
 				onBlur={handleOnBlur}
@@ -58,7 +59,9 @@ export function InputControl({
 				size={size}
 				{...props}
 			/>
-			{suffix && <Flex.Item>{suffix}</Flex.Item>}
+			{suffix && <FlexItem>{suffix}</FlexItem>}
 		</RootView>
 	);
 }
+
+export default connect(InputControl);

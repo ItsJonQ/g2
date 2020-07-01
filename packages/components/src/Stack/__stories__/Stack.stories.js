@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack } from '../Stack';
-import { StackItem } from '../Stack.Item';
+import { StackItem } from '../StackItem';
 import { Spacer } from '../../Spacer';
 import { BaseView } from '../../BaseView';
 

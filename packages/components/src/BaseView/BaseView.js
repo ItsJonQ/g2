@@ -1,3 +1,1 @@
-import { Box } from '@g2/css';
-
-export const BaseView = Box;
+export { BaseView } from '@g2/css';
