@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { cx } from '@g2/css';
 import { noop } from '@g2/utils';
-import Flex from '../Flex';
+import { Flex } from '../Flex';
 import { RootView, InputView } from './InputControl.styles';
 
-function InputControl({
+export function InputControl({
 	align,
 	className,
 	gap = 2.5,
@@ -62,5 +62,3 @@ function InputControl({
 		</RootView>
 	);
 }
-
-export default InputControl;

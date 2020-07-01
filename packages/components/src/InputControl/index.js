@@ -1,3 +1,1 @@
-import InputControl from './InputControl';
-
-export default InputControl;
+export * from './InputControl';

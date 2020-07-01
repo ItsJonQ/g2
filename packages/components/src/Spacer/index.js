@@ -1,3 +1,1 @@
-import Spacer from './Spacer';
-
-export default Spacer;
+export * from './Spacer';

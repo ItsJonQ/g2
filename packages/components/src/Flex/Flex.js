@@ -1,9 +1,7 @@
 import React from 'react';
-import BaseView from '../BaseView';
-import FlexBlock from './Flex.Block';
-import FlexItem from './Flex.Item';
+import { BaseView } from '../BaseView';
 
-function Flex({
+export function Flex({
 	align = 'center',
 	justify = 'space-between',
 	children,
@@ -24,8 +22,5 @@ function Flex({
 		</BaseView>
 	);
 }
-
-Flex.Block = FlexBlock;
-Flex.Item = FlexItem;
 
 export default Flex;

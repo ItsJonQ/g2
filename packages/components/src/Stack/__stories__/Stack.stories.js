@@ -1,7 +1,8 @@
 import React from 'react';
-import Stack from '../Stack';
-import Spacer from '../../Spacer';
-import BaseView from '../../BaseView';
+import { Stack } from '../Stack';
+import { StackItem } from '../Stack.Item';
+import { Spacer } from '../../Spacer';
+import { BaseView } from '../../BaseView';
 
 export default {
 	title: 'Stack',
@@ -21,9 +22,9 @@ export const _default = () => {
 			</Spacer>
 			<Stack direction={['column', 'row']} spacing={3}>
 				<ItemView sx={{ width: '180px' }}>Item</ItemView>
-				<Stack.Item isBlock>
+				<StackItem isBlock>
 					<ItemView>Item</ItemView>
-				</Stack.Item>
+				</StackItem>
 				<ItemView>Item</ItemView>
 				<ItemView>Item</ItemView>
 			</Stack>

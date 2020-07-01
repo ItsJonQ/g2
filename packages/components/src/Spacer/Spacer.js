@@ -1,8 +1,6 @@
 import React from 'react';
-import BaseView from '../BaseView';
+import { BaseView } from '../BaseView';
 
-function Spacer({ mb = 2, ...props }) {
+export function Spacer({ mb = 2, ...props }) {
 	return <BaseView mb={mb} {...props} />;
 }
-
-export default Spacer;

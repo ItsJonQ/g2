@@ -1,10 +1,8 @@
 import React from 'react';
-import Flex from '../Flex';
+import { FlexItem } from '../Flex';
 
-function StackItem({ display = 'inline-block', ...props }) {
-	return <Flex.Item display={display} {...props} />;
+export function StackItem({ display = 'inline-block', ...props }) {
+	return <FlexItem display={display} {...props} />;
 }
 
 StackItem.displayName = 'StackItem';
-
-export default StackItem;

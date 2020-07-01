@@ -48,5 +48,3 @@ export const styled = createStyled.bind();
 tags.forEach((tagName) => {
 	styled[tagName] = styled(tagName);
 });
-
-export default styled;

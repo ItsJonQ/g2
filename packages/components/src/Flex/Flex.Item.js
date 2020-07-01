@@ -1,15 +1,14 @@
 import React from 'react';
-import BaseView from '../BaseView';
+import { BaseView } from '../BaseView';
 
-function FlexItem({ display, isBlock = false, sx, ...props }) {
+export function FlexItem({ display, isBlock = false, ...props }) {
 	return (
 		<BaseView
-			sx={{
+			__sx={{
 				display: isBlock ? 'block' : display,
 				flex: isBlock ? 1 : null,
 				minWidth: 0,
 				maxWidth: '100%',
-				...sx,
 			}}
 			{...props}
 		/>
@@ -17,5 +16,3 @@ function FlexItem({ display, isBlock = false, sx, ...props }) {
 }
 
 FlexItem.displayName = 'FlexItem';
-
-export default FlexItem;

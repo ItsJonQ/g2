@@ -1,10 +1,10 @@
 import React from 'react';
 import { useResponsiveValue } from '@g2/css';
 import { getValidChildren } from '@g2/utils';
-import Flex from '../Flex';
-import StackItem from './Stack.Item';
+import { Flex } from '../Flex';
+import { StackItem } from './Stack.Item';
 
-function Stack({
+export function Stack({
 	align = null,
 	justify = 'space-between',
 	children,
@@ -48,7 +48,3 @@ function Stack({
 		</Flex>
 	);
 }
-
-Stack.Item = StackItem;
-
-export default Stack;

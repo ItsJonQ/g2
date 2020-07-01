@@ -20,5 +20,3 @@ export function withTheme(Component) {
 
 	return hoistNonReactStatics(WithTheme, Component);
 }
-
-export default withTheme;

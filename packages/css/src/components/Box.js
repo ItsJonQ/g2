@@ -1,13 +1,33 @@
-import { Box as BaseBox } from 'theme-ui';
+import React, { forwardRef } from 'react';
+import { Box as ThemeUIBox } from 'theme-ui';
 import { withTheme } from '../styled';
 
-const Box = withTheme(BaseBox);
+const BaseBox = withTheme(ThemeUIBox);
 
-Box.defaultProps = {
+BaseBox.defaultProps = {
 	__css: {
 		fontFamily: 'body',
 		fontSize: 2,
 	},
 };
 
-export default Box;
+const EnhancedBaseBox = (
+	{
+		// Internal default sx values
+		__sx: internalBaseStyles,
+		sx: customStyles,
+		...props
+	},
+	ref,
+) => {
+	let mergedStyles;
+	if (internalBaseStyles && customStyles) {
+		mergedStyles = { ...internalBaseStyles, ...customStyles };
+	} else {
+		mergedStyles = customStyles || internalBaseStyles;
+	}
+
+	return <BaseBox ref={ref} sx={mergedStyles} {...props} />;
+};
+
+export const Box = forwardRef(EnhancedBaseBox);

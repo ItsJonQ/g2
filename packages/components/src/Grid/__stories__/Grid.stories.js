@@ -1,6 +1,6 @@
 import React from 'react';
-import Grid from '../Grid';
-import BaseView from '../../BaseView';
+import { Grid } from '../Grid';
+import { BaseView } from '../../BaseView';
 
 export default {
 	title: 'Grid',

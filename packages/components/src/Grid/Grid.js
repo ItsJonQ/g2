@@ -1,12 +1,11 @@
 import React from 'react';
 import { useResponsiveValue } from '@g2/css';
-import BaseView from '../BaseView';
+import { BaseView } from '../BaseView';
 
-function Grid({
+export function Grid({
 	columns = 2,
 	rows,
 	spacing = 5,
-	sx,
 	templateColumns,
 	templateRows,
 	...props
@@ -20,8 +19,7 @@ function Grid({
 
 	return (
 		<BaseView
-			sx={{
-				...sx,
+			__sx={{
 				display: 'grid',
 				gridTemplateColumns,
 				gridTemplateRows,
@@ -31,5 +29,3 @@ function Grid({
 		/>
 	);
 }
-
-export default Grid;
