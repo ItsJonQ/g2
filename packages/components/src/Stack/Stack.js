@@ -1,8 +1,8 @@
 import React from 'react';
+import { useResponsiveValue } from '@g2/css';
+import { getValidChildren } from '@g2/utils';
 import Flex from '../Flex';
 import StackItem from './Stack.Item';
-import { getValidChildren } from '../../utils';
-import { useResponsiveValue } from '../../hooks';
 
 function Stack({
 	align = null,

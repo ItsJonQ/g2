@@ -1,5 +1,4 @@
 import React from 'react';
-import { ScopeProvider } from 'styled-providers/emotion';
 import Grid from '../Grid';
 import BaseView from '../../BaseView';
 
@@ -12,11 +11,9 @@ const ItemView = (props) => <BaseView {...props} p={3} bg="#eee" />;
 
 export const _default = () => {
 	return (
-		<ScopeProvider scope="html">
-			<Grid spacing={5}>
-				<ItemView>Item</ItemView>
-				<ItemView>Item</ItemView>
-			</Grid>
-		</ScopeProvider>
+		<Grid spacing={5}>
+			<ItemView>Item</ItemView>
+			<ItemView>Item</ItemView>
+		</Grid>
 	);
 };

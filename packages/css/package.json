@@ -1,0 +1,27 @@
+{
+    "name": "@g2/css",
+    "version": "0.0.1",
+    "description": "",
+    "main": "dist/cjs/index.js",
+    "module": "src/index.js",
+    "sideEffects": false,
+    "scripts": {
+        "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+        "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+        "build": "npm run build:cjs && npm run build:es -- --no-clean",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+    "license": "MIT",
+    "dependencies": {
+        "@emotion/core": "^10.0.28",
+        "@emotion/styled": "^10.0.27",
+        "@g2/utils": "^0.0.1",
+        "@theme-ui/match-media": "^0.3.1",
+        "@theme-ui/preset-base": "^0.3.0",
+        "classnames": "^2.2.6",
+        "hoist-non-react-statics": "^3.3.2",
+        "theme-ui": "^0.3.1",
+        "tinycolor2": "^1.4.1"
+    }
+}

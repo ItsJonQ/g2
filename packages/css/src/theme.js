@@ -1,6 +1,6 @@
 import colorize from 'tinycolor2';
 import basePresetTheme from '@theme-ui/preset-base';
-import { toPx } from './css';
+import { toPx } from './utils';
 
 const COLOR_PALETTE = {
 	brand: '#1E82FF',

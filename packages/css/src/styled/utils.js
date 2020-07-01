@@ -1,4 +1,5 @@
-import { baseTheme, is } from '../utils';
+import { is } from '@g2/utils';
+import { baseTheme } from '../theme';
 
 function isEmpty(o = {}) {
 	return Object.keys(o).length === 0;

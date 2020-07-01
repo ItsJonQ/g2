@@ -1,6 +1,8 @@
 import { useResponsiveValue as useBaseResponsiveValue } from '@theme-ui/match-media';
 import { useThemeUI } from 'theme-ui';
-import { is, toPx, baseTheme } from '../utils';
+import { is } from '@g2/utils';
+import { toPx } from '../utils';
+import { baseTheme } from '../theme';
 
 export function useTheme() {
 	const themeContext = useThemeUI() || {};

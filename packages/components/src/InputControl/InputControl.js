@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { cx } from '@g2/css';
+import { noop } from '@g2/utils';
 import Flex from '../Flex';
-import { cx, noop } from '../../utils';
 import { RootView, InputView } from './InputControl.styles';
 
 function InputControl({

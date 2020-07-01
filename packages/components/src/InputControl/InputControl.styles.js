@@ -1,7 +1,6 @@
-import { styled, css } from '../../styled';
+import { styled, css, getTheme } from '@g2/css';
 import BaseView from '../BaseView';
 import Flex from '../Flex';
-import { getTheme } from '../../utils';
 
 const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
 	const { config } = getTheme(theme);

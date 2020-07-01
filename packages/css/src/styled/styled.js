@@ -2,7 +2,7 @@ import React from 'react';
 import emotionStyled from '@emotion/styled';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeContext } from '@emotion/core';
-import { is } from '../utils';
+import { is } from '@g2/utils';
 import { mergeThemeProps, getDisplayName } from './utils';
 import { tags } from './tags';
 

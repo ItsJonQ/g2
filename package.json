@@ -1,16 +1,14 @@
 {
   "name": "@itsjonq/g2",
   "version": "0.0.0",
-  "description": "Module generated with Zero",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
+  "description": "G2",
   "sideEffects": false,
-  "private": false,
+  "private": true,
   "scripts": {
-    "prestart": "zero prestart",
-    "build:es": "BUILD_FORMAT=es zero build -d dist/es",
-    "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
-    "build": "npm run build:cjs && npm run build:es -- --no-clean",
+    "postinstall": "yarn bootstrap",
+    "prestart": "zero prestart && npm run bootstrap",
+    "build": "lerna run build --stream --parallel",
+    "bootstrap": "lerna bootstrap --use-workspaces",
     "lint": "zero lint",
     "start": "npm run storybook",
     "dev": "zero test",
@@ -18,17 +16,13 @@
     "test:coverage": "zero test --coverage",
     "format": "zero format",
     "validate": "zero validate",
-    "release": "zero release",
+    "publish": "lerna publish",
     "version": "npm run build",
     "precommit": "zero pre-commit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "prebuild-storybook": "npm run prestart && npm run build",
+    "build-storybook": "build-storybook -o dist/storybook"
   },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "repository": {
     "type": "git",
@@ -42,33 +36,21 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "@itsjonq/is": "0.0.2",
     "@itsjonq/zero": "4.1.10",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
+    "lerna": "^3.20.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "styled-providers": "0.0.8"
+    "react-dom": "16.13.1"
   },
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@emotion/core": "10.0.28",
-    "@emotion/styled": "10.0.27",
-    "@itsjonq/is": "0.0.2",
-    "@styled-system/color": "5.1.2",
-    "@styled-system/should-forward-prop": "5.1.5",
-    "@styled-system/space": "5.1.2",
-    "@theme-ui/core": "0.3.1",
-    "@theme-ui/css": "0.3.1",
-    "@theme-ui/match-media": "0.3.1",
-    "@theme-ui/preset-base": "0.3.0",
-    "classnames": "2.2.6",
-    "hoist-non-react-statics": "3.3.2",
-    "theme-ui": "0.3.1",
-    "tinycolor2": "1.4.1"
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }

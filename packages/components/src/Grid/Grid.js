@@ -1,6 +1,6 @@
 import React from 'react';
+import { useResponsiveValue } from '@g2/css';
 import BaseView from '../BaseView';
-import { useResponsiveValue } from '../../hooks';
 
 function Grid({
 	columns = 2,
