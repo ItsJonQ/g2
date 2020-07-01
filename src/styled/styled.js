@@ -4,8 +4,9 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeContext } from '@emotion/core';
 import { is } from '../utils';
 import { mergeThemeProps, getDisplayName } from './utils';
+import { tags } from './tags';
 
-export function createStyled(tagName) {
+function createStyled(tagName, options) {
 	// Source:
 	// https://github.com/emotion-js/emotion/blob/master/packages/styled-base/src/index.js#L22
 	if (process.env.NODE_ENV !== 'production') {
@@ -17,19 +18,15 @@ export function createStyled(tagName) {
 	}
 
 	return (...interpolatedProps) => {
-		const PrivateStyledComponent = emotionStyled(tagName)(
-			...interpolatedProps,
-		);
+		const SC = emotionStyled(tagName, options)(...interpolatedProps);
 
 		const render = (props, ref) => (
-			<ThemeContext>
+			<ThemeContext.Consumer>
 				{(theme) => {
 					const mergedProps = mergeThemeProps(props, theme);
-					return (
-						<PrivateStyledComponent ref={ref} {...mergedProps} />
-					);
+					return <SC ref={ref} {...mergedProps} />;
 				}}
-			</ThemeContext>
+			</ThemeContext.Consumer>
 		);
 
 		const StyledComponent = React.forwardRef(render);
@@ -46,4 +43,10 @@ export function createStyled(tagName) {
 	};
 }
 
-export const styled = createStyled;
+export const styled = createStyled.bind();
+
+tags.forEach((tagName) => {
+	styled[tagName] = styled(tagName);
+});
+
+export default styled;

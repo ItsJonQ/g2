@@ -18,13 +18,9 @@ export function mergeThemeProps(props = {}, theme) {
 }
 
 export function getDisplayName(tagName) {
-	const baseDisplayName = is.string(tagName)
+	const displayName = is.string(tagName)
 		? tagName
 		: tagName.displayName || tagName.name || 'Component';
-
-	const displayName = is.defined(tagName)
-		? tagName
-		: `Styled(${baseDisplayName})`;
 
 	return displayName;
 }

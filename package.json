@@ -12,6 +12,7 @@
     "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
     "build": "npm run build:cjs && npm run build:es -- --no-clean",
     "lint": "zero lint",
+    "start": "npm run storybook",
     "dev": "zero test",
     "test": "zero test --coverage",
     "test:coverage": "zero test --coverage",
