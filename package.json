@@ -5,8 +5,10 @@
   "sideEffects": false,
   "private": true,
   "scripts": {
-    "postinstall": "yarn bootstrap",
+    "postinstall": "npm run bootstrap",
+    "clean": "zero clean",
     "prestart": "zero prestart && npm run bootstrap",
+    "prebuild": "npm run clean",
     "build": "lerna run build --stream --parallel",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "lint": "zero lint",
