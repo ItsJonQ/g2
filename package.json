@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "postinstall": "npm run bootstrap",
-    "clean": "zero clean",
+    "clean": "lerna run clean --stream --parallel",
     "prestart": "zero prestart && npm run bootstrap",
     "prebuild": "npm run clean",
     "build": "lerna run build --stream --parallel",
