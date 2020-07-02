@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Box as ThemeUIBox } from 'theme-ui';
 
-import { withTheme } from '../styled';
+import { withTheme } from '../styled/withTheme';
 
 const BaseBox = withTheme(ThemeUIBox);
 
@@ -14,8 +14,12 @@ BaseBox.defaultProps = {
 
 const EnhancedBaseBox = (
 	{
+		__internal_baseComponent: BaseComponent,
 		// Internal default sx values
 		__sx: internalBaseStyles,
+		as = 'div',
+		children,
+		forwardedRef,
 		sx: customStyles,
 		...props
 	},
@@ -28,7 +32,19 @@ const EnhancedBaseBox = (
 		mergedStyles = customStyles || internalBaseStyles;
 	}
 
-	return <BaseBox ref={ref} sx={mergedStyles} {...props} />;
+	const componentProps = {
+		...props,
+		as,
+		children,
+		ref: forwardedRef || ref,
+		sx: mergedStyles,
+	};
+
+	if (BaseComponent) {
+		return <BaseComponent {...componentProps} />;
+	}
+
+	return <BaseBox {...componentProps} />;
 };
 
 export const Box = forwardRef(EnhancedBaseBox);

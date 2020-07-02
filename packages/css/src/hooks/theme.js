@@ -2,19 +2,25 @@ import { is } from '@g2/utils';
 import { useResponsiveValue as useBaseResponsiveValue } from '@theme-ui/match-media';
 import { useThemeUI } from 'theme-ui';
 
+import { enhanceThemeWithMixins } from '../styled/utils';
 import { baseTheme } from '../theme';
 import { toPx } from '../utils';
 
 export function useThemeContext() {
 	const themeContext = useThemeUI() || {};
-
-	return {
+	const enhancedThemeContext = {
 		...themeContext,
 		theme: {
 			...baseTheme,
 			...themeContext.theme,
 		},
 	};
+
+	enhancedThemeContext.theme = enhanceThemeWithMixins(
+		enhancedThemeContext.theme,
+	);
+
+	return enhancedThemeContext;
 }
 
 export function useTheme() {

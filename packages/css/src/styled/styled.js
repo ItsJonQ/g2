@@ -4,6 +4,7 @@ import { is } from '@g2/utils';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import React from 'react';
 
+import { Box } from '../components/Box';
 import { tags } from './tags';
 import { getDisplayName, mergeThemeProps } from './utils';
 
@@ -49,3 +50,6 @@ export const styled = createStyled.bind();
 tags.forEach((tagName) => {
 	styled[tagName] = styled(tagName);
 });
+
+styled.Box = styled(Box);
+styled.BaseView = styled(Box);

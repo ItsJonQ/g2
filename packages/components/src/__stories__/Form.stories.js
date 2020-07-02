@@ -8,8 +8,8 @@ export default {
 
 const Label = (props) => (
 	<Grid
-		as="label"
 		align="center"
+		as="label"
 		mb={3}
 		templateColumns="100px 1fr"
 		{...props}

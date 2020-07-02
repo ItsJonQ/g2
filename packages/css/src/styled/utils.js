@@ -1,6 +1,7 @@
 import { is } from '@g2/utils';
 
 import { baseTheme } from '../theme';
+import { createSpace, rgba } from '../themeHelpers';
 
 function isEmpty(o = {}) {
 	return Object.keys(o).length === 0;
@@ -8,6 +9,7 @@ function isEmpty(o = {}) {
 
 export function mergeThemeProps(props = {}, theme) {
 	let mergedProps = props;
+
 	if (is.undefined(props.theme)) {
 		mergedProps = {};
 		for (let key in props) {
@@ -16,7 +18,23 @@ export function mergeThemeProps(props = {}, theme) {
 		mergedProps.theme = isEmpty(theme) ? baseTheme : theme;
 	}
 
+	mergedProps.theme = enhanceThemeWithMixins(mergedProps.theme);
+
 	return mergedProps;
+}
+
+export function enhanceThemeWithMixins(themeContext) {
+	if (!themeContext) {
+		return themeContext;
+	}
+	// Mixins
+	if (!themeContext.utils) {
+		themeContext.utils = {};
+	}
+	themeContext.utils.rgba = rgba;
+	themeContext.utils.space = createSpace(themeContext?.config?.gridBase);
+
+	return themeContext;
 }
 
 export function getDisplayName(tagName) {
