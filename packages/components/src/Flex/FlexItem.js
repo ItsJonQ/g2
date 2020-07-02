@@ -6,13 +6,13 @@ function FlexItem({ display, forwardedRef, isBlock = false, ...props }) {
 	return (
 		<BaseView
 			{...props}
-			ref={forwardedRef}
 			__sx={{
 				display: isBlock ? 'block' : display,
 				flex: isBlock ? 1 : null,
 				minWidth: 0,
 				maxWidth: '100%',
 			}}
+			ref={forwardedRef}
 		/>
 	);
 }

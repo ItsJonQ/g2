@@ -23,7 +23,6 @@ function Grid({
 	return (
 		<BaseView
 			{...props}
-			ref={forwardedRef}
 			__sx={{
 				alignItems: align,
 				display: 'grid',
@@ -32,6 +31,7 @@ function Grid({
 				gap: spacing,
 				justifyContent: justify,
 			}}
+			ref={forwardedRef}
 		/>
 	);
 }

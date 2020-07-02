@@ -13,13 +13,13 @@ export function Flex({
 	return (
 		<BaseView
 			{...props}
-			ref={forwardedRef}
 			__sx={{
 				alignItems: align,
 				display: 'flex',
 				flexDirection: direction,
 				justifyContent: justify,
 			}}
+			ref={forwardedRef}
 		>
 			{children}
 		</BaseView>

@@ -1,9 +1,10 @@
 {
-	"extends": ["prettier", "./node_modules/@itsjonq/zero/eslint.js"],
-	"plugins": ["simple-import-sort"],
+	"extends": ["./node_modules/@itsjonq/zero/eslint.js", "prettier"],
+	"plugins": ["react", "simple-import-sort"],
 	"rules": {
 		"sort-imports": "off",
 		"import/order": "off",
-		"simple-import-sort/sort": "error"
+		"simple-import-sort/sort": "error",
+		"react/jsx-sort-props": "error"
 	}
 }

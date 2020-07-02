@@ -3,7 +3,7 @@ import { connect } from '@g2/provider';
 import React from 'react';
 
 function Spacer({ forwardedRef, mb = 2, ...props }) {
-	return <BaseView {...props} ref={forwardedRef} mb={mb} />;
+	return <BaseView {...props} mb={mb} ref={forwardedRef} />;
 }
 
 export default connect(Spacer);

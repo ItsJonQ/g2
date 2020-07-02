@@ -8,9 +8,5 @@ export default {
 };
 
 export const _default = () => {
-	return (
-		<div>
-			<InputControl />
-		</div>
-	);
+	return <InputControl />;
 };
