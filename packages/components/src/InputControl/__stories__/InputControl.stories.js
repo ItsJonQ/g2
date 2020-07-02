@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputControl } from '../InputControl';
+import { InputControl } from '../index';
 
 export default {
 	title: 'InputControl',

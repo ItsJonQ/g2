@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react';
 import { hoistNonReactStatics, is } from '@g2/utils';
-import { useComponentsProvider } from './ComponentsProvider';
+import { useComponentsContext } from './ComponentsProvider';
 
 export function componentsConnect(Component, namespace) {
 	const key = namespace || Component.name;
 
 	const ConnectedComponent = forwardRef((props, forwardedRef) => {
-		const ComponentsProvider = useComponentsProvider();
-		const contextProps = ComponentsProvider[key];
+		const context = useComponentsContext();
+		const contextProps = context[key];
 		const mergedProps = is.plainObject(contextProps)
 			? { ...contextProps, ...props }
 			: props;

@@ -2,8 +2,13 @@
   "name": "@g2/provider",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "src/index.js",
+  "sideEffects": false,
   "scripts": {
+    "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+    "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+    "build": "npm run build:cjs && npm run build:es -- --no-clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",

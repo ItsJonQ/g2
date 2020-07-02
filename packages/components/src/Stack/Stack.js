@@ -3,7 +3,7 @@ import { useResponsiveValue } from '@g2/css';
 import { connect } from '@g2/provider';
 import { getValidChildren } from '@g2/utils';
 import { Flex } from '../Flex';
-import { StackItem } from './StackItem';
+import StackItem from './StackItem';
 
 function Stack({
 	align = null,
