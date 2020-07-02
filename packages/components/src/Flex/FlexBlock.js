@@ -1,9 +1,10 @@
-import React from 'react';
 import { connect } from '@g2/provider';
+import React from 'react';
+
 import FlexItem from './FlexItem';
 
-function FlexBlock(props) {
-	return <FlexItem {...props} isBlock={true} />;
+function FlexBlock({ forwardedRef, ...props }) {
+	return <FlexItem {...props} isBlock={true} ref={forwardedRef} />;
 }
 
 export default connect(FlexBlock);

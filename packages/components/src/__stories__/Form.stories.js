@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Text, InputControl, BaseView } from '../index';
+
+import { BaseView, Grid, InputControl, Text } from '../index';
 
 export default {
 	title: 'Form',

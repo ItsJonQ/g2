@@ -1,4 +1,4 @@
-import { styled, css } from '@g2/css';
+import { css, styled } from '@g2/css';
 import { BaseView } from '@g2/css';
 
 const baseStyles = ({ theme }) => {

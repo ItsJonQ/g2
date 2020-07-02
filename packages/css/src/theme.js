@@ -1,5 +1,6 @@
-import colorize from 'tinycolor2';
 import basePresetTheme from '@theme-ui/preset-base';
+import colorize from 'tinycolor2';
+
 import { toPx } from './utils';
 
 const COLOR_PALETTE = {

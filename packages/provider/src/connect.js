@@ -1,5 +1,6 @@
-import React, { forwardRef } from 'react';
 import { hoistNonReactStatics, is } from '@g2/utils';
+import React, { forwardRef } from 'react';
+
 import { useComponentsContext } from './ComponentsProvider';
 
 export function componentsConnect(Component, namespace) {

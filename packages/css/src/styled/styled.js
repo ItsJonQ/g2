@@ -1,10 +1,11 @@
-import React from 'react';
-import emotionStyled from '@emotion/styled';
-import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeContext } from '@emotion/core';
+import emotionStyled from '@emotion/styled';
 import { is } from '@g2/utils';
-import { mergeThemeProps, getDisplayName } from './utils';
+import hoistNonReactStatics from 'hoist-non-react-statics';
+import React from 'react';
+
 import { tags } from './tags';
+import { getDisplayName, mergeThemeProps } from './utils';
 
 function createStyled(tagName, options) {
 	// Source:

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid } from '../index';
+
 import { BaseView } from '../../BaseView';
+import { Grid } from '../index';
 
 export default {
 	title: 'Grid',

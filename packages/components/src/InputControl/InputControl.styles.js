@@ -1,4 +1,5 @@
-import { BaseView, styled, css } from '@g2/css';
+import { BaseView, css, styled } from '@g2/css';
+
 import { Flex } from '../Flex';
 
 const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {

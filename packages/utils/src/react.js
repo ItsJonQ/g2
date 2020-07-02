@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { is } from './is';
 
+export { default as mergeRefs } from 'react-merge-refs';
 export { default as hoistNonReactStatics } from 'hoist-non-react-statics';
 
 export function getValidChildren(children) {
@@ -23,12 +25,6 @@ export function assignRef(ref, value) {
 	} catch (error) {
 		throw new Error(`Cannot assign value '${value}' to ref '${ref}'`);
 	}
-}
-
-export function mergeRefs(...refs) {
-	return (value) => {
-		refs.forEach((ref) => assignRef(ref, value));
-	};
 }
 
 export function getDisplayName(tagName) {

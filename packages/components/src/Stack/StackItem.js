@@ -1,5 +1,6 @@
-import React from 'react';
 import { connect } from '@g2/provider';
+import React from 'react';
+
 import { FlexItem } from '../Flex';
 
 function StackItem({ display = 'inline-block', ...props }) {

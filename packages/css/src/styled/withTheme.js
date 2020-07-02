@@ -1,6 +1,7 @@
-import React from 'react';
-import { hoistNonReactStatics, getDisplayName } from '@g2/utils';
 import { ThemeContext } from '@emotion/core';
+import { getDisplayName, hoistNonReactStatics } from '@g2/utils';
+import React from 'react';
+
 import { mergeThemeProps } from './utils';
 
 export function withTheme(Component) {

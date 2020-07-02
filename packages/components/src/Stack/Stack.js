@@ -1,15 +1,17 @@
-import React from 'react';
 import { useResponsiveValue } from '@g2/css';
 import { connect } from '@g2/provider';
 import { getValidChildren } from '@g2/utils';
+import React from 'react';
+
 import { Flex } from '../Flex';
 import StackItem from './StackItem';
 
 function Stack({
 	align = null,
-	justify = 'space-between',
 	children,
 	direction = 'column',
+	forwardedRef,
+	justify = 'space-between',
 	spacing = 2,
 	...props
 }) {
@@ -44,7 +46,13 @@ function Stack({
 	});
 
 	return (
-		<Flex align={align} direction={direction} justify={justify} {...props}>
+		<Flex
+			{...props}
+			align={align}
+			direction={direction}
+			justify={justify}
+			ref={forwardedRef}
+		>
 			{clonedChildren}
 		</Flex>
 	);

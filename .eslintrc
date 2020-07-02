@@ -1,1 +1,9 @@
-{ "extends": "./node_modules/@itsjonq/zero/eslint.js" }
+{
+	"extends": ["prettier", "./node_modules/@itsjonq/zero/eslint.js"],
+	"plugins": ["simple-import-sort"],
+	"rules": {
+		"sort-imports": "off",
+		"import/order": "off",
+		"simple-import-sort/sort": "error"
+	}
+}

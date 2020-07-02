@@ -1,10 +1,11 @@
-import React from 'react';
 import { BaseView, useResponsiveValue } from '@g2/css';
 import { connect } from '@g2/provider';
+import React from 'react';
 
 function Grid({
-	columns = 2,
 	align,
+	columns = 2,
+	forwardedRef,
 	justify,
 	rows,
 	spacing = 3,
@@ -21,6 +22,8 @@ function Grid({
 
 	return (
 		<BaseView
+			{...props}
+			ref={forwardedRef}
 			__sx={{
 				alignItems: align,
 				display: 'grid',
@@ -29,7 +32,6 @@ function Grid({
 				gap: spacing,
 				justifyContent: justify,
 			}}
-			{...props}
 		/>
 	);
 }

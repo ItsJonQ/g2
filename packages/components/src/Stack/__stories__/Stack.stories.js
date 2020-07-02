@@ -1,7 +1,8 @@
 import React from 'react';
-import { Stack, StackItem } from '../index';
-import { Spacer } from '../../Spacer';
+
 import { BaseView } from '../../BaseView';
+import { Spacer } from '../../Spacer';
+import { Stack, StackItem } from '../index';
 
 export default {
 	title: 'Stack',

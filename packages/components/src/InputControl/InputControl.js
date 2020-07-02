@@ -1,13 +1,15 @@
-import React, { useRef, useState } from 'react';
 import { cx } from '@g2/css';
 import { connect } from '@g2/provider';
-import { noop } from '@g2/utils';
+import { mergeRefs, noop } from '@g2/utils';
+import React, { useRef, useState } from 'react';
+
 import { FlexItem } from '../Flex';
-import { RootView, InputView } from './InputControl.styles';
+import { InputView, RootView } from './InputControl.styles';
 
 function InputControl({
 	align,
 	className,
+	forwardedRef,
 	gap = 2.5,
 	isRounded = false,
 	isSeamless = false,
@@ -55,7 +57,7 @@ function InputControl({
 				as="input"
 				onBlur={handleOnBlur}
 				onFocus={handleOnFocus}
-				ref={inputRef}
+				ref={mergeRefs([inputRef, forwardedRef])}
 				size={size}
 				{...props}
 			/>

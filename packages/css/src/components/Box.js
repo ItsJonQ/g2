@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Box as ThemeUIBox } from 'theme-ui';
+
 import { withTheme } from '../styled';
 
 const BaseBox = withTheme(ThemeUIBox);

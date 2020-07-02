@@ -1,5 +1,5 @@
-import React, { createContext, useContext } from 'react';
 import { ThemeProvider, useTheme } from '@g2/css';
+import React, { createContext, useContext } from 'react';
 
 export const ComponentsContext = createContext({});
 export const useComponentsContext = () => useContext(ComponentsContext);

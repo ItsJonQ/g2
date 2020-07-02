@@ -1,4 +1,5 @@
 import { is } from '@g2/utils';
+
 import { baseTheme } from '../theme';
 
 function isEmpty(o = {}) {
