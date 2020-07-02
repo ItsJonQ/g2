@@ -6,6 +6,7 @@
   "module": "src/index.js",
   "sideEffects": false,
   "scripts": {
+    "clean": "rm -rf dist",
     "build:es": "BUILD_FORMAT=es zero build -d dist/es",
     "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
     "build": "npm run build:cjs && npm run build:es -- --no-clean",

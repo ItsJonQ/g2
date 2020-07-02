@@ -8,7 +8,7 @@ export default {
 	component: Grid,
 };
 
-const ItemView = (props) => <BaseView {...props} p={3} bg="#eee" />;
+const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;
 
 export const _default = () => {
 	return (
