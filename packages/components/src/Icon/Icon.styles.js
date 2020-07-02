@@ -7,6 +7,6 @@ const baseStyles = ({ size }) => css`
 	width: ${toPx(size)};
 `;
 
-export const IconWrapper = styled.BaseView`
+export const IconWrapper = styled.div`
 	${baseStyles};
 `;

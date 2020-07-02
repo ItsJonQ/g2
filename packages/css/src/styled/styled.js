@@ -8,7 +8,8 @@ import { Box } from '../components/Box';
 import { tags } from './tags';
 import { getDisplayName, mergeThemeProps } from './utils';
 
-function createStyled(tagName, options) {
+function createStyled(tagName, options = {}) {
+	const { props: extraProps } = options;
 	// Source:
 	// https://github.com/emotion-js/emotion/blob/master/packages/styled-base/src/index.js#L22
 	if (process.env.NODE_ENV !== 'production') {
@@ -20,13 +21,13 @@ function createStyled(tagName, options) {
 	}
 
 	return (...interpolatedProps) => {
-		const SC = emotionStyled(tagName, options)(...interpolatedProps);
+		const SC = emotionStyled(tagName)(...interpolatedProps);
 
 		const render = (props, ref) => (
 			<ThemeContext.Consumer>
 				{(theme) => {
 					const mergedProps = mergeThemeProps(props, theme);
-					return <SC ref={ref} {...mergedProps} />;
+					return <SC ref={ref} {...extraProps} {...mergedProps} />;
 				}}
 			</ThemeContext.Consumer>
 		);
@@ -48,7 +49,7 @@ function createStyled(tagName, options) {
 export const styled = createStyled.bind();
 
 tags.forEach((tagName) => {
-	styled[tagName] = styled(tagName);
+	styled[tagName] = styled(Box, { props: { as: tagName } });
 });
 
 styled.Box = styled(Box);

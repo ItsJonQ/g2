@@ -10,7 +10,7 @@ const baseStyles = ({ size }) => css`
 	width: ${toPx(size)};
 `;
 
-export const ContainerView = styled.BaseView`
+export const ContainerView = styled.div`
 	${baseStyles};
 `;
 
@@ -28,7 +28,7 @@ const barsWrapperStyles = ({ theme }) => {
 	`;
 };
 
-export const BarsWrapperView = styled.BaseView`
+export const BarsWrapperView = styled.div`
 	${barsWrapperStyles};
 `;
 
@@ -121,6 +121,6 @@ const barsStyles = ({ spinnerColor, theme }) => {
 	`;
 };
 
-export const BarsView = styled.BaseView`
+export const BarsView = styled.div`
 	${barsStyles};
 `;

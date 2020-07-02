@@ -8,6 +8,7 @@ import { Flex } from '../Flex';
 import { Icon } from '../Icon';
 import LoadingOverlay from './Button.LoadingOverlay';
 import {
+	ButtonLinkView,
 	ButtonView,
 	CaretWrapperView,
 	ContentView,
@@ -15,7 +16,6 @@ import {
 } from './Button.styles';
 
 function Button({
-	as = 'button',
 	children,
 	elevation = 0,
 	elevationActive,
@@ -38,13 +38,12 @@ function Button({
 	variant = 'secondary',
 	...props
 }) {
-	const componentTagName = href ? 'a' : as;
+	const as = href ? ButtonLinkView : ButtonView;
 
 	return (
-		<ButtonView
-			__internal_baseComponent={BaseButton}
+		<BaseButton
 			aria-busy={isLoading}
-			as={componentTagName}
+			as={as}
 			href={href}
 			isBlock={isBlock}
 			isOutline={isOutline}
@@ -83,7 +82,7 @@ function Button({
 				offset={-1}
 				value={elevation}
 			/>
-		</ButtonView>
+		</BaseButton>
 	);
 }
 

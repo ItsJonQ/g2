@@ -1,5 +1,4 @@
 import { css, styled } from '@g2/css';
-import { BaseView } from '@g2/css';
 
 const baseStyles = ({ theme }) => {
 	const { config } = theme;
@@ -33,7 +32,7 @@ const variantStyles = ({ variant }) => {
 	}
 };
 
-export const TextView = styled(BaseView)`
+export const TextView = styled.span`
 	${baseStyles};
 	${modifierStyles};
 	${variantStyles};

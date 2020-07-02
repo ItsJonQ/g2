@@ -23,6 +23,6 @@ export function useSurfaceStyles() {
 	return surfaceStyles({ theme });
 }
 
-export const SurfaceView = styled.BaseView`
+export const SurfaceView = styled.div`
 	${surfaceStyles};
 `;

@@ -4,7 +4,7 @@ import colorize from 'tinycolor2';
 import { toPx } from './utils';
 
 const COLOR_PALETTE = {
-	brand: '#1E82FF',
+	brand: '#3958E8',
 	destructive: '#F6372B',
 };
 
@@ -59,8 +59,8 @@ const GRID_PROPS = {
 
 const FONT_PROPS = {
 	fontFamily:
-		"Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-	fontSize: '15px',
+		"Cabin, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+	fontSize: '14px',
 };
 
 const CONTROL_PROPS = {
@@ -76,7 +76,7 @@ const CONTROL_PROPS = {
 		.toHexString(),
 	controlBorderColor: '#DCDEE1',
 	controlBorderColorDark: '#4E4F50',
-	controlBorderRadius: '6px',
+	controlBorderRadius: '4px',
 	controlBorderRadiusRound: '20px',
 	controlBoxShadowFocusSize: '2px',
 	controlHeight: '36px',
@@ -233,7 +233,7 @@ export const BASE_THEME = {
 
 export const baseTheme = {
 	...BASE_THEME,
-	fontSizes: [12, 14, 15, 16, 20, 24, 32, 48, 64],
+	fontSizes: [11, 12, 14, 16, 20, 24, 32, 48, 64],
 };
 
 export function getTheme(theme) {

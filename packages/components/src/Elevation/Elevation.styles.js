@@ -66,7 +66,7 @@ const interactiveStyles = ({ active, hover, focus, isInteractive, value }) => {
 	return css(...styles);
 };
 
-export const ElevationView = styled.BaseView`
+export const ElevationView = styled.div`
 	${baseStyles};
 	${interactiveStyles};
 `;

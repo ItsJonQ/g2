@@ -7,6 +7,8 @@ const BaseBox = withTheme(ThemeUIBox);
 
 BaseBox.defaultProps = {
 	__css: {
+		'-webkit-font-smoothing': 'antialiased',
+		'-moz-osx-font-smoothing': 'grayscale',
 		fontFamily: 'body',
 		fontSize: 2,
 	},
@@ -14,7 +16,6 @@ BaseBox.defaultProps = {
 
 const EnhancedBaseBox = (
 	{
-		__internal_baseComponent: BaseComponent,
 		// Internal default sx values
 		__sx: internalBaseStyles,
 		as = 'div',
@@ -39,10 +40,6 @@ const EnhancedBaseBox = (
 		ref: forwardedRef || ref,
 		sx: mergedStyles,
 	};
-
-	if (BaseComponent) {
-		return <BaseComponent {...componentProps} />;
-	}
 
 	return <BaseBox {...componentProps} />;
 };

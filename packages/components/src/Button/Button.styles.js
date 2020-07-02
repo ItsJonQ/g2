@@ -261,7 +261,15 @@ const variantStyles = ({ variant, ...props }) => {
 	}
 };
 
-export const ButtonView = styled.BaseView`
+export const ButtonView = styled.button`
+	${baseStyles};
+	${blockStyles};
+	${variantStyles};
+	${roundedStyles};
+	${sizeStyles};
+`;
+
+export const ButtonLinkView = styled.a`
 	${baseStyles};
 	${blockStyles};
 	${variantStyles};

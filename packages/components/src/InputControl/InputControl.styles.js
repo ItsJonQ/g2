@@ -1,4 +1,4 @@
-import { BaseView, css, styled } from '@g2/css';
+import { css, styled } from '@g2/css';
 
 import { Flex } from '../Flex';
 
@@ -161,7 +161,7 @@ const inputStyles = ({ theme }) => {
 	`;
 };
 
-export const InputView = styled(BaseView)`
+export const InputView = styled.div`
 	${inputStyles};
 	${sizeStyles};
 `;

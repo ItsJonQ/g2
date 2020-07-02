@@ -32,11 +32,15 @@ export function useResponsiveValue(values = 0) {
 	return is.array(values) ? responsiveValues : values;
 }
 
-export function useSpacing(value) {
-	const themeSpace = useThemeContext()?.theme?.space;
+export function useResponsiveValueForKey(key, value) {
+	const themeKeys = useThemeContext()?.theme[key];
 	const baseValue = useResponsiveValue(value);
 
-	const values = is.array(themeSpace) ? themeSpace : [];
+	if (is.undefined(value)) {
+		return value;
+	}
+
+	const values = is.array(themeKeys) ? themeKeys : [];
 	const valuesEntry = values[baseValue];
 
 	if (!is.defined(valuesEntry)) {
@@ -44,4 +48,12 @@ export function useSpacing(value) {
 	}
 
 	return valuesEntry;
+}
+
+export function useFontSize(value) {
+	return useResponsiveValueForKey('fontSizes', value);
+}
+
+export function useSpacing(value) {
+	return useResponsiveValueForKey('space', value);
 }

@@ -1,15 +1,52 @@
-import { BaseView } from '@g2/css';
+import { BaseView, useResponsiveValue } from '@g2/css';
 import { connect } from '@g2/provider';
+import { getValidChildren } from '@g2/utils';
 import React from 'react';
+
+import FlexItem from './FlexItem';
 
 export function Flex({
 	align = 'center',
-	justify = 'space-between',
 	children,
-	direction = 'column',
+	direction,
 	forwardedRef,
+	gap = 2,
+	justify = 'space-between',
 	...props
 }) {
+	const validChildren = getValidChildren(children);
+	const _direction = useResponsiveValue(direction);
+
+	const clonedChildren = validChildren.map((child, index) => {
+		const isColumn = _direction === 'column';
+		const isLast = index + 1 === validChildren.length;
+		const displayName = child?.type?.displayName;
+
+		const _key = child.key || index;
+		const _isFlexSubComponent = ['FlexBlock', 'FlexItem'].includes(
+			displayName,
+		);
+		const _child = _isFlexSubComponent ? (
+			child
+		) : (
+			<FlexItem key={_key}>{child}</FlexItem>
+		);
+
+		const childProps = {
+			display: isColumn ? 'block' : undefined,
+		};
+
+		if (!isLast) {
+			if (isColumn) {
+				childProps.mb = gap;
+			} else {
+				childProps.mr = gap;
+			}
+		}
+
+		return React.cloneElement(_child, childProps);
+	});
+
 	return (
 		<BaseView
 			{...props}
@@ -21,7 +58,7 @@ export function Flex({
 			}}
 			ref={forwardedRef}
 		>
-			{children}
+			{clonedChildren}
 		</BaseView>
 	);
 }
