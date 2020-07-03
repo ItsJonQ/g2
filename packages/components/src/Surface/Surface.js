@@ -2,4 +2,4 @@ import { connect } from '@g2/provider';
 
 import { SurfaceView } from './Surface.styles';
 
-export default connect(SurfaceView);
+export default connect(SurfaceView, 'Surface');
