@@ -1,14 +1,14 @@
 import { styled } from '@g2/css';
 
 export const CollapsibleContentView = styled.div`
-	contain: content;
 	display: block !important;
 	overflow: hidden;
-	transition: height 300ms linear;
+	transition: height 160ms ease, opacity 160ms ease;
 	transform: translateZ(0);
 	will-change: height;
 `;
 
 export const InnerContentView = styled.div`
-	contain: content;
+	position: relative;
+	transform: translateZ(0);
 `;

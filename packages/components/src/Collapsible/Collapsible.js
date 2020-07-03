@@ -1,3 +1,4 @@
+import { BaseView } from '@g2/css';
 import { connect } from '@g2/provider';
 import React from 'react';
 import { useDisclosureState } from 'reakit/Disclosure';
@@ -6,10 +7,11 @@ import { CollapsibleContext, useAnimatedState } from './Collapsible.utils';
 
 function Collapsible({
 	animated = true,
-	animationDuration = 200,
-	animationTimingFunction = 'ease-in-out',
+	animationDuration = 160,
+	animationTimingFunction = 'ease',
 	children,
 	visible,
+	...props
 }) {
 	const disclosure = useDisclosureState({
 		animated: animated ? animationDuration : undefined,
@@ -29,7 +31,7 @@ function Collapsible({
 
 	return (
 		<CollapsibleContext.Provider value={contextValue}>
-			{children}
+			<BaseView {...props}>{children}</BaseView>
 		</CollapsibleContext.Provider>
 	);
 }

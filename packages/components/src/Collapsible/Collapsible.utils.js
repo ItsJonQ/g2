@@ -72,3 +72,25 @@ export function getAnimatedHeight({ animatedState, height: currentHeight }) {
 
 	return height;
 }
+
+export function getAnimatedOpacity({ animatedState }) {
+	let opacity = 0;
+
+	if (animatedState === 'ENTERING') {
+		opacity = 1;
+	}
+	if (animatedState === 'ENTERED') {
+		opacity = 1;
+	}
+	if (animatedState === 'EXITING_START') {
+		opacity = 1;
+	}
+	if (animatedState === 'EXITING') {
+		opacity = 0;
+	}
+	if (animatedState === 'EXITED') {
+		opacity = 0;
+	}
+
+	return opacity;
+}

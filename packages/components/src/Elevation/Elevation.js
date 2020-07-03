@@ -6,7 +6,6 @@ import { ElevationView } from './Elevation.styles';
 function Elevation({
 	active,
 	borderRadius = 'inherit',
-	className,
 	focus,
 	hover,
 	isInteractive = true,

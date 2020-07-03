@@ -1,7 +1,8 @@
 import { css, styled } from '@g2/css';
 
-const baseStyles = ({ borderRadius, offset, theme, value }) => {
+const baseStyles = () => {
 	return css`
+		height: 100%;
 		overflow-y: auto;
 	`;
 };

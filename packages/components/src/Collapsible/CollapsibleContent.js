@@ -3,7 +3,11 @@ import React from 'react';
 import useMeasure from 'react-use-measure';
 import { DisclosureContent } from 'reakit/Disclosure';
 
-import { getAnimatedHeight, useCollapsibleContext } from './Collapsible.utils';
+import {
+	getAnimatedHeight,
+	getAnimatedOpacity,
+	useCollapsibleContext,
+} from './Collapsible.utils';
 import {
 	CollapsibleContentView,
 	InnerContentView,
@@ -19,9 +23,11 @@ function CollapsibleContent({ children, forwardedRef, ...props }) {
 	} = useCollapsibleContext();
 
 	const height = getAnimatedHeight({ animatedState, height: bounds.height });
+	const opacity = getAnimatedOpacity({ animatedState });
 
 	const style = {
 		height,
+		opacity,
 		transitionDuration: `${animationDuration}ms`,
 		transitionTimingFunction: animationTimingFunction,
 	};

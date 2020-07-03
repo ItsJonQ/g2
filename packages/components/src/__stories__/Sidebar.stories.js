@@ -1,11 +1,20 @@
+import { BaseView } from '@g2/css';
+import { ComponentsProvider } from '@g2/provider';
 import React from 'react';
 
-import { Grid, InputControl, Spacer, Text } from '../../index';
-import { Panel, PanelBody, PanelHeader } from '../index';
+import {
+	Grid,
+	InputControl,
+	Panel,
+	PanelBody,
+	PanelHeader,
+	Scrollable,
+	Spacer,
+	Text,
+} from '../index';
 
 export default {
-	component: Panel,
-	title: 'Panel',
+	title: 'Example/Sidebar',
 };
 
 const InputSuffix = (props) => (
@@ -19,9 +28,9 @@ const InputSuffix = (props) => (
 	/>
 );
 
-export const _default = () => {
+const PanelExample = () => {
 	return (
-		<Panel sx={{ width: 300 }} visible>
+		<Panel visible>
 			<PanelHeader title="Title" />
 			<PanelBody>
 				<Spacer>
@@ -51,5 +60,36 @@ export const _default = () => {
 				</Spacer>
 			</PanelBody>
 		</Panel>
+	);
+};
+
+export const _default = () => {
+	return (
+		<BaseView
+			sx={{
+				borderLeft: '1px solid #eee',
+				bottom: 0,
+				height: '100vh',
+				maxWidth: 300,
+				position: 'fixed',
+				right: 0,
+				top: 0,
+			}}
+		>
+			<Scrollable>
+				<ComponentsProvider
+					value={{
+						Grid: { spacing: 2 },
+						InputControl: { size: 'small' },
+					}}
+				>
+					<PanelExample />
+					<PanelExample />
+					<PanelExample />
+					<PanelExample />
+					<PanelExample />
+				</ComponentsProvider>
+			</Scrollable>
+		</BaseView>
 	);
 };

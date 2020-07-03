@@ -3,7 +3,7 @@ import React from 'react';
 import { BaseView, Grid, InputControl, Text } from '../index';
 
 export default {
-	title: 'Form',
+	title: 'Example/Form',
 };
 
 const Label = (props) => (

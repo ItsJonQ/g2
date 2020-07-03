@@ -18,9 +18,14 @@ function PanelHeader({ children, title, ...props }) {
 		<CollapsibleTrigger
 			as={Flex}
 			sx={{
+				'&:active': {
+					userSelect: 'none',
+				},
+				cursor: 'pointer',
 				outline: 'none',
 				px: 3,
 				py: 2,
+				transform: 'translateZ(0)',
 			}}
 			{...props}
 		>

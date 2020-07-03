@@ -33,6 +33,8 @@ export function componentsConnect(Component, namespace) {
 }
 
 function getStyledClassName(displayName) {
+	if (!displayName) return displayName;
+
 	return `wp-components-${displayName.replace(/ |_/g, '-').toLowerCase()}`;
 }
 

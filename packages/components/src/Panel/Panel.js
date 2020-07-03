@@ -1,10 +1,10 @@
 import { connect } from '@g2/provider';
 import React from 'react';
 
-import { Collapsible } from '../Collapsible';
+import { PanelView } from './Panel.styles';
 
 function Panel({ animated = true, ...props }) {
-	return <Collapsible animated={animated} {...props} />;
+	return <PanelView animated={animated} {...props} />;
 }
 
 export default connect(Panel);
