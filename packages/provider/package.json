@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@g2/css": "^0.0.1",
-    "@g2/utils": "^0.0.1"
+    "@g2/utils": "^0.0.1",
+    "deepmerge": "^4.2.2"
   }
 }

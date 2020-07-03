@@ -1,11 +1,7 @@
-import { is } from '@g2/utils';
+import { is, isEmpty } from '@g2/utils';
 
 import { baseTheme } from '../theme';
 import { createSpace, rgba } from '../themeHelpers';
-
-function isEmpty(o = {}) {
-	return Object.keys(o).length === 0;
-}
 
 export function mergeThemeProps(props = {}, theme) {
 	let mergedProps = props;

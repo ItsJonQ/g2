@@ -1,3 +1,4 @@
+import { isEmpty } from '@g2/utils';
 import basePresetTheme from '@theme-ui/preset-base';
 import colorize from 'tinycolor2';
 
@@ -237,7 +238,7 @@ export const baseTheme = {
 };
 
 export function getTheme(theme) {
-	if (!theme || Object.keys(theme).length === 0) {
+	if (!theme || isEmpty(theme)) {
 		return baseTheme;
 	}
 

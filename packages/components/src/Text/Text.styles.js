@@ -1,6 +1,6 @@
 import { css, styled } from '@g2/css';
 
-const baseStyles = ({ theme }) => {
+const baseStyles = ({ isBlock, theme }) => {
 	const { config } = theme;
 	const { isDark } = config;
 
@@ -10,6 +10,11 @@ const baseStyles = ({ theme }) => {
 		${isDark &&
 		css`
 			color: ${theme.colorTextDark};
+		`}
+
+		${isBlock &&
+		css`
+			display: block;
 		`}
 	`;
 };
@@ -26,7 +31,7 @@ const modifierStyles = ({ align, display, lineHeight, size, weight }) =>
 const variantStyles = ({ variant }) => {
 	switch (variant) {
 		case 'muted':
-			return css({ opacity: 0.6 });
+			return css({ opacity: 0.5 });
 		default:
 			return '';
 	}

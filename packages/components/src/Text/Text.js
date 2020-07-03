@@ -4,13 +4,21 @@ import React from 'react';
 
 import { TextView } from './Text.styles';
 
-function Text({ as = 'span', lineHeight = 1.2, size, weight = 400, ...props }) {
+function Text({
+	as = 'span',
+	isBlock = false,
+	lineHeight = 1.2,
+	size,
+	weight = 400,
+	...props
+}) {
 	const fontSize = useFontSize(size);
 
 	return (
 		<TextView
 			{...props}
 			as={as}
+			isBlock={isBlock}
 			lineHeight={lineHeight}
 			size={fontSize}
 			weight={weight}

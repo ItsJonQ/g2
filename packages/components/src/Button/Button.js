@@ -86,4 +86,4 @@ function Button({
 	);
 }
 
-export default connect(Button);
+export default connect(Button, 'Button');
