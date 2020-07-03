@@ -4,13 +4,13 @@ import React from 'react';
 import { Elevation } from '../index';
 
 export default {
-	title: 'Elevation',
 	component: Elevation,
+	title: 'Elevation',
 };
 
 export const _default = () => {
 	return (
-		<BaseView sx={{ position: 'relative', padding: 30 }}>
+		<BaseView sx={{ padding: 30, position: 'relative' }}>
 			<Elevation value={5} />
 		</BaseView>
 	);

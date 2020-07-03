@@ -24,7 +24,7 @@ const baseStyles = ({ borderRadius, offset, theme, value }) => {
 	`;
 };
 
-const interactiveStyles = ({ active, hover, focus, isInteractive, value }) => {
+const interactiveStyles = ({ active, focus, hover, isInteractive, value }) => {
 	let hoverValue = is.defined(hover) ? hover : value * 2;
 	let activeValue = is.defined(active) ? hover : value / 2;
 

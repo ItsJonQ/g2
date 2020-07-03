@@ -7,8 +7,8 @@ const BaseBox = withTheme(ThemeUIBox);
 
 BaseBox.defaultProps = {
 	__css: {
-		'-webkit-font-smoothing': 'antialiased',
-		'-moz-osx-font-smoothing': 'grayscale',
+		MozOsxFontSmoothing: 'grayscale',
+		WebkitFontSmoothing: 'antialiased',
 		fontFamily: 'body',
 		fontSize: 2,
 	},

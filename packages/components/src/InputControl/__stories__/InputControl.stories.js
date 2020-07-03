@@ -3,8 +3,8 @@ import React from 'react';
 import { InputControl } from '../index';
 
 export default {
-	title: 'InputControl',
 	component: InputControl,
+	title: 'InputControl',
 };
 
 export const _default = () => {

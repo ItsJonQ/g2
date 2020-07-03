@@ -4,8 +4,8 @@ import { BaseView } from '../../BaseView';
 import { Grid } from '../index';
 
 export default {
-	title: 'Grid',
 	component: Grid,
+	title: 'Grid',
 };
 
 const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;

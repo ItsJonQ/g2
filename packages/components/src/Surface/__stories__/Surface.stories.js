@@ -3,8 +3,8 @@ import React from 'react';
 import { Surface } from '../index';
 
 export default {
-	title: 'Surface',
 	component: Surface,
+	title: 'Surface',
 };
 
 export const _default = () => {

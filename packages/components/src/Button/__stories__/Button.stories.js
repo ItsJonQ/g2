@@ -1,4 +1,3 @@
-import emotionStyled from '@emotion/styled';
 import React from 'react';
 
 import { Spacer } from '../../Spacer';
@@ -7,8 +6,8 @@ import { Text } from '../../Text';
 import { Button } from '../index';
 
 export default {
-	title: 'Button',
 	component: Button,
+	title: 'Button',
 };
 
 const Buttons = (props) => {
@@ -50,11 +49,10 @@ const Buttons = (props) => {
 	);
 };
 
-const E = emotionStyled.div``;
 export const _default = () => {
 	return (
 		<>
-			<Buttons isLargeeee variant="primary" />
+			<Buttons variant="primary" />
 			<Buttons variant="secondary" />
 			<Buttons variant="tertiary" />
 			<Buttons isOutline variant="primary" />

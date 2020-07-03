@@ -11,7 +11,8 @@
     "prebuild": "npm run clean",
     "build": "lerna run build --stream --parallel",
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "lint": "zero lint",
+    "lint:eslint": "eslint \"./packages/**/*.js\" --fix",
+    "lint": "zero lint && npm run lint:eslint",
     "start": "npm run storybook",
     "dev": "zero test",
     "test": "zero test --coverage",
@@ -48,6 +49,8 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-react": "7.20.3",
     "eslint-plugin-simple-import-sort": "5.0.3",
+    "eslint-plugin-sort-destructure-keys": "1.3.5",
+    "eslint-plugin-sort-keys-fix": "1.1.1",
     "lerna": "^3.20.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"

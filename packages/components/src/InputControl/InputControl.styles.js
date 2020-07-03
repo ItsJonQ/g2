@@ -77,7 +77,7 @@ const seamlessStyles = ({ isSeamless, theme }) => {
 	`;
 };
 
-const focusSeamlessStyles = ({ isSeamless, isFocused, theme }) => {
+const focusSeamlessStyles = ({ isFocused, isSeamless, theme }) => {
 	if (!isSeamless && !isFocused) return '';
 	const { config } = theme;
 	const { isDark } = config;

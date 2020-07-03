@@ -5,7 +5,6 @@ import React from 'react';
 function Grid({
 	align,
 	columns = 2,
-	forwardedRef,
 	justify,
 	rows,
 	spacing = 3,
@@ -26,12 +25,11 @@ function Grid({
 			__sx={{
 				alignItems: align,
 				display: 'grid',
+				gap: spacing,
 				gridTemplateColumns,
 				gridTemplateRows,
-				gap: spacing,
 				justifyContent: justify,
 			}}
-			ref={forwardedRef}
 		/>
 	);
 }

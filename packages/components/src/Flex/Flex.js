@@ -9,7 +9,6 @@ export function Flex({
 	align = 'center',
 	children,
 	direction,
-	forwardedRef,
 	gap = 2,
 	justify = 'space-between',
 	...props
@@ -56,7 +55,6 @@ export function Flex({
 				flexDirection: direction,
 				justifyContent: justify,
 			}}
-			ref={forwardedRef}
 		>
 			{clonedChildren}
 		</BaseView>

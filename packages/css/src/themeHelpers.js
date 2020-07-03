@@ -3,7 +3,7 @@ import colorize from 'tinycolor2';
 import { toPx } from './utils';
 
 export function rgba(hexValue = '', alpha = 1) {
-	const { r, g, b } = colorize(hexValue).toRgb();
+	const { b, g, r } = colorize(hexValue).toRgb();
 	return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 

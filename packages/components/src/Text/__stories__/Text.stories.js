@@ -3,8 +3,8 @@ import React from 'react';
 import { Text } from '../index';
 
 export default {
-	title: 'Text',
 	component: Text,
+	title: 'Text',
 };
 
 export const _default = () => {

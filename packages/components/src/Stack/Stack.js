@@ -10,7 +10,6 @@ function Stack({
 	align = null,
 	children,
 	direction = 'column',
-	forwardedRef,
 	justify = 'space-between',
 	spacing = 2,
 	...props
@@ -46,13 +45,7 @@ function Stack({
 	});
 
 	return (
-		<Flex
-			{...props}
-			align={align}
-			direction={direction}
-			justify={justify}
-			ref={forwardedRef}
-		>
+		<Flex {...props} align={align} direction={direction} justify={justify}>
 			{clonedChildren}
 		</Flex>
 	);

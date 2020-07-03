@@ -14,7 +14,7 @@ const baseStyles = ({ theme }) => {
 	`;
 };
 
-const modifierStyles = ({ display, size, weight, lineHeight, align }) =>
+const modifierStyles = ({ align, display, lineHeight, size, weight }) =>
 	css({
 		display,
 		fontSize: size,

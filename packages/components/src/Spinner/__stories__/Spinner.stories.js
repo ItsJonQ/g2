@@ -3,8 +3,8 @@ import React from 'react';
 import { Spinner } from '../index';
 
 export default {
-	title: 'Spinner',
 	component: Spinner,
+	title: 'Spinner',
 };
 
 export const _default = () => {

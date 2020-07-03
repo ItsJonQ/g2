@@ -5,8 +5,8 @@ import { Spacer } from '../../Spacer';
 import { Stack, StackItem } from '../index';
 
 export default {
-	title: 'Stack',
 	component: Stack,
+	title: 'Stack',
 };
 
 const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;

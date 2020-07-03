@@ -3,8 +3,8 @@ import React from 'react';
 
 import FlexItem from './FlexItem';
 
-function FlexBlock({ forwardedRef, ...props }) {
-	return <FlexItem {...props} isBlock={true} ref={forwardedRef} />;
+function FlexBlock(props) {
+	return <FlexItem {...props} isBlock={true} />;
 }
 
 export default connect(FlexBlock);

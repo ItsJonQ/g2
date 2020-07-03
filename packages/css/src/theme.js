@@ -21,31 +21,31 @@ const ANIMATION_PROPS = {
 };
 
 const COLOR_PROPS = {
+	colorBodyBackground: '#FFFFFF',
+	colorBodyBackgroundDark: '#18191A',
 	colorBrand: COLOR_PALETTE.brand,
-	colorBrandHover: colorize(COLOR_PALETTE.brand).lighten(5).toHexString(),
 	colorBrandActive: colorize(COLOR_PALETTE.brand).darken(5).toHexString(),
 	colorBrandFocus: colorize(COLOR_PALETTE.brand).lighten(10).toHexString(),
+	colorBrandHover: colorize(COLOR_PALETTE.brand).lighten(5).toHexString(),
 	colorDestructive: COLOR_PALETTE.destructive,
-	colorDestructiveHover: colorize(COLOR_PALETTE.destructive)
-		.lighten(5)
-		.toHexString(),
 	colorDestructiveActive: colorize(COLOR_PALETTE.destructive)
 		.darken(5)
 		.toHexString(),
 	colorDestructiveFocus: colorize(COLOR_PALETTE.destructive)
 		.lighten(10)
 		.toHexString(),
+	colorDestructiveHover: colorize(COLOR_PALETTE.destructive)
+		.lighten(5)
+		.toHexString(),
 	colorText: '#050505',
 	colorTextDark: '#E4E6EB',
-	colorBodyBackground: '#FFFFFF',
-	colorBodyBackgroundDark: '#18191A',
 };
 
 const SURFACE_PROPS = {
-	surfaceBackgroundColor: '#fff',
-	surfaceBackgroundColorDark: '#292929',
 	surfaceBackgroundBackgroundColor: '#EFEFF3',
 	surfaceBackgroundBackgroundColorDark: COLOR_PROPS.colorBodyBackgroundDark,
+	surfaceBackgroundColor: '#fff',
+	surfaceBackgroundColorDark: '#292929',
 };
 
 const ELEVATION_PROPS = {
@@ -65,14 +65,14 @@ const FONT_PROPS = {
 
 const CONTROL_PROPS = {
 	controlBackgroundColor: '#F0F2F5',
+	controlBackgroundColorActive: colorize('#F0F2F5').darken(10).toHexString(),
+	controlBackgroundColorActiveDark: colorize('#3A3B3C')
+		.darken(5)
+		.toHexString(),
 	controlBackgroundColorDark: '#3A3B3C',
 	controlBackgroundColorHover: colorize('#F0F2F5').darken(5).toHexString(),
 	controlBackgroundColorHoverDark: colorize('#3A3B3C')
 		.lighten(5)
-		.toHexString(),
-	controlBackgroundColorActive: colorize('#F0F2F5').darken(10).toHexString(),
-	controlBackgroundColorActiveDark: colorize('#3A3B3C')
-		.darken(5)
 		.toHexString(),
 	controlBorderColor: '#DCDEE1',
 	controlBorderColorDark: '#4E4F50',
@@ -90,13 +90,13 @@ const CONTROL_PROPS = {
 
 const BUTTON_PROPS = {
 	buttonBackgroundColor: CONTROL_PROPS.controlBackgroundColor,
+	buttonBackgroundColorActive: CONTROL_PROPS.controlBackgroundColorActive,
+	buttonBackgroundColorActiveDark:
+		CONTROL_PROPS.controlBackgroundColorActiveDark,
 	buttonBackgroundColorDark: CONTROL_PROPS.controlBackgroundColorDark,
 	buttonBackgroundColorHover: CONTROL_PROPS.controlBackgroundColorHover,
 	buttonBackgroundColorHoverDark:
 		CONTROL_PROPS.controlBackgroundColorHoverDark,
-	buttonBackgroundColorActive: CONTROL_PROPS.controlBackgroundColorActive,
-	buttonBackgroundColorActiveDark:
-		CONTROL_PROPS.controlBackgroundColorActiveDark,
 	buttonBackgroundColorPrimary: COLOR_PROPS.colorBrand,
 	buttonBackgroundColorPrimaryActive: COLOR_PROPS.colorBrandActive,
 	buttonBackgroundColorPrimaryHover: COLOR_PROPS.colorBrandHover,
@@ -107,22 +107,22 @@ const BUTTON_PROPS = {
 	buttonBorderRadiusRound: CONTROL_PROPS.controlHeightXLarge,
 	buttonBorderStyle: 'solid',
 	buttonBorderWidth: '1px',
-	buttonTextColorPrimary: '#FFFFFF',
 	buttonBoxShadow: `0 0 0 ${CONTROL_PROPS.controlBoxShadowFocusSize} transparent`,
-	buttonBoxShadowFocus: `0 0 0 ${
-		CONTROL_PROPS.controlBoxShadowFocusSize
-	} ${colorize(COLOR_PROPS.colorBrand).setAlpha(0.4).toRgbString()}`,
 	buttonBoxShadowDestructiveFocus: `0 0 0 ${
 		CONTROL_PROPS.controlBoxShadowFocusSize
 	} ${colorize(COLOR_PROPS.colorDestructive).setAlpha(0.4).toRgbString()}`,
+	buttonBoxShadowFocus: `0 0 0 ${
+		CONTROL_PROPS.controlBoxShadowFocusSize
+	} ${colorize(COLOR_PROPS.colorBrand).setAlpha(0.4).toRgbString()}`,
+	buttonContentLineHeight: CONTROL_PROPS.controlLineHeight,
 	buttonFontWeight: 600,
 	buttonHeight: CONTROL_PROPS.controlHeight,
 	buttonHeightLarge: CONTROL_PROPS.controlHeightLarge,
 	buttonHeightSmall: CONTROL_PROPS.controlHeightSmall,
 	buttonLineHeight: CONTROL_PROPS.controlLineHeight,
-	buttonContentLineHeight: CONTROL_PROPS.controlLineHeight,
 	buttonPaddingX: toPx(GRID_PROPS.gridBase * 4),
 	buttonPaddingXNarrow: toPx(GRID_PROPS.gridBase * 2),
+	buttonTextColorPrimary: '#FFFFFF',
 	buttonTransform: 'scale(1)',
 	buttonTransformActive: 'scale(0.96)',
 	buttonTransitionDuration: ANIMATION_PROPS.transitionDuration,
@@ -193,19 +193,19 @@ const SPINNER_PROPS = {
 
 const SWITCH_PROPS = {
 	switchBackgroundColor: 'rgba(0, 0, 0, 0.1)',
-	switchBackgroundColorDark: 'rgba(255, 255, 255, 0.16)',
 	switchBackgroundColorActive: '#34c759',
-	switchToggleColor: '#fff',
-	switchToggleBoxShadow: '0px 1px 2px rgba(0, 0, 0, 0.3)',
-	switchToggleOffset: 2,
+	switchBackgroundColorDark: 'rgba(255, 255, 255, 0.16)',
 	switchHeight: CONTROL_PROPS.controlHeightXSmall,
 	switchHeightLarge: CONTROL_PROPS.controlHeightSmall,
 	switchHeightSmall: CONTROL_PROPS.controlHeightXXSmall,
+	switchToggleBoxShadow: '0px 1px 2px rgba(0, 0, 0, 0.3)',
+	switchToggleColor: '#fff',
+	switchToggleOffset: 2,
+	switchToggleTransitionDuration: ANIMATION_PROPS.transitionDurationFaster,
+	switchTransitionDuration: ANIMATION_PROPS.transitionDurationFaster,
 	switchWidth: '48px',
 	switchWidthLarge: '52px',
 	switchWidthSmall: '36px',
-	switchToggleTransitionDuration: ANIMATION_PROPS.transitionDurationFaster,
-	switchTransitionDuration: ANIMATION_PROPS.transitionDurationFaster,
 };
 
 export const THEME_PROPS = {

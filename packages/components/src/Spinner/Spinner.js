@@ -5,13 +5,7 @@ import React from 'react';
 import { BarsView, BarsWrapperView, ContainerView } from './Spinner.styles';
 import { BASE_SIZE, WRAPPER_SIZE } from './Spinner.utils';
 
-function Spinner({
-	color,
-	className,
-	size = BASE_SIZE,
-	forwardedRef,
-	...props
-}) {
+function Spinner({ color, className, size = BASE_SIZE, ...props }) {
 	const { config } = useTheme();
 	const { isDark } = config;
 
@@ -24,7 +18,7 @@ function Spinner({
 	const styles = { transform };
 
 	return (
-		<ContainerView ref={forwardedRef} size={size} {...props}>
+		<ContainerView size={size} {...props}>
 			<BarsWrapperView style={styles}>
 				<BarsView spinnerColor={spinnerColor}>
 					<div className="InnerBar1" />

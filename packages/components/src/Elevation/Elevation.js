@@ -8,7 +8,6 @@ function Elevation({
 	borderRadius = 'inherit',
 	className,
 	focus,
-	forwardedRef,
 	hover,
 	isInteractive = true,
 	offset = 0,
@@ -24,7 +23,6 @@ function Elevation({
 			hover={hover}
 			isInteractive={isInteractive}
 			offset={offset}
-			ref={forwardedRef}
 			value={value}
 		/>
 	);
