@@ -7,7 +7,7 @@ import { CollapsibleContent } from '../Collapsible';
 function PanelBody({ children, ...props }) {
 	return (
 		<CollapsibleContent {...props}>
-			<BaseView sx={{ px: 3, py: 2 }}>{children}</BaseView>
+			<BaseView sx={{ pb: 3, pt: 2, px: 3 }}>{children}</BaseView>
 		</CollapsibleContent>
 	);
 }

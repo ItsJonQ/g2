@@ -1,6 +1,7 @@
 // Base
 export * from './BaseView';
 // Components
+export * from './Button';
 export * from './Collapsible';
 export * from './Elevation';
 export * from './Icon';
