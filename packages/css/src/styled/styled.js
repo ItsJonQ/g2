@@ -32,7 +32,10 @@ function createStyled(tagName, options = {}) {
 			</ThemeContext.Consumer>
 		);
 
-		const StyledComponent = React.forwardRef(render);
+		const StyledComponent = hoistNonReactStatics(
+			React.forwardRef(render),
+			SC,
+		);
 
 		StyledComponent.displayName = is.defined(tagName?.displayName)
 			? tagName.displayName

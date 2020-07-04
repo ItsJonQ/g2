@@ -2,8 +2,8 @@ import { css, styled, toPx } from '@g2/css';
 
 const baseStyles = ({ size }) => css`
 	display: block;
-	user-select: none;
 	height: ${toPx(size)};
+	user-select: none;
 	width: ${toPx(size)};
 `;
 

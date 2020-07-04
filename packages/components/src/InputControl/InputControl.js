@@ -16,6 +16,7 @@ function InputControl({
 	justify,
 	onBlur = noop,
 	onFocus = noop,
+	onChange = noop,
 	prefix,
 	size = 'medium',
 	suffix,
@@ -56,6 +57,7 @@ function InputControl({
 			<InputView
 				as="input"
 				onBlur={handleOnBlur}
+				onChange={onChange}
 				onFocus={handleOnFocus}
 				ref={mergeRefs([inputRef, forwardedRef])}
 				size={size}

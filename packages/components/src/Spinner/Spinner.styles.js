@@ -69,54 +69,54 @@ const barsStyles = ({ spinnerColor, theme }) => {
 		}
 
 		.InnerBar1 {
-			transform: rotate(0deg) translate(0, -130%);
 			animation-delay: 0s;
+			transform: rotate(0deg) translate(0, -130%);
 		}
 
 		.InnerBar2 {
-			transform: rotate(30deg) translate(0, -130%);
 			animation-delay: -0.9167s;
+			transform: rotate(30deg) translate(0, -130%);
 		}
 
 		.InnerBar3 {
-			transform: rotate(60deg) translate(0, -130%);
 			animation-delay: -0.833s;
+			transform: rotate(60deg) translate(0, -130%);
 		}
 		.InnerBar4 {
-			transform: rotate(90deg) translate(0, -130%);
 			animation-delay: -0.7497s;
+			transform: rotate(90deg) translate(0, -130%);
 		}
 		.InnerBar5 {
-			transform: rotate(120deg) translate(0, -130%);
 			animation-delay: -0.667s;
+			transform: rotate(120deg) translate(0, -130%);
 		}
 		.InnerBar6 {
-			transform: rotate(150deg) translate(0, -130%);
 			animation-delay: -0.5837s;
+			transform: rotate(150deg) translate(0, -130%);
 		}
 		.InnerBar7 {
-			transform: rotate(180deg) translate(0, -130%);
 			animation-delay: -0.5s;
+			transform: rotate(180deg) translate(0, -130%);
 		}
 		.InnerBar8 {
-			transform: rotate(210deg) translate(0, -130%);
 			animation-delay: -0.4167s;
+			transform: rotate(210deg) translate(0, -130%);
 		}
 		.InnerBar9 {
-			transform: rotate(240deg) translate(0, -130%);
 			animation-delay: -0.333s;
+			transform: rotate(240deg) translate(0, -130%);
 		}
 		.InnerBar10 {
-			transform: rotate(270deg) translate(0, -130%);
 			animation-delay: -0.2497s;
+			transform: rotate(270deg) translate(0, -130%);
 		}
 		.InnerBar11 {
-			transform: rotate(300deg) translate(0, -130%);
 			animation-delay: -0.167s;
+			transform: rotate(300deg) translate(0, -130%);
 		}
 		.InnerBar12 {
-			transform: rotate(330deg) translate(0, -130%);
 			animation-delay: -0.0833s;
+			transform: rotate(330deg) translate(0, -130%);
 		}
 	`;
 };

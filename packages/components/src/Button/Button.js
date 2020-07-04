@@ -54,7 +54,7 @@ function Button({
 			{...props}
 		>
 			<LoadingOverlay isLoading={isLoading} />
-			<Flex as="span" gap={gap} justify={justify}>
+			<Flex as="span" gap={gap} justify={justify} sx={{ width: '100%' }}>
 				{prefix && (
 					<PrefixSuffixView as="span" isLoading={isLoading}>
 						{prefix}

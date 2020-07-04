@@ -1,12 +1,14 @@
 {
 	"extends": ["./node_modules/@itsjonq/zero/eslint.js", "prettier"],
 	"plugins": [
+		"better-styled-components",
 		"react",
 		"simple-import-sort",
 		"sort-keys-fix",
 		"sort-destructure-keys"
 	],
 	"rules": {
+		"better-styled-components/sort-declarations-alphabetically": 2,
 		"sort-destructure-keys/sort-destructure-keys": 2,
 		"sort-keys-fix/sort-keys-fix": "warn",
 		"sort-imports": "off",

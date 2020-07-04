@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Popover } from '../index';
+import { Button, CardBody, CardHeader } from '../../index';
+import { Popover, PopoverContent, PopoverTrigger } from '../index';
 
 export default {
 	component: Popover,
@@ -8,5 +9,13 @@ export default {
 };
 
 export const _default = () => {
-	return <Popover>Popover</Popover>;
+	return (
+		<Popover visible>
+			<PopoverTrigger as={Button}>Click</PopoverTrigger>
+			<PopoverContent>
+				<CardHeader>Go</CardHeader>
+				<CardBody>Stuff</CardBody>
+			</PopoverContent>
+		</Popover>
+	);
 };

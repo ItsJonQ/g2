@@ -1,14 +1,32 @@
-import { BaseView } from '@g2/css';
 import { connect } from '@g2/provider';
 import React from 'react';
+import { usePopoverState } from 'reakit/Popover';
 
-import { Card, CardBody } from '../Card';
+import { PopoverContext } from './Popover.utils';
 
-function Popover({ ...props }) {
+function Popover({
+	animated = true,
+	animationDuration = 160,
+	children,
+	modal = true,
+	placement,
+	visible,
+	...props
+}) {
+	const popover = usePopoverState({
+		animated: animated ? animationDuration : undefined,
+		modal,
+		placement,
+		visible,
+		...props,
+	});
+	const contextValue = {
+		popover,
+	};
 	return (
-		<Card {...props}>
-			<CardBody>Hello</CardBody>
-		</Card>
+		<PopoverContext.Provider value={contextValue}>
+			{children}
+		</PopoverContext.Provider>
 	);
 }
 

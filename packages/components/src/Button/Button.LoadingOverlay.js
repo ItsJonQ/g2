@@ -5,12 +5,12 @@ import { Flex } from '../Flex';
 import { Spinner } from '../Spinner';
 
 const LoadingOverlayView = styled(Flex)`
+	bottom: 0;
+	left: 0;
 	pointer-events: none;
 	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
 	right: 0;
+	top: 0;
 `;
 
 export function LoadingOverlay({ isLoading = false }) {

@@ -17,12 +17,12 @@ const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
 
 	return css`
 		background-color: ${config.inputBackgroundColor};
+		border-color: ${config.inputBorderColor};
 		border-radius: ${isRounded
 			? config.inputBorderRadiusRound
 			: config.inputBorderRadius};
-		border-width: ${config.inputBorderWidth};
 		border-style: ${config.inputBorderStyle};
-		border-color: ${config.inputBorderColor};
+		border-width: ${config.inputBorderWidth};
 		box-shadow: ${config.inputBoxShadow};
 		color: ${config.colorText};
 		display: flex;

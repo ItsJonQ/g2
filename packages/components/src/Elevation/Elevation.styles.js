@@ -9,9 +9,9 @@ const baseStyles = ({ borderRadius, offset, theme, value }) => {
 
 	return css`
 		background: transparent;
-		box-shadow: ${boxShadow};
 		border-radius: ${borderRadius};
 		bottom: ${toPx(offset)};
+		box-shadow: ${boxShadow};
 		display: block;
 		left: ${toPx(offset)};
 		margin: 0 !important;

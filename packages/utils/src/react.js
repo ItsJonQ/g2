@@ -6,6 +6,8 @@ export { default as mergeRefs } from 'react-merge-refs';
 export { default as hoistNonReactStatics } from 'hoist-non-react-statics';
 
 export function getValidChildren(children) {
+	if (is.string(children)) return [children];
+
 	return React.Children.toArray(children).filter((child) =>
 		React.isValidElement(child),
 	);

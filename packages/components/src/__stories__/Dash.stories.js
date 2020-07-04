@@ -4,14 +4,22 @@ import React from 'react';
 
 import {
 	Button,
+	CardBody,
+	CardHeader,
+	CardInnerBody,
 	Flex,
 	FlexItem,
 	Grid,
+	InputControl,
 	Panel,
 	PanelBody,
 	PanelHeader,
 	Placeholder,
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
 	Scrollable,
+	Spacer,
 	Text,
 } from '../index';
 
@@ -20,6 +28,49 @@ export default {
 };
 
 const Sidebar = connect(BaseView, 'Sidebar');
+
+const InputSuffix = (props) => (
+	<Text
+		isBlock
+		lineHeight={1}
+		size={11}
+		sx={{ userSelect: 'none' }}
+		variant="muted"
+		{...props}
+	/>
+);
+
+const ControlExample = () => {
+	return (
+		<>
+			<Spacer>
+				<Grid columns={2}>
+					<InputControl
+						suffix={<InputSuffix>W</InputSuffix>}
+						value={300}
+					/>
+					<InputControl
+						suffix={<InputSuffix>H</InputSuffix>}
+						value={200}
+					/>
+				</Grid>
+			</Spacer>
+			<Spacer>
+				<Grid columns={3}>
+					<InputControl suffix={<InputSuffix>X</InputSuffix>} />
+					<InputControl suffix={<InputSuffix>Y</InputSuffix>} />
+					<InputControl suffix={<InputSuffix>Z</InputSuffix>} />
+				</Grid>
+			</Spacer>
+			<Spacer>
+				<Grid templateColumns="2fr 1fr">
+					<InputControl />
+					<InputControl suffix={<InputSuffix>%</InputSuffix>} />
+				</Grid>
+			</Spacer>
+		</>
+	);
+};
 
 export const _default = () => {
 	return (
@@ -49,7 +100,74 @@ export const _default = () => {
 				<Scrollable>
 					<Panel visible>
 						<PanelHeader title="Panel" />
-						<PanelBody>Content</PanelBody>
+						<PanelBody>
+							<Spacer>
+								<Popover placement="left-start">
+									<PopoverTrigger
+										as={Button}
+										isBlock
+										isOutline
+									>
+										<Flex>
+											<Text weight={600}>Opacity</Text>
+											<Text>50%</Text>
+										</Flex>
+									</PopoverTrigger>
+									<PopoverContent>
+										<CardHeader>
+											<Text weight={600}>
+												Opacity Settings
+											</Text>
+										</CardHeader>
+										<CardBody sx={{ maxHeight: 300 }}>
+											<ControlExample />
+											<ControlExample />
+											<ControlExample />
+											<ControlExample />
+										</CardBody>
+									</PopoverContent>
+								</Popover>
+							</Spacer>
+							<Spacer>
+								<Popover placement="left-start">
+									<PopoverTrigger
+										as={Button}
+										isBlock
+										isOutline
+									>
+										<Flex>
+											<Text weight={600}>Filters</Text>
+											<Text>Custom</Text>
+										</Flex>
+									</PopoverTrigger>
+									<PopoverContent>
+										<CardHeader>
+											<Text weight={600}>
+												Opacity Settings
+											</Text>
+										</CardHeader>
+										<CardBody sx={{ maxHeight: 300 }}>
+											<ControlExample />
+											<ControlExample />
+											<CardInnerBody>
+												<Panel>
+													<PanelHeader title="Another Panel" />
+													<PanelBody>
+														<ControlExample />
+													</PanelBody>
+												</Panel>
+												<Panel>
+													<PanelHeader title="Another Panel" />
+													<PanelBody>
+														<ControlExample />
+													</PanelBody>
+												</Panel>
+											</CardInnerBody>
+										</CardBody>
+									</PopoverContent>
+								</Popover>
+							</Spacer>
+						</PanelBody>
 					</Panel>
 					<Panel>
 						<PanelHeader title="Another Panel" />

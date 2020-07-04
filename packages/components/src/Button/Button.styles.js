@@ -1,6 +1,6 @@
 import { css, styled } from '@g2/css';
 
-import { FlexItem } from '../Flex';
+import { FlexBlock, FlexItem } from '../Flex';
 
 const baseStyles = ({ isDestructive, theme }) => {
 	const { config } = theme;
@@ -12,8 +12,8 @@ const baseStyles = ({ isDestructive, theme }) => {
 		align-items: center;
 		appearance: none;
 		background-color: ${config.buttonBackgroundColor};
-		border-radius: ${config.buttonBorderRadius};
 		border-color: transparent;
+		border-radius: ${config.buttonBorderRadius};
 		border-style: solid;
 		border-width: ${config.buttonBorderWidth};
 		box-shadow: ${config.buttonBoxShadow};
@@ -27,8 +27,8 @@ const baseStyles = ({ isDestructive, theme }) => {
 		padding-left: ${config.buttonPaddingX};
 		padding-right: ${config.buttonPaddingX};
 		position: relative;
-		transform: ${config.buttonTransform};
 		text-decoration: none;
+		transform: ${config.buttonTransform};
 		user-select: none;
 		width: auto;
 
@@ -296,7 +296,7 @@ const loadingStyles = ({ isLoading }) => css`
 `}
 `;
 
-export const ContentView = styled(FlexItem)`
+export const ContentView = styled(FlexBlock)`
 	${contentStyles};
 	${loadingStyles};
 `;

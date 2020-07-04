@@ -6,9 +6,11 @@ import { CollapsibleTrigger, useCollapsibleContext } from '../Collapsible';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
+import { usePanelContext } from './Panel.utils';
 
 function PanelHeader({ children, title, ...props }) {
 	const { disclosure } = useCollapsibleContext();
+	const { isSeamless } = usePanelContext();
 	const { visible } = disclosure;
 
 	const content = title ? <Text weight={500}>{title}</Text> : children;
@@ -18,14 +20,10 @@ function PanelHeader({ children, title, ...props }) {
 		<CollapsibleTrigger
 			as={Flex}
 			sx={{
-				'&:active': {
-					userSelect: 'none',
-				},
 				cursor: 'pointer',
 				outline: 'none',
-				px: 3,
+				px: isSeamless ? null : 3,
 				py: 2,
-				transform: 'translateZ(0)',
 			}}
 			{...props}
 		>

@@ -2,14 +2,16 @@
 export * from './BaseView';
 // Components
 export * from './Button';
+export * from './Card';
 export * from './Collapsible';
 export * from './Elevation';
-export * from './Icon';
 export * from './Flex';
 export * from './Grid';
+export * from './Icon';
 export * from './InputControl';
 export * from './Panel';
 export * from './Placeholder';
+export * from './Popover';
 export * from './Scrollable';
 export * from './Spacer';
 export * from './Spinner';

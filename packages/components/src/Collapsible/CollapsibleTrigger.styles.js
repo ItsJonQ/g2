@@ -1,9 +1,14 @@
 import { styled } from '@g2/css';
+import { Disclosure } from 'reakit/Disclosure';
 
-export const CollapsibleTriggerView = styled.div`
+const CollapsibleTriggerBaseView = styled.div`
 	transform: translateZ(0);
 
 	&:active {
 		user-select: none;
 	}
 `;
+
+export const CollapsibleTriggerView = CollapsibleTriggerBaseView.withComponent(
+	Disclosure,
+);
