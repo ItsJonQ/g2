@@ -5,6 +5,10 @@ const baseStyles = ({ size }) => css`
 	height: ${toPx(size)};
 	user-select: none;
 	width: ${toPx(size)};
+
+	svg {
+		display: block;
+	}
 `;
 
 export const IconWrapper = styled.div`
