@@ -14,9 +14,10 @@ function DropdownMenu({
 	minWidth = 200,
 	...props
 }) {
-	const { menu } = useDropdownContext();
+	const { label, menu } = useDropdownContext();
 	return (
 		<Menu
+			aria-label={label}
 			{...props}
 			{...menu}
 			__sx={{ minWidth }}

@@ -8,6 +8,7 @@ function Popover({
 	animated = true,
 	animationDuration = 160,
 	children,
+	label,
 	modal = true,
 	placement,
 	visible,
@@ -20,7 +21,9 @@ function Popover({
 		visible,
 		...props,
 	});
+	const uniqueId = `popover-${popover.baseId}`;
 	const contextValue = {
+		label: label || uniqueId,
 		popover,
 	};
 	return (

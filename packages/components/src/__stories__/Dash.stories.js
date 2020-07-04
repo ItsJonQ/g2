@@ -25,6 +25,9 @@ import {
 	Scrollable,
 	Spacer,
 	Text,
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
 } from '../index';
 
 export default {
@@ -90,7 +93,14 @@ export const _default = () => {
 				<FlexItem>
 					<ComponentsProvider value={{ Button: { size: 'small' } }}>
 						<Flex justify="flex-start">
-							<Button>Save draft</Button>
+							<Tooltip>
+								<TooltipTrigger as={Button}>
+									Save draft
+								</TooltipTrigger>
+								<TooltipContent>
+									Saves, but does not publish
+								</TooltipContent>
+							</Tooltip>
 							<Button>Preview</Button>
 							<Dropdown placement="bottom-end">
 								<DropdownTrigger variant="primary">

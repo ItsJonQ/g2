@@ -1,6 +1,5 @@
 import { connect } from '@g2/provider';
 import React from 'react';
-import { Popover } from 'reakit/Popover';
 
 import { Card } from '../Card';
 import { usePopoverContext } from './Popover.utils';
@@ -13,19 +12,19 @@ function PopoverContent({
 	maxWidth = 360,
 	...props
 }) {
-	const { popover } = usePopoverContext();
+	const { label, popover } = usePopoverContext();
 
 	return (
-		<Popover
+		<PopoverContentView
+			aria-label={label}
 			{...props}
 			{...popover}
-			__sx={{ maxWidth }}
-			as={PopoverContentView}
+			sx={{ maxWidth }}
 		>
 			<Card elevation={elevation} ref={forwardedRef}>
 				{children}
 			</Card>
-		</Popover>
+		</PopoverContentView>
 	);
 }
 

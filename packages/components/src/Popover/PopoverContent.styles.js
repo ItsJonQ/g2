@@ -1,6 +1,7 @@
 import { styled } from '@g2/css';
+import { Popover } from 'reakit/Popover';
 
-export const PopoverContentView = styled.div`
+export const PopoverContentView = styled(Popover)`
 	opacity: 0;
 	opacity: 0;
 	outline: none;

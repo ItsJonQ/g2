@@ -10,6 +10,7 @@ function Dropdown({
 	animationTimingFunction = 'ease',
 	children,
 	gutter = 4,
+	label,
 	modal = true,
 	placement,
 	visible,
@@ -23,9 +24,11 @@ function Dropdown({
 		visible,
 		...props,
 	});
+	const uniqueId = `dropdown-${menu.baseId}`;
 	const contextValue = {
 		animationDuration,
 		animationTimingFunction,
+		label: label || uniqueId,
 		menu,
 	};
 
