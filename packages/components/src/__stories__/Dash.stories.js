@@ -7,6 +7,10 @@ import {
 	CardBody,
 	CardHeader,
 	CardInnerBody,
+	Dropdown,
+	DropdownMenu,
+	DropdownMenuItem,
+	DropdownTrigger,
 	Flex,
 	FlexItem,
 	Grid,
@@ -86,7 +90,19 @@ export const _default = () => {
 						<Flex justify="flex-start">
 							<Button>Save draft</Button>
 							<Button>Preview</Button>
-							<Button variant="primary">Publish</Button>
+							<Dropdown placement="bottom-end">
+								<DropdownTrigger variant="primary">
+									Publish
+								</DropdownTrigger>
+								<DropdownMenu>
+									<DropdownMenuItem>
+										As Public
+									</DropdownMenuItem>
+									<DropdownMenuItem>
+										As Private
+									</DropdownMenuItem>
+								</DropdownMenu>
+							</Dropdown>
 						</Flex>
 					</ComponentsProvider>
 				</FlexItem>

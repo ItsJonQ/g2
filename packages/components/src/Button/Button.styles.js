@@ -1,4 +1,4 @@
-import { css, styled } from '@g2/css';
+import { css, styled, themeCss } from '@g2/css';
 
 import { FlexBlock, FlexItem } from '../Flex';
 
@@ -320,10 +320,7 @@ export const PrefixSuffixView = styled(FlexItem)`
 `;
 
 const caretWrapperStyles = ({ theme }) => {
-	const { space } = theme?.utils;
-	return css`
-		margin-right: ${space(-1.5)};
-	`;
+	return themeCss({ mr: -2 })(theme);
 };
 
 export const CaretWrapperView = styled(FlexItem)`

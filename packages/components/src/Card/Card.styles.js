@@ -1,4 +1,4 @@
-import { css, styled } from '@g2/css';
+import { css, styled, themeCss } from '@g2/css';
 
 import { Flex } from '../Flex';
 import { Scrollable } from '../Scrollable';
@@ -10,12 +10,12 @@ export const CardView = styled(Surface)`
 `;
 
 const headerFooterStyles = ({ theme }) => {
-	const { utils } = theme;
-	const { space } = utils;
-
 	return css`
 		min-height: 48px;
-		padding: ${space(1)} ${space(3)};
+		${themeCss({
+			px: 3,
+			py: 1,
+		})(theme)}
 	`;
 };
 
@@ -32,12 +32,9 @@ const borderRadiusStyles = () => css`
 `;
 
 const bodyStyles = ({ theme }) => {
-	const { utils } = theme;
-	const { space } = utils;
-
-	return css`
-		padding: ${space(3)};
-	`;
+	return themeCss({
+		p: 3,
+	})(theme);
 };
 
 export const CardBodyView = styled(Scrollable)`

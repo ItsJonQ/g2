@@ -1,12 +1,22 @@
 import { ThemeContext } from '@emotion/core';
 import emotionStyled from '@emotion/styled';
 import { is } from '@g2/utils';
+import { css as themeCss, get } from '@theme-ui/css';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import React from 'react';
 
 import { Box } from '../components/Box';
 import { tags } from './tags';
 import { getDisplayName, mergeThemeProps } from './utils';
+
+const baseStyles = ({ theme }) => {
+	return themeCss({
+		MozOsxFontSmoothing: 'grayscale',
+		WebkitFontSmoothing: 'antialiased',
+		fontFamily: get(theme, 'fonts.body'),
+		fontSize: 2,
+	});
+};
 
 function createStyled(tagName, options = {}) {
 	const { props: extraProps } = options;
@@ -21,7 +31,7 @@ function createStyled(tagName, options = {}) {
 	}
 
 	return (...interpolatedProps) => {
-		const SC = emotionStyled(tagName)(...interpolatedProps);
+		const SC = emotionStyled(tagName)(baseStyles, ...interpolatedProps);
 
 		const render = (props, ref) => (
 			<ThemeContext.Consumer>

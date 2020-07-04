@@ -1,14 +1,8 @@
-import { css, styled } from '@g2/css';
-
-const baseStyles = () => {
-	return css`
-		height: 100%;
-		overflow-y: auto;
-	`;
-};
+import { styled } from '@g2/css';
 
 export const ScrollableView = styled.div`
-	${baseStyles};
+	height: 100%;
+	overflow-y: auto;
 `;
 
 export const ContentView = styled.div`
