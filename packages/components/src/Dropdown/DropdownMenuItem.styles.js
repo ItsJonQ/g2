@@ -1,4 +1,4 @@
-import { css, styled, themeCss } from '@g2/css';
+import { css, styled } from '@g2/css';
 import { MenuItem } from 'reakit/Menu';
 
 const baseStyles = ({ theme }) => {
@@ -22,13 +22,13 @@ const baseStyles = ({ theme }) => {
 			background: #eee;
 		}
 
-		${themeCss({
+		${theme.sx({
 			px: 3,
 			py: 2,
-		})(theme)}
+		})}
 	`;
 };
 
-export const DropdownMenuItemView = styled.div`
+export const DropdownMenuItemView = styled(MenuItem)`
 	${baseStyles};
-`.withComponent(MenuItem);
+`;

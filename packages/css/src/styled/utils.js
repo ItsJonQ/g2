@@ -1,7 +1,10 @@
 import { is, isEmpty } from '@g2/utils';
+import { css as themeCss, get } from '@theme-ui/css';
 
 import { baseTheme } from '../theme';
 import { colorize, rgba } from '../themeHelpers';
+
+const THEME_ENHANCED_NAMESPACE = '__styled_theme_enhanced__';
 
 export function mergeThemeProps(props = {}, theme) {
 	let mergedProps = props;
@@ -19,10 +22,19 @@ export function mergeThemeProps(props = {}, theme) {
 	return mergedProps;
 }
 
-export function enhanceThemeWithMixins(themeContext) {
+export function enhanceThemeWithMixins(themeContext = baseTheme) {
 	if (!themeContext) {
 		return themeContext;
 	}
+	if (themeContext[THEME_ENHANCED_NAMESPACE]) {
+		return themeContext;
+	}
+
+	themeContext[THEME_ENHANCED_NAMESPACE] = true;
+
+	themeContext.get = (props, fallback) => get(themeContext, props, fallback);
+	themeContext.sx = (props) => themeCss(props)(themeContext);
+
 	// Mixins
 	if (!themeContext.utils) {
 		themeContext.utils = {};

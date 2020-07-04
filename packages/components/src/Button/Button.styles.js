@@ -1,4 +1,4 @@
-import { css, styled, themeCss } from '@g2/css';
+import { css, styled } from '@g2/css';
 
 import { FlexBlock, FlexItem } from '../Flex';
 
@@ -6,7 +6,7 @@ const baseStyles = ({ isDestructive, theme }) => {
 	const { config } = theme;
 	const { isDark } = config;
 	const buttonTransition = `all ${config.buttonTransitionDuration}
-    ${config.buttonTransitionTimingFunction}`;
+	${config.buttonTransitionTimingFunction}`;
 
 	return css`
 		align-items: center;
@@ -320,7 +320,7 @@ export const PrefixSuffixView = styled(FlexItem)`
 `;
 
 const caretWrapperStyles = ({ theme }) => {
-	return themeCss({ mr: -2 })(theme);
+	return theme.sx({ mr: -2 });
 };
 
 export const CaretWrapperView = styled(FlexItem)`
