@@ -1,5 +1,7 @@
 import colorize from 'tinycolor2';
 
+import { getThemeValueForKey } from './hooks/theme';
+import { baseTheme } from './theme';
 import { toPx } from './utils';
 
 export function rgba(hexValue = '', alpha = 1) {
@@ -7,13 +9,16 @@ export function rgba(hexValue = '', alpha = 1) {
 	return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-/**
- * Creates a space mixin. Used to retrieve space values based on theme.gridBase.
- * @param {number} gridBase The base grid value.
- * @returns {Function} The space function.
- */
-export function createSpace(gridBase = 4) {
+export function createSpace(theme = baseTheme, gridBase = 4) {
 	return (value = 0) => {
-		return toPx(value * gridBase);
+		const themeValue = getThemeValueForKey(theme, 'space', value);
+		return themeValue ? toPx(themeValue) : toPx(value * gridBase);
+	};
+}
+
+export function createFontSizes(theme = baseTheme) {
+	return (value = 0) => {
+		const themeValue = getThemeValueForKey(theme, 'fontSizes', value);
+		return themeValue ? toPx(themeValue) : toPx(value);
 	};
 }

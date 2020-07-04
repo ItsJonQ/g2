@@ -23,6 +23,14 @@ export function useThemeContext() {
 	return enhancedThemeContext;
 }
 
+export function getThemeValueForKey(theme = baseTheme, key, value) {
+	const themeKeys = theme[key];
+	const values = is.array(themeKeys) ? themeKeys : [];
+	const valuesEntry = values[value];
+
+	return valuesEntry;
+}
+
 export function useTheme() {
 	return useThemeContext().theme;
 }
@@ -33,15 +41,14 @@ export function useResponsiveValue(values = 0) {
 }
 
 export function useResponsiveValueForKey(key, value) {
-	const themeKeys = useThemeContext()?.theme[key];
+	const theme = useThemeContext()?.theme;
 	const baseValue = useResponsiveValue(value);
 
 	if (is.undefined(value)) {
 		return value;
 	}
 
-	const values = is.array(themeKeys) ? themeKeys : [];
-	const valuesEntry = values[baseValue];
+	const valuesEntry = getThemeValueForKey(theme, key, value);
 
 	if (!is.defined(valuesEntry)) {
 		return toPx(baseValue);

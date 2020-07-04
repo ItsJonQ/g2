@@ -1,6 +1,5 @@
 import { connect } from '@g2/provider';
-import React from 'react';
-import useMeasure from 'react-use-measure';
+import React, { useRef } from 'react';
 import { DisclosureContent } from 'reakit/Disclosure';
 
 import {
@@ -14,7 +13,7 @@ import {
 } from './CollapsibleContent.styles';
 
 function CollapsibleContent({ children, forwardedRef, ...props }) {
-	const [ref, bounds] = useMeasure();
+	const innerRef = useRef();
 	const {
 		animatedState,
 		animationDuration,
@@ -22,7 +21,10 @@ function CollapsibleContent({ children, forwardedRef, ...props }) {
 		disclosure,
 	} = useCollapsibleContext();
 
-	const height = getAnimatedHeight({ animatedState, height: bounds.height });
+	const height = getAnimatedHeight({
+		animatedState,
+		height: innerRef.current?.clientHeight,
+	});
 	const opacity = getAnimatedOpacity({ animatedState });
 
 	const style = {
@@ -40,7 +42,7 @@ function CollapsibleContent({ children, forwardedRef, ...props }) {
 			{...disclosure}
 			style={style}
 		>
-			<InnerContentView ref={ref}>{children}</InnerContentView>
+			<InnerContentView ref={innerRef}>{children}</InnerContentView>
 		</DisclosureContent>
 	);
 }

@@ -230,6 +230,12 @@ export const THEME_PROPS = {
 export const BASE_THEME = {
 	...basePresetTheme,
 	config: THEME_PROPS,
+	fonts: {
+		body:
+			'Cabin, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+		heading: 'inherit',
+		monospace: 'Menlo, monospace',
+	},
 };
 
 export const baseTheme = {

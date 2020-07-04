@@ -15,17 +15,17 @@ const headerFooterStyles = ({ theme }) => {
 
 	return css`
 		min-height: 48px;
-		padding: ${space(1)} ${space(4)};
+		padding: ${space(1)} ${space(3)};
 	`;
 };
 
 const borderRadiusStyles = () => css`
-	&:first-child {
+	&:first-of-type {
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
 	}
 
-	&:last-child {
+	&:last-of-type {
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
 	}
@@ -36,7 +36,7 @@ const bodyStyles = ({ theme }) => {
 	const { space } = utils;
 
 	return css`
-		padding: ${space(4)};
+		padding: ${space(3)};
 	`;
 };
 

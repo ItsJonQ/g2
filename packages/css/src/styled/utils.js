@@ -1,7 +1,7 @@
 import { is, isEmpty } from '@g2/utils';
 
 import { baseTheme } from '../theme';
-import { createSpace, rgba } from '../themeHelpers';
+import { createFontSizes, createSpace, rgba } from '../themeHelpers';
 
 export function mergeThemeProps(props = {}, theme) {
 	let mergedProps = props;
@@ -28,7 +28,11 @@ export function enhanceThemeWithMixins(themeContext) {
 		themeContext.utils = {};
 	}
 	themeContext.utils.rgba = rgba;
-	themeContext.utils.space = createSpace(themeContext?.config?.gridBase);
+	themeContext.utils.space = createSpace(
+		themeContext,
+		themeContext?.config?.gridBase,
+	);
+	themeContext.utils.fontSize = createFontSizes(themeContext);
 
 	return themeContext;
 }
