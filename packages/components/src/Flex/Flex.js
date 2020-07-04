@@ -49,7 +49,7 @@ export function Flex({
 	return (
 		<BaseView
 			{...props}
-			__sx={{
+			__css={{
 				alignItems: align,
 				display: 'flex',
 				flexDirection: direction,

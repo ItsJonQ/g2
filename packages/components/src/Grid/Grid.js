@@ -22,7 +22,7 @@ function Grid({
 	return (
 		<BaseView
 			{...props}
-			__sx={{
+			__css={{
 				alignItems: align,
 				display: 'grid',
 				gap: spacing,

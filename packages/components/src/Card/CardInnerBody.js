@@ -3,7 +3,7 @@ import { connect } from '@g2/provider';
 import React from 'react';
 
 function CardInnerBody({ ...props }) {
-	return <BaseView __sx={{ mx: -3 }} {...props} />;
+	return <BaseView __css={{ mx: -3 }} {...props} />;
 }
 
 export default connect(CardInnerBody);

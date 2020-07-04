@@ -5,19 +5,20 @@ import { withTheme } from '../styled/withTheme';
 
 const BaseBox = withTheme(ThemeUIBox);
 
+const defaultCSS = {
+	MozOsxFontSmoothing: 'grayscale',
+	WebkitFontSmoothing: 'antialiased',
+	fontFamily: 'body',
+	fontSize: 2,
+};
+
 BaseBox.defaultProps = {
-	__css: {
-		MozOsxFontSmoothing: 'grayscale',
-		WebkitFontSmoothing: 'antialiased',
-		fontFamily: 'body',
-		fontSize: 2,
-	},
+	__css: defaultCSS,
 };
 
 const EnhancedBaseBox = (
 	{
 		// Internal default sx values
-		__sx: internalBaseStyles,
 		as = 'div',
 		children,
 		forwardedRef,
@@ -26,11 +27,12 @@ const EnhancedBaseBox = (
 	},
 	ref,
 ) => {
-	let mergedStyles;
-	if (internalBaseStyles && customStyles) {
-		mergedStyles = { ...internalBaseStyles, ...customStyles };
-	} else {
-		mergedStyles = customStyles || internalBaseStyles;
+	let mergedStyles = defaultCSS;
+	if (customStyles) {
+		mergedStyles = {
+			...defaultCSS,
+			...customStyles,
+		};
 	}
 
 	const componentProps = {

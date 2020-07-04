@@ -6,7 +6,7 @@ function FlexItem({ display, isBlock = false, ...props }) {
 	return (
 		<BaseView
 			{...props}
-			__sx={{
+			__css={{
 				display: isBlock ? 'block' : display,
 				flex: isBlock ? 1 : null,
 				maxWidth: '100%',

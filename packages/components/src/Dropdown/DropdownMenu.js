@@ -20,7 +20,7 @@ function DropdownMenu({
 			aria-label={label}
 			{...props}
 			{...menu}
-			__sx={{ minWidth }}
+			__css={{ minWidth }}
 			as={DropdownMenuView}
 			ref={forwardedRef}
 		>
