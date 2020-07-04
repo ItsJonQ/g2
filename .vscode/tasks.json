@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "remake",
+			"type": "shell",
+			"command": "npm",
+			"problemMatcher": ["$eslint-stylish"],
+			"args": [
+				"run",
+				"remake:component",
+				"--",
+				"--name",
+				"${input:componentName}"
+			]
+		}
+	],
+	"inputs": [
+		{
+			"id": "componentName",
+			"description": "Name your component.",
+			"default": "NewComponent",
+			"type": "promptString"
+		}
+	]
+}
