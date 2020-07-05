@@ -1,6 +1,7 @@
 import { cx } from '@g2/css';
 import { hoistNonReactStatics, is } from '@g2/utils';
 import kebabCase from 'lodash.kebabcase';
+import uniq from 'lodash.uniq';
 import React, { forwardRef } from 'react';
 
 import { useComponentsContext } from './ComponentsProvider';
@@ -9,7 +10,9 @@ const REACT_TYPEOF_KEY = '$$typeof';
 const CONNECT_NAMESPACE = '__wpComponentsKey__';
 
 export function componentsConnect(Component, namespace) {
-	const displayName = is.array(namespace) ? namespace[0] : namespace;
+	const displayName = is.array(namespace)
+		? namespace[0]
+		: namespace || Component.name;
 	const key = namespace || Component.name;
 
 	const render = ({ className, ...props }, forwardedRef) => {
@@ -52,7 +55,7 @@ export function componentsConnect(Component, namespace) {
 
 	const ConnectedComponent = forwardRef(render);
 
-	let mergedNamespace = Component[CONNECT_NAMESPACE] || [];
+	let mergedNamespace = Component[CONNECT_NAMESPACE] || [displayName];
 
 	if (is.array(namespace)) {
 		mergedNamespace = [...mergedNamespace, ...namespace];
@@ -62,7 +65,7 @@ export function componentsConnect(Component, namespace) {
 	}
 
 	ConnectedComponent.displayName = displayName;
-	ConnectedComponent[CONNECT_NAMESPACE] = mergedNamespace;
+	ConnectedComponent[CONNECT_NAMESPACE] = uniq(mergedNamespace);
 
 	return hoistNonReactStatics(ConnectedComponent, Component);
 }
@@ -77,7 +80,7 @@ function getStyledClassNameFromKey(key) {
 	if (!key) return '';
 
 	if (is.array(key)) {
-		return cx(key.map(getStyledClassName));
+		return cx(uniq(key).map(getStyledClassName));
 	}
 	if (is.string(key)) {
 		return getStyledClassName(key);

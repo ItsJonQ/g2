@@ -9,7 +9,7 @@ import { jsx } from 'theme-ui';
 
 import { Box } from '../components/Box';
 import { tags } from './tags';
-import { getDisplayName, mergeThemeProps } from './utils';
+import { getDisplayName, mergeThemeProps, RENDERED_BASE_STYLES } from './utils';
 
 const baseStyles = ({ theme }) => {
 	return themeCss({
@@ -25,7 +25,7 @@ const baseStyles = ({ theme }) => {
  * This will allow us to reliably pass in our enhanced theme object.
  */
 function createStyled(tagName, options = {}) {
-	const { props: extraProps } = options;
+	const { props: extraProps, pure = true } = options;
 	// Source:
 	// https://github.com/emotion-js/emotion/blob/master/packages/styled-base/src/index.js#L22
 	if (process.env.NODE_ENV !== 'production') {
@@ -41,6 +41,9 @@ function createStyled(tagName, options = {}) {
 	 * a styled.div`...`
 	 */
 	return (...interpolatedProps) => {
+		const styledArgs = tagName[RENDERED_BASE_STYLES]
+			? interpolatedProps
+			: [baseStyles, ...interpolatedProps];
 		/*
 		 * We're not mutating the original @emotion/styled function.
 		 * We'll be creating a styled component using the core library
@@ -51,7 +54,7 @@ function createStyled(tagName, options = {}) {
 		 * base style for all of our components (or anything rendered with
 		 * styled).
 		 */
-		const SC = emotionStyled(tagName)(baseStyles, ...interpolatedProps);
+		const SC = emotionStyled(tagName)(styledArgs);
 
 		/*
 		 * Theme support.
@@ -78,14 +81,16 @@ function createStyled(tagName, options = {}) {
 			</ThemeContext.Consumer>
 		);
 
+		const ForwardedComponent = React.forwardRef(render);
+		const RenderedComponent = pure
+			? React.memo(ForwardedComponent)
+			: ForwardedComponent;
+
 		/*
 		 * Hoisting statics from the @emotion/styled function to our
 		 * enhanced styled component.
 		 */
-		const StyledComponent = hoistNonReactStatics(
-			React.forwardRef(render),
-			SC,
-		);
+		const StyledComponent = hoistNonReactStatics(RenderedComponent, SC);
 
 		/*
 		 * Enhancing the displayName.
@@ -107,8 +112,12 @@ function createStyled(tagName, options = {}) {
 				nextOptions !== undefined
 					? { ...(options || {}), ...nextOptions }
 					: options,
-			)(baseStyles, ...interpolatedProps);
+			)(styledArgs);
 		};
+
+		if (!StyledComponent[RENDERED_BASE_STYLES]) {
+			StyledComponent[RENDERED_BASE_STYLES] = true;
+		}
 
 		if (!is.string(tagName)) {
 			/*

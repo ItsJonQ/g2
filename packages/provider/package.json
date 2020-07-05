@@ -18,6 +18,7 @@
     "@g2/css": "^0.0.1",
     "@g2/utils": "^0.0.1",
     "deepmerge": "^4.2.2",
+    "lodash.uniq": "^4.5.0",
     "lodash.kebabcase": "^4.1.1"
   }
 }

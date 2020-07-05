@@ -4,7 +4,8 @@ import { css as themeCss, get } from '@theme-ui/css';
 import { baseTheme } from '../theme';
 import { colorize, rgba } from '../themeHelpers';
 
-const THEME_ENHANCED_NAMESPACE = '__styled_theme_enhanced__';
+export const RENDERED_BASE_STYLES = '__styled_rendered_base__';
+export const THEME_ENHANCED_NAMESPACE = '__styled_theme_enhanced__';
 
 export function mergeThemeProps(props = {}, theme) {
 	let mergedProps = props;
