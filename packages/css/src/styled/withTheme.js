@@ -4,8 +4,10 @@ import React from 'react';
 
 import { mergeThemeProps } from './utils';
 
-export function withTheme(Component) {
-	let render = (props, ref) => {
+export function withTheme(Component, options = {}) {
+	const { pure = true } = options;
+
+	const render = (props, ref) => {
 		return (
 			<ThemeContext.Consumer>
 				{(theme) => {
@@ -15,7 +17,10 @@ export function withTheme(Component) {
 			</ThemeContext.Consumer>
 		);
 	};
-	let WithTheme = React.forwardRef(render);
+	const ForwardedComponent = React.forwardRef(render);
+	const WithTheme = pure
+		? React.memo(ForwardedComponent)
+		: ForwardedComponent;
 
 	WithTheme.displayName = `WithTheme(${getDisplayName(Component)})`;
 

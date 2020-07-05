@@ -9,7 +9,8 @@ import { useComponentsContext } from './ComponentsProvider';
 const REACT_TYPEOF_KEY = '$$typeof';
 const CONNECT_NAMESPACE = '__wpComponentsKey__';
 
-export function componentsConnect(Component, namespace) {
+export function componentsConnect(Component, namespace, options = {}) {
+	const { pure = true } = options;
 	const displayName = is.array(namespace)
 		? namespace[0]
 		: namespace || Component.name;
@@ -23,7 +24,7 @@ export function componentsConnect(Component, namespace) {
 		if (is.array(key)) {
 			contextProps = key.reduce((acc, k) => {
 				const v = context[k];
-				return v ? { ...acc, ...v } : acc;
+				return is.plainObject(v) ? { ...acc, ...v } : acc;
 			}, {});
 		} else {
 			contextProps = context[key];
@@ -53,7 +54,10 @@ export function componentsConnect(Component, namespace) {
 		);
 	};
 
-	const ConnectedComponent = forwardRef(render);
+	const ForwardedComponent = forwardRef(render);
+	const ConnectedComponent = pure
+		? React.memo(ForwardedComponent)
+		: ForwardedComponent;
 
 	let mergedNamespace = Component[CONNECT_NAMESPACE] || [displayName];
 

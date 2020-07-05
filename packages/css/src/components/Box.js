@@ -45,5 +45,7 @@ const EnhancedBaseBox = (
 
 EnhancedBaseBox[RENDERED_BASE_STYLES] = true;
 
-export const Box = forwardRef(EnhancedBaseBox);
+const ForwardedBox = forwardRef(EnhancedBaseBox);
+
+export const Box = React.memo(ForwardedBox);
 export const BaseView = Box;
