@@ -1,5 +1,5 @@
 import { BaseView, useResponsiveValue } from '@g2/css';
-import { connect } from '@g2/provider';
+import { connect, hasNamespace } from '@g2/provider';
 import { getValidChildren } from '@g2/utils';
 import React from 'react';
 
@@ -19,12 +19,13 @@ export function Flex({
 	const clonedChildren = validChildren.map((child, index) => {
 		const isColumn = _direction === 'column';
 		const isLast = index + 1 === validChildren.length;
-		const displayName = child?.type?.displayName;
 
 		const _key = child.key || index;
-		const _isFlexSubComponent = ['FlexBlock', 'FlexItem'].includes(
-			displayName,
-		);
+		const _isFlexSubComponent = hasNamespace(child, [
+			'FlexBlock',
+			'FlexItem',
+		]);
+
 		const _child = _isFlexSubComponent ? (
 			child
 		) : (

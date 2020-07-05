@@ -81,6 +81,15 @@ const ControlExample = () => {
 	);
 };
 
+const PublishPublicDropdownItem = connect(DropdownMenuItem, [
+	'PublishDropdownItem',
+	'PublishPublicDropdownItem',
+]);
+const PublishPrivateDropdownItem = connect(DropdownMenuItem, [
+	'PublishDropdownItem',
+	'PublishPrivateDropdownItem',
+]);
+
 export const _default = () => {
 	return (
 		<Grid align="flex-start" templateColumns={[null, null, '1fr 300px']}>
@@ -91,7 +100,23 @@ export const _default = () => {
 					</Text>
 				</FlexItem>
 				<FlexItem>
-					<ComponentsProvider value={{ Button: { size: 'small' } }}>
+					<ComponentsProvider
+						value={{
+							Button: { size: 'small' },
+							PublishPublicDropdownItem: {
+								renderChildren: ({ children }) => {
+									return (
+										<>
+											<Spacer>{children}</Spacer>
+											<Text variant="muted">
+												Subtitle
+											</Text>
+										</>
+									);
+								},
+							},
+						}}
+					>
 						<Flex justify="flex-start">
 							<Tooltip>
 								<TooltipTrigger as={Button}>
@@ -107,12 +132,12 @@ export const _default = () => {
 									Publish
 								</DropdownTrigger>
 								<DropdownMenu>
-									<DropdownMenuItem>
+									<PublishPublicDropdownItem>
 										As Public
-									</DropdownMenuItem>
-									<DropdownMenuItem>
+									</PublishPublicDropdownItem>
+									<PublishPrivateDropdownItem>
 										As Private
-									</DropdownMenuItem>
+									</PublishPrivateDropdownItem>
 								</DropdownMenu>
 							</Dropdown>
 						</Flex>
