@@ -72,9 +72,13 @@ function Example() {
 	return (
 		<>
 			<NavigationStackScreen>
-				<CardHeader>NavigationScreen</CardHeader>
+				<CardHeader>NavigationStack</CardHeader>
 				<CardBody>
-					<h1>Built with Reakit</h1>
+					<ul>
+						<li>Content is split by panes</li>
+						<li>Left to Right transitions</li>
+						<li>Auto height resize</li>
+					</ul>
 				</CardBody>
 				<CardFooter justify="flex-end">
 					<NavigationStackScreenNext>Next</NavigationStackScreenNext>
