@@ -10,6 +10,7 @@ export * from './Flex';
 export * from './Grid';
 export * from './Icon';
 export * from './InputControl';
+export * from './NavigationStack';
 export * from './Panel';
 export * from './Placeholder';
 export * from './Popover';

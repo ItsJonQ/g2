@@ -1,0 +1,42 @@
+import { BaseView } from '@g2/css';
+import { connect } from '@g2/provider';
+import { mergeRefs } from '@g2/utils';
+import React, { useRef } from 'react';
+import { TabPanel } from 'reakit/Tab';
+
+import {
+	useCurrentPanelNode,
+	useNavigationStackContext,
+} from './NavigationStack.utils';
+
+function NavigationStackScreen({ children, forwardedRef, ...props }) {
+	const { __isRendered, tab } = useNavigationStackContext();
+	const tabRef = useRef();
+	const nodeRef = useRef();
+	const currentPanelNode = useCurrentPanelNode();
+	const isCurrent = currentPanelNode === tabRef.current;
+
+	let opacity = 0;
+
+	if (__isRendered && isCurrent) {
+		opacity = 1;
+	}
+
+	return (
+		<TabPanel
+			{...tab}
+			{...props}
+			ref={mergeRefs([tabRef, forwardedRef])}
+			style={{
+				display: 'block',
+				opacity,
+				outline: 'none',
+				transition: 'opacity 300ms ease-in-out',
+			}}
+		>
+			<BaseView ref={nodeRef}>{children}</BaseView>
+		</TabPanel>
+	);
+}
+
+export default connect(NavigationStackScreen);
