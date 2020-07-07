@@ -1,5 +1,5 @@
 import { useResponsiveValue } from '@g2/css';
-import { connect } from '@g2/provider';
+import { connect, hasNamespace } from '@g2/provider';
 import { getValidChildren } from '@g2/utils';
 import React from 'react';
 
@@ -22,8 +22,13 @@ function Stack({
 		const isLast = index + 1 === validChildren.length;
 
 		const _key = child.key || index;
-		const _isStackItem = child?.type?.displayName === 'StackItem';
-		const _child = _isStackItem ? (
+		const _isSubComponent = hasNamespace(child, [
+			'StackItem',
+			'FlexItem',
+			'FlexBlock',
+		]);
+
+		const _child = _isSubComponent ? (
 			child
 		) : (
 			<StackItem key={_key}>{child}</StackItem>

@@ -57,6 +57,7 @@ const focusStyles = ({ isFocused, theme }) => {
 	return css`
 		border-color: ${config.inputBorderColorFocus};
 		box-shadow: ${config.inputBoxShadowFocus};
+		z-index: 1;
 	`;
 };
 
@@ -78,7 +79,6 @@ const seamlessStyles = ({ isSeamless, theme }) => {
 };
 
 const focusSeamlessStyles = ({ isFocused, isSeamless, theme }) => {
-	if (!isSeamless && !isFocused) return '';
 	const { config } = theme;
 	const { isDark } = config;
 
@@ -114,12 +114,33 @@ const darkStyles = ({ isFocused, isSeamless, theme }) => {
 	`;
 };
 
+const controlGroupStyles = ({ isFirst, isLast, isMiddle }) => {
+	if (isFirst) {
+		return css`
+			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+		`;
+	}
+	if (isMiddle) {
+		return css`
+			border-radius: 0;
+		`;
+	}
+	if (isLast) {
+		return css`
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		`;
+	}
+};
+
 export const RootView = styled(Flex)`
 	${baseStyles};
+	${focusSeamlessStyles};
 	${focusStyles};
 	${seamlessStyles};
-	${focusSeamlessStyles};
 	${darkStyles};
+	${controlGroupStyles};
 `;
 
 const sizeStyles = ({ size, theme }) => {
@@ -153,10 +174,10 @@ const inputStyles = ({ theme }) => {
 		color: currentColor;
 		display: block;
 		line-height: ${config.inputLineHeight};
-		min-height: ${config.inputHeight};
+		min-height: calc(${config.inputHeight} - 2px);
 		outline: none;
-		padding-bottom: ${config.inputPadding};
-		padding-top: ${config.inputPadding};
+		padding-bottom: calc(${config.inputPadding} - 1px);
+		padding-top: calc(${config.inputPadding} - 1px);
 		width: 100%;
 	`;
 };

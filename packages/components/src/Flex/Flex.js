@@ -6,6 +6,7 @@ import React from 'react';
 import FlexItem from './FlexItem';
 
 export function Flex({
+	_autoWrap = true,
 	align = 'center',
 	children,
 	direction,
@@ -26,11 +27,12 @@ export function Flex({
 			'FlexItem',
 		]);
 
-		const _child = _isFlexSubComponent ? (
-			child
-		) : (
-			<FlexItem key={_key}>{child}</FlexItem>
-		);
+		const _child =
+			!_isFlexSubComponent && _autoWrap ? (
+				<FlexItem key={_key}>{child}</FlexItem>
+			) : (
+				child
+			);
 
 		const childProps = {
 			display: isColumn ? 'block' : undefined,

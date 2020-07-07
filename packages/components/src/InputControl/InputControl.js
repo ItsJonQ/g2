@@ -3,7 +3,8 @@ import { connect } from '@g2/provider';
 import { mergeRefs, noop } from '@g2/utils';
 import React, { useRef, useState } from 'react';
 
-import { FlexItem } from '../Flex';
+import { useControlGroupContext } from '../ControlGroup';
+import { FlexBlock, FlexItem } from '../Flex';
 import { InputView, RootView } from './InputControl.styles';
 
 function InputControl({
@@ -24,6 +25,7 @@ function InputControl({
 }) {
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
+	const { isFirst, isLast, isMiddle } = useControlGroupContext();
 
 	const handleOnRootClick = () => {
 		inputRef.current.focus();
@@ -46,7 +48,10 @@ function InputControl({
 			align={align}
 			className={classes}
 			gap={gap}
+			isFirst={isFirst}
 			isFocused={isFocused}
+			isLast={isLast}
+			isMiddle={isMiddle}
 			isRounded={isRounded}
 			isSeamless={isSeamless}
 			justify={justify}
@@ -54,15 +59,17 @@ function InputControl({
 			size={size}
 		>
 			{prefix && <FlexItem>{prefix}</FlexItem>}
-			<InputView
-				as="input"
-				onBlur={handleOnBlur}
-				onChange={onChange}
-				onFocus={handleOnFocus}
-				ref={mergeRefs([inputRef, forwardedRef])}
-				size={size}
-				{...props}
-			/>
+			<FlexBlock>
+				<InputView
+					as="input"
+					onBlur={handleOnBlur}
+					onChange={onChange}
+					onFocus={handleOnFocus}
+					ref={mergeRefs([inputRef, forwardedRef])}
+					size={size}
+					{...props}
+				/>
+			</FlexBlock>
 			{suffix && <FlexItem>{suffix}</FlexItem>}
 		</RootView>
 	);

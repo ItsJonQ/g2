@@ -3,6 +3,7 @@ import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { Button as BaseButton } from 'reakit/Button';
 
+import { useControlGroupContext } from '../ControlGroup';
 import { Elevation } from '../Elevation';
 import { Flex } from '../Flex';
 import { Icon } from '../Icon';
@@ -39,6 +40,7 @@ function Button({
 	...props
 }) {
 	const as = href ? ButtonLinkView : ButtonView;
+	const { isFirst, isLast, isMiddle } = useControlGroupContext();
 
 	return (
 		<BaseButton
@@ -46,6 +48,9 @@ function Button({
 			as={as}
 			href={href}
 			isBlock={isBlock}
+			isFirst={isFirst}
+			isLast={isLast}
+			isMiddle={isMiddle}
 			isOutline={isOutline}
 			isRounded={isRounded}
 			ref={forwardedRef}

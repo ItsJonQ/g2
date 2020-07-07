@@ -4,6 +4,7 @@ export * from './BaseView';
 export * from './Button';
 export * from './Card';
 export * from './Collapsible';
+export * from './ControlGroup';
 export * from './Dropdown';
 export * from './Elevation';
 export * from './Flex';

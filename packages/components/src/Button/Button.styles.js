@@ -55,6 +55,10 @@ const baseStyles = ({ isDestructive, theme }) => {
 			opacity: 0.5;
 		}
 
+		&:focus {
+			z-index: 1;
+		}
+
 		svg {
 			display: block;
 		}
@@ -261,12 +265,33 @@ const variantStyles = ({ variant, ...props }) => {
 	}
 };
 
+const controlGroupStyles = ({ isFirst, isLast, isMiddle }) => {
+	if (isFirst) {
+		return css`
+			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+		`;
+	}
+	if (isMiddle) {
+		return css`
+			border-radius: 0;
+		`;
+	}
+	if (isLast) {
+		return css`
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		`;
+	}
+};
+
 export const ButtonView = styled.button`
 	${baseStyles};
 	${blockStyles};
 	${variantStyles};
 	${roundedStyles};
 	${sizeStyles};
+	${controlGroupStyles};
 `;
 
 export const ButtonLinkView = styled.a`
