@@ -1,4 +1,4 @@
-import { ThemeProvider, useTheme } from '@wp-g2/css';
+import { ThemeProvider, useTheme } from '@wp-g2/styled';
 import { isEmpty } from '@wp-g2/utils';
 import deepmerge from 'deepmerge';
 import React, { createContext, useContext } from 'react';

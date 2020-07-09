@@ -1,4 +1,4 @@
-import { css, styled } from '@wp-g2/css';
+import { css, styled } from '@wp-g2/styled';
 
 const baseStyles = ({ isBlock, theme }) => {
 	const { config } = theme;

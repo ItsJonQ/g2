@@ -1,4 +1,4 @@
-import { css, styled, toPx } from '@wp-g2/css';
+import { css, styled, toPx } from '@wp-g2/styled';
 
 const baseStyles = ({ size }) => css`
 	display: block;

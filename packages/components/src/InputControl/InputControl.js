@@ -1,5 +1,5 @@
-import { cx } from '@wp-g2/css';
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styled';
 import { mergeRefs, noop } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 

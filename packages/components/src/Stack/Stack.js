@@ -1,5 +1,5 @@
-import { useResponsiveValue } from '@wp-g2/css';
 import { connect, hasNamespace } from '@wp-g2/provider';
+import { useResponsiveValue } from '@wp-g2/styled';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
