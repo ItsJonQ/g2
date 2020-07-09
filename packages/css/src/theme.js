@@ -7,6 +7,7 @@ import { toPx } from './utils';
 const COLOR_PALETTE = {
 	brand: '#3958E8',
 	destructive: '#F6372B',
+	positive: '#108043',
 };
 
 const THEME_CONFIG_PROPS = {
@@ -36,6 +37,16 @@ const COLOR_PROPS = {
 		.lighten(10)
 		.toHexString(),
 	colorDestructiveHover: colorize(COLOR_PALETTE.destructive)
+		.lighten(5)
+		.toHexString(),
+	colorPositive: COLOR_PALETTE.positive,
+	colorPositiveActive: colorize(COLOR_PALETTE.positive)
+		.darken(5)
+		.toHexString(),
+	colorPositiveFocus: colorize(COLOR_PALETTE.positive)
+		.lighten(10)
+		.toHexString(),
+	colorPositiveHover: colorize(COLOR_PALETTE.positive)
 		.lighten(5)
 		.toHexString(),
 	colorText: '#050505',
@@ -241,6 +252,7 @@ export const BASE_THEME = {
 export const baseTheme = {
 	...BASE_THEME,
 	fontSizes: [11, 12, 14, 16, 20, 24, 32, 48, 64],
+	headingFontSizes: [48, 32, 24, 20, 16, 14],
 };
 
 export function getTheme(theme) {

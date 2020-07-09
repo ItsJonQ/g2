@@ -1,5 +1,7 @@
 import { css, styled } from '@wp-g2/styled';
 
+import { Truncate } from '../Truncate';
+
 const baseStyles = ({ isBlock, theme }) => {
 	const { config } = theme;
 	const { isDark } = config;
@@ -28,8 +30,15 @@ const modifierStyles = ({ align, display, lineHeight, size, weight }) =>
 		textAlign: align,
 	});
 
-const variantStyles = ({ variant }) => {
+const variantStyles = ({ theme, variant }) => {
+	const { config } = theme;
+	const { colorDestructive, colorPositive } = config;
+
 	switch (variant) {
+		case 'positive':
+			return css({ color: colorPositive });
+		case 'negative':
+			return css({ color: colorDestructive });
 		case 'muted':
 			return css({ opacity: 0.5 });
 		default:
@@ -38,6 +47,12 @@ const variantStyles = ({ variant }) => {
 };
 
 export const TextView = styled.span`
+	${baseStyles};
+	${modifierStyles};
+	${variantStyles};
+`;
+
+export const TruncateTextView = styled(Truncate)`
 	${baseStyles};
 	${modifierStyles};
 	${variantStyles};

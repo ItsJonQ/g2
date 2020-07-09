@@ -1,19 +1,15 @@
 import React from 'react';
 
-import { Text } from '../index';
+import { Truncate } from '../index';
 
 export default {
-	component: Text,
-	title: 'Text',
+	component: Truncate,
+	title: 'Truncate',
 };
 
 export const _default = () => {
-	return <Text>Hello</Text>;
-};
-
-export const truncate = () => {
 	return (
-		<Text numberOfLines={1} truncate>
+		<Truncate numberOfLines={2}>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
 			facilisis dictum tortor, eu tincidunt justo scelerisque tincidunt.
 			Duis semper dui id augue malesuada, ut feugiat nisi aliquam.
@@ -27,6 +23,6 @@ export const truncate = () => {
 			Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
 			posuere cubilia curae; Vivamus nec pretium velit, sit amet
 			consectetur ante. Praesent porttitor ex eget fermentum mattis.
-		</Text>
+		</Truncate>
 	);
 };
