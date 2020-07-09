@@ -16,7 +16,7 @@ function Grid({
 	const row = useResponsiveValue(rows);
 
 	const gridTemplateColumns =
-		templateColumns || (column && `repeat(${column}, 1fr)`);
+		templateColumns || (!!column && `repeat(${column}, 1fr)`);
 	const gridTemplateRows = templateRows || (rows && `repeat(${row}, 1fr)`);
 
 	return (
