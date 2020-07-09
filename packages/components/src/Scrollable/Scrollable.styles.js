@@ -1,6 +1,9 @@
 import { css, styled } from '@wp-g2/styled';
 
-export const scrollableScrollbarStyles = () => {
+export const scrollableScrollbarStyles = ({ theme }) => {
+	const { config } = theme;
+	const { isDark } = theme;
+
 	return css`
 		&::-webkit-scrollbar {
 			width: 12px;
@@ -25,6 +28,21 @@ export const scrollableScrollbarStyles = () => {
 		&:hover::-webkit-scrollbar-thumb {
 			background-color: rgba(0, 0, 0, 0.4);
 		}
+
+		${isDark &&
+		css`
+			&::-webkit-scrollbar-track {
+				background: rgba(255, 255, 255, 0.04);
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+
+			&:hover::-webkit-scrollbar-thumb {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+		`}
 	`;
 };
 

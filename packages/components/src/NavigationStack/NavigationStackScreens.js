@@ -12,6 +12,7 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 	const currentIndex = useCurrentPanelIndex();
 	const {
 		__isRendered,
+		autoHeight,
 		containerRef,
 		initialHeight,
 		tab,
@@ -33,11 +34,14 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 		<BaseView
 			{...props}
 			ref={mergeRefs([containerRef, forwardedRef])}
-			style={{ height: initialHeight }}
+			style={{ height: autoHeight ? initialHeight : '100%' }}
 			sx={{
 				overflow: 'hidden',
 				position: 'relative',
-				transition: __isRendered ? 'height 300ms ease-in-out' : null,
+				transition:
+					__isRendered && autoHeight
+						? 'height 300ms ease-in-out'
+						: null,
 			}}
 		>
 			<BaseView

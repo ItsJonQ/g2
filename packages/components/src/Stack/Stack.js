@@ -10,8 +10,8 @@ function Stack({
 	align = null,
 	children,
 	direction = 'column',
+	gap = 2,
 	justify = 'space-between',
-	spacing = 2,
 	...props
 }) {
 	const validChildren = getValidChildren(children);
@@ -40,9 +40,9 @@ function Stack({
 
 		if (!isLast) {
 			if (isColumn) {
-				childProps.mb = spacing;
+				childProps.mb = gap;
 			} else {
-				childProps.mr = spacing;
+				childProps.mr = gap;
 			}
 		}
 

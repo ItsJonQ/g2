@@ -1,95 +1,133 @@
-import { ComponentsProvider } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styled';
+import { ThemeProvider } from '@wp-g2/styled';
 import React from 'react';
 
 import {
+	BaseView,
+	CardBody,
+	CardFooter,
+	CardHeader,
 	Grid,
-	Panel,
-	PanelBody,
-	PanelHeader,
-	Scrollable,
+	Heading,
+	Menu,
+	MenuItem as BaseMenuItem,
+	NavigationStack,
+	NavigationStackNext,
+	NavigationStackPrevious,
+	NavigationStackScreen,
+	NavigationStackScreens,
 	Spacer,
+	Surface,
 	Text,
-	TextInput,
 } from '../index';
 
 export default {
 	title: 'Example/Sidebar',
 };
 
-const InputSuffix = (props) => (
-	<Text
-		isBlock
-		lineHeight={1}
-		size={11}
-		sx={{ userSelect: 'none' }}
-		variant="muted"
-		{...props}
-	/>
+const SidebarHeader = ({ children }) => {
+	return (
+		<Spacer my={3} px={2}>
+			{children}
+		</Spacer>
+	);
+};
+
+const MenuGroup = ({ children }) => {
+	return <Spacer mb={3}>{children}</Spacer>;
+};
+
+const MenuItem = ({ children, ...props }) => (
+	<BaseMenuItem {...props}>
+		<Text>{children}</Text>
+	</BaseMenuItem>
 );
 
-const PanelExample = () => {
+const MainScreen = () => {
 	return (
-		<Panel visible>
-			<PanelHeader title="Title" />
-			<PanelBody>
-				<Spacer>
-					<Grid columns={2}>
-						<TextInput
-							suffix={<InputSuffix>W</InputSuffix>}
-							value={300}
-						/>
-						<TextInput
-							suffix={<InputSuffix>H</InputSuffix>}
-							value={200}
-						/>
-					</Grid>
-				</Spacer>
-				<Spacer>
-					<Grid columns={3}>
-						<TextInput suffix={<InputSuffix>X</InputSuffix>} />
-						<TextInput suffix={<InputSuffix>Y</InputSuffix>} />
-						<TextInput suffix={<InputSuffix>Z</InputSuffix>} />
-					</Grid>
-				</Spacer>
-				<Spacer>
-					<Grid templateColumns="2fr 1fr">
-						<TextInput />
-						<TextInput suffix={<InputSuffix>%</InputSuffix>} />
-					</Grid>
-				</Spacer>
-			</PanelBody>
-		</Panel>
+		<Grid gap={0} sx={{ height: '100%' }} templateRows="auto 1fr">
+			<CardHeader>
+				<SidebarHeader>
+					<Spacer mb={1}>
+						<Heading size={4}>
+							The Swedish Museum of Modern Art
+						</Heading>
+					</Spacer>
+					<Text>Visit Site</Text>
+				</SidebarHeader>
+			</CardHeader>
+			<CardBody sx={{ px: 2, py: 4 }}>
+				<Menu>
+					<MenuGroup>
+						<MenuItem>Dashboard</MenuItem>
+					</MenuGroup>
+					<MenuGroup>
+						<MenuItem>Media</MenuItem>
+						<MenuItem>Posts</MenuItem>
+						<MenuItem as={NavigationStackNext}>Pages</MenuItem>
+						<MenuItem>Comments</MenuItem>
+					</MenuGroup>
+					<MenuGroup>
+						<MenuItem>Appearance</MenuItem>
+						<MenuItem>Plugins</MenuItem>
+						<MenuItem>Users</MenuItem>
+						<MenuItem>Tools</MenuItem>
+						<MenuItem>Settings</MenuItem>
+					</MenuGroup>
+				</Menu>
+			</CardBody>
+		</Grid>
+	);
+};
+
+const PagesScreen = () => {
+	return (
+		<>
+			<BaseView p={3}>
+				<SidebarHeader>
+					<NavigationStackPrevious>Main menu</NavigationStackPrevious>
+					<Spacer mb={0} pt={5}>
+						<Heading size={3}>Pages</Heading>
+					</Spacer>
+				</SidebarHeader>
+			</BaseView>
+			<CardBody sx={{ px: 2, py: 4 }}>
+				<Menu>
+					<MenuGroup>
+						<MenuItem>Media</MenuItem>
+						<MenuItem>Posts</MenuItem>
+						<MenuItem>Pages</MenuItem>
+						<MenuItem>Comments</MenuItem>
+					</MenuGroup>
+				</Menu>
+			</CardBody>
+		</>
+	);
+};
+
+const AdminSidebar = () => {
+	return (
+		<ThemeProvider theme={{ isDark: true }}>
+			<Surface sx={{ height: '100vh', width: 240 }}>
+				<Grid gap={0} sx={{ height: '100%' }} templateRows="1fr auto">
+					<NavigationStack autoHeight={false}>
+						<NavigationStackScreens>
+							<NavigationStackScreen>
+								<MainScreen />
+							</NavigationStackScreen>
+							<NavigationStackScreen>
+								<PagesScreen />
+							</NavigationStackScreen>
+						</NavigationStackScreens>
+					</NavigationStack>
+					<CardFooter>
+						<Text>User Details</Text>
+					</CardFooter>
+				</Grid>
+			</Surface>
+		</ThemeProvider>
 	);
 };
 
 export const _default = () => {
-	return (
-		<BaseView
-			sx={{
-				borderLeft: '1px solid #eee',
-				bottom: 0,
-				height: '100vh',
-				maxWidth: 300,
-				position: 'fixed',
-				right: 0,
-				top: 0,
-			}}
-		>
-			<Scrollable>
-				<ComponentsProvider
-					value={{
-						Grid: { spacing: 2 },
-						TextInput: { size: 'small' },
-					}}
-				>
-					<PanelExample />
-					<PanelExample />
-					<PanelExample />
-					<PanelExample />
-					<PanelExample />
-				</ComponentsProvider>
-			</Scrollable>
-		</BaseView>
-	);
+	return <AdminSidebar />;
 };

@@ -1,8 +1,10 @@
 import { styled } from '@wp-g2/styled';
 
-export const DropdownMenuView = styled.div`
+import { Menu } from '../Menu';
+
+export const DropdownMenuView = styled(Menu)`
+	min-width: 200px;
 	opacity: 0;
-	outline: none;
 	transform-origin: top center;
 	transition: opacity 120ms ease;
 

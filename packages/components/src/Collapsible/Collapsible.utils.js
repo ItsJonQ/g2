@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 
-export const CollapsibleContext = createContext();
+export const CollapsibleContext = createContext({});
 export const useCollapsibleContext = () => useContext(CollapsibleContext);
 
 const FPS_60 = 1000 / 16;

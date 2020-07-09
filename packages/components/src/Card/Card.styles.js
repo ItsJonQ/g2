@@ -42,14 +42,28 @@ export const CardBodyView = styled(Scrollable)`
 	${borderRadiusStyles};
 `;
 
+const borderColorStyles = ({ theme }) => {
+	const { config } = theme;
+	const { isDark } = config;
+	const borderColor = isDark
+		? config.cardSectionBorderColorDark
+		: config.cardSectionBorderColor;
+
+	return css`
+		border-color: ${borderColor};
+	`;
+};
+
 export const CardHeaderView = styled(Flex)`
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid;
+	${borderColorStyles};
 	${headerFooterStyles};
 	${borderRadiusStyles};
 `;
 
 export const CardFooterView = styled(Flex)`
-	border-top: 1px solid #eee;
+	border-top: 1px solid;
+	${borderColorStyles};
 	${headerFooterStyles};
 	${borderRadiusStyles};
 `;

@@ -1,11 +1,15 @@
 import { createContext, useContext } from 'react';
 
-export const NavigationStackContext = createContext();
+export const NavigationStackContext = createContext({});
 export const useNavigationStackContext = () =>
 	useContext(NavigationStackContext);
 
 export function usePositionPanels() {
-	const { __isRendered, containerRef } = useNavigationStackContext();
+	const {
+		__isRendered,
+		autoHeight,
+		containerRef,
+	} = useNavigationStackContext();
 	const currentPanelNode = useCurrentPanelNode();
 	const panelNodes = usePanelNodes();
 	const containerNode = containerRef.current;
@@ -16,7 +20,7 @@ export function usePositionPanels() {
 		panel.style.width = '100%';
 	});
 
-	if (__isRendered && containerNode) {
+	if (__isRendered && autoHeight && containerNode) {
 		containerNode.style.height = `${currentPanelNode?.children[0].clientHeight}px`;
 	}
 }

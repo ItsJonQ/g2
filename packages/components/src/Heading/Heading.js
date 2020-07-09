@@ -3,8 +3,8 @@ import React from 'react';
 
 import { HeadingView } from './Heading.styles';
 
-function Heading({ size = 3, ...props }) {
-	return <HeadingView size={size} {...props} />;
+function Heading({ as = 'div', size = 3, ...props }) {
+	return <HeadingView as={as} isBlock size={size} {...props} />;
 }
 
 export default connect(Heading);

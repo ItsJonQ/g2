@@ -4,10 +4,10 @@ import React from 'react';
 
 function Grid({
 	align,
-	columns = 2,
+	columns,
+	gap = 3,
 	justify,
 	rows,
-	spacing = 3,
 	templateColumns,
 	templateRows,
 	...props
@@ -17,7 +17,7 @@ function Grid({
 
 	const gridTemplateColumns =
 		templateColumns || (!!column && `repeat(${column}, 1fr)`);
-	const gridTemplateRows = templateRows || (rows && `repeat(${row}, 1fr)`);
+	const gridTemplateRows = templateRows || (!!rows && `repeat(${row}, 1fr)`);
 
 	return (
 		<BaseView
@@ -25,7 +25,7 @@ function Grid({
 			__css={{
 				alignItems: align,
 				display: 'grid',
-				gap: spacing,
+				gap,
 				gridTemplateColumns,
 				gridTemplateRows,
 				justifyContent: justify,

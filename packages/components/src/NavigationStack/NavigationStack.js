@@ -14,7 +14,12 @@ function NavigationStackController() {
 	return null;
 }
 
-function NavigationStack({ children, initialHeight = 200, loop = false }) {
+function NavigationStack({
+	autoHeight = true,
+	children,
+	initialHeight = 200,
+	loop = false,
+}) {
 	const tab = useTabState({ loop });
 	const [__isRendered, setIsRendered] = useState(false);
 	const containerRef = useRef();
@@ -27,7 +32,9 @@ function NavigationStack({ children, initialHeight = 200, loop = false }) {
 
 	const contextValue = {
 		__isRendered,
+		autoHeight,
 		containerRef,
+		initialHeight,
 		tab,
 	};
 

@@ -198,6 +198,13 @@ const INPUT_PROPS = {
 	inputTransition: `all ${ANIMATION_PROPS.transitionDurationFast} ${ANIMATION_PROPS.transitionTimingFunction}`,
 };
 
+const MENU_PROPS = {
+	menuActiveBackgroundColor: 'rgba(0, 0, 0, 0.1)',
+	menuActiveBackgroundColorDark: 'rgba(255, 255, 255, 0.1)',
+	menuHoverBackgroundColor: 'rgba(0, 0, 0, 0.05)',
+	menuHoverBackgroundColorDark: 'rgba(255, 255, 255, 0.05)',
+};
+
 const SPINNER_PROPS = {
 	spinnerAnimationDuration: '1000ms',
 	spinnerOpacity: 0.6,
@@ -234,6 +241,7 @@ export const THEME_PROPS = {
 	...GRID_PROPS,
 	...ICON_CONTROL_PROPS,
 	...INPUT_PROPS,
+	...MENU_PROPS,
 	...SPINNER_PROPS,
 	...SWITCH_PROPS,
 };

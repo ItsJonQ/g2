@@ -1,6 +1,5 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { Menu } from 'reakit/Menu';
 
 import { Card } from '../Card';
 import { Scrollable } from '../Scrollable';
@@ -16,23 +15,22 @@ function DropdownMenu({
 }) {
 	const { label, menu } = useDropdownContext();
 	return (
-		<Menu
+		<DropdownMenuView
 			aria-label={label}
 			{...props}
-			{...menu}
-			__css={{ minWidth }}
-			as={DropdownMenuView}
+			css={{ minWidth }}
+			menu={menu}
 			ref={forwardedRef}
 		>
 			<Card
+				css={{ maxHeight: '50vh', minHeight: 24 }}
 				elevation={elevation}
-				sx={{ maxHeight: '50vh', minHeight: 24 }}
 			>
 				<Scrollable sx={{ maxHeight: '50vh', px: 1, py: 1 }}>
 					{children}
 				</Scrollable>
 			</Card>
-		</Menu>
+		</DropdownMenuView>
 	);
 }
 

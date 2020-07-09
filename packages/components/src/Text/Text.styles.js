@@ -11,7 +11,7 @@ const baseStyles = ({ isBlock, theme }) => {
 
 		${isDark &&
 		css`
-			color: ${theme.colorTextDark};
+			color: ${config.colorTextDark};
 		`}
 
 		${isBlock &&
