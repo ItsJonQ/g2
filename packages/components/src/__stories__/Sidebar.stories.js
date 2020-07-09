@@ -4,13 +4,13 @@ import React from 'react';
 
 import {
 	Grid,
-	InputControl,
 	Panel,
 	PanelBody,
 	PanelHeader,
 	Scrollable,
 	Spacer,
 	Text,
+	TextInput,
 } from '../index';
 
 export default {
@@ -35,11 +35,11 @@ const PanelExample = () => {
 			<PanelBody>
 				<Spacer>
 					<Grid columns={2}>
-						<InputControl
+						<TextInput
 							suffix={<InputSuffix>W</InputSuffix>}
 							value={300}
 						/>
-						<InputControl
+						<TextInput
 							suffix={<InputSuffix>H</InputSuffix>}
 							value={200}
 						/>
@@ -47,15 +47,15 @@ const PanelExample = () => {
 				</Spacer>
 				<Spacer>
 					<Grid columns={3}>
-						<InputControl suffix={<InputSuffix>X</InputSuffix>} />
-						<InputControl suffix={<InputSuffix>Y</InputSuffix>} />
-						<InputControl suffix={<InputSuffix>Z</InputSuffix>} />
+						<TextInput suffix={<InputSuffix>X</InputSuffix>} />
+						<TextInput suffix={<InputSuffix>Y</InputSuffix>} />
+						<TextInput suffix={<InputSuffix>Z</InputSuffix>} />
 					</Grid>
 				</Spacer>
 				<Spacer>
 					<Grid templateColumns="2fr 1fr">
-						<InputControl />
-						<InputControl suffix={<InputSuffix>%</InputSuffix>} />
+						<TextInput />
+						<TextInput suffix={<InputSuffix>%</InputSuffix>} />
 					</Grid>
 				</Spacer>
 			</PanelBody>
@@ -80,7 +80,7 @@ export const _default = () => {
 				<ComponentsProvider
 					value={{
 						Grid: { spacing: 2 },
-						InputControl: { size: 'small' },
+						TextInput: { size: 'small' },
 					}}
 				>
 					<PanelExample />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BaseView, Grid, InputControl, Text } from '../index';
+import { BaseView, Grid, Text, TextInput } from '../index';
 
 export default {
 	title: 'Example/Form',
@@ -21,23 +21,23 @@ export const _default = () => {
 		<BaseView m="auto" sx={{ maxWidth: 300 }}>
 			<Label>
 				<Text>Label</Text>
-				<InputControl />
+				<TextInput />
 			</Label>
 			<Label>
 				<Text>Label</Text>
-				<InputControl />
+				<TextInput />
 			</Label>
 			<Label>
 				<Text>Label</Text>
-				<InputControl />
+				<TextInput />
 			</Label>
 			<Label>
 				<Text>Label</Text>
-				<InputControl />
+				<TextInput />
 			</Label>
 			<Label>
 				<Text>Label</Text>
-				<InputControl />
+				<TextInput />
 			</Label>
 		</BaseView>
 	);

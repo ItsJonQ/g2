@@ -5,19 +5,21 @@ import React, { useRef, useState } from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { FlexBlock, FlexItem } from '../Flex';
-import { InputView, RootView } from './InputControl.styles';
+import { InputView, RootView, TextAreaView } from './TextInput.styles';
 
-function InputControl({
+function TextInput({
 	align,
 	className,
 	forwardedRef,
 	gap = 2.5,
 	isRounded = false,
 	isSeamless = false,
+	isResizable = false,
 	justify,
 	onBlur = noop,
 	onFocus = noop,
 	onChange = noop,
+	multiline = false,
 	prefix,
 	size = 'medium',
 	suffix,
@@ -42,6 +44,7 @@ function InputControl({
 	};
 
 	const classes = cx(className);
+	const InputComponent = multiline ? TextAreaView : InputView;
 
 	return (
 		<RootView
@@ -55,13 +58,14 @@ function InputControl({
 			isRounded={isRounded}
 			isSeamless={isSeamless}
 			justify={justify}
+			multiline={multiline}
 			onClick={handleOnRootClick}
 			size={size}
 		>
 			{prefix && <FlexItem>{prefix}</FlexItem>}
 			<FlexBlock>
-				<InputView
-					as="input"
+				<InputComponent
+					isResizable={isResizable}
 					onBlur={handleOnBlur}
 					onChange={onChange}
 					onFocus={handleOnFocus}
@@ -75,4 +79,4 @@ function InputControl({
 	);
 }
 
-export default connect(InputControl);
+export default connect(TextInput);

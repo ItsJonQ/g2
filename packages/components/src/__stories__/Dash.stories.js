@@ -16,7 +16,6 @@ import {
 	Flex,
 	FlexItem,
 	Grid,
-	InputControl,
 	NavigationStack,
 	NavigationStackNext,
 	NavigationStackPrevious,
@@ -32,6 +31,7 @@ import {
 	Scrollable,
 	Spacer,
 	Text,
+	TextInput,
 	Tooltip,
 	TooltipContent,
 	TooltipTrigger,
@@ -59,12 +59,12 @@ const ControlExample = () => {
 		<>
 			<Spacer>
 				<Grid columns={2}>
-					<InputControl
+					<TextInput
 						prefix={<InputSuffix>W</InputSuffix>}
 						suffix={<InputSuffix>PX</InputSuffix>}
 						value={300}
 					/>
-					<InputControl
+					<TextInput
 						prefix={<InputSuffix>H</InputSuffix>}
 						suffix={<InputSuffix>PX</InputSuffix>}
 						value={200}
@@ -73,15 +73,15 @@ const ControlExample = () => {
 			</Spacer>
 			<Spacer>
 				<Grid columns={3}>
-					<InputControl prefix={<InputSuffix>X</InputSuffix>} />
-					<InputControl prefix={<InputSuffix>Y</InputSuffix>} />
-					<InputControl prefix={<InputSuffix>Z</InputSuffix>} />
+					<TextInput prefix={<InputSuffix>X</InputSuffix>} />
+					<TextInput prefix={<InputSuffix>Y</InputSuffix>} />
+					<TextInput prefix={<InputSuffix>Z</InputSuffix>} />
 				</Grid>
 			</Spacer>
 			<Spacer>
 				<Grid templateColumns="2fr 1fr">
-					<InputControl />
-					<InputControl suffix={<InputSuffix>%</InputSuffix>} />
+					<TextInput />
+					<TextInput suffix={<InputSuffix>%</InputSuffix>} />
 				</Grid>
 			</Spacer>
 		</>

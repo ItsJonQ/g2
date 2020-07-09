@@ -1,8 +1,10 @@
 import { css, styled } from '@wp-g2/styled';
+import TextareaAutosize from 'react-textarea-autosize';
 
 import { Flex } from '../Flex';
+import { scrollableScrollbarStyles } from '../Scrollable';
 
-const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
+const baseStyles = ({ isFocused, isRounded, isSeamless, multiline, theme }) => {
 	const { config } = theme;
 
 	const hoverStyles =
@@ -14,6 +16,9 @@ const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
 				border-color: ${config.inputBackgroundColorHover};
 			}
 		`;
+
+	const paddingLeft = multiline ? 0 : config.inputPaddingX;
+	const paddingRight = multiline ? 0 : config.inputPaddingX;
 
 	return css`
 		background-color: ${config.inputBackgroundColor};
@@ -30,8 +35,8 @@ const baseStyles = ({ isFocused, isRounded, isSeamless, theme }) => {
 		font-family: ${config.inputFontFamily};
 		font-size: ${config.inputFontSize};
 		outline: none;
-		padding-left: ${config.inputPaddingX};
-		padding-right: ${config.inputPaddingX};
+		padding-left: ${paddingLeft};
+		padding-right: ${paddingRight};
 		position: relative;
 		transition: ${config.inputTransition};
 		width: 100%;
@@ -182,7 +187,28 @@ const inputStyles = ({ theme }) => {
 	`;
 };
 
-export const InputView = styled.div`
+export const InputView = styled.input`
 	${inputStyles};
 	${sizeStyles};
+`;
+
+const textAreaStyles = ({ isResizable, theme }) => {
+	const { config } = theme;
+	const resize = isResizable ? 'vertical' : 'none';
+
+	return css`
+		padding-left: ${config.inputPaddingX};
+		padding-right: ${config.inputPaddingX};
+		resize: ${resize};
+	`;
+};
+
+export const TextAreaView = styled(TextareaAutosize)`
+	box-sizing: border-box;
+	margin: 0;
+
+	${inputStyles};
+	${sizeStyles};
+	${textAreaStyles};
+	${scrollableScrollbarStyles};
 `;

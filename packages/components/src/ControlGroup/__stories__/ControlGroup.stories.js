@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, InputControl } from '../../index';
+import { Button, TextInput } from '../../index';
 import { ControlGroup, ControlGroupItem } from '../index';
 
 export default {
@@ -12,10 +12,10 @@ export const _default = () => {
 	return (
 		<ControlGroup templateColumns="1fr 100px">
 			<ControlGroupItem isBlock>
-				<InputControl placeholder="First name" />
+				<TextInput placeholder="First name" />
 			</ControlGroupItem>
 			<ControlGroupItem isBlock>
-				<InputControl placeholder="Last name" />
+				<TextInput placeholder="Last name" />
 			</ControlGroupItem>
 			<ControlGroupItem>
 				<Button isOutline variant="primary">

@@ -11,7 +11,7 @@ export * from './Flex';
 export * from './Grid';
 export * from './Heading';
 export * from './Icon';
-export * from './InputControl';
+export * from './TextInput';
 export * from './NavigationStack';
 export * from './Panel';
 export * from './Placeholder';
