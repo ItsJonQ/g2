@@ -1,3 +1,3 @@
-import { styled } from '@g2/css';
+import { styled } from '@wp-g2/css';
 
 export const NavigationStackView = styled.div``;

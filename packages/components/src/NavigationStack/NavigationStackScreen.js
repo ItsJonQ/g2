@@ -1,6 +1,6 @@
-import { BaseView } from '@g2/css';
-import { connect } from '@g2/provider';
-import { mergeRefs } from '@g2/utils';
+import { BaseView } from '@wp-g2/css';
+import { connect } from '@wp-g2/provider';
+import { mergeRefs } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 import { TabPanel } from 'reakit/Tab';
 

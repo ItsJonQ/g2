@@ -1,5 +1,5 @@
-import { is, isEmpty } from '@g2/utils';
 import { css as themeCss, get } from '@theme-ui/css';
+import { is, isEmpty } from '@wp-g2/utils';
 
 import { baseTheme } from '../theme';
 import { colorize, rgba } from '../themeHelpers';

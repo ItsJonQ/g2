@@ -1,4 +1,4 @@
-import { ComponentsProvider, connect } from '@g2/provider';
+import { ComponentsProvider, connect } from '@wp-g2/provider';
 import React from 'react';
 
 import { BaseView, Text } from '../index';

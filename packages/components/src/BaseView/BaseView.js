@@ -1,3 +1,3 @@
-import { BaseView } from '@g2/css';
+import { BaseView } from '@wp-g2/css';
 
 export default BaseView;

@@ -1,4 +1,4 @@
-import { connect } from '@g2/provider';
+import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { Tab, TabList } from 'reakit/Tab';
 import { VisuallyHidden } from 'reakit/VisuallyHidden';

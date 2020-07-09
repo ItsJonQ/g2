@@ -1,5 +1,5 @@
-import { BaseView } from '@g2/css';
-import { ComponentsProvider } from '@g2/provider';
+import { BaseView } from '@wp-g2/css';
+import { ComponentsProvider } from '@wp-g2/provider';
 import React from 'react';
 
 import {

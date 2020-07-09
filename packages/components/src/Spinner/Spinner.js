@@ -1,5 +1,5 @@
-import { useTheme } from '@g2/css';
-import { connect } from '@g2/provider';
+import { useTheme } from '@wp-g2/css';
+import { connect } from '@wp-g2/provider';
 import React from 'react';
 
 import { BarsView, BarsWrapperView, ContainerView } from './Spinner.styles';

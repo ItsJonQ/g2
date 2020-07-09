@@ -1,4 +1,4 @@
-import { css, styled } from '@g2/css';
+import { css, styled } from '@wp-g2/css';
 
 import { Flex } from '../Flex';
 

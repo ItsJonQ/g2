@@ -1,5 +1,5 @@
-import { connect } from '@g2/provider';
-import { useUpdateEffect } from '@g2/utils';
+import { connect } from '@wp-g2/provider';
+import { useUpdateEffect } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import { useTabState } from 'reakit/Tab';
 

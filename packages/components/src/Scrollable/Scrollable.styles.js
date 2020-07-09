@@ -1,4 +1,4 @@
-import { styled } from '@g2/css';
+import { styled } from '@wp-g2/css';
 
 export const ScrollableView = styled.div`
 	height: 100%;

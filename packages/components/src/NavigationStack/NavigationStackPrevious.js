@@ -1,5 +1,5 @@
-import { connect } from '@g2/provider';
-import { noop } from '@g2/utils';
+import { connect } from '@wp-g2/provider';
+import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Button } from '../Button';

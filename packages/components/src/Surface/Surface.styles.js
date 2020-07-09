@@ -1,4 +1,4 @@
-import { css, styled, useTheme } from '@g2/css';
+import { css, styled, useTheme } from '@wp-g2/css';
 
 const surfaceStyles = ({ theme }) => {
 	const { config } = theme;

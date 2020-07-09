@@ -1,5 +1,5 @@
 import { ThemeContext } from '@emotion/core';
-import { getDisplayName, hoistNonReactStatics } from '@g2/utils';
+import { getDisplayName, hoistNonReactStatics } from '@wp-g2/utils';
 import React from 'react';
 
 import { mergeThemeProps } from './utils';

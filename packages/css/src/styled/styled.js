@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { ThemeContext } from '@emotion/core';
 import emotionStyled from '@emotion/styled';
-import { is } from '@g2/utils';
 import { css as themeCss, get } from '@theme-ui/css';
+import { is } from '@wp-g2/utils';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import React from 'react';
 import { jsx } from 'theme-ui';

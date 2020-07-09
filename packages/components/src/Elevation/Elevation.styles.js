@@ -1,5 +1,5 @@
-import { css, styled, toPx } from '@g2/css';
-import { is } from '@g2/utils';
+import { css, styled, toPx } from '@wp-g2/css';
+import { is } from '@wp-g2/utils';
 
 const baseStyles = ({ borderRadius, offset, theme, value }) => {
 	const { config } = theme;

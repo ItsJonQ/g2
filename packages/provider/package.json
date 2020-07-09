@@ -1,5 +1,5 @@
 {
-  "name": "@g2/provider",
+  "name": "@wp-g2/provider",
   "version": "0.0.1",
   "description": "",
   "main": "dist/cjs/index.js",
@@ -15,8 +15,8 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@g2/css": "^0.0.1",
-    "@g2/utils": "^0.0.1",
+    "@wp-g2/css": "^0.0.1",
+    "@wp-g2/utils": "^0.0.1",
     "deepmerge": "^4.2.2",
     "lodash.uniq": "^4.5.0",
     "lodash.kebabcase": "^4.1.1"

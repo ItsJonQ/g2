@@ -1,5 +1,5 @@
 {
-    "name": "@g2/utils",
+    "name": "@wp-g2/utils",
     "version": "0.0.1",
     "description": "",
     "main": "dist/cjs/index.js",

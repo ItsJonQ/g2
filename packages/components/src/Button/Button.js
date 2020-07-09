@@ -1,4 +1,4 @@
-import { connect } from '@g2/provider';
+import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { Button as BaseButton } from 'reakit/Button';

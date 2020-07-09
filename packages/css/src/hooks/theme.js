@@ -1,5 +1,5 @@
-import { is } from '@g2/utils';
 import { useResponsiveValue as useBaseResponsiveValue } from '@theme-ui/match-media';
+import { is } from '@wp-g2/utils';
 import { useThemeUI } from 'theme-ui';
 
 import { enhanceThemeWithMixins } from '../styled/utils';

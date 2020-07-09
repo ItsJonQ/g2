@@ -1,5 +1,5 @@
-import { useFontSize } from '@g2/css';
-import { connect } from '@g2/provider';
+import { useFontSize } from '@wp-g2/css';
+import { connect } from '@wp-g2/provider';
 import React from 'react';
 
 import { TextView } from './Text.styles';

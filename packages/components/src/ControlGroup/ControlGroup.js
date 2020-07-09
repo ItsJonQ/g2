@@ -1,5 +1,5 @@
-import { connect, hasNamespace } from '@g2/provider';
-import { getValidChildren } from '@g2/utils';
+import { connect, hasNamespace } from '@wp-g2/provider';
+import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import { Flex } from '../Flex';

@@ -1,4 +1,4 @@
-import { BaseView } from '@g2/css';
+import { BaseView } from '@wp-g2/css';
 import React from 'react';
 
 import { Elevation } from '../index';

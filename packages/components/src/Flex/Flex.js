@@ -1,6 +1,6 @@
-import { BaseView, useResponsiveValue } from '@g2/css';
-import { connect, hasNamespace } from '@g2/provider';
-import { getValidChildren } from '@g2/utils';
+import { BaseView, useResponsiveValue } from '@wp-g2/css';
+import { connect, hasNamespace } from '@wp-g2/provider';
+import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import FlexItem from './FlexItem';

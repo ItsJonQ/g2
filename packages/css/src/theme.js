@@ -1,5 +1,5 @@
-import { isEmpty } from '@g2/utils';
 import basePresetTheme from '@theme-ui/preset-base';
+import { isEmpty } from '@wp-g2/utils';
 import colorize from 'tinycolor2';
 
 import { toPx } from './utils';
