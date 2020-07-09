@@ -30,8 +30,8 @@ function Button({
 	isDestructive = false,
 	isLoading = false,
 	isNarrow = false,
-	isOutline = false,
 	isRounded = false,
+	isSubtle = false,
 	justify = 'center',
 	prefix,
 	size = 'medium',
@@ -48,11 +48,12 @@ function Button({
 			as={as}
 			href={href}
 			isBlock={isBlock}
+			isDestructive={isDestructive}
 			isFirst={isFirst}
 			isLast={isLast}
 			isMiddle={isMiddle}
-			isOutline={isOutline}
 			isRounded={isRounded}
+			isSubtle={isSubtle}
 			ref={forwardedRef}
 			size={size}
 			variant={variant}

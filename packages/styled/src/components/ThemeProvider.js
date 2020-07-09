@@ -8,6 +8,7 @@ export function ThemeProvider({ children, theme = {} }) {
 	if (theme.isDark) {
 		mergedThemeProps.config.isDark = theme.isDark;
 	}
+
 	return (
 		<BaseThemeProvider theme={mergedThemeProps}>
 			{children}

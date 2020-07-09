@@ -15,9 +15,9 @@ function Menu({ children, forwardedRef, menu: menuProp, ...props }) {
 	return (
 		<MenuContext.Provider value={contextValue}>
 			<MenuView
+				hideOnClickOutside={false}
 				{...menu}
 				{...props}
-				hideOnClickOutside={false}
 				ref={forwardedRef}
 			>
 				{children}

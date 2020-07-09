@@ -183,14 +183,14 @@ export const _default = () => {
 					>
 						<Flex justify="flex-start">
 							<Tooltip>
-								<TooltipTrigger as={Button}>
+								<TooltipTrigger as={Button} variant="tertiary">
 									Save draft
 								</TooltipTrigger>
 								<TooltipContent>
 									Saves, but does not publish
 								</TooltipContent>
 							</Tooltip>
-							<Button>Preview</Button>
+							<Button variant="tertiary">Preview</Button>
 							<Dropdown placement="bottom-end">
 								<DropdownTrigger variant="primary">
 									Publish
@@ -223,7 +223,7 @@ export const _default = () => {
 									<PopoverTrigger
 										as={Button}
 										isBlock
-										isOutline
+										isSubtle
 									>
 										<Flex>
 											<Text weight={600}>Dimensions</Text>
@@ -262,7 +262,7 @@ export const _default = () => {
 									<PopoverTrigger
 										as={Button}
 										isBlock
-										isOutline
+										isSubtle
 									>
 										<Flex>
 											<Text weight={600}>Filters</Text>

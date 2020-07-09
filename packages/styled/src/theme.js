@@ -4,10 +4,22 @@ import colorize from 'tinycolor2';
 
 import { toPx } from './utils';
 
+const G2_COLORS = {
+	blueberry: '#3858E9',
+	blueberryDark: '#1D35B4',
+	greens: '#33F078',
+	grey: '#40464D',
+	greyBlack: '#1E1E1E',
+	lightBlue: '#33F078',
+	lightGrey: '#40464D',
+	lighterGrey: '#dddddd',
+	pomegrade: '#E26F56',
+};
+
 const COLOR_PALETTE = {
-	brand: '#3958E8',
-	destructive: '#F6372B',
-	positive: '#108043',
+	brand: G2_COLORS.blueberry,
+	destructive: G2_COLORS.pomegrade,
+	positive: G2_COLORS.greens,
 };
 
 const THEME_CONFIG_PROPS = {
@@ -23,12 +35,13 @@ const ANIMATION_PROPS = {
 };
 
 const COLOR_PROPS = {
+	colorBaseDark: G2_COLORS.greyBlack,
 	colorBodyBackground: '#FFFFFF',
 	colorBodyBackgroundDark: '#18191A',
 	colorBrand: COLOR_PALETTE.brand,
 	colorBrandActive: colorize(COLOR_PALETTE.brand).darken(5).toHexString(),
 	colorBrandFocus: colorize(COLOR_PALETTE.brand).lighten(10).toHexString(),
-	colorBrandHover: colorize(COLOR_PALETTE.brand).lighten(5).toHexString(),
+	colorBrandHover: colorize(COLOR_PALETTE.brand).darken(5).toHexString(),
 	colorDestructive: COLOR_PALETTE.destructive,
 	colorDestructiveActive: colorize(COLOR_PALETTE.destructive)
 		.darken(5)
@@ -110,11 +123,12 @@ const BUTTON_PROPS = {
 	buttonBackgroundColorHoverDark:
 		CONTROL_PROPS.controlBackgroundColorHoverDark,
 	buttonBackgroundColorPrimary: COLOR_PROPS.colorBrand,
-	buttonBackgroundColorPrimaryActive: COLOR_PROPS.colorBrandActive,
+	buttonBackgroundColorPrimaryActive: COLOR_PROPS.colorBaseDark,
 	buttonBackgroundColorPrimaryHover: COLOR_PROPS.colorBrandHover,
 	buttonBorderColorFocus: 'transparent',
 	buttonBorderColorOutline: CONTROL_PROPS.controlBorderColor,
 	buttonBorderColorOutlineDark: CONTROL_PROPS.controlBorderColorDark,
+	buttonBorderColorOutlineHover: COLOR_PROPS.colorBaseDark,
 	buttonBorderRadius: CONTROL_PROPS.controlBorderRadius,
 	buttonBorderRadiusRound: CONTROL_PROPS.controlHeightXLarge,
 	buttonBorderStyle: 'solid',
@@ -134,9 +148,11 @@ const BUTTON_PROPS = {
 	buttonLineHeight: CONTROL_PROPS.controlLineHeight,
 	buttonPaddingX: toPx(GRID_PROPS.gridBase * 4),
 	buttonPaddingXNarrow: toPx(GRID_PROPS.gridBase * 2),
+	buttonTextColor: COLOR_PROPS.colorBrand,
+	buttonTextColorActive: COLOR_PROPS.colorBaseDark,
 	buttonTextColorPrimary: '#FFFFFF',
 	buttonTransform: 'scale(1)',
-	buttonTransformActive: 'scale(0.96)',
+	buttonTransformActive: 'scale(1)',
 	buttonTransitionDuration: ANIMATION_PROPS.transitionDuration,
 	buttonTransitionTimingFunction:
 		ANIMATION_PROPS.transitionTimingFunctionControl,

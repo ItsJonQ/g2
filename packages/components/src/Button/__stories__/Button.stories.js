@@ -55,8 +55,9 @@ export const _default = () => {
 			<Buttons variant="primary" />
 			<Buttons variant="secondary" />
 			<Buttons variant="tertiary" />
-			<Buttons isOutline variant="primary" />
-			<Buttons isOutline variant="secondary" />
+			<Buttons isDestructive variant="primary" />
+			<Buttons isDestructive variant="secondary" />
+			<Buttons isDestructive variant="tertiary" />
 		</>
 	);
 };

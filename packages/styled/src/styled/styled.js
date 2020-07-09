@@ -76,6 +76,7 @@ function createStyled(tagName, options = {}) {
 					 * Lastly, we'll pass the enhanced theme value into
 					 * our styled component to interpolate.
 					 */
+
 					return <SC ref={ref} {...extraProps} {...mergedProps} />;
 				}}
 			</ThemeContext.Consumer>

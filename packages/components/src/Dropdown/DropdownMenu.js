@@ -10,6 +10,7 @@ function DropdownMenu({
 	children,
 	elevation = 3,
 	forwardedRef,
+	hideOnClickOutside = true,
 	minWidth = 200,
 	...props
 }) {
@@ -19,6 +20,7 @@ function DropdownMenu({
 			aria-label={label}
 			{...props}
 			css={{ minWidth }}
+			hideOnClickOutside={hideOnClickOutside}
 			menu={menu}
 			ref={forwardedRef}
 		>

@@ -12,7 +12,7 @@ const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;
 
 export const _default = () => {
 	return (
-		<Grid>
+		<Grid columns={2}>
 			<ItemView>Item</ItemView>
 			<ItemView>Item</ItemView>
 		</Grid>

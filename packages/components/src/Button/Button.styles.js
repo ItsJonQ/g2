@@ -17,7 +17,7 @@ const baseStyles = ({ isDestructive, theme }) => {
 		border-style: solid;
 		border-width: ${config.buttonBorderWidth};
 		box-shadow: ${config.buttonBoxShadow};
-		color: ${config.colorText};
+		color: ${config.buttonTextColor};
 		cursor: pointer;
 		display: inline-flex;
 		font-weight: ${config.buttonFontWeight};
@@ -32,13 +32,8 @@ const baseStyles = ({ isDestructive, theme }) => {
 		user-select: none;
 		width: auto;
 
-		&:hover,
-		&:focus {
-			background-color: ${config.buttonBackgroundColorHover};
-		}
-
 		&:active {
-			background-color: ${config.buttonBackgroundColorActive};
+			color: ${config.buttonTextColorActive};
 			transform: ${config.buttonTransformActive};
 			transform-origin: center center;
 		}
@@ -56,12 +51,18 @@ const baseStyles = ({ isDestructive, theme }) => {
 		}
 
 		&:focus {
+			box-shadow: ${config.buttonBoxShadowFocus};
 			z-index: 1;
 		}
 
 		svg {
 			display: block;
 		}
+
+		${isDestructive &&
+		css`
+			color: ${config.colorDestructive};
+		`}
 
 		${isDark &&
 		css`
@@ -76,11 +77,6 @@ const baseStyles = ({ isDestructive, theme }) => {
 			&:active {
 				background-color: ${config.buttonBackgroundColorActiveDark};
 			}
-
-			${isDestructive &&
-			css`
-				color: ${config.colorDestructive};
-			`}
 		`}
 	`;
 };
@@ -129,12 +125,18 @@ const sizeStyles = ({ size, theme }) => {
 	}
 };
 
-const primaryStyles = ({ isDestructive, isOutline, theme }) => {
+const primaryStyles = ({ isDestructive, theme }) => {
 	const { config } = theme;
 
 	return css`
 		background-color: ${config.buttonBackgroundColorPrimary};
 		color: ${config.buttonTextColorPrimary};
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: ${config.buttonTextColorPrimary};
+		}
 
 		&:hover,
 		&:focus {
@@ -168,54 +170,90 @@ const primaryStyles = ({ isDestructive, isOutline, theme }) => {
 				background-color: ${config.colorDestructiveActive};
 			}
 		`}
-
-		${isOutline &&
-		css`
-			background-color: transparent;
-			border-color: ${config.buttonBackgroundColorPrimary};
-			color: ${config.buttonBackgroundColorPrimary};
-
-			&:hover,
-			&:active,
-			&:focus {
-				color: ${config.buttonTextColorPrimary};
-			}
-		`}
 	`;
 };
 
-const secondaryStyles = ({ isDestructive, isOutline, theme }) => {
-	if (!isOutline) return '';
-
+const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
 	const { config } = theme;
 	const { isDark } = config;
 
 	return css`
 		background-color: transparent;
-		border-color: ${config.buttonBorderColorOutline};
-
-		${isDark &&
-		`
-			border-color: ${config.buttonBorderColorOutlineDark};
-		`}
+		border-color: ${config.buttonBackgroundColorPrimary};
+		color: ${config.buttonBackgroundColorPrimary};
 
 		&:hover,
 		&:active,
 		&:focus {
-			border-color: transparent;
+			border-color: ${config.buttonBackgroundColorPrimaryHover};
+			color: ${config.buttonBackgroundColorPrimaryHover};
 		}
 
-		${isDestructive &&
-		`
-			color: ${config.colorDestructive};
-			border-color: ${config.colorDestructive};
-		`}
+		&:active {
+			border-color: ${config.buttonTextColorActive};
+			color: ${config.buttonTextColorActive};
+		}
+
+		${
+			isSubtle &&
+			css`
+				border-color: ${config.buttonBorderColorOutline};
+
+				&:hover {
+					border-color: ${config.buttonBorderColorOutlineHover};
+				}
+			`
+		}
+
+		${
+			isDark &&
+			css`
+				border-color: ${config.buttonBorderColorOutlineDark};
+			`
+		}
+
+		${
+			isDestructive &&
+			css`
+				border-color: ${config.colorDestructive};
+				color: ${config.colorDestructive};
+
+				&:hover,
+				&:active,
+				&:focus {
+					border-color: ${config.colorDestructive};
+					color: ${config.colorDestructive};
+				}
+
+				&:focus {
+					box-shadow: ${config.buttonBoxShadowDestructiveFocus};
+				}
+
+				&:active {
+					color: ${config.buttonTextColorActive};
+				}
+			`
+		}
 	`;
 };
 
-const tertiaryStyles = () => {
+const tertiaryStyles = ({ isDestructive, theme }) => {
+	const { config } = theme;
+
 	return css`
 		background-color: transparent;
+
+		${isDestructive &&
+		css`
+			&:focus {
+				box-shadow: ${config.buttonBoxShadowDestructiveFocus};
+			}
+
+			&:focus,
+			&:active {
+				border-color: ${config.colorDestructive};
+			}
+		`}
 	`;
 };
 
