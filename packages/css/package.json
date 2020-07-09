@@ -17,13 +17,13 @@
     "dependencies": {
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
-        "@wp-g2/utils": "^0.0.1",
         "@theme-ui/css": "^0.3.1",
         "@theme-ui/match-media": "^0.3.1",
         "@theme-ui/preset-base": "^0.3.0",
-        "is-style-prop-valid": "^0.0.7",
+        "@wp-g2/utils": "^0.0.1",
         "classnames": "^2.2.6",
         "hoist-non-react-statics": "^3.3.2",
+        "is-style-prop-valid": "^0.0.7",
         "theme-ui": "^0.3.1",
         "tinycolor2": "^1.4.1"
     }
