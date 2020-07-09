@@ -26,5 +26,6 @@
         "is-style-prop-valid": "^0.0.7",
         "theme-ui": "^0.3.1",
         "tinycolor2": "^1.4.1"
-    }
+    },
+    "gitHead": "3a971b5b9117ac80e2522d3685e4da4398305aae"
 }
