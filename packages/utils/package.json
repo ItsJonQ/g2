@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "main": "dist/cjs/index.js",
     "module": "src/index.js",
