@@ -5,6 +5,7 @@ import colorize from 'tinycolor2';
 import { toPx } from './utils';
 
 const G2_COLORS = {
+	black: '#000000',
 	blueberry: '#3858E9',
 	blueberryDark: '#1D35B4',
 	greens: '#33F078',
@@ -14,16 +15,13 @@ const G2_COLORS = {
 	lightGrey: '#40464D',
 	lighterGrey: '#dddddd',
 	pomegrade: '#E26F56',
+	white: '#ffffff',
 };
 
 const COLOR_PALETTE = {
 	brand: G2_COLORS.blueberry,
 	destructive: G2_COLORS.pomegrade,
 	positive: G2_COLORS.greens,
-};
-
-const THEME_CONFIG_PROPS = {
-	isDark: false,
 };
 
 const ANIMATION_PROPS = {
@@ -36,7 +34,9 @@ const ANIMATION_PROPS = {
 
 const COLOR_PROPS = {
 	colorBaseDark: G2_COLORS.greyBlack,
-	colorBodyBackground: '#FFFFFF',
+	colorBaseLight: G2_COLORS.lighterGrey,
+	colorBlack: G2_COLORS.black,
+	colorBodyBackground: G2_COLORS.white,
 	colorBodyBackgroundDark: '#18191A',
 	colorBrand: COLOR_PALETTE.brand,
 	colorBrandActive: colorize(COLOR_PALETTE.brand).darken(5).toHexString(),
@@ -64,6 +64,7 @@ const COLOR_PROPS = {
 		.toHexString(),
 	colorText: '#050505',
 	colorTextDark: '#E4E6EB',
+	colorWhite: G2_COLORS.white,
 };
 
 const SURFACE_PROPS = {
@@ -150,7 +151,9 @@ const BUTTON_PROPS = {
 	buttonPaddingXNarrow: toPx(GRID_PROPS.gridBase * 2),
 	buttonTextColor: COLOR_PROPS.colorBrand,
 	buttonTextColorActive: COLOR_PROPS.colorBaseDark,
-	buttonTextColorPrimary: '#FFFFFF',
+	buttonTextColorActiveDark: COLOR_PROPS.colorBaseLight,
+	buttonTextColorPrimary: COLOR_PROPS.colorWhite,
+	buttonTextColorPrimaryDark: COLOR_PROPS.colorBaseDark,
 	buttonTransform: 'scale(1)',
 	buttonTransformActive: 'scale(1)',
 	buttonTransitionDuration: ANIMATION_PROPS.transitionDuration,
@@ -245,7 +248,6 @@ const SWITCH_PROPS = {
 
 export const THEME_PROPS = {
 	// Base theme
-	...THEME_CONFIG_PROPS,
 	...COLOR_PROPS,
 	...SURFACE_PROPS,
 	// Props

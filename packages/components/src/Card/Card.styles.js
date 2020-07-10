@@ -43,8 +43,7 @@ export const CardBodyView = styled(Scrollable)`
 `;
 
 const borderColorStyles = ({ theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 	const borderColor = isDark
 		? config.cardSectionBorderColorDark
 		: config.cardSectionBorderColor;

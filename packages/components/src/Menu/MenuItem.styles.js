@@ -2,8 +2,7 @@ import { css, styled } from '@wp-g2/styled';
 import { MenuItem } from 'reakit/Menu';
 
 const baseStyles = ({ theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	return css`
 		appearance: none;
@@ -25,6 +24,7 @@ const baseStyles = ({ theme }) => {
 
 		&:focus {
 			background: ${config.menuHoverBackgroundColor};
+			box-shadow: none;
 		}
 		&:active {
 			background: ${config.menuActiveBackgroundColor};

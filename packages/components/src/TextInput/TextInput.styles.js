@@ -68,8 +68,7 @@ const focusStyles = ({ isFocused, theme }) => {
 
 const seamlessStyles = ({ isSeamless, theme }) => {
 	if (!isSeamless) return '';
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	return css`
 		background-color: transparent;
@@ -84,8 +83,7 @@ const seamlessStyles = ({ isSeamless, theme }) => {
 };
 
 const focusSeamlessStyles = ({ isFocused, isSeamless, theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	return css`
 		border-color: ${isDark
@@ -96,8 +94,7 @@ const focusSeamlessStyles = ({ isFocused, isSeamless, theme }) => {
 };
 
 const darkStyles = ({ isFocused, isSeamless, theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	if (!isDark) return;
 

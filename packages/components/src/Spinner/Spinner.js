@@ -6,8 +6,7 @@ import { BarsView, BarsWrapperView, ContainerView } from './Spinner.styles';
 import { BASE_SIZE, WRAPPER_SIZE } from './Spinner.utils';
 
 function Spinner({ color, className, size = BASE_SIZE, ...props }) {
-	const { config } = useTheme();
-	const { isDark } = config;
+	const { config, isDark } = useTheme();
 
 	const ratio = size / BASE_SIZE;
 	const scale = (ratio * BASE_SIZE) / WRAPPER_SIZE;

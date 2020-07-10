@@ -1,8 +1,7 @@
 import { css, styled } from '@wp-g2/styled';
 
 export const scrollableScrollbarStyles = ({ theme }) => {
-	const { config } = theme;
-	const { isDark } = theme;
+	const { config, isDark } = theme;
 
 	return css`
 		&::-webkit-scrollbar {

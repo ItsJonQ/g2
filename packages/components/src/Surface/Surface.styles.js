@@ -1,8 +1,7 @@
 import { css, styled, useTheme } from '@wp-g2/styled';
 
 const surfaceStyles = ({ theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	return css`
 		background-color: ${config.cardBackgroundColor};

@@ -3,8 +3,7 @@ import { css, styled } from '@wp-g2/styled';
 import { FlexBlock, FlexItem } from '../Flex';
 
 const baseStyles = ({ isDestructive, theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 	const buttonTransition = `all ${config.buttonTransitionDuration}
 	${config.buttonTransitionTimingFunction}`;
 
@@ -59,24 +58,16 @@ const baseStyles = ({ isDestructive, theme }) => {
 			display: block;
 		}
 
+		${isDark &&
+		css`
+			&:active {
+				color: ${config.buttonTextColorActiveDark};
+			}
+		`}
+
 		${isDestructive &&
 		css`
 			color: ${config.colorDestructive};
-		`}
-
-		${isDark &&
-		css`
-			background-color: ${config.buttonBackgroundColorDark};
-			color: ${config.colorTextDark};
-
-			&:hover,
-			&:focus {
-				background-color: ${config.buttonBackgroundColorHoverDark};
-			}
-
-			&:active {
-				background-color: ${config.buttonBackgroundColorActiveDark};
-			}
 		`}
 	`;
 };
@@ -126,7 +117,7 @@ const sizeStyles = ({ size, theme }) => {
 };
 
 const primaryStyles = ({ isDestructive, theme }) => {
-	const { config } = theme;
+	const { config, isDark } = theme;
 
 	return css`
 		background-color: ${config.buttonBackgroundColorPrimary};
@@ -152,6 +143,14 @@ const primaryStyles = ({ isDestructive, theme }) => {
 			background-color: ${config.buttonBackgroundColorPrimaryActive};
 		}
 
+		${isDark &&
+		css`
+			&:active {
+				background-color: ${config.buttonTextColorActiveDark};
+				color: ${config.buttonTextColorPrimaryDark};
+			}
+		`}
+
 		${isDestructive &&
 		css`
 			background-color: ${config.colorDestructive};
@@ -174,8 +173,7 @@ const primaryStyles = ({ isDestructive, theme }) => {
 };
 
 const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	return css`
 		background-color: transparent;
@@ -195,6 +193,16 @@ const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
 		}
 
 		${
+			isDark &&
+			css`
+				&:active {
+					border-color: ${config.buttonTextColorActiveDark};
+					color: ${config.buttonTextColorActiveDark};
+				}
+			`
+		}
+
+		${
 			isSubtle &&
 			css`
 				border-color: ${config.buttonBorderColorOutline};
@@ -202,13 +210,6 @@ const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
 				&:hover {
 					border-color: ${config.buttonBorderColorOutlineHover};
 				}
-			`
-		}
-
-		${
-			isDark &&
-			css`
-				border-color: ${config.buttonBorderColorOutlineDark};
 			`
 		}
 
@@ -232,16 +233,30 @@ const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
 				&:active {
 					color: ${config.buttonTextColorActive};
 				}
+
+				${isDark &&
+				css`
+					&:active {
+						color: ${config.buttonTextColorActiveDark};
+					}
+				`}
 			`
 		}
 	`;
 };
 
 const tertiaryStyles = ({ isDestructive, theme }) => {
-	const { config } = theme;
+	const { config, isDark } = theme;
 
 	return css`
 		background-color: transparent;
+
+		${isDark &&
+		css`
+			&:active {
+				color: ${config.buttonTextColorActiveDark};
+			}
+		`}
 
 		${isDestructive &&
 		css`

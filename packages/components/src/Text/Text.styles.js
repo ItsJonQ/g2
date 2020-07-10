@@ -3,8 +3,7 @@ import { css, styled } from '@wp-g2/styled';
 import { Truncate } from '../Truncate';
 
 const baseStyles = ({ isBlock, theme }) => {
-	const { config } = theme;
-	const { isDark } = config;
+	const { config, isDark } = theme;
 
 	return css`
 		color: ${config.colorText};
