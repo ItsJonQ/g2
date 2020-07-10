@@ -4,9 +4,23 @@ import { Flex } from '../Flex';
 import { Scrollable } from '../Scrollable';
 import { Surface } from '../Surface';
 
+const baseStyles = ({ theme }) => {
+	const { isDark } = theme;
+
+	return css`
+		border-radius: 8px;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+		outline: none;
+
+		${isDark &&
+		css`
+			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+		`}
+	`;
+};
+
 export const CardView = styled(Surface)`
-	border-radius: 8px;
-	outline: none;
+	${baseStyles};
 `;
 
 const headerFooterStyles = ({ theme }) => {

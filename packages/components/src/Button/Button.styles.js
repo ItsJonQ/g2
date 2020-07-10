@@ -210,6 +210,15 @@ const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
 				&:hover {
 					border-color: ${config.buttonBorderColorOutlineHover};
 				}
+
+				${isDark &&
+				css`
+					border-color: ${config.buttonBorderColorOutlineDark};
+
+					&:hover {
+						border-color: ${config.buttonBorderColorOutlineDark};
+					}
+				`}
 			`
 		}
 

@@ -29,7 +29,9 @@ function PanelHeader({ children, title, ...props }) {
 		>
 			<FlexBlock>{content}</FlexBlock>
 			<FlexItem>
-				<Icon icon={icon} />
+				<Text isBlock>
+					<Icon icon={icon} />
+				</Text>
 			</FlexItem>
 		</CollapsibleTrigger>
 	);
