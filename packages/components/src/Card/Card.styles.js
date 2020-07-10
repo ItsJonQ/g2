@@ -14,7 +14,7 @@ const baseStyles = ({ theme }) => {
 
 		${isDark &&
 		css`
-			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 		`}
 	`;
 };

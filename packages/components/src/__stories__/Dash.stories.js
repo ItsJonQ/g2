@@ -48,7 +48,7 @@ const InputSuffix = (props) => (
 		isBlock
 		lineHeight={1}
 		size={11}
-		sx={{ pr: 3, userSelect: 'none' }}
+		sx={{ userSelect: 'none' }}
 		variant="muted"
 		{...props}
 	/>
@@ -60,12 +60,12 @@ const ControlExample = () => {
 			<Spacer>
 				<Grid columns={2}>
 					<TextInput
-						prefix={<InputSuffix>W</InputSuffix>}
+						prefix={<InputSuffix pr={1}>W</InputSuffix>}
 						suffix={<InputSuffix>PX</InputSuffix>}
 						value={300}
 					/>
 					<TextInput
-						prefix={<InputSuffix>H</InputSuffix>}
+						prefix={<InputSuffix pr={1}>H</InputSuffix>}
 						suffix={<InputSuffix>PX</InputSuffix>}
 						value={200}
 					/>
@@ -73,9 +73,9 @@ const ControlExample = () => {
 			</Spacer>
 			<Spacer>
 				<Grid columns={3}>
-					<TextInput prefix={<InputSuffix>X</InputSuffix>} />
-					<TextInput prefix={<InputSuffix>Y</InputSuffix>} />
-					<TextInput prefix={<InputSuffix>Z</InputSuffix>} />
+					<TextInput prefix={<InputSuffix pr={1}>X</InputSuffix>} />
+					<TextInput prefix={<InputSuffix pr={1}>Y</InputSuffix>} />
+					<TextInput prefix={<InputSuffix pr={1}>Z</InputSuffix>} />
 				</Grid>
 			</Spacer>
 			<Spacer>
