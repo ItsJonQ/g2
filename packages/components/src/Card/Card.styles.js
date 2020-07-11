@@ -9,12 +9,12 @@ const baseStyles = ({ theme }) => {
 
 	return css`
 		border-radius: 8px;
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
 		outline: none;
 
 		${isDark &&
 		css`
-			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
 		`}
 	`;
 };

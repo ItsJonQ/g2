@@ -22,7 +22,7 @@ const baseStyles = ({ isFocused, isRounded, isSeamless, multiline, theme }) => {
 
 	return css`
 		background-color: ${config.inputBackgroundColor};
-		border-color: ${config.inputBorderColor};
+		border-color: ${config.controlBorderColor};
 		border-radius: ${isRounded
 			? config.inputBorderRadiusRound
 			: config.inputBorderRadius};
@@ -66,33 +66,6 @@ const focusStyles = ({ isFocused, theme }) => {
 	`;
 };
 
-const seamlessStyles = ({ isSeamless, theme }) => {
-	if (!isSeamless) return '';
-	const { config, isDark } = theme;
-
-	return css`
-		background-color: transparent;
-		border-color: transparent;
-		&:active {
-			border-color: ${isDark
-				? config.controlBorderColorDark
-				: config.controlBorderColor};
-			box-shadow: none;
-		}
-	`;
-};
-
-const focusSeamlessStyles = ({ isFocused, isSeamless, theme }) => {
-	const { config, isDark } = theme;
-
-	return css`
-		border-color: ${isDark
-			? config.controlBorderColorDark
-			: config.controlBorderColor};
-		box-shadow: none;
-	`;
-};
-
 const darkStyles = ({ isFocused, isSeamless, theme }) => {
 	const { config, isDark } = theme;
 
@@ -110,7 +83,7 @@ const darkStyles = ({ isFocused, isSeamless, theme }) => {
 
 	return css`
 		background-color: ${config.inputBackgroundColorDark};
-		border-color: ${config.inputBorderColorDark};
+		border-color: ${config.controlBorderColorDark};
 		color: ${config.colorTextDark};
 		${hoverStyles}
 	`;
@@ -138,10 +111,8 @@ const controlGroupStyles = ({ isFirst, isLast, isMiddle }) => {
 
 export const RootView = styled(Flex)`
 	${baseStyles};
-	${focusSeamlessStyles};
-	${focusStyles};
-	${seamlessStyles};
 	${darkStyles};
+	${focusStyles};
 	${controlGroupStyles};
 `;
 
