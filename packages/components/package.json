@@ -22,7 +22,10 @@
     "react-spring": "^8.0.27",
     "react-use-measure": "^2.0.1",
     "react-textarea-autosize": "^8.2.0",
-    "reakit": "^1.1.1"
+    "reakit": "^1.1.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1"
   },
   "gitHead": "3a971b5b9117ac80e2522d3685e4da4398305aae"
 }
