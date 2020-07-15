@@ -1,8 +1,9 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { Route } from 'react-router-dom';
 
-function NavigatorScreen({ exact = true, ...props }) {
+import { Route } from './Router';
+
+function NavigatorScreen({ exact = false, ...props }) {
 	return <Route exact={exact} {...props} />;
 }
 

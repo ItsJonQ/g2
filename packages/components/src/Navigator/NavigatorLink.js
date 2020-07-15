@@ -1,6 +1,7 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { Link } from './Router';
 
 function NavigatorLink({ children, forwardedRef, href, to, ...props }) {
 	if (!to) {

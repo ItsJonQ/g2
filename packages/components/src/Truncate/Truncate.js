@@ -22,6 +22,8 @@ export function Truncate({
 		limit,
 	});
 
+	console.log(truncatedContent);
+
 	return (
 		<TruncateView
 			ellipsizeMode={ellipsizeMode}

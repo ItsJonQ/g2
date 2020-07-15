@@ -13,7 +13,7 @@ export const _default = () => {
 
 export const truncate = () => {
 	return (
-		<Text numberOfLines={1} truncate>
+		<Text numberOfLines={2} truncate>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
 			facilisis dictum tortor, eu tincidunt justo scelerisque tincidunt.
 			Duis semper dui id augue malesuada, ut feugiat nisi aliquam.

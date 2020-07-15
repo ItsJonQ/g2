@@ -2,8 +2,7 @@
 import { ThemeContext } from '@emotion/core';
 import emotionStyled from '@emotion/styled';
 import { css as themeCss, get } from '@theme-ui/css';
-import { is } from '@wp-g2/utils';
-import hoistNonReactStatics from 'hoist-non-react-statics';
+import { hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 import { jsx } from 'theme-ui';
 

@@ -1,13 +1,15 @@
 import { styled } from '@wp-g2/styled';
 import React from 'react';
-import { MemoryRouter, Route } from 'react-router-dom';
 
-import { Surface } from '../../index';
+import { Flex, FlexBlock, FlexItem, Surface } from '../../index';
 import {
 	Navigator,
 	NavigatorBack,
 	NavigatorLink,
 	NavigatorScreen,
+	NavigatorScreens,
+	useNavigator,
+	withNavigator,
 } from '../index';
 
 export default {
@@ -26,81 +28,62 @@ const Screen = styled(Surface)`
 
 const Home = () => (
 	<Screen>
-		<h1>WooCommerce</h1>
+		<h1>Home</h1>
 		<ul>
 			<li>
-				<NavigatorLink to="Home">Home</NavigatorLink>
+				<NavigatorLink to="Pages">Dashboard</NavigatorLink>
 			</li>
 			<li>
-				<NavigatorLink to="Analytics">Analytics</NavigatorLink>
-			</li>
-			<li>
-				<NavigatorLink to="Orders">Orders</NavigatorLink>
-			</li>
-			<li>
-				<NavigatorLink to="Marketing">Marketing</NavigatorLink>
+				<NavigatorLink to="Pages">Updates</NavigatorLink>
 			</li>
 		</ul>
+		<NavigatorLink to="Pages">
+			<h1>Pages</h1>
+		</NavigatorLink>
 	</Screen>
 );
 
-const Analytics = () => (
+const Pages = () => (
 	<Screen>
-		<h1>Analytics</h1>
+		<h1>Pages</h1>
 		<NavigatorBack>Back</NavigatorBack>
-		<ul>
-			<li>
-				<NavigatorLink to="Analytics">Real Time</NavigatorLink>
-			</li>
-			<li>
-				<NavigatorLink>Trends</NavigatorLink>
-			</li>
-		</ul>
 	</Screen>
 );
 
-const Orders = () => (
-	<Screen>
-		<h1>Orders</h1>
-		<NavigatorBack>Back</NavigatorBack>
-		<ul>
-			<li>
-				<NavigatorLink>All Orders</NavigatorLink>
-			</li>
-			<li>
-				<NavigatorLink>Payouts</NavigatorLink>
-			</li>
-			<li>
-				<NavigatorLink>Transctions</NavigatorLink>
-			</li>
-		</ul>
-	</Screen>
-);
+const Header = () => {
+	const navigator = useNavigator();
+	const isHome = navigator?.location?.pathname === 'Home';
+	return (
+		<h1 style={{ fontSize: isHome ? 20 : 14, transition: 'all 200ms' }}>
+			Header
+		</h1>
+	);
+};
+
+const NavigatorHeader = withNavigator(Header);
 
 export const _default = () => {
 	return (
-		<MemoryRouter>
-			<Route
-				path="/"
-				render={() => (
-					<Surface
-						sx={{
-							border: '1px solid #ddd',
-							height: 480,
-							width: 320,
-						}}
-					>
-						<Navigator initialPath="Home">
+		<Surface
+			sx={{
+				border: '1px solid #ddd',
+				height: 480,
+				width: 320,
+			}}
+		>
+			<Navigator initialPath="Home">
+				<Flex direction="column" sx={{ height: '100%' }}>
+					<FlexItem>
+						<NavigatorHeader />
+					</FlexItem>
+					<FlexBlock sx={{ width: '100%' }}>
+						<NavigatorScreens>
 							<NavigatorScreen component={Home} path="Home" />
-							<NavigatorScreen component={Orders} path="Orders" />
-							<NavigatorScreen
-								component={Analytics}
-								path="Analytics"
-							/>
-						</Navigator>
-					</Surface>
-				)}
-			></Route>
-		</MemoryRouter>
+							<NavigatorScreen component={Pages} path="Pages" />
+						</NavigatorScreens>
+					</FlexBlock>
+				</Flex>
+			</Navigator>
+		</Surface>
 	);
 };
