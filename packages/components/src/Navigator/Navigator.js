@@ -1,9 +1,9 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
 
 import { NavigatorView } from './Navigator.styles';
 import { NavigatorContext } from './Navigator.utils';
+import NavigatorRouter from './NavigatorRouter';
 import NavigatorSwitch from './NavigatorSwitch';
 
 function Navigator({
@@ -19,11 +19,9 @@ function Navigator({
 	return (
 		<NavigatorContext.Provider value={contextValue}>
 			<NavigatorView {...props} ref={forwardedRef}>
-				<MemoryRouter
-					initialEntries={initialPath ? [initialPath] : undefined}
-				>
+				<NavigatorRouter initialPath={initialPath}>
 					<NavigatorSwitch>{children}</NavigatorSwitch>
-				</MemoryRouter>
+				</NavigatorRouter>
 			</NavigatorView>
 		</NavigatorContext.Provider>
 	);

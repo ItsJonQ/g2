@@ -4,10 +4,11 @@ import { Redirect } from 'react-router-dom';
 
 import { useHistory } from './Navigator.utils';
 
-function NavigatorForwarder({ ...props }) {
+function NavigatorForwarder() {
 	const { entries } = useHistory();
-	const lastEntry = entries[entries.length - 2];
+	const lastEntry = entries && [entries.length - 2];
 
+	return null;
 	if (lastEntry) {
 		return <Redirect push to={lastEntry.pathname} />;
 	}

@@ -1,5 +1,6 @@
 import { styled } from '@wp-g2/styled';
 import React from 'react';
+import { MemoryRouter, Route } from 'react-router-dom';
 
 import { Surface } from '../../index';
 import {
@@ -78,12 +79,28 @@ const Orders = () => (
 
 export const _default = () => {
 	return (
-		<Surface sx={{ border: '1px solid #ddd', height: 480, width: 320 }}>
-			<Navigator animationDuration={300} initialPath="Home">
-				<NavigatorScreen component={Home} path="Home" />
-				<NavigatorScreen component={Orders} path="Orders" />
-				<NavigatorScreen component={Analytics} path="Analytics" />
-			</Navigator>
-		</Surface>
+		<MemoryRouter>
+			<Route
+				path="/"
+				render={() => (
+					<Surface
+						sx={{
+							border: '1px solid #ddd',
+							height: 480,
+							width: 320,
+						}}
+					>
+						<Navigator initialPath="Home">
+							<NavigatorScreen component={Home} path="Home" />
+							<NavigatorScreen component={Orders} path="Orders" />
+							<NavigatorScreen
+								component={Analytics}
+								path="Analytics"
+							/>
+						</Navigator>
+					</Surface>
+				)}
+			></Route>
+		</MemoryRouter>
 	);
 };
