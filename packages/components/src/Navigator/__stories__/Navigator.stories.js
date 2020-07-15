@@ -79,7 +79,7 @@ const Orders = () => (
 export const _default = () => {
 	return (
 		<Surface sx={{ border: '1px solid #ddd', height: 480, width: 320 }}>
-			<Navigator initialPath="Home">
+			<Navigator animationDuration={300} initialPath="Home">
 				<NavigatorScreen component={Home} path="Home" />
 				<NavigatorScreen component={Orders} path="Orders" />
 				<NavigatorScreen component={Analytics} path="Analytics" />

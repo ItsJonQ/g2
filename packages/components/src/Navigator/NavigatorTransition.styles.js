@@ -1,7 +1,14 @@
 import { css, styled } from '@wp-g2/styled';
 
 const transitionStyles = ({ animationDuration, isForward }) => {
-	const transform = isForward ? 'translate(100%, 0)' : 'translate(-100%, 0)';
+	const transform = isForward
+		? 'translate3d(100%, 0, 0)'
+		: 'translate3d(0, 0, 0)';
+
+	const exitTransform = !isForward
+		? 'translate3d(100%, 0, 0)'
+		: 'translate3d(0, 0, 0)';
+	const exitZIndex = !isForward ? 2 : 0;
 
 	return css`
 		> div {
@@ -11,7 +18,9 @@ const transitionStyles = ({ animationDuration, isForward }) => {
 			position: absolute;
 			right: 0;
 			top: 0;
-			transform: translate(0, 0);
+			transform: translate3d(0, 0, 0);
+			will-change: transform;
+			z-index: 0;
 
 			&.fade-enter {
 				opacity: 0;
@@ -20,15 +29,24 @@ const transitionStyles = ({ animationDuration, isForward }) => {
 			}
 			&.fade-enter-active {
 				opacity: 1;
-				transform: translate(0, 0);
-				transition: all ${animationDuration}ms;
+				transform: translate3d(0, 0, 0);
+				transition: transform ${animationDuration}ms,
+					opacity ${animationDuration}ms;
+				z-index: 1;
+			}
+			&.fade-enter-done {
 				z-index: 1;
 			}
 			&.fade-exit {
 				opacity: 1;
+				z-index: ${exitZIndex};
 			}
 			&.fade-exit-active {
-				transition: all ${animationDuration}ms;
+				opacity: 0;
+				transform: ${exitTransform};
+				transition: transform ${animationDuration}ms,
+					opacity ${animationDuration}ms;
+				z-index: ${exitZIndex};
 			}
 		}
 	`;
