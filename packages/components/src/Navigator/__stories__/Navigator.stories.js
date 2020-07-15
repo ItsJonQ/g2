@@ -46,7 +46,6 @@ const Home = () => (
 const Pages = () => (
 	<Screen>
 		<h1>Pages</h1>
-		<NavigatorBack>Back</NavigatorBack>
 	</Screen>
 );
 
@@ -54,9 +53,12 @@ const Header = () => {
 	const navigator = useNavigator();
 	const isHome = navigator?.location?.pathname === 'Home';
 	return (
-		<h1 style={{ fontSize: isHome ? 20 : 14, transition: 'all 200ms' }}>
-			Header
-		</h1>
+		<div>
+			{!isHome && <NavigatorBack>Back</NavigatorBack>}
+			<h1 style={{ fontSize: isHome ? 20 : 14, transition: 'all 200ms' }}>
+				Header
+			</h1>
+		</div>
 	);
 };
 
@@ -68,12 +70,13 @@ export const _default = () => {
 			sx={{
 				border: '1px solid #ddd',
 				height: 480,
+				m: 'auto',
 				width: 320,
 			}}
 		>
 			<Navigator initialPath="Home">
 				<Flex direction="column" sx={{ height: '100%' }}>
-					<FlexItem>
+					<FlexItem sx={{ width: '100%' }}>
 						<NavigatorHeader />
 					</FlexItem>
 					<FlexBlock sx={{ width: '100%' }}>
