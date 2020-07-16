@@ -1,9 +1,23 @@
 import { connect } from '@wp-g2/provider';
+import { is } from '@wp-g2/utils';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Link } from './Router';
+import useNavigator from './useNavigator';
+import useQuery from './useQuery';
 
-function NavigatorLink({ children, forwardedRef, href, to, ...props }) {
+function NavigatorLink({
+	as,
+	children,
+	forwardedRef,
+	href,
+	params,
+	to,
+	...props
+}) {
+	const query = useQuery();
+	const navigator = useNavigator();
+
 	if (!to) {
 		return (
 			<a href={href || '#'} ref={forwardedRef} {...props}>
@@ -12,8 +26,23 @@ function NavigatorLink({ children, forwardedRef, href, to, ...props }) {
 		);
 	}
 
+	let nextLocation;
+	query.set(to);
+
+	if (params) {
+		nextLocation = {
+			...params,
+			search: query.toString(),
+		};
+	} else {
+		nextLocation = {
+			...navigator.location,
+			search: query.toString(),
+		};
+	}
+
 	return (
-		<Link to={to} {...props} ref={forwardedRef}>
+		<Link component={as} to={nextLocation} {...props} ref={forwardedRef}>
 			{children}
 		</Link>
 	);

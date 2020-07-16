@@ -1,4 +1,4 @@
-import { withRouter } from './Router';
+import { withRouter } from 'react-router-dom';
 
 const withNavigator = withRouter;
 

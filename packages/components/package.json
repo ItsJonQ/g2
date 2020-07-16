@@ -25,9 +25,9 @@
     "react-textarea-autosize": "^8.2.0",
     "reakit": "^1.1.1",
     "react-transition-group": "^4.4.1",
-    "tiny-warning": "^1.0.3",
-    "tiny-invariant": "^1.1.0",
-    "path-to-regexp": "^1.7.0"
+    "react-router-dom": "^5.2.0",
+    "react-router": "^5.2.0",
+    "query-string": "^6.13.1"
   },
   "devDependencies": {
     "react-router": "^5.2.0",

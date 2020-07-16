@@ -1,4 +1,4 @@
-import { useHistory } from './Router';
+import { useHistory } from 'react-router-dom';
 
 const useNavigator = useHistory;
 

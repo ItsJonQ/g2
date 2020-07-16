@@ -1,10 +1,24 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
 
-import { Route } from './Router';
+import useQuery from './useQuery';
 
-function NavigatorScreen({ exact = false, ...props }) {
-	return <Route exact={exact} {...props} />;
+function NavigatorScreen({ children, component, path, render, ...props }) {
+	const match = useQuery().is(path);
+
+	if (match) {
+		return children
+			? typeof children === 'function'
+				? children(props)
+				: children
+			: component
+			? React.createElement(component, props)
+			: render
+			? render(props)
+			: null;
+	}
+
+	return null;
 }
 
 export default connect(NavigatorScreen);

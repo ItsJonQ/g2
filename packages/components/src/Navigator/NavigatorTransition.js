@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 import { useHistory, useNavigatorContext } from './Navigator.utils';
 import { NavigatorTransitionWrapperView } from './NavigatorTransition.styles';
 
-function NavigatorTransition({ children, ...props }) {
+function NavigatorTransition({ children, forwardedRef, ...props }) {
 	const { animationDuration } = useNavigatorContext();
 	const history = useHistory();
 
@@ -17,6 +17,7 @@ function NavigatorTransition({ children, ...props }) {
 			animationDuration={animationDuration}
 			isForward={isForward}
 			isInitialRoute={isInitialRoute}
+			ref={forwardedRef}
 		>
 			<CSSTransition
 				classNames="fade"

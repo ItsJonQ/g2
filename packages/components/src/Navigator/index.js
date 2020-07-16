@@ -7,6 +7,7 @@ export { default as NavigatorRouter } from './NavigatorRouter';
 export { default as NavigatorLink } from './NavigatorLink';
 
 export { default as useNavigator } from './useNavigator';
+export { default as useQuery } from './useQuery';
 export { default as withNavigator } from './withNavigator';
 
 export * from './Navigator.utils';

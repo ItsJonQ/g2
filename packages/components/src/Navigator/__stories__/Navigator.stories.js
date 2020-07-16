@@ -1,7 +1,18 @@
 import { styled } from '@wp-g2/styled';
 import React from 'react';
+import { FiArrowLeft } from 'react-icons/fi';
+import { animated, useSpring } from 'react-spring';
 
-import { Flex, FlexBlock, FlexItem, Surface } from '../../index';
+import {
+	BaseView,
+	Flex,
+	FlexBlock,
+	FlexItem,
+	Heading,
+	Icon,
+	Surface,
+	Text,
+} from '../../index';
 import {
 	Navigator,
 	NavigatorBack,
@@ -9,6 +20,7 @@ import {
 	NavigatorScreen,
 	NavigatorScreens,
 	useNavigator,
+	useQuery,
 	withNavigator,
 } from '../index';
 
@@ -19,7 +31,6 @@ export default {
 
 const Screen = styled(Surface)`
 	bottom: 0;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -28,37 +39,120 @@ const Screen = styled(Surface)`
 
 const Home = () => (
 	<Screen>
-		<h1>Home</h1>
 		<ul>
 			<li>
-				<NavigatorLink to="Pages">Dashboard</NavigatorLink>
+				<NavigatorLink params={{ id: 'Acme' }} to="Organization">
+					Acme
+				</NavigatorLink>
 			</li>
 			<li>
-				<NavigatorLink to="Pages">Updates</NavigatorLink>
+				<NavigatorLink params={{ id: 'Hello' }} to="Organization">
+					Hello
+				</NavigatorLink>
 			</li>
 		</ul>
-		<NavigatorLink to="Pages">
-			<h1>Pages</h1>
-		</NavigatorLink>
 	</Screen>
 );
 
-const Pages = () => (
-	<Screen>
-		<h1>Pages</h1>
-	</Screen>
-);
+const Organization = () => {
+	const { location } = useNavigator();
+	const { id } = location;
+
+	return (
+		<Screen>
+			<ul>
+				<li>
+					<NavigatorLink params={{ id }} to="Manage">
+						Manage
+					</NavigatorLink>
+				</li>
+				<li>
+					<NavigatorLink>Usage</NavigatorLink>
+				</li>
+				<li>
+					<NavigatorLink>Members</NavigatorLink>
+				</li>
+			</ul>
+		</Screen>
+	);
+};
+
+const Manage = () => {
+	return (
+		<Screen>
+			<Heading size={4}>Manage</Heading>
+			<ul>
+				<li>
+					<NavigatorLink>Dashboard</NavigatorLink>
+				</li>
+				<li>
+					<NavigatorLink>Data</NavigatorLink>
+				</li>
+				<li>
+					<NavigatorLink>Settings</NavigatorLink>
+				</li>
+			</ul>
+		</Screen>
+	);
+};
 
 const Header = () => {
-	const navigator = useNavigator();
-	const isHome = navigator?.location?.pathname === 'Home';
+	const { location } = useNavigator();
+	const { id } = location;
+	const query = useQuery();
+	const isHome = query.is('Home');
+	const animatedProps = useSpring({
+		opacity: isHome ? 0 : 1,
+		xy: isHome ? [0, 0] : [70, 12],
+	});
+
 	return (
-		<div>
-			{!isHome && <NavigatorBack>Back</NavigatorBack>}
-			<h1 style={{ fontSize: isHome ? 20 : 14, transition: 'all 200ms' }}>
-				Header
-			</h1>
-		</div>
+		<BaseView sx={{ mb: 3, position: 'relative' }}>
+			<animated.div
+				style={{
+					left: 8,
+					opacity: animatedProps.opacity,
+					position: 'absolute',
+					top: 8,
+				}}
+			>
+				<NavigatorBack size="small">
+					<Icon icon={<FiArrowLeft />} />
+				</NavigatorBack>
+			</animated.div>
+
+			{id && (
+				<animated.div
+					style={{
+						left: 78,
+						opacity: animatedProps.opacity,
+						position: 'absolute',
+						transform: animatedProps.opacity
+							.interpolate({
+								output: [0, 8],
+								range: [0, 1],
+							})
+							.interpolate((y) => `translateY(${y}px)`),
+					}}
+				>
+					<Text size={1} variant="muted">
+						Organization
+					</Text>
+				</animated.div>
+			)}
+
+			<animated.div
+				style={{
+					maxWidth: '80%',
+					padding: 8,
+					transform: animatedProps.xy.interpolate(
+						(x, y) => `translate(${x}px, ${y}px)`,
+					),
+				}}
+			>
+				<Heading size={2}>{id || 'Organizations'}</Heading>
+			</animated.div>
+		</BaseView>
 	);
 };
 
@@ -82,9 +176,18 @@ export const _default = () => {
 					<FlexBlock sx={{ width: '100%' }}>
 						<NavigatorScreens>
 							<NavigatorScreen component={Home} path="Home" />
-							<NavigatorScreen component={Pages} path="Pages" />
+							<NavigatorScreen
+								component={Organization}
+								path="Organization"
+							/>
+							<NavigatorScreen component={Manage} path="Manage" />
 						</NavigatorScreens>
 					</FlexBlock>
+					<FlexItem sx={{ width: '100%' }}>
+						<Flex>
+							<NavigatorLink to="Home">Home</NavigatorLink>
+						</Flex>
+					</FlexItem>
 				</Flex>
 			</Navigator>
 		</Surface>
