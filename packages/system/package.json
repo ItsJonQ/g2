@@ -1,0 +1,23 @@
+{
+    "name": "@wp-g2/system",
+    "version": "0.0.2",
+    "description": "",
+    "main": "dist/cjs/index.js",
+    "module": "src/index.js",
+    "sideEffects": false,
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+        "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+        "build": "npm run build:cjs && npm run build:es -- --no-clean",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+    "license": "MIT",
+    "dependencies": {
+        "@wp-g2/utils": "^0.0.2",
+        "emotion": "^10.0.27",
+        "memize": "^1.1.0",
+        "uniq": "^1.0.1"
+    }
+}
