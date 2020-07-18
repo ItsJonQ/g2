@@ -6,12 +6,15 @@ import { css } from './css';
 import { cx } from './cx';
 
 export const createSystemElement = (tagName = 'div') => ({
-	as,
-	children,
-	className,
+	// Internal props
 	css: cssProp,
 	cx: cxProp,
 	ns,
+	// External props
+	// eslint-disable-next-line
+	as,
+	children,
+	className,
 	...props
 }) => {
 	const context = useComponentsContext();
@@ -40,12 +43,7 @@ export const createSystemElement = (tagName = 'div') => ({
 	}
 	displayName = displayName || 'Component';
 
-	const classes = cx(
-		css(cssProp),
-		cxProp,
-		className,
-		`wp-components-${displayName}`,
-	);
+	const classes = cx(cxProp, className, css(cssProp));
 
 	return React.createElement(
 		element,

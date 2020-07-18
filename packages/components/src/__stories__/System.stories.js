@@ -1,4 +1,3 @@
-import { ComponentsProvider } from '@wp-g2/provider';
 import { css, system } from '@wp-g2/system';
 import React from 'react';
 
@@ -6,6 +5,7 @@ export default {
 	title: 'Example/System',
 };
 
+const sys = system;
 const { get } = system;
 
 const button = css`
@@ -23,15 +23,23 @@ const buttonLarge = css`
 	font-size: 22px;
 `;
 
+const buttonContent = css`
+	padding: 20px;
+`;
+
 // component library level
 // uses system.base component
-const Button = ({ isLarge, ...props }) => {
+const Button = ({ children, isLarge, ...props }) => {
 	return (
-		<system.button
+		<sys.button
 			cx={[button, isLarge && buttonLarge]}
 			ns="Button"
 			{...props}
-		/>
+		>
+			<sys.span cx={buttonContent} ns="ButtonContent">
+				{children}
+			</sys.span>
+		</sys.button>
 	);
 };
 
