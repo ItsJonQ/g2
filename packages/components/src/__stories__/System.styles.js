@@ -7,7 +7,7 @@ const { get } = system;
  * workflow to CSS Modules.
  */
 
-export const button = css`
+export const Button = css`
 	background: ${get('colorBrand')};
 	border-radius: ${get('buttonBorderRadius')};
 	color: ${get('colorBrandText')};
@@ -18,10 +18,10 @@ export const button = css`
 	user-select: none;
 `;
 
-export const buttonLarge = css`
+export const Large = css`
 	font-size: 22px;
 `;
 
-export const buttonContent = css`
+export const Content = css`
 	padding: 20px;
 `;

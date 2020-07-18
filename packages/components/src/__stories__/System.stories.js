@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import { connect } from '@wp-g2/provider';
-import { system } from '@wp-g2/system';
+import { jsx } from '@wp-g2/system';
 import React from 'react';
 
 // CSS Modules like workflow
@@ -9,18 +10,13 @@ export default {
 	title: 'Example/System',
 };
 
-const sys = system;
-
 // component library level
 // uses system.base component
 const BaseButton = ({ children, isLarge, ...props }) => {
 	return (
-		<sys.button
-			{...props}
-			cx={[styles.button, isLarge && styles.buttonLarge]}
-		>
-			<sys.span cx={styles.buttonContent}>{children}</sys.span>
-		</sys.button>
+		<button {...props} cx={[styles.Button, isLarge && styles.Large]}>
+			<span cx={styles.Content}>{children}</span>
+		</button>
 	);
 };
 
