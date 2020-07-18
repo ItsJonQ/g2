@@ -1,47 +1,30 @@
-import { css, system } from '@wp-g2/system';
+import { connect } from '@wp-g2/provider';
+import { system } from '@wp-g2/system';
 import React from 'react';
+
+// CSS Modules like workflow
+import * as styles from './System.styles';
 
 export default {
 	title: 'Example/System',
 };
 
 const sys = system;
-const { get } = system;
-
-const button = css`
-	background: ${get('colorBrand')};
-	border-radius: ${get('buttonBorderRadius')};
-	color: ${get('colorBrandText')};
-	display: inline-flex;
-	font-weight: 400;
-	justify-content: center;
-	padding: ${get('buttonPadding')};
-	user-select: none;
-`;
-
-const buttonLarge = css`
-	font-size: 22px;
-`;
-
-const buttonContent = css`
-	padding: 20px;
-`;
 
 // component library level
 // uses system.base component
-const Button = ({ children, isLarge, ...props }) => {
+const BaseButton = ({ children, isLarge, ...props }) => {
 	return (
 		<sys.button
-			cx={[button, isLarge && buttonLarge]}
-			ns="Button"
 			{...props}
+			cx={[styles.button, isLarge && styles.buttonLarge]}
 		>
-			<sys.span cx={buttonContent} ns="ButtonContent">
-				{children}
-			</sys.span>
+			<sys.span cx={styles.buttonContent}>{children}</sys.span>
 		</sys.button>
 	);
 };
+
+const Button = connect(BaseButton, 'Button');
 
 // consumer level
 // overrides can happen with special css prop, enabled by system.base
