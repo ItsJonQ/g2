@@ -5,11 +5,23 @@ import React, { forwardRef } from 'react';
 import { css } from './css';
 import { cx } from './cx';
 import { injectGlobal } from './injectGlobal';
-import { GLOBAL_CSS_VARIABLES, GLOBAL_DARK_MODE_CSS_VARIABLES } from './theme';
+import {
+	GLOBAL_CSS_VARIABLES,
+	GLOBAL_DARK_MODE_CSS_VARIABLES,
+	THEME,
+} from './theme';
 
 const shouldForwardProp = isPropValid;
-const __INTERNAL_STATE__ = {
-	didInjectGlobal: false,
+
+const styles = {
+	Base: {
+		MozOsxFontSmoothing: 'grayscale',
+		WebkitFontSmoothing: 'antialiased',
+		boxSizing: 'border-box',
+		fontFamily: THEME['fontFamily'],
+		fontSize: 14,
+		margin: 0,
+	},
 };
 
 export const createSystemElement = (tagName = 'div') => {
@@ -32,7 +44,7 @@ export const createSystemElement = (tagName = 'div') => {
 		useHydrateGlobals();
 
 		const element = as || tagName;
-		const classes = cx(cxProp, className, css(cssProp));
+		const classes = cx(css(styles.Base), cxProp, className, css(cssProp));
 		const shouldUseAs = as && is.string(as);
 		const shouldFilterProps = is.string(element);
 
@@ -69,6 +81,10 @@ export const createSystemElement = (tagName = 'div') => {
 	}
 
 	return SystemComponent;
+};
+
+const __INTERNAL_STATE__ = {
+	didInjectGlobal: false,
 };
 
 function useHydrateGlobals() {

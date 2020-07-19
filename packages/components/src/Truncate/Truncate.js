@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { css, system } from '@wp-g2/system';
+import { BaseView, css } from '@wp-g2/system';
 import React from 'react';
 
 import * as styles from './Truncate.styles';
@@ -10,6 +10,7 @@ import {
 } from './Truncate.utils';
 
 export function Truncate({
+	as = 'span',
 	children,
 	ellipsis = TRUNCATE_ELLIPSIS,
 	ellipsizeMode = TRUNCATE_TYPE.auto,
@@ -38,14 +39,15 @@ export function Truncate({
 	];
 
 	return (
-		<system.span
+		<BaseView
 			{...props}
+			as={as}
 			cx={cx}
 			ellipsizeMode={ellipsizeMode}
 			numberOfLines={numberOfLines}
 		>
 			{truncatedContent}
-		</system.span>
+		</BaseView>
 	);
 }
 

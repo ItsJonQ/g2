@@ -27,6 +27,11 @@ const COLOR_PROPS = {
 	colorText: '#050505',
 };
 
+const FONT_PROPS = {
+	fontFamily:
+		'Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
+};
+
 const SURFACE_PROPS = {
 	surfaceBackgroundBackgroundColor: '#EFEFF3',
 	surfaceBackgroundColor: '#fff',
@@ -42,6 +47,7 @@ export const BASE_THEME = {
 	...G2_COLORS,
 	...COLOR_PALETTE,
 	...COLOR_PROPS,
+	...FONT_PROPS,
 	...SURFACE_PROPS,
 };
 

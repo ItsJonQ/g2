@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { css, cx, system } from '@wp-g2/system';
+import { BaseView, css, cx } from '@wp-g2/system';
 import React from 'react';
 
 import { Truncate } from '../Truncate';
@@ -26,15 +26,16 @@ function Text({
 		textAlign: align,
 	});
 
-	const classes = cx({
-		[styles.Text]: true,
-		[styles.Base]: true,
-		[styles.Block]: isBlock,
-		[styles.Destructive]: isBlock,
-		[styles.Positive]: isBlock,
-		[styles.Muted]: isBlock,
-		[className]: true,
-	});
+	const classes = cx(
+		[styles.Text, styles.Base],
+		{
+			[styles.Block]: isBlock,
+			[styles.Destructive]: variant === 'destructive',
+			[styles.Positive]: variant === 'positive',
+			[styles.Muted]: variant === 'muted',
+		},
+		[className],
+	);
 
 	const componentProps = {
 		...props,
@@ -46,7 +47,7 @@ function Text({
 		return <Truncate {...componentProps} />;
 	}
 
-	return <system.span {...componentProps} />;
+	return <BaseView {...componentProps} />;
 }
 
 export default connect(Text);

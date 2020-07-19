@@ -1,10 +1,10 @@
 import { connect } from '@wp-g2/provider';
-import { css, system } from '@wp-g2/system';
+import { BaseView, css } from '@wp-g2/system';
 import React from 'react';
 
 import * as styles from './Icon.styles';
 
-function Icon({ forwardedRef, icon, size = 20, ...props }) {
+function Icon({ as = 'div', forwardedRef, icon, size = 20, ...props }) {
 	if (!icon) return null;
 
 	styles.Size = css({
@@ -21,9 +21,9 @@ function Icon({ forwardedRef, icon, size = 20, ...props }) {
 	const cx = [styles.Wrapper, styles.Size];
 
 	return (
-		<system.div cx={cx} {...props}>
+		<BaseView {...props} as={as} cx={cx}>
 			{IconComponent}
-		</system.div>
+		</BaseView>
 	);
 }
 
