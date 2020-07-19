@@ -1,11 +1,9 @@
-import { THEME } from './theme';
+import baseGet from 'dash-get';
+
+import { THEME } from '../theme';
 
 // Defaults
-const __SYSTEM_CONFIG_DEFAULT__ = {
-	...THEME,
-	buttonBorderRadius: '0.25rem',
-	buttonPadding: '0.375em 0.75em',
-};
+const __SYSTEM_CONFIG_DEFAULT__ = { ...THEME };
 
 export const createSystem = (initialValue = __SYSTEM_CONFIG_DEFAULT__) => {
 	const state = {
@@ -20,7 +18,7 @@ export const createSystem = (initialValue = __SYSTEM_CONFIG_DEFAULT__) => {
 
 	// Method to get value from system config store
 	const get = (key) => {
-		const value = config[key];
+		const value = baseGet(config, key);
 		state.lastGet = { key, value };
 
 		return value;

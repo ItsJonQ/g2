@@ -1,8 +1,9 @@
 import { connect, hasNamespace } from '@wp-g2/provider';
-import { BaseView, useResponsiveValue } from '@wp-g2/styled';
+import { BaseView, css, cx } from '@wp-g2/system';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
+import * as styles from './Flex.styles';
 import FlexItem from './FlexItem';
 
 export function Flex({
@@ -14,11 +15,19 @@ export function Flex({
 	justify = 'space-between',
 	...props
 }) {
+	styles.Base = css({
+		alignItems: align,
+		flexDirection: direction,
+		justifyContent: justify,
+	});
+
+	const classes = [styles.Flex, styles.Base];
+	const gapValue = gap * 4;
+
 	const validChildren = getValidChildren(children);
-	const _direction = useResponsiveValue(direction);
 
 	const clonedChildren = validChildren.map((child, index) => {
-		const isColumn = _direction === 'column';
+		const isColumn = direction === 'column';
 		const isLast = index + 1 === validChildren.length;
 
 		const _key = child.key || index;
@@ -38,27 +47,27 @@ export function Flex({
 			display: isColumn ? 'block' : undefined,
 		};
 
+		let childClasses = childProps.className;
+
 		if (!isLast) {
 			if (isColumn) {
-				childProps.mb = gap;
+				childClasses = cx(
+					css({ marginBottom: gapValue }),
+					childClasses,
+				);
 			} else {
-				childProps.mr = gap;
+				childClasses = cx(css({ marginRight: gapValue }), childClasses);
 			}
 		}
 
-		return React.cloneElement(_child, childProps);
+		return React.cloneElement(_child, {
+			...childProps,
+			className: childClasses,
+		});
 	});
 
 	return (
-		<BaseView
-			{...props}
-			__css={{
-				alignItems: align,
-				display: 'flex',
-				flexDirection: direction,
-				justifyContent: justify,
-			}}
-		>
+		<BaseView {...props} cx={classes}>
 			{clonedChildren}
 		</BaseView>
 	);

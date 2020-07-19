@@ -1,4 +1,5 @@
 import { css, styled } from '@wp-g2/styled';
+import { get } from '@wp-g2/system';
 import { MenuItem } from 'reakit/Menu';
 
 const baseStyles = ({ theme }) => {
@@ -9,7 +10,7 @@ const baseStyles = ({ theme }) => {
 		background: none;
 		border: none;
 		border-radius: 6px;
-		color: ${config.colorText};
+		color: ${get('colorText')};
 		cursor: pointer;
 		display: block;
 		outline: none;

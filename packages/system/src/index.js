@@ -1,5 +1,4 @@
-export * from './Box';
-export * from './css';
-export * from './cx';
+export { css, jsx, cx } from './style-system';
+
 export * from './system';
-export * from './jsx';
+export * from './components';

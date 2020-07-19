@@ -21,6 +21,8 @@
         "@emotion/core": "^10.0.28",
         "@emotion/is-prop-valid": "^0.8.8",
         "emotion": "^10.0.27",
+        "emotion-theming": "^10.0.27",
+        "dash-get": "^1.0.2",
         "memize": "^1.1.0",
         "uniq": "^1.0.1"
     }

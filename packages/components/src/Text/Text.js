@@ -27,14 +27,11 @@ function Text({
 	});
 
 	const classes = cx(
-		[styles.Text, styles.Base],
-		{
-			[styles.Block]: isBlock,
-			[styles.Destructive]: variant === 'destructive',
-			[styles.Positive]: variant === 'positive',
-			[styles.Muted]: variant === 'muted',
-		},
-		[className],
+		styles.Text,
+		styles.Base,
+		styles[isBlock && 'block'],
+		styles[variant],
+		className,
 	);
 
 	const componentProps = {

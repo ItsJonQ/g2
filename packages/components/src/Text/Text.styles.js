@@ -1,22 +1,21 @@
-import { css, system } from '@wp-g2/system';
-const { get } = system;
+import { css, get } from '@wp-g2/system';
 
 export const Text = css`
 	color: ${get('colorText')};
 `;
 
-export const Block = css`
+export const block = css`
 	display: block;
 `;
 
-export const Positive = css`
+export const positive = css`
 	color: ${get('colorPositive')};
 `;
 
-export const Destructive = css`
+export const destructive = css`
 	color: ${get('colorDestructive')};
 `;
 
-export const Muted = css`
+export const muted = css`
 	opacity: 0.5;
 `;

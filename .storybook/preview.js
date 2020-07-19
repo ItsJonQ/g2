@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '../packages/styled';
+import { ThemeProvider } from '../packages/system';
 import { Button, Spacer, Surface } from '../packages/components';
 
 function StoryDecorator(storyFn) {
 	const [isDark, setIsDark] = useState(false);
 
 	return (
-		<ThemeProvider theme={{ isDark }}>
+		<ThemeProvider isDark={isDark}>
 			<Spacer m={0} p={2}>
 				<Button size="small" onClick={() => setIsDark(!isDark)}>
 					{isDark ? 'Set Light' : 'Set Dark'}

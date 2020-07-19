@@ -1,4 +1,8 @@
-const NAMESPACE = '--wp-g2';
+import {
+	transformValuesToReferences,
+	transformValuesToVariables,
+	transformValuesToVariablesString,
+} from './utils';
 
 const G2_COLORS = {
 	black: '#000000',
@@ -51,6 +55,10 @@ export const BASE_THEME = {
 	...SURFACE_PROPS,
 };
 
+export const DARK_THEME = {
+	...DARK_MODE_PROPS,
+};
+
 export const THEME = transformValuesToReferences(BASE_THEME);
 export const GLOBAL_VARIABLES = transformValuesToVariables(BASE_THEME);
 export const GLOBAL_CSS_VARIABLES = transformValuesToVariablesString(
@@ -62,32 +70,3 @@ export const GLOBAL_DARK_MODE_CSS_VARIABLES = transformValuesToVariablesString(
 	'[data-system-ui-mode="dark"]',
 	DARK_MODE_PROPS,
 );
-
-function transformValuesToReferences(values = {}) {
-	const next = {};
-	for (const [key, value] of Object.entries(values)) {
-		next[key] = `var(${NAMESPACE}-${key}, ${value})`;
-	}
-	return next;
-}
-
-function transformValuesToVariables(values = {}) {
-	const next = {};
-	for (const [key, value] of Object.entries(values)) {
-		next[`${NAMESPACE}-${key}`] = value;
-	}
-	return next;
-}
-
-function transformValuesToVariablesString(selector = ':root', values = {}) {
-	const variables = transformValuesToVariables(values);
-	const next = [`${selector} {`];
-
-	for (const [key, value] of Object.entries(variables)) {
-		next.push(`${key}: ${value};`);
-	}
-
-	next.push('}');
-
-	return next.join('');
-}

@@ -1,4 +1,4 @@
-import { system } from './system';
+import { system } from '../system';
 
 export const Box = system.div;
 export const BaseView = Box;
