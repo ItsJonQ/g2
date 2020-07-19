@@ -159,7 +159,7 @@ export const _default = () => {
 		<Grid align="flex-start" templateColumns={[null, null, '1fr 300px']}>
 			<Flex align={[null, 'center']} direction={['column', 'row']} p={3}>
 				<FlexItem pb={[1, null]}>
-					<Text as="h1" size={3} weight={600}>
+					<Text as="h1" size={24} weight={600}>
 						Title
 					</Text>
 				</FlexItem>

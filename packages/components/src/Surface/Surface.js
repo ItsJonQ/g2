@@ -1,5 +1,12 @@
 import { connect } from '@wp-g2/provider';
+import { system } from '@wp-g2/system';
+import React from 'react';
 
-import { SurfaceView } from './Surface.styles';
+import * as styles from './Surface.styles';
 
-export default connect(SurfaceView, 'Surface');
+function Surface(props) {
+	const cx = [styles.Surface];
+	return <system.div {...props} cx={cx} />;
+}
+
+export default connect(Surface, 'Surface');

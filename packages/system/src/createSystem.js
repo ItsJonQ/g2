@@ -1,9 +1,10 @@
+import { THEME } from './theme';
+
 // Defaults
 const __SYSTEM_CONFIG_DEFAULT__ = {
+	...THEME,
 	buttonBorderRadius: '0.25rem',
 	buttonPadding: '0.375em 0.75em',
-	colorBrand: 'dodgerblue',
-	colorBrandText: 'white',
 };
 
 export const createSystem = (initialValue = __SYSTEM_CONFIG_DEFAULT__) => {

@@ -1,6 +1,5 @@
 import { jsx as emotion } from '@emotion/core';
 import { mergeRefs } from '@wp-g2/utils';
-import React from 'react';
 
 import { css } from './css';
 import { cx } from './cx';

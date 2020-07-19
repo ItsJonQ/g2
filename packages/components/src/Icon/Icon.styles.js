@@ -1,16 +1,10 @@
-import { css, styled, toPx } from '@wp-g2/styled';
+import { css } from '@wp-g2/system';
 
-const baseStyles = ({ size }) => css`
+export const Wrapper = css`
 	display: block;
-	height: ${toPx(size)};
 	user-select: none;
-	width: ${toPx(size)};
 
 	svg {
 		display: block;
 	}
-`;
-
-export const IconWrapper = styled.div`
-	${baseStyles};
 `;

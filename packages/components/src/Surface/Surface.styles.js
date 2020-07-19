@@ -1,27 +1,9 @@
-import { css, styled, useTheme } from '@wp-g2/styled';
+import { css, system } from '@wp-g2/system';
 
-const surfaceStyles = ({ theme }) => {
-	const { config, isDark } = theme;
+const { get } = system;
 
-	return css`
-		background-color: ${config.cardBackgroundColor};
-		color: ${config.colorText};
-		position: relative;
-
-		${isDark &&
-		css`
-			background-color: ${config.cardBackgroundColorDark};
-			color: ${config.colorTextDark};
-		`}
-	`;
-};
-
-export function useSurfaceStyles() {
-	const theme = useTheme();
-
-	return surfaceStyles({ theme });
-}
-
-export const SurfaceView = styled.div`
-	${surfaceStyles};
+export const Surface = css`
+	background-color: ${get('surfaceBackgroundColor')};
+	color: ${get('colorText')};
+	position: relative;
 `;

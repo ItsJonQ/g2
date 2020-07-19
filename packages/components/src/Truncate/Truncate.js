@@ -1,7 +1,8 @@
 import { connect } from '@wp-g2/provider';
+import { css, system } from '@wp-g2/system';
 import React from 'react';
 
-import { TruncateView } from './Truncate.styles';
+import * as styles from './Truncate.styles';
 import {
 	TRUNCATE_ELLIPSIS,
 	TRUNCATE_TYPE,
@@ -22,16 +23,29 @@ export function Truncate({
 		limit,
 	});
 
-	console.log(truncatedContent);
+	const shouldTruncate = ellipsizeMode === TRUNCATE_TYPE.auto;
+
+	styles.NumberOfLines = css`
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: ${numberOfLines};
+		display: -webkit-box;
+		overflow: hidden;
+	`;
+
+	const cx = [
+		shouldTruncate && !numberOfLines && styles.Truncate,
+		shouldTruncate && numberOfLines && styles.NumberOfLines,
+	];
 
 	return (
-		<TruncateView
+		<system.span
+			{...props}
+			cx={cx}
 			ellipsizeMode={ellipsizeMode}
 			numberOfLines={numberOfLines}
-			{...props}
 		>
 			{truncatedContent}
-		</TruncateView>
+		</system.span>
 	);
 }
 
