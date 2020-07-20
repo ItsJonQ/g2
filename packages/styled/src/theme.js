@@ -68,10 +68,10 @@ const COLOR_PROPS = {
 };
 
 const SURFACE_PROPS = {
-	surfaceBackgroundBackgroundColor: '#EFEFF3',
-	surfaceBackgroundBackgroundColorDark: COLOR_PROPS.colorBodyBackgroundDark,
-	surfaceBackgroundColor: '#fff',
-	surfaceBackgroundColorDark: '#292929',
+	surfaceBackgroundColor: '#EFEFF3',
+	surfaceBackgroundColorDark: COLOR_PROPS.colorBodyBackgroundDark,
+	surfaceColor: '#fff',
+	surfaceColorDark: '#292929',
 };
 
 const ELEVATION_PROPS = {
@@ -162,8 +162,8 @@ const BUTTON_PROPS = {
 };
 
 const CARD_PROPS = {
-	cardBackgroundColor: SURFACE_PROPS.surfaceBackgroundColor,
-	cardBackgroundColorDark: SURFACE_PROPS.surfaceBackgroundColorDark,
+	cardBackgroundColor: SURFACE_PROPS.surfaceColor,
+	cardBackgroundColorDark: SURFACE_PROPS.surfaceColorDark,
 	cardSectionBorderColor: 'rgba(0, 0, 0, 0.1)',
 	cardSectionBorderColorDark: 'rgba(255, 255, 255, 0.1)',
 };

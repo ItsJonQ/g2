@@ -1,9 +1,10 @@
 import { connect, hasNamespace } from '@wp-g2/provider';
-import { BaseView, css, cx } from '@wp-g2/system';
+import { BaseView, css } from '@wp-g2/system';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import * as styles from './Flex.styles';
+import { FlexContext } from './Flex.utils';
 import FlexItem from './FlexItem';
 
 export function Flex({
@@ -24,46 +25,36 @@ export function Flex({
 	const classes = [styles.Flex, styles.Base];
 	const gapValue = gap * 4;
 
+	const isColumn = direction === 'column';
 	const validChildren = getValidChildren(children);
 
 	const clonedChildren = validChildren.map((child, index) => {
-		const isColumn = direction === 'column';
+		const isFirst = index === 0;
 		const isLast = index + 1 === validChildren.length;
 
 		const _key = child.key || index;
-		const _isFlexSubComponent = hasNamespace(child, [
-			'FlexBlock',
-			'FlexItem',
-		]);
+		const contextValue = {
+			display: isColumn ? 'block' : undefined,
+			gap: gapValue,
+			isColumn,
+			isFirst,
+			isLast,
+		};
+
+		const _isSubComponent = hasNamespace(child, ['FlexBlock', 'FlexItem']);
 
 		const _child =
-			!_isFlexSubComponent && _autoWrap ? (
-				<FlexItem key={_key}>{child}</FlexItem>
+			!_isSubComponent && _autoWrap ? (
+				<FlexItem>{child}</FlexItem>
 			) : (
 				child
 			);
 
-		const childProps = {
-			display: isColumn ? 'block' : undefined,
-		};
-
-		let childClasses = childProps.className;
-
-		if (!isLast) {
-			if (isColumn) {
-				childClasses = cx(
-					css({ marginBottom: gapValue }),
-					childClasses,
-				);
-			} else {
-				childClasses = cx(css({ marginRight: gapValue }), childClasses);
-			}
-		}
-
-		return React.cloneElement(_child, {
-			...childProps,
-			className: childClasses,
-		});
+		return (
+			<FlexContext.Provider key={_key} value={contextValue}>
+				{_child}
+			</FlexContext.Provider>
+		);
 	});
 
 	return (

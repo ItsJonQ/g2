@@ -107,7 +107,7 @@ const Header = () => {
 	});
 
 	return (
-		<BaseView sx={{ mb: 3, position: 'relative' }}>
+		<BaseView css={{ mb: 3, position: 'relative' }}>
 			<animated.div
 				style={{
 					left: 8,
@@ -135,7 +135,7 @@ const Header = () => {
 							.interpolate((y) => `translateY(${y}px)`),
 					}}
 				>
-					<Text size={1} variant="muted">
+					<Text size={11} variant="muted">
 						Organization
 					</Text>
 				</animated.div>
@@ -161,7 +161,7 @@ const NavigatorHeader = withNavigator(Header);
 export const _default = () => {
 	return (
 		<Surface
-			sx={{
+			css={{
 				border: '1px solid #ddd',
 				height: 480,
 				m: 'auto',
@@ -169,11 +169,11 @@ export const _default = () => {
 			}}
 		>
 			<Navigator initialPath="Home">
-				<Flex direction="column" sx={{ height: '100%' }}>
-					<FlexItem sx={{ width: '100%' }}>
+				<Flex css={{ height: '100%' }} direction="column">
+					<FlexItem css={{ width: '100%' }}>
 						<NavigatorHeader />
 					</FlexItem>
-					<FlexBlock sx={{ width: '100%' }}>
+					<FlexBlock css={{ width: '100%' }}>
 						<NavigatorScreens>
 							<NavigatorScreen component={Home} path="Home" />
 							<NavigatorScreen
@@ -183,7 +183,7 @@ export const _default = () => {
 							<NavigatorScreen component={Manage} path="Manage" />
 						</NavigatorScreens>
 					</FlexBlock>
-					<FlexItem sx={{ width: '100%' }}>
+					<FlexItem css={{ width: '100%' }}>
 						<Flex>
 							<NavigatorLink to="Home">Home</NavigatorLink>
 						</Flex>

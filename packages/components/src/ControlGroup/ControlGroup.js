@@ -30,18 +30,16 @@ function ControlGroup({ children, ...props }) {
 		]);
 
 		const _child = _isSubComponent ? (
-			<ControlGroupContext.Provider key={_key} value={contextValue}>
-				{child}
-			</ControlGroupContext.Provider>
+			child
 		) : (
-			<ControlGroupItem key={_key}>
-				<ControlGroupContext.Provider value={contextValue}>
-					{child}
-				</ControlGroupContext.Provider>
-			</ControlGroupItem>
+			<ControlGroupItem>{child}</ControlGroupItem>
 		);
 
-		return _child;
+		return (
+			<ControlGroupContext.Provider key={_key} value={contextValue}>
+				{_child}
+			</ControlGroupContext.Provider>
+		);
 	});
 
 	return (

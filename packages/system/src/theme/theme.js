@@ -37,14 +37,14 @@ const FONT_PROPS = {
 };
 
 const SURFACE_PROPS = {
-	surfaceBackgroundBackgroundColor: '#EFEFF3',
-	surfaceBackgroundColor: '#fff',
+	surfaceBackgroundColor: '#EFEFF3',
+	surfaceColor: '#fff',
 };
 
 const DARK_MODE_PROPS = {
 	colorText: '#E4E6EB',
-	surfaceBackgroundBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
-	surfaceBackgroundColor: '#292929',
+	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
+	surfaceColor: '#292929',
 };
 
 export const BASE_THEME = {
