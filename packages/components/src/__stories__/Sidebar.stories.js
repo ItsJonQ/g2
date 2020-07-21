@@ -92,8 +92,8 @@ const PagesScreen = () => {
 			</BaseView>
 			<CardBody sx={{ px: 2, py: 4 }}>
 				<Menu>
-					<MenuGroup sx={{ py: 3 }}>
-						<Heading size="5" sx={{ px: 3 }}>
+					<MenuGroup>
+						<Heading size="5" sx={{ px: 3, paddingBottom: 2 }}>
 							RECENT
 						</Heading>
 						<MenuItem>About</MenuItem>
@@ -105,15 +105,29 @@ const PagesScreen = () => {
 						<MenuItem>Contact</MenuItem>
 						<MenuItem>Locations</MenuItem>
 					</MenuGroup>
-					<MenuGroup sx={{ py: 3 }}>
-						<Heading size="5" sx={{ px: 3 }}>
+					<MenuGroup>
+						<Heading
+							size="5"
+							sx={{
+								px: 3,
+								paddingTop: 4,
+								paddingBottom: 2,
+							}}
+						>
 							DRAFTS
 						</Heading>
 						<MenuItem>Services</MenuItem>
 						<MenuItem>Television and Radio</MenuItem>
 					</MenuGroup>
-					<MenuGroup sx={{ py: 3 }}>
-						<Heading size="5" sx={{ px: 3 }}>
+					<MenuGroup>
+						<Heading
+							size="5"
+							sx={{
+								px: 3,
+								paddingTop: 4,
+								paddingBottom: 2,
+							}}
+						>
 							ALL PAGES
 						</Heading>
 						<MenuItem>Aardvark</MenuItem>
