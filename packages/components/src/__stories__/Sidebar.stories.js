@@ -92,11 +92,63 @@ const PagesScreen = () => {
 			</BaseView>
 			<CardBody sx={{ px: 2, py: 4 }}>
 				<Menu>
-					<MenuGroup>
-						<MenuItem>Media</MenuItem>
-						<MenuItem>Posts</MenuItem>
-						<MenuItem>Pages</MenuItem>
-						<MenuItem>Comments</MenuItem>
+					<MenuGroup sx={{ py: 3 }}>
+						<Heading size="5" sx={{ px: 3 }}>
+							RECENT
+						</Heading>
+						<MenuItem>About</MenuItem>
+						<MenuItem>Portfolio</MenuItem>
+						<MenuItem>
+							A place for mostly incoherent nonsense
+						</MenuItem>
+						<MenuItem>Team</MenuItem>
+						<MenuItem>Contact</MenuItem>
+						<MenuItem>Locations</MenuItem>
+					</MenuGroup>
+					<MenuGroup sx={{ py: 3 }}>
+						<Heading size="5" sx={{ px: 3 }}>
+							DRAFTS
+						</Heading>
+						<MenuItem>Services</MenuItem>
+						<MenuItem>Television and Radio</MenuItem>
+					</MenuGroup>
+					<MenuGroup sx={{ py: 3 }}>
+						<Heading size="5" sx={{ px: 3 }}>
+							ALL PAGES
+						</Heading>
+						<MenuItem>Aardvark</MenuItem>
+						<MenuItem>Albatross</MenuItem>
+						<MenuItem>Akita</MenuItem>
+						<MenuItem>Bison</MenuItem>
+						<MenuItem>Clown Fish</MenuItem>
+						<MenuItem>Dog</MenuItem>
+						<MenuItem>Dragonfly</MenuItem>
+						<MenuItem>Emu</MenuItem>
+						<MenuItem>Fox</MenuItem>
+						<MenuItem>Gecko</MenuItem>
+						<MenuItem>Hermit Crab</MenuItem>
+						<MenuItem>Iguana</MenuItem>
+						<MenuItem>Jaguar</MenuItem>
+						<MenuItem>Jellyfish</MenuItem>
+						<MenuItem>Kangaroo</MenuItem>
+						<MenuItem>Labradoodle</MenuItem>
+						<MenuItem>Ladybug</MenuItem>
+						<MenuItem>Macaw</MenuItem>
+						<MenuItem>Mayfly</MenuItem>
+						<MenuItem>Newt</MenuItem>
+						<MenuItem>Ocelot</MenuItem>
+						<MenuItem>Octopus</MenuItem>
+						<MenuItem>Panther</MenuItem>
+						<MenuItem>Quail</MenuItem>
+						<MenuItem>Rabbit</MenuItem>
+						<MenuItem>Raccoon</MenuItem>
+						<MenuItem>Skunk</MenuItem>
+						<MenuItem>Tapir</MenuItem>
+						<MenuItem>Umbrellabird</MenuItem>
+						<MenuItem>Vulture</MenuItem>
+						<MenuItem>Walrus</MenuItem>
+						<MenuItem>Yak</MenuItem>
+						<MenuItem>Zabra</MenuItem>
 					</MenuGroup>
 				</Menu>
 			</CardBody>
