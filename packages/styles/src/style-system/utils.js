@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+export const breakpoints = [40, 52, 64].map((n) => n + 'em');
+
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts
 export function get(obj, key, def, p, undef) {
 	const path = key && typeof key === 'string' ? key.split('.') : [key];
@@ -8,8 +10,6 @@ export function get(obj, key, def, p, undef) {
 	}
 	return obj === undef ? def : obj;
 }
-
-export const defaultBreakpoints = [40, 52, 64].map((n) => n + 'em');
 
 const defaultTheme = {
 	space: [0, 4, 8, 16, 32, 64, 128, 256, 512],

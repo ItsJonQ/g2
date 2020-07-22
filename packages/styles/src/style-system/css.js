@@ -1,11 +1,10 @@
 import { is } from '@wp-g2/utils';
 
 import { css as compile } from './emotion';
-
-const breakpoints = [40, 52, 64].map((n) => n + 'em');
+import { breakpoints } from './utils';
 
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224
-const responsive = (styles = {}) => {
+export const responsive = (styles = {}) => {
 	const next = {};
 	const mediaQueries = [
 		null,
@@ -37,6 +36,8 @@ const responsive = (styles = {}) => {
 
 	return next;
 };
+
+export function responsiveValue(value, transform = (v) => v) {}
 
 export function css(...args) {
 	if (is.plainObject(args[0])) {

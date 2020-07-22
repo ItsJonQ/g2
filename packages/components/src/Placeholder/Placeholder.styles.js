@@ -1,20 +1,9 @@
-import { css, styled } from '@wp-g2/styled-components';
+import { css, get } from '@wp-g2/styles';
 
-const baseStyles = ({ theme }) => {
-	const { config, isDark } = theme;
-
-	return css`
-		align-items: center;
-		background: rgba(0, 0, 0, 0.1);
-		display: flex;
-		justify-content: center;
-
-		${isDark &&
-		css`
-			background: rgba(255, 255, 255, 0.1);
-		`}
-	`;
-};
-export const PlaceholderView = styled.div`
-	${baseStyles};
+export const Placeholder = css`
+	align-items: center;
+	background: ${get('surfaceBackgroundColor')};
+	color: ${get('colorText')};
+	display: flex;
+	justify-content: center;
 `;

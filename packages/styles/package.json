@@ -24,7 +24,7 @@
         "cssjanus": "^1.3.2",
         "emotion": "^10.0.27",
         "emotion-theming": "^10.0.27",
-        "stylis-plugin-css-variables": "^1.0.0",
+        "stylis-plugin-css-variables": "^1.0.1",
         "stylis-plugin-rtl": "^1.0.0",
         "dash-get": "^1.0.2",
         "memize": "^1.1.0",

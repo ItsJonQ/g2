@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView, useResponsiveValue } from '@wp-g2/styled-components';
+import { BaseView, css, useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
 function Grid({
@@ -16,22 +16,19 @@ function Grid({
 	const row = useResponsiveValue(rows);
 
 	const gridTemplateColumns =
-		templateColumns || (!!column && `repeat(${column}, 1fr)`);
+		templateColumns || (!!columns && `repeat(${column}, 1fr)`);
 	const gridTemplateRows = templateRows || (!!rows && `repeat(${row}, 1fr)`);
 
-	return (
-		<BaseView
-			{...props}
-			__css={{
-				alignItems: align,
-				display: 'grid',
-				gap,
-				gridTemplateColumns,
-				gridTemplateRows,
-				justifyContent: justify,
-			}}
-		/>
-	);
+	const cx = css({
+		alignItems: align,
+		display: 'grid',
+		gap,
+		gridTemplateColumns,
+		gridTemplateRows,
+		justifyContent: justify,
+	});
+
+	return <BaseView {...props} cx={cx} />;
 }
 
 export default connect(Grid);

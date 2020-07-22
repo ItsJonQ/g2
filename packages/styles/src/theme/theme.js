@@ -44,6 +44,10 @@ const FONT_PROPS = {
 		'Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
 };
 
+const GRID_PROPS = {
+	gridBase: 4,
+};
+
 const SURFACE_PROPS = {
 	surfaceBackgroundColor: '#EFEFF3',
 	surfaceColor: '#fff',
@@ -62,6 +66,7 @@ export const BASE_THEME = {
 	...FONT_PROPS,
 	...SURFACE_PROPS,
 	...ANIMATION_PROPS,
+	...GRID_PROPS,
 };
 
 export const DARK_THEME = {

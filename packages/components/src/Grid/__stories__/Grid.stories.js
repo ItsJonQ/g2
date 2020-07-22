@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BaseView } from '../../BaseView';
+import { Placeholder } from '../../index';
 import { Grid } from '../index';
 
 export default {
@@ -8,13 +8,11 @@ export default {
 	title: 'Grid',
 };
 
-const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;
-
 export const _default = () => {
 	return (
-		<Grid columns={2}>
-			<ItemView>Item</ItemView>
-			<ItemView>Item</ItemView>
+		<Grid columns={[2, null, 4]}>
+			<Placeholder>Item</Placeholder>
+			<Placeholder>Item</Placeholder>
 		</Grid>
 	);
 };
