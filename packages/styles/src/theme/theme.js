@@ -4,6 +4,14 @@ import {
 	transformValuesToVariablesString,
 } from './utils';
 
+const ANIMATION_PROPS = {
+	transitionDuration: '200ms',
+	transitionDurationFast: '120ms',
+	transitionDurationFaster: '100ms',
+	transitionTimingFunction: 'cubic-bezier(0.08, 0.52, 0.52, 1)',
+	transitionTimingFunctionControl: 'cubic-bezier(0.12, 0.8, 0.32, 1)',
+};
+
 const G2_COLORS = {
 	black: '#000000',
 	blueberry: '#3858E9',
@@ -53,6 +61,7 @@ export const BASE_THEME = {
 	...COLOR_PROPS,
 	...FONT_PROPS,
 	...SURFACE_PROPS,
+	...ANIMATION_PROPS,
 };
 
 export const DARK_THEME = {

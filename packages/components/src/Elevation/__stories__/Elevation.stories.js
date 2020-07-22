@@ -1,4 +1,4 @@
-import { BaseView } from '@wp-g2/styled-components';
+import { BaseView } from '@wp-g2/styles';
 import React from 'react';
 
 import { Elevation } from '../index';
@@ -10,7 +10,7 @@ export default {
 
 export const _default = () => {
 	return (
-		<BaseView sx={{ padding: 30, position: 'relative' }}>
+		<BaseView css={{ padding: 30, position: 'relative' }}>
 			<Elevation value={5} />
 		</BaseView>
 	);
