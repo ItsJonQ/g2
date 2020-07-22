@@ -14357,10 +14357,10 @@ styled-system@^5.1.5:
     "@styled-system/variant" "^5.1.5"
     object-assign "^4.1.1"
 
-stylis-plugin-css-variables@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/stylis-plugin-css-variables/-/stylis-plugin-css-variables-1.0.1.tgz#801b421f9d4a2e037a6dcb46dcf1ef45d9c61deb"
-  integrity sha512-ZsyHTfxyCmktsj36hk0eYQtgOOrxDgBhfAGJmZhuwYA6D+2RJ2bqM0I5W1z/hkZiteAyBViso7HgA/MWWox6pQ==
+stylis-plugin-css-variables@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/stylis-plugin-css-variables/-/stylis-plugin-css-variables-1.0.2.tgz#db8ae6f9b1b9ec29ae5c15853622ba91c7ca8331"
+  integrity sha512-0GgonHncp17EFBn3OSJDxJ7RQbjUCfogHsvmmB9nh4jPOLIZk7Xh9sGRPuE38dAzkDt7QYUTjHtoqU4k9BQYTA==
   dependencies:
     "@ungap/weakset" "^0.2.1"
     memize "^1.1.0"
