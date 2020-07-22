@@ -10,8 +10,8 @@ export default {
 
 export const _default = () => {
 	return (
-		<Scrollable sx={{ height: 400, width: 300 }}>
-			<BaseView m={3} sx={{ backgroundColor: '#eee', height: 1000 }} />
+		<Scrollable css={{ height: 400, width: 300 }}>
+			<BaseView css={{ backgroundColor: '#eee', height: 1000 }} />
 		</Scrollable>
 	);
 };

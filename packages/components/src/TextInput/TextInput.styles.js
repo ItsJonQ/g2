@@ -2,7 +2,7 @@ import { css, styled } from '@wp-g2/styled-components';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { Flex } from '../Flex';
-import { scrollableScrollbarStyles } from '../Scrollable';
+// import { scrollableScrollbarStyles } from '../Scrollable';
 
 const baseStyles = ({ isFocused, isRounded, isSeamless, multiline, theme }) => {
 	const { config } = theme;
@@ -178,5 +178,4 @@ export const TextAreaView = styled(TextareaAutosize)`
 	${inputStyles};
 	${sizeStyles};
 	${textAreaStyles};
-	${scrollableScrollbarStyles};
 `;

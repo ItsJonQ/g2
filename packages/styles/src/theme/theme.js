@@ -36,6 +36,9 @@ const COLOR_PROPS = {
 	colorBodyBackground: G2_COLORS.white,
 	colorBodyBackgroundDark: '#18191A',
 	colorBrand: COLOR_PALETTE.brand,
+	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
+	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
+	colorScrollbarTrack: 'rgba(255,255,255, 0.04)',
 	colorText: '#050505',
 };
 
@@ -54,6 +57,9 @@ const SURFACE_PROPS = {
 };
 
 const DARK_MODE_PROPS = {
+	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
+	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',
+	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#E4E6EB',
 	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
 	surfaceColor: '#292929',

@@ -27,7 +27,7 @@ function Elevation({
 		'transitionTimingFunction',
 	)}`;
 
-	styles.base = css({
+	styles.Base = css({
 		borderRadius,
 		bottom: offset,
 		boxShadow: styles.getBoxShadow(value),
@@ -57,7 +57,7 @@ function Elevation({
 
 	const cx = [
 		styles.Elevation,
-		styles.base,
+		styles.Base,
 		is.defined(hoverValue) && styles.hover,
 		is.defined(activeValue) && styles.active,
 		is.defined(focus) && styles.focus,
