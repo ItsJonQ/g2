@@ -1,5 +1,6 @@
 import { is } from '@wp-g2/utils';
-import { css as compile } from 'emotion';
+
+import { css as compile } from './emotion';
 
 const breakpoints = [40, 52, 64].map((n) => n + 'em');
 

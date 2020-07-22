@@ -1,4 +1,4 @@
-import { css, styled } from '@wp-g2/styled';
+import { css, styled } from '@wp-g2/styled-components';
 
 export const scrollableScrollbarStyles = ({ theme }) => {
 	const { isDark } = theme;

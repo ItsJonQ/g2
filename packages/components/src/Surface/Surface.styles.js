@@ -1,4 +1,4 @@
-import { css, get } from '@wp-g2/system';
+import { css, get } from '@wp-g2/styles';
 
 export const Surface = css`
 	background-color: ${get('surfaceColor')};

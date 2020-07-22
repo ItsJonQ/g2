@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '../packages/system';
+import { ThemeProvider } from '../packages/styles';
 import { Button, Spacer, Surface } from '../packages/components';
 
 function StoryDecorator(storyFn) {

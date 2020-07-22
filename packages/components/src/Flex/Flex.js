@@ -1,5 +1,5 @@
 import { connect, hasNamespace } from '@wp-g2/provider';
-import { BaseView, css } from '@wp-g2/system';
+import { BaseView, css } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 

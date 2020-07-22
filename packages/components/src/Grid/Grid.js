@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView, useResponsiveValue } from '@wp-g2/styled';
+import { BaseView, useResponsiveValue } from '@wp-g2/styled-components';
 import React from 'react';
 
 function Grid({

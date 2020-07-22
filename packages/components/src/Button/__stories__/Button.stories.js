@@ -16,7 +16,7 @@ const Buttons = (props) => {
 			<Stack direction="row" justify="left" spacing={4}>
 				<StackItem>
 					<Spacer>
-						<Text size={0} variant="muted">
+						<Text size={12} variant="muted">
 							Large
 						</Text>
 					</Spacer>
@@ -26,7 +26,7 @@ const Buttons = (props) => {
 				</StackItem>
 				<StackItem>
 					<Spacer>
-						<Text size={0} variant="muted">
+						<Text size={12} variant="muted">
 							Medium
 						</Text>
 					</Spacer>
@@ -36,7 +36,7 @@ const Buttons = (props) => {
 				</StackItem>
 				<StackItem>
 					<Spacer>
-						<Text size={0} variant="muted">
+						<Text size={12} variant="muted">
 							Small
 						</Text>
 					</Spacer>

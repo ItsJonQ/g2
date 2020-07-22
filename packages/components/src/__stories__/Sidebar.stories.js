@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@wp-g2/styled';
+import { ThemeProvider } from '@wp-g2/styled-components';
 import React from 'react';
 
 import {
@@ -93,7 +93,7 @@ const PagesScreen = () => {
 			<CardBody sx={{ px: 2, py: 4 }}>
 				<Menu>
 					<MenuGroup>
-						<Heading size="5" sx={{ px: 3, paddingBottom: 2 }}>
+						<Heading size="5" sx={{ paddingBottom: 2, px: 3 }}>
 							RECENT
 						</Heading>
 						<MenuItem>About</MenuItem>
@@ -109,9 +109,9 @@ const PagesScreen = () => {
 						<Heading
 							size="5"
 							sx={{
-								px: 3,
-								paddingTop: 4,
 								paddingBottom: 2,
+								paddingTop: 4,
+								px: 3,
 							}}
 						>
 							DRAFTS
@@ -123,9 +123,9 @@ const PagesScreen = () => {
 						<Heading
 							size="5"
 							sx={{
-								px: 3,
-								paddingTop: 4,
 								paddingBottom: 2,
+								paddingTop: 4,
+								px: 3,
 							}}
 						>
 							ALL PAGES

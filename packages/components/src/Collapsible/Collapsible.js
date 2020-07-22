@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styled';
+import { BaseView } from '@wp-g2/styled-components';
 import React from 'react';
 import { useDisclosureState } from 'reakit/Disclosure';
 

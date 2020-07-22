@@ -1,4 +1,4 @@
-import { css, styled, toPx } from '@wp-g2/styled';
+import { css, styled, toPx } from '@wp-g2/styled-components';
 
 import { WRAPPER_SIZE } from './Spinner.utils';
 

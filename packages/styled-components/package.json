@@ -1,5 +1,5 @@
 {
-    "name": "@wp-g2/system",
+    "name": "@wp-g2/styled-components",
     "version": "0.0.2",
     "description": "",
     "main": "dist/cjs/index.js",
@@ -15,15 +15,17 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "@wp-g2/provider": "^0.0.2",
+        "@emotion/core": "^10.0.28",
+        "@emotion/styled": "^10.0.27",
+        "@theme-ui/css": "^0.3.1",
+        "@theme-ui/match-media": "^0.3.1",
+        "@theme-ui/preset-base": "^0.3.0",
         "@wp-g2/utils": "^0.0.2",
         "classnames": "^2.2.6",
-        "@emotion/core": "^10.0.28",
-        "@emotion/is-prop-valid": "^0.8.8",
-        "emotion": "^10.0.27",
-        "emotion-theming": "^10.0.27",
-        "dash-get": "^1.0.2",
-        "memize": "^1.1.0",
-        "uniq": "^1.0.1"
-    }
+        "hoist-non-react-statics": "^3.3.2",
+        "is-style-prop-valid": "^0.0.7",
+        "theme-ui": "^0.3.1",
+        "tinycolor2": "^1.4.1"
+    },
+    "gitHead": "3a971b5b9117ac80e2522d3685e4da4398305aae"
 }

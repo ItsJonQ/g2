@@ -1,4 +1,4 @@
-import { css } from '@wp-g2/system';
+import { css } from '@wp-g2/styles';
 
 export const Truncate = css`
 	display: block;

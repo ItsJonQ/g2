@@ -1,5 +1,5 @@
-import { css, styled } from '@wp-g2/styled';
-import { get } from '@wp-g2/system';
+import { css, styled } from '@wp-g2/styled-components';
+import { get } from '@wp-g2/styles';
 import { MenuItem } from 'reakit/Menu';
 
 const baseStyles = ({ theme }) => {

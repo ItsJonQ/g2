@@ -1,4 +1,4 @@
-import { css, styled } from '@wp-g2/styled';
+import { css, styled } from '@wp-g2/styled-components';
 
 import { Text } from '../Text';
 

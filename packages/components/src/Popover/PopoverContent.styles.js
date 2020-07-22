@@ -1,4 +1,4 @@
-import { styled } from '@wp-g2/styled';
+import { styled } from '@wp-g2/styled-components';
 import { Popover } from 'reakit/Popover';
 
 export const PopoverContentView = styled(Popover)`

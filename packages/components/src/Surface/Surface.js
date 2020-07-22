@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/system';
+import { BaseView } from '@wp-g2/styles';
 import React from 'react';
 
 import * as styles from './Surface.styles';
