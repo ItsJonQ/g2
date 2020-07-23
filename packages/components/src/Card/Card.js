@@ -2,15 +2,18 @@ import { connect } from '@wp-g2/provider';
 import React from 'react';
 
 import { Elevation } from '../Elevation';
-import { CardView } from './Card.styles';
+import { Surface } from '../Surface';
+import * as styles from './Card.styles';
 
-function Card({ children, elevation = 2, ...props }) {
+function Card({ children, className, elevation = 2, ...props }) {
+	const cx = [styles.Card, styles.borderRadius, className];
+
 	return (
-		<CardView {...props}>
+		<Surface {...props} className={cx}>
 			{children}
 			<Elevation isInteractive={false} value={elevation ? 1 : 0} />
 			<Elevation isInteractive={false} value={elevation} />
-		</CardView>
+		</Surface>
 	);
 }
 

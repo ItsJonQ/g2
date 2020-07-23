@@ -1,10 +1,18 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
 
-import { CardHeaderView } from './Card.styles';
+import { Flex } from '../Flex';
+import * as styles from './Card.styles';
 
-function CardHeader({ ...props }) {
-	return <CardHeaderView {...props} />;
+function CardHeader({ className, ...props }) {
+	const cx = [
+		styles.Header,
+		styles.borderRadius,
+		styles.headerFooter,
+		className,
+	];
+
+	return <Flex {...props} className={cx} />;
 }
 
 export default connect(CardHeader);

@@ -1,39 +1,35 @@
-import { css, styled } from '@wp-g2/styled-components';
+import { css, get } from '@wp-g2/styles';
 
-import { Flex } from '../Flex';
-import { Scrollable } from '../Scrollable';
-import { Surface } from '../Surface';
-
-const baseStyles = ({ theme }) => {
-	const { isDark } = theme;
-
-	return css`
-		border-radius: 8px;
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
-		outline: none;
-
-		${isDark &&
-		css`
-			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
-		`}
-	`;
-};
-
-export const CardView = styled(Surface)`
-	${baseStyles};
+export const Card = css`
+	border-radius: 8px;
+	box-shadow: 0 0 0 1px ${get('surfaceBorder')};
+	outline: none;
 `;
 
-const headerFooterStyles = ({ theme }) => {
-	return css`
-		min-height: 48px;
-		${theme.sx({
-			px: 3,
-			py: 1,
-		})}
-	`;
-};
+export const Header = css`
+	border-bottom: 1px solid;
+`;
 
-const borderRadiusStyles = () => css`
+export const Footer = css`
+	border-top: 1px solid;
+`;
+
+export const Body = css`
+	padding: 12px;
+`;
+
+export const InnerBody = css`
+	margin-left: -12px;
+	margin-right: -12px;
+`;
+
+export const headerFooter = css`
+	border-color: ${get('colorDivider')};
+	min-height: 48px;
+	padding: 4px 12px;
+`;
+
+export const borderRadius = css`
 	&:first-of-type {
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
@@ -43,40 +39,4 @@ const borderRadiusStyles = () => css`
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
 	}
-`;
-
-const bodyStyles = ({ theme }) => {
-	return theme.sx({
-		p: 3,
-	});
-};
-
-export const CardBodyView = styled(Scrollable)`
-	${bodyStyles};
-	${borderRadiusStyles};
-`;
-
-const borderColorStyles = ({ theme }) => {
-	const { config, isDark } = theme;
-	const borderColor = isDark
-		? config.cardSectionBorderColorDark
-		: config.cardSectionBorderColor;
-
-	return css`
-		border-color: ${borderColor};
-	`;
-};
-
-export const CardHeaderView = styled(Flex)`
-	border-bottom: 1px solid;
-	${borderColorStyles};
-	${headerFooterStyles};
-	${borderRadiusStyles};
-`;
-
-export const CardFooterView = styled(Flex)`
-	border-top: 1px solid;
-	${borderColorStyles};
-	${headerFooterStyles};
-	${borderRadiusStyles};
 `;

@@ -25,11 +25,12 @@ export const createSystemElement = (tagName = 'div') => {
 			// Internal props
 			css: cssProp,
 			cx: cxProp,
+			sx: sxProp, // Legacy: From ThemeUI
 			// External props
 			// eslint-disable-next-line
 			as,
 			children,
-			className,
+			className: classNameProp,
 			forwardedRef,
 			...props
 		},
@@ -39,7 +40,19 @@ export const createSystemElement = (tagName = 'div') => {
 		useHydrateGlobalStyles();
 
 		const element = as || tagName;
-		const classes = cx(css(styles.Base), cxProp, className, css(cssProp));
+		const className = !is.string(classNameProp)
+			? cx(classNameProp)
+			: classNameProp;
+
+		const sx = sxProp && css(sxProp);
+
+		const classes = cx(
+			css(styles.Base),
+			cxProp,
+			className,
+			sx,
+			css(cssProp),
+		);
 		const shouldFilterProps = is.string(element);
 
 		let newProps = {};

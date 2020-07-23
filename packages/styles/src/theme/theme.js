@@ -36,9 +36,10 @@ const COLOR_PROPS = {
 	colorBodyBackground: G2_COLORS.white,
 	colorBodyBackgroundDark: '#18191A',
 	colorBrand: COLOR_PALETTE.brand,
+	colorDivider: 'rgba(0, 0, 0, 0.1)',
 	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
 	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
-	colorScrollbarTrack: 'rgba(255,255,255, 0.04)',
+	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#050505',
 };
 
@@ -53,15 +54,18 @@ const GRID_PROPS = {
 
 const SURFACE_PROPS = {
 	surfaceBackgroundColor: '#EFEFF3',
+	surfaceBorder: 'rgba(0, 0, 0, 0.06)',
 	surfaceColor: '#fff',
 };
 
 const DARK_MODE_PROPS = {
+	colorDivider: 'rgba(255, 255, 255, 0.1)',
 	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#E4E6EB',
 	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
+	surfaceBorder: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',
 };
 

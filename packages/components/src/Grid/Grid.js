@@ -5,7 +5,7 @@ import React from 'react';
 function Grid({
 	align,
 	columns,
-	gap = 3,
+	gap = 12,
 	justify,
 	rows,
 	templateColumns,
