@@ -45,9 +45,9 @@ export function componentsConnect(Component, namespace, options = {}) {
 
 		return (
 			<Component
+				data-component={displayName}
 				{...mergedProps}
 				className={classes}
-				data-component={displayName}
 				forwardedRef={forwardedRef}
 			>
 				{rendered}
