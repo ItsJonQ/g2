@@ -1,5 +1,10 @@
 import React from 'react';
-import { FiAirplay } from 'react-icons/fi';
+import {
+	FiAlignCenter,
+	FiAlignJustify,
+	FiAlignLeft,
+	FiAlignRight,
+} from 'react-icons/fi';
 
 import { Icon, Spacer } from '../../index';
 import { SegmentedControl } from '../index';
@@ -10,48 +15,43 @@ export default {
 };
 
 export const _default = () => {
-	const options = [
+	const align = [
 		{
-			label: <Icon icon={<FiAirplay />} size={14} />,
-			value: 'first',
+			label: <Icon icon={<FiAlignLeft />} size={14} />,
+			value: 'left',
 		},
 		{
-			label: 'Second',
-			value: 'second',
+			label: <Icon icon={<FiAlignCenter />} size={14} />,
+			value: 'center',
 		},
 		{
-			label: 'Third',
-			value: 'third',
+			label: <Icon icon={<FiAlignRight />} size={14} />,
+			value: 'right',
 		},
 		{
-			label: 'Fourth',
-			value: 'fourth',
+			label: <Icon icon={<FiAlignJustify />} size={14} />,
+			value: 'justify',
+		},
+	];
+
+	const xy = [
+		{
+			label: 'Horizontal',
+			value: 'horizontal',
 		},
 		{
-			label: 'Fifth',
-			value: 'fifth',
+			label: 'Vertical',
+			value: 'vertical',
 		},
 	];
 
 	return (
 		<>
 			<Spacer>
-				<SegmentedControl options={options} />
+				<SegmentedControl options={align} />
 			</Spacer>
 			<Spacer>
-				<SegmentedControl
-					evenWidths
-					options={[
-						{
-							label: 'Horizontal',
-							value: 'horizontal',
-						},
-						{
-							label: 'Vertical',
-							value: 'vertical',
-						},
-					]}
-				/>
+				<SegmentedControl evenWidths options={xy} />
 			</Spacer>
 		</>
 	);

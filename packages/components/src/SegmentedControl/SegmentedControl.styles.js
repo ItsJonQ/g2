@@ -44,27 +44,31 @@ export const labelBlock = css`
 export const Button = styled.button`
 	align-items: center;
 	appearance: none;
-	background: none;
+	background: transparent;
 	border: none;
 	border-radius: 3px;
 	color: ${get('colorText')};
 	cursor: pointer;
 	display: flex;
-	height: 28px;
+	height: 26px;
 	justify-content: center;
-	line-height: 28px;
-	margin: -1px 0;
+	line-height: 26px;
 	outline: none;
 	padding: 0 12px;
 	position: relative;
 	text-align: center;
-	transition: color 160ms linear, font-weight 60ms linear;
+	transition: background 160ms linear, color 160ms linear,
+		font-weight 60ms linear;
 	user-select: none;
 	width: 100%;
 	z-index: 2;
 
 	&::-moz-focus-inner {
 		border: 0;
+	}
+
+	&:active {
+		background: ${get('controlBackgroundSubtleColor')};
 	}
 `;
 
