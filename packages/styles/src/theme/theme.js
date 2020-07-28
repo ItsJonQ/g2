@@ -41,6 +41,13 @@ const COLOR_PROPS = {
 	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#050505',
+	colorTextInverted: '#fff',
+};
+
+const CONTROL_PROPS = {
+	controlBackgroundSubtleColor: 'rgba(0, 0, 0, 0.05)',
+	controlBorderColor: 'rgba(0, 0, 0, 0.9)',
+	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.5)',
 };
 
 const FONT_PROPS = {
@@ -64,6 +71,10 @@ const DARK_MODE_PROPS = {
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#E4E6EB',
+	colorTextInverted: '#050505',
+	controlBackgroundSubtleColor: 'rgba(255, 255, 255, 0.05)',
+	controlBorderColor: 'rgba(255, 255, 255, 0.9)',
+	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
 	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
 	surfaceBorder: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',
@@ -73,6 +84,7 @@ export const BASE_THEME = {
 	...G2_COLORS,
 	...COLOR_PALETTE,
 	...COLOR_PROPS,
+	...CONTROL_PROPS,
 	...FONT_PROPS,
 	...SURFACE_PROPS,
 	...ANIMATION_PROPS,

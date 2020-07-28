@@ -3,16 +3,21 @@ import React from 'react';
 
 import { Box } from './components';
 import { tags } from './create-system';
-import { css, cx } from './style-system';
+import { css } from './style-system';
 
 function createStyled(tagName, options = {}) {
 	const { props: extraProps } = options;
 
 	return (...interpolatedProps) => {
-		const render = ({ className, ...props }, ref) => {
-			const classes = cx([css(...interpolatedProps), className]);
+		const render = ({ cx: cxProp, ...props }, ref) => {
 			const mergedProps = { ...extraProps, ...props, ref };
-			return <Box as={tagName} {...mergedProps} className={classes} />;
+			return (
+				<Box
+					as={tagName}
+					{...mergedProps}
+					cx={[css(...interpolatedProps), cxProp]}
+				/>
+			);
 		};
 
 		const StyledComponent = React.forwardRef(render);
