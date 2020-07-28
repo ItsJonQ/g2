@@ -45,6 +45,17 @@ export const _default = () => {
 		},
 	];
 
+	const shortLong = [
+		{
+			label: 'Short',
+			value: 'short',
+		},
+		{
+			label: 'Looooooooooooong',
+			value: 'long',
+		},
+	];
+
 	return (
 		<>
 			<Spacer>
@@ -52,6 +63,9 @@ export const _default = () => {
 			</Spacer>
 			<Spacer>
 				<SegmentedControl evenWidths options={xy} />
+			</Spacer>
+			<Spacer>
+				<SegmentedControl options={shortLong} />
 			</Spacer>
 		</>
 	);
