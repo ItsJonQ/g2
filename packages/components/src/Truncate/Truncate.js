@@ -35,7 +35,7 @@ export function Truncate({
 
 	const cx = [
 		shouldTruncate && !numberOfLines && styles.Truncate,
-		shouldTruncate && numberOfLines && styles.NumberOfLines,
+		shouldTruncate && numberOfLines && styles.numberOfLines,
 	];
 
 	return (

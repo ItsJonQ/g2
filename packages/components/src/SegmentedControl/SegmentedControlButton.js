@@ -21,10 +21,7 @@ function SegmentedControlButton({
 	const isActive = props.state === value;
 
 	return (
-		<Label
-			cx={[styles.Label, isBlock && styles.labelBlock]}
-			data-active={isActive}
-		>
+		<Label cx={[isBlock && styles.labelBlock]} data-active={isActive}>
 			<Radio
 				{...props}
 				as={Button}
