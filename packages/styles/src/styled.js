@@ -9,13 +9,25 @@ function createStyled(tagName, options = {}) {
 	const { props: extraProps } = options;
 
 	return (...interpolatedProps) => {
-		const render = ({ cx: cxProp, ...props }, ref) => {
+		const render = ({ className, cx: cxProp, ...props }, ref) => {
 			const mergedProps = { ...extraProps, ...props, ref };
+			const isBaseTag = is.string(tagName);
+			const compiledCx = [css(...interpolatedProps), cxProp];
+			const compiledClasses = [
+				css(...interpolatedProps),
+				cxProp,
+				className,
+			];
+
+			const finalCxProp = isBaseTag && compiledCx;
+			const finalClasses = !isBaseTag && compiledClasses;
+
 			return (
 				<Box
 					as={tagName}
 					{...mergedProps}
-					cx={[css(...interpolatedProps), cxProp]}
+					className={finalClasses}
+					cx={finalCxProp}
 				/>
 			);
 		};

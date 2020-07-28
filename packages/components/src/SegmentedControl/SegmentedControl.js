@@ -7,7 +7,7 @@ import Backdrop from './SegmentedControlBackdrop';
 import Button from './SegmentedControlButton';
 
 function SegmentControl({
-	evenWidths = false,
+	isAdaptiveWidth = false,
 	isBlock = false,
 	label = 'SegmentControl',
 	options = [],
@@ -38,7 +38,7 @@ function SegmentControl({
 					<Button
 						{...radio}
 						{...option}
-						isBlock={evenWidths}
+						isBlock={!isAdaptiveWidth}
 						key={option.value || index}
 						showSeparator={showSeparator}
 					/>
@@ -53,8 +53,6 @@ function getShowSeparator(radio, index) {
 	const isLast = index === items.length - 1;
 	const isActive = items[index]?.id === currentId;
 	const isNextActive = items[index + 1]?.id === currentId;
-
-	console.log(currentId);
 
 	let showSeparator = true;
 

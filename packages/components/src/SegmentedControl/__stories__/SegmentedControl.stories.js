@@ -62,10 +62,10 @@ export const _default = () => {
 				<SegmentedControl options={align} />
 			</Spacer>
 			<Spacer>
-				<SegmentedControl evenWidths options={xy} />
+				<SegmentedControl options={xy} />
 			</Spacer>
 			<Spacer>
-				<SegmentedControl options={shortLong} />
+				<SegmentedControl isAdaptiveWidth options={shortLong} />
 			</Spacer>
 		</>
 	);

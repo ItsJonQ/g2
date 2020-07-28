@@ -2,7 +2,7 @@ import { css, get } from '@wp-g2/styles';
 
 export const Card = css`
 	border-radius: 8px;
-	box-shadow: 0 0 0 1px ${get('surfaceBorder')};
+	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')};
 	outline: none;
 `;
 

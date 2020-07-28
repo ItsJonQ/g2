@@ -1,13 +1,14 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styles';
 import React from 'react';
 
 import * as styles from './Surface.styles';
 
-function Surface(props) {
-	const cx = [styles.Surface];
+const { SurfaceView } = styles;
 
-	return <BaseView {...props} cx={cx} />;
+function Surface({ isBackground, ...props }) {
+	const cx = [isBackground && styles.background];
+
+	return <SurfaceView {...props} cx={cx} />;
 }
 
 export default connect(Surface, 'Surface');

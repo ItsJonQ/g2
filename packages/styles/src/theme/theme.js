@@ -44,26 +44,29 @@ const COLOR_PROPS = {
 	colorTextInverted: '#fff',
 };
 
-const CONTROL_PROPS = {
-	controlBackgroundSubtleColor: 'rgba(0, 0, 0, 0.05)',
-	controlBorderColor: 'rgba(0, 0, 0, 0.9)',
-	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.5)',
-};
-
 const FONT_PROPS = {
 	fontFamily:
 		'Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
-	fontSize: '14px',
+	fontSize: '13px',
+	fontSizeSmall: '12px',
+};
+
+const SURFACE_PROPS = {
+	surfaceBackgroundColor: '#fff',
+	surfaceBackgroundSubtleColor: '#EFEFF3',
+	surfaceBorderColor: 'rgba(0, 0, 0, 0.06)',
+	surfaceColor: '#fff',
 };
 
 const GRID_PROPS = {
 	gridBase: 4,
 };
 
-const SURFACE_PROPS = {
-	surfaceBackgroundColor: '#EFEFF3',
-	surfaceBorder: 'rgba(0, 0, 0, 0.06)',
-	surfaceColor: '#fff',
+const CONTROL_PROPS = {
+	controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
+	controlBackgroundStrongColor: 'white',
+	controlBorderColor: 'rgba(0, 0, 0, 0.3)',
+	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 };
 
 const DARK_MODE_PROPS = {
@@ -73,11 +76,13 @@ const DARK_MODE_PROPS = {
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#E4E6EB',
 	colorTextInverted: '#050505',
-	controlBackgroundSubtleColor: 'rgba(255, 255, 255, 0.05)',
+	controlBackgroundColor: 'rgba(255, 255, 255, 0.1)',
+	controlBackgroundStrongColor: 'rgba(255, 255, 255, 0.3)',
 	controlBorderColor: 'rgba(255, 255, 255, 0.9)',
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
 	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
-	surfaceBorder: 'rgba(255, 255, 255, 0.1)',
+	surfaceBackgroundSubtleColor: COLOR_PROPS.colorBodyBackgroundDark,
+	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',
 };
 

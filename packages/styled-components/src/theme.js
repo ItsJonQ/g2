@@ -68,8 +68,8 @@ const COLOR_PROPS = {
 };
 
 const SURFACE_PROPS = {
-	surfaceBackgroundColor: '#EFEFF3',
-	surfaceBackgroundColorDark: COLOR_PROPS.colorBodyBackgroundDark,
+	surfaceBackgroundSubtleColor: '#EFEFF3',
+	surfaceBackgroundSubtleColorDark: COLOR_PROPS.colorBodyBackgroundDark,
 	surfaceColor: '#fff',
 	surfaceColorDark: '#292929',
 };
@@ -187,35 +187,6 @@ const ICON_CONTROL_PROPS = {
 		ANIMATION_PROPS.transitionTimingFunctionControl,
 };
 
-const INPUT_PROPS = {
-	inputBackgroundColor: 'rgba(0, 0, 0, 0.025)',
-	inputBackgroundColorDark: 'rgba(255, 255, 255, 0.025)',
-	inputBackgroundColorHover: 'rgba(0, 0, 0, 0.06)',
-	inputBackgroundColorHoverDark: 'rgba(255, 255, 255, 0.06)',
-	inputBorderColor: CONTROL_PROPS.controlBackgroundColor,
-	inputBorderColorDark: CONTROL_PROPS.controlBackgroundColorDark,
-	inputBorderColorFocus: COLOR_PROPS.colorBrand,
-	inputBorderRadius: CONTROL_PROPS.controlBorderRadius,
-	inputBorderRadiusRound: CONTROL_PROPS.controlBorderRadiusRound,
-	inputBorderStyle: 'solid',
-	inputBorderWidth: '1px',
-	inputBoxShadow: `0 0 0 ${CONTROL_PROPS.controlBoxShadowFocusSize} transparent`,
-	inputBoxShadowFocus: `0 0 0 ${
-		CONTROL_PROPS.controlBoxShadowFocusSize
-	} ${colorize(COLOR_PROPS.colorBrand).setAlpha(0.2).toRgbString()}`,
-	inputFontFamily: FONT_PROPS.fontFamily,
-	inputFontSize: FONT_PROPS.fontSize,
-	inputHeight: CONTROL_PROPS.controlHeight,
-	inputHeightLarge: CONTROL_PROPS.controlHeightLarge,
-	inputHeightSmall: CONTROL_PROPS.controlHeightSmall,
-	inputLineHeight: CONTROL_PROPS.controlLineHeight,
-	inputPadding: '8px',
-	inputPaddingLarge: '10px',
-	inputPaddingSmall: '6px',
-	inputPaddingX: '12px',
-	inputTransition: `all ${ANIMATION_PROPS.transitionDurationFast} ${ANIMATION_PROPS.transitionTimingFunction}`,
-};
-
 const MENU_PROPS = {
 	menuActiveBackgroundColor: 'rgba(0, 0, 0, 0.1)',
 	menuActiveBackgroundColorDark: 'rgba(255, 255, 255, 0.1)',
@@ -257,7 +228,6 @@ export const THEME_PROPS = {
 	...ELEVATION_PROPS,
 	...GRID_PROPS,
 	...ICON_CONTROL_PROPS,
-	...INPUT_PROPS,
 	...MENU_PROPS,
 	...SPINNER_PROPS,
 	...SWITCH_PROPS,

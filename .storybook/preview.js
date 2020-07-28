@@ -15,6 +15,7 @@ function StoryDecorator(storyFn) {
 			</Spacer>
 			{storyFn()}
 			<Surface
+				isBackground
 				css={{
 					position: 'fixed',
 					top: 0,

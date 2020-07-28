@@ -1,11 +1,13 @@
 import { connect } from '@wp-g2/provider';
-import { cx } from '@wp-g2/styled-components';
 import { mergeRefs, noop } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { FlexBlock, FlexItem } from '../Flex';
-import { InputView, RootView, TextAreaView } from './TextInput.styles';
+import * as styles from './TextInput.styles';
+
+const { InputView, RootView } = styles;
 
 function TextInput({
 	align,
@@ -43,40 +45,81 @@ function TextInput({
 		setIsFocused(true);
 	};
 
-	const classes = cx(className);
-	const InputComponent = multiline ? TextAreaView : InputView;
+	const InputComponent = multiline ? TextareaAutosize : 'input';
+
+	const cx = [
+		isFirst && styles.first,
+		isMiddle && styles.middle,
+		isLast && styles.last,
+		isFocused && styles.focus,
+		multiline && styles.multiline,
+	];
+
+	console.log(styles.scrollableScrollbar);
+
+	const inputCx = [
+		styles[size],
+		multiline && styles.inputMultiline,
+		isResizable && styles.resizable,
+		styles.scrollableScrollbar,
+	];
 
 	return (
 		<RootView
 			align={align}
-			className={classes}
+			cx={cx}
 			gap={gap}
-			isFirst={isFirst}
-			isFocused={isFocused}
-			isLast={isLast}
-			isMiddle={isMiddle}
-			isRounded={isRounded}
-			isSeamless={isSeamless}
 			justify={justify}
-			multiline={multiline}
 			onClick={handleOnRootClick}
-			size={size}
 		>
 			{prefix && <FlexItem>{prefix}</FlexItem>}
 			<FlexBlock>
-				<InputComponent
+				<InputView
+					as={InputComponent}
+					cx={inputCx}
 					isResizable={isResizable}
 					onBlur={handleOnBlur}
 					onChange={onChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([inputRef, forwardedRef])}
-					size={size}
 					{...props}
 				/>
 			</FlexBlock>
 			{suffix && <FlexItem>{suffix}</FlexItem>}
 		</RootView>
 	);
+
+	// return (
+	// 	<RootView
+	// 		align={align}
+	// 		className={classes}
+	// 		gap={gap}
+	// 		isFirst={isFirst}
+	// 		isFocused={isFocused}
+	// 		isLast={isLast}
+	// 		isMiddle={isMiddle}
+	// 		isRounded={isRounded}
+	// 		isSeamless={isSeamless}
+	// 		justify={justify}
+	// 		multiline={multiline}
+	// 		onClick={handleOnRootClick}
+	// 		size={size}
+	// 	>
+	// 		{prefix && <FlexItem>{prefix}</FlexItem>}
+	// 		<FlexBlock>
+	// 			<InputComponent
+	// 				isResizable={isResizable}
+	// 				onBlur={handleOnBlur}
+	// 				onChange={onChange}
+	// 				onFocus={handleOnFocus}
+	// 				ref={mergeRefs([inputRef, forwardedRef])}
+	// 				size={size}
+	// 				{...props}
+	// 			/>
+	// 		</FlexBlock>
+	// 		{suffix && <FlexItem>{suffix}</FlexItem>}
+	// 	</RootView>
+	// );
 }
 
 export default connect(TextInput);

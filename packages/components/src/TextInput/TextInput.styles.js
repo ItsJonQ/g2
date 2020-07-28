@@ -1,181 +1,85 @@
-import { css, styled } from '@wp-g2/styled-components';
-import TextareaAutosize from 'react-textarea-autosize';
+import { css, get, styled } from '@wp-g2/styles';
 
 import { Flex } from '../Flex';
-// import { scrollableScrollbarStyles } from '../Scrollable';
 
-const baseStyles = ({ isFocused, isRounded, isSeamless, multiline, theme }) => {
-	const { config } = theme;
-
-	const hoverStyles =
-		!isFocused &&
-		!isSeamless &&
-		css`
-			&:hover {
-				background-color: ${config.inputBackgroundColorHover};
-				border-color: ${config.inputBackgroundColorHover};
-			}
-		`;
-
-	const paddingLeft = multiline ? 0 : config.inputPaddingX;
-	const paddingRight = multiline ? 0 : config.inputPaddingX;
-
-	return css`
-		background-color: ${config.inputBackgroundColor};
-		border-color: ${config.controlBorderColor};
-		border-radius: ${isRounded
-			? config.inputBorderRadiusRound
-			: config.inputBorderRadius};
-		border-style: ${config.inputBorderStyle};
-		border-width: ${config.inputBorderWidth};
-		box-shadow: ${config.inputBoxShadow};
-		color: ${config.colorText};
-		display: flex;
-		flex: 1;
-		font-family: ${config.inputFontFamily};
-		font-size: ${config.inputFontSize};
-		outline: none;
-		padding-left: ${paddingLeft};
-		padding-right: ${paddingRight};
-		position: relative;
-		transition: ${config.inputTransition};
-		width: 100%;
-
-		${hoverStyles};
-
-		&:active,
-		&:focus {
-			border-color: ${config.inputBorderColorFocus};
-			box-shadow: ${config.inputBoxShadowFocus};
-		}
-
-		&[disabled] {
-			opacity: 0.6;
-		}
-	`;
-};
-
-const focusStyles = ({ isFocused, theme }) => {
-	if (!isFocused) return '';
-	const { config } = theme;
-
-	return css`
-		border-color: ${config.inputBorderColorFocus};
-		box-shadow: ${config.inputBoxShadowFocus};
-		z-index: 1;
-	`;
-};
-
-const darkStyles = ({ isFocused, isSeamless, theme }) => {
-	const { config, isDark } = theme;
-
-	if (!isDark) return;
-
-	const hoverStyles =
-		!isFocused &&
-		!isSeamless &&
-		css`
-			&:hover {
-				background-color: ${config.inputBackgroundColorHoverDark};
-				border-color: ${config.inputBackgroundColorHoverDark};
-			}
-		`;
-
-	return css`
-		background-color: ${config.inputBackgroundColorDark};
-		border-color: ${config.controlBorderColorDark};
-		color: ${config.colorTextDark};
-		${hoverStyles}
-	`;
-};
-
-const controlGroupStyles = ({ isFirst, isLast, isMiddle }) => {
-	if (isFirst) {
-		return css`
-			border-bottom-right-radius: 0;
-			border-top-right-radius: 0;
-		`;
-	}
-	if (isMiddle) {
-		return css`
-			border-radius: 0;
-		`;
-	}
-	if (isLast) {
-		return css`
-			border-bottom-left-radius: 0;
-			border-top-left-radius: 0;
-		`;
-	}
-};
+export { scrollableScrollbar } from '../Scrollable/Scrollable.styles';
 
 export const RootView = styled(Flex)`
-	${baseStyles};
-	${darkStyles};
-	${focusStyles};
-	${controlGroupStyles};
+	background-color: ${get('controlBackgroundColor')};
+	border: 1px solid transparent;
+	border-color: transparent;
+	border-radius: 4px;
+	display: flex;
+	flex: 1;
+	font-family: ${get('fontFamily')};
+	font-size: ${get('fontSize')};
+	outline: none;
+	padding-left: 8px;
+	padding-right: 8px;
+	position: relative;
+	transition: all 100ms ease;
+	width: 100%;
+
+	&[disabled] {
+		opacity: 0.6;
+	}
 `;
 
-const sizeStyles = ({ size, theme }) => {
-	const { config } = theme;
-	switch (size) {
-		case 'large':
-			return css`
-				min-height: ${config.inputHeightLarge};
-				padding-bottom: ${config.inputPaddingLarge};
-				padding-top: ${config.inputPaddingLarge};
-			`;
+export const first = css`
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+`;
 
-		case 'small':
-			return css`
-				min-height: ${config.inputHeightSmall};
-				padding-bottom: ${config.inputPaddingSmall};
-				padding-top: ${config.inputPaddingSmall};
-			`;
+export const middle = css`
+	border-radius: 0;
+`;
 
-		default:
-			return '';
-	}
-};
+export const last = css`
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+`;
 
-const inputStyles = ({ theme }) => {
-	const { config } = theme;
+export const focus = css`
+	border-color: ${get('colorBrand')};
+	z-index: 1;
+`;
 
-	return css`
-		background: transparent;
-		border: none;
-		color: currentColor;
-		display: block;
-		line-height: ${config.inputLineHeight};
-		min-height: calc(${config.inputHeight} - 2px);
-		outline: none;
-		padding-bottom: calc(${config.inputPadding} - 1px);
-		padding-top: calc(${config.inputPadding} - 1px);
-		width: 100%;
-	`;
-};
+export const multiline = css`
+	padding-left: 0;
+	padding-right: 0;
+`;
+
+export const inputMultiline = css`
+	padding-left: 8px;
+	padding-right: 8px;
+`;
 
 export const InputView = styled.input`
-	${inputStyles};
-	${sizeStyles};
+	background: transparent;
+	border: none;
+	color: ${get('colorText')};
+	display: block;
+	line-height: 18px;
+	min-height: calc(36px - 2px);
+	outline: none;
+	padding-bottom: calc(8px - 1px);
+	padding-top: calc(8px - 1px);
+	resize: none;
+	width: 100%;
 `;
 
-const textAreaStyles = ({ isResizable, theme }) => {
-	const { config } = theme;
-	const resize = isResizable ? 'vertical' : 'none';
+export const large = css`
+	min-height: 38px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+`;
 
-	return css`
-		padding-left: ${config.inputPaddingX};
-		padding-right: ${config.inputPaddingX};
-		resize: ${resize};
-	`;
-};
+export const small = css`
+	min-height: 28px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+`;
 
-export const TextAreaView = styled(TextareaAutosize)`
-	box-sizing: border-box;
-	margin: 0;
-
-	${inputStyles};
-	${sizeStyles};
-	${textAreaStyles};
+export const resizable = css`
+	resize: vertical;
 `;

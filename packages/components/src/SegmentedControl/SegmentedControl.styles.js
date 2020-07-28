@@ -1,9 +1,8 @@
 import { css, get, styled } from '@wp-g2/styles';
 
 export const SegmentedControl = css`
-	background: ${get('controlBackgroundSubtleColor')};
-	border-radius: 4px;
-	box-shadow: 0 0 0 1px ${get('controlBorderSubtleColor')};
+	background: ${get('controlBackgroundColor')};
+	border-radius: 5px;
 	display: inline-flex;
 	min-width: 0;
 	padding: 2px;
@@ -11,7 +10,6 @@ export const SegmentedControl = css`
 	transition: background 100ms linear;
 
 	&:focus {
-		background: rgba(0, 0, 0, 0);
 		outline: none;
 	}
 `;
@@ -22,8 +20,9 @@ export const block = css`
 `;
 
 export const Backdrop = css`
-	background: ${get('controlBorderColor')};
-	border-radius: 3px;
+	background: ${get('controlBackgroundStrongColor')};
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 	height: 26px;
 	left: 0;
 	position: absolute;
@@ -35,6 +34,7 @@ export const Label = styled.div`
 	display: inline-flex;
 	max-width: 100%;
 	min-width: 0;
+	position: relative;
 `;
 
 export const labelBlock = css`
@@ -46,7 +46,7 @@ export const Button = styled.button`
 	appearance: none;
 	background: transparent;
 	border: none;
-	border-radius: 3px;
+	border-radius: 4px;
 	color: ${get('colorText')};
 	cursor: pointer;
 	display: flex;
@@ -68,7 +68,7 @@ export const Button = styled.button`
 	}
 
 	&:active {
-		background: ${get('controlBackgroundSubtleColor')};
+		background: ${get('controlBackgroundColor')};
 	}
 `;
 
@@ -81,14 +81,14 @@ export const ButtonContent = styled.div`
 `;
 
 export const buttonActive = css`
-	color: ${get('colorTextInverted')};
 	font-weight: bold;
 `;
 
 export const Separator = styled.div`
 	background: ${get('colorDivider')};
 	height: 18px;
-	position: relative;
+	position: absolute;
+	right: 0;
 	top: 4px;
 	transition: background 200ms linear;
 	width: 1px;
