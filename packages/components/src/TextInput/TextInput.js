@@ -1,13 +1,14 @@
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import { mergeRefs, noop } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { useControlGroupContext } from '../ControlGroup';
-import { FlexBlock, FlexItem } from '../Flex';
+import { Flex, FlexBlock, FlexItem } from '../Flex';
 import * as styles from './TextInput.styles';
 
-const { InputView, RootView } = styles;
+const { InputView } = styles;
 
 function TextInput({
 	align,
@@ -47,15 +48,15 @@ function TextInput({
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
-	const cx = [
+	const classes = cx([
+		styles.Root,
 		isFirst && styles.first,
 		isMiddle && styles.middle,
 		isLast && styles.last,
 		isFocused && styles.focus,
 		multiline && styles.multiline,
-	];
-
-	console.log(styles.scrollableScrollbar);
+		className,
+	]);
 
 	const inputCx = [
 		styles[size],
@@ -65,9 +66,9 @@ function TextInput({
 	];
 
 	return (
-		<RootView
+		<Flex
 			align={align}
-			cx={cx}
+			className={classes}
 			gap={gap}
 			justify={justify}
 			onClick={handleOnRootClick}
@@ -86,40 +87,8 @@ function TextInput({
 				/>
 			</FlexBlock>
 			{suffix && <FlexItem>{suffix}</FlexItem>}
-		</RootView>
+		</Flex>
 	);
-
-	// return (
-	// 	<RootView
-	// 		align={align}
-	// 		className={classes}
-	// 		gap={gap}
-	// 		isFirst={isFirst}
-	// 		isFocused={isFocused}
-	// 		isLast={isLast}
-	// 		isMiddle={isMiddle}
-	// 		isRounded={isRounded}
-	// 		isSeamless={isSeamless}
-	// 		justify={justify}
-	// 		multiline={multiline}
-	// 		onClick={handleOnRootClick}
-	// 		size={size}
-	// 	>
-	// 		{prefix && <FlexItem>{prefix}</FlexItem>}
-	// 		<FlexBlock>
-	// 			<InputComponent
-	// 				isResizable={isResizable}
-	// 				onBlur={handleOnBlur}
-	// 				onChange={onChange}
-	// 				onFocus={handleOnFocus}
-	// 				ref={mergeRefs([inputRef, forwardedRef])}
-	// 				size={size}
-	// 				{...props}
-	// 			/>
-	// 		</FlexBlock>
-	// 		{suffix && <FlexItem>{suffix}</FlexItem>}
-	// 	</RootView>
-	// );
 }
 
 export default connect(TextInput);

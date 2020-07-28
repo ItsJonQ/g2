@@ -27,15 +27,15 @@ const G2_COLORS = {
 };
 
 const COLOR_PALETTE = {
-	brand: G2_COLORS.blueberry,
+	admin: G2_COLORS.blueberry,
 	destructive: G2_COLORS.pomegrade,
 	positive: G2_COLORS.greens,
 };
 
 const COLOR_PROPS = {
+	colorAdmin: COLOR_PALETTE.admin,
 	colorBodyBackground: G2_COLORS.white,
 	colorBodyBackgroundDark: '#18191A',
-	colorBrand: COLOR_PALETTE.brand,
 	colorDivider: 'rgba(0, 0, 0, 0.1)',
 	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
 	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
@@ -67,6 +67,7 @@ const CONTROL_PROPS = {
 	controlBackgroundStrongColor: 'white',
 	controlBorderColor: 'rgba(0, 0, 0, 0.3)',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
+	controlTextActiveColor: COLOR_PROPS.colorAdmin,
 };
 
 const DARK_MODE_PROPS = {
@@ -80,6 +81,7 @@ const DARK_MODE_PROPS = {
 	controlBackgroundStrongColor: 'rgba(255, 255, 255, 0.3)',
 	controlBorderColor: 'rgba(255, 255, 255, 0.9)',
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
+	controlTextActiveColor: G2_COLORS.white,
 	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
 	surfaceBackgroundSubtleColor: COLOR_PROPS.colorBodyBackgroundDark,
 	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',

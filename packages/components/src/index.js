@@ -7,6 +7,7 @@ export * from './Collapsible';
 export * from './ControlGroup';
 export * from './ControlLabel';
 export * from './Dropdown';
+export * from './Divider';
 export * from './Elevation';
 export * from './Flex';
 export * from './Grid';

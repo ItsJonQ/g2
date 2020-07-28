@@ -81,6 +81,7 @@ export const ButtonContent = styled.div`
 `;
 
 export const buttonActive = css`
+	color: ${get('controlTextActiveColor')};
 	font-weight: bold;
 `;
 

@@ -6,12 +6,17 @@ import {
 	FiAlignLeft,
 	FiAlignRight,
 	FiMaximize,
+	FiMonitor,
+	FiSmartphone,
 	FiSquare,
+	FiTablet,
 } from 'react-icons/fi';
 
 import {
 	BaseView,
 	ControlLabel,
+	Divider,
+	Flex,
 	Grid,
 	Heading,
 	Icon,
@@ -29,7 +34,7 @@ const SuffixLabel = (props) => (
 	<Text isBlock size={10} variant="muted" {...props} />
 );
 
-const ControlGroup = (props) => <Grid templateColumns={'33% 66%'} {...props} />;
+const ControlGroup = (props) => <Grid templateColumns={'1fr 2fr'} {...props} />;
 
 export const _default = () => {
 	return (
@@ -52,10 +57,28 @@ export const _default = () => {
 					padding: 16px;
 				`}
 			>
+				<Flex justify="center">
+					<SegmentedControl
+						options={[
+							{
+								label: <Icon icon={<FiSmartphone />} />,
+								value: 'phone',
+							},
+							{
+								label: <Icon icon={<FiTablet />} />,
+								value: 'tablet',
+							},
+							{
+								label: <Icon icon={<FiMonitor />} />,
+								value: 'desktop',
+							},
+						]}
+					/>
+				</Flex>
+				<Divider mb={4} mt={2} />
 				<Spacer mb={3}>
 					<Heading size={5}>Layout</Heading>
 				</Spacer>
-
 				<ControlGroup>
 					<ControlLabel>Dimensions</ControlLabel>
 					<Spacer>
@@ -65,7 +88,6 @@ export const _default = () => {
 						</Grid>
 					</Spacer>
 				</ControlGroup>
-
 				<ControlGroup>
 					<ControlLabel>Align</ControlLabel>
 					<Spacer>
@@ -88,7 +110,6 @@ export const _default = () => {
 						/>
 					</Spacer>
 				</ControlGroup>
-
 				<ControlGroup>
 					<ControlLabel>Position</ControlLabel>
 					<Spacer>
@@ -98,7 +119,6 @@ export const _default = () => {
 						</Grid>
 					</Spacer>
 				</ControlGroup>
-
 				<ControlGroup>
 					<ControlLabel>Padding</ControlLabel>
 					<Spacer>
@@ -118,6 +138,24 @@ export const _default = () => {
 								]}
 							/>
 						</Grid>
+					</Spacer>
+				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Overflow</ControlLabel>
+					<Spacer>
+						<SegmentedControl
+							isBlock
+							options={[
+								{
+									label: 'Show',
+									value: 'show',
+								},
+								{
+									label: 'Hide',
+									value: 'hide',
+								},
+							]}
+						/>
 					</Spacer>
 				</ControlGroup>
 			</BaseView>

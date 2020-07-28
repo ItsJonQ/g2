@@ -1,10 +1,8 @@
 import { css, get, styled } from '@wp-g2/styles';
 
-import { Flex } from '../Flex';
-
 export { scrollableScrollbar } from '../Scrollable/Scrollable.styles';
 
-export const RootView = styled(Flex)`
+export const Root = css`
 	background-color: ${get('controlBackgroundColor')};
 	border: 1px solid transparent;
 	border-color: transparent;
@@ -40,7 +38,7 @@ export const last = css`
 `;
 
 export const focus = css`
-	border-color: ${get('colorBrand')};
+	border-color: ${get('colorAdmin')};
 	z-index: 1;
 `;
 
