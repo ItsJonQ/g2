@@ -7,6 +7,8 @@ import Backdrop from './SegmentedControlBackdrop';
 import Button from './SegmentedControlButton';
 
 function SegmentControl({
+	evenWidths = false,
+	isBlock = false,
 	label = 'SegmentControl',
 	options = [],
 	onChange,
@@ -25,26 +27,46 @@ function SegmentControl({
 			{...radio}
 			aria-label={label}
 			as={BaseView}
-			cx={styles.SegmentedControl}
+			cx={[styles.SegmentedControl, isBlock && styles.block]}
 			ref={containerRef}
 		>
 			<Backdrop {...radio} containerRef={containerRef} />
 			{options.map((option, index) => {
-				const isFirst = index === 0;
-				const isLast = index === options.length - 1;
+				const showSeparator = getShowSeparator(radio, index);
 
 				return (
 					<Button
 						{...radio}
 						{...option}
-						isFirst={isFirst}
-						isLast={isLast}
+						isBlock={evenWidths}
 						key={option.value || index}
+						showSeparator={showSeparator}
 					/>
 				);
 			})}
 		</RadioGroup>
 	);
+}
+
+function getShowSeparator(radio, index) {
+	const { currentId, items } = radio;
+	const isLast = index === items.length - 1;
+	const isActive = items[index]?.id === currentId;
+	const isNextActive = items[index + 1]?.id === currentId;
+
+	console.log(currentId);
+
+	let showSeparator = true;
+
+	if (items.length < 3) {
+		showSeparator = false;
+	}
+
+	if (isActive || isNextActive || isLast) {
+		showSeparator = false;
+	}
+
+	return showSeparator;
 }
 
 export default SegmentControl;

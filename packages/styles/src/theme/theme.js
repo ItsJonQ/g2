@@ -53,6 +53,7 @@ const CONTROL_PROPS = {
 const FONT_PROPS = {
 	fontFamily:
 		'Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
+	fontSize: '14px',
 };
 
 const GRID_PROPS = {

@@ -14,7 +14,7 @@ const styles = {
 		WebkitFontSmoothing: 'antialiased',
 		boxSizing: 'border-box',
 		fontFamily: THEME['fontFamily'],
-		fontSize: 14,
+		fontSize: THEME['fontSize'],
 		margin: 0,
 	},
 };

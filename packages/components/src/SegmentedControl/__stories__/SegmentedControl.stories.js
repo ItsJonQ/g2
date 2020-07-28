@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiAirplay } from 'react-icons/fi';
 
-import { Icon } from '../../index';
+import { Icon, Spacer } from '../../index';
 import { SegmentedControl } from '../index';
 
 export default {
@@ -23,6 +23,36 @@ export const _default = () => {
 			label: 'Third',
 			value: 'third',
 		},
+		{
+			label: 'Fourth',
+			value: 'fourth',
+		},
+		{
+			label: 'Fifth',
+			value: 'fifth',
+		},
 	];
-	return <SegmentedControl options={options} />;
+
+	return (
+		<>
+			<Spacer>
+				<SegmentedControl options={options} />
+			</Spacer>
+			<Spacer>
+				<SegmentedControl
+					evenWidths
+					options={[
+						{
+							label: 'Horizontal',
+							value: 'horizontal',
+						},
+						{
+							label: 'Vertical',
+							value: 'vertical',
+						},
+					]}
+				/>
+			</Spacer>
+		</>
+	);
 };
