@@ -21,6 +21,7 @@ import {
 	Heading,
 	Icon,
 	SegmentedControl,
+	Select,
 	Spacer,
 	Text,
 	TextInput,
@@ -43,6 +44,7 @@ export const _default = () => {
 				ControlLabel: { size: 'small' },
 				Grid: { gap: 8 },
 				Icon: { size: 16 },
+				Select: { size: 'small' },
 				TextInput: { size: 'small' },
 			}}
 		>
@@ -117,6 +119,14 @@ export const _default = () => {
 							<TextInput suffix={<SuffixLabel>X</SuffixLabel>} />
 							<TextInput suffix={<SuffixLabel>Y</SuffixLabel>} />
 						</Grid>
+					</Spacer>
+				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Distrbution</ControlLabel>
+					<Spacer>
+						<Select
+							options={[{ label: 'Center', value: 'center' }]}
+						/>
 					</Spacer>
 				</ControlGroup>
 				<ControlGroup>

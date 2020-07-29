@@ -1,4 +1,4 @@
-import { cx } from '@wp-g2/styled-components';
+import { cx } from '@wp-g2/styles';
 import { hoistNonReactStatics, is } from '@wp-g2/utils';
 import kebabCase from 'lodash.kebabcase';
 import uniq from 'lodash.uniq';

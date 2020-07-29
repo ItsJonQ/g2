@@ -3,28 +3,36 @@ import React from 'react';
 
 import { Box } from './components';
 import { tags } from './create-system';
-import { css } from './style-system';
+import { css, cx } from './style-system';
 
 function createStyled(tagName, options = {}) {
 	const { props: extraProps } = options;
 
 	return (...interpolatedProps) => {
-		const render = ({ className, cx: cxProp, ...props }, ref) => {
+		const render = (
+			{ as: asProp, className, cx: cxProp, ...props },
+			ref,
+		) => {
 			const mergedProps = { ...extraProps, ...props, ref };
-			const isBaseTag = is.string(tagName);
-			const compiledCx = [css(...interpolatedProps), cxProp];
-			const compiledClasses = [
-				css(...interpolatedProps),
-				cxProp,
-				className,
-			];
+			const baseTag = asProp || tagName;
+			const isBaseTag = asProp ? is.string(asProp) : is.string(tagName);
 
-			const finalCxProp = isBaseTag && compiledCx;
-			const finalClasses = !isBaseTag && compiledClasses;
+			let finalCxProp;
+			let finalClasses;
+
+			if (!isBaseTag) {
+				finalClasses = cx([
+					css(...interpolatedProps),
+					cxProp,
+					className,
+				]);
+			} else {
+				finalCxProp = [css(...interpolatedProps), cxProp];
+			}
 
 			return (
 				<Box
-					as={tagName}
+					as={baseTag}
 					{...mergedProps}
 					className={finalClasses}
 					cx={finalCxProp}

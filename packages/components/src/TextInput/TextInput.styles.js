@@ -23,20 +23,6 @@ export const Root = css`
 	}
 `;
 
-export const first = css`
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0;
-`;
-
-export const middle = css`
-	border-radius: 0;
-`;
-
-export const last = css`
-	border-bottom-left-radius: 0;
-	border-top-left-radius: 0;
-`;
-
 export const focus = css`
 	border-color: ${get('colorAdmin')};
 	z-index: 1;
@@ -53,6 +39,7 @@ export const inputMultiline = css`
 `;
 
 export const InputView = styled.input`
+	appearance: none;
 	background: transparent;
 	border: none;
 	color: ${get('colorText')};

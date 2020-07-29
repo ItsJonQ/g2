@@ -1,6 +1,7 @@
 // Base
 export * from './BaseView';
 // Components
+export * from './BaseField';
 export * from './Button';
 export * from './Card';
 export * from './Collapsible';
@@ -20,6 +21,7 @@ export * from './Placeholder';
 export * from './Popover';
 export * from './Scrollable';
 export * from './SegmentedControl';
+export * from './Select';
 export * from './Spacer';
 export * from './Spinner';
 export * from './Stack';

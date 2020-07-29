@@ -2,14 +2,16 @@ import { css, get, styled } from '@wp-g2/styles';
 
 export const SegmentedControl = css`
 	background: ${get('controlBackgroundColor')};
+	border: 1px solid transparent;
 	border-radius: 5px;
 	display: inline-flex;
 	min-width: 0;
 	padding: 2px;
 	position: relative;
-	transition: background 100ms linear;
+	transition: all 100ms linear;
 
 	&:focus {
+		border-color: ${get('colorAdmin')};
 		outline: none;
 	}
 `;
@@ -22,7 +24,7 @@ export const block = css`
 export const Backdrop = css`
 	background: ${get('controlBackgroundStrongColor')};
 	border-radius: 4px;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 	height: 26px;
 	left: 0;
 	position: absolute;

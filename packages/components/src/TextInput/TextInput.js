@@ -4,7 +4,7 @@ import { mergeRefs, noop } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { useControlGroupContext } from '../ControlGroup';
+import { BaseField } from '../BaseField';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
 import * as styles from './TextInput.styles';
 
@@ -13,6 +13,7 @@ const { InputView } = styles;
 function TextInput({
 	align,
 	className,
+	disabled,
 	forwardedRef,
 	gap = 2.5,
 	isRounded = false,
@@ -30,7 +31,6 @@ function TextInput({
 }) {
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
-	const { styles: controlGroupStyles } = useControlGroupContext();
 
 	const handleOnRootClick = () => {
 		inputRef.current.focus();
@@ -48,13 +48,7 @@ function TextInput({
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
-	const classes = cx([
-		styles.Root,
-		controlGroupStyles,
-		isFocused && styles.focus,
-		multiline && styles.multiline,
-		className,
-	]);
+	const classes = cx([multiline && styles.multiline, className]);
 
 	const inputCx = [
 		styles[size],
@@ -64,10 +58,13 @@ function TextInput({
 	];
 
 	return (
-		<Flex
+		<BaseField
 			align={align}
+			as={Flex}
 			className={classes}
+			disabled={disabled}
 			gap={gap}
+			isFocused={isFocused}
 			justify={justify}
 			onClick={handleOnRootClick}
 		>
@@ -76,6 +73,7 @@ function TextInput({
 				<InputView
 					as={InputComponent}
 					cx={inputCx}
+					disabled={disabled}
 					isResizable={isResizable}
 					onBlur={handleOnBlur}
 					onChange={onChange}
@@ -85,7 +83,7 @@ function TextInput({
 				/>
 			</FlexBlock>
 			{suffix && <FlexItem>{suffix}</FlexItem>}
-		</Flex>
+		</BaseField>
 	);
 }
 
