@@ -27,6 +27,7 @@ function Icon({
 	const IconComponent = React.cloneElement(icon, {
 		height: size,
 		ref: forwardedRef,
+		size,
 		width: size,
 		...props,
 	});
