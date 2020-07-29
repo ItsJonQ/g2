@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { AnimatePresence, motion } from '../index';
 
 export default {
-	title: 'Components/Animations',
+	title: 'Animations/Test',
 };
 
 const list = {
