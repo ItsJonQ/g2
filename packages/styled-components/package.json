@@ -27,5 +27,9 @@
         "theme-ui": "^0.3.1",
         "tinycolor2": "^1.4.1"
     },
+    "peerDependencies": {
+        "react": "^16.8.0",
+        "react-dom": "^16.8.0"
+    },
     "gitHead": "3a971b5b9117ac80e2522d3685e4da4398305aae"
 }

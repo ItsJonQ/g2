@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/components",
-  "version": "0.0.8",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -15,10 +15,10 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/provider": "^0.0.7",
-    "@wp-g2/styled-components": "^0.0.7",
-    "@wp-g2/styles": "^0.0.7",
-    "@wp-g2/utils": "^0.0.7",
+    "@wp-g2/provider": "^0.0.6",
+    "@wp-g2/styled-components": "^0.0.6",
+    "@wp-g2/styles": "^0.0.6",
+    "@wp-g2/utils": "^0.0.6",
     "history": "^4.9.0",
     "query-string": "^6.13.1",
     "react-icons": "^3.10.0",
@@ -34,6 +34,10 @@
   "devDependencies": {
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "gitHead": "3a971b5b9117ac80e2522d3685e4da4398305aae"
 }
