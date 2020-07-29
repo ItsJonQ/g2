@@ -30,7 +30,7 @@ function TextInput({
 }) {
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
-	const { isFirst, isLast, isMiddle } = useControlGroupContext();
+	const { styles: controlGroupStyles } = useControlGroupContext();
 
 	const handleOnRootClick = () => {
 		inputRef.current.focus();
@@ -50,9 +50,7 @@ function TextInput({
 
 	const classes = cx([
 		styles.Root,
-		isFirst && styles.first,
-		isMiddle && styles.middle,
-		isLast && styles.last,
+		controlGroupStyles,
 		isFocused && styles.focus,
 		multiline && styles.multiline,
 		className,

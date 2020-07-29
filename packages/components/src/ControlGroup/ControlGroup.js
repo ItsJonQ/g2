@@ -1,8 +1,10 @@
 import { connect, hasNamespace } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import { Flex } from '../Flex';
+import * as styles from './ControlGroup.styles';
 import { ControlGroupContext } from './ControlGroup.utils';
 import ControlGroupItem from './ControlGroupItem';
 
@@ -16,11 +18,19 @@ function ControlGroup({ children, ...props }) {
 		const isMiddle = !isFirst && !isLast;
 
 		const _key = child.key || index;
+
+		const contextStyles = cx([
+			isFirst && styles.first,
+			isMiddle && styles.middle,
+			isLast && styles.last,
+		]);
+
 		const contextValue = {
 			isFirst,
 			isLast,
 			isMiddle,
 			isOnly,
+			styles: contextStyles,
 		};
 
 		const _isSubComponent = hasNamespace(child, [
