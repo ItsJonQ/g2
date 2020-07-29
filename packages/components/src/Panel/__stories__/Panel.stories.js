@@ -5,7 +5,7 @@ import { Panel, PanelBody, PanelHeader } from '../index';
 
 export default {
 	component: Panel,
-	title: 'Panel',
+	title: 'Components/Panel',
 };
 
 const InputSuffix = (props) => (

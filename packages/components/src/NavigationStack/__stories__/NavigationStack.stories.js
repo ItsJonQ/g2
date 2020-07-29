@@ -14,7 +14,7 @@ import {
 
 export default {
 	component: NavigationStack,
-	title: 'NavigationStack',
+	title: 'Components/NavigationStack',
 };
 
 export const _default = () => {

@@ -21,7 +21,7 @@ import {
 } from '../index';
 
 export default {
-	title: 'Example/Sidebar',
+	title: 'Examples/Sidebar',
 };
 
 const SidebarHeader = ({ children }) => {

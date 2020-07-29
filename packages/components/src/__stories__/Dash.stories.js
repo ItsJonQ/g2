@@ -38,7 +38,7 @@ import {
 } from '../index';
 
 export default {
-	title: 'Example/Dash',
+	title: 'Examples/Dash',
 };
 
 const Sidebar = connect(BaseView, 'Sidebar');

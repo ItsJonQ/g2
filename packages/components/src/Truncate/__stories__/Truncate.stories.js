@@ -4,7 +4,7 @@ import { Truncate } from '../index';
 
 export default {
 	component: Truncate,
-	title: 'Truncate',
+	title: 'Components/Truncate',
 };
 
 export const _default = () => {

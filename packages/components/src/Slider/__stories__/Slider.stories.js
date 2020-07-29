@@ -4,7 +4,7 @@ import { Slider } from '../index';
 
 export default {
 	component: Slider,
-	title: 'Slider',
+	title: 'Components/Slider',
 };
 
 export const _default = () => {

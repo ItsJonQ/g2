@@ -9,7 +9,7 @@ import {
 
 export default {
 	component: Dropdown,
-	title: 'Dropdown',
+	title: 'Components/Dropdown',
 };
 
 export const _default = () => {

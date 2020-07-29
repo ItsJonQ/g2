@@ -4,7 +4,7 @@ import { ColorPicker } from '../index';
 
 export default {
 	component: ColorPicker,
-	title: 'ColorPicker',
+	title: 'Components/ColorPicker',
 };
 
 export const _default = () => {

@@ -1,5 +1,5 @@
 import * as icons from '@wordpress/icons';
-import { css, get, styled } from '@wp-g2/styles';
+import { get, styled } from '@wp-g2/styles';
 import { useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
@@ -32,7 +32,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'Example/Blocks/Cover',
+	title: 'Examples/Blocks/Cover',
 };
 
 const SuffixLabel = (props) => (
@@ -62,14 +62,6 @@ const ColorPickerButtonView = styled.button`
 		border-color: ${get('colorAdmin')};
 		outline: none;
 	}
-`;
-
-const large = css`
-	height: ${get('controlHeightLarge')};
-`;
-
-const small = css`
-	height: ${get('controlHeightSmall')};
 `;
 
 const ContextPopover = ({ children, title, trigger }) => {

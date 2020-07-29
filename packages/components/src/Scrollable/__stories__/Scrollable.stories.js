@@ -5,7 +5,7 @@ import { Scrollable } from '../index';
 
 export default {
 	component: Scrollable,
-	title: 'Scrollable',
+	title: 'Components/Scrollable',
 };
 
 export const _default = () => {

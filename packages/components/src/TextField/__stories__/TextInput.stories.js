@@ -4,7 +4,7 @@ import { TextField } from '../index';
 
 export default {
 	component: TextField,
-	title: 'TextField',
+	title: 'Components/TextField',
 };
 
 export const _default = () => {

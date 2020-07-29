@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '../index';
 
 export default {
 	component: Tooltip,
-	title: 'Tooltip',
+	title: 'Components/Tooltip',
 };
 
 export const _default = () => {

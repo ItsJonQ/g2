@@ -4,7 +4,7 @@ import { Select } from '../index';
 
 export default {
 	component: Select,
-	title: 'Select',
+	title: 'Components/Select',
 };
 
 export const _default = () => {

@@ -26,7 +26,7 @@ import {
 
 export default {
 	component: Navigator,
-	title: 'Navigator',
+	title: 'Components/Navigator',
 };
 
 const Screen = styled(Surface)`

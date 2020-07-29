@@ -5,7 +5,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '../index';
 
 export default {
 	component: Popover,
-	title: 'Popover',
+	title: 'Components/Popover',
 };
 
 export const _default = () => {

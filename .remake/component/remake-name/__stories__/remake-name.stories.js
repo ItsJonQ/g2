@@ -4,7 +4,7 @@ import { <%= name %> } from '../index';
 
 export default {
 	component: <%= name %>,
-	title: '<%= name %>',
+	title: 'Components/<%= name %>',
 };
 
 export const _default = () => {

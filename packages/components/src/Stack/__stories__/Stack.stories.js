@@ -6,7 +6,7 @@ import { Stack, StackItem } from '../index';
 
 export default {
 	component: Stack,
-	title: 'Stack',
+	title: 'Components/Stack',
 };
 
 const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;

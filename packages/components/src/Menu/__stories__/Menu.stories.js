@@ -4,7 +4,7 @@ import { Menu } from '../index';
 
 export default {
 	component: Menu,
-	title: 'Menu',
+	title: 'Components/Menu',
 };
 
 export const _default = () => {

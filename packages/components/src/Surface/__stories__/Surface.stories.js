@@ -4,7 +4,7 @@ import { Surface } from '../index';
 
 export default {
 	component: Surface,
-	title: 'Surface',
+	title: 'Components/Surface',
 };
 
 export const _default = () => {

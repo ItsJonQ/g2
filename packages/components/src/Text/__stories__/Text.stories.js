@@ -4,7 +4,7 @@ import { Text } from '../index';
 
 export default {
 	component: Text,
-	title: 'Text',
+	title: 'Components/Text',
 };
 
 export const _default = () => {

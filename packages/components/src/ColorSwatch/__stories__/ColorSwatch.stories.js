@@ -4,7 +4,7 @@ import { ColorSwatch } from '../index';
 
 export default {
 	component: ColorSwatch,
-	title: 'ColorSwatch',
+	title: 'Components/ColorSwatch',
 };
 
 export const _default = () => {

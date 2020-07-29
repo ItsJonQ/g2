@@ -5,7 +5,7 @@ import { ControlGroup, ControlGroupItem } from '../index';
 
 export default {
 	component: ControlGroup,
-	title: 'ControlGroup',
+	title: 'Components/ControlGroup',
 };
 
 export const _default = () => {

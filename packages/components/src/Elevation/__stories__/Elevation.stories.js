@@ -5,7 +5,7 @@ import { Elevation } from '../index';
 
 export default {
 	component: Elevation,
-	title: 'Elevation',
+	title: 'Components/Elevation',
 };
 
 export const _default = () => {

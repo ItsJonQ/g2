@@ -11,7 +11,7 @@ import { SegmentedControl } from '../index';
 
 export default {
 	component: SegmentedControl,
-	title: 'SegmentedControl',
+	title: 'Components/SegmentedControl',
 };
 
 export const _default = () => {

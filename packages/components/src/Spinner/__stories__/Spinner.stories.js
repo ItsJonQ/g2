@@ -4,7 +4,7 @@ import { Spinner } from '../index';
 
 export default {
 	component: Spinner,
-	title: 'Spinner',
+	title: 'Components/Spinner',
 };
 
 export const _default = () => {

@@ -32,7 +32,7 @@ import {
 } from '../index';
 
 export default {
-	title: 'Example/Controls',
+	title: 'Examples/Controls',
 };
 
 const SuffixLabel = (props) => (

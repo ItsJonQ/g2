@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '../packages/styles';
-import { Button, Spacer, Surface } from '../packages/components';
+import { ThemeProvider } from '@wp-g2/styles';
+import { Button, Spacer, Surface } from '@wp-g2/components';
 
 function StoryDecorator(storyFn) {
 	const [isDark, setIsDark] = useState(false);

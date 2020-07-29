@@ -4,7 +4,7 @@ import { ColorField } from '../index';
 
 export default {
 	component: ColorField,
-	title: 'ColorField',
+	title: 'Components/ColorField',
 };
 
 export const _default = () => {

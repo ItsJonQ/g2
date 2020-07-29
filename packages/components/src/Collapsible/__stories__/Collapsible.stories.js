@@ -7,7 +7,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../index';
 
 export default {
 	component: Collapsible,
-	title: 'Collapsible',
+	title: 'Components/Collapsible',
 };
 
 export const _default = () => {
