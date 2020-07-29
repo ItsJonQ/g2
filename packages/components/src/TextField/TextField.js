@@ -6,11 +6,11 @@ import TextareaAutosize from 'react-textarea-autosize';
 
 import { BaseField } from '../BaseField';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
-import * as styles from './TextInput.styles';
+import * as styles from './TextField.styles';
 
 const { InputView } = styles;
 
-function TextInput({
+function TextField({
 	align,
 	className,
 	disabled,
@@ -87,4 +87,4 @@ function TextInput({
 	);
 }
 
-export default connect(TextInput);
+export default connect(TextField);

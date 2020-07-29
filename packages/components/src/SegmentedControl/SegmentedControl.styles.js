@@ -5,8 +5,9 @@ export const SegmentedControl = css`
 	border: 1px solid transparent;
 	border-radius: 5px;
 	display: inline-flex;
+	min-height: ${get('controlHeight')};
 	min-width: 0;
-	padding: 2px;
+	padding: 1px;
 	position: relative;
 	transition: all 100ms linear;
 
@@ -25,7 +26,7 @@ export const Backdrop = css`
 	background: ${get('controlBackgroundStrongColor')};
 	border-radius: 4px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
-	height: 26px;
+	height: calc(${get('controlHeight')} - 4px);
 	left: 0;
 	position: absolute;
 	transition: all 140ms ease;
@@ -52,9 +53,9 @@ export const Button = styled.button`
 	color: ${get('colorText')};
 	cursor: pointer;
 	display: flex;
-	height: 26px;
+	height: 100%;
 	justify-content: center;
-	line-height: 26px;
+	line-height: 100%;
 	outline: none;
 	padding: 0 12px;
 	position: relative;
@@ -89,7 +90,7 @@ export const buttonActive = css`
 
 export const Separator = styled.div`
 	background: ${get('colorDivider')};
-	height: 18px;
+	height: calc(100% - 4px - 4px);
 	position: absolute;
 	right: 0;
 	top: 4px;
@@ -107,4 +108,12 @@ export const LabelPlaceholder = styled.div`
 	height: 0;
 	overflow: hidden;
 	visibility: hidden;
+`;
+
+export const large = css`
+	min-height: ${get('controlHeightLarge')};
+`;
+
+export const small = css`
+	min-height: ${get('controlHeightSmall')};
 `;

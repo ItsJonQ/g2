@@ -1,1 +1,1 @@
-export { default as TextInput } from './TextInput';
+export { TextField as TextInput } from '../TextField';

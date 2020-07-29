@@ -16,6 +16,7 @@ function SegmentControl({
 	label = 'SegmentControl',
 	options = [],
 	onChange,
+	size = 'medium',
 	value,
 }) {
 	const containerRef = useRef();
@@ -32,7 +33,11 @@ function SegmentControl({
 			{...radio}
 			aria-label={label}
 			as={BaseView}
-			cx={[styles.SegmentedControl, isBlock && styles.block]}
+			cx={[
+				styles.SegmentedControl,
+				isBlock && styles.block,
+				styles[size],
+			]}
 			ref={mergeRefs([containerRef, forwardedRef])}
 		>
 			{resizeListener}

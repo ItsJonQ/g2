@@ -45,24 +45,24 @@ export const InputView = styled.input`
 	color: ${get('colorText')};
 	display: block;
 	line-height: 18px;
-	min-height: calc(36px - 2px);
+	min-height: calc(${get('controlHeight')} - 2px);
 	outline: none;
-	padding-bottom: calc(8px - 1px);
-	padding-top: calc(8px - 1px);
+	padding-bottom: calc((${get('controlHeight')} - 2px - 18px) / 2);
+	padding-top: calc((${get('controlHeight')} - 2px - 18px) / 2);
 	resize: none;
 	width: 100%;
 `;
 
 export const large = css`
-	min-height: 38px;
-	padding-bottom: 10px;
-	padding-top: 10px;
+	min-height: calc(${get('controlHeightLarge')} - 2px);
+	padding-bottom: calc((${get('controlHeightLarge')} - 2px - 18px) / 2);
+	padding-top: calc((${get('controlHeightLarge')} - 2px - 18px) / 2);
 `;
 
 export const small = css`
-	min-height: 28px;
-	padding-bottom: 4px;
-	padding-top: 4px;
+	min-height: calc(${get('controlHeightSmall')} - 2px);
+	padding-bottom: calc((${get('controlHeightSmall')} - 2px - 18px) / 2);
+	padding-top: calc((${get('controlHeightSmall')} - 2px - 18px) / 2);
 `;
 
 export const resizable = css`

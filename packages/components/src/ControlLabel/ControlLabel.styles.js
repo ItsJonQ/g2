@@ -4,16 +4,16 @@ export const ControlLabelView = styled.div`
 	color: ${get('colorText')};
 	font-size: ${get('fontSize')};
 	line-height: 14px;
-	padding-bottom: 11px;
-	padding-top: 11px;
+	padding-bottom: calc((${get('controlHeight')} - 14px) / 2);
+	padding-top: calc((${get('controlHeight')} - 14px) / 2);
 `;
 
 export const large = css`
-	padding-bottom: 13px;
-	padding-top: 13px;
+	padding-bottom: calc((${get('controlHeightLarge')} - 14px) / 2);
+	padding-top: calc((${get('controlHeightLarge')} - 14px) / 2);
 `;
 
 export const small = css`
-	padding-bottom: 9px;
-	padding-top: 9px;
+	padding-bottom: calc((${get('controlHeightSmall')} - 14px) / 2);
+	padding-top: calc((${get('controlHeightSmall')} - 14px) / 2);
 `;

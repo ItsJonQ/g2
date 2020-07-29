@@ -31,7 +31,7 @@ import {
 	Scrollable,
 	Spacer,
 	Text,
-	TextInput,
+	TextField,
 	Tooltip,
 	TooltipContent,
 	TooltipTrigger,
@@ -59,12 +59,12 @@ const ControlExample = () => {
 		<>
 			<Spacer>
 				<Grid columns={2}>
-					<TextInput
+					<TextField
 						prefix={<InputSuffix pr={1}>W</InputSuffix>}
 						suffix={<InputSuffix>PX</InputSuffix>}
 						value={300}
 					/>
-					<TextInput
+					<TextField
 						prefix={<InputSuffix pr={1}>H</InputSuffix>}
 						suffix={<InputSuffix>PX</InputSuffix>}
 						value={200}
@@ -73,15 +73,15 @@ const ControlExample = () => {
 			</Spacer>
 			<Spacer>
 				<Grid columns={3}>
-					<TextInput prefix={<InputSuffix pr={1}>X</InputSuffix>} />
-					<TextInput prefix={<InputSuffix pr={1}>Y</InputSuffix>} />
-					<TextInput prefix={<InputSuffix pr={1}>Z</InputSuffix>} />
+					<TextField prefix={<InputSuffix pr={1}>X</InputSuffix>} />
+					<TextField prefix={<InputSuffix pr={1}>Y</InputSuffix>} />
+					<TextField prefix={<InputSuffix pr={1}>Z</InputSuffix>} />
 				</Grid>
 			</Spacer>
 			<Spacer>
 				<Grid templateColumns="2fr 1fr">
-					<TextInput />
-					<TextInput suffix={<InputSuffix>%</InputSuffix>} />
+					<TextField />
+					<TextField suffix={<InputSuffix>%</InputSuffix>} />
 				</Grid>
 			</Spacer>
 		</>

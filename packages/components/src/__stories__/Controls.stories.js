@@ -17,14 +17,18 @@ import {
 	ControlLabel,
 	Divider,
 	Flex,
+	FlexBlock,
 	Grid,
-	Heading,
 	Icon,
+	Panel,
+	PanelBody,
+	PanelHeader,
 	SegmentedControl,
 	Select,
+	Slider,
 	Spacer,
 	Text,
-	TextInput,
+	TextField,
 } from '../index';
 
 export default {
@@ -32,61 +36,53 @@ export default {
 };
 
 const SuffixLabel = (props) => (
-	<Text isBlock size={10} variant="muted" {...props} />
+	<Text
+		isBlock
+		size={10}
+		variant="muted"
+		{...props}
+		css={{ userSelect: 'none' }}
+	/>
 );
 
 const ControlGroup = (props) => <Grid templateColumns={'1fr 2fr'} {...props} />;
 
-export const _default = () => {
+const ResponsiveControls = () => {
 	return (
-		<ComponentsProvider
-			value={{
-				ControlLabel: { size: 'small' },
-				Grid: { gap: 8 },
-				Icon: { size: 16 },
-				Select: { size: 'small' },
-				TextInput: { size: 'small' },
-			}}
-		>
-			<BaseView
-				css={`
-					width: 280px;
-					position: absolute;
-					height: 100%;
-					top: 0;
-					right: 0;
-					border-left: 1px solid ${get('surfaceBorderColor')};
-					padding: 16px;
-				`}
-			>
-				<Flex justify="center">
-					<SegmentedControl
-						options={[
-							{
-								label: <Icon icon={<FiSmartphone />} />,
-								value: 'phone',
-							},
-							{
-								label: <Icon icon={<FiTablet />} />,
-								value: 'tablet',
-							},
-							{
-								label: <Icon icon={<FiMonitor />} />,
-								value: 'desktop',
-							},
-						]}
-					/>
-				</Flex>
-				<Divider mb={4} mt={2} />
-				<Spacer mb={3}>
-					<Heading size={5}>Layout</Heading>
-				</Spacer>
+		<>
+			<Flex justify="center">
+				<SegmentedControl
+					options={[
+						{
+							label: <Icon icon={<FiSmartphone />} />,
+							value: 'phone',
+						},
+						{
+							label: <Icon icon={<FiTablet />} />,
+							value: 'tablet',
+						},
+						{
+							label: <Icon icon={<FiMonitor />} />,
+							value: 'desktop',
+						},
+					]}
+				/>
+			</Flex>
+		</>
+	);
+};
+
+const LayoutControls = () => {
+	return (
+		<Panel visible>
+			<PanelHeader title="Layout" />
+			<PanelBody>
 				<ControlGroup>
 					<ControlLabel>Dimensions</ControlLabel>
 					<Spacer>
 						<Grid columns={2}>
-							<TextInput suffix={<SuffixLabel>W</SuffixLabel>} />
-							<TextInput suffix={<SuffixLabel>H</SuffixLabel>} />
+							<TextField suffix={<SuffixLabel>W</SuffixLabel>} />
+							<TextField suffix={<SuffixLabel>H</SuffixLabel>} />
 						</Grid>
 					</Spacer>
 				</ControlGroup>
@@ -116,13 +112,13 @@ export const _default = () => {
 					<ControlLabel>Position</ControlLabel>
 					<Spacer>
 						<Grid columns={2}>
-							<TextInput suffix={<SuffixLabel>X</SuffixLabel>} />
-							<TextInput suffix={<SuffixLabel>Y</SuffixLabel>} />
+							<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
+							<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
 						</Grid>
 					</Spacer>
 				</ControlGroup>
 				<ControlGroup>
-					<ControlLabel>Distrbution</ControlLabel>
+					<ControlLabel>Distribution</ControlLabel>
 					<Spacer>
 						<Select
 							options={[{ label: 'Center', value: 'center' }]}
@@ -133,7 +129,7 @@ export const _default = () => {
 					<ControlLabel>Padding</ControlLabel>
 					<Spacer>
 						<Grid columns={2}>
-							<TextInput suffix={<SuffixLabel>PX</SuffixLabel>} />
+							<TextField suffix={<SuffixLabel>PX</SuffixLabel>} />
 							<SegmentedControl
 								isBlock
 								options={[
@@ -168,6 +164,79 @@ export const _default = () => {
 						/>
 					</Spacer>
 				</ControlGroup>
+			</PanelBody>
+		</Panel>
+	);
+};
+
+const TypographyControls = () => {
+	return (
+		<Panel visible>
+			<PanelHeader title="Typography" />
+			<PanelBody>
+				<ControlGroup>
+					<ControlLabel>Font</ControlLabel>
+					<Spacer>
+						<Select
+							options={[{ label: 'Inter', value: 'inter' }]}
+						/>
+					</Spacer>
+				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Style</ControlLabel>
+					<Spacer>
+						<Select
+							options={[{ label: 'Medium', value: 'medium' }]}
+						/>
+					</Spacer>
+				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Size</ControlLabel>
+					<Spacer>
+						<Flex gap={2}>
+							<FlexBlock>
+								<TextField value="16" />
+							</FlexBlock>
+							<FlexBlock>
+								<Slider />
+							</FlexBlock>
+						</Flex>
+					</Spacer>
+				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Transform</ControlLabel>
+					<Spacer>
+						<Select options={[{ label: 'None', value: 'none' }]} />
+					</Spacer>
+				</ControlGroup>
+			</PanelBody>
+		</Panel>
+	);
+};
+
+export const _default = () => {
+	return (
+		<ComponentsProvider
+			value={{
+				Grid: { gap: 8 },
+				Icon: { size: 16 },
+			}}
+		>
+			<BaseView
+				css={`
+					width: 280px;
+					position: absolute;
+					min-height: 100%;
+					top: 0;
+					right: 0;
+					border-left: 1px solid ${get('surfaceBorderColor')};
+					padding: 16px 0;
+				`}
+			>
+				<ResponsiveControls />
+				<Divider mb={0} mt={2} />
+				<LayoutControls />
+				<TypographyControls />
 			</BaseView>
 		</ComponentsProvider>
 	);

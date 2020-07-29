@@ -8,11 +8,11 @@ import { BaseField } from '../BaseField';
 import { Flex, FlexBlock } from '../Flex';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
-import * as textInputStyles from '../TextInput/TextInput.styles';
+import * as TextFieldStyles from '../TextField/TextField.styles';
 import * as styles from './Select.styles';
 
 const { ArrowWrapperView } = styles;
-const { InputView } = textInputStyles;
+const { InputView } = TextFieldStyles;
 
 function Select({
 	className,
@@ -41,7 +41,7 @@ function Select({
 	};
 
 	const classes = cx([styles.base, className]);
-	const inputCx = cx([styles.select, textInputStyles[size]]);
+	const inputCx = cx([styles.select, TextFieldStyles[size]]);
 
 	return (
 		<BaseField

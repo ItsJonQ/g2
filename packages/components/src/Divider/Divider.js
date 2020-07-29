@@ -1,5 +1,6 @@
 import { connect } from '@wp-g2/provider';
 import { css, toPx } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
 import React from 'react';
 import { Separator } from 'reakit/Separator';
 
@@ -20,7 +21,12 @@ function Divider({ m, mb = 3, mt = 3, ...props }) {
 		margin-bottom: ${toPx(m * GRID_BASE)};
 		margin-top: ${toPx(m * GRID_BASE)};
 	`;
-	const cx = [mb && styles.mb, mt && styles.mt, m && styles.m];
+
+	const cx = [
+		!is.defined(m) && mb && styles.mb,
+		!is.defined(m) && mt && styles.mt,
+		is.defined(m) && styles.m,
+	];
 
 	return <Separator {...props} as={DividerView} cx={cx} />;
 }
