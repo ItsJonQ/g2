@@ -1,3 +1,4 @@
+import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { Radio } from 'reakit/Radio';
 
@@ -12,6 +13,7 @@ function SegmentedControlSeparator({ isActive }) {
 }
 
 function SegmentedControlButton({
+	forwardedRef,
 	isBlock = false,
 	label,
 	showSeparator,
@@ -27,6 +29,7 @@ function SegmentedControlButton({
 				as={Button}
 				cx={[isActive && styles.buttonActive]}
 				data-value={value}
+				ref={forwardedRef}
 				value={value}
 			>
 				<ButtonContent>{label}</ButtonContent>
@@ -37,4 +40,4 @@ function SegmentedControlButton({
 	);
 }
 
-export default SegmentedControlButton;
+export default connect(SegmentedControlButton);

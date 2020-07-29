@@ -1,4 +1,6 @@
+import { connect } from '@wp-g2/provider';
 import { BaseView } from '@wp-g2/styles';
+import { mergeRefs } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 import { RadioGroup, useRadioState } from 'reakit/Radio';
 
@@ -7,6 +9,7 @@ import Backdrop from './SegmentedControlBackdrop';
 import Button from './SegmentedControlButton';
 
 function SegmentControl({
+	forwardedRef,
 	isAdaptiveWidth = false,
 	isBlock = false,
 	label = 'SegmentControl',
@@ -28,7 +31,7 @@ function SegmentControl({
 			aria-label={label}
 			as={BaseView}
 			cx={[styles.SegmentedControl, isBlock && styles.block]}
-			ref={containerRef}
+			ref={mergeRefs([containerRef, forwardedRef])}
 		>
 			<Backdrop {...radio} containerRef={containerRef} />
 			{options.map((option, index) => {
@@ -67,4 +70,4 @@ function getShowSeparator(radio, index) {
 	return showSeparator;
 }
 
-export default SegmentControl;
+export default connect(SegmentControl);
