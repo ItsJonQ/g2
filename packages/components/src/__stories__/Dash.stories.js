@@ -38,7 +38,7 @@ import {
 } from '../index';
 
 export default {
-	title: 'Examples/Dash',
+	title: 'Examples',
 };
 
 const Sidebar = connect(BaseView, 'Sidebar');
@@ -154,7 +154,7 @@ const NavigationStackExample = () => {
 	);
 };
 
-export const _default = () => {
+export const Dash = () => {
 	return (
 		<Grid align="flex-start" templateColumns={[null, null, '1fr 300px']}>
 			<Flex align={[null, 'center']} direction={['column', 'row']} p={3}>

@@ -21,7 +21,7 @@ import {
 } from '../index';
 
 export default {
-	title: 'Examples/Sidebar',
+	title: 'Examples',
 };
 
 const SidebarHeader = ({ children }) => {
@@ -194,6 +194,6 @@ const AdminSidebar = () => {
 	);
 };
 
-export const _default = () => {
+export const Sidebar = () => {
 	return <AdminSidebar />;
 };

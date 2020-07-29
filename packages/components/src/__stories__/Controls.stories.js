@@ -32,7 +32,7 @@ import {
 } from '../index';
 
 export default {
-	title: 'Examples/Controls',
+	title: 'Examples',
 };
 
 const SuffixLabel = (props) => (
@@ -214,7 +214,7 @@ const TypographyControls = () => {
 	);
 };
 
-export const _default = () => {
+export const Controls = () => {
 	return (
 		<ComponentsProvider
 			value={{

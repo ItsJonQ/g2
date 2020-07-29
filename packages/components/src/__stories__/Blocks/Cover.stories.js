@@ -32,7 +32,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'Examples/Blocks/Cover',
+	title: 'Examples/Blocks',
 };
 
 const SuffixLabel = (props) => (
@@ -273,7 +273,7 @@ const InspectorControl = () => {
 	);
 };
 
-export const _default = () => {
+export const Cover = () => {
 	return (
 		<Sidebar>
 			<InspectorControl />
