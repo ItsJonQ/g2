@@ -47,7 +47,7 @@ const SuffixLabel = (props) => (
 
 const UnitSelect = () => <Select options={[{ label: 'PX', value: 'px' }]} />;
 
-export const ColorPickerButtonView = styled.button`
+const ColorPickerButtonView = styled.button`
 	appearance: none;
 	background-color: ${get('controlBackgroundColor')};
 	border: 1px solid transparent;
@@ -64,11 +64,11 @@ export const ColorPickerButtonView = styled.button`
 	}
 `;
 
-export const large = css`
+const large = css`
 	height: ${get('controlHeightLarge')};
 `;
 
-export const small = css`
+const small = css`
 	height: ${get('controlHeightSmall')};
 `;
 

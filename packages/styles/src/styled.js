@@ -18,7 +18,7 @@ function createStyled(tagName, options = {}) {
 			const isBaseTag = asProp ? is.string(asProp) : is.string(tagName);
 
 			let finalCxProp;
-			let finalClasses;
+			let finalClasses = className;
 
 			if (!isBaseTag) {
 				finalClasses = cx([
