@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "src/index.js",
@@ -15,10 +15,10 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/provider": "^0.0.3",
-    "@wp-g2/styled-components": "^0.0.3",
-    "@wp-g2/styles": "^0.0.3",
-    "@wp-g2/utils": "^0.0.3",
+    "@wp-g2/provider": "^0.0.4",
+    "@wp-g2/styled-components": "^0.0.4",
+    "@wp-g2/styles": "^0.0.4",
+    "@wp-g2/utils": "^0.0.4",
     "history": "^4.9.0",
     "query-string": "^6.13.1",
     "react-icons": "^3.10.0",
