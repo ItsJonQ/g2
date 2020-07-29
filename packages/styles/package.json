@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/styles",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "",
     "main": "dist/cjs/index.js",
     "module": "src/index.js",
@@ -15,19 +15,19 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "@wp-g2/provider": "^0.0.2",
-        "@wp-g2/utils": "^0.0.2",
-        "classnames": "^2.2.6",
         "@emotion/core": "^10.0.28",
         "@emotion/is-prop-valid": "^0.8.8",
+        "@wp-g2/provider": "^0.0.3",
+        "@wp-g2/utils": "^0.0.3",
+        "classnames": "^2.2.6",
         "create-emotion": "^10.0.27",
         "cssjanus": "^1.3.2",
+        "dash-get": "^1.0.2",
         "emotion": "^10.0.27",
         "emotion-theming": "^10.0.27",
+        "memize": "^1.1.0",
         "stylis-plugin-css-variables": "^1.0.2",
         "stylis-plugin-rtl": "^1.0.0",
-        "dash-get": "^1.0.2",
-        "memize": "^1.1.0",
         "uniq": "^1.0.1"
     }
 }
