@@ -6,7 +6,7 @@ import {
 	FiAlignRight,
 } from 'react-icons/fi';
 
-import { Icon, Spacer } from '../../index';
+import { BaseView, Icon, Spacer } from '../../index';
 import { SegmentedControl } from '../index';
 
 export default {
@@ -57,9 +57,9 @@ export const _default = () => {
 	];
 
 	return (
-		<>
-			<Spacer>
-				<SegmentedControl options={align} />
+		<BaseView>
+			<Spacer sx={{ width: [null, 300] }}>
+				<SegmentedControl isBlock options={align} />
 			</Spacer>
 			<Spacer>
 				<SegmentedControl options={xy} />
@@ -67,6 +67,6 @@ export const _default = () => {
 			<Spacer>
 				<SegmentedControl isAdaptiveWidth options={shortLong} />
 			</Spacer>
-		</>
+		</BaseView>
 	);
 };

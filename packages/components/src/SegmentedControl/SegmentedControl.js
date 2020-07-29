@@ -2,6 +2,7 @@ import { connect } from '@wp-g2/provider';
 import { BaseView } from '@wp-g2/styles';
 import { mergeRefs } from '@wp-g2/utils';
 import React, { useRef } from 'react';
+import useResizeAware from 'react-resize-aware';
 import { RadioGroup, useRadioState } from 'reakit/Radio';
 
 import * as styles from './SegmentedControl.styles';
@@ -19,6 +20,7 @@ function SegmentControl({
 }) {
 	const containerRef = useRef();
 	const reakitRadio = useRadioState({ unstable_virtual: true });
+	const [resizeListener, sizes] = useResizeAware();
 	const radio = {
 		...reakitRadio,
 		setState: onChange || reakitRadio.setState,
@@ -33,7 +35,12 @@ function SegmentControl({
 			cx={[styles.SegmentedControl, isBlock && styles.block]}
 			ref={mergeRefs([containerRef, forwardedRef])}
 		>
-			<Backdrop {...radio} containerRef={containerRef} />
+			{resizeListener}
+			<Backdrop
+				{...radio}
+				containerRef={containerRef}
+				containerWidth={sizes.width}
+			/>
 			{options.map((option, index) => {
 				const showSeparator = getShowSeparator(radio, index);
 

@@ -5,6 +5,7 @@ import * as styles from './SegmentedControl.styles';
 
 function SegmentedControlBackdrop({
 	containerRef,
+	containerWidth,
 	currentId,
 	items,
 	state,
@@ -21,7 +22,9 @@ function SegmentedControlBackdrop({
 		/**
 		 * Workaround for Reakit
 		 */
-		const targetNode = containerNode.querySelector(`[data-value=${state}]`);
+		const targetNode = containerNode.querySelector(
+			`[data-value="${state}"]`,
+		);
 		if (!targetNode) return;
 
 		const { x: parentX } = containerNode.getBoundingClientRect();
@@ -36,7 +39,7 @@ function SegmentedControlBackdrop({
 				setCanAnimate(true);
 			});
 		}
-	}, [canAnimate, containerRef, state]);
+	}, [canAnimate, containerRef, containerWidth, state]);
 
 	const cx = [styles.Backdrop];
 
