@@ -18,7 +18,8 @@
         "@itsjonq/is": "^0.0.2",
         "hoist-non-react-statics": "^3.3.2",
         "lodash.clamp": "^4.0.3",
-        "react-merge-refs": "^1.0.0"
+        "react-merge-refs": "^1.0.0",
+        "tinycolor2": "^1.4.1"
     },
     "gitHead": "3a971b5b9117ac80e2522d3685e4da4398305aae"
 }

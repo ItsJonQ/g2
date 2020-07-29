@@ -107,7 +107,7 @@ const CONTROL_PROPS = {
 	controlBoxShadowFocusSize: '2px',
 	controlHeight: '36px',
 	controlHeightLarge: '40px',
-	controlHeightSmall: '32px',
+	controlHeightSmall: '30px',
 	controlHeightXLarge: '48px',
 	controlHeightXSmall: '28px',
 	controlHeightXXSmall: '20px',

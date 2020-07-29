@@ -11,8 +11,16 @@ function Card({ children, className, elevation = 2, ...props }) {
 	return (
 		<Surface {...props} className={cx}>
 			{children}
-			<Elevation isInteractive={false} value={elevation ? 1 : 0} />
-			<Elevation isInteractive={false} value={elevation} />
+			<Elevation
+				css={{ borderRadius: 8 }}
+				isInteractive={false}
+				value={elevation ? 1 : 0}
+			/>
+			<Elevation
+				css={{ borderRadius: 8 }}
+				isInteractive={false}
+				value={elevation}
+			/>
 		</Surface>
 	);
 }

@@ -7,6 +7,7 @@ export const PopoverContentView = styled(Popover)`
 	outline: none;
 	transform-origin: top center;
 	transition: opacity 120ms ease;
+	width: 100%;
 
 	&[data-enter] {
 		opacity: 1;

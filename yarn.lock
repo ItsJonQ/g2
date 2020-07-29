@@ -1178,6 +1178,11 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
+"@icons/material@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
+  integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
+
 "@itsjonq/is@0.0.2", "@itsjonq/is@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@itsjonq/is/-/is-0.0.2.tgz#eaa8e1ba341181c9de051887bbcfbda1c9692451"
@@ -3405,6 +3410,42 @@
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
+
+"@wordpress/element@^2.16.0":
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.16.0.tgz#8196a74a6a9049eed2a5b7a51eb696fd553bbf4c"
+  integrity sha512-1ijo/GR/uBfL4teCQ3oFdUTqkeV2EZ32SCvXl30iPbqYmaNSzT1ZI1dlW8GO5o5UBja9BG11hnaOwm93pE2y2A==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@wordpress/escape-html" "^1.9.0"
+    lodash "^4.17.15"
+    react "^16.9.0"
+    react-dom "^16.9.0"
+
+"@wordpress/escape-html@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-1.9.0.tgz#d982cac20a21018a471dff0942fe7e37e3f66caf"
+  integrity sha512-XW0GGqxpFauOgTjfQ9603hCDnUE+HhD0HVFMIEphIrTpTreLW3lJbfTibPTn0dWWPATqanH2TlPurOagUubh4g==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
+"@wordpress/icons@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/icons/-/icons-2.4.0.tgz#e409da9d68bbb7d327dc96ddb994440c2f583539"
+  integrity sha512-G7ClNkJX8Hr/eSudoGM/cONrnwGspYLcL5Jf38lrk7Irrfl3rJXULnqe1FFcs4QHMgQuZUTphtrcMbiG6alKpw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@wordpress/element" "^2.16.0"
+    "@wordpress/primitives" "^1.7.0"
+
+"@wordpress/primitives@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/primitives/-/primitives-1.7.0.tgz#b682faefa068b4eff7d3d3c7c0ba0b056263a8c4"
+  integrity sha512-bbbWmYtvI23tOtikEIVThEfJauIoDFcPmLB5+/EAQ1kFXB0dGANMunYcUcBiE+ejtvpOxVJfEN4+/iElVUlW/Q==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@wordpress/element" "^2.16.0"
+    classnames "^2.2.5"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -10214,7 +10255,7 @@ lodash.zip@^4.2.0:
   resolved "https://registry.yarnpkg.com/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
   integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
-lodash@^4.11.2, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.2.1:
+lodash@^4.0.1, lodash@^4.11.2, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.2.1:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -10413,6 +10454,11 @@ markdown-to-jsx@^6.11.4:
   dependencies:
     prop-types "^15.6.2"
     unquote "^1.1.0"
+
+material-colors@^1.2.1:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
+  integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -12238,7 +12284,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -12496,6 +12542,18 @@ react-clientside-effect@^1.2.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+react-color@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.18.1.tgz#2cda8cc8e06a9e2c52ad391a30ddad31972472f4"
+  integrity sha512-X5XpyJS6ncplZs74ak0JJoqPi+33Nzpv5RYWWxn17bslih+X7OlgmfpmGC1fNvdkK7/SGWYf1JJdn7D2n5gSuQ==
+  dependencies:
+    "@icons/material" "^0.2.4"
+    lodash "^4.17.11"
+    material-colors "^1.2.1"
+    prop-types "^15.5.10"
+    reactcss "^1.2.0"
+    tinycolor2 "^1.4.1"
+
 react-dev-utils@^9.0.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.1.0.tgz#3ad2bb8848a32319d760d0a84c56c14bdaae5e81"
@@ -12541,7 +12599,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@16.13.1, react-dom@^16.8.3:
+react-dom@16.13.1, react-dom@^16.8.3, react-dom@^16.9.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -12748,7 +12806,7 @@ react-use-measure@^2.0.1:
   dependencies:
     debounce "^1.2.0"
 
-react@16.13.1, react@^16.8.3:
+react@16.13.1, react@^16.8.3, react@^16.9.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -12756,6 +12814,13 @@ react@16.13.1, react@^16.8.3:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+reactcss@^1.2.0:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/reactcss/-/reactcss-1.2.3.tgz#c00013875e557b1cf0dfd9a368a1c3dab3b548dd"
+  integrity sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==
+  dependencies:
+    lodash "^4.0.1"
 
 read-cmd-shim@^1.0.1:
   version "1.0.5"

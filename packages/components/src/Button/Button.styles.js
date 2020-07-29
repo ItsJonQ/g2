@@ -1,4 +1,5 @@
 import { css, styled } from '@wp-g2/styled-components';
+import { get } from '@wp-g2/styles';
 
 import { FlexBlock, FlexItem } from '../Flex';
 
@@ -368,6 +369,7 @@ const contentStyles = ({ theme }) => {
 	const { config } = theme;
 
 	return css`
+		font-size: ${get('fontSize')};
 		line-height: ${config.buttonContentLineHeight};
 		min-height: ${config.buttonLineHeight};
 		white-space: nowrap;
