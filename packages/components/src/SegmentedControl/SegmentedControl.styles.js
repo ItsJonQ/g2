@@ -79,6 +79,7 @@ export const ButtonView = styled.button`
 export const ButtonContentView = styled.div`
 	font-size: 12px;
 	left: 50%;
+	line-height: 1;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
