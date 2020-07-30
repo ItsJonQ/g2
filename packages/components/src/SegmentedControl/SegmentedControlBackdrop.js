@@ -30,7 +30,8 @@ function SegmentedControlBackdrop({
 
 		const { x: parentX } = containerNode.getBoundingClientRect();
 		const { width: offsetWidth, x } = targetNode.getBoundingClientRect();
-		const offsetLeft = x - parentX;
+		const borderWidth = 1;
+		const offsetLeft = x - parentX - borderWidth;
 
 		setLeft(offsetLeft);
 		setWidth(offsetWidth);

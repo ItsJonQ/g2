@@ -2,7 +2,7 @@ import { css, get, styled } from '@wp-g2/styles';
 
 export const SegmentedControl = css`
 	background: ${get('controlBackgroundColor')};
-	border: 1px solid transparent;
+	border: 1px solid ${get('controlBorderColor')};
 	border-radius: 5px;
 	display: inline-flex;
 	min-height: ${get('controlHeight')};
@@ -23,7 +23,8 @@ export const block = css`
 `;
 
 export const BackdropView = styled.div`
-	background: ${get('controlBackgroundStrongColor')};
+	background: ${get('controlSurfaceColor')};
+	border: 1px solid ${get('controlBorderColor')};
 	border-radius: 4px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 	height: calc(${get('controlHeight')} - 4px);

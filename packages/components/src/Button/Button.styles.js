@@ -143,6 +143,14 @@ export const link = css`
 	}
 `;
 
+export const subtle = css`
+	border-color: transparent;
+
+	&:focus {
+		border-color: transparent;
+	}
+`;
+
 export const plainLink = css`
 	background: none;
 	border-color: transparent;

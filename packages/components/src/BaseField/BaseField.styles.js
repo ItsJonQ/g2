@@ -2,8 +2,7 @@ import { css, get, styled } from '@wp-g2/styles';
 
 export const BaseFieldView = styled.div`
 	background-color: ${get('controlBackgroundColor')};
-	border: 1px solid transparent;
-	border-color: transparent;
+	border: 1px solid ${get('controlBorderColor')};
 	border-radius: 4px;
 	display: flex;
 	flex: 1;

@@ -63,8 +63,7 @@ const GRID_PROPS = {
 const CONTROL_PROPS = {
 	controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
-	controlBackgroundStrongColor: get('white'),
-	controlBorderColor: 'rgba(0, 0, 0, 0.3)',
+	controlBorderColor: 'transparent',
 	controlBorderRadius: '4px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlHeight: '30px',
@@ -75,6 +74,7 @@ const CONTROL_PROPS = {
 	controlPaddingXLarge: '16px',
 	controlPrimaryTextActiveColor: get('white'),
 	controlPrimaryTextColor: get('white'),
+	controlSurfaceColor: get('white'),
 	controlTextActiveColor: get('colorAdmin'),
 };
 
@@ -87,11 +87,10 @@ const DARK_MODE_PROPS = {
 	colorTextInverted: '#050505',
 	controlBackgroundColor: 'rgba(255, 255, 255, 0.1)',
 	controlBackgroundDimColor: 'rgba(255, 255, 255, 0.2)',
-	controlBackgroundStrongColor: 'rgba(255, 255, 255, 0.3)',
-	controlBorderColor: 'rgba(255, 255, 255, 0.9)',
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
 	controlPrimaryTextActiveColor: get('black'),
 	controlPrimaryTextColor: get('white'),
+	controlSurfaceColor: 'rgba(255, 255, 255, 0.3)',
 	controlTextActiveColor: get('white'),
 	surfaceBackgroundColor: get('colorBodyBackgroundDark'),
 	surfaceBackgroundSubtleColor: get('colorBodyBackgroundDark'),

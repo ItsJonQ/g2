@@ -51,7 +51,7 @@ export const SliderView = styled.input`
 	&::-webkit-slider-thumb {
 		appearance: none;
 		background-color: ${get('white')};
-		border: none;
+		border: 1px solid ${get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
 			0px 1px 1px 0px rgba(0, 0, 0, 0.3);
@@ -69,7 +69,7 @@ export const SliderView = styled.input`
 	&::-moz-range-thumb {
 		appearance: none;
 		background-color: ${get('white')};
-		border: none;
+		border: 1px solid ${get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
 			0px 1px 1px 0px rgba(0, 0, 0, 0.3);
