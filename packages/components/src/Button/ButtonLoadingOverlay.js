@@ -1,25 +1,20 @@
-import { styled } from '@wp-g2/styled-components';
 import React from 'react';
 
 import { Flex } from '../Flex';
 import { Spinner } from '../Spinner';
-
-const LoadingOverlayView = styled(Flex)`
-	bottom: 0;
-	left: 0;
-	pointer-events: none;
-	position: absolute;
-	right: 0;
-	top: 0;
-`;
+import * as styles from './Button.styles';
 
 export function LoadingOverlay({ isLoading = false }) {
 	if (!isLoading) return null;
 
 	return (
-		<LoadingOverlayView aria-hidden="true" justify="center">
+		<Flex
+			aria-hidden="true"
+			className={styles.LoadingOverlay}
+			justify="center"
+		>
 			<Spinner color={'currentColor'} />
-		</LoadingOverlayView>
+		</Flex>
 	);
 }
 

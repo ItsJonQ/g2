@@ -9,14 +9,19 @@ import { THEME } from '../theme';
 const shouldForwardProp = isPropValid;
 
 const styles = {
-	Base: {
+	Base: css({
 		MozOsxFontSmoothing: 'grayscale',
 		WebkitFontSmoothing: 'antialiased',
 		boxSizing: 'border-box',
 		fontFamily: THEME['fontFamily'],
 		fontSize: THEME['fontSize'],
 		margin: 0,
-	},
+	}),
+	reduceMotion: css`
+		@media (prefers-reduced-motion) {
+			transition: none !important;
+		}
+	`,
 };
 
 export const createSystemElement = (tagName = 'div') => {
@@ -47,7 +52,8 @@ export const createSystemElement = (tagName = 'div') => {
 		const sx = sxProp && css(sxProp);
 
 		const classes = cx(
-			css(styles.Base),
+			styles.Base,
+			styles.reduceMotion,
 			cxProp,
 			className,
 			sx,

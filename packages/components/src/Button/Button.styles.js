@@ -1,307 +1,158 @@
-import { css, styled } from '@wp-g2/styled-components';
-import { get } from '@wp-g2/styles';
+import { css, get } from '@wp-g2/styles';
 
-import { FlexBlock, FlexItem } from '../Flex';
+export const Button = css`
+	align-items: center;
+	appearance: none;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: ${get('controlBorderRadius')};
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 0 0 2px transparent;
+	color: ${get('colorAdmin')};
+	cursor: pointer;
+	display: inline-flex;
+	font-weight: 600;
+	height: ${get('controlHeight')};
+	line-height: ${get('controlHeight')};
+	outline: none;
+	padding-left: ${get('controlPaddingXLarge')};
+	padding-right: ${get('controlPaddingXLarge')};
+	position: relative;
+	text-decoration: none;
+	user-select: none;
+	width: auto;
 
-const baseStyles = ({ isDestructive, theme }) => {
-	const { config, isDark } = theme;
-	const buttonTransition = `all ${config.buttonTransitionDuration}
-	${config.buttonTransitionTimingFunction}`;
-
-	return css`
-		align-items: center;
-		appearance: none;
-		background-color: ${config.buttonBackgroundColor};
-		border-color: transparent;
-		border-radius: ${config.buttonBorderRadius};
-		border-style: solid;
-		border-width: ${config.buttonBorderWidth};
-		box-shadow: ${config.buttonBoxShadow};
-		color: ${config.buttonTextColor};
-		cursor: pointer;
-		display: inline-flex;
-		font-weight: ${config.buttonFontWeight};
-		height: ${config.buttonHeight};
-		line-height: ${config.buttonHeight};
-		outline: none;
-		padding-left: ${config.buttonPaddingX};
-		padding-right: ${config.buttonPaddingX};
-		position: relative;
-		text-decoration: none;
-		transform: ${config.buttonTransform};
-		user-select: none;
-		width: auto;
-
-		&:active {
-			color: ${config.buttonTextColorActive};
-			transform: ${config.buttonTransformActive};
-			transform-origin: center center;
-		}
-
-		&:hover,
-		&:active,
-		&:focus {
-			transition: ${buttonTransition};
-		}
-
-		&[disabled],
-		&[aria-disabled='true'] {
-			cursor: auto;
-			opacity: 0.5;
-		}
-
-		&:focus {
-			box-shadow: ${config.buttonBoxShadowFocus};
-			z-index: 1;
-		}
-
-		svg {
-			display: block;
-		}
-
-		${isDark &&
-		css`
-			&:active {
-				color: ${config.buttonTextColorActiveDark};
-			}
-		`}
-
-		${isDestructive &&
-		css`
-			color: ${config.colorDestructive};
-		`}
-	`;
-};
-
-const blockStyles = ({ isBlock }) => {
-	if (!isBlock) return;
-
-	return css`
-		display: flex;
-		width: 100%;
-
-		&:active {
-			transform: scale(1);
-		}
-	`;
-};
-
-const roundedStyles = ({ isRounded, theme }) => {
-	if (!isRounded) return '';
-
-	const { config } = theme;
-
-	return css`
-		border-radius: ${config.buttonBorderRadiusRound};
-	`;
-};
-
-const sizeStyles = ({ size, theme }) => {
-	const { config } = theme;
-
-	switch (size) {
-		case 'large':
-			return css`
-				height: ${config.buttonHeightLarge};
-				line-height: ${config.buttonHeightLarge};
-			`;
-
-		case 'small':
-			return css`
-				height: ${config.buttonHeightSmall};
-				line-height: ${config.buttonHeightSmall};
-			`;
-
-		default:
-			return '';
+	&:active {
+		color: ${get('colorText')};
 	}
-};
 
-const primaryStyles = ({ isDestructive, theme }) => {
-	const { config, isDark } = theme;
+	&:hover,
+	&:active,
+	&:focus {
+		transition: all ${get('transitionDuration')}
+			cubic-bezier(0.12, 0.8, 0.32, 1);
+	}
 
-	return css`
-		background-color: ${config.buttonBackgroundColorPrimary};
-		color: ${config.buttonTextColorPrimary};
+	&[disabled],
+	&[aria-disabled='true'] {
+		cursor: auto;
+		opacity: 0.5;
+	}
 
-		&:hover,
-		&:focus,
-		&:active {
-			color: ${config.buttonTextColorPrimary};
-		}
+	&:focus {
+		box-shadow: 0 0 0 2px ${get('controlBackgroundDimColor')};
+		z-index: 1;
+	}
 
-		&:hover,
-		&:focus {
-			background-color: ${config.buttonBackgroundColorPrimaryHover};
-		}
+	svg {
+		display: block;
+	}
+`;
 
-		&:focus {
-			border-color: ${config.buttonBorderColorFocus};
-			box-shadow: ${config.buttonBoxShadowFocus};
-		}
+export const destructive = css`
+	color: ${get('colorDestructive')};
+`;
 
-		&:active {
-			background-color: ${config.buttonBackgroundColorPrimaryActive};
-		}
+export const block = css`
+	display: flex;
+	width: 100%;
+`;
 
-		${isDark &&
-		css`
-			&:active {
-				background-color: ${config.buttonTextColorActiveDark};
-				color: ${config.buttonTextColorPrimaryDark};
-			}
-		`}
+export const rounded = css`
+	border-radius: 9999px;
+`;
 
-		${isDestructive &&
-		css`
-			background-color: ${config.colorDestructive};
+export const large = css`
+	height: ${get('controlHeightLarge')};
+	line-height: ${get('controlHeightLarge')};
+`;
 
-			&:hover,
-			&:focus {
-				background-color: ${config.colorDestructiveHover};
-			}
+export const small = css`
+	height: ${get('controlHeightSmall')};
+	line-height: ${get('controlHeightSmall')};
+`;
 
-			&:focus {
-				border-color: ${config.buttonBorderColorFocus};
-				box-shadow: ${config.buttonBoxShadowDestructiveFocus};
-			}
+export const primary = css`
+	background-color: ${get('colorAdmin')};
+	color: ${get('controlPrimaryTextColor')};
 
-			&:active {
-				background-color: ${config.colorDestructiveActive};
-			}
-		`}
-	`;
-};
+	&:active {
+		color: ${get('colorTextInverted')};
+	}
 
-const secondaryStyles = ({ isDestructive, isSubtle, theme }) => {
-	const { config, isDark } = theme;
+	&:hover,
+	&:focus {
+		background-color: ${get('colorAdmin')};
+	}
 
-	return css`
-		background-color: transparent;
-		border-color: ${config.buttonBackgroundColorPrimary};
-		color: ${config.buttonBackgroundColorPrimary};
+	&:focus {
+		border-color: ${get('colorAdmin')};
+	}
+
+	&:active {
+		background-color: ${get('colorText')};
+	}
+`;
+
+export const secondary = css`
+	background-color: transparent;
+	border-color: ${get('colorAdmin')};
+	color: ${get('colorAdmin')};
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: ${get('colorAdmin')};
+		color: ${get('colorAdmin')};
+	}
+
+	&:active {
+		border-color: ${get('colorText')};
+		color: ${get('colorText')};
+	}
+
+	&[data-destructive='true'] {
+		border-color: ${get('colorDestructive')};
+		color: ${get('colorDestructive')};
 
 		&:hover,
 		&:active,
 		&:focus {
-			border-color: ${config.buttonBackgroundColorPrimaryHover};
-			color: ${config.buttonBackgroundColorPrimaryHover};
+			border-color: ${get('colorDestructive')};
+			color: ${get('colorDestructive')};
 		}
 
 		&:active {
-			border-color: ${config.buttonTextColorActive};
-			color: ${config.buttonTextColorActive};
+			color: ${get('colorText')};
 		}
+	}
+`;
 
-		${
-			isDark &&
-			css`
-				&:active {
-					border-color: ${config.buttonTextColorActiveDark};
-					color: ${config.buttonTextColorActiveDark};
-				}
-			`
-		}
+export const tertiary = css`
+	background-color: transparent;
+`;
 
-		${
-			isSubtle &&
-			css`
-				border-color: ${config.buttonBorderColorOutline};
+export const link = css`
+	background: none;
+	border-color: transparent;
+	color: ${get('colorAdmin')};
 
-				&:hover {
-					border-color: ${config.buttonBorderColorOutlineHover};
-				}
+	&[data-destructive='true'] {
+		color: ${get('colorDestructive')};
+	}
+`;
 
-				${isDark &&
-				css`
-					border-color: ${config.buttonBorderColorOutlineDark};
-
-					&:hover {
-						border-color: ${config.buttonBorderColorOutlineDark};
-					}
-				`}
-			`
-		}
-
-		${
-			isDestructive &&
-			css`
-				border-color: ${config.colorDestructive};
-				color: ${config.colorDestructive};
-
-				&:hover,
-				&:active,
-				&:focus {
-					border-color: ${config.colorDestructive};
-					color: ${config.colorDestructive};
-				}
-
-				&:focus {
-					box-shadow: ${config.buttonBoxShadowDestructiveFocus};
-				}
-
-				&:active {
-					color: ${config.buttonTextColorActive};
-				}
-
-				${isDark &&
-				css`
-					&:active {
-						color: ${config.buttonTextColorActiveDark};
-					}
-				`}
-			`
-		}
-	`;
-};
-
-const tertiaryStyles = ({ isDestructive, theme }) => {
-	const { config, isDark } = theme;
-
-	return css`
-		background-color: transparent;
-
-		${isDark &&
-		css`
-			&:active {
-				color: ${config.buttonTextColorActiveDark};
-			}
-		`}
-
-		${isDestructive &&
-		css`
-			&:focus {
-				box-shadow: ${config.buttonBoxShadowDestructiveFocus};
-			}
-
-			&:focus,
-			&:active {
-				border-color: ${config.colorDestructive};
-			}
-		`}
-	`;
-};
-
-const linkStyles = ({ isDestructive, theme }) => {
-	const { config } = theme;
-
-	return css`
-		background: none;
-		border-color: transparent;
-		color: ${config.buttonBackgroundColorPrimary};
-
-		${isDestructive &&
-		css`
-			color: ${config.colorDestructive};
-		`}
-	`;
-};
-
-const plainLinkStyles = (props) => css`
-	${linkStyles(props)};
-
+export const plainLink = css`
+	background: none;
+	border-color: transparent;
+	color: ${get('colorAdmin')};
 	padding-left: 0;
 	padding-right: 0;
+
+	&[data-destructive='true'] {
+		color: ${get('colorDestructive')};
+	}
 
 	&:hover,
 	&:active,
@@ -311,108 +162,35 @@ const plainLinkStyles = (props) => css`
 	}
 `;
 
-const variantStyles = ({ variant, ...props }) => {
-	switch (variant) {
-		case 'primary':
-			return primaryStyles(props);
-		case 'secondary':
-			return secondaryStyles(props);
-		case 'tertiary':
-			return tertiaryStyles(props);
-		case 'link':
-			return linkStyles(props);
-		case 'plain-link':
-			return plainLinkStyles(props);
-		default:
-			return '';
-	}
-};
-
-const controlGroupStyles = ({ isFirst, isLast, isMiddle }) => {
-	if (isFirst) {
-		return css`
-			border-bottom-right-radius: 0;
-			border-top-right-radius: 0;
-		`;
-	}
-	if (isMiddle) {
-		return css`
-			border-radius: 0;
-		`;
-	}
-	if (isLast) {
-		return css`
-			border-bottom-left-radius: 0;
-			border-top-left-radius: 0;
-		`;
-	}
-};
-
-export const ButtonView = styled.button`
-	${baseStyles};
-	${blockStyles};
-	${variantStyles};
-	${roundedStyles};
-	${sizeStyles};
-	${controlGroupStyles};
+export const loading = css`
+	opacity: 0;
 `;
 
-export const ButtonLinkView = styled.a`
-	${baseStyles};
-	${blockStyles};
-	${variantStyles};
-	${roundedStyles};
-	${sizeStyles};
+export const Content = css`
+	font-size: ${get('fontSize')};
+	opacity: 1;
+	white-space: nowrap;
 `;
 
-const contentStyles = ({ theme }) => {
-	const { config } = theme;
-
-	return css`
-		font-size: ${get('fontSize')};
-		line-height: ${config.buttonContentLineHeight};
-		min-height: ${config.buttonLineHeight};
-		white-space: nowrap;
-	`;
-};
-
-const loadingStyles = ({ isLoading }) => css`
+export const PrefixSuffix = css`
 	opacity: 1;
 
-	${isLoading &&
-	`
-    opacity: 0;
-`}
+	svg {
+		display: block;
+		user-select: none;
+	}
 `;
 
-export const ContentView = styled(FlexBlock)`
-	${contentStyles};
-	${loadingStyles};
+export const CaretWrapper = css`
+	margin-left: -8px;
+	margin-right: -8px;
 `;
 
-const prefixSuffixStyles = ({ theme }) => {
-	const { config } = theme;
-
-	return css`
-		line-height: ${config.inputLineHeight};
-
-		svg {
-			display: block;
-			user-select: none;
-		}
-	`;
-};
-
-export const PrefixSuffixView = styled(FlexItem)`
-	${prefixSuffixStyles};
-	${loadingStyles};
-`;
-
-const caretWrapperStyles = ({ theme }) => {
-	return theme.sx({ mr: -2 });
-};
-
-export const CaretWrapperView = styled(FlexItem)`
-	${caretWrapperStyles};
-	${loadingStyles};
+export const LoadingOverlay = css`
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
 `;

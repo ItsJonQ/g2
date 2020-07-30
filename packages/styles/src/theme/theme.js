@@ -1,4 +1,5 @@
 import {
+	get,
 	transformValuesToReferences,
 	transformValuesToVariables,
 	transformValuesToVariablesString,
@@ -6,8 +7,9 @@ import {
 
 const ANIMATION_PROPS = {
 	transitionDuration: '200ms',
-	transitionDurationFast: '120ms',
-	transitionDurationFaster: '100ms',
+	transitionDurationFast: '160ms',
+	transitionDurationFaster: '120ms',
+	transitionDurationFastest: '100ms',
 	transitionTimingFunction: 'cubic-bezier(0.08, 0.52, 0.52, 1)',
 	transitionTimingFunctionControl: 'cubic-bezier(0.12, 0.8, 0.32, 1)',
 };
@@ -26,22 +28,18 @@ const G2_COLORS = {
 	white: '#ffffff',
 };
 
-const COLOR_PALETTE = {
-	admin: G2_COLORS.blueberry,
-	destructive: G2_COLORS.pomegrade,
-	positive: G2_COLORS.greens,
-};
-
 const COLOR_PROPS = {
-	colorAdmin: COLOR_PALETTE.admin,
-	colorBodyBackground: G2_COLORS.white,
+	colorAdmin: get('blueberry'),
+	colorBodyBackground: get('white'),
 	colorBodyBackgroundDark: '#18191A',
+	colorDestructive: get('pomegrade'),
 	colorDivider: 'rgba(0, 0, 0, 0.1)',
+	colorPositive: get('greens'),
 	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
 	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#050505',
-	colorTextInverted: '#fff',
+	colorTextInverted: get('white'),
 };
 
 const FONT_PROPS = {
@@ -52,10 +50,10 @@ const FONT_PROPS = {
 };
 
 const SURFACE_PROPS = {
-	surfaceBackgroundColor: '#fff',
+	surfaceBackgroundColor: get('surfaceColor'),
 	surfaceBackgroundSubtleColor: '#EFEFF3',
 	surfaceBorderColor: 'rgba(0, 0, 0, 0.06)',
-	surfaceColor: '#fff',
+	surfaceColor: get('white'),
 };
 
 const GRID_PROPS = {
@@ -65,14 +63,19 @@ const GRID_PROPS = {
 const CONTROL_PROPS = {
 	controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
-	controlBackgroundStrongColor: 'white',
+	controlBackgroundStrongColor: get('white'),
 	controlBorderColor: 'rgba(0, 0, 0, 0.3)',
+	controlBorderRadius: '4px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlHeight: '30px',
 	controlHeightLarge: '36px',
 	controlHeightSmall: '24px',
 	controlHeightXLarge: '44px',
-	controlTextActiveColor: COLOR_PROPS.colorAdmin,
+	controlPaddingX: '8px',
+	controlPaddingXLarge: '16px',
+	controlPrimaryTextActiveColor: get('white'),
+	controlPrimaryTextColor: get('white'),
+	controlTextActiveColor: get('colorAdmin'),
 };
 
 const DARK_MODE_PROPS = {
@@ -87,16 +90,17 @@ const DARK_MODE_PROPS = {
 	controlBackgroundStrongColor: 'rgba(255, 255, 255, 0.3)',
 	controlBorderColor: 'rgba(255, 255, 255, 0.9)',
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
-	controlTextActiveColor: G2_COLORS.white,
-	surfaceBackgroundColor: COLOR_PROPS.colorBodyBackgroundDark,
-	surfaceBackgroundSubtleColor: COLOR_PROPS.colorBodyBackgroundDark,
+	controlPrimaryTextActiveColor: get('black'),
+	controlPrimaryTextColor: get('white'),
+	controlTextActiveColor: get('white'),
+	surfaceBackgroundColor: get('colorBodyBackgroundDark'),
+	surfaceBackgroundSubtleColor: get('colorBodyBackgroundDark'),
 	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',
 };
 
 export const BASE_THEME = {
 	...G2_COLORS,
-	...COLOR_PALETTE,
 	...COLOR_PROPS,
 	...CONTROL_PROPS,
 	...FONT_PROPS,

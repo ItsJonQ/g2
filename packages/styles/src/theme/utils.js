@@ -1,18 +1,43 @@
+import { is } from '@wp-g2/utils';
+
 const NAMESPACE = '--wp-g2';
+
+export function get(key) {
+	return () => key;
+}
 
 export function transformValuesToReferences(values = {}) {
 	const next = {};
 	for (const [key, value] of Object.entries(values)) {
-		next[key] = `var(${NAMESPACE}-${key}, ${value})`;
+		let ref;
+
+		if (is.function(value)) {
+			ref = `var(${NAMESPACE}-${key})`;
+		} else {
+			ref = `var(${NAMESPACE}-${key}, ${value})`;
+		}
+
+		next[key] = ref;
 	}
 	return next;
 }
 
 export function transformValuesToVariables(values = {}) {
 	const next = {};
+
 	for (const [key, value] of Object.entries(values)) {
-		next[`${NAMESPACE}-${key}`] = value;
+		let ref = value;
+
+		if (is.function(value)) {
+			try {
+				ref = `var(${NAMESPACE}-${value()})`;
+				// eslint-disable-next-line
+			} catch {}
+		}
+
+		next[`${NAMESPACE}-${key}`] = ref;
 	}
+
 	return next;
 }
 

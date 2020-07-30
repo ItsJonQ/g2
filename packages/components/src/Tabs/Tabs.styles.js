@@ -19,7 +19,7 @@ export const TabView = styled.button`
 	min-height: ${get('controlHeightXLarge')};
 	outline: none;
 	padding: 4px;
-	transition: color 160ms linear;
+	transition: color ${get('transitionDuration')} linear;
 
 	&[aria-selected='true'] {
 		color: ${get('colorAdmin')};
@@ -36,6 +36,6 @@ export const TabIndicatorView = styled.div`
 	height: 2px;
 	left: 0;
 	position: absolute;
-	transition: all 140ms ease;
+	transition: all ${get('transitionDuration')} ease;
 	z-index: 1;
 `;

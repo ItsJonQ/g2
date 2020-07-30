@@ -9,7 +9,7 @@ export const SegmentedControl = css`
 	min-width: 0;
 	padding: 1px;
 	position: relative;
-	transition: all 100ms linear;
+	transition: all ${get('transitionDurationFastest')} linear;
 
 	&:focus {
 		border-color: ${get('colorAdmin')};
@@ -29,7 +29,7 @@ export const BackdropView = styled.div`
 	height: calc(${get('controlHeight')} - 4px);
 	left: 0;
 	position: absolute;
-	transition: all 140ms ease;
+	transition: all ${get('transitionDurationFast')} ease;
 	z-index: 1;
 `;
 
@@ -60,8 +60,8 @@ export const ButtonView = styled.button`
 	padding: 0 12px;
 	position: relative;
 	text-align: center;
-	transition: background 160ms linear, color 160ms linear,
-		font-weight 60ms linear;
+	transition: background ${get('transitionDurationFast')} linear,
+		color ${get('transitionDurationFast')} linear, font-weight 60ms linear;
 	user-select: none;
 	width: 100%;
 	z-index: 2;
@@ -94,7 +94,7 @@ export const SeparatorView = styled.div`
 	position: absolute;
 	right: 0;
 	top: 4px;
-	transition: background 200ms linear;
+	transition: background ${get('transitionDuration')} linear;
 	width: 1px;
 `;
 

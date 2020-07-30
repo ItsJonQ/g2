@@ -1,23 +1,19 @@
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { Button as BaseButton } from 'reakit/Button';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { Elevation } from '../Elevation';
-import { Flex } from '../Flex';
+import { Flex, FlexBlock, FlexItem } from '../Flex';
 import { Icon } from '../Icon';
-import LoadingOverlay from './Button.LoadingOverlay';
-import {
-	ButtonLinkView,
-	ButtonView,
-	CaretWrapperView,
-	ContentView,
-	PrefixSuffixView,
-} from './Button.styles';
+import * as styles from './Button.styles';
+import LoadingOverlay from './ButtonLoadingOverlay';
 
 function Button({
 	children,
+	className,
 	elevation = 0,
 	elevationActive,
 	elevationFocus,
@@ -29,7 +25,6 @@ function Button({
 	isBlock = false,
 	isDestructive = false,
 	isLoading = false,
-	isNarrow = false,
 	isRounded = false,
 	isSubtle = false,
 	justify = 'center',
@@ -39,45 +34,73 @@ function Button({
 	variant = 'secondary',
 	...props
 }) {
-	const as = href ? ButtonLinkView : ButtonView;
-	const { isFirst, isLast, isMiddle } = useControlGroupContext();
+	const as = href ? 'a' : 'button';
+	const { styles: controlGroupStyles } = useControlGroupContext();
+
+	const classes = cx([
+		styles.Button,
+		isBlock && styles.block,
+		isDestructive && styles.destructive,
+		isRounded && styles.rounded,
+		isSubtle && styles.subtle,
+		styles[variant],
+		styles[size],
+		controlGroupStyles,
+	]);
 
 	return (
 		<BaseButton
 			aria-busy={isLoading}
 			as={as}
+			className={classes}
+			data-destructive={isDestructive}
 			href={href}
-			isBlock={isBlock}
-			isDestructive={isDestructive}
-			isFirst={isFirst}
-			isLast={isLast}
-			isMiddle={isMiddle}
-			isRounded={isRounded}
-			isSubtle={isSubtle}
 			ref={forwardedRef}
-			size={size}
-			variant={variant}
 			{...props}
 		>
 			<LoadingOverlay isLoading={isLoading} />
 			<Flex as="span" gap={gap} justify={justify}>
 				{prefix && (
-					<PrefixSuffixView as="span" isLoading={isLoading}>
+					<FlexItem
+						as="span"
+						className={cx([
+							styles.PrefixSuffix,
+							isLoading && styles.loading,
+						])}
+					>
 						{prefix}
-					</PrefixSuffixView>
+					</FlexItem>
 				)}
-				<ContentView as="span" isLoading={isLoading}>
+				<FlexBlock
+					as="span"
+					className={cx([
+						styles.Content,
+						isLoading && styles.loading,
+					])}
+				>
 					{children}
-				</ContentView>
+				</FlexBlock>
 				{suffix && (
-					<PrefixSuffixView as="span" isLoading={isLoading}>
+					<FlexItem
+						as="span"
+						className={cx([
+							styles.PrefixSuffix,
+							isLoading && styles.loading,
+						])}
+					>
 						{suffix}
-					</PrefixSuffixView>
+					</FlexItem>
 				)}
 				{hasCaret && (
-					<CaretWrapperView as="span" isLoading={isLoading}>
+					<FlexItem
+						as="span"
+						className={cx([
+							styles.CaretWrapper,
+							isLoading && styles.loading,
+						])}
+					>
 						<Icon icon={<FiChevronDown />} size={16} />
-					</CaretWrapperView>
+					</FlexItem>
 				)}
 			</Flex>
 			<Elevation
