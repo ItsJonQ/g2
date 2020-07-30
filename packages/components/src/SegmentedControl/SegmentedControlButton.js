@@ -4,12 +4,18 @@ import { Radio } from 'reakit/Radio';
 
 import * as styles from './SegmentedControl.styles';
 
-const { Button, ButtonContent, Label, LabelPlaceholder, Separator } = styles;
+const {
+	ButtonContentView,
+	ButtonView,
+	LabelPlaceholderView,
+	LabelView,
+	SeparatorView,
+} = styles;
 
 function SegmentedControlSeparator({ isActive }) {
 	const cx = [isActive && styles.separatorActive];
 
-	return <Separator cx={cx} />;
+	return <SeparatorView cx={cx} />;
 }
 
 function SegmentedControlButton({
@@ -23,20 +29,20 @@ function SegmentedControlButton({
 	const isActive = props.state === value;
 
 	return (
-		<Label cx={[isBlock && styles.labelBlock]} data-active={isActive}>
+		<LabelView cx={[isBlock && styles.labelBlock]} data-active={isActive}>
 			<Radio
 				{...props}
-				as={Button}
+				as={ButtonView}
 				cx={[isActive && styles.buttonActive]}
 				data-value={value}
 				ref={forwardedRef}
 				value={value}
 			>
-				<ButtonContent>{label}</ButtonContent>
-				<LabelPlaceholder aria-hidden>{label}</LabelPlaceholder>
+				<ButtonContentView>{label}</ButtonContentView>
+				<LabelPlaceholderView aria-hidden>{label}</LabelPlaceholderView>
 			</Radio>
 			<SegmentedControlSeparator isActive={!showSeparator} />
-		</Label>
+		</LabelView>
 	);
 }
 

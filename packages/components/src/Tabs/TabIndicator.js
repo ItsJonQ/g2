@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-import * as styles from './SegmentedControl.styles';
+import * as styles from './Tabs.styles';
+import { useTabsContext } from './Tabs.utils';
 
-const { BackdropView } = styles;
+const { TabIndicatorView } = styles;
 
-function SegmentedControlBackdrop({
-	containerRef,
-	containerWidth,
-	currentId,
-	items,
-	state,
-	...props
-}) {
+function TabIndicator({ ...props }) {
+	const { listRef: containerRef, sizes, tab } = useTabsContext();
 	const [left, setLeft] = useState(0);
 	const [width, setWidth] = useState(0);
 	const [canAnimate, setCanAnimate] = useState(false);
+	const containerWidth = sizes?.width;
 
 	useEffect(() => {
 		const containerNode = containerRef?.current;
@@ -23,9 +19,10 @@ function SegmentedControlBackdrop({
 		/**
 		 * Workaround for Reakit
 		 */
-		const targetNode = containerNode.querySelector(
-			`[data-value="${state}"]`,
-		);
+
+		const { items, selectedId } = tab;
+		const currentItem = items.find((item) => item.id === selectedId);
+		const targetNode = currentItem?.ref?.current;
 		if (!targetNode) return;
 
 		const { x: parentX } = containerNode.getBoundingClientRect();
@@ -40,10 +37,10 @@ function SegmentedControlBackdrop({
 				setCanAnimate(true);
 			});
 		}
-	}, [canAnimate, containerRef, containerWidth, state]);
+	}, [canAnimate, containerRef, containerWidth, tab]);
 
 	return (
-		<BackdropView
+		<TabIndicatorView
 			role="presentation"
 			style={{
 				transform: `translateX(${left}px)`,
@@ -54,4 +51,4 @@ function SegmentedControlBackdrop({
 	);
 }
 
-export default SegmentedControlBackdrop;
+export default TabIndicator;

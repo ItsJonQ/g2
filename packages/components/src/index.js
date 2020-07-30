@@ -30,6 +30,7 @@ export * from './Spacer';
 export * from './Spinner';
 export * from './Stack';
 export * from './Surface';
+export * from './Tabs';
 export * from './Text';
 export * from './TextField';
 export * from './TextInput';

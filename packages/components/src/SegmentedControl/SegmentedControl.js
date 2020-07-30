@@ -1,8 +1,7 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styles';
-import { mergeRefs } from '@wp-g2/utils';
+import { View } from '@wp-g2/styles';
+import { mergeRefs, useResizeAware } from '@wp-g2/utils';
 import React, { useRef } from 'react';
-import useResizeAware from 'react-resize-aware';
 import { RadioGroup, useRadioState } from 'reakit/Radio';
 
 import * as styles from './SegmentedControl.styles';
@@ -32,7 +31,7 @@ function SegmentControl({
 		<RadioGroup
 			{...radio}
 			aria-label={label}
-			as={BaseView}
+			as={View}
 			cx={[
 				styles.SegmentedControl,
 				isBlock && styles.block,

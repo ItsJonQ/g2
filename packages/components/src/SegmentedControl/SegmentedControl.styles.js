@@ -22,7 +22,7 @@ export const block = css`
 	width: 100%;
 `;
 
-export const Backdrop = css`
+export const BackdropView = styled.div`
 	background: ${get('controlBackgroundStrongColor')};
 	border-radius: 4px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -33,7 +33,7 @@ export const Backdrop = css`
 	z-index: 1;
 `;
 
-export const Label = styled.div`
+export const LabelView = styled.div`
 	display: inline-flex;
 	max-width: 100%;
 	min-width: 0;
@@ -44,7 +44,7 @@ export const labelBlock = css`
 	flex: 1;
 `;
 
-export const Button = styled.button`
+export const ButtonView = styled.button`
 	align-items: center;
 	appearance: none;
 	background: transparent;
@@ -75,7 +75,7 @@ export const Button = styled.button`
 	}
 `;
 
-export const ButtonContent = styled.div`
+export const ButtonContentView = styled.div`
 	font-size: 12px;
 	left: 50%;
 	position: absolute;
@@ -88,7 +88,7 @@ export const buttonActive = css`
 	font-weight: bold;
 `;
 
-export const Separator = styled.div`
+export const SeparatorView = styled.div`
 	background: ${get('colorDivider')};
 	height: calc(100% - 4px - 4px);
 	position: absolute;
@@ -102,7 +102,7 @@ export const separatorActive = css`
 	background: transparent;
 `;
 
-export const LabelPlaceholder = styled.div`
+export const LabelPlaceholderView = styled.div`
 	font-size: 12px;
 	font-weight: bold;
 	height: 0;
