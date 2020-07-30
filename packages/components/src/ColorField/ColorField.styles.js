@@ -3,8 +3,8 @@ import { css, get, styled } from '@wp-g2/styles';
 export const ColorPickerButtonView = styled.button`
 	appearance: none;
 	background-color: ${get('controlBackgroundColor')};
-	border: 1px solid transparent;
-	border-radius: 3px;
+	border: 1px solid ${get('controlBorderColor')};
+	border-radius: ${get('controlBorderRadius')};
 	cursor: pointer;
 	display: block;
 	height: ${get('controlHeight')};

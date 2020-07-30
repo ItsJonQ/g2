@@ -3,7 +3,7 @@ import { css, get, styled } from '@wp-g2/styles';
 export const SegmentedControl = css`
 	background: ${get('controlBackgroundColor')};
 	border: 1px solid ${get('controlBorderColor')};
-	border-radius: 5px;
+	border-radius: calc(${get('controlBorderRadius')} + 1px);
 	display: inline-flex;
 	min-height: ${get('controlHeight')};
 	min-width: 0;
@@ -25,7 +25,7 @@ export const block = css`
 export const BackdropView = styled.div`
 	background: ${get('controlSurfaceColor')};
 	border: 1px solid ${get('controlBorderColor')};
-	border-radius: 4px;
+	border-radius: ${get('controlBorderRadius')};
 	box-shadow: ${get('controlSurfaceBoxShadow')};
 	height: calc(${get('controlHeight')} - 4px);
 	left: 0;
@@ -50,7 +50,7 @@ export const ButtonView = styled.button`
 	appearance: none;
 	background: transparent;
 	border: none;
-	border-radius: 4px;
+	border-radius: ${get('controlBorderRadius')};
 	color: ${get('colorText')};
 	cursor: pointer;
 	display: flex;

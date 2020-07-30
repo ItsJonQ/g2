@@ -12,8 +12,9 @@ import {
 	FiTablet,
 } from 'react-icons/fi';
 
+import { ControlGroup, Sidebar } from '../__fixtures__/components';
 import {
-	BaseView,
+	Button,
 	ControlLabel,
 	Divider,
 	Flex,
@@ -27,6 +28,7 @@ import {
 	Select,
 	Slider,
 	Spacer,
+	Switch,
 	Text,
 	TextField,
 } from '../index';
@@ -44,8 +46,6 @@ const SuffixLabel = (props) => (
 		css={{ userSelect: 'none' }}
 	/>
 );
-
-const ControlGroup = (props) => <Grid templateColumns={'1fr 2fr'} {...props} />;
 
 const ResponsiveControls = () => {
 	return (
@@ -79,90 +79,76 @@ const LayoutControls = () => {
 			<PanelBody>
 				<ControlGroup>
 					<ControlLabel>Dimensions</ControlLabel>
-					<Spacer>
-						<Grid columns={2}>
-							<TextField suffix={<SuffixLabel>W</SuffixLabel>} />
-							<TextField suffix={<SuffixLabel>H</SuffixLabel>} />
-						</Grid>
-					</Spacer>
+					<Grid columns={2}>
+						<TextField suffix={<SuffixLabel>W</SuffixLabel>} />
+						<TextField suffix={<SuffixLabel>H</SuffixLabel>} />
+					</Grid>
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Align</ControlLabel>
-					<Spacer>
-						<SegmentedControl
-							isBlock
-							options={[
-								{
-									label: <Icon icon={<FiAlignLeft />} />,
-									value: 'left',
-								},
-								{
-									label: <Icon icon={<FiAlignCenter />} />,
-									value: 'center',
-								},
-								{
-									label: <Icon icon={<FiAlignRight />} />,
-									value: 'right',
-								},
-							]}
-						/>
-					</Spacer>
+					<SegmentedControl
+						isBlock
+						options={[
+							{
+								label: <Icon icon={<FiAlignLeft />} />,
+								value: 'left',
+							},
+							{
+								label: <Icon icon={<FiAlignCenter />} />,
+								value: 'center',
+							},
+							{
+								label: <Icon icon={<FiAlignRight />} />,
+								value: 'right',
+							},
+						]}
+					/>
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Position</ControlLabel>
-					<Spacer>
-						<Grid columns={2}>
-							<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
-							<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
-						</Grid>
-					</Spacer>
+					<Grid columns={2}>
+						<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
+						<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
+					</Grid>
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Distribution</ControlLabel>
-					<Spacer>
-						<Select
-							options={[{ label: 'Center', value: 'center' }]}
-						/>
-					</Spacer>
+					<Select options={[{ label: 'Center', value: 'center' }]} />
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Padding</ControlLabel>
-					<Spacer>
-						<Grid columns={2}>
-							<TextField suffix={<SuffixLabel>PX</SuffixLabel>} />
-							<SegmentedControl
-								isBlock
-								options={[
-									{
-										label: <Icon icon={<FiSquare />} />,
-										value: 'all',
-									},
-									{
-										label: <Icon icon={<FiMaximize />} />,
-										value: 'sides',
-									},
-								]}
-							/>
-						</Grid>
-					</Spacer>
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Overflow</ControlLabel>
-					<Spacer>
+					<Grid columns={2}>
+						<TextField suffix={<SuffixLabel>PX</SuffixLabel>} />
 						<SegmentedControl
 							isBlock
 							options={[
 								{
-									label: 'Show',
-									value: 'show',
+									label: <Icon icon={<FiSquare />} />,
+									value: 'all',
 								},
 								{
-									label: 'Hide',
-									value: 'hide',
+									label: <Icon icon={<FiMaximize />} />,
+									value: 'sides',
 								},
 							]}
 						/>
-					</Spacer>
+					</Grid>
+				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Overflow</ControlLabel>
+					<SegmentedControl
+						isBlock
+						options={[
+							{
+								label: 'Show',
+								value: 'show',
+							},
+							{
+								label: 'Hide',
+								value: 'hide',
+							},
+						]}
+					/>
 				</ControlGroup>
 			</PanelBody>
 		</Panel>
@@ -176,39 +162,47 @@ const TypographyControls = () => {
 			<PanelBody>
 				<ControlGroup>
 					<ControlLabel>Font</ControlLabel>
-					<Spacer>
-						<Select
-							options={[{ label: 'Inter', value: 'inter' }]}
-						/>
-					</Spacer>
+					<Select options={[{ label: 'Inter', value: 'inter' }]} />
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Style</ControlLabel>
-					<Spacer>
-						<Select
-							options={[{ label: 'Medium', value: 'medium' }]}
-						/>
-					</Spacer>
+					<Select options={[{ label: 'Medium', value: 'medium' }]} />
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Size</ControlLabel>
-					<Spacer>
-						<Flex gap={2}>
-							<FlexBlock>
-								<TextField value="16" />
-							</FlexBlock>
-							<FlexBlock>
-								<Slider />
-							</FlexBlock>
-						</Flex>
-					</Spacer>
+					<Flex gap={2}>
+						<FlexBlock>
+							<TextField value="16" />
+						</FlexBlock>
+						<FlexBlock>
+							<Slider />
+						</FlexBlock>
+					</Flex>
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Transform</ControlLabel>
-					<Spacer>
-						<Select options={[{ label: 'None', value: 'none' }]} />
-					</Spacer>
+					<Select options={[{ label: 'None', value: 'none' }]} />
 				</ControlGroup>
+				<ControlGroup>
+					<ControlLabel>Dropcap</ControlLabel>
+					<Flex justify="flex-end">
+						<Switch />
+					</Flex>
+				</ControlGroup>
+			</PanelBody>
+		</Panel>
+	);
+};
+
+const ActionsControl = () => {
+	return (
+		<Panel visible>
+			<PanelHeader title="Actions" />
+			<PanelBody>
+				<Grid columns={2}>
+					<Button>Save Draft</Button>
+					<Button variant="primary">Publish</Button>
+				</Grid>
 			</PanelBody>
 		</Panel>
 	);
@@ -216,28 +210,13 @@ const TypographyControls = () => {
 
 export const Controls = () => {
 	return (
-		<ComponentsProvider
-			value={{
-				Grid: { gap: 8 },
-				Icon: { size: 16 },
-			}}
-		>
-			<BaseView
-				css={`
-					width: 280px;
-					position: absolute;
-					min-height: 100%;
-					top: 0;
-					right: 0;
-					border-left: 1px solid ${get('surfaceBorderColor')};
-					padding: 16px 0;
-				`}
-			>
-				<ResponsiveControls />
-				<Divider mb={0} mt={2} />
-				<LayoutControls />
-				<TypographyControls />
-			</BaseView>
-		</ComponentsProvider>
+		<Sidebar>
+			<Spacer />
+			<ResponsiveControls />
+			<Divider mb={0} mt={2} />
+			<LayoutControls />
+			<TypographyControls />
+			<ActionsControl />
+		</Sidebar>
 	);
 };

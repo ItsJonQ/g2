@@ -3,7 +3,7 @@ import { css, get, styled } from '@wp-g2/styles';
 export const BaseFieldView = styled.div`
 	background-color: ${get('controlBackgroundColor')};
 	border: 1px solid ${get('controlBorderColor')};
-	border-radius: 4px;
+	border-radius: ${get('controlBorderRadius')};
 	display: flex;
 	flex: 1;
 	font-family: ${get('fontFamily')};

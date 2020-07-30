@@ -1,5 +1,4 @@
 import * as icons from '@wordpress/icons';
-import { get, styled } from '@wp-g2/styles';
 import { useControlledState } from '@wp-g2/utils';
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
@@ -8,8 +7,8 @@ import {
 	Button,
 	CardBody,
 	CardHeader,
+	ColorField,
 	ColorPicker,
-	ColorSwatch,
 	ControlLabel,
 	Flex,
 	FlexBlock,
@@ -46,23 +45,6 @@ const SuffixLabel = (props) => (
 );
 
 const UnitSelect = () => <Select options={[{ label: 'PX', value: 'px' }]} />;
-
-const ColorPickerButtonView = styled.button`
-	appearance: none;
-	background-color: ${get('controlBackgroundColor')};
-	border: 1px solid transparent;
-	border-radius: 3px;
-	cursor: pointer;
-	display: block;
-	height: ${get('controlHeight')};
-	padding: 3px;
-	width: 100%;
-
-	&:focus {
-		border-color: ${get('colorAdmin')};
-		outline: none;
-	}
-`;
 
 const ContextPopover = ({ children, title, trigger }) => {
 	const [offset, setOffset] = useState(0);
@@ -108,11 +90,7 @@ const ColorControl = ({ color: colorProp }) => {
 			<Grid columns={2}>
 				<ContextPopover
 					title="Tint"
-					trigger={
-						<ColorPickerButtonView>
-							<ColorSwatch color={color} />
-						</ColorPickerButtonView>
-					}
+					trigger={<ColorField color={color} />}
 				>
 					<Spacer>
 						<ColorPicker color={color} onChange={setColor} />
@@ -129,9 +107,7 @@ const ColorControl = ({ color: colorProp }) => {
 						</Flex>
 					</ControlGroup>
 				</ContextPopover>
-				<Button size="small" variant="tertiary">
-					Clear
-				</Button>
+				<Button variant="tertiary">Clear</Button>
 			</Grid>
 		</ControlGroup>
 	);
@@ -178,9 +154,7 @@ const MediaControl = () => {
 						/>
 					</ControlGroup>
 				</ContextPopover>
-				<Button size="small" variant="tertiary">
-					Clear
-				</Button>
+				<Button variant="tertiary">Clear</Button>
 			</Grid>
 		</ControlGroup>
 	);

@@ -4,11 +4,13 @@ export const SliderView = styled.input`
 	appearance: none;
 	background-color: transparent;
 	border: 1px solid transparent;
-	border-radius: 4px;
+	border-radius: ${get('controlBorderRadius')};
 	display: block;
 	height: ${get('controlHeight')};
 	max-width: 100%;
+	min-width: 0;
 	padding: 4px;
+	width: 100%;
 
 	&:focus {
 		border-color: ${get('colorAdmin')};
