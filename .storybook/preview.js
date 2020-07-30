@@ -1,17 +1,51 @@
 import React, { useState } from 'react';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from '@wp-g2/styles';
-import { Button, Spacer, Surface } from '@wp-g2/components';
+import {
+	Button,
+	ControlLabel,
+	Flex,
+	SegmentedControl,
+	Spacer,
+	Surface,
+	Switch,
+} from '@wp-g2/components';
 
 function StoryDecorator(storyFn) {
 	const [isDark, setIsDark] = useState(false);
+	const [isHighContrast, setIsHighContast] = useState(false);
+
+	const theme = {
+		controlBorderColor: isHighContrast
+			? isDark
+				? '#ddd'
+				: '#444'
+			: 'transparent',
+	};
 
 	return (
-		<ThemeProvider isDark={isDark}>
-			<Spacer m={0} p={2}>
-				<Button size="small" onClick={() => setIsDark(!isDark)}>
-					{isDark ? 'Set Light' : 'Set Dark'}
-				</Button>
+		<ThemeProvider isDark={isDark} theme={theme}>
+			<Spacer css={{ padding: 8 }}>
+				<Flex justify="left" gap={12}>
+					<Flex>
+						<ControlLabel>Dark Mode</ControlLabel>
+						<Switch
+							value={isDark}
+							onChange={(next) => {
+								setIsDark(next);
+							}}
+						/>
+					</Flex>
+					<Flex>
+						<ControlLabel>High Contrast</ControlLabel>
+						<Switch
+							value={isHighContrast}
+							onChange={(next) => {
+								setIsHighContast(next);
+							}}
+						/>
+					</Flex>
+				</Flex>
 			</Spacer>
 			{storyFn()}
 			<Surface

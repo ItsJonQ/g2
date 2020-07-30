@@ -49,7 +49,9 @@ export function transformValuesToVariablesString(
 	const next = [`${selector} {`];
 
 	for (const [key, value] of Object.entries(variables)) {
-		next.push(`${key}: ${value};`);
+		if (is.defined(value)) {
+			next.push(`${key}: ${value};`);
+		}
 	}
 
 	next.push('}');

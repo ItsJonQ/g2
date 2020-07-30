@@ -23,7 +23,7 @@ const Example = () => {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Controls left={8} right={null} title="Theme Customizer" top={40} />
+			<Controls left={8} right={null} title="Theme Customizer" top={60} />
 			<ControlsExample />
 		</ThemeProvider>
 	);

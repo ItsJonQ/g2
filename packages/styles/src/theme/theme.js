@@ -74,6 +74,8 @@ const CONTROL_PROPS = {
 	controlPaddingXLarge: '16px',
 	controlPrimaryTextActiveColor: get('white'),
 	controlPrimaryTextColor: get('white'),
+	controlSurfaceBoxShadow:
+		'0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2)',
 	controlSurfaceColor: get('white'),
 	controlTextActiveColor: get('colorAdmin'),
 };

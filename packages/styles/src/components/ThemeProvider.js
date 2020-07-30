@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { injectGlobal } from '../style-system';
 import {
-	transformValuesToReferences,
 	transformValuesToVariables,
 	transformValuesToVariablesString,
 } from '../theme/utils';
@@ -30,21 +29,16 @@ function useThemeStyles({ isGlobal = true, theme = {} }) {
 	const [themeStyles, setThemeStyles] = useState({});
 
 	useEffect(() => {
-		if (deepEqual(themeRef.current, theme)) {
-			return;
-		}
+		if (deepEqual(themeRef.current, theme)) return;
 		themeRef.current = theme;
-
+		const nextTheme = transformValuesToVariables(theme);
 		if (isGlobal) {
-			const globalStyles = transformValuesToVariablesString(
-				':root',
-				theme,
-			);
-			injectGlobal`
-				${globalStyles}
-			`;
+			const rootNode = document.documentElement;
+			for (const [k, v] of Object.entries(nextTheme)) {
+				rootNode.style.setProperty(k, v);
+			}
 		} else {
-			setThemeStyles(transformValuesToVariables(theme));
+			setThemeStyles(nextTheme);
 		}
 	}, [isGlobal, theme]);
 
