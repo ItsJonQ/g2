@@ -22,6 +22,7 @@ export const Sidebar = ({ children }) => {
 					border-left: 1px solid ${get('surfaceBorderColor')};
 					padding: 16px 0;
 				`}
+				data-component="Sidebar"
 			>
 				{children}
 			</BaseView>

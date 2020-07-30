@@ -46,7 +46,7 @@ const COLOR_PROPS = {
 
 const FONT_PROPS = {
 	fontFamily:
-		'Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
+		'Inter,Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
 	fontSize: '13px',
 	fontSizeSmall: '12px',
 };

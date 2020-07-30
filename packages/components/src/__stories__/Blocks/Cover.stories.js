@@ -1,7 +1,7 @@
 import * as icons from '@wordpress/icons';
 import { get, styled } from '@wp-g2/styles';
 import { useControlledState } from '@wp-g2/utils';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { ControlGroup, Sidebar } from '../../__fixtures__/components';
 import {
@@ -65,12 +65,27 @@ const ColorPickerButtonView = styled.button`
 `;
 
 const ContextPopover = ({ children, title, trigger }) => {
+	const [offset, setOffset] = useState(0);
+	const triggerRef = useRef();
+
+	useEffect(() => {
+		const node = triggerRef.current;
+
+		if (node) {
+			setOffset(node.offsetLeft);
+		}
+	}, []);
+
 	return (
-		<Popover placement="right-start" unstable_offset={[0, 30]}>
-			<PopoverTrigger as={BaseView} css={{ outline: 'none' }}>
+		<Popover placement="right-start" unstable_offset={[0, 12]}>
+			<PopoverTrigger
+				as={BaseView}
+				css={{ outline: 'none' }}
+				ref={triggerRef}
+			>
 				{trigger}
 			</PopoverTrigger>
-			<PopoverContent maxWidth={280}>
+			<PopoverContent maxWidth={280} style={{ right: offset }}>
 				<CardHeader>
 					<Text weight={600}>{title}</Text>
 				</CardHeader>
@@ -87,95 +102,99 @@ const ColorControl = ({ color: colorProp }) => {
 	});
 
 	return (
-		<ContextPopover
-			title="Tint"
-			trigger={
-				<ControlGroup>
-					<ControlLabel>Tint</ControlLabel>
-					<Spacer>
-						<Grid columns={2}>
+		<ControlGroup>
+			<ControlLabel>Tint</ControlLabel>
+			<Spacer>
+				<Grid columns={2}>
+					<ContextPopover
+						title="Tint"
+						trigger={
 							<ColorPickerButtonView>
 								<ColorSwatch color={color} />
 							</ColorPickerButtonView>
-							<Button size="small" variant="tertiary">
-								Clear
-							</Button>
-						</Grid>
-					</Spacer>
-				</ControlGroup>
-			}
-		>
-			<Spacer>
-				<ColorPicker color={color} onChange={setColor} />
+						}
+					>
+						<Spacer>
+							<ColorPicker color={color} onChange={setColor} />
+						</Spacer>
+						<ControlGroup>
+							<ControlLabel>Opacity</ControlLabel>
+							<Flex>
+								<FlexBlock>
+									<TextField value="50%" />
+								</FlexBlock>
+								<FlexBlock>
+									<Slider />
+								</FlexBlock>
+							</Flex>
+						</ControlGroup>
+					</ContextPopover>
+					<Button size="small" variant="tertiary">
+						Clear
+					</Button>
+				</Grid>
 			</Spacer>
-			<ControlGroup>
-				<ControlLabel>Opacity</ControlLabel>
-				<Flex>
-					<FlexBlock>
-						<TextField value="50%" />
-					</FlexBlock>
-					<FlexBlock>
-						<Slider />
-					</FlexBlock>
-				</Flex>
-			</ControlGroup>
-		</ContextPopover>
+		</ControlGroup>
 	);
 };
 
 const MediaControl = () => {
 	return (
-		<ContextPopover
-			title="Media"
-			trigger={
-				<ControlGroup>
-					<ControlLabel>Media</ControlLabel>
-					<Spacer>
-						<Grid columns={2}>
+		<ControlGroup>
+			<ControlLabel>Media</ControlLabel>
+			<Spacer>
+				<Grid columns={2}>
+					<ContextPopover
+						title="Media"
+						trigger={
 							<Placeholder
 								css={{ background: 'blue' }}
 								height={30}
 							/>
-							<Button size="small" variant="tertiary">
-								Clear
-							</Button>
-						</Grid>
-					</Spacer>
-				</ControlGroup>
-			}
-		>
-			<Spacer>
-				<Placeholder
-					css={{ background: 'blue' }}
-					height={140}
-					width="100%"
-				/>
+						}
+					>
+						<Spacer>
+							<Placeholder
+								css={{ background: 'blue' }}
+								height={140}
+								width="100%"
+							/>
+						</Spacer>
+						<ControlGroup>
+							<ControlLabel>Focal Point</ControlLabel>
+							<Spacer>
+								<Grid columns={2}>
+									<TextField
+										suffix={<SuffixLabel>X</SuffixLabel>}
+									/>
+									<TextField
+										suffix={<SuffixLabel>Y</SuffixLabel>}
+									/>
+								</Grid>
+							</Spacer>
+						</ControlGroup>
+						<ControlGroup>
+							<ControlLabel>Position</ControlLabel>
+							<SegmentedControl
+								options={[
+									{
+										label: 'Static',
+										value: 'static',
+									},
+									{
+										label: 'Fixed',
+										value: 'fixed',
+									},
+								]}
+							/>
+						</ControlGroup>
+					</ContextPopover>
+					<Button size="small" variant="tertiary">
+						Clear
+					</Button>
+				</Grid>
 			</Spacer>
-			<ControlGroup>
-				<ControlLabel>Focal Point</ControlLabel>
-				<Spacer>
-					<Grid columns={2}>
-						<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
-						<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
-					</Grid>
-				</Spacer>
-			</ControlGroup>
-			<ControlGroup>
-				<ControlLabel>Position</ControlLabel>
-				<SegmentedControl
-					options={[
-						{
-							label: 'Static',
-							value: 'static',
-						},
-						{
-							label: 'Fixed',
-							value: 'fixed',
-						},
-					]}
-				/>
-			</ControlGroup>
-		</ContextPopover>
+		</ControlGroup>
 	);
 };
 
@@ -246,27 +265,21 @@ const InspectorControl = () => {
 					<ColorControl />
 				</PanelBody>
 			</Panel>
-			<Panel>
+			<Panel visible>
 				<PanelHeader title="Advanced" />
 				<PanelBody>
-					<ControlGroup>
+					<Spacer>
 						<ControlLabel>Title</ControlLabel>
-						<Spacer>
-							<TextField />
-						</Spacer>
-					</ControlGroup>
-					<ControlGroup>
+						<TextField />
+					</Spacer>
+					<Spacer>
 						<ControlLabel>HTML Anchor</ControlLabel>
-						<Spacer>
-							<TextField />
-						</Spacer>
-					</ControlGroup>
-					<ControlGroup>
+						<TextField />
+					</Spacer>
+					<Spacer>
 						<ControlLabel>CSS Classes</ControlLabel>
-						<Spacer>
-							<TextField />
-						</Spacer>
-					</ControlGroup>
+						<TextField />
+					</Spacer>
 				</PanelBody>
 			</Panel>
 		</>

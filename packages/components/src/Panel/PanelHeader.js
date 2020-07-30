@@ -23,7 +23,7 @@ function PanelHeader({ children, title, ...props }) {
 				cursor: 'pointer',
 				outline: 'none',
 				px: isSeamless ? null : 3,
-				py: 2,
+				py: 12,
 			}}
 			{...props}
 		>
