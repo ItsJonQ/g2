@@ -54,7 +54,7 @@ function TextField({
 		styles[size],
 		multiline && styles.inputMultiline,
 		isResizable && styles.resizable,
-		styles.scrollableScrollbar,
+		multiline && styles.scrollableScrollbar,
 	];
 
 	return (
