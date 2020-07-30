@@ -2,7 +2,20 @@ import { ComponentsProvider } from '@wp-g2/provider';
 import { get } from '@wp-g2/styles';
 import React from 'react';
 
-import { BaseView } from '../../index';
+import {
+	ControlLabel,
+	Panel,
+	PanelBody,
+	PanelHeader,
+	Scrollable,
+	Tab,
+	TabList,
+	TabPanel,
+	Tabs,
+	TextField,
+	View,
+} from '../../index';
+import { ControlGroup } from './ControlGroup';
 
 export const Sidebar = ({ children }) => {
 	return (
@@ -12,20 +25,75 @@ export const Sidebar = ({ children }) => {
 				Icon: { size: 16 },
 			}}
 		>
-			<BaseView
+			<View
 				css={`
 					width: 280px;
 					position: absolute;
-					min-height: 100%;
+					height: 100vh;
 					top: 0;
 					right: 0;
-					border-left: 1px solid ${get('surfaceBorderColor')};
-					padding: 16px 0;
+					border-left: 1px solid ${get('colorDivider')};
 				`}
 				data-component="Sidebar"
 			>
-				{children}
-			</BaseView>
+				<Tabs selectedId="block">
+					<TabList>
+						<Tab id="document">Document</Tab>
+						<Tab id="block">Block</Tab>
+					</TabList>
+					<TabPanel
+						css={{
+							height: `calc(100vh - (${get(
+								'controlHeightXLarge',
+							)} + 1px))`,
+						}}
+					>
+						<Scrollable css={{ paddingBottom: '20vh' }}>
+							<Panel visible>
+								<PanelHeader title="Status & Visibility" />
+								<PanelBody>
+									<ControlGroup>
+										<ControlLabel>Visibility</ControlLabel>
+										<ControlLabel>Public</ControlLabel>
+									</ControlGroup>
+									<ControlGroup>
+										<ControlLabel>Slug</ControlLabel>
+										<TextField value="/my-blog-post" />
+									</ControlGroup>
+								</PanelBody>
+							</Panel>
+							<Panel>
+								<PanelHeader title="Excerpt" />
+								<PanelBody>
+									<ControlLabel>
+										Write an excerpt (optional)
+									</ControlLabel>
+									<TextField
+										maxRows={6}
+										minRows={3}
+										multiline
+									/>
+								</PanelBody>
+							</Panel>
+							<Panel>
+								<PanelHeader title="Discussion" />
+								<PanelBody>TBD</PanelBody>
+							</Panel>
+						</Scrollable>
+					</TabPanel>
+					<TabPanel
+						css={{
+							height: `calc(100vh - (${get(
+								'controlHeightXLarge',
+							)} + 1px))`,
+						}}
+					>
+						<Scrollable css={{ paddingBottom: '20vh' }}>
+							{children}
+						</Scrollable>
+					</TabPanel>
+				</Tabs>
+			</View>
 		</ComponentsProvider>
 	);
 };

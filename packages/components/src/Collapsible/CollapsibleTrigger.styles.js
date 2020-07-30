@@ -1,14 +1,9 @@
-import { styled } from '@wp-g2/styled-components';
-import { Disclosure } from 'reakit/Disclosure';
+import { css } from '@wp-g2/styles';
 
-const CollapsibleTriggerBaseView = styled.div`
+export const CollapsibleTrigger = css`
 	transform: translateZ(0);
 
 	&:active {
 		user-select: none;
 	}
 `;
-
-export const CollapsibleTriggerView = CollapsibleTriggerBaseView.withComponent(
-	Disclosure,
-);

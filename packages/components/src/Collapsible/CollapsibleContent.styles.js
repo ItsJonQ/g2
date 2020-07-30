@@ -1,4 +1,4 @@
-import { styled } from '@wp-g2/styled-components';
+import { styled } from '@wp-g2/styles';
 
 export const CollapsibleContentView = styled.div`
 	display: block !important;

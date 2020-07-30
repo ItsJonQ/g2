@@ -1,6 +1,6 @@
-import { css, toPx } from '@wp-g2/styles';
+import { styled, toPx } from '@wp-g2/styles';
 
-export const Elevation = css`
+export const ElevationView = styled.div`
 	background: transparent;
 	display: block;
 	margin: 0 !important;

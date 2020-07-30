@@ -1,11 +1,10 @@
 import * as icons from '@wordpress/icons';
 import { get, styled } from '@wp-g2/styles';
 import { useControlledState } from '@wp-g2/utils';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
 import { ControlGroup, Sidebar } from '../../__fixtures__/components';
 import {
-	BaseView,
 	Button,
 	CardBody,
 	CardHeader,
@@ -29,6 +28,7 @@ import {
 	Spacer,
 	Text,
 	TextField,
+	View,
 } from '../../index';
 
 export default {
@@ -68,18 +68,19 @@ const ContextPopover = ({ children, title, trigger }) => {
 	const [offset, setOffset] = useState(0);
 	const triggerRef = useRef();
 
-	useEffect(() => {
-		const node = triggerRef.current;
-
-		if (node) {
-			setOffset(node.offsetLeft);
-		}
+	useLayoutEffect(() => {
+		requestAnimationFrame(() => {
+			const node = triggerRef.current;
+			if (node) {
+				setOffset(node.offsetLeft);
+			}
+		});
 	}, []);
 
 	return (
 		<Popover placement="right-start" unstable_offset={[0, 12]}>
 			<PopoverTrigger
-				as={BaseView}
+				as={View}
 				css={{ outline: 'none' }}
 				ref={triggerRef}
 			>
@@ -104,36 +105,34 @@ const ColorControl = ({ color: colorProp }) => {
 	return (
 		<ControlGroup>
 			<ControlLabel>Tint</ControlLabel>
-			<Spacer>
-				<Grid columns={2}>
-					<ContextPopover
-						title="Tint"
-						trigger={
-							<ColorPickerButtonView>
-								<ColorSwatch color={color} />
-							</ColorPickerButtonView>
-						}
-					>
-						<Spacer>
-							<ColorPicker color={color} onChange={setColor} />
-						</Spacer>
-						<ControlGroup>
-							<ControlLabel>Opacity</ControlLabel>
-							<Flex>
-								<FlexBlock>
-									<TextField value="50%" />
-								</FlexBlock>
-								<FlexBlock>
-									<Slider />
-								</FlexBlock>
-							</Flex>
-						</ControlGroup>
-					</ContextPopover>
-					<Button size="small" variant="tertiary">
-						Clear
-					</Button>
-				</Grid>
-			</Spacer>
+			<Grid columns={2}>
+				<ContextPopover
+					title="Tint"
+					trigger={
+						<ColorPickerButtonView>
+							<ColorSwatch color={color} />
+						</ColorPickerButtonView>
+					}
+				>
+					<Spacer>
+						<ColorPicker color={color} onChange={setColor} />
+					</Spacer>
+					<ControlGroup>
+						<ControlLabel>Opacity</ControlLabel>
+						<Flex>
+							<FlexBlock>
+								<TextField value="50%" />
+							</FlexBlock>
+							<FlexBlock>
+								<Slider />
+							</FlexBlock>
+						</Flex>
+					</ControlGroup>
+				</ContextPopover>
+				<Button size="small" variant="tertiary">
+					Clear
+				</Button>
+			</Grid>
 		</ControlGroup>
 	);
 };
@@ -142,58 +141,47 @@ const MediaControl = () => {
 	return (
 		<ControlGroup>
 			<ControlLabel>Media</ControlLabel>
-			<Spacer>
-				<Grid columns={2}>
-					<ContextPopover
-						title="Media"
-						trigger={
-							<Placeholder
-								css={{ background: 'blue' }}
-								height={30}
-							/>
-						}
-					>
-						<Spacer>
-							<Placeholder
-								css={{ background: 'blue' }}
-								height={140}
-								width="100%"
-							/>
-						</Spacer>
-						<ControlGroup>
-							<ControlLabel>Focal Point</ControlLabel>
-							<Spacer>
-								<Grid columns={2}>
-									<TextField
-										suffix={<SuffixLabel>X</SuffixLabel>}
-									/>
-									<TextField
-										suffix={<SuffixLabel>Y</SuffixLabel>}
-									/>
-								</Grid>
-							</Spacer>
-						</ControlGroup>
-						<ControlGroup>
-							<ControlLabel>Position</ControlLabel>
-							<SegmentedControl
-								options={[
-									{
-										label: 'Static',
-										value: 'static',
-									},
-									{
-										label: 'Fixed',
-										value: 'fixed',
-									},
-								]}
-							/>
-						</ControlGroup>
-					</ContextPopover>
-					<Button size="small" variant="tertiary">
-						Clear
-					</Button>
-				</Grid>
-			</Spacer>
+			<Grid columns={2}>
+				<ContextPopover
+					title="Media"
+					trigger={
+						<Placeholder css={{ background: 'blue' }} height={30} />
+					}
+				>
+					<Spacer>
+						<Placeholder
+							css={{ background: 'blue' }}
+							height={140}
+							width="100%"
+						/>
+					</Spacer>
+					<ControlGroup>
+						<ControlLabel>Focal Point</ControlLabel>
+						<Grid columns={2}>
+							<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
+							<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
+						</Grid>
+					</ControlGroup>
+					<ControlGroup>
+						<ControlLabel>Position</ControlLabel>
+						<SegmentedControl
+							options={[
+								{
+									label: 'Static',
+									value: 'static',
+								},
+								{
+									label: 'Fixed',
+									value: 'fixed',
+								},
+							]}
+						/>
+					</ControlGroup>
+				</ContextPopover>
+				<Button size="small" variant="tertiary">
+					Clear
+				</Button>
+			</Grid>
 		</ControlGroup>
 	);
 };
@@ -204,51 +192,41 @@ const InspectorControl = () => {
 			<Panel visible>
 				<PanelHeader title="Layout" />
 				<PanelBody>
-					<Spacer>
-						<ControlGroup templateColumns="1fr 2fr">
-							<ControlLabel>Align</ControlLabel>
-							<SegmentedControl
-								options={[
-									{
-										label: <Icon icon={icons.alignLeft} />,
-										value: 'left',
-									},
-									{
-										label: (
-											<Icon icon={icons.alignCenter} />
-										),
-										value: 'center',
-									},
-									{
-										label: <Icon icon={icons.alignRight} />,
-										value: 'right',
-									},
-									{
-										label: (
-											<Icon icon={icons.stretchWide} />
-										),
-										value: 'wide',
-									},
-									{
-										label: (
-											<Icon
-												icon={icons.stretchFullWidth}
-											/>
-										),
-										value: 'full',
-									},
-								]}
-							/>
-						</ControlGroup>
-					</Spacer>
+					<ControlGroup templateColumns="1fr 2fr">
+						<ControlLabel>Align</ControlLabel>
+						<SegmentedControl
+							options={[
+								{
+									label: <Icon icon={icons.alignLeft} />,
+									value: 'left',
+								},
+								{
+									label: <Icon icon={icons.alignCenter} />,
+									value: 'center',
+								},
+								{
+									label: <Icon icon={icons.alignRight} />,
+									value: 'right',
+								},
+								{
+									label: <Icon icon={icons.stretchWide} />,
+									value: 'wide',
+								},
+								{
+									label: (
+										<Icon icon={icons.stretchFullWidth} />
+									),
+									value: 'full',
+								},
+							]}
+						/>
+					</ControlGroup>
 					<ControlGroup>
 						<ControlLabel>Height</ControlLabel>
-						<Spacer>
-							<ControlGroup templateColumns="1.2fr 0.8fr">
-								<TextField />
-								<UnitSelect />
-							</ControlGroup>
-						</Spacer>
+						<Grid templateColumns="1.2fr 0.8fr">
+							<TextField />
+							<UnitSelect />
+						</Grid>
 					</ControlGroup>
 					<ControlGroup>
 						<ControlLabel>Position</ControlLabel>
@@ -265,7 +243,7 @@ const InspectorControl = () => {
 					<ColorControl />
 				</PanelBody>
 			</Panel>
-			<Panel visible>
+			<Panel>
 				<PanelHeader title="Advanced" />
 				<PanelBody>
 					<Spacer>

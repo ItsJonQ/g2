@@ -74,7 +74,6 @@ function TextField({
 					as={InputComponent}
 					cx={inputCx}
 					disabled={disabled}
-					isResizable={isResizable}
 					onBlur={handleOnBlur}
 					onChange={onChange}
 					onFocus={handleOnFocus}

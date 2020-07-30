@@ -1,13 +1,22 @@
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
+import { Disclosure } from 'reakit/Disclosure';
 
 import { useCollapsibleContext } from './Collapsible.utils';
-import { CollapsibleTriggerView } from './CollapsibleTrigger.styles';
+import * as styles from './CollapsibleTrigger.styles';
 
-function CollapsibleTrigger({ forwardedRef, ...props }) {
+function CollapsibleTrigger({ className, forwardedRef, ...props }) {
 	const { disclosure } = useCollapsibleContext();
+	const classes = cx([styles.CollapsibleTrigger, className]);
+
 	return (
-		<CollapsibleTriggerView ref={forwardedRef} {...props} {...disclosure} />
+		<Disclosure
+			ref={forwardedRef}
+			{...props}
+			{...disclosure}
+			className={classes}
+		/>
 	);
 }
 

@@ -71,6 +71,7 @@ const CONTROL_PROPS = {
 	controlHeight: '30px',
 	controlHeightLarge: '36px',
 	controlHeightSmall: '24px',
+	controlHeightXLarge: '44px',
 	controlTextActiveColor: COLOR_PROPS.colorAdmin,
 };
 

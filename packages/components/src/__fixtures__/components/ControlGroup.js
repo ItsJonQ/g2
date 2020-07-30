@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { Grid } from '../../index';
+import { Grid, Spacer } from '../../index';
 
 export const ControlGroup = (props) => (
-	<Grid templateColumns={'1fr 2fr'} {...props} />
+	<Spacer>
+		<Grid templateColumns={'1fr 2fr'} {...props} />
+	</Spacer>
 );

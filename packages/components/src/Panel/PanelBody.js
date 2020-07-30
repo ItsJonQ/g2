@@ -1,22 +1,20 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styled-components';
 import React from 'react';
 
 import { CollapsibleContent } from '../Collapsible';
+import * as styles from './Panel.styles';
 import { usePanelContext } from './Panel.utils';
+
+const { PanelBodyView } = styles;
 
 function PanelBody({ children, ...props }) {
 	const { isSeamless } = usePanelContext();
-	const sx = isSeamless
-		? {
-				pb: 3,
-				pt: 2,
-		  }
-		: { pb: 3, pt: 2, px: 3 };
+
+	const cx = [isSeamless && styles.seamless];
 
 	return (
 		<CollapsibleContent {...props}>
-			<BaseView sx={sx}>{children}</BaseView>
+			<PanelBodyView cx={cx}>{children}</PanelBodyView>
 		</CollapsibleContent>
 	);
 }

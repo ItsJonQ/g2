@@ -5,8 +5,8 @@ import { useTabState } from 'reakit/Tab';
 
 import { TabsContext } from './Tabs.utils';
 
-function Tabs({ children }) {
-	const tab = useTabState();
+function Tabs({ children, selectedId }) {
+	const tab = useTabState({ selectedId });
 	const listRef = useRef();
 	const [resizeListener, sizes] = useResizeAware();
 

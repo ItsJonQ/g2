@@ -1,7 +1,7 @@
 import { get, styled } from '@wp-g2/styles';
 
 export const TabListView = styled.div`
-	border-bottom: 1px solid ${get('surfaceBorderColor')};
+	border-bottom: 1px solid ${get('colorDivider')};
 	display: flex;
 	outline: none;
 	position: relative;
@@ -16,7 +16,7 @@ export const TabView = styled.button`
 	cursor: pointer;
 	flex: 1;
 	justify-content: center;
-	min-height: ${get('controlHeightLarge')};
+	min-height: ${get('controlHeightXLarge')};
 	outline: none;
 	padding: 4px;
 	transition: color 160ms linear;

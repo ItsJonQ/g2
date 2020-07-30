@@ -1,5 +1,6 @@
 // Base
 export * from './BaseView';
+export * from './View';
 // Components
 export * from './BaseField';
 export * from './Button';

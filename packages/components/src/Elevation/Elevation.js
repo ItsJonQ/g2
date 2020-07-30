@@ -1,9 +1,11 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView, css, get } from '@wp-g2/styles';
+import { css, get } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import * as styles from './Elevation.styles';
+
+const { ElevationView } = styles;
 
 function Elevation({
 	active,
@@ -63,7 +65,7 @@ function Elevation({
 		is.defined(focus) && styles.focus,
 	];
 
-	return <BaseView {...props} cx={cx} />;
+	return <ElevationView {...props} cx={cx} />;
 }
 
 export default connect(Elevation);
