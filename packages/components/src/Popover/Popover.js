@@ -26,6 +26,7 @@ function Popover({
 		label: label || uniqueId,
 		popover,
 	};
+
 	return (
 		<PopoverContext.Provider value={contextValue}>
 			{children}

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Text } from '../../index';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../index';
 
 export default {
@@ -10,7 +11,9 @@ export default {
 export const _default = () => {
 	return (
 		<Tooltip visible>
-			<TooltipTrigger>Hello</TooltipTrigger>
+			<TooltipTrigger>
+				<Text>Hello</Text>
+			</TooltipTrigger>
 			<TooltipContent>Tooltip</TooltipContent>
 		</Tooltip>
 	);

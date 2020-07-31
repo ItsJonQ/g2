@@ -1,5 +1,5 @@
 import { connect, hasNamespace } from '@wp-g2/provider';
-import { BaseView, css } from '@wp-g2/styles';
+import { BaseView, css, useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -11,19 +11,14 @@ export function Flex({
 	_autoWrap = true,
 	align = 'center',
 	children,
-	direction,
+	direction: directionProp,
 	gap = 2,
 	justify = 'space-between',
+	wrap,
 	...props
 }) {
-	styles.Base = css({
-		alignItems: align,
-		flexDirection: direction,
-		justifyContent: justify,
-	});
-
-	const classes = [styles.Flex, styles.Base];
 	const gapValue = gap * 4;
+	const direction = useResponsiveValue(directionProp);
 
 	const isColumn = direction === 'column';
 	const validChildren = getValidChildren(children);
@@ -56,6 +51,15 @@ export function Flex({
 			</FlexContext.Provider>
 		);
 	});
+
+	styles.Base = css({
+		alignItems: isColumn ? 'normal' : align,
+		flexDirection: direction,
+		flexWrap: wrap ? 'wrap' : undefined,
+		justifyContent: justify,
+	});
+
+	const classes = [styles.Flex, styles.Base];
 
 	return (
 		<BaseView {...props} cx={classes}>

@@ -1,13 +1,16 @@
 import { connect } from '@wp-g2/provider';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Card } from '../Card';
+import { Menu } from '../Menu';
 import { Scrollable } from '../Scrollable';
+import * as styles from './Dropdown.styles';
 import { useDropdownContext } from './Dropdown.utils';
-import { DropdownMenuView } from './DropdownMenu.styles';
 
 function DropdownMenu({
 	children,
+	className,
 	elevation = 3,
 	forwardedRef,
 	hideOnClickOutside = true,
@@ -15,11 +18,13 @@ function DropdownMenu({
 	...props
 }) {
 	const { label, menu } = useDropdownContext();
+	const classes = cx([styles.DropdownMenu, css({ minWidth }), className]);
+
 	return (
-		<DropdownMenuView
+		<Menu
 			aria-label={label}
 			{...props}
-			css={{ minWidth }}
+			className={classes}
 			hideOnClickOutside={hideOnClickOutside}
 			menu={menu}
 			ref={forwardedRef}
@@ -28,11 +33,11 @@ function DropdownMenu({
 				css={{ maxHeight: '50vh', minHeight: 24 }}
 				elevation={elevation}
 			>
-				<Scrollable sx={{ maxHeight: '50vh', px: 1, py: 1 }}>
+				<Scrollable css={{ maxHeight: '50vh', padding: 4 }}>
 					{children}
 				</Scrollable>
 			</Card>
-		</DropdownMenuView>
+		</Menu>
 	);
 }
 

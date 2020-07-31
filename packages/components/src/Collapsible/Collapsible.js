@@ -1,8 +1,8 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styled-components';
 import React from 'react';
 import { useDisclosureState } from 'reakit/Disclosure';
 
+import { View } from '../View';
 import { CollapsibleContext, useAnimatedState } from './Collapsible.utils';
 
 function Collapsible({
@@ -31,7 +31,7 @@ function Collapsible({
 
 	return (
 		<CollapsibleContext.Provider value={contextValue}>
-			<BaseView {...props}>{children}</BaseView>
+			<View {...props}>{children}</View>
 		</CollapsibleContext.Provider>
 	);
 }

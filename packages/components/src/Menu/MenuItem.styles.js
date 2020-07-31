@@ -3,8 +3,6 @@ import { get } from '@wp-g2/styles';
 import { MenuItem } from 'reakit/Menu';
 
 const baseStyles = ({ theme }) => {
-	const { config, isDark } = theme;
-
 	return css`
 		appearance: none;
 		background: none;
@@ -24,23 +22,13 @@ const baseStyles = ({ theme }) => {
 		})}
 
 		&:focus {
-			background: ${config.menuHoverBackgroundColor};
+			background: ${get('controlBackgroundColor')};
 			box-shadow: none;
 		}
-		&:active {
-			background: ${config.menuActiveBackgroundColor};
-		}
 
-		${isDark &&
-		css`
-			color: ${config.colorTextDark};
-			&:focus {
-				background: ${config.menuHoverBackgroundColorDark};
-			}
-			&:active {
-				background: ${config.menuActiveBackgroundColorDark};
-			}
-		`}
+		&:active {
+			background: ${get('controlBackgroundDimColor')};
+		}
 	`;
 };
 

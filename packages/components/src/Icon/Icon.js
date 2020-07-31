@@ -1,13 +1,13 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView, css, get } from '@wp-g2/styles';
+import { BaseView, css } from '@wp-g2/styles';
 import React from 'react';
 
 import * as styles from './Icon.styles';
 
 function Icon({
 	as = 'div',
-	color = get('colorText'),
 	children,
+	color,
 	forwardedRef,
 	icon,
 	size = 20,

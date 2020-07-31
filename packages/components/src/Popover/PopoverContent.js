@@ -1,30 +1,34 @@
 import { connect } from '@wp-g2/provider';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
+import { Popover as ReakitPopover } from 'reakit/Popover';
 
 import { Card } from '../Card';
+import * as styles from './Popover.styles';
 import { usePopoverContext } from './Popover.utils';
-import { PopoverContentView } from './PopoverContent.styles';
 
 function PopoverContent({
 	children,
+	className,
 	elevation = 5,
 	forwardedRef,
 	maxWidth = 360,
 	...props
 }) {
 	const { label, popover } = usePopoverContext();
+	const classes = cx([css({ maxWidth }), styles.PopoverContent, className]);
 
 	return (
-		<PopoverContentView
+		<ReakitPopover
 			aria-label={label}
+			className={classes}
 			{...props}
 			{...popover}
-			sx={{ maxWidth }}
 		>
 			<Card elevation={elevation} ref={forwardedRef}>
 				{children}
 			</Card>
-		</PopoverContentView>
+		</ReakitPopover>
 	);
 }
 

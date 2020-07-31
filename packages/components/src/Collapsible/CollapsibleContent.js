@@ -1,18 +1,17 @@
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import React, { useRef } from 'react';
 import { DisclosureContent } from 'reakit/Disclosure';
 
+import { InnerContentView } from './Collapsible.styles';
+import * as styles from './Collapsible.styles';
 import {
 	getAnimatedHeight,
 	getAnimatedOpacity,
 	useCollapsibleContext,
 } from './Collapsible.utils';
-import {
-	CollapsibleContentView,
-	InnerContentView,
-} from './CollapsibleContent.styles';
 
-function CollapsibleContent({ children, forwardedRef, ...props }) {
+function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 	const innerRef = useRef();
 	const {
 		animatedState,
@@ -27,6 +26,8 @@ function CollapsibleContent({ children, forwardedRef, ...props }) {
 	});
 	const opacity = getAnimatedOpacity({ animatedState });
 
+	const classes = cx([styles.CollapsibleContent, className]);
+
 	const style = {
 		height,
 		opacity,
@@ -36,7 +37,7 @@ function CollapsibleContent({ children, forwardedRef, ...props }) {
 
 	return (
 		<DisclosureContent
-			as={CollapsibleContentView}
+			className={classes}
 			ref={forwardedRef}
 			{...props}
 			{...disclosure}

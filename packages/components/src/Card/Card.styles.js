@@ -41,3 +41,7 @@ export const borderRadius = css`
 		border-bottom-right-radius: 8px;
 	}
 `;
+
+export const popoverBody = css`
+	max-height: 80vh;
+`;

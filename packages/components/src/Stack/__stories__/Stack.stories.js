@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { BaseView } from '../../BaseView';
-import { Spacer } from '../../Spacer';
+import { Placeholder, Spacer } from '../../index';
 import { Stack, StackItem } from '../index';
 
 export default {
@@ -9,18 +8,18 @@ export default {
 	title: 'Components/Stack',
 };
 
-const ItemView = (props) => <BaseView {...props} bg="#eee" p={3} />;
+const ItemView = (props) => <Placeholder {...props} />;
 
 export const _default = () => {
 	return (
 		<>
 			<Spacer mb={4}>
-				<Stack spacing={3}>
+				<Stack gap={3}>
 					<ItemView>Item</ItemView>
 					<ItemView>Item</ItemView>
 				</Stack>
 			</Spacer>
-			<Stack direction={['column', 'row']} spacing={3}>
+			<Stack direction={['column', 'row']} gap={3}>
 				<ItemView sx={{ width: '180px' }}>Item</ItemView>
 				<StackItem isBlock>
 					<ItemView>Item</ItemView>

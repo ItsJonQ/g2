@@ -1,8 +1,6 @@
-import { styled } from '@wp-g2/styled-components';
-import { Tooltip } from 'reakit/Tooltip';
+import { css, get, styled } from '@wp-g2/styles';
 
-export const TooltipContentView = styled(Tooltip)`
-	opacity: 0;
+export const TooltipContent = css`
 	opacity: 0;
 	outline: none;
 	transform-origin: top center;
@@ -17,6 +15,10 @@ export const TooltipPopoverView = styled.div`
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 6px;
 	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
-	color: white;
+	color: ${get('white')};
 	padding: 4px 8px;
+`;
+
+export const noOutline = css`
+	outline: none;
 `;

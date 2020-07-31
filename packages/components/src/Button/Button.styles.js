@@ -190,7 +190,6 @@ export const PrefixSuffix = css`
 `;
 
 export const CaretWrapper = css`
-	margin-left: -8px;
 	margin-right: -8px;
 `;
 

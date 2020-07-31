@@ -12,10 +12,10 @@ export default {
 
 export const _default = () => {
 	return (
-		<Collapsible sx={{ height: 400, width: 300 }}>
+		<Collapsible css={{ height: 400, width: 300 }}>
 			<CollapsibleTrigger as={Button}>Toggle</CollapsibleTrigger>
 			<CollapsibleContent>
-				<Surface p={3}>
+				<Surface>
 					<Placeholder height={500} />
 				</Surface>
 			</CollapsibleContent>
