@@ -1,4 +1,4 @@
-import { css } from '@wp-g2/styled-components';
+import { css } from '@wp-g2/styles';
 
 export const first = css`
 	border-bottom-right-radius: 0;

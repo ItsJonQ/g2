@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, TextField } from '../../index';
+import { Button, Select, TextField } from '../../index';
 import { ControlGroup, ControlGroupItem } from '../index';
 
 export default {
@@ -11,16 +11,18 @@ export default {
 export const _default = () => {
 	return (
 		<ControlGroup templateColumns="1fr 100px">
+			<ControlGroupItem>
+				<Select options={[{ label: 'Ms.', value: 'ms' }]} />
+			</ControlGroupItem>
 			<ControlGroupItem isBlock>
 				<TextField placeholder="First name" />
 			</ControlGroupItem>
 			<ControlGroupItem isBlock>
 				<TextField placeholder="Last name" />
 			</ControlGroupItem>
+
 			<ControlGroupItem>
-				<Button isOutline variant="primary">
-					Submit
-				</Button>
+				<Button variant="primary">Submit</Button>
 			</ControlGroupItem>
 		</ControlGroup>
 	);

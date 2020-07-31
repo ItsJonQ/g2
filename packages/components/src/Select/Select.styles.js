@@ -8,7 +8,7 @@ export const base = css`
 
 export const select = css`
 	padding-left: 8px;
-	padding-right: 20px;
+	padding-right: 30px;
 `;
 
 export const ArrowWrapperView = styled(FlexItem)`

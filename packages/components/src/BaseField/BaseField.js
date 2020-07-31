@@ -8,6 +8,7 @@ const { BaseFieldView } = styles;
 
 function BaseField({ isFocused, ...props }) {
 	const { styles: controlGroupStyles } = useControlGroupContext();
+	console.log(controlGroupStyles);
 	const cx = [controlGroupStyles, isFocused && styles.focus];
 
 	return <BaseFieldView {...props} cx={cx} />;

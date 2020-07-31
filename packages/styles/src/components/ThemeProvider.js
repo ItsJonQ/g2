@@ -2,11 +2,7 @@ import { deepEqual } from '@wp-g2/utils';
 import { ThemeProvider as BaseThemeProvider } from 'emotion-theming';
 import React, { useEffect, useRef, useState } from 'react';
 
-import { injectGlobal } from '../style-system';
-import {
-	transformValuesToVariables,
-	transformValuesToVariablesString,
-} from '../theme/utils';
+import { transformValuesToVariables } from '../theme/utils';
 
 function useDarkMode({ isDark = false, isGlobal = true, ref }) {
 	useEffect(() => {
