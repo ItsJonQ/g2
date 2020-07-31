@@ -4,7 +4,6 @@ export const CollapsibleContent = css`
 	display: block !important;
 	overflow: hidden;
 	transform: translateZ(0);
-	transition: height 160ms ease, opacity 160ms ease;
 	will-change: height;
 `;
 
