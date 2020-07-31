@@ -26,7 +26,7 @@ export const InnerBody = css`
 
 export const headerFooter = css`
 	border-color: ${get('colorDivider')};
-	min-height: 48px;
+	min-height: 44px;
 	padding: 4px 12px;
 `;
 
