@@ -21,11 +21,13 @@ export const BaseFieldView = styled.div`
 
 	&:focus {
 		border-color: ${get('colorAdmin')};
+		box-shadow: 0 0 0 2px ${get('controlBackgroundDimColor')};
 		z-index: 1;
 	}
 `;
 
 export const focus = css`
 	border-color: ${get('colorAdmin')};
+	box-shadow: 0 0 0 2px ${get('controlBackgroundDimColor')};
 	z-index: 1;
 `;

@@ -15,11 +15,13 @@ function Card({ children, className, elevation = 2, ...props }) {
 			<Elevation
 				css={{ borderRadius: 8 }}
 				isInteractive={false}
+				offset={-1}
 				value={elevation ? 1 : 0}
 			/>
 			<Elevation
 				css={{ borderRadius: 8 }}
 				isInteractive={false}
+				offset={-1}
 				value={elevation}
 			/>
 		</Surface>

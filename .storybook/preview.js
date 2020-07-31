@@ -15,12 +15,17 @@ function StoryDecorator(storyFn) {
 	const [isDark, setIsDark] = useState(false);
 	const [isHighContrast, setIsHighContast] = useState(false);
 
+	const controlBorderColor = isHighContrast
+		? isDark
+			? '#ddd'
+			: '#444'
+		: null;
+
+	const colorDivider = isHighContrast ? (isDark ? '#ddd' : '#444') : null;
+
 	const theme = {
-		controlBorderColor: isHighContrast
-			? isDark
-				? '#ddd'
-				: '#444'
-			: 'transparent',
+		controlBorderColor,
+		colorDivider,
 	};
 
 	return (

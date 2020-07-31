@@ -20,7 +20,7 @@ export const ColorPickerView = styled.div`
 
 		input {
 			background: ${get('controlBackgroundColor')} !important;
-			border: 1px solid transparent !important;
+			border: 1px solid ${get('controlBorderColor')} !important;
 			border-radius: 3px !important;
 			box-shadow: none !important;
 			color: ${get('colorText')} !important;
