@@ -3,20 +3,13 @@ import { is } from '@wp-g2/utils';
 const NAMESPACE = '--wp-g2';
 
 export function get(key) {
-	return () => key;
+	return `var(${NAMESPACE}-${key})`;
 }
 
 export function transformValuesToReferences(values = {}) {
 	const next = {};
 	for (const [key, value] of Object.entries(values)) {
-		let ref;
-
-		if (is.function(value)) {
-			ref = `var(${NAMESPACE}-${key})`;
-		} else {
-			ref = `var(${NAMESPACE}-${key}, ${value})`;
-		}
-
+		const ref = `var(${NAMESPACE}-${key}, ${value})`;
 		next[key] = ref;
 	}
 	return next;
@@ -26,15 +19,7 @@ export function transformValuesToVariables(values = {}) {
 	const next = {};
 
 	for (const [key, value] of Object.entries(values)) {
-		let ref = value;
-
-		if (is.function(value)) {
-			try {
-				ref = `var(${NAMESPACE}-${value()})`;
-				// eslint-disable-next-line
-			} catch {}
-		}
-
+		const ref = value;
 		next[`${NAMESPACE}-${key}`] = ref;
 	}
 
@@ -49,8 +34,9 @@ export function transformValuesToVariablesString(
 	const next = [`${selector} {`];
 
 	for (const [key, value] of Object.entries(variables)) {
-		if (is.defined(value)) {
-			next.push(`${key}: ${value};`);
+		const ref = value;
+		if (is.defined(ref)) {
+			next.push(`${key}: ${ref};`);
 		}
 	}
 

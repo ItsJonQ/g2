@@ -1,13 +1,5 @@
-import { css, styled } from '@wp-g2/styled-components';
+import { css } from '@wp-g2/styles';
 
-import { FlexItem } from '../Flex';
-
-const controlGroupStyles = ({ isFirst, isOnly }) => {
-	if (isFirst || isOnly) return '';
-	return css`
-		margin-left: -1px;
-	`;
-};
-export const ControlGroupItemView = styled(FlexItem)`
-	${controlGroupStyles};
+export const offset = css`
+	margin-left: -1px;
 `;

@@ -1,15 +1,16 @@
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
+import { FlexItem } from '../Flex';
 import { useControlGroupContext } from './ControlGroup.utils';
-import { ControlGroupItemView } from './ControlGroupItem.styles';
+import * as styles from './ControlGroupItem.styles';
 
-function ControlGroupItem(props) {
+function ControlGroupItem({ className, ...props }) {
 	const { isFirst, isOnly } = useControlGroupContext();
+	const classes = cx([!isFirst && !isOnly && styles.offset, className]);
 
-	return (
-		<ControlGroupItemView isFirst={isFirst} isOnly={isOnly} {...props} />
-	);
+	return <FlexItem {...props} className={classes} />;
 }
 
 export default connect(ControlGroupItem, 'ControlGroupItem');

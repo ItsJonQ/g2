@@ -41,7 +41,7 @@ export const Button = css`
 	}
 
 	&:focus {
-		box-shadow: 0 0 0 2px ${get('controlBackgroundDimColor')};
+		box-shadow: ${get('controlBoxShadowFocus')};
 		z-index: 1;
 	}
 

@@ -1,17 +1,23 @@
 import { css, get, styled } from '@wp-g2/styles';
 
+const lineHeight = `calc(${get('fontSize')} * 1.2)`;
+
+function getPadding(size) {
+	return `calc((${get(size)} - ${lineHeight}) / 2)`;
+}
+
 export const ControlLabelView = styled.div`
-	line-height: 14px;
-	padding-bottom: calc((${get('controlHeight')} - 14px) / 2);
-	padding-top: calc((${get('controlHeight')} - 14px) / 2);
+	line-height: ${lineHeight};
+	padding-bottom: ${getPadding('controlHeight')};
+	padding-top: ${getPadding('controlHeight')};
 `;
 
 export const large = css`
-	padding-bottom: calc((${get('controlHeightLarge')} - 14px) / 2);
-	padding-top: calc((${get('controlHeightLarge')} - 14px) / 2);
+	padding-bottom: ${getPadding('controlHeightLarge')};
+	padding-top: ${getPadding('controlHeightLarge')};
 `;
 
 export const small = css`
-	padding-bottom: calc((${get('controlHeightSmall')} - 14px) / 2);
-	padding-top: calc((${get('controlHeightSmall')} - 14px) / 2);
+	padding-bottom: ${getPadding('controlHeightSmall')};
+	padding-top: ${getPadding('controlHeightSmall')};
 `;

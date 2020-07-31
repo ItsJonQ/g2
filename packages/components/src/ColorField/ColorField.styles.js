@@ -13,7 +13,7 @@ export const ColorPickerButtonView = styled.button`
 
 	&:focus {
 		border-color: ${get('colorAdmin')};
-		box-shadow: 0 0 0 2px ${get('controlBackgroundDimColor')};
+		box-shadow: ${get('controlBoxShadowFocus')};
 		outline: none;
 		z-index: 1;
 	}

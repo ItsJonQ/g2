@@ -46,6 +46,12 @@ const FONT_PROPS = {
 	fontFamily:
 		'Inter,Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
 	fontSize: '13px',
+	fontSizeH1: `calc(2.44 * ${get('fontSize')})`,
+	fontSizeH2: `calc(1.95 * ${get('fontSize')})`,
+	fontSizeH3: `calc(1.56 * ${get('fontSize')})`,
+	fontSizeH4: `calc(1.25 * ${get('fontSize')})`,
+	fontSizeH5: `calc(1 * ${get('fontSize')})`,
+	fontSizeH6: `calc(0.8 * ${get('fontSize')})`,
 	fontSizeSmall: '12px',
 };
 
@@ -66,6 +72,7 @@ const CONTROL_PROPS = {
 	controlBorderColor: 'transparent',
 	controlBorderRadius: '4px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
+	controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,
 	controlHeight: '30px',
 	controlHeightLarge: '36px',
 	controlHeightSmall: '24px',
