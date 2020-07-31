@@ -11,15 +11,18 @@ export default {
 const Example = () => {
 	const { color, number, text } = useControls();
 
+	const controlBorderColor = color('controlBorderColor', '#f2f2f2');
+
 	const theme = {
 		colorAdmin: color('colorAdmin', 'blue'),
 		colorText: color('colorText', 'black'),
-		controlBorderColor: color('controlBorderColor', '#f2f2f2'),
+		controlBorderColor,
 		controlBorderRadius: `${number('controlBorderRadius', 4)}px`,
 		controlHeight: `${number('controlHeight', 30)}px`,
 		controlSurfaceColor: color('controlSurfaceColor', 'white'),
 		fontFamily: text('fontFamily', 'Inter'),
 		fontSize: `${number('fontSize', 13)}px`,
+		surfaceBorderColor: controlBorderColor,
 		surfaceColor: color('surfaceColor', 'white'),
 	};
 

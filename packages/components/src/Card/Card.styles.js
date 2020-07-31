@@ -1,7 +1,6 @@
 import { css, get } from '@wp-g2/styles';
 
 export const Card = css`
-	border: 1px solid ${get('controlBorderColor')};
 	border-radius: 8px;
 	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')};
 	outline: none;

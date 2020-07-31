@@ -21,11 +21,10 @@ function StoryDecorator(storyFn) {
 			: '#444'
 		: null;
 
-	const colorDivider = isHighContrast ? (isDark ? '#ddd' : '#444') : null;
-
 	const theme = {
 		controlBorderColor,
-		colorDivider,
+		colorDivider: controlBorderColor,
+		surfaceBorderColor: controlBorderColor,
 	};
 
 	return (

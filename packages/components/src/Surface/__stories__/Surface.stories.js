@@ -8,5 +8,5 @@ export default {
 };
 
 export const _default = () => {
-	return <Surface>Surface</Surface>;
+	return <Surface borderBottom>Surface</Surface>;
 };

@@ -1,3 +1,14 @@
+import {
+	Button,
+	Card,
+	Divider,
+	Flex,
+	Spacer,
+	Text,
+	View,
+} from '@wp-g2/components';
+import faker from 'faker';
+import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
 
 import { AnimatePresence, motion } from '../index';
@@ -22,51 +33,70 @@ const list = {
 	},
 };
 
+const itemSchema = new Schema(() => ({
+	id: faker.random.uuid(),
+	name: faker.name.firstName(),
+}));
+
 const App = () => {
-	const [count, setCount] = useState(3);
-	const items = [...Array(count)].fill(0).map((v, i) => i);
+	const [items, setItems] = useState(itemSchema.make(10));
+
+	const remove = (id) => {
+		setItems(items.filter((item) => item.id !== id));
+	};
+
+	const add = () => {
+		setItems([itemSchema.makeOne(), ...items]);
+	};
 
 	return (
 		<>
-			<button onClick={() => setCount(count + 1)}>Add</button>
-			<button onClick={() => setCount(count - 1)}>Remove</button>
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
 			<div className="example-container">
-				<motion.div
-					animate="visible"
-					initial="hidden"
+				<Spacer>
+					<Button onClick={add}>Add Item</Button>
+				</Spacer>
+				<Card
 					style={{
-						display: 'grid',
-						gridTemplateColumns: 'repeat(3, 1fr)',
 						width: 300,
 					}}
-					variants={list}
 				>
-					<AnimatePresence initial={false}>
-						{items.map((i) => (
-							<motion.div
-								animate={{ opacity: 1, scale: 1, y: 0 }}
-								exit={{
-									opacity: 0,
-									scale: 0.5,
-									transition: { duration: 0.2 },
-									y: -20,
-								}}
-								initial={{ opacity: 0, scale: 0.3, y: 20 }}
-								key={`item-${i}`}
-								style={{ background: '#eee', padding: 20 }}
-							>
-								Item
-							</motion.div>
-						))}
-					</AnimatePresence>
-				</motion.div>
+					<motion.div
+						animate="visible"
+						initial="hidden"
+						variants={list}
+					>
+						<AnimatePresence initial={false}>
+							{items.map((item, index) => (
+								<motion.div
+									animate={{ height: 'auto', opacity: 1 }}
+									exit={{
+										height: 0,
+										opacity: 0,
+									}}
+									initial={{ height: 0, opacity: 0 }}
+									key={item.id}
+									style={{ overflow: 'hidden' }}
+								>
+									<View css={{ padding: 8 }}>
+										<Flex>
+											<Text>{item.name}</Text>
+											<Button
+												onClick={() => remove(item.id)}
+												size="small"
+												variant="tertiary"
+											>
+												X
+											</Button>
+										</Flex>
+									</View>
+									{index !== items.length - 1 && (
+										<Divider m={0} />
+									)}
+								</motion.div>
+							))}
+						</AnimatePresence>
+					</motion.div>
+				</Card>
 			</div>
 		</>
 	);

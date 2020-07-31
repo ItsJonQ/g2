@@ -10,7 +10,7 @@ const { DividerView } = styles;
 
 const GRID_BASE = 4;
 
-function Divider({ m, mb = 3, mt = 3, ...props }) {
+function Divider({ m, mb, mt, ...props }) {
 	styles.mt = css`
 		margin-top: ${toPx(mt * GRID_BASE)};
 	`;
