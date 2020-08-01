@@ -34,7 +34,6 @@ export const Sidebar = ({ children }) => {
 					right: 0;
 					border-left: 1px solid ${get('colorDivider')};
 				`}
-				data-component="Sidebar"
 			>
 				<Tabs selectedId="block">
 					<TabList>

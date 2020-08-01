@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { cx } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
 import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { Button as BaseButton } from 'reakit/Button';
@@ -72,6 +72,7 @@ function Button({
 							styles.PrefixSuffix,
 							isLoading && styles.loading,
 						])}
+						{...ns('ButtonPrefix')}
 					>
 						{prefix}
 					</FlexItem>
@@ -83,6 +84,7 @@ function Button({
 							styles.PrefixSuffix,
 							isLoading && styles.loading,
 						])}
+						{...ns('ButtonIcon')}
 					>
 						<Icon icon={icon} size={iconSize} />
 					</FlexItem>
@@ -94,6 +96,7 @@ function Button({
 							styles.Content,
 							isLoading && styles.loading,
 						])}
+						{...ns('ButtonContent')}
 					>
 						{children}
 					</FlexBlock>
@@ -105,6 +108,7 @@ function Button({
 							styles.PrefixSuffix,
 							isLoading && styles.loading,
 						])}
+						{...ns('ButtonSuffix')}
 					>
 						{suffix}
 					</FlexItem>
@@ -116,6 +120,7 @@ function Button({
 							styles.CaretWrapper,
 							isLoading && styles.loading,
 						])}
+						{...ns('ButtonCaret')}
 					>
 						<Icon icon={<FiChevronDown />} size={16} />
 					</FlexItem>
@@ -128,6 +133,7 @@ function Button({
 				hover={elevationHover}
 				offset={-1}
 				value={elevation}
+				{...ns('ButtonElevation')}
 			/>
 		</BaseButton>
 	);

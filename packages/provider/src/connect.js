@@ -1,4 +1,4 @@
-import { cx } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
 import { hoistNonReactStatics, is } from '@wp-g2/utils';
 import kebabCase from 'lodash.kebabcase';
 import uniq from 'lodash.uniq';
@@ -45,7 +45,7 @@ export function componentsConnect(Component, namespace, options = {}) {
 
 		return (
 			<Component
-				data-component={displayName}
+				{...ns(displayName)}
 				{...mergedProps}
 				className={classes}
 				forwardedRef={forwardedRef}

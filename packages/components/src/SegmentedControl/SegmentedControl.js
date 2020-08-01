@@ -1,9 +1,9 @@
 import { connect } from '@wp-g2/provider';
-import { View } from '@wp-g2/styles';
 import { mergeRefs, useResizeAware } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 import { RadioGroup, useRadioState } from 'reakit/Radio';
 
+import { View } from '../View';
 import * as styles from './SegmentedControl.styles';
 import Backdrop from './SegmentedControlBackdrop';
 import Button from './SegmentedControlButton';

@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { cx } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
 import { mergeRefs, noop } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
@@ -68,8 +68,8 @@ function TextField({
 			justify={justify}
 			onClick={handleOnRootClick}
 		>
-			{prefix && <FlexItem>{prefix}</FlexItem>}
-			<FlexBlock>
+			{prefix && <FlexItem {...ns('TextFieldPrefix')}>{prefix}</FlexItem>}
+			<FlexBlock {...ns('TextFieldContent')}>
 				<InputView
 					as={InputComponent}
 					cx={inputCx}
@@ -79,9 +79,10 @@ function TextField({
 					onFocus={handleOnFocus}
 					ref={mergeRefs([inputRef, forwardedRef])}
 					{...props}
+					{...ns('TextFieldInput')}
 				/>
 			</FlexBlock>
-			{suffix && <FlexItem>{suffix}</FlexItem>}
+			{suffix && <FlexItem {...ns('TextFieldSuffix')}>{suffix}</FlexItem>}
 		</BaseField>
 	);
 }

@@ -1,4 +1,4 @@
-import { ThemeProvider, useTheme } from '@wp-g2/styled-components';
+import { ThemeProvider } from '@wp-g2/styles';
 import { isEmpty } from '@wp-g2/utils';
 import deepmerge from 'deepmerge';
 import React, { createContext, useContext } from 'react';
@@ -8,7 +8,6 @@ export const useComponentsContext = () => useContext(ComponentsContext);
 
 export function ComponentsProvider({ children, theme = {}, value = {} }) {
 	const parentComponentsContext = useComponentsContext();
-	const mergedThemeProps = { ...useTheme(), ...theme };
 
 	let mergedValues = value;
 
@@ -18,7 +17,7 @@ export function ComponentsProvider({ children, theme = {}, value = {} }) {
 
 	return (
 		<ComponentsContext.Provider value={mergedValues}>
-			<ThemeProvider theme={mergedThemeProps}>{children}</ThemeProvider>
+			<ThemeProvider theme={theme}>{children}</ThemeProvider>
 		</ComponentsContext.Provider>
 	);
 }

@@ -1,4 +1,4 @@
-export { css, jsx, cx } from './style-system';
+export { css, jsx, cx, ns } from './style-system';
 
 export { createSystemElement } from './create-system';
 export * from './system';

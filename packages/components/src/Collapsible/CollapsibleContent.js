@@ -1,6 +1,6 @@
 import { motion } from '@wp-g2/animations';
 import { connect } from '@wp-g2/provider';
-import { cx } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
 import React from 'react';
 import { DisclosureContent } from 'reakit/Disclosure';
 
@@ -29,6 +29,7 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 				as={motion.div}
 				initial={false}
 				transition={{ duration: 0.2 }}
+				{...ns('CollapsibleInnerContent')}
 			>
 				{children}
 			</InnerContentView>

@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { cx } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
 import React from 'react';
 
 import { Elevation } from '../Elevation';
@@ -16,11 +16,13 @@ function Card({ children, className, elevation = 2, ...props }) {
 				css={{ borderRadius: 8 }}
 				isInteractive={false}
 				value={elevation ? 1 : 0}
+				{...ns('CardElevation')}
 			/>
 			<Elevation
 				css={{ borderRadius: 8 }}
 				isInteractive={false}
 				value={elevation}
+				{...ns('CardElevation')}
 			/>
 		</Surface>
 	);

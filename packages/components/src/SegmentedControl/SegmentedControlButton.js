@@ -1,4 +1,5 @@
 import { connect } from '@wp-g2/provider';
+import { ns } from '@wp-g2/styles';
 import React from 'react';
 import { Radio } from 'reakit/Radio';
 
@@ -29,7 +30,11 @@ function SegmentedControlButton({
 	const isActive = props.state === value;
 
 	return (
-		<LabelView cx={[isBlock && styles.labelBlock]} data-active={isActive}>
+		<LabelView
+			cx={[isBlock && styles.labelBlock]}
+			data-active={isActive}
+			{...ns('SegmentedControlButtonLabel')}
+		>
 			<Radio
 				{...props}
 				as={ButtonView}
@@ -38,10 +43,20 @@ function SegmentedControlButton({
 				ref={forwardedRef}
 				value={value}
 			>
-				<ButtonContentView>{label}</ButtonContentView>
-				<LabelPlaceholderView aria-hidden>{label}</LabelPlaceholderView>
+				<ButtonContentView {...ns('SegmentedControlButtonContent')}>
+					{label}
+				</ButtonContentView>
+				<LabelPlaceholderView
+					aria-hidden
+					{...ns('SegmentedControlButtonContentPlaceholder')}
+				>
+					{label}
+				</LabelPlaceholderView>
 			</Radio>
-			<SegmentedControlSeparator isActive={!showSeparator} />
+			<SegmentedControlSeparator
+				isActive={!showSeparator}
+				{...ns('SegmentedControlButtonSeparator')}
+			/>
 		</LabelView>
 	);
 }
