@@ -51,7 +51,7 @@ const Example = () => {
 				<Card css={{ overflow: 'hidden' }}>
 					<AnimatePresence initial={false}>
 						{items.map((item, index) => (
-							<AnimatedView key={item.id}>
+							<AnimatedView auto key={item.id}>
 								<View
 									css={{
 										padding: '12px 8px',
@@ -62,7 +62,6 @@ const Example = () => {
 										animate={{
 											paddingRight: isEditable ? 48 : 0,
 										}}
-										auto={false}
 										exit={{
 											opacity: 0,
 											x: -100,
@@ -74,7 +73,6 @@ const Example = () => {
 										animate={{
 											opacity: isEditable ? 1 : 0,
 										}}
-										auto={false}
 										css={{
 											pointerEvents: !isEditable
 												? 'none'

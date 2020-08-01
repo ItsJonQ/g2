@@ -1,5 +1,6 @@
 import { connect } from '@wp-g2/provider';
 import { css, cx, toPx } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import { View } from '../View';
@@ -23,63 +24,63 @@ function Spacer({
 	...props
 }) {
 	const classes = cx(
-		mt &&
+		is.defined(mt) &&
 			css`
 				margin-top: ${value(mt)};
 			`,
-		mb &&
+		is.defined(mb) &&
 			css`
 				margin-bottom: ${value(mb)};
 			`,
-		ml &&
+		is.defined(ml) &&
 			css`
 				margin-left: ${value(ml)};
 			`,
-		mr &&
+		is.defined(mr) &&
 			css`
 				margin-right: ${value(mr)};
 			`,
-		mx &&
+		is.defined(mx) &&
 			css`
 				margin-left: ${value(mx)};
 				margin-right: ${value(mx)};
 			`,
-		my &&
+		is.defined(my) &&
 			css`
 				margin-bottom: ${value(my)};
 				margin-top: ${value(my)};
 			`,
-		m &&
+		is.defined(m) &&
 			css`
 				margin: ${value(m)};
 			`,
-		pt &&
+		is.defined(pt) &&
 			css`
 				padding-top: ${value(pt)};
 			`,
-		pb &&
+		is.defined(pb) &&
 			css`
 				padding-bottom: ${value(pb)};
 			`,
-		pl &&
+		is.defined(pl) &&
 			css`
 				padding-left: ${value(pl)};
 			`,
-		pr &&
+		is.defined(pr) &&
 			css`
 				padding-right: ${value(pr)};
 			`,
-		px &&
+		is.defined(px) &&
 			css`
 				padding-left: ${value(px)};
 				padding-right: ${value(px)};
 			`,
-		py &&
+		is.defined(py) &&
 			css`
 				padding-bottom: ${value(py)};
 				padding-top: ${value(py)};
 			`,
-		p &&
+		is.defined(p) &&
 			css`
 				padding: ${value(p)};
 			`,

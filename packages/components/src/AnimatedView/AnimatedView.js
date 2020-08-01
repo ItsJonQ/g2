@@ -11,7 +11,7 @@ const createAnimatedView = function (tagName) {
 
 const memoizedCreateAnimatedView = memoize(createAnimatedView);
 
-function AnimatedView({ as = 'div', auto = true, ...props }) {
+function AnimatedView({ as = 'div', auto = false, ...props }) {
 	warning(
 		!is.string(as),
 		'@wp-g2/components',
@@ -34,7 +34,7 @@ function AnimatedView({ as = 'div', auto = true, ...props }) {
 				opacity: 0,
 			},
 			initial: { height: 0, opacity: 0 },
-			style: { overflow: 'hidden' },
+			style: { overflow: 'hidden', willChange: 'height' },
 		};
 	}
 
