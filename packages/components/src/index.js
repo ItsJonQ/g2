@@ -1,6 +1,7 @@
 // Base
 export * from './BaseView';
 export * from './View';
+export * from './AnimatedView';
 // Components
 export * from './BaseField';
 export * from './Button';
@@ -26,10 +27,12 @@ export * from './Popover';
 export * from './Scrollable';
 export * from './SegmentedControl';
 export * from './Select';
+export * from './Separator';
 export * from './Slider';
 export * from './Spacer';
 export * from './Spinner';
 export * from './Stack';
+export * from './Subheading';
 export * from './Surface';
 export * from './Switch';
 export * from './Tabs';
