@@ -1,7 +1,5 @@
 import { cx, ns } from '@wp-g2/styles';
-import { hoistNonReactStatics, is } from '@wp-g2/utils';
-import kebabCase from 'lodash.kebabcase';
-import uniq from 'lodash.uniq';
+import { hoistNonReactStatics, is, kebabCase, uniq } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
 import { useComponentsContext } from './ComponentsProvider';

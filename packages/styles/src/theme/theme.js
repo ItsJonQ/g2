@@ -52,6 +52,7 @@ const FONT_PROPS = {
 	fontSizeH4: `calc(1.25 * ${get('fontSize')})`,
 	fontSizeH5: `calc(1 * ${get('fontSize')})`,
 	fontSizeH6: `calc(0.8 * ${get('fontSize')})`,
+	fontSizeInputMobile: '16px',
 	fontSizeSmall: '12px',
 };
 

@@ -1,6 +1,5 @@
 import { ThemeProvider } from '@wp-g2/styles';
-import { isEmpty } from '@wp-g2/utils';
-import deepmerge from 'deepmerge';
+import { deepMerge, isEmpty } from '@wp-g2/utils';
 import React, { createContext, useContext } from 'react';
 
 export const ComponentsContext = createContext({});
@@ -12,7 +11,7 @@ export function ComponentsProvider({ children, theme = {}, value = {} }) {
 	let mergedValues = value;
 
 	if (!isEmpty(parentComponentsContext)) {
-		mergedValues = deepmerge(parentComponentsContext, value);
+		mergedValues = deepMerge(parentComponentsContext, value);
 	}
 
 	return (

@@ -23,6 +23,7 @@ export const InputView = styled.input`
 	border: none;
 	color: ${get('colorText')};
 	display: block;
+	font-size: ${get('fontSizeInputMobile')};
 	line-height: 18px;
 	min-height: calc(${get('controlHeight')} - 2px);
 	outline: none;
@@ -30,6 +31,10 @@ export const InputView = styled.input`
 	padding-top: calc((${get('controlHeight')} - 2px - 18px) / 2);
 	resize: none;
 	width: 100%;
+
+	@media (min-width: 36em) {
+		font-size: ${get('fontSize')};
+	}
 `;
 
 export const large = css`

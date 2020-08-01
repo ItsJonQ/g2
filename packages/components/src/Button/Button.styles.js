@@ -14,7 +14,7 @@ export const Button = css`
 	display: inline-flex;
 	font-weight: 600;
 	height: ${get('controlHeight')};
-	line-height: ${get('controlHeight')};
+	line-height: 1;
 	outline: none;
 	padding-left: ${get('controlPaddingXLarge')};
 	padding-right: ${get('controlPaddingXLarge')};
@@ -69,7 +69,6 @@ export const rounded = css`
 
 export const large = css`
 	height: ${get('controlHeightLarge')};
-	line-height: ${get('controlHeightLarge')};
 
 	&[data-icon='true'] {
 		min-width: ${get('controlHeightLarge')};
@@ -78,7 +77,6 @@ export const large = css`
 
 export const small = css`
 	height: ${get('controlHeightSmall')};
-	line-height: ${get('controlHeightSmall')};
 
 	&[data-icon='true'] {
 		min-width: ${get('controlHeightSmall')};
@@ -193,6 +191,7 @@ export const loading = css`
 
 export const Content = css`
 	font-size: ${get('fontSize')};
+	line-height: 0;
 	opacity: 1;
 	white-space: nowrap;
 `;

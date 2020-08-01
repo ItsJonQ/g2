@@ -1,15 +1,15 @@
-import { is } from '@wp-g2/utils';
+import { is, kebabCase } from '@wp-g2/utils';
 
 const NAMESPACE = '--wp-g2';
 
 export function get(key) {
-	return `var(${NAMESPACE}-${key})`;
+	return `var(${NAMESPACE}-${kebabCase(key)})`;
 }
 
 export function transformValuesToReferences(values = {}) {
 	const next = {};
 	for (const [key, value] of Object.entries(values)) {
-		const ref = `var(${NAMESPACE}-${key}, ${value})`;
+		const ref = `var(${NAMESPACE}-${kebabCase(key)}, ${value})`;
 		next[key] = ref;
 	}
 	return next;
@@ -20,7 +20,7 @@ export function transformValuesToVariables(values = {}) {
 
 	for (const [key, value] of Object.entries(values)) {
 		const ref = value;
-		next[`${NAMESPACE}-${key}`] = ref;
+		next[`${NAMESPACE}-${kebabCase(key)}`] = ref;
 	}
 
 	return next;

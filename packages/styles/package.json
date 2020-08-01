@@ -19,16 +19,13 @@
         "@emotion/is-prop-valid": "^0.8.8",
         "@wp-g2/provider": "^0.0.15",
         "@wp-g2/utils": "^0.0.15",
-        "classnames": "^2.2.6",
         "create-emotion": "^10.0.27",
         "cssjanus": "^1.3.2",
         "dash-get": "^1.0.2",
         "emotion": "^10.0.27",
         "emotion-theming": "^10.0.27",
-        "memize": "^1.1.0",
         "stylis-plugin-css-variables": "^1.0.2",
-        "stylis-plugin-rtl": "^1.0.0",
-        "uniq": "^1.0.1"
+        "stylis-plugin-rtl": "^1.0.0"
     },
     "peerDependencies": {
         "react": "^16.8.0",

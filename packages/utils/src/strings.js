@@ -1,3 +1,5 @@
+export { default as kebabCase } from 'lodash.kebabcase';
+
 /**
  * Repeats a character x amount of times.
  * @param {string} char Character to repeat.

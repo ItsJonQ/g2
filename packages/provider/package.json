@@ -17,10 +17,7 @@
   "dependencies": {
     "@wp-g2/styled-components": "^0.0.15",
     "@wp-g2/styles": "^0.0.15",
-    "@wp-g2/utils": "^0.0.15",
-    "deepmerge": "^4.2.2",
-    "lodash.kebabcase": "^4.1.1",
-    "lodash.uniq": "^4.5.0"
+    "@wp-g2/utils": "^0.0.15"
   },
   "peerDependencies": {
     "react": "^16.8.0",
