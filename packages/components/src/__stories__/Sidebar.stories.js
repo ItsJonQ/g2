@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@wp-g2/styled-components';
 import React from 'react';
 
 import {
@@ -172,25 +171,23 @@ const PagesScreen = () => {
 
 const AdminSidebar = () => {
 	return (
-		<ThemeProvider theme={{ isDark: true }}>
-			<Surface sx={{ height: '100vh', width: 240 }}>
-				<Grid gap={0} sx={{ height: '100%' }} templateRows="1fr auto">
-					<NavigationStack autoHeight={false}>
-						<NavigationStackScreens>
-							<NavigationStackScreen>
-								<MainScreen />
-							</NavigationStackScreen>
-							<NavigationStackScreen>
-								<PagesScreen />
-							</NavigationStackScreen>
-						</NavigationStackScreens>
-					</NavigationStack>
-					<CardFooter>
-						<Text>User Details</Text>
-					</CardFooter>
-				</Grid>
-			</Surface>
-		</ThemeProvider>
+		<Surface sx={{ height: '100vh', width: 240 }}>
+			<Grid gap={0} sx={{ height: '100%' }} templateRows="1fr auto">
+				<NavigationStack autoHeight={false}>
+					<NavigationStackScreens>
+						<NavigationStackScreen>
+							<MainScreen />
+						</NavigationStackScreen>
+						<NavigationStackScreen>
+							<PagesScreen />
+						</NavigationStackScreen>
+					</NavigationStackScreens>
+				</NavigationStack>
+				<CardFooter>
+					<Text>User Details</Text>
+				</CardFooter>
+			</Grid>
+		</Surface>
 	);
 };
 

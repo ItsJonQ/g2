@@ -1,25 +1,30 @@
 import { connect } from '@wp-g2/provider';
-import { useTheme } from '@wp-g2/styled-components';
+import { get } from '@wp-g2/styles';
 import React from 'react';
 
 import { BarsView, BarsWrapperView, ContainerView } from './Spinner.styles';
 import { BASE_SIZE, WRAPPER_SIZE } from './Spinner.utils';
 
-function Spinner({ color, className, size = BASE_SIZE, ...props }) {
-	const { config, isDark } = useTheme();
-
+function Spinner({
+	color = get('colorText'),
+	className,
+	size = BASE_SIZE,
+	...props
+}) {
 	const ratio = size / BASE_SIZE;
 	const scale = (ratio * BASE_SIZE) / WRAPPER_SIZE;
 	const transform = `scale(${scale})`;
 
-	const baseColor = isDark ? config.colorTextDark : config.colorText;
-	const spinnerColor = color || baseColor;
 	const styles = { transform };
 
 	return (
-		<ContainerView size={size} {...props}>
-			<BarsWrapperView style={styles}>
-				<BarsView spinnerColor={spinnerColor}>
+		<ContainerView
+			{...props}
+			aria-busy={true}
+			style={{ height: size, width: size }}
+		>
+			<BarsWrapperView aria-hidden={true} style={styles}>
+				<BarsView style={{ color }}>
 					<div className="InnerBar1" />
 					<div className="InnerBar2" />
 					<div className="InnerBar3" />

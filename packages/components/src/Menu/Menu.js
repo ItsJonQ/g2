@@ -1,27 +1,31 @@
 import { connect } from '@wp-g2/provider';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
-import { useMenuState } from 'reakit/Menu';
+import { Menu as ReakitMenu, useMenuState } from 'reakit/Menu';
 
-import { MenuView } from './Menu.styles';
+import * as styles from './Menu.styles';
 import { MenuContext } from './Menu.utils';
 
-function Menu({ children, forwardedRef, menu: menuProp, ...props }) {
+function Menu({ children, className, forwardedRef, menu: menuProp, ...props }) {
 	const baseMenuState = useMenuState({ visible: true });
 	const menu = menuProp || baseMenuState;
 	const contextValue = {
 		menu,
 	};
 
+	const classes = cx([styles.Menu, className]);
+
 	return (
 		<MenuContext.Provider value={contextValue}>
-			<MenuView
+			<ReakitMenu
 				hideOnClickOutside={false}
 				{...menu}
 				{...props}
+				className={classes}
 				ref={forwardedRef}
 			>
 				{children}
-			</MenuView>
+			</ReakitMenu>
 		</MenuContext.Provider>
 	);
 }
