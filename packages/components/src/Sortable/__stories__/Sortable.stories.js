@@ -67,8 +67,11 @@ const SortableItem = sortableElement(({ isEditing, item, onRemove, value }) => (
 				<DragHandle />
 			</AnimatedView>
 			<AnimatedView
-				animate={{ paddingLeft: isEditing ? 36 : 8 }}
-				css={{ padding: 8 }}
+				animate={{
+					paddingLeft: isEditing ? 36 : 8,
+					paddingRight: isEditing ? 36 : 8,
+				}}
+				css={{ padding: 8, willChange: 'padding' }}
 			>
 				{value}
 			</AnimatedView>
