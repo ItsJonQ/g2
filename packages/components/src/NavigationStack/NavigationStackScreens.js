@@ -1,8 +1,8 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styled-components';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
 
+import { View } from '../View';
 import {
 	useCurrentPanelIndex,
 	useNavigationStackContext,
@@ -31,11 +31,9 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 	}
 
 	return (
-		<BaseView
+		<View
 			{...props}
-			ref={mergeRefs([containerRef, forwardedRef])}
-			style={{ height: autoHeight ? initialHeight : '100%' }}
-			sx={{
+			css={{
 				overflow: 'hidden',
 				position: 'relative',
 				transition:
@@ -43,22 +41,24 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 						? 'height 300ms ease-in-out'
 						: null,
 			}}
+			ref={mergeRefs([containerRef, forwardedRef])}
+			style={{ height: autoHeight ? initialHeight : '100%' }}
 		>
-			<BaseView
-				style={{
-					transform,
-					width,
-				}}
-				sx={{
+			<View
+				css={{
 					display: 'flex',
 					transition: __isRendered
 						? 'transform 300ms ease-in-out'
 						: null,
 				}}
+				style={{
+					transform,
+					width,
+				}}
 			>
 				{children}
-			</BaseView>
-		</BaseView>
+			</View>
+		</View>
 	);
 }
 

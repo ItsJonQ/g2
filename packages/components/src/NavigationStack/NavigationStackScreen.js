@@ -1,9 +1,9 @@
 import { connect } from '@wp-g2/provider';
-import { BaseView } from '@wp-g2/styled-components';
 import { mergeRefs } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 import { TabPanel } from 'reakit/Tab';
 
+import { View } from '../View';
 import {
 	useCurrentPanelNode,
 	useNavigationStackContext,
@@ -34,7 +34,7 @@ function NavigationStackScreen({ children, forwardedRef, ...props }) {
 				transition: 'opacity 300ms ease-in-out',
 			}}
 		>
-			<BaseView ref={nodeRef}>{children}</BaseView>
+			<View ref={nodeRef}>{children}</View>
 		</TabPanel>
 	);
 }

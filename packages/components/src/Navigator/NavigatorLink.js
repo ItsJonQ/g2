@@ -1,5 +1,4 @@
 import { connect } from '@wp-g2/provider';
-import { is } from '@wp-g2/utils';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

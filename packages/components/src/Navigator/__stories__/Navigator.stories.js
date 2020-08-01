@@ -1,4 +1,4 @@
-import { styled } from '@wp-g2/styled-components';
+import { styled } from '@wp-g2/styles';
 import React from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { animated, useSpring } from 'react-spring';
