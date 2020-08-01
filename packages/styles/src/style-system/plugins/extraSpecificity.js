@@ -22,7 +22,8 @@ function stylisExtraSpecificityPlugin(options = defaultOptions) {
 
 			if (match) {
 				item = item
-					.replace(html, '')
+					.replace(new RegExp(html, 'g'), '')
+					.replace(new RegExp(match, 'g'), match)
 					.replace(match, repeat(match, repeatLevel));
 				selectors[i] = `${html}${item}`;
 			}
