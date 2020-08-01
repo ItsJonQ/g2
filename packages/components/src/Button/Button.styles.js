@@ -83,6 +83,30 @@ export const small = css`
 	}
 `;
 
+export const half = css`
+	height: calc(${get('controlHeight')} / 2);
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeight')};
+	}
+`;
+
+export const halfLarge = css`
+	height: calc(${get('controlHeightLarge')} / 2);
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeightLarge')};
+	}
+`;
+
+export const halfSmall = css`
+	height: calc(${get('controlHeightSmall')} / 2);
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeightSmall')};
+	}
+`;
+
 export const icon = css`
 	padding-left: 0;
 	padding-right: 0;
@@ -216,4 +240,17 @@ export const LoadingOverlay = css`
 	position: absolute;
 	right: 0;
 	top: 0;
+`;
+
+export const control = css`
+	background-color: ${get('controlBackgroundColor')};
+	border: 1px solid ${get('controlBorderColor')};
+	font-family: ${get('fontFamily')};
+	font-size: ${get('fontSize')};
+
+	&:focus {
+		border-color: ${get('colorAdmin')};
+		box-shadow: ${get('controlBoxShadowFocus')};
+		z-index: 1;
+	}
 `;

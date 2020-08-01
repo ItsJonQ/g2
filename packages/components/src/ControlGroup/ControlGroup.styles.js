@@ -13,3 +13,13 @@ export const last = css`
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 `;
+
+export const firstRow = css`
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+`;
+
+export const lastRow = css`
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+`;

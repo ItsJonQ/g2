@@ -1,8 +1,9 @@
 import { connect, hasNamespace } from '@wp-g2/provider';
-import { BaseView, css, useResponsiveValue } from '@wp-g2/styles';
+import { css, useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
+import { View } from '../View';
 import * as styles from './Flex.styles';
 import { FlexContext } from './Flex.utils';
 import FlexItem from './FlexItem';
@@ -20,7 +21,7 @@ export function Flex({
 	const gapValue = gap * 4;
 	const direction = useResponsiveValue(directionProp);
 
-	const isColumn = direction === 'column';
+	const isColumn = direction?.includes('column');
 	const validChildren = getValidChildren(children);
 
 	const clonedChildren = validChildren.map((child, index) => {
@@ -62,9 +63,9 @@ export function Flex({
 	const classes = [styles.Flex, styles.Base];
 
 	return (
-		<BaseView {...props} cx={classes}>
+		<View {...props} cx={classes}>
 			{clonedChildren}
-		</BaseView>
+		</View>
 	);
 }
 

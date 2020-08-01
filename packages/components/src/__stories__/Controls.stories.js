@@ -1,5 +1,3 @@
-import { ComponentsProvider } from '@wp-g2/provider';
-import { get } from '@wp-g2/styles';
 import React from 'react';
 import {
 	FiAlignCenter,
@@ -21,6 +19,7 @@ import {
 	FlexBlock,
 	Grid,
 	Icon,
+	IncrementalControl,
 	Panel,
 	PanelBody,
 	PanelHeader,
@@ -31,6 +30,7 @@ import {
 	Switch,
 	Text,
 	TextField,
+	View,
 } from '../index';
 
 export default {
@@ -117,8 +117,15 @@ const LayoutControls = () => {
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Padding</ControlLabel>
-					<Grid columns={2}>
-						<TextField suffix={<SuffixLabel>PX</SuffixLabel>} />
+					<View>
+						<Spacer>
+							<Grid columns={2}>
+								<TextField
+									suffix={<SuffixLabel>PX</SuffixLabel>}
+								/>
+								<IncrementalControl direction="horizontal" />
+							</Grid>
+						</Spacer>
 						<SegmentedControl
 							isBlock
 							options={[
@@ -132,7 +139,7 @@ const LayoutControls = () => {
 								},
 							]}
 						/>
-					</Grid>
+					</View>
 				</ControlGroup>
 				<ControlGroup>
 					<ControlLabel>Overflow</ControlLabel>

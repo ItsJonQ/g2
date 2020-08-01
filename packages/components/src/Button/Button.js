@@ -25,6 +25,7 @@ function Button({
 	icon,
 	iconSize = 16,
 	isBlock = false,
+	isControl = false,
 	isDestructive = false,
 	isLoading = false,
 	isRounded = false,
@@ -44,12 +45,13 @@ function Button({
 		styles.Button,
 		isBlock && styles.block,
 		isDestructive && styles.destructive,
-		isRounded && styles.rounded,
 		isSubtle && styles.subtle,
 		isIconOnly && styles.icon,
 		styles[variant],
 		styles[size],
+		isControl && styles.control,
 		controlGroupStyles,
+		isRounded && styles.rounded,
 	]);
 
 	return (

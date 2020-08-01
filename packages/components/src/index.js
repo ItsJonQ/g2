@@ -20,6 +20,7 @@ export * from './Flex';
 export * from './Grid';
 export * from './Heading';
 export * from './Icon';
+export * from './IncrementalControl';
 export * from './Menu';
 export * from './NavigationStack';
 export * from './Panel';

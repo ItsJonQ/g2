@@ -7,8 +7,15 @@ import { useControlGroupContext } from './ControlGroup.utils';
 import * as styles from './ControlGroupItem.styles';
 
 function ControlGroupItem({ className, ...props }) {
-	const { isFirst, isOnly } = useControlGroupContext();
-	const classes = cx([!isFirst && !isOnly && styles.offset, className]);
+	const { isFirst, isOnly, isVertical } = useControlGroupContext();
+	const withOffset = !isFirst && !isOnly;
+
+	let offsetStyles;
+	if (withOffset) {
+		offsetStyles = isVertical ? styles.offsetVertical : styles.offset;
+	}
+
+	const classes = cx([offsetStyles, className]);
 
 	return <FlexItem {...props} className={classes} />;
 }

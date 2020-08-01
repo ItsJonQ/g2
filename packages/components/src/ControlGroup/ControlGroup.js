@@ -8,8 +8,9 @@ import * as styles from './ControlGroup.styles';
 import { ControlGroupContext } from './ControlGroup.utils';
 import ControlGroupItem from './ControlGroupItem';
 
-function ControlGroup({ children, ...props }) {
+function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {
 	const validChildren = getValidChildren(children);
+	const isVertical = direction === 'column';
 
 	const clonedChildren = validChildren.map((child, index) => {
 		const isFirst = index === 0;
@@ -20,9 +21,9 @@ function ControlGroup({ children, ...props }) {
 		const _key = child.key || index;
 
 		const contextStyles = cx([
-			isFirst && styles.first,
+			isFirst ? (isVertical ? styles.firstRow : styles.first) : undefined,
 			isMiddle && styles.middle,
-			isLast && styles.last,
+			isLast ? (isVertical ? styles.lastRow : styles.last) : undefined,
 		]);
 
 		const contextValue = {
@@ -30,6 +31,7 @@ function ControlGroup({ children, ...props }) {
 			isLast,
 			isMiddle,
 			isOnly,
+			isVertical,
 			styles: contextStyles,
 		};
 
@@ -42,7 +44,7 @@ function ControlGroup({ children, ...props }) {
 		const _child = _isSubComponent ? (
 			child
 		) : (
-			<ControlGroupItem>{child}</ControlGroupItem>
+			<ControlGroupItem isBlock={isItemBlock}>{child}</ControlGroupItem>
 		);
 
 		return (
@@ -53,7 +55,7 @@ function ControlGroup({ children, ...props }) {
 	});
 
 	return (
-		<Flex {...props} _autoWrap={false} gap={0}>
+		<Flex {...props} _autoWrap={false} direction={direction} gap={0}>
 			{clonedChildren}
 		</Flex>
 	);
