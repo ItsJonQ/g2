@@ -22,6 +22,8 @@ function Button({
 	gap = 2,
 	hasCaret = false,
 	href,
+	icon,
+	iconSize = 16,
 	isBlock = false,
 	isDestructive = false,
 	isLoading = false,
@@ -36,6 +38,7 @@ function Button({
 }) {
 	const as = href ? 'a' : 'button';
 	const { styles: controlGroupStyles } = useControlGroupContext();
+	const isIconOnly = !!icon && !children;
 
 	const classes = cx([
 		styles.Button,
@@ -43,6 +46,7 @@ function Button({
 		isDestructive && styles.destructive,
 		isRounded && styles.rounded,
 		isSubtle && styles.subtle,
+		isIconOnly && styles.icon,
 		styles[variant],
 		styles[size],
 		controlGroupStyles,
@@ -54,6 +58,7 @@ function Button({
 			as={as}
 			className={classes}
 			data-destructive={isDestructive}
+			data-icon={!!icon}
 			href={href}
 			ref={forwardedRef}
 			{...props}
@@ -71,15 +76,28 @@ function Button({
 						{prefix}
 					</FlexItem>
 				)}
-				<FlexBlock
-					as="span"
-					className={cx([
-						styles.Content,
-						isLoading && styles.loading,
-					])}
-				>
-					{children}
-				</FlexBlock>
+				{icon && (
+					<FlexItem
+						as="span"
+						className={cx([
+							styles.PrefixSuffix,
+							isLoading && styles.loading,
+						])}
+					>
+						<Icon icon={icon} size={iconSize} />
+					</FlexItem>
+				)}
+				{children && (
+					<FlexBlock
+						as="span"
+						className={cx([
+							styles.Content,
+							isLoading && styles.loading,
+						])}
+					>
+						{children}
+					</FlexBlock>
+				)}
 				{suffix && (
 					<FlexItem
 						as="span"

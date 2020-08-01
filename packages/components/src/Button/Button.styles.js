@@ -45,6 +45,10 @@ export const Button = css`
 		z-index: 1;
 	}
 
+	&[data-icon='true'] {
+		min-width: ${get('controlHeight')};
+	}
+
 	svg {
 		display: block;
 	}
@@ -66,11 +70,24 @@ export const rounded = css`
 export const large = css`
 	height: ${get('controlHeightLarge')};
 	line-height: ${get('controlHeightLarge')};
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeightLarge')};
+	}
 `;
 
 export const small = css`
 	height: ${get('controlHeightSmall')};
 	line-height: ${get('controlHeightSmall')};
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeightSmall')};
+	}
+`;
+
+export const icon = css`
+	padding-left: 0;
+	padding-right: 0;
 `;
 
 export const primary = css`
