@@ -4,5 +4,4 @@ module.exports = {
 		'../packages/components/src/**/*.stories.js',
 		'../packages/animations/src/**/*.stories.js',
 	],
-	addons: ['@storybook/addon-actions', '@storybook/addon-links'],
 };
