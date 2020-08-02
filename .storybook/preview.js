@@ -58,11 +58,11 @@ function Themer() {
 	const [themeConfig, setThemeConfig] = useState(defaultThemeConfig);
 
 	const update = (key) => (value) => {
-		setThemeConfig({ ...themeConfig, [key]: value });
+		setThemeConfig((prev) => ({ ...prev, [key]: value }));
 	};
 
 	const reset = () => {
-		setThemeConfig(defaultThemeConfig);
+		setThemeConfig((prev) => ({ ...prev, ...defaultThemeConfig }));
 	};
 
 	const {

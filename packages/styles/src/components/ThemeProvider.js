@@ -27,16 +27,16 @@ function useThemeStyles({ isGlobal = true, theme = {} }) {
 	useLayoutEffect(() => {
 		if (deepEqual(themeRef.current, theme)) return;
 		themeRef.current = theme;
+		const rootNode = document.documentElement;
 		const nextTheme = transformValuesToVariables(theme);
 		if (isGlobal) {
 			requestAnimationFrame(() => {
-				const rootNode = document.documentElement;
 				for (const [k, v] of Object.entries(nextTheme)) {
-					rootNode.style.setProperty(k, v);
+					rootNode && rootNode.style.setProperty(k, v);
 				}
 			});
 		} else {
-			setThemeStyles(nextTheme);
+			setThemeStyles((prev) => ({ ...prev, ...nextTheme }));
 		}
 	}, [isGlobal, theme]);
 
