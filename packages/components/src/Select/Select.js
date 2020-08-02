@@ -18,6 +18,7 @@ function Select({
 	className,
 	forwardedRef,
 	onBlur = noop,
+	onChange = noop,
 	onFocus = noop,
 	options = [],
 	size,
@@ -40,6 +41,8 @@ function Select({
 		setIsFocused(true);
 	};
 
+	const handleOnChange = (event) => onChange(event.target.value, { event });
+
 	const classes = cx([styles.base, className]);
 	const inputCx = cx([styles.select, TextFieldStyles[size]]);
 
@@ -57,6 +60,7 @@ function Select({
 					as="select"
 					cx={inputCx}
 					onBlur={handleOnBlur}
+					onChange={handleOnChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([forwardedRef, inputRef])}
 				>

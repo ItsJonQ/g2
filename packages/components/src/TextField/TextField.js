@@ -46,7 +46,7 @@ function TextField({
 		setIsFocused(true);
 	};
 
-	const handleOnChange = (event) => onChange(event.target.value);
+	const handleOnChange = (event) => onChange(event.target.value, { event });
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 

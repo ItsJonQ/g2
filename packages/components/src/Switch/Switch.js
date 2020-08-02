@@ -38,9 +38,9 @@ function Switch({
 
 	const cx = [styles[size]];
 
-	const toggle = (changeProps) => {
+	const toggle = (event) => {
 		setChecked(!checked);
-		onChange(!checked, changeProps);
+		onChange(!checked, { event });
 	};
 
 	const handleOnBlur = (event) => {

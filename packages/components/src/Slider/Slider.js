@@ -19,7 +19,7 @@ function Slider({
 
 	const handleOnChange = (event) => {
 		setValue(event.target.value);
-		onChange(event);
+		onChange(event.target.value, { event });
 	};
 
 	const currentValue = value ? clamp(value, min, max) : 50;
