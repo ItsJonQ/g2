@@ -19,5 +19,6 @@ export const ModalCloseButtonView = styled.div`
 	position: absolute;
 	right: ${space(2)};
 	top: 50%;
+
 	transform: translate(0, -50%);
 `;

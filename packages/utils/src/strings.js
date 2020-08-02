@@ -9,3 +9,11 @@ export { default as kebabCase } from 'lodash.kebabcase';
 export function repeat(char, n, a) {
 	return (a = []).join((a[n - 1] = char));
 }
+
+export function camel2hyphen(str) {
+	return str
+		.replace(/[A-Z]/g, function (match) {
+			return '-' + match.toLowerCase();
+		})
+		.toLowerCase();
+}
