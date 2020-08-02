@@ -3,6 +3,7 @@ import {
 	Card,
 	Divider,
 	Flex,
+	Grid,
 	Spacer,
 	Text,
 	View,
@@ -14,10 +15,14 @@ import React, { useState } from 'react';
 import { AnimatePresence, motion } from '../index';
 
 export default {
-	title: 'Animations/Mount',
+	title: 'Animations/Flip',
 };
 
 const itemSchema = new Schema(() => ({
+	height: faker.random.number({
+		max: 200,
+		min: 30,
+	}),
 	id: faker.random.uuid(),
 	name: faker.name.firstName(),
 }));
@@ -30,30 +35,38 @@ const App = () => {
 	};
 
 	const add = () => {
-		setItems([itemSchema.makeOne(), ...items]);
+		setItems([...items, itemSchema.makeOne()]);
+	};
+
+	const shuffle = () => {
+		const next = items.sort(() => Math.random() - 0.5);
+		setItems([...next]);
 	};
 
 	return (
 		<View css={{ margin: '20px auto', maxWidth: 500 }}>
 			<Spacer>
-				<Button onClick={add}>Add User</Button>
+				<Flex>
+					<Button onClick={add}>Add User</Button>
+					<Button onClick={shuffle}>Shuffle</Button>
+				</Flex>
 			</Spacer>
-			<Card
-				style={{
-					width: 300,
-				}}
-			>
+			<Grid columns={3}>
 				<AnimatePresence initial={false}>
 					{items.map((item, index) => (
-						<motion.div
-							animate={{ height: 'auto', opacity: 1 }}
-							exit={{
-								height: 0,
-								opacity: 0,
+						<Card
+							animate={{
+								opacity: 1,
+								y: 0,
 							}}
-							initial={{ height: 0, opacity: 0 }}
+							as={motion.div}
+							exit={{
+								opacity: 0,
+								transition: { duration: 0.2 },
+							}}
+							initial={{ opacity: 0, y: 10 }}
 							key={item.id}
-							style={{ overflow: 'hidden' }}
+							layout
 						>
 							<View css={{ padding: 8 }}>
 								<Flex>
@@ -66,11 +79,10 @@ const App = () => {
 									/>
 								</Flex>
 							</View>
-							{index !== items.length - 1 && <Divider m={0} />}
-						</motion.div>
+						</Card>
 					))}
 				</AnimatePresence>
-			</Card>
+			</Grid>
 		</View>
 	);
 };
