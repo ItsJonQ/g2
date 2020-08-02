@@ -64,7 +64,7 @@ const SURFACE_PROPS = {
 };
 
 const GRID_PROPS = {
-	gridBase: 4,
+	gridBase: '4px',
 };
 
 const CONTROL_PROPS = {

@@ -254,3 +254,8 @@ export const control = css`
 		z-index: 1;
 	}
 `;
+
+export const narrow = css`
+	padding-left: ${get('controlPaddingX')};
+	padding-right: ${get('controlPaddingX')};
+`;

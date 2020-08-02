@@ -24,6 +24,7 @@ export * from './Icon';
 export * from './IncrementalControl';
 export * from './Link';
 export * from './Menu';
+export * from './Modal';
 export * from './NavigationStack';
 export * from './Panel';
 export * from './Placeholder';

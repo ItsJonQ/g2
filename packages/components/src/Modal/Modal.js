@@ -1,107 +1,97 @@
-// import React from 'react';
-// import { css, cx } from 'emotion';
-// import {BaseModal} from '../BaseModal';
-// import { connect } from '@wp-g2/provider';
-// import { useTheme } from '../../css';
-// import Card from '../Card';
-// import ModalHeader from './Modal.Header';
-// import ModalFooter from './Modal.Footer';
-// import ModalTrigger from './Modal.Trigger';
+import { connect } from '@wp-g2/provider';
+import { breakpoint, css, cx, space, toPx } from '@wp-g2/styles';
+import React from 'react';
 
-// export { useModalContext } from './Modal.Context';
+import { BaseModal } from '../BaseModal';
+import { Card } from '../Card';
 
-// const MODAL_SIZES = {
-// 	lg: 720,
-// 	md: 500,
-// 	sm: 400,
-// };
+export { useModalContext } from './Modal.Context';
 
-// function Modal({
-// 	children,
-// 	className,
-// 	forwardedRef,
-// 	label = 'Modal',
-// 	transitionTimingFunction = 'ease-in-out',
-// 	transitionDuration = 200,
-// 	backdropTransitionDuration = 250,
-// 	size = 'md',
-// 	visible = false,
-// 	renderTrigger = null,
-// 	zIndex = 999,
-// 	...props
-// }) {
-// 	const { breakpoint, space } = useTheme();
-// 	const maxWidth = MODAL_SIZES[size] || MODAL_SIZES.md;
+const MODAL_SIZES = {
+	lg: 720,
+	md: 500,
+	sm: 400,
+};
 
-// 	const modalTransition = `
-// 	opacity ${transitionDuration}ms ${transitionTimingFunction},
-// 			transform ${transitionDuration}ms ${transitionTimingFunction}
-// 	`;
+function Modal({
+	backdropTransitionDuration = 250,
+	children,
+	className,
+	forwardedRef,
+	label = 'Modal',
+	renderTrigger = null,
+	size = 'md',
+	transitionDuration = 200,
+	transitionTimingFunction = 'ease-in-out',
+	visible = false,
+	zIndex = 999,
+	...props
+}) {
+	const maxWidth = MODAL_SIZES[size] || MODAL_SIZES.md;
 
-// 	const baseStyles = css`
-// 		left: 50%;
-// 		width: 100%;
-// 		opacity: 0;
-// 		outline: none;
-// 		perspective: 800px;
-// 		position: relative;
-// 		transform-origin: top center;
-// 		transform: translate3d(-50%, ${space(5)}, 0);
-// 		transition: ${modalTransition};
-// 		max-width: 100%;
-// 		top: ${space(4)};
+	const modalTransition = `
+	opacity ${transitionDuration}ms ${transitionTimingFunction},
+			transform ${transitionDuration}ms ${transitionTimingFunction}
+	`;
 
-// 		@media (min-height: 40em) {
-// 			top: ${space(4)};
-// 		}
+	const baseStyles = css`
+		left: 50%;
+		max-width: 100%;
+		opacity: 0;
+		outline: none;
+		perspective: 800px;
+		position: relative;
+		top: ${space(4)};
+		transform: translate3d(-50%, ${space(5)}, 0);
+		transform-origin: top center;
+		transition: ${modalTransition};
+		width: 100%;
 
-// 		${breakpoint('md')`
-// 			max-width: ${maxWidth}px;
-// 			position: absolute;
-// 			top: 16%;
-// 		`}
+		@media (min-height: 40em) {
+			top: ${space(4)};
+		}
 
-// 		&[data-enter] {
-// 			opacity: 1;
-// 			transform: translate3d(-50%, 0, 0);
+		${breakpoint('md')`
+			max-width: ${toPx(maxWidth)};
+			position: absolute;
+			top: 16%;
+		`}
 
-// 			&[data-underlayer] {
-// 				transform: translate3d(-50%, -10px, 0) scale(0.95);
-// 				transform-origin: top center;
-// 			}
-// 		}
-// 	`;
+		&[data-enter] {
+			opacity: 1;
+			transform: translate3d(-50%, 0, 0);
 
-// 	const classes = cx(baseStyles, className);
+			&[data-underlayer] {
+				transform: translate3d(-50%, -10px, 0) scale(0.95);
+				transform-origin: top center;
+			}
+		}
+	`;
 
-// 	const modalProps = {
-// 		...props,
-// 		transitionTimingFunction,
-// 		transitionDuration,
-// 		backdropTransitionDuration,
-// 		renderTrigger,
-// 		size,
-// 		visible,
-// 		zIndex,
-// 	};
+	const classes = cx(baseStyles, className);
 
-// 	return (
-// 		<BaseModal
-// 			as={Card}
-// 			elevation={4}
-// 			className={classes}
-// 			ref={forwardedRef}
-// 			{...modalProps}
-// 		>
-// 			{children}
-// 		</BaseModal>
-// 	);
-// }
+	const modalProps = {
+		...props,
+		backdropTransitionDuration,
+		renderTrigger,
+		size,
+		transitionDuration,
+		transitionTimingFunction,
+		visible,
+		zIndex,
+	};
 
-// const ConnectedComponent = connect(Modal);
-// ConnectedComponent.Body = Card.Body;
-// ConnectedComponent.Header = ModalHeader;
-// ConnectedComponent.Footer = ModalFooter;
-// ConnectedComponent.Trigger = ModalTrigger;
+	return (
+		<BaseModal
+			as={Card}
+			className={classes}
+			elevation={4}
+			ref={forwardedRef}
+			{...modalProps}
+		>
+			{children}
+		</BaseModal>
+	);
+}
 
-// export default ConnectedComponent;
+export default connect(Modal);

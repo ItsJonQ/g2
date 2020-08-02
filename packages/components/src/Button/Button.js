@@ -28,6 +28,7 @@ function Button({
 	isControl = false,
 	isDestructive = false,
 	isLoading = false,
+	isNarrow = false,
 	isRounded = false,
 	isSubtle = false,
 	justify = 'center',
@@ -52,6 +53,7 @@ function Button({
 		isControl && styles.control,
 		controlGroupStyles,
 		isRounded && styles.rounded,
+		isNarrow && styles.narrow,
 	]);
 
 	return (
