@@ -46,6 +46,8 @@ function TextField({
 		setIsFocused(true);
 	};
 
+	const handleOnChange = (event) => onChange(event.target.value);
+
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
 	const classes = cx([multiline && styles.multiline, className]);
@@ -75,7 +77,7 @@ function TextField({
 					cx={inputCx}
 					disabled={disabled}
 					onBlur={handleOnBlur}
-					onChange={onChange}
+					onChange={handleOnChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([inputRef, forwardedRef])}
 					{...props}

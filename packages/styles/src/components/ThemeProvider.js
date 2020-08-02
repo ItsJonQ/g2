@@ -1,11 +1,11 @@
 import { deepEqual } from '@wp-g2/utils';
 import { ThemeProvider as BaseThemeProvider } from 'emotion-theming';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
 import { transformValuesToVariables } from '../theme/utils';
 
 function useDarkMode({ isDark = false, isGlobal = true, ref }) {
-	useEffect(() => {
+	useLayoutEffect(() => {
 		let target = document.documentElement;
 
 		if (!isGlobal && ref.current) {
@@ -24,15 +24,17 @@ function useThemeStyles({ isGlobal = true, theme = {} }) {
 	const themeRef = useRef(theme);
 	const [themeStyles, setThemeStyles] = useState({});
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (deepEqual(themeRef.current, theme)) return;
 		themeRef.current = theme;
 		const nextTheme = transformValuesToVariables(theme);
 		if (isGlobal) {
-			const rootNode = document.documentElement;
-			for (const [k, v] of Object.entries(nextTheme)) {
-				rootNode.style.setProperty(k, v);
-			}
+			requestAnimationFrame(() => {
+				const rootNode = document.documentElement;
+				for (const [k, v] of Object.entries(nextTheme)) {
+					rootNode.style.setProperty(k, v);
+				}
+			});
 		} else {
 			setThemeStyles(nextTheme);
 		}

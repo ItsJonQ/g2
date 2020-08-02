@@ -28,12 +28,14 @@ function IncrementalControl({
 				<ControlButton
 					icon={AddIcon}
 					isVertical={isVertical}
+					key="plus"
 					onClick={onIncrement}
 					size={size}
 				/>,
 				<ControlButton
 					icon={MinusIcon}
 					isVertical={isVertical}
+					key="minus"
 					onClick={onDecrement}
 					size={size}
 				/>,
@@ -42,12 +44,14 @@ function IncrementalControl({
 				<ControlButton
 					icon={MinusIcon}
 					isVertical={isVertical}
+					key="minus"
 					onClick={onIncrement}
 					size={size}
 				/>,
 				<ControlButton
 					icon={AddIcon}
 					isVertical={isVertical}
+					key="plus"
 					onClick={onDecrement}
 					size={size}
 				/>,
