@@ -15,14 +15,15 @@ function Slider({
 	value: valueProp,
 	...props
 }) {
-	const [value, setValue] = useControlledState(valueProp);
+	const [value, setValue] = useControlledState(valueProp, { initial: 50 });
 
 	const handleOnChange = (event) => {
-		setValue(event.target.value);
-		onChange(event.target.value, { event });
+		const next = parseFloat(event.target.value);
+		setValue(next);
+		onChange(next, { event });
 	};
 
-	const currentValue = value ? clamp(value, min, max) : 50;
+	const currentValue = clamp(value, min, max);
 	const componentStyles = {
 		...style,
 		'--progress': `${currentValue}%`,
