@@ -41,17 +41,40 @@ const ColorInput = ({ value, onChange, fallback = '' }) => {
 	);
 };
 
+const defaultThemeConfig = {
+	colorAdmin: '#3858E9',
+	surfaceColor: '#ffffff',
+	controlSurfaceColor: null,
+	colorText: null,
+	controlBorderRadius: '4px',
+	controlHeight: '30px',
+	fontFamily: '',
+	fontSize: '13px',
+};
+
 function Themer() {
 	const [isDark, setIsDark] = useState(false);
 	const [isHighContrast, setIsHighContast] = useState(false);
-	const [colorAdmin, setColorAdmin] = useState('#3858E9');
-	const [surfaceColor, setSurfaceColor] = useState('#ffffff');
-	const [controlSurfaceColor, setControlSurfaceColor] = useState(null);
-	const [colorText, setColorText] = useState(null);
-	const [controlBorderRadius, setControlBorderRadius] = useState('4px');
-	const [controlHeight, setControlHeight] = useState('30px');
-	const [fontFamily, setFontFamily] = useState('');
-	const [fontSize, setFontSize] = useState('13px');
+	const [themeConfig, setThemeConfig] = useState(defaultThemeConfig);
+
+	const update = (key) => (value) => {
+		setThemeConfig({ ...themeConfig, [key]: value });
+	};
+
+	const reset = () => {
+		setThemeConfig(defaultThemeConfig);
+	};
+
+	const {
+		colorAdmin,
+		surfaceColor,
+		controlSurfaceColor,
+		colorText,
+		controlBorderRadius,
+		controlHeight,
+		fontFamily,
+		fontSize,
+	} = themeConfig;
 
 	const controlBorderColor = isHighContrast
 		? isDark
@@ -98,7 +121,9 @@ function Themer() {
 												</ControlLabel>
 												<ColorInput
 													value={colorAdmin}
-													onChange={setColorAdmin}
+													onChange={update(
+														'colorAdmin',
+													)}
 												/>
 											</ControlGroup>
 											<ControlGroup>
@@ -108,7 +133,9 @@ function Themer() {
 												<ColorInput
 													value={colorText}
 													fallback="#000000"
-													onChange={setColorText}
+													onChange={update(
+														'colorText',
+													)}
 												/>
 											</ControlGroup>
 											<ControlGroup>
@@ -117,7 +144,9 @@ function Themer() {
 												</ControlLabel>
 												<ColorInput
 													value={surfaceColor}
-													onChange={setSurfaceColor}
+													onChange={update(
+														'surfaceColor',
+													)}
 												/>
 											</ControlGroup>
 											<ControlGroup>
@@ -127,9 +156,9 @@ function Themer() {
 												<ColorInput
 													value={controlSurfaceColor}
 													fallback="#ffffff"
-													onChange={
-														setControlSurfaceColor
-													}
+													onChange={update(
+														'controlSurfaceColor',
+													)}
 												/>
 											</ControlGroup>
 										</Spacer>
@@ -147,9 +176,9 @@ function Themer() {
 														10,
 													)}
 													onChange={(value) =>
-														setControlBorderRadius(
-															`${value}px`,
-														)
+														update(
+															'controlBorderRadius',
+														)(`${value}px`)
 													}
 												/>
 											</ControlGroup>
@@ -164,7 +193,7 @@ function Themer() {
 														10,
 													)}
 													onChange={(value) =>
-														setControlHeight(
+														update('controlHeight')(
 															`${value}px`,
 														)
 													}
@@ -180,7 +209,9 @@ function Themer() {
 												</ControlLabel>
 												<TextField
 													value={fontFamily}
-													onChange={setFontFamily}
+													onChange={update(
+														'fontFamily',
+													)}
 												/>
 											</ControlGroup>
 											<ControlGroup>
@@ -194,13 +225,21 @@ function Themer() {
 														10,
 													)}
 													onChange={(value) =>
-														setFontSize(
+														update('fontSize')(
 															`${value}px`,
 														)
 													}
 												/>
 											</ControlGroup>
 										</Spacer>
+										<Separator />
+										<Button
+											isBlock
+											onClick={reset}
+											variant="tertiary"
+										>
+											Reset
+										</Button>
 									</CardBody>
 								</PopoverContent>
 							</Popover>
