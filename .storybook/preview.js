@@ -30,11 +30,11 @@ const ControlGroup = ({ children, ...props }) => {
 	);
 };
 
-const ColorInput = ({ value, onChange }) => {
+const ColorInput = ({ value, onChange, fallback = '' }) => {
 	return (
 		<input
 			type="color"
-			value={value || ''}
+			value={value || fallback}
 			onChange={(e) => onChange(e.target.value)}
 			style={{ marginLeft: 'auto' }}
 		/>
@@ -46,6 +46,7 @@ function Themer() {
 	const [isHighContrast, setIsHighContast] = useState(false);
 	const [colorAdmin, setColorAdmin] = useState('#3858E9');
 	const [surfaceColor, setSurfaceColor] = useState('#ffffff');
+	const [controlSurfaceColor, setControlSurfaceColor] = useState(null);
 	const [colorText, setColorText] = useState(null);
 	const [controlBorderRadius, setControlBorderRadius] = useState('4px');
 	const [controlHeight, setControlHeight] = useState('30px');
@@ -65,6 +66,7 @@ function Themer() {
 		controlBorderColor,
 		controlHeight,
 		surfaceColor: !isDark ? surfaceColor : null,
+		controlSurfaceColor,
 		fontFamily,
 		fontSize,
 		colorDivider: controlBorderColor,
@@ -105,6 +107,7 @@ function Themer() {
 												</ControlLabel>
 												<ColorInput
 													value={colorText}
+													fallback="#000000"
 													onChange={setColorText}
 												/>
 											</ControlGroup>
@@ -115,6 +118,18 @@ function Themer() {
 												<ColorInput
 													value={surfaceColor}
 													onChange={setSurfaceColor}
+												/>
+											</ControlGroup>
+											<ControlGroup>
+												<ControlLabel>
+													Control Surface
+												</ControlLabel>
+												<ColorInput
+													value={controlSurfaceColor}
+													fallback="#ffffff"
+													onChange={
+														setControlSurfaceColor
+													}
 												/>
 											</ControlGroup>
 										</Spacer>
