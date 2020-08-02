@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';
-import { useTabsContext } from './Tabs.utils';
 
 const { TabIndicatorView } = styles;
 

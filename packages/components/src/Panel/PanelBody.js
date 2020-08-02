@@ -2,8 +2,8 @@ import { connect } from '@wp-g2/provider';
 import React from 'react';
 
 import { CollapsibleContent } from '../Collapsible';
+import { usePanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
-import { usePanelContext } from './Panel.utils';
 
 const { PanelBodyView } = styles;
 

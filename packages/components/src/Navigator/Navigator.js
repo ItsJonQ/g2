@@ -1,7 +1,7 @@
 import { connect } from '@wp-g2/provider';
 import React from 'react';
 
-import { NavigatorContext } from './Navigator.utils';
+import { NavigatorContext } from './Navigator.Context';
 import NavigatorRouter from './NavigatorRouter';
 
 function Navigator({

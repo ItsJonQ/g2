@@ -2,7 +2,7 @@ import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { useMenuState } from 'reakit/Menu';
 
-import { DropdownContext } from './Dropdown.utils';
+import { DropdownContext } from './Dropdown.Context';
 
 function Dropdown({
 	animated = true,

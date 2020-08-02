@@ -3,10 +3,8 @@ import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
 
 import { View } from '../View';
-import {
-	useCurrentPanelIndex,
-	useNavigationStackContext,
-} from './NavigationStack.utils';
+import { useNavigationStackContext } from './NavigationStack.Context';
+import { useCurrentPanelIndex } from './NavigationStack.utils';
 
 function NavigationStackScreens({ children, forwardedRef, ...props }) {
 	const currentIndex = useCurrentPanelIndex();

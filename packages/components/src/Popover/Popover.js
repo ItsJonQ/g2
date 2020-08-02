@@ -2,7 +2,7 @@ import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { usePopoverState } from 'reakit/Popover';
 
-import { PopoverContext } from './Popover.utils';
+import { PopoverContext } from './Popover.Context';
 
 function Popover({
 	animated = true,

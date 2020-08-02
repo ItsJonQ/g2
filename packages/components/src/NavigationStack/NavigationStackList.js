@@ -3,7 +3,7 @@ import React from 'react';
 import { Tab, TabList } from 'reakit/Tab';
 import { VisuallyHidden } from 'reakit/VisuallyHidden';
 
-import { useNavigationStackContext } from './NavigationStack.utils';
+import { useNavigationStackContext } from './NavigationStack.Context';
 
 function NavigationStackList() {
 	const { tab } = useNavigationStackContext();

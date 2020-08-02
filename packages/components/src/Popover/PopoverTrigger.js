@@ -2,7 +2,7 @@ import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { PopoverDisclosure } from 'reakit/Popover';
 
-import { usePopoverContext } from './Popover.utils';
+import { usePopoverContext } from './Popover.Context';
 
 function PopoverTrigger({ forwardedRef, ...props }) {
 	const { popover } = usePopoverContext();

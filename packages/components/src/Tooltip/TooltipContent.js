@@ -4,8 +4,8 @@ import React from 'react';
 import { Tooltip as ReakitTooltip } from 'reakit/Tooltip';
 
 import { View } from '../View';
+import { useTooltipContext } from './Tooltip.Context';
 import * as styles from './Tooltip.styles';
-import { useTooltipContext } from './Tooltip.utils';
 
 const { TooltipPopoverView } = styles;
 

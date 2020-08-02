@@ -29,7 +29,8 @@
     "react-spring": "^8.0.27",
     "react-textarea-autosize": "^8.2.0",
     "react-transition-group": "^4.4.1",
-    "reakit": "^1.1.1"
+    "reakit": "^1.1.1",
+    "zustand": "^2.2.3"
   },
   "devDependencies": {
     "@wordpress/icons": "^2.4.0"

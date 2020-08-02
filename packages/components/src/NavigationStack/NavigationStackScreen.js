@@ -4,10 +4,8 @@ import React, { useRef } from 'react';
 import { TabPanel } from 'reakit/Tab';
 
 import { View } from '../View';
-import {
-	useCurrentPanelNode,
-	useNavigationStackContext,
-} from './NavigationStack.utils';
+import { useNavigationStackContext } from './NavigationStack.Context';
+import { useCurrentPanelNode } from './NavigationStack.utils';
 
 function NavigationStackScreen({ children, forwardedRef, ...props }) {
 	const { __isRendered, tab } = useNavigationStackContext();

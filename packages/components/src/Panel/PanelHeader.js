@@ -7,8 +7,8 @@ import { CollapsibleTrigger, useCollapsibleContext } from '../Collapsible';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
+import { usePanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
-import { usePanelContext } from './Panel.utils';
 
 function PanelHeader({ children, className, title, ...props }) {
 	const { disclosure } = useCollapsibleContext();

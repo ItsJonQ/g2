@@ -3,7 +3,7 @@ import React from 'react';
 import { useDisclosureState } from 'reakit/Disclosure';
 
 import { View } from '../View';
-import { CollapsibleContext } from './Collapsible.utils';
+import { CollapsibleContext } from './Collapsible.Context';
 
 function Collapsible({ children, visible, ...props }) {
 	const disclosure = useDisclosureState({

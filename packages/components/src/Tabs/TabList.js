@@ -4,8 +4,8 @@ import React from 'react';
 import { TabList as ReakitTabList } from 'reakit/Tab';
 
 import TabIndicator from './TabIndicator';
+import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';
-import { useTabsContext } from './Tabs.utils';
 const { TabListView } = styles;
 
 function TabList({ children, forwardedRef, label = 'Tabs', ...props }) {

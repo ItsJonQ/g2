@@ -3,8 +3,8 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 import { Menu as ReakitMenu, useMenuState } from 'reakit/Menu';
 
+import { MenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
-import { MenuContext } from './Menu.utils';
 
 function Menu({ children, className, forwardedRef, menu: menuProp, ...props }) {
 	const baseMenuState = useMenuState({ visible: true });

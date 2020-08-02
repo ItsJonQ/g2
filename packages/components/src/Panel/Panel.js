@@ -3,8 +3,8 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Collapsible } from '../Collapsible';
+import { PanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
-import { PanelContext } from './Panel.utils';
 
 function Panel({ animated = true, className, isSeamless = false, ...props }) {
 	const classes = cx([styles.Panel, className]);

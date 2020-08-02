@@ -2,7 +2,7 @@ import { connect } from '@wp-g2/provider';
 import React from 'react';
 import { useTooltipState } from 'reakit/Tooltip';
 
-import { TooltipContext } from './Tooltip.utils';
+import { TooltipContext } from './Tooltip.Context';
 
 function Tooltip({
 	animated = true,

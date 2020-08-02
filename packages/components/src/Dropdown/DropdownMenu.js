@@ -5,8 +5,8 @@ import React from 'react';
 import { Card } from '../Card';
 import { Menu } from '../Menu';
 import { Scrollable } from '../Scrollable';
+import { useDropdownContext } from './Dropdown.Context';
 import * as styles from './Dropdown.styles';
-import { useDropdownContext } from './Dropdown.utils';
 
 function DropdownMenu({
 	children,

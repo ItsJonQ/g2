@@ -3,10 +3,8 @@ import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Button } from '../Button';
-import {
-	useIsNextEnabled,
-	useNavigationStackContext,
-} from './NavigationStack.utils';
+import { useNavigationStackContext } from './NavigationStack.Context';
+import { useIsNextEnabled } from './NavigationStack.utils';
 
 function NavigationStackScreenNext({ onClick = noop, ...props }) {
 	const { tab } = useNavigationStackContext();

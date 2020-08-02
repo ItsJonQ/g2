@@ -4,8 +4,8 @@ import React from 'react';
 import { Popover as ReakitPopover } from 'reakit/Popover';
 
 import { Card } from '../Card';
+import { usePopoverContext } from './Popover.Context';
 import * as styles from './Popover.styles';
-import { usePopoverContext } from './Popover.utils';
 
 function PopoverContent({
 	children,

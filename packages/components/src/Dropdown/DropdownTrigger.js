@@ -3,7 +3,7 @@ import React from 'react';
 import { MenuButton } from 'reakit/Menu';
 
 import { Button } from '../Button';
-import { useDropdownContext } from './Dropdown.utils';
+import { useDropdownContext } from './Dropdown.Context';
 
 function DropdownTrigger({ forwardedRef, ...props }) {
 	const { menu } = useDropdownContext();

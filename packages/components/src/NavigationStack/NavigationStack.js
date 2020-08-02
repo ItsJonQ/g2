@@ -3,10 +3,8 @@ import { useUpdateEffect } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import { useTabState } from 'reakit/Tab';
 
-import {
-	NavigationStackContext,
-	usePositionPanels,
-} from './NavigationStack.utils';
+import { NavigationStackContext } from './NavigationStack.Context';
+import { usePositionPanels } from './NavigationStack.utils';
 import NavigationStackList from './NavigationStackList';
 
 function NavigationStackController() {

@@ -5,6 +5,7 @@ export * from './AnimatedView';
 // Components
 export * from './Background';
 export * from './BaseField';
+export * from './BaseModal';
 export * from './Button';
 export * from './Card';
 export * from './Collapsible';

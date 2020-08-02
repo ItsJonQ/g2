@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { FlexItem } from '../Flex';
-import { useControlGroupContext } from './ControlGroup.utils';
+import { useControlGroupContext } from './ControlGroup.Context';
 import * as styles from './ControlGroupItem.styles';
 
 function ControlGroupItem({ className, ...props }) {

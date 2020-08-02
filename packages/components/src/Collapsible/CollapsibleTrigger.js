@@ -3,8 +3,8 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 import { Disclosure } from 'reakit/Disclosure';
 
+import { useCollapsibleContext } from './Collapsible.Context';
 import * as styles from './Collapsible.styles';
-import { useCollapsibleContext } from './Collapsible.utils';
 
 function CollapsibleTrigger({ className, forwardedRef, ...props }) {
 	const { disclosure } = useCollapsibleContext();

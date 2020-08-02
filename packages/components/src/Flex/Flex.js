@@ -4,8 +4,8 @@ import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import { View } from '../View';
+import { FlexContext } from './Flex.Context';
 import * as styles from './Flex.styles';
-import { FlexContext } from './Flex.utils';
 import FlexItem from './FlexItem';
 
 export function Flex({

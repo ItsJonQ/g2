@@ -3,8 +3,8 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 import { TooltipReference } from 'reakit/Tooltip';
 
+import { useTooltipContext } from './Tooltip.Context';
 import * as styles from './Tooltip.styles';
-import { useTooltipContext } from './Tooltip.utils';
 
 function TooltipTrigger({ as = 'span', className, forwardedRef, ...props }) {
 	const { tooltip } = useTooltipContext();

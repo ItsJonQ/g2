@@ -1,8 +1,4 @@
-import { createContext, useContext } from 'react';
-
-export const NavigationStackContext = createContext({});
-export const useNavigationStackContext = () =>
-	useContext(NavigationStackContext);
+import { useNavigationStackContext } from './NavigationStack.Context';
 
 export function usePositionPanels() {
 	const {

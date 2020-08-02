@@ -4,8 +4,8 @@ import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import { Flex } from '../Flex';
+import { ControlGroupContext } from './ControlGroup.Context';
 import * as styles from './ControlGroup.styles';
-import { ControlGroupContext } from './ControlGroup.utils';
 import ControlGroupItem from './ControlGroupItem';
 
 function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {

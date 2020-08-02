@@ -3,8 +3,8 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 import { MenuItem as ReakitMenuItem } from 'reakit/Menu';
 
+import { useMenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
-import { useMenuContext } from './Menu.utils';
 
 function MenuItem({ className, forwardedRef, ...props }) {
 	const { menu } = useMenuContext();
