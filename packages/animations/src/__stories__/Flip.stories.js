@@ -52,36 +52,33 @@ const App = () => {
 				</Flex>
 			</Spacer>
 			<Grid columns={3}>
-				<AnimatePresence initial={false}>
-					{items.map((item, index) => (
-						<Card
-							animate={{
-								opacity: 1,
-								y: 0,
-							}}
-							as={motion.div}
-							exit={{
-								opacity: 0,
-								transition: { duration: 0.2 },
-							}}
-							initial={{ opacity: 0, y: 10 }}
-							key={item.id}
-							layout
-						>
-							<View css={{ padding: 8 }}>
-								<Flex>
-									<Text>{item.name}</Text>
-									<Button
-										icon={<View>X</View>}
-										onClick={() => remove(item.id)}
-										size="small"
-										variant="tertiary"
-									/>
-								</Flex>
-							</View>
-						</Card>
-					))}
-				</AnimatePresence>
+				{items.map((item, index) => (
+					<Card
+						animate={{
+							opacity: 1,
+							y: 0,
+						}}
+						as={motion.div}
+						exit={{
+							opacity: 0,
+						}}
+						initial={{ opacity: 0, y: 10 }}
+						key={item.id}
+						layout
+					>
+						<View css={{ padding: 8 }}>
+							<Flex>
+								<Text>{item.name}</Text>
+								<Button
+									icon={<View>X</View>}
+									onClick={() => remove(item.id)}
+									size="small"
+									variant="tertiary"
+								/>
+							</Flex>
+						</View>
+					</Card>
+				))}
 			</Grid>
 		</View>
 	);
