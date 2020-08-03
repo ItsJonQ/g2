@@ -37,6 +37,7 @@ export * from './Select';
 export * from './Separator';
 export * from './Slider';
 export * from './SlotFill';
+export * from './Sortable';
 export * from './Spacer';
 export * from './Spinner';
 export * from './Stack';

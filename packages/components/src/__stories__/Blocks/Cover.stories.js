@@ -1,12 +1,15 @@
 import * as icons from '@wordpress/icons';
 import { useControlledState } from '@wp-g2/utils';
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React from 'react';
 
-import { ControlGroup, Sidebar } from '../../__fixtures__/components';
+import {
+	ContextPopover,
+	ControlGroup,
+	Sidebar,
+	SuffixLabel,
+} from '../../__fixtures__/components';
 import {
 	Button,
-	CardBody,
-	CardHeader,
 	ColorField,
 	ColorPicker,
 	ControlLabel,
@@ -18,65 +21,18 @@ import {
 	PanelBody,
 	PanelHeader,
 	Placeholder,
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
 	SegmentedControl,
 	Select,
 	Slider,
 	Spacer,
-	Text,
 	TextField,
-	View,
 } from '../../index';
 
 export default {
 	title: 'Examples/Blocks',
 };
 
-const SuffixLabel = (props) => (
-	<Text
-		isBlock
-		size={10}
-		variant="muted"
-		{...props}
-		css={{ userSelect: 'none' }}
-	/>
-);
-
 const UnitSelect = () => <Select options={[{ label: 'PX', value: 'px' }]} />;
-
-const ContextPopover = ({ children, title, trigger }) => {
-	const [offset, setOffset] = useState(0);
-	const triggerRef = useRef();
-
-	useLayoutEffect(() => {
-		requestAnimationFrame(() => {
-			const node = triggerRef.current;
-			if (node) {
-				setOffset(node.offsetLeft);
-			}
-		});
-	}, []);
-
-	return (
-		<Popover placement="right-start" unstable_offset={[0, 12]}>
-			<PopoverTrigger
-				as={View}
-				css={{ outline: 'none' }}
-				ref={triggerRef}
-			>
-				{trigger}
-			</PopoverTrigger>
-			<PopoverContent maxWidth={280} style={{ right: offset }}>
-				<CardHeader>
-					<Text weight={600}>{title}</Text>
-				</CardHeader>
-				<CardBody>{children}</CardBody>
-			</PopoverContent>
-		</Popover>
-	);
-};
 
 // TODO: Sidebar/Panel Popovers HAVE to be easier.
 const ColorControl = ({ color: colorProp }) => {

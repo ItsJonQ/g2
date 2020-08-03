@@ -78,9 +78,9 @@ function createStyled(tagName, options = {}) {
 }
 
 function getDisplayName(tagName) {
-	const displayName = is.string(tagName)
+	let displayName = is.string(tagName)
 		? tagName
-		: tagName.displayName || tagName.name || 'Component';
+		: tagName?.displayName || tagName?.name || 'Component';
 
 	return displayName;
 }

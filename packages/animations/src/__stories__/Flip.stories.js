@@ -1,7 +1,6 @@
 import {
 	Button,
 	Card,
-	Divider,
 	Flex,
 	Grid,
 	Spacer,
@@ -12,7 +11,7 @@ import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
 
-import { AnimatePresence, motion } from '../index';
+import { motion } from '../index';
 
 export default {
 	title: 'Animations/Flip',
