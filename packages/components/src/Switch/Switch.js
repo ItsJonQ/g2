@@ -20,6 +20,7 @@ function Switch({
 	checked: checkedProp,
 	className,
 	disabled,
+	defaultValue,
 	forwardedRef,
 	onBlur = noop,
 	onChange = noop,
@@ -31,7 +32,7 @@ function Switch({
 }) {
 	const [isFocused, setIsFocused] = useState(false);
 	const [checked, setChecked] = useControlledState(checkedProp, {
-		initial: false,
+		initial: defaultValue || false,
 	});
 	const id = useUniqueId(Switch, 'switch', props.id);
 	const Control = ControlComponent[type] || Checkbox;

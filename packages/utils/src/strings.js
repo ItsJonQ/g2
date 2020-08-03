@@ -1,4 +1,5 @@
 export { default as kebabCase } from 'lodash.kebabcase';
+export { default as capitalize } from 'lodash.capitalize';
 
 /**
  * Repeats a character x amount of times.

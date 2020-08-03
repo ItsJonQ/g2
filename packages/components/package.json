@@ -19,6 +19,7 @@
     "@wp-g2/provider": "^0.0.18",
     "@wp-g2/styles": "^0.0.18",
     "@wp-g2/utils": "^0.0.18",
+    "@humanmade/react-slot-fill": "^0.0.4",
     "history": "^4.9.0",
     "query-string": "^6.13.1",
     "react-color": "^2.18.1",

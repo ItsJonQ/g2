@@ -1,6 +1,6 @@
 import { connect } from '@wp-g2/provider';
 import { cx, ns } from '@wp-g2/styles';
-import { mergeRefs, noop } from '@wp-g2/utils';
+import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -14,6 +14,7 @@ function TextField({
 	align,
 	className,
 	disabled,
+	defaultValue,
 	forwardedRef,
 	gap = 2.5,
 	isRounded = false,
@@ -27,8 +28,12 @@ function TextField({
 	prefix,
 	size = 'medium',
 	suffix,
+	value: valueProp,
 	...props
 }) {
+	const [value, setValue] = useControlledState(valueProp, {
+		initial: defaultValue,
+	});
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
 
@@ -46,7 +51,11 @@ function TextField({
 		setIsFocused(true);
 	};
 
-	const handleOnChange = (event) => onChange(event.target.value, { event });
+	const handleOnChange = (event) => {
+		const next = event.target.value;
+		setValue(next);
+		onChange(event.target.value, { event });
+	};
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
@@ -80,6 +89,7 @@ function TextField({
 					onChange={handleOnChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([inputRef, forwardedRef])}
+					value={value}
 					{...props}
 					{...ns('TextFieldInput')}
 				/>

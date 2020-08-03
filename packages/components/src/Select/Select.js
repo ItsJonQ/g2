@@ -1,6 +1,6 @@
 import { connect } from '@wp-g2/provider';
 import { cx } from '@wp-g2/styles';
-import { mergeRefs, noop } from '@wp-g2/utils';
+import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 
@@ -16,14 +16,19 @@ const { InputView } = TextFieldStyles;
 
 function Select({
 	className,
+	defaultValue,
 	forwardedRef,
 	onBlur = noop,
 	onChange = noop,
 	onFocus = noop,
 	options = [],
 	size,
+	value: valueProp,
 	...props
 }) {
+	const [value, setValue] = useControlledState(valueProp, {
+		initial: defaultValue,
+	});
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
 
@@ -41,7 +46,11 @@ function Select({
 		setIsFocused(true);
 	};
 
-	const handleOnChange = (event) => onChange(event.target.value, { event });
+	const handleOnChange = (event) => {
+		const next = event.target.value;
+		setValue(next);
+		onChange(event.target.value, { event });
+	};
 
 	const classes = cx([styles.base, className]);
 	const inputCx = cx([styles.select, TextFieldStyles[size]]);
@@ -63,6 +72,7 @@ function Select({
 					onChange={handleOnChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([forwardedRef, inputRef])}
+					value={value}
 				>
 					{options.map((option, index) => {
 						const { id, label, value, ...optionProps } = option;
