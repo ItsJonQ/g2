@@ -101,7 +101,7 @@ const GREEN_COLORS = {
 	green500: '#46b450',
 	green600: '#399648',
 	green700: '#328540',
-	green800: '##2c7337',
+	green800: '#2c7337',
 	green900: '#25612f',
 	greenRgba10: 'rgba(70, 180, 80, 0.1)',
 	greenRgba20: 'rgba(70, 180, 80, 0.2)',
@@ -173,11 +173,17 @@ const G2_COLORS = {
 
 const BACKGROUND_COLOR_PROPS = {
 	colorBackgroundBlue: get('blueRgba10'),
+	colorBackgroundBlueText: get('blue800'),
 	colorBackgroundGreen: get('greenRgba10'),
+	colorBackgroundGreenText: get('green800'),
 	colorBackgroundOrange: get('orangeRgba10'),
+	colorBackgroundOrangeText: get('orange800'),
 	colorBackgroundPurple: get('purpleRgba10'),
+	colorBackgroundPurpleText: get('purple800'),
 	colorBackgroundRed: get('redRgba10'),
+	colorBackgroundRedText: get('red800'),
 	colorBackgroundYellow: get('yellowRgba10'),
+	colorBackgroundYellowText: get('yellow800'),
 };
 
 const COLOR_PROPS = {
@@ -246,11 +252,17 @@ const CONTROL_PROPS = {
 
 const DARK_MODE_PROPS = {
 	colorBackgroundBlue: get('blueRgba20'),
+	colorBackgroundBlueText: get('white'),
 	colorBackgroundGreen: get('greenRgba20'),
+	colorBackgroundGreenText: get('white'),
 	colorBackgroundOrange: get('orangeRgba20'),
+	colorBackgroundOrangeText: get('white'),
 	colorBackgroundPurple: get('purpleRgba20'),
+	colorBackgroundPurpleText: get('white'),
 	colorBackgroundRed: get('redRgba20'),
+	colorBackgroundRedText: get('white'),
 	colorBackgroundYellow: get('yellowRgba20'),
+	colorBackgroundYellowText: get('white'),
 	colorDivider: 'rgba(255, 255, 255, 0.1)',
 	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',

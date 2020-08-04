@@ -35,7 +35,7 @@ export function getBackgroundColor(color) {
 			)} 25%, transparent 25%, transparent 75%, ${get(
 				`red${colorBlindShade}`,
 			)} 75%, ${get(`red${colorBlindShade}`)})`,
-			backgroundSize: '10px',
+			backgroundSize: '10px 10px',
 		});
 	}
 
@@ -51,7 +51,7 @@ export function getBackgroundColor(color) {
 			)} 25%, transparent 25%, transparent 75%, ${get(
 				`yellow${colorBlindShade}`,
 			)} 75%, ${get(`yellow${colorBlindShade}`)})`,
-			backgroundSize: '10px',
+			backgroundSize: '10px 10px',
 		});
 	}
 
