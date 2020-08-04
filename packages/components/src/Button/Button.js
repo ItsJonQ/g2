@@ -14,6 +14,7 @@ import LoadingOverlay from './ButtonLoadingOverlay';
 function Button({
 	children,
 	className,
+	currentColor,
 	elevation = 0,
 	elevationActive,
 	elevationFocus,
@@ -54,6 +55,7 @@ function Button({
 		controlGroupStyles,
 		isRounded && styles.rounded,
 		isNarrow && styles.narrow,
+		currentColor && styles.currentColor,
 	]);
 
 	return (
