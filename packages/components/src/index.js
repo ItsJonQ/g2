@@ -28,6 +28,7 @@ export * from './HelpTip';
 export * from './Icon';
 export * from './IncrementalControl';
 export * from './Link';
+export * from './List';
 export * from './Lozenge';
 export * from './MediaQuery';
 export * from './Menu';
