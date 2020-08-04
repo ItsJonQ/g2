@@ -1,7 +1,7 @@
+import { RadioGroup, useRadioState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { mergeRefs, useResizeAware } from '@wp-g2/utils';
 import React, { useRef } from 'react';
-import { RadioGroup, useRadioState } from 'reakit/Radio';
 
 import { View } from '../View';
 import * as styles from './SegmentedControl.styles';

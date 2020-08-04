@@ -1,8 +1,8 @@
+import { Button as BaseButton } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { cx, ns } from '@wp-g2/styles';
 import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
-import { Button as BaseButton } from 'reakit/Button';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { Elevation } from '../Elevation';

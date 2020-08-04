@@ -1,8 +1,8 @@
+import { Separator } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { css, toPx } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
-import { Separator } from 'reakit/Separator';
 
 import * as styles from './Divider.styles';
 

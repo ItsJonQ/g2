@@ -1,7 +1,7 @@
+import { TabPanel } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { mergeRefs } from '@wp-g2/utils';
 import React, { useRef } from 'react';
-import { TabPanel } from 'reakit/Tab';
 
 import { View } from '../View';
 import { useNavigationStackContext } from './NavigationStack.Context';

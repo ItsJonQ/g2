@@ -1,7 +1,7 @@
+import { Tab, TabList } from '@wp-g2/a11y';
+import { VisuallyHidden } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { Tab, TabList } from 'reakit/Tab';
-import { VisuallyHidden } from 'reakit/VisuallyHidden';
 
 import { useNavigationStackContext } from './NavigationStack.Context';
 

@@ -1,6 +1,6 @@
+import { PopoverDisclosure } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { PopoverDisclosure } from 'reakit/Popover';
 
 import { usePopoverContext } from './Popover.Context';
 

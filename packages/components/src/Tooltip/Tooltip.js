@@ -1,6 +1,6 @@
+import { useTooltipState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { useTooltipState } from 'reakit/Tooltip';
 
 import { TooltipContext } from './Tooltip.Context';
 

@@ -1,7 +1,7 @@
+import { useTabState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { useUpdateEffect } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
-import { useTabState } from 'reakit/Tab';
 
 import { NavigationStackContext } from './NavigationStack.Context';
 import { usePositionPanels } from './NavigationStack.utils';

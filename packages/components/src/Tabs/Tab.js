@@ -1,6 +1,6 @@
+import { Tab as ReakitTab } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { Tab as ReakitTab } from 'reakit/Tab';
 
 import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';

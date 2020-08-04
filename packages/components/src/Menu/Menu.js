@@ -1,7 +1,7 @@
+import { Menu as ReakitMenu, useMenuState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
-import { Menu as ReakitMenu, useMenuState } from 'reakit/Menu';
 
 import { MenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';

@@ -1,10 +1,10 @@
+import { Radio } from '@wp-g2/a11y';
+import { Checkbox } from '@wp-g2/a11y';
+import { VisuallyHidden } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { ns } from '@wp-g2/styles';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
-import { Checkbox } from 'reakit/Checkbox';
-import { Radio } from 'reakit/Radio';
-import { VisuallyHidden } from 'reakit/VisuallyHidden';
 
 import { useFormGroupContext } from '../FormGroup';
 import * as styles from './Switch.styles';

@@ -1,6 +1,6 @@
+import { useDisclosureState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import React from 'react';
-import { useDisclosureState } from 'reakit/Disclosure';
 
 import { View } from '../View';
 import { CollapsibleContext } from './Collapsible.Context';

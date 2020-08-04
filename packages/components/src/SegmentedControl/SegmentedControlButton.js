@@ -1,7 +1,7 @@
+import { Radio } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/provider';
 import { ns } from '@wp-g2/styles';
 import React from 'react';
-import { Radio } from 'reakit/Radio';
 
 import * as styles from './SegmentedControl.styles';
 
