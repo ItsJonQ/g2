@@ -11,13 +11,13 @@ These components (and their sub-systems) have been uniquely developed to meet th
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
--   [Getting Start](#getting-start)
+-   [Getting Started](#getting-started)
 -   [Goal](#goal)
 -   [Open for Feedback](#open-for-feedback)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Getting Start
+## Getting Started
 
 Install all the dependencies by running:
 
