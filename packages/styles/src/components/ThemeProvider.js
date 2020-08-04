@@ -4,6 +4,24 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 
 import { transformValuesToVariables } from '../theme/utils';
 
+function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
+	useLayoutEffect(() => {
+		if (!is.defined(isColorBlind)) return;
+
+		let target = document.documentElement;
+
+		if (!isGlobal && ref.current) {
+			target = ref.current;
+		}
+
+		if (isColorBlind) {
+			target.setAttribute('data-system-ui-color-blind-mode', 'true');
+		} else {
+			target.setAttribute('data-system-ui-color-blind-mode', 'false');
+		}
+	}, [isGlobal, isColorBlind, ref]);
+}
+
 function useDarkMode({ isDark, isGlobal = true, ref }) {
 	useLayoutEffect(() => {
 		if (!is.defined(isDark)) return;
@@ -67,6 +85,7 @@ export function ThemeProvider({
 	children,
 	isGlobal = true,
 	isDark,
+	isColorBlind,
 	isHighContrast,
 	theme = {},
 	...props
@@ -76,6 +95,7 @@ export function ThemeProvider({
 
 	useHighContrastMode({ isGlobal, isHighContrast, ref: nodeRef });
 	useDarkMode({ isDark, isGlobal, ref: nodeRef });
+	useColorBlindMode({ isColorBlind, isGlobal, ref: nodeRef });
 
 	return (
 		<BaseThemeProvider theme={theme}>

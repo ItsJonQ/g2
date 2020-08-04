@@ -40,6 +40,7 @@ const LIGHT_GRAY_COLORS = {
 
 const RED_COLORS = {
 	red100: '#fcebeb',
+	red150: '#F2D7D7',
 	red200: '#f1adad',
 	red300: '#ea8484',
 	red400: '#e35b5b',
@@ -52,6 +53,7 @@ const RED_COLORS = {
 
 const ORANGE_COLORS = {
 	orange100: '#fef1ea',
+	orange150: '#F4DDD6',
 	orange200: '#fbc5a9',
 	orange300: '#f9a87e',
 	orange400: '#f78b53',
@@ -64,6 +66,7 @@ const ORANGE_COLORS = {
 
 const YELLOW_COLORS = {
 	yellow100: '#fff8e6',
+	yellow150: '#F5E4D2',
 	yellow200: '#ffe399',
 	yellow300: '#ffd566',
 	yellow400: '#ffc733',
@@ -76,6 +79,7 @@ const YELLOW_COLORS = {
 
 const GREEN_COLORS = {
 	green100: '#edf8ee',
+	green150: '#D9EEDA',
 	green200: '#b5e1b9',
 	green300: '#90d296',
 	green400: '#6bc373',
@@ -88,6 +92,7 @@ const GREEN_COLORS = {
 
 const PURPLE_COLORS = {
 	purple100: '#f3f1f8',
+	purple150: '#E9DDE4',
 	purple200: '#cdc5e1',
 	purple300: '#9b8bc3',
 	purple400: '#9b8bc3',
@@ -100,6 +105,7 @@ const PURPLE_COLORS = {
 
 const BLUE_COLORS = {
 	blue100: '#e6f6fb',
+	blue150: '#D2E2F1',
 	blue200: '#99d9ed',
 	blue300: '#66c6e4',
 	blue400: '#33b3db',
@@ -135,8 +141,18 @@ const G2_COLORS = {
 	white: '#ffffff',
 };
 
+const BACKGROUND_COLOR_PROPS = {
+	colorBackgroundBlue: get('blue200'),
+	colorBackgroundGreen: get('green200'),
+	colorBackgroundOrange: get('orange200'),
+	colorBackgroundPurple: get('purple200'),
+	colorBackgroundRed: get('red200'),
+	colorBackgroundYellow: get('yellow200'),
+};
+
 const COLOR_PROPS = {
 	...WORDPRESS_COLORS,
+	...BACKGROUND_COLOR_PROPS,
 	colorAdmin: get('blueberry'),
 	colorBodyBackground: get('white'),
 	colorBodyBackgroundDark: '#18191A',
@@ -255,6 +271,8 @@ export const GLOBAL_CSS_VARIABLES = transformValuesToVariablesString(
 export const DARK_MODE_ATTR = '[data-system-ui-mode="dark"]';
 export const HIGH_CONTRAST_MODE_MODE_ATTR =
 	'[data-system-ui-contrast-mode="high"]';
+
+export const COLOR_BLIND_MODE_ATTR = '[data-system-ui-color-blind-mode="true"]';
 
 export const GLOBAL_DARK_MODE_CSS_VARIABLES = transformValuesToVariablesString(
 	DARK_MODE_ATTR,
