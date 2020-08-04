@@ -15,15 +15,13 @@ function Surface({
 	isBackground,
 	...props
 }) {
-	const borderStyle = `1px solid ${get('surfaceBorderColor')}`;
-
 	/* eslint-disable */
-	styles.borders = css({
-		borderBottom: borderBottom && borderStyle,
-		borderTop: borderTop && borderStyle,
-		borderLeft: borderLeft && borderStyle,
-		borderRight: borderRight && borderStyle,
-		border: border && borderStyle,
+	styles.borders = styles.getBorders({
+		border,
+		borderBottom,
+		borderLeft,
+		borderRight,
+		borderTop,
 	});
 	/* eslint-enable */
 

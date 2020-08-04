@@ -3,6 +3,7 @@ export * from './BaseView';
 export * from './View';
 export * from './AnimatedView';
 // Components
+export * from './ArrowIndicator';
 export * from './Background';
 export * from './BaseField';
 export * from './BaseModal';

@@ -1,11 +1,10 @@
 import { connect } from '@wp-g2/provider';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
+import { ArrowIndicator } from '../ArrowIndicator';
 import { CollapsibleTrigger, useCollapsibleContext } from '../Collapsible';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
-import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { usePanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
@@ -16,7 +15,7 @@ function PanelHeader({ children, className, title, ...props }) {
 	const { visible } = disclosure;
 
 	const content = title ? <Text weight={500}>{title}</Text> : children;
-	const icon = visible ? <FiChevronUp /> : <FiChevronDown />;
+	const direction = visible ? 'down' : 'right';
 
 	const classes = cx([
 		styles.PanelHeader,
@@ -26,12 +25,12 @@ function PanelHeader({ children, className, title, ...props }) {
 
 	return (
 		<CollapsibleTrigger as={Flex} className={classes} {...props}>
-			<FlexBlock>{content}</FlexBlock>
 			<FlexItem>
 				<Text isBlock>
-					<Icon icon={icon} />
+					<ArrowIndicator direction={direction} size={5} width={5} />
 				</Text>
 			</FlexItem>
+			<FlexBlock>{content}</FlexBlock>
 		</CollapsibleTrigger>
 	);
 }
