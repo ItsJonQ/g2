@@ -59,3 +59,4 @@ export * from './TextInput';
 export * from './Tooltip';
 export * from './Truncate';
 export * from './Viewport';
+export * from './VisuallyHidden';

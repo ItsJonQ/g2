@@ -1,8 +1,8 @@
 import { Tab, TabList } from '@wp-g2/a11y';
-import { VisuallyHidden } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
 import React from 'react';
 
+import { VisuallyHidden } from '../VisuallyHidden';
 import { useNavigationStackContext } from './NavigationStack.Context';
 
 function NavigationStackList() {
