@@ -6,3 +6,4 @@ export * from './components';
 export * from './styled';
 export * from './hooks';
 export * from './mixins';
+export { getIsReducedMotion } from './theme';

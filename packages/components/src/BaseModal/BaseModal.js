@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { css, cx, space } from '@wp-g2/styles';
+import { css, cx, reducedMotion, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 import { Dialog, DialogBackdrop, useDialogState } from 'reakit/Dialog';
@@ -45,6 +45,12 @@ function BaseModal({
 		&[data-enter] {
 			opacity: 1;
 		}
+
+		${reducedMotion(`
+			&[data-leave] {
+				display: none;
+			}
+		`)};
 	`;
 
 	const dialogWrapperStyles = css`

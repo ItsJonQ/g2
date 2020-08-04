@@ -58,6 +58,24 @@ function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
 	}, [isGlobal, isHighContrast, ref]);
 }
 
+function useReducedMotion({ isGlobal = true, isReducedMotion, ref }) {
+	useLayoutEffect(() => {
+		if (!is.defined(isReducedMotion)) return;
+
+		let target = document.documentElement;
+
+		if (!isGlobal && ref.current) {
+			target = ref.current;
+		}
+
+		if (isReducedMotion) {
+			target.setAttribute('data-system-ui-reduced-motion-mode', 'true');
+		} else {
+			target.setAttribute('data-system-ui-reduced-motion-mode', 'false');
+		}
+	}, [isGlobal, isReducedMotion, ref]);
+}
+
 function useThemeStyles({ isGlobal = true, theme = {} }) {
 	const themeRef = useRef();
 	const [themeStyles, setThemeStyles] = useState({});
@@ -86,6 +104,7 @@ export function ThemeProvider({
 	isGlobal = true,
 	isDark,
 	isColorBlind,
+	isReducedMotion,
 	isHighContrast,
 	theme = {},
 	...props
@@ -93,9 +112,10 @@ export function ThemeProvider({
 	const nodeRef = useRef();
 	const themeStyles = useThemeStyles({ isGlobal, theme });
 
-	useHighContrastMode({ isGlobal, isHighContrast, ref: nodeRef });
-	useDarkMode({ isDark, isGlobal, ref: nodeRef });
 	useColorBlindMode({ isColorBlind, isGlobal, ref: nodeRef });
+	useDarkMode({ isDark, isGlobal, ref: nodeRef });
+	useHighContrastMode({ isGlobal, isHighContrast, ref: nodeRef });
+	useReducedMotion({ isGlobal, isReducedMotion, ref: nodeRef });
 
 	return (
 		<BaseThemeProvider theme={theme}>

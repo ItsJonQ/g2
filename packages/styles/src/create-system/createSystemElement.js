@@ -4,7 +4,7 @@ import React, { forwardRef } from 'react';
 
 import { useHydrateGlobalStyles } from '../hooks';
 import { css, cx } from '../style-system';
-import { THEME } from '../theme';
+import { REDUCED_MOTION_MODE_ATTR, THEME } from '../theme';
 
 const shouldForwardProp = isPropValid;
 
@@ -19,6 +19,9 @@ const styles = {
 	}),
 	reduceMotion: css`
 		@media (prefers-reduced-motion) {
+			transition: none !important;
+		}
+		${REDUCED_MOTION_MODE_ATTR} & {
 			transition: none !important;
 		}
 	`,

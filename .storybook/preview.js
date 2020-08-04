@@ -65,6 +65,10 @@ function Themer() {
 		'colorBlindMode',
 		false,
 	);
+	const [isReducedMotion, setIsReducedMotion] = useLocalStorage(
+		'reducedMotionMode',
+		false,
+	);
 
 	const update = (key) => (value) => {
 		setThemeConfig((prev) => ({ ...prev, [key]: value }));
@@ -103,6 +107,7 @@ function Themer() {
 				isDark={isDark}
 				isHighContrast={isHighContrast}
 				isColorBlind={isColorBlind}
+				isReducedMotion={isReducedMotion}
 				theme={theme}
 			/>
 			<Spacer css={{ padding: 8 }} mb={5}>
@@ -249,6 +254,15 @@ function Themer() {
 									checked={!!isColorBlind}
 									onChange={(next) => {
 										setIsColorBlind(next);
+									}}
+								/>
+							</Flex>
+							<Flex>
+								<ControlLabel>Reduced Motion</ControlLabel>
+								<Switch
+									checked={!!isReducedMotion}
+									onChange={(next) => {
+										setIsReducedMotion(next);
 									}}
 								/>
 							</Flex>

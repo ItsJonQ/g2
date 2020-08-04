@@ -43,5 +43,6 @@ export function css(...args) {
 	if (is.plainObject(args[0])) {
 		return compile(responsive(args[0]));
 	}
+
 	return compile(...args);
 }

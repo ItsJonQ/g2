@@ -1,6 +1,6 @@
-import { css, get } from '@wp-g2/styles';
+import { get, styled } from '@wp-g2/styles';
 
-export const PopoverContent = css`
+export const PopoverContentView = styled.div`
 	opacity: 0;
 	outline: none;
 	transform-origin: center center;

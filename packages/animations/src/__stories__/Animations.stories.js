@@ -1,4 +1,5 @@
 import {
+	AnimatedView,
 	Button,
 	Card,
 	Divider,
@@ -11,7 +12,7 @@ import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
 
-import { AnimatePresence, motion } from '../index';
+import { AnimatePresence } from '../index';
 
 export default {
 	title: 'Animations/Mount',
@@ -45,7 +46,7 @@ const App = () => {
 			>
 				<AnimatePresence initial={false}>
 					{items.map((item, index) => (
-						<motion.div
+						<AnimatedView
 							animate={{ height: 'auto', opacity: 1 }}
 							exit={{
 								height: 0,
@@ -67,7 +68,7 @@ const App = () => {
 								</Flex>
 							</View>
 							{index !== items.length - 1 && <Divider m={0} />}
-						</motion.div>
+						</AnimatedView>
 					))}
 				</AnimatePresence>
 			</Card>

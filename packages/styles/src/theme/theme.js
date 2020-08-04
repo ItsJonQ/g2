@@ -321,6 +321,8 @@ export const HIGH_CONTRAST_MODE_MODE_ATTR =
 	'[data-system-ui-contrast-mode="high"]';
 
 export const COLOR_BLIND_MODE_ATTR = '[data-system-ui-color-blind-mode="true"]';
+export const REDUCED_MOTION_MODE_ATTR =
+	'[data-system-ui-reduced-motion-mode="true"]';
 
 export const GLOBAL_DARK_MODE_CSS_VARIABLES = transformValuesToVariablesString(
 	DARK_MODE_ATTR,

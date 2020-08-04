@@ -1,4 +1,5 @@
 import {
+	AnimatedView,
 	Button,
 	Card,
 	Flex,
@@ -10,8 +11,6 @@ import {
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
-
-import { motion } from '../index';
 
 export default {
 	title: 'Animations/Flip',
@@ -57,7 +56,7 @@ const App = () => {
 							opacity: 1,
 							y: 0,
 						}}
-						as={motion.div}
+						as={AnimatedView}
 						exit={{
 							opacity: 0,
 						}}

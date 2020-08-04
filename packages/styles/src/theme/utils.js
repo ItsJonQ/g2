@@ -1,5 +1,7 @@
 import { is, kebabCase } from '@wp-g2/utils';
 
+import { REDUCED_MOTION_MODE_ATTR } from './theme';
+
 const NAMESPACE = '--wp-g2';
 
 export function get(key) {
@@ -43,4 +45,8 @@ export function transformValuesToVariablesString(
 	next.push('}');
 
 	return next.join('');
+}
+
+export function getIsReducedMotion() {
+	return !!document.querySelector(REDUCED_MOTION_MODE_ATTR);
 }

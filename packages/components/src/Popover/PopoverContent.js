@@ -7,6 +7,8 @@ import { Card } from '../Card';
 import { usePopoverContext } from './Popover.Context';
 import * as styles from './Popover.styles';
 
+const { PopoverContentView } = styles;
+
 function PopoverContent({
 	children,
 	className,
@@ -16,11 +18,12 @@ function PopoverContent({
 	...props
 }) {
 	const { label, popover } = usePopoverContext();
-	const classes = cx([css({ maxWidth }), styles.PopoverContent, className]);
+	const classes = cx([css({ maxWidth }), className]);
 
 	return (
 		<ReakitPopover
 			aria-label={label}
+			as={PopoverContentView}
 			className={classes}
 			{...props}
 			{...popover}
