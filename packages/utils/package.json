@@ -22,6 +22,7 @@
         "hoist-non-react-statics": "^3.3.2",
         "json2mq": "^0.2.0",
         "lodash.capitalize": "^4.2.1",
+        "lodash.upperfirst": "^4.3.1",
         "lodash.clamp": "^4.0.3",
         "lodash.kebabcase": "^4.1.1",
         "lodash.uniq": "^4.5.0",

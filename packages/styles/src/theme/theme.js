@@ -49,6 +49,11 @@ const RED_COLORS = {
 	red700: '#b02828',
 	red800: '#9a2323',
 	red900: '#841e1e',
+	redRgba10: 'rgba(220, 50, 50, 0.1)',
+	redRgba20: 'rgba(220, 50, 50, 0.2)',
+	redRgba40: 'rgba(220, 50, 50, 0.4)',
+	redRgba50: 'rgba(220, 50, 50, 0.5)',
+	redRgba70: 'rgba(220, 50, 50, 0.7)',
 };
 
 const ORANGE_COLORS = {
@@ -62,6 +67,11 @@ const ORANGE_COLORS = {
 	orange700: '#ca4a1f',
 	orange800: '#c0461e',
 	orange900: '#aa3e1a',
+	orangeRgba10: 'rgba(245, 110, 40, 0.1)',
+	orangeRgba20: 'rgba(245, 110, 40, 0.2)',
+	orangeRgba40: 'rgba(245, 110, 40, 0.4)',
+	orangeRgba50: 'rgba(245, 110, 40, 0.5)',
+	orangeRgba70: 'rgba(245, 110, 40, 0.7)',
 };
 
 const YELLOW_COLORS = {
@@ -75,6 +85,11 @@ const YELLOW_COLORS = {
 	yellow700: '#ee8e0d',
 	yellow800: '#e67914',
 	yellow900: '#dd631a',
+	yellowRgba10: 'rgba(255, 185, 0, 0.1)',
+	yellowRgba20: 'rgba(255, 185, 0, 0.2)',
+	yellowRgba40: 'rgba(255, 185, 0, 0.4)',
+	yellowRgba50: 'rgba(255, 185, 0, 0.5)',
+	yellowRgba70: 'rgba(255, 185, 0, 0.7)',
 };
 
 const GREEN_COLORS = {
@@ -88,6 +103,11 @@ const GREEN_COLORS = {
 	green700: '#328540',
 	green800: '##2c7337',
 	green900: '#25612f',
+	greenRgba10: 'rgba(70, 180, 80, 0.1)',
+	greenRgba20: 'rgba(70, 180, 80, 0.2)',
+	greenRgba40: 'rgba(70, 180, 80, 0.4)',
+	greenRgba50: 'rgba(70, 180, 80, 0.5)',
+	greenRgba70: 'rgba(70, 180, 80, 0.7)',
 };
 
 const PURPLE_COLORS = {
@@ -101,6 +121,11 @@ const PURPLE_COLORS = {
 	purple700: '#4e426c',
 	purple800: '#41375a',
 	purple900: '#342c48',
+	purpleRgba10: 'rgba(130, 110, 180, 0.1)',
+	purpleRgba20: 'rgba(130, 110, 180, 0.2)',
+	purpleRgba40: 'rgba(130, 110, 180, 0.4)',
+	purpleRgba50: 'rgba(130, 110, 180, 0.5)',
+	purpleRgba70: 'rgba(130, 110, 180, 0.7)',
 };
 
 const BLUE_COLORS = {
@@ -114,6 +139,11 @@ const BLUE_COLORS = {
 	blue700: '#0085ba',
 	blue800: '#007cb2',
 	blue900: '#005177',
+	blueRgba10: 'rgba(0, 160, 210, 0.1)',
+	blueRgba20: 'rgba(0, 160, 210, 0.2)',
+	blueRgba40: 'rgba(0, 160, 210, 0.4)',
+	blueRgba50: 'rgba(0, 160, 210, 0.5)',
+	blueRgba70: 'rgba(0, 160, 210, 0.7)',
 };
 
 const WORDPRESS_COLORS = {
@@ -142,12 +172,12 @@ const G2_COLORS = {
 };
 
 const BACKGROUND_COLOR_PROPS = {
-	colorBackgroundBlue: get('blue200'),
-	colorBackgroundGreen: get('green200'),
-	colorBackgroundOrange: get('orange200'),
-	colorBackgroundPurple: get('purple200'),
-	colorBackgroundRed: get('red200'),
-	colorBackgroundYellow: get('yellow200'),
+	colorBackgroundBlue: get('blueRgba10'),
+	colorBackgroundGreen: get('greenRgba10'),
+	colorBackgroundOrange: get('orangeRgba10'),
+	colorBackgroundPurple: get('purpleRgba10'),
+	colorBackgroundRed: get('redRgba10'),
+	colorBackgroundYellow: get('yellowRgba10'),
 };
 
 const COLOR_PROPS = {
@@ -215,6 +245,12 @@ const CONTROL_PROPS = {
 };
 
 const DARK_MODE_PROPS = {
+	colorBackgroundBlue: get('blueRgba20'),
+	colorBackgroundGreen: get('greenRgba20'),
+	colorBackgroundOrange: get('orangeRgba20'),
+	colorBackgroundPurple: get('purpleRgba20'),
+	colorBackgroundRed: get('redRgba20'),
+	colorBackgroundYellow: get('yellowRgba20'),
 	colorDivider: 'rgba(255, 255, 255, 0.1)',
 	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',

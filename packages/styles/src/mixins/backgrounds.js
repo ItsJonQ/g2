@@ -1,3 +1,5 @@
+import { upperFirst } from '@wp-g2/utils';
+
 import { css } from '../style-system';
 import { get } from '../system';
 import { colorBlindMode } from './colorBlindMode';
@@ -7,15 +9,17 @@ const SUPPORTED_COLORS = ['blue', 'red', 'purple', 'green', 'yellow', 'orange'];
 export function getBackgroundColor(color) {
 	if (!SUPPORTED_COLORS.includes(color)) return '';
 
-	const baseColor = css({ background: get(`${color}100`) });
-	const colorBlindShade = 150;
+	const baseColor = css({
+		background: get(`colorBackground${upperFirst(color)}`),
+	});
+	const colorBlindShade = `Rgba10`;
 	let colorBlindColor;
 
 	if (color === 'green') {
 		colorBlindColor = css({
 			backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, ${get(
-				`green${colorBlindShade}`,
-			)} 10px, ${get(`green${colorBlindShade}`)} 20px)`,
+				`colorBackgroundGreen`,
+			)} 10px, ${get(`colorBackgroundGreen`)} 20px)`,
 		});
 	}
 
