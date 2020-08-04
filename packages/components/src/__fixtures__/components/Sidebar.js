@@ -1,4 +1,4 @@
-import { ComponentsProvider } from '@wp-g2/provider';
+import { ComponentsProvider } from '@wp-g2/context';
 import { get } from '@wp-g2/styles';
 import React from 'react';
 

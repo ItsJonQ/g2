@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from '@wp-g2/animations';
-import { connect } from '@wp-g2/provider';
+import { connect } from '@wp-g2/context';
 import { createSystemElement, getIsReducedMotion } from '@wp-g2/styles';
 import { is, memoize, warning } from '@wp-g2/utils';
 import React from 'react';

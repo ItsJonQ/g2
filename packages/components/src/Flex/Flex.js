@@ -1,4 +1,4 @@
-import { connect, hasNamespace } from '@wp-g2/provider';
+import { connect, hasNamespace } from '@wp-g2/context';
 import { css, useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/provider';
+import { connect } from '@wp-g2/context';
 import { cx, ns } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';

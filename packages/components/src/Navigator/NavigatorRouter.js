@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/provider';
+import { connect } from '@wp-g2/context';
 import React, { useEffect } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 

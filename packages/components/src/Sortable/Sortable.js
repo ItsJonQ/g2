@@ -1,5 +1,5 @@
 import { AnimatePresence } from '@wp-g2/animations';
-import { connect } from '@wp-g2/provider';
+import { connect } from '@wp-g2/context';
 import { styled } from '@wp-g2/styles';
 import { arrayMove, noop } from '@wp-g2/utils';
 import React from 'react';

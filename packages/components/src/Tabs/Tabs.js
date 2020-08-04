@@ -1,5 +1,5 @@
 import { useTabState } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/provider';
+import { connect } from '@wp-g2/context';
 import { useResizeAware } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 

@@ -1,5 +1,5 @@
 import { Radio } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/provider';
+import { connect } from '@wp-g2/context';
 import { ns } from '@wp-g2/styles';
 import React from 'react';
 

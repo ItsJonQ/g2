@@ -1,5 +1,5 @@
 {
-  "name": "@wp-g2/provider",
+  "name": "@wp-g2/context",
   "version": "0.0.19",
   "description": "",
   "main": "dist/cjs/index.js",
