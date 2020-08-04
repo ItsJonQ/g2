@@ -29,7 +29,6 @@ function Icon({
 		ref: forwardedRef,
 		size,
 		width: size,
-		...props,
 	});
 
 	const cx = [styles.Wrapper, styles.color, styles.size];

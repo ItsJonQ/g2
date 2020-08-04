@@ -11,7 +11,7 @@ function Tooltip({
 	gutter = 4,
 	modal = true,
 	placement,
-	visible,
+	visible = false,
 	...props
 }) {
 	const tooltip = useTooltipState({

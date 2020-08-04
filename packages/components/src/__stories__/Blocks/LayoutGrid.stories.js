@@ -8,11 +8,14 @@ import {
 	ControlLabel,
 	Flex,
 	FormGroup,
+	Grid,
+	HelpTip,
 	Panel,
 	PanelBody,
 	PanelHeader,
 	SegmentedControl,
 	Select,
+	Slider,
 	Sortable,
 	Spacer,
 	Switch,
@@ -80,7 +83,12 @@ const Columns = () => {
 			</FormGroup>
 			<Spacer>
 				<ResponsiveControls />
-				<Background>
+				<Background
+					css={`
+						border-radius: 8px;
+						overflow: hidden;
+					`}
+				>
 					<Sortable
 						isSortable
 						items={columns}
@@ -124,11 +132,17 @@ const InspectorControl = () => {
 				<PanelHeader title="Gutter" />
 				<PanelBody>
 					<FormGroup label="Size">
-						<Select
-							options={[{ label: 'Large', value: 'large' }]}
-						/>
+						<Grid columns={2}>
+							<Select
+								options={[{ label: 'Large', value: 'large' }]}
+							/>
+							<Slider id="columns-slider" />
+						</Grid>
 					</FormGroup>
-					<FormGroup label="Ends">
+					<FormGroup>
+						<ControlLabel>
+							Ends <HelpTip>Gutter Ends</HelpTip>
+						</ControlLabel>
 						<Flex justify="flex-end">
 							<Switch />
 						</Flex>

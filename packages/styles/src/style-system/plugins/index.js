@@ -1,3 +1,4 @@
+import cssGridPlugin from 'styled-griddie';
 import cssVariablesPlugin from 'stylis-plugin-css-variables';
 
 import specificityPlugin from './extraSpecificity';
@@ -9,4 +10,5 @@ export const plugins = [
 	rtlPlugin,
 	cssVariablesPlugin({ skipSupportedBrowsers: isProd }),
 	specificityPlugin({ htmlPrefix: true, level: 3 }),
+	cssGridPlugin,
 ];

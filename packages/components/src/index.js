@@ -21,6 +21,7 @@ export * from './Flex';
 export * from './FormGroup';
 export * from './Grid';
 export * from './Heading';
+export * from './HelpTip';
 export * from './Icon';
 export * from './IncrementalControl';
 export * from './Link';

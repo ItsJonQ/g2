@@ -20,6 +20,10 @@ import { View } from '../View';
 
 const SortableItemView = styled(Surface)`
 	position: relative;
+
+	&:active {
+		user-select: none;
+	}
 `;
 
 const DragHandle = sortableHandle(() => (

@@ -2,6 +2,11 @@ import baseGet from 'dash-get';
 
 import { THEME } from '../theme';
 
+/**
+ * TODO: DEPRECATE THIS. NO LONGER NEEDED AS DYNAMIC STYLES
+ * ARE HELD AS CSS VARIABLES.
+ */
+
 // Defaults
 const __SYSTEM_CONFIG_DEFAULT__ = { ...THEME };
 

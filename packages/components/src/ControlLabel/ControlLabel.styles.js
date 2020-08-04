@@ -10,6 +10,10 @@ export const ControlLabelView = styled.div`
 	line-height: ${lineHeight};
 	padding-bottom: ${getPadding('controlHeight')};
 	padding-top: ${getPadding('controlHeight')};
+
+	&:active {
+		user-select: none;
+	}
 `;
 
 export const large = css`
