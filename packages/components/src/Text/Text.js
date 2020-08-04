@@ -9,16 +9,19 @@ function Text({
 	align,
 	as = 'span',
 	className,
+	color,
 	display,
 	isBlock = false,
 	lineHeight = 1.2,
 	size,
 	truncate,
+	upperCase,
 	variant,
 	weight = 400,
 	...props
 }) {
 	styles.Base = css({
+		color,
 		display,
 		fontSize: size,
 		fontWeight: weight,
@@ -26,11 +29,14 @@ function Text({
 		textAlign: align,
 	});
 
+	styles.upperCase = css({ textTransform: 'uppercase' });
+
 	const classes = cx(
 		styles.Text,
 		styles.Base,
 		styles[isBlock && 'block'],
 		styles[variant],
+		upperCase && styles.upperCase,
 		className,
 	);
 

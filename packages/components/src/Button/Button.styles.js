@@ -83,6 +83,14 @@ export const small = css`
 	}
 `;
 
+export const xSmall = css`
+	height: ${get('controlHeightXSmall')};
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeightXSmall')};
+	}
+`;
+
 export const half = css`
 	height: calc(${get('controlHeight')} / 2);
 
@@ -258,4 +266,13 @@ export const control = css`
 export const narrow = css`
 	padding-left: ${get('controlPaddingX')};
 	padding-right: ${get('controlPaddingX')};
+`;
+
+export const currentColor = css`
+	color: currentColor;
+
+	&:hover,
+	&:focus {
+		color: currentColor;
+	}
 `;

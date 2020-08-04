@@ -9,6 +9,6 @@ const isProd = process.env.NODE_ENV === 'production';
 export const plugins = [
 	rtlPlugin,
 	cssVariablesPlugin({ skipSupportedBrowsers: isProd }),
-	specificityPlugin({ htmlPrefix: true, level: 3 }),
+	specificityPlugin({ level: 7 }),
 	cssGridPlugin,
 ];

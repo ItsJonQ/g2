@@ -9,3 +9,21 @@ export const SurfaceView = styled.div`
 export const background = css`
 	background-color: ${get('surfaceBackgroundColor')};
 `;
+
+export function getBorders({
+	border,
+	borderBottom,
+	borderLeft,
+	borderRight,
+	borderTop,
+}) {
+	const borderStyle = `1px solid ${get('surfaceBorderColor')}`;
+
+	return css({
+		border: border && borderStyle,
+		borderBottom: borderBottom && borderStyle,
+		borderLeft: borderLeft && borderStyle,
+		borderRight: borderRight && borderStyle,
+		borderTop: borderTop && borderStyle,
+	});
+}

@@ -1,7 +1,8 @@
 import { connect } from '@wp-g2/provider';
-import { css, get, ns } from '@wp-g2/styles';
+import { ns } from '@wp-g2/styles';
 import React from 'react';
 
+import { getBorders } from '../Surface/Surface.styles';
 import * as styles from './Background.styles';
 const { BackgroundView, ContentView, TintView } = styles;
 
@@ -14,17 +15,14 @@ function Background({
 	children,
 	...props
 }) {
-	const borderStyle = `1px solid ${get('surfaceBorderColor')}`;
-
 	/* eslint-disable */
-	styles.borders = css({
-		borderBottom: borderBottom && borderStyle,
-		borderTop: borderTop && borderStyle,
-		borderLeft: borderLeft && borderStyle,
-		borderRight: borderRight && borderStyle,
-		border: border && borderStyle,
+	styles.borders = getBorders({
+		border,
+		borderBottom,
+		borderLeft,
+		borderRight,
+		borderTop,
 	});
-	/* eslint-enable */
 
 	const cx = [styles.borders];
 
