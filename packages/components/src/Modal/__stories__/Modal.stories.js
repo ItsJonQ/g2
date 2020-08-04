@@ -15,15 +15,17 @@ export default {
 	title: 'Components/Modal',
 };
 
-function CloseButton({ children = 'Done', variant = 'primary' }) {
-	const { dialog } = useModalContext();
+const CloseButton = React.forwardRef(
+	({ children = 'Done', variant = 'primary' }, ref) => {
+		const { dialog } = useModalContext();
 
-	return (
-		<Button onClick={dialog.hide} variant={variant}>
-			{children}
-		</Button>
-	);
-}
+		return (
+			<Button onClick={dialog.hide} ref={ref} variant={variant}>
+				{children}
+			</Button>
+		);
+	},
+);
 
 export const _default = () => {
 	return (
