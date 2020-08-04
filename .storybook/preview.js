@@ -61,6 +61,10 @@ function Themer() {
 		'highContrastMode',
 		false,
 	);
+	const [isColorBlind, setIsColorBlind] = useLocalStorage(
+		'colorBlindMode',
+		false,
+	);
 
 	const update = (key) => (value) => {
 		setThemeConfig((prev) => ({ ...prev, [key]: value }));
@@ -98,6 +102,7 @@ function Themer() {
 			<ThemeProvider
 				isDark={isDark}
 				isHighContrast={isHighContrast}
+				isColorBlind={isColorBlind}
 				theme={theme}
 			/>
 			<Spacer css={{ padding: 8 }} mb={5}>
@@ -235,6 +240,15 @@ function Themer() {
 									checked={!!isHighContrast}
 									onChange={(next) => {
 										setIsHighContast(next);
+									}}
+								/>
+							</Flex>
+							<Flex>
+								<ControlLabel>Color Blind</ControlLabel>
+								<Switch
+									checked={!!isColorBlind}
+									onChange={(next) => {
+										setIsColorBlind(next);
 									}}
 								/>
 							</Flex>
