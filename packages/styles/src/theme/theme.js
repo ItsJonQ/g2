@@ -108,6 +108,18 @@ const DARK_MODE_PROPS = {
 	surfaceColor: '#292929',
 };
 
+const HIGH_CONTRAST_MODE_PROPS = {
+	colorDivider: '#444',
+	controlBorderColor: '#444',
+	surfaceBorderColor: '#444',
+};
+
+const HIGH_CONTRAST_DARK_MODE_PROPS = {
+	colorDivider: '#eee',
+	controlBorderColor: '#eee',
+	surfaceBorderColor: '#eee',
+};
+
 export const BASE_THEME = {
 	...G2_COLORS,
 	...COLOR_PROPS,
@@ -132,4 +144,14 @@ export const GLOBAL_CSS_VARIABLES = transformValuesToVariablesString(
 export const GLOBAL_DARK_MODE_CSS_VARIABLES = transformValuesToVariablesString(
 	'[data-system-ui-mode="dark"]',
 	DARK_MODE_PROPS,
+);
+
+export const GLOBAL_HIGH_CONTRAST_MODE_CSS_VARIABLES = transformValuesToVariablesString(
+	'[data-system-ui-contrast-mode="high"]',
+	HIGH_CONTRAST_MODE_PROPS,
+);
+
+export const GLOBAL_HIGH_CONTRAST_DARK_MODE_CSS_VARIABLES = transformValuesToVariablesString(
+	'[data-system-ui-mode="dark"][data-system-ui-contrast-mode="high"]',
+	HIGH_CONTRAST_DARK_MODE_PROPS,
 );

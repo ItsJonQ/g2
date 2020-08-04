@@ -28,7 +28,7 @@ function NavigationStack({
 		}
 	}, [tab]);
 
-	const contextValue = {
+	const contextProps = {
 		__isRendered,
 		autoHeight,
 		containerRef,
@@ -37,7 +37,7 @@ function NavigationStack({
 	};
 
 	return (
-		<NavigationStackContext.Provider value={contextValue}>
+		<NavigationStackContext.Provider value={contextProps}>
 			<NavigationStackController />
 			<NavigationStackList />
 			{children}

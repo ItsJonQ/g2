@@ -7,8 +7,8 @@ import {
 	CardBody,
 	Separator,
 	ControlLabel,
+	FormGroup as BaseFormGroup,
 	Flex,
-	Grid,
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
@@ -19,14 +19,13 @@ import {
 	Subheading,
 	View,
 } from '@wp-g2/components';
+import { useLocalStorage } from '@wp-g2/utils';
 
-const ControlGroup = ({ children, ...props }) => {
+const FormGroup = ({ children, ...props }) => {
 	return (
-		<Spacer>
-			<Grid templateColumns="1fr 1fr" {...props}>
-				{children}
-			</Grid>
-		</Spacer>
+		<BaseFormGroup templateColumns="1fr 1fr" {...props}>
+			{children}
+		</BaseFormGroup>
 	);
 };
 
@@ -53,9 +52,15 @@ const defaultThemeConfig = {
 };
 
 function Themer() {
-	const [isDark, setIsDark] = useState(false);
-	const [isHighContrast, setIsHighContast] = useState(false);
-	const [themeConfig, setThemeConfig] = useState(defaultThemeConfig);
+	const [themeConfig, setThemeConfig] = useLocalStorage(
+		'themeConfig',
+		defaultThemeConfig,
+	);
+	const [isDark, setIsDark] = useLocalStorage('darkMode', false);
+	const [isHighContrast, setIsHighContast] = useLocalStorage(
+		'highContrastMode',
+		false,
+	);
 
 	const update = (key) => (value) => {
 		setThemeConfig((prev) => ({ ...prev, [key]: value }));
@@ -63,6 +68,7 @@ function Themer() {
 
 	const reset = () => {
 		setThemeConfig((prev) => ({ ...prev, ...defaultThemeConfig }));
+		setColorAdmin(defaultThemeConfig.colorAdmin);
 	};
 
 	const {
@@ -76,29 +82,24 @@ function Themer() {
 		fontSize,
 	} = themeConfig;
 
-	const controlBorderColor = isHighContrast
-		? isDark
-			? '#ddd'
-			: '#444'
-		: null;
-
 	const theme = {
 		colorAdmin,
 		colorText,
 		controlBorderRadius,
-		controlBorderColor,
 		controlHeight,
 		surfaceColor: !isDark ? surfaceColor : null,
 		controlSurfaceColor,
 		fontFamily,
 		fontSize,
-		colorDivider: controlBorderColor,
-		surfaceBorderColor: controlBorderColor,
 	};
 
 	return (
 		<>
-			<ThemeProvider isDark={isDark} theme={theme} />
+			<ThemeProvider
+				isDark={isDark}
+				isHighContrast={isHighContrast}
+				theme={theme}
+			/>
 			<Spacer css={{ padding: 8 }} mb={5}>
 				<Card css={{ display: 'inline-flex' }}>
 					<CardBody>
@@ -115,21 +116,15 @@ function Themer() {
 										<Subheading>Colors</Subheading>
 										<Separator />
 										<Spacer mb={4}>
-											<ControlGroup>
-												<ControlLabel>
-													Admin
-												</ControlLabel>
+											<FormGroup label="Admin">
 												<ColorInput
 													value={colorAdmin}
 													onChange={update(
 														'colorAdmin',
 													)}
 												/>
-											</ControlGroup>
-											<ControlGroup>
-												<ControlLabel>
-													Text
-												</ControlLabel>
+											</FormGroup>
+											<FormGroup label="Text">
 												<ColorInput
 													value={colorText}
 													fallback="#000000"
@@ -137,22 +132,16 @@ function Themer() {
 														'colorText',
 													)}
 												/>
-											</ControlGroup>
-											<ControlGroup>
-												<ControlLabel>
-													Surface
-												</ControlLabel>
+											</FormGroup>
+											<FormGroup label="Surface">
 												<ColorInput
 													value={surfaceColor}
 													onChange={update(
 														'surfaceColor',
 													)}
 												/>
-											</ControlGroup>
-											<ControlGroup>
-												<ControlLabel>
-													Control Surface
-												</ControlLabel>
+											</FormGroup>
+											<FormGroup label="Control Surface">
 												<ColorInput
 													value={controlSurfaceColor}
 													fallback="#ffffff"
@@ -160,15 +149,12 @@ function Themer() {
 														'controlSurfaceColor',
 													)}
 												/>
-											</ControlGroup>
+											</FormGroup>
 										</Spacer>
 										<Spacer mb={4}>
 											<Subheading>Controls</Subheading>
 											<Separator />
-											<ControlGroup>
-												<ControlLabel>
-													Border Radius
-												</ControlLabel>
+											<FormGroup label="Border Radius">
 												<TextField
 													type="number"
 													value={parseInt(
@@ -181,11 +167,8 @@ function Themer() {
 														)(`${value}px`)
 													}
 												/>
-											</ControlGroup>
-											<ControlGroup>
-												<ControlLabel>
-													Height
-												</ControlLabel>
+											</FormGroup>
+											<FormGroup label="Height">
 												<TextField
 													type="number"
 													value={parseInt(
@@ -198,26 +181,20 @@ function Themer() {
 														)
 													}
 												/>
-											</ControlGroup>
+											</FormGroup>
 										</Spacer>
 										<Spacer mb={4}>
 											<Subheading>Font</Subheading>
 											<Separator />
-											<ControlGroup>
-												<ControlLabel>
-													Family
-												</ControlLabel>
+											<FormGroup label="Family">
 												<TextField
 													value={fontFamily}
 													onChange={update(
 														'fontFamily',
 													)}
 												/>
-											</ControlGroup>
-											<ControlGroup>
-												<ControlLabel>
-													Size
-												</ControlLabel>
+											</FormGroup>
+											<FormGroup label="Size">
 												<TextField
 													type="number"
 													value={parseInt(
@@ -230,7 +207,7 @@ function Themer() {
 														)
 													}
 												/>
-											</ControlGroup>
+											</FormGroup>
 										</Spacer>
 										<Separator />
 										<Button
@@ -246,7 +223,7 @@ function Themer() {
 							<Flex>
 								<ControlLabel>Dark Mode</ControlLabel>
 								<Switch
-									value={isDark}
+									checked={!!isDark}
 									onChange={(next) => {
 										setIsDark(next);
 									}}
@@ -255,7 +232,7 @@ function Themer() {
 							<Flex>
 								<ControlLabel>High Contrast</ControlLabel>
 								<Switch
-									value={isHighContrast}
+									checked={!!isHighContrast}
 									onChange={(next) => {
 										setIsHighContast(next);
 									}}

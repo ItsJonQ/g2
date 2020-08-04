@@ -9,14 +9,14 @@ import * as styles from './Menu.styles';
 function Menu({ children, className, forwardedRef, menu: menuProp, ...props }) {
 	const baseMenuState = useMenuState({ visible: true });
 	const menu = menuProp || baseMenuState;
-	const contextValue = {
+	const contextProps = {
 		menu,
 	};
 
 	const classes = cx([styles.Menu, className]);
 
 	return (
-		<MenuContext.Provider value={contextValue}>
+		<MenuContext.Provider value={contextProps}>
 			<ReakitMenu
 				hideOnClickOutside={false}
 				{...menu}

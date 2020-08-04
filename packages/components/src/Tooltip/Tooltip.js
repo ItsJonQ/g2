@@ -22,11 +22,11 @@ function Tooltip({
 		visible,
 		...props,
 	});
-	const contextValue = {
+	const contextProps = {
 		tooltip,
 	};
 	return (
-		<TooltipContext.Provider value={contextValue}>
+		<TooltipContext.Provider value={contextProps}>
 			{children}
 		</TooltipContext.Provider>
 	);

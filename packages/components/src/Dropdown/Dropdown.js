@@ -25,7 +25,7 @@ function Dropdown({
 		...props,
 	});
 	const uniqueId = `dropdown-${menu.baseId}`;
-	const contextValue = {
+	const contextProps = {
 		animationDuration,
 		animationTimingFunction,
 		label: label || uniqueId,
@@ -33,7 +33,7 @@ function Dropdown({
 	};
 
 	return (
-		<DropdownContext.Provider value={contextValue}>
+		<DropdownContext.Provider value={contextProps}>
 			{children}
 		</DropdownContext.Provider>
 	);

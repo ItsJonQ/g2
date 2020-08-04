@@ -29,7 +29,7 @@ export function Flex({
 		const isLast = index + 1 === validChildren.length;
 
 		const _key = child.key || index;
-		const contextValue = {
+		const contextProps = {
 			display: isColumn ? 'block' : undefined,
 			gap: gapValue,
 			isColumn,
@@ -47,7 +47,7 @@ export function Flex({
 			);
 
 		return (
-			<FlexContext.Provider key={_key} value={contextValue}>
+			<FlexContext.Provider key={_key} value={contextProps}>
 				{_child}
 			</FlexContext.Provider>
 		);

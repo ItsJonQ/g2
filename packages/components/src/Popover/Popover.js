@@ -22,13 +22,13 @@ function Popover({
 		...props,
 	});
 	const uniqueId = `popover-${popover.baseId}`;
-	const contextValue = {
+	const contextProps = {
 		label: label || uniqueId,
 		popover,
 	};
 
 	return (
-		<PopoverContext.Provider value={contextValue}>
+		<PopoverContext.Provider value={contextProps}>
 			{children}
 		</PopoverContext.Provider>
 	);

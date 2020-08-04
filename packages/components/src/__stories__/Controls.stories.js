@@ -10,13 +10,13 @@ import {
 	FiTablet,
 } from 'react-icons/fi';
 
-import { ControlGroup, Sidebar } from '../__fixtures__/components';
+import { Sidebar } from '../__fixtures__/components';
 import {
 	Button,
-	ControlLabel,
 	Divider,
 	Flex,
 	FlexBlock,
+	FormGroup,
 	Grid,
 	Icon,
 	IncrementalControl,
@@ -77,15 +77,16 @@ const LayoutControls = () => {
 		<Panel visible>
 			<PanelHeader title="Layout" />
 			<PanelBody>
-				<ControlGroup>
-					<ControlLabel>Dimensions</ControlLabel>
+				<FormGroup label="Dimensions">
 					<Grid columns={2}>
 						<TextField suffix={<SuffixLabel>W</SuffixLabel>} />
-						<TextField suffix={<SuffixLabel>H</SuffixLabel>} />
+						<TextField
+							id="d-h"
+							suffix={<SuffixLabel>H</SuffixLabel>}
+						/>
 					</Grid>
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Align</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Align">
 					<SegmentedControl
 						isBlock
 						options={[
@@ -103,20 +104,20 @@ const LayoutControls = () => {
 							},
 						]}
 					/>
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Position</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Position">
 					<Grid columns={2}>
 						<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
-						<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
+						<TextField
+							id="pos-y"
+							suffix={<SuffixLabel>Y</SuffixLabel>}
+						/>
 					</Grid>
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Distribution</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Distribution">
 					<Select options={[{ label: 'Center', value: 'center' }]} />
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Padding</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Padding">
 					<View>
 						<Spacer>
 							<Grid columns={2}>
@@ -140,9 +141,8 @@ const LayoutControls = () => {
 							]}
 						/>
 					</View>
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Overflow</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Overflow">
 					<SegmentedControl
 						isBlock
 						options={[
@@ -156,7 +156,7 @@ const LayoutControls = () => {
 							},
 						]}
 					/>
-				</ControlGroup>
+				</FormGroup>
 			</PanelBody>
 		</Panel>
 	);
@@ -167,16 +167,13 @@ const TypographyControls = () => {
 		<Panel visible>
 			<PanelHeader title="Typography" />
 			<PanelBody>
-				<ControlGroup>
-					<ControlLabel>Font</ControlLabel>
+				<FormGroup label="Font">
 					<Select options={[{ label: 'Inter', value: 'inter' }]} />
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Style</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Style">
 					<Select options={[{ label: 'Medium', value: 'medium' }]} />
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Size</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Size">
 					<Flex gap={2}>
 						<FlexBlock>
 							<TextField value="16" />
@@ -185,17 +182,15 @@ const TypographyControls = () => {
 							<Slider />
 						</FlexBlock>
 					</Flex>
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Transform</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Transform">
 					<Select options={[{ label: 'None', value: 'none' }]} />
-				</ControlGroup>
-				<ControlGroup>
-					<ControlLabel>Dropcap</ControlLabel>
+				</FormGroup>
+				<FormGroup label="Dropcap">
 					<Flex justify="flex-end">
 						<Switch />
 					</Flex>
-				</ControlGroup>
+				</FormGroup>
 			</PanelBody>
 		</Panel>
 	);

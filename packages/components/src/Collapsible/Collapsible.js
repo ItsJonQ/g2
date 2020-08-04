@@ -10,12 +10,12 @@ function Collapsible({ children, visible, ...props }) {
 		visible,
 	});
 
-	const contextValue = {
+	const contextProps = {
 		disclosure,
 	};
 
 	return (
-		<CollapsibleContext.Provider value={contextValue}>
+		<CollapsibleContext.Provider value={contextProps}>
 			<View {...props}>{children}</View>
 		</CollapsibleContext.Provider>
 	);

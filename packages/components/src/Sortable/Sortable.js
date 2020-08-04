@@ -29,7 +29,7 @@ const DragHandle = sortableHandle(() => (
 ));
 
 const SortableItem = sortableElement(
-	({ index, isSortable, item, onRemove, renderItem, value }) => (
+	({ index, isLast, isSortable, item, onRemove, renderItem, value }) => (
 		<AnimatedView auto>
 			<SortableItemView>
 				<AnimatedView
@@ -75,7 +75,7 @@ const SortableItem = sortableElement(
 						variant="tertiary"
 					/>
 				</AnimatedView>
-				<Divider />
+				{!isLast && <Divider />}
 			</SortableItemView>
 		</AnimatedView>
 	),
@@ -111,6 +111,7 @@ function Sortable({
 					<SortableItem
 						helperClass="is-dragging"
 						index={index}
+						isLast={index === items.length - 1}
 						isSortable={isSortable}
 						item={item}
 						key={item.id}

@@ -6,6 +6,7 @@ import { FiChevronDown } from 'react-icons/fi';
 
 import { BaseField } from '../BaseField';
 import { Flex, FlexBlock } from '../Flex';
+import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import * as TextFieldStyles from '../TextField/TextField.styles';
@@ -18,6 +19,7 @@ function Select({
 	className,
 	defaultValue,
 	forwardedRef,
+	id: idProp,
 	onBlur = noop,
 	onChange = noop,
 	onFocus = noop,
@@ -31,6 +33,9 @@ function Select({
 	});
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
+
+	const { id: contextId } = useFormGroupContext();
+	const id = idProp || contextId;
 
 	const handleOnRootClick = () => {
 		inputRef.current.focus();
@@ -68,6 +73,7 @@ function Select({
 				<InputView
 					as="select"
 					cx={inputCx}
+					id={id}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}
 					onFocus={handleOnFocus}

@@ -4,6 +4,7 @@ import React from 'react';
 
 import {
 	ControlLabel,
+	FormGroup,
 	Panel,
 	PanelBody,
 	PanelHeader,
@@ -15,7 +16,6 @@ import {
 	TextField,
 	View,
 } from '../../index';
-import { ControlGroup } from './ControlGroup';
 
 export const Sidebar = ({ children }) => {
 	return (
@@ -51,14 +51,14 @@ export const Sidebar = ({ children }) => {
 							<Panel visible>
 								<PanelHeader title="Status & Visibility" />
 								<PanelBody>
-									<ControlGroup>
-										<ControlLabel>Visibility</ControlLabel>
-										<ControlLabel>Public</ControlLabel>
-									</ControlGroup>
-									<ControlGroup>
-										<ControlLabel>Slug</ControlLabel>
+									<FormGroup label="Visibility">
+										<ControlLabel as="div">
+											Public
+										</ControlLabel>
+									</FormGroup>
+									<FormGroup label="Slug">
 										<TextField value="/my-blog-post" />
-									</ControlGroup>
+									</FormGroup>
 								</PanelBody>
 							</Panel>
 							<Panel>

@@ -6,6 +6,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 
 import { BaseField } from '../BaseField';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
+import { useFormGroupContext } from '../FormGroup';
 import * as styles from './TextField.styles';
 
 const { InputView } = styles;
@@ -17,6 +18,7 @@ function TextField({
 	defaultValue,
 	forwardedRef,
 	gap = 2.5,
+	id: idProp,
 	isRounded = false,
 	isSeamless = false,
 	isResizable = false,
@@ -36,6 +38,9 @@ function TextField({
 	});
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
+
+	const { id: contextId } = useFormGroupContext();
+	const id = idProp || contextId;
 
 	const handleOnRootClick = () => {
 		inputRef.current.focus();
@@ -85,6 +90,7 @@ function TextField({
 					as={InputComponent}
 					cx={inputCx}
 					disabled={disabled}
+					id={id}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}
 					onFocus={handleOnFocus}

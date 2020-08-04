@@ -11,11 +11,11 @@ function Navigator({
 	initialPath,
 	...props
 }) {
-	const contextValue = {
+	const contextProps = {
 		animationDuration,
 	};
 	return (
-		<NavigatorContext.Provider value={contextValue}>
+		<NavigatorContext.Provider value={contextProps}>
 			<NavigatorRouter initialPath={initialPath}>
 				{children}
 			</NavigatorRouter>

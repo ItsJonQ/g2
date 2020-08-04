@@ -26,7 +26,7 @@ function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {
 			isLast ? (isVertical ? styles.lastRow : styles.last) : undefined,
 		]);
 
-		const contextValue = {
+		const contextProps = {
 			isFirst,
 			isLast,
 			isMiddle,
@@ -48,7 +48,7 @@ function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {
 		);
 
 		return (
-			<ControlGroupContext.Provider key={_key} value={contextValue}>
+			<ControlGroupContext.Provider key={_key} value={contextProps}>
 				{_child}
 			</ControlGroupContext.Provider>
 		);

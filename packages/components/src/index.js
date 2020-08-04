@@ -18,6 +18,7 @@ export * from './Divider';
 export * from './Dropdown';
 export * from './Elevation';
 export * from './Flex';
+export * from './FormGroup';
 export * from './Grid';
 export * from './Heading';
 export * from './Icon';

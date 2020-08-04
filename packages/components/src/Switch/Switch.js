@@ -5,6 +5,7 @@ import { Checkbox } from 'reakit/Checkbox';
 import { Radio } from 'reakit/Radio';
 import { VisuallyHidden } from 'reakit/VisuallyHidden';
 
+import { useFormGroupContext } from '../FormGroup';
 import * as styles from './Switch.styles';
 import Backdrop from './SwitchBackdrop';
 import Toggle from './SwitchToggle';
@@ -22,6 +23,7 @@ function Switch({
 	disabled,
 	defaultValue,
 	forwardedRef,
+	id: idProp,
 	onBlur = noop,
 	onChange = noop,
 	onFocus = noop,
@@ -34,7 +36,11 @@ function Switch({
 	const [checked, setChecked] = useControlledState(checkedProp, {
 		initial: defaultValue || false,
 	});
-	const id = useUniqueId(Switch, 'switch', props.id);
+
+	const uniqueId = useUniqueId(Switch, 'switch', idProp);
+	const { id: contextId } = useFormGroupContext();
+	const id = idProp || contextId || uniqueId;
+
 	const Control = ControlComponent[type] || Checkbox;
 
 	const cx = [styles[size]];

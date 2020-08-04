@@ -17,10 +17,10 @@ import {
 	Spacer,
 	Surface,
 	Text,
-} from '../index';
+} from '../../index';
 
 export default {
-	title: 'Examples',
+	title: 'Examples/WIP',
 };
 
 const SidebarHeader = ({ children }) => {

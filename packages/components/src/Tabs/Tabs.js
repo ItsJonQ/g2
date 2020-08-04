@@ -10,10 +10,10 @@ function Tabs({ children, selectedId }) {
 	const listRef = useRef();
 	const [resizeListener, sizes] = useResizeAware();
 
-	const contextValue = { listRef, resizeListener, sizes, tab };
+	const contextProps = { listRef, resizeListener, sizes, tab };
 
 	return (
-		<TabsContext.Provider value={contextValue}>
+		<TabsContext.Provider value={contextProps}>
 			{children}
 		</TabsContext.Provider>
 	);

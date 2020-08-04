@@ -4,7 +4,6 @@ import React from 'react';
 
 import {
 	ContextPopover,
-	ControlGroup,
 	Sidebar,
 	SuffixLabel,
 } from '../../__fixtures__/components';
@@ -15,6 +14,7 @@ import {
 	ControlLabel,
 	Flex,
 	FlexBlock,
+	FormGroup,
 	Grid,
 	Icon,
 	Panel,
@@ -41,8 +41,7 @@ const ColorControl = ({ color: colorProp }) => {
 	});
 
 	return (
-		<ControlGroup>
-			<ControlLabel>Tint</ControlLabel>
+		<FormGroup label="Tint">
 			<Grid columns={2}>
 				<ContextPopover
 					title="Tint"
@@ -51,8 +50,7 @@ const ColorControl = ({ color: colorProp }) => {
 					<Spacer>
 						<ColorPicker color={color} onChange={setColor} />
 					</Spacer>
-					<ControlGroup>
-						<ControlLabel>Opacity</ControlLabel>
+					<FormGroup label="Opacity">
 						<Flex>
 							<FlexBlock>
 								<TextField value="50%" />
@@ -61,18 +59,17 @@ const ColorControl = ({ color: colorProp }) => {
 								<Slider />
 							</FlexBlock>
 						</Flex>
-					</ControlGroup>
+					</FormGroup>
 				</ContextPopover>
 				<Button variant="tertiary">Clear</Button>
 			</Grid>
-		</ControlGroup>
+		</FormGroup>
 	);
 };
 
 const MediaControl = () => {
 	return (
-		<ControlGroup>
-			<ControlLabel>Media</ControlLabel>
+		<FormGroup label="Media">
 			<Grid columns={2}>
 				<ContextPopover
 					title="Media"
@@ -87,15 +84,13 @@ const MediaControl = () => {
 							width="100%"
 						/>
 					</Spacer>
-					<ControlGroup>
-						<ControlLabel>Focal Point</ControlLabel>
+					<FormGroup label="Focal Point">
 						<Grid columns={2}>
 							<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
 							<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
 						</Grid>
-					</ControlGroup>
-					<ControlGroup>
-						<ControlLabel>Position</ControlLabel>
+					</FormGroup>
+					<FormGroup label="Position">
 						<SegmentedControl
 							options={[
 								{
@@ -108,11 +103,11 @@ const MediaControl = () => {
 								},
 							]}
 						/>
-					</ControlGroup>
+					</FormGroup>
 				</ContextPopover>
 				<Button variant="tertiary">Clear</Button>
 			</Grid>
-		</ControlGroup>
+		</FormGroup>
 	);
 };
 
@@ -122,8 +117,7 @@ const InspectorControl = () => {
 			<Panel visible>
 				<PanelHeader title="Layout" />
 				<PanelBody>
-					<ControlGroup templateColumns="1fr 2fr">
-						<ControlLabel>Align</ControlLabel>
+					<FormGroup label="Align" templateColumns="1fr 2fr">
 						<SegmentedControl
 							options={[
 								{
@@ -150,20 +144,18 @@ const InspectorControl = () => {
 								},
 							]}
 						/>
-					</ControlGroup>
-					<ControlGroup>
-						<ControlLabel>Height</ControlLabel>
+					</FormGroup>
+					<FormGroup label="Height">
 						<Grid templateColumns="1.2fr 0.8fr">
 							<TextField />
 							<UnitSelect />
 						</Grid>
-					</ControlGroup>
-					<ControlGroup>
-						<ControlLabel>Position</ControlLabel>
+					</FormGroup>
+					<FormGroup label="Position">
 						<Select
 							options={[{ label: 'Center', value: 'center' }]}
 						/>
-					</ControlGroup>
+					</FormGroup>
 				</PanelBody>
 			</Panel>
 			<Panel visible>
@@ -176,18 +168,16 @@ const InspectorControl = () => {
 			<Panel>
 				<PanelHeader title="Advanced" />
 				<PanelBody>
-					<Spacer>
+					<FormGroup label="Title">
 						<ControlLabel>Title</ControlLabel>
 						<TextField />
-					</Spacer>
-					<Spacer>
-						<ControlLabel>HTML Anchor</ControlLabel>
+					</FormGroup>
+					<FormGroup label="HTML Anchor">
 						<TextField />
-					</Spacer>
-					<Spacer>
-						<ControlLabel>CSS Classes</ControlLabel>
+					</FormGroup>
+					<FormGroup label="CSS Classes">
 						<TextField />
-					</Spacer>
+					</FormGroup>
 				</PanelBody>
 			</Panel>
 		</>
