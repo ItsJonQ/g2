@@ -33,7 +33,7 @@ yarn start
 
 ## Goal
 
-The goal of this project is to derive useful UI features and/or architecture patterns and workflows to improve the experience of WordPres [Gutenberg](https://github.com/WordPress/gutenberg).
+The goal of this project is to derive useful UI features and/or architecture patterns and workflows to improve the experience of WordPress [Gutenberg](https://github.com/WordPress/gutenberg).
 
 ## Open for Feedback
 
