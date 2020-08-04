@@ -59,6 +59,7 @@ const FONT_PROPS = {
 const SURFACE_PROPS = {
 	surfaceBackgroundColor: get('surfaceColor'),
 	surfaceBackgroundSubtleColor: '#EFEFF3',
+	surfaceBackgroundTintColor: 'rgba(0, 0, 0, 0.04)',
 	surfaceBorderColor: 'rgba(0, 0, 0, 0.06)',
 	surfaceColor: get('white'),
 };
@@ -104,6 +105,7 @@ const DARK_MODE_PROPS = {
 	controlTextActiveColor: get('white'),
 	surfaceBackgroundColor: get('colorBodyBackgroundDark'),
 	surfaceBackgroundSubtleColor: get('colorBodyBackgroundDark'),
+	surfaceBackgroundTintColor: 'rgba(0, 0, 0, 0.1)',
 	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',
 };

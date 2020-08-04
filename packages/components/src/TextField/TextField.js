@@ -83,6 +83,7 @@ function TextField({
 			isFocused={isFocused}
 			justify={justify}
 			onClick={handleOnRootClick}
+			{...ns('TextField')}
 		>
 			{prefix && <FlexItem {...ns('TextFieldPrefix')}>{prefix}</FlexItem>}
 			<FlexBlock {...ns('TextFieldContent')}>

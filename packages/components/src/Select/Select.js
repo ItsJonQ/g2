@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/provider';
-import { cx } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
@@ -68,6 +68,7 @@ function Select({
 			gap={0}
 			isFocused={isFocused}
 			onClick={handleOnRootClick}
+			{...ns('Select')}
 		>
 			<FlexBlock>
 				<InputView
@@ -79,6 +80,7 @@ function Select({
 					onFocus={handleOnFocus}
 					ref={mergeRefs([forwardedRef, inputRef])}
 					value={value}
+					{...ns('SelectInput')}
 				>
 					{options.map((option, index) => {
 						const { id, label, value, ...optionProps } = option;
