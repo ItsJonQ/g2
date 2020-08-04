@@ -1,10 +1,10 @@
-import React from 'react';
 import {
 	FiAlignCenter,
 	FiAlignJustify,
 	FiAlignLeft,
 	FiAlignRight,
-} from 'react-icons/fi';
+} from '@wp-g2/icons';
+import React from 'react';
 
 import { BaseView, Icon, Spacer } from '../../index';
 import { SegmentedControl } from '../index';

@@ -1,8 +1,8 @@
 import { AnimatePresence } from '@wp-g2/animations';
+import { FiX } from '@wp-g2/icons';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
-import { FiX } from 'react-icons/fi';
 
 import { Button, Card, Divider, Flex, Spacer, Text, View } from '../../index';
 import { AnimatedView } from '../index';

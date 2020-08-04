@@ -1,9 +1,9 @@
 import { AnimatePresence } from '@wp-g2/animations';
 import { connect } from '@wp-g2/context';
+import { FiMenu, FiX } from '@wp-g2/icons';
 import { styled } from '@wp-g2/styles';
 import { arrayMove, noop } from '@wp-g2/utils';
 import React from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
 import {
 	sortableContainer,
 	sortableElement,

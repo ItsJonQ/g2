@@ -1,4 +1,10 @@
-import * as icons from '@wordpress/icons';
+import {
+	FiAlignCenter,
+	FiAlignJustify,
+	FiAlignLeft,
+	FiAlignRight,
+	FiMaximize,
+} from '@wp-g2/icons';
 import { useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
@@ -121,25 +127,23 @@ const InspectorControl = () => {
 						<SegmentedControl
 							options={[
 								{
-									label: <Icon icon={icons.alignLeft} />,
+									label: <Icon icon={<FiAlignLeft />} />,
 									value: 'left',
 								},
 								{
-									label: <Icon icon={icons.alignCenter} />,
+									label: <Icon icon={<FiAlignCenter />} />,
 									value: 'center',
 								},
 								{
-									label: <Icon icon={icons.alignRight} />,
+									label: <Icon icon={<FiAlignRight />} />,
 									value: 'right',
 								},
 								{
-									label: <Icon icon={icons.stretchWide} />,
+									label: <Icon icon={<FiAlignJustify />} />,
 									value: 'wide',
 								},
 								{
-									label: (
-										<Icon icon={icons.stretchFullWidth} />
-									),
+									label: <Icon icon={<FiMaximize />} />,
 									value: 'full',
 								},
 							]}

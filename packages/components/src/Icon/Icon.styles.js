@@ -7,8 +7,4 @@ export const Wrapper = css`
 	svg {
 		display: block;
 	}
-
-	path {
-		fill: currentColor;
-	}
 `;

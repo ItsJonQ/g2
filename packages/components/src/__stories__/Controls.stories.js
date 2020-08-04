@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	FiAlignCenter,
 	FiAlignLeft,
@@ -8,7 +7,8 @@ import {
 	FiSmartphone,
 	FiSquare,
 	FiTablet,
-} from 'react-icons/fi';
+} from '@wp-g2/icons';
+import React from 'react';
 
 import { Sidebar } from '../__fixtures__/components';
 import {

@@ -1,7 +1,7 @@
 import { connect } from '@wp-g2/context';
+import { FiHelpCircle } from '@wp-g2/icons';
 import { get, space } from '@wp-g2/styles';
 import React from 'react';
-import { FiHelpCircle } from 'react-icons/fi';
 
 import { Icon } from '../Icon';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../Tooltip';

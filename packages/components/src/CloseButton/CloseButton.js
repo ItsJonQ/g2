@@ -1,6 +1,6 @@
 import { connect } from '@wp-g2/context';
+import { FiX } from '@wp-g2/icons';
 import React from 'react';
-import { FiX } from 'react-icons/fi';
 
 import { Button } from '../Button';
 
