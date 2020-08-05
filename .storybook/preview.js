@@ -120,15 +120,12 @@ function Themer() {
 			<View css={{ padding: 8 }}>
 				<Card css={{ display: 'inline-flex' }}>
 					<CardBody css={{ padding: 4 }}>
-						<Flex justify="left" gap={4}>
+						<Flex justify="left" gap={2}>
 							<Popover placement="top-start">
-								<PopoverTrigger as={Button}>
+								<PopoverTrigger as={Button} variant="primary">
 									Customize Theme
 								</PopoverTrigger>
-								<PopoverContent
-									maxWidth={240}
-									hideOnClickOutside={false}
-								>
+								<PopoverContent maxWidth={240}>
 									<CardBody>
 										<Subheading>Colors</Subheading>
 										<Separator />
@@ -237,42 +234,72 @@ function Themer() {
 									</CardBody>
 								</PopoverContent>
 							</Popover>
-							<Flex>
-								<ControlLabel>Dark Mode</ControlLabel>
-								<Switch
-									checked={!!isDark}
-									onChange={(next) => {
-										setIsDark(next);
-									}}
-								/>
-							</Flex>
-							<Flex>
-								<ControlLabel>High Contrast</ControlLabel>
-								<Switch
-									checked={!!isHighContrast}
-									onChange={(next) => {
-										setIsHighContast(next);
-									}}
-								/>
-							</Flex>
-							<Flex>
-								<ControlLabel>Color Blind</ControlLabel>
-								<Switch
-									checked={!!isColorBlind}
-									onChange={(next) => {
-										setIsColorBlind(next);
-									}}
-								/>
-							</Flex>
-							<Flex>
-								<ControlLabel>Reduced Motion</ControlLabel>
-								<Switch
-									checked={!!isReducedMotion}
-									onChange={(next) => {
-										setIsReducedMotion(next);
-									}}
-								/>
-							</Flex>
+							<Popover placement="top-start">
+								<PopoverTrigger as={Button} variant="tertiary">
+									Configure
+								</PopoverTrigger>
+								<PopoverContent
+									maxWidth={200}
+									hideOnClickOutside={false}
+								>
+									<CardBody>
+										<FormGroup>
+											<ControlLabel>
+												Dark Mode
+											</ControlLabel>
+											<Flex justify="flex-end">
+												<Switch
+													checked={!!isDark}
+													onChange={(next) => {
+														setIsDark(next);
+													}}
+												/>
+											</Flex>
+										</FormGroup>
+										<FormGroup>
+											<ControlLabel>
+												High Contrast
+											</ControlLabel>
+											<Flex justify="flex-end">
+												<Switch
+													checked={!!isHighContrast}
+													onChange={(next) => {
+														setIsHighContast(next);
+													}}
+												/>
+											</Flex>
+										</FormGroup>
+										<FormGroup>
+											<ControlLabel>
+												Color Blind
+											</ControlLabel>
+											<Flex justify="flex-end">
+												<Switch
+													checked={!!isColorBlind}
+													onChange={(next) => {
+														setIsColorBlind(next);
+													}}
+												/>
+											</Flex>
+										</FormGroup>
+										<FormGroup>
+											<ControlLabel>
+												Reduced Motion
+											</ControlLabel>
+											<Flex justify="flex-end">
+												<Switch
+													checked={!!isReducedMotion}
+													onChange={(next) => {
+														setIsReducedMotion(
+															next,
+														);
+													}}
+												/>
+											</Flex>
+										</FormGroup>
+									</CardBody>
+								</PopoverContent>
+							</Popover>
 						</Flex>
 					</CardBody>
 				</Card>

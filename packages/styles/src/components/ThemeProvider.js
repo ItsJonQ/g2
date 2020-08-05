@@ -2,6 +2,7 @@ import { deepEqual, is } from '@wp-g2/utils';
 import { ThemeProvider as BaseThemeProvider } from 'emotion-theming';
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
+import { useReducedMotion } from '../hooks';
 import { transformValuesToVariables } from '../theme/utils';
 
 function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
@@ -58,7 +59,15 @@ function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
 	}, [isGlobal, isHighContrast, ref]);
 }
 
-function useReducedMotion({ isGlobal = true, isReducedMotion, ref }) {
+function useReducedMotionMode({ isGlobal = true, isReducedMotion, ref }) {
+	const [, setIsReducedMotion] = useReducedMotion(isReducedMotion);
+
+	useLayoutEffect(() => {
+		if (isGlobal) {
+			setIsReducedMotion(!!isReducedMotion);
+		}
+	}, [isGlobal, isReducedMotion, setIsReducedMotion]);
+
 	useLayoutEffect(() => {
 		if (!is.defined(isReducedMotion)) return;
 
@@ -115,7 +124,7 @@ export function ThemeProvider({
 	useColorBlindMode({ isColorBlind, isGlobal, ref: nodeRef });
 	useDarkMode({ isDark, isGlobal, ref: nodeRef });
 	useHighContrastMode({ isGlobal, isHighContrast, ref: nodeRef });
-	useReducedMotion({ isGlobal, isReducedMotion, ref: nodeRef });
+	useReducedMotionMode({ isGlobal, isReducedMotion, ref: nodeRef });
 
 	return (
 		<BaseThemeProvider theme={theme}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Text, View } from '../../index';
+import { Button, Spacer, Text, View } from '../../index';
 import { Alert, Alerts } from '../index';
 
 export default {
@@ -10,9 +10,10 @@ export default {
 
 const statuses = ['default', 'success', 'warning', 'info', 'critical'];
 
-export const Example = () => {
+const Example = () => {
 	const [alerts, setAlerts] = useState(statuses);
 	const remove = (id) => setAlerts((prev) => prev.filter((i) => i !== id));
+	const reset = () => setAlerts(statuses);
 
 	return (
 		<View
@@ -21,6 +22,11 @@ export const Example = () => {
 				margin: auto;
 			`}
 		>
+			<Spacer>
+				<Button disabled={alerts.length === 5} onClick={reset}>
+					Reset
+				</Button>
+			</Spacer>
 			<Alerts>
 				{alerts.map((status) => (
 					<Alert
