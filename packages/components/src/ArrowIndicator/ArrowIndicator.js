@@ -30,6 +30,7 @@ function ArrowIndicator({
 				<Icon
 					icon={
 						<svg
+							fill="currentColor"
 							height="24"
 							viewBox="0 0 24 24"
 							width="24"
