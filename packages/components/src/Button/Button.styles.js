@@ -178,6 +178,7 @@ export const secondary = css`
 
 export const tertiary = css`
 	background-color: transparent;
+	border-color: ${get('controlBorderColor')};
 `;
 
 export const link = css`
