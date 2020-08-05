@@ -48,7 +48,7 @@ Everything by way of workflows should recognize and prioritize design and develo
 
 ### Native support and considerations for a11y
 
-Considerations for a11y should be inherent to the core system. This ensures that a11y works consistently throughout the entire project. Implementation should feel mostly "invisible" at the component (code) layer.
+Considerations for a11y should be inherent to the core system. This ensures that a11y works consistently throughout the entire project. Adding a11y on top often leads to inconsistencies, fragmentation,and regressions. This should be avoided. Implementation should feel mostly "invisible" at the component (code) layer.
 
 ### Seamless integration into existing systems
 
