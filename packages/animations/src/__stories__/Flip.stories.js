@@ -1,7 +1,8 @@
 import {
-	AnimatedView,
+	Animated,
 	Button,
 	Card,
+	CloseButton,
 	Flex,
 	Grid,
 	Spacer,
@@ -56,7 +57,7 @@ const App = () => {
 							opacity: 1,
 							y: 0,
 						}}
-						as={AnimatedView}
+						as={Animated}
 						exit={{
 							opacity: 0,
 						}}
@@ -67,8 +68,7 @@ const App = () => {
 						<View css={{ padding: 8 }}>
 							<Flex>
 								<Text>{item.name}</Text>
-								<Button
-									icon={<View>X</View>}
+								<CloseButton
 									onClick={() => remove(item.id)}
 									size="small"
 									variant="tertiary"

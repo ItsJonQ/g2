@@ -2,7 +2,7 @@ import { connect } from '@wp-g2/context';
 import { css } from '@wp-g2/styles';
 import React from 'react';
 
-import { AnimatedView } from '../AnimatedView';
+import { Animated } from '../Animated';
 import { Icon } from '../Icon';
 import * as styles from './ArrowIndicator.styles';
 const { ArrowIndicatorView } = styles;
@@ -26,7 +26,7 @@ function ArrowIndicator({
 
 	return (
 		<ArrowIndicatorView {...props} cx={cx}>
-			<AnimatedView animate={{ rotate }}>
+			<Animated animate={{ rotate }}>
 				<Icon
 					icon={
 						<svg
@@ -40,7 +40,7 @@ function ArrowIndicator({
 					}
 					size={iconSize}
 				/>
-			</AnimatedView>
+			</Animated>
 		</ArrowIndicatorView>
 	);
 }

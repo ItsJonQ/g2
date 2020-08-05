@@ -1,7 +1,9 @@
 import {
-	AnimatedView,
+	Animated,
+	AnimatedContainer,
 	Button,
 	Card,
+	CloseButton,
 	Divider,
 	Flex,
 	Spacer,
@@ -11,8 +13,6 @@ import {
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
-
-import { AnimatePresence } from '../index';
 
 export default {
 	title: 'Animations/Mount',
@@ -44,9 +44,9 @@ const App = () => {
 					width: 300,
 				}}
 			>
-				<AnimatePresence initial={false}>
+				<AnimatedContainer initial={false}>
 					{items.map((item, index) => (
-						<AnimatedView
+						<Animated
 							animate={{ height: 'auto', opacity: 1 }}
 							exit={{
 								height: 0,
@@ -59,8 +59,7 @@ const App = () => {
 							<View css={{ padding: 8 }}>
 								<Flex>
 									<Text>{item.name}</Text>
-									<Button
-										icon={<View>X</View>}
+									<CloseButton
 										onClick={() => remove(item.id)}
 										size="small"
 										variant="tertiary"
@@ -68,9 +67,9 @@ const App = () => {
 								</Flex>
 							</View>
 							{index !== items.length - 1 && <Divider m={0} />}
-						</AnimatedView>
+						</Animated>
 					))}
-				</AnimatePresence>
+				</AnimatedContainer>
 			</Card>
 		</View>
 	);

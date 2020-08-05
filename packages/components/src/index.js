@@ -1,7 +1,7 @@
 // Base
 export * from './BaseView';
 export * from './View';
-export * from './AnimatedView';
+export * from './Animated';
 // Components
 export * from './Alert';
 export * from './ArrowIndicator';

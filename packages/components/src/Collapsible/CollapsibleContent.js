@@ -3,7 +3,7 @@ import { connect } from '@wp-g2/context';
 import { cx, ns } from '@wp-g2/styles';
 import React from 'react';
 
-import { AnimatedView } from '../AnimatedView';
+import { Animated } from '../Animated';
 import { useCollapsibleContext } from './Collapsible.Context';
 import { InnerContentView } from './Collapsible.styles';
 import * as styles from './Collapsible.styles';
@@ -26,7 +26,7 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 					height: isVisible ? 'auto' : 0,
 					opacity: isVisible ? 1 : 0,
 				}}
-				as={AnimatedView}
+				as={Animated}
 				initial={false}
 				transition={{ duration: 0.2 }}
 				{...ns('CollapsibleInnerContent')}

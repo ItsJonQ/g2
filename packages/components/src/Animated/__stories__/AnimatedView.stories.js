@@ -1,15 +1,22 @@
-import { AnimatePresence } from '@wp-g2/animations';
-import { FiX } from '@wp-g2/icons';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';
 
-import { Button, Card, Divider, Flex, Spacer, Text, View } from '../../index';
-import { AnimatedView } from '../index';
+import {
+	Button,
+	Card,
+	CloseButton,
+	Divider,
+	Flex,
+	Spacer,
+	Text,
+	View,
+} from '../../index';
+import { Animated, AnimatedContainer } from '../index';
 
 export default {
-	component: AnimatedView,
-	title: 'Components/AnimatedView',
+	component: Animated,
+	title: 'Components/Animated',
 };
 
 const itemSchema = new Schema(() => ({
@@ -49,16 +56,16 @@ const Example = () => {
 					</Flex>
 				</Spacer>
 				<Card css={{ overflow: 'hidden' }}>
-					<AnimatePresence initial={false}>
+					<AnimatedContainer initial={false}>
 						{items.map((item, index) => (
-							<AnimatedView auto key={item.id}>
+							<Animated auto key={item.id}>
 								<View
 									css={{
 										padding: '12px 8px',
 										position: 'relative',
 									}}
 								>
-									<AnimatedView
+									<Animated
 										animate={{
 											paddingRight: isEditable ? 48 : 0,
 										}}
@@ -68,8 +75,8 @@ const Example = () => {
 										}}
 									>
 										<Text>{item.name}</Text>
-									</AnimatedView>
-									<AnimatedView
+									</Animated>
+									<Animated
 										animate={{
 											opacity: isEditable ? 1 : 0,
 										}}
@@ -85,20 +92,19 @@ const Example = () => {
 											duration: 0.2,
 										}}
 									>
-										<Button
-											icon={<FiX />}
+										<CloseButton
 											onClick={() => remove(item.id)}
 											size="small"
 											variant="tertiary"
 										/>
-									</AnimatedView>
+									</Animated>
 								</View>
 								{index !== items.length - 1 && (
 									<Divider m={0} />
 								)}
-							</AnimatedView>
+							</Animated>
 						))}
-					</AnimatePresence>
+					</AnimatedContainer>
 				</Card>
 			</View>
 		</>

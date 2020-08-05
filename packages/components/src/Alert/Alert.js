@@ -1,9 +1,8 @@
-import { AnimatePresence } from '@wp-g2/animations';
 import { connect } from '@wp-g2/context';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
-import { AnimatedView } from '../AnimatedView';
+import { Animated } from '../Animated';
 import { Flex, FlexBlock } from '../Flex';
 import * as styles from './Alert.styles';
 import AlertCloseButton from './AlertCloseButton';
@@ -21,7 +20,7 @@ function Alert({
 	const cx = [styles[status]];
 
 	return (
-		<AnimatedView auto>
+		<Animated auto>
 			<AlertView {...props} cx={cx}>
 				<Flex align="flex-start">
 					<FlexBlock>
@@ -35,7 +34,7 @@ function Alert({
 					/>
 				</Flex>
 			</AlertView>
-		</AnimatedView>
+		</Animated>
 	);
 }
 

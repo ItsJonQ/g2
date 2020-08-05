@@ -1,6 +1,5 @@
-import { AnimatePresence } from '@wp-g2/animations';
 import { connect } from '@wp-g2/context';
-import { FiMenu, FiX } from '@wp-g2/icons';
+import { FiMenu } from '@wp-g2/icons';
 import { styled } from '@wp-g2/styles';
 import { arrayMove, noop } from '@wp-g2/utils';
 import React from 'react';
@@ -10,8 +9,8 @@ import {
 	sortableHandle,
 } from 'react-sortable-hoc';
 
-import { AnimatedView } from '../AnimatedView';
-import { Button } from '../Button';
+import { Animated, AnimatedContainer } from '../Animated';
+import { CloseButton } from '../CloseButton';
 import { Divider } from '../Divider';
 import { Icon } from '../Icon';
 import { Surface } from '../Surface';
@@ -34,9 +33,9 @@ const DragHandle = sortableHandle(() => (
 
 const SortableItem = sortableElement(
 	({ index, isLast, isSortable, item, onRemove, renderItem, value }) => (
-		<AnimatedView auto>
+		<Animated auto>
 			<SortableItemView>
-				<AnimatedView
+				<Animated
 					animate={{
 						display: isSortable ? 'block' : 'none',
 						opacity: isSortable ? 1 : 0,
@@ -50,8 +49,8 @@ const SortableItem = sortableElement(
 					}}
 				>
 					<DragHandle />
-				</AnimatedView>
-				<AnimatedView
+				</Animated>
+				<Animated
 					animate={{
 						paddingLeft: isSortable ? 36 : 8,
 						paddingRight: isSortable ? 36 : 8,
@@ -59,8 +58,8 @@ const SortableItem = sortableElement(
 					css={{ padding: 8, willChange: 'padding' }}
 				>
 					{renderItem ? renderItem({ index, item }) : value}
-				</AnimatedView>
-				<AnimatedView
+				</Animated>
+				<Animated
 					animate={{
 						display: isSortable ? 'block' : 'none',
 						opacity: isSortable ? 1 : 0,
@@ -71,17 +70,16 @@ const SortableItem = sortableElement(
 						top: 4,
 					}}
 				>
-					<Button
-						icon={<FiX />}
+					<CloseButton
 						iconSize={16}
 						onClick={() => onRemove(item.id)}
 						size="small"
 						variant="tertiary"
 					/>
-				</AnimatedView>
+				</Animated>
 				{!isLast && <Divider />}
 			</SortableItemView>
-		</AnimatedView>
+		</Animated>
 	),
 );
 
@@ -110,7 +108,7 @@ function Sortable({
 			useDragHandle
 			{...props}
 		>
-			<AnimatePresence initial={false}>
+			<AnimatedContainer initial={false}>
 				{items.map((item, index) => (
 					<SortableItem
 						helperClass="is-dragging"
@@ -124,7 +122,7 @@ function Sortable({
 						value={item.value}
 					/>
 				))}
-			</AnimatePresence>
+			</AnimatedContainer>
 		</SortableContainer>
 	);
 }

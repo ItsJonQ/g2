@@ -4,18 +4,18 @@ import { createSystemElement, getIsReducedMotion } from '@wp-g2/styles';
 import { is, memoize, warning } from '@wp-g2/utils';
 import React from 'react';
 
-const createAnimatedView = function (tagName) {
+const createAnimated = function (tagName) {
 	const motionComponent = motion[tagName];
 	return createSystemElement(motionComponent);
 };
 
-const memoizedCreateAnimatedView = memoize(createAnimatedView);
+const memoizedCreateAnimated = memoize(createAnimated);
 
-function AnimatedView({ as = 'div', auto = false, ...props }) {
+function Animated({ as = 'div', auto = false, ...props }) {
 	warning(
 		!is.string(as),
 		'@wp-g2/components',
-		'AnimatedView',
+		'Animated',
 		'as prop must be a string.',
 	);
 
@@ -24,7 +24,7 @@ function AnimatedView({ as = 'div', auto = false, ...props }) {
 	const isReducedMotion = isSystemReducedMotion || shouldReduceMotion;
 
 	const tagName = is.string(as) ? as : 'div';
-	const Component = memoizedCreateAnimatedView(tagName);
+	const Component = memoizedCreateAnimated(tagName);
 
 	let baseProps = {
 		initial: false,
@@ -58,4 +58,4 @@ function AnimatedView({ as = 'div', auto = false, ...props }) {
 	return <Component {...finalProps} />;
 }
 
-export default connect(AnimatedView);
+export default connect(Animated);
