@@ -1,3 +1,4 @@
+import { colorize } from '@wp-g2/utils';
 import { is, kebabCase } from '@wp-g2/utils';
 
 import { REDUCED_MOTION_MODE_ATTR } from './theme';
@@ -49,4 +50,17 @@ export function transformValuesToVariablesString(
 
 export function getIsReducedMotion() {
 	return !!document.querySelector(REDUCED_MOTION_MODE_ATTR);
+}
+
+export function createRgbaColors(colorName, baseColorValue) {
+	const range = [10, 20, 40, 50, 70];
+	const colorSet = {};
+
+	for (const index of range) {
+		colorSet[`${colorName}Rgba${index}`] = colorize(baseColorValue)
+			.setAlpha(index / 100)
+			.toRgbString();
+	}
+
+	return colorSet;
 }

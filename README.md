@@ -12,7 +12,10 @@ These components (and their sub-systems) have been uniquely developed to meet th
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 -   [Getting Started](#getting-started)
--   [Goal](#goal)
+-   [Goals](#goals)
+    -   [Design + Developer Experience (DX)](#design--developer-experience-dx)
+    -   [Native support and considerations for a11y](#native-support-and-considerations-for-a11y)
+    -   [Seamless integration into existing systems](#seamless-integration-into-existing-systems)
 -   [Open for Feedback](#open-for-feedback)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -31,9 +34,27 @@ Then, fire up the local dev environment (Storybook) by running:
 yarn start
 ```
 
-## Goal
+## Goals
 
-The goal of this project is to derive useful UI features and/or architecture patterns and workflows to improve the experience of WordPress [Gutenberg](https://github.com/WordPress/gutenberg).
+There are several core values that drive everything in this project:
+
+-   Design + Developer Experience
+-   Native support and considerations for a11y
+-   Seamless integration into existing systems
+
+### Design + Developer Experience (DX)
+
+Everything by way of workflows should recognize and prioritize design and developer experience - considering the folks working directly on the project, as well as folks using and modifying parts of the project. Having superior DX enables newer contributors and users to work with the project and it's systems.
+
+### Native support and considerations for a11y
+
+Considerations for a11y should be inherent to the core system. This ensures that a11y works consistently throughout the entire project. Implementation should feel mostly "invisible" at the component (code) layer.
+
+### Seamless integration into existing systems
+
+Developers should be able to **reliably** use any/all parts of the system within existing projects (like Gutenberg, WordPress WP-Admin, or anything else) with minimal integration/build-system effort. The project's component should function and render perfectly out-of-the-box.
+
+Ultimately, the goal of this project is to derive useful UI features and/or architecture patterns and workflows to improve the experience of WordPress [Gutenberg](https://github.com/WordPress/gutenberg).
 
 ## Open for Feedback
 
