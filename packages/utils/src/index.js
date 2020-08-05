@@ -1,6 +1,7 @@
 export * from './arrays';
 export * from './colors';
 export * from './deepEqual';
+export * from './env';
 export * from './hooks';
 export * from './is';
 export * from './math';

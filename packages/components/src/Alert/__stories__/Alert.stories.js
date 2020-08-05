@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Text } from '../../Text';
+import { Text, View } from '../../index';
 import { Alert, Alerts } from '../index';
 
 export default {
@@ -15,21 +15,28 @@ export const Example = () => {
 	const remove = (id) => setAlerts((prev) => prev.filter((i) => i !== id));
 
 	return (
-		<Alerts>
-			{alerts.map((status) => (
-				<Alert
-					isDismissable
-					key={status}
-					onDismiss={() => {
-						remove(status);
-					}}
-					status={status}
-					title="Title"
-				>
-					<Text>Alert Content</Text>
-				</Alert>
-			))}
-		</Alerts>
+		<View
+			css={`
+				max-width: 480px;
+				margin: auto;
+			`}
+		>
+			<Alerts>
+				{alerts.map((status) => (
+					<Alert
+						isDismissable
+						key={status}
+						onDismiss={() => {
+							remove(status);
+						}}
+						status={status}
+						title="Title"
+					>
+						<Text>Alert Content</Text>
+					</Alert>
+				))}
+			</Alerts>
+		</View>
 	);
 };
 

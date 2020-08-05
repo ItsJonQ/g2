@@ -1,5 +1,3 @@
-import { colorize } from '@wp-g2/utils';
-
 import {
 	createRgbaColors,
 	get,
@@ -52,11 +50,7 @@ const RED_COLORS = {
 	red700: '#b02828',
 	red800: '#9a2323',
 	red900: '#841e1e',
-	redRgba10: colorize('#dc3232').setAlpha(0.1).toRgbString(),
-	redRgba20: colorize('#dc3232').setAlpha(0.2).toRgbString(),
-	redRgba40: colorize('#dc3232').setAlpha(0.4).toRgbString(),
-	redRgba50: colorize('#dc3232').setAlpha(0.5).toRgbString(),
-	redRgba70: colorize('#dc3232').setAlpha(0.7).toRgbString(),
+	...createRgbaColors('red', '#dc3232'),
 };
 
 const ORANGE_COLORS = {
@@ -188,6 +182,7 @@ const COLOR_PROPS = {
 const FONT_PROPS = {
 	fontFamily:
 		'Inter,Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
+	fontFamilyMono: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace',
 	fontSize: '13px',
 	fontSizeH1: `calc(2.44 * ${get('fontSize')})`,
 	fontSizeH2: `calc(1.95 * ${get('fontSize')})`,
@@ -196,7 +191,8 @@ const FONT_PROPS = {
 	fontSizeH5: `calc(1 * ${get('fontSize')})`,
 	fontSizeH6: `calc(0.8 * ${get('fontSize')})`,
 	fontSizeInputMobile: '16px',
-	fontSizeSmall: '12px',
+	fontSizeSmall: `calc(0.92 * ${get('fontSize')})`,
+	fontSizeXSmall: `calc(0.75 * ${get('fontSize')})`,
 };
 
 const SURFACE_PROPS = {

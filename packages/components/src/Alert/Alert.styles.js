@@ -5,6 +5,7 @@ export const AlertView = styled.div`
 	border-radius: ${get('controlBorderRadius')};
 	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')} inset;
 	padding: ${space(3)} ${space(4)};
+	position: relative;
 `;
 
 export const CloseButtonWrapper = styled.div`

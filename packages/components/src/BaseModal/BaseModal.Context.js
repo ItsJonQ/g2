@@ -1,10 +1,10 @@
+import { createStore } from '@wp-g2/context';
 import { createContext, useContext, useEffect, useRef } from 'react';
-import create from 'zustand';
 
 export const ModalContext = createContext({ dialog: {} });
 export const useModalContext = () => useContext(ModalContext);
 
-const [useBaseModalStore] = create((setState, getState) => ({
+const [useBaseModalStore] = createStore((setState, getState) => ({
 	getIsUnderLayer: (ref) => {
 		const { isStacked, modals } = getState();
 		const latestRef = modals[modals.length - 1];

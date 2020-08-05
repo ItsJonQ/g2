@@ -1,8 +1,10 @@
 import { motion, useReducedMotion } from '@wp-g2/animations';
 import { connect } from '@wp-g2/context';
-import { createSystemElement, getIsReducedMotion } from '@wp-g2/styles';
+import { createSystemElement, css, getIsReducedMotion } from '@wp-g2/styles';
 import { is, memoize, warning } from '@wp-g2/utils';
 import React from 'react';
+
+import { Debugger } from '../Debugger';
 
 const createAnimated = function (tagName) {
 	const motionComponent = motion[tagName];
@@ -11,7 +13,7 @@ const createAnimated = function (tagName) {
 
 const memoizedCreateAnimated = memoize(createAnimated);
 
-function Animated({ as = 'div', auto = false, ...props }) {
+function Animated({ as = 'div', auto = false, children, ...props }) {
 	warning(
 		!is.string(as),
 		'@wp-g2/components',
@@ -55,7 +57,17 @@ function Animated({ as = 'div', auto = false, ...props }) {
 		};
 	}
 
-	return <Component {...finalProps} />;
+	return (
+		<Component {...finalProps}>
+			<Debugger>
+				<div>Reduce Motion: {isReducedMotion ? 'ON' : 'OFF'}</div>
+			</Debugger>
+			<Debugger>
+				<div>Transition: {finalProps.transition?.duration}</div>
+			</Debugger>
+			{children}
+		</Component>
+	);
 }
 
 export default connect(Animated);

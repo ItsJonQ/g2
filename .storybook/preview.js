@@ -102,7 +102,14 @@ function Themer() {
 	};
 
 	return (
-		<>
+		<View
+			css={{
+				position: 'fixed',
+				left: 8,
+				bottom: 8,
+				zIndex: 10,
+			}}
+		>
 			<ThemeProvider
 				isDark={isDark}
 				isHighContrast={isHighContrast}
@@ -110,11 +117,11 @@ function Themer() {
 				isReducedMotion={isReducedMotion}
 				theme={theme}
 			/>
-			<Spacer css={{ padding: 8 }} mb={5}>
+			<View css={{ padding: 8 }}>
 				<Card css={{ display: 'inline-flex' }}>
-					<CardBody>
+					<CardBody css={{ padding: 4 }}>
 						<Flex justify="left" gap={4}>
-							<Popover placement="bottom-start">
+							<Popover placement="top-start">
 								<PopoverTrigger as={Button}>
 									Customize Theme
 								</PopoverTrigger>
@@ -269,8 +276,8 @@ function Themer() {
 						</Flex>
 					</CardBody>
 				</Card>
-			</Spacer>
-		</>
+			</View>
+		</View>
 	);
 }
 
