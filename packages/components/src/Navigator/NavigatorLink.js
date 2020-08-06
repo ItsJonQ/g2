@@ -1,7 +1,8 @@
 import { connect } from '@wp-g2/context';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
+import { Link } from '../Link';
 import useNavigator from './useNavigator';
 import useQuery from './useQuery';
 
@@ -41,9 +42,14 @@ function NavigatorLink({
 	}
 
 	return (
-		<Link component={as} to={nextLocation} {...props} ref={forwardedRef}>
+		<RouterLink
+			component={as}
+			to={nextLocation}
+			{...props}
+			ref={forwardedRef}
+		>
 			{children}
-		</Link>
+		</RouterLink>
 	);
 }
 
