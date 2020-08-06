@@ -1,30 +1,20 @@
-import { FiArrowLeft } from '@wp-g2/icons';
 import { styled, ThemeProvider } from '@wp-g2/styles';
 import React from 'react';
-import { animated, useSpring } from 'react-spring';
 
 import {
-	BaseView,
 	Flex,
 	FlexBlock,
 	FlexItem,
-	Heading,
-	Icon,
 	Menu,
 	MenuItem,
 	Surface,
-	Text,
 	View,
 } from '../../index';
 import {
 	Navigator,
-	NavigatorBack,
 	NavigatorLink,
 	NavigatorScreen,
 	NavigatorScreens,
-	useNavigator,
-	useQuery,
-	withNavigator,
 } from '../index';
 
 export default {
