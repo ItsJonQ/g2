@@ -15,7 +15,7 @@ export function getBackgroundColor(color, options = {}) {
 		? `${color}Rgba10`
 		: `${color}Rgba20`;
 
-	const colorBlindShade = isBold ? `Rgba90` : `Rgba10`;
+	const colorBlindShade = isBold ? `Rgba20` : `Rgba10`;
 	let colorBlindColor;
 
 	const baseColor = css({

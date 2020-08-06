@@ -1,5 +1,4 @@
 import { connect } from '@wp-g2/context';
-import { css, get } from '@wp-g2/styles';
 import React from 'react';
 
 import * as styles from './Surface.styles';

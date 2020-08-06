@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Elevation } from '../Elevation';
 import { Surface } from '../Surface';
+import { View } from '../View';
 import * as styles from './Card.styles';
 
 function Card({ children, className, elevation = 2, ...props }) {
@@ -11,7 +12,7 @@ function Card({ children, className, elevation = 2, ...props }) {
 
 	return (
 		<Surface {...props} className={classes}>
-			{children}
+			<View {...ns('CardContent')}>{children}</View>
 			<Elevation
 				css={{ borderRadius: 8 }}
 				isInteractive={false}

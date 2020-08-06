@@ -52,19 +52,41 @@ export function getIsReducedMotion() {
 	return !!document.querySelector(REDUCED_MOTION_MODE_ATTR);
 }
 
-export function createRgbaColors(colorName, baseColorValue, isDark = false) {
-	const range = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+export function createTextColors(colors = {}) {
 	const colorSet = {};
+	const entries = Object.entries(colors);
+	const light = entries[0][1];
+	const lighter = colorize(light).lighten(15).toHexString();
+	const dark = entries[entries.length - 1][1];
+	const darker = colorize(dark).darken(15).toHexString();
+
+	for (const [color, value] of entries) {
+		colorSet[`${color}Text`] = colorize
+			.mostReadable(value, [lighter, light, dark, darker])
+			.toHexString();
+	}
+
+	return colorSet;
+}
+
+export function createRgbaColors(colors = {}, isDark = false) {
+	const colorSet = {};
+	const entries = Object.entries(colors);
+	const [baseColorName, baseColorValue] = entries[5];
+	const [colorName] = baseColorName.split(/\d+/);
+
+	const ranges = entries.map((entry, index) => (index + 1) * 10);
 
 	const mixBase = isDark ? '#000' : '#fff';
 	const readabilityTextBase = isDark ? '#fff' : '#000';
 	const adjustMethod = isDark ? 'darken' : 'lighten';
 
-	for (const index of range) {
+	entries.forEach((entry, index) => {
+		const range = ranges[index];
 		let enhancedColorValue = baseColorValue;
 
 		enhancedColorValue = colorize(enhancedColorValue)
-			.setAlpha(index / 100)
+			.setAlpha(range / 100)
 			.toRgbString();
 
 		const testColor = colorize
@@ -83,8 +105,8 @@ export function createRgbaColors(colorName, baseColorValue, isDark = false) {
 				.toRgbString();
 		}
 
-		colorSet[`${colorName}Rgba${index}`] = enhancedColorValue;
-	}
+		colorSet[`${colorName}Rgba${range}`] = enhancedColorValue;
+	});
 
 	return colorSet;
 }
