@@ -16,8 +16,10 @@ export const MenuItem = css`
 	padding: 8px 12px;
 	text-align: left;
 	text-decoration: none;
+	transition: background ${get('transitionDurationFastest')} linear;
 	width: 100%;
 
+	&:hover,
 	&:focus {
 		background: ${get('controlBackgroundColor')};
 		box-shadow: none;
@@ -25,5 +27,27 @@ export const MenuItem = css`
 
 	&:active {
 		background: ${get('controlBackgroundDimColor')};
+	}
+
+	.is-active > & {
+		background-color: ${get('colorAdmin')};
+		color: ${get('controlPrimaryTextColor')};
+
+		&:active {
+			color: ${get('colorTextInverted')};
+		}
+
+		&:hover,
+		&:focus {
+			background-color: ${get('colorAdmin')};
+		}
+
+		&:focus {
+			border-color: ${get('colorAdmin')};
+		}
+
+		&:active {
+			background-color: ${get('colorText')};
+		}
 	}
 `;

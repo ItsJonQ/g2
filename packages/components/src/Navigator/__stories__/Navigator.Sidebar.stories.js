@@ -10,8 +10,11 @@ import {
 	FlexItem,
 	Heading,
 	Icon,
+	Menu,
+	MenuItem,
 	Surface,
 	Text,
+	View,
 } from '../../index';
 import {
 	Navigator,
@@ -39,43 +42,140 @@ const Screen = styled(Surface)`
 
 const Home = () => (
 	<Screen>
-		<ul>
-			<li>
-				<NavigatorLink params={{ id: 'Acme' }} to="Organization">
-					Acme
+		<View css={{ padding: 8 }}>
+			<Menu>
+				<NavigatorLink to="Home">
+					<MenuItem>My Home</MenuItem>
 				</NavigatorLink>
-			</li>
-			<li>
-				<NavigatorLink params={{ id: 'Hello' }} to="Organization">
-					Hello
+				<NavigatorLink>
+					<MenuItem>Stats</MenuItem>
 				</NavigatorLink>
-			</li>
-		</ul>
+				<NavigatorLink>
+					<MenuItem>Plan</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink to="Store">
+					<MenuItem>Store</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink to="Site">
+					<MenuItem>Site</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink>
+					<MenuItem>Design</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink>
+					<MenuItem>Tools</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink>
+					<MenuItem>Manage</MenuItem>
+				</NavigatorLink>
+			</Menu>
+		</View>
 	</Screen>
 );
 
 const Store = () => {
-	const { location } = useNavigator();
-	const { id } = location;
-
 	return (
 		<Screen>
-			<ul>
-				<li>
-					<NavigatorLink params={{ id }} to="Manage">
-						Manage
+			<View css={{ padding: 8 }}>
+				<Menu>
+					<NavigatorLink isBack>
+						<MenuItem>Back</MenuItem>
 					</NavigatorLink>
-				</li>
-				<li>
-					<NavigatorLink>Usage</NavigatorLink>
-				</li>
-				<li>
-					<NavigatorLink>Members</NavigatorLink>
-				</li>
-			</ul>
+					<NavigatorLink to="Store">
+						<MenuItem>Store home</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Analytics</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink to="Orders">
+						<MenuItem>Orders</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Marketing</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Products</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Customers</MenuItem>
+					</NavigatorLink>
+				</Menu>
+			</View>
 		</Screen>
 	);
 };
+
+const Orders = () => {
+	return (
+		<Screen>
+			<View css={{ padding: 8 }}>
+				<Menu>
+					<NavigatorLink isBack>
+						<MenuItem>Back</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink to="Orders">
+						<MenuItem>Orders</MenuItem>
+					</NavigatorLink>
+					<View css={{ paddingLeft: 16 }}>
+						<NavigatorLink>
+							<MenuItem>All orders</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Payouts</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Transactions</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Disputes</MenuItem>
+						</NavigatorLink>
+					</View>
+				</Menu>
+			</View>
+		</Screen>
+	);
+};
+
+const Site = () => {
+	return (
+		<Screen>
+			<View css={{ padding: 8 }}>
+				<Menu>
+					<NavigatorLink isBack>
+						<MenuItem>Back</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink to="Site">
+						<MenuItem>Site</MenuItem>
+					</NavigatorLink>
+					<View css={{ paddingLeft: 16 }}>
+						<NavigatorLink>
+							<MenuItem>Pages</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Posts</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Media</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Comments</MenuItem>
+						</NavigatorLink>
+						<NavigatorLink>
+							<MenuItem>Feedback</MenuItem>
+						</NavigatorLink>
+					</View>
+				</Menu>
+			</View>
+		</Screen>
+	);
+};
+
+const screens = [
+	{ component: Home, path: 'Home' },
+	{ component: Store, path: 'Store' },
+	{ component: Orders, path: 'Orders' },
+	{ component: Site, path: 'Site' },
+];
 
 export const Sidebar = () => {
 	return (
@@ -94,18 +194,15 @@ export const Sidebar = () => {
 					<Flex css={{ height: '100%' }} direction="column">
 						<FlexBlock css={{ width: '100%' }}>
 							<NavigatorScreens>
-								<NavigatorScreen component={Home} path="Home" />
-								<NavigatorScreen
-									component={Store}
-									path="Store"
-								/>
+								{screens.map((screen) => (
+									<NavigatorScreen
+										{...screen}
+										key={screen.path}
+									/>
+								))}
 							</NavigatorScreens>
 						</FlexBlock>
-						<FlexItem css={{ width: '100%' }}>
-							<Flex>
-								<NavigatorLink to="Home">Home</NavigatorLink>
-							</Flex>
-						</FlexItem>
+						<FlexItem css={{ width: '100%' }}></FlexItem>
 					</Flex>
 				</Navigator>
 			</Surface>
