@@ -16,6 +16,7 @@ These components (and their sub-systems) have been uniquely developed to meet th
     -   [Design + Developer Experience (DX)](#design--developer-experience-dx)
     -   [Native support and considerations for a11y](#native-support-and-considerations-for-a11y)
     -   [Seamless integration into existing systems](#seamless-integration-into-existing-systems)
+-   [Thinking in Systems](#thinking-in-systems)
 -   [Open for Feedback](#open-for-feedback)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -55,6 +56,31 @@ Considerations for a11y should be inherent to the core system. This ensures that
 Developers should be able to **reliably** use any/all parts of the system within existing projects (like Gutenberg, WordPress WP-Admin, or anything else) with minimal integration/build-system effort. The project's component should function and render perfectly out-of-the-box.
 
 Ultimately, the goal of this project is to derive useful UI features and/or architecture patterns and workflows to improve the experience of WordPress [Gutenberg](https://github.com/WordPress/gutenberg).
+
+## Thinking in Systems
+
+The primary strategy to achieving the goals outlined above is to craft the (many) moving parts using a series of systems.
+
+To help visualize the various systems and mechanics at flow, I've illustrated a flow chart for an example `<Alert />` component.
+
+Like this one:
+
+<img width="505" alt="Screen Shot 2020-08-06 at 7 45 21 PM" src="https://user-images.githubusercontent.com/2322354/89593516-60542580-d81d-11ea-9807-7d404d8de931.png">
+
+Here it is!
+
+![IMG_0457](https://user-images.githubusercontent.com/2322354/89593533-6813ca00-d81d-11ea-8c3e-28bfbc377e9b.png)
+
+There are 4 main systems which are represented by a colour:
+
+-   Systems (Yellow)
+-   Context (Blue)
+-   A11Y (Pink)
+-   Animations (Green)
+
+The arrows that link the topics/keywords are colour coded to match their respective system.
+
+[Click here](https://github.com/ItsJonQ/g2/issues/3) for more details about the core systems in this project.
 
 ## Open for Feedback
 
