@@ -82,14 +82,8 @@ function Modal({
 	};
 
 	return (
-		<BaseModal
-			as={Card}
-			className={classes}
-			elevation={4}
-			ref={forwardedRef}
-			{...modalProps}
-		>
-			{children}
+		<BaseModal className={classes} ref={forwardedRef} {...modalProps}>
+			<Card elevation={4}>{children}</Card>
 		</BaseModal>
 	);
 }

@@ -85,6 +85,7 @@ function BaseModal({
 							className={className}
 							ref={forwardedRef}
 							tabIndex={0}
+							{...dialog}
 							{...dialogProps}
 						>
 							{children}
