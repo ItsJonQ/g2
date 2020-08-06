@@ -2,7 +2,6 @@ import { createRgbaColors, createTextColors, get } from '../utils';
 
 export const CORE_PURPLE_COLORS = {
 	purple100: '#f3f1f8',
-	purple150: '#E9DDE4',
 	purple200: '#cdc5e1',
 	purple300: '#B4A8D2',
 	purple400: '#9b8bc3',
@@ -39,7 +38,6 @@ export const CORE_LIGHT_GRAY_COLORS = {
 
 export const CORE_RED_COLORS = {
 	red100: '#fcebeb',
-	red150: '#F2D7D7',
 	red200: '#f1adad',
 	red300: '#ea8484',
 	red400: '#e35b5b',
@@ -52,7 +50,6 @@ export const CORE_RED_COLORS = {
 
 export const CORE_ORANGE_COLORS = {
 	orange100: '#fef1ea',
-	orange150: '#F4DDD6',
 	orange200: '#fbc5a9',
 	orange300: '#f9a87e',
 	orange400: '#f78b53',
@@ -65,7 +62,6 @@ export const CORE_ORANGE_COLORS = {
 
 export const CORE_YELLOW_COLORS = {
 	yellow100: '#fff8e6',
-	yellow150: '#F5E4D2',
 	yellow200: '#ffe399',
 	yellow300: '#ffd566',
 	yellow400: '#ffc733',
@@ -78,7 +74,6 @@ export const CORE_YELLOW_COLORS = {
 
 export const CORE_GREEN_COLORS = {
 	green100: '#edf8ee',
-	green150: '#D9EEDA',
 	green200: '#b5e1b9',
 	green300: '#90d296',
 	green400: '#6bc373',
@@ -91,7 +86,6 @@ export const CORE_GREEN_COLORS = {
 
 export const CORE_BLUE_COLORS = {
 	blue100: '#e6f6fb',
-	blue150: '#D2E2F1',
 	blue200: '#99d9ed',
 	blue300: '#66c6e4',
 	blue400: '#33b3db',
