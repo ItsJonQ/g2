@@ -8,6 +8,7 @@ import {
 
 export const LozengeView = styled.div`
 	border-radius: ${get('controlBorderRadius')};
+	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')} inset;
 	cursor: default;
 	display: flex;
 	height: 18px;

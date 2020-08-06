@@ -7,9 +7,13 @@ import { colorBlindMode } from './colorBlindMode';
 
 export function getBackgroundColor(color, options = {}) {
 	if (!SUPPORTED_COLORS.includes(color)) return '';
-	const { isBold } = options;
+	const { isBold, isSubtle } = options;
 
-	const baseBackground = isBold ? `${color}Rgba70` : `${color}Rgba30`;
+	const baseBackground = isBold
+		? `${color}Rgba70`
+		: isSubtle
+		? `${color}Rgba10`
+		: `${color}Rgba20`;
 
 	const colorBlindShade = isBold ? `Rgba90` : `Rgba10`;
 	let colorBlindColor;

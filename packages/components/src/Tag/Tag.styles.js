@@ -8,7 +8,7 @@ import {
 
 export const TagView = styled.div`
 	border-radius: ${get('controlBorderRadius')};
-	box-shadow: 0 0 0 1px ${get('controlBorderColor')};
+	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')} inset;
 	cursor: default;
 	display: flex;
 	height: 20px;
