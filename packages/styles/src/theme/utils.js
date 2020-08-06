@@ -52,14 +52,38 @@ export function getIsReducedMotion() {
 	return !!document.querySelector(REDUCED_MOTION_MODE_ATTR);
 }
 
-export function createRgbaColors(colorName, baseColorValue) {
-	const range = [10, 20, 40, 50, 70];
+export function createRgbaColors(colorName, baseColorValue, isDark = false) {
+	const range = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 	const colorSet = {};
 
+	const mixBase = isDark ? '#000' : '#fff';
+	const readabilityTextBase = isDark ? '#fff' : '#000';
+	const adjustMethod = isDark ? 'darken' : 'lighten';
+
 	for (const index of range) {
-		colorSet[`${colorName}Rgba${index}`] = colorize(baseColorValue)
+		let enhancedColorValue = baseColorValue;
+
+		enhancedColorValue = colorize(enhancedColorValue)
 			.setAlpha(index / 100)
 			.toRgbString();
+
+		const testColor = colorize
+			.mix(baseColorValue, mixBase, index)
+			.toRgbString();
+
+		const isReadable = colorize.isReadable(
+			testColor,
+			readabilityTextBase,
+			{},
+		);
+
+		if (!isReadable) {
+			enhancedColorValue = colorize(enhancedColorValue)
+				[adjustMethod](20)
+				.toRgbString();
+		}
+
+		colorSet[`${colorName}Rgba${index}`] = enhancedColorValue;
 	}
 
 	return colorSet;

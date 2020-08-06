@@ -1,4 +1,10 @@
-import { css, get, styled } from '@wp-g2/styles';
+import {
+	css,
+	get,
+	getBackgroundColor,
+	getBackgroundColorText,
+	styled,
+} from '@wp-g2/styles';
 
 export const LozengeView = styled.div`
 	border-radius: ${get('controlBorderRadius')};
@@ -13,3 +19,15 @@ export const LozengeView = styled.div`
 export const text = css`
 	padding: 4px 0;
 `;
+
+export function getBackground({ color, isBold }) {
+	return css`
+		${getBackgroundColor(color, { isBold })}
+	`;
+}
+
+export function getBackgroundText({ color, isBold }) {
+	return css`
+		${getBackgroundColorText(color, { isBold })}
+	`;
+}

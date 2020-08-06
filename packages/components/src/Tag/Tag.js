@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, get, highContrastMode } from '@wp-g2/styles';
+import { css } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
@@ -19,19 +19,16 @@ function Tag({
 	...props
 }) {
 	const tagColor = TAG_COLORS[color] || TAG_COLORS.standard;
-	const background = tagColor.background;
 
 	styles.base = css({
-		background,
-		color: tagColor.color,
 		display,
 	});
 
-	styles.highContrast = highContrastMode(`
-		box-shadow: 0 0 0 1px inset ${get('controlBorderColor')};
-	`);
-
-	const cx = [styles.base, styles.highContrast];
+	const cx = [
+		styles.base,
+		styles.getBackground({ color: tagColor }),
+		styles.getBackgroundText({ color: tagColor }),
+	];
 
 	const asProp = href ? 'a' : 'span';
 

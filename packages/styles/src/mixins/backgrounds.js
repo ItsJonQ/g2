@@ -2,18 +2,21 @@ import { upperFirst } from '@wp-g2/utils';
 
 import { css } from '../style-system';
 import { get } from '../system';
+import { SUPPORTED_COLORS } from '../theme';
 import { colorBlindMode } from './colorBlindMode';
 
-const SUPPORTED_COLORS = ['blue', 'red', 'purple', 'green', 'yellow', 'orange'];
-
-export function getBackgroundColor(color) {
+export function getBackgroundColor(color, options = {}) {
 	if (!SUPPORTED_COLORS.includes(color)) return '';
+	const { isBold } = options;
+
+	const baseBackground = isBold ? `${color}Rgba70` : `${color}Rgba30`;
+
+	const colorBlindShade = isBold ? `Rgba90` : `Rgba10`;
+	let colorBlindColor;
 
 	const baseColor = css({
-		background: get(`colorBackground${upperFirst(color)}`),
+		background: get(baseBackground),
 	});
-	const colorBlindShade = `Rgba10`;
-	let colorBlindColor;
 
 	if (color === 'green') {
 		colorBlindColor = css({
@@ -58,5 +61,18 @@ export function getBackgroundColor(color) {
 	return css`
 		${baseColor};
 		${colorBlindMode(colorBlindColor)};
+	`;
+}
+
+export function getBackgroundColorText(color, options = {}) {
+	if (!SUPPORTED_COLORS.includes(color)) return '';
+	const { isBold } = options;
+
+	const value = isBold
+		? get('white')
+		: get(`colorBackground${upperFirst(color)}Text`);
+
+	return css`
+		color: ${value};
 	`;
 }

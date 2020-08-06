@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, get, highContrastMode } from '@wp-g2/styles';
+import { css, get } from '@wp-g2/styles';
 import React from 'react';
 
 import { Text } from '../Text';
@@ -13,34 +13,26 @@ function Lozenge({
 	color: colorProp = 'standard',
 	display = 'inline-flex',
 	isBold,
+	isBordered,
 	...props
 }) {
 	const lozengeColor = LOZENGE_COLORS[colorProp] || LOZENGE_COLORS.standard;
-	const isStandard = colorProp === 'standard';
-
-	let background = isBold
-		? get(`${lozengeColor}700`)
-		: get(`${lozengeColor}100`);
-	let color = isBold ? get('white') : get(`${lozengeColor}700`);
-	let borderColor = get(`${lozengeColor}700`);
-
-	if (isStandard) {
-		background = isBold ? get(`darkGray300`) : get(`lightGray300`);
-		color = isBold ? get('white') : get(`darkGray700`);
-		borderColor = get(`darkGray300`);
-	}
+	const borderColor = get(`${lozengeColor}Rgba70`);
 
 	styles.base = css({
-		background,
-		color,
 		display,
 	});
 
-	styles.highContrast = highContrastMode(`
+	styles.bordered = css`
 		box-shadow: 0 0 0 1px inset ${borderColor};
-	`);
+	`;
 
-	const cx = [styles.base, styles.highContrast];
+	const cx = [
+		styles.base,
+		isBordered && styles.bordered,
+		styles.getBackground({ color: lozengeColor, isBold }),
+		styles.getBackgroundText({ color: lozengeColor, isBold }),
+	];
 
 	return (
 		<LozengeView {...props} cx={cx}>

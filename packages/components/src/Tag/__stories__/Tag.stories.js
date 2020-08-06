@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Spacer } from '../../index';
 import { Tag } from '../index';
 import { TAG_COLORS } from '../Tag.utils';
 
@@ -13,11 +14,20 @@ export const _default = () => {
 
 	return (
 		<>
-			{tags.map((tag) => (
-				<Tag color={tag} key={tag}>
-					{tag}
-				</Tag>
-			))}
+			<Spacer>
+				{tags.map((tag) => (
+					<Tag color={tag} key={tag}>
+						{tag}
+					</Tag>
+				))}
+			</Spacer>
+			<Spacer>
+				{tags.map((tag) => (
+					<Tag color={tag} key={tag} removeButtonText="Remove">
+						{tag}
+					</Tag>
+				))}
+			</Spacer>
 		</>
 	);
 };

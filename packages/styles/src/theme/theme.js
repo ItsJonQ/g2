@@ -6,6 +6,17 @@ import {
 	transformValuesToVariablesString,
 } from './utils';
 
+export const SUPPORTED_COLORS = [
+	'blue',
+	'red',
+	'purple',
+	'green',
+	'yellow',
+	'orange',
+	'darkGray',
+	'lightGray',
+];
+
 const ANIMATION_PROPS = {
 	transitionDuration: '200ms',
 	transitionDurationFast: '160ms',
@@ -25,6 +36,7 @@ const DARK_GRAY_COLORS = {
 	darkGray700: '#32373C',
 	darkGray800: '#23282D',
 	darkGray900: '#191E23',
+	...createRgbaColors('darkGray', '#555D66'),
 };
 
 const LIGHT_GRAY_COLORS = {
@@ -37,6 +49,7 @@ const LIGHT_GRAY_COLORS = {
 	lightGray700: '#ccd0d4',
 	lightGray800: '#b5bcc2',
 	lightGray900: '#a2aab2',
+	...createRgbaColors('lightGray', '#e2e4e7'),
 };
 
 const RED_COLORS = {
@@ -151,14 +164,25 @@ const G2_COLORS = {
 const BACKGROUND_COLOR_PROPS = {
 	colorBackgroundBlue: get('blueRgba10'),
 	colorBackgroundBlueText: get('blue800'),
+
+	colorBackgroundDarkGray: get('darkGrayRgba10'),
+	colorBackgroundDarkGrayText: get('darkGray800'),
+
 	colorBackgroundGreen: get('greenRgba10'),
 	colorBackgroundGreenText: get('green800'),
+
+	colorBackgroundLightGray: get('lightGrayRgba10'),
+	colorBackgroundLightGrayText: get('lightGray800'),
+
 	colorBackgroundOrange: get('orangeRgba10'),
 	colorBackgroundOrangeText: get('orange800'),
+
 	colorBackgroundPurple: get('purpleRgba10'),
 	colorBackgroundPurpleText: get('purple800'),
+
 	colorBackgroundRed: get('redRgba10'),
 	colorBackgroundRedText: get('red800'),
+
 	colorBackgroundYellow: get('yellowRgba10'),
 	colorBackgroundYellowText: get('yellow800'),
 };
@@ -231,48 +255,52 @@ const CONTROL_PROPS = {
 
 const DARK_MODE_COLORS = {
 	colorBackgroundBlue: get('blueRgba20'),
-	colorBackgroundBlueText: get('white'),
+	colorBackgroundBlueText: get('blue200'),
+
+	colorBackgroundDarkGray: get('darkGrayRgba20'),
+	colorBackgroundDarkGrayText: get('white'),
 
 	colorBackgroundGreen: get('greenRgba20'),
-	colorBackgroundGreenText: get('white'),
+	colorBackgroundGreenText: get('green200'),
+
+	colorBackgroundLightGray: get('lightGrayRgba20'),
+	colorBackgroundLightGrayText: get('white'),
 
 	colorBackgroundOrange: get('orangeRgba20'),
-	colorBackgroundOrangeText: get('white'),
+	colorBackgroundOrangeText: get('orange200'),
 
 	colorBackgroundPurple: get('purpleRgba20'),
-	colorBackgroundPurpleText: get('white'),
+	colorBackgroundPurpleText: get('purple200'),
 
 	colorBackgroundRed: get('redRgba20'),
-	colorBackgroundRedText: get('white'),
+	colorBackgroundRedText: get('red200'),
 
 	colorBackgroundYellow: get('yellowRgba20'),
-	colorBackgroundYellowText: get('white'),
+	colorBackgroundYellowText: get('yellow200'),
 };
 
 const DARK_MODE_RGBA_COLORS = {
-	...createRgbaColors('blue', BLUE_COLORS.blue400),
-	...createRgbaColors('green', GREEN_COLORS.green400),
-	...createRgbaColors('orange', ORANGE_COLORS.orange400),
-	...createRgbaColors('purple', PURPLE_COLORS.purple400),
-	...createRgbaColors('red', RED_COLORS.red400),
-	...createRgbaColors('yellow', YELLOW_COLORS.yellow400),
+	...createRgbaColors('blue', BLUE_COLORS.blue400, /* isDark */ true),
+	...createRgbaColors('green', GREEN_COLORS.green400, /* isDark */ true),
+	...createRgbaColors('orange', ORANGE_COLORS.orange400, /* isDark */ true),
+	...createRgbaColors('purple', PURPLE_COLORS.purple400, /* isDark */ true),
+	...createRgbaColors('red', RED_COLORS.red400, /* isDark */ true),
+	...createRgbaColors('yellow', YELLOW_COLORS.yellow400, /* isDark */ true),
+	...createRgbaColors(
+		'darkGray',
+		DARK_GRAY_COLORS.darkGray400,
+		/* isDark */ true,
+	),
+	...createRgbaColors(
+		'lightGray',
+		LIGHT_GRAY_COLORS.lightGray400,
+		/* isDark */ true,
+	),
 };
 
 const DARK_MODE_PROPS = {
 	...DARK_MODE_COLORS,
 	...DARK_MODE_RGBA_COLORS,
-	colorBackgroundBlue: get('blueRgba20'),
-	colorBackgroundBlueText: get('white'),
-	colorBackgroundGreen: get('greenRgba20'),
-	colorBackgroundGreenText: get('white'),
-	colorBackgroundOrange: get('orangeRgba20'),
-	colorBackgroundOrangeText: get('white'),
-	colorBackgroundPurple: get('purpleRgba20'),
-	colorBackgroundPurpleText: get('white'),
-	colorBackgroundRed: get('redRgba20'),
-	colorBackgroundRedText: get('white'),
-	colorBackgroundYellow: get('yellowRgba20'),
-	colorBackgroundYellowText: get('white'),
 	colorDivider: 'rgba(255, 255, 255, 0.1)',
 	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',
