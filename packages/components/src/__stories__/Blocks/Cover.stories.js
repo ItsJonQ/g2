@@ -17,7 +17,6 @@ import {
 	Button,
 	ColorField,
 	ColorPicker,
-	ControlLabel,
 	Flex,
 	FlexBlock,
 	FormGroup,
@@ -173,7 +172,6 @@ const InspectorControl = () => {
 				<PanelHeader title="Advanced" />
 				<PanelBody>
 					<FormGroup label="Title">
-						<ControlLabel>Title</ControlLabel>
 						<TextField />
 					</FormGroup>
 					<FormGroup label="HTML Anchor">
