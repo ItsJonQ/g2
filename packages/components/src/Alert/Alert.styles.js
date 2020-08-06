@@ -18,19 +18,19 @@ export const ContentWrapperView = styled.div`
 `;
 
 export const success = css`
-	${getBackgroundColor('green', { isSubtle: true })};
+	${getBackgroundColor('green')};
 `;
 
 export const warning = css`
-	${getBackgroundColor('yellow', { isSubtle: true })};
+	${getBackgroundColor('yellow')};
 `;
 
 export const critical = css`
-	${getBackgroundColor('red', { isSubtle: true })};
+	${getBackgroundColor('red')};
 `;
 
 export const info = css`
-	${getBackgroundColor('blue', { isSubtle: true })};
+	${getBackgroundColor('blue')};
 `;
 
 export function getTextColor(status) {
