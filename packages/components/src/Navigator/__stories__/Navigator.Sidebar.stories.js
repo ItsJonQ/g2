@@ -25,6 +25,7 @@ export default {
 const Screen = styled(Surface)`
 	bottom: 0;
 	left: 0;
+	padding: 8px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -32,34 +33,32 @@ const Screen = styled(Surface)`
 
 const Home = () => (
 	<Screen>
-		<View css={{ padding: 8 }}>
-			<Menu>
-				<NavigatorLink to="Home">
-					<MenuItem>My Home</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink>
-					<MenuItem>Stats</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink>
-					<MenuItem>Plan</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink to="Store">
-					<MenuItem>Store</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink to="Site">
-					<MenuItem>Site</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink>
-					<MenuItem>Design</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink>
-					<MenuItem>Tools</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink>
-					<MenuItem>Manage</MenuItem>
-				</NavigatorLink>
-			</Menu>
-		</View>
+		<Menu>
+			<NavigatorLink to="Home">
+				<MenuItem>My Home</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink>
+				<MenuItem>Stats</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink>
+				<MenuItem>Plan</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink to="Store">
+				<MenuItem>Store</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink to="Site">
+				<MenuItem>Site</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink>
+				<MenuItem>Design</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink>
+				<MenuItem>Tools</MenuItem>
+			</NavigatorLink>
+			<NavigatorLink>
+				<MenuItem>Manage</MenuItem>
+			</NavigatorLink>
+		</Menu>
 	</Screen>
 );
 
@@ -98,30 +97,28 @@ const Store = () => {
 const Orders = () => {
 	return (
 		<Screen>
-			<View css={{ padding: 8 }}>
-				<Menu>
-					<NavigatorLink isBack>
-						<MenuItem>Back</MenuItem>
+			<Menu>
+				<NavigatorLink isBack>
+					<MenuItem>Back</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink to="Orders">
+					<MenuItem>Orders</MenuItem>
+				</NavigatorLink>
+				<View css={{ paddingLeft: 16 }}>
+					<NavigatorLink>
+						<MenuItem>All orders</MenuItem>
 					</NavigatorLink>
-					<NavigatorLink to="Orders">
-						<MenuItem>Orders</MenuItem>
+					<NavigatorLink>
+						<MenuItem>Payouts</MenuItem>
 					</NavigatorLink>
-					<View css={{ paddingLeft: 16 }}>
-						<NavigatorLink>
-							<MenuItem>All orders</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Payouts</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Transactions</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Disputes</MenuItem>
-						</NavigatorLink>
-					</View>
-				</Menu>
-			</View>
+					<NavigatorLink>
+						<MenuItem>Transactions</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Disputes</MenuItem>
+					</NavigatorLink>
+				</View>
+			</Menu>
 		</Screen>
 	);
 };
@@ -129,33 +126,31 @@ const Orders = () => {
 const Site = () => {
 	return (
 		<Screen>
-			<View css={{ padding: 8 }}>
-				<Menu>
-					<NavigatorLink isBack>
-						<MenuItem>Back</MenuItem>
+			<Menu>
+				<NavigatorLink isBack>
+					<MenuItem>Back</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink to="Site">
+					<MenuItem>Site</MenuItem>
+				</NavigatorLink>
+				<View css={{ paddingLeft: 16 }}>
+					<NavigatorLink>
+						<MenuItem>Pages</MenuItem>
 					</NavigatorLink>
-					<NavigatorLink to="Site">
-						<MenuItem>Site</MenuItem>
+					<NavigatorLink>
+						<MenuItem>Posts</MenuItem>
 					</NavigatorLink>
-					<View css={{ paddingLeft: 16 }}>
-						<NavigatorLink>
-							<MenuItem>Pages</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Posts</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Media</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Comments</MenuItem>
-						</NavigatorLink>
-						<NavigatorLink>
-							<MenuItem>Feedback</MenuItem>
-						</NavigatorLink>
-					</View>
-				</Menu>
-			</View>
+					<NavigatorLink>
+						<MenuItem>Media</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Comments</MenuItem>
+					</NavigatorLink>
+					<NavigatorLink>
+						<MenuItem>Feedback</MenuItem>
+					</NavigatorLink>
+				</View>
+			</Menu>
 		</Screen>
 	);
 };
