@@ -72,16 +72,16 @@ export function createTextColors(colors = {}) {
 export function createRgbaColors(colors = {}, isDark = false) {
 	const colorSet = {};
 	const entries = Object.entries(colors);
-	const [baseColorName, baseColorValue] = entries[5];
+	const [baseColorName, baseColorValue] = entries[2];
 	const [colorName] = baseColorName.split(/\d+/);
 
-	const ranges = entries.map((entry, index) => (index + 1) * 10);
+	const ranges = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 	const mixBase = isDark ? '#000' : '#fff';
 	const readabilityTextBase = isDark ? '#fff' : '#000';
 	const adjustMethod = isDark ? 'darken' : 'lighten';
 
-	entries.forEach((entry, index) => {
+	ranges.forEach((entry, index) => {
 		const range = ranges[index];
 		let enhancedColorValue = baseColorValue;
 

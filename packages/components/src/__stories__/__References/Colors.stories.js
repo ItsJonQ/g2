@@ -17,13 +17,13 @@ export default {
 	title: 'References',
 };
 
-const grades = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+const grades = [100, 300, 500, 700, 900];
 const alphas = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 const ColorSet = ({ color }) => {
 	return (
 		<Card>
-			{grades.map((grade, index) => {
+			{grades.map((grade) => {
 				return (
 					<CardBody
 						key={grade}
@@ -48,17 +48,17 @@ const ColorSet = ({ color }) => {
 const ColorRGBSet = ({ color }) => {
 	return (
 		<Card>
-			{alphas.map((grade, index) => {
+			{alphas.map((alpha) => {
 				return (
 					<CardBody
-						key={grade}
+						key={alpha}
 						style={{
-							background: get(`${color}Rgba${grade}`),
-							color: get(`${color}${grade}Text`),
+							background: get(`${color}Rgba${alpha}`),
+							color: get(`${color}${alpha}Text`),
 						}}
 					>
 						<Flex>
-							<FlexItem>{`${color}Rgba${grade}`}</FlexItem>
+							<FlexItem>{`${color}Rgba${alpha}`}</FlexItem>
 						</Flex>
 					</CardBody>
 				);
