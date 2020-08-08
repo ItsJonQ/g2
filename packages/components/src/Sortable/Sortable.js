@@ -32,55 +32,85 @@ const DragHandle = sortableHandle(() => (
 ));
 
 const SortableItem = sortableElement(
-	({ index, isLast, isSortable, item, onRemove, renderItem, value }) => (
-		<Animated auto>
-			<SortableItemView>
-				<Animated
-					animate={{
-						display: isSortable ? 'block' : 'none',
-						opacity: isSortable ? 1 : 0,
-						width: isSortable ? 30 : 0,
-					}}
-					css={{
-						left: 8,
-						overflow: 'hidden',
-						position: 'absolute',
-						top: 8,
-					}}
-				>
-					<DragHandle />
-				</Animated>
-				<Animated
-					animate={{
-						paddingLeft: isSortable ? 36 : 8,
-						paddingRight: isSortable ? 36 : 8,
-					}}
-					css={{ padding: 8, willChange: 'padding' }}
-				>
-					{renderItem ? renderItem({ index, item }) : value}
-				</Animated>
-				<Animated
-					animate={{
-						display: isSortable ? 'block' : 'none',
-						opacity: isSortable ? 1 : 0,
-					}}
-					css={{
-						position: 'absolute',
-						right: 4,
-						top: 4,
-					}}
-				>
-					<CloseButton
-						iconSize={16}
-						onClick={() => onRemove(item.id)}
-						size="small"
-						variant="tertiary"
-					/>
-				</Animated>
-				{!isLast && <Divider />}
-			</SortableItemView>
-		</Animated>
-	),
+	({
+		isLast,
+		isSortable,
+		item,
+		itemComponent,
+		itemIndex,
+		onRemove,
+		renderItem,
+		useDragHandle,
+		value,
+	}) => {
+		if (itemComponent) {
+			return itemComponent({
+				index: itemIndex,
+				isLast,
+				isSortable,
+				item,
+				itemComponent,
+				itemIndex,
+				onRemove,
+				renderItem,
+				useDragHandle,
+				value,
+			});
+		}
+
+		return (
+			<Animated auto>
+				<SortableItemView>
+					<Animated
+						animate={{
+							display:
+								isSortable && useDragHandle ? 'block' : 'none',
+							opacity: isSortable ? 1 : 0,
+							width: isSortable ? 30 : 0,
+						}}
+						css={{
+							left: 8,
+							overflow: 'hidden',
+							position: 'absolute',
+							top: 8,
+						}}
+					>
+						<DragHandle />
+					</Animated>
+					<Animated
+						animate={{
+							paddingLeft: isSortable && useDragHandle ? 36 : 8,
+							paddingRight: isSortable ? 36 : 8,
+						}}
+						css={{ padding: 8, willChange: 'padding' }}
+					>
+						{renderItem
+							? renderItem({ index: itemIndex, item })
+							: value}
+					</Animated>
+					<Animated
+						animate={{
+							display: isSortable ? 'block' : 'none',
+							opacity: isSortable ? 1 : 0,
+						}}
+						css={{
+							position: 'absolute',
+							right: 4,
+							top: 4,
+						}}
+					>
+						<CloseButton
+							iconSize={16}
+							onClick={() => onRemove(item.id)}
+							size="small"
+							variant="tertiary"
+						/>
+					</Animated>
+					{!isLast && <Divider />}
+				</SortableItemView>
+			</Animated>
+		);
+	},
 );
 
 const SortableContainer = sortableContainer(({ children, ...props }) => {
@@ -91,8 +121,11 @@ function Sortable({
 	isSortable,
 	items,
 	onRemove = noop,
+	distance = 5,
 	renderItem,
 	setItems,
+	useDragHandle = true,
+	itemComponent,
 	...props
 }) {
 	const onSortEnd = ({ newIndex, oldIndex }) => {
@@ -105,8 +138,9 @@ function Sortable({
 		<SortableContainer
 			lockAxis="y"
 			onSortEnd={onSortEnd}
-			useDragHandle
 			{...props}
+			distance={distance}
+			useDragHandle={useDragHandle}
 		>
 			<AnimatedContainer initial={false}>
 				{items.map((item, index) => (
@@ -116,9 +150,12 @@ function Sortable({
 						isLast={index === items.length - 1}
 						isSortable={isSortable}
 						item={item}
-						key={item.id}
+						itemComponent={itemComponent}
+						itemIndex={index}
+						key={item.id || index}
 						onRemove={onRemove}
 						renderItem={renderItem}
+						useDragHandle={useDragHandle}
 						value={item.value}
 					/>
 				))}
