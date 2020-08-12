@@ -1,24 +1,56 @@
 import { connect } from '@wp-g2/context';
 import React from 'react';
 
-import useQuery from './useQuery';
+import { Animated } from '../Animated';
+import { Route } from './Router';
 
 function NavigatorScreen({ children, component, path, render, ...props }) {
-	const match = useQuery().is(path);
+	return (
+		<Route
+			{...props}
+			path={path}
+			render={(routeProps) => {
+				const { history } = routeProps;
+				const isBack = history?.action === 'POP';
 
-	if (match) {
-		return children
-			? typeof children === 'function'
-				? children(props)
-				: children
-			: component
-			? React.createElement(component, props)
-			: render
-			? render(props)
-			: null;
-	}
+				const content = children
+					? typeof children === 'function'
+						? children(routeProps)
+						: children
+					: component
+					? React.createElement(component, routeProps)
+					: render
+					? render(routeProps)
+					: null;
 
-	return null;
+				const animate = {
+					opacity: 1,
+					transition: { duration: 0.25, ease: 'easeInOut' },
+					x: 0,
+				};
+				const initial = {
+					opacity: 0,
+					x: isBack ? -50 : 50,
+				};
+				const exit = {
+					opacity: 0,
+					transition: { duration: 0.25, ease: 'easeInOut' },
+				};
+
+				const animatedProps = {
+					animate,
+					exit,
+					initial,
+				};
+
+				return (
+					<Animated {...animatedProps} key={path}>
+						{content}
+					</Animated>
+				);
+			}}
+		/>
+	);
 }
 
 export default connect(NavigatorScreen);

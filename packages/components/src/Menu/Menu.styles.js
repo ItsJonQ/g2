@@ -14,6 +14,7 @@ export const MenuItem = css`
 	display: block;
 	outline: none;
 	padding: 8px 12px;
+	position: relative;
 	text-align: left;
 	text-decoration: none;
 	transition: background ${get('transitionDurationFastest')} linear;
@@ -29,8 +30,8 @@ export const MenuItem = css`
 		background: ${get('controlBackgroundDimColor')};
 	}
 
-	.is-active > & {
-		background-color: ${get('colorAdmin')};
+	&.is-active {
+		background-color: ${get('surfaceBackgroundSubtleColor')};
 		color: ${get('controlPrimaryTextColor')};
 
 		&:active {
@@ -39,15 +40,23 @@ export const MenuItem = css`
 
 		&:hover,
 		&:focus {
-			background-color: ${get('colorAdmin')};
+			background-color: ${get('surfaceBackgroundSubtleColor')};
 		}
 
 		&:focus {
-			border-color: ${get('colorAdmin')};
+			border-color: ${get('surfaceBackgroundSubtleColor')};
 		}
 
 		&:active {
 			background-color: ${get('colorText')};
 		}
 	}
+`;
+
+export const showArrow = css`
+	padding-right: 32px;
+`;
+
+export const showBackArrow = css`
+	padding-left: 28px;
 `;

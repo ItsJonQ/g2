@@ -1,12 +1,23 @@
-import { styled, ThemeProvider } from '@wp-g2/styles';
-import React from 'react';
+import { get, styled, ThemeProvider } from '@wp-g2/styles';
+import React, { useEffect, useState } from 'react';
+import {
+	MemoryRouter as Router,
+	NavLink,
+	Route,
+	Switch,
+} from 'react-router-dom';
 
 import {
+	Background,
 	Flex,
-	FlexBlock,
-	FlexItem,
+	Grid,
+	Heading,
+	Lozenge,
 	Menu,
 	MenuItem,
+	Scrollable,
+	Spacer,
+	Spinner,
 	Surface,
 	View,
 } from '../../index';
@@ -22,175 +33,249 @@ export default {
 	title: 'Components/Navigator',
 };
 
-const Screen = styled(Surface)`
+const ScreenView = styled(Surface)`
 	bottom: 0;
 	left: 0;
-	padding: 8px;
-	position: absolute;
 	right: 0;
 	top: 0;
 `;
 
-const Home = () => (
+const Screen = ({ children }) => {
+	return <ScreenView>{children}</ScreenView>;
+};
+
+const MenuLink = ({ children, ...props }) => {
+	return (
+		<NavigatorLink {...props}>
+			<MenuItem>{children}</MenuItem>
+		</NavigatorLink>
+	);
+};
+
+const ExternalMenuLink = (props) => (
+	<MenuItem
+		activeClassName="is-active"
+		as={NavLink}
+		exact={true}
+		{...props}
+	/>
+);
+
+const DashboardNav = () => {
+	const [commentCount, setCommentCount] = useState(null);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setCommentCount(3);
+		}, 1000);
+	}, []);
+
+	return (
+		<Screen>
+			<Spacer py={4} />
+			<Spacer mb={8}>
+				<MenuLink>My sites</MenuLink>
+			</Spacer>
+			<Spacer mb={4} pl={3}>
+				<Heading size={4}>My site name</Heading>
+			</Spacer>
+			<Spacer mb={4}>
+				<Menu>
+					<ExternalMenuLink to="/">Dashboard</ExternalMenuLink>
+					<MenuLink to="Pages">Pages</MenuLink>
+					<MenuLink to="Posts">Posts</MenuLink>
+					<ExternalMenuLink to="/comments">
+						<Flex>
+							<View>Comments</View>
+							<View css={{ margin: '-3px 0' }}>
+								{commentCount === null ? (
+									<Spinner />
+								) : (
+									<Lozenge>{commentCount}</Lozenge>
+								)}
+							</View>
+						</Flex>
+					</ExternalMenuLink>
+					<ExternalMenuLink to="/media">Media</ExternalMenuLink>
+					<ExternalMenuLink to="/users">Users</ExternalMenuLink>
+				</Menu>
+			</Spacer>
+			<Spacer mb={4} mt={12} pl={3}>
+				<Heading size={4}>Plugins</Heading>
+			</Spacer>
+			<Spacer mb={4}>
+				<Menu>
+					<ExternalMenuLink to="/plugins/hello-dolly">
+						Hello Dolly
+					</ExternalMenuLink>
+					<MenuLink to="PluginsWooCommerce">WooCommerce</MenuLink>
+					<ExternalMenuLink to="/plugins">
+						All plugins
+					</ExternalMenuLink>
+				</Menu>
+			</Spacer>
+		</Screen>
+	);
+};
+
+const PagesNav = () => (
 	<Screen>
+		<Spacer py={4} />
+		<Spacer mb={8}>
+			<MenuLink isBack>Dashboard</MenuLink>
+		</Spacer>
+		<Spacer mb={4} pl={3}>
+			<Heading size={4}>Pages</Heading>
+		</Spacer>
 		<Menu>
-			<NavigatorLink to="Home">
-				<MenuItem>My Home</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink>
-				<MenuItem>Stats</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink>
-				<MenuItem>Plan</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink to="Store">
-				<MenuItem>Store</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink to="Site">
-				<MenuItem>Site</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink>
-				<MenuItem>Design</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink>
-				<MenuItem>Tools</MenuItem>
-			</NavigatorLink>
-			<NavigatorLink>
-				<MenuItem>Manage</MenuItem>
-			</NavigatorLink>
+			<ExternalMenuLink to="/pages">All pages</ExternalMenuLink>
+			<ExternalMenuLink to="/pages/new">New page</ExternalMenuLink>
 		</Menu>
 	</Screen>
 );
 
-const Store = () => {
-	return (
-		<Screen>
-			<View css={{ padding: 8 }}>
-				<Menu>
-					<NavigatorLink isBack>
-						<MenuItem>Back</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink to="Store">
-						<MenuItem>Store home</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Analytics</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink to="Orders">
-						<MenuItem>Orders</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Marketing</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Products</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Customers</MenuItem>
-					</NavigatorLink>
-				</Menu>
-			</View>
-		</Screen>
-	);
-};
+const PostsNav = () => (
+	<Screen>
+		<Spacer py={4} />
+		<Spacer mb={8}>
+			<MenuLink isBack>Dashboard</MenuLink>
+		</Spacer>
+		<Spacer mb={4} pl={3}>
+			<Heading size={4}>Posts</Heading>
+		</Spacer>
+		<Menu>
+			<ExternalMenuLink to="/posts">All posts</ExternalMenuLink>
+			<ExternalMenuLink to="/posts/categories">
+				Categories
+			</ExternalMenuLink>
+			<ExternalMenuLink to="/posts/tags">Tags</ExternalMenuLink>
+			<ExternalMenuLink to="/posts/new">New page</ExternalMenuLink>
+		</Menu>
+	</Screen>
+);
 
-const Orders = () => {
-	return (
-		<Screen>
-			<Menu>
-				<NavigatorLink isBack>
-					<MenuItem>Back</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink to="Orders">
-					<MenuItem>Orders</MenuItem>
-				</NavigatorLink>
-				<View css={{ paddingLeft: 16 }}>
-					<NavigatorLink>
-						<MenuItem>All orders</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Payouts</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Transactions</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Disputes</MenuItem>
-					</NavigatorLink>
-				</View>
-			</Menu>
-		</Screen>
-	);
-};
-
-const Site = () => {
-	return (
-		<Screen>
-			<Menu>
-				<NavigatorLink isBack>
-					<MenuItem>Back</MenuItem>
-				</NavigatorLink>
-				<NavigatorLink to="Site">
-					<MenuItem>Site</MenuItem>
-				</NavigatorLink>
-				<View css={{ paddingLeft: 16 }}>
-					<NavigatorLink>
-						<MenuItem>Pages</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Posts</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Media</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Comments</MenuItem>
-					</NavigatorLink>
-					<NavigatorLink>
-						<MenuItem>Feedback</MenuItem>
-					</NavigatorLink>
-				</View>
-			</Menu>
-		</Screen>
-	);
-};
+const PluginsWooCommerceNav = () => (
+	<Screen>
+		<Spacer py={4} />
+		<Spacer mb={8}>
+			<MenuLink isBack to="Dashboard">
+				Dashboard
+			</MenuLink>
+		</Spacer>
+		<Spacer mb={4} pl={3}>
+			<Heading size={4}>WooCommerce</Heading>
+		</Spacer>
+		<Menu>
+			<ExternalMenuLink to="/plugins/woo-commerce/store">
+				Store home
+			</ExternalMenuLink>
+			<MenuLink to="PluginsWooCommerce">Analytics</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Orders</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Marketing</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Products</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Customers</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Settings</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Extensions</MenuLink>
+			<MenuLink to="PluginsWooCommerce">Tools</MenuLink>
+		</Menu>
+	</Screen>
+);
 
 const screens = [
-	{ component: Home, path: 'Home' },
-	{ component: Store, path: 'Store' },
-	{ component: Orders, path: 'Orders' },
-	{ component: Site, path: 'Site' },
+	{ component: DashboardNav, path: 'Dashboard' },
+	{ component: PagesNav, path: 'Pages' },
+	{ component: PostsNav, path: 'Posts' },
+	{ component: PluginsWooCommerceNav, path: 'PluginsWooCommerce' },
 ];
 
-export const Sidebar = () => {
+const NavigationSidebar = () => {
 	return (
 		<ThemeProvider isDark isGlobal={false}>
 			<Surface
 				borderRight="1px solid"
 				css={{
-					height: 'calc(100vh - 100px)',
-					left: 0,
-					position: 'fixed',
-					top: 0,
-					width: 320,
+					height: '100%',
 				}}
 			>
-				<Navigator initialPath="Home">
-					<Flex css={{ height: '100%' }} direction="column">
-						<FlexBlock css={{ width: '100%' }}>
-							<NavigatorScreens>
-								{screens.map((screen) => (
-									<NavigatorScreen
-										{...screen}
-										key={screen.path}
-									/>
-								))}
-							</NavigatorScreens>
-						</FlexBlock>
-						<FlexItem css={{ width: '100%' }}></FlexItem>
-					</Flex>
+				<Navigator initialPath="Dashboard">
+					<Scrollable
+						css={{ height: `calc(100vh - 100px)`, padding: 8 }}
+					>
+						<NavigatorScreens>
+							{screens.map((screen) => (
+								<NavigatorScreen
+									{...screen}
+									key={screen.path}
+								/>
+							))}
+						</NavigatorScreens>
+					</Scrollable>
 				</Navigator>
 			</Surface>
 		</ThemeProvider>
 	);
+};
+
+const MockPage = ({ title }) => {
+	return (
+		<Surface borderBottom>
+			<View css={{ padding: '20px 40px' }}>
+				<Heading>{title}</Heading>
+			</View>
+		</Surface>
+	);
+};
+
+const routes = [
+	{ path: '/', title: 'Dashboard' },
+	{ path: '/pages', title: 'All pages' },
+	{ path: '/pages/new', title: 'New page' },
+	{ path: '/posts', title: 'All posts' },
+	{ path: '/posts/categories', title: 'Categories' },
+	{ path: '/posts/tags', title: 'Tags' },
+	{ path: '/posts/new', title: 'New post' },
+	{ path: '/media', title: 'Media' },
+	{ path: '/comments', title: 'Comments' },
+	{ path: '/users', title: 'Users' },
+	{ path: '/plugins', title: 'All plugins' },
+	{ path: '/plugins/hello-dolly', title: 'Hello Dolly' },
+	{ path: '/plugins/woo-commerce/store', title: 'Store home' },
+];
+
+const App = () => {
+	return (
+		<View
+			css={{
+				border: `2px solid ${get('surfaceBorderColor')}`,
+				bottom: 100,
+				left: 0,
+				position: 'fixed',
+				right: 0,
+				top: 0,
+			}}
+		>
+			<Router>
+				<Grid
+					css={{ height: `100%` }}
+					gap={0}
+					templateColumns="220px 1fr"
+				>
+					<NavigationSidebar />
+					<Background>
+						<Switch>
+							{routes.map((route) => (
+								<Route exact={true} {...route} key={route.path}>
+									<MockPage title={route.title} />
+								</Route>
+							))}
+						</Switch>
+					</Background>
+				</Grid>
+			</Router>
+		</View>
+	);
+};
+
+export const Sidebar = () => {
+	return <App />;
 };
