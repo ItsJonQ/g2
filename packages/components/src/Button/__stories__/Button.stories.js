@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { Flex } from '../../Flex';
 import { Spacer } from '../../Spacer';
-import { Stack, StackItem } from '../../Stack';
 import { Text } from '../../Text';
 import { Button } from '../index';
 
@@ -13,38 +13,32 @@ export default {
 const Buttons = (props) => {
 	return (
 		<Spacer>
-			<Stack direction="row" justify="left" spacing={4}>
-				<StackItem>
-					<Spacer>
-						<Text size={12} variant="muted">
-							Large
-						</Text>
-					</Spacer>
-					<Button size="large" {...props}>
-						Button
-					</Button>
-				</StackItem>
-				<StackItem>
-					<Spacer>
-						<Text size={12} variant="muted">
-							Medium
-						</Text>
-					</Spacer>
-					<Button size="medium" {...props}>
-						Button
-					</Button>
-				</StackItem>
-				<StackItem>
-					<Spacer>
-						<Text size={12} variant="muted">
-							Small
-						</Text>
-					</Spacer>
-					<Button size="small" {...props}>
-						Button
-					</Button>
-				</StackItem>
-			</Stack>
+			<Flex direction="row" justify="left" spacing={4}>
+				<Spacer>
+					<Text size={12} variant="muted">
+						Large
+					</Text>
+				</Spacer>
+				<Button size="large" {...props}>
+					Button
+				</Button>
+				<Spacer>
+					<Text size={12} variant="muted">
+						Medium
+					</Text>
+				</Spacer>
+				<Button size="medium" {...props}>
+					Button
+				</Button>
+				<Spacer>
+					<Text size={12} variant="muted">
+						Small
+					</Text>
+				</Spacer>
+				<Button size="small" {...props}>
+					Button
+				</Button>
+			</Flex>
 		</Spacer>
 	);
 };
