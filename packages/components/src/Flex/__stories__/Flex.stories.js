@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { Placeholder, Spacer } from '../../index';
-import { Stack, StackItem } from '../index';
+import { Flex, FlexItem } from '../index';
 
 export default {
-	component: Stack,
-	title: 'Components/Stack',
+	component: Flex,
+	title: 'Components/Flex',
 };
 
 const ItemView = (props) => <Placeholder {...props} />;
@@ -14,19 +14,19 @@ export const _default = () => {
 	return (
 		<>
 			<Spacer mb={4}>
-				<Stack gap={3}>
+				<Flex gap={3}>
 					<ItemView>Item</ItemView>
 					<ItemView>Item</ItemView>
-				</Stack>
+				</Flex>
 			</Spacer>
-			<Stack direction={['column', 'row']} gap={3}>
+			<Flex direction={['column', 'row']} gap={3}>
 				<ItemView sx={{ width: '180px' }}>Item</ItemView>
-				<StackItem isBlock>
+				<FlexItem isBlock>
 					<ItemView>Item</ItemView>
-				</StackItem>
+				</FlexItem>
 				<ItemView>Item</ItemView>
 				<ItemView>Item</ItemView>
-			</Stack>
+			</Flex>
 		</>
 	);
 };

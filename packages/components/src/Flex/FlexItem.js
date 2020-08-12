@@ -14,11 +14,7 @@ function FlexItem({ display: displayProp, isBlock = false, ...props }) {
 		marginRight: !isColumn && !isLast && gap,
 	});
 
-	const cx = [
-		styles.Item,
-		styles.Base,
-		styles[(isColumn || isBlock) && 'block'],
-	];
+	const cx = [styles.Item, styles.Base, isBlock && styles.block];
 
 	return <BaseView {...props} cx={cx} />;
 }

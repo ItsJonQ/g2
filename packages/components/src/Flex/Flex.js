@@ -21,7 +21,7 @@ export function Flex({
 	const gapValue = gap * 4;
 	const direction = useResponsiveValue(directionProp);
 
-	const isColumn = direction?.includes('column');
+	const isColumn = !!direction?.includes('column');
 	const validChildren = getValidChildren(children);
 
 	const clonedChildren = validChildren.map((child, index) => {
