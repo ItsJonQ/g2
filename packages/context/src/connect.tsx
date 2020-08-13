@@ -7,7 +7,11 @@ import { useComponentsContext } from './ComponentsProvider';
 const REACT_TYPEOF_KEY = '$$typeof';
 const CONNECT_NAMESPACE = '__wpComponentsKey__';
 
-export function componentsConnect(Component, namespace, options = {}) {
+export function componentsConnect<T>(
+	Component: React.ComponentType<T>,
+	namespace?: any,
+	options: any = {},
+): T {
 	const { pure = true } = options;
 	const displayName = is.array(namespace)
 		? namespace[0]
@@ -44,7 +48,7 @@ export function componentsConnect(Component, namespace, options = {}) {
 		return (
 			<Component
 				{...ns(displayName)}
-				{...mergedProps}
+				{...(mergedProps as T)}
 				className={classes}
 				forwardedRef={forwardedRef}
 			>

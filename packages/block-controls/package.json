@@ -9,7 +9,7 @@
         "clean": "rm -rf dist",
         "build:es": "BUILD_FORMAT=es zero build -d dist/es",
         "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
-        "build": "npm run build:cjs && npm run build:es -- --no-clean",
+        "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:ts -- --no-clean",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",

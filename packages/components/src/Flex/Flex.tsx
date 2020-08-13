@@ -8,7 +8,23 @@ import { FlexContext } from './Flex.Context';
 import * as styles from './Flex.styles';
 import FlexItem from './FlexItem';
 
-export function Flex({
+export type FlexProps = {
+	_autoWrap?: boolean;
+	align?: 'flex-start' | 'center' | 'flex-end' | 'baseline' | 'stretch';
+	children?: any;
+	direction?: 'column' | 'row';
+	gap?: number;
+	justify:
+		| 'flex-start'
+		| 'center'
+		| 'flex-end'
+		| 'space-between'
+		| 'space-around'
+		| 'space-evenly';
+	wrap?: boolean;
+};
+
+function Flex({
 	_autoWrap = true,
 	align = 'center',
 	children,
@@ -17,7 +33,7 @@ export function Flex({
 	justify = 'space-between',
 	wrap,
 	...props
-}) {
+}: FlexProps) {
 	const gapValue = gap * 4;
 	const direction = useResponsiveValue(directionProp);
 
@@ -53,14 +69,16 @@ export function Flex({
 		);
 	});
 
-	styles.Base = css({
+	const ds: { [x: string]: any } = {};
+
+	ds.Base = css({
 		alignItems: isColumn ? 'normal' : align,
 		flexDirection: direction,
 		flexWrap: wrap ? 'wrap' : undefined,
 		justifyContent: justify,
 	});
 
-	const classes = [styles.Flex, styles.Base];
+	const classes = [styles.Flex, ds.Base];
 
 	return (
 		<View {...props} cx={classes}>
