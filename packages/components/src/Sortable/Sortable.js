@@ -25,13 +25,17 @@ const SortableItemView = styled(Surface)`
 	}
 `;
 
-const DragHandle = sortableHandle(() => (
+export const DragHandle = sortableHandle(() => (
 	<Text css={{ cursor: 'grab' }} isBlock variant="muted">
 		<Icon icon={<FiMenu />} size={16} />
 	</Text>
 ));
 
-const SortableItem = sortableElement(
+export const SortableItemBase = sortableElement(({ children }) => (
+	<>{children}</>
+));
+
+export const SortableItem = sortableElement(
 	({
 		isLast,
 		isSortable,
@@ -113,7 +117,7 @@ const SortableItem = sortableElement(
 	},
 );
 
-const SortableContainer = sortableContainer(({ children, ...props }) => {
+export const SortableContainer = sortableContainer(({ children, ...props }) => {
 	return <View {...props}>{children}</View>;
 });
 

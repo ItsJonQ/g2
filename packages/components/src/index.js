@@ -28,6 +28,7 @@ export * from './Heading';
 export * from './HelpTip';
 export * from './HStack';
 export * from './Icon';
+export * from './Image';
 export * from './Stepper';
 export * from './Link';
 export * from './List';
