@@ -11,16 +11,16 @@ export function useHistory() {
 }
 
 export function useLocation() {
-	return useContext(RouterContext).location;
+	return useContext(RouterContext)?.location;
 }
 
 export function useParams() {
-	const match = useContext(RouterContext).match;
+	const match = useContext(RouterContext)?.match;
 	return match ? match.params : {};
 }
 
 export function useRouteMatch(path) {
 	const location = useLocation();
-	const match = useContext(RouterContext).match;
+	const match = useContext(RouterContext)?.match;
 	return path ? matchPath(location.pathname, path) : match;
 }

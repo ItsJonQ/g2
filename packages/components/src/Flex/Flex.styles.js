@@ -7,7 +7,9 @@ export const Flex = css`
 
 export const Item = css`
 	display: block;
+	max-height: 100%;
 	max-width: 100%;
+	min-height: 0;
 	min-width: 0;
 `;
 

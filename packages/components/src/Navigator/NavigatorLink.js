@@ -15,6 +15,7 @@ function NavigatorLink({
 	isBack,
 	isPlain,
 	params,
+	showArrow,
 	to,
 	...props
 }) {
@@ -31,7 +32,9 @@ function NavigatorLink({
 
 	const content = (
 		<ComponentsProvider
-			value={{ MenuItem: { isBack: isBack, showArrow: !!to } }}
+			value={{
+				MenuItem: { isBack: isBack, showArrow: !!to || showArrow },
+			}}
 		>
 			{children}
 		</ComponentsProvider>

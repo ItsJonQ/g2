@@ -13,7 +13,7 @@ function HStack({ alignment, children, forwardedRef, spacing = 2, ...props }) {
 		const _isSpacer = hasNamespace(child, ['Spacer']);
 
 		if (_isSpacer) {
-			return <FlexBlock key={child.key} />;
+			return <FlexBlock key={child.key} {...child.props} />;
 		}
 
 		return child;

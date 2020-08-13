@@ -19,7 +19,9 @@ import {
 	Spacer,
 	Spinner,
 	Surface,
+	TextField,
 	View,
+	VStack,
 } from '../../index';
 import {
 	Navigator,
@@ -169,14 +171,14 @@ const PluginsWooCommerceNav = () => (
 			<ExternalMenuLink to="/plugins/woo-commerce/store">
 				Store home
 			</ExternalMenuLink>
-			<MenuLink to="PluginsWooCommerce">Analytics</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Orders</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Marketing</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Products</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Customers</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Settings</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Extensions</MenuLink>
-			<MenuLink to="PluginsWooCommerce">Tools</MenuLink>
+			<MenuLink showArrow>Analytics</MenuLink>
+			<MenuLink showArrow>Orders</MenuLink>
+			<MenuLink showArrow>Marketing</MenuLink>
+			<MenuLink showArrow>Products</MenuLink>
+			<MenuLink showArrow>Customers</MenuLink>
+			<MenuLink showArrow>Settings</MenuLink>
+			<MenuLink showArrow>Extensions</MenuLink>
+			<MenuLink showArrow>Tools</MenuLink>
 		</Menu>
 	</Screen>
 );
@@ -199,7 +201,10 @@ const NavigationSidebar = () => {
 			>
 				<Navigator initialPath="Dashboard">
 					<Scrollable
-						css={{ height: `calc(100vh - 100px)`, padding: 8 }}
+						css={{
+							height: `calc(100vh - 100px - 40px)`,
+							padding: 8,
+						}}
 					>
 						<NavigatorScreens>
 							{screens.map((screen) => (
@@ -242,6 +247,19 @@ const routes = [
 	{ path: '/plugins/woo-commerce/store', title: 'Store home' },
 ];
 
+const BrowserBar = ({ history }) => {
+	const pathname = history?.location?.pathname || '/';
+	const url = `http://mysite.com/wp-admin${pathname}`;
+
+	console.log();
+
+	return (
+		<Background borderBottom css={{ padding: 4 }}>
+			<TextField css={{ textAlign: 'center' }} readOnly value={url} />
+		</Background>
+	);
+};
+
 const App = () => {
 	return (
 		<View
@@ -255,22 +273,31 @@ const App = () => {
 			}}
 		>
 			<Router>
-				<Grid
-					css={{ height: `100%` }}
-					gap={0}
-					templateColumns="220px 1fr"
-				>
-					<NavigationSidebar />
-					<Background>
-						<Switch>
-							{routes.map((route) => (
-								<Route exact={true} {...route} key={route.path}>
-									<MockPage title={route.title} />
-								</Route>
-							))}
-						</Switch>
-					</Background>
-				</Grid>
+				<VStack spacing={0}>
+					<Route component={BrowserBar} />
+					<Spacer>
+						<Grid
+							css={{ height: `100%` }}
+							gap={0}
+							templateColumns="220px 1fr"
+						>
+							<NavigationSidebar />
+							<Background>
+								<Switch>
+									{routes.map((route) => (
+										<Route
+											exact={true}
+											{...route}
+											key={route.path}
+										>
+											<MockPage title={route.title} />
+										</Route>
+									))}
+								</Switch>
+							</Background>
+						</Grid>
+					</Spacer>
+				</VStack>
 			</Router>
 		</View>
 	);
