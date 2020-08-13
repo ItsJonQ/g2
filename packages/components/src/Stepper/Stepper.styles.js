@@ -1,6 +1,6 @@
 import { css } from '@wp-g2/styles';
 
-export const IncrementalControl = css`
+export const Stepper = css`
 	display: inline-flex;
 	vertical-align: middle;
 	width: auto;

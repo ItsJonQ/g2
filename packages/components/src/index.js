@@ -28,7 +28,7 @@ export * from './Heading';
 export * from './HelpTip';
 export * from './HStack';
 export * from './Icon';
-export * from './IncrementalControl';
+export * from './Stepper';
 export * from './Link';
 export * from './List';
 export * from './Lozenge';

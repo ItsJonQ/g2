@@ -19,7 +19,6 @@ import {
 	FormGroup,
 	Grid,
 	Icon,
-	IncrementalControl,
 	Panel,
 	PanelBody,
 	PanelHeader,
@@ -27,6 +26,7 @@ import {
 	Select,
 	Slider,
 	Spacer,
+	Stepper,
 	Switch,
 	Text,
 	TextField,
@@ -124,7 +124,7 @@ const LayoutControls = () => {
 								<TextField
 									suffix={<SuffixLabel>PX</SuffixLabel>}
 								/>
-								<IncrementalControl direction="horizontal" />
+								<Stepper direction="horizontal" />
 							</Grid>
 						</Spacer>
 						<SegmentedControl

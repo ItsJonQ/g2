@@ -5,11 +5,11 @@ import React from 'react';
 
 import { Button } from '../Button';
 import { ControlGroup } from '../ControlGroup';
-import * as styles from './IncrementalControl.styles';
+import * as styles from './Stepper.styles';
 
-function IncrementalControl({
+function Stepper({
 	className,
-	direction = 'vertical',
+	direction = 'horizontal',
 	onIncrement = noop,
 	onDecrement = noop,
 	size,
@@ -18,7 +18,7 @@ function IncrementalControl({
 	const isVertical = direction === 'vertical';
 	const controlGroupDirection = isVertical ? 'column' : 'row';
 
-	const classes = cx([!isVertical && styles.IncrementalControl, className]);
+	const classes = cx([!isVertical && styles.Stepper, className]);
 
 	const AddIcon = isVertical ? <FiChevronUp /> : <FiPlus />;
 	const MinusIcon = isVertical ? <FiChevronDown /> : <FiMinus />;
@@ -81,7 +81,7 @@ function ControlButton({ isVertical, size, ...props }) {
 
 	return (
 		<Button
-			{...ns('IncrementalControlButton')}
+			{...ns('StepperButton')}
 			{...props}
 			iconSize={14}
 			isBlock
@@ -91,4 +91,4 @@ function ControlButton({ isVertical, size, ...props }) {
 	);
 }
 
-export default connect(IncrementalControl);
+export default connect(Stepper);
