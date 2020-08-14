@@ -1,5 +1,5 @@
-import { system } from '../system';
+import { core } from '../core';
 
-export const Box = system.div;
+export const Box = core.div;
 export const BaseView = Box;
 export const View = Box;

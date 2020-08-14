@@ -27,7 +27,7 @@ const styles = {
 	`,
 };
 
-export const createSystemElement = (tagName = 'div') => {
+export const createStyleSystemElement = (tagName = 'div') => {
 	const render = (
 		{
 			// Internal props

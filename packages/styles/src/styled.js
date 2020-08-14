@@ -2,7 +2,7 @@ import { hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
 import { Box } from './components';
-import { tags } from './create-system';
+import { tags } from './create-style-system';
 import { css, cx } from './style-system';
 
 function createStyled(tagName, options = {}) {

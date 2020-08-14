@@ -6,7 +6,7 @@ const BREAKPOINT_SIZES = {
 	sm: 576,
 };
 
-export function breakpoint(size = 'md') {
+export function getBreakpoint(size = 'md') {
 	return (strings, ...interpolations) => {
 		const interpolatedStyles = css(strings, ...interpolations);
 

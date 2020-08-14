@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { breakpoint, css, cx, space, toPx } from '@wp-g2/styles';
+import { css, cx, getBreakpoint, space, toPx } from '@wp-g2/styles';
 import React from 'react';
 
 import { BaseModal } from '../BaseModal';
@@ -51,7 +51,7 @@ function Modal({
 			top: ${space(4)};
 		}
 
-		${breakpoint('md')`
+		${getBreakpoint('md')`
 			max-width: ${toPx(maxWidth)};
 			position: absolute;
 			top: 16%;

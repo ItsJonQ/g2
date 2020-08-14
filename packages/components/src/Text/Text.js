@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { BaseView, css, cx } from '@wp-g2/styles';
+import { BaseView, css, cx, getFontSize } from '@wp-g2/styles';
 import React from 'react';
 
 import { Truncate } from '../Truncate';
@@ -23,7 +23,7 @@ function Text({
 	styles.Base = css({
 		color,
 		display,
-		fontSize: size,
+		fontSize: getFontSize(size),
 		fontWeight: weight,
 		lineHeight,
 		textAlign: align,

@@ -10,7 +10,7 @@ import { THEME } from '../theme';
 // Defaults
 const __SYSTEM_CONFIG_DEFAULT__ = { ...THEME };
 
-export const createSystem = (initialValue = __SYSTEM_CONFIG_DEFAULT__) => {
+export const createStyleSystem = (initialValue = __SYSTEM_CONFIG_DEFAULT__) => {
 	const state = {
 		lastGet: null,
 	};
@@ -55,4 +55,4 @@ export const createSystem = (initialValue = __SYSTEM_CONFIG_DEFAULT__) => {
 	};
 };
 
-export default createSystem;
+export default createStyleSystem;
