@@ -1,5 +1,29 @@
+import { get } from '../core';
 import { getFontSize } from '../mixins';
 import { css, cx } from '../style-system';
+
+function getFontColor(color) {
+	return css({ color });
+}
+
+getFontColor.black = getFontColor(get('black'));
+getFontColor.white = getFontColor(get('white'));
+getFontColor.admin = getFontColor(get('admin'));
+getFontColor.purple = getFontColor(get('purple500'));
+getFontColor.green = getFontColor(get('green500'));
+getFontColor.yellow = getFontColor(get('yellow500'));
+getFontColor.orange = getFontColor(get('orange500'));
+getFontColor.darkGray = getFontColor(get('darkGray500'));
+getFontColor.lightGray = getFontColor(get('lightGray500'));
+
+const fontFamily = {
+	default: css({
+		color: get('colorText'),
+		fontFamily: get('fontFamily'),
+		fontWeight: 400,
+	}),
+	monospace: css({ fontFamily: get('fontFamilyMono') }),
+};
 
 const fontStyles = {
 	bold: css({ fontWeight: 600 }),
@@ -21,8 +45,14 @@ const fontSizes = {
 	title: css({ fontSize: getFontSize(20) }),
 };
 
+const fontMixins = {
+	color: getFontColor,
+	size: (size) => css({ fontSize: getFontSize(size) }),
+};
+
 export const font = {
+	...fontFamily,
 	...fontSizes,
 	...fontStyles,
-	size: (size) => css({ fontSize: getFontSize(size) }),
+	...fontMixins,
 };

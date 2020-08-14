@@ -6,4 +6,5 @@ export * from './fonts';
 export * from './highContrastMode';
 export * from './motion';
 export * from './space';
+export * from './shadows';
 export * from './units';

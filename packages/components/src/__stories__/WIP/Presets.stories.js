@@ -7,8 +7,20 @@ export default {
 	title: 'Examples/WIP',
 };
 
-const { font } = system;
-
 export const Presets = () => {
-	return <Text css={[font.title, font.italic, font.size(23)]}>Text</Text>;
+	return (
+		<Text
+			css={[
+				system.font.smallCaps,
+				system.background.green,
+				system.border.all,
+				system.borderRadius.round,
+				system.padding.top(3),
+				system.padding.bottom(3),
+				system.shadow({ radius: 10 }),
+			]}
+		>
+			Text
+		</Text>
+	);
 };
