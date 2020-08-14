@@ -3,10 +3,10 @@ import { background } from './backgrounds';
 import { border, borderRadius } from './borders';
 import { font } from './fonts';
 import { active, focus, hover } from './interactions';
-import { offset } from './offsets';
 import { opacity } from './opacity';
 import { shadow } from './shadows';
 import { margin, padding } from './spacing';
+import { offset, rotate, scale } from './transforms';
 
 export const system = {
 	active,
@@ -21,6 +21,8 @@ export const system = {
 	offset,
 	opacity,
 	padding,
+	rotate,
+	scale,
 	shadow,
 };
 

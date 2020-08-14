@@ -16,7 +16,7 @@ const Thing = () => (
 			ui.borderRadius.round,
 			ui.border.all,
 			ui.animation.ease,
-			ui.hover(ui.background.red, ui.offset.y(-10)),
+			ui.hover(ui.background.red, ui.scale(1.2)),
 		]}
 	>
 		View

@@ -23,3 +23,11 @@ export function offset(value, valueY = 0) {
 
 offset.x = (value) => css({ transform: `translateX(${toPx(value)})` });
 offset.y = (value) => css({ transform: `translateY(${toPx(value)})` });
+
+export function scale(value) {
+	return css({ transform: `scale(${value})` });
+}
+
+export function rotate(value) {
+	return css({ transform: `rotate(${value}deg)` });
+}

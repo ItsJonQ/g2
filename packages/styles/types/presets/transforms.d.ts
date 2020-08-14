@@ -17,3 +17,13 @@ export declare interface OffsetInterface {
 	/** Applies custom vertical offset values. */
 	y: (value: OffsetValue) => CSSClassName;
 }
+
+/** Modify scale (transform) styles based on system presets. */
+export declare interface ScaleInterface {
+	(value: string | number): CSSClassName;
+}
+
+/** Modify rotate (transform) styles based on system presets. */
+export declare interface RotateInterface {
+	(value: number): CSSClassName;
+}
