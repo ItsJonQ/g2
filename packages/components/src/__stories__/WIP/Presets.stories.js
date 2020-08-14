@@ -1,26 +1,40 @@
-import { system } from '@wp-g2/styles';
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { Text } from '../../index';
+import { HStack, Spacer, View } from '../../index';
 
 export default {
 	title: 'Examples/WIP',
 };
 
+const Thing = () => (
+	<View
+		css={[
+			ui.font.default,
+			ui.background.green,
+			ui.padding(3),
+			ui.borderRadius.round,
+			ui.border.all,
+			ui.animation.ease,
+			ui.hover(ui.background.red, ui.offset.y(-10)),
+		]}
+	>
+		View
+	</View>
+);
+
 export const Presets = () => {
 	return (
-		<Text
-			css={[
-				system.font.smallCaps,
-				system.background.green,
-				system.border.all,
-				system.borderRadius.round,
-				system.padding.top(3),
-				system.padding.bottom(3),
-				system.shadow({ radius: 10 }),
-			]}
-		>
-			Text
-		</Text>
+		<HStack alignment="left">
+			<Thing />
+			<Thing />
+			<Spacer />
+			<Thing />
+			<Thing />
+			<Thing />
+			<Spacer />
+			<Thing />
+			<Thing />
+		</HStack>
 	);
 };

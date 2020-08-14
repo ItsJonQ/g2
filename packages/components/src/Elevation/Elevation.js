@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, get } from '@wp-g2/styles';
+import { css, get, getBoxShadow } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -32,7 +32,7 @@ function Elevation({
 	styles.Base = css({
 		borderRadius,
 		bottom: offset,
-		boxShadow: styles.getBoxShadow(value),
+		boxShadow: getBoxShadow(value),
 		left: offset,
 		right: offset,
 		top: offset,
@@ -41,19 +41,19 @@ function Elevation({
 
 	styles.hover = css`
 		*:hover > & {
-			box-shadow: ${styles.getBoxShadow(hoverValue)};
+			box-shadow: ${getBoxShadow(hoverValue)};
 		}
 	`;
 
 	styles.active = css`
 		*:active > & {
-			box-shadow: ${styles.getBoxShadow(activeValue)};
+			box-shadow: ${getBoxShadow(activeValue)};
 		}
 	`;
 
 	styles.focus = css`
 		*:focus > & {
-			box-shadow: ${styles.getBoxShadow(focus)};
+			box-shadow: ${getBoxShadow(focus)};
 		}
 	`;
 
