@@ -1,4 +1,4 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, get, styled, ui } from '@wp-g2/styles';
 
 function getSwitchWidth(height) {
 	return `calc(${getControlHeight(height)} * 1.85);`;
@@ -38,9 +38,10 @@ export const inputHidden = css`
 `;
 
 export const BackdropView = styled.div`
-	background-color: ${get('controlBackgroundColor')};
-	border: 1px solid ${get('controlBorderColor')};
-	border-radius: 999px;
+	${ui.background.control};
+	${ui.border.control};
+	${ui.borderRadius.circle};
+
 	bottom: 4px;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	display: block;
@@ -54,16 +55,15 @@ export const BackdropView = styled.div`
 `;
 
 export const focus = css`
-	border-color: ${get('colorAdmin')};
-	box-shadow: ${get('controlBoxShadowFocus')};
+	${ui.border.control.focus};
 `;
 
 export const checkedFocus = css`
-	border-color: ${get('controlBorderColor')};
+	${ui.border.control.default};
 `;
 
 export const backdropChecked = css`
-	background-color: ${get('colorAdmin')};
+	${ui.background.admin};
 `;
 
 export const ToggleView = styled.div`

@@ -1,9 +1,9 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, get, styled, ui } from '@wp-g2/styles';
 
 export const BaseFieldView = styled.div`
-	background-color: ${get('controlBackgroundColor')};
+	${ui.background.control};
+	${ui.borderRadius.round};
 	border: 1px solid ${get('controlBorderColor')};
-	border-radius: ${get('controlBorderRadius')};
 	display: flex;
 	flex: 1;
 	font-family: ${get('fontFamily')};
@@ -12,7 +12,7 @@ export const BaseFieldView = styled.div`
 	padding-left: 8px;
 	padding-right: 8px;
 	position: relative;
-	transition: all 100ms ease;
+	transition: all ${get('transitionDurationFastest')} ease;
 	width: 100%;
 
 	&[disabled] {
