@@ -18,28 +18,6 @@
 		"strict": true,
 		"strictFunctionTypes": false,
 		"stripInternal": true,
-		"target": "esnext",
-		"paths": {
-			"@wp-g2/a11y": ["./node_modules/@wp-g2/a11y/src"],
-			"@wp-g2/a11y/*": ["./node_modules/@wp-g2/a11y/src/*"],
-
-			"@wp-g2/animations": ["./node_modules/@wp-g2/animations/src"],
-			"@wp-g2/animations/*": ["./node_modules/@wp-g2/animations/src/*"],
-
-			"@wp-g2/components": ["./node_modules/@wp-g2/components/src"],
-			"@wp-g2/components/*": ["./node_modules/@wp-g2/components/src/*"],
-
-			"@wp-g2/context": ["./node_modules/@wp-g2/context/src"],
-			"@wp-g2/context/*": ["./node_modules/@wp-g2/context/src/*"],
-
-			"@wp-g2/icons": ["./node_modules/@wp-g2/icons/src"],
-			"@wp-g2/icons/*": ["./node_modules/@wp-g2/icons/src/*"],
-
-			"@wp-g2/styles": ["./node_modules/@wp-g2/styles/src"],
-			"@wp-g2/styles/*": ["./node_modules/@wp-g2/styles/src/*"],
-
-			"@wp-g2/utils": ["./node_modules/@wp-g2/utils/src"],
-			"@wp-g2/utils/*": ["./node_modules/@wp-g2/utils/src/*"]
-		}
+		"target": "esnext"
 	}
 }
