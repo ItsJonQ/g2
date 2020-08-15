@@ -37,11 +37,21 @@ export const responsive = (styles = {}) => {
 	return next;
 };
 
-export function responsiveValue(value, transform = (v) => v) {}
-
 export function css(...args) {
-	if (is.plainObject(args[0])) {
-		return compile(responsive(args[0]));
+	const [arg, ...rest] = args;
+
+	if (is.plainObject(arg)) {
+		return compile(responsive(arg));
+	}
+
+	if (is.array(arg)) {
+		for (let i = 0, len = arg.length; i < len; i++) {
+			const n = arg[i];
+			if (is.plainObject(n)) {
+				arg[i] = responsive(n);
+			}
+		}
+		return compile(...[arg, ...rest]);
 	}
 
 	return compile(...args);

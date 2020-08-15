@@ -138,8 +138,10 @@ function Example() {
 		<HStack alignment="center">
 			<Spacer css={{ maxWidth: 800 }}>
 				<DraggableProvider>
-					<HStack>
-						<VStack css={[{ width: 240 }, ui.position.relative]}>
+					<HStack direction={['column', 'row']}>
+						<VStack
+							css={[{ width: [null, 240] }, ui.position.relative]}
+						>
 							<Heading>Pending</Heading>
 							<DropZone
 								accept={ItemTypes.DONE}
