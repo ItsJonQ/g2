@@ -6,6 +6,7 @@ import { BackgroundInterface } from './backgrounds';
 import { BorderInterface, BorderRadiusInterface } from './borders';
 import { FontInterface } from './fonts';
 import { OpacityInterface } from './opacity';
+import { PositionInterface } from './positions';
 import { OffsetInterface, ScaleInterface, RotateInterface } from './transforms';
 import { MarginInterface, PaddingInterface } from './spacing';
 import { ShadowInterface } from './shadows';
@@ -49,6 +50,8 @@ export declare interface SystemInterface {
 	opacity: OpacityInterface;
 	/** Modify padding styles based on system presets. */
 	padding: PaddingInterface;
+	/** Modify position styles based on system presets. */
+	position: PositionInterface;
 	/** Modify rotate (transform) styles based on system presets. */
 	rotate: RotateInterface;
 	/** Modify scale (transform) styles based on system presets. */

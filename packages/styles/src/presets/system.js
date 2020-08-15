@@ -5,6 +5,7 @@ import { border, borderRadius } from './borders';
 import { font } from './fonts';
 import { active, focus, hover } from './interactions';
 import { opacity } from './opacity';
+import { position } from './positions';
 import { shadow } from './shadows';
 import { margin, padding } from './spacing';
 import { offset, rotate, scale } from './transforms';
@@ -23,6 +24,7 @@ export const system = {
 	offset,
 	opacity,
 	padding,
+	position,
 	rotate,
 	scale,
 	shadow,

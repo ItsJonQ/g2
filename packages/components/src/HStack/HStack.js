@@ -5,7 +5,13 @@ import React from 'react';
 import { Flex, FlexBlock } from '../Flex';
 import { getAlignmentProps } from './HStack.utils';
 
-function HStack({ alignment, children, forwardedRef, spacing = 2, ...props }) {
+function HStack({
+	alignment = 'edge',
+	children,
+	forwardedRef,
+	spacing = 2,
+	...props
+}) {
 	const align = getAlignmentProps(alignment);
 	const validChildren = getValidChildren(children);
 

@@ -141,7 +141,7 @@ const FlatListItem = ({ children, onDelete, onMove, ...props }) => {
 		<SortableItemBase index={index}>
 			<Animated auto key={_key}>
 				<Surface {...props}>
-					<HStack alignment="edge">
+					<HStack>
 						{hasEditButton && hasSortAction && (
 							<Animated
 								animate={{
@@ -261,7 +261,7 @@ const Example = () => {
 				css={{ maxWidth: 400 }}
 				onMove={(from, to) => moveUser(from, to)}
 			>
-				<HStack alignment="edge">
+				<HStack>
 					<Button onClick={addUser} variant="primary">
 						Add User
 					</Button>

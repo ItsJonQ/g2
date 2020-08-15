@@ -10,13 +10,14 @@ background.black = background(get('black'));
 background.white = background(get('white'));
 background.admin = background(get('colorAdmin'));
 
-background.purple = getBackgroundColor('purple');
+background.blue = getBackgroundColor('blue');
+background.darkGray = getBackgroundColor('darkGray');
 background.green = getBackgroundColor('green');
+background.lightGray = getBackgroundColor('lightGray');
+background.orange = getBackgroundColor('orange');
+background.purple = getBackgroundColor('purple');
 background.red = getBackgroundColor('red');
 background.yellow = getBackgroundColor('yellow');
-background.orange = getBackgroundColor('orange');
-background.darkGray = getBackgroundColor('darkGray');
-background.lightGray = getBackgroundColor('lightGray');
 
 background.control = background(get('controlBackgroundColor'));
 background.surface = background(get('surfaceBackgroundColor'));
