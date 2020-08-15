@@ -169,7 +169,7 @@ const FlatListItem = ({ children, onDelete, onMove, ...props }) => {
 										duration: 0.2,
 										ease: 'easeInOut',
 									},
-									width: isEditing ? 50 : 0,
+									width: isEditing ? 36 : 0,
 								}}
 							>
 								<HStack alignment="right" css={{ padding: 2 }}>
@@ -221,7 +221,7 @@ const Example = () => {
 	return (
 		<HStack alignment="center">
 			<FlatList
-				css={{ maxWidth: 400 }}
+				css={{ maxWidth: '100%', minWidth: 0, width: 400 }}
 				onMove={(from, to) => moveUser(from, to)}
 			>
 				<VStack>
@@ -229,6 +229,7 @@ const Example = () => {
 						<Button onClick={addUser} variant="primary">
 							Add User
 						</Button>
+						<Spacer />
 						<EditButton />
 					</HStack>
 					<FlatListItems>
