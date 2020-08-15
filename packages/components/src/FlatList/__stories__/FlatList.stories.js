@@ -1,5 +1,5 @@
 import { FiX } from '@wp-g2/icons';
-import { arrayMove, getValidChildren, is } from '@wp-g2/utils';
+import { getValidChildren, useListState } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -211,92 +211,57 @@ const userSchema = new Schema(() => ({
 	name: faker.name.firstName(),
 }));
 
-const useFlatListState = (collection) => {
-	const [state, setState] = useState(collection);
-
-	setState.prepend = (next) => {
-		return setState((prevState) => [next, ...prevState]);
-	};
-
-	setState.append = (next) => {
-		return setState((prevState) => [...prevState, next]);
-	};
-
-	setState.add = setState.append;
-
-	setState.delete = ({ at, id }) => {
-		setState((prevState) =>
-			prevState.filter((item, index) => {
-				if (is.number(at)) {
-					return index !== at;
-				}
-				if (is.defined(id)) {
-					return item?.id !== id;
-				}
-
-				return item;
-			}),
-		);
-	};
-
-	setState.move = (from, to) => {
-		setState((prevState) => {
-			return arrayMove(prevState, from, to);
-		});
-	};
-
-	return [state, setState];
-};
-
 const Example = () => {
-	const [users, setUsers] = useFlatListState(userSchema.make(10));
+	const [users, setUsers] = useListState(userSchema.make(10));
 
 	const addUser = () => setUsers.prepend(userSchema.makeOne());
 	const deleteUser = (id) => setUsers.delete({ id });
 	const moveUser = (from, to) => setUsers.move(from, to);
 
 	return (
-		<HStack>
+		<HStack alignment="center">
 			<FlatList
 				css={{ maxWidth: 400 }}
 				onMove={(from, to) => moveUser(from, to)}
 			>
-				<HStack>
-					<Button onClick={addUser} variant="primary">
-						Add User
-					</Button>
-					<EditButton />
-				</HStack>
-				<FlatListItems>
-					{users.map((user, index) => {
-						return (
-							<FlatListItem
-								css={{ padding: 12 }}
-								key={user.id || index}
-								onDelete={() => deleteUser(user.id)}
-							>
-								<HStack alignment="left" spacing={3}>
-									<Avatar src={user.avatar} />
-									<Spacer>
-										<VStack spacing={1}>
-											<Text size={14} weight="bold">
-												{user.name}
-											</Text>
-											<Text
-												numberOfLines={2}
-												size={12}
-												truncate
-												variant="muted"
-											>
-												{user.description}
-											</Text>
-										</VStack>
-									</Spacer>
-								</HStack>
-							</FlatListItem>
-						);
-					})}
-				</FlatListItems>
+				<VStack>
+					<HStack>
+						<Button onClick={addUser} variant="primary">
+							Add User
+						</Button>
+						<EditButton />
+					</HStack>
+					<FlatListItems>
+						{users.map((user, index) => {
+							return (
+								<FlatListItem
+									css={{ padding: 12 }}
+									key={user.id || index}
+									onDelete={() => deleteUser(user.id)}
+								>
+									<HStack alignment="left" spacing={3}>
+										<Avatar src={user.avatar} />
+										<Spacer>
+											<VStack spacing={1}>
+												<Text size={14} weight="bold">
+													{user.name}
+												</Text>
+												<Text
+													numberOfLines={2}
+													size={12}
+													truncate
+													variant="muted"
+												>
+													{user.description}
+												</Text>
+											</VStack>
+										</Spacer>
+									</HStack>
+								</FlatListItem>
+							);
+						})}
+					</FlatListItems>
+				</VStack>
 			</FlatList>
 		</HStack>
 	);

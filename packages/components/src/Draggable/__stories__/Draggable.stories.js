@@ -1,5 +1,5 @@
 import { ui } from '@wp-g2/styles';
-import { arrayMove, is } from '@wp-g2/utils';
+import { useListState } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React from 'react';
@@ -87,43 +87,6 @@ const itemSchema = new Schema(() => ({
 	id: faker.random.uuid(),
 	title: faker.name.firstName(),
 }));
-
-const useListState = (collection) => {
-	const [state, setState] = React.useState(collection);
-
-	setState.prepend = (next) => {
-		return setState((prevState) => [next, ...prevState]);
-	};
-
-	setState.append = (next) => {
-		return setState((prevState) => [...prevState, next]);
-	};
-
-	setState.add = setState.append;
-
-	setState.delete = ({ at, id }) => {
-		setState((prevState) =>
-			prevState.filter((item, index) => {
-				if (is.number(at)) {
-					return index !== at;
-				}
-				if (is.defined(id)) {
-					return item?.id !== id;
-				}
-
-				return item;
-			}),
-		);
-	};
-
-	setState.move = (from, to) => {
-		setState((prevState) => {
-			return arrayMove(prevState, from, to);
-		});
-	};
-
-	return [state, setState];
-};
 
 function Avatar({ src }) {
 	return (
