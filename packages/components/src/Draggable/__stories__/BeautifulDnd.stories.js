@@ -141,7 +141,6 @@ const Example = () => {
 				<Spacer>
 					<Droppable droppableId="editors">
 						{(provided, snapshot) => {
-							console.log(provided, snapshot);
 							return (
 								<View
 									{...provided.droppableProps}
