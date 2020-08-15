@@ -24,6 +24,14 @@ export function useListState(collection = []) {
 
 	setState.add = setState.append;
 
+	setState.insert = ({ at, item }) => {
+		setState((prevState) => {
+			const next = [...prevState];
+			next.splice(at, 0, item);
+			return next;
+		});
+	};
+
 	setState.delete = ({ at, id }) => {
 		setState((prevState) =>
 			prevState.filter((item, index) => {

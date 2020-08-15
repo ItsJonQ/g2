@@ -28,6 +28,7 @@
     "path-to-regexp": "^1.7.0",
     "query-string": "^6.13.1",
     "react-color": "^2.18.1",
+    "react-beautiful-dnd": "^13.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-sortable-hoc": "^1.11.0",
