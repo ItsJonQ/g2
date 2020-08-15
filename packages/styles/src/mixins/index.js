@@ -2,6 +2,7 @@ export * from './backgrounds';
 export * from './breakpoints';
 export * from './colorBlindMode';
 export * from './darkMode';
+export * from './device';
 export * from './fonts';
 export * from './highContrastMode';
 export * from './interactions';

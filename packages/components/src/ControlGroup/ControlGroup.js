@@ -55,7 +55,7 @@ function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {
 	});
 
 	return (
-		<Flex {...props} _autoWrap={false} direction={direction} gap={0}>
+		<Flex _autoWrap={false} direction={direction} gap={0} {...props}>
 			{clonedChildren}
 		</Flex>
 	);

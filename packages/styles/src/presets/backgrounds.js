@@ -8,7 +8,7 @@ export function background(color) {
 
 background.black = background(get('black'));
 background.white = background(get('white'));
-background.admin = background(get('admin'));
+background.admin = background(get('colorAdmin'));
 
 background.purple = getBackgroundColor('purple');
 background.green = getBackgroundColor('green');
@@ -17,3 +17,6 @@ background.yellow = getBackgroundColor('yellow');
 background.orange = getBackgroundColor('orange');
 background.darkGray = getBackgroundColor('darkGray');
 background.lightGray = getBackgroundColor('lightGray');
+
+background.control = background(get('controlBackgroundColor'));
+background.surface = background(get('surfaceBackgroundColor'));

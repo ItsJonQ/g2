@@ -1,3 +1,4 @@
+import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
 import { border, borderRadius } from './borders';
@@ -10,6 +11,7 @@ import { offset, rotate, scale } from './transforms';
 
 export const system = {
 	active,
+	alignment,
 	animation,
 	background,
 	border,

@@ -125,12 +125,14 @@ const DARK_MODE_PROPS = {
 const HIGH_CONTRAST_MODE_PROPS = {
 	colorDivider: '#444',
 	controlBorderColor: '#444',
+	controlBorderSubtleColor: '#444',
 	surfaceBorderColor: '#444',
 };
 
 const HIGH_CONTRAST_DARK_MODE_PROPS = {
 	colorDivider: '#eee',
 	controlBorderColor: '#eee',
+	controlBorderSubtleColor: '#eee',
 	surfaceBorderColor: '#eee',
 };
 

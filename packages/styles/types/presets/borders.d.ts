@@ -1,5 +1,15 @@
 import { CSSClassName } from '../shared';
 
+/** Modify border styles for controls based on system presets. */
+interface ControlBorderInterface {
+	/** Applies control border styles to all sides. */
+	default: CSSClassName;
+	/** Applies subtle control border styles to all sides. */
+	subtle: CSSClassName;
+	/** Applies focus control border styles to all sides. */
+	focus: CSSClassName;
+}
+
 /** Modify border styles based on system presets. */
 export declare interface BorderInterface {
 	/** Applies border to all sides. */
@@ -12,6 +22,8 @@ export declare interface BorderInterface {
 	left: CSSClassName;
 	/** Applies border to the top side. */
 	right: CSSClassName;
+	/** Modify border styles for controls based on system presets. */
+	control: ControlBorderInterface;
 }
 
 /** Modify border radius styles based on system presets. */

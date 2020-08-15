@@ -26,4 +26,8 @@ export declare interface BackgroundInterface {
 	darkGray: CSSClassName;
 	/** Applies admin background color. */
 	admin: CSSClassName;
+	/** Applies control background color. */
+	control: CSSClassName;
+	/** Applies surface background color. */
+	surface: CSSClassName;
 }

@@ -6,6 +6,7 @@ function Grid({
 	align,
 	columns,
 	gap = 12,
+	isInline,
 	justify,
 	rows,
 	templateColumns,
@@ -21,11 +22,12 @@ function Grid({
 
 	const cx = css({
 		alignItems: align,
-		display: 'grid',
+		display: isInline ? 'inline-grid' : 'grid',
 		gap,
 		gridTemplateColumns,
 		gridTemplateRows,
 		justifyContent: justify,
+		verticalAlign: isInline ? 'middle' : null,
 	});
 
 	return <BaseView {...props} cx={cx} />;

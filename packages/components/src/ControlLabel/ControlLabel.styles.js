@@ -1,10 +1,17 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, get, getHighDpi, styled } from '@wp-g2/styles';
 
 const lineHeight = `calc(${get('fontSize')} * 1.2)`;
 
 function getPadding(size) {
 	return `calc((${get(size)} - ${lineHeight}) / 2)`;
 }
+
+const highDpiAdjust = getHighDpi(css`
+	> * {
+		position: relative;
+		top: 0.5px;
+	}
+`);
 
 export const ControlLabelView = styled.div`
 	line-height: ${lineHeight};
@@ -14,6 +21,8 @@ export const ControlLabelView = styled.div`
 	&:active {
 		user-select: none;
 	}
+
+	${highDpiAdjust};
 `;
 
 export const large = css`

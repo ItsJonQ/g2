@@ -1,5 +1,6 @@
 import { CSSClassName } from '../shared';
 
+import { AlignmentInterface } from './alignments';
 import { AnimationInterface } from './animations';
 import { BackgroundInterface } from './backgrounds';
 import { BorderInterface, BorderRadiusInterface } from './borders';
@@ -24,6 +25,8 @@ declare interface FocusInterface extends InteractionInterface {}
 export declare interface SystemInterface {
 	/** Applies custom modifiers based on an active interaction. */
 	active: ActiveInterface;
+	/** Modify alignment styles based on system presets. */
+	alignment: AlignmentInterface;
 	/** Applies custom animation styles based on system presets. */
 	animation: AnimationInterface;
 	/** Modify background styles based on system presets. */
