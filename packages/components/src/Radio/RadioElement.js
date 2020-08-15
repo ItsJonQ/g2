@@ -1,7 +1,7 @@
 import { Radio as ReakitRadio } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
 import { css, cx, ns } from '@wp-g2/styles';
-import { noop, useControlledState } from '@wp-g2/utils';
+import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
@@ -31,13 +31,13 @@ function RadioElement({
 
 	const handleOnChange = (event) => {
 		const next = event.target.checked;
-		if (!radio) {
+		if (isEmpty(radio)) {
 			setChecked(next);
 		}
 		onChange(next, { event });
 	};
 
-	const checkedState = radio ? undefined : checked;
+	const checkedState = isEmpty(radio) ? checked : undefined;
 
 	return (
 		<RadioWrapperView {...ns('RadioWrapper')}>

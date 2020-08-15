@@ -2,7 +2,7 @@ import { Checkbox as ReakitCheckbox } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
 import { FiCheck } from '@wp-g2/icons';
 import { css, cx, ns } from '@wp-g2/styles';
-import { noop, useControlledState } from '@wp-g2/utils';
+import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
 import { useCheckboxGroupContext } from '../CheckboxGroup';
@@ -33,13 +33,13 @@ function CheckboxElement({
 
 	const handleOnChange = (event) => {
 		const next = event.target.checked;
-		if (!checkbox) {
+		if (isEmpty(checkbox)) {
 			setChecked(next);
 		}
 		onChange(next, { event });
 	};
 
-	const checkedState = checkbox ? undefined : checked;
+	const checkedState = isEmpty(checkbox) ? checked : undefined;
 
 	return (
 		<CheckboxWrapperView {...ns('CheckboxWrapper')}>
