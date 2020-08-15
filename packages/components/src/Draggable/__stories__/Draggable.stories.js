@@ -24,7 +24,7 @@ export default {
 	title: 'Components/Draggable',
 };
 
-export const ItemTypes = {
+const ItemTypes = {
 	DONE: 'DONE',
 	TODO: 'TODO',
 };
