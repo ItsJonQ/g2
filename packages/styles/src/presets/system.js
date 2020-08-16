@@ -2,6 +2,7 @@ import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
 import { border, borderRadius } from './borders';
+import { frame } from './dimensions';
 import { font } from './fonts';
 import { active, focus, hover } from './interactions';
 import { opacity } from './opacity';
@@ -19,6 +20,7 @@ export const system = {
 	borderRadius,
 	focus,
 	font,
+	frame,
 	hover,
 	margin,
 	offset,

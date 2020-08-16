@@ -3,6 +3,7 @@ import { CSSClassName } from '../shared';
 import { AlignmentInterface } from './alignments';
 import { AnimationInterface } from './animations';
 import { BackgroundInterface } from './backgrounds';
+import { FrameInterface } from './dimensions';
 import { BorderInterface, BorderRadiusInterface } from './borders';
 import { FontInterface } from './fonts';
 import { OpacityInterface } from './opacity';
@@ -36,6 +37,8 @@ export declare interface SystemInterface {
 	borderRadius: BorderRadiusInterface;
 	/** Modify border styles based on system presets. */
 	border: BorderInterface;
+	/** Modify width/height styles. */
+	frame: FrameInterface;
 	/** Applies custom modifiers based on an focus interaction. */
 	focus: FocusInterface;
 	/** Applies custom modifiers based on an hover interaction. */
@@ -44,7 +47,7 @@ export declare interface SystemInterface {
 	font: FontInterface;
 	/** Modify margin styles based on system presets. */
 	margin: MarginInterface;
-	/** Modify offset (transform) styles based on system presets. */
+	/** Modify offset (transform) styles. */
 	offset: OffsetInterface;
 	/** Modify opacity styles based on system presets. */
 	opacity: OpacityInterface;
@@ -52,9 +55,9 @@ export declare interface SystemInterface {
 	padding: PaddingInterface;
 	/** Modify position styles based on system presets. */
 	position: PositionInterface;
-	/** Modify rotate (transform) styles based on system presets. */
+	/** Modify rotate (transform) styles. */
 	rotate: RotateInterface;
-	/** Modify scale (transform) styles based on system presets. */
+	/** Modify scale (transform) styles. */
 	scale: ScaleInterface;
 	/** Modify box-shadow styles based on system presets. */
 	shadow: ShadowInterface;
