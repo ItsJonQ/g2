@@ -139,18 +139,7 @@ const Example = () => {
 					</Droppable>
 				</Spacer>
 				<Spacer>
-					<Droppable
-						droppableId="editors"
-						renderClone={(provided, snapshot, rubric) => (
-							<div
-								{...provided.draggableProps}
-								{...provided.dragHandleProps}
-								ref={provided.innerRef}
-							>
-								Hi
-							</div>
-						)}
-					>
+					<Droppable droppableId="editors">
 						{(provided, snapshot) => {
 							return (
 								<View
