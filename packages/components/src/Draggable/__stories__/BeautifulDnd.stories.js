@@ -58,16 +58,16 @@ const UserCard = ({ avatar, description, title }) => {
 };
 
 const Example = () => {
-	const [users, setUsers] = useListState(userSchema.make(10));
-	const [editors, setEditors] = useListState(userSchema.make(10));
+	const [users, usersData] = useListState(userSchema.make(10));
+	const [editors, editorsData] = useListState(userSchema.make(10));
 
 	const states = {
 		editors,
 		users,
 	};
 	const sources = {
-		editors: setEditors,
-		users: setUsers,
+		editors: editorsData,
+		users: usersData,
 	};
 
 	const onMove = ({ destination, source, ...rest }) => {

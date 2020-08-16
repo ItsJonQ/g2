@@ -209,11 +209,11 @@ const userSchema = new Schema(() => ({
 }));
 
 const Example = () => {
-	const [users, setUsers] = useListState(userSchema.make(10));
+	const [users, usersData] = useListState(userSchema.make(10));
 
-	const addUser = () => setUsers.prepend(userSchema.makeOne());
-	const deleteUser = (id) => setUsers.delete({ id });
-	const moveUser = (from, to) => setUsers.move(from, to);
+	const addUser = () => usersData.prepend(userSchema.makeOne());
+	const deleteUser = (id) => usersData.delete({ id });
+	const moveUser = (from, to) => usersData.move(from, to);
 
 	return (
 		<HStack alignment="center">

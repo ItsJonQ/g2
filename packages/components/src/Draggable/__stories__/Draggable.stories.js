@@ -131,8 +131,8 @@ function ItemCard({ avatar, description, id, title }) {
 }
 
 function Example() {
-	const [todos, setTodos] = useListState(itemSchema.make(7));
-	const [dones, setDones] = useListState(itemSchema.make(2));
+	const [todos, todosData] = useListState(itemSchema.make(7));
+	const [dones, donesData] = useListState(itemSchema.make(2));
 
 	return (
 		<HStack alignment="center">
@@ -154,8 +154,8 @@ function Example() {
 										onEnd={(item, monitor) => {
 											const dropResult = monitor.getDropResult();
 											if (dropResult?.name === 'Dones') {
-												setDones.prepend(todo);
-												setTodos.delete({
+												donesData.prepend(todo);
+												todosData.delete({
 													id: todo.id,
 												});
 											}
@@ -183,8 +183,8 @@ function Example() {
 												if (
 													dropResult?.name === 'Todos'
 												) {
-													setTodos.prepend(todo);
-													setDones.delete({
+													todosData.prepend(todo);
+													donesData.delete({
 														id: todo.id,
 													});
 												}

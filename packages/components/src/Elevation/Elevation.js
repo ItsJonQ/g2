@@ -12,7 +12,7 @@ function Elevation({
 	borderRadius = 'inherit',
 	focus,
 	hover,
-	isInteractive = true,
+	isInteractive = false,
 	offset = 0,
 	value = 0,
 	...props

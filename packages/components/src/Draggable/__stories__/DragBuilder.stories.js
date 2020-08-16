@@ -12,11 +12,13 @@ import {
 	Button,
 	Card,
 	CardBody,
+	Elevation,
 	Heading,
 	HStack,
 	Icon,
 	Placeholder,
 	Spacer,
+	Surface,
 	Text,
 	View,
 	VStack,
@@ -53,14 +55,14 @@ const imageSchema = new Schema(() => ({
 	type: 'image',
 }));
 
-const blockListData = [
+const initialBlockList = [
 	buttonSchema.makeOne(),
 	headingSchema.makeOne(),
 	imageSchema.makeOne(),
 	paragraphSchema.makeOne(),
 ];
 
-const contentListData = [imageSchema.makeOne(), paragraphSchema.makeOne()];
+const initialContentList = [imageSchema.makeOne(), ...paragraphSchema.make(2)];
 
 const createNewContentBlock = (type) => {
 	if (type === 'paragraph') {
@@ -174,6 +176,23 @@ const BlockDragIndexLine = () => {
 	);
 };
 
+const DraggableClone = ({ children, snapshot }) => {
+	if (!snapshot.isDragging) return null;
+	return children;
+};
+
+const DraggablePlaceholder = ({ provided }) => {
+	return (
+		<span
+			style={{
+				display: 'none',
+			}}
+		>
+			{provided.placeholder}
+		</span>
+	);
+};
+
 const BlockList = ({ blockList }) => {
 	return (
 		<Droppable droppableId="blockList" isDropDisabled>
@@ -210,7 +229,7 @@ const BlockList = ({ blockList }) => {
 										>
 											<BlockListCard {...block} />
 										</View>
-										{snapshot.isDragging && (
+										<DraggableClone snapshot={snapshot}>
 											<View
 												css={[
 													ui.margin.bottom(2),
@@ -219,18 +238,12 @@ const BlockList = ({ blockList }) => {
 											>
 												<BlockListCard {...block} />
 											</View>
-										)}
+										</DraggableClone>
 									</React.Fragment>
 								)}
 							</Draggable>
 						))}
-						<span
-							style={{
-								display: 'none',
-							}}
-						>
-							{provided.placeholder}
-						</span>
+						<DraggablePlaceholder provided={provided} />
 					</View>
 				);
 			}}
@@ -240,7 +253,27 @@ const BlockList = ({ blockList }) => {
 
 const ContentList = ({ contentList, targetIndex }) => {
 	return (
-		<Droppable droppableId="content">
+		<Droppable
+			droppableId="content"
+			renderClone={(provided, snapshot, rubric) => (
+				<Surface
+					{...provided.draggableProps}
+					{...provided.dragHandleProps}
+					isBackground
+					ref={provided.innerRef}
+					style={{
+						...provided.draggableProps.style,
+						height: undefined,
+						padding: 12,
+					}}
+				>
+					<View css={{ marginBottom: '-1.5em', opacity: 0.5 }}>
+						<ExampleBlock {...contentList[rubric.source.index]} />
+					</View>
+					<Elevation value={6} />
+				</Surface>
+			)}
+		>
 			{(provided) => {
 				return (
 					<View
@@ -251,45 +284,33 @@ const ContentList = ({ contentList, targetIndex }) => {
 						<Spacer mb={6}>
 							<Heading size={1}>Blog Title</Heading>
 						</Spacer>
-						<AnimatedContainer>
-							{contentList.map((block, index) => (
-								<Animated auto key={block.id}>
-									{index === targetIndex && (
-										<BlockDragIndexLine />
+
+						{contentList.map((block, index) => (
+							<View key={block.id}>
+								{index === targetIndex && (
+									<BlockDragIndexLine />
+								)}
+								<Draggable draggableId={block.id} index={index}>
+									{(provided, snapshot) => (
+										<View
+											ref={provided.innerRef}
+											{...provided.draggableProps}
+											{...provided.dragHandleProps}
+										>
+											<ExampleBlock
+												key={block.id}
+												{...block}
+											/>
+										</View>
 									)}
-									<Draggable
-										draggableId={block.id}
-										index={index}
-										isDragDisabled
-										key={block.id}
-									>
-										{(provided, snapshot) => (
-											<View
-												ref={provided.innerRef}
-												{...provided.draggableProps}
-												{...provided.dragHandleProps}
-												css={[ui.margin.bottom(2)]}
-											>
-												<ExampleBlock
-													key={block.id}
-													{...block}
-												/>
-											</View>
-										)}
-									</Draggable>
-								</Animated>
-							))}
-						</AnimatedContainer>
+								</Draggable>
+							</View>
+						))}
+
 						{targetIndex === contentList.length && (
 							<BlockDragIndexLine />
 						)}
-						<View
-							style={{
-								display: 'none',
-							}}
-						>
-							{provided.placeholder}
-						</View>
+						{provided.placeholder}
 					</View>
 				);
 			}}
@@ -298,20 +319,42 @@ const ContentList = ({ contentList, targetIndex }) => {
 };
 
 const Example = () => {
-	const [blockList] = useListState(blockListData);
-	const [contentList, setContentList] = useListState(contentListData);
+	const [blockList] = useListState(initialBlockList);
+	const [contentList, contentListData] = useListState(initialContentList);
 	const [targetIndex, setTargetIndex] = useState();
+	const [isDraggingContent, setIsDraggingContent] = useState(false);
+	const [sourceContentIndex, setSourceContentIndex] = useState();
+
+	const onDragStart = ({ source }) => {
+		if (source?.droppableId !== 'content') return;
+		setSourceContentIndex(source.index);
+	};
 
 	const onDragUpdate = ({ destination, source }) => {
 		if (destination?.droppableId !== 'content') {
 			setTargetIndex(undefined);
 			return;
 		}
-		setTargetIndex(destination?.index);
+		let next = destination?.index;
+		if (isDraggingContent) {
+			next = next >= sourceContentIndex ? next + 1 : next;
+		}
+		setTargetIndex(next);
 	};
 
 	const onDragEnd = ({ destination, source }) => {
 		setTargetIndex(undefined);
+		setIsDraggingContent(false);
+
+		// Sorting content
+		if (
+			destination?.droppableId === 'content' &&
+			source?.droppableId === 'content'
+		) {
+			contentListData.move(source.index, destination.index);
+			return;
+		}
+
 		if (destination?.droppableId !== 'content') return;
 
 		const item = blockList[source.index];
@@ -319,16 +362,23 @@ const Example = () => {
 		const next = createNewContentBlock(itemType);
 
 		if (next) {
-			setContentList.insert({ at: destination.index, item: next });
+			contentListData.insert({ at: destination.index, item: next });
 		}
 	};
 
 	const onBeforeCapture = ({ draggableId }) => {
-		const el = document.querySelector(
+		const contentListItem = contentListData.find({ id: draggableId });
+		const isDraggingContentList = !!contentListItem;
+
+		if (isDraggingContentList) {
+			setIsDraggingContent(true);
+		}
+
+		let el = document.querySelector(
 			`[data-rbd-drag-handle-draggable-id="${draggableId}"]`,
 		);
 		if (el) {
-			el.style.height = '12px';
+			el.style.height = isDraggingContentList ? '24px' : '12px';
 		}
 	};
 
@@ -336,6 +386,7 @@ const Example = () => {
 		<DragDropContext
 			onBeforeCapture={onBeforeCapture}
 			onDragEnd={onDragEnd}
+			onDragStart={onDragStart}
 			onDragUpdate={onDragUpdate}
 		>
 			<HStack

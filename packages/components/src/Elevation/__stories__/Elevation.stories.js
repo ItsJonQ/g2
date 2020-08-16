@@ -11,7 +11,7 @@ export default {
 export const _default = () => {
 	return (
 		<View css={{ padding: 30, position: 'relative' }}>
-			<Elevation value={5} />
+			<Elevation isInteractive value={5} />
 		</View>
 	);
 };
