@@ -3,7 +3,7 @@ import { ui } from '@wp-g2/styles';
 import { useListState } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 
 import {
@@ -193,7 +193,7 @@ const DraggablePlaceholder = ({ provided }) => {
 	);
 };
 
-const BlockList = ({ blockList }) => {
+const BlockList = ({ blockList, contentListData }) => {
 	return (
 		<Droppable droppableId="blockList" isDropDisabled>
 			{(provided) => {
@@ -218,6 +218,13 @@ const BlockList = ({ blockList }) => {
 											ref={provided.innerRef}
 											{...provided.draggableProps}
 											{...provided.dragHandleProps}
+											onClick={() => {
+												contentListData.add(
+													createNewContentBlock(
+														block.type,
+													),
+												);
+											}}
 											style={{
 												...getStyle(
 													provided.draggableProps
@@ -287,23 +294,28 @@ const ContentList = ({ contentList, targetIndex }) => {
 
 						{contentList.map((block, index) => (
 							<View key={block.id}>
-								{index === targetIndex && (
-									<BlockDragIndexLine />
-								)}
-								<Draggable draggableId={block.id} index={index}>
-									{(provided, snapshot) => (
-										<View
-											ref={provided.innerRef}
-											{...provided.draggableProps}
-											{...provided.dragHandleProps}
-										>
-											<ExampleBlock
-												key={block.id}
-												{...block}
-											/>
-										</View>
+								<Animated auto>
+									{index === targetIndex && (
+										<BlockDragIndexLine />
 									)}
-								</Draggable>
+									<Draggable
+										draggableId={block.id}
+										index={index}
+									>
+										{(provided, snapshot) => (
+											<View
+												ref={provided.innerRef}
+												{...provided.draggableProps}
+												{...provided.dragHandleProps}
+											>
+												<ExampleBlock
+													key={block.id}
+													{...block}
+												/>
+											</View>
+										)}
+									</Draggable>
+								</Animated>
 							</View>
 						))}
 
@@ -322,10 +334,27 @@ const Example = () => {
 	const [blockList] = useListState(initialBlockList);
 	const [contentList, contentListData] = useListState(initialContentList);
 	const [targetIndex, setTargetIndex] = useState();
+	const [isDragging, setIsDragging] = useState(false);
 	const [isDraggingContent, setIsDraggingContent] = useState(false);
 	const [sourceContentIndex, setSourceContentIndex] = useState();
 
+	useEffect(() => {
+		const onMouseMove = (event) => {
+			console.log('mousemove', event);
+		};
+		if (isDragging) {
+			document.addEventListener('mousemove', onMouseMove);
+		}
+
+		return () => {
+			if (isDragging) {
+				document.removeEventListener('mousemove', onMouseMove);
+			}
+		};
+	}, [isDragging]);
+
 	const onDragStart = ({ source }) => {
+		setIsDragging(true);
 		if (source?.droppableId !== 'content') return;
 		setSourceContentIndex(source.index);
 	};
@@ -343,6 +372,7 @@ const Example = () => {
 	};
 
 	const onDragEnd = ({ destination, source }) => {
+		setIsDragging(false);
 		setTargetIndex(undefined);
 		setIsDraggingContent(false);
 
@@ -399,7 +429,10 @@ const Example = () => {
 				spacing={0}
 			>
 				<View css={ui.frame.width(300)}>
-					<BlockList blockList={blockList} />
+					<BlockList
+						blockList={blockList}
+						contentListData={contentListData}
+					/>
 				</View>
 				<Spacer>
 					<ContentList
