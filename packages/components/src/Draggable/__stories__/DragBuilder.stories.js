@@ -292,32 +292,34 @@ const ContentList = ({ contentList, targetIndex }) => {
 							<Heading size={1}>Blog Title</Heading>
 						</Spacer>
 
-						{contentList.map((block, index) => (
-							<View key={block.id}>
-								<Animated auto>
-									{index === targetIndex && (
-										<BlockDragIndexLine />
-									)}
-									<Draggable
-										draggableId={block.id}
-										index={index}
-									>
-										{(provided, snapshot) => (
-											<View
-												ref={provided.innerRef}
-												{...provided.draggableProps}
-												{...provided.dragHandleProps}
-											>
-												<ExampleBlock
-													key={block.id}
-													{...block}
-												/>
-											</View>
+						<AnimatedContainer>
+							{contentList.map((block, index) => (
+								<View key={block.id}>
+									<Animated auto>
+										{index === targetIndex && (
+											<BlockDragIndexLine />
 										)}
-									</Draggable>
-								</Animated>
-							</View>
-						))}
+										<Draggable
+											draggableId={block.id}
+											index={index}
+										>
+											{(provided, snapshot) => (
+												<View
+													ref={provided.innerRef}
+													{...provided.draggableProps}
+													{...provided.dragHandleProps}
+												>
+													<ExampleBlock
+														key={block.id}
+														{...block}
+													/>
+												</View>
+											)}
+										</Draggable>
+									</Animated>
+								</View>
+							))}
+						</AnimatedContainer>
 
 						{targetIndex === contentList.length && (
 							<BlockDragIndexLine />
