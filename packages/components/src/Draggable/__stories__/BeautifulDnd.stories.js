@@ -87,8 +87,18 @@ const Example = () => {
 			item,
 		});
 	};
+
+	const onBeforeCapture = ({ draggableId }) => {
+		const el = document.querySelector(
+			`[data-rbd-drag-handle-draggable-id="${draggableId}"]`,
+		);
+		if (el) {
+			el.style.height = '12px';
+		}
+	};
+
 	return (
-		<DragDropContext onDragEnd={onMove}>
+		<DragDropContext onBeforeCapture={onBeforeCapture} onDragEnd={onMove}>
 			<HStack
 				css={[{ maxWidth: '100%', width: 800 }, ui.alignment.center]}
 				spacing={0}

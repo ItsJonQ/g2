@@ -6,6 +6,7 @@ const ALIGNMENTS = {
 	edge: { align: 'flex-start', justify: 'space-between' },
 	left: { align: 'center', justify: 'flex-start' },
 	right: { align: 'center', justify: 'flex-end' },
+	stretch: { align: 'stretch' },
 	top: { align: 'flex-start', justify: 'center' },
 	topLeft: { align: 'flex-start', justify: 'flex-start' },
 	topRight: { align: 'flex-start', justify: 'flex-end' },
