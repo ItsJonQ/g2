@@ -12,11 +12,9 @@ import {
 	Button,
 	Card,
 	CardBody,
-	Grid,
 	Heading,
 	HStack,
 	Icon,
-	Image,
 	Placeholder,
 	Spacer,
 	Text,
@@ -176,19 +174,145 @@ const BlockDragIndexLine = () => {
 	);
 };
 
+const BlockList = ({ blockList }) => {
+	return (
+		<Droppable droppableId="blockList" isDropDisabled>
+			{(provided) => {
+				return (
+					<View
+						{...provided.droppableProps}
+						css={[ui.padding(5)]}
+						ref={provided.innerRef}
+					>
+						<Spacer>
+							<Heading>Blocks</Heading>
+						</Spacer>
+						{blockList.map((block, index) => (
+							<Draggable
+								draggableId={block.id}
+								index={index}
+								key={block.id}
+							>
+								{(provided, snapshot) => (
+									<React.Fragment>
+										<View
+											ref={provided.innerRef}
+											{...provided.draggableProps}
+											{...provided.dragHandleProps}
+											style={{
+												...getStyle(
+													provided.draggableProps
+														.style,
+													snapshot,
+												),
+												marginBottom: 8,
+											}}
+										>
+											<BlockListCard {...block} />
+										</View>
+										{snapshot.isDragging && (
+											<View
+												css={[
+													ui.margin.bottom(2),
+													ui.opacity.muted,
+												]}
+											>
+												<BlockListCard {...block} />
+											</View>
+										)}
+									</React.Fragment>
+								)}
+							</Draggable>
+						))}
+						<span
+							style={{
+								display: 'none',
+							}}
+						>
+							{provided.placeholder}
+						</span>
+					</View>
+				);
+			}}
+		</Droppable>
+	);
+};
+
+const ContentList = ({ contentList, targetIndex }) => {
+	return (
+		<Droppable droppableId="content">
+			{(provided) => {
+				return (
+					<View
+						{...provided.droppableProps}
+						css={[ui.padding(5)]}
+						ref={provided.innerRef}
+					>
+						<Spacer mb={6}>
+							<Heading size={1}>Blog Title</Heading>
+						</Spacer>
+						<AnimatedContainer>
+							{contentList.map((block, index) => (
+								<Animated auto key={block.id}>
+									{index === targetIndex && (
+										<BlockDragIndexLine />
+									)}
+									<Draggable
+										draggableId={block.id}
+										index={index}
+										isDragDisabled
+										key={block.id}
+									>
+										{(provided, snapshot) => (
+											<View
+												ref={provided.innerRef}
+												{...provided.draggableProps}
+												{...provided.dragHandleProps}
+												css={[ui.margin.bottom(2)]}
+											>
+												<ExampleBlock
+													key={block.id}
+													{...block}
+												/>
+											</View>
+										)}
+									</Draggable>
+								</Animated>
+							))}
+						</AnimatedContainer>
+						{targetIndex === contentList.length && (
+							<BlockDragIndexLine />
+						)}
+						<View
+							style={{
+								display: 'none',
+							}}
+						>
+							{provided.placeholder}
+						</View>
+					</View>
+				);
+			}}
+		</Droppable>
+	);
+};
+
 const Example = () => {
-	const [blockList, setBlockList] = useListState(blockListData);
+	const [blockList] = useListState(blockListData);
 	const [contentList, setContentList] = useListState(contentListData);
 	const [targetIndex, setTargetIndex] = useState();
 
 	const onDragUpdate = ({ destination, source }) => {
-		if (destination?.droppableId !== 'content') return;
+		if (destination?.droppableId !== 'content') {
+			setTargetIndex(undefined);
+			return;
+		}
 		setTargetIndex(destination?.index);
 	};
 
 	const onDragEnd = ({ destination, source }) => {
 		setTargetIndex(undefined);
-		if (destination.droppableId !== 'content') return;
+		if (destination?.droppableId !== 'content') return;
 
 		const item = blockList[source.index];
 		const itemType = item.type;
@@ -224,118 +348,13 @@ const Example = () => {
 				spacing={0}
 			>
 				<View css={ui.frame.width(300)}>
-					<Droppable droppableId="blockList" isDropDisabled>
-						{(provided, snapshot) => {
-							return (
-								<View
-									{...provided.droppableProps}
-									css={[ui.padding(5)]}
-									ref={provided.innerRef}
-								>
-									<Spacer>
-										<Heading>Blocks</Heading>
-									</Spacer>
-									{blockList.map((block, index) => (
-										<Draggable
-											draggableId={block.id}
-											index={index}
-											key={block.id}
-										>
-											{(provided, snapshot) => (
-												<div
-													ref={provided.innerRef}
-													{...provided.draggableProps}
-													{...provided.dragHandleProps}
-													style={{
-														...getStyle(
-															provided
-																.draggableProps
-																.style,
-															snapshot,
-														),
-														marginBottom: 8,
-													}}
-												>
-													<BlockListCard {...block} />
-												</div>
-											)}
-										</Draggable>
-									))}
-									<span
-										style={{
-											display: 'none',
-										}}
-									>
-										{provided.placeholder}
-									</span>
-								</View>
-							);
-						}}
-					</Droppable>
+					<BlockList blockList={blockList} />
 				</View>
 				<Spacer>
-					<Droppable droppableId="content">
-						{(provided, snapshot) => {
-							return (
-								<View
-									{...provided.droppableProps}
-									css={[ui.padding(5)]}
-									ref={provided.innerRef}
-								>
-									<Spacer mb={6}>
-										<Heading size={1}>Blog Title</Heading>
-									</Spacer>
-									<AnimatedContainer>
-										{contentList.map((block, index) => (
-											<Animated auto key={block.id}>
-												{index === targetIndex && (
-													<BlockDragIndexLine />
-												)}
-												<Draggable
-													draggableId={block.id}
-													index={index}
-													isDragDisabled
-													key={block.id}
-												>
-													{(provided, snapshot) => (
-														<div
-															ref={
-																provided.innerRef
-															}
-															{...provided.draggableProps}
-															{...provided.dragHandleProps}
-															style={{
-																...provided
-																	.draggableProps
-																	.style,
-																marginBottom: 8,
-																snapshot,
-															}}
-														>
-															<ExampleBlock
-																key={block.id}
-																{...block}
-															/>
-														</div>
-													)}
-												</Draggable>
-											</Animated>
-										))}
-									</AnimatedContainer>
-									{targetIndex === contentList.length && (
-										<BlockDragIndexLine />
-									)}
-									<span
-										style={{
-											display: 'none',
-										}}
-									>
-										{provided.placeholder}
-									</span>
-								</View>
-							);
-						}}
-					</Droppable>
+					<ContentList
+						contentList={contentList}
+						targetIndex={targetIndex}
+					/>
 				</Spacer>
 			</HStack>
 		</DragDropContext>
