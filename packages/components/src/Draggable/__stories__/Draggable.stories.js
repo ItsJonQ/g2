@@ -155,7 +155,7 @@ function Example() {
 											const dropResult = monitor.getDropResult();
 											if (dropResult?.name === 'Dones') {
 												donesData.prepend(todo);
-												todosData.delete({
+												todosData.remove({
 													id: todo.id,
 												});
 											}
@@ -184,7 +184,7 @@ function Example() {
 													dropResult?.name === 'Todos'
 												) {
 													todosData.prepend(todo);
-													donesData.delete({
+													donesData.remove({
 														id: todo.id,
 													});
 												}

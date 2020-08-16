@@ -81,7 +81,7 @@ const Example = () => {
 		}
 
 		const item = states[source.droppableId][source.index];
-		sources[source.droppableId].delete({ at: source.index });
+		sources[source.droppableId].remove({ at: source.index });
 		sources[destination.droppableId].insert({
 			at: destination.index,
 			item,

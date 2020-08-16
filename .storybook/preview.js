@@ -19,7 +19,7 @@ import {
 	Subheading,
 	View,
 } from '@wp-g2/components';
-import { useLocalStorage } from '@wp-g2/utils';
+import { useLocalState } from '@wp-g2/utils';
 
 const FormGroup = ({ children, ...props }) => {
 	return (
@@ -52,20 +52,20 @@ const defaultThemeConfig = {
 };
 
 function Themer() {
-	const [themeConfig, setThemeConfig] = useLocalStorage(
+	const [themeConfig, setThemeConfig] = useLocalState(
 		'themeConfig',
 		defaultThemeConfig,
 	);
-	const [isDark, setIsDark] = useLocalStorage('darkMode', false);
-	const [isHighContrast, setIsHighContast] = useLocalStorage(
+	const [isDark, setIsDark] = useLocalState('darkMode', false);
+	const [isHighContrast, setIsHighContast] = useLocalState(
 		'highContrastMode',
 		false,
 	);
-	const [isColorBlind, setIsColorBlind] = useLocalStorage(
+	const [isColorBlind, setIsColorBlind] = useLocalState(
 		'colorBlindMode',
 		false,
 	);
-	const [isReducedMotion, setIsReducedMotion] = useLocalStorage(
+	const [isReducedMotion, setIsReducedMotion] = useLocalState(
 		'reducedMotionMode',
 		false,
 	);

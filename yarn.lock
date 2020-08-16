@@ -12930,12 +12930,24 @@ reakit-utils@^0.13.1:
   resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.13.1.tgz#060b8b2a55eea1170c6d8ff37cd98c10c63ee55c"
   integrity sha512-NBKgsot3tU91gZgK5MTInI/PR0T3kIsTmbU5MbGggSOcwU2dG/kbE8IrM2lC6ayCSL2W2QWkijT6kewdrIX7Gw==
 
+reakit-utils@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.14.1.tgz#e552a3c5b7fe6a4f176ebddc4565cee1980670e6"
+  integrity sha512-Xzp8X8ZrZ3HVpKjAFmHVCVbL+cyNHFG2JHaZIrRR/Uni9gTKQo5uoEg9n6ULr+2k3v6R7C91TzhcReLHKGh8ZA==
+
 reakit-warning@0.4.1, reakit-warning@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/reakit-warning/-/reakit-warning-0.4.1.tgz#a715302812c5fc7f89f35772d650423f09029b00"
   integrity sha512-AgnRN6cf8DYBF/mK2JEMFVL67Sbon8fDbFy1kfm0EDibtGsMOQtsFYfozZL7TwmJ4yg68VMhg8tmPHchVQRrlg==
   dependencies:
     reakit-utils "^0.13.1"
+
+reakit-warning@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/reakit-warning/-/reakit-warning-0.5.1.tgz#775213d63f78b696983c7e4cb4410dd9dd571a3c"
+  integrity sha512-WD7bjJyIR6hhXM1UqnJ9f6WWC/7NwKEx9+cUhanJY6paIbjstdQg8II2HgCeMptUaUrUo7odYejy+iGmdUXb3g==
+  dependencies:
+    reakit-utils "^0.14.1"
 
 reakit@^1.1.2:
   version "1.1.2"
@@ -15266,6 +15278,15 @@ use-composed-ref@^1.0.0:
   integrity sha512-RVqY3NFNjZa0xrmK3bIMWNmQ01QjKPDc7DeWR3xa/N8aliVppuutOE5bZzPkQfvL+5NRWMMp0DJ99Trd974FIw==
   dependencies:
     ts-essentials "^2.0.3"
+
+use-enhanced-state@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.3.tgz#f0555b09dfbd53c888f2c8cd633369f1b9229acb"
+  integrity sha512-oOzRAcHq8b+5c4wf3cJCAu/YutHTUjqOkk8yshVvCxbTlE9Pp6JvoY2xoX9g33GdGroEJ95aJlCzGvpM6IP0Jg==
+  dependencies:
+    "@itsjonq/is" "0.0.2"
+    array-move "^3.0.0"
+    reakit-warning "0.5.1"
 
 use-isomorphic-layout-effect@^1.0.0:
   version "1.0.0"

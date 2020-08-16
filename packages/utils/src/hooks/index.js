@@ -1,6 +1,6 @@
 export * from './useControlledState';
 export * from './useListState';
-export * from './useLocalStorage';
+export * from './useLocalState';
 export * from './useMediaQuery';
 export * from './useResizeAware';
 export * from './useUniqueId';

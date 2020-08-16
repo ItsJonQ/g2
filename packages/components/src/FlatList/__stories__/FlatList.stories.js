@@ -212,7 +212,7 @@ const Example = () => {
 	const [users, usersData] = useListState(userSchema.make(10));
 
 	const addUser = () => usersData.prepend(userSchema.makeOne());
-	const deleteUser = (id) => usersData.delete({ id });
+	const deleteUser = (id) => usersData.remove({ id });
 	const moveUser = (from, to) => usersData.move(from, to);
 
 	return (
