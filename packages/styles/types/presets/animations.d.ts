@@ -4,6 +4,8 @@ import { CSSClassName } from '../shared';
 export declare interface AnimationInterface {
 	/** Applies custom animation settings. */
 	(animation: string): CSSClassName;
+	/** Applies custom default animation styles. */
+	default: CSSClassName;
 	/** Applies a bounce animation timing. */
 	bounce: CSSClassName;
 	/** Applies custom animation duration styles. */

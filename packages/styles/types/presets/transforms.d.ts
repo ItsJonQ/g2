@@ -18,12 +18,22 @@ export declare interface OffsetInterface {
 	y: (value: OffsetValue) => CSSClassName;
 }
 
-/** Modify scale (transform) styles based on system presets. */
+/** Modify scale (transform) styles. */
 export declare interface ScaleInterface {
 	(value: string | number): CSSClassName;
 }
 
-/** Modify rotate (transform) styles based on system presets. */
+/** Modify scaleX (transform) styles. */
+export declare interface ScaleXInterface {
+	(value: string | number): CSSClassName;
+}
+
+/** Modify scaleY (transform) styles. */
+export declare interface ScaleYInterface {
+	(value: string | number): CSSClassName;
+}
+
+/** Modify rotate (transform) styles. */
 export declare interface RotateInterface {
 	(value: number): CSSClassName;
 }

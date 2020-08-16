@@ -1,1 +1,1 @@
-export { offset, scale, rotate } from '../mixins';
+export { offset, scale, scaleX, scaleY, rotate } from '../mixins';

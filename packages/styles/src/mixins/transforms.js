@@ -28,6 +28,14 @@ export function scale(value) {
 	return css({ transform: `scale(${value})` });
 }
 
+export function scaleY(value) {
+	return css({ transform: `scaleY(${value})` });
+}
+
+export function scaleX(value) {
+	return css({ transform: `scaleX(${value})` });
+}
+
 export function rotate(value) {
 	return css({ transform: `rotate(${value}deg)` });
 }

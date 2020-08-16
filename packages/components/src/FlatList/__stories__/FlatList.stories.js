@@ -1,4 +1,5 @@
 import { FiX } from '@wp-g2/icons';
+import { ui } from '@wp-g2/styles';
 import { getValidChildren, useListState } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
@@ -20,10 +21,8 @@ import {
 	View,
 	VStack,
 } from '../../index';
-// import { FlatList } from '../index';
 
 export default {
-	// component: FlatList,
 	title: 'Components/FlatList',
 };
 
@@ -143,34 +142,32 @@ const FlatListItem = ({ children, onDelete, onMove, ...props }) => {
 				<Surface {...props}>
 					<HStack>
 						{hasEditButton && hasSortAction && (
-							<Animated
-								animate={{
-									opacity: isEditing ? 1 : 0,
-									overflow: 'hidden',
-									transition: {
-										duration: 0.2,
-										ease: 'easeInOut',
+							<View
+								css={[
+									{
+										opacity: isEditing ? 1 : 0,
+										overflow: 'hidden',
+										width: isEditing ? 24 : 0,
 									},
-									width: isEditing ? 24 : 0,
-								}}
+									ui.animation.default,
+								]}
 							>
 								<VStack css={{ paddingTop: 4 }}>
 									<DragHandle />
 								</VStack>
-							</Animated>
+							</View>
 						)}
 						<Spacer>{children}</Spacer>
 						{hasEditButton && hasDeleteAction && (
-							<Animated
-								animate={{
-									opacity: isEditing ? 1 : 0,
-									overflow: 'hidden',
-									transition: {
-										duration: 0.2,
-										ease: 'easeInOut',
+							<View
+								css={[
+									{
+										opacity: isEditing ? 1 : 0,
+										overflow: 'hidden',
+										width: isEditing ? 36 : 0,
 									},
-									width: isEditing ? 36 : 0,
-								}}
+									ui.animation.default,
+								]}
 							>
 								<HStack alignment="right" css={{ padding: 2 }}>
 									<Button
@@ -180,7 +177,7 @@ const FlatListItem = ({ children, onDelete, onMove, ...props }) => {
 										variant="tertiary"
 									/>
 								</HStack>
-							</Animated>
+							</View>
 						)}
 					</HStack>
 				</Surface>

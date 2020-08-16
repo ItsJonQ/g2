@@ -9,7 +9,7 @@ import { opacity } from './opacity';
 import { position } from './positions';
 import { shadow } from './shadows';
 import { margin, padding } from './spacing';
-import { offset, rotate, scale } from './transforms';
+import { offset, rotate, scale, scaleX, scaleY } from './transforms';
 
 export const system = {
 	active,
@@ -29,6 +29,8 @@ export const system = {
 	position,
 	rotate,
 	scale,
+	scaleX,
+	scaleY,
 	shadow,
 };
 

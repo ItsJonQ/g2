@@ -8,7 +8,13 @@ import { BorderInterface, BorderRadiusInterface } from './borders';
 import { FontInterface } from './fonts';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
-import { OffsetInterface, ScaleInterface, RotateInterface } from './transforms';
+import {
+	OffsetInterface,
+	ScaleInterface,
+	ScaleXInterface,
+	ScaleYInterface,
+	RotateInterface,
+} from './transforms';
 import { MarginInterface, PaddingInterface } from './spacing';
 import { ShadowInterface } from './shadows';
 
@@ -59,6 +65,10 @@ export declare interface SystemInterface {
 	rotate: RotateInterface;
 	/** Modify scale (transform) styles. */
 	scale: ScaleInterface;
+	/** Modify scaleX (transform) styles. */
+	scaleX: ScaleXInterface;
+	/** Modify scaleY (transform) styles. */
+	scaleY: ScaleYInterface;
 	/** Modify box-shadow styles based on system presets. */
 	shadow: ShadowInterface;
 }

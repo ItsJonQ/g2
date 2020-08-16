@@ -11,13 +11,17 @@ export const animation = (transition) => {
 	return css({ transition: transition });
 };
 
+animation.default = css({
+	...animationProps,
+	transitionTimingFunction: 'ease',
+});
+
 animation.bounce = css({
 	...animationProps,
-	transitionTimingFunction: 'cubic-bezier(0.680,  0.580, 0.265, 2.500)',
+	transitionTimingFunction: 'cubic-bezier(.8, .5, .2, 1.4)',
 });
 animation.duration = (value) =>
 	css({
-		...animationProps,
 		transitionDuration: `${value}s`,
 	});
 animation.ease = css({
