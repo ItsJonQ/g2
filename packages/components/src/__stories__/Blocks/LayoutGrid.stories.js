@@ -25,7 +25,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'Examples/Blocks',
+	title: 'Examples/Blocks/LayoutGrid',
 };
 
 const ResponsiveControls = () => {
@@ -153,7 +153,7 @@ const InspectorControl = () => {
 	);
 };
 
-export const LayoutGrid = () => {
+export const _default = () => {
 	return (
 		<Sidebar>
 			<InspectorControl />

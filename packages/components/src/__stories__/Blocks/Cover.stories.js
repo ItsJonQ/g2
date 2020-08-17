@@ -34,7 +34,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'Examples/Blocks',
+	title: 'Examples/Blocks/Cover',
 };
 
 const UnitSelect = () => <Select options={[{ label: 'PX', value: 'px' }]} />;
@@ -186,7 +186,7 @@ const InspectorControl = () => {
 	);
 };
 
-export const Cover = () => {
+export const _default = () => {
 	return (
 		<Sidebar>
 			<InspectorControl />

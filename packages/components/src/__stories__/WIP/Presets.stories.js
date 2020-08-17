@@ -4,7 +4,7 @@ import React from 'react';
 import { HStack, Spacer, View } from '../../index';
 
 export default {
-	title: 'Examples/WIP',
+	title: 'Examples/WIP/Presets',
 };
 
 const Thing = () => (
@@ -23,7 +23,7 @@ const Thing = () => (
 	</View>
 );
 
-export const Presets = () => {
+export const _default = () => {
 	return (
 		<HStack alignment="left">
 			<Thing />

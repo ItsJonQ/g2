@@ -19,7 +19,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'References',
+	title: 'References/Background',
 };
 
 const ColorSet = ({ color }) => {
@@ -102,7 +102,7 @@ const ColorCollection = ({ title }) => {
 	);
 };
 
-export const Backgrounds = () => {
+export const _default = () => {
 	return (
 		<>
 			<ColorCollection title="Backgrounds" />

@@ -12,7 +12,7 @@ const RED = '#E52122';
 const YELLOW = '#EFBB21';
 
 export default {
-	title: 'Experiments',
+	title: 'Experiments/Clear',
 };
 
 const todoSchema = new Schema(() => ({
@@ -92,7 +92,7 @@ const [useDragContext] = createStore((setState, getState) => ({
 	onDragStart: () => setState(() => ({ isDragging: true })),
 }));
 
-export const Clear = () => {
+export const _default = () => {
 	const [todos, setTodos] = useState(todoSchema.make(10));
 
 	const onRemove = (id) =>

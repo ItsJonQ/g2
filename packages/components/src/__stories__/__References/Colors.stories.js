@@ -14,7 +14,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'References',
+	title: 'References/Colors',
 };
 
 const grades = [100, 300, 500, 700, 900];
@@ -119,7 +119,7 @@ const ColorCollection = ({ title }) => {
 	);
 };
 
-export const Colors = () => {
+export const _default = () => {
 	return (
 		<>
 			<ColorCollection title="Colors" />
