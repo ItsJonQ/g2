@@ -42,7 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@itsjonq/controls": "0.0.9",
-    "@itsjonq/is": "0.0.2",
+    "@itsjonq/is": "^0.0.5",
     "@itsjonq/remake": "2.0.0",
     "@itsjonq/zero": "4.1.10",
     "@storybook/addon-actions": "^5.3.19",
