@@ -15,7 +15,7 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "@itsjonq/is": "^0.0.2",
+        "@itsjonq/is": "^0.0.3",
         "array-move": "^3.0.0",
         "deepmerge": "^4.2.2",
         "fast-deep-equal": "^3.1.3",
@@ -28,7 +28,7 @@
         "lodash.upperfirst": "^4.3.1",
         "memize": "^1.1.0",
         "react-merge-refs": "^1.0.0",
-        "use-enhanced-state": "^0.0.3",
+        "use-enhanced-state": "^0.0.7",
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.4.1",
         "tinycolor2": "^1.4.1"
