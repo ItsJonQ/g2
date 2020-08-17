@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "description": "",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -28,10 +28,10 @@
         "lodash.upperfirst": "^4.3.1",
         "memize": "^1.1.0",
         "react-merge-refs": "^1.0.0",
-        "use-enhanced-state": "^0.0.8",
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.4.1",
-        "tinycolor2": "^1.4.1"
+        "tinycolor2": "^1.4.1",
+        "use-enhanced-state": "^0.0.8"
     },
     "peerDependencies": {
         "react": "^16.8.0",
