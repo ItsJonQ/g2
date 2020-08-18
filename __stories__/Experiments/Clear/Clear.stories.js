@@ -85,7 +85,7 @@ function Todo({ index, item, onComplete, todosCount }) {
 	);
 }
 
-const [useDragContext] = createStore((setState, getState) => ({
+const useDragContext = createStore((setState, getState) => ({
 	getDragState: () => getState().isDragging,
 	isDragging: false,
 	onDragEnd: () => setState(() => ({ isDragging: false })),

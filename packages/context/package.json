@@ -16,8 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@wp-g2/styles": "^0.0.26",
-    "@wp-g2/utils": "^0.0.26",
-    "zustand": "^2.2.3"
+    "@wp-g2/utils": "^0.0.26"
   },
   "peerDependencies": {
     "react": "^16.8.0",

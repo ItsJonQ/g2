@@ -1,1 +1,1 @@
-export { default as createStore } from 'zustand';
+export { createStore } from '@wp-g2/utils';

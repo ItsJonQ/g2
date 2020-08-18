@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useRef } from 'react';
 export const ModalContext = createContext({ dialog: {} });
 export const useModalContext = () => useContext(ModalContext);
 
-const [useBaseModalStore] = createStore((setState, getState) => ({
+const useBaseModalStore = createStore((setState, getState) => ({
 	getIsUnderLayer: (ref) => {
 		const { isStacked, modals } = getState();
 		const latestRef = modals[modals.length - 1];

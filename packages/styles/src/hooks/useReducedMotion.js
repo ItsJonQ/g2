@@ -1,6 +1,6 @@
-import { createStore } from '@wp-g2/context';
+import { createStore } from '@wp-g2/utils';
 
-export const [useReducedMotionState] = createStore((setState) => ({
+export const useReducedMotionState = createStore((setState) => ({
 	isReducedMotion: false,
 	setIsReducedMotion: (next) => {
 		setState(() => ({ isReducedMotion: next }));

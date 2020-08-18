@@ -31,7 +31,8 @@
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.4.1",
         "tinycolor2": "^1.4.1",
-        "use-enhanced-state": "^0.0.8"
+        "use-enhanced-state": "^0.0.8",
+        "zustand": "^3.0.0"
     },
     "peerDependencies": {
         "react": "^16.8.0",

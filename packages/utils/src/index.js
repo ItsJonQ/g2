@@ -1,5 +1,6 @@
 export * from './arrays';
 export * from './colors';
+export * from './createStore';
 export * from './deepEqual';
 export * from './deepMerge';
 export * from './env';
