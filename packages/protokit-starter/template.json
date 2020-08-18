@@ -1,0 +1,13 @@
+{
+	"package": {
+		"dependencies": {
+			"@wp-g2/a11y": "^0.0.27",
+			"@wp-g2/animations": "^0.0.27",
+			"@wp-g2/context": "^0.0.27",
+			"@wp-g2/components": "^0.0.27",
+			"@wp-g2/icons": "^0.0.27",
+			"@wp-g2/styles": "^0.0.27",
+			"@wp-g2/utils": "^0.0.27"
+		}
+	}
+}
