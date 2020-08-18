@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/cra-template-protokit",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "",
   "sideEffects": false,
   "main": "template.json",

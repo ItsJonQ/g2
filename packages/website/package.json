@@ -1,13 +1,13 @@
 {
-  "name": "website",
-  "version": "0.0.28",
+  "name": "@wp-g2/website",
+  "version": "0.0.29",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "1.6.16",
     "@mdx-js/react": "1.6.16",
-    "@wp-g2/components": "^0.0.28",
+    "@wp-g2/components": "^0.0.29",
     "babel-preset-gatsby": "^0.5.5",
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
