@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { FormGroup } from '../../index';
 import { Slider } from '../index';
 
 export default {
@@ -8,5 +9,9 @@ export default {
 };
 
 export const _default = () => {
-	return <Slider />;
+	return (
+		<FormGroup label="Slider">
+			<Slider />
+		</FormGroup>
+	);
 };
