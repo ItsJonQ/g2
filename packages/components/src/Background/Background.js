@@ -15,8 +15,9 @@ function Background({
 	children,
 	...props
 }) {
+	const sx = {};
 	/* eslint-disable */
-	styles.borders = getBorders({
+	sx.borders = getBorders({
 		border,
 		borderBottom,
 		borderLeft,
@@ -24,7 +25,7 @@ function Background({
 		borderTop,
 	});
 
-	const cx = [styles.borders];
+	const cx = [sx.borders];
 
 	return (
 		<BackgroundView {...props} cx={cx}>

@@ -53,14 +53,16 @@ export function Flex({
 		);
 	});
 
-	styles.Base = css({
+	const sx = {};
+
+	sx.Base = css({
 		alignItems: isColumn ? 'normal' : align,
 		flexDirection: direction,
 		flexWrap: wrap ? 'wrap' : undefined,
 		justifyContent: justify,
 	});
 
-	const classes = [styles.Flex, styles.Base];
+	const classes = [styles.Flex, sx.Base];
 
 	return (
 		<View {...props} cx={classes}>

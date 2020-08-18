@@ -16,13 +16,14 @@ function Lozenge({
 	...props
 }) {
 	const lozengeColor = LOZENGE_COLORS[colorProp] || LOZENGE_COLORS.standard;
+	const sx = {};
 
-	styles.base = css({
+	sx.base = css({
 		display,
 	});
 
 	const cx = [
-		styles.base,
+		sx.base,
 		styles.getBackground({ color: lozengeColor, isBold }),
 		styles.getBackgroundText({ color: lozengeColor, isBold }),
 	];

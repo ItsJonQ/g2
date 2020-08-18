@@ -25,8 +25,9 @@ export function Truncate({
 	});
 
 	const shouldTruncate = ellipsizeMode === TRUNCATE_TYPE.auto;
+	const sx = {};
 
-	styles.numberOfLines = css`
+	sx.numberOfLines = css`
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: ${numberOfLines};
 		display: -webkit-box;
@@ -35,7 +36,7 @@ export function Truncate({
 
 	const cx = [
 		shouldTruncate && !numberOfLines && styles.Truncate,
-		shouldTruncate && numberOfLines && styles.numberOfLines,
+		shouldTruncate && numberOfLines && sx.numberOfLines,
 	];
 
 	return (

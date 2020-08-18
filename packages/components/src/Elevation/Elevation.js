@@ -3,9 +3,7 @@ import { css, get, getBoxShadow } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
-import * as styles from './Elevation.styles';
-
-const { ElevationView } = styles;
+import { ElevationView } from './Elevation.styles';
 
 function Elevation({
 	active,
@@ -29,7 +27,9 @@ function Elevation({
 		'transitionTimingFunction',
 	)}`;
 
-	styles.Base = css({
+	const sx = {};
+
+	sx.Base = css({
 		borderRadius,
 		bottom: offset,
 		boxShadow: getBoxShadow(value),
@@ -39,30 +39,30 @@ function Elevation({
 		transition,
 	});
 
-	styles.hover = css`
+	sx.hover = css`
 		*:hover > & {
 			box-shadow: ${getBoxShadow(hoverValue)};
 		}
 	`;
 
-	styles.active = css`
+	sx.active = css`
 		*:active > & {
 			box-shadow: ${getBoxShadow(activeValue)};
 		}
 	`;
 
-	styles.focus = css`
+	sx.focus = css`
 		*:focus > & {
 			box-shadow: ${getBoxShadow(focus)};
 		}
 	`;
 
 	const cx = [
-		styles.Elevation,
-		styles.Base,
-		is.defined(hoverValue) && styles.hover,
-		is.defined(activeValue) && styles.active,
-		is.defined(focus) && styles.focus,
+		sx.Elevation,
+		sx.Base,
+		is.defined(hoverValue) && sx.hover,
+		is.defined(activeValue) && sx.active,
+		is.defined(focus) && sx.focus,
 	];
 
 	return <ElevationView {...props} cx={cx} />;

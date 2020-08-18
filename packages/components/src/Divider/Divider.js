@@ -11,21 +11,22 @@ const { DividerView } = styles;
 const GRID_BASE = 4;
 
 function Divider({ m, mb, mt, ...props }) {
-	styles.mt = css`
+	const sx = {};
+	sx.mt = css`
 		margin-top: ${toPx(mt * GRID_BASE)};
 	`;
-	styles.mb = css`
+	sx.mb = css`
 		margin-bottom: ${toPx(mb * GRID_BASE)};
 	`;
-	styles.m = css`
+	sx.m = css`
 		margin-bottom: ${toPx(m * GRID_BASE)};
 		margin-top: ${toPx(m * GRID_BASE)};
 	`;
 
 	const cx = [
-		!is.defined(m) && mb && styles.mb,
-		!is.defined(m) && mt && styles.mt,
-		is.defined(m) && styles.m,
+		!is.defined(m) && mb && sx.mb,
+		!is.defined(m) && mt && sx.mt,
+		is.defined(m) && sx.m,
 	];
 
 	return <Separator {...props} as={DividerView} cx={cx} />;

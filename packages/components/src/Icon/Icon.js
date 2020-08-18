@@ -14,12 +14,13 @@ function Icon({
 	...props
 }) {
 	if (!icon) return null;
+	const sx = {};
 
-	styles.color = css({
+	sx.color = css({
 		color,
 	});
 
-	styles.size = css({
+	sx.size = css({
 		height: size,
 		width: size,
 	});
@@ -31,7 +32,7 @@ function Icon({
 		width: size,
 	});
 
-	const cx = [styles.Wrapper, styles.color, styles.size];
+	const cx = [styles.Wrapper, sx.color, sx.size];
 
 	return (
 		<BaseView {...props} as={as} cx={cx}>

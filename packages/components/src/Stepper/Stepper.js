@@ -1,6 +1,7 @@
 import { connect } from '@wp-g2/context';
 import { FiChevronDown, FiChevronUp, FiMinus, FiPlus } from '@wp-g2/icons';
-import { cx, noop, ns } from '@wp-g2/styles';
+import { cx, ns } from '@wp-g2/styles';
+import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Button } from '../Button';

@@ -14,8 +14,9 @@ function Surface({
 	isBackground,
 	...props
 }) {
+	const sx = {};
 	/* eslint-disable */
-	styles.borders = styles.getBorders({
+	sx.borders = styles.getBorders({
 		border,
 		borderBottom,
 		borderLeft,
@@ -24,7 +25,7 @@ function Surface({
 	});
 	/* eslint-enable */
 
-	const cx = [isBackground && styles.background, styles.borders];
+	const cx = [isBackground && styles.background, sx.borders];
 
 	return <SurfaceView {...props} cx={cx} />;
 }

@@ -19,13 +19,14 @@ function Tag({
 	...props
 }) {
 	const tagColor = TAG_COLORS[color] || TAG_COLORS.standard;
+	const sx = {};
 
-	styles.base = css({
+	sx.base = css({
 		display,
 	});
 
 	const cx = [
-		styles.base,
+		sx.base,
 		styles.getBackground({ color: tagColor }),
 		styles.getBackgroundText({ color: tagColor }),
 	];
