@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/components",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "description": "React components for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -17,12 +17,12 @@
   "license": "MIT",
   "dependencies": {
     "@humanmade/react-slot-fill": "^0.0.4",
-    "@wp-g2/a11y": "^0.0.33",
-    "@wp-g2/animations": "^0.0.33",
-    "@wp-g2/context": "^0.0.33",
-    "@wp-g2/icons": "^0.0.33",
-    "@wp-g2/styles": "^0.0.33",
-    "@wp-g2/utils": "^0.0.33",
+    "@wp-g2/a11y": "^0.0.34",
+    "@wp-g2/animations": "^0.0.34",
+    "@wp-g2/context": "^0.0.34",
+    "@wp-g2/icons": "^0.0.34",
+    "@wp-g2/styles": "^0.0.34",
+    "@wp-g2/utils": "^0.0.34",
     "history": "^4.9.0",
     "path-to-regexp": "^1.7.0",
     "react-color": "^2.18.1",
@@ -34,7 +34,7 @@
     "zustand": "^2.2.3"
   },
   "devDependencies": {
-    "@wp-g2/protokit": "^0.0.33",
+    "@wp-g2/protokit": "^0.0.34",
     "react-beautiful-dnd": "^13.0.0",
     "react-dnd": "^11.1.3",
     "react-dnd-html5-backend": "^11.1.3",
