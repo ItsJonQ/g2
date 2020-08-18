@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/a11y",
-    "version": "0.0.35",
+    "version": "0.0.36",
     "description": "A11Y System for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
