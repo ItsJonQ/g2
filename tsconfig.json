@@ -19,6 +19,6 @@
 		"strictFunctionTypes": false,
 		"stripInternal": true,
 		"target": "esnext",
-		"exclude": ["packages/proto-start"]
+		"exclude": ["packages/protokit-starter"]
 	}
 }

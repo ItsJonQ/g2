@@ -1,7 +1,7 @@
 {
     "name": "@wp-g2/styles",
     "version": "0.0.29",
-    "description": "",
+    "description": "Style system for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
     "sideEffects": false,
