@@ -5,7 +5,10 @@
 
 import cssjanus from 'cssjanus';
 
-const isRtl = document?.documentElement?.dir === 'rtl';
+let isRtl = false;
+if (typeof window !== 'undefined') {
+	isRtl = window?.document?.documentElement?.dir === 'rtl';
+}
 
 // https://github.com/thysultan/stylis.js#plugins
 const STYLIS_CONTEXTS = {

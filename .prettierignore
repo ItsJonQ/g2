@@ -4,3 +4,5 @@ node_modules
 dist
 coverage
 .remake
+.cache
+packages/website/public
