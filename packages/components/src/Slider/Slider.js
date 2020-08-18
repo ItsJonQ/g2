@@ -35,6 +35,8 @@ function Slider({
 		<SliderView
 			{...props}
 			cx={cx}
+			max={max}
+			min={min}
 			onChange={handleOnChange}
 			style={componentStyles}
 			type="range"

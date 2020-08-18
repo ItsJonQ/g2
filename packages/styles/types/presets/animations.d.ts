@@ -8,6 +8,8 @@ export declare interface AnimationInterface {
 	default: CSSClassName;
 	/** Applies a bounce animation timing. */
 	bounce: CSSClassName;
+	/** Applies custom animation delay styles. */
+	delay: (delay: number) => CSSClassName;
 	/** Applies custom animation duration styles. */
 	duration: (duration: number) => CSSClassName;
 	/** Applies custom animation easing styles. */

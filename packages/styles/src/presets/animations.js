@@ -20,6 +20,10 @@ animation.bounce = css({
 	...animationProps,
 	transitionTimingFunction: 'cubic-bezier(.8, .5, .2, 1.4)',
 });
+animation.delay = (value) =>
+	css({
+		transitionDelay: `${value}s`,
+	});
 animation.duration = (value) =>
 	css({
 		transitionDuration: `${value}s`,
