@@ -34,18 +34,22 @@ function Animated({ as = 'div', auto = false, children, ...props }) {
 	if (auto) {
 		baseProps = {
 			animate: {
-				height: 'auto',
 				opacity: 1,
 				scale: 1,
-				transition: { duration: 0.2, ease: 'easeInOut' },
+				transition: props.transition || {
+					duration: 0.2,
+					ease: 'easeInOut',
+				},
 			},
 			exit: {
 				opacity: 0,
 				scale: 0.9,
-				transition: { duration: 0.2, ease: 'easeInOut' },
+				transition: {
+					duration: 0.2,
+					ease: 'easeInOut',
+				},
 			},
 			initial: { opacity: 0, scale: 0.9 },
-			style: { overflow: 'hidden', willChange: 'height' },
 		};
 	}
 

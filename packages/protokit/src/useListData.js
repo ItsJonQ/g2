@@ -1,14 +1,10 @@
 import { useListState } from '@wp-g2/utils';
-import faker from 'faker';
-import { Schema } from 'faker-schema';
-import { useEffect, useRef, useState } from 'react';
-export function createSchema(props = {}) {
-	const id = faker.random.uuid();
-	const schema = new Schema(() => ({ id, key: id, ...props }));
-	return schema;
-}
+import { useState } from 'react';
 
-const defaultSchema = createSchema({ title: faker.lorem.sentence() });
+import { faker } from './faker';
+import { Schema } from './Schema';
+
+const defaultSchema = new Schema(() => ({ title: faker.lorem.sentence() }));
 
 const defaultOptions = {
 	currentPage: 1,
@@ -19,27 +15,49 @@ const defaultOptions = {
 };
 
 export function useListData(options = defaultOptions) {
-	const {
-		currentPage,
-		initialCount,
-		itemsPerPage,
-		schema: schemaProp,
-		totalItems,
-	} = {
+	const { initialCount, schema: schemaProp } = {
 		...defaultOptions,
 		...options,
 	};
 	const [schema] = useState(schemaProp);
 
-	let initialData = [];
-	if (initialCount === 1) {
-		initialData = [schema.makeOne()];
-	} else {
-		initialData = schema.make(initialCount);
-	}
+	const createItems = (count = initialCount) => {
+		let next = [];
+		if (initialCount === 1) {
+			next = [schema.makeOne()];
+		} else {
+			next = schema.make(count);
+		}
+		return next;
+	};
 
+	const initialData = createItems();
 	const [state, fns] = useListState(initialData);
-	const timeoutRef = useRef();
+
+	const create = (next = {}) => fns.add({ ...schema.makeOne(), ...next });
+	const update = ({ id, ...rest }) => {
+		const item = fns.find({ id });
+		if (item) {
+			fns.set((prev) =>
+				prev.filter((item) => {
+					if (item.id === id) {
+						return { ...item, ...rest };
+					}
+					return item;
+				}),
+			);
+		}
+	};
+
+	const loadMore = ({ limit }) => {
+		fns.set((prev) => [...prev, ...createItems(limit)]);
+	};
+
+	fns.create = create;
+	fns.update = update;
+	fns.delete = fns.remove;
+	fns.deleteAll = () => fns.set([]);
+	fns.loadMore = loadMore;
 
 	return [state, fns];
 }
