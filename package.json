@@ -19,7 +19,7 @@
     "test:coverage": "zero test --coverage",
     "format": "zero format",
     "validate": "zero validate",
-    "publish": "lerna publish --ignore website",
+    "publish": "lerna publish",
     "website": "lerna exec --scope website -- yarn start",
     "website:build": "lerna exec --scope website -- yarn build",
     "website:serve": "lerna exec --scope website -- yarn serve",

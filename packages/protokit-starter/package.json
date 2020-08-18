@@ -1,5 +1,5 @@
 {
-  "name": "@wp-g2/protokit-starter",
+  "name": "@wp-g2/cra-template-protokit",
   "version": "0.0.28",
   "description": "",
   "sideEffects": false,
