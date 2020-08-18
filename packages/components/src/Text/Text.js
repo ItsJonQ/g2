@@ -20,7 +20,8 @@ function Text({
 	weight = 400,
 	...props
 }) {
-	styles.Base = css({
+	const sx = {};
+	sx.Base = css({
 		color,
 		display,
 		fontSize: getFontSize(size),
@@ -29,14 +30,14 @@ function Text({
 		textAlign: align,
 	});
 
-	styles.upperCase = css({ textTransform: 'uppercase' });
+	sx.upperCase = css({ textTransform: 'uppercase' });
 
 	const classes = cx(
 		styles.Text,
-		styles.Base,
+		sx.Base,
 		styles[isBlock && 'block'],
 		styles[variant],
-		upperCase && styles.upperCase,
+		upperCase && sx.upperCase,
 		className,
 	);
 

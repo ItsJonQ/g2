@@ -7,14 +7,14 @@ import * as styles from './Flex.styles';
 
 function FlexItem({ display: displayProp, isBlock = false, ...props }) {
 	const { display, gap, isColumn, isLast } = useFlexContext();
-
-	styles.Base = css({
+	const sx = {};
+	sx.Base = css({
 		display: displayProp || display,
 		marginBottom: isColumn && !isLast && gap,
 		marginRight: !isColumn && !isLast && gap,
 	});
 
-	const cx = [styles.Item, styles.Base, isBlock && styles.block];
+	const cx = [styles.Item, sx.Base, isBlock && styles.block];
 
 	return <BaseView {...props} cx={cx} />;
 }
