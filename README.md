@@ -21,6 +21,10 @@ These components (and their sub-systems) have been uniquely developed to meet th
     -   [Native support and considerations for a11y](#native-support-and-considerations-for-a11y)
     -   [Seamless integration into existing systems](#seamless-integration-into-existing-systems)
 -   [Thinking in Systems](#thinking-in-systems)
+-   [Start Prototyping](#start-prototyping)
+-   [Video Tutorial](#video-tutorial)
+-   [CodeSandbox](#codesandbox)
+-   [Create React App](#create-react-app)
 -   [Open for Feedback](#open-for-feedback)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -85,6 +89,33 @@ There are 4 main systems which are represented by a colour:
 The arrows that link the topics/keywords are colour coded to match their respective system.
 
 [Click here](https://github.com/ItsJonQ/g2/issues/3) for more details about the core systems in this project.
+
+## Start Prototyping
+
+Start experiencing the new (experimental) G2 Components project with this starter kit!
+
+## Video Tutorial
+
+https://www.loom.com/share/7b0527a36f284568a9f1e7c1ab10fa42
+
+We can start prototyping with G2 Components in 2 ways:
+
+1. CodeSandbox (Recommended)
+2. Create React App
+
+## CodeSandbox
+
+To get started with the CodeSandbox template, click on the link below:
+
+[https://codesandbox.io/s/g2-prototype-sandbox-8ose4?file=/src/App.js](https://codesandbox.io/s/g2-prototype-sandbox-8ose4?file=/src/App.js)
+
+## Create React App
+
+To get started with a Create React App experience, run the following code in your Terminal:
+
+```
+npx create-react-app my-app --template @wp-g2/cra-template-protokit
+```
 
 ## Open for Feedback
 

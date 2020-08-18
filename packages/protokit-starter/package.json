@@ -1,0 +1,17 @@
+{
+  "name": "@wp-g2/cra-template-protokit",
+  "version": "0.0.32",
+  "description": "",
+  "sideEffects": false,
+  "main": "template.json",
+  "scripts": {
+    "clean": "echo",
+    "build": "echo"
+  },
+  "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+  "license": "MIT",
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
