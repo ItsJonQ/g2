@@ -1,5 +1,3 @@
-import './styles.css';
-
 import { Heading, Text, VStack } from '@wp-g2/components';
 import { ui } from '@wp-g2/styles';
 import React from 'react';
