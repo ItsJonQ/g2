@@ -23,7 +23,7 @@ const itemSchema = new Schema(() => ({
 }));
 
 export const ListData = () => {
-	const limit = 3;
+	const limit = 10;
 
 	const [data, fns] = useListData({
 		initialCount: limit,
