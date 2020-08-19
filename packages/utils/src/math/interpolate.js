@@ -45,30 +45,6 @@ export function baseInterpolate(
 	return clamp(result, clampMin, clampMax);
 }
 
-export function interpolateColor(
-	input = 0,
-	inputRange = [0, 1],
-	outputRange = [],
-) {
-	const range = findRange(input, inputRange);
-	const color1 = outputRange[range];
-	const color2 = outputRange[range + 1];
-
-	if (!isColor(color1) || !isColor(color2)) {
-		warning(
-			true,
-			'@wp-g2/utils',
-			'interpolateColor',
-			'outputRange values must be valid color strings.',
-		);
-		return input;
-	}
-
-	const mixAmount = interpolate(input, inputRange, [0, 100]);
-
-	return colorize.mix(color1, color2, mixAmount).toRgbString();
-}
-
 export function interpolate(
 	input = 0,
 	inputRange = [0, 1],
