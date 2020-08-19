@@ -1,5 +1,4 @@
 import { colorize, isColor } from '../colors';
-import { warning } from '../warning';
 import { clamp } from './clamp';
 /**
  * Interpolation from:
