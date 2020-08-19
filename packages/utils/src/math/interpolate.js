@@ -33,7 +33,15 @@ export function baseInterpolate(
 	else if (outputMax === Infinity) result = result + outputMin;
 	else result = result * (outputMax - outputMin) + outputMin;
 
-	return clamp(result, outputMin, outputMax);
+	let clampMin = outputMin;
+	let clampMax = outputMax;
+
+	if (outputMax < outputMin) {
+		clampMin = outputMax;
+		clampMax = outputMin;
+	}
+
+	return clamp(result, clampMin, clampMax);
 }
 
 export function interpolate(

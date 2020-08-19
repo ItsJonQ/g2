@@ -35,13 +35,16 @@ const Example = () => {
 		};
 	}, []);
 
-	const left = interpolate(position.x, [0, 100, 1000], [0, 20, 750]) - 50;
+	// const left = interpolate(position.x, [0, 100, 1000], [0, 20, 750]) - 50;
 	const top = position.y - 50;
+	const opacity = interpolate(position.x, [0, 1000], [1, 0]);
 
 	return (
 		<Circle
 			style={{
-				left,
+				// left,
+				left: position.x,
+				opacity,
 				position: 'fixed',
 				top,
 			}}
