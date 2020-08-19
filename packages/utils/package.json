@@ -23,6 +23,7 @@
         "json2mq": "^0.2.0",
         "lodash.capitalize": "^4.2.1",
         "lodash.clamp": "^4.0.3",
+        "lodash.chunk": "^4.2.0",
         "lodash.kebabcase": "^4.1.1",
         "lodash.uniq": "^4.5.0",
         "lodash.upperfirst": "^4.3.1",

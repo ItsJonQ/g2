@@ -1,5 +1,6 @@
+import { colorize, isColor } from '../colors';
+import { warning } from '../warning';
 import { clamp } from './clamp';
-
 /**
  * Interpolation from:
  * https://github.com/react-spring/react-spring/blob/master/src/animated/createInterpolator.ts
@@ -44,19 +45,52 @@ export function baseInterpolate(
 	return clamp(result, clampMin, clampMax);
 }
 
+export function interpolateColor(
+	input = 0,
+	inputRange = [0, 1],
+	outputRange = [],
+) {
+	const range = findRange(input, inputRange);
+	const color1 = outputRange[range];
+	const color2 = outputRange[range + 1];
+
+	if (!isColor(color1) || !isColor(color2)) {
+		warning(
+			true,
+			'@wp-g2/utils',
+			'interpolateColor',
+			'outputRange values must be valid color strings.',
+		);
+		return input;
+	}
+
+	const mixAmount = interpolate(input, inputRange, [0, 100]);
+
+	return colorize.mix(color1, color2, mixAmount).toRgbString();
+}
+
 export function interpolate(
 	input = 0,
 	inputRange = [0, 1],
 	outputRange = [0, 1],
 ) {
 	const range = findRange(input, inputRange);
+	const outputRange1 = outputRange[range];
+	const outputRange2 = outputRange[range + 1];
+
+	if (isColor(outputRange1) && isColor(outputRange2)) {
+		const mixAmount = interpolate(input, inputRange, [0, 100]);
+		return colorize
+			.mix(outputRange1, outputRange2, mixAmount)
+			.toRgbString();
+	}
 
 	return baseInterpolate(
 		input,
 		inputRange[range],
 		inputRange[range + 1],
-		outputRange[range],
-		outputRange[range + 1],
+		outputRange1,
+		outputRange2,
 	);
 }
 
