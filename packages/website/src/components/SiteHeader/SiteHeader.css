@@ -1,4 +1,5 @@
 .SiteHeader {
+  background-color: var(--wp-g2-surface-background-color);
   left: 0;
   padding: 20px;
   position: fixed;
