@@ -1,0 +1,64 @@
+.SiteHeader {
+  left: 0;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.SiteHeaderContent {
+  max-width: 100%;
+  width: 1080px;
+  margin: auto;
+}
+
+.SiteHeaderShadow {
+  pointer-events: none;
+  position: absolute;
+  will-change: box-shadow;
+  border-radius: inherit;
+  bottom: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.SiteHeaderLinkWrapper {
+  display: flex;
+  width: 100%;
+  -ms-flex-align: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SiteHeaderSideLinks {
+  display: flex;
+  width: 100%;
+  -ms-flex-align: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SiteHeaderSideLinks > * {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.SiteHeaderSideLinks > *:last-child {
+  margin-right: 0;
+}
+
+.SiteHeaderLogo {
+  color: var(--wp-g2-color-text);
+  font-weight: 600;
+  line-height: 1.2;
+  display: block;
+  font-size: calc(1.25 * 13px);
+  font-size: var(--wp-g2-font-size-h-4, calc(1.25 * var(--wp-g2-font-size)));
+}
+
+.SiteHeaderLink {
+  padding: 20px 8px;
+}

@@ -1,22 +1,22 @@
 ---
-title: Heading
-description: "Heading renders headings and titles using the library's typography system."
+title: Subheading
+description: "Subheading renders subheadings and subtitles using the library's typography system."
 type: typography
 ---
 
-# Heading
+# Subheading
 
-`Heading` renders headings and titles using the library's typography system.
+`Subheading` renders subheadings and subtitles using the library's typography system.
 
 ## Usage
 
 ```jsx live
-<Heading>Into The Unknown</Heading>
+<Subheading>Into The Unknown</Subheading>
 ```
 
 ### Props
 
-`Heading` uses `Text` underneath, so we have access to all of `Text`'s props.
+`Subheading` uses `Text` underneath, so we have access to all of `Text`'s props.
 
 | Name          | Type               | Default | Description                                                          |
 | ------------- | ------------------ | ------- | -------------------------------------------------------------------- |
@@ -36,23 +36,7 @@ type: typography
 | variant       | `string`           |         | Adjusts style variation of the text.                                 |
 | weight        | `number`           |         | Adjusts font-weight of the text.                                     |
 
-#### size
-
-`Heading` will typically render the sizes `1`, `2`, `3`, `4`, `5`, or `6`, which map to `h1`-`h6`. However, it can render any size, including non `px` values.
-
-```jsx live
-<View>
-  <Heading size={1}>Into The Unknown</Heading>
-  <Heading size={2}>Into The Unknown</Heading>
-  <Heading size={3}>Into The Unknown</Heading>
-  <Heading size={4}>Into The Unknown</Heading>
-  <Heading size={5}>Into The Unknown</Heading>
-  <Heading size={6}>Into The Unknown</Heading>
-</View>
-```
-
 ## See Also
 
 - [Text](./text)
-- [Subheading](./subheading)
-- [View](./view)
+- [Heading](./heading)

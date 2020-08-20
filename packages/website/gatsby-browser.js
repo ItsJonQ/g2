@@ -1,5 +1,7 @@
 import "./src/styles/Normalize.css"
+import "./src/styles/G2.css"
 import "./src/styles/Global.css"
+import "./src/styles/LiveEditor.css"
 
 import { MDXProvider } from "@mdx-js/react"
 import * as Components from "@wp-g2/components"
@@ -20,11 +22,16 @@ const liveCodeScope = {
   ui,
 }
 
-function CopyToClipboard({ value, ...props }) {
+function CopyToClipboard({ onClick, value, ...props }) {
   const { hasCopied, onCopy } = useClipboard(value)
 
+  const handleOnClick = () => {
+    onCopy()
+    onClick()
+  }
+
   return (
-    <Button onClick={onCopy} size="small" variant="primary" {...props}>
+    <Button onClick={handleOnClick} size="small" variant="primary" {...props}>
       {hasCopied ? "Copied!" : "Copy"}
     </Button>
   )
@@ -35,9 +42,9 @@ const LiveCode = props => {
   const code = props.children.props.children.trim()
 
   return (
-    <Spacer mb={8} mt={5}>
+    <Spacer className="LiveEditorWrapper" mb={8} mt={5}>
       <LiveProvider code={code} scope={liveCodeScope} theme={nightOwl}>
-        <VStack>
+        <VStack className="LiveEditorContainer">
           <Card>
             <CardBody css={{ padding: 20 }}>
               <LivePreview />
@@ -45,6 +52,7 @@ const LiveCode = props => {
           </Card>
           <Card css={[ui.position.relative]}>
             <View
+              className="LiveEditorCopyFlash"
               css={[
                 ui.position.full,
                 ui.background.blue,
@@ -53,17 +61,23 @@ const LiveCode = props => {
                 ui.animation.default,
               ]}
             />
-            <View css={[ui.position.topRight, ui.offset(-4, 4), { zIndex: 5 }]}>
+            <View
+              className="LiveEditorCopyButtonWrapper"
+              css={[ui.position.topRight, ui.offset(-4, 4), { zIndex: 5 }]}
+            >
               <CopyToClipboard
+                onClick={() => setShowOverlay(false)}
                 onMouseDown={() => setShowOverlay(true)}
                 onMouseUp={() => setShowOverlay(false)}
                 value={code}
               />
             </View>
             <LiveEditor
+              className="LiveEditorEditor"
               style={{
                 borderRadius: 6,
                 display: "block",
+                fontSize: "0.85rem",
                 lineHeight: 1.5,
                 outline: "none",
                 overflow: "hidden",
@@ -71,18 +85,17 @@ const LiveCode = props => {
             />
           </Card>
           <View
-            css={[
-              `
-            pre {
-              border-radius: 4px;
-              font-size: 11px;
-              padding: 12px;
-              margin: 0;
-            }
-          `,
-            ]}
+            className="LiveEditorErrorWrapper"
+            css={`
+              pre {
+                border-radius: 4px;
+                font-size: 11px;
+                padding: 12px;
+                margin: 0;
+              }
+            `}
           >
-            <LiveError />
+            <LiveError className="LiveEditorError" />
           </View>
         </VStack>
       </LiveProvider>
@@ -96,24 +109,26 @@ const SyntaxHighlighter = props => {
   const language = matches?.groups?.lang || ""
 
   return (
-    <Highlight
-      {...defaultProps}
-      code={props.children.props.children.trim()}
-      language={language}
-      theme={nightOwl}
-    >
-      {({ className, getLineProps, getTokenProps, style, tokens }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ key: i, line })}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ key, token })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
+    <div className="SyntaxHighlighter">
+      <Highlight
+        {...defaultProps}
+        code={props.children.props.children.trim()}
+        language={language}
+        theme={nightOwl}
+      >
+        {({ className, getLineProps, getTokenProps, style, tokens }) => (
+          <pre className={className} style={style}>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ key: i, line })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ key, token })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
+    </div>
   )
 }
 

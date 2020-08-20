@@ -1,3 +1,22 @@
+.LayoutsDocsWrapper {
+  padding: 20px;
+}
+
+.LayoutsDocsWrapperPage {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.LayoutsDocsWrapperContent {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  grid-gap: 48px;
+}
+
+.LayoutsDocs {
+  font-size: 1rem;
+}
+
 .LayoutsDocs > * + * {
   margin-top: 1.5em;
 }

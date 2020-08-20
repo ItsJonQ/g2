@@ -1,0 +1,33 @@
+.LiveEditorWrapper {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.LiveEditorContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.LiveEditorContainer > * {
+  margin-bottom: 8px;
+}
+
+.LiveEditorCopyButtonWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-4px, 4px);
+  z-index: 5;
+}
+
+.LiveEditorCopyFlash {
+  opacity: 0;
+}
+
+.SyntaxHighlighter pre {
+  color: rgb(214, 222, 235);
+  background-color: rgb(1, 22, 39);
+  font-size: 0.85rem;
+}

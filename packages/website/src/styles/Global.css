@@ -19,6 +19,7 @@ html {
   line-height: 1.5;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: var(--wp-g2-surface-color, var(--wp-g2-white));
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 100px;
+  color: var(--wp-g2-color-text, #050505);
 }
 
 h1,
@@ -91,7 +93,7 @@ code {
 }
 
 a {
-  color: var(--wp-g2-color-admin);
+  color: var(--wp-g2-color-admin, var(--wp-g2-blueberry));
   text-decoration: none;
 }
 

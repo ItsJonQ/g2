@@ -1,0 +1,85 @@
+.DocsNavigation {
+  position: sticky;
+  top: 0;
+  top: 100px;
+}
+
+.DocsNavigationBody {
+  overflow-y: auto;
+  height: 80vh;
+  max-height: 100%;
+}
+
+.DocsNavigationContent {
+  padding-right: 12px;
+}
+
+.DocsNavigationSection {
+  display: flex;
+  width: 100%;
+  align-items: normal;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.DocsNavigationSection.is-subSection {
+  margin-bottom: 0;
+}
+
+.DocsNavigationSection > * {
+  margin-bottom: 8px;
+}
+
+.DocsNavigationSectionTitle {
+  font-size: calc(1.0769230769230769 * var(--wp-g2-font-size, 13px));
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.DocsNavigationSectionTitle.is-subSection {
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size, 13px));
+  text-transform: uppercase;
+}
+
+.DocsNavigationSubSection {
+  display: flex;
+  width: 100%;
+  align-items: normal;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.DocsNavigationSubSection > * {
+  margin-bottom: 16px;
+}
+
+.DocsNavigationMenuItem {
+  margin: 0;
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: #050505;
+  color: var(--wp-g2-color-text, #050505);
+  cursor: pointer;
+  display: block;
+  outline: none;
+  padding: 8px 12px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: background 100ms linear;
+  transition: background var(--wp-g2-transition-duration-fastest, 100ms) linear;
+  width: 100%;
+}
+
+.DocsNavigationMenuItem[aria-current="page"] {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(
+    --wp-g2-surface-background-subtle-color,
+    rgba(0, 0, 0, 0.05)
+  );
+  color: #050505;
+  color: var(--wp-g2-color-text, #050505);
+}

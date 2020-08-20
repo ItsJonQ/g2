@@ -1,7 +1,7 @@
 {
   "sections": [
     {
-      "title": "Guides",
+      "title": "Introduction",
       "links": [
         {
           "link": "/",
@@ -55,6 +55,10 @@
             {
               "link": "/components/heading",
               "title": "Heading"
+            },
+            {
+              "link": "/components/subheading",
+              "title": "Subheading"
             }
           ]
         },
