@@ -23,13 +23,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       options: {
-        background_color: `#663399`,
+        background_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        icon: `src/images/g2-logo.png`,
+        name: `g2-components`,
+        short_name: `g2`,
         start_url: `/`,
-        theme_color: `#663399`, // This path is relative to the root of the site.
+        theme_color: `#000000`, // This path is relative to the root of the site.
       },
       resolve: `gatsby-plugin-manifest`,
     },
