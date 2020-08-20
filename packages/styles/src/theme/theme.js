@@ -50,7 +50,7 @@ const COLOR_PROPS = {
 
 const FONT_PROPS = {
 	fontFamily:
-		'Inter,Cabin,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
+		'Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif',
 	fontFamilyMono: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace',
 	fontSize: '13px',
 	fontSizeH1: `calc(2.44 * ${get('fontSize')})`,

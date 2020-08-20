@@ -34,3 +34,7 @@ export const Scrollable = css`
 export const Content = css`
 	position: relative;
 `;
+
+export const smoothScroll = css`
+	scroll-behavior: smooth;
+`;

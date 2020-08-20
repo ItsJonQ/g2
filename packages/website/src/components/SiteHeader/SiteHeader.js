@@ -12,6 +12,8 @@ import { ui } from "@wp-g2/styles"
 import { Link as GLink } from "gatsby"
 import React from "react"
 
+import { Logo } from "../Logo"
+
 function NavLink(props) {
   return (
     <Link
@@ -44,10 +46,13 @@ export function SiteHeader() {
         <HStack className="SiteHeaderLinkWrapper">
           <GLink to="/">
             <Heading className="SiteHeaderLogo" size={4}>
+              <span style={{ paddingRight: 8, verticalAlign: "middle" }}>
+                <Logo />
+              </span>
               G2 Components
             </Heading>
           </GLink>
-          <HStack className="SiteHeaderSideLinks">
+          <HStack as="nav" className="SiteHeaderSideLinks">
             <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
             <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
             <NavLink href="https://g2-components.xyz/">Storybook</NavLink>

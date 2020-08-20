@@ -4,8 +4,12 @@ import React from 'react';
 
 import * as styles from './Scrollable.styles';
 
-function Scrollable({ children, ...props }) {
-	const cx = [styles.Scrollable, styles.scrollableScrollbar];
+function Scrollable({ children, smoothScroll = false, ...props }) {
+	const cx = [
+		styles.Scrollable,
+		styles.scrollableScrollbar,
+		smoothScroll && styles.smoothScroll,
+	];
 
 	return (
 		<View {...props} cx={cx}>

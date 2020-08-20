@@ -10,22 +10,24 @@ type: layout
 
 ### Usage
 
-```jsx
-import { Grid } from "@wp-g2/components"
-```
-
 ```jsx live
-<Grid columns={3}>
-  <View css={[ui.background.blue]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Olaf</Text>
-  </View>
-</Grid>
+import { Grid } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Grid columns={3}>
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Olaf</Text>
+      </View>
+    </Grid>
+  )
+}
 ```
 
 ### Props

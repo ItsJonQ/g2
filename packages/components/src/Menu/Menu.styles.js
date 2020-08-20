@@ -2,6 +2,7 @@ import { css, get } from '@wp-g2/styles';
 
 export const Menu = css`
 	outline: none;
+	padding: 0;
 `;
 
 export const MenuItem = css`

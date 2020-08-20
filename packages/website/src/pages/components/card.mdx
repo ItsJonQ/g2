@@ -10,24 +10,26 @@ type: layout
 
 ### Usage
 
-```jsx
-import { Card } from "@wp-g2/components"
-```
-
 `Card` provides convenient sub-components such as `CardBody`, `CardHeader`, and `CardFooter`.
 
 ```jsx live
-<Card>
-  <CardHeader>
-    <Heading size={4}>Card Title</Heading>
-  </CardHeader>
-  <CardBody>
-    <Text>Card Content</Text>
-  </CardBody>
-  <CardFooter>
-    <Text>Card Footer</Text>
-  </CardFooter>
-</Card>
+import { Card, CardHeader, CardBody, CardFooter, Text } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Card>
+      <CardHeader>
+        <Heading size={4}>Card Title</Heading>
+      </CardHeader>
+      <CardBody>
+        <Text>Card Content</Text>
+      </CardBody>
+      <CardFooter>
+        <Text>Card Footer</Text>
+      </CardFooter>
+    </Card>
+  )
+}
 ```
 
 ### Props
@@ -41,11 +43,17 @@ import { Card } from "@wp-g2/components"
 Elevating a `Card` can be done by adjusting the `elevation` prop. This may be helpful in highlighting certain content.
 
 ```jsx live
-<Card elevation={8}>
-  <CardBody>
-    <Text>Card Content</Text>
-  </CardBody>
-</Card>
+import { Card, CardBody, Text } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Card elevation={8}>
+      <CardBody>
+        <Text>Card Content</Text>
+      </CardBody>
+    </Card>
+  )
+}
 ```
 
 ## See Also

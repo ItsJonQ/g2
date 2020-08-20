@@ -13,14 +13,16 @@ Everything is a `View`.
 
 ## Usage
 
-```jsx
-import { View } from "@wp-g2/components"
-```
-
 ```jsx live
-<View>
-  <Text>Into the unknown</Text>
-</View>
+import { Text, View } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <View>
+      <Text>Into the unknown</Text>
+    </View>
+  )
+}
 ```
 
 ### Props
@@ -37,11 +39,17 @@ There are two primary but foundational props for a `View`.
 The `as` property is an important concept for a `View`. It is a powerful property that allows a `View` to render as **anything**.
 
 ```jsx live
-<View as="ul">
-  <View as="li">
-    <Text>Into the unknown</Text>
-  </View>
-</View>
+import { Text, View } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <View as="ul">
+      <View as="li">
+        <Text>Into the unknown</Text>
+      </View>
+    </View>
+  )
+}
 ```
 
 #### css
@@ -53,16 +61,22 @@ The `css` property allows for the `View` to performantly and reliably render any
 If you prefer a more "traditional" CSS-like workflow, you can pass a `string` into the `css` prop. The Style system supports Sass-like workflows, for example using `&` for nesting.
 
 ```jsx live
-<View
-  css={`
-    background: dodgerblue;
-    &:hover {
-      background: yellow;
-    }
-  `}
->
-  <Text>Into the unknown</Text>
-</View>
+import { Text, View } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <View
+      css={`
+        background: dodgerblue;
+        &:hover {
+          background: yellow;
+        }
+      `}
+    >
+      <Text>Into the unknown</Text>
+    </View>
+  )
+}
 ```
 
 ##### Object
@@ -70,38 +84,47 @@ If you prefer a more "traditional" CSS-like workflow, you can pass a `string` in
 Another way to pass in styles is using a style Object.
 
 ```jsx live
-<View
-  css={{
-    background: "dodgerblue",
-    "&:hover": {
-      background: "yellow",
-    },
-  }}
->
-  <Text>Into the unknown</Text>
-</View>
+import { Text, View } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <View
+      css={{
+        background: "dodgerblue",
+        "&:hover": {
+          background: "yellow",
+        },
+      }}
+    >
+      <Text>Into the unknown</Text>
+    </View>
+  )
+}
 ```
 
 ### Styling with Presets
 
 The Style system provides a bunch of style presets, which come from `@wp-g2/styles`. These presets are namespaced under `ui`.
 
-```jsx
-import { ui } from "@wp-g2/styles"
-```
-
 Presets can style a `View` by passing an `Array` of them into the `css` prop.
 
 ```jsx live
-<View
-  css={[
-    ui.padding(5),
-    ui.background.blue,
-    ui.hover(ui.background.red, ui.scale(1.02)),
-    ui.active(ui.background.yellow, ui.scale(0.8)),
-    ui.animation.bounce,
-  ]}
->
-  <Text>Into the unknown</Text>
-</View>
+import { Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <View
+      css={[
+        ui.padding(5),
+        ui.background.blue,
+        ui.hover(ui.background.red, ui.scale(1.02)),
+        ui.active(ui.background.yellow, ui.scale(0.8)),
+        ui.animation.bounce,
+      ]}
+    >
+      <Text>Into the unknown</Text>
+    </View>
+  )
+}
 ```

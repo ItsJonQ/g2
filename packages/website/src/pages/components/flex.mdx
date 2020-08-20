@@ -10,38 +10,47 @@ type: layout
 
 ### Usage
 
-```jsx
-import { Flex } from "@wp-g2/components"
-```
-
-`Flex` is used with any of it's two sub-components, `FlexItem` and `FlexBlock`:
+`Flex` is used with any of it's two sub-components, `FlexItem` and `FlexBlock`.
 
 ```jsx live
-<Flex>
-  <FlexItem>
-    <View css={[ui.background.blue]}>
-      <Text>Ana</Text>
-    </View>
-  </FlexItem>
-  <FlexBlock>
-    <View css={[ui.background.blue]}>
-      <Text>Elsa</Text>
-    </View>
-  </FlexBlock>
-</Flex>
+import { Flex, FlexItem, FlexBlock, Text, View } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Flex>
+      <FlexItem>
+        <View css={[ui.background.blue]}>
+          <Text>Ana</Text>
+        </View>
+      </FlexItem>
+      <FlexBlock>
+        <View css={[ui.background.blue]}>
+          <Text>Elsa</Text>
+        </View>
+      </FlexBlock>
+    </Flex>
+  )
+}
 ```
 
 If `FlexItem` or `FlexBlock` isn't used within `Flex`, it will attempt to automatically wrap child content with `FlexItem`.
 
 ```jsx live
-<Flex>
-  <View css={[ui.background.blue]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-</Flex>
+import { Flex, FlexItem, FlexBlock, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex>
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 ### Props
@@ -62,14 +71,21 @@ Vertically aligns content if the `direction` is `row`, or horizontally aligns co
 In the example below, `flex-start` will align the children content to the top.
 
 ```jsx live
-<Flex align="flex-start">
-  <View css={[ui.background.blue, { height: 100 }]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-</Flex>
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex align="flex-start">
+      <View css={[ui.background.blue, { height: 100 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 #### direction
@@ -77,27 +93,41 @@ In the example below, `flex-start` will align the children content to the top.
 The direction flow of the children content can be adjusted with `direction`. `column` will align children vertically and `row` will align children horizontally.
 
 ```jsx live
-<Flex direction="column">
-  <View css={[ui.background.blue]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-</Flex>
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex direction="column">
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 An `Array` can be passed with `column` or `row` if responsive behaviour is required.
 
 ```jsx live
-<Flex direction={["column", "row"]}>
-  <View css={[ui.background.blue]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-</Flex>
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex direction={["column", "row"]}>
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 #### gap
@@ -105,14 +135,21 @@ An `Array` can be passed with `column` or `row` if responsive behaviour is requi
 Spacing in between each child can be adjusted by using `gap`. The value of `gap` works as a multiplier to the library's grid system (base of `4px`).
 
 ```jsx live
-<Flex justify="flex-start" gap={8}>
-  <View css={[ui.background.blue]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-</Flex>
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start" gap={8}>
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 #### justify
@@ -122,14 +159,21 @@ Horizontally aligns content if the `direction` is `row`, or vertically aligns co
 In the example below, `flex-start` will align the children content to the left.
 
 ```jsx live
-<Flex justify="flex-start">
-  <View css={[ui.background.blue, { height: 100 }]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue]}>
-    <Text>Elsa</Text>
-  </View>
-</Flex>
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start">
+      <View css={[ui.background.blue, { height: 100 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 #### wrap
@@ -137,29 +181,36 @@ In the example below, `flex-start` will align the children content to the left.
 Wraps children if there is an overflow.
 
 ```jsx live
-<Flex justify="flex-start" wrap>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>Ana</Text>
-  </View>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>Elsa</Text>
-  </View>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>Olaf</Text>
-  </View>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>Kristoff</Text>
-  </View>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>Queen Iduna</Text>
-  </View>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>King Agnarr</Text>
-  </View>
-  <View css={[ui.background.blue, { width: 200 }]}>
-    <Text>Yelena</Text>
-  </View>
-</Flex>
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start" wrap>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Elsa</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Olaf</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Kristoff</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Queen Iduna</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>King Agnarr</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Yelena</Text>
+      </View>
+    </Flex>
+  )
+}
 ```
 
 ## See Also

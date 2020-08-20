@@ -42,21 +42,40 @@ function CopyToClipboard({ onClick, value, ...props }) {
   )
 }
 
+function transformCode(code) {
+  if (!code) {
+    return ""
+  }
+
+  const match = code.replace(
+    /import(?:["'\s]*([\w*{}\n, ]+)from\s*)?["'\s]*([@\w/_-]+)["'\s].*/gm,
+    ""
+  )
+
+  return `() => {${match}; return <Example />}`
+}
+
 const LiveCode = props => {
   const code = props.children.props.children.trim()
 
   return (
     <Spacer className="LiveEditorWrapper" mb={8} mt={5}>
-      <LiveProvider code={code} scope={liveCodeScope} theme={nightOwl}>
+      <LiveProvider
+        code={code}
+        scope={liveCodeScope}
+        theme={nightOwl}
+        transformCode={transformCode}
+      >
         <VStack className="LiveEditorContainer">
           <Card>
             <CardBody css={{ padding: 20 }}>
-              <LivePreview />
+              <LivePreview aria-label="Live code preview" />
             </CardBody>
           </Card>
           <Card css={[ui.position.relative]}>
             <CopyToClipboard value={code} />
             <LiveEditor
+              aria-label="Live code editor"
               className="LiveEditorEditor"
               style={{
                 borderRadius: 6,

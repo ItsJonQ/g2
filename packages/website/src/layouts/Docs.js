@@ -26,8 +26,12 @@ const Layout = ({ children, ...props }) => {
           <View css={[ui.position.relative]}>
             <DocsNavigation />
           </View>
-          <View>
-            <View as="main" className="LayoutsDocs" css={{ fontSize: "1rem" }}>
+          <View as="main">
+            <View
+              as="article"
+              className="LayoutsDocs"
+              css={{ fontSize: "1rem" }}
+            >
               {children}
             </View>
             <SiteFooter />
