@@ -75,7 +75,16 @@ tt {
 }
 
 pre {
-  font-size: 85%;
+  color: rgb(214, 222, 235);
+  background-color: rgb(1, 22, 39);
+  font-size: 0.85rem;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
 }
 
 pre.prism-code {
@@ -87,7 +96,7 @@ pre.prism-code {
 code {
   padding: 0.2em 0.4em;
   margin: 0;
-  font-size: 85%;
+  font-size: 0.85rem;
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 6px;
 }
