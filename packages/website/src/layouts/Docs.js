@@ -8,11 +8,12 @@ import { DocsNavigation, SEO, SiteFooter, SiteHeader } from "../components"
 
 const Layout = ({ children, ...props }) => {
   const title = props?.pageContext?.frontmatter?.title
-
+  const description = props?.pageContext?.frontmatter?.description
+  console.log(props)
   return (
     <View className="LayoutsDocsWrapper">
       <SiteHeader />
-      <SEO title={title} />
+      <SEO description={description} title={title} />
       <View
         className="LayoutsDocsWrapperPage"
         css={[ui.frame.width(1080), ui.alignment.center]}
