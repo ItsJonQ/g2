@@ -25,7 +25,7 @@
     "website:build": "yarn --cwd ./packages/website generate",
     "website:serve": "yarn --cwd ./packages/website serve",
     "website:test": "yarn website:build && yarn website:serve",
-    "website:deploy": "git push -u origin website",
+    "website:deploy": "git push origin master:website --force",
     "version": "npm run build",
     "precommit": "zero pre-commit",
     "storybook": "start-storybook -p 6006",
