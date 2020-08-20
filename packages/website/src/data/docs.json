@@ -8,7 +8,7 @@
           "title": "Getting Started"
         },
         {
-          "link": "/installation",
+          "link": "/installation/",
           "title": "Installation"
         }
       ]
@@ -20,31 +20,31 @@
           "title": "Layout",
           "links": [
             {
-              "link": "/components/view",
+              "link": "/components/view/",
               "title": "View"
             },
             {
-              "link": "/components/spacer",
+              "link": "/components/spacer/",
               "title": "Spacer"
             },
             {
-              "link": "/components/flex",
+              "link": "/components/flex/",
               "title": "Flex"
             },
             {
-              "link": "/components/grid",
+              "link": "/components/grid/",
               "title": "Grid"
             },
             {
-              "link": "/components/hstack",
+              "link": "/components/hstack/",
               "title": "HStack"
             },
             {
-              "link": "/components/vstack",
+              "link": "/components/vstack/",
               "title": "VStack"
             },
             {
-              "link": "/components/card",
+              "link": "/components/card/",
               "title": "Card"
             }
           ]
@@ -53,19 +53,19 @@
           "title": "Typography",
           "links": [
             {
-              "link": "/components/text",
+              "link": "/components/text/",
               "title": "Text"
             },
             {
-              "link": "/components/heading",
+              "link": "/components/heading/",
               "title": "Heading"
             },
             {
-              "link": "/components/subheading",
+              "link": "/components/subheading/",
               "title": "Subheading"
             },
             {
-              "link": "/components/truncate",
+              "link": "/components/truncate/",
               "title": "Truncate"
             }
           ]
@@ -74,11 +74,11 @@
           "title": "Forms",
           "links": [
             {
-              "link": "/components/button",
+              "link": "/components/button/",
               "title": "Button"
             },
             {
-              "link": "/components/textfield",
+              "link": "/components/textfield/",
               "title": "TextField"
             }
           ]
