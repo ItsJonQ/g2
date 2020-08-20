@@ -20,7 +20,9 @@
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.13",
     "prop-types": "^15.7.2",
+    "prism-react-renderer": "^1.1.1",
     "react": "16.13.1",
+    "react-live": "^2.2.2",
     "react-dom": "16.13.1",
     "react-helmet": "^6.1.0"
   },

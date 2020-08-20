@@ -9,13 +9,13 @@ import * as styles from './Flex.styles';
 import FlexItem from './FlexItem';
 
 export function Flex({
-	_autoWrap = true,
 	align = 'center',
+	autoWrap = true,
 	children,
-	direction: directionProp,
+	direction: directionProp = 'row',
 	gap = 2,
 	justify = 'space-between',
-	wrap,
+	wrap = false,
 	...props
 }) {
 	const gapValue = gap * 4;
@@ -40,11 +40,7 @@ export function Flex({
 		const _isSubComponent = hasNamespace(child, ['FlexBlock', 'FlexItem']);
 
 		const _child =
-			!_isSubComponent && _autoWrap ? (
-				<FlexItem>{child}</FlexItem>
-			) : (
-				child
-			);
+			!_isSubComponent && autoWrap ? <FlexItem>{child}</FlexItem> : child;
 
 		return (
 			<FlexContext.Provider key={_key} value={contextProps}>

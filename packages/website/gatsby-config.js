@@ -1,8 +1,16 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
+    {
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/layouts/Docs.js"),
+          pages: require.resolve("./src/layouts/Docs.js"),
+          posts: require.resolve("./src/layouts/Docs.js"),
+        },
+      },
+      resolve: `gatsby-plugin-mdx`,
+    },
     {
       options: {
         name: `images`,

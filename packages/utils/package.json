@@ -17,6 +17,7 @@
     "dependencies": {
         "@itsjonq/is": "^0.0.5",
         "array-move": "^3.0.0",
+        "copy-to-clipboard": "^3.3.1",
         "deepmerge": "^4.2.2",
         "fast-deep-equal": "^3.1.3",
         "hoist-non-react-statics": "^3.3.2",
