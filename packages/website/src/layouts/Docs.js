@@ -1,37 +1,32 @@
-import { graphql, useStaticQuery } from "gatsby"
+import "./Docs.css"
+
+import { Grid, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
 import React from "react"
 
-import Header from "../components/header"
+import { DocsNavigation, Footer, Header, SEO } from "../components"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query siteTitleQueryAndSiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children, ...props }) => {
+  const title = props?.pageContext?.frontmatter?.title
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <View css={[ui.padding.x(5)]}>
+      <Header />
+      <SEO title={title} />
+      <View css={[ui.frame.width(1080), ui.alignment.center]}>
+        <Grid gap={48} templateColumns="240px minmax(0, 1fr)">
+          <View css={[ui.position.relative]}>
+            <DocsNavigation />
+          </View>
+          <View>
+            <View as="main" className="LayoutsDocs" css={{ fontSize: "1rem" }}>
+              {children}
+            </View>
+            <Footer />
+          </View>
+        </Grid>
+      </View>
+    </View>
   )
 }
 

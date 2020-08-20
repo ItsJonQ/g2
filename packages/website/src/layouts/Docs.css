@@ -1,0 +1,19 @@
+.LayoutsDocs > * + * {
+  margin-top: 1.5em;
+}
+
+.LayoutsDocs > h2,
+.LayoutsDocs > h3,
+.LayoutsDocs > h4,
+.LayoutsDocs > h5,
+.LayoutsDocs > h6 {
+  margin-top: 2em;
+}
+
+.LayoutsDocs > p {
+  margin-top: 1em;
+}
+
+.LayoutsDocs ul li {
+  margin-bottom: 0.5em;
+}

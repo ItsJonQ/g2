@@ -1,3 +1,6 @@
+import "./src/styles/Normalize.css"
+import "./src/styles/Global.css"
+
 import { MDXProvider } from "@mdx-js/react"
 import * as Components from "@wp-g2/components"
 import * as Context from "@wp-g2/context"
@@ -32,7 +35,7 @@ const LiveCode = props => {
   const code = props.children.props.children.trim()
 
   return (
-    <Spacer mb={8}>
+    <Spacer mb={8} mt={5}>
       <LiveProvider code={code} scope={liveCodeScope} theme={nightOwl}>
         <VStack>
           <Card>
@@ -47,7 +50,7 @@ const LiveCode = props => {
                 ui.background.blue,
                 { pointerEvents: showOverlay ? "default" : "none", zIndex: 2 },
                 ui.opacity(showOverlay ? 1 : 0),
-                ui.animation.duration(0.5),
+                ui.animation.default,
               ]}
             />
             <View css={[ui.position.topRight, ui.offset(-4, 4), { zIndex: 5 }]}>
@@ -60,10 +63,10 @@ const LiveCode = props => {
             <LiveEditor
               style={{
                 borderRadius: 6,
+                display: "block",
                 lineHeight: 1.5,
                 outline: "none",
                 overflow: "hidden",
-                padding: 4,
               }}
             />
           </Card>

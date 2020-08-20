@@ -8,6 +8,7 @@ module.exports = {
           pages: require.resolve("./src/layouts/Docs.js"),
           posts: require.resolve("./src/layouts/Docs.js"),
         },
+        extensions: [".mdx", ".md"],
       },
       resolve: `gatsby-plugin-mdx`,
     },
@@ -37,8 +38,8 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
   siteMetadata: {
-    author: `@gatsbyjs`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    title: `Gatsby Default Starter`,
+    author: `@itsjonq`,
+    description: `The project is a from-scratch reimagining of @wordpress/components to accommodate the ever-growing and ever-expressive needs of the Editor and the platform.`,
+    title: `G2 Components`,
   },
 }

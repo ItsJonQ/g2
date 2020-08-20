@@ -1,0 +1,77 @@
+{
+  "sections": [
+    {
+      "title": "Guides",
+      "links": [
+        {
+          "link": "/",
+          "title": "Getting Started"
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "sections": [
+        {
+          "title": "Layout",
+          "links": [
+            {
+              "link": "/components/view",
+              "title": "View"
+            },
+            {
+              "link": "/components/spacer",
+              "title": "Spacer"
+            },
+            {
+              "link": "/components/flex",
+              "title": "Flex"
+            },
+            {
+              "link": "/components/grid",
+              "title": "Grid"
+            },
+            {
+              "link": "/components/hstack",
+              "title": "HStack"
+            },
+            {
+              "link": "/components/vstack",
+              "title": "VStack"
+            },
+            {
+              "link": "/components/card",
+              "title": "Card"
+            }
+          ]
+        },
+        {
+          "title": "Typography",
+          "links": [
+            {
+              "link": "/components/text",
+              "title": "Text"
+            },
+            {
+              "link": "/components/heading",
+              "title": "Heading"
+            }
+          ]
+        },
+        {
+          "title": "Forms",
+          "links": [
+            {
+              "link": "/components/button",
+              "title": "Button"
+            },
+            {
+              "link": "/components/textfield",
+              "title": "TextField"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
