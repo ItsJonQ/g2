@@ -27,11 +27,11 @@
 }
 
 .SiteHeaderLinkWrapper {
+  align-items: center;
   display: flex;
-  width: 100%;
-  -ms-flex-align: flex-start;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .SiteHeaderSideLinks {
