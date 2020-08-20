@@ -14,8 +14,8 @@ function Text({
 	isBlock = false,
 	lineHeight = 1.2,
 	size,
-	truncate,
-	upperCase,
+	truncate = false,
+	upperCase = false,
 	variant,
 	weight = 400,
 	...props

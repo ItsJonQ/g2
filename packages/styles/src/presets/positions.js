@@ -9,6 +9,7 @@ export const position = {
 	left: css({ left: 0, position: 'absolute' }),
 	relative: css({ position: 'relative' }),
 	right: css({ position: 'absolute', right: 0 }),
+	sticky: css({ position: 'sticky', top: 0 }),
 	top: css({ position: 'absolute', top: 0 }),
 	topLeft: css({ left: 0, position: 'absolute', top: 0 }),
 	topRight: css({ position: 'absolute', right: 0, top: 0 }),

@@ -4,9 +4,9 @@ import React from 'react';
 
 function Grid({
 	align,
-	columns,
+	columns = 2,
 	gap = 12,
-	isInline,
+	isInline = false,
 	justify,
 	rows,
 	templateColumns,

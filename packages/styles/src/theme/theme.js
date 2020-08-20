@@ -67,7 +67,7 @@ const FONT_PROPS = {
 
 const SURFACE_PROPS = {
 	surfaceBackgroundColor: get('surfaceColor'),
-	surfaceBackgroundSubtleColor: '#EFEFF3',
+	surfaceBackgroundSubtleColor: 'rgba(0, 0, 0, 0.05)',
 	surfaceBackgroundTintColor: 'rgba(0, 0, 0, 0.04)',
 	surfaceBorderColor: 'rgba(0, 0, 0, 0.06)',
 	surfaceColor: get('white'),

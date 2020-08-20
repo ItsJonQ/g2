@@ -30,9 +30,10 @@ export const MenuItem = css`
 		background: ${get('controlBackgroundDimColor')};
 	}
 
-	&.is-active {
+	&.is-active,
+	&[aria-current='page'] {
 		background-color: ${get('surfaceBackgroundSubtleColor')};
-		color: ${get('controlPrimaryTextColor')};
+		color: ${get('colorText')};
 
 		&:active {
 			color: ${get('colorTextInverted')};
