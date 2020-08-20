@@ -10,7 +10,7 @@ import { css, ui } from "@wp-g2/styles"
 import { useClipboard } from "@wp-g2/utils"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import nightOwl from "prism-react-renderer/themes/nightOwl"
-import React, { useState } from "react"
+import React from "react"
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live"
 
 const { Button, Card, CardBody, Spacer, VStack, View } = Components
@@ -27,18 +27,22 @@ function CopyToClipboard({ onClick, value, ...props }) {
 
   const handleOnClick = () => {
     onCopy()
-    onClick()
+    onClick && onClick()
   }
 
   return (
-    <Button onClick={handleOnClick} size="small" variant="primary" {...props}>
-      {hasCopied ? "Copied!" : "Copy"}
-    </Button>
+    <View
+      className="LiveEditorCopyButtonWrapper"
+      css={[ui.position.topRight, ui.offset(-8, 8), { zIndex: 5 }]}
+    >
+      <Button onClick={handleOnClick} size="small" variant="primary" {...props}>
+        {hasCopied ? "Copied!" : "Copy"}
+      </Button>
+    </View>
   )
 }
 
 const LiveCode = props => {
-  const [showOverlay, setShowOverlay] = useState(false)
   const code = props.children.props.children.trim()
 
   return (
@@ -51,27 +55,7 @@ const LiveCode = props => {
             </CardBody>
           </Card>
           <Card css={[ui.position.relative]}>
-            <View
-              className="LiveEditorCopyFlash"
-              css={[
-                ui.position.full,
-                ui.background.blue,
-                { pointerEvents: showOverlay ? "default" : "none", zIndex: 2 },
-                ui.opacity(showOverlay ? 1 : 0),
-                ui.animation.default,
-              ]}
-            />
-            <View
-              className="LiveEditorCopyButtonWrapper"
-              css={[ui.position.topRight, ui.offset(-4, 4), { zIndex: 5 }]}
-            >
-              <CopyToClipboard
-                onClick={() => setShowOverlay(false)}
-                onMouseDown={() => setShowOverlay(true)}
-                onMouseUp={() => setShowOverlay(false)}
-                value={code}
-              />
-            </View>
+            <CopyToClipboard value={code} />
             <LiveEditor
               className="LiveEditorEditor"
               style={{
@@ -104,15 +88,18 @@ const LiveCode = props => {
 }
 
 const SyntaxHighlighter = props => {
+  const { copy } = props
+  const code = props.children.props.children.trim()
   const className = props.children.props.className || ""
   const matches = className.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
 
   return (
     <div className="SyntaxHighlighter">
+      {copy && <CopyToClipboard value={code} />}
       <Highlight
         {...defaultProps}
-        code={props.children.props.children.trim()}
+        code={code}
         language={language}
         theme={nightOwl}
       >
@@ -137,7 +124,9 @@ const components = {
     if (props.children.props["live"]) {
       return <LiveCode {...props} />
     } else {
-      return <SyntaxHighlighter {...props} />
+      return (
+        <SyntaxHighlighter {...props} copy={!props.children.props["nocopy"]} />
+      )
     }
   },
   wrapper: ({ children }) => <>{children}</>,

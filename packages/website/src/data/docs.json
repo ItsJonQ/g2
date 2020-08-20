@@ -6,6 +6,10 @@
         {
           "link": "/",
           "title": "Getting Started"
+        },
+        {
+          "link": "/installation",
+          "title": "Installation"
         }
       ]
     },

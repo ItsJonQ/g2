@@ -18,12 +18,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-4px, 4px);
+  transform: translate(-8px, 8px);
   z-index: 5;
 }
 
 .LiveEditorCopyFlash {
   opacity: 0;
+}
+
+.SyntaxHighlighter {
+  position: relative;
 }
 
 .SyntaxHighlighter pre {
