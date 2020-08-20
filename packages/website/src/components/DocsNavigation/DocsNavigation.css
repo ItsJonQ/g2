@@ -31,6 +31,10 @@
   margin-bottom: 8px;
 }
 
+.DocsNavigationSection > *:last-child {
+  margin-bottom: 0;
+}
+
 .DocsNavigationSectionTitle {
   font-size: calc(1.0769230769230769 * var(--wp-g2-font-size, 13px));
   font-weight: bold;
