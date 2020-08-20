@@ -24,8 +24,6 @@ export function Truncate({
 		limit,
 	});
 
-	console.log(ellipsis, ellipsizeMode, limit);
-
 	const shouldTruncate = ellipsizeMode === TRUNCATE_TYPE.auto;
 	const sx = {};
 

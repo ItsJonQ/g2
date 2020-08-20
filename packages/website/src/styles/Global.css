@@ -41,31 +41,31 @@ h6 {
 }
 
 h1 {
-  font-size: 2.8em;
+  font-size: 2.8rem;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 2.2em;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.85rem;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 h5 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 code,

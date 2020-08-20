@@ -63,6 +63,10 @@
             {
               "link": "/components/subheading",
               "title": "Subheading"
+            },
+            {
+              "link": "/components/truncate",
+              "title": "Truncate"
             }
           ]
         },

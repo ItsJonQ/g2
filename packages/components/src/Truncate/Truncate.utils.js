@@ -3,7 +3,6 @@ import { is } from '@wp-g2/utils';
 export const TRUNCATE_ELLIPSIS = '…';
 export const TRUNCATE_TYPE = {
 	auto: 'auto',
-	clip: 'clip',
 	head: 'head',
 	middle: 'middle',
 	tail: 'tail',

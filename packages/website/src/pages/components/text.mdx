@@ -8,7 +8,7 @@ type: typography
 
 `Text` renders text using the library's typography system.
 
-## Usage
+### Usage
 
 ```jsx live
 import { Text } from "@wp-g2/components"
@@ -36,9 +36,58 @@ function Example() {
 | numberOfLines | `boolean`          |         | Determines how many lines to truncate. `truncate` must first be set. |
 | upperCase     | `boolean`          |         | Uppercases the text content.                                         |
 | variant       | `string`           |         | Adjusts style variation of the text.                                 |
-| weight        | `number`           |         | Adjusts font-weight of the text.                                     |
+| weight        | `number`,`string`  |         | Adjusts font-weight of the text.                                     |
 
-### Truncation
+#### align
+
+| Value  | Description                |
+| ------ | -------------------------- |
+| left   | Aligns text to the left.   |
+| center | Aligns text to the center. |
+| right  | Aligns text to the right.  |
+
+```jsx live
+import { Text } from "@wp-g2/components"
+
+function Example() {
+  return <Text align="left">Where the north wind meets the sea...</Text>
+}
+```
+
+#### size
+
+`Text` can render a wide range of font sizes, which are automatically calculated and adapted to the typography system. The `size` value can be a system preset, a `number`, or a custom unit value (`string`) such as `30em`.
+
+##### Preset sizes
+
+| Value       | Description                               |
+| ----------- | ----------------------------------------- |
+| largeTitle  | Renders an effective font-size of `28px`. |
+| title       | Renders an effective font-size of `20px`. |
+| body        | Renders an effective font-size of `13px`. |
+| subheadline | Renders an effective font-size of `12px`. |
+| footnote    | Renders an effective font-size of `11px`. |
+| caption     | Renders an effective font-size of `10px`. |
+
+```jsx live
+import { Text } from "@wp-g2/components"
+
+function Example() {
+  return <Text size="largeTitle">Where the north wind meets the sea...</Text>
+}
+```
+
+##### Custom sizes
+
+```jsx live
+import { Text } from "@wp-g2/components"
+
+function Example() {
+  return <Text size={20}>Where the north wind meets the sea...</Text>
+}
+```
+
+#### truncate
 
 When `truncate` is set,we are able to truncate the long text in a variety of ways.
 
@@ -57,9 +106,9 @@ function Example() {
 }
 ```
 
-#### ellipsizeMode
+##### ellipsizeMode
 
-For example, we can truncate text right in the middle. To do this, we need to set `ellipsizeMode` to `middle` and a text `limit`.
+For example, we can truncate text right in the middle. To do this, we need to set `ellipsizeMode` to `middle` and a text `limit`. For more information about truncation, check out [`Truncate`](/components/truncate).
 
 ```jsx live
 import { Text } from "@wp-g2/components"
@@ -73,6 +122,20 @@ function Example() {
       sound, but not too far or you'll be drowned
     </Text>
   )
+}
+```
+
+#### variant
+
+| Value | Description         |
+| ----- | ------------------- |
+| muted | Renders muted text. |
+
+```jsx live
+import { Text } from "@wp-g2/components"
+
+function Example() {
+  return <Text variant="muted">Where the north wind meets the sea...</Text>
 }
 ```
 
