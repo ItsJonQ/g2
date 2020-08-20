@@ -3,12 +3,22 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       options: {
-        defaultLayouts: {
-          default: require.resolve("./src/layouts/Docs.js"),
-          pages: require.resolve("./src/layouts/Docs.js"),
-          posts: require.resolve("./src/layouts/Docs.js"),
-        },
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+      resolve: `gatsby-source-filesystem`,
+    },
+    {
+      options: {
+        name: `docs`,
+        path: `${__dirname}/src/docs`,
+      },
+      resolve: `gatsby-source-filesystem`,
+    },
+    {
+      options: {
         extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`],
       },
       resolve: `gatsby-plugin-mdx`,
     },

@@ -1,7 +1,7 @@
 .SiteHeader {
   background-color: var(--wp-g2-surface-background-color);
   left: 0;
-  padding: 20px;
+  padding: 8px 20px;
   position: fixed;
   right: 0;
   top: 0;
@@ -10,7 +10,7 @@
 
 .SiteHeaderContent {
   max-width: 100%;
-  width: 1080px;
+  width: 1280px;
   margin: auto;
 }
 

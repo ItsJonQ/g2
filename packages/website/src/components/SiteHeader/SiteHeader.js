@@ -32,7 +32,7 @@ export function SiteHeader() {
       className="SiteHeader"
       css={{
         left: 0,
-        padding: 20,
+        padding: "8px 20px",
         position: "fixed",
         right: 0,
         top: 0,
@@ -41,7 +41,7 @@ export function SiteHeader() {
     >
       <View
         className="SiteHeaderContent"
-        css={[ui.frame.width(1080), ui.alignment.center]}
+        css={[ui.frame.width(1280), ui.alignment.center]}
       >
         <HStack className="SiteHeaderLinkWrapper">
           <GLink to="/">

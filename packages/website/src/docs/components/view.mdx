@@ -8,10 +8,9 @@ type: layout
 
 `View` is the foundational element that renders component in the library. It is the principle component in the entire library.
 
-A `View` is **everything**.
-Everything is a `View`.
+A `View` is **everything**. **Everything** is a `View`.
 
-### Usage
+## Usage
 
 ```jsx live
 import { Text, View } from "@wp-g2/components"
@@ -25,7 +24,7 @@ function Example() {
 }
 ```
 
-### Props
+## Props
 
 There are two primary but foundational props for a `View`.
 
@@ -34,7 +33,7 @@ There are two primary but foundational props for a `View`.
 | as   | `string`          | `div`   | Render as any HTML element or (custom) React component. |
 | css  | `Object`,`string` |         | Render CSS using the Style system.                      |
 
-#### as
+### as
 
 The `as` property is an important concept for a `View`. It is a powerful property that allows a `View` to render as **anything**.
 
@@ -52,11 +51,11 @@ function Example() {
 }
 ```
 
-#### css
+### css
 
 The `css` property allows for the `View` to performantly and reliably render any CSS styles using the libraries System system.
 
-##### string
+#### string
 
 If you prefer a more "traditional" CSS-like workflow, you can pass a `string` into the `css` prop. The Style system supports Sass-like workflows, for example using `&` for nesting.
 
@@ -79,7 +78,7 @@ function Example() {
 }
 ```
 
-##### Object
+#### Object
 
 Another way to pass in styles is using a style Object.
 
@@ -102,7 +101,9 @@ function Example() {
 }
 ```
 
-### Styling with Presets
+## Styling
+
+### Presets
 
 The Style system provides a bunch of style presets, which come from `@wp-g2/styles`. These presets are namespaced under `ui`.
 

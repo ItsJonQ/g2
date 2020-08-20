@@ -155,7 +155,7 @@ export const wrapRootElement = ({ element }) => {
   return <MDXProvider components={components}>{element}</MDXProvider>
 }
 
-export const shouldUpdateScroll = () => {
-  window.scrollTo(0, 0)
-  return false
-}
+// export const shouldUpdateScroll = () => {
+//   window.scrollTo(0, 0)
+//   return false
+// }

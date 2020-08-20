@@ -8,7 +8,7 @@ type: layout
 
 `Flex` is a primitive layout component that adaptively aligns child content horizontally or vertically. `Flex` powers components like [`HStack`](/components/hstack/) and [`VStack`](/components/vstack/).
 
-### Usage
+## Usage
 
 `Flex` is used with any of it's two sub-components, `FlexItem` and `FlexBlock`.
 
@@ -53,7 +53,7 @@ function Example() {
 }
 ```
 
-### Props
+## Props
 
 | Name      | Type                      | Default         | Description                                                                     |
 | --------- | ------------------------- | --------------- | ------------------------------------------------------------------------------- |
@@ -64,7 +64,7 @@ function Example() {
 | justify   | `string`                  | `space-between` | Justifies children using CSS Flexbox `justify-content`.                         |
 | wrap      | `boolean`                 | `false`         | Determines if children should wrap.                                             |
 
-#### align
+### align
 
 Vertically aligns content if the `direction` is `row`, or horizontally aligns content if the `direction` is `column`.
 
@@ -88,7 +88,7 @@ function Example() {
 }
 ```
 
-#### direction
+### direction
 
 The direction flow of the children content can be adjusted with `direction`. `column` will align children vertically and `row` will align children horizontally.
 
@@ -130,7 +130,7 @@ function Example() {
 }
 ```
 
-#### gap
+### gap
 
 Spacing in between each child can be adjusted by using `gap`. The value of `gap` works as a multiplier to the library's grid system (base of `4px`).
 
@@ -152,7 +152,7 @@ function Example() {
 }
 ```
 
-#### justify
+### justify
 
 Horizontally aligns content if the `direction` is `row`, or vertically aligns content if the `direction` is `column`.
 
@@ -176,7 +176,7 @@ function Example() {
 }
 ```
 
-#### wrap
+### wrap
 
 Wraps children if there is an overflow.
 

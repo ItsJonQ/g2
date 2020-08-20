@@ -91,11 +91,7 @@ export function DocsNavigation() {
   }, [])
 
   return (
-    <View
-      as="aside"
-      className="DocsNavigation"
-      css={[ui.position.sticky, { top: 100 }]}
-    >
+    <View className="DocsNavigation" css={[ui.position.sticky, { top: 100 }]}>
       <Scrollable
         className="DocsNavigationBody"
         css={[ui.frame.height("70vh")]}

@@ -1,0 +1,27 @@
+.DocsTableOfContents {
+  position: sticky;
+  top: 100px;
+  border-left: 1px solid var(--wp-g2-control-border-subtle-color);
+}
+
+.DocsTableOfContents ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 12px;
+}
+
+.DocsTableOfContents a {
+  display: block;
+  padding: 4px;
+  color: currentColor;
+  opacity: 0.5;
+}
+
+.DocsTableOfContents a:hover {
+  color: var(--wp-g2-color-admin);
+  opacity: 1;
+}
+
+.DocsTableOfContents [aria-current="page"] {
+  font-weight: bold;
+}

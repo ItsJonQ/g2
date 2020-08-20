@@ -3,14 +3,14 @@
 }
 
 .LayoutsDocsWrapperPage {
-  max-width: 1080px;
+  max-width: 1280px;
   margin: auto;
 }
 
 .LayoutsDocsWrapperContent {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  grid-gap: 48px;
+  grid-template-columns: 220px minmax(0, 1fr) 160px;
+  grid-gap: 40px;
 }
 
 .LayoutsDocs {
@@ -18,7 +18,47 @@
 }
 
 .LayoutsDocs > * + * {
-  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.LayoutsDocs h1 {
+  margin-bottom: 1.5rem;
+}
+
+.LayoutsDocs h1 a.anchor,
+.LayoutsDocs h2 a.anchor,
+.LayoutsDocs h3 a.anchor,
+.LayoutsDocs h4 a.anchor,
+.LayoutsDocs h5 a.anchor,
+.LayoutsDocs h6 a.anchor {
+  position: absolute;
+  opacity: 0;
+  transform: translate(-100%, -10%);
+  padding: 0 8px;
+  transition: all 120ms linear;
+}
+
+.LayoutsDocs h1:hover a.anchor,
+.LayoutsDocs h2:hover a.anchor,
+.LayoutsDocs h3:hover a.anchor,
+.LayoutsDocs h4:hover a.anchor,
+.LayoutsDocs h5:hover a.anchor,
+.LayoutsDocs h6:hover a.anchor {
+  opacity: 1;
+}
+
+.LayoutsDocs h2[id],
+.LayoutsDocs h3[id],
+.LayoutsDocs h4[id],
+.LayoutsDocs h5[id],
+.LayoutsDocs h6[id] {
+  margin-top: -60px;
+  padding-top: 80px;
+}
+
+.LayoutsDocs h1 a.anchor {
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 .LayoutsDocs > h2,
@@ -26,7 +66,7 @@
 .LayoutsDocs > h4,
 .LayoutsDocs > h5,
 .LayoutsDocs > h6 {
-  margin-top: 2.4rem;
+  margin-top: 2.8rem;
 }
 
 .LayoutsDocs > p {

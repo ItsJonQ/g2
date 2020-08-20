@@ -8,7 +8,7 @@ type: typography
 
 `Text` renders text using the library's typography system.
 
-### Usage
+## Usage
 
 ```jsx live
 import { Text } from "@wp-g2/components"
@@ -18,7 +18,7 @@ function Example() {
 }
 ```
 
-### Props
+## Props
 
 | Name          | Type               | Default | Description                                                          |
 | ------------- | ------------------ | ------- | -------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ function Example() {
 | variant       | `string`           |         | Adjusts style variation of the text.                                 |
 | weight        | `number`,`string`  |         | Adjusts font-weight of the text.                                     |
 
-#### align
+### align
 
 | Value  | Description                |
 | ------ | -------------------------- |
@@ -54,11 +54,11 @@ function Example() {
 }
 ```
 
-#### size
+### size
 
 `Text` can render a wide range of font sizes, which are automatically calculated and adapted to the typography system. The `size` value can be a system preset, a `number`, or a custom unit value (`string`) such as `30em`.
 
-##### Preset sizes
+#### Preset
 
 | Value       | Description                               |
 | ----------- | ----------------------------------------- |
@@ -77,7 +77,7 @@ function Example() {
 }
 ```
 
-##### Custom sizes
+#### Custom
 
 ```jsx live
 import { Text } from "@wp-g2/components"
@@ -87,7 +87,7 @@ function Example() {
 }
 ```
 
-#### truncate
+### truncate
 
 When `truncate` is set,we are able to truncate the long text in a variety of ways.
 
@@ -106,7 +106,7 @@ function Example() {
 }
 ```
 
-##### ellipsizeMode
+#### ellipsizeMode
 
 For example, we can truncate text right in the middle. To do this, we need to set `ellipsizeMode` to `middle` and a text `limit`. For more information about truncation, check out [`Truncate`](/components/truncate).
 
@@ -125,7 +125,7 @@ function Example() {
 }
 ```
 
-#### variant
+### variant
 
 | Value | Description         |
 | ----- | ------------------- |
@@ -141,5 +141,5 @@ function Example() {
 
 ## See Also
 
-- [Heading](/components/heading/)
-- [Subheading](/components/subheading/)
+- [`Heading`](/components/heading/)
+- [`Subheading`](/components/subheading/)

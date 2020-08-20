@@ -1,4 +1,5 @@
 export * from "./DocsNavigation"
+export * from "./DocsTableOfContents"
 export * from "./Logo"
 export * from "./SiteFooter"
 export * from "./SiteHeader"

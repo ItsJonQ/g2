@@ -8,7 +8,7 @@ type: typography
 
 `Truncate` is a typography primitive that trims text content. For almost all cases, it is recommended that [`Text`](/components/text/), [`Heading`](/components/heading), or [`Subheading`](/components/subheading) is used to render text content. However, `Truncate` is available for custom implementations.
 
-### Usage
+## Usage
 
 ```jsx live
 import { Truncate } from "@wp-g2/components"
@@ -25,7 +25,7 @@ function Example() {
 }
 ```
 
-### Props
+## Props
 
 | Name          | Type      | Default | Description                                                          |
 | ------------- | --------- | ------- | -------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ function Example() {
 | limit         | `number`  | `0`     | Determines the max characters when `truncate` is set.                |
 | numberOfLines | `boolean` |         | Determines how many lines to truncate. `truncate` must first be set. |
 
-#### ellipsizeMode
+### ellipsizeMode
 
 For example, we can truncate text right in the middle. To do this, we need to set `ellipsizeMode` to `middle` and a text `limit`.
 
@@ -62,7 +62,7 @@ function Example() {
 }
 ```
 
-#### numberOfLines
+### numberOfLines
 
 Clamps the text content to the specifiec `numberOfLines`, adding the `ellipsis` at the end.
 
@@ -83,6 +83,6 @@ function Example() {
 
 ## See Also
 
-- [Text](/components/text/)
-- [Heading](/components/heading/)
-- [Subheading](/components/subheading/)
+- [`Text`](/components/text/)
+- [`Heading`](/components/heading/)
+- [`Subheading`](/components/subheading/)

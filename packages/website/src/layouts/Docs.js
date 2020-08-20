@@ -2,13 +2,25 @@ import "./Docs.css"
 
 import { Grid, View } from "@wp-g2/components"
 import { ui } from "@wp-g2/styles"
+import { graphql } from "gatsby"
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 import React from "react"
 
-import { DocsNavigation, SEO, SiteFooter, SiteHeader } from "../components"
+import {
+  DocsNavigation,
+  DocsTableOfContents,
+  SEO,
+  SiteFooter,
+  SiteHeader,
+} from "../components"
 
-const Layout = ({ children, ...props }) => {
-  const title = props?.pageContext?.frontmatter?.title
-  const description = props?.pageContext?.frontmatter?.description
+export default function Layout(props) {
+  const { children, data } = props
+  const title = data?.mdx?.frontmatter?.title
+  const description = data?.mdx?.frontmatter?.description
+  const headings = data?.mdx?.tableOfContents?.items[0]?.items
+
+  const isMdx = !!data?.mdx
 
   return (
     <View className="LayoutsDocsWrapper">
@@ -16,14 +28,14 @@ const Layout = ({ children, ...props }) => {
       <SEO description={description} title={title} />
       <View
         className="LayoutsDocsWrapperPage"
-        css={[ui.frame.width(1080), ui.alignment.center]}
+        css={[ui.frame.width(1280), ui.alignment.center]}
       >
         <Grid
           className="LayoutsDocsWrapperContent"
-          gap={48}
-          templateColumns="240px minmax(0, 1fr)"
+          gap={40}
+          templateColumns="220px minmax(0, 1fr) 160px"
         >
-          <View css={[ui.position.relative]}>
+          <View as="aside" css={[ui.position.relative]}>
             <DocsNavigation />
           </View>
           <View as="main">
@@ -32,9 +44,12 @@ const Layout = ({ children, ...props }) => {
               className="LayoutsDocs"
               css={{ fontSize: "1rem" }}
             >
-              {children}
+              {isMdx ? <MDXRenderer>{data?.mdx?.body}</MDXRenderer> : children}
             </View>
             <SiteFooter />
+          </View>
+          <View as="aside" css={[ui.position.relative]}>
+            <DocsTableOfContents headings={headings} />
           </View>
         </Grid>
       </View>
@@ -42,4 +57,15 @@ const Layout = ({ children, ...props }) => {
   )
 }
 
-export default Layout
+export const pageQuery = graphql`
+  query($id: String!) {
+    mdx(fields: { id: { eq: $id } }) {
+      frontmatter {
+        title
+        description
+      }
+      body
+      tableOfContents
+    }
+  }
+`

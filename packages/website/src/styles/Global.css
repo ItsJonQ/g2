@@ -26,7 +26,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 100px;
+  padding-top: 80px;
   color: var(--wp-g2-color-text, #050505);
 }
 
@@ -132,6 +132,9 @@ table th {
   border: 1px solid #dfe2e5;
 }
 
-tr:nth-child(2n) {
+table tr:nth-child(2n) {
   background-color: #f6f8fa;
+}
+table tbody tr:hover {
+  background-color: var(--wp-g2-blue-rgba-10);
 }
