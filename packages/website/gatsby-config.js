@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-g2`,
+    `@wp-g2/gatsby-plugin-styles`,
     `gatsby-plugin-react-helmet`,
     {
       options: {
