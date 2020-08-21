@@ -1,0 +1,27 @@
+{
+  "name": "gatsby-plugin-g2",
+  "version": "0.0.39",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "sideEffects": false,
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+    "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+    "build": "npm run build:cjs && npm run build:es -- --no-clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@wp-g2/babel-plugin-styles": "^0.0.39",
+    "@emotion/core": "^10.0.35",
+    "create-emotion-server": "^10.0.27"
+  },
+  "peerDependencies": {
+    "react": "16.x",
+    "react-dom": "16.x"
+  }
+}
