@@ -1,17 +1,18 @@
 {
   "name": "@wp-g2/website",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "private": true,
   "description": "Documentatoin website for G2 Components.",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
-    "@wp-g2/components": "^0.0.39",
-    "@wp-g2/styles": "^0.0.39",
-    "@wp-g2/utils": "^0.0.39",
-    "@wp-g2/gatsby-plugin-styles": "^0.0.39",
+    "@wp-g2/components": "^0.0.40",
+    "@wp-g2/gatsby-plugin-styles": "^0.0.40",
+    "@wp-g2/styles": "^0.0.40",
+    "@wp-g2/utils": "^0.0.40",
     "babel-preset-gatsby": "^0.5.5",
+    "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-manifest": "^2.4.23",
     "gatsby-plugin-mdx": "^1.2.34",
@@ -21,14 +22,13 @@
     "gatsby-remark-autolink-headers": "^2.3.11",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.13",
-    "gatsby": "^2.24.47",
     "lodash": "^4.17.20",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
+    "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "^6.1.0",
-    "react-live": "^2.2.2",
-    "react": "16.13.1"
+    "react-live": "^2.2.2"
   },
   "keywords": [
     "gatsby"

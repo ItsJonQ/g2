@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/gatsby-plugin-styles",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -15,8 +15,8 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/babel-plugin-styles": "^0.0.39",
     "@emotion/core": "^10.0.35",
+    "@wp-g2/babel-plugin-styles": "^0.0.40",
     "create-emotion-server": "^10.0.27"
   },
   "peerDependencies": {
