@@ -5,6 +5,8 @@ import { Link } from "gatsby"
 import React from "react"
 
 export function DocsTableOfContents({ headings = [] }) {
+  if (!headings.length) return null
+
   return (
     <View className="DocsTableOfContentsWrapper">
       <Spacer>

@@ -23,7 +23,7 @@ export default function Layout(props) {
   const isMdx = !!data?.mdx
 
   return (
-    <View className="LayoutsDocsWrapper">
+    <View className="LayoutsDocsWrapper" css={[ui.padding.x(5)]}>
       <SiteHeader />
       <SEO description={description} title={title} />
       <View
