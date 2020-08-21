@@ -8,9 +8,11 @@ export function DocsTableOfContents({ headings = [] }) {
   if (!headings.length) return null
 
   return (
-    <View className="DocsTableOfContentsWrapper">
-      <Spacer>
-        <Subheading variant="muted">Contents</Subheading>
+    <View as="section" className="DocsTableOfContentsWrapper">
+      <Spacer as="header">
+        <Subheading as="h2" variant="muted">
+          Contents
+        </Subheading>
       </Spacer>
       <View className="DocsTableOfContents">
         <TableOfContents headings={headings} />

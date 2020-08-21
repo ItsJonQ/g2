@@ -17,6 +17,7 @@ function NavLink(props) {
     <Link
       className="SiteHeaderLink"
       css={[ui.padding.y(5), ui.padding.x(2)]}
+      rel="noopener"
       target="_blank"
       weight="bold"
       {...props}
@@ -27,6 +28,7 @@ function NavLink(props) {
 export function SiteHeader() {
   return (
     <Surface
+      as="header"
       className="SiteHeader"
       css={{
         left: 0,
@@ -42,11 +44,14 @@ export function SiteHeader() {
         css={[ui.frame.width(1280), ui.alignment.center]}
       >
         <HStack className="SiteHeaderLinkWrapper">
-          <GLink to="/">
+          <GLink role="banner" to="/">
             <Heading className="SiteHeaderLogo" size={4}>
-              <span style={{ paddingRight: 8, verticalAlign: "middle" }}>
+              <View
+                as="span"
+                css={{ paddingRight: 8, verticalAlign: "middle" }}
+              >
                 <Logo />
-              </span>
+              </View>
               G2 Components
             </Heading>
           </GLink>
