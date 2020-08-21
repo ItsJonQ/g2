@@ -37,4 +37,4 @@ function HelpTip({ children, iconSize = 14, ...props }) {
 	);
 }
 
-export default connect(HelpTip);
+export default connect(HelpTip, 'HelpTip');

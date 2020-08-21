@@ -4,4 +4,4 @@ import { CardBody } from '../Card';
 
 const ModalBody = CardBody;
 
-export default connect(ModalBody);
+export default connect(ModalBody, 'ModalBody');

@@ -29,4 +29,4 @@ function ModalCloseButton({
 	);
 }
 
-export default connect(ModalCloseButton);
+export default connect(ModalCloseButton, 'ModalCloseButton');

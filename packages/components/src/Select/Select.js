@@ -106,4 +106,4 @@ function Select({
 	);
 }
 
-export default connect(Select);
+export default connect(Select, 'Select');

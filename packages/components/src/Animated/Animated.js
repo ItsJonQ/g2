@@ -69,4 +69,4 @@ function Animated({ as = 'div', auto = false, children, ...props }) {
 	return <Component {...finalProps}>{children}</Component>;
 }
 
-export default connect(Animated);
+export default connect(Animated, 'Animated');

@@ -19,4 +19,4 @@ function TabPanel({ forwardedRef, ...props }) {
 	);
 }
 
-export default connect(TabPanel);
+export default connect(TabPanel, 'TabPanel');

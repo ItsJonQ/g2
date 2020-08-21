@@ -10,4 +10,4 @@ function NavigatorBack({ ...props }) {
 	return <Button {...props} onClick={history.goBack} />;
 }
 
-export default connect(NavigatorBack);
+export default connect(NavigatorBack, 'NavigatorBack');

@@ -12,4 +12,4 @@ function Tab({ forwardedRef, ...props }) {
 	return <ReakitTab as={TabView} ref={forwardedRef} {...tab} {...props} />;
 }
 
-export default connect(Tab);
+export default connect(Tab, 'Tab');

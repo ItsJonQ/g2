@@ -61,4 +61,4 @@ function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {
 	);
 }
 
-export default connect(ControlGroup);
+export default connect(ControlGroup, 'ControlGroup');

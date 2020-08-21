@@ -16,4 +16,4 @@ function Panel({ animated = true, className, isSeamless = false, ...props }) {
 	);
 }
 
-export default connect(Panel);
+export default connect(Panel, 'Panel');

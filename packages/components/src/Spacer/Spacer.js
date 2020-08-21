@@ -95,4 +95,4 @@ function value(val) {
 	return toPx(val * gridBase);
 }
 
-export default connect(Spacer);
+export default connect(Spacer, 'Spacer');

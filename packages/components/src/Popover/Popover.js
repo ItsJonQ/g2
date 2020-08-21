@@ -34,4 +34,4 @@ function Popover({
 	);
 }
 
-export default connect(Popover);
+export default connect(Popover, 'Popover');

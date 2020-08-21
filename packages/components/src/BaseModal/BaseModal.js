@@ -97,4 +97,4 @@ function BaseModal({
 	);
 }
 
-export default connect(BaseModal);
+export default connect(BaseModal, 'BaseModal');

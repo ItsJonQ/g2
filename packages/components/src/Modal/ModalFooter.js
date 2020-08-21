@@ -16,4 +16,4 @@ function ModalFooter({
 	);
 }
 
-export default connect(ModalFooter);
+export default connect(ModalFooter, 'ModalFooter');

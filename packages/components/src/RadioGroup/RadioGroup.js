@@ -31,4 +31,4 @@ function RadioGroup({
 	);
 }
 
-export default connect(RadioGroup);
+export default connect(RadioGroup, 'RadioGroup');

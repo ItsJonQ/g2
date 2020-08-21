@@ -15,4 +15,4 @@ function CardFooter({ className, ...props }) {
 	return <Flex {...props} className={cx} />;
 }
 
-export default connect(CardFooter);
+export default connect(CardFooter, 'CardFooter');

@@ -7,4 +7,4 @@ function FlexBlock(props) {
 	return <FlexItem {...props} isBlock={true} />;
 }
 
-export default connect(FlexBlock);
+export default connect(FlexBlock, 'FlexBlock');

@@ -35,4 +35,4 @@ function PanelHeader({ children, className, title, ...props }) {
 	);
 }
 
-export default connect(PanelHeader);
+export default connect(PanelHeader, 'PanelHeader');

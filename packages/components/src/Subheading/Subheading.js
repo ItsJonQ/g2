@@ -11,4 +11,4 @@ function Subheading({ className, ...props }) {
 	return <Text className={classes} size={11} weight={700} {...props} />;
 }
 
-export default connect(Subheading);
+export default connect(Subheading, 'Subheading');

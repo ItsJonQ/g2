@@ -13,4 +13,4 @@ function ModalTrigger({ as = Button, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(ModalTrigger);
+export default connect(ModalTrigger, 'ModalTrigger');

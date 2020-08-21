@@ -8,4 +8,4 @@ function ListItem({ ...props }) {
 	return <ListItemView {...props} />;
 }
 
-export default connect(ListItem);
+export default connect(ListItem, 'ListItem');

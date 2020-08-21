@@ -17,4 +17,4 @@ function CardBody({ className, ...props }) {
 	return <Scrollable {...props} className={cx} />;
 }
 
-export default connect(CardBody);
+export default connect(CardBody, 'CardBody');

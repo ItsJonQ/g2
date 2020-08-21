@@ -12,4 +12,4 @@ function NavigatorScreens({ children, ...props }) {
 	);
 }
 
-export default connect(NavigatorScreens);
+export default connect(NavigatorScreens, 'NavigatorScreens');

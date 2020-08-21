@@ -23,4 +23,4 @@ function Navigator({
 	);
 }
 
-export default connect(Navigator);
+export default connect(Navigator, 'Navigator');

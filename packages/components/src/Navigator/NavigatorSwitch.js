@@ -12,4 +12,4 @@ function NavigatorSwitch({ children }) {
 	);
 }
 
-export default connect(NavigatorSwitch);
+export default connect(NavigatorSwitch, 'NavigatorSwitch');

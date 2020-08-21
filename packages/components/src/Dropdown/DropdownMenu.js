@@ -41,4 +41,4 @@ function DropdownMenu({
 	);
 }
 
-export default connect(DropdownMenu);
+export default connect(DropdownMenu, 'DropdownMenu');

@@ -82,4 +82,4 @@ function Switch({
 	);
 }
 
-export default connect(Switch);
+export default connect(Switch, 'Switch');

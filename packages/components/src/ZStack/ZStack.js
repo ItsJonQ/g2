@@ -54,4 +54,4 @@ function ZStack({
 	);
 }
 
-export default connect(ZStack);
+export default connect(ZStack, 'ZStack');

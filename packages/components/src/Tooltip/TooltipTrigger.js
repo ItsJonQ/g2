@@ -27,4 +27,4 @@ function TooltipTrigger({
 	);
 }
 
-export default connect(TooltipTrigger);
+export default connect(TooltipTrigger, 'TooltipTrigger');

@@ -8,4 +8,4 @@ function FlatList({ ...props }) {
 	return <FlatListView {...props} />;
 }
 
-export default connect(FlatList);
+export default connect(FlatList, 'FlatList');

@@ -3,6 +3,13 @@ import { useEffect, useState } from 'react';
 import { breakpoints } from '../style-system/utils';
 import { useTheme } from './useTheme';
 
+// For SSR
+let __window = {};
+if (typeof window !== 'undefined') {
+	__window = window;
+}
+const { addEventListener, matchMedia, removeEventListener } = __window;
+
 export const useBreakpointIndex = (options = {}) => {
 	const { defaultIndex = 0 } = options;
 
@@ -20,10 +27,11 @@ export const useBreakpointIndex = (options = {}) => {
 
 	useEffect(() => {
 		const getIndex = () =>
-			breakpoints.filter(
-				(bp) =>
-					window.matchMedia(`screen and (min-width: ${bp})`).matches,
-			).length;
+			breakpoints.filter((bp) => {
+				return matchMedia
+					? matchMedia(`screen and (min-width: ${bp})`).matches
+					: false;
+			}).length;
 
 		const onResize = () => {
 			const newValue = getIndex();
@@ -33,8 +41,8 @@ export const useBreakpointIndex = (options = {}) => {
 		};
 
 		onResize();
-		window.addEventListener('resize', onResize);
-		return () => window.removeEventListener('resize', onResize);
+		addEventListener('resize', onResize);
+		return () => removeEventListener('resize', onResize);
 	}, [value]);
 
 	return value;

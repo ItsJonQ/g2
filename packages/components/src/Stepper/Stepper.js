@@ -92,4 +92,4 @@ function ControlButton({ isVertical, size, ...props }) {
 	);
 }
 
-export default connect(Stepper);
+export default connect(Stepper, 'Stepper');

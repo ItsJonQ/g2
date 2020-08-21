@@ -106,4 +106,4 @@ function TextField({
 	);
 }
 
-export default connect(TextField);
+export default connect(TextField, 'TextField');

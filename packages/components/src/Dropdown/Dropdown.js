@@ -39,4 +39,4 @@ function Dropdown({
 	);
 }
 
-export default connect(Dropdown);
+export default connect(Dropdown, 'Dropdown');

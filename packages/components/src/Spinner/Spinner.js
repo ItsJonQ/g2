@@ -43,4 +43,4 @@ function Spinner({
 	);
 }
 
-export default connect(Spinner);
+export default connect(Spinner, 'Spinner');

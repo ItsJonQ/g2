@@ -37,4 +37,4 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(CollapsibleContent);
+export default connect(CollapsibleContent, 'CollapsibleContent');

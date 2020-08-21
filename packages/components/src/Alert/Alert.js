@@ -38,4 +38,4 @@ function Alert({
 	);
 }
 
-export default connect(Alert);
+export default connect(Alert, 'Alert');

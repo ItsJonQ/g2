@@ -69,4 +69,4 @@ function NavigatorLink({
 	);
 }
 
-export default connect(NavigatorLink);
+export default connect(NavigatorLink, 'NavigatorLink');

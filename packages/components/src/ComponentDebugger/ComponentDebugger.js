@@ -63,4 +63,4 @@ function ComponentDebugger({ children, disabled = false, ...props }) {
 	);
 }
 
-export default connect(ComponentDebugger);
+export default connect(ComponentDebugger, 'ComponentDebugger');

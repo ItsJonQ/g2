@@ -32,4 +32,4 @@ function Tooltip({
 	);
 }
 
-export default connect(Tooltip);
+export default connect(Tooltip, 'Tooltip');

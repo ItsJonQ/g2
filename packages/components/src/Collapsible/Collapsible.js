@@ -21,4 +21,4 @@ function Collapsible({ children, visible, ...props }) {
 	);
 }
 
-export default connect(Collapsible);
+export default connect(Collapsible, 'Collapsible');

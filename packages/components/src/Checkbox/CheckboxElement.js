@@ -59,4 +59,4 @@ function CheckboxElement({
 	);
 }
 
-export default connect(CheckboxElement);
+export default connect(CheckboxElement, 'CheckboxElement');

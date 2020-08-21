@@ -13,4 +13,4 @@ function ColorField({ color, ...props }) {
 	);
 }
 
-export default connect(ColorField);
+export default connect(ColorField, 'ColorField');

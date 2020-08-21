@@ -10,4 +10,4 @@ function CloseButton({ ...props }) {
 	);
 }
 
-export default connect(CloseButton);
+export default connect(CloseButton, 'CloseButton');

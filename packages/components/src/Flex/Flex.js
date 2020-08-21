@@ -67,4 +67,4 @@ export function Flex({
 	);
 }
 
-export default connect(Flex);
+export default connect(Flex, 'Flex');

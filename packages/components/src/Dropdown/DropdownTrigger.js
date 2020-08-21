@@ -18,4 +18,4 @@ function DropdownTrigger({ forwardedRef, ...props }) {
 	);
 }
 
-export default connect(DropdownTrigger);
+export default connect(DropdownTrigger, 'DropdownTrigger');

@@ -1,4 +1,5 @@
 import { connect, hasNamespace } from '@wp-g2/context';
+import { ns } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -19,7 +20,9 @@ function HStack({
 		const _isSpacer = hasNamespace(child, ['Spacer']);
 
 		if (_isSpacer) {
-			return <FlexBlock key={child.key} {...child.props} />;
+			return (
+				<FlexBlock key={child.key} {...child.props} {...ns('Spacer')} />
+			);
 		}
 
 		return child;
@@ -38,4 +41,4 @@ function HStack({
 	);
 }
 
-export default connect(HStack);
+export default connect(HStack, 'HStack');

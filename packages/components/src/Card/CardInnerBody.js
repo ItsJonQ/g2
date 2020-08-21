@@ -10,4 +10,4 @@ function CardInnerBody({ ...props }) {
 	return <View {...props} cx={cx} />;
 }
 
-export default connect(CardInnerBody);
+export default connect(CardInnerBody, 'CardInnerBody');

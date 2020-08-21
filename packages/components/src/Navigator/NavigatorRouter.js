@@ -22,4 +22,4 @@ function NavigatorRouter({ children, initialPath }) {
 	return children;
 }
 
-export default connect(NavigatorRouter);
+export default connect(NavigatorRouter, 'NavigatorRouter');

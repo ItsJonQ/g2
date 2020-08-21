@@ -51,4 +51,4 @@ function ArrowIndicator({
 	);
 }
 
-export default connect(ArrowIndicator);
+export default connect(ArrowIndicator, 'ArrowIndicator');

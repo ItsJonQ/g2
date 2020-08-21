@@ -60,4 +60,4 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(NavigationStackScreens);
+export default connect(NavigationStackScreens, 'NavigationStackScreens');

@@ -30,4 +30,4 @@ function ModalHeader({
 	);
 }
 
-export default connect(ModalHeader);
+export default connect(ModalHeader, 'ModalHeader');

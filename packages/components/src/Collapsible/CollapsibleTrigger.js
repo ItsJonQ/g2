@@ -20,4 +20,4 @@ function CollapsibleTrigger({ className, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(CollapsibleTrigger);
+export default connect(CollapsibleTrigger, 'CollapsibleTrigger');

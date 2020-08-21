@@ -46,4 +46,4 @@ function MenuItem({
 	);
 }
 
-export default connect(MenuItem);
+export default connect(MenuItem, 'MenuItem');

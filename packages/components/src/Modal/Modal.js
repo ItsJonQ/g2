@@ -88,4 +88,4 @@ function Modal({
 	);
 }
 
-export default connect(Modal);
+export default connect(Modal, 'Modal');

@@ -8,4 +8,4 @@ function Draggable({ ...props }) {
 	return <DraggableView {...props} />;
 }
 
-export default connect(Draggable);
+export default connect(Draggable, 'Draggable');

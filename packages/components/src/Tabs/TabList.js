@@ -26,4 +26,4 @@ function TabList({ children, forwardedRef, label = 'Tabs', ...props }) {
 	);
 }
 
-export default connect(TabList);
+export default connect(TabList, 'TabList');

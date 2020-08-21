@@ -68,4 +68,4 @@ function Elevation({
 	return <ElevationView {...props} cx={cx} />;
 }
 
-export default connect(Elevation);
+export default connect(Elevation, 'Elevation');

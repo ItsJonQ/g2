@@ -19,4 +19,4 @@ function PanelBody({ children, ...props }) {
 	);
 }
 
-export default connect(PanelBody);
+export default connect(PanelBody, 'PanelBody');

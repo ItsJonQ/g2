@@ -18,4 +18,4 @@ function Scrollable({ children, smoothScroll = false, ...props }) {
 	);
 }
 
-export default connect(Scrollable);
+export default connect(Scrollable, 'Scrollable');

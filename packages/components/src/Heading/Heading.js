@@ -19,4 +19,4 @@ function Heading({ as = 'div', className, size = 3, ...props }) {
 	);
 }
 
-export default connect(Heading);
+export default connect(Heading, 'Heading');

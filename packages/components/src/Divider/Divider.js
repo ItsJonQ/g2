@@ -32,4 +32,4 @@ function Divider({ m, mb, mt, ...props }) {
 	return <Separator {...props} as={DividerView} cx={cx} />;
 }
 
-export default connect(Divider);
+export default connect(Divider, 'Divider');

@@ -26,4 +26,4 @@ function TooltipContent({ children, className, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(TooltipContent);
+export default connect(TooltipContent, 'TooltipContent');

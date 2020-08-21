@@ -10,4 +10,4 @@ function Debugger({ __force = false, ...props }) {
 	return <DebuggerView {...props} />;
 }
 
-export default connect(Debugger);
+export default connect(Debugger, 'Debugger');

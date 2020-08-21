@@ -23,4 +23,4 @@ function NavigationStackList() {
 		</VisuallyHidden>
 	);
 }
-export default connect(NavigationStackList);
+export default connect(NavigationStackList, 'NavigationStackList');

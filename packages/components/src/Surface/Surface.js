@@ -30,4 +30,4 @@ function Surface({
 	return <SurfaceView {...props} cx={cx} />;
 }
 
-export default connect(Surface);
+export default connect(Surface, 'Surface');

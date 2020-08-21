@@ -41,4 +41,4 @@ function Icon({
 	);
 }
 
-export default connect(Icon);
+export default connect(Icon, 'Icon');

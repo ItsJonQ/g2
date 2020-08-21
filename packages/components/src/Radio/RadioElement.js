@@ -57,4 +57,4 @@ function RadioElement({
 	);
 }
 
-export default connect(RadioElement);
+export default connect(RadioElement, 'RadioElement');

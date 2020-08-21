@@ -46,4 +46,4 @@ function Lozenge({
 	);
 }
 
-export default connect(Lozenge);
+export default connect(Lozenge, 'Lozenge');

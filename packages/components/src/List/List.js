@@ -13,4 +13,4 @@ function List({ type = 'unordered', ...props }) {
 	return <ListView as={asProp} {...props} cx={cx} />;
 }
 
-export default connect(List);
+export default connect(List, 'List');

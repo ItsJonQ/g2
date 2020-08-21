@@ -35,4 +35,4 @@ function PopoverContent({
 	);
 }
 
-export default connect(PopoverContent);
+export default connect(PopoverContent, 'PopoverContent');

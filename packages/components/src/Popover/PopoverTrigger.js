@@ -9,4 +9,4 @@ function PopoverTrigger({ forwardedRef, ...props }) {
 	return <PopoverDisclosure {...props} {...popover} ref={forwardedRef} />;
 }
 
-export default connect(PopoverTrigger);
+export default connect(PopoverTrigger, 'PopoverTrigger');

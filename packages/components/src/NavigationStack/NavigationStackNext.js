@@ -22,4 +22,4 @@ function NavigationStackScreenNext({ onClick = noop, ...props }) {
 	);
 }
 
-export default connect(NavigationStackScreenNext);
+export default connect(NavigationStackScreenNext, 'NavigationStackScreenNext');

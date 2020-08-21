@@ -64,7 +64,7 @@ function transformCode(code) {
 
 export function LiveCodeEditor({ children, file = "example.js" }) {
   const { debug, setDebug } = useAppContext()
-  const __enableDebugger = false
+  const __enableDebugger = true
 
   const code = children.props.children.trim()
 
@@ -82,7 +82,11 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
               <Text variant="muted">{file}</Text>
               {__enableDebugger && (
                 <HStack>
-                  {debug && <Text variant="muted">Mouseover below.</Text>}
+                  {debug && (
+                    <Text css={[ui.opacity(0.3)]} variant="muted">
+                      Mouseover below.
+                    </Text>
+                  )}
                   <Button
                     onClick={() => setDebug(!debug)}
                     size="xSmall"

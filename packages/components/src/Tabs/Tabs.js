@@ -19,4 +19,4 @@ function Tabs({ children, selectedId }) {
 	);
 }
 
-export default connect(Tabs);
+export default connect(Tabs, 'Tabs');

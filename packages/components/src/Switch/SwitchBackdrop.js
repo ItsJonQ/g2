@@ -14,4 +14,4 @@ function SwitchBackdrop({ checked = false, isFocused = false, ...props }) {
 	return <BackdropView aria-hidden={true} {...props} cx={cx} />;
 }
 
-export default connect(SwitchBackdrop);
+export default connect(SwitchBackdrop, 'SwitchBackdrop');

@@ -19,4 +19,4 @@ function FlexItem({ display: displayProp, isBlock = false, ...props }) {
 	return <BaseView {...props} cx={cx} />;
 }
 
-export default connect(FlexItem);
+export default connect(FlexItem, 'FlexItem');

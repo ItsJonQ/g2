@@ -39,4 +39,4 @@ function ColorPicker({
 	);
 }
 
-export default connect(ColorPicker);
+export default connect(ColorPicker, 'ColorPicker');

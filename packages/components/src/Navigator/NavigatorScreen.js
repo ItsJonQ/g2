@@ -53,4 +53,4 @@ function NavigatorScreen({ children, component, path, render, ...props }) {
 	);
 }
 
-export default connect(NavigatorScreen);
+export default connect(NavigatorScreen, 'NavigatorScreen');

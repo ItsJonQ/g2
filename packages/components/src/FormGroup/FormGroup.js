@@ -46,4 +46,4 @@ function FormGroup({
 	);
 }
 
-export default connect(FormGroup);
+export default connect(FormGroup, 'FormGroup');

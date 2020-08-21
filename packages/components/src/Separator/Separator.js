@@ -7,4 +7,4 @@ function Separator({ mb = 3, mt = 3, ...props }) {
 	return <Divider {...props} mb={mb} mt={mt} />;
 }
 
-export default connect(Separator);
+export default connect(Separator, 'Separator');

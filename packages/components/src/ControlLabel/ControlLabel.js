@@ -33,4 +33,4 @@ function ControlLabel({
 	);
 }
 
-export default connect(ControlLabel);
+export default connect(ControlLabel, 'ControlLabel');

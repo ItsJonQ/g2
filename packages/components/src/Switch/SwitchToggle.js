@@ -14,4 +14,4 @@ function SwitchToggle({ checked = false, size = 'medium', ...props }) {
 	return <ToggleView aria-hidden={true} {...props} cx={cx} />;
 }
 
-export default connect(SwitchToggle);
+export default connect(SwitchToggle, 'SwitchToggle');

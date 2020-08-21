@@ -16,4 +16,4 @@ function Radio({ forwardedRef, label, ...props }) {
 	);
 }
 
-export default connect(Radio);
+export default connect(Radio, 'Radio');

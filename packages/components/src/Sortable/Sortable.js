@@ -168,4 +168,4 @@ function Sortable({
 	);
 }
 
-export default connect(Sortable);
+export default connect(Sortable, 'Sortable');

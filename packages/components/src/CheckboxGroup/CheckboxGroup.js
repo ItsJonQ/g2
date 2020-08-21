@@ -23,4 +23,4 @@ function CheckboxGroup({
 	);
 }
 
-export default connect(CheckboxGroup);
+export default connect(CheckboxGroup, 'CheckboxGroup');

@@ -81,4 +81,4 @@ function getShowSeparator(radio, index) {
 	return showSeparator;
 }
 
-export default connect(SegmentControl);
+export default connect(SegmentControl, 'SegmentControl');

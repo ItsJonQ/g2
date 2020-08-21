@@ -29,4 +29,4 @@ function View({ children, forwardedRef, ...props }) {
 		</BaseView>
 	);
 }
-export default connect(View);
+export default connect(View, 'View');

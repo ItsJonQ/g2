@@ -45,4 +45,4 @@ function NavigationStack({
 	);
 }
 
-export default connect(NavigationStack);
+export default connect(NavigationStack, 'NavigationStack');

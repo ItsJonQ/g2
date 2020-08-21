@@ -33,4 +33,4 @@ function Menu({ children, className, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(Menu);
+export default connect(Menu, 'Menu');

@@ -35,4 +35,4 @@ function Background({
 	);
 }
 
-export default connect(Background);
+export default connect(Background, 'Background');

@@ -29,4 +29,4 @@ function Card({ children, className, elevation = 2, ...props }) {
 	);
 }
 
-export default connect(Card);
+export default connect(Card, 'Card');

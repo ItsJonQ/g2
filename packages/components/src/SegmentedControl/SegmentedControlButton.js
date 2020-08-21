@@ -61,4 +61,4 @@ function SegmentedControlButton({
 	);
 }
 
-export default connect(SegmentedControlButton);
+export default connect(SegmentedControlButton, 'SegmentedControlButton');

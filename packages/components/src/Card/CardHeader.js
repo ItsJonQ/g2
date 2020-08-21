@@ -15,4 +15,4 @@ function CardHeader({ className, ...props }) {
 	return <Flex {...props} className={cx} />;
 }
 
-export default connect(CardHeader);
+export default connect(CardHeader, 'CardHeader');

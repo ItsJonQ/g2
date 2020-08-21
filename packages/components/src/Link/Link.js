@@ -11,4 +11,4 @@ function Link({ className, forwardedRef, isPlain, ...props }) {
 	return <Text as="a" {...props} className={classes} ref={forwardedRef} />;
 }
 
-export default connect(Link);
+export default connect(Link, 'Link');

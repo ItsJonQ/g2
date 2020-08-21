@@ -52,4 +52,4 @@ function Tag({
 	);
 }
 
-export default connect(Tag);
+export default connect(Tag, 'Tag');

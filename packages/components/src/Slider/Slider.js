@@ -50,4 +50,4 @@ function Slider({
 	);
 }
 
-export default connect(Slider);
+export default connect(Slider, 'Slider');

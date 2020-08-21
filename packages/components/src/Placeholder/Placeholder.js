@@ -10,4 +10,4 @@ function Placeholder({ height = 36, width, ...props }) {
 	);
 }
 
-export default connect(Placeholder);
+export default connect(Placeholder, 'Placeholder');

@@ -16,4 +16,4 @@ function Checkbox({ forwardedRef, label, ...props }) {
 	);
 }
 
-export default connect(Checkbox);
+export default connect(Checkbox, 'Checkbox');

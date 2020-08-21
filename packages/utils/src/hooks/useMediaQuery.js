@@ -4,6 +4,12 @@ import { is } from '../is';
 import { json2mq } from '../mediaQueries';
 import { noop } from '../other';
 
+// For SSR
+let __window = {};
+if (typeof window !== 'undefined') {
+	__window = window;
+}
+
 function mockMatchMedia() {
 	return {
 		addListener: noop,
@@ -17,7 +23,7 @@ function mockMatchMedia() {
  */
 export function useMediaQuery(query, defaultMatches = true) {
 	const [matches, setMatches] = useState(defaultMatches);
-	const matchMedia = window.matchMedia || mockMatchMedia;
+	const matchMedia = __window.matchMedia || mockMatchMedia;
 
 	useEffect(() => {
 		const mediaQueryList = matchMedia(

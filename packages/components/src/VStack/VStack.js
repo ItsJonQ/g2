@@ -7,4 +7,4 @@ function VStack({ forwardedRef, ...props }) {
 	return <HStack {...props} direction="column" ref={forwardedRef} />;
 }
 
-export default connect(VStack);
+export default connect(VStack, 'VStack');

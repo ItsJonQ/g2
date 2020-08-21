@@ -8,4 +8,4 @@ function Image({ ...props }) {
 	return <ImageView {...props} />;
 }
 
-export default connect(Image);
+export default connect(Image, 'Image');

@@ -33,4 +33,4 @@ function Grid({
 	return <BaseView {...props} cx={cx} />;
 }
 
-export default connect(Grid);
+export default connect(Grid, 'Grid');

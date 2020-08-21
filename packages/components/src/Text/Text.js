@@ -54,4 +54,4 @@ function Text({
 	return <BaseView {...componentProps} />;
 }
 
-export default connect(Text);
+export default connect(Text, 'Text');

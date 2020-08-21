@@ -13,4 +13,4 @@ function BaseField({ isFocused, ...props }) {
 	return <BaseFieldView {...props} cx={cx} />;
 }
 
-export default connect(BaseField);
+export default connect(BaseField, 'BaseField');

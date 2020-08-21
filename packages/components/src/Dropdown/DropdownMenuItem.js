@@ -9,4 +9,4 @@ function DropdownMenuItem({ forwardedRef, ...props }) {
 	return <MenuItem {...props} {...menu} ref={forwardedRef} />;
 }
 
-export default connect(DropdownMenuItem);
+export default connect(DropdownMenuItem, 'DropdownMenuItem');

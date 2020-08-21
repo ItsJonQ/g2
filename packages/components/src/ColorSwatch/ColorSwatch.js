@@ -11,4 +11,4 @@ function ColorSwatch({ color: colorProp = 'purple', ...props }) {
 	return <ColorSwatchView style={{ backgroundColor }} />;
 }
 
-export default connect(ColorSwatch);
+export default connect(ColorSwatch, 'ColorSwatch');

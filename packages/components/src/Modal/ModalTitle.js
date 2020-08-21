@@ -9,4 +9,4 @@ function ModalTitle({ children, ...props }) {
 	return <ModalTitleView {...props}>{children}</ModalTitleView>;
 }
 
-export default connect(ModalTitle);
+export default connect(ModalTitle, 'ModalTitle');

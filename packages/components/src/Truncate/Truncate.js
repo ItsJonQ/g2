@@ -52,4 +52,4 @@ export function Truncate({
 	);
 }
 
-export default connect(Truncate);
+export default connect(Truncate, 'Truncate');

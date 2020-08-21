@@ -7,7 +7,7 @@ export const useAppContext = () => useContext(AppContext)
 export function AppProvider({ children }) {
   const [debug, setDebug] = useLocalState(
     "@wp-g2/website/AppProvider/debug",
-    false
+    true
   )
 
   const [state, setState] = useState({})
