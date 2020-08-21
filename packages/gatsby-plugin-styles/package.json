@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/gatsby-plugin-styles",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
