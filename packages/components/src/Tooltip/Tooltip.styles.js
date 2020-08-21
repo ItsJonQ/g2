@@ -5,6 +5,7 @@ export const TooltipContent = css`
 	outline: none;
 	transform-origin: top center;
 	transition: opacity 120ms ease;
+	z-index: 99999;
 
 	&[data-enter] {
 		opacity: 1;

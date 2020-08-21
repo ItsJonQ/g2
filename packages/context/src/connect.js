@@ -1,4 +1,4 @@
-import { cx, ns } from '@wp-g2/styles';
+import { cns, cx, ns } from '@wp-g2/styles';
 import { hoistNonReactStatics, is, kebabCase, uniq } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
@@ -43,6 +43,7 @@ export function componentsConnect(Component, namespace, options = {}) {
 
 		return (
 			<Component
+				{...cns()}
 				{...ns(displayName)}
 				{...mergedProps}
 				className={classes}
@@ -93,7 +94,7 @@ function getStyledClassNameFromKey(key) {
 }
 
 export function getConnectNamespace(Component) {
-	return Component[CONNECT_NAMESPACE] || [];
+	return (Component && Component[CONNECT_NAMESPACE]) || [];
 }
 
 export function hasConnectNamespace(Component, match) {

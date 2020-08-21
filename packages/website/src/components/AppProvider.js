@@ -1,17 +1,24 @@
 import { useLocalState } from "@wp-g2/utils"
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useContext } from "react"
 
 const AppContext = createContext({})
 export const useAppContext = () => useContext(AppContext)
 
 export function AppProvider({ children }) {
-  const [debug, setDebug] = useLocalState(
-    "@wp-g2/website/AppProvider/debug",
-    true
-  )
+  const [state, setState] = useLocalState("@wp-g2/website/AppProvider", {
+    debug: true,
+    inspect: false,
+  })
 
-  const [state, setState] = useState({})
-  const value = { ...state, debug, setDebug, setState }
+  const { debug, inspect } = state
+
+  const setDebug = next => setState(prev => ({ ...prev, debug: next }))
+
+  const toggleInspect = () => {
+    setState(prev => ({ ...prev, inspect: !inspect }))
+  }
+
+  const value = { debug, inspect, setDebug, setState, state, toggleInspect }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }

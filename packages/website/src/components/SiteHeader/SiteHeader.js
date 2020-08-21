@@ -1,15 +1,22 @@
 import {
   Elevation,
+  FormGroup,
   Heading,
   HStack,
   Link,
+  Spacer,
   Surface,
+  Switch,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
   View,
 } from "@wp-g2/components"
 import { ui } from "@wp-g2/styles"
 import { Link as GLink } from "gatsby"
 import React from "react"
 
+import { useAppContext } from "../AppProvider"
 import { Logo } from "../Logo"
 
 function NavLink(props) {
@@ -26,6 +33,8 @@ function NavLink(props) {
 }
 
 export function SiteHeader() {
+  const { inspect, toggleInspect } = useAppContext()
+
   return (
     <Surface
       as="header"
@@ -59,6 +68,17 @@ export function SiteHeader() {
             <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
             <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
             <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
+            <Spacer />
+            <FormGroup isMarginless label="Inspect">
+              <Tooltip placement="bottom-end">
+                <TooltipTrigger>
+                  <Switch checked={inspect} onChange={toggleInspect} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  See how this site was built with G2!
+                </TooltipContent>
+              </Tooltip>
+            </FormGroup>
           </HStack>
         </HStack>
       </View>

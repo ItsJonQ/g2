@@ -9,7 +9,8 @@ export {
 	sheet,
 } from './emotion';
 
+export * from './cns';
 export * from './css';
 export * from './cx';
-export * from './ns';
 export * from './jsx';
+export * from './ns';

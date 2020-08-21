@@ -14,7 +14,7 @@ const {
   Card,
   CardBody,
   CardHeader,
-  ComponentDebugger,
+  ComponentInspector,
   HStack,
   Spacer,
   Text,
@@ -98,9 +98,9 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
               )}
             </CardHeader>
             <CardBody css={{ padding: 20 }}>
-              <ComponentDebugger disabled={!debug || !__enableDebugger}>
+              <ComponentInspector disabled={!debug || !__enableDebugger}>
                 <LivePreview aria-label="Live code preview" />
-              </ComponentDebugger>
+              </ComponentInspector>
             </CardBody>
           </Card>
           <Card css={[ui.position.relative]}>

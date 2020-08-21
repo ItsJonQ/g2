@@ -1,6 +1,7 @@
 export * from "./AppProvider"
 export * from "./DocsNavigation"
 export * from "./DocsTableOfContents"
+export * from "./Inspector"
 export * from "./LiveEditor"
 export * from "./Logo"
 export * from "./MDXProvider"

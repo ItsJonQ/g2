@@ -9,6 +9,7 @@ import React from "react"
 import {
   DocsNavigation,
   DocsTableOfContents,
+  Inspector,
   SEO,
   SiteFooter,
   SiteHeader,
@@ -17,6 +18,7 @@ import BaseLayout from "./Base"
 
 export default function Layout(props) {
   const { children, data } = props
+
   const title = data?.mdx?.frontmatter?.title
   const description = data?.mdx?.frontmatter?.description
   const headings = data?.mdx?.tableOfContents?.items[0]?.items
@@ -25,41 +27,43 @@ export default function Layout(props) {
 
   return (
     <BaseLayout>
-      <View className="LayoutsDocsWrapper" css={[ui.padding.x(5)]}>
-        <SiteHeader />
-        <SEO description={description} title={title} />
-        <View
-          className="LayoutsDocsWrapperPage"
-          css={[ui.frame.width(1280), ui.alignment.center]}
-        >
-          <Grid
-            className="LayoutsDocsWrapperContent"
-            gap={40}
-            templateColumns="220px minmax(0, 1fr) 160px"
+      <Inspector>
+        <View className="LayoutsDocsWrapper" css={[ui.padding.x(5)]}>
+          <SiteHeader />
+          <SEO description={description} title={title} />
+          <View
+            className="LayoutsDocsWrapperPage"
+            css={[ui.frame.width(1280), ui.alignment.center]}
           >
-            <View as="aside" css={[ui.position.relative]}>
-              <DocsNavigation />
-            </View>
-            <View as="main">
-              <View
-                as="article"
-                className="LayoutsDocs"
-                css={{ fontSize: "1rem" }}
-              >
-                {isMdx ? (
-                  <MDXRenderer>{data?.mdx?.body}</MDXRenderer>
-                ) : (
-                  children
-                )}
+            <Grid
+              className="LayoutsDocsWrapperContent"
+              gap={40}
+              templateColumns="220px minmax(0, 1fr) 160px"
+            >
+              <View as="aside" css={[ui.position.relative]}>
+                <DocsNavigation />
               </View>
-              <SiteFooter />
-            </View>
-            <View as="aside" css={[ui.position.relative]}>
-              <DocsTableOfContents headings={headings} />
-            </View>
-          </Grid>
+              <View as="main">
+                <View
+                  as="article"
+                  className="LayoutsDocs"
+                  css={{ fontSize: "1rem" }}
+                >
+                  {isMdx ? (
+                    <MDXRenderer>{data?.mdx?.body}</MDXRenderer>
+                  ) : (
+                    children
+                  )}
+                </View>
+                <SiteFooter />
+              </View>
+              <View as="aside" css={[ui.position.relative]}>
+                <DocsTableOfContents headings={headings} />
+              </View>
+            </Grid>
+          </View>
         </View>
-      </View>
+      </Inspector>
     </BaseLayout>
   )
 }

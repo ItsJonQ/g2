@@ -1,17 +1,23 @@
 import { connect } from '@wp-g2/context';
+import { ns } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Debugger } from '../Debugger';
-import { ComponentDebuggerView } from './ComponentDebugger.styles';
+import { ComponentInspectorView } from './ComponentInspector.styles';
 
-function ComponentDebugger({ children, disabled = false, ...props }) {
+const [NAMESPACE] = Object.keys(ns());
+
+function ComponentInspector({ children, disabled = false, visible, ...props }) {
 	const nodeRef = useRef();
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 	const [label, setLabel] = useState();
 
+	const isHidden = is.boolean(visible) && !visible;
+
 	useEffect(() => {
 		const node = nodeRef.current;
-		if (!node || disabled) return;
+		if (!node || disabled || isHidden) return;
 
 		const clear = () => {
 			setPosition({ x: 0, y: 0 });
@@ -20,7 +26,7 @@ function ComponentDebugger({ children, disabled = false, ...props }) {
 
 		const handleOnMouseMove = (event) => {
 			const { target } = event;
-			const componentName = target.getAttribute('data-g2-component');
+			const componentName = target.getAttribute(NAMESPACE);
 
 			setPosition({ x: event.clientX, y: event.clientY });
 
@@ -38,13 +44,17 @@ function ComponentDebugger({ children, disabled = false, ...props }) {
 			node.removeEventListener('mouseenter', clear);
 			node.removeEventListener('mouseleave', clear);
 		};
-	}, [disabled]);
+	}, [disabled, isHidden]);
 
 	const { x, y } = position;
 	const showDebugger = disabled || !label || (!!x && !!y);
 
 	return (
-		<ComponentDebuggerView disabled={disabled} ref={nodeRef} {...props}>
+		<ComponentInspectorView
+			disabled={disabled || isHidden}
+			ref={nodeRef}
+			{...props}
+		>
 			{showDebugger && (
 				<Debugger
 					__force
@@ -59,8 +69,8 @@ function ComponentDebugger({ children, disabled = false, ...props }) {
 				</Debugger>
 			)}
 			{children}
-		</ComponentDebuggerView>
+		</ComponentInspectorView>
 	);
 }
 
-export default connect(ComponentDebugger, 'ComponentDebugger');
+export default connect(ComponentInspector, 'ComponentInspector');
