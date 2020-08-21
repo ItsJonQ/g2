@@ -77,6 +77,8 @@ export const large = css`
 
 export const small = css`
 	height: ${get('controlHeightSmall')};
+	padding-left: ${get('controlPaddingX')};
+	padding-right: ${get('controlPaddingX')};
 
 	&[data-icon='true'] {
 		min-width: ${get('controlHeightSmall')};
@@ -85,6 +87,8 @@ export const small = css`
 
 export const xSmall = css`
 	height: ${get('controlHeightXSmall')};
+	padding-left: ${get('controlPaddingXSmall')};
+	padding-right: ${get('controlPaddingXSmall')};
 
 	&[data-icon='true'] {
 		min-width: ${get('controlHeightXSmall')};

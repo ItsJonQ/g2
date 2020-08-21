@@ -91,6 +91,7 @@ const CONTROL_PROPS = {
 	controlHeightXSmall: '20px',
 	controlPaddingX: '8px',
 	controlPaddingXLarge: '16px',
+	controlPaddingXSmall: '4px',
 	controlPrimaryTextActiveColor: get('white'),
 	controlPrimaryTextColor: get('white'),
 	controlSurfaceBoxShadow:

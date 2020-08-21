@@ -19,6 +19,7 @@ export * from './ColorPicker';
 export * from './ColorSwatch';
 export * from './ControlGroup';
 export * from './ControlLabel';
+export * from './ComponentDebugger';
 export * from './Debugger';
 export * from './Divider';
 export * from './Dropdown';

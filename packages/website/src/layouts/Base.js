@@ -4,12 +4,12 @@ import "../styles/Global.css"
 import { MDXProvider } from "@mdx-js/react"
 import React from "react"
 
-import { LiveCodeEditor, SyntaxHighlighter } from "../components"
+import { AppProvider, LiveCodeEditor, SyntaxHighlighter } from "../components"
 
 const components = {
   pre: props => {
     if (props.children.props["live"]) {
-      return <LiveCodeEditor {...props} />
+      return <LiveCodeEditor {...props} file={props.children.props["file"]} />
     } else {
       return (
         <SyntaxHighlighter {...props} copy={!props.children.props["nocopy"]} />
@@ -21,5 +21,9 @@ const components = {
 
 export default function Layout(props) {
   const { children } = props
-  return <MDXProvider components={components}>{children}</MDXProvider>
+  return (
+    <AppProvider>
+      <MDXProvider components={components}>{children}</MDXProvider>
+    </AppProvider>
+  )
 }

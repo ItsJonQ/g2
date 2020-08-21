@@ -4,8 +4,8 @@ import React from 'react';
 
 import { DebuggerView } from './Debugger.styles';
 
-function Debugger({ ...props }) {
-	if (!IS_DEV_ENV) return null;
+function Debugger({ __force = false, ...props }) {
+	if (!IS_DEV_ENV && !__force) return null;
 
 	return <DebuggerView {...props} />;
 }

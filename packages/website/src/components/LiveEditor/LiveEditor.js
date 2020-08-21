@@ -7,7 +7,20 @@ import nightOwl from "prism-react-renderer/themes/nightOwl"
 import React from "react"
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live"
 
-const { Button, Card, CardBody, Spacer, VStack, View } = Components
+import { useAppContext } from "../AppProvider"
+
+const {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  ComponentDebugger,
+  HStack,
+  Spacer,
+  Text,
+  VStack,
+  View,
+} = Components
 
 const liveCodeScope = {
   ...Context,
@@ -49,8 +62,11 @@ function transformCode(code) {
   return `() => {${match}; return <Example />}`
 }
 
-export function LiveCodeEditor(props) {
-  const code = props.children.props.children.trim()
+export function LiveCodeEditor({ children, file = "example.js" }) {
+  const { debug, setDebug } = useAppContext()
+  const __enableDebugger = false
+
+  const code = children.props.children.trim()
 
   return (
     <Spacer className="LiveEditorWrapper" mb={8} mt={5}>
@@ -62,8 +78,25 @@ export function LiveCodeEditor(props) {
       >
         <VStack className="LiveEditorContainer">
           <Card>
+            <CardHeader css={[ui.padding.y(1.5), { minHeight: 20 }]}>
+              <Text variant="muted">{file}</Text>
+              {__enableDebugger && (
+                <HStack>
+                  {debug && <Text variant="muted">Mouseover below.</Text>}
+                  <Button
+                    onClick={() => setDebug(!debug)}
+                    size="xSmall"
+                    variant="tertiary"
+                  >
+                    {debug ? "Hide Debugger" : "Show Debugger"}
+                  </Button>
+                </HStack>
+              )}
+            </CardHeader>
             <CardBody css={{ padding: 20 }}>
-              <LivePreview aria-label="Live code preview" />
+              <ComponentDebugger disabled={!debug || !__enableDebugger}>
+                <LivePreview aria-label="Live code preview" />
+              </ComponentDebugger>
             </CardBody>
           </Card>
           <Card css={[ui.position.relative]}>
