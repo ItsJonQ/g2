@@ -9,6 +9,7 @@ import {
 } from "@wp-g2/components"
 import { cx, ui } from "@wp-g2/styles"
 import { Link } from "gatsby"
+import { kebabCase } from "lodash"
 import React, { useEffect, useRef } from "react"
 
 import data from "../../data/docs.json"
@@ -34,18 +35,18 @@ function SubSection({ sections }) {
 
   return (
     <VStack className="DocsNavigationSubSection" spacing={4}>
-      {sections.map(section => (
+      {sections.map((section, index) => (
         <View key={section.title}>
-          <Section isSubSection {...section} />
+          <Section isSubSection {...section} index={index} />
         </View>
       ))}
     </VStack>
   )
 }
 
-function Section({ index, isSubSection, links, sections, title }) {
+function Section({ index = 0, isSubSection, links, sections, title }) {
   const TitleComponent = isSubSection ? Subheading : Text
-  const id = `nav-${index}`
+  const id = `nav-${kebabCase(title)}-${index}`
 
   return (
     <VStack
