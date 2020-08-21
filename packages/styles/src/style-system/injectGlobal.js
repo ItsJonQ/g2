@@ -1,1 +1,0 @@
-export { injectGlobal } from './emotion';

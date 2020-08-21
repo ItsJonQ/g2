@@ -1,5 +1,15 @@
+export {
+	cache,
+	flush,
+	getRegisteredStyles,
+	hydrate,
+	injectGlobal,
+	keyframes,
+	merge,
+	sheet,
+} from './emotion';
+
 export * from './css';
 export * from './cx';
 export * from './ns';
-export * from './injectGlobal';
 export * from './jsx';
