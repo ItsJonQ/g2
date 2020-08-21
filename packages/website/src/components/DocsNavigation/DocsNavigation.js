@@ -1,5 +1,3 @@
-import "./DocsNavigation.css"
-
 import {
   Menu,
   MenuItem,

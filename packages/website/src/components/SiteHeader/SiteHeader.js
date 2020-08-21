@@ -1,5 +1,3 @@
-import "./SiteHeader.css"
-
 import {
   Elevation,
   Heading,

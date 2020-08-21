@@ -1,18 +1,3 @@
-.LayoutsDocsWrapper {
-  padding: 20px;
-}
-
-.LayoutsDocsWrapperPage {
-  max-width: 1280px;
-  margin: auto;
-}
-
-.LayoutsDocsWrapperContent {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) 160px;
-  grid-gap: 40px;
-}
-
 .LayoutsDocs {
   font-size: 1rem;
 }
@@ -52,8 +37,8 @@
 .LayoutsDocs h4[id],
 .LayoutsDocs h5[id],
 .LayoutsDocs h6[id] {
-  margin-top: -60px;
-  padding-top: 80px;
+  margin-top: -20px;
+  padding-top: 40px;
 }
 
 .LayoutsDocs h1 a.anchor {

@@ -1,5 +1,3 @@
-import "./SiteFooter.css"
-
 import { Spacer, Text, View } from "@wp-g2/components"
 import React from "react"
 

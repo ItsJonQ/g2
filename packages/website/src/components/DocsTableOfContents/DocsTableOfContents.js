@@ -1,13 +1,19 @@
 import "./DocsTableOfContents.css"
 
+import { Spacer, Subheading, View } from "@wp-g2/components"
 import { Link } from "gatsby"
 import React from "react"
 
 export function DocsTableOfContents({ headings = [] }) {
   return (
-    <div className="DocsTableOfContents">
-      <TableOfContents headings={headings} />
-    </div>
+    <View className="DocsTableOfContentsWrapper">
+      <Spacer>
+        <Subheading variant="muted">Contents</Subheading>
+      </Spacer>
+      <View className="DocsTableOfContents">
+        <TableOfContents headings={headings} />
+      </View>
+    </View>
   )
 }
 

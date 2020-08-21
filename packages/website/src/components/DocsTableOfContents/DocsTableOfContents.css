@@ -1,6 +1,9 @@
-.DocsTableOfContents {
+.DocsTableOfContentsWrapper {
   position: sticky;
   top: 100px;
+}
+
+.DocsTableOfContents {
   border-left: 1px solid var(--wp-g2-control-border-subtle-color);
 }
 
