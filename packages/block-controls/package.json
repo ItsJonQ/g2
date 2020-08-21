@@ -5,6 +5,7 @@
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
     "sideEffects": false,
+    "private": true,
     "scripts": {
         "clean": "rm -rf dist",
         "build:es": "BUILD_FORMAT=es zero build -d dist/es",
