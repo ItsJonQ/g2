@@ -18,7 +18,7 @@ function Links({ links }) {
   if (!links) return null
 
   return (
-    <Menu role="list">
+    <Menu>
       {links.map(link => (
         <MenuItem
           as={Link}
