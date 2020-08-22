@@ -1,10 +1,10 @@
 import {
+  Button,
   Elevation,
   FormGroup,
   Heading,
   HStack,
   Link,
-  Spacer,
   Surface,
   Switch,
   Tooltip,
@@ -12,8 +12,9 @@ import {
   TooltipTrigger,
   View,
 } from "@wp-g2/components"
+import { FiSearch } from "@wp-g2/icons"
 import { ui } from "@wp-g2/styles"
-import { Link as GLink } from "gatsby"
+import { Link as GLink, navigate } from "gatsby"
 import React from "react"
 
 import { useAppContext } from "../AppProvider"
@@ -64,12 +65,13 @@ export function SiteHeader() {
               G2 Components
             </Heading>
           </GLink>
-          <HStack as="nav" className="SiteHeaderSideLinks">
-            <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
-            <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
-            <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
-            <Spacer />
-            <FormGroup isMarginless label="Inspect">
+          <HStack as="nav" className="SiteHeaderSideLinks" spacing={6}>
+            <HStack>
+              <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
+              <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
+              <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
+            </HStack>
+            <FormGroup isMarginless label="Inspect" templateColumns="1fr 1fr">
               <Tooltip placement="bottom-end">
                 <TooltipTrigger>
                   <Switch checked={inspect} onChange={toggleInspect} />
@@ -79,6 +81,17 @@ export function SiteHeader() {
                 </TooltipContent>
               </Tooltip>
             </FormGroup>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button
+                  icon={<FiSearch />}
+                  isRounded
+                  label="Search"
+                  onClick={() => navigate("/search")}
+                />
+              </TooltipTrigger>
+              <TooltipContent>Search</TooltipContent>
+            </Tooltip>
           </HStack>
         </HStack>
       </View>

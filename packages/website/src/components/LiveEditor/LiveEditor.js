@@ -92,7 +92,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
                     size="xSmall"
                     variant="tertiary"
                   >
-                    {debug ? "Hide Debugger" : "Show Debugger"}
+                    {debug ? "Hide Inspector" : "Show Inspector"}
                   </Button>
                 </HStack>
               )}

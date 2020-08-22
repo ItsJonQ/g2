@@ -23,8 +23,16 @@ const CodeWrapperView = styled.span`
 
 export function DefinitionPopover({ children }) {
   const data = useComponentData(children)
+  let currentPage = false
 
-  if (!data || !is.string(children)) {
+  // For SSR
+  if (typeof window !== "undefined") {
+    currentPage = window?.location?.pathname
+  }
+
+  const isCurrentPage = currentPage && currentPage.includes(data?.fields?.slug)
+
+  if (!data || !is.string(children) || isCurrentPage) {
     return <code>{children}</code>
   }
 
