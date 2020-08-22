@@ -4,6 +4,7 @@ import {
   FormGroup,
   Heading,
   HStack,
+  Icon,
   Link,
   Surface,
   Switch,
@@ -55,15 +56,12 @@ export function SiteHeader() {
       >
         <HStack className="SiteHeaderLinkWrapper">
           <GLink role="banner" to="/">
-            <Heading className="SiteHeaderLogo" size={4}>
-              <View
-                as="span"
-                css={{ paddingRight: 8, verticalAlign: "middle" }}
-              >
-                <Logo />
-              </View>
-              G2 Components
-            </Heading>
+            <HStack>
+              <Icon icon={<Logo />} size={32} />
+              <Heading className="SiteHeaderLogo" size={4}>
+                G2 Components
+              </Heading>
+            </HStack>
           </GLink>
           <HStack as="nav" className="SiteHeaderSideLinks" spacing={6}>
             <HStack>
