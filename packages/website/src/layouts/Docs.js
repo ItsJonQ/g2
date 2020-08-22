@@ -1,14 +1,6 @@
 import "./Docs.css"
 
-import {
-  Grid,
-  HStack,
-  Lozenge,
-  Separator,
-  Subheading,
-  Text,
-  View,
-} from "@wp-g2/components"
+import { Grid, View } from "@wp-g2/components"
 import { ui } from "@wp-g2/styles"
 import { graphql } from "gatsby"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
