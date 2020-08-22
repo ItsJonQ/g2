@@ -44,3 +44,11 @@ export const borderRadius = css`
 export const popoverBody = css`
 	max-height: 80vh;
 `;
+
+export const small = css`
+	min-height: 30px;
+`;
+
+export const xSmall = css`
+	min-height: 24px;
+`;

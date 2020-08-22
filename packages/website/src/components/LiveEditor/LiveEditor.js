@@ -78,7 +78,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
       >
         <VStack className="LiveEditorContainer">
           <Card>
-            <CardHeader css={[ui.padding.y(1.5), { minHeight: 20 }]}>
+            <CardHeader size="small">
               <Text variant="muted">{file}</Text>
               {__enableDebugger && (
                 <HStack>

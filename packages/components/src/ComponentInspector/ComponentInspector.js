@@ -16,6 +16,13 @@ function ComponentInspector({ children, disabled = false, visible, ...props }) {
 	const isHidden = is.boolean(visible) && !visible;
 
 	useEffect(() => {
+		if (isHidden) {
+			setPosition({ x: 0, y: 0 });
+			setLabel(null);
+		}
+	}, [isHidden]);
+
+	useEffect(() => {
 		const node = nodeRef.current;
 		if (!node || disabled || isHidden) return;
 

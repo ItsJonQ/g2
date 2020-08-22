@@ -1,4 +1,5 @@
 export * from "./AppProvider"
+export * from "./DefinitionPopover"
 export * from "./DocsNavigation"
 export * from "./DocsTableOfContents"
 export * from "./Inspector"

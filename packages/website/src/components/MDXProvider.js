@@ -1,9 +1,16 @@
 import { MDXProvider as BaseMDXProvider } from "@mdx-js/react"
 import React from "react"
 
-import { LiveCodeEditor, SyntaxHighlighter } from "../components"
+import {
+  DefinitionPopover,
+  LiveCodeEditor,
+  SyntaxHighlighter,
+} from "../components"
 
 const components = {
+  inlineCode: props => {
+    return <DefinitionPopover {...props} />
+  },
   pre: props => {
     if (props.children.props["live"]) {
       return <LiveCodeEditor {...props} file={props.children.props["file"]} />
