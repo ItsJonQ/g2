@@ -39,22 +39,24 @@ export function DefinitionPopover({ children }) {
   const { fields, frontmatter } = data
 
   return (
-    <Popover placement="top-start">
-      <PopoverTrigger as={CodeWrapperView}>
-        <code>{children}</code>
-      </PopoverTrigger>
-      <PopoverContent preventBodyScroll={false} tabIndex={0}>
-        <CardHeader size="small">
-          <Heading size={5}>{frontmatter.title}</Heading>
-          <Text weight="bold">
-            <Link to={fields.slug}>View Docs</Link>
-          </Text>
-        </CardHeader>
-        <CardBody>
-          <Text>{frontmatter.description}</Text>
-        </CardBody>
-      </PopoverContent>
-    </Popover>
+    <>
+      <Popover placement="top-start">
+        <PopoverTrigger as={CodeWrapperView}>
+          <code>{children}</code>
+        </PopoverTrigger>
+        <PopoverContent preventBodyScroll={false} tabIndex={0}>
+          <CardHeader size="small">
+            <Heading size={5}>{frontmatter.title}</Heading>
+            <Text weight="bold">
+              <Link to={fields.slug}>View Docs</Link>
+            </Text>
+          </CardHeader>
+          <CardBody>
+            <Text>{frontmatter.description}</Text>
+          </CardBody>
+        </PopoverContent>
+      </Popover>
+    </>
   )
 }
 

@@ -13,8 +13,11 @@ export const LozengeView = styled.div`
 	display: flex;
 	height: 18px;
 	line-height: 1;
-	max-width: 120px;
 	padding: 0 4px;
+`;
+
+export const truncate = css`
+	max-width: 120px;
 `;
 
 export const text = css`

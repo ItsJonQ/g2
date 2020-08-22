@@ -1,5 +1,4 @@
 import {
-  Button,
   Elevation,
   FormGroup,
   Heading,
@@ -13,13 +12,13 @@ import {
   TooltipTrigger,
   View,
 } from "@wp-g2/components"
-import { FiSearch } from "@wp-g2/icons"
 import { ui } from "@wp-g2/styles"
-import { Link as GLink, navigate } from "gatsby"
+import { Link as GLink } from "gatsby"
 import React from "react"
 
 import { useAppContext } from "../AppProvider"
 import { Logo } from "../Logo"
+import { SiteSearch } from "../SiteSearch"
 
 function NavLink(props) {
   return (
@@ -79,17 +78,7 @@ export function SiteHeader() {
                 </TooltipContent>
               </Tooltip>
             </FormGroup>
-            <Tooltip>
-              <TooltipTrigger>
-                <Button
-                  icon={<FiSearch />}
-                  isRounded
-                  label="Search"
-                  onClick={() => navigate("/search")}
-                />
-              </TooltipTrigger>
-              <TooltipContent>Search</TooltipContent>
-            </Tooltip>
+            <SiteSearch />
           </HStack>
         </HStack>
       </View>

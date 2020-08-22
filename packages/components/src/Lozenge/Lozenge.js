@@ -13,6 +13,7 @@ function Lozenge({
 	color: colorProp = 'standard',
 	display = 'inline-flex',
 	isBold,
+	truncate = true,
 	...props
 }) {
 	const lozengeColor = LOZENGE_COLORS[colorProp] || LOZENGE_COLORS.standard;
@@ -24,6 +25,7 @@ function Lozenge({
 
 	const cx = [
 		sx.base,
+		truncate && styles.truncate,
 		styles.getBackground({ color: lozengeColor, isBold }),
 		styles.getBackgroundText({ color: lozengeColor, isBold }),
 	];

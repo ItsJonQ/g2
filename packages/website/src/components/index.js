@@ -1,6 +1,7 @@
 export * from "./AppProvider"
 export * from "./DefinitionPopover"
 export * from "./DocsNavigation"
+export * from "./DocsSearch"
 export * from "./DocsTableOfContents"
 export * from "./Inspector"
 export * from "./LiveEditor"
