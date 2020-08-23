@@ -1,5 +1,6 @@
 {
   "name": "vscode-snippet-wp-g2",
+  "displayName": "G2 Components Snippets",
   "version": "0.0.41",
   "description": "VS Code snippets for G2 Components.",
   "sideEffects": false,
@@ -10,7 +11,7 @@
     "build:data": "node ./scripts/generate-snip-files.js",
     "build:snippets": "node ./scripts/generate-vscode-snippets.js",
     "build": "npm run build:data && npm run build:snippets",
-    "postversion": "npm run release",
+    "prerelease": "node ./scripts/update-version.js",
     "release": "vsce publish",
     "test": "echo "
   },
@@ -21,6 +22,10 @@
     "gray-matter": "^4.0.2",
     "mkdirp": "^0.5.1"
   },
+  "files": [
+    "images",
+    "snippets"
+  ],
   "keywords": [
     "wordpress",
     "components",
@@ -43,10 +48,10 @@
     "vscode": "^1.12.0"
   },
   "galleryBanner": {
-    "color": "#ffffff",
-    "theme": "light"
+    "color": "#000000",
+    "theme": "dark"
   },
-  "icon": "images/wordpress.png",
+  "icon": "images/g2.png",
   "categories": [
     "Snippets"
   ],
