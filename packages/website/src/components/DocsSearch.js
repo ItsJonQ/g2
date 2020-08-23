@@ -146,7 +146,7 @@ function ResultItem({ description, menu, slug, snippet, title }) {
 
   const dragSnippetData = event => {
     if (snippet) {
-      event.dataTransfer.setData("text", snippet)
+      event.dataTransfer.setData("text/plain", snippet)
     }
   }
 
@@ -175,7 +175,7 @@ function ResultItem({ description, menu, slug, snippet, title }) {
       onClick={() => navigate(slug)}
       onDragStart={dragSnippetData}
       onKeyDown={handleOnKeyDown}
-      title={`${title}. Drag to paste code snippet`}
+      title={`${title}. Copy or drag/drop for code snippet.`}
     >
       <VStack
         css={[
