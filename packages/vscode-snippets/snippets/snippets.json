@@ -1,19 +1,19 @@
 {
 	"g2-components-button": {
-		"body": ["<Button>Go</Button>"],
+		"body": ["<Button>${1:Go}</Button>"],
 		"prefix": "g2-button"
 	},
 	"g2-components-card": {
 		"body": [
 			"<Card>",
 			"  <CardHeader>",
-			"    <Heading size={4}>Card Title</Heading>",
+			"    <Heading size={4}>${1:Card Title}</Heading>",
 			"  </CardHeader>",
 			"  <CardBody>",
-			"    <Text>Card Content</Text>",
+			"    <Text>${2:Card Content}</Text>",
 			"  </CardBody>",
 			"  <CardFooter>",
-			"    <Text>Card Footer</Text>",
+			"    <Text>${3:Card Footer}</Text>",
 			"  </CardFooter>",
 			"</Card>"
 		],
@@ -24,12 +24,12 @@
 			"<Flex>",
 			"  <FlexItem>",
 			"    <View css={[ui.background.blue]}>",
-			"      <Text>Ana</Text>",
+			"      <Text>${1:Ana}</Text>",
 			"    </View>",
 			"  </FlexItem>",
 			"  <FlexBlock>",
 			"    <View css={[ui.background.blue]}>",
-			"      <Text>Elsa</Text>",
+			"      <Text>${2:Elsa}</Text>",
 			"    </View>",
 			"  </FlexBlock>",
 			"</Flex>"
@@ -40,33 +40,33 @@
 		"body": [
 			"<Grid columns={3}>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Ana</Text>",
+			"    <Text>${1:Ana}</Text>",
 			"  </View>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Elsa</Text>",
+			"    <Text>${2:Elsa}</Text>",
 			"  </View>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Olaf</Text>",
+			"    <Text>${3:Olaf}</Text>",
 			"  </View>",
 			"</Grid>"
 		],
 		"prefix": "g2-grid"
 	},
 	"g2-components-heading": {
-		"body": ["<Heading>Into The Unknown</Heading>"],
+		"body": ["<Heading>${1:Into The Unknown}</Heading>"],
 		"prefix": "g2-heading"
 	},
 	"g2-components-hstack": {
 		"body": [
 			"<HStack>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Ana</Text>",
+			"    <Text>${1:Ana}</Text>",
 			"  </View>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Elsa</Text>",
+			"    <Text>${2:Elsa}</Text>",
 			"  </View>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Olaf</Text>",
+			"    <Text>${3:Olaf}</Text>",
 			"  </View>",
 			"</HStack>"
 		],
@@ -76,7 +76,7 @@
 		"body": [
 			"<View>",
 			"  <Spacer>",
-			"    <Heading>Into the unknown</Heading>",
+			"    <Heading>${1:Into the unknown}</Heading>",
 			"  </Spacer>",
 			"  <Text>",
 			"    Every day's a little harder as I feel your power grow. Don't you know",
@@ -87,11 +87,11 @@
 		"prefix": "g2-spacer"
 	},
 	"g2-components-subheading": {
-		"body": ["<Subheading>Into The Unknown</Subheading>"],
+		"body": ["<Subheading>${1:Into The Unknown}</Subheading>"],
 		"prefix": "g2-subheading"
 	},
 	"g2-components-text": {
-		"body": ["<Text>Where the north wind meets the sea...</Text>"],
+		"body": ["<Text>${1:Where the north wind meets the sea...}</Text>"],
 		"prefix": "g2-text"
 	},
 	"g2-components-textfield": {
@@ -110,20 +110,20 @@
 		"prefix": "g2-truncate"
 	},
 	"g2-components-view": {
-		"body": ["<View>", "  <Text>Into the unknown</Text>", "</View>"],
+		"body": ["<View>", "  <Text>${1:Into the unknown}</Text>", "</View>"],
 		"prefix": "g2-view"
 	},
 	"g2-components-vstack": {
 		"body": [
 			"<VStack css={[ui.frame.height(200)]}>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Ana</Text>",
+			"    <Text>${1:Ana}</Text>",
 			"  </View>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Elsa</Text>",
+			"    <Text>${2:Elsa}</Text>",
 			"  </View>",
 			"  <View css={[ui.background.blue]}>",
-			"    <Text>Olaf</Text>",
+			"    <Text>${3:Olaf}</Text>",
 			"  </View>",
 			"</VStack>"
 		],

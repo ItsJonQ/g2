@@ -31,6 +31,18 @@ ${snippet}
       `;
 
 			content = content.trim();
+
+			const matches = content.match(/(\>)(.*?)(\<\/)/g);
+			if (matches && matches.length) {
+				matches.forEach((match, index) => {
+					const next = match
+						.replace('>', [`>$`, `{`, index + 1, `:`].join(''))
+						.replace('</', `}</`);
+
+					content = content.replace(match, next);
+				});
+			}
+
 			const snipFilePath = path.join(DATA_DIR, `${slug}.snip`);
 
 			fs.writeFileSync(snipFilePath, content);
