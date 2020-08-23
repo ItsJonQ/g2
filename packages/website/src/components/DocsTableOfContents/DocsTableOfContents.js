@@ -23,11 +23,11 @@ export function DocsTableOfContents({ headings = [] }) {
 
 function TableOfContents({ currentId, headings = [] }) {
   return (
-    <ul>
+    <View as="ul">
       {headings
         .filter(heading => heading.depth !== 1)
         .map(heading => (
-          <li key={heading.title}>
+          <View as="li" key={heading.title}>
             <Link
               aria-current={
                 currentId === heading.url.replace("#", "") ? "page" : null
@@ -39,8 +39,8 @@ function TableOfContents({ currentId, headings = [] }) {
             {heading.items && (
               <TableOfContents currentId={currentId} headings={heading.items} />
             )}
-          </li>
+          </View>
         ))}
-    </ul>
+    </View>
   )
 }

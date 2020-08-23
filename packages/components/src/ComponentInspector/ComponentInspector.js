@@ -54,7 +54,7 @@ function ComponentInspector({ children, disabled = false, visible, ...props }) {
 	}, [disabled, isHidden]);
 
 	const { x, y } = position;
-	const showDebugger = disabled || !label || (!!x && !!y);
+	const showDebugger = label && !!x && !!y && !disabled;
 
 	return (
 		<ComponentInspectorView

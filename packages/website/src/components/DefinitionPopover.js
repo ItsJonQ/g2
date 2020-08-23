@@ -14,7 +14,7 @@ import {
 import { get, styled } from "@wp-g2/styles"
 import { is } from "@wp-g2/utils"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import { SyntaxHighlighter } from "./SyntaxHighlighter"
 
@@ -30,6 +30,16 @@ const CodeWrapperView = styled.span`
 export function DefinitionPopover({ children }) {
   const data = useComponentData(children)
   let currentPage = false
+  const [canRender, setCanRender] = useState(true)
+  const nodeRef = useRef()
+
+  useEffect(() => {
+    const node = nodeRef.current
+    const closestLink = node?.closest("a")
+    if (closestLink) {
+      setCanRender(false)
+    }
+  }, [])
 
   // For SSR
   if (typeof window !== "undefined") {
@@ -38,8 +48,8 @@ export function DefinitionPopover({ children }) {
 
   const isCurrentPage = currentPage && currentPage.includes(data?.fields?.slug)
 
-  if (!data || !is.string(children) || isCurrentPage) {
-    return <code>{children}</code>
+  if (!data || !is.string(children) || isCurrentPage || !canRender) {
+    return <code ref={nodeRef}>{children}</code>
   }
 
   const { fields, frontmatter } = data
@@ -50,7 +60,7 @@ export function DefinitionPopover({ children }) {
     <>
       <Popover placement="bottom-start">
         <PopoverTrigger as={CodeWrapperView}>
-          <code>{children}</code>
+          <code ref={nodeRef}>{children}</code>
         </PopoverTrigger>
         <PopoverContent preventBodyScroll={false} tabIndex={0}>
           <CardHeader size="small">
