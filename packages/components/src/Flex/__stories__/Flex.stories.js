@@ -5,7 +5,7 @@ import { Flex, FlexItem } from '../index';
 
 export default {
 	component: Flex,
-	title: 'components/flex/',
+	title: 'Components/Flex',
 };
 
 const ItemView = (props) => <Placeholder {...props} />;
