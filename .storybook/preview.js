@@ -76,7 +76,6 @@ function Themer() {
 
 	const reset = () => {
 		setThemeConfig((prev) => ({ ...prev, ...defaultThemeConfig }));
-		setColorAdmin(defaultThemeConfig.colorAdmin);
 	};
 
 	const {
