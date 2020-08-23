@@ -1,0 +1,132 @@
+{
+	"g2-components-button": {
+		"body": ["<Button>Go</Button>"],
+		"prefix": "g2-button"
+	},
+	"g2-components-card": {
+		"body": [
+			"<Card>",
+			"  <CardHeader>",
+			"    <Heading size={4}>Card Title</Heading>",
+			"  </CardHeader>",
+			"  <CardBody>",
+			"    <Text>Card Content</Text>",
+			"  </CardBody>",
+			"  <CardFooter>",
+			"    <Text>Card Footer</Text>",
+			"  </CardFooter>",
+			"</Card>"
+		],
+		"prefix": "g2-card"
+	},
+	"g2-components-flex": {
+		"body": [
+			"<Flex>",
+			"  <FlexItem>",
+			"    <View css={[ui.background.blue]}>",
+			"      <Text>Ana</Text>",
+			"    </View>",
+			"  </FlexItem>",
+			"  <FlexBlock>",
+			"    <View css={[ui.background.blue]}>",
+			"      <Text>Elsa</Text>",
+			"    </View>",
+			"  </FlexBlock>",
+			"</Flex>"
+		],
+		"prefix": "g2-flex"
+	},
+	"g2-components-grid": {
+		"body": [
+			"<Grid columns={3}>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Ana</Text>",
+			"  </View>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Elsa</Text>",
+			"  </View>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Olaf</Text>",
+			"  </View>",
+			"</Grid>"
+		],
+		"prefix": "g2-grid"
+	},
+	"g2-components-heading": {
+		"body": ["<Heading>Into The Unknown</Heading>"],
+		"prefix": "g2-heading"
+	},
+	"g2-components-hstack": {
+		"body": [
+			"<HStack>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Ana</Text>",
+			"  </View>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Elsa</Text>",
+			"  </View>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Olaf</Text>",
+			"  </View>",
+			"</HStack>"
+		],
+		"prefix": "g2-hstack"
+	},
+	"g2-components-spacer": {
+		"body": [
+			"<View>",
+			"  <Spacer>",
+			"    <Heading>Into the unknown</Heading>",
+			"  </Spacer>",
+			"  <Text>",
+			"    Every day's a little harder as I feel your power grow. Don't you know",
+			"    there's part of me that longs to go.",
+			"  </Text>",
+			"</View>"
+		],
+		"prefix": "g2-spacer"
+	},
+	"g2-components-subheading": {
+		"body": ["<Subheading>Into The Unknown</Subheading>"],
+		"prefix": "g2-subheading"
+	},
+	"g2-components-text": {
+		"body": ["<Text>Where the north wind meets the sea...</Text>"],
+		"prefix": "g2-text"
+	},
+	"g2-components-textfield": {
+		"body": ["<TextField placeholder=\"First name\" />"],
+		"prefix": "g2-textfield"
+	},
+	"g2-components-truncate": {
+		"body": [
+			"<Truncate>",
+			"  Where the north wind meets the sea, there's a river full of memory. Sleep,",
+			"  my darling, safe and sound, for in this river all is found. In her waters,",
+			"  deep and true, lay the answers and a path for you. Dive down deep into her",
+			"  sound, but not too far or you'll be drowned",
+			"</Truncate>"
+		],
+		"prefix": "g2-truncate"
+	},
+	"g2-components-view": {
+		"body": ["<View>", "  <Text>Into the unknown</Text>", "</View>"],
+		"prefix": "g2-view"
+	},
+	"g2-components-vstack": {
+		"body": [
+			"<VStack css={[ui.frame.height(200)]}>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Ana</Text>",
+			"  </View>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Elsa</Text>",
+			"  </View>",
+			"  <View css={[ui.background.blue]}>",
+			"    <Text>Olaf</Text>",
+			"  </View>",
+			"</VStack>"
+		],
+		"prefix": "g2-vstack"
+	}
+}

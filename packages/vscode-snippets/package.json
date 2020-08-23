@@ -1,0 +1,79 @@
+{
+  "name": "vscode-snippet-wp-g2",
+  "version": "0.0.41",
+  "description": "VS Code snippets for G2 Components.",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf _tmp && rm -rf snippets",
+    "start": "build",
+    "prebuild": "npm run clean",
+    "build:data": "node ./scripts/generate-snip-files.js",
+    "build:snippets": "node ./scripts/generate-vscode-snippets.js",
+    "build": "npm run build:data && npm run build:snippets",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.4",
+    "gray-matter": "^4.0.2",
+    "mkdirp": "^0.5.1"
+  },
+  "keywords": [
+    "wordpress",
+    "components",
+    "component",
+    "wp",
+    "g2",
+    "snippets",
+    "snippet",
+    "react",
+    "javascript",
+    "typescript",
+    "jsx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ItsJonQ/g2"
+  },
+  "publisher": "itsjonq",
+  "engines": {
+    "vscode": "^1.12.0"
+  },
+  "galleryBanner": {
+    "color": "#ffffff",
+    "theme": "light"
+  },
+  "icon": "images/wordpress.png",
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}

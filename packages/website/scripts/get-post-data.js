@@ -25,12 +25,14 @@ function getDataFileDir(filePath) {
 
 async function getDataFromFile(filePath) {
   const markdown = fs.readFileSync(filePath, "utf-8")
-  const slug = path.basename(path.dirname(filePath))
   const rawFileName = path.basename(filePath).toLowerCase()
   const fileName = rawFileName.replace("readme", "index")
+
   const dataFileName = fileName.replace(".mdx", ".json").replace(".md", ".json")
   const dataFileDest = getDataFileDir(filePath)
   const dataFilePath = path.join(dataFileDest, dataFileName)
+
+  const slug = dataFileName.replace(".json", "")
 
   const baseDestDir = dataFileDest.replace(dataDestDir, "")
 
