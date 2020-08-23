@@ -11,6 +11,8 @@ import {
   VStack,
 } from "@wp-g2/components"
 import { FiSearch } from "@wp-g2/icons"
+import { ui } from "@wp-g2/styles"
+import { copyToClipboard } from "@wp-g2/utils"
 import Fuse from "fuse.js"
 import { graphql, navigate, useStaticQuery } from "gatsby"
 import { uniqBy } from "lodash"
@@ -128,24 +130,76 @@ function ResultsHeader({ results = [], query = "" }) {
     </View>
   )
 }
+
+function ResultItem({ description, menu, slug, snippet, title }) {
+  const [hasCopied, setHasCopied] = useState(false)
+
+  useEffect(() => {
+    if (hasCopied) {
+      const id = setTimeout(() => {
+        setHasCopied(false)
+      }, 200)
+
+      return () => clearTimeout(id)
+    }
+  }, [hasCopied])
+
+  const dragSnippetData = event => {
+    if (snippet) {
+      event.dataTransfer.setData("text", snippet)
+    }
+  }
+
+  const copySnippetData = event => {
+    if (snippet) {
+      event.preventDefault()
+      copyToClipboard(snippet)
+      const didCopy = copyToClipboard(snippet)
+      setHasCopied(didCopy)
+    }
+  }
+
+  const handleOnKeyDown = event => {
+    const { ctrlKey, keyCode, metaKey } = event
+    // Copy command
+    if (keyCode === 67 && (ctrlKey || metaKey)) {
+      return copySnippetData(event)
+    }
+  }
+
+  return (
+    <ReakitMenuItem
+      as={MenuItem}
+      {...menu}
+      draggable
+      onClick={() => navigate(slug)}
+      onDragStart={dragSnippetData}
+      onKeyDown={handleOnKeyDown}
+      title={`${title}. Drag to paste code snippet`}
+    >
+      <VStack
+        css={[
+          ui.scale(hasCopied ? 0.98 : 1),
+          ui.opacity(hasCopied ? 0.4 : 1),
+          ui.animation.duration(0.16),
+          ui.animation.bounce,
+        ]}
+        spacing={1}
+      >
+        <Heading size={4}>{title}</Heading>
+        <Text variant="muted">{description}</Text>
+      </VStack>
+    </ReakitMenuItem>
+  )
+}
+
 function SearchResults({ results = [] }) {
   const menu = useMenuState({ visible: true })
 
   return (
     <VStack>
       {results.map(result => (
-        <View key={result.item.id}>
-          <ReakitMenuItem
-            as={MenuItem}
-            {...menu}
-            onClick={() => navigate(result.item.slug)}
-          >
-            <VStack spacing={1}>
-              <Heading size={4}>{result.item.title}</Heading>
-              <Text variant="muted">{result.item.description}</Text>
-            </VStack>
-          </ReakitMenuItem>
-        </View>
+        <ResultItem key={result.item.id} {...result.item} menu={menu} />
       ))}
     </VStack>
   )
@@ -202,6 +256,7 @@ function useComponentsData() {
                 id
                 slug
                 title
+                snippet
               }
               rawBody
               slug

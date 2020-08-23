@@ -8,6 +8,7 @@ const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { lstatSync, readdirSync } = require("fs")
 const { get } = require("lodash")
+const { getDataFromFile } = require("./scripts/get-post-data.js")
 
 const basePath = path.resolve(__dirname, "../../", "packages")
 const packages = readdirSync(basePath).filter(name =>
@@ -85,12 +86,35 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ actions, getNode, node }) => {
+exports.onCreateNode = async ({ actions, getNode, node }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `Mdx`) {
+    const { fileAbsolutePath } = node
+
     const filePath = createFilePath({ getNode, node })
     const slug = createSlug({ filePath, node })
+    const fileData = await getDataFromFile(fileAbsolutePath)
+
+    if (fileData) {
+      createNodeField({
+        name: "snippet",
+        node,
+        value: fileData.snippet,
+      })
+
+      createNodeField({
+        name: "keywords",
+        node,
+        value: fileData.keywords,
+      })
+
+      createNodeField({
+        name: "baseType",
+        node,
+        value: fileData.type,
+      })
+    }
 
     createNodeField({
       name: "id",

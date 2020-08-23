@@ -3,7 +3,16 @@
   "version": "0.0.41",
   "private": true,
   "description": "Documentatoin website for G2 Components.",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jon Quach <hello@jonquach.com>",
+  "scripts": {
+    "build": "echo",
+    "generate:data": "rm -rf tmp && node ./scripts/generate-data-json.js",
+    "generate": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
@@ -23,6 +32,16 @@
     "gatsby-remark-autolink-headers": "^2.3.11",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.13",
+    "glob": "^7.1.6",
+    "unified": "^9.2.0",
+    "remark": "^12.0.1",
+    "remark-parse": "^8.0.3",
+    "remark-html": "^12.0.0",
+    "remark-frontmatter": "^2.0.0",
+    "remark-strip-html": "^1.0.1",
+    "unist-util-visit": "^2.0.3",
+    "mkdirp": "^1.0.4",
+    "redent": "^3.0.0",
     "lodash": "^4.17.20",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
@@ -37,14 +56,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "echo",
-    "generate": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"

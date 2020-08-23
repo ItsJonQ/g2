@@ -1,4 +1,4 @@
-import { get, styled } from '@wp-g2/styles';
+import { css, get, styled } from '@wp-g2/styles';
 
 export const TabListView = styled.div`
 	border-bottom: 1px solid ${get('colorDivider')};
@@ -24,6 +24,14 @@ export const TabView = styled.button`
 	&[aria-selected='true'] {
 		color: ${get('colorAdmin')};
 	}
+`;
+
+export const small = css`
+	min-height: ${get('controlHeightLarge')};
+`;
+
+export const xSmall = css`
+	min-height: ${get('controlHeight')};
 `;
 
 export const TabPanelView = styled.div`

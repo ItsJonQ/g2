@@ -34,7 +34,9 @@ function TabIndicator({ ...props }) {
 
 		if (!canAnimate) {
 			requestAnimationFrame(() => {
-				setCanAnimate(true);
+				if (offsetWidth) {
+					setCanAnimate(true);
+				}
 			});
 		}
 	}, [canAnimate, containerRef, containerWidth, tab]);

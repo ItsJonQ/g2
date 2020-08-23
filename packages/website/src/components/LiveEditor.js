@@ -1,13 +1,13 @@
 import * as Components from "@wp-g2/components"
 import * as Context from "@wp-g2/context"
 import { css, ui } from "@wp-g2/styles"
-import { useClipboard } from "@wp-g2/utils"
-import Highlight, { defaultProps } from "prism-react-renderer"
+import { useUniqueId } from "@wp-g2/utils"
 import nightOwl from "prism-react-renderer/themes/nightOwl"
 import React from "react"
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live"
 
-import { useAppContext } from "../AppProvider"
+import { useAppContext } from "./AppProvider"
+import { CopyToClipboardButton } from "./CopyToClipboardButton"
 
 const {
   Button,
@@ -20,6 +20,7 @@ const {
   Text,
   VStack,
   View,
+  VisuallyHidden,
 } = Components
 
 const liveCodeScope = {
@@ -27,26 +28,6 @@ const liveCodeScope = {
   ...Components,
   css,
   ui,
-}
-
-function CopyToClipboard({ onClick, value, ...props }) {
-  const { hasCopied, onCopy } = useClipboard(value)
-
-  const handleOnClick = () => {
-    onCopy()
-    onClick && onClick()
-  }
-
-  return (
-    <View
-      className="LiveEditorCopyButtonWrapper"
-      css={[ui.position.topRight, ui.offset(-8, 8), { zIndex: 5 }]}
-    >
-      <Button onClick={handleOnClick} size="small" variant="primary" {...props}>
-        {hasCopied ? "Copied!" : "Copy"}
-      </Button>
-    </View>
-  )
 }
 
 function transformCode(code) {
@@ -67,6 +48,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
   const __enableDebugger = true
 
   const code = children.props.children.trim()
+  const id = useUniqueId(LiveCodeEditor, "live-code-editor")
 
   return (
     <Spacer className="LiveEditorWrapper" mb={8} mt={5}>
@@ -82,11 +64,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
               <Text variant="muted">{file}</Text>
               {__enableDebugger && (
                 <HStack>
-                  {debug && (
-                    <Text css={[ui.opacity(0.3)]} variant="muted">
-                      Mouseover below.
-                    </Text>
-                  )}
+                  {debug && <Text variant="muted">Mouseover below.</Text>}
                   <Button
                     onClick={() => setDebug(!debug)}
                     size="xSmall"
@@ -104,9 +82,13 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
             </CardBody>
           </Card>
           <Card css={[ui.position.relative]}>
-            <CopyToClipboard value={code} />
+            <CopyToClipboardButton value={code} />
+            <VisuallyHidden>
+              <View as="label" htmlFor={id}>
+                Live Code Editor
+              </View>
+            </VisuallyHidden>
             <LiveEditor
-              aria-label="Live code editor"
               className="LiveEditorEditor"
               style={{
                 borderRadius: 6,
@@ -116,6 +98,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
                 outline: "none",
                 overflow: "hidden",
               }}
+              textareaId={id}
             />
           </Card>
           <View
@@ -134,37 +117,5 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
         </VStack>
       </LiveProvider>
     </Spacer>
-  )
-}
-
-export function SyntaxHighlighter(props) {
-  const { copy } = props
-  const code = props.children.props.children.trim()
-  const className = props.children.props.className || ""
-  const matches = className.match(/language-(?<lang>.*)/)
-  const language = matches?.groups?.lang || ""
-
-  return (
-    <div className="SyntaxHighlighter">
-      {copy && <CopyToClipboard value={code} />}
-      <Highlight
-        {...defaultProps}
-        code={code}
-        language={language}
-        theme={nightOwl}
-      >
-        {({ className, getLineProps, getTokenProps, style, tokens }) => (
-          <pre className={className} style={style}>
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ key: i, line })}>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ key, token })} />
-                ))}
-              </div>
-            ))}
-          </pre>
-        )}
-      </Highlight>
-    </div>
   )
 }

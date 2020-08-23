@@ -17,6 +17,7 @@ dist
 .opt-in
 .opt-out
 dist
+_tmp
 
 npm-debug.log*
 yarn-debug.log*

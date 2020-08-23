@@ -54,7 +54,7 @@ export function SiteHeader() {
         css={[ui.frame.width(1280), ui.alignment.center]}
       >
         <HStack className="SiteHeaderLinkWrapper">
-          <GLink role="banner" to="/">
+          <GLink aria-label="G2 Components" role="banner" to="/">
             <HStack>
               <Icon icon={<Logo />} size={32} />
               <Heading className="SiteHeaderLogo" size={4}>

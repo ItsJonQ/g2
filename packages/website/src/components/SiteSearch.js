@@ -26,10 +26,10 @@ export function SiteSearch() {
         <Tooltip>
           <TooltipTrigger>
             <ModalTrigger
+              aria-label="Search"
               as={Button}
               icon={<FiSearch />}
               isRounded
-              label="Search"
             />
           </TooltipTrigger>
           <TooltipContent>Search</TooltipContent>

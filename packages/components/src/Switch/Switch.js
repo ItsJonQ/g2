@@ -61,8 +61,10 @@ function Switch({
 		setIsFocused(true);
 	};
 
+	const viewComponent = contextId ? 'div' : undefined;
+
 	return (
-		<SwitchView {...props} cx={cx} htmlFor={id}>
+		<SwitchView as={viewComponent} {...props} cx={cx} htmlFor={id}>
 			<Backdrop checked={checked} isFocused={isFocused} size={size} />
 			<Toggle checked={checked} size={size} />
 			<Control

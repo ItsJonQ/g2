@@ -5,12 +5,18 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
+  Tab,
+  TabList,
+  TabPanel,
+  Tabs,
   Text,
 } from "@wp-g2/components"
 import { get, styled } from "@wp-g2/styles"
 import { is } from "@wp-g2/utils"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
+
+import { SyntaxHighlighter } from "./SyntaxHighlighter"
 
 const CodeWrapperView = styled.span`
   &:hover {
@@ -37,23 +43,47 @@ export function DefinitionPopover({ children }) {
   }
 
   const { fields, frontmatter } = data
+  const { description, title } = frontmatter
+  const { slug, snippet } = fields
 
   return (
     <>
-      <Popover placement="top-start">
+      <Popover placement="bottom-start">
         <PopoverTrigger as={CodeWrapperView}>
           <code>{children}</code>
         </PopoverTrigger>
         <PopoverContent preventBodyScroll={false} tabIndex={0}>
           <CardHeader size="small">
-            <Heading size={5}>{frontmatter.title}</Heading>
+            <Heading size={5}>{title}</Heading>
             <Text weight="bold">
-              <Link to={fields.slug}>View Docs</Link>
+              <Link to={slug}>View Docs</Link>
             </Text>
           </CardHeader>
-          <CardBody>
-            <Text>{frontmatter.description}</Text>
-          </CardBody>
+          <Tabs>
+            <TabList>
+              <Tab size="small">Description</Tab>
+              {snippet && <Tab size="small">Code</Tab>}
+            </TabList>
+            <TabPanel>
+              <CardBody>
+                <Text>{description}</Text>
+              </CardBody>
+            </TabPanel>
+            {snippet && (
+              <TabPanel>
+                <CardBody
+                  css={`
+                    pre.prism-code {
+                      margin: 0;
+                      overflow-x: auto;
+                    }
+                  `}
+                >
+                  <SyntaxHighlighter code={snippet} copy lang="jsx" />
+                </CardBody>
+              </TabPanel>
+            )}
+          </Tabs>
         </PopoverContent>
       </Popover>
     </>
@@ -76,6 +106,7 @@ function useComponentsData() {
               fields {
                 id
                 slug
+                snippet
               }
               slug
             }
