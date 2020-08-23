@@ -11,7 +11,8 @@
     "build:data": "node ./scripts/generate-snip-files.js",
     "build:snippets": "node ./scripts/generate-vscode-snippets.js",
     "build": "npm run build:data && npm run build:snippets",
-    "prerelease": "node ./scripts/update-version.js",
+    "sync:version": "node ./scripts/update-version.js",
+    "prerelease": "npm run build && npm run sync:version",
     "release": "vsce publish",
     "test": "echo "
   },

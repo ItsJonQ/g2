@@ -1,6 +1,6 @@
 {
 	"g2-components-button": {
-		"body": ["<Button>${1:Go}</Button>"],
+		"body": ["<Button variant=\"default\">${1:Let It Go}</Button>"],
 		"prefix": "g2-button"
 	},
 	"g2-components-card": {
@@ -76,7 +76,7 @@
 		"body": [
 			"<View>",
 			"  <Spacer>",
-			"    <Heading>${1:Into the unknown}</Heading>",
+			"    <Heading>${1:Into The Unknown}</Heading>",
 			"  </Spacer>",
 			"  <Text>",
 			"    Every day's a little harder as I feel your power grow. Don't you know",
@@ -91,7 +91,7 @@
 		"prefix": "g2-subheading"
 	},
 	"g2-components-text": {
-		"body": ["<Text>${1:Where the north wind meets the sea...}</Text>"],
+		"body": ["<Text>${1:Where the north wind meets the sea}</Text>"],
 		"prefix": "g2-text"
 	},
 	"g2-components-textfield": {
@@ -102,15 +102,13 @@
 		"body": [
 			"<Truncate>",
 			"  Where the north wind meets the sea, there's a river full of memory. Sleep,",
-			"  my darling, safe and sound, for in this river all is found. In her waters,",
-			"  deep and true, lay the answers and a path for you. Dive down deep into her",
-			"  sound, but not too far or you'll be drowned",
+			"  my darling, safe and sound, for in this river all is found.",
 			"</Truncate>"
 		],
 		"prefix": "g2-truncate"
 	},
 	"g2-components-view": {
-		"body": ["<View>", "  <Text>${1:Into the unknown}</Text>", "</View>"],
+		"body": ["<View>", "  <Text>${1:Into The Unknown}</Text>", "</View>"],
 		"prefix": "g2-view"
 	},
 	"g2-components-vstack": {
