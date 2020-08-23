@@ -10,7 +10,9 @@
     "build:data": "node ./scripts/generate-snip-files.js",
     "build:snippets": "node ./scripts/generate-vscode-snippets.js",
     "build": "npm run build:data && npm run build:snippets",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postversion": "npm run release",
+    "release": "vsce publish",
+    "test": "echo "
   },
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
