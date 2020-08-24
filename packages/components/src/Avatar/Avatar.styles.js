@@ -1,3 +1,3 @@
 import { styled } from '@wp-g2/styles';
 
-export const ImageView = styled.div``;
+export const AvatarView = styled.div``;
