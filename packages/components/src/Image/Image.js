@@ -4,38 +4,41 @@ import React from 'react';
 
 import { AspectRatio } from '../AspectRatio';
 import { ImageView } from './Image.styles';
-import { getImageObjectFit } from './Image.utils';
 
 function Image({ aspectRatio, fit, height, width, ...props }) {
-	const objectFit = getImageObjectFit(fit);
-	let cx = [css({ objectFit, width, height })];
+	const sx = {};
+	const aspectFit = aspectRatio && !fit ? 'cover' : fit;
+	const preferredFit = aspectRatio ? aspectFit : fit;
+
+	sx.base = css({
+		width,
+		height,
+	});
+
+	sx.fit = css({
+		objectFit: preferredFit,
+	});
+
+	sx.fitSize = css({ height: '100%', width: '100%' });
+
+	const cx = [sx.base, sx.fit, fit && sx.fitSize];
 
 	const imageProps = {
 		...props,
+		cx,
 		height,
 		width,
 	};
 
-	if (objectFit) {
-		cx = [css({ objectFit, width: '100%', height: '100%' })];
-	}
-
 	if (aspectRatio) {
-		if (!fit) {
-			cx = [
-				...cx,
-				css({ objectFit: 'cover', height: '100%', width: '100%' }),
-			];
-		}
-
 		return (
 			<AspectRatio ratio={aspectRatio} width={width}>
-				<ImageView {...imageProps} cx={cx} />
+				<ImageView {...imageProps} />
 			</AspectRatio>
 		);
 	}
 
-	return <ImageView {...imageProps} cx={cx} />;
+	return <ImageView {...imageProps} />;
 }
 
 export default connect(Image, 'Image');
