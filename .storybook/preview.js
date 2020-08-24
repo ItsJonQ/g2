@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from '@wp-g2/styles';
 import {
@@ -17,6 +17,7 @@ import {
 	Switch,
 	TextField,
 	Subheading,
+	ComponentInspector,
 	View,
 } from '@wp-g2/components';
 import { useLocalState } from '@wp-g2/utils';
@@ -51,11 +52,12 @@ const defaultThemeConfig = {
 	fontSize: '13px',
 };
 
-function Themer() {
+function Themer({ inspector, setInspector }) {
 	const [themeConfig, setThemeConfig] = useLocalState(
 		'themeConfig',
 		defaultThemeConfig,
 	);
+
 	const [isDark, setIsDark] = useLocalState('darkMode', false);
 	const [isHighContrast, setIsHighContast] = useLocalState(
 		'highContrastMode',
@@ -296,6 +298,19 @@ function Themer() {
 												/>
 											</Flex>
 										</FormGroup>
+										<FormGroup>
+											<ControlLabel>
+												Inspector
+											</ControlLabel>
+											<Flex justify="flex-end">
+												<Switch
+													checked={!!inspector}
+													onChange={(next) => {
+														setInspector(next);
+													}}
+												/>
+											</Flex>
+										</FormGroup>
 									</CardBody>
 								</PopoverContent>
 							</Popover>
@@ -308,10 +323,16 @@ function Themer() {
 }
 
 function StoryDecorator(storyFn) {
+	const [inspector, setInspector] = useLocalState('inspector', false);
+
 	return (
 		<>
-			<Themer />
-			<View css={{ padding: 16 }}>{storyFn()}</View>
+			<Themer inspector={inspector} setInspector={setInspector} />
+			<View css={{ padding: 16 }}>
+				<ComponentInspector visible={inspector}>
+					{storyFn()}
+				</ComponentInspector>
+			</View>
 			<Surface
 				isBackground
 				css={{

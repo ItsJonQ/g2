@@ -11,6 +11,7 @@ export const DebuggerView = styled.div`
 	padding: 2px 4px;
 	pointer-events: none;
 	vertical-align: middle;
+	white-space: nowrap;
 	z-index: 99;
 
 	& + & {
