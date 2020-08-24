@@ -17,16 +17,25 @@
       "title": "Components",
       "sections": [
         {
-          "title": "Layout",
+          "title": "Core",
           "links": [
             {
               "link": "/components/view/",
               "title": "View"
             },
             {
-              "link": "/components/spacer/",
-              "title": "Spacer"
+              "link": "/components/text/",
+              "title": "Text"
             },
+            {
+              "link": "/components/image/",
+              "title": "Image"
+            }
+          ]
+        },
+        {
+          "title": "Foundations",
+          "links": [
             {
               "link": "/components/flex/",
               "title": "Flex"
@@ -40,8 +49,21 @@
               "title": "HStack"
             },
             {
+              "link": "/components/spacer/",
+              "title": "Spacer"
+            },
+            {
               "link": "/components/vstack/",
               "title": "VStack"
+            }
+          ]
+        },
+        {
+          "title": "Layout",
+          "links": [
+            {
+              "link": "/components/aspectratio/",
+              "title": "AspectRatio"
             },
             {
               "link": "/components/card/",
@@ -53,12 +75,12 @@
           "title": "Typography",
           "links": [
             {
-              "link": "/components/text/",
-              "title": "Text"
-            },
-            {
               "link": "/components/heading/",
               "title": "Heading"
+            },
+            {
+              "link": "/components/initials/",
+              "title": "Initials"
             },
             {
               "link": "/components/subheading/",
@@ -67,6 +89,15 @@
             {
               "link": "/components/truncate/",
               "title": "Truncate"
+            }
+          ]
+        },
+        {
+          "title": "Images",
+          "links": [
+            {
+              "link": "/components/avatar/",
+              "title": "Avatar"
             }
           ]
         },

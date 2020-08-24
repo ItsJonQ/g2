@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { View } from '../../index';
 import { Image } from '../index';
 
 export default {
@@ -8,5 +9,18 @@ export default {
 };
 
 export const _default = () => {
-	return <Image />;
+	return (
+		<View>
+			<Image
+				alt="random"
+				src="https://picsum.photos/seed/picsum/200/300"
+			/>
+			<Image
+				alt="random"
+				aspectRatio={16 / 9}
+				src="https://picsum.photos/seed/picsum/200/300"
+				width={300}
+			/>
+		</View>
+	);
 };

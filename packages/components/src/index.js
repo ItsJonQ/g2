@@ -5,6 +5,8 @@ export * from './Animated';
 // Components
 export * from './Alert';
 export * from './ArrowIndicator';
+export * from './AspectRatio';
+export * from './Avatar';
 export * from './Background';
 export * from './BaseField';
 export * from './BaseModal';
@@ -31,6 +33,7 @@ export * from './Heading';
 export * from './HelpTip';
 export * from './HStack';
 export * from './Icon';
+export * from './Initials';
 export * from './Image';
 export * from './Link';
 export * from './List';

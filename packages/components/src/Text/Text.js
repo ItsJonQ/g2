@@ -1,5 +1,6 @@
 import { connect } from '@wp-g2/context';
-import { BaseView, css, cx, getFontSize } from '@wp-g2/styles';
+import { BaseView, css, cx, get, getFontSize } from '@wp-g2/styles';
+import { getOptimalTextShade } from '@wp-g2/utils';
 import React from 'react';
 
 import { Truncate } from '../Truncate';
@@ -13,6 +14,7 @@ function Text({
 	display,
 	isBlock = false,
 	lineHeight = 1.2,
+	optimizeReadability,
 	size,
 	truncate = false,
 	upperCase = false,
@@ -21,6 +23,7 @@ function Text({
 	...props
 }) {
 	const sx = {};
+
 	sx.Base = css({
 		color,
 		display,
@@ -32,9 +35,21 @@ function Text({
 
 	sx.upperCase = css({ textTransform: 'uppercase' });
 
+	sx.optimalTextColor = null;
+
+	if (optimizeReadability) {
+		const isOptimalTextColorDark =
+			getOptimalTextShade(optimizeReadability) === 'dark';
+
+		sx.optimalTextColor = isOptimalTextColorDark
+			? css({ color: get('black') })
+			: css({ color: get('white') });
+	}
+
 	const classes = cx(
 		styles.Text,
 		sx.Base,
+		sx.optimalTextColor,
 		styles[isBlock && 'block'],
 		styles[variant],
 		upperCase && sx.upperCase,

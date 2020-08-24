@@ -1,15 +1,17 @@
 ---
 title: Text
-description: "Text renders text using the library's typography system."
+description: "Text a core element that renders text in the library, using the library's typography system."
 type: typography
 stack: ["View", "Truncate", "Text"]
 ---
 
 # Text
 
-`Text` renders text using the library's typography system.
+`Text` a core element that renders text in the library, using the library's typography system.
 
 ## Usage
+
+`Text` can be used to render any text-content, like an HTML `p` or `span`.
 
 ```jsx live
 import { Text } from "@wp-g2/components"
@@ -21,23 +23,24 @@ function Example() {
 
 ## Props
 
-| Name          | Type               | Default | Description                                                          |
-| ------------- | ------------------ | ------- | -------------------------------------------------------------------- |
-| align         | `string`           |         | Adjusts the text alignment.                                          |
-| as            | `string`           | `span`  | Renders as another HTML element (or React component).                |
-| color         | `string`           |         | Adjust the text color.                                               |
-| display       | `string`           |         | Adjusts the text CSS `display`.                                      |
-| ellipsis      | `string`           | `...`   | The ellipsis string when `truncate` is set.                          |
-| ellipsizeMode | `string`           | `auto`  | Determines where to truncate. `truncate` must first be set.          |
-| limit         | `number`           | `0`     | Determines the max characters when `truncate` is set.                |
-| isBlock       | `boolean`          |         | Sets `Text` to have `display: block`.                                |
-| lineHeight    | `number`           |         | Adjusts all text line-height based on the typography system.         |
-| size          | `number`, `string` |         | Adjusts all text size based on the typography system.                |
-| truncate      | `boolean`          |         | Enables text truncation.                                             |
-| numberOfLines | `boolean`          |         | Determines how many lines to truncate. `truncate` must first be set. |
-| upperCase     | `boolean`          |         | Uppercases the text content.                                         |
-| variant       | `string`           |         | Adjusts style variation of the text.                                 |
-| weight        | `number`,`string`  |         | Adjusts font-weight of the text.                                     |
+| Name                | Type               | Default | Description                                                             |
+| ------------------- | ------------------ | ------- | ----------------------------------------------------------------------- |
+| align               | `string`           |         | Adjusts the text alignment.                                             |
+| as                  | `string`           | `span`  | Renders as another HTML element (or React component).                   |
+| color               | `string`           |         | Adjust the text color.                                                  |
+| display             | `string`           |         | Adjusts the text CSS `display`.                                         |
+| ellipsis            | `string`           | `...`   | The ellipsis string when `truncate` is set.                             |
+| ellipsizeMode       | `string`           | `auto`  | Determines where to truncate. `truncate` must first be set.             |
+| limit               | `number`           | `0`     | Determines the max characters when `truncate` is set.                   |
+| isBlock             | `boolean`          |         | Sets `Text` to have `display: block`.                                   |
+| lineHeight          | `number`           |         | Adjusts all text line-height based on the typography system.            |
+| optimizeReadability | `string`           |         | Optimizes text (black or white) readability for given background color. |
+| size                | `number`, `string` |         | Adjusts all text size based on the typography system.                   |
+| truncate            | `boolean`          |         | Enables text truncation.                                                |
+| numberOfLines       | `boolean`          |         | Determines how many lines to truncate. `truncate` must first be set.    |
+| upperCase           | `boolean`          |         | Uppercases the text content.                                            |
+| variant             | `string`           |         | Adjusts style variation of the text.                                    |
+| weight              | `number`,`string`  |         | Adjusts font-weight of the text.                                        |
 
 ### align
 

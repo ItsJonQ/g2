@@ -13,80 +13,33 @@ import {
 	VStack,
 	ZStack,
 } from '../../index';
+import { AVATAR_SIZES } from '../Avatar.utils';
+import { Avatar } from '../index';
 
 export default {
-	// component: Avatar,
+	component: Avatar,
 	title: 'Components/Avatar',
 };
 
-const borderRadii = {
-	circle: 999999,
-	square: 8,
-};
+// function StatusDot({ color = 'green' }) {
+// 	const styles = {
+// 		border: '2px solid white',
+// 		zIndex: 1,
+// 	};
 
-/* eslint-disable */
-const sizes = {
-	xLarge: 48,
-	large: 36,
-	medium: 30,
-	small: 24,
-	xSmall: 16,
-};
-/* eslint-enable */
-
-function getInitials(name = 'Hello There') {
-	const names = name
-		.split(' ')
-		.map((name) => name.charAt(0))
-		.join('');
-
-	return names;
-}
-
-function getSize(size) {
-	const supported = sizes[size];
-
-	return supported || size;
-}
-
-function getBorderRadius(borderRadius, size = sizes.medium) {
-	const supported = borderRadii[borderRadius];
-
-	if (borderRadius === 'square' && size < 25) {
-		return 4;
-	}
-
-	return supported || borderRadius;
-}
-
-function StatusDot({ color = 'green' }) {
-	const styles = {
-		border: '2px solid white',
-		zIndex: 1,
-	};
-
-	return (
-		<View
-			css={[
-				{ background: color },
-				ui.offset({ x: 4, y: -4 }),
-				ui.borderRadius.circle,
-				ui.frame({ height: 10, width: 10 }),
-				ui.position.topRight,
-				styles,
-			]}
-		/>
-	);
-}
-
-function Image({ css: cssProp, src, ...props }) {
-	const styles = {
-		height: 'auto',
-		maxWidth: '100%',
-	};
-
-	return <View as="img" css={[styles, cssProp]} src={src} {...props} />;
-}
+// 	return (
+// 		<View
+// 			css={[
+// 				{ background: color },
+// 				ui.offset({ x: 4, y: -4 }),
+// 				ui.borderRadius.circle,
+// 				ui.frame({ height: 10, width: 10 }),
+// 				ui.position.topRight,
+// 				styles,
+// 			]}
+// 		/>
+// 	);
+// }
 
 function AvatarGroup({ children }) {
 	return (
@@ -96,59 +49,8 @@ function AvatarGroup({ children }) {
 	);
 }
 
-function Avatar({
-	name,
-	size: sizeProp = 48,
-	src,
-	status,
-	tooltipText,
-	variant = 'circle',
-}) {
-	const size = getSize(sizeProp);
-	const borderRadius = getBorderRadius(variant, size);
-
-	const styles = {
-		alignItems: 'center',
-		borderRadius,
-		display: 'flex',
-		height: size,
-		justifyContent: 'center',
-		width: size,
-	};
-
-	let textSize = size < 28 ? 11 : undefined;
-
-	if (size < 21) {
-		textSize = 8;
-	}
-
-	const initials = getInitials(name);
-	const shouldRenderInitials = !src && initials;
-
-	return (
-		<Tooltip>
-			<TooltipTrigger>
-				<View
-					css={[ui.background.darkGray, ui.position.relative, styles]}
-					title={name}
-				>
-					{status && <StatusDot color={status} />}
-					{src && <Image css={[{ borderRadius }]} src={src} />}
-					{shouldRenderInitials && (
-						<Text as="div" size={textSize} weight={500}>
-							{initials}
-						</Text>
-					)}
-				</View>
-			</TooltipTrigger>
-			<TooltipContent>{tooltipText || name}</TooltipContent>
-		</Tooltip>
-	);
-}
-
 export const _default = () => {
-	const avatars = Object.keys(sizes);
-	const avatarSizes = Object.values(sizes);
+	const avatars = Object.keys(AVATAR_SIZES);
 
 	return (
 		<VStack spacing={8}>
@@ -160,6 +62,12 @@ export const _default = () => {
 					return (
 						<View key={index}>
 							<Avatar
+								color={faker.random.arrayElement([
+									'var(--wp-g2-green-500)',
+									'var(--wp-g2-red-500)',
+									'var(--wp-g2-orange-500)',
+									undefined,
+								])}
 								key={size}
 								name={randomName}
 								size={size}
@@ -174,8 +82,6 @@ export const _default = () => {
 									undefined,
 								])}
 							/>
-							<Text>{avatarSizes[index]}</Text>
-							<Text>{randomName}</Text>
 						</View>
 					);
 				})}
@@ -188,6 +94,12 @@ export const _default = () => {
 					return (
 						<View key={index}>
 							<Avatar
+								color={faker.random.arrayElement([
+									'green',
+									'red',
+									'orange',
+									undefined,
+								])}
 								key={size}
 								name={randomName}
 								size={size}
@@ -203,8 +115,6 @@ export const _default = () => {
 								])}
 								variant="square"
 							/>
-							<Text>{avatarSizes[index]}</Text>
-							<Text>{randomName}</Text>
 						</View>
 					);
 				})}

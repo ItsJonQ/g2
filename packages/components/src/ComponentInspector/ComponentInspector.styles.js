@@ -9,13 +9,13 @@ export const ComponentInspectorView = styled.div`
 	&:not([disabled]) {
 		${componentSelector} {
 			&:hover {
-				outline: 1px solid rgba(0, 0, 255, 0.12) !important;
+				outline: 1px solid rgba(0, 180, 255, 0.2) !important;
 
 				${componentSelector} {
-					outline: 1px solid rgba(0, 0, 255, 0.12) !important;
+					outline: 1px solid rgba(0, 180, 255, 0.2) !important;
 
 					&:hover {
-						outline: 1px solid rgba(0, 0, 255, 0.24) !important;
+						outline: 1px solid rgba(0, 180, 255, 0.3) !important;
 					}
 				}
 			}
