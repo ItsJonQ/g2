@@ -38,7 +38,13 @@ function ComponentInspector({ children, disabled = false, visible, ...props }) {
 			setPosition({ x: event.clientX, y: event.clientY });
 
 			if (componentName) {
-				setLabel(`<${componentName} />`);
+				if (
+					!['Debugger', 'ComponentInspector'].includes(componentName)
+				) {
+					setLabel(`<${componentName} />`);
+				} else {
+					setLabel(null);
+				}
 			}
 		};
 

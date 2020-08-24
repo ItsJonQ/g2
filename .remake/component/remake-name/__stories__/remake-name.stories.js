@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ComponentInspector } from '../../index';
 import { <%= name %> } from '../index';
 
 export default {
@@ -8,5 +9,9 @@ export default {
 };
 
 export const _default = () => {
-	return <<%= name %> />;
+	return (
+		<ComponentInspector visible={false}>
+			<<%= name %> />
+		</ComponentInspector>
+	);
 };
