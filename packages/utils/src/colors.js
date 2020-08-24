@@ -29,9 +29,10 @@ export function isColor(value) {
 
 export function getComputedColor(color) {
 	if (!is.string(color)) return '';
-	console.log(color);
-	if (!color.includes('var(')) return '';
 
+	if (isColor(color)) return color;
+
+	if (!color.includes('var(')) return '';
 	if (typeof document === 'undefined') return '';
 
 	// Attempts to gracefully handle CSS variables color values.
