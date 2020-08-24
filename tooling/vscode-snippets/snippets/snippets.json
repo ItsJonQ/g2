@@ -1,6 +1,28 @@
 {
+	"g2-components-aspectratio": {
+		"body": [
+			"<AspectRatio ratio={16 / 9}>",
+			"  <img",
+			"    src=\"https://picsum.photos/seed/picsum/800/800\"",
+			"    alt=\"Snowy Mountains\"",
+			"    style={{ objectFit: \"cover\" }",
+			"  />",
+			"</AspectRatio>"
+		],
+		"prefix": "g2-aspectratio"
+	},
+	"g2-components-avatar": {
+		"body": [
+			"<Avatar",
+			"  name=\"Elsa Oldenburg\"",
+			"  src=\"https://picsum.photos/id/1041/300/300\"",
+			"  size=\"medium\"",
+			"/>"
+		],
+		"prefix": "g2-avatar"
+	},
 	"g2-components-button": {
-		"body": ["<Button variant=\"default\">${1:Let It Go}</Button>"],
+		"body": ["<Button variant=\"secondary\">${1:Let It Go}</Button>"],
 		"prefix": "g2-button"
 	},
 	"g2-components-card": {
@@ -71,6 +93,21 @@
 			"</HStack>"
 		],
 		"prefix": "g2-hstack"
+	},
+	"g2-components-image": {
+		"body": [
+			"<Image",
+			"  src=\"https://picsum.photos/seed/picsum/800/800\"",
+			"  alt=\"Snowy Mountains\"",
+			"  width={300",
+			"  height={300",
+			"/>"
+		],
+		"prefix": "g2-image"
+	},
+	"g2-components-initials": {
+		"body": ["<Initials name=\"Elsa Oldenburg\" />"],
+		"prefix": "g2-initials"
 	},
 	"g2-components-spacer": {
 		"body": [
