@@ -14,6 +14,7 @@
     "sync:version": "node ./scripts/update-version.js",
     "prerelease": "npm run build && npm run sync:version",
     "release": "vsce publish",
+    "postrelease": "git add ./ && git commit -m \"Update Snippets.\"",
     "test": "echo "
   },
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
