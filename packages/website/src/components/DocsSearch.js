@@ -47,13 +47,20 @@ export function DocsSearch({ visible }) {
   const results = uniqBy(fuse.search(queryValue) || [])
   const hasResults = !!results.length
 
+  const visibleRef = useRef(visible)
+
   useEffect(() => {
     if (visible && inputRef?.current) {
       inputRef.current.focus()
     }
-    if (!visible) {
-      setQueryParam("")
-      setQuery("")
+
+    if (visibleRef.current !== visible) {
+      if (!visible) {
+        setQueryParam("")
+        setQuery("")
+      }
+
+      visibleRef.current = visible
     }
   }, [setQueryParam, visible])
 
