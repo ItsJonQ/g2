@@ -1,9 +1,8 @@
 import { connect } from '@wp-g2/context';
 import React from 'react';
 
+import { SurfaceView } from './Surface.styles';
 import * as styles from './Surface.styles';
-
-const { SurfaceView } = styles;
 
 function Surface({
 	border,
@@ -11,11 +10,12 @@ function Surface({
 	borderLeft,
 	borderRight,
 	borderTop,
-	isBackground,
+	children,
+	variant = 'primary',
 	...props
 }) {
 	const sx = {};
-	/* eslint-disable */
+
 	sx.borders = styles.getBorders({
 		border,
 		borderBottom,
@@ -23,11 +23,14 @@ function Surface({
 		borderRight,
 		borderTop,
 	});
-	/* eslint-enable */
 
-	const cx = [isBackground && styles.background, sx.borders];
+	const cx = [sx.borders, styles[variant]];
 
-	return <SurfaceView {...props} cx={cx} />;
+	return (
+		<SurfaceView {...props} cx={cx}>
+			{children}
+		</SurfaceView>
+	);
 }
 
 export default connect(Surface, 'Surface');

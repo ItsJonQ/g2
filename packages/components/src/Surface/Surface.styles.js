@@ -27,3 +27,11 @@ export function getBorders({
 		borderTop: borderTop && borderStyle,
 	});
 }
+
+export const secondary = css`
+	background: ${get('surfaceBackgroundTintColor')};
+`;
+
+export const tertiary = css`
+	background: ${get('surfaceBackgroundColor')};
+`;
