@@ -13,7 +13,7 @@ import {
 	TabList,
 	TabPanel,
 	Tabs,
-	TextField,
+	TextInput,
 	View,
 } from '../../index';
 
@@ -57,7 +57,7 @@ export const Sidebar = ({ children }) => {
 										</ControlLabel>
 									</FormGroup>
 									<FormGroup label="Slug">
-										<TextField value="/my-blog-post" />
+										<TextInput value="/my-blog-post" />
 									</FormGroup>
 								</PanelBody>
 							</Panel>
@@ -67,7 +67,7 @@ export const Sidebar = ({ children }) => {
 									<ControlLabel>
 										Write an excerpt (optional)
 									</ControlLabel>
-									<TextField
+									<TextInput
 										maxRows={6}
 										minRows={3}
 										multiline

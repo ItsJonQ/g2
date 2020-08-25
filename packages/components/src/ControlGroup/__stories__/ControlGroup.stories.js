@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Select, TextField } from '../../index';
+import { Button, Select, TextInput } from '../../index';
 import { ControlGroup, ControlGroupItem } from '../index';
 
 export default {
@@ -15,10 +15,10 @@ export const _default = () => {
 				<Select options={[{ label: 'Ms.', value: 'ms' }]} />
 			</ControlGroupItem>
 			<ControlGroupItem isBlock>
-				<TextField placeholder="First name" />
+				<TextInput placeholder="First name" />
 			</ControlGroupItem>
 			<ControlGroupItem isBlock>
-				<TextField placeholder="Last name" />
+				<TextInput placeholder="Last name" />
 			</ControlGroupItem>
 
 			<ControlGroupItem>

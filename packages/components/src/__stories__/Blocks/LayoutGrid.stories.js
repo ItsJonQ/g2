@@ -20,7 +20,7 @@ import {
 	Spacer,
 	Switch,
 	Text,
-	TextField,
+	TextInput,
 	View,
 } from '../../index';
 
@@ -100,11 +100,11 @@ const Columns = () => {
 										<Text weight={600}>Column</Text>
 									</Spacer>
 									<FormGroup templateColumns="1fr 1fr">
-										<TextField
+										<TextInput
 											placeholder="Offset"
 											type="number"
 										/>
-										<TextField
+										<TextInput
 											placeholder="Span"
 											type="number"
 										/>

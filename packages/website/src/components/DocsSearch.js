@@ -1,16 +1,14 @@
 import { MenuItem as ReakitMenuItem, useMenuState } from "@wp-g2/a11y"
 import {
   Heading,
-  Icon,
   MenuItem,
+  SearchInput,
   Spacer,
   Surface,
   Text,
-  TextField,
   View,
   VStack,
 } from "@wp-g2/components"
-import { FiSearch } from "@wp-g2/icons"
 import { ui } from "@wp-g2/styles"
 import { copyToClipboard } from "@wp-g2/utils"
 import Fuse from "fuse.js"
@@ -108,15 +106,12 @@ export function DocsSearch({ visible }) {
           zIndex: 3,
         }}
       >
-        <TextField
+        <SearchInput
           onChange={handleOnChange}
           onKeyDown={handleOnKeyDown}
           placeholder="Search... (e.g. hstack)"
-          prefix={<Icon icon={<FiSearch />} size={12} />}
           ref={inputRef}
           size="large"
-          style={{ position: "sticky", top: 0 }}
-          type="search"
           value={queryValue}
         />
       </Surface>

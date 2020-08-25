@@ -15,7 +15,7 @@ import {
 	Spacer,
 	Surface,
 	Switch,
-	TextField,
+	TextInput,
 	Subheading,
 	ComponentInspector,
 	View,
@@ -174,7 +174,7 @@ function Themer({ inspector, setInspector }) {
 											<Subheading>Controls</Subheading>
 											<Separator />
 											<FormGroup label="Border Radius">
-												<TextField
+												<TextInput
 													type="number"
 													value={parseInt(
 														controlBorderRadius,
@@ -188,7 +188,7 @@ function Themer({ inspector, setInspector }) {
 												/>
 											</FormGroup>
 											<FormGroup label="Height">
-												<TextField
+												<TextInput
 													type="number"
 													value={parseInt(
 														controlHeight,
@@ -206,7 +206,7 @@ function Themer({ inspector, setInspector }) {
 											<Subheading>Font</Subheading>
 											<Separator />
 											<FormGroup label="Family">
-												<TextField
+												<TextInput
 													value={fontFamily}
 													onChange={update(
 														'fontFamily',
@@ -214,7 +214,7 @@ function Themer({ inspector, setInspector }) {
 												/>
 											</FormGroup>
 											<FormGroup label="Size">
-												<TextField
+												<TextInput
 													type="number"
 													value={parseInt(
 														fontSize,

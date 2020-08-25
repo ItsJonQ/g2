@@ -95,6 +95,16 @@ export const xSmall = css`
 	}
 `;
 
+export const xxSmall = css`
+	height: ${get('controlHeightXXSmall')};
+	padding-left: 0;
+	padding-right: 0;
+
+	&[data-icon='true'] {
+		min-width: ${get('controlHeightXXSmall')};
+	}
+`;
+
 export const half = css`
 	height: calc(${get('controlHeight')} / 2);
 

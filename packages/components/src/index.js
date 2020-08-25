@@ -50,6 +50,7 @@ export * from './Portal';
 export * from './Radio';
 export * from './RadioGroup';
 export * from './Scrollable';
+export * from './SearchInput';
 export * from './SegmentedControl';
 export * from './Select';
 export * from './Separator';

@@ -7,11 +7,11 @@ import TextareaAutosize from 'react-textarea-autosize';
 import { BaseField } from '../BaseField';
 import { Flex, FlexBlock, FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
-import * as styles from './TextField.styles';
+import * as styles from './TextInput.styles';
 
 const { InputView } = styles;
 
-function TextField({
+function TextInput({
 	align,
 	className,
 	disabled,
@@ -83,10 +83,10 @@ function TextField({
 			isFocused={isFocused}
 			justify={justify}
 			onClick={handleOnRootClick}
-			{...ns('TextField')}
+			{...ns('TextInput')}
 		>
-			{prefix && <FlexItem {...ns('TextFieldPrefix')}>{prefix}</FlexItem>}
-			<FlexBlock {...ns('TextFieldContent')}>
+			{prefix && <FlexItem {...ns('TextInputPrefix')}>{prefix}</FlexItem>}
+			<FlexBlock {...ns('TextInputContent')}>
 				<InputView
 					as={InputComponent}
 					cx={inputCx}
@@ -98,12 +98,12 @@ function TextField({
 					ref={mergeRefs([inputRef, forwardedRef])}
 					value={value}
 					{...props}
-					{...ns('TextFieldInput')}
+					{...ns('TextInputInput')}
 				/>
 			</FlexBlock>
-			{suffix && <FlexItem {...ns('TextFieldSuffix')}>{suffix}</FlexItem>}
+			{suffix && <FlexItem {...ns('TextInputSuffix')}>{suffix}</FlexItem>}
 		</BaseField>
 	);
 }
 
-export default connect(TextField, 'TextField');
+export default connect(TextInput, 'TextInput');

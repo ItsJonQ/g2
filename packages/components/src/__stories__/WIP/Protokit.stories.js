@@ -14,6 +14,8 @@ import {
 	FormGroup,
 	Grid,
 	HStack,
+	SearchInput,
+	Spacer,
 	Spinner,
 	Switch,
 	Text,
@@ -30,10 +32,11 @@ const itemSchema = new Schema(() => ({
 }));
 
 export const ListData = () => {
-	const limit = 6;
+	const limit = 20;
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
 	const [fail, setFail] = useState(false);
+	const [search, setSearch] = useState('');
 
 	const [data, fns] = useListData({
 		initialCount: limit,
@@ -46,9 +49,9 @@ export const ListData = () => {
 
 		try {
 			await mockRequest({
-				data: () => fns.loadMore({ limit: 3 }),
+				data: () => fns.loadMore({ limit: 10 }),
 				status: fail ? 400 : 200,
-				timeout: 1000,
+				timeout: 300,
 			});
 		} catch (response) {
 			setIsError(true);
@@ -76,8 +79,17 @@ export const ListData = () => {
 						<Button disabled={isLoading} onClick={handleOnLoadMore}>
 							Load More
 						</Button>
+						<SearchInput
+							onChange={(next) => {
+								setSearch(next);
+								fns.search(next);
+							}}
+							value={search}
+						/>
 						{isLoading && <Spinner />}
 					</HStack>
+
+					<Spacer />
 					<FormGroup
 						isMarginless
 						label="Force Fail"
@@ -92,10 +104,12 @@ export const ListData = () => {
 							<Animated
 								auto
 								key={item.id}
-								transition={{
-									// This should feel easier...
-									delay: 0.05 * (index - data.length + limit),
-								}}
+								transition={
+									{
+										// This should feel easier...
+										// delay: 0.05 * (index - data.length + limit),
+									}
+								}
 							>
 								<Card
 									css={[
@@ -103,6 +117,7 @@ export const ListData = () => {
 										{
 											cursor: 'pointer',
 											userSelect: 'none',
+											zIndex: 2,
 										},
 										ui.hover([
 											ui.scale(1.1),

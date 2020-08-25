@@ -89,6 +89,7 @@ const CONTROL_PROPS = {
 	controlHeightSmall: '24px',
 	controlHeightXLarge: '44px',
 	controlHeightXSmall: '20px',
+	controlHeightXXSmall: '12px',
 	controlPaddingX: '8px',
 	controlPaddingXLarge: '16px',
 	controlPaddingXSmall: '4px',

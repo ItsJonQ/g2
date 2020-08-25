@@ -22,12 +22,13 @@ import {
 	Menu,
 	MenuItem,
 	Scrollable,
+	SearchInput,
 	Spacer,
 	Spinner,
 	Subheading,
 	Surface,
 	Text,
-	TextField,
+	TextInput,
 	Truncate,
 	View,
 	VStack,
@@ -180,10 +181,9 @@ const PagesNav = () => {
 				<Heading size={4}>Pages</Heading>
 			</Spacer>
 			<View css={[ui.padding.x(3), ui.margin.bottom(4)]}>
-				<TextField
+				<SearchInput
 					onChange={(next) => setQuery(next)}
 					placeholder="Search pages"
-					type="search"
 					value={query}
 				/>
 			</View>
@@ -428,7 +428,7 @@ const BrowserBar = ({ history }) => {
 
 	return (
 		<Background borderBottom css={{ padding: 4 }}>
-			<TextField css={{ textAlign: 'center' }} readOnly value={url} />
+			<TextInput css={{ textAlign: 'center' }} readOnly value={url} />
 		</Background>
 	);
 };

@@ -121,8 +121,8 @@
               "title": "Button"
             },
             {
-              "link": "/components/textfield/",
-              "title": "TextField"
+              "link": "/components/textinput/",
+              "title": "TextInput"
             }
           ]
         }

@@ -1,6 +1,5 @@
 import { connect } from '@wp-g2/context';
 import { ns } from '@wp-g2/styles';
-import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Animated } from '../Animated';

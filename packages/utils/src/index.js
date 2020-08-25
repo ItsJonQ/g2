@@ -1,6 +1,6 @@
 export * from './arrays';
-export * from './colors';
 export * from './clipboard';
+export * from './colors';
 export * from './createStore';
 export * from './deepEqual';
 export * from './deepMerge';
@@ -12,4 +12,5 @@ export * from './memoize';
 export * from './other';
 export * from './react';
 export * from './strings';
+export * from './values';
 export * from './warning';

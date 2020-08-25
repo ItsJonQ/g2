@@ -8,7 +8,7 @@ import {
 	Spacer,
 	Surface,
 	Switch,
-	TextField,
+	TextInput,
 	View,
 } from '@wp-g2/components';
 import { capitalize, is } from '@wp-g2/utils';
@@ -93,7 +93,7 @@ const Controls = {
 	boolean: ({ value, ...props }) => (
 		<Switch defaultValue={value} {...props} />
 	),
-	string: TextField,
+	string: TextInput,
 };
 
 const BlockContext = createContext({});
