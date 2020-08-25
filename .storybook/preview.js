@@ -113,6 +113,7 @@ function Themer({ inspector, setInspector }) {
 		>
 			<ThemeProvider
 				isDark={isDark}
+				isGlobal
 				isHighContrast={isHighContrast}
 				isColorBlind={isColorBlind}
 				isReducedMotion={isReducedMotion}
@@ -334,7 +335,7 @@ function StoryDecorator(storyFn) {
 				</ComponentInspector>
 			</View>
 			<Surface
-				isBackground
+				variant="tertiary"
 				css={{
 					position: 'fixed',
 					top: 0,
