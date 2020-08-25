@@ -26,11 +26,15 @@ export function DocsSearch({ visible }) {
     keys: [
       {
         name: "title",
-        weight: 0.7,
+        weight: 0.6,
+      },
+      {
+        name: "keywords",
+        weight: 0.25,
       },
       {
         name: "rawBody",
-        weight: 0.3,
+        weight: 0.15,
       },
     ],
     minMatchCharLength: 1,
@@ -258,6 +262,7 @@ function useComponentsData() {
                 title
                 type
                 description
+                keywords
               }
               fields {
                 id
