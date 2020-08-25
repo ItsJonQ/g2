@@ -13,7 +13,7 @@ export const CloseButtonWrapper = styled.div`
 	margin-top: ${space(-1)};
 `;
 
-export const ContentWrapperView = styled.div`
+export const contentWithDismiss = css`
 	padding-top: ${space(1.25)};
 `;
 

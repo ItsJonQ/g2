@@ -19,6 +19,7 @@ export * from './Collapsible';
 export * from './ColorField';
 export * from './ColorPicker';
 export * from './ColorSwatch';
+export * from './Container';
 export * from './ControlGroup';
 export * from './ControlLabel';
 export * from './ComponentInspector';

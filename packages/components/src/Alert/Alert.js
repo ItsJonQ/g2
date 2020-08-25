@@ -1,23 +1,26 @@
 import { connect } from '@wp-g2/context';
+import { ns } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Animated } from '../Animated';
 import { Flex, FlexBlock } from '../Flex';
+import { View } from '../View';
 import * as styles from './Alert.styles';
 import AlertCloseButton from './AlertCloseButton';
 import AlertTitle from './AlertTitle';
-const { AlertView, ContentWrapperView } = styles;
+const { AlertView } = styles;
 
 function Alert({
 	children,
-	isDismissable = false,
-	onDismiss = noop,
+	isDismissable: isDismissableProp = false,
+	onDismiss,
 	status = 'default',
 	title,
 	...props
 }) {
 	const cx = [styles[status]];
+	const isDismissable = isDismissableProp || !!onDismiss;
 
 	return (
 		<Animated auto>
@@ -25,7 +28,12 @@ function Alert({
 				<Flex align="flex-start">
 					<FlexBlock>
 						<AlertTitle title={title} />
-						<ContentWrapperView>{children}</ContentWrapperView>
+						<View
+							{...ns('AlertContent')}
+							cx={[isDismissable && styles.contentWithDismiss]}
+						>
+							{children}
+						</View>
 					</FlexBlock>
 					<AlertCloseButton
 						isDismissable={isDismissable}
