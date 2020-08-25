@@ -11,7 +11,9 @@ function NavigatorScreen({ children, component, path, render, ...props }) {
 			path={path}
 			render={(routeProps) => {
 				const { history } = routeProps;
-				const isBack = history?.action === 'POP';
+				const isBack =
+					history?.action === 'POP' ||
+					history?.location?.state?.isBack;
 
 				const content = children
 					? typeof children === 'function'

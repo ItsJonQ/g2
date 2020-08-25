@@ -26,7 +26,11 @@ function NavigatorLink({
 	const handleOnClick = (event) => {
 		if (isBack) {
 			event.preventDefault();
-			history.goBack();
+			if (to) {
+				history.push(to, { isBack: true });
+			} else {
+				history.goBack();
+			}
 		}
 	};
 
