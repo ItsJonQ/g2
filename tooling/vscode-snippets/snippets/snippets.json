@@ -21,6 +21,16 @@
 		],
 		"prefix": "g2-avatar"
 	},
+	"g2-components-background": {
+		"body": [
+			"<Background css={[ui.padding(5)]}>",
+			"  <Surface css={[ui.padding(5)]}>",
+			"    <Text>${1:Into The Unknown}</Text>",
+			"  </Surface>",
+			"</Background>"
+		],
+		"prefix": "g2-background"
+	},
 	"g2-components-button": {
 		"body": ["<Button variant=\"secondary\">${1:Let It Go}</Button>"],
 		"prefix": "g2-button"
@@ -40,6 +50,17 @@
 			"</Card>"
 		],
 		"prefix": "g2-card"
+	},
+	"g2-components-elevation": {
+		"body": [
+			"<View css={[ui.padding(5)]}>",
+			"  <Surface css={[ui.padding(5)]}>",
+			"    <Text>${1:Into The Unknown}</Text>",
+			"    <Elevation value={5} />",
+			"  </Surface>",
+			"</View>"
+		],
+		"prefix": "g2-elevation"
 	},
 	"g2-components-flex": {
 		"body": [
@@ -126,6 +147,16 @@
 	"g2-components-subheading": {
 		"body": ["<Subheading>${1:Into The Unknown}</Subheading>"],
 		"prefix": "g2-subheading"
+	},
+	"g2-components-surface": {
+		"body": [
+			"<Background css={[ui.padding(5)]}>",
+			"  <Surface css={[ui.padding(5)]}>",
+			"    <Text>${1:Into The Unknown}</Text>",
+			"  </Surface>",
+			"</Background>"
+		],
+		"prefix": "g2-surface"
 	},
 	"g2-components-text": {
 		"body": ["<Text>${1:Where the north wind meets the sea}</Text>"],
