@@ -27,6 +27,7 @@
 		".remake",
 		".github",
 		".storybook",
-		"packages/website"
+		"packages/website",
+		"packages/**/dist"
 	]
 }
