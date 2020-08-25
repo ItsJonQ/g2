@@ -1,6 +1,7 @@
 import colorize from 'tinycolor2';
 
 import { is } from './is';
+import { memoize } from './memoize';
 export { default as colorize } from 'tinycolor2';
 
 let __colorComputationNode;
@@ -27,7 +28,7 @@ export function isColor(value) {
 	return test.isValid();
 }
 
-export function getComputedColor(color) {
+function __getComputedColor(color) {
 	if (!is.string(color)) return '';
 
 	if (isColor(color)) return color;
@@ -47,6 +48,8 @@ export function getComputedColor(color) {
 
 	return computedColor || '';
 }
+
+export const getComputedColor = memoize(__getComputedColor);
 
 export function getOptimalTextColor(color) {
 	const background = getComputedColor(color);
