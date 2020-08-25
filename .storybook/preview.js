@@ -1,6 +1,6 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '@wp-g2/styles';
+import { ThemeProvider, ui } from '@wp-g2/styles';
 import {
 	Button,
 	Card,
@@ -104,12 +104,15 @@ function Themer({ inspector, setInspector }) {
 
 	return (
 		<View
-			css={{
-				position: 'fixed',
-				left: 8,
-				bottom: 8,
-				zIndex: 10,
-			}}
+			css={[
+				{
+					position: 'fixed',
+					left: '50%',
+					bottom: 8,
+					zIndex: 10,
+				},
+				ui.offset.x('-50%'),
+			]}
 		>
 			<ThemeProvider
 				isDark={isDark}

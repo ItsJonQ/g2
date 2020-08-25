@@ -328,7 +328,7 @@ const screens = [
 ];
 
 const NavigationSidebar = () => {
-	const initialPath = 'Pages';
+	const initialPath = 'Dashboard';
 
 	return (
 		<ThemeProvider isDark isGlobal={false}>
@@ -445,7 +445,7 @@ const App = () => {
 				top: 0,
 			}}
 		>
-			<Router initialEntries={['/pages']}>
+			<Router initialEntries={['/']}>
 				<VStack spacing={0}>
 					<Route component={BrowserBar} />
 					<Spacer>
