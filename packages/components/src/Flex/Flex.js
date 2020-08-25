@@ -13,6 +13,7 @@ export function Flex({
 	autoWrap = true,
 	children,
 	direction: directionProp = 'row',
+	forwardedRef,
 	gap = 2,
 	justify = 'space-between',
 	wrap = false,
@@ -61,7 +62,7 @@ export function Flex({
 	const classes = [styles.Flex, sx.Base];
 
 	return (
-		<View {...props} cx={classes}>
+		<View {...props} cx={classes} ref={forwardedRef}>
 			{clonedChildren}
 		</View>
 	);

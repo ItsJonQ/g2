@@ -5,11 +5,22 @@ import { ControlLabel } from '../ControlLabel';
 import { FormGroup } from '../FormGroup';
 import CheckboxElement from './CheckboxElement';
 
-function Checkbox({ forwardedRef, label, ...props }) {
+function Checkbox({
+	forwardedRef,
+	gap,
+	label,
+	templateColumns = 'auto 1fr',
+	...props
+}) {
 	if (!label) return <CheckboxElement {...props} ref={forwardedRef} />;
 
 	return (
-		<FormGroup isInline isMarginless templateColumns="auto 1fr">
+		<FormGroup
+			gap={gap}
+			isInline
+			isMarginless
+			templateColumns={templateColumns}
+		>
 			<CheckboxElement {...props} ref={forwardedRef} />
 			<ControlLabel>{label}</ControlLabel>
 		</FormGroup>

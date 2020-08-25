@@ -1,5 +1,13 @@
-import { styled } from '@wp-g2/styles';
+import { css } from '@wp-g2/styles';
 
-export const ContainerView = styled.div`
+export const left = css`
+	margin-right: auto;
+`;
+
+export const right = css`
+	margin-left: auto;
+`;
+
+export const center = css`
 	margin: auto;
 `;

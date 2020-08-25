@@ -10,6 +10,7 @@ import * as styles from './FormGroup.styles';
 const { FormGroupView } = styles;
 
 function FormGroup({
+	alignLabel = 'left',
 	children,
 	horizontal = true,
 	id: idProp,
@@ -22,7 +23,9 @@ function FormGroup({
 
 	const cx = [isMarginless && styles.marginless];
 
-	const labelMarkup = label ? <ControlLabel>{label}</ControlLabel> : null;
+	const labelMarkup = label ? (
+		<ControlLabel align={alignLabel}>{label}</ControlLabel>
+	) : null;
 
 	const contentMarkup = (
 		<>

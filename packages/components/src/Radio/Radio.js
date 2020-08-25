@@ -5,11 +5,22 @@ import { ControlLabel } from '../ControlLabel';
 import { FormGroup } from '../FormGroup';
 import RadioElement from './RadioElement';
 
-function Radio({ forwardedRef, label, ...props }) {
+function Radio({
+	forwardedRef,
+	gap,
+	label,
+	templateColumns = 'auto 1fr',
+	...props
+}) {
 	if (!label) return <RadioElement {...props} ref={forwardedRef} />;
 
 	return (
-		<FormGroup isInline isMarginless templateColumns="auto 1fr">
+		<FormGroup
+			gap={gap}
+			isInline
+			isMarginless
+			templateColumns={templateColumns}
+		>
 			<RadioElement {...props} ref={forwardedRef} />
 			<ControlLabel>{label}</ControlLabel>
 		</FormGroup>
