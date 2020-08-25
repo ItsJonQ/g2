@@ -107,7 +107,6 @@ export function DocsNavigation() {
         className="DocsNavigationBody"
         css={[ui.frame.height("70vh"), ui.padding.right(3)]}
         ref={scrollableRef}
-        smoothScroll
       >
         {sections.map((section, index) => (
           <Section key={section.title} {...section} index={index} />

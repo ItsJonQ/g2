@@ -1,0 +1,67 @@
+---
+title: Elevation
+description: "Elevation is a core component that renders shadow, using the library's shadow system.."
+type: images
+slug: /components/elevation/
+keywords: ["elevation", "shadow", "depth"]
+---
+
+# Elevation
+
+`Elevation` is a core component that renders shadow, using the library's shadow system.
+
+## Usage
+
+The shadow effect is generated using the `value` prop.
+
+```jsx live
+import { Elevation, Surface, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <View css={[ui.padding(5)]}>
+      <Surface css={[ui.padding(5)]}>
+        <Text>Into The Unknown</Text>
+        <Elevation value={5} />
+      </Surface>
+    </View>
+  )
+}
+```
+
+## Props
+
+| Name          | Type      | Default | Description                                                                 |
+| ------------- | --------- | ------- | --------------------------------------------------------------------------- |
+| active        | `number`  |         | Shadow value on `:active` interaction.                                      |
+| focus         | `number`  |         | Shadow value on `:focus` interaction.                                       |
+| hover         | `number`  |         | Shadow value on `:hover` interaction.                                       |
+| isInteractive | `boolean` | `false` | Automatically generates `active`, `focus`, and `hover` shadow values.       |
+| offset        | `number`  | `0`     | Negative bounding offsets. Used to align `Elevation` with a parent element. |
+| value         | `number`  | `0`     | Negative bounding offsets. Used to align `Elevation` with a parent element. |
+
+### value
+
+The `value` determines the strength of the shadow, which sense of depth. In the example below, `isInteractive` is activated to give a better sense of depth.
+
+```jsx live
+import { Elevation, Surface, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <View css={[ui.padding(5)]}>
+      <Surface css={[ui.padding(5)]}>
+        <Text>Into The Unknown</Text>
+        <Elevation value={8} isInteractive />
+      </Surface>
+    </View>
+  )
+}
+```
+
+## See Also
+
+- [Surface](/components/surface/)
+- [View](/components/view/)

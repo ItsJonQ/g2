@@ -30,6 +30,18 @@
             {
               "link": "/components/image/",
               "title": "Image"
+            },
+            {
+              "link": "/components/surface/",
+              "title": "Surface"
+            },
+            {
+              "link": "/components/background/",
+              "title": "Background"
+            },
+            {
+              "link": "/components/elevation/",
+              "title": "Elevation"
             }
           ]
         },

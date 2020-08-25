@@ -11,7 +11,7 @@ import * as styles from './Avatar.styles';
 import { getBorderRadius, getInitialsTextSize, getSize } from './Avatar.utils';
 
 function Avatar({
-	animateOnRender = true,
+	animateOnImageLoad = true,
 	border = false,
 	color,
 	name,
@@ -20,7 +20,7 @@ function Avatar({
 	src,
 	...props
 }) {
-	const [imageLoaded, setImageLoaded] = useState(!animateOnRender);
+	const [imageLoaded, setImageLoaded] = useState(!animateOnImageLoad);
 	const size = getSize(sizeProp);
 	const borderRadius = getBorderRadius(shape, size);
 	const textSize = getInitialsTextSize(size);

@@ -1,0 +1,77 @@
+---
+title: Surface
+description: "Surface is a core elemenet that renders a primary background color."
+type: images
+slug: /components/surface/
+keywords: ["surface", "background"]
+---
+
+# Surface
+
+`Surface` is a core elemenet that renders a primary background color.
+
+## Usage
+
+In the example below, notice how the `Surface` renders in white (or dark gray if in dark mode).
+
+```jsx live
+import { Background, Surface, Text } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Background css={[ui.padding(5)]}>
+      <Surface css={[ui.padding(5)]}>
+        <Text>Into The Unknown</Text>
+      </Surface>
+    </Background>
+  )
+}
+```
+
+## Props
+
+| Name         | Type      | Default | Description                                   |
+| ------------ | --------- | ------- | --------------------------------------------- |
+| border       | `boolean` |         | Renders a border around the entire `Surface`. |
+| borderBottom | `boolean` |         | Renders a bottom border.                      |
+| borderLeft   | `boolean` |         | Renders a left border.                        |
+| borderRight  | `boolean` |         | Renders a right border.                       |
+| borderTop    | `boolean` |         | Renders a top border.                         |
+| variant      | `string`  |         | Modifies the background color of `Surface`.   |
+
+### variant
+
+`variant` modifies the background color or `Surface`.
+
+| Value     | Description                                                                            |
+| --------- | -------------------------------------------------------------------------------------- |
+| primary   | Used for almost all cases.                                                             |
+| secondary | Used as a secondary background for inner `Surface` components.                         |
+| tertiary  | Used as the app/site wide background. Visible in **dark mode** only. Use case is rare. |
+
+```jsx live
+import { Surface, Text, VStack } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <VStack css={[ui.background.darkGray, ui.padding(5)]}>
+      <Surface css={[ui.padding(5)]} variant="primary">
+        <Text>Primary Surface</Text>
+      </Surface>
+      <Surface css={[ui.padding(5)]} variant="secondary">
+        <Text>Secondary Surface</Text>
+      </Surface>
+      <Surface css={[ui.padding(5)]} variant="tertiary">
+        <Text>Tertiary Surface</Text>
+      </Surface>
+    </VStack>
+  )
+}
+```
+
+## See Also
+
+- [View](/components/view/)
+- [Background](/components/background/)
