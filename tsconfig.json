@@ -20,9 +20,10 @@
 		"stripInternal": true,
 		"target": "esnext"
 	},
-	"include": ["packages/**/*"],
+	"include": ["packages/*/types/**/*"],
 	"exclude": [
 		"dist",
+		"src",
 		"node_modules",
 		".remake",
 		".github",
