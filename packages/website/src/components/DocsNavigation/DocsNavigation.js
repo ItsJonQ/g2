@@ -12,7 +12,7 @@ import { Link } from "gatsby"
 import { kebabCase } from "lodash"
 import React, { useEffect, useRef } from "react"
 
-import data from "../../data/docs.json"
+import data from "../../data/navigation-components.json"
 
 function Links({ links }) {
   if (!links) return null
