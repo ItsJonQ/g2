@@ -21,6 +21,7 @@ import {
 	RadioGroup,
 	Select,
 	Spacer,
+	Surface,
 	Tab,
 	TabList,
 	TabPanel,
@@ -355,27 +356,29 @@ function App() {
 								<Tab css={[ui.padding.x(3)]}>Permission</Tab>
 							</HStack>
 						</TabList>
-						<ComponentsProvider value={componentsProviderValue}>
-							<Grid gap={28} templateColumns="1fr 280px">
-								<Spacer py={4}>
-									<TabPanel>
-										<ProfilePanel />
-									</TabPanel>
-									<TabPanel>
-										<AccountPanel />
-									</TabPanel>
-									<TabPanel>
-										<OptionsPanel />
-									</TabPanel>
-									<TabPanel>
-										<PermissionsPanel />
-									</TabPanel>
-								</Spacer>
-								<Spacer py={4}>
-									<Sidebar />
-								</Spacer>
-							</Grid>
-						</ComponentsProvider>
+						<Surface css={[ui.padding(5)]} variant="secondary">
+							<ComponentsProvider value={componentsProviderValue}>
+								<Grid gap={28} templateColumns="1fr 280px">
+									<View>
+										<TabPanel>
+											<ProfilePanel />
+										</TabPanel>
+										<TabPanel>
+											<AccountPanel />
+										</TabPanel>
+										<TabPanel>
+											<OptionsPanel />
+										</TabPanel>
+										<TabPanel>
+											<PermissionsPanel />
+										</TabPanel>
+									</View>
+									<View>
+										<Sidebar />
+									</View>
+								</Grid>
+							</ComponentsProvider>
+						</Surface>
 					</Tabs>
 				</Container>
 			</DragDropContext>
