@@ -1,6 +1,6 @@
 import * as Components from "@wp-g2/components"
 import * as Context from "@wp-g2/context"
-import { css, ui } from "@wp-g2/styles"
+import { css, cx, ThemeProvider, ui } from "@wp-g2/styles"
 import { useUniqueId } from "@wp-g2/utils"
 import nightOwl from "prism-react-renderer/themes/nightOwl"
 import React from "react"
@@ -28,6 +28,8 @@ const liveCodeScope = {
   ...Components,
   css,
   ui,
+  ThemeProvider,
+  cx,
 }
 
 function transformCode(code) {
