@@ -10,6 +10,7 @@ import { position } from './positions';
 import { shadow } from './shadows';
 import { margin, padding } from './spacing';
 import { offset, rotate, scale, scaleX, scaleY } from './transforms';
+import { zIndex } from './zIndex';
 
 export const system = {
 	active,
@@ -32,6 +33,7 @@ export const system = {
 	scaleX,
 	scaleY,
 	shadow,
+	zIndex,
 };
 
 // TODO: Testing ui alias for system

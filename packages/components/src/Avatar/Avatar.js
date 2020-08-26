@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, ns } from '@wp-g2/styles';
+import { css, get, ns } from '@wp-g2/styles';
 import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
 
@@ -13,7 +13,7 @@ import { getBorderRadius, getInitialsTextSize, getSize } from './Avatar.utils';
 function Avatar({
 	animateOnImageLoad = true,
 	border = false,
-	color,
+	color = get('lightGray500'),
 	name,
 	shape = 'circle',
 	size: sizeProp = 'medium',
@@ -43,7 +43,6 @@ function Avatar({
 	});
 
 	const cx = [sx.base, sx.borderRadius, border && styles.border];
-
 	return (
 		<AvatarView {...props} cx={cx}>
 			{shouldRenderInitials && (

@@ -54,19 +54,6 @@ export function useListData(options = defaultOptions) {
 	}, [state]);
 
 	const create = (next = {}) => fns.add({ ...schema.makeOne(), ...next });
-	const update = ({ id, ...rest }) => {
-		const item = fns.find({ id });
-		if (item) {
-			fns.set((prev) =>
-				prev.filter((item) => {
-					if (item.id === id) {
-						return { ...item, ...rest };
-					}
-					return item;
-				}),
-			);
-		}
-	};
 
 	const loadMore = ({ limit }) => {
 		fns.set((prev) => [...prev, ...createItems(limit)]);
@@ -77,7 +64,6 @@ export function useListData(options = defaultOptions) {
 	};
 
 	fns.create = create;
-	fns.update = update;
 	fns.delete = fns.remove;
 	fns.deleteAll = () => fns.set([]);
 	fns.loadMore = loadMore;

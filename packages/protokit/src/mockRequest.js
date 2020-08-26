@@ -6,7 +6,7 @@ const defaultMockRequestOptions = {
 };
 
 export async function mockRequest(options = defaultMockRequestOptions) {
-	const { data, message, status, timeout } = {
+	const { action, data, message, status, timeout } = {
 		...defaultMockRequestOptions,
 		...options,
 	};
@@ -14,6 +14,14 @@ export async function mockRequest(options = defaultMockRequestOptions) {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			if (status === 200) {
+				try {
+					if (is.function(action)) {
+						action();
+					}
+				} catch (err) {
+					reject({ status: 400, message: err });
+				}
+
 				const response = is.function(data) ? data() : data;
 				return resolve(response, { status: 200, message });
 			} else {

@@ -16,7 +16,9 @@ export default {
 					if (!isNodeText(node)) return;
 
 					const name = getComponentName(node);
-					const isInvalid = name === 'View';
+					const invalidWrappers = ['Card', 'CardContent', 'View'];
+
+					const isInvalid = invalidWrappers.includes(name);
 
 					if (isInvalid) {
 						context.report({

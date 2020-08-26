@@ -23,7 +23,7 @@ import {
 } from '../../index';
 
 export default {
-	title: 'Examples/WIP/Protokit',
+	title: 'Examples/WIP/Protokit/ListData',
 };
 
 const itemSchema = new Schema(() => ({
@@ -31,7 +31,7 @@ const itemSchema = new Schema(() => ({
 	title: faker.name.firstName(),
 }));
 
-export const ListData = () => {
+const Example = () => {
 	const limit = 20;
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -153,3 +153,5 @@ export const ListData = () => {
 		</Container>
 	);
 };
+
+export const _default = () => <Example />;
