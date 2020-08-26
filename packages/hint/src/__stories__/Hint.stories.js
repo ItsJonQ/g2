@@ -1,8 +1,6 @@
 import { Button, HStack, View } from '@wp-g2/components';
 import React from 'react';
 
-import { Hint } from '../Hint';
-
 export default {
 	title: 'Examples/WIP/Hint',
 };
@@ -27,8 +25,8 @@ export const _default = () => {
 					<Button>One</Button>
 					<Button>Two</Button>
 				</HStack>
+				<View>Invalid Text</View>
 			</View>
-			<Hint />
 		</>
 	);
 };

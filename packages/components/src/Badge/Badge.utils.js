@@ -1,4 +1,4 @@
-export const LOZENGE_COLORS = {
+export const BADGE_COLORS = {
 	blue: 'blue',
 	green: 'green',
 	orange: 'orange',

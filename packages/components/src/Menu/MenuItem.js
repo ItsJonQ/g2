@@ -28,6 +28,7 @@ function MenuItem({
 	]);
 
 	const Component = menu ? ReakitMenuItem : View;
+	console.log(props, menu);
 
 	return (
 		<Component {...props} {...menu} className={classes} ref={forwardedRef}>

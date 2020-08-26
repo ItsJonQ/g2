@@ -13,12 +13,12 @@ import {
 import {
 	Avatar,
 	Background,
+	Badge,
 	Flex,
 	Grid,
 	Heading,
 	HStack,
 	Icon,
-	Lozenge,
 	Menu,
 	MenuItem,
 	Scrollable,
@@ -123,7 +123,7 @@ const DashboardNav = () => {
 								{commentCount === null ? (
 									<Spinner />
 								) : (
-									<Lozenge>{commentCount}</Lozenge>
+									<Badge>{commentCount}</Badge>
 								)}
 							</View>
 						</Flex>

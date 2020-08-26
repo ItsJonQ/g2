@@ -38,7 +38,7 @@ export * from './Initials';
 export * from './Image';
 export * from './Link';
 export * from './List';
-export * from './Lozenge';
+export * from './Badge';
 export * from './MediaQuery';
 export * from './Menu';
 export * from './Modal';

@@ -23,7 +23,7 @@ import {
 import { Hint } from '@wp-g2/hint';
 import { useLocalState } from '@wp-g2/utils';
 
-const __EXPERIMENTAL_SHOW_HINT = false;
+const __EXPERIMENTAL_SHOW_HINT = true;
 
 const FormGroup = ({ children, ...props }) => {
 	return (

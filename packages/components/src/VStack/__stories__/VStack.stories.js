@@ -2,9 +2,9 @@ import React from 'react';
 
 import { HStack } from '../../HStack';
 import {
+	Badge,
 	Button,
 	Heading,
-	Lozenge,
 	Placeholder,
 	Spacer,
 	Text,
@@ -41,7 +41,7 @@ export const _default = () => {
 					</View>
 				</HStack>
 				<HStack justify="flex-start">
-					<Lozenge color="green">Open</Lozenge>
+					<Badge color="green">Open</Badge>
 					<Text weight="bold">ItsJonQ</Text>
 					<Text>opened this issue 2 days ago · 1 comment</Text>
 				</HStack>
