@@ -20,7 +20,10 @@ import {
 	ComponentInspector,
 	View,
 } from '@wp-g2/components';
+import { Hint } from '@wp-g2/hint';
 import { useLocalState } from '@wp-g2/utils';
+
+const __EXPERIMENTAL_SHOW_HINT = false;
 
 const FormGroup = ({ children, ...props }) => {
 	return (
@@ -337,6 +340,7 @@ function StoryDecorator(storyFn) {
 					{storyFn()}
 				</ComponentInspector>
 			</View>
+			{__EXPERIMENTAL_SHOW_HINT && <Hint />}
 			<Surface
 				variant="tertiary"
 				css={{

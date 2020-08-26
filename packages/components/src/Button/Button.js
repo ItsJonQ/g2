@@ -15,6 +15,7 @@ function Button({
 	children,
 	className,
 	currentColor,
+	disabled,
 	elevation = 0,
 	elevationActive,
 	elevationFocus,
@@ -65,6 +66,7 @@ function Button({
 			className={classes}
 			data-destructive={isDestructive}
 			data-icon={!!icon}
+			disabled={disabled || isLoading}
 			href={href}
 			ref={forwardedRef}
 			{...props}

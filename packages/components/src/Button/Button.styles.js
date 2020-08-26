@@ -34,8 +34,8 @@ export const Button = css`
 			cubic-bezier(0.12, 0.8, 0.32, 1);
 	}
 
-	&[disabled],
-	&[aria-disabled='true'] {
+	&[disabled]:not([aria-busy='true']),
+	&[aria-disabled='true']:not([aria-busy='true']) {
 		cursor: auto;
 		opacity: 0.5;
 	}
