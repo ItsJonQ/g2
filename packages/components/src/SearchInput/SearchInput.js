@@ -6,6 +6,7 @@ import React, { useRef } from 'react';
 
 import { Icon } from '../Icon';
 import { Spinner } from '../Spinner';
+import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { View } from '../View';
 import * as styles from './SearchInput.styles';
@@ -71,7 +72,9 @@ function SearchPrefix({ isLoading = false, prefix }) {
 				{isLoading ? (
 					<Spinner size={16} />
 				) : (
-					<Icon icon={<FiSearch />} size={12} />
+					<Text>
+						<Icon icon={<FiSearch />} size={12} />
+					</Text>
 				)}
 			</View>
 			{prefix}
