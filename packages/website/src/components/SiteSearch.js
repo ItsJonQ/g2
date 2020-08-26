@@ -1,7 +1,7 @@
 import {
+  Badge,
   Button,
   HStack,
-  Lozenge,
   Modal,
   ModalBody,
   ModalTrigger,
@@ -38,12 +38,12 @@ export function SiteSearch() {
       visible={visible}
     >
       <HStack css={[ui.position.top, ui.offset.y(-30)]}>
-        <Lozenge isBold truncate={false}>
+        <Badge isBold truncate={false}>
           Jump Search
-        </Lozenge>
-        <Lozenge isBold truncate={false}>
+        </Badge>
+        <Badge isBold truncate={false}>
           Press ⌘ / CTRL + J
-        </Lozenge>
+        </Badge>
       </HStack>
       <ModalBody css={{ maxHeight: "70vh" }}>
         <SearchBody />

@@ -1,0 +1,90 @@
+---
+title: Image
+type: images
+description: "Image a core component that renders images in the library."
+slug: /components/image/
+keywords: ["image", "aspect", "ratio", "responsive", "media"]
+---
+
+# Image
+
+`Image` a core component that renders images in the library.
+
+## Usage
+
+`Image` can be used just like a regular HTML `img`. However, unlike the HTML `img`, the `Image` core component is responsive **by default**.
+
+```jsx live
+import { Image } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Image
+      src="https://picsum.photos/seed/picsum/800/800"
+      alt="Snowy Mountains"
+      width={300}
+      height={300}
+    />
+  )
+}
+```
+
+## Props
+
+| Name        | Type              | Default | Description                                                                                                                  |
+| ----------- | ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| aspectRatio | `number`          |         | Renders the image with a specific `AspectRatio`.                                                                             |
+| fit         | `string`          |         | Resizes the image to fit a container, using CSS [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit). |
+| height      | `number`,`string` |         | The image height.                                                                                                            |
+| width       | `number`,`string` |         | The image width.                                                                                                             |
+
+### aspectRatio
+
+The `Image` width:height aspect ratio can be customized, rendering the content in an `AspectRatio`. If an `aspectRatio` is used, `Image` will default to a `fit` of `cover`.
+
+```jsx live
+import { Image } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Image
+      src="https://picsum.photos/seed/picsum/800/800"
+      alt="Snowy Mountains"
+      aspectRatio={21 / 9}
+    />
+  )
+}
+```
+
+### fit
+
+The `fit` prop accepts a variety of CSS [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) values:
+
+| Value      | Description                                                                   |
+| ---------- | ----------------------------------------------------------------------------- |
+| contain    | Resizes image to fit the container box, while maintaining it's aspect ratio.  |
+| cover      | Resizes image to fill the container box, while maintaining it's aspect ratio. |
+| fill       | Resizes image to fill the container box.                                      |
+| none       | Image will not be resized.                                                    |
+| scale-down | Image will be sized as if none or contain were specified.                     |
+
+```jsx live
+import { Image } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <View css={{ height: 200 }}>
+      <Image
+        src="https://picsum.photos/seed/picsum/800/800"
+        alt="Snowy Mountains"
+        fit="fill"
+      />
+    </View>
+  )
+}
+```
+
+## See Also
+
+- [Text](/components/text/)
+- [AspectRatio](/components/aspectratio/)

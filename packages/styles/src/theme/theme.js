@@ -67,9 +67,9 @@ const FONT_PROPS = {
 
 const SURFACE_PROPS = {
 	surfaceBackgroundColor: get('surfaceColor'),
-	surfaceBackgroundSubtleColor: 'rgba(0, 0, 0, 0.05)',
-	surfaceBackgroundTintColor: 'rgba(0, 0, 0, 0.04)',
-	surfaceBorderColor: 'rgba(0, 0, 0, 0.06)',
+	surfaceBackgroundSubtleColor: '#F3F3F3',
+	surfaceBackgroundTintColor: '#F5F5F5',
+	surfaceBorderColor: 'rgba(0, 0, 0, 0.1)',
 	surfaceColor: get('white'),
 };
 
@@ -89,6 +89,7 @@ const CONTROL_PROPS = {
 	controlHeightSmall: '24px',
 	controlHeightXLarge: '44px',
 	controlHeightXSmall: '20px',
+	controlHeightXXSmall: '12px',
 	controlPaddingX: '8px',
 	controlPaddingXLarge: '16px',
 	controlPaddingXSmall: '4px',
@@ -118,7 +119,7 @@ const DARK_MODE_PROPS = {
 	controlTextActiveColor: get('white'),
 	surfaceBackgroundColor: get('colorBodyBackgroundDark'),
 	surfaceBackgroundSubtleColor: 'rgba(255, 255, 255, 0.05)',
-	surfaceBackgroundTintColor: 'rgba(0, 0, 0, 0.1)',
+	surfaceBackgroundTintColor: '#252525',
 	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',
 };

@@ -74,7 +74,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        stack
       }
       body
       tableOfContents

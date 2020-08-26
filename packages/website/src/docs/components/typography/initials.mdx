@@ -1,0 +1,33 @@
+---
+title: Initials
+description: "Initials renders a given name with initials."
+type: typography
+slug: /components/initials/
+keywords: ["initials", "text", "user", "name"]
+---
+
+# Initials
+
+Initials renders a given name with initials.
+
+## Usage
+
+```jsx live
+import { Initials } from "@wp-g2/components"
+
+function Example() {
+  return <Initials name="Elsa Oldenburg" />
+}
+```
+
+## Props
+
+| Name | Type     | Default | Description                       |
+| ---- | -------- | ------- | --------------------------------- |
+| name | `string` |         | The name to render as initialize. |
+
+`Initials` uses `Text` underneath, so we have access to all of `Text`'s props. For a complete list of props, check out [`Text`](/components/text/#props).
+
+## See Also
+
+- [Text](/components/text/)

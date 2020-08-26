@@ -12,6 +12,7 @@ function BaseModal({
 	backdropTransitionDuration = 250,
 	children,
 	className,
+	dialog: dialogProp,
 	forwardedRef,
 	label = 'Modal',
 	renderTrigger = null,
@@ -22,7 +23,14 @@ function BaseModal({
 	zIndex = 999,
 	...props
 }) {
-	const dialog = useDialogState({ animated: true, visible });
+	const _dialog = useDialogState({ animated: true, visible });
+	let dialog = _dialog;
+
+	if (dialogProp) {
+		dialog = dialogProp;
+		dialog.setAnimated(true);
+	}
+
 	const { isUnderLayer } = useModalState(dialog);
 
 	const backdropTransition = `opacity ${backdropTransitionDuration}ms

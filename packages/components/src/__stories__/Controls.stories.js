@@ -29,7 +29,7 @@ import {
 	Stepper,
 	Switch,
 	Text,
-	TextField,
+	TextInput,
 	View,
 } from '../index';
 
@@ -79,8 +79,8 @@ const LayoutControls = () => {
 			<PanelBody>
 				<FormGroup label="Dimensions">
 					<Grid columns={2}>
-						<TextField suffix={<SuffixLabel>W</SuffixLabel>} />
-						<TextField
+						<TextInput suffix={<SuffixLabel>W</SuffixLabel>} />
+						<TextInput
 							id="d-h"
 							suffix={<SuffixLabel>H</SuffixLabel>}
 						/>
@@ -107,8 +107,8 @@ const LayoutControls = () => {
 				</FormGroup>
 				<FormGroup label="Position">
 					<Grid columns={2}>
-						<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
-						<TextField
+						<TextInput suffix={<SuffixLabel>X</SuffixLabel>} />
+						<TextInput
 							id="pos-y"
 							suffix={<SuffixLabel>Y</SuffixLabel>}
 						/>
@@ -121,7 +121,7 @@ const LayoutControls = () => {
 					<View>
 						<Spacer>
 							<Grid columns={2}>
-								<TextField
+								<TextInput
 									suffix={<SuffixLabel>PX</SuffixLabel>}
 								/>
 								<Stepper direction="horizontal" />
@@ -176,7 +176,7 @@ const TypographyControls = () => {
 				<FormGroup label="Size">
 					<Flex gap={2}>
 						<FlexBlock>
-							<TextField value="16" />
+							<TextInput value="16" />
 						</FlexBlock>
 						<FlexBlock>
 							<Slider />

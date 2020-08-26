@@ -30,7 +30,7 @@ import {
 	Select,
 	Slider,
 	Spacer,
-	TextField,
+	TextInput,
 } from '../../index';
 
 export default {
@@ -58,7 +58,7 @@ const ColorControl = ({ color: colorProp }) => {
 					<FormGroup label="Opacity">
 						<Flex>
 							<FlexBlock>
-								<TextField value="50%" />
+								<TextInput value="50%" />
 							</FlexBlock>
 							<FlexBlock>
 								<Slider />
@@ -91,8 +91,8 @@ const MediaControl = () => {
 					</Spacer>
 					<FormGroup label="Focal Point">
 						<Grid columns={2}>
-							<TextField suffix={<SuffixLabel>X</SuffixLabel>} />
-							<TextField suffix={<SuffixLabel>Y</SuffixLabel>} />
+							<TextInput suffix={<SuffixLabel>X</SuffixLabel>} />
+							<TextInput suffix={<SuffixLabel>Y</SuffixLabel>} />
 						</Grid>
 					</FormGroup>
 					<FormGroup label="Position">
@@ -150,7 +150,7 @@ const InspectorControl = () => {
 					</FormGroup>
 					<FormGroup label="Height">
 						<Grid templateColumns="1.2fr 0.8fr">
-							<TextField />
+							<TextInput />
 							<UnitSelect />
 						</Grid>
 					</FormGroup>
@@ -172,13 +172,13 @@ const InspectorControl = () => {
 				<PanelHeader title="Advanced" />
 				<PanelBody>
 					<FormGroup label="Title">
-						<TextField />
+						<TextInput />
 					</FormGroup>
 					<FormGroup label="HTML Anchor">
-						<TextField />
+						<TextInput />
 					</FormGroup>
 					<FormGroup label="CSS Classes">
-						<TextField />
+						<TextInput />
 					</FormGroup>
 				</PanelBody>
 			</Panel>

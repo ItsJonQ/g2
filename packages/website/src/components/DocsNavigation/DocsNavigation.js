@@ -12,7 +12,7 @@ import { Link } from "gatsby"
 import { kebabCase } from "lodash"
 import React, { useEffect, useRef } from "react"
 
-import data from "../../data/docs.json"
+import data from "../../data/navigation-components.json"
 
 function Links({ links }) {
   if (!links) return null
@@ -107,7 +107,6 @@ export function DocsNavigation() {
         className="DocsNavigationBody"
         css={[ui.frame.height("70vh"), ui.padding.right(3)]}
         ref={scrollableRef}
-        smoothScroll
       >
         {sections.map((section, index) => (
           <Section key={section.title} {...section} index={index} />

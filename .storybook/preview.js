@@ -1,6 +1,6 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '@wp-g2/styles';
+import { ThemeProvider, ui } from '@wp-g2/styles';
 import {
 	Button,
 	Card,
@@ -15,12 +15,15 @@ import {
 	Spacer,
 	Surface,
 	Switch,
-	TextField,
+	TextInput,
 	Subheading,
 	ComponentInspector,
 	View,
 } from '@wp-g2/components';
+import { Hint } from '@wp-g2/hint';
 import { useLocalState } from '@wp-g2/utils';
+
+const __EXPERIMENTAL_SHOW_HINT = true;
 
 const FormGroup = ({ children, ...props }) => {
 	return (
@@ -104,15 +107,19 @@ function Themer({ inspector, setInspector }) {
 
 	return (
 		<View
-			css={{
-				position: 'fixed',
-				left: 8,
-				bottom: 8,
-				zIndex: 10,
-			}}
+			css={[
+				{
+					position: 'fixed',
+					left: '50%',
+					bottom: 8,
+					zIndex: 10,
+				},
+				ui.offset.x('-50%'),
+			]}
 		>
 			<ThemeProvider
 				isDark={isDark}
+				isGlobal
 				isHighContrast={isHighContrast}
 				isColorBlind={isColorBlind}
 				isReducedMotion={isReducedMotion}
@@ -170,7 +177,7 @@ function Themer({ inspector, setInspector }) {
 											<Subheading>Controls</Subheading>
 											<Separator />
 											<FormGroup label="Border Radius">
-												<TextField
+												<TextInput
 													type="number"
 													value={parseInt(
 														controlBorderRadius,
@@ -184,7 +191,7 @@ function Themer({ inspector, setInspector }) {
 												/>
 											</FormGroup>
 											<FormGroup label="Height">
-												<TextField
+												<TextInput
 													type="number"
 													value={parseInt(
 														controlHeight,
@@ -202,7 +209,7 @@ function Themer({ inspector, setInspector }) {
 											<Subheading>Font</Subheading>
 											<Separator />
 											<FormGroup label="Family">
-												<TextField
+												<TextInput
 													value={fontFamily}
 													onChange={update(
 														'fontFamily',
@@ -210,7 +217,7 @@ function Themer({ inspector, setInspector }) {
 												/>
 											</FormGroup>
 											<FormGroup label="Size">
-												<TextField
+												<TextInput
 													type="number"
 													value={parseInt(
 														fontSize,
@@ -333,8 +340,9 @@ function StoryDecorator(storyFn) {
 					{storyFn()}
 				</ComponentInspector>
 			</View>
+			{__EXPERIMENTAL_SHOW_HINT && <Hint />}
 			<Surface
-				isBackground
+				variant="tertiary"
 				css={{
 					position: 'fixed',
 					top: 0,

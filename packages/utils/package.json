@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.43",
+    "version": "0.0.47",
     "description": "Utilities for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -33,7 +33,7 @@
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.4.1",
         "tinycolor2": "^1.4.1",
-        "use-enhanced-state": "^0.0.8",
+        "use-enhanced-state": "^0.0.9",
         "zustand": "^3.0.0"
     },
     "peerDependencies": {

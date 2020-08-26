@@ -1,6 +1,38 @@
 {
+	"g2-components-aspectratio": {
+		"body": [
+			"<AspectRatio ratio={16 / 9}>",
+			"  <img",
+			"    src=\"https://picsum.photos/seed/picsum/800/800\"",
+			"    alt=\"Snowy Mountains\"",
+			"    style={{ objectFit: \"cover\" }",
+			"  />",
+			"</AspectRatio>"
+		],
+		"prefix": "g2-aspectratio"
+	},
+	"g2-components-avatar": {
+		"body": [
+			"<Avatar",
+			"  name=\"Elsa Oldenburg\"",
+			"  src=\"https://picsum.photos/id/1041/300/300\"",
+			"  size=\"medium\"",
+			"/>"
+		],
+		"prefix": "g2-avatar"
+	},
+	"g2-components-background": {
+		"body": [
+			"<Background css={[ui.padding(5)]}>",
+			"  <Surface css={[ui.padding(5)]}>",
+			"    <Text>${1:Into The Unknown}</Text>",
+			"  </Surface>",
+			"</Background>"
+		],
+		"prefix": "g2-background"
+	},
 	"g2-components-button": {
-		"body": ["<Button variant=\"default\">${1:Let It Go}</Button>"],
+		"body": ["<Button variant=\"secondary\">${1:Let It Go}</Button>"],
 		"prefix": "g2-button"
 	},
 	"g2-components-card": {
@@ -18,6 +50,17 @@
 			"</Card>"
 		],
 		"prefix": "g2-card"
+	},
+	"g2-components-elevation": {
+		"body": [
+			"<View css={[ui.padding(5)]}>",
+			"  <Surface css={[ui.padding(5)]}>",
+			"    <Text>${1:Into The Unknown}</Text>",
+			"    <Elevation value={5} />",
+			"  </Surface>",
+			"</View>"
+		],
+		"prefix": "g2-elevation"
 	},
 	"g2-components-flex": {
 		"body": [
@@ -72,6 +115,21 @@
 		],
 		"prefix": "g2-hstack"
 	},
+	"g2-components-image": {
+		"body": [
+			"<Image",
+			"  src=\"https://picsum.photos/seed/picsum/800/800\"",
+			"  alt=\"Snowy Mountains\"",
+			"  width={300",
+			"  height={300",
+			"/>"
+		],
+		"prefix": "g2-image"
+	},
+	"g2-components-initials": {
+		"body": ["<Initials name=\"Elsa Oldenburg\" />"],
+		"prefix": "g2-initials"
+	},
 	"g2-components-spacer": {
 		"body": [
 			"<View>",
@@ -89,6 +147,16 @@
 	"g2-components-subheading": {
 		"body": ["<Subheading>${1:Into The Unknown}</Subheading>"],
 		"prefix": "g2-subheading"
+	},
+	"g2-components-surface": {
+		"body": [
+			"<Background css={[ui.padding(5)]}>",
+			"  <Surface css={[ui.padding(5)]}>",
+			"    <Text>${1:Into The Unknown}</Text>",
+			"  </Surface>",
+			"</Background>"
+		],
+		"prefix": "g2-surface"
 	},
 	"g2-components-text": {
 		"body": ["<Text>${1:Where the north wind meets the sea}</Text>"],

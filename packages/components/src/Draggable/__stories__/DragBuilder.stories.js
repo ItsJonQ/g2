@@ -266,13 +266,13 @@ const ContentList = ({ contentList, targetIndex }) => {
 				<Surface
 					{...provided.draggableProps}
 					{...provided.dragHandleProps}
-					isBackground
 					ref={provided.innerRef}
 					style={{
 						...provided.draggableProps.style,
 						height: undefined,
 						padding: 12,
 					}}
+					variant="tertiary"
 				>
 					<View css={{ marginBottom: '-1.5em', opacity: 0.5 }}>
 						<ExampleBlock {...contentList[rubric.source.index]} />

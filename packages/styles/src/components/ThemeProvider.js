@@ -110,7 +110,7 @@ function useThemeStyles({ isGlobal = true, theme = {} }) {
 
 export function ThemeProvider({
 	children,
-	isGlobal = true,
+	isGlobal = false,
 	isDark,
 	isColorBlind,
 	isReducedMotion,

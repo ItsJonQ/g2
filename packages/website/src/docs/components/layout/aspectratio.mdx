@@ -1,0 +1,70 @@
+---
+title: AspectRatio
+description: "AspectRatio renders content with a given width:height ratio. A common example would be the HD 16:9 ratio."
+type: images
+slug: /components/aspectratio/
+keywords:
+  ["aspectratio", "image", "ratio", "aspect", "width", "height", "resize"]
+---
+
+# AspectRatio
+
+`AspectRatio` renders content with a given width:height ratio. A common example would be the **HD** `16:9` ratio.
+
+## Usage
+
+```jsx live
+import { AspectRatio } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <AspectRatio ratio={16 / 9}>
+      <img
+        src="https://picsum.photos/seed/picsum/800/800"
+        alt="Snowy Mountains"
+        style={{ objectFit: "cover" }}
+      />
+    </AspectRatio>
+  )
+}
+```
+
+## Props
+
+| Name  | Type              | Default | Description                       |
+| ----- | ----------------- | ------- | --------------------------------- |
+| ratio | `number`          | `1`     | The width:height ratio to render. |
+| width | `number`,`string` |         | A custom width.                   |
+
+## Use Cases
+
+Typically, media-based content (such as images or video) would benefit from an `AspectRatio` controlled container.
+
+### iFrames
+
+A common use-case for `AspectRatio` would be to render `iframe` content with a specific responsive width:height ratio.
+
+In the example below, we're rendering a [YouTube video iFrame embed](https://www.youtube.com/watch?v=Zi4LMpSDccc) with a custom ultra-wide `21:9` aspect ratio.
+
+```jsx live
+import { AspectRatio } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <AspectRatio ratio={21 / 9}>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Zi4LMpSDccc"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </AspectRatio>
+  )
+}
+```
+
+## See Also
+
+- [Image](/components/image/)

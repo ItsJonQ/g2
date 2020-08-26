@@ -4,3 +4,5 @@ dist
 .remake
 .cache
 packages/website/public
+tooling/vscode-snippets/package.json
+tooling/vscode-snippets/package-lock.json

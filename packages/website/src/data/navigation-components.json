@@ -1,0 +1,132 @@
+{
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        {
+          "link": "/",
+          "title": "Getting Started"
+        },
+        {
+          "link": "/installation/",
+          "title": "Installation"
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "sections": [
+        {
+          "title": "Core",
+          "links": [
+            {
+              "link": "/components/view/",
+              "title": "View"
+            },
+            {
+              "link": "/components/text/",
+              "title": "Text"
+            },
+            {
+              "link": "/components/image/",
+              "title": "Image"
+            },
+            {
+              "link": "/components/surface/",
+              "title": "Surface"
+            },
+            {
+              "link": "/components/background/",
+              "title": "Background"
+            },
+            {
+              "link": "/components/elevation/",
+              "title": "Elevation"
+            }
+          ]
+        },
+        {
+          "title": "Foundations",
+          "links": [
+            {
+              "link": "/components/flex/",
+              "title": "Flex"
+            },
+            {
+              "link": "/components/grid/",
+              "title": "Grid"
+            },
+            {
+              "link": "/components/hstack/",
+              "title": "HStack"
+            },
+            {
+              "link": "/components/spacer/",
+              "title": "Spacer"
+            },
+            {
+              "link": "/components/vstack/",
+              "title": "VStack"
+            }
+          ]
+        },
+        {
+          "title": "Layout",
+          "links": [
+            {
+              "link": "/components/aspectratio/",
+              "title": "AspectRatio"
+            },
+            {
+              "link": "/components/card/",
+              "title": "Card"
+            }
+          ]
+        },
+        {
+          "title": "Typography",
+          "links": [
+            {
+              "link": "/components/heading/",
+              "title": "Heading"
+            },
+            {
+              "link": "/components/initials/",
+              "title": "Initials"
+            },
+            {
+              "link": "/components/subheading/",
+              "title": "Subheading"
+            },
+            {
+              "link": "/components/truncate/",
+              "title": "Truncate"
+            }
+          ]
+        },
+        {
+          "title": "Images",
+          "links": [
+            {
+              "link": "/components/avatar/",
+              "title": "Avatar"
+            }
+          ]
+        },
+        {
+          "title": "Forms",
+          "links": [
+            {
+              "link": "/components/button/",
+              "title": "Button"
+            },
+            {
+              "link": "/components/textinput/",
+              "title": "TextInput"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

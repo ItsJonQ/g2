@@ -9,11 +9,11 @@ import { Flex, FlexBlock } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
-import * as TextFieldStyles from '../TextField/TextField.styles';
+import * as TextInputStyles from '../TextInput/TextInput.styles';
 import * as styles from './Select.styles';
 
 const { ArrowWrapperView } = styles;
-const { InputView } = TextFieldStyles;
+const { InputView } = TextInputStyles;
 
 function Select({
 	className,
@@ -58,7 +58,7 @@ function Select({
 	};
 
 	const classes = cx([styles.base, className]);
-	const inputCx = cx([styles.select, TextFieldStyles[size]]);
+	const inputCx = cx([styles.select, TextInputStyles[size]]);
 
 	return (
 		<BaseField
