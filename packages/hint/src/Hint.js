@@ -7,6 +7,7 @@ import {
 	CardFooter,
 	CardHeader,
 	FlexBlock,
+	FormGroup,
 	Heading,
 	MenuItem,
 	Panel,
@@ -16,24 +17,32 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 	Scrollable,
+	Switch,
 	Text,
 	View,
 	VStack,
 } from '@wp-g2/components';
 import { FiAperture } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
+import { useLocalState } from '@wp-g2/utils';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { process } from './processor';
 import { isBrowser } from './utils';
 
-export function Hint({ autoAnalyze = true }) {
+export function Hint({
+	autoAnalyze: autoAnalyzeProp = true,
+	autoAnalyzeInterval = 5000,
+}) {
 	const [isAnalyzing, setIsAnalyzing] = useState(false);
 	const menu = useMenuState({ visible: true });
 	const [issues, setIssues] = useState([]);
 	const [didScan, setDidScan] = useState(false);
-	const initialAnalyizeTimeoutRef = useRef();
-	const didInitialAnalyize = useRef(false);
+	const analyzeIntervalRef = useRef();
+	const [autoAnalyze, setAutoAnalyze] = useLocalState(
+		'@wp-g2/hint/autoAnalyze',
+		autoAnalyzeProp,
+	);
 
 	const analyze = useCallback(async () => {
 		return new Promise((resolve) => {
@@ -56,21 +65,24 @@ export function Hint({ autoAnalyze = true }) {
 	useEffect(() => {
 		if (!isBrowser) return;
 
-		if (autoAnalyze && !didInitialAnalyize.current) {
-			initialAnalyizeTimeoutRef.current = setTimeout(() => {
-				analyze();
-				setDidScan(true);
-				didInitialAnalyize.current = true;
-			}, 500);
+		if (autoAnalyze) {
+			if (analyzeIntervalRef.current) {
+				clearInterval(analyzeIntervalRef.current);
+			}
+			analyzeIntervalRef.current = setInterval(
+				analyze,
+				autoAnalyzeInterval,
+			);
 		}
 
 		return () => {
 			if (!isBrowser) return;
-			if (initialAnalyizeTimeoutRef.current) {
-				clearTimeout(initialAnalyizeTimeoutRef.current);
+
+			if (analyzeIntervalRef.current) {
+				clearInterval(analyzeIntervalRef.current);
 			}
 		};
-	}, [autoAnalyze, analyze]);
+	}, [autoAnalyze, analyze, autoAnalyzeInterval]);
 
 	const onClick = async () => {
 		setIsAnalyzing(true);
@@ -192,15 +204,23 @@ export function Hint({ autoAnalyze = true }) {
 							</Scrollable>
 						</View>
 						<CardFooter>
-							<FlexBlock>
-								<Button
-									isBlock
-									isLoading={isAnalyzing}
-									onClick={onClick}
-								>
-									Analyze
-								</Button>
-							</FlexBlock>
+							<FormGroup
+								isMarginless
+								label="Auto-Analyze"
+								templateColumns="1fr 1fr"
+							>
+								<Switch
+									checked={autoAnalyze}
+									onChange={setAutoAnalyze}
+								/>
+							</FormGroup>
+							<Button
+								isBlock
+								isLoading={isAnalyzing}
+								onClick={onClick}
+							>
+								Analyze
+							</Button>
 						</CardFooter>
 					</PopoverContent>
 				</Popover>
