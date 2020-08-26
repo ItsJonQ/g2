@@ -16,7 +16,13 @@ export function useData(data) {
 	const update = (key) => (value) =>
 		setState((prev) => ({ ...prev, [key]: value }));
 
-	const bindToField = (key) => ({ value: state[key], onChange: update(key) });
+	const bindToField = (key) => {
+		const value = state[key];
+		return {
+			value: is.defined(value) ? value : '',
+			onChange: update(key),
+		};
+	};
 
 	const reset = () => setState(() => initialDataRef.current);
 

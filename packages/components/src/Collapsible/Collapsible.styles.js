@@ -1,4 +1,4 @@
-import { css, styled } from '@wp-g2/styles';
+import { css } from '@wp-g2/styles';
 
 export const CollapsibleContent = css`
 	display: block !important;
@@ -7,7 +7,7 @@ export const CollapsibleContent = css`
 	will-change: height;
 `;
 
-export const InnerContentView = styled.div`
+export const innerContent = css`
 	position: relative;
 	transform: translateZ(0);
 `;

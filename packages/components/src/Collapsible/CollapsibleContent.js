@@ -5,7 +5,6 @@ import React from 'react';
 
 import { Animated } from '../Animated';
 import { useCollapsibleContext } from './Collapsible.Context';
-import { InnerContentView } from './Collapsible.styles';
 import * as styles from './Collapsible.styles';
 
 function CollapsibleContent({ children, className, forwardedRef, ...props }) {
@@ -21,18 +20,18 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 			{...props}
 			{...disclosure}
 		>
-			<InnerContentView
+			<Animated
 				animate={{
 					height: isVisible ? 'auto' : 0,
 					opacity: isVisible ? 1 : 0,
 				}}
-				as={Animated}
+				className={cx([styles.innerContent])}
 				initial={false}
 				transition={{ duration: 0.2 }}
 				{...ns('CollapsibleInnerContent')}
 			>
 				{children}
-			</InnerContentView>
+			</Animated>
 		</DisclosureContent>
 	);
 }

@@ -24,12 +24,7 @@ function BaseModal({
 	...props
 }) {
 	const _dialog = useDialogState({ animated: true, visible });
-	let dialog = _dialog;
-
-	if (dialogProp) {
-		dialog = dialogProp;
-		dialog.setAnimated(true);
-	}
+	const dialog = dialogProp || _dialog;
 
 	const { isUnderLayer } = useModalState(dialog);
 

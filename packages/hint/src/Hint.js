@@ -6,7 +6,6 @@ import {
 	Card,
 	CardFooter,
 	CardHeader,
-	FlexBlock,
 	FormGroup,
 	Heading,
 	MenuItem,
