@@ -37,8 +37,11 @@ export function process({ onReport } = { onReport: noop }) {
 	if (!rules.length) return;
 
 	const nodes = getAllNodes();
+
 	const getComponentName = (node) => node?.getAttribute(COMPONENT_NAMESPACE);
 	const isComponent = (node) => !!getComponentName(node);
+	const getClosestComponent = (node, name) =>
+		node.closest(`[${COMPONENT_NAMESPACE}="${name}"]`);
 
 	const handleOnReport = (name, __node) => (props) => {
 		const { message, node, title } = props;
@@ -61,7 +64,11 @@ export function process({ onReport } = { onReport: noop }) {
 			const [name, fns] = rule;
 			if (is.function(fns.create)) {
 				context.report = handleOnReport(name, node);
-				fns.create(context)(node, { getComponentName, isComponent });
+				fns.create(context)(node, {
+					getComponentName,
+					isComponent,
+					getClosestComponent,
+				});
 			}
 		}
 	}
