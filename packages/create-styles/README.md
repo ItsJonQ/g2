@@ -11,8 +11,8 @@
 import { createStyleSystem, ThemeProvider } from '@wp-g2/create-styles';
 
 const baseStyles = {
-  margin: 0
-},
+	margin: 0,
+};
 
 const {
 	// A collection of styled elements. (core.div)
