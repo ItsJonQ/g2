@@ -8,7 +8,22 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ```jsx
-import { createStyleSystem } from '@wp-g2/create-styles';
+import { createStyleSystem, ThemeProvider } from '@wp-g2/create-styles';
 
-const { core, compiler, get } = createStyleSystem();
+const baseStyles = {
+  margin: 0
+},
+
+const {
+	// A collection of styled elements. (core.div)
+	core,
+	// The custom Emotion instance.
+	compiler,
+	// Getter for configs (CSS Variables).
+	get,
+	// Styled components. (styled.div)
+	styled,
+	// The base View.
+	View,
+} = createStyleSystem({ baseStyles });
 ```

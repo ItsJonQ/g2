@@ -11,10 +11,7 @@ const shouldForwardProp = isPropValid;
 
 const styles = {
 	Base: css({
-		MozOsxFontSmoothing: 'grayscale',
-		WebkitFontSmoothing: 'antialiased',
 		boxSizing: 'border-box',
-		margin: 0,
 	}),
 	reduceMotion: css`
 		@media (prefers-reduced-motion) {

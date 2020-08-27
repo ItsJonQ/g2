@@ -9,8 +9,11 @@ import {
 
 const systemConfig = {
 	baseStyles: {
+		MozOsxFontSmoothing: 'grayscale',
+		WebkitFontSmoothing: 'antialiased',
 		fontFamily: config.fontFamily,
 		fontSize: config.fontSize,
+		margin: 0,
 	},
 	config,
 	darkModeConfig,

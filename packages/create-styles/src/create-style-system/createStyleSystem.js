@@ -44,7 +44,10 @@ export function createStyleSystem(options = defaultOptions) {
 	const _createCoreElement = (tagName) =>
 		createCoreElement(tagName, { baseStyles, globalStyles });
 
+	const View = core.div;
+
 	return {
+		View,
 		core,
 		compiler,
 		styled,
