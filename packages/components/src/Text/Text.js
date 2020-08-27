@@ -1,20 +1,26 @@
 import { connect } from '@wp-g2/context';
 import { BaseView, css, cx, get, getFontSize } from '@wp-g2/styles';
-import { getOptimalTextShade } from '@wp-g2/utils';
+import { getOptimalTextShade, is } from '@wp-g2/utils';
 import React from 'react';
 
 import { Truncate } from '../Truncate';
 import * as styles from './Text.styles';
+import { createHighlighterText } from './Text.utils';
 
 function Text({
 	align,
 	as = 'span',
+	children,
 	className,
 	color,
 	display,
+	highlightEscape = false,
+	highlightCaseSensitive = false,
+	highlightWords = [],
+	highlightSanitize,
 	isBlock = false,
 	lineHeight = 1.2,
-	optimizeReadability,
+	optimizeReadabilityFor,
 	size,
 	truncate = false,
 	upperCase = false,
@@ -22,6 +28,19 @@ function Text({
 	weight = 400,
 	...props
 }) {
+	let content = children;
+	const isHighlighter = is.array(highlightWords) && highlightWords.length;
+
+	if (isHighlighter) {
+		content = createHighlighterText({
+			autoEscape: highlightEscape,
+			children,
+			caseSensitive: highlightCaseSensitive,
+			searchWords: highlightWords,
+			sanitize: highlightSanitize,
+		});
+	}
+
 	const sx = {};
 
 	sx.Base = css({
@@ -37,9 +56,9 @@ function Text({
 
 	sx.optimalTextColor = null;
 
-	if (optimizeReadability) {
+	if (optimizeReadabilityFor) {
 		const isOptimalTextColorDark =
-			getOptimalTextShade(optimizeReadability) === 'dark';
+			getOptimalTextShade(optimizeReadabilityFor) === 'dark';
 
 		sx.optimalTextColor = isOptimalTextColorDark
 			? css({ color: get('black') })
@@ -50,6 +69,7 @@ function Text({
 		styles.Text,
 		sx.Base,
 		sx.optimalTextColor,
+		isHighlighter && styles.highlighterText,
 		styles[isBlock && 'block'],
 		styles[variant],
 		upperCase && sx.upperCase,
@@ -63,10 +83,10 @@ function Text({
 	};
 
 	if (truncate) {
-		return <Truncate {...componentProps} />;
+		return <Truncate {...componentProps}>{content}</Truncate>;
 	}
 
-	return <BaseView {...componentProps} />;
+	return <BaseView {...componentProps}>{content}</BaseView>;
 }
 
 export default connect(Text, 'Text');

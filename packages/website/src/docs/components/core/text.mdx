@@ -24,24 +24,28 @@ function Example() {
 
 ## Props
 
-| Name                | Type               | Default | Description                                                             |
-| ------------------- | ------------------ | ------- | ----------------------------------------------------------------------- |
-| align               | `string`           |         | Adjusts the text alignment.                                             |
-| as                  | `string`           | `span`  | Renders as another HTML element (or React component).                   |
-| color               | `string`           |         | Adjust the text color.                                                  |
-| display             | `string`           |         | Adjusts the text CSS `display`.                                         |
-| ellipsis            | `string`           | `...`   | The ellipsis string when `truncate` is set.                             |
-| ellipsizeMode       | `string`           | `auto`  | Determines where to truncate. `truncate` must first be set.             |
-| limit               | `number`           | `0`     | Determines the max characters when `truncate` is set.                   |
-| isBlock             | `boolean`          |         | Sets `Text` to have `display: block`.                                   |
-| lineHeight          | `number`           |         | Adjusts all text line-height based on the typography system.            |
-| optimizeReadability | `string`           |         | Optimizes text (black or white) readability for given background color. |
-| size                | `number`, `string` |         | Adjusts all text size based on the typography system.                   |
-| truncate            | `boolean`          |         | Enables text truncation.                                                |
-| numberOfLines       | `boolean`          |         | Determines how many lines to truncate. `truncate` must first be set.    |
-| upperCase           | `boolean`          |         | Uppercases the text content.                                            |
-| variant             | `string`           |         | Adjusts style variation of the text.                                    |
-| weight              | `number`,`string`  |         | Adjusts font-weight of the text.                                        |
+| Name                   | Type                   | Default | Description                                                                                                    |
+| ---------------------- | ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| align                  | `string`               |         | Adjusts the text alignment.                                                                                    |
+| as                     | `string`               | `span`  | Renders as another HTML element (or React component).                                                          |
+| color                  | `string`               |         | Adjust the text color.                                                                                         |
+| display                | `string`               |         | Adjusts the text CSS `display`.                                                                                |
+| ellipsis               | `string`               | `...`   | The ellipsis string when `truncate` is set.                                                                    |
+| ellipsizeMode          | `string`               | `auto`  | Determines where to truncate. `truncate` must first be set.                                                    |
+| highlightCaseSensitive | `boolean`              | `false` | Determines if `highlightWords` should be case sensitive.                                                       |
+| highlightEscape        | `boolean`              | `false` | Escape characters in `highlightWords` which are meaningful in regular expressions.                             |
+| highlightWords         | `Array<string>`        |         | Highlights words within the text content.                                                                      |
+| highlightSanitize      | `Array<string,regExp>` |         | Array of search words. String search terms are automatically cast to RegExps unless `highlightEscape` is true. |
+| limit                  | `number`               | `0`     | Determines the max characters when `truncate` is set.                                                          |
+| isBlock                | `boolean`              |         | Sets `Text` to have `display: block`.                                                                          |
+| lineHeight             | `number`               |         | Adjusts all text line-height based on the typography system.                                                   |
+| optimizeReadabilityFor | `string`               |         | Optimizes text (black or white) readability for given background color.                                        |
+| size                   | `number`, `string`     |         | Adjusts all text size based on the typography system.                                                          |
+| truncate               | `boolean`              |         | Enables text truncation.                                                                                       |
+| numberOfLines          | `boolean`              |         | Determines how many lines to truncate. `truncate` must first be set.                                           |
+| upperCase              | `boolean`              |         | Uppercases the text content.                                                                                   |
+| variant                | `string`               |         | Adjusts style variation of the text.                                                                           |
+| weight                 | `number`,`string`      |         | Adjusts font-weight of the text.                                                                               |
 
 ### align
 
@@ -55,7 +59,53 @@ function Example() {
 import { Text } from "@wp-g2/components"
 
 function Example() {
-  return <Text align="left">Where the north wind meets the sea...</Text>
+  return (
+    <Text align="center" isBlock>
+      Where the north wind meets the sea...
+    </Text>
+  )
+}
+```
+
+### highlightWords
+
+Letters or words within `Text` can be highlighted using `highlightWords`.
+
+```jsx live
+import { Text } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Text highlightWords={["the"]}>
+      Where the north wind meets the sea, there's a river full of memory. Sleep,
+      my darling, safe and sound, for in this river all is found. In her waters,
+      deep and true, lay the answers and a path for you. Dive down deep into her
+      sound, but not too far or you'll be drowned
+    </Text>
+  )
+}
+```
+
+### optimizeReadabilityFor
+
+The `Text` color can be adapted to a background color for optimal readability. `optimizeReadabilityFor` can accept CSS variables, in addition to standard CSS color values (e.g. Hex, RGB, HSL, etc...).
+
+```jsx live
+import { Text, View } from "@wp-g2/components"
+
+function Example() {
+  const backgroundColor = "blue"
+
+  return (
+    <View css={{ backgroundColor }}>
+      <Text optimizeReadabilityFor={backgroundColor}>
+        Where the north wind meets the sea, there's a river full of memory.
+        Sleep, my darling, safe and sound, for in this river all is found. In
+        her waters, deep and true, lay the answers and a path for you. Dive down
+        deep into her sound, but not too far or you'll be drowned
+      </Text>
+    </View>
+  )
 }
 ```
 

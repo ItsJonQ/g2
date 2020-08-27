@@ -53,7 +53,7 @@ function Avatar({
 						as="div"
 						lineHeight={1}
 						name={name}
-						optimizeReadability={color}
+						optimizeReadabilityFor={color}
 						size={textSize}
 					/>
 				</View>

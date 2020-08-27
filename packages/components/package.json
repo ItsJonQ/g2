@@ -25,6 +25,7 @@
     "@wp-g2/utils": "^0.0.51",
     "history": "^4.9.0",
     "path-to-regexp": "^1.7.0",
+    "highlight-words-core": "^1.2.2",
     "react-color": "^2.18.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",

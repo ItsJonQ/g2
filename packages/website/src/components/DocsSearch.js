@@ -116,7 +116,7 @@ export function DocsSearch({ visible }) {
         />
       </Surface>
       <ResultsHeader query={query} results={results} />
-      {hasResults && <SearchResults results={results} />}
+      {hasResults && <SearchResults query={query} results={results} />}
     </View>
   )
 }
@@ -137,7 +137,7 @@ function ResultsHeader({ results = [], query = "" }) {
   )
 }
 
-function ResultItem({ description, menu, slug, snippet, title }) {
+function ResultItem({ description, menu, query = "", slug, snippet, title }) {
   const [hasCopied, setHasCopied] = useState(false)
 
   useEffect(() => {
@@ -173,6 +173,8 @@ function ResultItem({ description, menu, slug, snippet, title }) {
     }
   }
 
+  const highlightWords = query.split(" ")
+
   return (
     <ReakitMenuItem
       as={MenuItem}
@@ -193,19 +195,26 @@ function ResultItem({ description, menu, slug, snippet, title }) {
         spacing={1}
       >
         <Heading size={4}>{title}</Heading>
-        <Text variant="muted">{description}</Text>
+        <Text highlightWords={highlightWords} variant="muted">
+          {description}
+        </Text>
       </VStack>
     </ReakitMenuItem>
   )
 }
 
-function SearchResults({ results = [] }) {
+function SearchResults({ query = "", results = [] }) {
   const menu = useMenuState({ visible: true })
 
   return (
     <VStack>
       {results.map(result => (
-        <ResultItem key={result.item.id} {...result.item} menu={menu} />
+        <ResultItem
+          key={result.item.id}
+          {...result.item}
+          menu={menu}
+          query={query}
+        />
       ))}
     </VStack>
   )

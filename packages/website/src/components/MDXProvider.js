@@ -1,4 +1,5 @@
 import { MDXProvider as BaseMDXProvider } from "@mdx-js/react"
+import { Scrollable } from "@wp-g2/components"
 import React from "react"
 
 import {
@@ -19,6 +20,13 @@ const components = {
         <SyntaxHighlighter {...props} copy={!props.children.props["nocopy"]} />
       )
     }
+  },
+  table: props => {
+    return (
+      <Scrollable data-table={true}>
+        <table {...props} />
+      </Scrollable>
+    )
   },
   wrapper: ({ children }) => <>{children}</>,
 }

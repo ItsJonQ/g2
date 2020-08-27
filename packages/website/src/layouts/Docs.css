@@ -42,6 +42,14 @@
   padding-top: 40px;
 }
 
+.LayoutsDocs [data-table] + h2[id],
+.LayoutsDocs [data-table] + h3[id],
+.LayoutsDocs [data-table] + h4[id],
+.LayoutsDocs [data-table] + h5[id],
+.LayoutsDocs [data-table] + h6[id] {
+  margin-top: 0px;
+}
+
 .LayoutsDocs h1 a.anchor {
   opacity: 0 !important;
   pointer-events: none;
@@ -61,4 +69,8 @@
 
 .LayoutsDocs ul li {
   margin-bottom: 0.5em;
+}
+
+.LayoutsDocs [data-table] table {
+  font-size: 0.9rem;
 }

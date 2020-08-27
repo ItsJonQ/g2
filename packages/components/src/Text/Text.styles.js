@@ -19,3 +19,12 @@ export const destructive = css`
 export const muted = css`
 	opacity: 0.6;
 `;
+
+export const highlighterText = css`
+	mark {
+		background: ${get('yellowRgba70')};
+		border-radius: 2px;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset,
+			0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	}
+`;

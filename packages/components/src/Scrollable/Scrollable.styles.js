@@ -2,6 +2,7 @@ import { css, get } from '@wp-g2/styles';
 
 export const scrollableScrollbar = css`
 	&::-webkit-scrollbar {
+		height: 12px;
 		width: 12px;
 	}
 
