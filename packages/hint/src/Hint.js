@@ -37,7 +37,11 @@ export function Hint({
 	const menu = useMenuState({ visible: true });
 	const [issues, setIssues] = useState([]);
 	const [didScan, setDidScan] = useState(false);
+
 	const analyzeIntervalRef = useRef();
+	const analyzeTimeoutRef = useRef();
+	const didInitialScan = useRef(false);
+
 	const [autoAnalyze, setAutoAnalyze] = useLocalState(
 		'@wp-g2/hint/autoAnalyze',
 		autoAnalyzeProp,
@@ -65,6 +69,10 @@ export function Hint({
 		if (!isBrowser) return;
 
 		if (autoAnalyze) {
+			if (!didInitialScan.current) {
+				analyzeTimeoutRef.current = setTimeout(analyze, 200);
+				didInitialScan.current = true;
+			}
 			if (analyzeIntervalRef.current) {
 				clearInterval(analyzeIntervalRef.current);
 			}
@@ -79,6 +87,9 @@ export function Hint({
 
 			if (analyzeIntervalRef.current) {
 				clearInterval(analyzeIntervalRef.current);
+			}
+			if (analyzeTimeoutRef.current) {
+				clearTimeout(analyzeTimeoutRef.current);
 			}
 		};
 	}, [autoAnalyze, analyze, autoAnalyzeInterval]);

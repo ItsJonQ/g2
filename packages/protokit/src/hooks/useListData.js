@@ -2,8 +2,7 @@ import { useListState } from '@wp-g2/utils';
 import Fuse from 'fuse.js';
 import { useEffect, useRef, useState } from 'react';
 
-import { faker } from './faker';
-import { Schema } from './Schema';
+import { faker, Schema } from '../mockers';
 
 const defaultSchema = new Schema(() => ({ title: faker.lorem.sentence() }));
 
