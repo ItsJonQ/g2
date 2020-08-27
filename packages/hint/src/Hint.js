@@ -107,7 +107,8 @@ export function Hint({
 			<Card
 				css={[
 					ui.position.bottomRight,
-					{ zIndex: 999999, position: 'fixed' },
+					ui.position.fixed,
+					ui.zIndex('Hint', 999999),
 					ui.padding(1),
 					ui.offset({ x: -16, y: -16 }),
 				]}

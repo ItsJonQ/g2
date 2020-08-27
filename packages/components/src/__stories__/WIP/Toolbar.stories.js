@@ -13,7 +13,7 @@ import { get, styled } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
-import { Icon, Tooltip, TooltipContent, TooltipTrigger } from '../../index';
+import { Icon, Tooltip } from '../../index';
 
 export default {
 	title: 'Examples/WIP/Toolbar',
@@ -172,18 +172,15 @@ const MoreItems = React.forwardRef((props, ref) => {
 	});
 	return (
 		<>
-			<Tooltip>
-				<TooltipTrigger>
-					<MenuButton
-						{...menu}
-						{...props}
-						aria-label="More items"
-						as={BaseToolbarItem}
-						icon={<IconSet.FiMoreVertical />}
-						ref={ref}
-					/>
-				</TooltipTrigger>
-				<TooltipContent>More options</TooltipContent>
+			<Tooltip content="More options">
+				<MenuButton
+					{...menu}
+					{...props}
+					aria-label="More items"
+					as={BaseToolbarItem}
+					icon={<IconSet.FiMoreVertical />}
+					ref={ref}
+				/>
 			</Tooltip>
 
 			<Menu {...menu} aria-label="More items" as={ToolbarDropdownView}>

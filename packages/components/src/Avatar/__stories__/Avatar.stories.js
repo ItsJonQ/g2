@@ -1,18 +1,7 @@
-// import { Avatar } from '../index';
 import { faker } from '@wp-g2/protokit';
-import { ui } from '@wp-g2/styles';
 import React from 'react';
 
-import {
-	HStack,
-	Text,
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-	View,
-	VStack,
-	ZStack,
-} from '../../index';
+import { HStack, View, VStack, ZStack } from '../../index';
 import { AVATAR_SIZES } from '../Avatar.utils';
 import { Avatar } from '../index';
 

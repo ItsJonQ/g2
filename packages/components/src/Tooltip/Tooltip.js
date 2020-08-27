@@ -1,13 +1,15 @@
-import { useTooltipState } from '@wp-g2/a11y';
+import { TooltipReference, useTooltipState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
 import React from 'react';
 
 import { TooltipContext } from './Tooltip.Context';
+import TooltipContent from './TooltipContent';
 
 function Tooltip({
 	animated = true,
 	animationDuration = 160,
 	children,
+	content,
 	gutter = 4,
 	modal = true,
 	placement,
@@ -27,6 +29,16 @@ function Tooltip({
 	};
 	return (
 		<TooltipContext.Provider value={contextProps}>
+			{content && <TooltipContent>{content}</TooltipContent>}
+			<TooltipReference
+				{...tooltip}
+				ref={children.ref}
+				{...children.props}
+			>
+				{(referenceProps) =>
+					React.cloneElement(children, referenceProps)
+				}
+			</TooltipReference>
 			{children}
 		</TooltipContext.Provider>
 	);

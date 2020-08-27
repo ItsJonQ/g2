@@ -11,3 +11,4 @@ export * from './shadows';
 export * from './space';
 export * from './transforms';
 export * from './units';
+export * from './zIndex';

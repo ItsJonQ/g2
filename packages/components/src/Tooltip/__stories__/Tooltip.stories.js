@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text } from '../../index';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../index';
+import { Tooltip } from '../index';
 
 export default {
 	component: Tooltip,
@@ -10,11 +10,8 @@ export default {
 
 export const _default = () => {
 	return (
-		<Tooltip visible>
-			<TooltipTrigger>
-				<Text>Hello</Text>
-			</TooltipTrigger>
-			<TooltipContent>Tooltip</TooltipContent>
+		<Tooltip content="Tooltip" visible>
+			<Text>Hello</Text>
 		</Tooltip>
 	);
 };

@@ -112,8 +112,8 @@ function Themer({ inspector, setInspector }) {
 					position: 'fixed',
 					left: '50%',
 					bottom: 8,
-					zIndex: 10,
 				},
+				ui.zIndex('PreviewThemer', 10),
 				ui.offset.x('-50%'),
 			]}
 		>

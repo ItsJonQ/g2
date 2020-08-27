@@ -24,7 +24,7 @@ function Modal({
 	transitionDuration = 200,
 	transitionTimingFunction = 'ease-in-out',
 	visible = false,
-	zIndex = 999,
+	zIndex,
 	...props
 }) {
 	const maxWidth = MODAL_SIZES[size] || MODAL_SIZES.md;

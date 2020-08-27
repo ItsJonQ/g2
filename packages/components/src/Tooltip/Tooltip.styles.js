@@ -1,11 +1,11 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, get, styled, ui } from '@wp-g2/styles';
 
 export const TooltipContent = css`
+	${ui.zIndex('Tooltip')};
 	opacity: 0;
 	outline: none;
 	transform-origin: top center;
 	transition: opacity 120ms ease;
-	z-index: 99999;
 
 	&[data-enter] {
 		opacity: 1;

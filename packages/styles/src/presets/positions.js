@@ -2,6 +2,7 @@ import { css } from '../style-system';
 
 export const position = {
 	absolute: css({ position: 'absolute' }),
+	fixed: css({ position: 'fixed' }),
 	bottom: css({ bottom: 0, position: 'absolute' }),
 	bottomLeft: css({ bottom: 0, left: 0, position: 'absolute' }),
 	bottomRight: css({ bottom: 0, position: 'absolute', right: 0 }),

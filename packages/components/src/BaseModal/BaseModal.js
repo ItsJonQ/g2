@@ -1,6 +1,6 @@
 import { Dialog, DialogBackdrop, useDialogState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
-import { css, cx, reducedMotion, space } from '@wp-g2/styles';
+import { css, cx, getZIndex, reducedMotion, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -20,7 +20,7 @@ function BaseModal({
 	transitionDuration = 200,
 	transitionTimingFunction = 'ease-in-out',
 	visible = false,
-	zIndex = 999,
+	zIndex,
 	...props
 }) {
 	const _dialog = useDialogState({ animated: true, visible });
@@ -43,7 +43,7 @@ function BaseModal({
 		right: 0;
 		top: 0;
 		transition: ${backdropTransition};
-		z-index: ${zIndex};
+		z-index: ${zIndex || getZIndex('Modal')};
 
 		&[data-enter] {
 			opacity: 1;

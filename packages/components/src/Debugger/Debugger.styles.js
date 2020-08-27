@@ -1,7 +1,7 @@
-import { get, space, styled } from '@wp-g2/styles';
+import { get, space, styled, ui } from '@wp-g2/styles';
 
 export const DebuggerView = styled.div`
-	background: rgba(0, 0, 0, 0.8);
+	${ui.zIndex('Debugger', 99)};
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 3px;
 	color: ${get('white')};
@@ -12,7 +12,6 @@ export const DebuggerView = styled.div`
 	pointer-events: none;
 	vertical-align: middle;
 	white-space: nowrap;
-	z-index: 99;
 
 	& + & {
 		margin-left: ${space(0.5)};

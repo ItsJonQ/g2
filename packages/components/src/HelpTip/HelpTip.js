@@ -4,12 +4,14 @@ import { get, space } from '@wp-g2/styles';
 import React from 'react';
 
 import { Icon } from '../Icon';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../Tooltip';
+import { Tooltip } from '../Tooltip';
+import { View } from '../View';
 
-function HelpTip({ children, iconSize = 14, ...props }) {
+function HelpTip({ as, children, iconSize = 14, ...props }) {
 	return (
-		<Tooltip {...props}>
-			<TooltipTrigger
+		<Tooltip {...props} content={children}>
+			<View
+				as={as || 'span'}
 				css={`
 					cursor: pointer;
 					vertical-align: middle;
@@ -31,8 +33,7 @@ function HelpTip({ children, iconSize = 14, ...props }) {
 					icon={<FiHelpCircle />}
 					size={iconSize}
 				/>
-			</TooltipTrigger>
-			{children && <TooltipContent>{children}</TooltipContent>}
+			</View>
 		</Tooltip>
 	);
 }

@@ -8,8 +8,6 @@ import {
   Surface,
   Switch,
   Tooltip,
-  TooltipContent,
-  TooltipTrigger,
   View,
 } from "@wp-g2/components"
 import { ui } from "@wp-g2/styles"
@@ -69,13 +67,11 @@ export function SiteHeader() {
               <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
             </HStack>
             <FormGroup isMarginless label="Inspect" templateColumns="1fr 1fr">
-              <Tooltip placement="bottom-end">
-                <TooltipTrigger>
-                  <Switch checked={inspect} onChange={toggleInspect} />
-                </TooltipTrigger>
-                <TooltipContent>
-                  See how this site was built with G2!
-                </TooltipContent>
+              <Tooltip
+                content="See how this site was built with G2!"
+                placement="bottom-end"
+              >
+                <Switch checked={inspect} onChange={toggleInspect} />
               </Tooltip>
             </FormGroup>
             <SiteSearch />

@@ -4,14 +4,28 @@ import { CSSClassName } from '../shared';
 export declare interface PositionInterface {
 	/** Aligns content to full size of the parent element. */
 	full: CSSClassName;
-	/** Allows for content to position to. */
+	/** Absolutely positions element. */
+	absolute: CSSClassName;
+	/** Fix positions element. */
+	fixed: CSSClassName;
+	/** Sticky positions element. */
+	sticky: CSSClassName;
+	/** Allows for inner content to position to. */
 	relative: CSSClassName;
-	/** Applies content to the top. */
+	/** Aligns content to the top. */
 	top: CSSClassName;
-	/** Applies content to the bottom. */
+	/** Aligns content to the top/left. */
+	topLeft: CSSClassName;
+	/** Aligns content to the top/right. */
+	topRight: CSSClassName;
+	/** Aligns content to the bottom. */
 	bottom: CSSClassName;
-	/** Applies content to the left. */
+	/** Aligns content to the bottom/left. */
+	bottomLeft: CSSClassName;
+	/** Aligns content to the bottom/right. */
+	bottomRight: CSSClassName;
+	/** Aligns content to the left. */
 	left: CSSClassName;
-	/** Applies content to the right. */
+	/** Aligns content to the right. */
 	right: CSSClassName;
 }
