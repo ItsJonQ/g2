@@ -5,7 +5,12 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+-   [Usage](#usage)
+-   [Demo](#demo)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Usage
 
 ```jsx
 import { createStyleSystem, ThemeProvider } from '@wp-g2/create-styles';
@@ -27,3 +32,8 @@ const {
 	View,
 } = createStyleSystem({ baseStyles });
 ```
+
+## Demo
+
+CodeSandbox Demo:
+[https://codesandbox.io/s/wp-g2-create-styles-demo-4tv4k](https://codesandbox.io/s/wp-g2-create-styles-demo-4tv4k)
