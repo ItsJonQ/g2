@@ -5,7 +5,6 @@ import {
   Modal,
   ModalBody,
   ModalTrigger,
-  Tooltip,
   useModalContext,
 } from "@wp-g2/components"
 import { FiSearch } from "@wp-g2/icons"
@@ -21,14 +20,12 @@ export function SiteSearch() {
   return (
     <Modal
       renderTrigger={
-        <Tooltip content="Search">
-          <ModalTrigger
-            aria-label="Search"
-            as={Button}
-            icon={<FiSearch />}
-            isRounded
-          />
-        </Tooltip>
+        <ModalTrigger
+          aria-label="Search"
+          as={Button}
+          icon={<FiSearch />}
+          isRounded
+        />
       }
       visible={visible}
     >

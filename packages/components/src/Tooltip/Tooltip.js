@@ -39,7 +39,6 @@ function Tooltip({
 					React.cloneElement(children, referenceProps)
 				}
 			</TooltipReference>
-			{children}
 		</TooltipContext.Provider>
 	);
 }

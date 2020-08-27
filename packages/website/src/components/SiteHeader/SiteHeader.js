@@ -69,7 +69,8 @@ export function SiteHeader() {
             <FormGroup isMarginless label="Inspect" templateColumns="1fr 1fr">
               <Tooltip
                 content="See how this site was built with G2!"
-                placement="bottom-end"
+                gutter={16}
+                placement="bottom"
               >
                 <Switch checked={inspect} onChange={toggleInspect} />
               </Tooltip>

@@ -2,6 +2,7 @@ import { get, space, styled, ui } from '@wp-g2/styles';
 
 export const DebuggerView = styled.div`
 	${ui.zIndex('Debugger', 99)};
+	background: rgba(0, 0, 0, 0.8);
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 3px;
 	color: ${get('white')};

@@ -9,6 +9,7 @@ export const SwitchView = styled.label`
 	display: flex;
 	height: ${get('controlHeight')};
 	margin: 0;
+	outline: none;
 	padding: 4px 0;
 	position: relative;
 	user-select: none;
