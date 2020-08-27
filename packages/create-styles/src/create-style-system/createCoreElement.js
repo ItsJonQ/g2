@@ -30,6 +30,7 @@ export const createCoreElement = (
 	options = defaultOptions,
 ) => {
 	const { baseStyles, globalStyles } = { ...defaultOptions, ...options };
+	const compiledBaseStyles = css(baseStyles);
 
 	const render = (
 		{
@@ -60,7 +61,7 @@ export const createCoreElement = (
 		const classes = cx(
 			styles.Base,
 			styles.reduceMotion,
-			css(baseStyles),
+			compiledBaseStyles,
 			cxProp,
 			className,
 			sx,
