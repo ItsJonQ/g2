@@ -1,5 +1,6 @@
+import { HIGH_CONTRAST_MODE_MODE_ATTR } from '@wp-g2/create-styles';
+
 import { css } from '../style-system';
-import { HIGH_CONTRAST_MODE_MODE_ATTR } from '../theme';
 
 export function highContrastMode(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);

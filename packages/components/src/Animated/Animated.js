@@ -1,12 +1,12 @@
 import { motion, useSystemReducedMotion } from '@wp-g2/animations';
 import { connect } from '@wp-g2/context';
-import { createStyledElement, useReducedMotion } from '@wp-g2/styles';
+import { createCoreElement, useReducedMotion } from '@wp-g2/styles';
 import { is, memoize, warning } from '@wp-g2/utils';
 import React from 'react';
 
 const createAnimated = function (tagName) {
 	const motionComponent = motion[tagName];
-	return createStyledElement(motionComponent);
+	return createCoreElement(motionComponent);
 };
 
 const memoizedCreateAnimated = memoize(createAnimated);

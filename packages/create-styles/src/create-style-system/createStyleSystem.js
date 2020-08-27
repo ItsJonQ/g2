@@ -1,7 +1,8 @@
 import * as compiler from '../compiler';
-import { createStyleSystemElement } from './createStyleSystemElement';
+import { createCoreElement } from './createCoreElement';
+import { createCoreElements } from './createCoreElements';
+import { createStyledComponents } from './createStyledComponents';
 import { generateTheme } from './generateTheme';
-import { tags } from './tags';
 import { DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
@@ -25,19 +26,30 @@ export function createStyleSystem(options = defaultOptions) {
 		highContrastModeConfig,
 	});
 
-	const core = {};
-	const createStyledElement = (tagName) =>
-		createStyleSystemElement(tagName, { baseStyles, globalStyles });
+	/**
+	 * Core elements.
+	 * core.div
+	 */
+	const core = createCoreElements({ baseStyles, globalStyles });
 
-	for (const tagName of tags) {
-		core[tagName] = createStyledElement(tagName);
-	}
+	/**
+	 * Styled elements.
+	 * styled.div
+	 */
+	const styled = createStyledComponents({ compiler, core });
+
+	/**
+	 * Export prebound createCoreElement factory.
+	 */
+	const _createCoreElement = (tagName) =>
+		createCoreElement(tagName, { baseStyles, globalStyles });
 
 	return {
 		core,
 		compiler,
+		styled,
 		get,
-		createStyledElement: createStyledElement,
+		createCoreElement: _createCoreElement,
 	};
 }
 

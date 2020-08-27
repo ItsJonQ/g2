@@ -1,5 +1,6 @@
+import { REDUCED_MOTION_MODE_ATTR } from '@wp-g2/create-styles';
+
 import { css } from '../style-system';
-import { REDUCED_MOTION_MODE_ATTR } from '../theme';
 
 export function reducedMotion(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);

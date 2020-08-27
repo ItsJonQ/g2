@@ -52,3 +52,11 @@ export function transformValuesToVariablesString(
 
 	return next.join('');
 }
+
+export function getDisplayName(tagName) {
+	let displayName = is.string(tagName)
+		? tagName
+		: tagName?.displayName || tagName?.name || 'Component';
+
+	return displayName;
+}

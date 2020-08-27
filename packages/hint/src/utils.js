@@ -1,3 +1,2 @@
-import { is } from '@wp-g2/utils';
-
-export const isBrowser = is.defined(window) && is.defined(document);
+export const isBrowser =
+	typeof window !== 'undefined' && typeof document !== 'undefined';

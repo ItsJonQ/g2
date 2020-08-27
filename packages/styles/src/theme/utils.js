@@ -1,6 +1,5 @@
+import { REDUCED_MOTION_MODE_ATTR } from '@wp-g2/create-styles';
 import { colorize } from '@wp-g2/utils';
-
-import { REDUCED_MOTION_MODE_ATTR } from '../create-style-system/constants';
 
 export function getIsReducedMotion() {
 	return !!document.querySelector(REDUCED_MOTION_MODE_ATTR);

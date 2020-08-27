@@ -1,5 +1,6 @@
+import { COLOR_BLIND_MODE_ATTR } from '@wp-g2/create-styles';
+
 import { css } from '../style-system';
-import { COLOR_BLIND_MODE_ATTR } from '../theme';
 
 export function colorBlindMode(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);

@@ -1,7 +1,7 @@
+import { useTheme } from '@wp-g2/create-styles';
 import { useEffect, useState } from 'react';
 
-import { breakpoints } from '../style-system/utils';
-import { useTheme } from './useTheme';
+import { breakpoints } from '../style-system';
 
 // For SSR
 let __window = {};

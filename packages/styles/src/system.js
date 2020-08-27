@@ -18,6 +18,10 @@ const systemConfig = {
 	darkHighContrastModeConfig,
 };
 
-export const { compiler, core, createStyledElement, get } = createStyleSystem(
-	systemConfig,
-);
+export const {
+	compiler,
+	core,
+	createCoreElement,
+	get,
+	styled,
+} = createStyleSystem(systemConfig);

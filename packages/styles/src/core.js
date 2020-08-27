@@ -1,1 +1,1 @@
-export { core, get, createStyledElement } from './system';
+export { core, get, createCoreElement } from './system';
