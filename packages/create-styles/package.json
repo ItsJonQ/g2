@@ -1,0 +1,35 @@
+{
+  "name": "@wp-g2/create-styles",
+  "version": "0.0.51",
+  "description": "Style system creator for G2 Components.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "sideEffects": false,
+  "types": "types",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+    "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+    "build": "npm run build:cjs && npm run build:es -- --no-clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/is-prop-valid": "^0.8.8",
+    "@wp-g2/utils": "^0.0.51",
+    "create-emotion": "^10.0.27",
+    "cssjanus": "^1.3.2",
+    "dash-get": "^1.0.2",
+    "emotion": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "styled-griddie": "^0.1.3",
+    "stylis-plugin-css-variables": "^1.0.4",
+    "stylis-plugin-rtl": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}

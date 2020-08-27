@@ -1,4 +1,6 @@
-import { createRgbaColors, createTextColors, get } from '../utils';
+import { get } from '@wp-g2/create-styles';
+
+import { createRgbaColors, createTextColors } from '../utils';
 
 export const CORE_PURPLE_COLORS = {
 	purple100: '#f3f1f8',

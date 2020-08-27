@@ -1,4 +1,4 @@
-import { injectGlobal } from '../style-system';
+import { injectGlobal } from '../compiler';
 
 const __INTERNAL_STATE__ = {
 	didInjectGlobal: false,

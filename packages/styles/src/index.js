@@ -1,7 +1,10 @@
+export * from './core';
 export { cache, cns, css, jsx, cx, ns } from './style-system';
 
-export { createStyleSystemElement } from './create-style-system';
-export * from './core';
+// export {
+// 	createStyleSystem,
+// 	createStyleSystemElement,
+// } from './create-style-system';
 export * from './components';
 export * from './styled';
 export * from './hooks';

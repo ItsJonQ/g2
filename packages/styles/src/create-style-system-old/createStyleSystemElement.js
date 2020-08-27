@@ -4,7 +4,8 @@ import React, { forwardRef } from 'react';
 
 import { useHydrateGlobalStyles } from '../hooks';
 import { css, cx } from '../style-system';
-import { REDUCED_MOTION_MODE_ATTR, THEME } from '../theme';
+import { REDUCED_MOTION_MODE_ATTR } from './constants';
+import { DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const shouldForwardProp = isPropValid;
 
@@ -13,8 +14,6 @@ const styles = {
 		MozOsxFontSmoothing: 'grayscale',
 		WebkitFontSmoothing: 'antialiased',
 		boxSizing: 'border-box',
-		fontFamily: THEME['fontFamily'],
-		fontSize: THEME['fontSize'],
 		margin: 0,
 	}),
 	reduceMotion: css`
@@ -27,7 +26,14 @@ const styles = {
 	`,
 };
 
-export const createStyleSystemElement = (tagName = 'div') => {
+const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
+
+export const createStyleSystemElement = (
+	tagName = 'div',
+	options = defaultOptions,
+) => {
+	const { baseStyles, globalStyles } = { ...defaultOptions, ...options };
+
 	const render = (
 		{
 			// Internal props
@@ -45,7 +51,7 @@ export const createStyleSystemElement = (tagName = 'div') => {
 		ref,
 	) => {
 		// eslint-disable-next-line
-		useHydrateGlobalStyles();
+		useHydrateGlobalStyles({ globalStyles });
 
 		const element = as || tagName;
 		const className = !is.string(classNameProp)
@@ -57,6 +63,7 @@ export const createStyleSystemElement = (tagName = 'div') => {
 		const classes = cx(
 			styles.Base,
 			styles.reduceMotion,
+			css(baseStyles),
 			cxProp,
 			className,
 			sx,

@@ -2,8 +2,8 @@ import { deepEqual, is } from '@wp-g2/utils';
 import { ThemeProvider as BaseThemeProvider } from 'emotion-theming';
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
+import { transformValuesToVariables } from '../create-style-system/utils';
 import { useReducedMotion } from '../hooks';
-import { transformValuesToVariables } from '../theme/utils';
 
 function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
 	useLayoutEffect(() => {
