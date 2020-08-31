@@ -46,11 +46,15 @@ export function createStyleSystem(options = defaultOptions) {
 
 	const View = core.div;
 
+	const { css, cx } = compiler;
+
 	return {
 		View,
 		core,
 		compiler,
 		styled,
+		css,
+		cx,
 		get,
 		createCoreElement: _createCoreElement,
 	};

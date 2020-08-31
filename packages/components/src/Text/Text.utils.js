@@ -1,4 +1,4 @@
-import { ns } from '@wp-g2/styles';
+import { ns } from '@wp-g2/context';
 import { is, memoize } from '@wp-g2/utils';
 import { findAll } from 'highlight-words-core';
 import { createElement } from 'react';

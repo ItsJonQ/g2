@@ -1,4 +1,5 @@
-import { cns, ns, styled } from '@wp-g2/styles';
+import { cns, ns } from '@wp-g2/context';
+import { styled } from '@wp-g2/styles';
 
 const [CONNECTED_NAMESPACE] = Object.keys(cns());
 const [NAMESPACE] = Object.keys(ns());

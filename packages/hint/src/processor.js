@@ -1,4 +1,4 @@
-import { ns } from '@wp-g2/styles';
+import { ns } from '@wp-g2/context';
 import { is, noop } from '@wp-g2/utils';
 
 import coreRules from './rules';

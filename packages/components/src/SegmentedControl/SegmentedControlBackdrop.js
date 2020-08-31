@@ -1,4 +1,4 @@
-import { ns } from '@wp-g2/styles';
+import { ns } from '@wp-g2/context';
 import React, { useEffect, useState } from 'react';
 
 import * as styles from './SegmentedControl.styles';

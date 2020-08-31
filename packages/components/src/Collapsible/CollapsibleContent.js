@@ -1,6 +1,6 @@
 import { DisclosureContent } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
-import { cx, ns } from '@wp-g2/styles';
+import { connect, ns } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Animated } from '../Animated';

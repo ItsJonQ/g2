@@ -1,5 +1,5 @@
-import { connect } from '@wp-g2/context';
-import { cx, ns } from '@wp-g2/styles';
+import { connect, ns } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Elevation } from '../Elevation';

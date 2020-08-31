@@ -1,7 +1,7 @@
 import { Button as BaseButton } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { connect, ns } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
-import { cx, ns } from '@wp-g2/styles';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';

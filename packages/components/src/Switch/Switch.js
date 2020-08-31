@@ -1,7 +1,6 @@
 import { Radio } from '@wp-g2/a11y';
 import { Checkbox } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
-import { ns } from '@wp-g2/styles';
+import { connect, ns } from '@wp-g2/context';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
 

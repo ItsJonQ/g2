@@ -1,13 +1,34 @@
-import { cns, cx, ns } from '@wp-g2/styles';
+import { cx } from '@wp-g2/styles';
 import { hoistNonReactStatics, is, kebabCase, uniq } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
 import { useComponentsContext } from './ComponentsProvider';
+import { cns, ns } from './utils';
 
 const REACT_TYPEOF_KEY = '$$typeof';
+
+/**
+ * Special key where the connected namespaces are stored.
+ * This is attached to Context connected components as a static property.
+ */
 const CONNECT_NAMESPACE = '__wpComponentsKey__';
 
-export function componentsConnect(Component, namespace, options = {}) {
+/**
+ * Connects a component to the G2 Context system using a higher-order component.
+ * The workflow for this connect HOC is similar to that of Redux.
+ *
+ * @example
+ * ```jsx
+ * const HelloComponent = () => <div>Hello</div>
+ * const ConnectedHello = connect(HelloComponent, 'Hello')
+ * ```
+ *
+ * @param {React.Component} Component The component to connect.
+ * @param {Array<string>|string} namespace The name for the component to be identified by the Context system.
+ * @param {object} options Options to modify the connected component.
+ * @returns {React.Component} The connected component.
+ */
+export function connect(Component, namespace, options = {}) {
 	const { pure = true } = options;
 	const displayName = is.array(namespace)
 		? namespace[0]
@@ -19,6 +40,13 @@ export function componentsConnect(Component, namespace, options = {}) {
 		const context = useComponentsContext();
 		let contextProps;
 
+		/**
+		 * It's possible to connect (register) a component under multiple namespaces.
+		 * This is done when passing the namespace as an array (Array<string>).
+		 *
+		 * To properly retrieve props from the Context system, we must accomodate
+		 * both singular and multi connections.
+		 */
 		if (is.array(key)) {
 			contextProps = key.reduce((acc, k) => {
 				const v = context[k];
@@ -61,6 +89,9 @@ export function componentsConnect(Component, namespace, options = {}) {
 
 	let mergedNamespace = Component[CONNECT_NAMESPACE] || [displayName];
 
+	/**
+	 * Consolidate (merge) namespaces before attaching it to the component.
+	 */
 	if (is.array(namespace)) {
 		mergedNamespace = [...mergedNamespace, ...namespace];
 	}
@@ -74,12 +105,24 @@ export function componentsConnect(Component, namespace, options = {}) {
 	return hoistNonReactStatics(ConnectedComponent, Component);
 }
 
+/**
+ * Generates the connected component CSS className based on the namespace.
+ *
+ * @param {string} displayName The name of the connected component.
+ * @returns {string} The generated CSS className.
+ */
 function getStyledClassName(displayName) {
 	if (!displayName || !is.string(displayName)) return '';
 
 	return `wp-components-${kebabCase(displayName)}`;
 }
 
+/**
+ * Generates the connected component CSS className based on the namespace.
+ *
+ * @param {string} displayName The name of the connected component.
+ * @returns {string} The generated CSS className.
+ */
 function getStyledClassNameFromKey(key) {
 	if (!key) return '';
 
@@ -93,10 +136,23 @@ function getStyledClassNameFromKey(key) {
 	return '';
 }
 
+/**
+ * Attempts to retrieve the connected namespace from a component.
+ *
+ * @param {React.Component} Component The component to retrieve a namespace from.
+ * @returns {Array<string>} The connected namespaces.
+ */
 export function getConnectNamespace(Component) {
 	return (Component && Component[CONNECT_NAMESPACE]) || [];
 }
 
+/**
+ * Checks to see if a component is connected within the Context system.
+ *
+ * @param {React.Component} Component The component to retrieve a namespace from.
+ * @param {Array<string>|string} match The namespace to check.
+ * @returns {boolean} The result.
+ */
 export function hasConnectNamespace(Component, match) {
 	const BaseComponent = Component[REACT_TYPEOF_KEY]
 		? Component.type
@@ -114,6 +170,5 @@ export function hasConnectNamespace(Component, match) {
 	return false;
 }
 
-export const connect = componentsConnect;
 export const getNamespace = getConnectNamespace;
 export const hasNamespace = hasConnectNamespace;

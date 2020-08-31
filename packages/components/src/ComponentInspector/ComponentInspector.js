@@ -1,5 +1,4 @@
-import { connect } from '@wp-g2/context';
-import { ns } from '@wp-g2/styles';
+import { connect, ns } from '@wp-g2/context';
 import { is } from '@wp-g2/utils';
 import React, { useEffect, useRef, useState } from 'react';
 
