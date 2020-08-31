@@ -1,5 +1,7 @@
 const jestConfig = require('@itsjonq/zero/jest');
 
+delete jestConfig.roots;
+
 module.exports = Object.assign(jestConfig, {
-	// your overrides here
+	projects: ['<rootDir>/packages/*/jest.config.js'],
 });
