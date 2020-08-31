@@ -1,5 +1,5 @@
-import { connect } from '@wp-g2/context';
-import { css, ns } from '@wp-g2/styles';
+import { connect, ns } from '@wp-g2/context';
+import { css } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
