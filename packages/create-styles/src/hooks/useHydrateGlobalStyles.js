@@ -4,6 +4,23 @@ const __INTERNAL_STATE__ = {
 	didInjectGlobal: false,
 };
 
+/**
+ * @typedef UseHydrateGlobalStylesProps
+ * @param {object} globalStyles Global style values to be injected.
+ */
+
+/**
+ * Renders configs (global styles) from the Style system into the DOM on
+ * initial render.
+ *
+ * This is a very important custom hook for the Style system.
+ * This hook injects the global styles (theme configs, dark mode configs, etc...)
+ * from the Style system into the DOM. It does so seamlessly (once) on initial
+ * render, enabling the styled coreElements, components, and CSS compiler
+ * to work without the need for Context Providers/Consumers.
+ *
+ * @param {UseHydrateGlobalStylesProps} props Props for the hook.
+ */
 export function useHydrateGlobalStyles({ globalStyles = {} }) {
 	if (__INTERNAL_STATE__.didInjectGlobal) return;
 
@@ -14,6 +31,9 @@ export function useHydrateGlobalStyles({ globalStyles = {} }) {
 		highContrastModeCSSVariables,
 	} = globalStyles;
 
+	/**
+	 * Using the compiler's (Emotion) injectGlobal function.
+	 */
 	injectGlobal`
 		${globalCSSVariables};
 		${darkModeCSSVariables};
@@ -21,5 +41,8 @@ export function useHydrateGlobalStyles({ globalStyles = {} }) {
 		${darkHighContrastModeCSSVariables};
 	`;
 
+	/**
+	 * Ensure that this only happens once with a singleton state.
+	 */
 	__INTERNAL_STATE__.didInjectGlobal = true;
 }

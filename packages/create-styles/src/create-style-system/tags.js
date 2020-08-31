@@ -1,3 +1,6 @@
+/**
+ * A collection of React HTMLElements.
+ */
 export const tags = [
 	'a',
 	'abbr',

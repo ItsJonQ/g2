@@ -6,6 +6,15 @@ const defaultOptions = {
 	level: 7,
 };
 
+/**
+ * Custom stylis plugin that increases the scope of generated selectors.
+ * The default compounding "level" is 7.
+ *
+ * For example, a selector of `.css-ah12df` would result in a final selector
+ * of `.css-ah12df.css-ah12df.css-ah12df.css-ah12df.css-ah12df.css-ah12df.css-ah12df`.
+ *
+ * @param {object} options Options to adjust the plugin
+ */
 function stylisExtraSpecificityPlugin(options = defaultOptions) {
 	const { level } = { ...defaultOptions, ...options };
 	const repeatLevel = clamp(level, 0, 20);

@@ -20,7 +20,7 @@ export const _default = () => {
 				</Flex>
 			</Spacer>
 			<Flex direction={['column', 'row']} gap={3}>
-				<ItemView sx={{ width: '180px' }}>Item</ItemView>
+				<ItemView css={{ width: '180px' }}>Item</ItemView>
 				<FlexItem isBlock>
 					<ItemView>Item</ItemView>
 				</FlexItem>

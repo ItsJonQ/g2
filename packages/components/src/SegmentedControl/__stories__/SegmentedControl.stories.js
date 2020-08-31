@@ -58,7 +58,7 @@ export const _default = () => {
 
 	return (
 		<BaseView>
-			<Spacer sx={{ width: [null, 300] }}>
+			<Spacer css={{ width: [null, 300] }}>
 				<SegmentedControl isBlock options={align} />
 			</Spacer>
 			<Spacer>

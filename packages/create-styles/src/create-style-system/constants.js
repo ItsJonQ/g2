@@ -1,3 +1,6 @@
+/**
+ * Uses the the prefix for the CSS variables compiled by the system.
+ */
 export const NAMESPACE = '--wp-g2';
 
 export const DARK_MODE_ATTR = '[data-system-ui-mode="dark"]';

@@ -24,6 +24,16 @@ const STYLIS_CONTEXTS = {
 // (they are not present at the PROPERTY, SELECTOR_BLOCK, or POST_PROCESS steps)
 export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
 
+/**
+ * Custom stylis plugin that flips applicable styles from LTR to RTL based
+ * on the <html dir="" /> property. On render, if dir="rtl", the styles will render
+ * as RTL flipped.
+ *
+ * It's currently not possible to dynamically flip between LTR and RTL styles.
+ * The LTR/RTL detection happens only once on render.
+ *
+ * This is something that can be improved in future.
+ */
 function stylisRTLPlugin(context, content) {
 	if (context === STYLIS_PROPERTY_CONTEXT) {
 		return isRtl ? cssjanus.transform(content) : undefined;

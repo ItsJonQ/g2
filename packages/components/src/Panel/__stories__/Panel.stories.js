@@ -10,10 +10,10 @@ export default {
 
 const InputSuffix = (props) => (
 	<Text
+		css={{ userSelect: 'none' }}
 		isBlock
 		lineHeight={1}
 		size={11}
-		sx={{ userSelect: 'none' }}
 		variant="muted"
 		{...props}
 	/>
@@ -21,7 +21,7 @@ const InputSuffix = (props) => (
 
 export const _default = () => {
 	return (
-		<Panel sx={{ width: 300 }} visible>
+		<Panel css={{ width: 300 }} visible>
 			<PanelHeader title="Title" />
 			<PanelBody>
 				<Spacer>

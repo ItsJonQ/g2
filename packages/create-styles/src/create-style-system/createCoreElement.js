@@ -9,10 +9,15 @@ import { DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const shouldForwardProp = isPropValid;
 
+/**
+ * Default baseStyles for the system.
+ */
 const styles = {
 	Base: css({
+		// Automatic box-sizing resets.
 		boxSizing: 'border-box',
 	}),
+	// Enforced reduced-motion preferred styles.
 	reduceMotion: css`
 		@media (prefers-reduced-motion) {
 			transition: none !important;
@@ -25,6 +30,28 @@ const styles = {
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
+/**
+ * Creates the core styled elements for the Style system. These elements are
+ * an in-between of Emotion's <div css="" /> solution and a styled.div``
+ * solution.
+ *
+ * createCoreElement is a super light-weight higher-order wrapper that
+ * enhances base elements (like `div`, `input`, or even Components) with
+ * features provided by the Style system, such as direct CSS compiling via
+ * the `css` prop.
+ *
+ * A styled element also has built-in baseStyles (which can be adjusted using
+ * the createStyleSystem factory).
+ *
+ * @example
+ * ```jsx
+ * const alwaysBlueDiv = createCoreElement('div', { baseStyles: { background: 'blue' }})
+ * ```
+ *
+ * @param {string|React.Component} tagName The HTMLElement/React.Component to connect with the Style system.
+ * @param {object} options Options to custom coreElement styles.
+ * @returns {React.Component} The Style system wrapped HTMLElement/React.Component.
+ */
 export const createCoreElement = (
 	tagName = 'div',
 	options = defaultOptions,
@@ -37,7 +64,6 @@ export const createCoreElement = (
 			// Internal props
 			css: cssProp,
 			cx: cxProp,
-			sx: sxProp, // Legacy: From ThemeUI
 			// External props
 			// eslint-disable-next-line
 			as,
@@ -48,6 +74,16 @@ export const createCoreElement = (
 		},
 		ref,
 	) => {
+		/**
+		 * useHydrateGlobalStyles an incredibly important hook, and is vital
+		 * to the Style system. It automatically injects the variables Style
+		 * system configs (configs, dark mode, etc...) on first-render.
+		 *
+		 * This way avoids....
+		 *
+		 * 1. The need to wrap coreElements / styled components in any <Provider />.
+		 * 2. The need to use Context connectors (e.g. for ThemeProvider), which is HUGE for performance.
+		 */
 		// eslint-disable-next-line
 		useHydrateGlobalStyles({ globalStyles });
 
@@ -56,17 +92,23 @@ export const createCoreElement = (
 			? cx(classNameProp)
 			: classNameProp;
 
-		const sx = sxProp && css(sxProp);
-
+		/**
+		 * Compiles all of the custom styles into classNames before binding it
+		 * to the HTMLElement / React.Component.
+		 */
 		const classes = cx(
 			styles.Base,
 			styles.reduceMotion,
 			compiledBaseStyles,
 			cxProp,
 			className,
-			sx,
 			css(cssProp),
 		);
+
+		/**
+		 * A conventient feature to (attempt to) filter out non HTML-friendly
+		 * props for HTMLElements.
+		 */
 		const shouldFilterProps = is.string(element);
 
 		let newProps = {};

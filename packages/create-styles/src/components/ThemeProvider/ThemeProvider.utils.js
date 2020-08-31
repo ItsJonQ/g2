@@ -4,6 +4,17 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { transformValuesToVariables } from '../../create-style-system/utils';
 import { useReducedMotion } from '../../hooks';
 
+/**
+ * @typedef UseColorBlindModeProps
+ * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
+ * @property {RefObject} ref React ref.
+ */
+
+/**
+ * Hook that sets the Style system's color-blind mode.
+ * @param {UseColorBlindModeProps} props Props for the hook.
+ */
 export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
 	useLayoutEffect(() => {
 		if (!is.defined(isColorBlind)) return;
@@ -22,6 +33,17 @@ export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
 	}, [isGlobal, isColorBlind, ref]);
 }
 
+/**
+ * @typedef UseDarkModeProps
+ * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {boolean} isDark Determines if dark-mode styles should be rendered.
+ * @property {RefObject} ref React ref.
+ */
+
+/**
+ * Hook that sets the Style system's dark mode.
+ * @param {UseDarkModeProps} props Props for the hook.
+ */
 export function useDarkMode({ isDark, isGlobal = true, ref }) {
 	useLayoutEffect(() => {
 		if (!is.defined(isDark)) return;
@@ -40,6 +62,17 @@ export function useDarkMode({ isDark, isGlobal = true, ref }) {
 	}, [isGlobal, isDark, ref]);
 }
 
+/**
+ * @typedef UseHighContrastMode
+ * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {boolean} isHighContrast Determines if high-contrast styles should be rendered.
+ * @property {RefObject} ref React ref.
+ */
+
+/**
+ * Hook that sets the Style system's high-contrast mode.
+ * @param {UseHighContrastMode} props Props for the hook.
+ */
 export function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
 	useLayoutEffect(() => {
 		if (!is.defined(isHighContrast)) return;
@@ -58,6 +91,17 @@ export function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
 	}, [isGlobal, isHighContrast, ref]);
 }
 
+/**
+ * @typedef UseReducedMotionProps
+ * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {boolean} isReducedMotion Determines if reduced-motion styles should be rendered.
+ * @property {RefObject} ref React ref.
+ */
+
+/**
+ * Hook that sets the Style system's reduced-motion mode.
+ * @param {UseReducedMotionProps} props Props for the hook.
+ */
 export function useReducedMotionMode({
 	isGlobal = true,
 	isReducedMotion,
@@ -88,22 +132,54 @@ export function useReducedMotionMode({
 	}, [isGlobal, isReducedMotion, ref]);
 }
 
+/**
+ * @typedef UseThemeStyles
+ * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {object} theme Custom theme values.
+ */
+
+/**
+ * Hook that sets the Style system's theme.
+ * @param {UseThemeStyles} props Props for the hook.
+ */
 export function useThemeStyles({ isGlobal = true, theme = {} }) {
-	const themeRef = useRef();
 	const [themeStyles, setThemeStyles] = useState({});
+	/**
+	 * Used to track/compare changes for theme prop changes.
+	 */
+	const themeRef = useRef();
 
 	useLayoutEffect(() => {
+		/**
+		 * We only want to update + set the theme if there's a change.
+		 * Since themes (potentially) be nested, we need to do a deepEqual check.
+		 */
 		if (deepEqual(themeRef.current, theme)) return;
+
 		themeRef.current = theme;
 		const rootNode = document.documentElement;
+
+		/**
+		 * This compiles the theme config (object) into CSS variables that
+		 * the Style system understands and can be retrieved using the get() function.
+		 */
 		const nextTheme = transformValuesToVariables(theme);
+
 		if (isGlobal) {
+			/**
+			 * If isGlobal is preferred, we need to set the custom CSS variables onto
+			 * the root element.
+			 */
 			requestAnimationFrame(() => {
 				for (const [k, v] of Object.entries(nextTheme)) {
 					rootNode && rootNode.style.setProperty(k, v);
 				}
 			});
 		} else {
+			/**
+			 * Otherwise, we can set it to the themeStyles state, which will be
+			 * rendered as custom properties on the ThemeProvider (HTMLDivElement).
+			 */
 			setThemeStyles((prev) => ({ ...prev, ...nextTheme }));
 		}
 	}, [isGlobal, theme]);

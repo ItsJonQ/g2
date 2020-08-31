@@ -9,6 +9,30 @@ import {
 	transformValuesToVariablesString,
 } from './utils';
 
+/**
+ * @typedef GenerateThemeProps
+ * @property {object} config Default theme config.
+ * @property {object} darkModeConfig Dark mode theme config.
+ * @property {object} highContrastModeConfig High contrast mode theme config.
+ * @property {object} darkHighContrastModeConfig Dark high contrast mode theme config.
+ */
+
+/**
+ * @typedef GenerateThemeResults
+ * @property {object} theme A set of theme style references.
+ * @property {object} globalVariables A set of global variables.
+ * @property {string} globalCSSVariables The compiled CSS string for global variables.
+ * @property {string} darkModeCSSVariables The compiled CSS string for global dark variables.
+ * @property {string} highContrastModeCSSVariables The compiled CSS string for global high contrast variables.
+ * @property {string} darkHighContrastModeCSSVariables The compiled CSS string for global dark high contrast variables.
+ */
+
+/**
+ * Generates theme references and compiles CSS variables to be used by the Style System.
+ *
+ * @param {GenerateThemeProps} props Props to generate a Style system theme with.
+ * @returns {GenerateThemeResults} A set of variables and content for the System.
+ */
 export function generateTheme({
 	config = {},
 	darkModeConfig = {},

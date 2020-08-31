@@ -20,7 +20,7 @@ export default {
 export const _default = () => {
 	return (
 		<NavigationStack initialHeight={50}>
-			<Card sx={{ m: 'auto', width: 300 }}>
+			<Card css={{ m: 'auto', width: 300 }}>
 				<CardHeader>
 					<Text weight={600}>Content</Text>
 				</CardHeader>
