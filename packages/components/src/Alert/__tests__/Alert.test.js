@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
-import { Alert } from '../index';
+import { Alert, Alerts } from '../index';
 
 describe('props', () => {
 	test('should render correctly', () => {
@@ -12,7 +12,23 @@ describe('props', () => {
 
 	test('should render with status', () => {
 		const { container } = render(
-			<Alert status="success">I like warm hugs</Alert>,
+			<Alerts>
+				<Alert isDismissable key="warning" status="warning">
+					I like warm hugs
+				</Alert>
+				<Alert isDismissable key="success" status="success">
+					I like warm hugs
+				</Alert>
+				<Alert isDismissable key="critical" status="critical">
+					I like warm hugs
+				</Alert>
+				<Alert isDismissable key="info" status="info">
+					I like warm hugs
+				</Alert>
+				<Alert isDismissable key="standard">
+					I like warm hugs
+				</Alert>
+			</Alerts>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});

@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render alignLabel 1`] = `
+<div
+  class="wp-components-form-group css-52xju"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-grid wp-components-form-group css-1inz149"
+    data-g2-c16t="true"
+    data-g2-component="FormGroup"
+  >
+    <div
+      class="wp-components-control-label css-1bb4q70"
+      data-g2-c16t="true"
+      data-g2-component="ControlLabel"
+    >
+      <label
+        class="wp-components-truncate wp-components-text wp-components-control-label css-3vak3l"
+        data-g2-c16t="true"
+        data-g2-component="ControlLabel"
+        for="fname"
+      >
+        First name
+      </label>
+    </div>
+    <div
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        data-g2-c16t="true"
+        data-g2-component="TextInputContent"
+      >
+        <input
+          class="css-yegakt"
+          data-g2-c16t="true"
+          data-g2-component="TextInputInput"
+          id="fname"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-form-group css-52xju"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-grid wp-components-form-group css-1inz149"
+    data-g2-c16t="true"
+    data-g2-component="FormGroup"
+  >
+    <div
+      class="wp-components-control-label css-1bb4q70"
+      data-g2-c16t="true"
+      data-g2-component="ControlLabel"
+    >
+      <label
+        class="wp-components-truncate wp-components-text wp-components-control-label css-35vd3x"
+        data-g2-c16t="true"
+        data-g2-component="ControlLabel"
+        for="fname"
+      >
+        First name
+      </label>
+    </div>
+    <div
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        data-g2-c16t="true"
+        data-g2-component="TextInputContent"
+      >
+        <input
+          class="css-yegakt"
+          data-g2-c16t="true"
+          data-g2-component="TextInputInput"
+          id="fname"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render isMarginless 1`] = `
+<div
+  class="wp-components-form-group css-1l81ebi"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-grid wp-components-form-group css-1inz149"
+    data-g2-c16t="true"
+    data-g2-component="FormGroup"
+  >
+    <div
+      class="wp-components-control-label css-1bb4q70"
+      data-g2-c16t="true"
+      data-g2-component="ControlLabel"
+    >
+      <label
+        class="wp-components-truncate wp-components-text wp-components-control-label css-35vd3x"
+        data-g2-c16t="true"
+        data-g2-component="ControlLabel"
+        for="fname"
+      >
+        First name
+      </label>
+    </div>
+    <div
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        data-g2-c16t="true"
+        data-g2-component="TextInputContent"
+      >
+        <input
+          class="css-yegakt"
+          data-g2-c16t="true"
+          data-g2-component="TextInputInput"
+          id="fname"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render label without prop correctly 1`] = `
+<div
+  class="wp-components-form-group css-52xju"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-grid wp-components-form-group css-1inz149"
+    data-g2-c16t="true"
+    data-g2-component="FormGroup"
+  >
+    <div
+      class="wp-components-control-label css-1bb4q70"
+      data-g2-c16t="true"
+      data-g2-component="ControlLabel"
+    >
+      <label
+        class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+        data-g2-c16t="true"
+        data-g2-component="ControlLabel"
+        for="fname"
+      />
+    </div>
+    <div
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        data-g2-c16t="true"
+        data-g2-component="TextInputContent"
+      >
+        <input
+          class="css-yegakt"
+          data-g2-c16t="true"
+          data-g2-component="TextInputInput"
+          id="fname"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render vertically 1`] = `
+<div
+  class="wp-components-form-group css-52xju"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-control-label css-1bb4q70"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+  >
+    <label
+      class="wp-components-truncate wp-components-text wp-components-control-label css-35vd3x"
+      data-g2-c16t="true"
+      data-g2-component="ControlLabel"
+      for="fname"
+    >
+      First name
+    </label>
+  </div>
+  <div
+    class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+    data-g2-c16t="true"
+    data-g2-component="TextInput"
+  >
+    <div
+      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      data-g2-c16t="true"
+      data-g2-component="TextInputContent"
+    >
+      <input
+        class="css-yegakt"
+        data-g2-c16t="true"
+        data-g2-component="TextInputInput"
+        id="fname"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

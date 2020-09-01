@@ -72,4 +72,28 @@ describe('props', () => {
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
+
+	test('should render with a custom small size + square', () => {
+		const { container } = render(
+			<Avatar
+				border={true}
+				name="Elsa Oldenburg"
+				shape="square"
+				size={20}
+			/>,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	test('should render with a custom xSmall size + square', () => {
+		const { container } = render(
+			<Avatar
+				border={true}
+				name="Elsa Oldenburg"
+				shape="square"
+				size={15}
+			/>,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
 });

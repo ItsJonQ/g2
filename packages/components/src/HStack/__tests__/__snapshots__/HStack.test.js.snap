@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`props should render Spacer 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack css-1pg3rlk"
+  data-g2-c16t="true"
+  data-g2-component="HStack"
+>
+  <div
+    class="wp-components-flex-item css-h5jpv5"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-view css-1oanc4k"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    />
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1qsp6p9"
+    data-g2-c16t="true"
+    data-g2-component="Spacer"
+  />
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-view css-1oanc4k"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    />
+  </div>
+</div>
+`;
+
 exports[`props should render alignment 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-h-stack css-vqn2g8"

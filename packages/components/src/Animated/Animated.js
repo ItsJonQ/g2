@@ -1,7 +1,7 @@
 import { motion, useSystemReducedMotion } from '@wp-g2/animations';
 import { connect } from '@wp-g2/context';
 import { createCoreElement, useReducedMotion } from '@wp-g2/styles';
-import { is, memoize, warning } from '@wp-g2/utils';
+import { is, memoize } from '@wp-g2/utils';
 import React from 'react';
 
 const createAnimated = function (tagName) {
@@ -12,13 +12,6 @@ const createAnimated = function (tagName) {
 const memoizedCreateAnimated = memoize(createAnimated);
 
 function Animated({ as = 'div', auto = false, children, ...props }) {
-	warning(
-		!is.string(as),
-		'@wp-g2/components',
-		'Animated',
-		'as prop must be a string.',
-	);
-
 	const [isProviderReducedMotion] = useReducedMotion();
 	const isSystemReducedMotion = useSystemReducedMotion();
 

@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render color 1`] = `
+<span
+  class="wp-components-tag css-1wxccvi"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-vwfq0p"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  >
+    Status
+  </span>
+</span>
+`;
+
+exports[`props should render correctly 1`] = `
+<span
+  class="wp-components-tag css-acvidt"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-vwfq0p"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  >
+    Status
+  </span>
+</span>
+`;
+
+exports[`props should render display 1`] = `
+<span
+  class="wp-components-tag css-16edemj"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-vwfq0p"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  >
+    Status
+  </span>
+</span>
+`;
+
+exports[`props should render href 1`] = `
+<a
+  class="wp-components-tag css-acvidt"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+  href="#"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-vwfq0p"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  >
+    Status
+  </span>
+</a>
+`;
+
+exports[`props should render onRemove 1`] = `
+<span
+  class="wp-components-tag css-acvidt"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-vwfq0p"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  >
+    Status
+  </span>
+</span>
+`;
+
+exports[`props should render removeButtonText 1`] = `
+<span
+  class="wp-components-tag css-acvidt"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-vwfq0p"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  >
+    Status
+  </span>
+  <div
+    class="css-c7yxzp"
+    data-g2-component="TagRemoveButtonWrapper"
+  >
+    <button
+      aria-busy="false"
+      aria-label="Remove"
+      class="css-1czjvki"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="TagRemoveButton"
+      data-icon="true"
+      title="Remove"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-vqn2g8"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-1ir3rsg"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1q655eb"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="12"
+              size="12"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-r2c0vy"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+</span>
+`;

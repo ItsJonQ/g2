@@ -54,5 +54,5 @@ export function getTextColor(status) {
 			break;
 	}
 
-	return color ? get(color) : '';
+	return get(color);
 }

@@ -50,6 +50,24 @@ describe('props', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
+	test('should render highlighted words with undefined passed', () => {
+		const { container } = render(
+			<Text highlightWords={undefined}>
+				Some people are worth melting for.
+			</Text>,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	test('should render highlighted words with highlightCaseSensitive', () => {
+		const { container } = render(
+			<Text highlightCaseSensitive highlightWords={['WORTH']}>
+				Some people are worth melting for.
+			</Text>,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
 	test('should render isBlock', () => {
 		const { container } = render(
 			<Text isBlock>Some people are worth melting for.</Text>,

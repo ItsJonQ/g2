@@ -87,6 +87,31 @@ exports[`props should render highlighted words 1`] = `
 </span>
 `;
 
+exports[`props should render highlighted words with highlightCaseSensitive 1`] = `
+<span
+  class="wp-components-text css-rqttnj"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  <span
+    class=""
+    data-g2-component="Text"
+  >
+    Some people are worth melting for.
+  </span>
+</span>
+`;
+
+exports[`props should render highlighted words with undefined passed 1`] = `
+<span
+  class="wp-components-text css-1j8fk1m"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
 exports[`props should render isBlock 1`] = `
 <span
   class="wp-components-text css-19swntb"

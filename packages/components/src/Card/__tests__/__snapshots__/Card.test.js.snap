@@ -1,5 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`props should render CardInnerBody 1`] = `
+<div
+  class="wp-components-surface wp-components-card css-5tt5we"
+  data-g2-c16t="true"
+  data-g2-component="Card"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="CardContent"
+  >
+    <div
+      class="wp-components-view wp-components-flex wp-components-card-header css-1oil73r"
+      data-g2-c16t="true"
+      data-g2-component="CardHeader"
+      title="Olaf"
+    />
+    <div
+      class="wp-components-card-inner-body css-648dw8"
+      data-g2-c16t="true"
+      data-g2-component="CardInnerBody"
+    >
+      Some people are worth melting for.
+    </div>
+    <div
+      class="wp-components-view wp-components-flex wp-components-card-footer css-1mnxnmj"
+      data-g2-c16t="true"
+      data-g2-component="CardFooter"
+    >
+      <div
+        class="wp-components-flex-item css-tfelz2"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      >
+        <button
+          aria-busy="false"
+          class="css-1eci7gf"
+          data-destructive="false"
+          data-g2-c16t="true"
+          data-g2-component="Button"
+          data-icon="false"
+          type="button"
+        >
+          <span
+            class="wp-components-view wp-components-flex css-vqn2g8"
+            data-g2-c16t="true"
+            data-g2-component="Flex"
+          >
+            <span
+              class="wp-components-flex-item wp-components-flex-block css-11l05e8"
+              data-g2-c16t="true"
+              data-g2-component="ButtonContent"
+            >
+              Agree
+            </span>
+          </span>
+          <span
+            class="wp-components-elevation css-r2c0vy"
+            data-g2-c16t="true"
+            data-g2-component="ButtonElevation"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="wp-components-elevation css-1l6c14l"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-1cy7hni"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
 exports[`props should render correctly 1`] = `
 <div
   class="wp-components-surface wp-components-card css-5tt5we"
@@ -99,7 +177,31 @@ exports[`props should render elevation 1`] = `
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-1e6ofid"
+    class="wp-components-elevation css-1x2f63w"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render no elevation 1`] = `
+<div
+  class="wp-components-surface wp-components-card css-5tt5we"
+  data-g2-c16t="true"
+  data-g2-component="Card"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="CardContent"
+  />
+  <div
+    class="wp-components-elevation css-1cjqlxx"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-b6uech"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />

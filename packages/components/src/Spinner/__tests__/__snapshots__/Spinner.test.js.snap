@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render color 1`] = `
+<div
+  aria-busy="true"
+  class="css-1t6iypa"
+  data-g2-c16t="true"
+  data-g2-component="Spinner"
+  style="height: 16px; width: 16px;"
+>
+  <div
+    aria-hidden="true"
+    class="css-1elsyoz"
+    style="transform: scale(0.4444444444444444);"
+  >
+    <div
+      class="css-15dvh3h"
+      style="color: blue;"
+    >
+      <div
+        class="InnerBar1"
+      />
+      <div
+        class="InnerBar2"
+      />
+      <div
+        class="InnerBar3"
+      />
+      <div
+        class="InnerBar4"
+      />
+      <div
+        class="InnerBar5"
+      />
+      <div
+        class="InnerBar6"
+      />
+      <div
+        class="InnerBar7"
+      />
+      <div
+        class="InnerBar8"
+      />
+      <div
+        class="InnerBar9"
+      />
+      <div
+        class="InnerBar10"
+      />
+      <div
+        class="InnerBar11"
+      />
+      <div
+        class="InnerBar12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  aria-busy="true"
+  class="css-1t6iypa"
+  data-g2-c16t="true"
+  data-g2-component="Spinner"
+  style="height: 16px; width: 16px;"
+>
+  <div
+    aria-hidden="true"
+    class="css-1elsyoz"
+    style="transform: scale(0.4444444444444444);"
+  >
+    <div
+      class="css-15dvh3h"
+    >
+      <div
+        class="InnerBar1"
+      />
+      <div
+        class="InnerBar2"
+      />
+      <div
+        class="InnerBar3"
+      />
+      <div
+        class="InnerBar4"
+      />
+      <div
+        class="InnerBar5"
+      />
+      <div
+        class="InnerBar6"
+      />
+      <div
+        class="InnerBar7"
+      />
+      <div
+        class="InnerBar8"
+      />
+      <div
+        class="InnerBar9"
+      />
+      <div
+        class="InnerBar10"
+      />
+      <div
+        class="InnerBar11"
+      />
+      <div
+        class="InnerBar12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render size 1`] = `
+<div
+  aria-busy="true"
+  class="css-1t6iypa"
+  data-g2-c16t="true"
+  data-g2-component="Spinner"
+  style="height: 31px; width: 31px;"
+>
+  <div
+    aria-hidden="true"
+    class="css-1elsyoz"
+    style="transform: scale(0.8611111111111112);"
+  >
+    <div
+      class="css-15dvh3h"
+    >
+      <div
+        class="InnerBar1"
+      />
+      <div
+        class="InnerBar2"
+      />
+      <div
+        class="InnerBar3"
+      />
+      <div
+        class="InnerBar4"
+      />
+      <div
+        class="InnerBar5"
+      />
+      <div
+        class="InnerBar6"
+      />
+      <div
+        class="InnerBar7"
+      />
+      <div
+        class="InnerBar8"
+      />
+      <div
+        class="InnerBar9"
+      />
+      <div
+        class="InnerBar10"
+      />
+      <div
+        class="InnerBar11"
+      />
+      <div
+        class="InnerBar12"
+      />
+    </div>
+  </div>
+</div>
+`;
