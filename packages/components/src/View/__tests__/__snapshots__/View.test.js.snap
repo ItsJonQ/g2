@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render as another element 1`] = `
+<p
+  class="wp-components-view css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="View"
+>
+  <span>
+    Some people are worth melting for.
+  </span>
+</p>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="View"
+>
+  <span>
+    Some people are worth melting for.
+  </span>
+</div>
+`;
+
+exports[`props should render with custom styles (Array) 1`] = `
+<p
+  class="wp-components-view css-1ey0nom"
+  data-g2-c16t="true"
+  data-g2-component="View"
+>
+  <span>
+    Some people are worth melting for.
+  </span>
+</p>
+`;
+
+exports[`props should render with custom styles (object) 1`] = `
+<p
+  class="wp-components-view css-co1g1p"
+  data-g2-c16t="true"
+  data-g2-component="View"
+>
+  <span>
+    Some people are worth melting for.
+  </span>
+</p>
+`;
+
+exports[`props should render with custom styles (string) 1`] = `
+<p
+  class="wp-components-view css-182m11h"
+  data-g2-c16t="true"
+  data-g2-component="View"
+>
+  <span>
+    Some people are worth melting for.
+  </span>
+</p>
+`;

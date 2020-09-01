@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render borderBottom 1`] = `
+<div
+  class="wp-components-surface css-hz745k"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render borderLeft 1`] = `
+<div
+  class="wp-components-surface css-x09vk4"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render borderRight 1`] = `
+<div
+  class="wp-components-surface css-bfvuwe"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render borderTop 1`] = `
+<div
+  class="wp-components-surface css-9eoqfb"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render borders 1`] = `
+<div
+  class="wp-components-surface css-1x3d0ab"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-surface css-796cdr"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render variants 1`] = `
+<div
+  class="wp-components-surface css-10ui744"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+>
+  Some people are worth melting for.
+</div>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render as another element 1`] = `
+<h3
+  class="wp-components-text wp-components-heading css-17zb1od"
+  data-g2-c16t="true"
+  data-g2-component="Heading"
+>
+  Some people are worth melting for.
+</h3>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-text wp-components-heading css-mg5g9g"
+  data-g2-c16t="true"
+  data-g2-component="Heading"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render size 1`] = `
+<div
+  class="wp-components-text wp-components-heading css-17zb1od"
+  data-g2-c16t="true"
+  data-g2-component="Heading"
+>
+  Some people are worth melting for.
+</div>
+`;

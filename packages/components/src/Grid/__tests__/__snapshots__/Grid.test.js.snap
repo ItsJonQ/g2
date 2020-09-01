@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render align 1`] = `
+<div
+  class="wp-components-grid css-1cnh276"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-grid css-1uel6nx"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render custom columns 1`] = `
+<div
+  class="wp-components-grid css-kd2il8"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render custom rows 1`] = `
+<div
+  class="wp-components-grid css-1a347u"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render custom templateColumns 1`] = `
+<div
+  class="wp-components-grid css-1emhejr"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render custom templateRows 1`] = `
+<div
+  class="wp-components-grid css-1lx2jos"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render gap 1`] = `
+<div
+  class="wp-components-grid css-1ajpiwm"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render isInline 1`] = `
+<div
+  class="wp-components-grid css-75j5pi"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;
+
+exports[`props should render justify 1`] = `
+<div
+  class="wp-components-grid css-nqbiex"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+>
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+  <div
+    class="wp-components-view css-1oanc4k"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  />
+</div>
+`;

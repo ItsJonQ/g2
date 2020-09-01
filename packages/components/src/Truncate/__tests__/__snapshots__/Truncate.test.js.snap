@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<span
+  class="wp-components-truncate css-na7ues"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render custom ellipsis 1`] = `
+<span
+  class="wp-components-truncate css-na7ues"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render custom ellipsizeMode 1`] = `
+<span
+  class="wp-components-truncate css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+>
+  So!!!r.
+</span>
+`;
+
+exports[`props should render limit 1`] = `
+<span
+  class="wp-components-truncate css-na7ues"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render numberOfLines 1`] = `
+<span
+  class="wp-components-truncate css-451se2"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+>
+  Some people are worth melting for.
+</span>
+`;

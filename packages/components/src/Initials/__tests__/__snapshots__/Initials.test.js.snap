@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<span
+  class="wp-components-text wp-components-initials css-8bvww9"
+  data-g2-c16t="true"
+  data-g2-component="Initials"
+>
+  EO
+</span>
+`;

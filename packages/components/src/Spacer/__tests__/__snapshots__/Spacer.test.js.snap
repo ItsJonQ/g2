@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-18dob1y"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render margin 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-wo8eao"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render marginBottom 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1csyfio"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render marginLeft 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-11hcdr8"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render marginRight 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1t2xhie"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render marginTop 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1829k91"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render marginX 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-5hgnsh"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render marginY 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1pv0oea"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render padding 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1gltn8r"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render paddingBottom 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-4a1r3i"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render paddingLeft 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-ytijwo"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render paddingRight 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-m34hvv"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render paddingTop 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-hot1s1"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render paddingX 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-voikzr"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;
+
+exports[`props should render paddingY 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-e23zdp"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+/>
+`;

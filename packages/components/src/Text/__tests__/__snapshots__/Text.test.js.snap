@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render align 1`] = `
+<span
+  class="wp-components-text css-1c4c06o"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render as another element 1`] = `
+<div
+  class="wp-components-text css-1j8fk1m"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render color 1`] = `
+<span
+  class="wp-components-text css-1wv6u71"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render correctly 1`] = `
+<span
+  class="wp-components-text css-1j8fk1m"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render custom size 1`] = `
+<span
+  class="wp-components-text css-1rdc3tj"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render display 1`] = `
+<span
+  class="wp-components-text css-xw219u"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render highlighted words 1`] = `
+<span
+  class="wp-components-text css-rqttnj"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  <span
+    class=""
+    data-g2-component="Text"
+  >
+    Some people are 
+  </span>
+  <mark
+    class=" "
+    data-g2-component="TextHighlight"
+  >
+    worth
+  </mark>
+  <span
+    class=""
+    data-g2-component="Text"
+  >
+     melting for.
+  </span>
+</span>
+`;
+
+exports[`props should render isBlock 1`] = `
+<span
+  class="wp-components-text css-19swntb"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render lineHeight 1`] = `
+<span
+  class="wp-components-text css-1vk2pqa"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render optimizeReadabilityFor 1`] = `
+<span
+  class="wp-components-text css-zixsns"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render size 1`] = `
+<span
+  class="wp-components-text css-m1gdfr"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render truncate 1`] = `
+<span
+  class="wp-components-truncate wp-components-text css-tac0ke"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render upperCase 1`] = `
+<span
+  class="wp-components-text css-v94xud"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render variant 1`] = `
+<span
+  class="wp-components-text css-13osiko"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;
+
+exports[`props should render weight 1`] = `
+<span
+  class="wp-components-text css-1juvghl"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+>
+  Some people are worth melting for.
+</span>
+`;

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<a
+  class="wp-components-text wp-components-link css-1ikul0b"
+  data-g2-c16t="true"
+  data-g2-component="Link"
+  href="#"
+>
+  Let it go
+</a>
+`;
+
+exports[`props should render isPlain 1`] = `
+<a
+  class="wp-components-text wp-components-link css-1vyil80"
+  data-g2-c16t="true"
+  data-g2-component="Link"
+  href="#"
+>
+  Let it go
+</a>
+`;

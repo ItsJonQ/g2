@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render alignment 1`] = `
+<div
+  class="wp-components-view wp-components-container css-102y339"
+  data-g2-c16t="true"
+  data-g2-component="Container"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-container css-156gqkj"
+  data-g2-c16t="true"
+  data-g2-component="Container"
+>
+  Some people are worth melting for.
+</div>
+`;
+
+exports[`props should render width 1`] = `
+<div
+  class="wp-components-view wp-components-container css-13rfj2b"
+  data-g2-c16t="true"
+  data-g2-component="Container"
+>
+  Some people are worth melting for.
+</div>
+`;

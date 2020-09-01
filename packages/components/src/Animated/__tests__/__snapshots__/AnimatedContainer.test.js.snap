@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+>
+  I like warm hugs
+</div>
+`;
