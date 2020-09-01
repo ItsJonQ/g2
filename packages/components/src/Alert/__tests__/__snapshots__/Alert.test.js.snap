@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render as dismissable 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-qp04ps"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-view wp-components-flex css-umgb39"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="wp-components-view css-aa6xze"
+          data-g2-c16t="true"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+      <div
+        class="wp-components-flex-item css-tfelz2"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      >
+        <div
+          class="css-8cker"
+        >
+          <button
+            aria-busy="false"
+            class="css-76hjhg"
+            data-destructive="false"
+            data-g2-c16t="true"
+            data-g2-component="CloseButton"
+            data-icon="true"
+            title="Dismiss"
+            type="button"
+          >
+            <span
+              class="wp-components-view wp-components-flex css-vqn2g8"
+              data-g2-c16t="true"
+              data-g2-component="Flex"
+            >
+              <span
+                class="wp-components-flex-item css-1ir3rsg"
+                data-g2-c16t="true"
+                data-g2-component="ButtonIcon"
+              >
+                <div
+                  class="wp-components-icon css-a6dhrw"
+                  data-g2-c16t="true"
+                  data-g2-component="Icon"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    size="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="18"
+                      x2="6"
+                      y1="6"
+                      y2="18"
+                    />
+                    <line
+                      x1="6"
+                      x2="18"
+                      y1="6"
+                      y2="18"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="wp-components-elevation css-r2c0vy"
+              data-g2-c16t="true"
+              data-g2-component="ButtonElevation"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-1nobek4"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-view wp-components-flex css-umgb39"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="wp-components-view css-1oanc4k"
+          data-g2-c16t="true"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+      <div
+        class="wp-components-flex-item css-tfelz2"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render with status 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-qp04ps"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-view wp-components-flex css-umgb39"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="wp-components-view css-1oanc4k"
+          data-g2-c16t="true"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+      <div
+        class="wp-components-flex-item css-tfelz2"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render with title 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-1nobek4"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-view wp-components-flex css-umgb39"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="wp-components-view wp-components-spacer css-ylv018"
+          data-g2-c16t="true"
+          data-g2-component="Spacer"
+        >
+          <div
+            class="wp-components-text wp-components-heading css-2v8tda"
+            data-g2-c16t="true"
+            data-g2-component="Heading"
+          >
+            Hi
+          </div>
+        </div>
+        <div
+          class="wp-components-view css-1oanc4k"
+          data-g2-c16t="true"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+      <div
+        class="wp-components-flex-item css-tfelz2"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`rendering should render correctly 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-1nobek4"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-view wp-components-flex css-umgb39"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="wp-components-view css-1oanc4k"
+          data-g2-c16t="true"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+      <div
+        class="wp-components-flex-item css-tfelz2"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render as another HTML tag 1`] = `
+<span
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+>
+  I like warm hugs
+</span>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+>
+  I like warm hugs
+</div>
+`;
+
+exports[`props should render with auto animations 1`] = `
+<div
+  class="wp-components-animated css-1oanc4k"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  I like warm hugs
+</div>
+`;
