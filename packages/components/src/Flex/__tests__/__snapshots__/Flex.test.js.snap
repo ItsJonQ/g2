@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render + wrap non Flex children 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-1pg3rlk"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+>
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-view css-1oanc4k"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div />
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  />
+</div>
+`;
+
+exports[`props should render align 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-umgb39"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+>
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  />
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-1pg3rlk"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+>
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  />
+</div>
+`;
+
+exports[`props should render justify 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-70npbx"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+>
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  />
+</div>
+`;
+
+exports[`props should render spacing 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-1pg3rlk"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+  spacing="5"
+>
+  <div
+    class="wp-components-flex-item css-eqsycl"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-view css-1oanc4k"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-view css-1oanc4k"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    />
+  </div>
+</div>
+`;
