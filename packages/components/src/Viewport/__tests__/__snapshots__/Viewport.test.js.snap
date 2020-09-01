@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render ViewportDesktop 1`] = `null`;
+
+exports[`props should render ViewportMobile 1`] = `null`;
+
+exports[`props should render ViewportPhablet 1`] = `null`;
+
+exports[`props should render ViewportPhabletOnly 1`] = `null`;
+
+exports[`props should render ViewportTablet 1`] = `null`;
+
+exports[`props should render ViewportTabletOnly 1`] = `null`;
+
+exports[`props should render breakpoint 1`] = `null`;
+
+exports[`props should render correctly 1`] = `null`;
+
+exports[`props should render media 1`] = `null`;

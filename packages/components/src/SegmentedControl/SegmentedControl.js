@@ -9,6 +9,7 @@ import Backdrop from './SegmentedControlBackdrop';
 import Button from './SegmentedControlButton';
 
 function SegmentControl({
+	baseId,
 	forwardedRef,
 	isAdaptiveWidth = false,
 	isBlock = false,
@@ -19,7 +20,7 @@ function SegmentControl({
 	value,
 }) {
 	const containerRef = useRef();
-	const reakitRadio = useRadioState({ unstable_virtual: true });
+	const reakitRadio = useRadioState({ baseId, unstable_virtual: true });
 	const [resizeListener, sizes] = useResizeAware();
 	const radio = {
 		...reakitRadio,

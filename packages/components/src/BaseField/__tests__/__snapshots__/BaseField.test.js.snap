@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-base-field css-1skv8wk"
+  data-g2-c16t="true"
+  data-g2-component="BaseField"
+/>
+`;

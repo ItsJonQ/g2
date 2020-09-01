@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;

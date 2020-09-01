@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  aria-activedescendant="segmented-1"
+  aria-label="SegmentControl"
+  class="wp-components-view css-1g07w5i"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  id="segmented"
+  role="radiogroup"
+  tabindex="0"
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+  <div
+    class="css-1ie3ep8"
+    data-g2-component="SegmentedControlBackdrop"
+    role="presentation"
+    style="transform: translateX(NaNpx); transition: none; width: 0px;"
+  />
+  <div
+    class="css-1iso3al"
+    data-active="true"
+    data-g2-component="SegmentedControlButtonLabel"
+  >
+    <button
+      aria-checked="true"
+      aria-selected="true"
+      class="wp-components-segmented-control-button css-mf0iw2"
+      data-g2-c16t="true"
+      data-g2-component="SegmentedControlButton"
+      data-value="olaf"
+      id="segmented-1"
+      role="radio"
+      tabindex="-1"
+    >
+      <div
+        class="css-xip3y"
+        data-g2-component="SegmentedControlButtonContent"
+      >
+        O
+      </div>
+      <div
+        aria-hidden="true"
+        class="css-4cn9nj"
+        data-g2-component="SegmentedControlButtonContentPlaceholder"
+      >
+        O
+      </div>
+    </button>
+    <div
+      class="css-1s5geos"
+    />
+  </div>
+  <div
+    class="css-1iso3al"
+    data-active="false"
+    data-g2-component="SegmentedControlButtonLabel"
+  >
+    <button
+      aria-checked="false"
+      class="wp-components-segmented-control-button css-8w5z78"
+      data-g2-c16t="true"
+      data-g2-component="SegmentedControlButton"
+      data-value="samantha"
+      id="segmented-2"
+      role="radio"
+      tabindex="-1"
+    >
+      <div
+        class="css-xip3y"
+        data-g2-component="SegmentedControlButtonContent"
+      >
+        S
+      </div>
+      <div
+        aria-hidden="true"
+        class="css-4cn9nj"
+        data-g2-component="SegmentedControlButtonContentPlaceholder"
+      >
+        S
+      </div>
+    </button>
+    <div
+      class="css-1s5geos"
+    />
+  </div>
+</div>
+`;

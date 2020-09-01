@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render checked 1`] = `
+<label
+  class="css-2acdts"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-xzr96w"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-1wbbzve"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="true"
+    checked=""
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render correctly 1`] = `
+<label
+  class="css-2acdts"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-178o6vf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-kbm9b9"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render defaultValue 1`] = `
+<label
+  class="css-2acdts"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-xzr96w"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-1wbbzve"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="true"
+    checked=""
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render disabled 1`] = `
+<label
+  class="css-2acdts"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-178o6vf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-kbm9b9"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    aria-disabled="true"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    disabled=""
+    id="switch"
+    style="pointer-events: none;"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render label 1`] = `
+<label
+  class="css-2acdts"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-178o6vf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-kbm9b9"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  >
+    Size
+  </span>
+</label>
+`;
+
+exports[`props should render size 1`] = `
+<label
+  class="css-vabszd"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-178o6vf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-1bjl5x"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render type 1`] = `
+<label
+  class="css-2acdts"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-178o6vf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-kbm9b9"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="switch"
+    tabindex="0"
+    type="radio"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;

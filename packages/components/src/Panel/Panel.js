@@ -6,12 +6,23 @@ import { Collapsible } from '../Collapsible';
 import { PanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
 
-function Panel({ animated = true, className, isSeamless = false, ...props }) {
+function Panel({
+	animated = true,
+	className,
+	id,
+	isSeamless = false,
+	...props
+}) {
 	const classes = cx([styles.Panel, className]);
 
 	return (
 		<PanelContext.Provider value={{ isSeamless }}>
-			<Collapsible {...props} animated={animated} className={classes} />
+			<Collapsible
+				baseId={id}
+				{...props}
+				animated={animated}
+				className={classes}
+			/>
 		</PanelContext.Provider>
 	);
 }

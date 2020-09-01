@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-collapsible wp-components-panel css-s7db2d"
+  data-g2-c16t="true"
+  data-g2-component="Panel"
+>
+  <div
+    aria-controls="panel"
+    aria-expanded="false"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-17ek7ck"
+    data-g2-c16t="true"
+    data-g2-component="PanelHeader"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="wp-components-flex-item css-eqsycl"
+      data-g2-c16t="true"
+      data-g2-component="FlexItem"
+    >
+      <span
+        class="wp-components-text css-19swntb"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-arrow-indicator css-aqnf2q"
+          data-g2-c16t="true"
+          data-g2-component="ArrowIndicator"
+        >
+          <div
+            class="wp-components-view css-1oanc4k"
+            data-g2-c16t="true"
+            data-g2-component="View"
+          >
+            <div
+              class="wp-components-icon css-1t2mv3u"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="currentColor"
+                height="5"
+                size="5"
+                viewBox="0 0 24 24"
+                width="5"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12l-18 12v-24z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div
+      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      data-g2-c16t="true"
+      data-g2-component="FlexBlock"
+    >
+      <span
+        class="wp-components-text css-8bvww9"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        Olaf
+      </span>
+    </div>
+  </div>
+  <div
+    class="css-12j8ok7 wp-components-collapsible-content wp-components-panel-body"
+    data-g2-c16t="true"
+    data-g2-component="PanelBody"
+    hidden=""
+    id="panel"
+    style="display: none;"
+  >
+    <div
+      class="wp-components-animated css-ebb2lo"
+      data-g2-c16t="true"
+      data-g2-component="CollapsibleInnerContent"
+      style="height: 0px; opacity: 0;"
+    >
+      <div
+        class="css-rtl5wp"
+      >
+        Some people are worth melting for.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render seamless 1`] = `
+<div
+  class="wp-components-view wp-components-collapsible wp-components-panel css-s7db2d"
+  data-g2-c16t="true"
+  data-g2-component="Panel"
+  seamless=""
+>
+  <div
+    aria-controls="panel"
+    aria-expanded="false"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-17ek7ck"
+    data-g2-c16t="true"
+    data-g2-component="PanelHeader"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="wp-components-flex-item css-eqsycl"
+      data-g2-c16t="true"
+      data-g2-component="FlexItem"
+    >
+      <span
+        class="wp-components-text css-19swntb"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-arrow-indicator css-aqnf2q"
+          data-g2-c16t="true"
+          data-g2-component="ArrowIndicator"
+        >
+          <div
+            class="wp-components-view css-1oanc4k"
+            data-g2-c16t="true"
+            data-g2-component="View"
+          >
+            <div
+              class="wp-components-icon css-1t2mv3u"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="currentColor"
+                height="5"
+                size="5"
+                viewBox="0 0 24 24"
+                width="5"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12l-18 12v-24z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div
+      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      data-g2-c16t="true"
+      data-g2-component="FlexBlock"
+    >
+      <span
+        class="wp-components-text css-8bvww9"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        Olaf
+      </span>
+    </div>
+  </div>
+  <div
+    class="css-12j8ok7 wp-components-collapsible-content wp-components-panel-body"
+    data-g2-c16t="true"
+    data-g2-component="PanelBody"
+    hidden=""
+    id="panel"
+    style="display: none;"
+  >
+    <div
+      class="wp-components-animated css-ebb2lo"
+      data-g2-c16t="true"
+      data-g2-component="CollapsibleInnerContent"
+      style="height: 0px; opacity: 0;"
+    >
+      <div
+        class="css-rtl5wp"
+      >
+        Some people are worth melting for.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render visible 1`] = `
+<div
+  class="wp-components-view wp-components-collapsible wp-components-panel css-s7db2d"
+  data-g2-c16t="true"
+  data-g2-component="Panel"
+>
+  <div
+    aria-controls="panel"
+    aria-expanded="true"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-17ek7ck"
+    data-g2-c16t="true"
+    data-g2-component="PanelHeader"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="wp-components-flex-item css-eqsycl"
+      data-g2-c16t="true"
+      data-g2-component="FlexItem"
+    >
+      <span
+        class="wp-components-text css-19swntb"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-arrow-indicator css-1vatisx"
+          data-g2-c16t="true"
+          data-g2-component="ArrowIndicator"
+        >
+          <div
+            class="wp-components-view css-1oanc4k"
+            data-g2-c16t="true"
+            data-g2-component="View"
+          >
+            <div
+              class="wp-components-icon css-1t2mv3u"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="currentColor"
+                height="5"
+                size="5"
+                viewBox="0 0 24 24"
+                width="5"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12l-18 12v-24z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div
+      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      data-g2-c16t="true"
+      data-g2-component="FlexBlock"
+    >
+      <span
+        class="wp-components-text css-8bvww9"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        Olaf
+      </span>
+    </div>
+  </div>
+  <div
+    class="css-12j8ok7 wp-components-collapsible-content wp-components-panel-body"
+    data-g2-c16t="true"
+    data-g2-component="PanelBody"
+    id="panel"
+  >
+    <div
+      class="wp-components-animated css-ebb2lo"
+      data-g2-c16t="true"
+      data-g2-component="CollapsibleInnerContent"
+      style="height: auto; opacity: 1;"
+    >
+      <div
+        class="css-rtl5wp"
+      >
+        Some people are worth melting for.
+      </div>
+    </div>
+  </div>
+</div>
+`;

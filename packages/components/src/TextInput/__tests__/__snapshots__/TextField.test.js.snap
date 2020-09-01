@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render align 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-aqweam"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render defaultValue 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value="Olaf"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render disabled 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+  disabled=""
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      disabled=""
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render gap 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render isRounded 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render isSeamless 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render justify 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1040k1x"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render multiline 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1l0difq"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <textarea
+      class="css-1xuw7oi"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render prefix 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <span>
+      prefix
+    </span>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render size 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-17aolsu"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render suffix 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <span>
+      suffix
+    </span>
+  </div>
+</div>
+`;
+
+exports[`props should render value 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="text-input"
+      value="Olaf"
+    />
+  </div>
+</div>
+`;

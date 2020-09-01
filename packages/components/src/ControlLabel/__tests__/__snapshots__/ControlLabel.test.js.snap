@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-control-label css-1bb4q70"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+>
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`props should render htmlFor 1`] = `
+<div
+  class="wp-components-control-label css-1bb4q70"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+>
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+    for="Field"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`props should render no truncate 1`] = `
+<div
+  class="wp-components-control-label css-1bb4q70"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+>
+  <label
+    class="wp-components-text wp-components-control-label css-19swntb"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`props should render size 1`] = `
+<div
+  class="wp-components-control-label css-8i8iw5"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+>
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+  >
+    Label
+  </label>
+</div>
+`;

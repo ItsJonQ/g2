@@ -5,8 +5,9 @@ import React from 'react';
 import { View } from '../View';
 import { CollapsibleContext } from './Collapsible.Context';
 
-function Collapsible({ children, visible, ...props }) {
+function Collapsible({ baseId, children, visible, ...props }) {
 	const disclosure = useDisclosureState({
+		baseId,
 		visible,
 	});
 

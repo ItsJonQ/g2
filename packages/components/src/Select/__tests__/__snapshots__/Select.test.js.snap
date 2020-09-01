@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1r4p4mc"
+  data-g2-c16t="true"
+  data-g2-component="Select"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1ehiftx"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  >
+    <select
+      class="css-gdaxsy"
+      data-g2-component="SelectInput"
+      id="select"
+    >
+      <option
+        value="olaf"
+      >
+        Olaf
+      </option>
+      <option
+        value="samantha"
+      >
+        Samantha
+      </option>
+    </select>
+  </div>
+  <div
+    class="wp-components-flex-item css-lq5eu3"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <span
+      class="wp-components-text css-1gcfvkk"
+      data-g2-c16t="true"
+      data-g2-component="Text"
+    >
+      <div
+        class="wp-components-icon css-qdf7pd"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="14"
+          size="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`props should render defaultValue 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1r4p4mc"
+  data-g2-c16t="true"
+  data-g2-component="Select"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1ehiftx"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  >
+    <select
+      class="css-gdaxsy"
+      data-g2-component="SelectInput"
+      id="select"
+    >
+      <option
+        value="olaf"
+      >
+        Olaf
+      </option>
+      <option
+        value="samantha"
+      >
+        Samantha
+      </option>
+    </select>
+  </div>
+  <div
+    class="wp-components-flex-item css-lq5eu3"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <span
+      class="wp-components-text css-1gcfvkk"
+      data-g2-c16t="true"
+      data-g2-component="Text"
+    >
+      <div
+        class="wp-components-icon css-qdf7pd"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="14"
+          size="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`props should render size 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1r4p4mc"
+  data-g2-c16t="true"
+  data-g2-component="Select"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1ehiftx"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  >
+    <select
+      class="css-5lc6nq"
+      data-g2-component="SelectInput"
+      id="select"
+    >
+      <option
+        value="olaf"
+      >
+        Olaf
+      </option>
+      <option
+        value="samantha"
+      >
+        Samantha
+      </option>
+    </select>
+  </div>
+  <div
+    class="wp-components-flex-item css-lq5eu3"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <span
+      class="wp-components-text css-1gcfvkk"
+      data-g2-c16t="true"
+      data-g2-component="Text"
+    >
+      <div
+        class="wp-components-icon css-qdf7pd"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="14"
+          size="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,889 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ymchl5"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-z83dvy"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <span
+        class="wp-components-text css-1j8fk1m"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-icon css-1q655eb"
+          data-g2-c16t="true"
+          data-g2-component="Icon"
+        >
+          <svg
+            fill="none"
+            height="12"
+            size="12"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="search"
+      placeholder="Search..."
+      type="search"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <div
+      class="wp-components-view css-h5b0yt"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-vqn2g8"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-1ir3rsg"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-bsd62c"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-r2c0vy"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render isLoading 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ymchl5"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-z83dvy"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <div
+        aria-busy="true"
+        class="css-1t6iypa"
+        data-g2-c16t="true"
+        data-g2-component="Spinner"
+        style="height: 16px; width: 16px;"
+      >
+        <div
+          aria-hidden="true"
+          class="css-1elsyoz"
+          style="transform: scale(0.4444444444444444);"
+        >
+          <div
+            class="css-15dvh3h"
+          >
+            <div
+              class="InnerBar1"
+            />
+            <div
+              class="InnerBar2"
+            />
+            <div
+              class="InnerBar3"
+            />
+            <div
+              class="InnerBar4"
+            />
+            <div
+              class="InnerBar5"
+            />
+            <div
+              class="InnerBar6"
+            />
+            <div
+              class="InnerBar7"
+            />
+            <div
+              class="InnerBar8"
+            />
+            <div
+              class="InnerBar9"
+            />
+            <div
+              class="InnerBar10"
+            />
+            <div
+              class="InnerBar11"
+            />
+            <div
+              class="InnerBar12"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="search"
+      placeholder="Search..."
+      type="search"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <div
+      class="wp-components-view css-h5b0yt"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-vqn2g8"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-1ir3rsg"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-bsd62c"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-r2c0vy"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render placeholder 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ymchl5"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-z83dvy"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <span
+        class="wp-components-text css-1j8fk1m"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-icon css-1q655eb"
+          data-g2-c16t="true"
+          data-g2-component="Icon"
+        >
+          <svg
+            fill="none"
+            height="12"
+            size="12"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="search"
+      placeholder="Searching for..."
+      type="search"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <div
+      class="wp-components-view css-h5b0yt"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-vqn2g8"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-1ir3rsg"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-bsd62c"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-r2c0vy"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render prefix 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ymchl5"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-z83dvy"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <span
+        class="wp-components-text css-1j8fk1m"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-icon css-1q655eb"
+          data-g2-c16t="true"
+          data-g2-component="Icon"
+        >
+          <svg
+            fill="none"
+            height="12"
+            size="12"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+    <span>
+      prefix
+    </span>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="search"
+      placeholder="Search..."
+      type="search"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <div
+      class="wp-components-view css-h5b0yt"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-vqn2g8"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-1ir3rsg"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-bsd62c"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-r2c0vy"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render suffix 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ymchl5"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-z83dvy"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <span
+        class="wp-components-text css-1j8fk1m"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-icon css-1q655eb"
+          data-g2-c16t="true"
+          data-g2-component="Icon"
+        >
+          <svg
+            fill="none"
+            height="12"
+            size="12"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="search"
+      placeholder="Search..."
+      type="search"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <span>
+      suffix
+    </span>
+    <div
+      class="wp-components-view css-h5b0yt"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-vqn2g8"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-1ir3rsg"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-bsd62c"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-r2c0vy"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render value 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ymchl5"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+>
+  <div
+    class="wp-components-flex-item css-1tq3vgq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-z83dvy"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <span
+        class="wp-components-text css-1j8fk1m"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-icon css-1q655eb"
+          data-g2-c16t="true"
+          data-g2-component="Icon"
+        >
+          <svg
+            fill="none"
+            height="12"
+            size="12"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1535u6g"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-yegakt"
+      data-g2-c16t="true"
+      data-g2-component="TextInputInput"
+      id="search"
+      placeholder="Search..."
+      type="search"
+      value="q"
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-tfelz2"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <div
+      class="wp-components-view css-fqeccn"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-vqn2g8"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-1ir3rsg"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-bsd62c"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-r2c0vy"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

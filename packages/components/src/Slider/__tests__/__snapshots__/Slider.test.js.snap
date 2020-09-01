@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<input
+  class="wp-components-slider css-1s5rwa"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="slider"
+  max="100"
+  min="0"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render max 1`] = `
+<input
+  class="wp-components-slider css-1s5rwa"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="slider"
+  max="50"
+  min="0"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render min 1`] = `
+<input
+  class="wp-components-slider css-1s5rwa"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="slider"
+  max="100"
+  min="5"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render size 1`] = `
+<input
+  class="wp-components-slider css-9bq27s"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="slider"
+  max="100"
+  min="0"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render value 1`] = `
+<input
+  class="wp-components-slider css-1s5rwa"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="slider"
+  max="100"
+  min="0"
+  type="range"
+  value="50"
+/>
+`;

@@ -8,6 +8,7 @@ import TooltipContent from './TooltipContent';
 function Tooltip({
 	animated = true,
 	animationDuration = 160,
+	baseId,
 	children,
 	content,
 	gutter = 4,
@@ -18,6 +19,7 @@ function Tooltip({
 }) {
 	const tooltip = useTooltipState({
 		animated: animated ? animationDuration : undefined,
+		baseId,
 		gutter,
 		placement,
 		unstable_portal: modal,
@@ -30,15 +32,17 @@ function Tooltip({
 	return (
 		<TooltipContext.Provider value={contextProps}>
 			{content && <TooltipContent>{content}</TooltipContent>}
-			<TooltipReference
-				{...tooltip}
-				ref={children.ref}
-				{...children.props}
-			>
-				{(referenceProps) =>
-					React.cloneElement(children, referenceProps)
-				}
-			</TooltipReference>
+			{children && (
+				<TooltipReference
+					{...tooltip}
+					ref={children.ref}
+					{...children.props}
+				>
+					{(referenceProps) =>
+						React.cloneElement(children, referenceProps)
+					}
+				</TooltipReference>
+			)}
 		</TooltipContext.Provider>
 	);
 }
