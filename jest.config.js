@@ -10,8 +10,11 @@ module.exports = Object.assign(jestConfig, {
 	],
 	modulePathIgnorePatterns: ['<rootDir>/.remake/'],
 	testPathIgnorePatterns: ['<rootDir>/.remake/'],
+	moduleNameMapper: {
+		'^@wp-g2/(.*)$': '<rootDir>/packages/$1/src/',
+	},
 	testMatch: [
-		'<rootDir>/packages/components/src/**/*.test.{js,jsx}',
-		'<rootDir>/packages/create-styles/src/**/*.test.{js,jsx}',
+		'<rootDir>/packages/*/src/**/*.test.{js,jsx}',
+		'!<rootDir>/packages/website/**/*',
 	],
 });
