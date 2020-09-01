@@ -1,5 +1,7 @@
 # G2 ✌️
 
+![CI Workflow](https://github.com/itsjonq/g2/workflows/ci/badge.svg)
+
 > An experimental component system.
 
 **📚 Check out the Storybook**
