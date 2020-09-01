@@ -1,5 +1,6 @@
 # G2 ✌️
 
+[![npm version](https://badge.fury.io/js/%40wp-g2%2Fcomponents.svg)](https://badge.fury.io/js/%40wp-g2%2Fcomponents)
 [![CI Workflow](https://github.com/itsjonq/g2/workflows/ci/badge.svg)](https://github.com/ItsJonQ/g2/actions?query=workflow%3Aci)
 
 > An experimental component system.
