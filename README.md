@@ -1,6 +1,6 @@
 # G2 ✌️
 
-![CI Workflow](https://github.com/itsjonq/g2/workflows/ci/badge.svg)
+[![CI Workflow](https://github.com/itsjonq/g2/workflows/ci/badge.svg)](https://github.com/ItsJonQ/g2/actions?query=workflow%3Aci)
 
 > An experimental component system.
 
