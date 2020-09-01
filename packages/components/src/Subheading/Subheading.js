@@ -8,7 +8,15 @@ import * as styles from './Subheading.styles';
 function Subheading({ className, ...props }) {
 	const classes = cx([styles.uppercase, className]);
 
-	return <Text className={classes} size={11} weight={700} {...props} />;
+	return (
+		<Text
+			className={classes}
+			size={10}
+			variant="muted"
+			weight={600}
+			{...props}
+		/>
+	);
 }
 
 export default connect(Subheading, 'Subheading');

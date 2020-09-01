@@ -43,6 +43,7 @@ export * from './MediaQuery';
 export * from './Menu';
 export * from './Modal';
 export * from './NavigationStack';
+export * from './Navigator';
 export * from './Panel';
 export * from './Placeholder';
 export * from './Popover';
