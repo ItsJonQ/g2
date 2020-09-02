@@ -72,7 +72,11 @@ const ColorExample = ({ color, title }) => {
 
 const GlobalStylesScreen = () => {
 	return (
-		<Screen>
+		<Screen
+			css={`
+				padding-top: 40px;
+			`}
+		>
 			<CardBody>
 				<Spacer mb={3}>
 					<Subheading>Color</Subheading>
@@ -88,12 +92,12 @@ const GlobalStylesScreen = () => {
 				<Spacer mb={3}>
 					<Subheading>Typography</Subheading>
 				</Spacer>
-				<FormGroup label="Heading font">
+				<FormGroup horizontal={false} label="Heading font">
 					<Select
 						options={[{ value: 'georgia', label: 'Georgia' }]}
 					/>
 				</FormGroup>
-				<FormGroup label="Base font">
+				<FormGroup horizontal={false} label="Base font">
 					<Select options={[{ value: 'inter', label: 'Inter UI' }]} />
 				</FormGroup>
 				<Spacer mt={3}>
@@ -132,7 +136,11 @@ const TypographyScreen = () => {
 		},
 	];
 	return (
-		<Screen>
+		<Screen
+			css={`
+				padding-top: 60px;
+			`}
+		>
 			<Panel visible>
 				<PanelHeader title="Heading" />
 				<PanelBody>
@@ -205,6 +213,8 @@ const usePreviousScreen = () => {
 	return screens.find((screen) => screen.path === previous.pathname);
 };
 
+const ANIMATION_SPEED = 0.14;
+
 const GlobalStylesHeader = (props) => {
 	const title = useNavigatorTitle();
 	const previousScreen = usePreviousScreen();
@@ -215,10 +225,11 @@ const GlobalStylesHeader = (props) => {
 			borderBottom
 			css={[
 				ui.padding(3),
+				{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10 },
 				{ overflow: 'hidden' },
 				ui.frame.height(hasPreviousScreen ? 60 : 40),
 				ui.animation.default,
-				ui.animation.duration(0.16),
+				ui.animation.duration(ANIMATION_SPEED),
 			]}
 			variant="tertiary"
 		>
@@ -228,7 +239,8 @@ const GlobalStylesHeader = (props) => {
 					ui.opacity(hasPreviousScreen ? 1 : 0),
 					ui.offset.x(hasPreviousScreen ? 0 : -20),
 					ui.animation.default,
-					ui.animation.duration(0.3),
+					ui.animation.delay(ANIMATION_SPEED * 0.5),
+					ui.animation.duration(ANIMATION_SPEED),
 				]}
 			>
 				{previousScreen && (
@@ -297,7 +309,9 @@ const Example = (props) => {
 				{screens.map((screen) => (
 					<NavigatorScreen
 						{...screen}
-						animationEnterDelay={0.16}
+						animationEnterDelay={0}
+						animationEnterDuration={ANIMATION_SPEED}
+						animationExitDuration={ANIMATION_SPEED}
 						key={screen.path}
 					/>
 				))}
@@ -308,8 +322,10 @@ const Example = (props) => {
 
 export const _default = () => {
 	return (
-		<Sidebar>
-			<Example />
-		</Sidebar>
+		<div>
+			<Sidebar>
+				<Example />
+			</Sidebar>
+		</div>
 	);
 };

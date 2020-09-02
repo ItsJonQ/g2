@@ -6,7 +6,9 @@ import { Route } from './Router';
 
 function NavigatorScreen({
 	animationEnterDelay = 0,
+	animationEnterDuration = 0.14,
 	animationExitDelay = 0,
+	animationExitDuration = 0.14,
 	children,
 	component,
 	path,
@@ -37,7 +39,7 @@ function NavigatorScreen({
 					opacity: 1,
 					transition: {
 						delay: animationEnterDelay,
-						duration: 0.16,
+						duration: animationEnterDuration,
 						ease: 'easeInOut',
 					},
 					x: 0,
@@ -50,7 +52,10 @@ function NavigatorScreen({
 					delay: animationExitDelay,
 					opacity: 0,
 					x: isBack ? 50 : -50,
-					transition: { duration: 0.16, ease: 'easeInOut' },
+					transition: {
+						duration: animationExitDuration,
+						ease: 'easeInOut',
+					},
 				};
 
 				const animatedProps = {
