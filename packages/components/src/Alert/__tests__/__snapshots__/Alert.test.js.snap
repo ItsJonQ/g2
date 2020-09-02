@@ -2,28 +2,28 @@
 
 exports[`props should render as dismissable 1`] = `
 <div
-  class="wp-components-animated css-1oanc4k"
+  class="wp-components-animated css-1ihlkjd"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
 >
   <div
-    class="wp-components-alert css-qp04ps"
+    class="wp-components-alert css-wp89yd"
     data-g2-c16t="true"
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-view wp-components-flex css-umgb39"
+      class="wp-components-view wp-components-flex css-1itisbr"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        class="wp-components-flex-item wp-components-flex-block css-14pv9go"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="wp-components-view css-aa6xze"
+          class="wp-components-view css-13b9wrh"
           data-g2-c16t="true"
           data-g2-component="AlertContent"
         >
@@ -31,12 +31,12 @@ exports[`props should render as dismissable 1`] = `
         </div>
       </div>
       <div
-        class="wp-components-flex-item css-tfelz2"
+        class="wp-components-flex-item css-1mq9jmc"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
         <div
-          class="css-8cker"
+          class="css-7cnmpf"
         >
           <button
             aria-busy="false"
@@ -49,17 +49,17 @@ exports[`props should render as dismissable 1`] = `
             type="button"
           >
             <span
-              class="wp-components-view wp-components-flex css-vqn2g8"
+              class="wp-components-view wp-components-flex css-1gjqylm"
               data-g2-c16t="true"
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-flex-item css-1ir3rsg"
+                class="wp-components-flex-item css-kq9hj8"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
                 <div
-                  class="wp-components-icon css-a6dhrw"
+                  class="wp-components-icon css-1b2ezh6"
                   data-g2-c16t="true"
                   data-g2-component="Icon"
                 >
@@ -92,7 +92,7 @@ exports[`props should render as dismissable 1`] = `
               </span>
             </span>
             <span
-              class="wp-components-elevation css-r2c0vy"
+              class="wp-components-elevation css-1l26w1c"
               data-g2-c16t="true"
               data-g2-component="ButtonElevation"
             />
@@ -106,28 +106,28 @@ exports[`props should render as dismissable 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-animated css-1oanc4k"
+  class="wp-components-animated css-1ihlkjd"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
 >
   <div
-    class="wp-components-alert css-1nobek4"
+    class="wp-components-alert css-vsalgz"
     data-g2-c16t="true"
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-view wp-components-flex css-umgb39"
+      class="wp-components-view wp-components-flex css-1itisbr"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        class="wp-components-flex-item wp-components-flex-block css-14pv9go"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="wp-components-view css-1oanc4k"
+          class="wp-components-view css-1ihlkjd"
           data-g2-c16t="true"
           data-g2-component="AlertContent"
         >
@@ -135,7 +135,7 @@ exports[`props should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="wp-components-flex-item css-tfelz2"
+        class="wp-components-flex-item css-1mq9jmc"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       />
@@ -146,33 +146,33 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with status 1`] = `
 <div
-  class="wp-components-view css-1oanc4k"
+  class="wp-components-view css-1ihlkjd"
   data-g2-c16t="true"
   data-g2-component="Alerts"
 >
   <div
-    class="wp-components-animated css-1oanc4k"
+    class="wp-components-animated css-1ihlkjd"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="wp-components-alert css-f3man5"
+      class="wp-components-alert css-1l96gzn"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-umgb39"
+        class="wp-components-view wp-components-flex css-1itisbr"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1el857o"
+          class="wp-components-flex-item wp-components-flex-block css-14pv9go"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-aa6xze"
+            class="wp-components-view css-13b9wrh"
             data-g2-c16t="true"
             data-g2-component="AlertContent"
           >
@@ -180,12 +180,12 @@ exports[`props should render with status 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-flex-item css-tfelz2"
+          class="wp-components-flex-item css-1mq9jmc"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
           <div
-            class="css-1wq7lvx"
+            class="css-1esfuet"
           >
             <button
               aria-busy="false"
@@ -198,17 +198,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-vqn2g8"
+                class="wp-components-view wp-components-flex css-1gjqylm"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-flex-item css-1ir3rsg"
+                  class="wp-components-flex-item css-kq9hj8"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-icon css-a6dhrw"
+                    class="wp-components-icon css-1b2ezh6"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -241,7 +241,7 @@ exports[`props should render with status 1`] = `
                 </span>
               </span>
               <span
-                class="wp-components-elevation css-r2c0vy"
+                class="wp-components-elevation css-1l26w1c"
                 data-g2-c16t="true"
                 data-g2-component="ButtonElevation"
               />
@@ -252,28 +252,28 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-animated css-1oanc4k"
+    class="wp-components-animated css-1ihlkjd"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="wp-components-alert css-qp04ps"
+      class="wp-components-alert css-wp89yd"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-umgb39"
+        class="wp-components-view wp-components-flex css-1itisbr"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1el857o"
+          class="wp-components-flex-item wp-components-flex-block css-14pv9go"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-aa6xze"
+            class="wp-components-view css-13b9wrh"
             data-g2-c16t="true"
             data-g2-component="AlertContent"
           >
@@ -281,12 +281,12 @@ exports[`props should render with status 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-flex-item css-tfelz2"
+          class="wp-components-flex-item css-1mq9jmc"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
           <div
-            class="css-8cker"
+            class="css-7cnmpf"
           >
             <button
               aria-busy="false"
@@ -299,17 +299,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-vqn2g8"
+                class="wp-components-view wp-components-flex css-1gjqylm"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-flex-item css-1ir3rsg"
+                  class="wp-components-flex-item css-kq9hj8"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-icon css-a6dhrw"
+                    class="wp-components-icon css-1b2ezh6"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -342,7 +342,7 @@ exports[`props should render with status 1`] = `
                 </span>
               </span>
               <span
-                class="wp-components-elevation css-r2c0vy"
+                class="wp-components-elevation css-1l26w1c"
                 data-g2-c16t="true"
                 data-g2-component="ButtonElevation"
               />
@@ -353,28 +353,28 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-animated css-1oanc4k"
+    class="wp-components-animated css-1ihlkjd"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="wp-components-alert css-1wv4l19"
+      class="wp-components-alert css-13fwilv"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-umgb39"
+        class="wp-components-view wp-components-flex css-1itisbr"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1el857o"
+          class="wp-components-flex-item wp-components-flex-block css-14pv9go"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-aa6xze"
+            class="wp-components-view css-13b9wrh"
             data-g2-c16t="true"
             data-g2-component="AlertContent"
           >
@@ -382,12 +382,12 @@ exports[`props should render with status 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-flex-item css-tfelz2"
+          class="wp-components-flex-item css-1mq9jmc"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
           <div
-            class="css-1wn1o22"
+            class="css-1qvtr6z"
           >
             <button
               aria-busy="false"
@@ -400,17 +400,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-vqn2g8"
+                class="wp-components-view wp-components-flex css-1gjqylm"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-flex-item css-1ir3rsg"
+                  class="wp-components-flex-item css-kq9hj8"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-icon css-a6dhrw"
+                    class="wp-components-icon css-1b2ezh6"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -443,7 +443,7 @@ exports[`props should render with status 1`] = `
                 </span>
               </span>
               <span
-                class="wp-components-elevation css-r2c0vy"
+                class="wp-components-elevation css-1l26w1c"
                 data-g2-c16t="true"
                 data-g2-component="ButtonElevation"
               />
@@ -454,28 +454,28 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-animated css-1oanc4k"
+    class="wp-components-animated css-1ihlkjd"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="wp-components-alert css-152kmq"
+      class="wp-components-alert css-1xinusq"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-umgb39"
+        class="wp-components-view wp-components-flex css-1itisbr"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1el857o"
+          class="wp-components-flex-item wp-components-flex-block css-14pv9go"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-aa6xze"
+            class="wp-components-view css-13b9wrh"
             data-g2-c16t="true"
             data-g2-component="AlertContent"
           >
@@ -483,12 +483,12 @@ exports[`props should render with status 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-flex-item css-tfelz2"
+          class="wp-components-flex-item css-1mq9jmc"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
           <div
-            class="css-9pi3x7"
+            class="css-17srs5g"
           >
             <button
               aria-busy="false"
@@ -501,17 +501,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-vqn2g8"
+                class="wp-components-view wp-components-flex css-1gjqylm"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-flex-item css-1ir3rsg"
+                  class="wp-components-flex-item css-kq9hj8"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-icon css-a6dhrw"
+                    class="wp-components-icon css-1b2ezh6"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -544,7 +544,7 @@ exports[`props should render with status 1`] = `
                 </span>
               </span>
               <span
-                class="wp-components-elevation css-r2c0vy"
+                class="wp-components-elevation css-1l26w1c"
                 data-g2-c16t="true"
                 data-g2-component="ButtonElevation"
               />
@@ -555,28 +555,28 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-animated css-1oanc4k"
+    class="wp-components-animated css-1ihlkjd"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="wp-components-alert css-1nobek4"
+      class="wp-components-alert css-vsalgz"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-umgb39"
+        class="wp-components-view wp-components-flex css-1itisbr"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1el857o"
+          class="wp-components-flex-item wp-components-flex-block css-14pv9go"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-aa6xze"
+            class="wp-components-view css-13b9wrh"
             data-g2-c16t="true"
             data-g2-component="AlertContent"
           >
@@ -584,12 +584,12 @@ exports[`props should render with status 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-flex-item css-tfelz2"
+          class="wp-components-flex-item css-1mq9jmc"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
           <div
-            class="css-b2m8uu"
+            class="css-od5sl7"
           >
             <button
               aria-busy="false"
@@ -602,17 +602,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-vqn2g8"
+                class="wp-components-view wp-components-flex css-1gjqylm"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-flex-item css-1ir3rsg"
+                  class="wp-components-flex-item css-kq9hj8"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-icon css-a6dhrw"
+                    class="wp-components-icon css-1b2ezh6"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -645,7 +645,7 @@ exports[`props should render with status 1`] = `
                 </span>
               </span>
               <span
-                class="wp-components-elevation css-r2c0vy"
+                class="wp-components-elevation css-1l26w1c"
                 data-g2-c16t="true"
                 data-g2-component="ButtonElevation"
               />
@@ -660,33 +660,33 @@ exports[`props should render with status 1`] = `
 
 exports[`props should render with title 1`] = `
 <div
-  class="wp-components-animated css-1oanc4k"
+  class="wp-components-animated css-1ihlkjd"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
 >
   <div
-    class="wp-components-alert css-1nobek4"
+    class="wp-components-alert css-vsalgz"
     data-g2-c16t="true"
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-view wp-components-flex css-umgb39"
+      class="wp-components-view wp-components-flex css-1itisbr"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1el857o"
+        class="wp-components-flex-item wp-components-flex-block css-14pv9go"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="wp-components-view wp-components-spacer css-ylv018"
+          class="wp-components-view wp-components-spacer css-1483z0j"
           data-g2-c16t="true"
           data-g2-component="Spacer"
         >
           <div
-            class="wp-components-text wp-components-heading css-2v8tda"
+            class="wp-components-text wp-components-heading css-na8zp1"
             data-g2-c16t="true"
             data-g2-component="Heading"
           >
@@ -694,7 +694,7 @@ exports[`props should render with title 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-view css-1oanc4k"
+          class="wp-components-view css-1ihlkjd"
           data-g2-c16t="true"
           data-g2-component="AlertContent"
         >
@@ -702,7 +702,7 @@ exports[`props should render with title 1`] = `
         </div>
       </div>
       <div
-        class="wp-components-flex-item css-tfelz2"
+        class="wp-components-flex-item css-1mq9jmc"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       />

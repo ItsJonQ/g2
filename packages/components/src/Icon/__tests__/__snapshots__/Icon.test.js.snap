@@ -2,7 +2,7 @@
 
 exports[`props should render color 1`] = `
 <div
-  class="wp-components-icon css-1cuw20t"
+  class="wp-components-icon css-9yzi72"
   data-g2-c16t="true"
   data-g2-component="Icon"
 >
@@ -12,7 +12,7 @@ exports[`props should render color 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-icon css-vawoc3"
+  class="wp-components-icon css-mm8iy7"
   data-g2-c16t="true"
   data-g2-component="Icon"
 >
@@ -22,7 +22,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="wp-components-icon css-1hbx1n"
+  class="wp-components-icon css-u9uu51"
   data-g2-c16t="true"
   data-g2-component="Icon"
 >

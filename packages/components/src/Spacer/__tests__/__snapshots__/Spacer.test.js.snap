@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-18dob1y"
+  class="wp-components-view wp-components-spacer css-1mfy76c"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -10,7 +10,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render margin 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-wo8eao"
+  class="wp-components-view wp-components-spacer css-12rie6d"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -18,7 +18,7 @@ exports[`props should render margin 1`] = `
 
 exports[`props should render marginBottom 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-1csyfio"
+  class="wp-components-view wp-components-spacer css-10qahn"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -26,7 +26,7 @@ exports[`props should render marginBottom 1`] = `
 
 exports[`props should render marginLeft 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-11hcdr8"
+  class="wp-components-view wp-components-spacer css-tpwyk"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -34,7 +34,7 @@ exports[`props should render marginLeft 1`] = `
 
 exports[`props should render marginRight 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-1t2xhie"
+  class="wp-components-view wp-components-spacer css-16edvvt"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -42,7 +42,7 @@ exports[`props should render marginRight 1`] = `
 
 exports[`props should render marginTop 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-1829k91"
+  class="wp-components-view wp-components-spacer css-19k6s5w"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -50,7 +50,7 @@ exports[`props should render marginTop 1`] = `
 
 exports[`props should render marginX 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-5hgnsh"
+  class="wp-components-view wp-components-spacer css-115fg9r"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -58,7 +58,7 @@ exports[`props should render marginX 1`] = `
 
 exports[`props should render marginY 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-1pv0oea"
+  class="wp-components-view wp-components-spacer css-q61xkv"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -66,7 +66,7 @@ exports[`props should render marginY 1`] = `
 
 exports[`props should render padding 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-1gltn8r"
+  class="wp-components-view wp-components-spacer css-119spbm"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -74,7 +74,7 @@ exports[`props should render padding 1`] = `
 
 exports[`props should render paddingBottom 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-4a1r3i"
+  class="wp-components-view wp-components-spacer css-1ltjrvp"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -82,7 +82,7 @@ exports[`props should render paddingBottom 1`] = `
 
 exports[`props should render paddingLeft 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-ytijwo"
+  class="wp-components-view wp-components-spacer css-1a6zbmj"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -90,7 +90,7 @@ exports[`props should render paddingLeft 1`] = `
 
 exports[`props should render paddingRight 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-m34hvv"
+  class="wp-components-view wp-components-spacer css-1k5ikrs"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -98,7 +98,7 @@ exports[`props should render paddingRight 1`] = `
 
 exports[`props should render paddingTop 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-hot1s1"
+  class="wp-components-view wp-components-spacer css-awx1ts"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -106,7 +106,7 @@ exports[`props should render paddingTop 1`] = `
 
 exports[`props should render paddingX 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-voikzr"
+  class="wp-components-view wp-components-spacer css-1f9n69c"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -114,7 +114,7 @@ exports[`props should render paddingX 1`] = `
 
 exports[`props should render paddingY 1`] = `
 <div
-  class="wp-components-view wp-components-spacer css-e23zdp"
+  class="wp-components-view wp-components-spacer css-123g9o2"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />

@@ -2,17 +2,17 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-avatar css-1idiyh9"
+  class="wp-components-avatar css-6ut4jc"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-1gtm8iv"
+      class="wp-components-text wp-components-initials css-e33ko5"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -24,17 +24,17 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with a border 1`] = `
 <div
-  class="wp-components-avatar css-o3go66"
+  class="wp-components-avatar css-1wqgldz"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-1gtm8iv"
+      class="wp-components-text wp-components-initials css-e33ko5"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -42,20 +42,20 @@ exports[`props should render with a border 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-aspect-ratio css-lzmd8z"
+    class="wp-components-aspect-ratio css-owceb3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="css-17dwwom"
+      class="css-1tqxezo"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="css-ftpcdx"
+      class="css-1wfnuwc"
     />
   </div>
 </div>
@@ -63,17 +63,17 @@ exports[`props should render with a border 1`] = `
 
 exports[`props should render with a custom color 1`] = `
 <div
-  class="wp-components-avatar css-2tsfft"
+  class="wp-components-avatar css-u5cday"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-fsm96m"
+      class="wp-components-text wp-components-initials css-1y62vx7"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -81,20 +81,20 @@ exports[`props should render with a custom color 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-aspect-ratio css-lzmd8z"
+    class="wp-components-aspect-ratio css-owceb3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="css-17dwwom"
+      class="css-1tqxezo"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="css-ftpcdx"
+      class="css-1wfnuwc"
     />
   </div>
 </div>
@@ -102,17 +102,17 @@ exports[`props should render with a custom color 1`] = `
 
 exports[`props should render with a custom size 1`] = `
 <div
-  class="wp-components-avatar css-1m7hgcd"
+  class="wp-components-avatar css-1flnli0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-1x85lh1"
+      class="wp-components-text wp-components-initials css-sna3ye"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -124,17 +124,17 @@ exports[`props should render with a custom size 1`] = `
 
 exports[`props should render with a custom small size + square 1`] = `
 <div
-  class="wp-components-avatar css-mw8k5f"
+  class="wp-components-avatar css-13jqxmm"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-qulam5"
+      class="wp-components-text wp-components-initials css-1ptu7k7"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -146,17 +146,17 @@ exports[`props should render with a custom small size + square 1`] = `
 
 exports[`props should render with a custom xSmall size + square 1`] = `
 <div
-  class="wp-components-avatar css-1pkhgrq"
+  class="wp-components-avatar css-1nse3gz"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-12z0kyb"
+      class="wp-components-text wp-components-initials css-d0ljbb"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -168,17 +168,17 @@ exports[`props should render with a custom xSmall size + square 1`] = `
 
 exports[`props should render with an alternate shape 1`] = `
 <div
-  class="wp-components-avatar css-56pqwc"
+  class="wp-components-avatar css-x02w1e"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-fsm96m"
+      class="wp-components-text wp-components-initials css-1y62vx7"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -186,20 +186,20 @@ exports[`props should render with an alternate shape 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-aspect-ratio css-lzmd8z"
+    class="wp-components-aspect-ratio css-owceb3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="css-1ihs34p"
+      class="css-1lfl1jb"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="css-ftpcdx"
+      class="css-1wfnuwc"
     />
   </div>
 </div>
@@ -207,17 +207,17 @@ exports[`props should render with an alternate shape 1`] = `
 
 exports[`props should render with an alternate size 1`] = `
 <div
-  class="wp-components-avatar css-150d6gp"
+  class="wp-components-avatar css-1d5apav"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-1x85lh1"
+      class="wp-components-text wp-components-initials css-sna3ye"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -229,17 +229,17 @@ exports[`props should render with an alternate size 1`] = `
 
 exports[`props should render with animateOnImageLoad disabled 1`] = `
 <div
-  class="wp-components-avatar css-1idiyh9"
+  class="wp-components-avatar css-6ut4jc"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-1gtm8iv"
+      class="wp-components-text wp-components-initials css-e33ko5"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -247,20 +247,20 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-aspect-ratio css-lzmd8z"
+    class="wp-components-aspect-ratio css-owceb3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="css-lhx2nn"
+      class="css-hi149s"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="css-ftpcdx"
+      class="css-1wfnuwc"
     />
   </div>
 </div>
@@ -268,17 +268,17 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
 
 exports[`props should render with image src 1`] = `
 <div
-  class="wp-components-avatar css-1idiyh9"
+  class="wp-components-avatar css-6ut4jc"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-1qr3s7c"
+    class="wp-components-view css-1b2n9ti"
     data-g2-c16t="true"
     data-g2-component="View"
   >
     <div
-      class="wp-components-text wp-components-initials css-1gtm8iv"
+      class="wp-components-text wp-components-initials css-e33ko5"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -286,20 +286,20 @@ exports[`props should render with image src 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-aspect-ratio css-lzmd8z"
+    class="wp-components-aspect-ratio css-owceb3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="css-17dwwom"
+      class="css-1tqxezo"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="css-ftpcdx"
+      class="css-1wfnuwc"
     />
   </div>
 </div>

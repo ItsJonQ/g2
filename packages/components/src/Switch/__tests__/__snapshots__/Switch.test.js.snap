@@ -2,20 +2,20 @@
 
 exports[`props should render checked 1`] = `
 <label
-  class="css-2acdts"
+  class="css-1omtivw"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-xzr96w"
+    class="wp-components-switch-backdrop css-aoup3l"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1wbbzve"
+    class="wp-components-switch-toggle css-ia31ep"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
@@ -37,20 +37,20 @@ exports[`props should render checked 1`] = `
 
 exports[`props should render correctly 1`] = `
 <label
-  class="css-2acdts"
+  class="css-1omtivw"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-178o6vf"
+    class="wp-components-switch-backdrop css-paq7jd"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-kbm9b9"
+    class="wp-components-switch-toggle css-1m1ng02"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
@@ -71,20 +71,20 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render defaultValue 1`] = `
 <label
-  class="css-2acdts"
+  class="css-1omtivw"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-xzr96w"
+    class="wp-components-switch-backdrop css-aoup3l"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1wbbzve"
+    class="wp-components-switch-toggle css-ia31ep"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
@@ -106,20 +106,20 @@ exports[`props should render defaultValue 1`] = `
 
 exports[`props should render disabled 1`] = `
 <label
-  class="css-2acdts"
+  class="css-1omtivw"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-178o6vf"
+    class="wp-components-switch-backdrop css-paq7jd"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-kbm9b9"
+    class="wp-components-switch-toggle css-1m1ng02"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
@@ -143,20 +143,20 @@ exports[`props should render disabled 1`] = `
 
 exports[`props should render label 1`] = `
 <label
-  class="css-2acdts"
+  class="css-1omtivw"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-178o6vf"
+    class="wp-components-switch-backdrop css-paq7jd"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-kbm9b9"
+    class="wp-components-switch-toggle css-1m1ng02"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
@@ -179,20 +179,20 @@ exports[`props should render label 1`] = `
 
 exports[`props should render size 1`] = `
 <label
-  class="css-vabszd"
+  class="css-1a91888"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-178o6vf"
+    class="wp-components-switch-backdrop css-paq7jd"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1bjl5x"
+    class="wp-components-switch-toggle css-2jwiir"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
@@ -213,20 +213,20 @@ exports[`props should render size 1`] = `
 
 exports[`props should render type 1`] = `
 <label
-  class="css-2acdts"
+  class="css-1omtivw"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-178o6vf"
+    class="wp-components-switch-backdrop css-paq7jd"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-kbm9b9"
+    class="wp-components-switch-toggle css-1m1ng02"
     data-g2-c16t="true"
     data-g2-component="SwitchToggle"
   />
