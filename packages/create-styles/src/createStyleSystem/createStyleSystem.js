@@ -1,4 +1,4 @@
-import * as compiler from '../compiler';
+import { createCompiler } from '../createCompiler';
 import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
 import { createStyledComponents } from './createStyledComponents';
@@ -14,6 +14,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {object} darkModeConfig Dark mode variables for the Style system.
  * @property {object} highContrastModeConfig High contrast mode variables for the Style system.
  * @property {object} darkHighContrastModeConfig Dark high contrast variables for the Style system.
+ * @property {object} compilerOptions Options for the compiler (Emotion).
  */
 
 /**
@@ -43,6 +44,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 export function createStyleSystem(options = defaultOptions) {
 	const {
 		baseStyles,
+		compilerOptions,
 		config,
 		darkHighContrastModeConfig,
 		darkModeConfig,
@@ -60,6 +62,13 @@ export function createStyleSystem(options = defaultOptions) {
 	});
 
 	/**
+	 * Compiler (Custom Emotion instance).
+	 */
+
+	const compiler = createCompiler(compilerOptions);
+	const { css, cx } = compiler;
+
+	/**
 	 * Core elements.
 	 *
 	 * @example
@@ -67,7 +76,7 @@ export function createStyleSystem(options = defaultOptions) {
 	 * <core.div />
 	 * ```
 	 */
-	const core = createCoreElements({ baseStyles, globalStyles });
+	const core = createCoreElements({ baseStyles, compiler, globalStyles });
 
 	/**
 	 * Styled components.
@@ -85,11 +94,9 @@ export function createStyleSystem(options = defaultOptions) {
 	 * Export prebound createCoreElement factory.
 	 */
 	const _createCoreElement = (tagName) =>
-		createCoreElement(tagName, { baseStyles, globalStyles });
+		createCoreElement(tagName, { baseStyles, compiler, globalStyles });
 
 	const View = core.div;
-
-	const { css, cx } = compiler;
 
 	return {
 		compiler,

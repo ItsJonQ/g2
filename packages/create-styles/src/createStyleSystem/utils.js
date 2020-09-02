@@ -8,6 +8,7 @@ export const DEFAULT_STYLE_SYSTEM_OPTIONS = {
 	darkModeConfig: {},
 	highContrastModeConfig: {},
 	darkHighContrastModeConfig: {},
+	compilerOptions: undefined,
 };
 
 /**
