@@ -1,14 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
-import {
-	CardBody,
-	CardHeader,
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-	Text,
-	View,
-} from '../../index';
+import { CardBody, CardHeader, Popover, Text, View } from '../../index';
 
 export const ContextPopover = ({ children, title, trigger }) => {
 	const [offset, setOffset] = useState(0);
@@ -24,20 +16,21 @@ export const ContextPopover = ({ children, title, trigger }) => {
 	}, []);
 
 	return (
-		<Popover placement="right-start" unstable_offset={[0, 12]}>
-			<PopoverTrigger
-				as={View}
-				css={{ outline: 'none' }}
-				ref={triggerRef}
-			>
-				{trigger}
-			</PopoverTrigger>
-			<PopoverContent maxWidth={280} style={{ right: offset }}>
-				<CardHeader>
-					<Text weight={600}>{title}</Text>
-				</CardHeader>
-				<CardBody>{children}</CardBody>
-			</PopoverContent>
+		<Popover
+			maxWidth={280}
+			placement="right-start"
+			style={{ right: offset }}
+			trigger={
+				<View css={{ outline: 'none' }} ref={triggerRef}>
+					{trigger}
+				</View>
+			}
+			unstable_offset={[0, 12]}
+		>
+			<CardHeader>
+				<Text weight={600}>{title}</Text>
+			</CardHeader>
+			<CardBody>{children}</CardBody>
 		</Popover>
 	);
 };

@@ -3,8 +3,6 @@ import {
   CardHeader,
   Heading,
   Popover,
-  PopoverContent,
-  PopoverTrigger,
   Tab,
   TabList,
   TabPanel,
@@ -58,43 +56,47 @@ export function DefinitionPopover({ children }) {
 
   return (
     <>
-      <Popover placement="bottom-start">
-        <PopoverTrigger as={CodeWrapperView}>
-          <code ref={nodeRef}>{children}</code>
-        </PopoverTrigger>
-        <PopoverContent preventBodyScroll={false} tabIndex={0}>
-          <CardHeader size="small">
-            <Heading size={5}>{title}</Heading>
-            <Text weight="bold">
-              <Link to={slug}>View Docs</Link>
-            </Text>
-          </CardHeader>
-          <Tabs>
-            <TabList>
-              <Tab size="small">Description</Tab>
-              {snippet && <Tab size="small">Code</Tab>}
-            </TabList>
+      <Popover
+        placement="bottom-start"
+        preventBodyScroll={false}
+        tabIndex={0}
+        trigger={
+          <CodeWrapperView>
+            <code ref={nodeRef}>{children}</code>
+          </CodeWrapperView>
+        }
+      >
+        <CardHeader size="small">
+          <Heading size={5}>{title}</Heading>
+          <Text weight="bold">
+            <Link to={slug}>View Docs</Link>
+          </Text>
+        </CardHeader>
+        <Tabs>
+          <TabList>
+            <Tab size="small">Description</Tab>
+            {snippet && <Tab size="small">Code</Tab>}
+          </TabList>
+          <TabPanel>
+            <CardBody>
+              <Text>{description}</Text>
+            </CardBody>
+          </TabPanel>
+          {snippet && (
             <TabPanel>
-              <CardBody>
-                <Text>{description}</Text>
+              <CardBody
+                css={`
+                  pre.prism-code {
+                    margin: 0;
+                    overflow-x: auto;
+                  }
+                `}
+              >
+                <SyntaxHighlighter code={snippet} copy lang="jsx" />
               </CardBody>
             </TabPanel>
-            {snippet && (
-              <TabPanel>
-                <CardBody
-                  css={`
-                    pre.prism-code {
-                      margin: 0;
-                      overflow-x: auto;
-                    }
-                  `}
-                >
-                  <SyntaxHighlighter code={snippet} copy lang="jsx" />
-                </CardBody>
-              </TabPanel>
-            )}
-          </Tabs>
-        </PopoverContent>
+          )}
+        </Tabs>
       </Popover>
     </>
   )

@@ -1,16 +1,21 @@
-import { usePopoverState } from '@wp-g2/a11y';
+import { PopoverDisclosure, usePopoverState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
 import React from 'react';
 
 import { PopoverContext } from './Popover.Context';
+import PopoverContent from './PopoverContent';
 
 function Popover({
 	animated = true,
 	animationDuration = 160,
 	children,
+	elevation = 5,
+	forwardedRef,
 	label,
+	maxWidth = 360,
 	modal = true,
 	placement,
+	trigger,
 	visible,
 	...props
 }) {
@@ -29,7 +34,25 @@ function Popover({
 
 	return (
 		<PopoverContext.Provider value={contextProps}>
-			{children}
+			{trigger && (
+				<PopoverDisclosure
+					{...popover}
+					ref={trigger.ref}
+					{...trigger.props}
+				>
+					{(triggerProps) =>
+						React.cloneElement(trigger, triggerProps)
+					}
+				</PopoverDisclosure>
+			)}
+			<PopoverContent
+				ref={forwardedRef}
+				{...props}
+				elevation={elevation}
+				maxWidth={maxWidth}
+			>
+				{children}
+			</PopoverContent>
 		</PopoverContext.Provider>
 	);
 }
