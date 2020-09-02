@@ -70,7 +70,7 @@
     "eslint-plugin-sort-keys-fix": "1.1.1",
     "faker": "4.1.0",
     "faker-schema": "1.0.2",
-    "jest-environment-jsdom-fourteen": "1.0.1",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "lerna": "^3.20.2",
     "lodash": "^4.17.19",
     "react": "16.13.1",
