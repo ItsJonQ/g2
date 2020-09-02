@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-aspect-ratio css-lzmd8z"
+  class="wp-components-aspect-ratio css-owceb3"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >
@@ -12,14 +12,14 @@ exports[`props should render correctly 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-ftpcdx"
+    class="css-1wfnuwc"
   />
 </div>
 `;
 
 exports[`props should render with custom ratio 1`] = `
 <div
-  class="wp-components-aspect-ratio css-lzmd8z"
+  class="wp-components-aspect-ratio css-owceb3"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >
@@ -29,14 +29,14 @@ exports[`props should render with custom ratio 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-eunmeo"
+    class="css-eul5hi"
   />
 </div>
 `;
 
 exports[`props should render with custom width 1`] = `
 <div
-  class="wp-components-aspect-ratio css-eeh67n"
+  class="wp-components-aspect-ratio css-j950ew"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >
@@ -46,7 +46,7 @@ exports[`props should render with custom width 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-pchz6x"
+    class="css-1csetj1"
   />
 </div>
 `;

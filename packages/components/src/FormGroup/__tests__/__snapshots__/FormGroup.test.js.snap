@@ -2,22 +2,22 @@
 
 exports[`props should render alignLabel 1`] = `
 <div
-  class="wp-components-form-group css-52xju"
+  class="wp-components-form-group css-1bmv0pn"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-1inz149"
+    class="wp-components-grid wp-components-form-group css-2cxhgd"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
     <div
-      class="wp-components-control-label css-1bb4q70"
+      class="wp-components-control-label css-2ldf03"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-3vak3l"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-1y64h1g"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -26,17 +26,17 @@ exports[`props should render alignLabel 1`] = `
       </label>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-141ezrd"
       data-g2-c16t="true"
       data-g2-component="TextInput"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
         <input
-          class="css-yegakt"
+          class="css-mtctxg"
           data-g2-c16t="true"
           data-g2-component="TextInputInput"
           id="fname"
@@ -50,22 +50,22 @@ exports[`props should render alignLabel 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-form-group css-52xju"
+  class="wp-components-form-group css-1bmv0pn"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-1inz149"
+    class="wp-components-grid wp-components-form-group css-2cxhgd"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
     <div
-      class="wp-components-control-label css-1bb4q70"
+      class="wp-components-control-label css-2ldf03"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-35vd3x"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-sju7lp"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -74,17 +74,17 @@ exports[`props should render correctly 1`] = `
       </label>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-141ezrd"
       data-g2-c16t="true"
       data-g2-component="TextInput"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
         <input
-          class="css-yegakt"
+          class="css-mtctxg"
           data-g2-c16t="true"
           data-g2-component="TextInputInput"
           id="fname"
@@ -98,22 +98,22 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isMarginless 1`] = `
 <div
-  class="wp-components-form-group css-1l81ebi"
+  class="wp-components-form-group css-s4fsv1"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-1inz149"
+    class="wp-components-grid wp-components-form-group css-2cxhgd"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
     <div
-      class="wp-components-control-label css-1bb4q70"
+      class="wp-components-control-label css-2ldf03"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-35vd3x"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-sju7lp"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -122,17 +122,17 @@ exports[`props should render isMarginless 1`] = `
       </label>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-141ezrd"
       data-g2-c16t="true"
       data-g2-component="TextInput"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
         <input
-          class="css-yegakt"
+          class="css-mtctxg"
           data-g2-c16t="true"
           data-g2-component="TextInputInput"
           id="fname"
@@ -146,39 +146,39 @@ exports[`props should render isMarginless 1`] = `
 
 exports[`props should render label without prop correctly 1`] = `
 <div
-  class="wp-components-form-group css-52xju"
+  class="wp-components-form-group css-1bmv0pn"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-1inz149"
+    class="wp-components-grid wp-components-form-group css-2cxhgd"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
     <div
-      class="wp-components-control-label css-1bb4q70"
+      class="wp-components-control-label css-2ldf03"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-1iskwod"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
       />
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-141ezrd"
       data-g2-c16t="true"
       data-g2-component="TextInput"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+        class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
         <input
-          class="css-yegakt"
+          class="css-mtctxg"
           data-g2-c16t="true"
           data-g2-component="TextInputInput"
           id="fname"
@@ -192,17 +192,17 @@ exports[`props should render label without prop correctly 1`] = `
 
 exports[`props should render vertically 1`] = `
 <div
-  class="wp-components-form-group css-52xju"
+  class="wp-components-form-group css-1bmv0pn"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-control-label css-1bb4q70"
+    class="wp-components-control-label css-2ldf03"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
   >
     <label
-      class="wp-components-truncate wp-components-text wp-components-control-label css-35vd3x"
+      class="wp-components-truncate wp-components-text wp-components-control-label css-sju7lp"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
       for="fname"
@@ -211,17 +211,17 @@ exports[`props should render vertically 1`] = `
     </label>
   </div>
   <div
-    class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1klsh7g"
+    class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-141ezrd"
     data-g2-c16t="true"
     data-g2-component="TextInput"
   >
     <div
-      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
       data-g2-c16t="true"
       data-g2-component="TextInputContent"
     >
       <input
-        class="css-yegakt"
+        class="css-mtctxg"
         data-g2-c16t="true"
         data-g2-component="TextInputInput"
         id="fname"

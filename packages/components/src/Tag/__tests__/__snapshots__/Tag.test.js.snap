@@ -2,12 +2,12 @@
 
 exports[`props should render color 1`] = `
 <span
-  class="wp-components-tag css-1wxccvi"
+  class="wp-components-tag css-1c24az3"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-vwfq0p"
+    class="wp-components-truncate wp-components-text css-1smtimq"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -18,12 +18,12 @@ exports[`props should render color 1`] = `
 
 exports[`props should render correctly 1`] = `
 <span
-  class="wp-components-tag css-acvidt"
+  class="wp-components-tag css-p3p88m"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-vwfq0p"
+    class="wp-components-truncate wp-components-text css-1smtimq"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -34,12 +34,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render display 1`] = `
 <span
-  class="wp-components-tag css-16edemj"
+  class="wp-components-tag css-mubtdf"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-vwfq0p"
+    class="wp-components-truncate wp-components-text css-1smtimq"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -50,13 +50,13 @@ exports[`props should render display 1`] = `
 
 exports[`props should render href 1`] = `
 <a
-  class="wp-components-tag css-acvidt"
+  class="wp-components-tag css-p3p88m"
   data-g2-c16t="true"
   data-g2-component="Tag"
   href="#"
 >
   <span
-    class="wp-components-truncate wp-components-text css-vwfq0p"
+    class="wp-components-truncate wp-components-text css-1smtimq"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -67,12 +67,12 @@ exports[`props should render href 1`] = `
 
 exports[`props should render onRemove 1`] = `
 <span
-  class="wp-components-tag css-acvidt"
+  class="wp-components-tag css-p3p88m"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-vwfq0p"
+    class="wp-components-truncate wp-components-text css-1smtimq"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -83,19 +83,19 @@ exports[`props should render onRemove 1`] = `
 
 exports[`props should render removeButtonText 1`] = `
 <span
-  class="wp-components-tag css-acvidt"
+  class="wp-components-tag css-p3p88m"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-vwfq0p"
+    class="wp-components-truncate wp-components-text css-1smtimq"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
     Status
   </span>
   <div
-    class="css-c7yxzp"
+    class="css-1h6q7sj"
     data-g2-component="TagRemoveButtonWrapper"
   >
     <button
@@ -110,17 +110,17 @@ exports[`props should render removeButtonText 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-vqn2g8"
+        class="wp-components-view wp-components-flex css-1gjqylm"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex-item css-1ir3rsg"
+          class="wp-components-flex-item css-kq9hj8"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-icon css-1q655eb"
+            class="wp-components-icon css-19gn8qe"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -153,7 +153,7 @@ exports[`props should render removeButtonText 1`] = `
         </span>
       </span>
       <span
-        class="wp-components-elevation css-r2c0vy"
+        class="wp-components-elevation css-1l26w1c"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />

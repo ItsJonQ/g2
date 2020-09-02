@@ -2,17 +2,17 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1r4p4mc"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-12qm0pt"
   data-g2-c16t="true"
   data-g2-component="Select"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ehiftx"
+    class="wp-components-flex-item wp-components-flex-block css-2c2lyi"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
     <select
-      class="css-gdaxsy"
+      class="css-112gptz"
       data-g2-component="SelectInput"
       id="select"
     >
@@ -29,17 +29,17 @@ exports[`props should render correctly 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-lq5eu3"
+    class="wp-components-flex-item css-1uudps2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-1gcfvkk"
+      class="wp-components-text css-5i0kly"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-qdf7pd"
+        class="wp-components-icon css-cciynq"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -67,17 +67,17 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render defaultValue 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1r4p4mc"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-12qm0pt"
   data-g2-c16t="true"
   data-g2-component="Select"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ehiftx"
+    class="wp-components-flex-item wp-components-flex-block css-2c2lyi"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
     <select
-      class="css-gdaxsy"
+      class="css-112gptz"
       data-g2-component="SelectInput"
       id="select"
     >
@@ -94,17 +94,17 @@ exports[`props should render defaultValue 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-lq5eu3"
+    class="wp-components-flex-item css-1uudps2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-1gcfvkk"
+      class="wp-components-text css-5i0kly"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-qdf7pd"
+        class="wp-components-icon css-cciynq"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -132,17 +132,17 @@ exports[`props should render defaultValue 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1r4p4mc"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-12qm0pt"
   data-g2-c16t="true"
   data-g2-component="Select"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ehiftx"
+    class="wp-components-flex-item wp-components-flex-block css-2c2lyi"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
     <select
-      class="css-5lc6nq"
+      class="css-1wez2l0"
       data-g2-component="SelectInput"
       id="select"
     >
@@ -159,17 +159,17 @@ exports[`props should render size 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-lq5eu3"
+    class="wp-components-flex-item css-1uudps2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-1gcfvkk"
+      class="wp-components-text css-5i0kly"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-qdf7pd"
+        class="wp-components-icon css-cciynq"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >

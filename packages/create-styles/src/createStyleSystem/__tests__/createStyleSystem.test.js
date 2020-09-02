@@ -1,16 +1,26 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { flush } from '../../compiler';
 import { createStyleSystem } from '../index';
 
 describe('createStyleSystem', () => {
+	let compiler;
+
+	const testCreateStyleSystem = (...args) => {
+		const styleSystem = createStyleSystem(...args);
+		compiler = styleSystem.compiler;
+		return styleSystem;
+	};
+
 	afterAll(() => {
-		flush();
+		if (compiler?.flush) {
+			compiler.flush();
+		}
 	});
 
 	test('should include a styled element, View, and styled component that renders', () => {
-		const { View, core, styled } = createStyleSystem();
+		const { View, core, styled } = testCreateStyleSystem();
+
 		const Box = styled.p`
 			padding: 10px;
 		`;
@@ -35,7 +45,7 @@ describe('createStyleSystem', () => {
 	});
 
 	test('should render custom baseStyles', () => {
-		const { View } = createStyleSystem({
+		const { View } = testCreateStyleSystem({
 			baseStyles: {
 				background: 'blue',
 			},
@@ -50,8 +60,8 @@ describe('createStyleSystem', () => {
 	});
 
 	test('should support multiple nested style system instances', () => {
-		const { View } = createStyleSystem();
-		const { View: AnotherView } = createStyleSystem({
+		const { View } = testCreateStyleSystem();
+		const { View: AnotherView } = testCreateStyleSystem({
 			baseStyles: {
 				padding: '2em',
 			},

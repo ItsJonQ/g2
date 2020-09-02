@@ -1,5 +1,5 @@
 export * from './core';
-export { cache, cns, css, jsx, cx, ns } from './style-system';
+export { cache, css, cx } from './style-system';
 
 export * from './components';
 export * from './styled';

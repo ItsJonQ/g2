@@ -3,13 +3,13 @@
 exports[`props should render correctly 1`] = `
 <span
   aria-describedby="help-tip"
-  class="wp-components-view css-87039i"
+  class="wp-components-view css-bjak5y"
   data-g2-c16t="true"
   data-g2-component="View"
   tabindex="0"
 >
   <div
-    class="wp-components-icon css-103gddu"
+    class="wp-components-icon css-11xbc2j"
     data-g2-c16t="true"
     data-g2-component="Icon"
   >
@@ -47,13 +47,13 @@ exports[`props should render correctly 1`] = `
 exports[`props should render iconSize 1`] = `
 <span
   aria-describedby="help-tip"
-  class="wp-components-view css-87039i"
+  class="wp-components-view css-bjak5y"
   data-g2-c16t="true"
   data-g2-component="View"
   tabindex="0"
 >
   <div
-    class="wp-components-icon css-1a3oz8"
+    class="wp-components-icon css-rt3g6j"
     data-g2-c16t="true"
     data-g2-component="Icon"
   >

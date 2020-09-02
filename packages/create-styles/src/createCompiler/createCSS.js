@@ -1,44 +1,45 @@
 import { is } from '@wp-g2/utils';
 
-import { css as compile } from './emotion';
 import { breakpoints } from './utils';
 
-/**
- * An enhanced version of the compiler's (Emotion) CSS function.
- * This enhanced CSS supports dynamic responsive (breakpoint-based) styles if
- * the value is an array of values.
- *
- * @example
- * ```js
- * // The following will render a CSS rule where the widths will be:
- * // 100px for mobile
- * // 200px for tablet
- * // 500px for desktop
- * css({
- * 		width: [100, 200, 500]
- * })
- * ```
- * @param {string|object|Array<string|object>} args
- * @returns {string} The compiled CSS className associated with the styles.
- */
-export function css(...args) {
-	const [arg, ...rest] = args;
+export function createCSS(compile) {
+	/**
+	 * An enhanced version of the compiler's (Emotion) CSS function.
+	 * This enhanced CSS supports dynamic responsive (breakpoint-based) styles if
+	 * the value is an array of values.
+	 *
+	 * @example
+	 * ```js
+	 * // The following will render a CSS rule where the widths will be:
+	 * // 100px for mobile
+	 * // 200px for tablet
+	 * // 500px for desktop
+	 * css({
+	 * 		width: [100, 200, 500]
+	 * })
+	 * ```
+	 * @param {string|object|Array<string|object>} args
+	 * @returns {string} The compiled CSS className associated with the styles.
+	 */
+	return function css(...args) {
+		const [arg, ...rest] = args;
 
-	if (is.plainObject(arg)) {
-		return compile(responsive(arg));
-	}
-
-	if (is.array(arg)) {
-		for (let i = 0, len = arg.length; i < len; i++) {
-			const n = arg[i];
-			if (is.plainObject(n)) {
-				arg[i] = responsive(n);
-			}
+		if (is.plainObject(arg)) {
+			return compile(responsive(arg));
 		}
-		return compile(...[arg, ...rest]);
-	}
 
-	return compile(...args);
+		if (is.array(arg)) {
+			for (let i = 0, len = arg.length; i < len; i++) {
+				const n = arg[i];
+				if (is.plainObject(n)) {
+					arg[i] = responsive(n);
+				}
+			}
+			return compile(...[arg, ...rest]);
+		}
+
+		return compile(...args);
+	};
 }
 
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224

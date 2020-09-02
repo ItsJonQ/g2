@@ -4,7 +4,7 @@ exports[`props should render correctly 1`] = `
 <div
   aria-activedescendant="segmented-1"
   aria-label="SegmentControl"
-  class="wp-components-view css-1g07w5i"
+  class="wp-components-view css-f9fl02"
   data-g2-c16t="true"
   data-g2-component="View"
   id="segmented"
@@ -19,20 +19,20 @@ exports[`props should render correctly 1`] = `
     tabindex="-1"
   />
   <div
-    class="css-1ie3ep8"
+    class="css-1q9ki2a"
     data-g2-component="SegmentedControlBackdrop"
     role="presentation"
     style="transform: translateX(NaNpx); transition: none; width: 0px;"
   />
   <div
-    class="css-1iso3al"
+    class="css-felwkr"
     data-active="true"
     data-g2-component="SegmentedControlButtonLabel"
   >
     <button
       aria-checked="true"
       aria-selected="true"
-      class="wp-components-segmented-control-button css-mf0iw2"
+      class="wp-components-segmented-control-button css-1msknw9"
       data-g2-c16t="true"
       data-g2-component="SegmentedControlButton"
       data-value="olaf"
@@ -41,31 +41,31 @@ exports[`props should render correctly 1`] = `
       tabindex="-1"
     >
       <div
-        class="css-xip3y"
+        class="css-1yh7q8g"
         data-g2-component="SegmentedControlButtonContent"
       >
         O
       </div>
       <div
         aria-hidden="true"
-        class="css-4cn9nj"
+        class="css-1wcd9qm"
         data-g2-component="SegmentedControlButtonContentPlaceholder"
       >
         O
       </div>
     </button>
     <div
-      class="css-1s5geos"
+      class="css-1pe9xrr"
     />
   </div>
   <div
-    class="css-1iso3al"
+    class="css-felwkr"
     data-active="false"
     data-g2-component="SegmentedControlButtonLabel"
   >
     <button
       aria-checked="false"
-      class="wp-components-segmented-control-button css-8w5z78"
+      class="wp-components-segmented-control-button css-y4hnna"
       data-g2-c16t="true"
       data-g2-component="SegmentedControlButton"
       data-value="samantha"
@@ -74,21 +74,21 @@ exports[`props should render correctly 1`] = `
       tabindex="-1"
     >
       <div
-        class="css-xip3y"
+        class="css-1yh7q8g"
         data-g2-component="SegmentedControlButtonContent"
       >
         S
       </div>
       <div
         aria-hidden="true"
-        class="css-4cn9nj"
+        class="css-1wcd9qm"
         data-g2-component="SegmentedControlButtonContentPlaceholder"
       >
         S
       </div>
     </button>
     <div
-      class="css-1s5geos"
+      class="css-1pe9xrr"
     />
   </div>
 </div>

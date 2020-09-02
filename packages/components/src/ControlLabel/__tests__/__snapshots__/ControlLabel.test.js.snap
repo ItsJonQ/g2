@@ -2,12 +2,12 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-control-label css-1bb4q70"
+  class="wp-components-control-label css-2ldf03"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-1iskwod"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
   >
@@ -18,12 +18,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render htmlFor 1`] = `
 <div
-  class="wp-components-control-label css-1bb4q70"
+  class="wp-components-control-label css-2ldf03"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-1iskwod"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="Field"
@@ -35,12 +35,12 @@ exports[`props should render htmlFor 1`] = `
 
 exports[`props should render no truncate 1`] = `
 <div
-  class="wp-components-control-label css-1bb4q70"
+  class="wp-components-control-label css-2ldf03"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
   <label
-    class="wp-components-text wp-components-control-label css-19swntb"
+    class="wp-components-text wp-components-control-label css-12n5bn0"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
   >
@@ -51,12 +51,12 @@ exports[`props should render no truncate 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="wp-components-control-label css-8i8iw5"
+  class="wp-components-control-label css-e5fr2"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-8wgeet"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-1iskwod"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
   >

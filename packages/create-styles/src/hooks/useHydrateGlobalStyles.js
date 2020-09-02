@@ -1,12 +1,11 @@
-import { injectGlobal } from '../compiler';
-
 const __INTERNAL_STATE__ = {
 	didInjectGlobal: false,
 };
 
 /**
  * @typedef UseHydrateGlobalStylesProps
- * @param {object} globalStyles Global style values to be injected.
+ * @property {object} injectGlobal injectGlobal function from the compiler (Emotion).
+ * @property {object} globalStyles Global style values to be injected.
  */
 
 /**
@@ -21,7 +20,7 @@ const __INTERNAL_STATE__ = {
  *
  * @param {UseHydrateGlobalStylesProps} props Props for the hook.
  */
-export function useHydrateGlobalStyles({ globalStyles = {} }) {
+export function useHydrateGlobalStyles({ injectGlobal, globalStyles = {} }) {
 	if (__INTERNAL_STATE__.didInjectGlobal) return;
 
 	const {
@@ -34,12 +33,14 @@ export function useHydrateGlobalStyles({ globalStyles = {} }) {
 	/**
 	 * Using the compiler's (Emotion) injectGlobal function.
 	 */
-	injectGlobal`
-		${globalCSSVariables};
-		${darkModeCSSVariables};
-		${highContrastModeCSSVariables};
-		${darkHighContrastModeCSSVariables};
-	`;
+	if (injectGlobal) {
+		injectGlobal`
+			${globalCSSVariables};
+			${darkModeCSSVariables};
+			${highContrastModeCSSVariables};
+			${darkHighContrastModeCSSVariables};
+		`;
+	}
 
 	/**
 	 * Ensure that this only happens once with a singleton state.

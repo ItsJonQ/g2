@@ -1,7 +1,7 @@
 import { deepEqual, is } from '@wp-g2/utils';
 import { useLayoutEffect, useRef, useState } from 'react';
 
-import { transformValuesToVariables } from '../../create-style-system/utils';
+import { transformValuesToVariables } from '../../createStyleSystem/utils';
 import { useReducedMotion } from '../../hooks';
 
 /**

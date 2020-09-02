@@ -1,7 +1,7 @@
 import { Checkbox as ReakitCheckbox } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { connect, ns } from '@wp-g2/context';
 import { FiCheck } from '@wp-g2/icons';
-import { css, cx, ns } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 

@@ -2,12 +2,12 @@
 
 exports[`props should render correctly 1`] = `
 <ul
-  class="wp-components-list css-1xbgqt6"
+  class="wp-components-list css-1klo2v3"
   data-g2-c16t="true"
   data-g2-component="List"
 >
   <li
-    class="wp-components-list-item css-q34c1j"
+    class="wp-components-list-item css-wctrmq"
     data-g2-c16t="true"
     data-g2-component="ListItem"
   >
@@ -18,12 +18,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render ordered list 1`] = `
 <ol
-  class="wp-components-list css-sqshqu"
+  class="wp-components-list css-53l222"
   data-g2-c16t="true"
   data-g2-component="List"
 >
   <li
-    class="wp-components-list-item css-q34c1j"
+    class="wp-components-list-item css-wctrmq"
     data-g2-c16t="true"
     data-g2-component="ListItem"
   >

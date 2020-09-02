@@ -2,33 +2,21 @@ import isPropValid from '@emotion/is-prop-valid';
 import { is, mergeRefs } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
-import { css, cx } from '../compiler';
+// import { css, cx } from '../compiler';
 import { useHydrateGlobalStyles } from '../hooks';
 import { REDUCED_MOTION_MODE_ATTR } from './constants';
 import { DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const shouldForwardProp = isPropValid;
 
-/**
- * Default baseStyles for the system.
- */
-const styles = {
-	Base: css({
-		// Automatic box-sizing resets.
-		boxSizing: 'border-box',
-	}),
-	// Enforced reduced-motion preferred styles.
-	reduceMotion: css`
-		@media (prefers-reduced-motion) {
-			transition: none !important;
-		}
-		${REDUCED_MOTION_MODE_ATTR} & {
-			transition: none !important;
-		}
-	`,
-};
-
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
+
+/**
+ * @typedef CreateCoreElementOptions
+ * @property {object} baseStyles The baseStyles from the Style system.
+ * @property {function} injectGlobal The injectGlobal from the Style system's compiler.
+ * @property {object} globalStyles The globalStyles from the Style system.
+ */
 
 /**
  * Creates the core styled elements for the Style system. These elements are
@@ -49,14 +37,39 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * ```
  *
  * @param {string|React.Component} tagName The HTMLElement/React.Component to connect with the Style system.
- * @param {object} options Options to custom coreElement styles.
+ * @param {CreateCoreElementOptions} options Options to custom coreElement styles.
  * @returns {React.Component} The Style system wrapped HTMLElement/React.Component.
  */
 export const createCoreElement = (
 	tagName = 'div',
 	options = defaultOptions,
 ) => {
-	const { baseStyles, globalStyles } = { ...defaultOptions, ...options };
+	const { baseStyles, compiler, globalStyles } = {
+		...defaultOptions,
+		...options,
+	};
+
+	const { css, cx, injectGlobal } = compiler;
+
+	/**
+	 * Default baseStyles for the system.
+	 */
+	const styles = {
+		Base: css({
+			// Automatic box-sizing resets.
+			boxSizing: 'border-box',
+		}),
+		// Enforced reduced-motion preferred styles.
+		reduceMotion: css`
+			@media (prefers-reduced-motion) {
+				transition: none !important;
+			}
+			${REDUCED_MOTION_MODE_ATTR} & {
+				transition: none !important;
+			}
+		`,
+	};
+
 	const compiledBaseStyles = css(baseStyles);
 
 	const render = (
@@ -85,7 +98,7 @@ export const createCoreElement = (
 		 * 2. The need to use Context connectors (e.g. for ThemeProvider), which is HUGE for performance.
 		 */
 		// eslint-disable-next-line
-		useHydrateGlobalStyles({ globalStyles });
+		useHydrateGlobalStyles({ globalStyles, injectGlobal });
 
 		const element = as || tagName;
 		const className = !is.string(classNameProp)

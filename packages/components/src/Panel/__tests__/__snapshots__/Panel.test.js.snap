@@ -2,41 +2,41 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible wp-components-panel css-s7db2d"
+  class="wp-components-view wp-components-collapsible wp-components-panel css-wmytf3"
   data-g2-c16t="true"
   data-g2-component="Panel"
 >
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-17ek7ck"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-z9p9em"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-flex-item css-eqsycl"
+      class="wp-components-flex-item css-1d3xnlc"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-text css-19swntb"
+        class="wp-components-text css-12n5bn0"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-arrow-indicator css-aqnf2q"
+          class="wp-components-arrow-indicator css-1munymz"
           data-g2-c16t="true"
           data-g2-component="ArrowIndicator"
         >
           <div
-            class="wp-components-view css-1oanc4k"
+            class="wp-components-view css-1ihlkjd"
             data-g2-c16t="true"
             data-g2-component="View"
           >
             <div
-              class="wp-components-icon css-1t2mv3u"
+              class="wp-components-icon css-1penggn"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -58,12 +58,12 @@ exports[`props should render correctly 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-8bvww9"
+        class="wp-components-text css-1e8va0n"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -80,13 +80,13 @@ exports[`props should render correctly 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-ebb2lo"
+      class="wp-components-animated css-162o42s"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0;"
     >
       <div
-        class="css-rtl5wp"
+        class="css-1vcszji"
       >
         Some people are worth melting for.
       </div>
@@ -97,7 +97,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render seamless 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible wp-components-panel css-s7db2d"
+  class="wp-components-view wp-components-collapsible wp-components-panel css-wmytf3"
   data-g2-c16t="true"
   data-g2-component="Panel"
   seamless=""
@@ -105,34 +105,34 @@ exports[`props should render seamless 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-17ek7ck"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-z9p9em"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-flex-item css-eqsycl"
+      class="wp-components-flex-item css-1d3xnlc"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-text css-19swntb"
+        class="wp-components-text css-12n5bn0"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-arrow-indicator css-aqnf2q"
+          class="wp-components-arrow-indicator css-1munymz"
           data-g2-c16t="true"
           data-g2-component="ArrowIndicator"
         >
           <div
-            class="wp-components-view css-1oanc4k"
+            class="wp-components-view css-1ihlkjd"
             data-g2-c16t="true"
             data-g2-component="View"
           >
             <div
-              class="wp-components-icon css-1t2mv3u"
+              class="wp-components-icon css-1penggn"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -154,12 +154,12 @@ exports[`props should render seamless 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-8bvww9"
+        class="wp-components-text css-1e8va0n"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -176,13 +176,13 @@ exports[`props should render seamless 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-ebb2lo"
+      class="wp-components-animated css-162o42s"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0;"
     >
       <div
-        class="css-rtl5wp"
+        class="css-1vcszji"
       >
         Some people are worth melting for.
       </div>
@@ -193,41 +193,41 @@ exports[`props should render seamless 1`] = `
 
 exports[`props should render visible 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible wp-components-panel css-s7db2d"
+  class="wp-components-view wp-components-collapsible wp-components-panel css-wmytf3"
   data-g2-c16t="true"
   data-g2-component="Panel"
 >
   <div
     aria-controls="panel"
     aria-expanded="true"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-17ek7ck"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-z9p9em"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-flex-item css-eqsycl"
+      class="wp-components-flex-item css-1d3xnlc"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-text css-19swntb"
+        class="wp-components-text css-12n5bn0"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-arrow-indicator css-1vatisx"
+          class="wp-components-arrow-indicator css-1eu86gw"
           data-g2-c16t="true"
           data-g2-component="ArrowIndicator"
         >
           <div
-            class="wp-components-view css-1oanc4k"
+            class="wp-components-view css-1ihlkjd"
             data-g2-c16t="true"
             data-g2-component="View"
           >
             <div
-              class="wp-components-icon css-1t2mv3u"
+              class="wp-components-icon css-1penggn"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -249,12 +249,12 @@ exports[`props should render visible 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-t4c3ny"
+      class="wp-components-flex-item wp-components-flex-block css-1mt9vp0"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-8bvww9"
+        class="wp-components-text css-1e8va0n"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -269,13 +269,13 @@ exports[`props should render visible 1`] = `
     id="panel"
   >
     <div
-      class="wp-components-animated css-ebb2lo"
+      class="wp-components-animated css-162o42s"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: auto; opacity: 1;"
     >
       <div
-        class="css-rtl5wp"
+        class="css-1vcszji"
       >
         Some people are worth melting for.
       </div>
