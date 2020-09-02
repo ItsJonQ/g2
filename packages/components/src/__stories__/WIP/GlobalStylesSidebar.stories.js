@@ -218,6 +218,7 @@ const GlobalStylesHeader = (props) => {
 				{ overflow: 'hidden' },
 				ui.frame.height(hasPreviousScreen ? 60 : 40),
 				ui.animation.default,
+				ui.animation.duration(0.16),
 			]}
 			variant="tertiary"
 		>
@@ -225,8 +226,9 @@ const GlobalStylesHeader = (props) => {
 				css={[
 					{ pointerEvents: hasPreviousScreen ? 'auto' : 'none' },
 					ui.opacity(hasPreviousScreen ? 1 : 0),
+					ui.offset.x(hasPreviousScreen ? 0 : -20),
 					ui.animation.default,
-					ui.animation.duration(0.5),
+					ui.animation.duration(0.3),
 				]}
 			>
 				{previousScreen && (
@@ -293,7 +295,11 @@ const Example = (props) => {
 			<GlobalStylesHeader />
 			<NavigatorScreens css={[ui.frame.height('auto')]}>
 				{screens.map((screen) => (
-					<NavigatorScreen {...screen} key={screen.path} />
+					<NavigatorScreen
+						{...screen}
+						animationEnterDelay={0.16}
+						key={screen.path}
+					/>
 				))}
 			</NavigatorScreens>
 		</Navigator>

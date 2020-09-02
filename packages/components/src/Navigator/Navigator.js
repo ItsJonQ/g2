@@ -9,7 +9,6 @@ function Navigator({
 	children,
 	forwardedRef,
 	initialPath,
-	...props
 }) {
 	const contextProps = {
 		animationDuration,

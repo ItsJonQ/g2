@@ -4,7 +4,15 @@ import React from 'react';
 import { Animated } from '../Animated';
 import { Route } from './Router';
 
-function NavigatorScreen({ children, component, path, render, ...props }) {
+function NavigatorScreen({
+	animationEnterDelay = 0,
+	animationExitDelay = 0,
+	children,
+	component,
+	path,
+	render,
+	...props
+}) {
 	return (
 		<Route
 			{...props}
@@ -27,7 +35,11 @@ function NavigatorScreen({ children, component, path, render, ...props }) {
 
 				const animate = {
 					opacity: 1,
-					transition: { duration: 0.25, ease: 'easeInOut' },
+					transition: {
+						delay: animationEnterDelay,
+						duration: 0.16,
+						ease: 'easeInOut',
+					},
 					x: 0,
 				};
 				const initial = {
@@ -35,8 +47,10 @@ function NavigatorScreen({ children, component, path, render, ...props }) {
 					x: isBack ? -50 : 50,
 				};
 				const exit = {
+					delay: animationExitDelay,
 					opacity: 0,
-					transition: { duration: 0.25, ease: 'easeInOut' },
+					x: isBack ? 50 : -50,
+					transition: { duration: 0.16, ease: 'easeInOut' },
 				};
 
 				const animatedProps = {
