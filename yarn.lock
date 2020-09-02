@@ -22078,10 +22078,10 @@ use-composed-ref@^1.0.0:
   dependencies:
     ts-essentials "^2.0.3"
 
-use-enhanced-state@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.9.tgz#e08729e257befd0d569fc6c4682b80d55301c605"
-  integrity sha512-klclMfBXK+fU8UN6NfJ107AAKovpVhpOVlrJiSTwN38Y1ZU+LuX7feu/6m8qMFm9itvOBZIdBmB6Ob+cGIl1/Q==
+use-enhanced-state@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.10.tgz#00f1e20d0bfbf79f2fbe059fd7cecb848c030083"
+  integrity sha512-6R5SSSNFdgIlj+Fem8WDikPHxcM1C36cHEDQD9INy81K/Y3BHdVLh3LOyU8ilD+bNpqOoPgMLlx+6RN4SGjOcQ==
   dependencies:
     "@itsjonq/is" "0.0.2"
     array-move "^3.0.0"
