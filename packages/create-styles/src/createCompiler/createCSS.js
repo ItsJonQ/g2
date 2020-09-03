@@ -2,7 +2,7 @@ import { is } from '@wp-g2/utils';
 
 import { breakpoints } from './utils';
 
-export function createCSS(compile) {
+export function createCSS(compile, useEmotionContext) {
 	/**
 	 * An enhanced version of the compiler's (Emotion) CSS function.
 	 * This enhanced CSS supports dynamic responsive (breakpoint-based) styles if

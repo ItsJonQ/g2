@@ -22,11 +22,9 @@ const systemConfig = {
 };
 
 export const {
-	StyleSystemContext,
 	compiler,
 	core,
 	createCoreElement,
 	get,
 	styled,
-	useStyleSystemContext,
 } = createStyleSystem(systemConfig);

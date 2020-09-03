@@ -1,5 +1,3 @@
-import { createContext, useContext } from 'react';
-
 import { createCompiler } from '../createCompiler';
 import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
@@ -111,14 +109,7 @@ export function createStyleSystem(options = defaultOptions) {
 		View,
 	};
 
-	/**
-	 * Style system context
-	 */
-	const StyleSystemContext = createContext(styleSystem);
-	// eslint-disable-next-line
-	const useStyleSystemContext = () => useContext(StyleSystemContext);
-
-	return { ...styleSystem, StyleSystemContext, useStyleSystemContext };
+	return styleSystem;
 }
 
 export default createStyleSystem;

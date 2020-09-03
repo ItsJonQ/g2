@@ -1,21 +1,26 @@
 import { ComponentsProvider } from '@wp-g2/context';
 import {
-	StyleSystemContext,
+	cache,
+	compiler,
+	StyleFrameProvider,
 	ThemeProvider,
-	useStyleSystemContext,
 } from '@wp-g2/styles';
 import React, { useEffect, useRef, useState } from 'react';
 import Frame from 'react-frame-component';
 
 import {
+	Alert,
+	Alerts,
 	Button,
 	Card,
 	CardBody,
 	FormGroup,
 	Grid,
+	HStack,
 	Popover,
 	Subheading,
 	Surface,
+	Text,
 	TextField,
 	View,
 	VStack,
@@ -39,50 +44,14 @@ const Cluster = () => {
 	);
 };
 
-/**
- * Provides the closest document given where the React component rendered.
- */
-function OwnerDocumentProvider({ children }) {
-	const [ownerDocument, setOwnerDocument] = useState(null);
-	const ref = useRef(null);
-
-	useEffect(() => {
-		if (ref.current) {
-			setOwnerDocument(ref.current.ownerDocument);
-		}
-	}, [ref, setOwnerDocument]);
-
-	return (
-		<React.Fragment>
-			{!ref.current ? <div ref={ref} /> : children({ ownerDocument })}
-		</React.Fragment>
-	);
-}
-
-function StyleSystemFrameProvider({ children }) {
-	const styleSystem = useStyleSystemContext();
-	return (
-		<OwnerDocumentProvider>
-			{({ ownerDocument }) => {
-				if (styleSystem?.compiler?.sheet?.container) {
-					// styleSystem.compiler.sheet.container = ownerDocument;
-				}
-
-				return (
-					<StyleSystemContext.Provider value={{}}>
-						{children}
-					</StyleSystemContext.Provider>
-				);
-			}}
-		</OwnerDocumentProvider>
-	);
-}
-
-const Section = ({ children, title }) => {
+const Section = ({ children, title, works = true }) => {
 	return (
 		<Surface border css={{ padding: 20, paddingTop: 12 }}>
 			<VStack alignment="left">
-				<Subheading>{title}</Subheading>
+				<HStack>
+					<Subheading>{title}</Subheading>
+					<Text>{works ? '✅' : '❌'}</Text>
+				</HStack>
 				{children}
 			</VStack>
 		</Surface>
@@ -90,14 +59,38 @@ const Section = ({ children, title }) => {
 };
 
 const Example = () => {
+	const [now, setNow] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setNow(true);
+		}, 3000);
+	}, []);
+
 	return (
 		<Grid columns={3}>
 			<Section title="Default">
 				<Cluster />
+				<Alerts>
+					{now && (
+						<Alert status="success">
+							<Text>New Element</Text>
+						</Alert>
+					)}
+				</Alerts>
 			</Section>
 			<Section title="Dark">
 				<ThemeProvider isDark>
-					<Cluster />
+					<Surface>
+						<Cluster />
+						<Alerts>
+							{now && (
+								<Alert status="success">
+									<Text>New Element</Text>
+								</Alert>
+							)}
+						</Alerts>
+					</Surface>
 				</ThemeProvider>
 			</Section>
 			<Section title="Custom Context">
@@ -115,23 +108,39 @@ const Example = () => {
 
 			<Section title="iFrame">
 				<Frame style={{ width: '100%' }}>
-					<StyleSystemFrameProvider>
+					<StyleFrameProvider>
 						<Cluster />
-					</StyleSystemFrameProvider>
+						<Alerts>
+							{now && (
+								<Alert status="success">
+									<Text>New Element</Text>
+								</Alert>
+							)}
+						</Alerts>
+					</StyleFrameProvider>
 				</Frame>
 			</Section>
 			<Section title="Dark + iFrame">
 				<Frame style={{ width: '100%' }}>
-					<StyleSystemFrameProvider>
+					<StyleFrameProvider>
 						<ThemeProvider isDark>
-							<Cluster />
+							<Surface>
+								<Cluster />
+								<Alerts>
+									{now && (
+										<Alert status="success">
+											<Text>New Element</Text>
+										</Alert>
+									)}
+								</Alerts>
+							</Surface>
 						</ThemeProvider>
-					</StyleSystemFrameProvider>
+					</StyleFrameProvider>
 				</Frame>
 			</Section>
 			<Section title="Custom Context + iFrame">
 				<Frame style={{ width: '100%' }}>
-					<StyleSystemFrameProvider>
+					<StyleFrameProvider>
 						<VStack>
 							<Subheading>Inside Context</Subheading>
 							<ComponentsProvider
@@ -142,7 +151,7 @@ const Example = () => {
 							<Subheading>Outside Context</Subheading>
 							<Cluster />
 						</VStack>
-					</StyleSystemFrameProvider>
+					</StyleFrameProvider>
 				</Frame>
 			</Section>
 			<Section title="Popover">
@@ -152,7 +161,7 @@ const Example = () => {
 							hideOnClickOutside={false}
 							placement="bottom-start"
 							trigger={<Button>Popover</Button>}
-							visible
+							visible={false}
 						>
 							<Cluster />
 						</Popover>
@@ -167,7 +176,7 @@ const Example = () => {
 								hideOnClickOutside={false}
 								placement="bottom-start"
 								trigger={<Button>Popover</Button>}
-								visible
+								visible={false}
 							>
 								<Cluster />
 							</Popover>
