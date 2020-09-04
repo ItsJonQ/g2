@@ -100,6 +100,7 @@ exports[`props should render mixed control types 1`] = `
       >
         <select
           class="css-exabpr"
+          data-g2-c16t="true"
           data-g2-component="SelectInput"
           id="salutations"
         />

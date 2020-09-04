@@ -19,6 +19,7 @@ function Select({
 	className,
 	children,
 	defaultValue,
+	disabled,
 	forwardedRef,
 	id: idProp,
 	onBlur = noop,
@@ -63,9 +64,9 @@ function Select({
 
 	return (
 		<BaseField
-			{...props}
 			as={Flex}
 			className={classes}
+			disabled={disabled}
 			gap={0}
 			isFocused={isFocused}
 			onClick={handleOnRootClick}
@@ -75,12 +76,14 @@ function Select({
 				<InputView
 					as="select"
 					cx={inputCx}
+					disabled={disabled}
 					id={id}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([forwardedRef, inputRef])}
 					value={value}
+					{...props}
 					{...ns('SelectInput')}
 				>
 					{children ||

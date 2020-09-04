@@ -25,9 +25,23 @@ describe('props', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	test('should render defaultValue', () => {
+	test('should render disabled', () => {
 		const { container } = render(
-			<Select defaultValue="olaf" id="select" options={options} />,
+			<Select disabled id="select" options={options} />,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	test('should render required', () => {
+		const { container } = render(
+			<Select id="select" options={options} required />,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	test('should render readOnly', () => {
+		const { container } = render(
+			<Select id="select" options={options} readOnly />,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
