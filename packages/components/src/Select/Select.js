@@ -17,6 +17,7 @@ const { InputView } = TextInputStyles;
 
 function Select({
 	className,
+	children,
 	defaultValue,
 	forwardedRef,
 	id: idProp,
@@ -82,19 +83,20 @@ function Select({
 					value={value}
 					{...ns('SelectInput')}
 				>
-					{options.map((option, index) => {
-						const { id, label, value, ...optionProps } = option;
+					{children ||
+						options.map((option, index) => {
+							const { id, label, value, ...optionProps } = option;
 
-						return (
-							<option
-								key={id || value || index}
-								value={value}
-								{...optionProps}
-							>
-								{label}
-							</option>
-						);
-					})}
+							return (
+								<option
+									key={id || value || index}
+									value={value}
+									{...optionProps}
+								>
+									{label}
+								</option>
+							);
+						})}
 				</InputView>
 			</FlexBlock>
 			<ArrowWrapperView>

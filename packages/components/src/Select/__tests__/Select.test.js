@@ -14,6 +14,17 @@ describe('props', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
+	test('should render children', () => {
+		const { container } = render(
+			<Select id="select">
+				<optgroup label="Snowmen">
+					<option value="olaf">Olaf</option>
+				</optgroup>
+			</Select>,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
 	test('should render defaultValue', () => {
 		const { container } = render(
 			<Select defaultValue="olaf" id="select" options={options} />,
