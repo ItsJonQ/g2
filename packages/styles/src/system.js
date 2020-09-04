@@ -1,4 +1,4 @@
-import { createStyleSystem } from '@wp-g2/create-styles';
+import { createStyleSystem, get as getConfig } from '@wp-g2/create-styles';
 
 import {
 	config,
@@ -11,8 +11,8 @@ const systemConfig = {
 	baseStyles: {
 		MozOsxFontSmoothing: 'grayscale',
 		WebkitFontSmoothing: 'antialiased',
-		fontFamily: config.fontFamily,
-		fontSize: config.fontSize,
+		fontFamily: getConfig('fontFamily'),
+		fontSize: getConfig('fontSize'),
 		margin: 0,
 	},
 	config,

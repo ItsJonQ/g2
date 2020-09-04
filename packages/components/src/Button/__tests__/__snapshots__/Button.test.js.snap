@@ -11,12 +11,12 @@ exports[`props should render (Flex) gap 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -24,7 +24,7 @@ exports[`props should render (Flex) gap 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -42,12 +42,12 @@ exports[`props should render as link (href) 1`] = `
   href="#"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -55,7 +55,7 @@ exports[`props should render as link (href) 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -73,12 +73,12 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -86,7 +86,7 @@ exports[`props should render correctly 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -107,12 +107,12 @@ exports[`props should render disabled 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -120,7 +120,7 @@ exports[`props should render disabled 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -138,12 +138,12 @@ exports[`props should render elevation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -151,7 +151,7 @@ exports[`props should render elevation 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-3ltoc2"
+    class="wp-components-elevation css-36hqob"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -169,24 +169,24 @@ exports[`props should render hasCaret 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-ob6r5h"
+      class="wp-components-flex-item wp-components-flex-block css-1rvbqq9"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
       Let It Go
     </span>
     <span
-      class="wp-components-flex-item css-k5vobh"
+      class="wp-components-flex-item css-lx6sj"
       data-g2-c16t="true"
       data-g2-component="ButtonCaret"
     >
       <div
-        class="wp-components-icon css-1b2ezh6"
+        class="wp-components-icon css-1k4as4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -210,7 +210,7 @@ exports[`props should render hasCaret 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -228,17 +228,17 @@ exports[`props should render icon 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-107eogi"
+      class="wp-components-flex-item css-1rqfg3c"
       data-g2-c16t="true"
       data-g2-component="ButtonIcon"
     >
       <div
-        class="wp-components-icon css-1b2ezh6"
+        class="wp-components-icon css-1k4as4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -246,7 +246,7 @@ exports[`props should render icon 1`] = `
       </div>
     </span>
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -254,7 +254,7 @@ exports[`props should render icon 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -272,12 +272,12 @@ exports[`props should render isControl 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -285,7 +285,7 @@ exports[`props should render isControl 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -303,12 +303,12 @@ exports[`props should render isDestructive 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -316,7 +316,7 @@ exports[`props should render isDestructive 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -338,29 +338,29 @@ exports[`props should render isLoading 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-view wp-components-flex css-1v3zwx0"
+    class="wp-components-view wp-components-flex css-1vfowa4"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <div
-      class="wp-components-flex-item css-1mq9jmc"
+      class="wp-components-flex-item css-1suoifq"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <div
         aria-busy="true"
-        class="css-15q9j8s"
+        class="css-ee8emf"
         data-g2-c16t="true"
         data-g2-component="Spinner"
         style="height: 16px; width: 16px;"
       >
         <div
           aria-hidden="true"
-          class="css-hif32n"
+          class="css-pq0fgq"
           style="transform: scale(0.4444444444444444);"
         >
           <div
-            class="css-wkxaoo"
+            class="css-1rq9pxc"
             style="color: currentColor;"
           >
             <div
@@ -405,12 +405,12 @@ exports[`props should render isLoading 1`] = `
     </div>
   </div>
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1033aa3"
+      class="wp-components-flex-item wp-components-flex-block css-1hux895"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -418,7 +418,7 @@ exports[`props should render isLoading 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -436,12 +436,12 @@ exports[`props should render isNarrow 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -449,7 +449,7 @@ exports[`props should render isNarrow 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -467,12 +467,12 @@ exports[`props should render isRounded 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -480,7 +480,7 @@ exports[`props should render isRounded 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -498,12 +498,12 @@ exports[`props should render isSubtle 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -511,7 +511,7 @@ exports[`props should render isSubtle 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -529,12 +529,12 @@ exports[`props should render prefix 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-107eogi"
+      class="wp-components-flex-item css-1rqfg3c"
       data-g2-c16t="true"
       data-g2-component="ButtonPrefix"
     >
@@ -543,7 +543,7 @@ exports[`props should render prefix 1`] = `
       </span>
     </span>
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -551,7 +551,7 @@ exports[`props should render prefix 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -569,12 +569,12 @@ exports[`props should render size 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -582,7 +582,7 @@ exports[`props should render size 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -600,19 +600,19 @@ exports[`props should render suffix 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-ob6r5h"
+      class="wp-components-flex-item wp-components-flex-block css-1rvbqq9"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
       Let It Go
     </span>
     <span
-      class="wp-components-flex-item css-kq9hj8"
+      class="wp-components-flex-item css-bzokzn"
       data-g2-c16t="true"
       data-g2-component="ButtonSuffix"
     >
@@ -622,7 +622,7 @@ exports[`props should render suffix 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -640,12 +640,12 @@ exports[`props should render variant 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -653,7 +653,7 @@ exports[`props should render variant 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

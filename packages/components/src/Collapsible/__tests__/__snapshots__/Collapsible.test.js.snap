@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible css-1ihlkjd"
+  class="wp-components-view wp-components-collapsible css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
 >
@@ -18,12 +18,12 @@ exports[`props should render correctly 1`] = `
     type="button"
   >
     <span
-      class="wp-components-view wp-components-flex css-1gjqylm"
+      class="wp-components-view wp-components-flex css-2r7rsp"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <span
-        class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+        class="wp-components-flex-item wp-components-flex-block css-13400lq"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
@@ -31,7 +31,7 @@ exports[`props should render correctly 1`] = `
       </span>
     </span>
     <span
-      class="wp-components-elevation css-1l26w1c"
+      class="wp-components-elevation css-h443as"
       data-g2-c16t="true"
       data-g2-component="ButtonElevation"
     />
@@ -45,7 +45,7 @@ exports[`props should render correctly 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-162o42s"
+      class="wp-components-animated css-zf0mza"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0;"
@@ -58,7 +58,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render visible 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible css-1ihlkjd"
+  class="wp-components-view wp-components-collapsible css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
 >
@@ -74,12 +74,12 @@ exports[`props should render visible 1`] = `
     type="button"
   >
     <span
-      class="wp-components-view wp-components-flex css-1gjqylm"
+      class="wp-components-view wp-components-flex css-2r7rsp"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <span
-        class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+        class="wp-components-flex-item wp-components-flex-block css-13400lq"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
@@ -87,7 +87,7 @@ exports[`props should render visible 1`] = `
       </span>
     </span>
     <span
-      class="wp-components-elevation css-1l26w1c"
+      class="wp-components-elevation css-h443as"
       data-g2-c16t="true"
       data-g2-component="ButtonElevation"
     />
@@ -99,7 +99,7 @@ exports[`props should render visible 1`] = `
     id="collapsible"
   >
     <div
-      class="wp-components-animated css-162o42s"
+      class="wp-components-animated css-zf0mza"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: auto; opacity: 1;"

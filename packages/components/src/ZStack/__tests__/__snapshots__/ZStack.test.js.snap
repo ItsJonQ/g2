@@ -2,30 +2,30 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-z-stack css-172eydk"
+  class="wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
@@ -35,30 +35,30 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isLayered 1`] = `
 <div
-  class="wp-components-z-stack css-172eydk"
+  class="wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
@@ -68,30 +68,30 @@ exports[`props should render isLayered 1`] = `
 
 exports[`props should render isReversed 1`] = `
 <div
-  class="wp-components-z-stack css-172eydk"
+  class="wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
@@ -101,30 +101,30 @@ exports[`props should render isReversed 1`] = `
 
 exports[`props should render offset 1`] = `
 <div
-  class="wp-components-z-stack css-172eydk"
+  class="wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-view css-tmmaxs"
+    class="wp-components-view css-vfdt80"
     data-g2-c16t="true"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
