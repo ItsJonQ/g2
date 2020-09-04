@@ -99,6 +99,13 @@ The arrows that link the topics/keywords are colour coded to match their respect
 
 Start experiencing the new (experimental) G2 Components project with this starter kit!
 
+We can start prototyping with G2 Components in 2 ways:
+
+1. CodeSandbox (Recommended)
+2. Create React App
+3. Gatsby
+4. Next.js
+
 ### CodeSandbox
 
 To get started with the CodeSandbox template, click on the link below:
@@ -131,18 +138,13 @@ To get started with a Next.js experience, run the following code in your Termina
 npx create-next-app my-site --use-npm --example "https://github.com/itsjonq/next-starter-g2/"
 ```
 
+For more details, check out the [Next.js G2 starter](https://github.com/ItsJonQ/next-g2-starter).
+
 ### Video Tutorial
 
+Below is a video walkthrough for prototyping with CodeSandbox and Create React App:
+
 https://www.loom.com/share/7b0527a36f284568a9f1e7c1ab10fa42
-
-We can start prototyping with G2 Components in 2 ways:
-
-1. CodeSandbox (Recommended)
-2. Create React App
-3. Gatsby
-4. Next.js
-
-For more details, check out the [Next.js G2 starter](https://github.com/ItsJonQ/next-g2-starter).
 
 ## Open for Feedback
 
