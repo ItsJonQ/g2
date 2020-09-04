@@ -1,5 +1,5 @@
 import { deepEqual, is } from '@wp-g2/utils';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { transformValuesToVariables } from '../../createStyleSystem/utils';
 import { useReducedMotion } from '../../hooks';
@@ -16,7 +16,7 @@ import { useReducedMotion } from '../../hooks';
  * @param {UseColorBlindModeProps} props Props for the hook.
  */
 export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isColorBlind)) return;
 
 		let target = document.documentElement;
@@ -45,7 +45,7 @@ export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
  * @param {UseDarkModeProps} props Props for the hook.
  */
 export function useDarkMode({ isDark, isGlobal = true, ref }) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isDark)) return;
 
 		let target = document.documentElement;
@@ -74,7 +74,7 @@ export function useDarkMode({ isDark, isGlobal = true, ref }) {
  * @param {UseHighContrastMode} props Props for the hook.
  */
 export function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isHighContrast)) return;
 
 		let target = document.documentElement;
@@ -109,13 +109,13 @@ export function useReducedMotionMode({
 }) {
 	const [, setIsReducedMotion] = useReducedMotion(isReducedMotion);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (isGlobal) {
 			setIsReducedMotion(!!isReducedMotion);
 		}
 	}, [isGlobal, isReducedMotion, setIsReducedMotion]);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isReducedMotion)) return;
 
 		let target = document.documentElement;
@@ -149,7 +149,7 @@ export function useThemeStyles({ isGlobal = true, theme = {} }) {
 	 */
 	const themeRef = useRef();
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		/**
 		 * We only want to update + set the theme if there's a change.
 		 * Since themes (potentially) be nested, we need to do a deepEqual check.
