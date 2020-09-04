@@ -115,7 +115,7 @@ npx create-react-app my-app --template @wp-g2/cra-template-protokit
 
 ### Gatsby
 
-To get started with a Next.ks experience, run the following code in your Terminal:
+To get started with a Gatsby experience, run the following code in your Terminal:
 
 ```
 npx gatsby new my-site https://github.com/itsjonq/gatsby-starter-g2"
@@ -125,7 +125,7 @@ For more details, check out the [Gatsby G2 starter](https://github.com/ItsJonQ/g
 
 ### Next.js
 
-To get started with a Next.ks experience, run the following code in your Terminal:
+To get started with a Next.js experience, run the following code in your Terminal:
 
 ```
 npx create-next-app my-site --use-npm --example "https://github.com/itsjonq/next-starter-g2/"
