@@ -118,7 +118,7 @@ npx create-react-app my-app --template @wp-g2/cra-template-protokit
 To get started with a Gatsby experience, run the following code in your Terminal:
 
 ```
-npx gatsby new my-site https://github.com/itsjonq/gatsby-starter-g2"
+npx gatsby new my-site https://github.com/itsjonq/gatsby-starter-g2
 ```
 
 For more details, check out the [Gatsby G2 starter](https://github.com/ItsJonQ/gatsby-starter-g2).
