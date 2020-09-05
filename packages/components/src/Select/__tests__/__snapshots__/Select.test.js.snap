@@ -4,7 +4,7 @@ exports[`props should render children 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
   data-g2-c16t="true"
-  data-g2-component="Select"
+  data-g2-component="SelectWrapper"
 >
   <div
     class="wp-components-flex-item wp-components-flex-block css-b4041i"
@@ -14,7 +14,7 @@ exports[`props should render children 1`] = `
     <select
       class="css-exabpr"
       data-g2-c16t="true"
-      data-g2-component="SelectInput"
+      data-g2-component="Select"
       id="select"
     >
       <optgroup
@@ -69,7 +69,7 @@ exports[`props should render correctly 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
   data-g2-c16t="true"
-  data-g2-component="Select"
+  data-g2-component="SelectWrapper"
 >
   <div
     class="wp-components-flex-item wp-components-flex-block css-b4041i"
@@ -79,7 +79,7 @@ exports[`props should render correctly 1`] = `
     <select
       class="css-exabpr"
       data-g2-c16t="true"
-      data-g2-component="SelectInput"
+      data-g2-component="Select"
       id="select"
     >
       <option
@@ -135,7 +135,7 @@ exports[`props should render disabled 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
   data-g2-c16t="true"
-  data-g2-component="Select"
+  data-g2-component="SelectWrapper"
   disabled=""
 >
   <div
@@ -146,7 +146,7 @@ exports[`props should render disabled 1`] = `
     <select
       class="css-exabpr"
       data-g2-c16t="true"
-      data-g2-component="SelectInput"
+      data-g2-component="Select"
       disabled=""
       id="select"
     >
@@ -203,7 +203,7 @@ exports[`props should render readOnly 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
   data-g2-c16t="true"
-  data-g2-component="Select"
+  data-g2-component="SelectWrapper"
 >
   <div
     class="wp-components-flex-item wp-components-flex-block css-b4041i"
@@ -213,7 +213,7 @@ exports[`props should render readOnly 1`] = `
     <select
       class="css-exabpr"
       data-g2-c16t="true"
-      data-g2-component="SelectInput"
+      data-g2-component="Select"
       id="select"
       readonly=""
     >
@@ -270,7 +270,7 @@ exports[`props should render required 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
   data-g2-c16t="true"
-  data-g2-component="Select"
+  data-g2-component="SelectWrapper"
 >
   <div
     class="wp-components-flex-item wp-components-flex-block css-b4041i"
@@ -280,7 +280,7 @@ exports[`props should render required 1`] = `
     <select
       class="css-exabpr"
       data-g2-c16t="true"
-      data-g2-component="SelectInput"
+      data-g2-component="Select"
       id="select"
       required=""
     >
@@ -337,7 +337,7 @@ exports[`props should render size 1`] = `
 <div
   class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
   data-g2-c16t="true"
-  data-g2-component="Select"
+  data-g2-component="SelectWrapper"
 >
   <div
     class="wp-components-flex-item wp-components-flex-block css-b4041i"
@@ -347,7 +347,7 @@ exports[`props should render size 1`] = `
     <select
       class="css-1slal88"
       data-g2-c16t="true"
-      data-g2-component="SelectInput"
+      data-g2-component="Select"
       id="select"
     >
       <option

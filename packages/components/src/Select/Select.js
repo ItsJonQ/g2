@@ -70,7 +70,7 @@ function Select({
 			gap={0}
 			isFocused={isFocused}
 			onClick={handleOnRootClick}
-			{...ns('Select')}
+			{...ns('SelectWrapper')}
 		>
 			<FlexBlock>
 				<InputView
@@ -84,7 +84,7 @@ function Select({
 					ref={mergeRefs([forwardedRef, inputRef])}
 					value={value}
 					{...props}
-					{...ns('SelectInput')}
+					{...ns('Select')}
 				>
 					{children ||
 						options.map((option, index) => {

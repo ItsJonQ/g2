@@ -36,7 +36,7 @@ exports[`props should render CardInnerBody 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1eci7gf"
+          class="wp-components-button css-1eci7gf"
           data-destructive="false"
           data-g2-c16t="true"
           data-g2-component="Button"
@@ -118,7 +118,7 @@ exports[`props should render correctly 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1eci7gf"
+          class="wp-components-button css-1eci7gf"
           data-destructive="false"
           data-g2-c16t="true"
           data-g2-component="Button"

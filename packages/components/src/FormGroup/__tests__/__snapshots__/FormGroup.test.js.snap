@@ -28,7 +28,7 @@ exports[`props should render alignLabel 1`] = `
     <div
       class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
       data-g2-c16t="true"
-      data-g2-component="TextInput"
+      data-g2-component="TextInputWrapper"
     >
       <div
         class="wp-components-flex-item wp-components-flex-block css-4z9ate"
@@ -38,7 +38,7 @@ exports[`props should render alignLabel 1`] = `
         <input
           class="css-pgzgex"
           data-g2-c16t="true"
-          data-g2-component="TextInputInput"
+          data-g2-component="TextInput"
           id="fname"
           value=""
         />
@@ -76,7 +76,7 @@ exports[`props should render correctly 1`] = `
     <div
       class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
       data-g2-c16t="true"
-      data-g2-component="TextInput"
+      data-g2-component="TextInputWrapper"
     >
       <div
         class="wp-components-flex-item wp-components-flex-block css-4z9ate"
@@ -86,7 +86,7 @@ exports[`props should render correctly 1`] = `
         <input
           class="css-pgzgex"
           data-g2-c16t="true"
-          data-g2-component="TextInputInput"
+          data-g2-component="TextInput"
           id="fname"
           value=""
         />
@@ -124,7 +124,7 @@ exports[`props should render isMarginless 1`] = `
     <div
       class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
       data-g2-c16t="true"
-      data-g2-component="TextInput"
+      data-g2-component="TextInputWrapper"
     >
       <div
         class="wp-components-flex-item wp-components-flex-block css-4z9ate"
@@ -134,7 +134,7 @@ exports[`props should render isMarginless 1`] = `
         <input
           class="css-pgzgex"
           data-g2-c16t="true"
-          data-g2-component="TextInputInput"
+          data-g2-component="TextInput"
           id="fname"
           value=""
         />
@@ -170,7 +170,7 @@ exports[`props should render label without prop correctly 1`] = `
     <div
       class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
       data-g2-c16t="true"
-      data-g2-component="TextInput"
+      data-g2-component="TextInputWrapper"
     >
       <div
         class="wp-components-flex-item wp-components-flex-block css-4z9ate"
@@ -180,7 +180,7 @@ exports[`props should render label without prop correctly 1`] = `
         <input
           class="css-pgzgex"
           data-g2-c16t="true"
-          data-g2-component="TextInputInput"
+          data-g2-component="TextInput"
           id="fname"
           value=""
         />
@@ -213,7 +213,7 @@ exports[`props should render vertically 1`] = `
   <div
     class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
     data-g2-c16t="true"
-    data-g2-component="TextInput"
+    data-g2-component="TextInputWrapper"
   >
     <div
       class="wp-components-flex-item wp-components-flex-block css-4z9ate"
@@ -223,7 +223,7 @@ exports[`props should render vertically 1`] = `
       <input
         class="css-pgzgex"
         data-g2-c16t="true"
-        data-g2-component="TextInputInput"
+        data-g2-component="TextInput"
         id="fname"
         value=""
       />

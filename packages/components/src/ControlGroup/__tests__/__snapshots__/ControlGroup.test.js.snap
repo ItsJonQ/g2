@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="css-k9b0kj"
+      class="wp-components-button css-k9b0kj"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"
@@ -47,7 +47,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="css-1khrkm8"
+      class="wp-components-button css-1khrkm8"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"
@@ -91,7 +91,7 @@ exports[`props should render mixed control types 1`] = `
     <div
       class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-tpx9mv"
       data-g2-c16t="true"
-      data-g2-component="Select"
+      data-g2-component="SelectWrapper"
     >
       <div
         class="wp-components-flex-item wp-components-flex-block css-b4041i"
@@ -101,7 +101,7 @@ exports[`props should render mixed control types 1`] = `
         <select
           class="css-exabpr"
           data-g2-c16t="true"
-          data-g2-component="SelectInput"
+          data-g2-component="Select"
           id="salutations"
         />
       </div>
@@ -149,7 +149,7 @@ exports[`props should render mixed control types 1`] = `
     <div
       class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1it8skp"
       data-g2-c16t="true"
-      data-g2-component="TextInput"
+      data-g2-component="TextInputWrapper"
     >
       <div
         class="wp-components-flex-item wp-components-flex-block css-4z9ate"
@@ -159,7 +159,7 @@ exports[`props should render mixed control types 1`] = `
         <input
           class="css-pgzgex"
           data-g2-c16t="true"
-          data-g2-component="TextInputInput"
+          data-g2-component="TextInput"
           id="fname"
           value=""
         />
@@ -173,7 +173,7 @@ exports[`props should render mixed control types 1`] = `
   >
     <button
       aria-busy="false"
-      class="css-1khrkm8"
+      class="wp-components-button css-1khrkm8"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"

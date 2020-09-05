@@ -7,15 +7,17 @@ import { useDropdownContext } from './Dropdown.Context';
 
 function DropdownTrigger({ forwardedRef, ...props }) {
 	const { menu } = useDropdownContext();
-	return (
-		<MenuButton
-			as={Button}
-			hasCaret
-			{...props}
-			{...menu}
-			ref={forwardedRef}
-		/>
-	);
+	const componentProps = {
+		hasCaret: true,
+		...props,
+		ref: forwardedRef,
+	};
+
+	if (!menu) {
+		return <Button {...componentProps} />;
+	}
+
+	return <MenuButton as={Button} {...componentProps} {...menu} />;
 }
 
 export default connect(DropdownTrigger, 'DropdownTrigger');

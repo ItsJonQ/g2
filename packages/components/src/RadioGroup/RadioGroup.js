@@ -6,13 +6,15 @@ import { View } from '../View';
 import { RadioGroupContext } from './RadioGroup.Context';
 
 function RadioGroup({
+	baseId,
 	children,
 	forwardedRef,
+	id,
 	label = 'RadioGroup',
 	value,
 	...props
 }) {
-	const radio = useRadioState({ state: value });
+	const radio = useRadioState({ baseId: baseId || id, state: value });
 	const contextProps = {
 		radio,
 	};

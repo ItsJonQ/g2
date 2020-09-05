@@ -1,7 +1,7 @@
 import { Button as BaseButton } from '@wp-g2/a11y';
 import { connect, ns } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
-import { cx } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
@@ -14,6 +14,7 @@ import LoadingOverlay from './ButtonLoadingOverlay';
 function Button({
 	children,
 	className,
+	css: cssProp,
 	currentColor,
 	disabled,
 	elevation = 0,
@@ -57,6 +58,8 @@ function Button({
 		isRounded && styles.rounded,
 		isNarrow && styles.narrow,
 		currentColor && styles.currentColor,
+		css(cssProp),
+		className,
 	]);
 
 	return (
