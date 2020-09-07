@@ -1,1 +1,1 @@
-export { ThemeProvider } from '@wp-g2/create-styles';
+export { ThemeProvider } from '../system';
