@@ -160,11 +160,15 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	 */
 	if (!didInjectGlobalStyles.current && isGlobal && theme) {
 		if (is.function(injectGlobal)) {
-			const globalStyles = transformValuesToVariablesString(
-				':root',
-				theme,
-			);
-			injectGlobal`${globalStyles}`;
+			try {
+				const globalStyles = transformValuesToVariablesString(
+					':root',
+					theme,
+				);
+				injectGlobal`${globalStyles}`;
+			} catch (err) {
+				// eslint-disable-next-line
+			}
 		}
 		didInjectGlobalStyles.current = true;
 	}
