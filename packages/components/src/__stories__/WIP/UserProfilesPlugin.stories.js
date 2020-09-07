@@ -42,10 +42,10 @@ const useAppContext = () => useContext(AppContext);
 const componentsProviderValue = {
 	FormGroup: {
 		alignLabel: 'right',
-		gap: 28,
+		gap: 7,
 	},
 	Radio: {
-		gap: 8,
+		gap: 2,
 	},
 };
 

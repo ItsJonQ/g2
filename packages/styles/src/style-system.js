@@ -1,9 +1,9 @@
 import { compiler } from './system';
+export { css } from './css';
 
 export const {
 	breakpoints,
 	cache,
-	css,
 	cx,
 	flush,
 	getRegisteredStyles,

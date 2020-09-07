@@ -7,7 +7,7 @@ exports[`props should render Spacer 1`] = `
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-nokw1o"
+    class="wp-components-flex-item css-h0ii8s"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
@@ -18,7 +18,7 @@ exports[`props should render Spacer 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-rw64f8"
+    class="wp-components-flex-item wp-components-flex-block css-5ntb4p"
     data-g2-c16t="true"
     data-g2-component="Spacer"
   />
@@ -43,7 +43,7 @@ exports[`props should render alignment 1`] = `
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-1cxb0nc"
+    class="wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
@@ -74,7 +74,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-1cxb0nc"
+    class="wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
@@ -105,7 +105,7 @@ exports[`props should render spacing 1`] = `
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-nokw1o"
+    class="wp-components-flex-item css-h0ii8s"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >

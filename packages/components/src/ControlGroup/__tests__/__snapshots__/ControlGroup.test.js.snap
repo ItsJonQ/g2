@@ -7,7 +7,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1163fmc"
+    class="wp-components-flex-item wp-components-control-group-item css-wy91s0"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -84,7 +84,7 @@ exports[`props should render mixed control types 1`] = `
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1163fmc"
+    class="wp-components-flex-item wp-components-control-group-item css-wy91s0"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -94,7 +94,7 @@ exports[`props should render mixed control types 1`] = `
       data-g2-component="SelectWrapper"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-b4041i"
+        class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
@@ -142,7 +142,7 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-5qryon"
+    class="wp-components-flex-item wp-components-control-group-item css-7if256"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
