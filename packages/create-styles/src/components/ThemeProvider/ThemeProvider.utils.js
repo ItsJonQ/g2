@@ -1,7 +1,10 @@
 import { deepEqual, is } from '@wp-g2/utils';
 import { useEffect, useRef, useState } from 'react';
 
-import { transformValuesToVariables } from '../../createStyleSystem/utils';
+import {
+	transformValuesToVariables,
+	transformValuesToVariablesString,
+} from '../../createStyleSystem/utils';
 import { useReducedMotion } from '../../hooks';
 
 /**
@@ -142,12 +145,33 @@ export function useReducedMotionMode({
  * Hook that sets the Style system's theme.
  * @param {UseThemeStyles} props Props for the hook.
  */
-export function useThemeStyles({ isGlobal = true, theme = {} }) {
+export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	const [themeStyles, setThemeStyles] = useState({});
+	const didInjectGlobalStyles = useRef(false);
+
 	/**
 	 * Used to track/compare changes for theme prop changes.
 	 */
 	const themeRef = useRef();
+
+	/**
+	 * Work-around to inject a global theme style. This makes it compatible with
+	 * SSR solutions, as injectGlobal is understood by Emotion's SSR flow.
+	 */
+	if (!didInjectGlobalStyles.current && isGlobal && theme) {
+		if (is.function(injectGlobal)) {
+			try {
+				const globalStyles = transformValuesToVariablesString(
+					':root',
+					theme,
+				);
+				injectGlobal`${globalStyles}`;
+			} catch (err) {
+				// eslint-disable-next-line
+			}
+		}
+		didInjectGlobalStyles.current = true;
+	}
 
 	useEffect(() => {
 		/**
@@ -182,7 +206,7 @@ export function useThemeStyles({ isGlobal = true, theme = {} }) {
 			 */
 			setThemeStyles((prev) => ({ ...prev, ...nextTheme }));
 		}
-	}, [isGlobal, theme]);
+	}, [injectGlobal, isGlobal, theme]);
 
 	return themeStyles;
 }

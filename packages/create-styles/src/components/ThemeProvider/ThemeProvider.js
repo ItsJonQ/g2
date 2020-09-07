@@ -12,6 +12,7 @@ import {
 /**
  * @typedef ThemeProviderProps
  * @property {any} children Children to render.
+ * @property {function} injectGlobal Globally injects styles on initial render (provided by an Emotion instance).
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
  * @property {boolean} isDark Determines if dark-mode styles should be rendered.
  * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
@@ -40,6 +41,7 @@ import {
  */
 function ThemeProvider({
 	children,
+	injectGlobal,
 	isGlobal = false,
 	isDark,
 	isColorBlind,
@@ -49,7 +51,7 @@ function ThemeProvider({
 	...props
 }) {
 	const nodeRef = useRef();
-	const themeStyles = useThemeStyles({ isGlobal, theme });
+	const themeStyles = useThemeStyles({ injectGlobal, isGlobal, theme });
 
 	useColorBlindMode({ isColorBlind, isGlobal, ref: nodeRef });
 	useDarkMode({ isDark, isGlobal, ref: nodeRef });

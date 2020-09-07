@@ -22,6 +22,7 @@ const systemConfig = {
 };
 
 export const {
+	ThemeProvider,
 	compiler,
 	core,
 	createCoreElement,
