@@ -485,7 +485,7 @@ exports[`props should render Button with css prop 2`] = `
 
 exports[`props should render Card 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-1wro4hw"
+  class="wp-components-surface wp-components-card css-azv6f"
   data-g2-c16t="true"
   data-g2-component="Card"
   id="Card"
@@ -496,12 +496,12 @@ exports[`props should render Card 1`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-1y2c0hu"
+    class="wp-components-elevation css-lhxd4v"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-1a0xmxv"
+    class="wp-components-elevation css-g2k0uu"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -510,7 +510,7 @@ exports[`props should render Card 1`] = `
 
 exports[`props should render Card with css prop 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-1wro4hw"
+  class="wp-components-surface wp-components-card css-azv6f"
   data-g2-c16t="true"
   data-g2-component="Card"
   id="Card"
@@ -521,12 +521,12 @@ exports[`props should render Card with css prop 1`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-1y2c0hu"
+    class="wp-components-elevation css-lhxd4v"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-1a0xmxv"
+    class="wp-components-elevation css-g2k0uu"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -535,7 +535,7 @@ exports[`props should render Card with css prop 1`] = `
 
 exports[`props should render Card with css prop 2`] = `
 <div
-  class="wp-components-surface wp-components-card css-1wuasxu"
+  class="wp-components-surface wp-components-card css-zp86it"
   data-g2-c16t="true"
   data-g2-component="Card"
   id="Card"
@@ -546,12 +546,12 @@ exports[`props should render Card with css prop 2`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-1y2c0hu"
+    class="wp-components-elevation css-lhxd4v"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-1a0xmxv"
+    class="wp-components-elevation css-g2k0uu"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -560,7 +560,7 @@ exports[`props should render Card with css prop 2`] = `
 
 exports[`props should render CardBody 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body css-1n4315a"
+  class="wp-components-scrollable wp-components-card-body css-1368q3i"
   data-g2-c16t="true"
   data-g2-component="CardBody"
   id="CardBody"
@@ -573,7 +573,7 @@ exports[`props should render CardBody 1`] = `
 
 exports[`props should render CardBody with css prop 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body css-1n4315a"
+  class="wp-components-scrollable wp-components-card-body css-1368q3i"
   data-g2-c16t="true"
   data-g2-component="CardBody"
   id="CardBody"
@@ -586,7 +586,7 @@ exports[`props should render CardBody with css prop 1`] = `
 
 exports[`props should render CardBody with css prop 2`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body css-94y2zw"
+  class="wp-components-scrollable wp-components-card-body css-tnoq1c"
   data-g2-c16t="true"
   data-g2-component="CardBody"
   id="CardBody"
@@ -599,7 +599,7 @@ exports[`props should render CardBody with css prop 2`] = `
 
 exports[`props should render CardFooter 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-footer css-1exvn52"
+  class="wp-components-view wp-components-flex wp-components-card-footer css-s1cblh"
   data-g2-c16t="true"
   data-g2-component="CardFooter"
   id="CardFooter"
@@ -608,7 +608,7 @@ exports[`props should render CardFooter 1`] = `
 
 exports[`props should render CardFooter with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-footer css-1exvn52"
+  class="wp-components-view wp-components-flex wp-components-card-footer css-s1cblh"
   data-g2-c16t="true"
   data-g2-component="CardFooter"
   id="CardFooter"
@@ -617,7 +617,7 @@ exports[`props should render CardFooter with css prop 1`] = `
 
 exports[`props should render CardFooter with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-footer css-f9pali"
+  class="wp-components-view wp-components-flex wp-components-card-footer css-1ahbe4"
   data-g2-c16t="true"
   data-g2-component="CardFooter"
   id="CardFooter"
@@ -626,7 +626,7 @@ exports[`props should render CardFooter with css prop 2`] = `
 
 exports[`props should render CardHeader 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-header css-mrd2oy"
+  class="wp-components-view wp-components-flex wp-components-card-header css-tycr7a"
   data-g2-c16t="true"
   data-g2-component="CardHeader"
   id="CardHeader"
@@ -635,7 +635,7 @@ exports[`props should render CardHeader 1`] = `
 
 exports[`props should render CardHeader with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-header css-mrd2oy"
+  class="wp-components-view wp-components-flex wp-components-card-header css-tycr7a"
   data-g2-c16t="true"
   data-g2-component="CardHeader"
   id="CardHeader"
@@ -644,7 +644,7 @@ exports[`props should render CardHeader with css prop 1`] = `
 
 exports[`props should render CardHeader with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-header css-cmcoji"
+  class="wp-components-view wp-components-flex wp-components-card-header css-vll6bw"
   data-g2-c16t="true"
   data-g2-component="CardHeader"
   id="CardHeader"
@@ -1126,7 +1126,7 @@ exports[`props should render DropdownMenu 1`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface wp-components-card css-1p33t61"
+    class="wp-components-surface wp-components-card css-bau4y1"
     data-g2-c16t="true"
     data-g2-component="Card"
   >
@@ -1146,12 +1146,12 @@ exports[`props should render DropdownMenu 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-elevation css-1y2c0hu"
+      class="wp-components-elevation css-lhxd4v"
       data-g2-c16t="true"
       data-g2-component="CardElevation"
     />
     <div
-      class="wp-components-elevation css-olcfa"
+      class="wp-components-elevation css-1v5iwrv"
       data-g2-c16t="true"
       data-g2-component="CardElevation"
     />
@@ -1167,7 +1167,7 @@ exports[`props should render DropdownMenu with css prop 1`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface wp-components-card css-1p33t61"
+    class="wp-components-surface wp-components-card css-bau4y1"
     data-g2-c16t="true"
     data-g2-component="Card"
   >
@@ -1187,12 +1187,12 @@ exports[`props should render DropdownMenu with css prop 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-elevation css-1y2c0hu"
+      class="wp-components-elevation css-lhxd4v"
       data-g2-c16t="true"
       data-g2-component="CardElevation"
     />
     <div
-      class="wp-components-elevation css-olcfa"
+      class="wp-components-elevation css-1v5iwrv"
       data-g2-c16t="true"
       data-g2-component="CardElevation"
     />
@@ -1208,7 +1208,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface wp-components-card css-1p33t61"
+    class="wp-components-surface wp-components-card css-bau4y1"
     data-g2-c16t="true"
     data-g2-component="Card"
   >
@@ -1228,12 +1228,12 @@ exports[`props should render DropdownMenu with css prop 2`] = `
       </div>
     </div>
     <div
-      class="wp-components-elevation css-1y2c0hu"
+      class="wp-components-elevation css-lhxd4v"
       data-g2-c16t="true"
       data-g2-component="CardElevation"
     />
     <div
-      class="wp-components-elevation css-olcfa"
+      class="wp-components-elevation css-1v5iwrv"
       data-g2-c16t="true"
       data-g2-component="CardElevation"
     />
@@ -1891,7 +1891,7 @@ exports[`props should render Modal 1`] = `null`;
 
 exports[`props should render ModalBody 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1n4315a"
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1368q3i"
   data-g2-c16t="true"
   data-g2-component="ModalBody"
   id="ModalBody"
@@ -1904,7 +1904,7 @@ exports[`props should render ModalBody 1`] = `
 
 exports[`props should render ModalBody with css prop 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1n4315a"
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1368q3i"
   data-g2-c16t="true"
   data-g2-component="ModalBody"
   id="ModalBody"
@@ -1917,7 +1917,7 @@ exports[`props should render ModalBody with css prop 1`] = `
 
 exports[`props should render ModalBody with css prop 2`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-94y2zw"
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-tnoq1c"
   data-g2-c16t="true"
   data-g2-component="ModalBody"
   id="ModalBody"
@@ -1930,7 +1930,7 @@ exports[`props should render ModalBody with css prop 2`] = `
 
 exports[`props should render ModalFooter 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-1op6tiy"
+  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-9d2rl5"
   data-g2-c16t="true"
   data-g2-component="ModalFooter"
   id="ModalFooter"
@@ -1939,7 +1939,7 @@ exports[`props should render ModalFooter 1`] = `
 
 exports[`props should render ModalFooter with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-1op6tiy"
+  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-9d2rl5"
   data-g2-c16t="true"
   data-g2-component="ModalFooter"
   id="ModalFooter"
@@ -1948,7 +1948,7 @@ exports[`props should render ModalFooter with css prop 1`] = `
 
 exports[`props should render ModalFooter with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-1v0pg8n"
+  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-1u96hyh"
   data-g2-c16t="true"
   data-g2-component="ModalFooter"
   id="ModalFooter"
@@ -1957,7 +1957,7 @@ exports[`props should render ModalFooter with css prop 2`] = `
 
 exports[`props should render ModalHeader 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1qx4aw0"
+  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1yrbald"
   data-g2-c16t="true"
   data-g2-component="ModalHeader"
   id="ModalHeader"
@@ -2012,7 +2012,7 @@ exports[`props should render ModalHeader 1`] = `
 
 exports[`props should render ModalHeader with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1qx4aw0"
+  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1yrbald"
   data-g2-c16t="true"
   data-g2-component="ModalHeader"
   id="ModalHeader"
@@ -2067,7 +2067,7 @@ exports[`props should render ModalHeader with css prop 1`] = `
 
 exports[`props should render ModalHeader with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1h9l55u"
+  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-5vfjmn"
   data-g2-c16t="true"
   data-g2-component="ModalHeader"
   id="ModalHeader"
