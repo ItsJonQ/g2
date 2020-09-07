@@ -7,7 +7,7 @@ exports[`props should render children 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-b4041i"
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -72,7 +72,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-b4041i"
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -139,7 +139,7 @@ exports[`props should render disabled 1`] = `
   disabled=""
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-b4041i"
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -206,7 +206,7 @@ exports[`props should render readOnly 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-b4041i"
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -273,7 +273,7 @@ exports[`props should render required 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-b4041i"
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -340,7 +340,7 @@ exports[`props should render size 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-b4041i"
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >

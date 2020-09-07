@@ -206,7 +206,7 @@ exports[`props should render prefix 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-mtk3dw"
+    class="wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -259,7 +259,7 @@ exports[`props should render suffix 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ucos74"
+    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >

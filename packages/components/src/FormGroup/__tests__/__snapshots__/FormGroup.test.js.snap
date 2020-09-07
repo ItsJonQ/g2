@@ -7,7 +7,7 @@ exports[`props should render alignLabel 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-170dnum"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -55,7 +55,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-170dnum"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -103,7 +103,7 @@ exports[`props should render isMarginless 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-170dnum"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -151,7 +151,7 @@ exports[`props should render label without prop correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-170dnum"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >

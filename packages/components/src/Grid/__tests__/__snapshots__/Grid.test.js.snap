@@ -2,7 +2,7 @@
 
 exports[`props should render align 1`] = `
 <div
-  class="wp-components-grid css-1sz0vlw"
+  class="wp-components-grid css-7cmdl8"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -26,7 +26,7 @@ exports[`props should render align 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-grid css-jj7eeb"
+  class="wp-components-grid css-pegie0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -45,7 +45,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render custom columns 1`] = `
 <div
-  class="wp-components-grid css-1dbbftp"
+  class="wp-components-grid css-uxh12g"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -69,7 +69,7 @@ exports[`props should render custom columns 1`] = `
 
 exports[`props should render custom rows 1`] = `
 <div
-  class="wp-components-grid css-ail65s"
+  class="wp-components-grid css-1jyhcgk"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -93,7 +93,7 @@ exports[`props should render custom rows 1`] = `
 
 exports[`props should render custom templateColumns 1`] = `
 <div
-  class="wp-components-grid css-qk6req"
+  class="wp-components-grid css-12id820"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -117,7 +117,7 @@ exports[`props should render custom templateColumns 1`] = `
 
 exports[`props should render custom templateRows 1`] = `
 <div
-  class="wp-components-grid css-1900w81"
+  class="wp-components-grid css-6bbedq"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -141,7 +141,7 @@ exports[`props should render custom templateRows 1`] = `
 
 exports[`props should render gap 1`] = `
 <div
-  class="wp-components-grid css-yn4p4z"
+  class="wp-components-grid css-gxz9wf"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -165,7 +165,7 @@ exports[`props should render gap 1`] = `
 
 exports[`props should render isInline 1`] = `
 <div
-  class="wp-components-grid css-1w2ybdf"
+  class="wp-components-grid css-18gwxf5"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
@@ -189,7 +189,7 @@ exports[`props should render isInline 1`] = `
 
 exports[`props should render justify 1`] = `
 <div
-  class="wp-components-grid css-b3bdpe"
+  class="wp-components-grid css-a7liz6"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
