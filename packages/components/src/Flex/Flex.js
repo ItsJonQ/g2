@@ -19,7 +19,6 @@ export function Flex({
 	wrap = false,
 	...props
 }) {
-	const gapValue = gap * 4;
 	const direction = useResponsiveValue(directionProp);
 
 	const isColumn = !!direction?.includes('column');
@@ -32,7 +31,7 @@ export function Flex({
 		const _key = child.key || index;
 		const contextProps = {
 			display: isColumn ? 'block' : undefined,
-			gap: gapValue,
+			gap,
 			isColumn,
 			isFirst,
 			isLast,
