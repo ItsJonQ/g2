@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render context props 1`] = `
+<div
+  data-system-theme-provider="true"
+>
+  <div
+    class="wp-components-olaf css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  >
+    Warm Hugs
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  data-system-theme-provider="true"
+>
+  <div
+    class="wp-components-olaf css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  />
+</div>
+`;
+
+exports[`props should render css props + provided css 1`] = `
+<div
+  data-system-theme-provider="true"
+>
+  <div
+    class="wp-components-olaf olaf css-1r6lrag"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  />
+</div>
+`;
+
+exports[`props should render css props 1`] = `
+<div
+  data-system-theme-provider="true"
+>
+  <div
+    class="wp-components-olaf olaf css-1dqvrac"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  />
+</div>
+`;
