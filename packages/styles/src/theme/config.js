@@ -91,9 +91,14 @@ const CONTROL_PROPS = {
 	controlTextActiveColor: get('colorAdmin'),
 };
 
+const CARD_PROPS = {
+	cardBorderRadius: '8px',
+};
+
 const BASE_THEME = {
 	...G2_COLORS,
 	...COLOR_PROPS,
+	...CARD_PROPS,
 	...CONTROL_PROPS,
 	...FONT_PROPS,
 	...SURFACE_PROPS,
