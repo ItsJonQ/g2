@@ -96,7 +96,7 @@ exports[`props should render correctly 1`] = `
       title="Olaf"
     />
     <div
-      class="wp-components-scrollable wp-components-card-body css-1368q3i"
+      class="wp-components-scrollable wp-components-card-body css-3pyc4i"
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >

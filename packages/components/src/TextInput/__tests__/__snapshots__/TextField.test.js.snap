@@ -190,7 +190,7 @@ exports[`props should render multiline 1`] = `
     data-g2-component="TextInputContent"
   >
     <textarea
-      class="css-4ivugn"
+      class="css-17xbbzb"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="text-input"

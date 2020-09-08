@@ -37,7 +37,7 @@ exports[`props should render correctly 1`] = `
     />
   </button>
   <div
-    class="css-12j8ok7 wp-components-collapsible-content"
+    class="wp-components-collapsible-content css-12j8ok7"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     hidden=""
@@ -93,7 +93,7 @@ exports[`props should render visible 1`] = `
     />
   </button>
   <div
-    class="css-12j8ok7 wp-components-collapsible-content"
+    class="wp-components-collapsible-content css-12j8ok7"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     id="collapsible"
