@@ -96,4 +96,32 @@ describe('props', () => {
 		expect(el).toHaveStyle(`background: white`);
 		expect(el).toHaveStyle(`font-weight: bold`);
 	});
+
+	test('should render _override props', () => {
+		const Olaf = ({ quote, ...props }) => <View {...props}>{quote}</View>;
+		const ConnectedOlaf = connect(Olaf, 'Olaf');
+
+		const contextValue = {
+			Olaf: {
+				_overrides: {
+					quote: 'Warm Hugs!',
+				},
+			},
+		};
+
+		const { container } = render(
+			<>
+				<ComponentsProvider value={contextValue}>
+					<ConnectedOlaf className="olaf" quote="Hello" />
+				</ComponentsProvider>
+			</>,
+		);
+
+		expect(container.firstChild).toMatchSnapshot();
+
+		const el = container.querySelector('.olaf');
+
+		expect(el.innerHTML).toContain('Warm Hugs!');
+		expect(el.innerHTML).not.toContain('Hello');
+	});
 });
