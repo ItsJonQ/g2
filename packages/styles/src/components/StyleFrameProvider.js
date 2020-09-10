@@ -52,10 +52,49 @@ function useEmotionInitialTagSync({ ref }) {
 		const head = ownerDocument.querySelector('head');
 
 		try {
-			if (cache.sheet.tags) {
-				cache.sheet.tags.forEach((tag) => {
-					head.appendChild(tag.cloneNode(true));
-				});
+			/**
+			 * Account for compiler (Emotion) isSpeedy rendering, which occurs
+			 * for production builds.
+			 */
+			if (cache.sheet.isSpeedy) {
+				let speedyTag = cache.sheet.tags[0];
+				/**
+				 * Locate the styleSheet instance within document.styleSheet
+				 * based on the speed (style) tag match.
+				 */
+				const speedySheet = Object.values(document.styleSheets).find(
+					(sheet) => sheet.ownerNode === speedyTag,
+				);
+				if (speedySheet) {
+					/**
+					 * The compiler's speedy mode inserts the cssRule directly
+					 * into the styleSheet instance, rather than as a textNode in
+					 * a style tag. We can retrieve this via the styleSheet instance
+					 * cssRule.
+					 */
+					const initialStyles = Object.values(speedySheet.cssRules)
+						.map((cssRule) => cssRule.cssText)
+						.join('\n');
+
+					/**
+					 * Clone the speed style tag, and append it into the target (frame)
+					 * document head.
+					 */
+					speedyTag = speedyTag.cloneNode(true);
+					speedyTag.innerHTML = initialStyles;
+
+					head.appendChild(speedyTag);
+				}
+			} else {
+				/**
+				 * Otherwise, loop through all of the cache sheet tags, and clone
+				 * them into the targeted (frame) document head.
+				 */
+				if (cache.sheet.tags) {
+					cache.sheet.tags.forEach((tag) => {
+						head.appendChild(tag.cloneNode(true));
+					});
+				}
 			}
 		} catch (e) {
 			if (!isProdEnv) {
