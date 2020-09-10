@@ -59,7 +59,11 @@ export function connect(Component, namespace, options = {}) {
 				{};
 		}
 
-		const { css: contextCSS, ...otherContextProps } = contextProps;
+		const {
+			_overrides: overrideProps = {},
+			css: contextCSS,
+			...otherContextProps
+		} = contextProps;
 
 		const initialMergedProps = is.plainObject(contextProps)
 			? { ...otherContextProps, ...props }
@@ -84,6 +88,7 @@ export function connect(Component, namespace, options = {}) {
 				{...cns()}
 				{...ns(displayName)}
 				{...mergedProps}
+				{...overrideProps}
 				className={classes}
 				forwardedRef={forwardedRef}
 			>
