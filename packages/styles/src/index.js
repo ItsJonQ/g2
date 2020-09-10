@@ -1,4 +1,5 @@
 export * from './core';
+export { compiler } from './system';
 export { cache, css, cx } from './style-system';
 
 export * from './components';

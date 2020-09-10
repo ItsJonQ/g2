@@ -109,7 +109,7 @@ export function createStyleSystem(options = defaultOptions) {
 		<BaseThemeProvider {...props} injectGlobal={compiler.injectGlobal} />
 	);
 
-	return {
+	const styleSystem = {
 		compiler,
 		core,
 		createCoreElement: _createCoreElement,
@@ -120,6 +120,8 @@ export function createStyleSystem(options = defaultOptions) {
 		View,
 		ThemeProvider,
 	};
+
+	return styleSystem;
 }
 
 export default createStyleSystem;
