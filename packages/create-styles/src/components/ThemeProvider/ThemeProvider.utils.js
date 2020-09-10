@@ -147,7 +147,6 @@ export function useReducedMotionMode({
  */
 export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	const [themeStyles, setThemeStyles] = useState({});
-	const didInjectGlobalStyles = useRef(false);
 
 	/**
 	 * Used to track/compare changes for theme prop changes.
@@ -158,20 +157,22 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	 * Work-around to inject a global theme style. This makes it compatible with
 	 * SSR solutions, as injectGlobal is understood by Emotion's SSR flow.
 	 */
-	if (!didInjectGlobalStyles.current && isGlobal && theme) {
-		if (is.function(injectGlobal)) {
-			try {
-				const globalStyles = transformValuesToVariablesString(
-					':root',
-					theme,
-				);
-				injectGlobal`${globalStyles}`;
-			} catch (err) {
-				// eslint-disable-next-line
-			}
-		}
-		didInjectGlobalStyles.current = true;
-	}
+	// const didInjectGlobalStyles = useRef(false);
+
+	// if (!didInjectGlobalStyles.current && isGlobal && theme) {
+	// 	if (is.function(injectGlobal)) {
+	// 		try {
+	// 			const globalStyles = transformValuesToVariablesString(
+	// 				':root',
+	// 				theme,
+	// 			);
+	// 			injectGlobal`${globalStyles}`;
+	// 		} catch (err) {
+	// 			// eslint-disable-next-line
+	// 		}
+	// 	}
+	// 	didInjectGlobalStyles.current = true;
+	// }
 
 	useEffect(() => {
 		/**
