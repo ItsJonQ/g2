@@ -195,11 +195,9 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 			 * If isGlobal is preferred, we need to set the custom CSS variables onto
 			 * the root element.
 			 */
-			requestAnimationFrame(() => {
-				for (const [k, v] of Object.entries(nextTheme)) {
-					rootNode && rootNode.style.setProperty(k, v);
-				}
-			});
+			for (const [k, v] of Object.entries(nextTheme)) {
+				rootNode && rootNode.style.setProperty(k, v);
+			}
 		} else {
 			/**
 			 * Otherwise, we can set it to the themeStyles state, which will be
