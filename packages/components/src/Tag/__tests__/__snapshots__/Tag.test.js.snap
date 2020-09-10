@@ -2,12 +2,12 @@
 
 exports[`props should render color 1`] = `
 <span
-  class="wp-components-tag css-1c24az3"
+  class="wp-components-tag css-3pykur"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1smtimq"
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -18,12 +18,12 @@ exports[`props should render color 1`] = `
 
 exports[`props should render correctly 1`] = `
 <span
-  class="wp-components-tag css-p3p88m"
+  class="wp-components-tag css-16ertor"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1smtimq"
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -34,12 +34,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render display 1`] = `
 <span
-  class="wp-components-tag css-mubtdf"
+  class="wp-components-tag css-1doipaj"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1smtimq"
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -50,13 +50,13 @@ exports[`props should render display 1`] = `
 
 exports[`props should render href 1`] = `
 <a
-  class="wp-components-tag css-p3p88m"
+  class="wp-components-tag css-16ertor"
   data-g2-c16t="true"
   data-g2-component="Tag"
   href="#"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1smtimq"
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -67,12 +67,12 @@ exports[`props should render href 1`] = `
 
 exports[`props should render onRemove 1`] = `
 <span
-  class="wp-components-tag css-p3p88m"
+  class="wp-components-tag css-16ertor"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1smtimq"
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -83,25 +83,25 @@ exports[`props should render onRemove 1`] = `
 
 exports[`props should render removeButtonText 1`] = `
 <span
-  class="wp-components-tag css-p3p88m"
+  class="wp-components-tag css-16ertor"
   data-g2-c16t="true"
   data-g2-component="Tag"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1smtimq"
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
     Status
   </span>
   <div
-    class="css-1h6q7sj"
+    class="css-opvnaq"
     data-g2-component="TagRemoveButtonWrapper"
   >
     <button
       aria-busy="false"
       aria-label="Remove"
-      class="css-1czjvki"
+      class="wp-components-button wp-components-close-button css-1czjvki"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="TagRemoveButton"
@@ -110,17 +110,17 @@ exports[`props should render removeButtonText 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-1gjqylm"
+        class="wp-components-view wp-components-flex css-2r7rsp"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex-item css-kq9hj8"
+          class="wp-components-flex-item css-bzokzn"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-icon css-19gn8qe"
+            class="wp-components-icon css-1d07aa5"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -153,7 +153,7 @@ exports[`props should render removeButtonText 1`] = `
         </span>
       </span>
       <span
-        class="wp-components-elevation css-1l26w1c"
+        class="wp-components-elevation css-h443as"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />

@@ -1,7 +1,10 @@
 import { deepEqual, is } from '@wp-g2/utils';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { transformValuesToVariables } from '../../createStyleSystem/utils';
+import {
+	transformValuesToVariables,
+	transformValuesToVariablesString,
+} from '../../createStyleSystem/utils';
 import { useReducedMotion } from '../../hooks';
 
 /**
@@ -16,7 +19,7 @@ import { useReducedMotion } from '../../hooks';
  * @param {UseColorBlindModeProps} props Props for the hook.
  */
 export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isColorBlind)) return;
 
 		let target = document.documentElement;
@@ -45,7 +48,7 @@ export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
  * @param {UseDarkModeProps} props Props for the hook.
  */
 export function useDarkMode({ isDark, isGlobal = true, ref }) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isDark)) return;
 
 		let target = document.documentElement;
@@ -74,7 +77,7 @@ export function useDarkMode({ isDark, isGlobal = true, ref }) {
  * @param {UseHighContrastMode} props Props for the hook.
  */
 export function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isHighContrast)) return;
 
 		let target = document.documentElement;
@@ -109,13 +112,13 @@ export function useReducedMotionMode({
 }) {
 	const [, setIsReducedMotion] = useReducedMotion(isReducedMotion);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (isGlobal) {
 			setIsReducedMotion(!!isReducedMotion);
 		}
 	}, [isGlobal, isReducedMotion, setIsReducedMotion]);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!is.defined(isReducedMotion)) return;
 
 		let target = document.documentElement;
@@ -142,14 +145,36 @@ export function useReducedMotionMode({
  * Hook that sets the Style system's theme.
  * @param {UseThemeStyles} props Props for the hook.
  */
-export function useThemeStyles({ isGlobal = true, theme = {} }) {
+export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	const [themeStyles, setThemeStyles] = useState({});
+
 	/**
 	 * Used to track/compare changes for theme prop changes.
 	 */
 	const themeRef = useRef();
 
-	useLayoutEffect(() => {
+	/**
+	 * Work-around to inject a global theme style. This makes it compatible with
+	 * SSR solutions, as injectGlobal is understood by Emotion's SSR flow.
+	 */
+	// const didInjectGlobalStyles = useRef(false);
+
+	// if (!didInjectGlobalStyles.current && isGlobal && theme) {
+	// 	if (is.function(injectGlobal)) {
+	// 		try {
+	// 			const globalStyles = transformValuesToVariablesString(
+	// 				':root',
+	// 				theme,
+	// 			);
+	// 			injectGlobal`${globalStyles}`;
+	// 		} catch (err) {
+	// 			// eslint-disable-next-line
+	// 		}
+	// 	}
+	// 	didInjectGlobalStyles.current = true;
+	// }
+
+	useEffect(() => {
 		/**
 		 * We only want to update + set the theme if there's a change.
 		 * Since themes (potentially) be nested, we need to do a deepEqual check.
@@ -182,7 +207,7 @@ export function useThemeStyles({ isGlobal = true, theme = {} }) {
 			 */
 			setThemeStyles((prev) => ({ ...prev, ...nextTheme }));
 		}
-	}, [isGlobal, theme]);
+	}, [injectGlobal, isGlobal, theme]);
 
 	return themeStyles;
 }

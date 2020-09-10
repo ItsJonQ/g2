@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-base-field css-1tbl6il"
+  class="wp-components-base-field css-q2ii1y"
   data-g2-c16t="true"
   data-g2-component="BaseField"
 />

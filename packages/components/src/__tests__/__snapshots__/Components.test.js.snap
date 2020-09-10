@@ -1,0 +1,3824 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render Alert 1`] = `
+<div
+  class="wp-components-animated css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-17vh6wg"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+    id="Alert"
+  >
+    <div
+      class="wp-components-view wp-components-flex css-upp0h5"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-16celyg"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="wp-components-view css-j1yu9m"
+          data-g2-c16t="true"
+          data-g2-component="AlertContent"
+        />
+      </div>
+      <div
+        class="wp-components-flex-item css-1suoifq"
+        data-g2-c16t="true"
+        data-g2-component="FlexItem"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render Alert with css prop 1`] = `
+<div
+  class="wp-components-alert css-17vh6wg"
+  data-g2-c16t="true"
+  data-g2-component="Alert"
+  id="Alert"
+>
+  <div
+    class="wp-components-view wp-components-flex css-upp0h5"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <div
+      class="wp-components-flex-item wp-components-flex-block css-16celyg"
+      data-g2-c16t="true"
+      data-g2-component="FlexBlock"
+    >
+      <div
+        class="wp-components-view css-j1yu9m"
+        data-g2-c16t="true"
+        data-g2-component="AlertContent"
+      />
+    </div>
+    <div
+      class="wp-components-flex-item css-1suoifq"
+      data-g2-c16t="true"
+      data-g2-component="FlexItem"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render Alert with css prop 2`] = `
+<div
+  class="wp-components-alert css-pozs7z"
+  data-g2-c16t="true"
+  data-g2-component="Alert"
+  id="Alert"
+>
+  <div
+    class="wp-components-view wp-components-flex css-upp0h5"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <div
+      class="wp-components-flex-item wp-components-flex-block css-16celyg"
+      data-g2-c16t="true"
+      data-g2-component="FlexBlock"
+    >
+      <div
+        class="wp-components-view css-j1yu9m"
+        data-g2-c16t="true"
+        data-g2-component="AlertContent"
+      />
+    </div>
+    <div
+      class="wp-components-flex-item css-1suoifq"
+      data-g2-c16t="true"
+      data-g2-component="FlexItem"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render Animated 1`] = `
+<div
+  class="wp-components-animated css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  id="Animated"
+/>
+`;
+
+exports[`props should render Animated with css prop 1`] = `
+<div
+  class="wp-components-animated css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  id="Animated"
+/>
+`;
+
+exports[`props should render Animated with css prop 2`] = `
+<div
+  class="wp-components-animated css-rnwhtm"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  id="Animated"
+/>
+`;
+
+exports[`props should render ArrowIndicator 1`] = `
+<div
+  class="wp-components-arrow-indicator css-tfxa88"
+  data-g2-c16t="true"
+  data-g2-component="ArrowIndicator"
+  id="ArrowIndicator"
+>
+  <div
+    class="wp-components-view css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  >
+    <div
+      class="wp-components-icon css-feyyos"
+      data-g2-c16t="true"
+      data-g2-component="Icon"
+    >
+      <svg
+        fill="currentColor"
+        height="5"
+        size="5"
+        viewBox="0 0 24 24"
+        width="5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 12l-18 12v-24z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ArrowIndicator with css prop 1`] = `
+<div
+  class="wp-components-arrow-indicator css-tfxa88"
+  data-g2-c16t="true"
+  data-g2-component="ArrowIndicator"
+  id="ArrowIndicator"
+>
+  <div
+    class="wp-components-view css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  >
+    <div
+      class="wp-components-icon css-feyyos"
+      data-g2-c16t="true"
+      data-g2-component="Icon"
+    >
+      <svg
+        fill="currentColor"
+        height="5"
+        size="5"
+        viewBox="0 0 24 24"
+        width="5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 12l-18 12v-24z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ArrowIndicator with css prop 2`] = `
+<div
+  class="wp-components-arrow-indicator css-14tugfq"
+  data-g2-c16t="true"
+  data-g2-component="ArrowIndicator"
+  id="ArrowIndicator"
+>
+  <div
+    class="wp-components-view css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="View"
+  >
+    <div
+      class="wp-components-icon css-feyyos"
+      data-g2-c16t="true"
+      data-g2-component="Icon"
+    >
+      <svg
+        fill="currentColor"
+        height="5"
+        size="5"
+        viewBox="0 0 24 24"
+        width="5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 12l-18 12v-24z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render AspectRatio 1`] = `
+<div
+  class="wp-components-aspect-ratio css-fvkpkj"
+  data-g2-c16t="true"
+  data-g2-component="AspectRatio"
+  id="AspectRatio"
+>
+  <div
+    aria-hidden="true"
+    class="css-v1plal"
+  />
+</div>
+`;
+
+exports[`props should render AspectRatio with css prop 1`] = `
+<div
+  class="wp-components-aspect-ratio css-fvkpkj"
+  data-g2-c16t="true"
+  data-g2-component="AspectRatio"
+  id="AspectRatio"
+>
+  <div
+    aria-hidden="true"
+    class="css-v1plal"
+  />
+</div>
+`;
+
+exports[`props should render AspectRatio with css prop 2`] = `
+<div
+  class="wp-components-aspect-ratio css-19enkyf"
+  data-g2-c16t="true"
+  data-g2-component="AspectRatio"
+  id="AspectRatio"
+>
+  <div
+    aria-hidden="true"
+    class="css-v1plal"
+  />
+</div>
+`;
+
+exports[`props should render Avatar 1`] = `
+<div
+  class="wp-components-avatar css-1523pzc"
+  data-g2-c16t="true"
+  data-g2-component="Avatar"
+  id="Avatar"
+/>
+`;
+
+exports[`props should render Avatar with css prop 1`] = `
+<div
+  class="wp-components-avatar css-1523pzc"
+  data-g2-c16t="true"
+  data-g2-component="Avatar"
+  id="Avatar"
+/>
+`;
+
+exports[`props should render Avatar with css prop 2`] = `
+<div
+  class="wp-components-avatar css-1e4x2w4"
+  data-g2-c16t="true"
+  data-g2-component="Avatar"
+  id="Avatar"
+/>
+`;
+
+exports[`props should render Background 1`] = `
+<div
+  class="wp-components-surface wp-components-background css-1heuhr3"
+  data-g2-c16t="true"
+  data-g2-component="Background"
+  id="Background"
+/>
+`;
+
+exports[`props should render Background with css prop 1`] = `
+<div
+  class="wp-components-surface wp-components-background css-1heuhr3"
+  data-g2-c16t="true"
+  data-g2-component="Background"
+  id="Background"
+/>
+`;
+
+exports[`props should render Background with css prop 2`] = `
+<div
+  class="wp-components-surface wp-components-background css-1n1cs3a"
+  data-g2-c16t="true"
+  data-g2-component="Background"
+  id="Background"
+/>
+`;
+
+exports[`props should render Badge 1`] = `
+<div
+  class="wp-components-badge css-1qf2rki"
+  data-g2-c16t="true"
+  data-g2-component="Badge"
+  id="Badge"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-qnyxla"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  />
+</div>
+`;
+
+exports[`props should render Badge with css prop 1`] = `
+<div
+  class="wp-components-badge css-1qf2rki"
+  data-g2-c16t="true"
+  data-g2-component="Badge"
+  id="Badge"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-qnyxla"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  />
+</div>
+`;
+
+exports[`props should render Badge with css prop 2`] = `
+<div
+  class="wp-components-badge css-zmg8g5"
+  data-g2-c16t="true"
+  data-g2-component="Badge"
+  id="Badge"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-qnyxla"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  />
+</div>
+`;
+
+exports[`props should render BaseField 1`] = `
+<div
+  class="wp-components-base-field css-q2ii1y"
+  data-g2-c16t="true"
+  data-g2-component="BaseField"
+  id="BaseField"
+/>
+`;
+
+exports[`props should render BaseField with css prop 1`] = `
+<div
+  class="wp-components-base-field css-q2ii1y"
+  data-g2-c16t="true"
+  data-g2-component="BaseField"
+  id="BaseField"
+/>
+`;
+
+exports[`props should render BaseField with css prop 2`] = `
+<div
+  class="wp-components-base-field css-1msv9hm"
+  data-g2-c16t="true"
+  data-g2-component="BaseField"
+  id="BaseField"
+/>
+`;
+
+exports[`props should render BaseModal 1`] = `null`;
+
+exports[`props should render BaseView 1`] = `
+<div
+  class="wp-components-view css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  id="BaseView"
+/>
+`;
+
+exports[`props should render Button 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button css-15tf5go"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="Button"
+  data-icon="false"
+  id="Button"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  />
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render Button with css prop 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button css-15tf5go"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="Button"
+  data-icon="false"
+  id="Button"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  />
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render Button with css prop 2`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button css-fcaezh"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="Button"
+  data-icon="false"
+  id="Button"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  />
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render Card 1`] = `
+<div
+  class="wp-components-surface wp-components-card css-azv6f"
+  data-g2-c16t="true"
+  data-g2-component="Card"
+  id="Card"
+>
+  <div
+    class="wp-components-view css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="CardContent"
+  />
+  <div
+    class="wp-components-elevation css-lhxd4v"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-g2k0uu"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render Card with css prop 1`] = `
+<div
+  class="wp-components-surface wp-components-card css-azv6f"
+  data-g2-c16t="true"
+  data-g2-component="Card"
+  id="Card"
+>
+  <div
+    class="wp-components-view css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="CardContent"
+  />
+  <div
+    class="wp-components-elevation css-lhxd4v"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-g2k0uu"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render Card with css prop 2`] = `
+<div
+  class="wp-components-surface wp-components-card css-zp86it"
+  data-g2-c16t="true"
+  data-g2-component="Card"
+  id="Card"
+>
+  <div
+    class="wp-components-view css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="CardContent"
+  />
+  <div
+    class="wp-components-elevation css-lhxd4v"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-g2k0uu"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render CardBody 1`] = `
+<div
+  class="wp-components-scrollable wp-components-card-body css-3pyc4i"
+  data-g2-c16t="true"
+  data-g2-component="CardBody"
+  id="CardBody"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render CardBody with css prop 1`] = `
+<div
+  class="wp-components-scrollable wp-components-card-body css-3pyc4i"
+  data-g2-c16t="true"
+  data-g2-component="CardBody"
+  id="CardBody"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render CardBody with css prop 2`] = `
+<div
+  class="wp-components-scrollable wp-components-card-body css-1xpiyt6"
+  data-g2-c16t="true"
+  data-g2-component="CardBody"
+  id="CardBody"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render CardFooter 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-footer css-s1cblh"
+  data-g2-c16t="true"
+  data-g2-component="CardFooter"
+  id="CardFooter"
+/>
+`;
+
+exports[`props should render CardFooter with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-footer css-s1cblh"
+  data-g2-c16t="true"
+  data-g2-component="CardFooter"
+  id="CardFooter"
+/>
+`;
+
+exports[`props should render CardFooter with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-footer css-1ahbe4"
+  data-g2-c16t="true"
+  data-g2-component="CardFooter"
+  id="CardFooter"
+/>
+`;
+
+exports[`props should render CardHeader 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-header css-tycr7a"
+  data-g2-c16t="true"
+  data-g2-component="CardHeader"
+  id="CardHeader"
+/>
+`;
+
+exports[`props should render CardHeader with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-header css-tycr7a"
+  data-g2-c16t="true"
+  data-g2-component="CardHeader"
+  id="CardHeader"
+/>
+`;
+
+exports[`props should render CardHeader with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-header css-vll6bw"
+  data-g2-c16t="true"
+  data-g2-component="CardHeader"
+  id="CardHeader"
+/>
+`;
+
+exports[`props should render CardInnerBody 1`] = `
+<div
+  class="wp-components-card-inner-body css-1jwn1my"
+  data-g2-c16t="true"
+  data-g2-component="CardInnerBody"
+  id="CardInnerBody"
+/>
+`;
+
+exports[`props should render CardInnerBody with css prop 1`] = `
+<div
+  class="wp-components-card-inner-body css-1jwn1my"
+  data-g2-c16t="true"
+  data-g2-component="CardInnerBody"
+  id="CardInnerBody"
+/>
+`;
+
+exports[`props should render CardInnerBody with css prop 2`] = `
+<div
+  class="wp-components-card-inner-body css-1nruc85"
+  data-g2-c16t="true"
+  data-g2-component="CardInnerBody"
+  id="CardInnerBody"
+/>
+`;
+
+exports[`props should render Checkbox 1`] = `
+<div
+  class="css-tfu3ak"
+  data-g2-component="CheckboxWrapper"
+>
+  <input
+    aria-checked="false"
+    class="wp-components-checkbox-element wp-components-checkbox css-1kgghmk"
+    data-g2-c16t="true"
+    data-g2-component="Checkbox"
+    id="Checkbox"
+    type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-45lur0"
+    data-g2-component="CheckboxIcon"
+  >
+    <div
+      class="wp-components-icon css-1d07aa5"
+      data-g2-c16t="true"
+      data-g2-component="Icon"
+    >
+      <svg
+        fill="none"
+        height="12"
+        size="12"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="20 6 9 17 4 12"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render Checkbox with css prop 1`] = `
+<input
+  aria-checked="false"
+  class="wp-components-checkbox-element wp-components-checkbox css-1kgghmk"
+  data-g2-c16t="true"
+  data-g2-component="Checkbox"
+  id="Checkbox"
+  type="checkbox"
+/>
+`;
+
+exports[`props should render Checkbox with css prop 2`] = `
+<input
+  aria-checked="false"
+  class="wp-components-checkbox-element wp-components-checkbox css-1kiuc3l"
+  data-g2-c16t="true"
+  data-g2-component="Checkbox"
+  id="Checkbox"
+  type="checkbox"
+/>
+`;
+
+exports[`props should render CheckboxGroup 1`] = `null`;
+
+exports[`props should render CloseButton 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-close-button css-1ntoxxs"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="CloseButton"
+  data-icon="true"
+  id="CloseButton"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-bzokzn"
+      data-g2-c16t="true"
+      data-g2-component="ButtonIcon"
+    >
+      <div
+        class="wp-components-icon css-1d07aa5"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="12"
+          size="12"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </div>
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render CloseButton with css prop 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-close-button css-1ntoxxs"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="CloseButton"
+  data-icon="true"
+  id="CloseButton"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-bzokzn"
+      data-g2-c16t="true"
+      data-g2-component="ButtonIcon"
+    >
+      <div
+        class="wp-components-icon css-1d07aa5"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="12"
+          size="12"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </div>
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render CloseButton with css prop 2`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-close-button css-vup7rm"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="CloseButton"
+  data-icon="true"
+  id="CloseButton"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-bzokzn"
+      data-g2-c16t="true"
+      data-g2-component="ButtonIcon"
+    >
+      <div
+        class="wp-components-icon css-1d07aa5"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="12"
+          size="12"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </div>
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ComponentInspector 1`] = `
+<div
+  class="wp-components-component-inspector css-wwgudg"
+  data-g2-c16t="true"
+  data-g2-component="ComponentInspector"
+  id="ComponentInspector"
+/>
+`;
+
+exports[`props should render ComponentInspector with css prop 1`] = `
+<div
+  class="wp-components-component-inspector css-wwgudg"
+  data-g2-c16t="true"
+  data-g2-component="ComponentInspector"
+  id="ComponentInspector"
+/>
+`;
+
+exports[`props should render ComponentInspector with css prop 2`] = `
+<div
+  class="wp-components-component-inspector css-rpdpkm"
+  data-g2-c16t="true"
+  data-g2-component="ComponentInspector"
+  id="ComponentInspector"
+/>
+`;
+
+exports[`props should render Container 1`] = `
+<div
+  class="wp-components-view wp-components-container css-m7w4n6"
+  data-g2-c16t="true"
+  data-g2-component="Container"
+  id="Container"
+/>
+`;
+
+exports[`props should render Container with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-container css-m7w4n6"
+  data-g2-c16t="true"
+  data-g2-component="Container"
+  id="Container"
+/>
+`;
+
+exports[`props should render Container with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-container css-dvmcp4"
+  data-g2-c16t="true"
+  data-g2-component="Container"
+  id="Container"
+/>
+`;
+
+exports[`props should render ControlGroup 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-control-group css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="ControlGroup"
+  id="ControlGroup"
+/>
+`;
+
+exports[`props should render ControlGroup with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-control-group css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="ControlGroup"
+  id="ControlGroup"
+/>
+`;
+
+exports[`props should render ControlGroup with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-control-group css-9mkxbw"
+  data-g2-c16t="true"
+  data-g2-component="ControlGroup"
+  id="ControlGroup"
+/>
+`;
+
+exports[`props should render ControlGroupItem 1`] = `
+<div
+  class="wp-components-flex-item wp-components-control-group-item css-1cmhu4"
+  data-g2-c16t="true"
+  data-g2-component="ControlGroupItem"
+  id="ControlGroupItem"
+/>
+`;
+
+exports[`props should render ControlGroupItem with css prop 1`] = `
+<div
+  class="wp-components-flex-item wp-components-control-group-item css-1cmhu4"
+  data-g2-c16t="true"
+  data-g2-component="ControlGroupItem"
+  id="ControlGroupItem"
+/>
+`;
+
+exports[`props should render ControlGroupItem with css prop 2`] = `
+<div
+  class="wp-components-flex-item wp-components-control-group-item css-1x31kpe"
+  data-g2-c16t="true"
+  data-g2-component="ControlGroupItem"
+  id="ControlGroupItem"
+/>
+`;
+
+exports[`props should render ControlLabel 1`] = `
+<div
+  class="wp-components-control-label css-1iwo04m"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+  id="ControlLabel"
+>
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+    id="ControlLabel"
+  />
+</div>
+`;
+
+exports[`props should render ControlLabel with css prop 1`] = `
+<div
+  class="wp-components-control-label css-1iwo04m"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+  id="ControlLabel"
+>
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
+    data-g2-c16t="true"
+    data-g2-component="ControlLabel"
+    id="ControlLabel"
+  />
+</div>
+`;
+
+exports[`props should render ControlLabel with css prop 2`] = `
+<label
+  class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
+  data-g2-c16t="true"
+  data-g2-component="ControlLabel"
+  id="ControlLabel"
+/>
+`;
+
+exports[`props should render Debugger 1`] = `null`;
+
+exports[`props should render Divider 1`] = `
+<hr
+  aria-orientation="horizontal"
+  class="wp-components-divider css-1o8eoct"
+  data-g2-c16t="true"
+  data-g2-component="Divider"
+  id="Divider"
+  role="separator"
+/>
+`;
+
+exports[`props should render Divider with css prop 1`] = `
+<hr
+  aria-orientation="horizontal"
+  class="wp-components-divider css-1o8eoct"
+  data-g2-c16t="true"
+  data-g2-component="Divider"
+  id="Divider"
+  role="separator"
+/>
+`;
+
+exports[`props should render Divider with css prop 2`] = `
+<hr
+  aria-orientation="horizontal"
+  class="wp-components-divider css-16slbn7"
+  data-g2-c16t="true"
+  data-g2-component="Divider"
+  id="Divider"
+  role="separator"
+/>
+`;
+
+exports[`props should render Dropdown 1`] = `null`;
+
+exports[`props should render DropdownMenu 1`] = `
+<div
+  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-v5g741"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenu"
+  id="DropdownMenu"
+>
+  <div
+    class="wp-components-surface wp-components-card css-bau4y1"
+    data-g2-c16t="true"
+    data-g2-component="Card"
+  >
+    <div
+      class="wp-components-view css-j1yu9m"
+      data-g2-c16t="true"
+      data-g2-component="CardContent"
+    >
+      <div
+        class="wp-components-scrollable css-1vjz50i"
+        data-g2-c16t="true"
+        data-g2-component="Scrollable"
+      >
+        <div
+          class="css-1qs21wj"
+        />
+      </div>
+    </div>
+    <div
+      class="wp-components-elevation css-lhxd4v"
+      data-g2-c16t="true"
+      data-g2-component="CardElevation"
+    />
+    <div
+      class="wp-components-elevation css-1v5iwrv"
+      data-g2-c16t="true"
+      data-g2-component="CardElevation"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render DropdownMenu with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-v5g741"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenu"
+  id="DropdownMenu"
+>
+  <div
+    class="wp-components-surface wp-components-card css-bau4y1"
+    data-g2-c16t="true"
+    data-g2-component="Card"
+  >
+    <div
+      class="wp-components-view css-j1yu9m"
+      data-g2-c16t="true"
+      data-g2-component="CardContent"
+    >
+      <div
+        class="wp-components-scrollable css-1vjz50i"
+        data-g2-c16t="true"
+        data-g2-component="Scrollable"
+      >
+        <div
+          class="css-1qs21wj"
+        />
+      </div>
+    </div>
+    <div
+      class="wp-components-elevation css-lhxd4v"
+      data-g2-c16t="true"
+      data-g2-component="CardElevation"
+    />
+    <div
+      class="wp-components-elevation css-1v5iwrv"
+      data-g2-c16t="true"
+      data-g2-component="CardElevation"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render DropdownMenu with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-1hofh9y"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenu"
+  id="DropdownMenu"
+>
+  <div
+    class="wp-components-surface wp-components-card css-bau4y1"
+    data-g2-c16t="true"
+    data-g2-component="Card"
+  >
+    <div
+      class="wp-components-view css-j1yu9m"
+      data-g2-c16t="true"
+      data-g2-component="CardContent"
+    >
+      <div
+        class="wp-components-scrollable css-1vjz50i"
+        data-g2-c16t="true"
+        data-g2-component="Scrollable"
+      >
+        <div
+          class="css-1qs21wj"
+        />
+      </div>
+    </div>
+    <div
+      class="wp-components-elevation css-lhxd4v"
+      data-g2-c16t="true"
+      data-g2-component="CardElevation"
+    />
+    <div
+      class="wp-components-elevation css-1v5iwrv"
+      data-g2-c16t="true"
+      data-g2-component="CardElevation"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render DropdownMenuItem 1`] = `
+<div
+  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-cmi091"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenuItem"
+  id="DropdownMenuItem"
+/>
+`;
+
+exports[`props should render DropdownMenuItem with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-cmi091"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenuItem"
+  id="DropdownMenuItem"
+/>
+`;
+
+exports[`props should render DropdownMenuItem with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-1dax3m"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenuItem"
+  id="DropdownMenuItem"
+/>
+`;
+
+exports[`props should render DropdownTrigger 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-dropdown-trigger css-15tf5go"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="DropdownTrigger"
+  data-icon="false"
+  id="DropdownTrigger"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-lx6sj"
+      data-g2-c16t="true"
+      data-g2-component="ButtonCaret"
+    >
+      <div
+        class="wp-components-icon css-1k4as4"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="16"
+          size="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render DropdownTrigger with css prop 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-dropdown-trigger css-15tf5go"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="DropdownTrigger"
+  data-icon="false"
+  id="DropdownTrigger"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-lx6sj"
+      data-g2-c16t="true"
+      data-g2-component="ButtonCaret"
+    >
+      <div
+        class="wp-components-icon css-1k4as4"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="16"
+          size="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render DropdownTrigger with css prop 2`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-dropdown-trigger css-fcaezh"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="DropdownTrigger"
+  data-icon="false"
+  id="DropdownTrigger"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-lx6sj"
+      data-g2-c16t="true"
+      data-g2-component="ButtonCaret"
+    >
+      <div
+        class="wp-components-icon css-1k4as4"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="16"
+          size="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render Elevation 1`] = `
+<div
+  class="wp-components-elevation css-189scdj"
+  data-g2-c16t="true"
+  data-g2-component="Elevation"
+  id="Elevation"
+/>
+`;
+
+exports[`props should render Elevation with css prop 1`] = `
+<div
+  class="wp-components-elevation css-189scdj"
+  data-g2-c16t="true"
+  data-g2-component="Elevation"
+  id="Elevation"
+/>
+`;
+
+exports[`props should render Elevation with css prop 2`] = `
+<div
+  class="wp-components-elevation css-1i7lhpk"
+  data-g2-c16t="true"
+  data-g2-component="Elevation"
+  id="Elevation"
+/>
+`;
+
+exports[`props should render Flex 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+  id="Flex"
+/>
+`;
+
+exports[`props should render Flex with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+  id="Flex"
+/>
+`;
+
+exports[`props should render Flex with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex css-9mkxbw"
+  data-g2-c16t="true"
+  data-g2-component="Flex"
+  id="Flex"
+/>
+`;
+
+exports[`props should render FlexBlock 1`] = `
+<div
+  class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+  data-g2-c16t="true"
+  data-g2-component="FlexBlock"
+  id="FlexBlock"
+/>
+`;
+
+exports[`props should render FlexBlock with css prop 1`] = `
+<div
+  class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+  data-g2-c16t="true"
+  data-g2-component="FlexBlock"
+  id="FlexBlock"
+/>
+`;
+
+exports[`props should render FlexBlock with css prop 2`] = `
+<div
+  class="wp-components-flex-item wp-components-flex-block css-11fi7md"
+  data-g2-c16t="true"
+  data-g2-component="FlexBlock"
+  id="FlexBlock"
+/>
+`;
+
+exports[`props should render FlexItem 1`] = `
+<div
+  class="wp-components-flex-item css-1suoifq"
+  data-g2-c16t="true"
+  data-g2-component="FlexItem"
+  id="FlexItem"
+/>
+`;
+
+exports[`props should render FlexItem with css prop 1`] = `
+<div
+  class="wp-components-flex-item css-1suoifq"
+  data-g2-c16t="true"
+  data-g2-component="FlexItem"
+  id="FlexItem"
+/>
+`;
+
+exports[`props should render FlexItem with css prop 2`] = `
+<div
+  class="wp-components-flex-item css-141gmrl"
+  data-g2-c16t="true"
+  data-g2-component="FlexItem"
+  id="FlexItem"
+/>
+`;
+
+exports[`props should render FormGroup 1`] = `
+<div
+  class="wp-components-form-group css-1u1ndy3"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    data-g2-c16t="true"
+    data-g2-component="FormGroup"
+  />
+</div>
+`;
+
+exports[`props should render FormGroup with css prop 1`] = `
+<div
+  class="wp-components-form-group css-1u1ndy3"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+>
+  <div
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    data-g2-c16t="true"
+    data-g2-component="FormGroup"
+  />
+</div>
+`;
+
+exports[`props should render FormGroup with css prop 2`] = `
+<div
+  class="wp-components-grid wp-components-form-group css-13x1ydg"
+  data-g2-c16t="true"
+  data-g2-component="FormGroup"
+/>
+`;
+
+exports[`props should render Grid 1`] = `
+<div
+  class="wp-components-grid css-pegie0"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+  id="Grid"
+/>
+`;
+
+exports[`props should render Grid with css prop 1`] = `
+<div
+  class="wp-components-grid css-pegie0"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+  id="Grid"
+/>
+`;
+
+exports[`props should render Grid with css prop 2`] = `
+<div
+  class="wp-components-grid css-3dwd9k"
+  data-g2-c16t="true"
+  data-g2-component="Grid"
+  id="Grid"
+/>
+`;
+
+exports[`props should render HStack 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="HStack"
+  id="HStack"
+/>
+`;
+
+exports[`props should render HStack with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="HStack"
+  id="HStack"
+/>
+`;
+
+exports[`props should render HStack with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack css-9mkxbw"
+  data-g2-c16t="true"
+  data-g2-component="HStack"
+  id="HStack"
+/>
+`;
+
+exports[`props should render Heading 1`] = `
+<div
+  class="wp-components-text wp-components-heading css-1w4mnxw"
+  data-g2-c16t="true"
+  data-g2-component="Heading"
+  id="Heading"
+/>
+`;
+
+exports[`props should render Heading with css prop 1`] = `
+<div
+  class="wp-components-text wp-components-heading css-1w4mnxw"
+  data-g2-c16t="true"
+  data-g2-component="Heading"
+  id="Heading"
+/>
+`;
+
+exports[`props should render Heading with css prop 2`] = `
+<div
+  class="wp-components-text wp-components-heading css-vs246b"
+  data-g2-c16t="true"
+  data-g2-component="Heading"
+  id="Heading"
+/>
+`;
+
+exports[`props should render HelpTip 1`] = `
+<span
+  aria-describedby="HelpTip"
+  class="wp-components-view css-1k2c6c"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  tabindex="0"
+>
+  <div
+    class="wp-components-icon css-1afesb"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      fill="none"
+      height="14"
+      size="14"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="14"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+      />
+      <path
+        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+      />
+      <line
+        x1="12"
+        x2="12"
+        y1="17"
+        y2="17"
+      />
+    </svg>
+  </div>
+</span>
+`;
+
+exports[`props should render Icon 1`] = `null`;
+
+exports[`props should render Image 1`] = `
+<img
+  class="wp-components-image css-1obj85a"
+  data-g2-c16t="true"
+  data-g2-component="Image"
+  id="Image"
+/>
+`;
+
+exports[`props should render Image with css prop 1`] = `
+<img
+  class="wp-components-image css-1obj85a"
+  data-g2-c16t="true"
+  data-g2-component="Image"
+  id="Image"
+/>
+`;
+
+exports[`props should render Image with css prop 2`] = `
+<img
+  class="wp-components-image css-191l29s"
+  data-g2-c16t="true"
+  data-g2-component="Image"
+  id="Image"
+/>
+`;
+
+exports[`props should render Initials 1`] = `
+<span
+  class="wp-components-text wp-components-initials css-1xgp14x"
+  data-g2-c16t="true"
+  data-g2-component="Initials"
+  id="Initials"
+/>
+`;
+
+exports[`props should render Initials with css prop 1`] = `
+<span
+  class="wp-components-text wp-components-initials css-1xgp14x"
+  data-g2-c16t="true"
+  data-g2-component="Initials"
+  id="Initials"
+/>
+`;
+
+exports[`props should render Initials with css prop 2`] = `
+<span
+  class="wp-components-text wp-components-initials css-19jm77f"
+  data-g2-c16t="true"
+  data-g2-component="Initials"
+  id="Initials"
+/>
+`;
+
+exports[`props should render Link 1`] = `
+<a
+  class="wp-components-text wp-components-link css-1ta0pmb"
+  data-g2-c16t="true"
+  data-g2-component="Link"
+  id="Link"
+/>
+`;
+
+exports[`props should render Link with css prop 1`] = `
+<a
+  class="wp-components-text wp-components-link css-1ta0pmb"
+  data-g2-c16t="true"
+  data-g2-component="Link"
+  id="Link"
+/>
+`;
+
+exports[`props should render Link with css prop 2`] = `
+<a
+  class="wp-components-text wp-components-link css-1ei3oxg"
+  data-g2-c16t="true"
+  data-g2-component="Link"
+  id="Link"
+/>
+`;
+
+exports[`props should render List 1`] = `
+<ul
+  class="wp-components-list css-e8bwzb"
+  data-g2-c16t="true"
+  data-g2-component="List"
+  id="List"
+/>
+`;
+
+exports[`props should render List with css prop 1`] = `
+<ul
+  class="wp-components-list css-e8bwzb"
+  data-g2-c16t="true"
+  data-g2-component="List"
+  id="List"
+/>
+`;
+
+exports[`props should render List with css prop 2`] = `
+<ul
+  class="wp-components-list css-s774in"
+  data-g2-c16t="true"
+  data-g2-component="List"
+  id="List"
+/>
+`;
+
+exports[`props should render ListItem 1`] = `
+<li
+  class="wp-components-list-item css-pqhj3g"
+  data-g2-c16t="true"
+  data-g2-component="ListItem"
+  id="ListItem"
+/>
+`;
+
+exports[`props should render ListItem with css prop 1`] = `
+<li
+  class="wp-components-list-item css-pqhj3g"
+  data-g2-c16t="true"
+  data-g2-component="ListItem"
+  id="ListItem"
+/>
+`;
+
+exports[`props should render ListItem with css prop 2`] = `
+<li
+  class="wp-components-list-item css-zt2gwy"
+  data-g2-c16t="true"
+  data-g2-component="ListItem"
+  id="ListItem"
+/>
+`;
+
+exports[`props should render Menu 1`] = `
+<div
+  class="wp-components-view wp-components-menu css-1bga1da"
+  data-g2-c16t="true"
+  data-g2-component="Menu"
+  id="Menu"
+/>
+`;
+
+exports[`props should render Menu with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-menu css-1bga1da"
+  data-g2-c16t="true"
+  data-g2-component="Menu"
+  id="Menu"
+/>
+`;
+
+exports[`props should render Menu with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-menu css-1iec4we"
+  data-g2-c16t="true"
+  data-g2-component="Menu"
+  id="Menu"
+/>
+`;
+
+exports[`props should render MenuItem 1`] = `
+<div
+  class="wp-components-view wp-components-menu-item css-cmi091"
+  data-g2-c16t="true"
+  data-g2-component="MenuItem"
+  id="MenuItem"
+/>
+`;
+
+exports[`props should render MenuItem with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-menu-item css-cmi091"
+  data-g2-c16t="true"
+  data-g2-component="MenuItem"
+  id="MenuItem"
+/>
+`;
+
+exports[`props should render MenuItem with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-menu-item css-1dax3m"
+  data-g2-c16t="true"
+  data-g2-component="MenuItem"
+  id="MenuItem"
+/>
+`;
+
+exports[`props should render Modal 1`] = `null`;
+
+exports[`props should render ModalBody 1`] = `
+<div
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-3pyc4i"
+  data-g2-c16t="true"
+  data-g2-component="ModalBody"
+  id="ModalBody"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render ModalBody with css prop 1`] = `
+<div
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-3pyc4i"
+  data-g2-c16t="true"
+  data-g2-component="ModalBody"
+  id="ModalBody"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render ModalBody with css prop 2`] = `
+<div
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1xpiyt6"
+  data-g2-c16t="true"
+  data-g2-component="ModalBody"
+  id="ModalBody"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render ModalFooter 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-9d2rl5"
+  data-g2-c16t="true"
+  data-g2-component="ModalFooter"
+  id="ModalFooter"
+/>
+`;
+
+exports[`props should render ModalFooter with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-9d2rl5"
+  data-g2-c16t="true"
+  data-g2-component="ModalFooter"
+  id="ModalFooter"
+/>
+`;
+
+exports[`props should render ModalFooter with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-footer wp-components-modal-footer css-1u96hyh"
+  data-g2-c16t="true"
+  data-g2-component="ModalFooter"
+  id="ModalFooter"
+/>
+`;
+
+exports[`props should render ModalHeader 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1yrbald"
+  data-g2-c16t="true"
+  data-g2-component="ModalHeader"
+  id="ModalHeader"
+>
+  <div
+    class="wp-components-flex-item css-x168m"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item css-1suoifq"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-modal-close-button css-7iavjl"
+      data-g2-c16t="true"
+      data-g2-component="ModalCloseButton"
+    >
+      <button
+        aria-busy="false"
+        class="wp-components-button css-fhq5i3"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="Button"
+        data-icon="false"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-2r7rsp"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item wp-components-flex-block css-13400lq"
+            data-g2-c16t="true"
+            data-g2-component="ButtonContent"
+          >
+            Close
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-h443as"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ModalHeader with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-1yrbald"
+  data-g2-c16t="true"
+  data-g2-component="ModalHeader"
+  id="ModalHeader"
+>
+  <div
+    class="wp-components-flex-item css-x168m"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item css-1suoifq"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-modal-close-button css-7iavjl"
+      data-g2-c16t="true"
+      data-g2-component="ModalCloseButton"
+    >
+      <button
+        aria-busy="false"
+        class="wp-components-button css-fhq5i3"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="Button"
+        data-icon="false"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-2r7rsp"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item wp-components-flex-block css-13400lq"
+            data-g2-c16t="true"
+            data-g2-component="ButtonContent"
+          >
+            Close
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-h443as"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ModalHeader with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-card-header wp-components-modal-header css-5vfjmn"
+  data-g2-c16t="true"
+  data-g2-component="ModalHeader"
+  id="ModalHeader"
+>
+  <div
+    class="wp-components-flex-item css-x168m"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  />
+  <div
+    class="wp-components-flex-item css-1suoifq"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-modal-close-button css-7iavjl"
+      data-g2-c16t="true"
+      data-g2-component="ModalCloseButton"
+    >
+      <button
+        aria-busy="false"
+        class="wp-components-button css-fhq5i3"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="Button"
+        data-icon="false"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-2r7rsp"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item wp-components-flex-block css-13400lq"
+            data-g2-c16t="true"
+            data-g2-component="ButtonContent"
+          >
+            Close
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-h443as"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ModalTitle 1`] = `null`;
+
+exports[`props should render ModalTrigger 1`] = `
+<button
+  aria-busy="false"
+  aria-expanded="false"
+  aria-haspopup="dialog"
+  class="wp-components-button wp-components-modal-trigger css-15tf5go"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ModalTrigger"
+  data-icon="false"
+  id="ModalTrigger"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  />
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ModalTrigger with css prop 1`] = `
+<button
+  aria-busy="false"
+  aria-expanded="false"
+  aria-haspopup="dialog"
+  class="wp-components-button wp-components-modal-trigger css-15tf5go"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ModalTrigger"
+  data-icon="false"
+  id="ModalTrigger"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  />
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ModalTrigger with css prop 2`] = `
+<button
+  aria-busy="false"
+  aria-expanded="false"
+  aria-haspopup="dialog"
+  class="wp-components-button wp-components-modal-trigger css-fcaezh"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ModalTrigger"
+  data-icon="false"
+  id="ModalTrigger"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  />
+  <span
+    class="wp-components-elevation css-h443as"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render Panel 1`] = `
+<div
+  class="wp-components-view wp-components-collapsible wp-components-panel css-k6yva8"
+  data-g2-c16t="true"
+  data-g2-component="Panel"
+/>
+`;
+
+exports[`props should render Panel with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-collapsible wp-components-panel css-k6yva8"
+  data-g2-c16t="true"
+  data-g2-component="Panel"
+/>
+`;
+
+exports[`props should render Panel with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-collapsible wp-components-panel css-ysyfxm"
+  data-g2-c16t="true"
+  data-g2-component="Panel"
+/>
+`;
+
+exports[`props should render Placeholder 1`] = `
+<div
+  class="wp-components-placeholder css-1lmo8em"
+  data-g2-c16t="true"
+  data-g2-component="Placeholder"
+  id="Placeholder"
+  style="height: 36px;"
+/>
+`;
+
+exports[`props should render Placeholder with css prop 1`] = `
+<div
+  class="wp-components-placeholder css-1lmo8em"
+  data-g2-c16t="true"
+  data-g2-component="Placeholder"
+  id="Placeholder"
+  style="height: 36px;"
+/>
+`;
+
+exports[`props should render Placeholder with css prop 2`] = `
+<div
+  class="wp-components-placeholder css-atn615"
+  data-g2-c16t="true"
+  data-g2-component="Placeholder"
+  id="Placeholder"
+  style="height: 36px;"
+/>
+`;
+
+exports[`props should render Popover 1`] = `null`;
+
+exports[`props should render Radio 1`] = `
+<div
+  class="css-tfu3ak"
+  data-g2-component="RadioWrapper"
+>
+  <input
+    aria-checked="false"
+    class="wp-components-radio-element wp-components-radio css-heuzg3"
+    data-g2-c16t="true"
+    data-g2-component="Radio"
+    id="Radio"
+    tabindex="0"
+    type="radio"
+  />
+  <div
+    aria-hidden="true"
+    class="css-x9ipsg"
+    data-g2-component="RadioIcon"
+  >
+    <div
+      class="css-16octit"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render Radio with css prop 1`] = `
+<input
+  aria-checked="false"
+  class="wp-components-radio-element wp-components-radio css-heuzg3"
+  data-g2-c16t="true"
+  data-g2-component="Radio"
+  id="Radio"
+  tabindex="0"
+  type="radio"
+/>
+`;
+
+exports[`props should render Radio with css prop 2`] = `
+<input
+  aria-checked="false"
+  class="wp-components-radio-element wp-components-radio css-1hq07rj"
+  data-g2-c16t="true"
+  data-g2-component="Radio"
+  id="Radio"
+  tabindex="0"
+  type="radio"
+/>
+`;
+
+exports[`props should render RadioGroup 1`] = `
+<div
+  aria-label="RadioGroup"
+  class="wp-components-view wp-components-radio-group css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="RadioGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render RadioGroup with css prop 1`] = `
+<div
+  aria-label="RadioGroup"
+  class="wp-components-view wp-components-radio-group css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="RadioGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render RadioGroup with css prop 2`] = `
+<div
+  aria-label="RadioGroup"
+  class="wp-components-view wp-components-radio-group css-rnwhtm"
+  data-g2-c16t="true"
+  data-g2-component="RadioGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render Scrollable 1`] = `
+<div
+  class="wp-components-scrollable css-d4wazc"
+  data-g2-c16t="true"
+  data-g2-component="Scrollable"
+  id="Scrollable"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render Scrollable with css prop 1`] = `
+<div
+  class="wp-components-scrollable css-d4wazc"
+  data-g2-c16t="true"
+  data-g2-component="Scrollable"
+  id="Scrollable"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render Scrollable with css prop 2`] = `
+<div
+  class="wp-components-scrollable css-1ri47nw"
+  data-g2-c16t="true"
+  data-g2-component="Scrollable"
+  id="Scrollable"
+>
+  <div
+    class="css-1qs21wj"
+  />
+</div>
+`;
+
+exports[`props should render SearchInput 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-edr5v1"
+  data-g2-c16t="true"
+  data-g2-component="TextInputWrapper"
+>
+  <div
+    class="wp-components-flex-item css-1c1od6x"
+    data-g2-c16t="true"
+    data-g2-component="TextInputPrefix"
+  >
+    <div
+      class="wp-components-view css-1bmslvj"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <span
+        class="wp-components-text css-1j5v64k"
+        data-g2-c16t="true"
+        data-g2-component="Text"
+      >
+        <div
+          class="wp-components-icon css-1d07aa5"
+          data-g2-c16t="true"
+          data-g2-component="Icon"
+        >
+          <svg
+            fill="none"
+            height="12"
+            size="12"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-pgzgex"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+      id="SearchInput"
+      placeholder="Search..."
+      type="search"
+      value=""
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-1suoifq"
+    data-g2-c16t="true"
+    data-g2-component="TextInputSuffix"
+  >
+    <div
+      class="wp-components-view css-ie9y1c"
+      data-g2-c16t="true"
+      data-g2-component="View"
+    >
+      <button
+        aria-busy="false"
+        aria-label="Clear"
+        class="wp-components-button wp-components-search-input-clear-button css-680ccn"
+        data-destructive="false"
+        data-g2-c16t="true"
+        data-g2-component="SearchInputClearButton"
+        data-icon="true"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="wp-components-view wp-components-flex css-2r7rsp"
+          data-g2-c16t="true"
+          data-g2-component="Flex"
+        >
+          <span
+            class="wp-components-flex-item css-bzokzn"
+            data-g2-c16t="true"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-2zqc15"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="10"
+                size="10"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+        </span>
+        <span
+          class="wp-components-elevation css-h443as"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render SegmentedControl 1`] = `
+<div
+  aria-label="SegmentControl"
+  class="wp-components-view css-16al81f"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  id="SegmentedControl"
+  role="radiogroup"
+  tabindex="0"
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+  <div
+    class="css-k5346k"
+    data-g2-component="SegmentedControlBackdrop"
+    role="presentation"
+    style="transform: translateX(0px); transition: none; width: 0px;"
+  />
+</div>
+`;
+
+exports[`props should render Select 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
+  data-g2-c16t="true"
+  data-g2-component="SelectWrapper"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    data-g2-c16t="true"
+    data-g2-component="FlexBlock"
+  >
+    <select
+      class="css-exabpr"
+      data-g2-c16t="true"
+      data-g2-component="Select"
+      id="Select"
+    />
+  </div>
+  <div
+    class="wp-components-flex-item css-19xoami"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <span
+      class="wp-components-text css-ckswz2"
+      data-g2-c16t="true"
+      data-g2-component="Text"
+    >
+      <div
+        class="wp-components-icon css-1tw4gp0"
+        data-g2-c16t="true"
+        data-g2-component="Icon"
+      >
+        <svg
+          fill="none"
+          height="14"
+          size="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="6 9 12 15 18 9"
+          />
+        </svg>
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`props should render Select with css prop 1`] = `
+<select
+  class="css-exabpr"
+  data-g2-c16t="true"
+  data-g2-component="Select"
+  id="Select"
+/>
+`;
+
+exports[`props should render Select with css prop 2`] = `
+<select
+  class="css-1qg5ytb"
+  data-g2-c16t="true"
+  data-g2-component="Select"
+  id="Select"
+/>
+`;
+
+exports[`props should render Separator 1`] = `
+<hr
+  aria-orientation="horizontal"
+  class="wp-components-divider wp-components-separator css-1ji2rlx"
+  data-g2-c16t="true"
+  data-g2-component="Separator"
+  id="Separator"
+  role="separator"
+/>
+`;
+
+exports[`props should render Separator with css prop 1`] = `
+<hr
+  aria-orientation="horizontal"
+  class="wp-components-divider wp-components-separator css-1ji2rlx"
+  data-g2-c16t="true"
+  data-g2-component="Separator"
+  id="Separator"
+  role="separator"
+/>
+`;
+
+exports[`props should render Separator with css prop 2`] = `
+<hr
+  aria-orientation="horizontal"
+  class="wp-components-divider wp-components-separator css-14wjglt"
+  data-g2-c16t="true"
+  data-g2-component="Separator"
+  id="Separator"
+  role="separator"
+/>
+`;
+
+exports[`props should render Slider 1`] = `
+<input
+  class="wp-components-slider css-t51y5"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="Slider"
+  max="100"
+  min="0"
+  style="--progress: 50%;"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render Slider with css prop 1`] = `
+<input
+  class="wp-components-slider css-t51y5"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="Slider"
+  max="100"
+  min="0"
+  style="--progress: 50%;"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render Slider with css prop 2`] = `
+<input
+  class="wp-components-slider css-sw1p5j"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="Slider"
+  max="100"
+  min="0"
+  style="--progress: 50%;"
+  type="range"
+  value="50"
+/>
+`;
+
+exports[`props should render Spacer 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1jtn9d9"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+  id="Spacer"
+/>
+`;
+
+exports[`props should render Spacer with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1jtn9d9"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+  id="Spacer"
+/>
+`;
+
+exports[`props should render Spacer with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-spacer css-1baslc2"
+  data-g2-c16t="true"
+  data-g2-component="Spacer"
+  id="Spacer"
+/>
+`;
+
+exports[`props should render Spinner 1`] = `
+<div
+  aria-busy="true"
+  class="css-ee8emf"
+  data-g2-c16t="true"
+  data-g2-component="Spinner"
+  id="Spinner"
+  style="height: 16px; width: 16px;"
+>
+  <div
+    aria-hidden="true"
+    class="css-pq0fgq"
+    style="transform: scale(0.4444444444444444);"
+  >
+    <div
+      class="css-1rq9pxc"
+    >
+      <div
+        class="InnerBar1"
+      />
+      <div
+        class="InnerBar2"
+      />
+      <div
+        class="InnerBar3"
+      />
+      <div
+        class="InnerBar4"
+      />
+      <div
+        class="InnerBar5"
+      />
+      <div
+        class="InnerBar6"
+      />
+      <div
+        class="InnerBar7"
+      />
+      <div
+        class="InnerBar8"
+      />
+      <div
+        class="InnerBar9"
+      />
+      <div
+        class="InnerBar10"
+      />
+      <div
+        class="InnerBar11"
+      />
+      <div
+        class="InnerBar12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render Spinner with css prop 1`] = `
+<div
+  aria-busy="true"
+  class="css-ee8emf"
+  data-g2-c16t="true"
+  data-g2-component="Spinner"
+  id="Spinner"
+  style="height: 16px; width: 16px;"
+>
+  <div
+    aria-hidden="true"
+    class="css-pq0fgq"
+    style="transform: scale(0.4444444444444444);"
+  >
+    <div
+      class="css-1rq9pxc"
+    >
+      <div
+        class="InnerBar1"
+      />
+      <div
+        class="InnerBar2"
+      />
+      <div
+        class="InnerBar3"
+      />
+      <div
+        class="InnerBar4"
+      />
+      <div
+        class="InnerBar5"
+      />
+      <div
+        class="InnerBar6"
+      />
+      <div
+        class="InnerBar7"
+      />
+      <div
+        class="InnerBar8"
+      />
+      <div
+        class="InnerBar9"
+      />
+      <div
+        class="InnerBar10"
+      />
+      <div
+        class="InnerBar11"
+      />
+      <div
+        class="InnerBar12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render Spinner with css prop 2`] = `
+<div
+  aria-busy="true"
+  class="css-lk5x3y"
+  data-g2-c16t="true"
+  data-g2-component="Spinner"
+  id="Spinner"
+  style="height: 16px; width: 16px;"
+>
+  <div
+    aria-hidden="true"
+    class="css-pq0fgq"
+    style="transform: scale(0.4444444444444444);"
+  >
+    <div
+      class="css-1rq9pxc"
+    >
+      <div
+        class="InnerBar1"
+      />
+      <div
+        class="InnerBar2"
+      />
+      <div
+        class="InnerBar3"
+      />
+      <div
+        class="InnerBar4"
+      />
+      <div
+        class="InnerBar5"
+      />
+      <div
+        class="InnerBar6"
+      />
+      <div
+        class="InnerBar7"
+      />
+      <div
+        class="InnerBar8"
+      />
+      <div
+        class="InnerBar9"
+      />
+      <div
+        class="InnerBar10"
+      />
+      <div
+        class="InnerBar11"
+      />
+      <div
+        class="InnerBar12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render Stepper 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-control-group wp-components-stepper css-1l1keo8"
+  data-g2-c16t="true"
+  data-g2-component="Stepper"
+  id="Stepper"
+>
+  <div
+    class="wp-components-flex-item wp-components-control-group-item css-14dt8fo"
+    data-g2-c16t="true"
+    data-g2-component="ControlGroupItem"
+  >
+    <button
+      aria-busy="false"
+      class="wp-components-button css-qt6rbo"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="StepperButton"
+      data-icon="true"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-2r7rsp"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-bzokzn"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1tw4gp0"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="14"
+              size="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-h443as"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-control-group-item css-9qi4f8"
+    data-g2-c16t="true"
+    data-g2-component="ControlGroupItem"
+  >
+    <button
+      aria-busy="false"
+      class="wp-components-button css-1xokiu0"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="StepperButton"
+      data-icon="true"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-2r7rsp"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-bzokzn"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1tw4gp0"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="14"
+              size="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-h443as"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`props should render Stepper with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-control-group wp-components-stepper css-1l1keo8"
+  data-g2-c16t="true"
+  data-g2-component="Stepper"
+  id="Stepper"
+>
+  <div
+    class="wp-components-flex-item wp-components-control-group-item css-14dt8fo"
+    data-g2-c16t="true"
+    data-g2-component="ControlGroupItem"
+  >
+    <button
+      aria-busy="false"
+      class="wp-components-button css-qt6rbo"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="StepperButton"
+      data-icon="true"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-2r7rsp"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-bzokzn"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1tw4gp0"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="14"
+              size="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-h443as"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-control-group-item css-9qi4f8"
+    data-g2-c16t="true"
+    data-g2-component="ControlGroupItem"
+  >
+    <button
+      aria-busy="false"
+      class="wp-components-button css-1xokiu0"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="StepperButton"
+      data-icon="true"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-2r7rsp"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-bzokzn"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1tw4gp0"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="14"
+              size="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-h443as"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`props should render Stepper with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-control-group wp-components-stepper css-wp5319"
+  data-g2-c16t="true"
+  data-g2-component="Stepper"
+  id="Stepper"
+>
+  <div
+    class="wp-components-flex-item wp-components-control-group-item css-14dt8fo"
+    data-g2-c16t="true"
+    data-g2-component="ControlGroupItem"
+  >
+    <button
+      aria-busy="false"
+      class="wp-components-button css-qt6rbo"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="StepperButton"
+      data-icon="true"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-2r7rsp"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-bzokzn"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1tw4gp0"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="14"
+              size="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-h443as"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+  <div
+    class="wp-components-flex-item wp-components-control-group-item css-9qi4f8"
+    data-g2-c16t="true"
+    data-g2-component="ControlGroupItem"
+  >
+    <button
+      aria-busy="false"
+      class="wp-components-button css-1xokiu0"
+      data-destructive="false"
+      data-g2-c16t="true"
+      data-g2-component="StepperButton"
+      data-icon="true"
+      type="button"
+    >
+      <span
+        class="wp-components-view wp-components-flex css-2r7rsp"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <span
+          class="wp-components-flex-item css-bzokzn"
+          data-g2-c16t="true"
+          data-g2-component="ButtonIcon"
+        >
+          <div
+            class="wp-components-icon css-1tw4gp0"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="14"
+              size="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        class="wp-components-elevation css-h443as"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`props should render Subheading 1`] = `
+<span
+  class="wp-components-text wp-components-subheading css-1kaqd9h"
+  data-g2-c16t="true"
+  data-g2-component="Subheading"
+  id="Subheading"
+/>
+`;
+
+exports[`props should render Subheading with css prop 1`] = `
+<span
+  class="wp-components-text wp-components-subheading css-1kaqd9h"
+  data-g2-c16t="true"
+  data-g2-component="Subheading"
+  id="Subheading"
+/>
+`;
+
+exports[`props should render Subheading with css prop 2`] = `
+<span
+  class="wp-components-text wp-components-subheading css-db6ix"
+  data-g2-c16t="true"
+  data-g2-component="Subheading"
+  id="Subheading"
+/>
+`;
+
+exports[`props should render Surface 1`] = `
+<div
+  class="wp-components-surface css-1uslwia"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+  id="Surface"
+/>
+`;
+
+exports[`props should render Surface with css prop 1`] = `
+<div
+  class="wp-components-surface css-1uslwia"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+  id="Surface"
+/>
+`;
+
+exports[`props should render Surface with css prop 2`] = `
+<div
+  class="wp-components-surface css-1thyizh"
+  data-g2-c16t="true"
+  data-g2-component="Surface"
+  id="Surface"
+/>
+`;
+
+exports[`props should render Switch 1`] = `
+<label
+  class="css-1qim1rt"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="Switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-z9wuna"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-1ptemzf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="Switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render Switch with css prop 1`] = `
+<label
+  class="css-1qim1rt"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="Switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-z9wuna"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-1ptemzf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="Switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render Switch with css prop 2`] = `
+<label
+  class="css-18ihsje"
+  data-g2-c16t="true"
+  data-g2-component="Switch"
+  for="Switch"
+>
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-backdrop css-z9wuna"
+    data-g2-c16t="true"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="wp-components-switch-toggle css-1ptemzf"
+    data-g2-c16t="true"
+    data-g2-component="SwitchToggle"
+  />
+  <input
+    aria-checked="false"
+    class="css-175q9tm"
+    css="
+							background: red;
+						,[object Object]"
+    data-g2-c16t="true"
+    data-g2-component="SwitchInput"
+    id="Switch"
+    type="checkbox"
+  />
+  <span
+    data-g2-component="SwitchLabel"
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  />
+</label>
+`;
+
+exports[`props should render Tab 1`] = `
+<button
+  aria-selected="false"
+  class="wp-components-tab css-1kygex4"
+  data-g2-c16t="true"
+  data-g2-component="Tab"
+  id="Tab"
+  role="tab"
+  tabindex="0"
+/>
+`;
+
+exports[`props should render Tab with css prop 1`] = `
+<button
+  aria-selected="false"
+  class="wp-components-tab css-1kygex4"
+  data-g2-c16t="true"
+  data-g2-component="Tab"
+  id="Tab"
+  role="tab"
+  tabindex="0"
+/>
+`;
+
+exports[`props should render Tab with css prop 2`] = `
+<button
+  aria-selected="false"
+  class="wp-components-tab css-zsfdc8"
+  data-g2-c16t="true"
+  data-g2-component="Tab"
+  id="Tab"
+  role="tab"
+  tabindex="0"
+/>
+`;
+
+exports[`props should render TabList 1`] = `
+<div
+  aria-label="Tabs"
+  class="wp-components-tab-list css-1jd2elf"
+  data-g2-c16t="true"
+  data-g2-component="TabList"
+  id="TabList"
+  role="tablist"
+>
+  <div
+    class="css-1siwnxt"
+    role="presentation"
+    style="transform: translateX(0px); transition: none; width: 0px;"
+  />
+</div>
+`;
+
+exports[`props should render TabList with css prop 1`] = `
+<div
+  aria-label="Tabs"
+  class="wp-components-tab-list css-1jd2elf"
+  data-g2-c16t="true"
+  data-g2-component="TabList"
+  id="TabList"
+  role="tablist"
+>
+  <div
+    class="css-1siwnxt"
+    role="presentation"
+    style="transform: translateX(0px); transition: none; width: 0px;"
+  />
+</div>
+`;
+
+exports[`props should render TabList with css prop 2`] = `
+<div
+  aria-label="Tabs"
+  class="wp-components-tab-list css-1yscbxo"
+  data-g2-c16t="true"
+  data-g2-component="TabList"
+  id="TabList"
+  role="tablist"
+>
+  <div
+    class="css-1siwnxt"
+    role="presentation"
+    style="transform: translateX(0px); transition: none; width: 0px;"
+  />
+</div>
+`;
+
+exports[`props should render TabPanel 1`] = `
+<div
+  class="wp-components-tab-panel css-1lnowwh"
+  data-g2-c16t="true"
+  data-g2-component="TabPanel"
+  hidden=""
+  id="TabPanel"
+  role="tabpanel"
+  style="display: none;"
+  tabindex="0"
+/>
+`;
+
+exports[`props should render TabPanel with css prop 1`] = `
+<div
+  class="wp-components-tab-panel css-1lnowwh"
+  data-g2-c16t="true"
+  data-g2-component="TabPanel"
+  hidden=""
+  id="TabPanel"
+  role="tabpanel"
+  style="display: none;"
+  tabindex="0"
+/>
+`;
+
+exports[`props should render TabPanel with css prop 2`] = `
+<div
+  class="wp-components-tab-panel css-1pvtmi5"
+  data-g2-c16t="true"
+  data-g2-component="TabPanel"
+  hidden=""
+  id="TabPanel"
+  role="tabpanel"
+  style="display: none;"
+  tabindex="0"
+/>
+`;
+
+exports[`props should render Tabs 1`] = `null`;
+
+exports[`props should render Tag 1`] = `
+<span
+  class="wp-components-tag css-16ertor"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+  id="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  />
+</span>
+`;
+
+exports[`props should render Tag with css prop 1`] = `
+<span
+  class="wp-components-tag css-16ertor"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+  id="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  />
+</span>
+`;
+
+exports[`props should render Tag with css prop 2`] = `
+<span
+  class="wp-components-tag css-1q06luk"
+  data-g2-c16t="true"
+  data-g2-component="Tag"
+  id="Tag"
+>
+  <span
+    class="wp-components-truncate wp-components-text css-1ejcfnr"
+    data-g2-c16t="true"
+    data-g2-component="Text"
+  />
+</span>
+`;
+
+exports[`props should render Text 1`] = `
+<span
+  class="wp-components-text css-1j5v64k"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+  id="Text"
+/>
+`;
+
+exports[`props should render Text with css prop 1`] = `
+<span
+  class="wp-components-text css-1j5v64k"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+  id="Text"
+/>
+`;
+
+exports[`props should render Text with css prop 2`] = `
+<span
+  class="wp-components-text css-1ihycc6"
+  data-g2-c16t="true"
+  data-g2-component="Text"
+  id="Text"
+/>
+`;
+
+exports[`props should render TextField 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
+  data-g2-c16t="true"
+  data-g2-component="TextInputWrapper"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-pgzgex"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+      id="TextField"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render TextInput 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
+  data-g2-c16t="true"
+  data-g2-component="TextInputWrapper"
+>
+  <div
+    class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+    data-g2-c16t="true"
+    data-g2-component="TextInputContent"
+  >
+    <input
+      class="css-pgzgex"
+      data-g2-c16t="true"
+      data-g2-component="TextInput"
+      id="TextInput"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render TextInput with css prop 1`] = `
+<input
+  class="css-pgzgex"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+  id="TextInput"
+  value=""
+/>
+`;
+
+exports[`props should render TextInput with css prop 2`] = `
+<input
+  class="css-9innbo"
+  data-g2-c16t="true"
+  data-g2-component="TextInput"
+  id="TextInput"
+  value=""
+/>
+`;
+
+exports[`props should render Tooltip 1`] = `null`;
+
+exports[`props should render Truncate 1`] = `
+<span
+  class="wp-components-truncate css-opvjha"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+  id="Truncate"
+/>
+`;
+
+exports[`props should render Truncate with css prop 1`] = `
+<span
+  class="wp-components-truncate css-opvjha"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+  id="Truncate"
+/>
+`;
+
+exports[`props should render Truncate with css prop 2`] = `
+<span
+  class="wp-components-truncate css-5jbwm1"
+  data-g2-c16t="true"
+  data-g2-component="Truncate"
+  id="Truncate"
+/>
+`;
+
+exports[`props should render VStack 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="VStack"
+  id="VStack"
+/>
+`;
+
+exports[`props should render VStack with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="VStack"
+  id="VStack"
+/>
+`;
+
+exports[`props should render VStack with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-mf5b48"
+  data-g2-c16t="true"
+  data-g2-component="VStack"
+  id="VStack"
+/>
+`;
+
+exports[`props should render View 1`] = `
+<div
+  class="wp-components-view css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  id="View"
+/>
+`;
+
+exports[`props should render View with css prop 1`] = `
+<div
+  class="wp-components-view css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  id="View"
+/>
+`;
+
+exports[`props should render View with css prop 2`] = `
+<div
+  class="wp-components-view css-rnwhtm"
+  data-g2-c16t="true"
+  data-g2-component="View"
+  id="View"
+/>
+`;
+
+exports[`props should render ZStack 1`] = `
+<div
+  class="wp-components-z-stack css-21shsf"
+  data-g2-c16t="true"
+  data-g2-component="ZStack"
+  id="ZStack"
+/>
+`;
+
+exports[`props should render ZStack with css prop 1`] = `
+<div
+  class="wp-components-z-stack css-21shsf"
+  data-g2-c16t="true"
+  data-g2-component="ZStack"
+  id="ZStack"
+/>
+`;
+
+exports[`props should render ZStack with css prop 2`] = `
+<div
+  class="wp-components-z-stack css-10w74if"
+  data-g2-c16t="true"
+  data-g2-component="ZStack"
+  id="ZStack"
+/>
+`;

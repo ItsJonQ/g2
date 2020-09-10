@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <span
-  class="wp-components-truncate css-16bor3n"
+  class="wp-components-truncate css-opvjha"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -12,7 +12,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render custom ellipsis 1`] = `
 <span
-  class="wp-components-truncate css-16bor3n"
+  class="wp-components-truncate css-opvjha"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -22,7 +22,7 @@ exports[`props should render custom ellipsis 1`] = `
 
 exports[`props should render custom ellipsizeMode 1`] = `
 <span
-  class="wp-components-truncate css-1ihlkjd"
+  class="wp-components-truncate css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -32,7 +32,7 @@ exports[`props should render custom ellipsizeMode 1`] = `
 
 exports[`props should render limit 1`] = `
 <span
-  class="wp-components-truncate css-16bor3n"
+  class="wp-components-truncate css-opvjha"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -42,7 +42,7 @@ exports[`props should render limit 1`] = `
 
 exports[`props should render numberOfLines 1`] = `
 <span
-  class="wp-components-truncate css-1buk3lj"
+  class="wp-components-truncate css-1r5j03k"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >

@@ -4,7 +4,7 @@ exports[`props should render animatedDuration 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -13,12 +13,12 @@ exports[`props should render animatedDuration 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -26,7 +26,7 @@ exports[`props should render animatedDuration 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -37,7 +37,7 @@ exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -46,12 +46,12 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -59,7 +59,7 @@ exports[`props should render correctly 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -70,7 +70,7 @@ exports[`props should render gutter 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -79,12 +79,12 @@ exports[`props should render gutter 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -92,7 +92,7 @@ exports[`props should render gutter 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -103,7 +103,7 @@ exports[`props should render placement 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -112,12 +112,12 @@ exports[`props should render placement 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -125,7 +125,7 @@ exports[`props should render placement 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -136,7 +136,7 @@ exports[`props should render visible 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -145,12 +145,12 @@ exports[`props should render visible 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -158,7 +158,7 @@ exports[`props should render visible 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -169,7 +169,7 @@ exports[`props should render without animation 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -178,12 +178,12 @@ exports[`props should render without animation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -191,7 +191,7 @@ exports[`props should render without animation 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -204,7 +204,7 @@ exports[`props should render without content 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -213,12 +213,12 @@ exports[`props should render without content 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -226,7 +226,7 @@ exports[`props should render without content 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -237,7 +237,7 @@ exports[`props should render without modal 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="css-15tf5go"
+  class="wp-components-button css-15tf5go"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -246,12 +246,12 @@ exports[`props should render without modal 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-1gjqylm"
+    class="wp-components-view wp-components-flex css-2r7rsp"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-1xcbse6"
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -259,7 +259,7 @@ exports[`props should render without modal 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-1l26w1c"
+    class="wp-components-elevation css-h443as"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

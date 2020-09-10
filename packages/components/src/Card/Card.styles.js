@@ -1,7 +1,7 @@
 import { css, get } from '@wp-g2/styles';
 
 export const Card = css`
-	border-radius: 8px;
+	border-radius: ${get('cardBorderRadius')};
 	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')};
 	outline: none;
 `;
@@ -31,13 +31,13 @@ export const headerFooter = css`
 
 export const borderRadius = css`
 	&:first-of-type {
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
+		border-top-left-radius: ${get('cardBorderRadius')};
+		border-top-right-radius: ${get('cardBorderRadius')};
 	}
 
 	&:last-of-type {
-		border-bottom-left-radius: 8px;
-		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: ${get('cardBorderRadius')};
+		border-bottom-right-radius: ${get('cardBorderRadius')};
 	}
 `;
 

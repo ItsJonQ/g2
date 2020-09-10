@@ -83,7 +83,7 @@ function TextInput({
 			isFocused={isFocused}
 			justify={justify}
 			onClick={handleOnRootClick}
-			{...ns('TextInput')}
+			{...ns('TextInputWrapper')}
 		>
 			{prefix && <FlexItem {...ns('TextInputPrefix')}>{prefix}</FlexItem>}
 			<FlexBlock {...ns('TextInputContent')}>
@@ -98,7 +98,7 @@ function TextInput({
 					ref={mergeRefs([inputRef, forwardedRef])}
 					value={value}
 					{...props}
-					{...ns('TextInputInput')}
+					{...ns('TextInput')}
 				/>
 			</FlexBlock>
 			{suffix && <FlexItem {...ns('TextInputSuffix')}>{suffix}</FlexItem>}

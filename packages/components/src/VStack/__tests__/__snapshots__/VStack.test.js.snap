@@ -2,33 +2,33 @@
 
 exports[`props should render Spacer 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-34tpg8"
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
   <div
-    class="wp-components-flex-item css-103ded3"
+    class="wp-components-flex-item css-a6x9qu"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1axj847"
+    class="wp-components-flex-item wp-components-flex-block css-qbeaji"
     data-g2-c16t="true"
     data-g2-component="Spacer"
   />
   <div
-    class="wp-components-flex-item css-1bebqpp"
+    class="wp-components-flex-item css-bg0v75"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
@@ -38,28 +38,28 @@ exports[`props should render Spacer 1`] = `
 
 exports[`props should render alignment 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-awstxh"
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-19ocfe2"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
   <div
-    class="wp-components-flex-item css-1na9mn3"
+    class="wp-components-flex-item css-1lhy1y6"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-flex-item css-1bebqpp"
+    class="wp-components-flex-item css-bg0v75"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
@@ -69,28 +69,28 @@ exports[`props should render alignment 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-34tpg8"
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
   <div
-    class="wp-components-flex-item css-1na9mn3"
+    class="wp-components-flex-item css-1lhy1y6"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-flex-item css-1bebqpp"
+    class="wp-components-flex-item css-bg0v75"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
@@ -100,28 +100,28 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render spacing 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-34tpg8"
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
   <div
-    class="wp-components-flex-item css-103ded3"
+    class="wp-components-flex-item css-a6x9qu"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />
   </div>
   <div
-    class="wp-components-flex-item css-1bebqpp"
+    class="wp-components-flex-item css-bg0v75"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view css-1ihlkjd"
+      class="wp-components-view css-j1yu9m"
       data-g2-c16t="true"
       data-g2-component="View"
     />

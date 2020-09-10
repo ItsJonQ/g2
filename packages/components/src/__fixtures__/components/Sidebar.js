@@ -21,7 +21,7 @@ export const Sidebar = ({ children }) => {
 	return (
 		<ComponentsProvider
 			value={{
-				Grid: { gap: 8 },
+				Grid: { gap: 2 },
 				Icon: { size: 16 },
 			}}
 		>

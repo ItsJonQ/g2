@@ -2,7 +2,7 @@
 
 exports[`props should render as another element 1`] = `
 <p
-  class="wp-components-view css-1ihlkjd"
+  class="wp-components-view css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="View"
 >
@@ -14,7 +14,7 @@ exports[`props should render as another element 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view css-1ihlkjd"
+  class="wp-components-view css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="View"
 >
@@ -26,7 +26,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with custom styles (Array) 1`] = `
 <p
-  class="wp-components-view css-gye301"
+  class="wp-components-view css-1k7hfdr"
   data-g2-c16t="true"
   data-g2-component="View"
 >
@@ -38,7 +38,7 @@ exports[`props should render with custom styles (Array) 1`] = `
 
 exports[`props should render with custom styles (object) 1`] = `
 <p
-  class="wp-components-view css-16bbktm"
+  class="wp-components-view css-9ricam"
   data-g2-c16t="true"
   data-g2-component="View"
 >
@@ -50,7 +50,7 @@ exports[`props should render with custom styles (object) 1`] = `
 
 exports[`props should render with custom styles (string) 1`] = `
 <p
-  class="wp-components-view css-1g90dnq"
+  class="wp-components-view css-170o10"
   data-g2-c16t="true"
   data-g2-component="View"
 >

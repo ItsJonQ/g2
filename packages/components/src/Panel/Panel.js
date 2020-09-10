@@ -8,6 +8,7 @@ import * as styles from './Panel.styles';
 
 function Panel({
 	animated = true,
+	baseId,
 	className,
 	id,
 	isSeamless = false,
@@ -18,7 +19,7 @@ function Panel({
 	return (
 		<PanelContext.Provider value={{ isSeamless }}>
 			<Collapsible
-				baseId={id}
+				baseId={baseId || id}
 				{...props}
 				animated={animated}
 				className={classes}

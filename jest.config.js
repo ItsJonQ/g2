@@ -7,6 +7,7 @@ module.exports = Object.assign(jestConfig, {
 	collectCoverageFrom: [
 		'<rootDir>/packages/components/src/**/*.{js,jsx}',
 		'<rootDir>/packages/create-styles/src/**/*.{js,jsx}',
+		'<rootDir>/packages/styles/src/**/*.{js,jsx}',
 	],
 	modulePathIgnorePatterns: ['<rootDir>/.remake/'],
 	testPathIgnorePatterns: ['<rootDir>/.remake/'],

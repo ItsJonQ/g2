@@ -45,6 +45,7 @@ const ColorInput = ({ value, onChange, fallback = '' }) => {
 const defaultThemeConfig = {
 	colorAdmin: '#3858E9',
 	surfaceColor: '#ffffff',
+	cardBorderRadius: '8px',
 	controlSurfaceColor: null,
 	colorText: null,
 	controlBorderRadius: '4px',
@@ -82,25 +83,27 @@ function Themer({ inspector, setInspector }) {
 	};
 
 	const {
+		cardBorderRadius,
 		colorAdmin,
-		surfaceColor,
-		controlSurfaceColor,
 		colorText,
 		controlBorderRadius,
 		controlHeight,
+		controlSurfaceColor,
 		fontFamily,
 		fontSize,
+		surfaceColor,
 	} = themeConfig;
 
 	const theme = {
+		cardBorderRadius,
 		colorAdmin,
 		colorText,
 		controlBorderRadius,
 		controlHeight,
-		surfaceColor: !isDark ? surfaceColor : null,
 		controlSurfaceColor,
 		fontFamily,
 		fontSize,
+		surfaceColor: !isDark ? surfaceColor : null,
 	};
 
 	return (
@@ -177,6 +180,7 @@ function Themer({ inspector, setInspector }) {
 										<FormGroup label="Border Radius">
 											<TextInput
 												type="number"
+												min={0}
 												value={parseInt(
 													controlBorderRadius,
 													10,
@@ -191,6 +195,7 @@ function Themer({ inspector, setInspector }) {
 										<FormGroup label="Height">
 											<TextInput
 												type="number"
+												min={0}
 												value={parseInt(
 													controlHeight,
 													10,
@@ -215,9 +220,29 @@ function Themer({ inspector, setInspector }) {
 										<FormGroup label="Size">
 											<TextInput
 												type="number"
+												min={0}
 												value={parseInt(fontSize, 10)}
 												onChange={(value) =>
 													update('fontSize')(
+														`${value}px`,
+													)
+												}
+											/>
+										</FormGroup>
+									</Spacer>
+									<Spacer mb={4}>
+										<Subheading>Card</Subheading>
+										<Separator />
+										<FormGroup label="Border Radius">
+											<TextInput
+												type="number"
+												min={0}
+												value={parseInt(
+													cardBorderRadius,
+													10,
+												)}
+												onChange={(value) =>
+													update('cardBorderRadius')(
 														`${value}px`,
 													)
 												}

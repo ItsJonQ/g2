@@ -13,6 +13,7 @@ function SegmentControl({
 	forwardedRef,
 	isAdaptiveWidth = false,
 	isBlock = false,
+	id,
 	label = 'SegmentControl',
 	options = [],
 	onChange,
@@ -20,7 +21,10 @@ function SegmentControl({
 	value,
 }) {
 	const containerRef = useRef();
-	const reakitRadio = useRadioState({ baseId, unstable_virtual: true });
+	const reakitRadio = useRadioState({
+		baseId: baseId || id,
+		unstable_virtual: true,
+	});
 	const [resizeListener, sizes] = useResizeAware();
 	const radio = {
 		...reakitRadio,

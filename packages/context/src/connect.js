@@ -1,4 +1,4 @@
-import { cx } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import { hoistNonReactStatics, is, kebabCase, uniq } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
@@ -53,16 +53,26 @@ export function connect(Component, namespace, options = {}) {
 				return is.plainObject(v) ? { ...acc, ...v } : acc;
 			}, {});
 		} else {
-			contextProps = context[key];
+			contextProps =
+				context[key] ||
+				// Fallback
+				{};
 		}
 
+		const { css: contextCSS, ...otherContextProps } = contextProps;
+
 		const initialMergedProps = is.plainObject(contextProps)
-			? { ...contextProps, ...props }
+			? { ...otherContextProps, ...props }
 			: props;
 
 		const { children, renderChildren, ...mergedProps } = initialMergedProps;
 
-		const classes = cx(getStyledClassNameFromKey(key), className);
+		const classes = cx(
+			// Resolve custom CSS from ComponentsProvider
+			css(contextCSS),
+			getStyledClassNameFromKey(key),
+			className,
+		);
 
 		// Provides the ability to customize the render of the component.
 		const rendered = is.function(renderChildren)

@@ -1,3 +1,6 @@
+import React from 'react';
+
+import { ThemeProvider as BaseThemeProvider } from '../components/ThemeProvider';
 import { createCompiler } from '../createCompiler';
 import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
@@ -27,6 +30,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {function} get The primary function to retrieve Style system variables.
  * @property {object} styled A set of styled components.
  * @property {React.Component} View The base <View /> component.
+ * @property {React.Component} ThemeProvider The component (Provider) used to adjust design tokens.
  */
 
 /**
@@ -98,6 +102,13 @@ export function createStyleSystem(options = defaultOptions) {
 
 	const View = core.div;
 
+	/**
+	 * An enhanced (base) ThemeProvider with injectGlobal from the custom Emotion instance.
+	 */
+	const ThemeProvider = (props) => (
+		<BaseThemeProvider {...props} injectGlobal={compiler.injectGlobal} />
+	);
+
 	const styleSystem = {
 		compiler,
 		core,
@@ -107,6 +118,7 @@ export function createStyleSystem(options = defaultOptions) {
 		get,
 		styled,
 		View,
+		ThemeProvider,
 	};
 
 	return styleSystem;

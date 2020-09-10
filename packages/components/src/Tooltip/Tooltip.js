@@ -12,6 +12,7 @@ function Tooltip({
 	children,
 	content,
 	gutter = 4,
+	id,
 	modal = true,
 	placement,
 	visible = false,
@@ -19,7 +20,7 @@ function Tooltip({
 }) {
 	const tooltip = useTooltipState({
 		animated: animated ? animationDuration : undefined,
-		baseId,
+		baseId: baseId || id,
 		gutter,
 		placement,
 		unstable_portal: modal,

@@ -2,12 +2,12 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-badge css-teaedw"
+  class="wp-components-badge css-1qf2rki"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-1y3m43u"
+    class="wp-components-truncate wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >

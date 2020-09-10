@@ -14,5 +14,5 @@ export const _default = () => {
 		{ label: 'Last 7 days', value: 'lastWeek' },
 	];
 
-	return <Select options={options} />;
+	return <Select options={options} required />;
 };

@@ -17,7 +17,9 @@ const { InputView } = TextInputStyles;
 
 function Select({
 	className,
+	children,
 	defaultValue,
+	disabled,
 	forwardedRef,
 	id: idProp,
 	onBlur = noop,
@@ -62,39 +64,42 @@ function Select({
 
 	return (
 		<BaseField
-			{...props}
 			as={Flex}
 			className={classes}
+			disabled={disabled}
 			gap={0}
 			isFocused={isFocused}
 			onClick={handleOnRootClick}
-			{...ns('Select')}
+			{...ns('SelectWrapper')}
 		>
 			<FlexBlock>
 				<InputView
 					as="select"
 					cx={inputCx}
+					disabled={disabled}
 					id={id}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}
 					onFocus={handleOnFocus}
 					ref={mergeRefs([forwardedRef, inputRef])}
 					value={value}
-					{...ns('SelectInput')}
+					{...props}
+					{...ns('Select')}
 				>
-					{options.map((option, index) => {
-						const { id, label, value, ...optionProps } = option;
+					{children ||
+						options.map((option, index) => {
+							const { id, label, value, ...optionProps } = option;
 
-						return (
-							<option
-								key={id || value || index}
-								value={value}
-								{...optionProps}
-							>
-								{label}
-							</option>
-						);
-					})}
+							return (
+								<option
+									key={id || value || index}
+									value={value}
+									{...optionProps}
+								>
+									{label}
+								</option>
+							);
+						})}
 				</InputView>
 			</FlexBlock>
 			<ArrowWrapperView>

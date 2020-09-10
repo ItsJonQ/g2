@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <a
-  class="wp-components-text wp-components-link css-1r39itj"
+  class="wp-components-text wp-components-link css-1ta0pmb"
   data-g2-c16t="true"
   data-g2-component="Link"
   href="#"
@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isPlain 1`] = `
 <a
-  class="wp-components-text wp-components-link css-9y7hj7"
+  class="wp-components-text wp-components-link css-ydk8q1"
   data-g2-c16t="true"
   data-g2-component="Link"
   href="#"

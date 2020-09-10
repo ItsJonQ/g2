@@ -1,5 +1,5 @@
 import { connect, hasNamespace } from '@wp-g2/context';
-import { css, useResponsiveValue } from '@wp-g2/styles';
+import { css, space, useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -19,7 +19,6 @@ export function Flex({
 	wrap = false,
 	...props
 }) {
-	const gapValue = gap * 4;
 	const direction = useResponsiveValue(directionProp);
 
 	const isColumn = !!direction?.includes('column');
@@ -32,7 +31,7 @@ export function Flex({
 		const _key = child.key || index;
 		const contextProps = {
 			display: isColumn ? 'block' : undefined,
-			gap: gapValue,
+			gap: space(gap),
 			isColumn,
 			isFirst,
 			isLast,

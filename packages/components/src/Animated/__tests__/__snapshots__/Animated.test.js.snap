@@ -2,7 +2,7 @@
 
 exports[`props should render as another Component 1`] = `
 <div
-  class="wp-components-animated css-1ihlkjd"
+  class="wp-components-animated css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Animated"
 >
@@ -12,12 +12,12 @@ exports[`props should render as another Component 1`] = `
 
 exports[`props should render as another HTML tag 1`] = `
 <span
-  class="wp-components-animated css-1ihlkjd"
+  class="wp-components-animated css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Animated"
 >
   <span
-    class="wp-components-text css-1rgm0kx"
+    class="wp-components-text css-1j5v64k"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -28,7 +28,7 @@ exports[`props should render as another HTML tag 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-animated css-1ihlkjd"
+  class="wp-components-animated css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Animated"
 >
@@ -38,7 +38,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with auto animations 1`] = `
 <div
-  class="wp-components-animated css-1ihlkjd"
+  class="wp-components-animated css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"

@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, cx, toPx } from '@wp-g2/styles';
+import { css, cx, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -26,73 +26,68 @@ function Spacer({
 	const classes = cx(
 		is.defined(mt) &&
 			css`
-				margin-top: ${value(mt)};
+				margin-top: ${space(mt)};
 			`,
 		is.defined(mb) &&
 			css`
-				margin-bottom: ${value(mb)};
+				margin-bottom: ${space(mb)};
 			`,
 		is.defined(ml) &&
 			css`
-				margin-left: ${value(ml)};
+				margin-left: ${space(ml)};
 			`,
 		is.defined(mr) &&
 			css`
-				margin-right: ${value(mr)};
+				margin-right: ${space(mr)};
 			`,
 		is.defined(mx) &&
 			css`
-				margin-left: ${value(mx)};
-				margin-right: ${value(mx)};
+				margin-left: ${space(mx)};
+				margin-right: ${space(mx)};
 			`,
 		is.defined(my) &&
 			css`
-				margin-bottom: ${value(my)};
-				margin-top: ${value(my)};
+				margin-bottom: ${space(my)};
+				margin-top: ${space(my)};
 			`,
 		is.defined(m) &&
 			css`
-				margin: ${value(m)};
+				margin: ${space(m)};
 			`,
 		is.defined(pt) &&
 			css`
-				padding-top: ${value(pt)};
+				padding-top: ${space(pt)};
 			`,
 		is.defined(pb) &&
 			css`
-				padding-bottom: ${value(pb)};
+				padding-bottom: ${space(pb)};
 			`,
 		is.defined(pl) &&
 			css`
-				padding-left: ${value(pl)};
+				padding-left: ${space(pl)};
 			`,
 		is.defined(pr) &&
 			css`
-				padding-right: ${value(pr)};
+				padding-right: ${space(pr)};
 			`,
 		is.defined(px) &&
 			css`
-				padding-left: ${value(px)};
-				padding-right: ${value(px)};
+				padding-left: ${space(px)};
+				padding-right: ${space(px)};
 			`,
 		is.defined(py) &&
 			css`
-				padding-bottom: ${value(py)};
-				padding-top: ${value(py)};
+				padding-bottom: ${space(py)};
+				padding-top: ${space(py)};
 			`,
 		is.defined(p) &&
 			css`
-				padding: ${value(p)};
+				padding: ${space(p)};
 			`,
 		className,
 	);
 
 	return <View className={classes} {...props} />;
-}
-
-function value(val) {
-	const gridBase = 4;
-	return toPx(val * gridBase);
 }
 
 export default connect(Spacer, 'Spacer');
