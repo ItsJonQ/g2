@@ -106,7 +106,11 @@ export function createStyleSystem(options = defaultOptions) {
 	 * An enhanced (base) ThemeProvider with injectGlobal from the custom Emotion instance.
 	 */
 	const ThemeProvider = (props) => (
-		<BaseThemeProvider {...props} injectGlobal={compiler.injectGlobal} />
+		<BaseThemeProvider
+			{...props}
+			globalStyles={globalStyles}
+			injectGlobal={compiler.injectGlobal}
+		/>
 	);
 
 	const styleSystem = {

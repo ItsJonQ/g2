@@ -1,6 +1,7 @@
 import { ThemeProvider as BaseThemeProvider } from 'emotion-theming';
 import React, { useRef } from 'react';
 
+import { useHydrateGlobalStyles } from '../../hooks';
 import {
 	useColorBlindMode,
 	useDarkMode,
@@ -43,6 +44,7 @@ function ThemeProvider({
 	children,
 	injectGlobal,
 	isGlobal = false,
+	globalStyles,
 	isDark,
 	isColorBlind,
 	isReducedMotion,
@@ -50,6 +52,15 @@ function ThemeProvider({
 	theme = {},
 	...props
 }) {
+	/**
+	 * Hydrates global styles (via injectGlobal). This is necessary as there may
+	 * be a chance that <ThemeProvider /> renders before any other (styled)
+	 * component. Injecting global styles early in this manner allows for
+	 * the initial render of theme styles (which also uses injectGlobal)
+	 * to be sequences correctly.
+	 */
+	useHydrateGlobalStyles({ injectGlobal, globalStyles });
+
 	const nodeRef = useRef();
 	const themeStyles = useThemeStyles({ injectGlobal, isGlobal, theme });
 

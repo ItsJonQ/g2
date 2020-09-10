@@ -157,22 +157,22 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	 * Work-around to inject a global theme style. This makes it compatible with
 	 * SSR solutions, as injectGlobal is understood by Emotion's SSR flow.
 	 */
-	// const didInjectGlobalStyles = useRef(false);
+	const didInjectGlobalStyles = useRef(false);
 
-	// if (!didInjectGlobalStyles.current && isGlobal && theme) {
-	// 	if (is.function(injectGlobal)) {
-	// 		try {
-	// 			const globalStyles = transformValuesToVariablesString(
-	// 				':root',
-	// 				theme,
-	// 			);
-	// 			injectGlobal`${globalStyles}`;
-	// 		} catch (err) {
-	// 			// eslint-disable-next-line
-	// 		}
-	// 	}
-	// 	didInjectGlobalStyles.current = true;
-	// }
+	if (!didInjectGlobalStyles.current && isGlobal && theme) {
+		if (is.function(injectGlobal)) {
+			try {
+				const globalStyles = transformValuesToVariablesString(
+					':root',
+					theme,
+				);
+				injectGlobal`${globalStyles}`;
+			} catch (err) {
+				// eslint-disable-next-line
+			}
+		}
+		didInjectGlobalStyles.current = true;
+	}
 
 	useEffect(() => {
 		/**
