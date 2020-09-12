@@ -69,11 +69,18 @@ export function connect(Component, namespace, options = {}) {
 			? { ...otherContextProps, ...props }
 			: props;
 
-		const { children, renderChildren, ...mergedProps } = initialMergedProps;
+		const {
+			children,
+			css: cssProp,
+			renderChildren,
+			...mergedProps
+		} = initialMergedProps;
 
 		const classes = cx(
 			// Resolve custom CSS from ComponentsProvider
 			css(contextCSS),
+			// Resolve custom CSS from props
+			css(cssProp),
 			getStyledClassNameFromKey(key),
 			className,
 		);

@@ -1120,7 +1120,7 @@ exports[`props should render Dropdown 1`] = `null`;
 
 exports[`props should render DropdownMenu 1`] = `
 <div
-  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-v5g741"
+  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-cab5f9"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
@@ -1161,7 +1161,7 @@ exports[`props should render DropdownMenu 1`] = `
 
 exports[`props should render DropdownMenu with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-v5g741"
+  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-cab5f9"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
@@ -1202,7 +1202,7 @@ exports[`props should render DropdownMenu with css prop 1`] = `
 
 exports[`props should render DropdownMenu with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-1hofh9y"
+  class="wp-components-view wp-components-menu wp-components-dropdown-menu css-c8pltp"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
@@ -2600,24 +2600,6 @@ exports[`props should render Select 1`] = `
 </div>
 `;
 
-exports[`props should render Select with css prop 1`] = `
-<select
-  class="css-exabpr"
-  data-g2-c16t="true"
-  data-g2-component="Select"
-  id="Select"
-/>
-`;
-
-exports[`props should render Select with css prop 2`] = `
-<select
-  class="css-1qg5ytb"
-  data-g2-c16t="true"
-  data-g2-component="Select"
-  id="Select"
-/>
-`;
-
 exports[`props should render Separator 1`] = `
 <hr
   aria-orientation="horizontal"
@@ -2723,7 +2705,7 @@ exports[`props should render Spacer with css prop 2`] = `
 exports[`props should render Spinner 1`] = `
 <div
   aria-busy="true"
-  class="css-ee8emf"
+  class="wp-components-spinner css-ee8emf"
   data-g2-c16t="true"
   data-g2-component="Spinner"
   id="Spinner"
@@ -2781,7 +2763,7 @@ exports[`props should render Spinner 1`] = `
 exports[`props should render Spinner with css prop 1`] = `
 <div
   aria-busy="true"
-  class="css-ee8emf"
+  class="wp-components-spinner css-ee8emf"
   data-g2-c16t="true"
   data-g2-component="Spinner"
   id="Spinner"
@@ -2839,7 +2821,7 @@ exports[`props should render Spinner with css prop 1`] = `
 exports[`props should render Spinner with css prop 2`] = `
 <div
   aria-busy="true"
-  class="css-lk5x3y"
+  class="wp-components-spinner css-lk5x3y"
   data-g2-c16t="true"
   data-g2-component="Spinner"
   id="Spinner"
@@ -3378,77 +3360,6 @@ exports[`props should render Switch 1`] = `
 </label>
 `;
 
-exports[`props should render Switch with css prop 1`] = `
-<label
-  class="css-1qim1rt"
-  data-g2-c16t="true"
-  data-g2-component="Switch"
-  for="Switch"
->
-  <div
-    aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
-  />
-  <input
-    aria-checked="false"
-    class="css-175q9tm"
-    data-g2-c16t="true"
-    data-g2-component="SwitchInput"
-    id="Switch"
-    type="checkbox"
-  />
-  <span
-    data-g2-component="SwitchLabel"
-    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
-  />
-</label>
-`;
-
-exports[`props should render Switch with css prop 2`] = `
-<label
-  class="css-18ihsje"
-  data-g2-c16t="true"
-  data-g2-component="Switch"
-  for="Switch"
->
-  <div
-    aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
-  />
-  <input
-    aria-checked="false"
-    class="css-175q9tm"
-    css="
-							background: red;
-						,[object Object]"
-    data-g2-c16t="true"
-    data-g2-component="SwitchInput"
-    id="Switch"
-    type="checkbox"
-  />
-  <span
-    data-g2-component="SwitchLabel"
-    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
-  />
-</label>
-`;
-
 exports[`props should render Tab 1`] = `
 <button
   aria-selected="false"
@@ -3691,26 +3602,6 @@ exports[`props should render TextInput 1`] = `
     />
   </div>
 </div>
-`;
-
-exports[`props should render TextInput with css prop 1`] = `
-<input
-  class="css-pgzgex"
-  data-g2-c16t="true"
-  data-g2-component="TextInput"
-  id="TextInput"
-  value=""
-/>
-`;
-
-exports[`props should render TextInput with css prop 2`] = `
-<input
-  class="css-9innbo"
-  data-g2-c16t="true"
-  data-g2-component="TextInput"
-  id="TextInput"
-  value=""
-/>
 `;
 
 exports[`props should render Tooltip 1`] = `null`;

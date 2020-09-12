@@ -349,7 +349,7 @@ exports[`props should render isLoading 1`] = `
     >
       <div
         aria-busy="true"
-        class="css-ee8emf"
+        class="wp-components-spinner css-ee8emf"
         data-g2-c16t="true"
         data-g2-component="Spinner"
         style="height: 16px; width: 16px;"

@@ -71,7 +71,14 @@ describe('props', () => {
 				`[${NAMESPACE}="${name}"]`,
 			);
 
-			if (second) {
+			/**
+			 * Skipping these components since their css/classNames not used
+			 * on the targeted namespaced node.
+			 */
+			const skipComponents = ['Select', 'Switch', 'TextInput'];
+			const shouldSkip = skipComponents.includes(name);
+
+			if (!shouldSkip && second) {
 				const firstClasses = first.classList.toString();
 				const secondClasses = second.classList.toString();
 

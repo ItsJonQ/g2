@@ -4,6 +4,7 @@ import { is } from '@wp-g2/utils';
 const Z_INDEX_REGISTRY = {
 	Tooltip: 999999,
 	Popover: 9999,
+	Dropdown: 9998,
 	Modal: 999,
 };
 
