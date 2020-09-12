@@ -1,5 +1,13 @@
+import { useDialogState } from '@wp-g2/a11y';
 import React from 'react';
 
+import {
+	Button,
+	Modal,
+	ModalBody,
+	ModalFooter,
+	ModalHeader,
+} from '../../index';
 import {
 	Dropdown,
 	DropdownMenu,
@@ -10,6 +18,35 @@ import {
 export default {
 	component: Dropdown,
 	title: 'Components/Dropdown',
+};
+
+export const WithModal = () => {
+	const dialog = useDialogState({ animated: true });
+	return (
+		<>
+			<Dropdown>
+				<DropdownTrigger>Dropdown</DropdownTrigger>
+				<DropdownMenu>
+					<DropdownMenuItem onClick={dialog.show}>
+						One
+					</DropdownMenuItem>
+					<DropdownMenuItem onClick={dialog.show}>
+						Two
+					</DropdownMenuItem>
+				</DropdownMenu>
+			</Dropdown>
+			<Modal dialog={dialog}>
+				<ModalHeader />
+				<ModalBody>Hello</ModalBody>
+				<ModalFooter>
+					<Button onClick={dialog.hide} variant="primary">
+						Save
+					</Button>
+					<Button onClick={dialog.hide}>Cancel</Button>
+				</ModalFooter>
+			</Modal>
+		</>
+	);
 };
 
 export const _default = () => {

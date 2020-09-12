@@ -4,24 +4,19 @@ import React from 'react';
 
 import { ControlLabel } from '../ControlLabel';
 import { Grid } from '../Grid';
+import { View } from '../View';
 import { FormGroupContext } from './FormGroup.Context';
-import * as styles from './FormGroup.styles';
-
-const { FormGroupView } = styles;
 
 function FormGroup({
 	alignLabel = 'left',
 	children,
 	horizontal = true,
 	id: idProp,
-	isMarginless,
 	label,
 	...props
 }) {
 	const id = useUniqueId(FormGroup, 'form-group', idProp);
 	const contextProps = { id };
-
-	const cx = [isMarginless && styles.marginless];
 
 	const labelMarkup = label ? (
 		<ControlLabel align={alignLabel}>{label}</ControlLabel>
@@ -36,7 +31,7 @@ function FormGroup({
 
 	return (
 		<FormGroupContext.Provider value={contextProps}>
-			<FormGroupView {...props} cx={cx}>
+			<View {...props}>
 				{horizontal ? (
 					<Grid templateColumns="minmax(0, 1fr) 2fr" {...props}>
 						{contentMarkup}
@@ -44,7 +39,7 @@ function FormGroup({
 				) : (
 					contentMarkup
 				)}
-			</FormGroupView>
+			</View>
 		</FormGroupContext.Provider>
 	);
 }

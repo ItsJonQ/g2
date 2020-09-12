@@ -35,6 +35,7 @@ export function Flex({
 			isColumn,
 			isFirst,
 			isLast,
+			isReverse: direction?.includes('reverse'),
 		};
 
 		const _isSubComponent = hasNamespace(child, ['FlexBlock', 'FlexItem']);

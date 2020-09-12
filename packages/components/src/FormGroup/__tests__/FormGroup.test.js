@@ -42,13 +42,4 @@ describe('props', () => {
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
-
-	test('should render isMarginless', () => {
-		const { container } = render(
-			<FormGroup id="fname" isMarginless label="First name">
-				<TextInput />
-			</FormGroup>,
-		);
-		expect(container.firstChild).toMatchSnapshot();
-	});
 });

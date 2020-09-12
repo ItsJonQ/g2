@@ -66,7 +66,7 @@ export function SiteHeader() {
               <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
               <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
             </HStack>
-            <FormGroup isMarginless label="Inspect" templateColumns="1fr 1fr">
+            <FormGroup label="Inspect" templateColumns="1fr 1fr">
               <Tooltip
                 content="See how this site was built with G2!"
                 gutter={16}

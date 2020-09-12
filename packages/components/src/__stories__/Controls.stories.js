@@ -31,6 +31,7 @@ import {
 	Text,
 	TextInput,
 	View,
+	VStack,
 } from '../index';
 
 export default {
@@ -77,86 +78,90 @@ const LayoutControls = () => {
 		<Panel visible>
 			<PanelHeader title="Layout" />
 			<PanelBody>
-				<FormGroup label="Dimensions">
-					<Grid columns={2}>
-						<TextInput suffix={<SuffixLabel>W</SuffixLabel>} />
-						<TextInput
-							id="d-h"
-							suffix={<SuffixLabel>H</SuffixLabel>}
-						/>
-					</Grid>
-				</FormGroup>
-				<FormGroup label="Align">
-					<SegmentedControl
-						isBlock
-						options={[
-							{
-								label: <Icon icon={<FiAlignLeft />} />,
-								value: 'left',
-							},
-							{
-								label: <Icon icon={<FiAlignCenter />} />,
-								value: 'center',
-							},
-							{
-								label: <Icon icon={<FiAlignRight />} />,
-								value: 'right',
-							},
-						]}
-					/>
-				</FormGroup>
-				<FormGroup label="Position">
-					<Grid columns={2}>
-						<TextInput suffix={<SuffixLabel>X</SuffixLabel>} />
-						<TextInput
-							id="pos-y"
-							suffix={<SuffixLabel>Y</SuffixLabel>}
-						/>
-					</Grid>
-				</FormGroup>
-				<FormGroup label="Distribution">
-					<Select options={[{ label: 'Center', value: 'center' }]} />
-				</FormGroup>
-				<FormGroup label="Padding">
-					<View>
-						<Spacer>
-							<Grid columns={2}>
-								<TextInput
-									suffix={<SuffixLabel>PX</SuffixLabel>}
-								/>
-								<Stepper direction="horizontal" />
-							</Grid>
-						</Spacer>
+				<VStack>
+					<FormGroup label="Dimensions">
+						<Grid columns={2}>
+							<TextInput suffix={<SuffixLabel>W</SuffixLabel>} />
+							<TextInput
+								id="d-h"
+								suffix={<SuffixLabel>H</SuffixLabel>}
+							/>
+						</Grid>
+					</FormGroup>
+					<FormGroup label="Align">
 						<SegmentedControl
 							isBlock
 							options={[
 								{
-									label: <Icon icon={<FiSquare />} />,
-									value: 'all',
+									label: <Icon icon={<FiAlignLeft />} />,
+									value: 'left',
 								},
 								{
-									label: <Icon icon={<FiMaximize />} />,
-									value: 'sides',
+									label: <Icon icon={<FiAlignCenter />} />,
+									value: 'center',
+								},
+								{
+									label: <Icon icon={<FiAlignRight />} />,
+									value: 'right',
 								},
 							]}
 						/>
-					</View>
-				</FormGroup>
-				<FormGroup label="Overflow">
-					<SegmentedControl
-						isBlock
-						options={[
-							{
-								label: 'Show',
-								value: 'show',
-							},
-							{
-								label: 'Hide',
-								value: 'hide',
-							},
-						]}
-					/>
-				</FormGroup>
+					</FormGroup>
+					<FormGroup label="Position">
+						<Grid columns={2}>
+							<TextInput suffix={<SuffixLabel>X</SuffixLabel>} />
+							<TextInput
+								id="pos-y"
+								suffix={<SuffixLabel>Y</SuffixLabel>}
+							/>
+						</Grid>
+					</FormGroup>
+					<FormGroup label="Distribution">
+						<Select
+							options={[{ label: 'Center', value: 'center' }]}
+						/>
+					</FormGroup>
+					<FormGroup label="Padding">
+						<View>
+							<Spacer>
+								<Grid columns={2}>
+									<TextInput
+										suffix={<SuffixLabel>PX</SuffixLabel>}
+									/>
+									<Stepper direction="horizontal" />
+								</Grid>
+							</Spacer>
+							<SegmentedControl
+								isBlock
+								options={[
+									{
+										label: <Icon icon={<FiSquare />} />,
+										value: 'all',
+									},
+									{
+										label: <Icon icon={<FiMaximize />} />,
+										value: 'sides',
+									},
+								]}
+							/>
+						</View>
+					</FormGroup>
+					<FormGroup label="Overflow">
+						<SegmentedControl
+							isBlock
+							options={[
+								{
+									label: 'Show',
+									value: 'show',
+								},
+								{
+									label: 'Hide',
+									value: 'hide',
+								},
+							]}
+						/>
+					</FormGroup>
+				</VStack>
 			</PanelBody>
 		</Panel>
 	);
@@ -167,30 +172,36 @@ const TypographyControls = () => {
 		<Panel visible>
 			<PanelHeader title="Typography" />
 			<PanelBody>
-				<FormGroup label="Font">
-					<Select options={[{ label: 'Inter', value: 'inter' }]} />
-				</FormGroup>
-				<FormGroup label="Style">
-					<Select options={[{ label: 'Medium', value: 'medium' }]} />
-				</FormGroup>
-				<FormGroup label="Size">
-					<Flex gap={2}>
-						<FlexBlock>
-							<TextInput value="16" />
-						</FlexBlock>
-						<FlexBlock>
-							<Slider />
-						</FlexBlock>
-					</Flex>
-				</FormGroup>
-				<FormGroup label="Transform">
-					<Select options={[{ label: 'None', value: 'none' }]} />
-				</FormGroup>
-				<FormGroup label="Dropcap">
-					<Flex justify="flex-end">
-						<Switch />
-					</Flex>
-				</FormGroup>
+				<VStack>
+					<FormGroup label="Font">
+						<Select
+							options={[{ label: 'Inter', value: 'inter' }]}
+						/>
+					</FormGroup>
+					<FormGroup label="Style">
+						<Select
+							options={[{ label: 'Medium', value: 'medium' }]}
+						/>
+					</FormGroup>
+					<FormGroup label="Size">
+						<Flex gap={2}>
+							<FlexBlock>
+								<TextInput value="16" />
+							</FlexBlock>
+							<FlexBlock>
+								<Slider />
+							</FlexBlock>
+						</Flex>
+					</FormGroup>
+					<FormGroup label="Transform">
+						<Select options={[{ label: 'None', value: 'none' }]} />
+					</FormGroup>
+					<FormGroup label="Dropcap">
+						<Flex justify="flex-end">
+							<Switch />
+						</Flex>
+					</FormGroup>
+				</VStack>
 			</PanelBody>
 		</Panel>
 	);

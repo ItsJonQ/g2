@@ -90,11 +90,7 @@ const Example = () => {
 					</HStack>
 
 					<Spacer />
-					<FormGroup
-						isMarginless
-						label="Force Fail"
-						templateColumns="1fr auto"
-					>
+					<FormGroup label="Force Fail" templateColumns="1fr auto">
 						<Switch checked={fail} onChange={setFail} />
 					</FormGroup>
 				</HStack>

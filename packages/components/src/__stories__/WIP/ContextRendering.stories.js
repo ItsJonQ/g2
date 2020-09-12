@@ -35,7 +35,7 @@ const Cluster = () => {
 		<View>
 			<Card>
 				<CardBody>
-					<FormGroup isMarginless label="First Name">
+					<FormGroup label="First Name">
 						<TextField value="Elsa" />
 					</FormGroup>
 				</CardBody>

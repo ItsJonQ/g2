@@ -12,6 +12,7 @@ export const Button = css`
 	color: ${get('colorAdmin')};
 	cursor: pointer;
 	display: inline-flex;
+	font-size: ${get('fontSize')};
 	font-weight: 600;
 	height: ${get('controlHeight')};
 	line-height: 1;
@@ -207,9 +208,13 @@ export const link = css`
 
 export const subtle = css`
 	border-color: transparent;
+	color: ${get('colorText')};
 
+	&:hover,
+	&:active,
 	&:focus {
 		border-color: transparent;
+		color: ${get('colorText')};
 	}
 `;
 

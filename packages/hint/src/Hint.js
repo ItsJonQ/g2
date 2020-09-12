@@ -208,7 +208,6 @@ export function Hint({
 					</View>
 					<CardFooter>
 						<FormGroup
-							isMarginless
 							label="Auto-Analyze"
 							templateColumns="1fr 1fr"
 						>

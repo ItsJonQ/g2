@@ -6,11 +6,16 @@ import { CardFooter } from '../Card';
 function ModalFooter({
 	children,
 	forwardedRef,
-	justify = 'flex-end',
+	justify = 'flex-start',
 	...props
 }) {
 	return (
-		<CardFooter justify={justify} ref={forwardedRef} {...props}>
+		<CardFooter
+			direction="row-reverse"
+			justify={justify}
+			ref={forwardedRef}
+			{...props}
+		>
 			{children}
 		</CardFooter>
 	);
