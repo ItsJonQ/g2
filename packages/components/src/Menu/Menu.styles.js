@@ -13,6 +13,7 @@ export const MenuItem = css`
 	color: ${get('colorText')};
 	cursor: pointer;
 	display: block;
+	font-size: ${get('fontSize')};
 	outline: none;
 	padding: 8px 12px;
 	position: relative;

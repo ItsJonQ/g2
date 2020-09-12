@@ -1243,7 +1243,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
 
 exports[`props should render DropdownMenuItem 1`] = `
 <div
-  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-cmi091"
+  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-1gi8xz1"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuItem"
   id="DropdownMenuItem"
@@ -1252,7 +1252,7 @@ exports[`props should render DropdownMenuItem 1`] = `
 
 exports[`props should render DropdownMenuItem with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-cmi091"
+  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-1gi8xz1"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuItem"
   id="DropdownMenuItem"
@@ -1261,7 +1261,7 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
 
 exports[`props should render DropdownMenuItem with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-1dax3m"
+  class="wp-components-view wp-components-menu-item wp-components-dropdown-menu-item css-youci"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuItem"
   id="DropdownMenuItem"
@@ -1862,7 +1862,7 @@ exports[`props should render Menu with css prop 2`] = `
 
 exports[`props should render MenuItem 1`] = `
 <div
-  class="wp-components-view wp-components-menu-item css-cmi091"
+  class="wp-components-view wp-components-menu-item css-1gi8xz1"
   data-g2-c16t="true"
   data-g2-component="MenuItem"
   id="MenuItem"
@@ -1871,7 +1871,7 @@ exports[`props should render MenuItem 1`] = `
 
 exports[`props should render MenuItem with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-menu-item css-cmi091"
+  class="wp-components-view wp-components-menu-item css-1gi8xz1"
   data-g2-c16t="true"
   data-g2-component="MenuItem"
   id="MenuItem"
@@ -1880,7 +1880,7 @@ exports[`props should render MenuItem with css prop 1`] = `
 
 exports[`props should render MenuItem with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-menu-item css-1dax3m"
+  class="wp-components-view wp-components-menu-item css-youci"
   data-g2-c16t="true"
   data-g2-component="MenuItem"
   id="MenuItem"
