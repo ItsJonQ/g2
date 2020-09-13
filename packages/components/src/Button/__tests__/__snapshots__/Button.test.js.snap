@@ -24,7 +24,7 @@ exports[`props should render (Flex) gap 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -55,7 +55,7 @@ exports[`props should render as link (href) 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -86,7 +86,7 @@ exports[`props should render correctly 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -120,7 +120,7 @@ exports[`props should render disabled 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -151,7 +151,7 @@ exports[`props should render elevation 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-36hqob"
+    class="wp-components-elevation css-9spiy4"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -210,7 +210,7 @@ exports[`props should render hasCaret 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -254,7 +254,7 @@ exports[`props should render icon 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -285,7 +285,7 @@ exports[`props should render isControl 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -316,7 +316,7 @@ exports[`props should render isDestructive 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -418,7 +418,7 @@ exports[`props should render isLoading 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -449,7 +449,7 @@ exports[`props should render isNarrow 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -480,7 +480,7 @@ exports[`props should render isRounded 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -511,7 +511,7 @@ exports[`props should render isSubtle 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -551,7 +551,7 @@ exports[`props should render prefix 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -582,7 +582,7 @@ exports[`props should render size 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -622,7 +622,7 @@ exports[`props should render suffix 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -653,7 +653,7 @@ exports[`props should render variant 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

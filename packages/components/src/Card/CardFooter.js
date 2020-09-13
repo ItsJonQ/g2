@@ -6,7 +6,6 @@ import * as styles from './Card.styles';
 
 function CardFooter({ className, size, ...props }) {
 	const cx = [
-		styles.Footer,
 		styles.borderRadius,
 		styles.headerFooter,
 		styles[size],

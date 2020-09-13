@@ -25,7 +25,7 @@ exports[`props should render CardInnerBody 1`] = `
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-card-footer css-s1cblh"
+      class="wp-components-view wp-components-flex wp-components-card-footer css-xk6v0j"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
@@ -57,7 +57,7 @@ exports[`props should render CardInnerBody 1`] = `
             </span>
           </span>
           <span
-            class="wp-components-elevation css-h443as"
+            class="wp-components-elevation css-17x6dun"
             data-g2-c16t="true"
             data-g2-component="ButtonElevation"
           />
@@ -66,12 +66,12 @@ exports[`props should render CardInnerBody 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-elevation css-lhxd4v"
+    class="wp-components-elevation css-18hqkt0"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-g2k0uu"
+    class="wp-components-elevation css-1873flw"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -107,7 +107,7 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-card-footer css-s1cblh"
+      class="wp-components-view wp-components-flex wp-components-card-footer css-xk6v0j"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
@@ -139,7 +139,7 @@ exports[`props should render correctly 1`] = `
             </span>
           </span>
           <span
-            class="wp-components-elevation css-h443as"
+            class="wp-components-elevation css-17x6dun"
             data-g2-c16t="true"
             data-g2-component="ButtonElevation"
           />
@@ -148,12 +148,12 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-elevation css-lhxd4v"
+    class="wp-components-elevation css-18hqkt0"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-g2k0uu"
+    class="wp-components-elevation css-1873flw"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -172,12 +172,12 @@ exports[`props should render elevation 1`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-lhxd4v"
+    class="wp-components-elevation css-18hqkt0"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-19fumss"
+    class="wp-components-elevation css-zytxex"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -196,12 +196,12 @@ exports[`props should render no elevation 1`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-1505ht1"
+    class="wp-components-elevation css-16j6c8z"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-u1d3br"
+    class="wp-components-elevation css-12htjgm"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />

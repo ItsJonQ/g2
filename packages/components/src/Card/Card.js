@@ -7,8 +7,19 @@ import { Surface } from '../Surface';
 import { View } from '../View';
 import * as styles from './Card.styles';
 
-function Card({ children, className, elevation = 2, forwardedRef, ...props }) {
-	const classes = cx([styles.Card, className]);
+function Card({
+	children,
+	className,
+	elevation = 2,
+	forwardedRef,
+	isBorderless = false,
+	...props
+}) {
+	const classes = cx([
+		styles.Card,
+		isBorderless && styles.borderless,
+		className,
+	]);
 
 	return (
 		<Surface {...props} className={classes} ref={forwardedRef}>

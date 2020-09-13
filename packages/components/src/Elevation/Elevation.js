@@ -33,6 +33,7 @@ function Elevation({
 		borderRadius,
 		bottom: offset,
 		boxShadow: getBoxShadow(value),
+		opacity: get('elevationIntensity'),
 		left: offset,
 		right: offset,
 		top: offset,

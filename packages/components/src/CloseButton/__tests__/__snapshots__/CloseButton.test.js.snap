@@ -54,7 +54,7 @@ exports[`props should render correctly 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -115,7 +115,7 @@ exports[`props should render size 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -176,7 +176,7 @@ exports[`props should render variant 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

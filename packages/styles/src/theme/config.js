@@ -63,6 +63,10 @@ const SURFACE_PROPS = {
 	surfaceColor: get('white'),
 };
 
+const ELEVATION_PROPS = {
+	elevationIntensity: 1,
+};
+
 const GRID_PROPS = {
 	gridBase: '4px',
 };
@@ -100,6 +104,7 @@ const BASE_THEME = {
 	...COLOR_PROPS,
 	...CARD_PROPS,
 	...CONTROL_PROPS,
+	...ELEVATION_PROPS,
 	...FONT_PROPS,
 	...SURFACE_PROPS,
 	...ANIMATION_PROPS,

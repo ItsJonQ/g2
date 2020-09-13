@@ -10,10 +10,6 @@ export const Header = css`
 	border-bottom: 1px solid;
 `;
 
-export const Footer = css`
-	border-top: 1px solid;
-`;
-
 export const Body = css`
 	padding: 12px;
 `;
@@ -39,6 +35,10 @@ export const borderRadius = css`
 		border-bottom-left-radius: ${get('cardBorderRadius')};
 		border-bottom-right-radius: ${get('cardBorderRadius')};
 	}
+`;
+
+export const borderless = css`
+	box-shadow: none;
 `;
 
 export const popoverBody = css`

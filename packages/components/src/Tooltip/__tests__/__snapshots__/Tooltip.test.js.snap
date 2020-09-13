@@ -26,7 +26,7 @@ exports[`props should render animatedDuration 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -59,7 +59,7 @@ exports[`props should render correctly 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -92,7 +92,7 @@ exports[`props should render gutter 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -125,7 +125,7 @@ exports[`props should render placement 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -158,7 +158,7 @@ exports[`props should render visible 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -191,7 +191,7 @@ exports[`props should render without animation 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -226,7 +226,7 @@ exports[`props should render without content 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -259,7 +259,7 @@ exports[`props should render without modal 1`] = `
     </span>
   </span>
   <span
-    class="wp-components-elevation css-h443as"
+    class="wp-components-elevation css-17x6dun"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

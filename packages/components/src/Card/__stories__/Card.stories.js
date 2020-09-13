@@ -9,7 +9,7 @@ export default {
 
 export const _default = () => {
 	return (
-		<Card>
+		<Card elevation={5} isBorderless>
 			<CardBody>Card</CardBody>
 		</Card>
 	);
