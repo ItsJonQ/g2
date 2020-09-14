@@ -2,7 +2,6 @@ import isPropValid from '@emotion/is-prop-valid';
 import { is, mergeRefs } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
-// import { css, cx } from '../compiler';
 import { useHydrateGlobalStyles } from '../hooks';
 import { REDUCED_MOTION_MODE_ATTR } from './constants';
 import { DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';

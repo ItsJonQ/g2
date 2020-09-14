@@ -40,10 +40,10 @@ export function useHydrateGlobalStyles({ injectGlobal, globalStyles = {} }) {
 			${highContrastModeCSSVariables};
 			${darkHighContrastModeCSSVariables};
 		`;
-	}
 
-	/**
-	 * Ensure that this only happens once with a singleton state.
-	 */
-	__INTERNAL_STATE__.didInjectGlobal = true;
+		/**
+		 * Ensure that this only happens once with a singleton state.
+		 */
+		__INTERNAL_STATE__.didInjectGlobal = true;
+	}
 }
