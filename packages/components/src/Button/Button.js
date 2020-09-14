@@ -38,6 +38,7 @@ function Button({
 	prefix,
 	size = 'medium',
 	suffix,
+	textAlign = 'center',
 	variant = 'secondary',
 	...props
 }) {
@@ -58,6 +59,7 @@ function Button({
 		isRounded && styles.rounded,
 		isNarrow && styles.narrow,
 		currentColor && styles.currentColor,
+		css({ textAlign }),
 		css(cssProp),
 		className,
 	]);

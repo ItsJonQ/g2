@@ -19,6 +19,10 @@ export const BaseFieldView = styled.div`
 		opacity: 0.6;
 	}
 
+	&:hover {
+		border-color: ${get('controlBorderColorHover')};
+	}
+
 	&:focus {
 		border-color: ${get('colorAdmin')};
 		box-shadow: ${get('controlBoxShadowFocus')};
@@ -30,4 +34,8 @@ export const focus = css`
 	border-color: ${get('colorAdmin')};
 	box-shadow: ${get('controlBoxShadowFocus')};
 	z-index: 1;
+
+	&:hover {
+		border-color: ${get('colorAdmin')};
+	}
 `;

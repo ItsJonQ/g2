@@ -8,5 +8,5 @@ export default {
 };
 
 export const _default = () => {
-	return <ColorSwatch />;
+	return <ColorSwatch color="red" />;
 };

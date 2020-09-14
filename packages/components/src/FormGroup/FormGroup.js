@@ -16,7 +16,7 @@ function FormGroup({
 	...props
 }) {
 	const id = useUniqueId(FormGroup, 'form-group', idProp);
-	const contextProps = { id };
+	const contextProps = { id, horizontal };
 
 	const labelMarkup = label ? (
 		<ControlLabel align={alignLabel}>{label}</ControlLabel>

@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1v5zbra"
+      class="wp-components-button css-18o72jj"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -71,7 +71,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1ty9nqr"
+      class="wp-components-button css-1k9mh7n"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -144,7 +144,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1z05sgy"
+      class="wp-components-button css-yt8beu"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -202,7 +202,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-l8u5p4"
+      class="wp-components-button css-spb5ds"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -275,7 +275,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1uozigw"
+      class="wp-components-button css-ljw0b6"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -330,7 +330,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-11xdpt"
+      class="wp-components-button css-bp3ec9"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"

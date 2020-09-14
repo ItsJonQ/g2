@@ -17,6 +17,8 @@ export * from './Checkbox';
 export * from './CheckboxGroup';
 export * from './CloseButton';
 export * from './Collapsible';
+export * from './ColorCircle';
+export * from './ColorControl';
 export * from './ColorField';
 export * from './ColorPicker';
 export * from './ColorSwatch';

@@ -75,6 +75,7 @@ const CONTROL_PROPS = {
 	controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
 	controlBorderColor: 'transparent',
+	controlBorderColorHover: 'transparent',
 	controlBorderRadius: '4px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,

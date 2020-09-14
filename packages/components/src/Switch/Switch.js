@@ -38,12 +38,12 @@ function Switch({
 	});
 
 	const uniqueId = useUniqueId(Switch, 'switch', idProp);
-	const { id: contextId } = useFormGroupContext();
+	const { horizontal, id: contextId } = useFormGroupContext();
 	const id = idProp || contextId || uniqueId;
 
 	const Control = ControlComponent[type] || Checkbox;
 
-	const cx = [styles[size]];
+	const cx = [styles[size], contextId && horizontal && styles.formGroup];
 
 	const toggle = (event) => {
 		setChecked(!checked);

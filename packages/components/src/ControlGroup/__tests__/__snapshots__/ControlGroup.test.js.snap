@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-cx90hn"
+      class="wp-components-button css-tt6g4h"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"
@@ -47,7 +47,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-m75sp2"
+      class="wp-components-button css-1ffpkfq"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"
@@ -89,7 +89,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-tpx9mv"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-151rieb"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
@@ -147,7 +147,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1it8skp"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1a3jv2r"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
@@ -173,7 +173,7 @@ exports[`props should render mixed control types 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-m75sp2"
+      class="wp-components-button css-1ffpkfq"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"

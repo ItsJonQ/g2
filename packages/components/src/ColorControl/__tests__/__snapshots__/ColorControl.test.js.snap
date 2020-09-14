@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-color-control css-13hyx04"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ColorControl"
+  data-icon="false"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-1sfr7tf"
+      data-g2-c16t="true"
+      data-g2-component="ButtonPrefix"
+    >
+      <div
+        class="wp-components-color-circle css-1xeytp8"
+        data-g2-c16t="true"
+        data-g2-component="ColorCircle"
+        style="background-color: rgb(0, 0, 255);"
+      />
+    </span>
+    <span
+      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      data-g2-c16t="true"
+      data-g2-component="ButtonContent"
+    >
+      I like warm hugs
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;

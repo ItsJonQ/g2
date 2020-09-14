@@ -112,6 +112,10 @@ export const toggleChecked = css`
 	right: 2px;
 `;
 
+export const formGroup = css`
+	margin-left: auto;
+`;
+
 function getControlHeight(height) {
 	return `calc(${get(height)} - 8px)`;
 }

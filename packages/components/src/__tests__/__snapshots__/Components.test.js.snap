@@ -375,7 +375,7 @@ exports[`props should render Badge with css prop 2`] = `
 
 exports[`props should render BaseField 1`] = `
 <div
-  class="wp-components-base-field css-q2ii1y"
+  class="wp-components-base-field css-kz2uje"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -384,7 +384,7 @@ exports[`props should render BaseField 1`] = `
 
 exports[`props should render BaseField with css prop 1`] = `
 <div
-  class="wp-components-base-field css-q2ii1y"
+  class="wp-components-base-field css-kz2uje"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -393,7 +393,7 @@ exports[`props should render BaseField with css prop 1`] = `
 
 exports[`props should render BaseField with css prop 2`] = `
 <div
-  class="wp-components-base-field css-1msv9hm"
+  class="wp-components-base-field css-1xxii84"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -414,7 +414,7 @@ exports[`props should render BaseView 1`] = `
 exports[`props should render Button 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button css-p8ixzx"
+  class="wp-components-button css-94gk5l"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -438,7 +438,7 @@ exports[`props should render Button 1`] = `
 exports[`props should render Button with css prop 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button css-p8ixzx"
+  class="wp-components-button css-94gk5l"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -462,7 +462,7 @@ exports[`props should render Button with css prop 1`] = `
 exports[`props should render Button with css prop 2`] = `
 <button
   aria-busy="false"
-  class="wp-components-button css-9zp618"
+  class="wp-components-button css-1e5ixpb"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -749,7 +749,7 @@ exports[`props should render CheckboxGroup 1`] = `null`;
 exports[`props should render CloseButton 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-close-button css-3c61ur"
+  class="wp-components-button wp-components-close-button css-g5raua"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -811,7 +811,7 @@ exports[`props should render CloseButton 1`] = `
 exports[`props should render CloseButton with css prop 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-close-button css-3c61ur"
+  class="wp-components-button wp-components-close-button css-g5raua"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -873,7 +873,7 @@ exports[`props should render CloseButton with css prop 1`] = `
 exports[`props should render CloseButton with css prop 2`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-close-button css-dm5v6y"
+  class="wp-components-button wp-components-close-button css-14oioqa"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -932,6 +932,147 @@ exports[`props should render CloseButton with css prop 2`] = `
 </button>
 `;
 
+exports[`props should render ColorCircle 1`] = `
+<div
+  class="wp-components-color-circle css-1xeytp8"
+  data-g2-c16t="true"
+  data-g2-component="ColorCircle"
+  id="ColorCircle"
+  style="background-color: rgb(128, 0, 128);"
+/>
+`;
+
+exports[`props should render ColorCircle with css prop 1`] = `
+<div
+  class="wp-components-color-circle css-1xeytp8"
+  data-g2-c16t="true"
+  data-g2-component="ColorCircle"
+  id="ColorCircle"
+  style="background-color: rgb(128, 0, 128);"
+/>
+`;
+
+exports[`props should render ColorCircle with css prop 2`] = `
+<div
+  class="wp-components-color-circle css-kbx4db"
+  data-g2-c16t="true"
+  data-g2-component="ColorCircle"
+  id="ColorCircle"
+  style="background-color: rgb(128, 0, 128);"
+/>
+`;
+
+exports[`props should render ColorControl 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-color-control css-13hyx04"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ColorControl"
+  data-icon="false"
+  id="ColorControl"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-bzokzn"
+      data-g2-c16t="true"
+      data-g2-component="ButtonPrefix"
+    >
+      <div
+        class="wp-components-color-circle css-1xeytp8"
+        data-g2-c16t="true"
+        data-g2-component="ColorCircle"
+        style="background-color: rgb(128, 0, 128);"
+      />
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ColorControl with css prop 1`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-color-control css-13hyx04"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ColorControl"
+  data-icon="false"
+  id="ColorControl"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-bzokzn"
+      data-g2-c16t="true"
+      data-g2-component="ButtonPrefix"
+    >
+      <div
+        class="wp-components-color-circle css-1xeytp8"
+        data-g2-c16t="true"
+        data-g2-component="ColorCircle"
+        style="background-color: rgb(128, 0, 128);"
+      />
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ColorControl with css prop 2`] = `
+<button
+  aria-busy="false"
+  class="wp-components-button wp-components-color-control css-1po2y5d"
+  data-destructive="false"
+  data-g2-c16t="true"
+  data-g2-component="ColorControl"
+  data-icon="false"
+  id="ColorControl"
+  type="button"
+>
+  <span
+    class="wp-components-view wp-components-flex css-2r7rsp"
+    data-g2-c16t="true"
+    data-g2-component="Flex"
+  >
+    <span
+      class="wp-components-flex-item css-bzokzn"
+      data-g2-c16t="true"
+      data-g2-component="ButtonPrefix"
+    >
+      <div
+        class="wp-components-color-circle css-1xeytp8"
+        data-g2-c16t="true"
+        data-g2-component="ColorCircle"
+        style="background-color: rgb(128, 0, 128);"
+      />
+    </span>
+  </span>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
 exports[`props should render ComponentInspector 1`] = `
 <div
   class="wp-components-component-inspector css-wwgudg"
@@ -961,7 +1102,7 @@ exports[`props should render ComponentInspector with css prop 2`] = `
 
 exports[`props should render Container 1`] = `
 <div
-  class="wp-components-view wp-components-container css-m7w4n6"
+  class="wp-components-container css-9guak4"
   data-g2-c16t="true"
   data-g2-component="Container"
   id="Container"
@@ -970,7 +1111,7 @@ exports[`props should render Container 1`] = `
 
 exports[`props should render Container with css prop 1`] = `
 <div
-  class="wp-components-view wp-components-container css-m7w4n6"
+  class="wp-components-container css-9guak4"
   data-g2-c16t="true"
   data-g2-component="Container"
   id="Container"
@@ -979,7 +1120,7 @@ exports[`props should render Container with css prop 1`] = `
 
 exports[`props should render Container with css prop 2`] = `
 <div
-  class="wp-components-view wp-components-container css-dvmcp4"
+  class="wp-components-container css-llt4p2"
   data-g2-c16t="true"
   data-g2-component="Container"
   id="Container"
@@ -1271,7 +1412,7 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
 exports[`props should render DropdownTrigger 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-dropdown-trigger css-p8ixzx"
+  class="wp-components-button wp-components-dropdown-trigger css-94gk5l"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="DropdownTrigger"
@@ -1324,7 +1465,7 @@ exports[`props should render DropdownTrigger 1`] = `
 exports[`props should render DropdownTrigger with css prop 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-dropdown-trigger css-p8ixzx"
+  class="wp-components-button wp-components-dropdown-trigger css-94gk5l"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="DropdownTrigger"
@@ -1377,7 +1518,7 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
 exports[`props should render DropdownTrigger with css prop 2`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-dropdown-trigger css-9zp618"
+  class="wp-components-button wp-components-dropdown-trigger css-1e5ixpb"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="DropdownTrigger"
@@ -1979,7 +2120,7 @@ exports[`props should render ModalHeader 1`] = `
     >
       <button
         aria-busy="false"
-        class="wp-components-button css-1d86or"
+        class="wp-components-button css-1ubd41g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -2034,7 +2175,7 @@ exports[`props should render ModalHeader with css prop 1`] = `
     >
       <button
         aria-busy="false"
-        class="wp-components-button css-1d86or"
+        class="wp-components-button css-1ubd41g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -2089,7 +2230,7 @@ exports[`props should render ModalHeader with css prop 2`] = `
     >
       <button
         aria-busy="false"
-        class="wp-components-button css-1d86or"
+        class="wp-components-button css-1ubd41g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -2127,7 +2268,7 @@ exports[`props should render ModalTrigger 1`] = `
   aria-busy="false"
   aria-expanded="false"
   aria-haspopup="dialog"
-  class="wp-components-button wp-components-modal-trigger css-p8ixzx"
+  class="wp-components-button wp-components-modal-trigger css-94gk5l"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ModalTrigger"
@@ -2153,7 +2294,7 @@ exports[`props should render ModalTrigger with css prop 1`] = `
   aria-busy="false"
   aria-expanded="false"
   aria-haspopup="dialog"
-  class="wp-components-button wp-components-modal-trigger css-p8ixzx"
+  class="wp-components-button wp-components-modal-trigger css-94gk5l"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ModalTrigger"
@@ -2179,7 +2320,7 @@ exports[`props should render ModalTrigger with css prop 2`] = `
   aria-busy="false"
   aria-expanded="false"
   aria-haspopup="dialog"
-  class="wp-components-button wp-components-modal-trigger css-9zp618"
+  class="wp-components-button wp-components-modal-trigger css-1e5ixpb"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ModalTrigger"
@@ -2377,7 +2518,7 @@ exports[`props should render Scrollable with css prop 2`] = `
 
 exports[`props should render SearchInput 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-edr5v1"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1d2hauh"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -2457,7 +2598,7 @@ exports[`props should render SearchInput 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-1lg15n"
+        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -2547,7 +2688,7 @@ exports[`props should render SegmentedControl 1`] = `
 
 exports[`props should render Select 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1669hcr"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-1qfrkek"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
@@ -2890,7 +3031,7 @@ exports[`props should render Stepper 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1v5zbra"
+      class="wp-components-button css-18o72jj"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -2948,7 +3089,7 @@ exports[`props should render Stepper 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1ty9nqr"
+      class="wp-components-button css-1k9mh7n"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -3022,7 +3163,7 @@ exports[`props should render Stepper with css prop 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1v5zbra"
+      class="wp-components-button css-18o72jj"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -3080,7 +3221,7 @@ exports[`props should render Stepper with css prop 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1ty9nqr"
+      class="wp-components-button css-1k9mh7n"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -3154,7 +3295,7 @@ exports[`props should render Stepper with css prop 2`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1v5zbra"
+      class="wp-components-button css-18o72jj"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -3212,7 +3353,7 @@ exports[`props should render Stepper with css prop 2`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-button css-1ty9nqr"
+      class="wp-components-button css-1k9mh7n"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -3562,7 +3703,7 @@ exports[`props should render Text with css prop 2`] = `
 
 exports[`props should render TextField 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1e9lk7h"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -3584,7 +3725,7 @@ exports[`props should render TextField 1`] = `
 
 exports[`props should render TextInput 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1ynpt9z"
+  class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-1e9lk7h"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

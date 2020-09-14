@@ -3,7 +3,7 @@
 exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-close-button css-3c61ur"
+  class="wp-components-button wp-components-close-button css-g5raua"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -64,7 +64,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render size 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-close-button css-tponci"
+  class="wp-components-button wp-components-close-button css-fwt7xl"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -125,7 +125,7 @@ exports[`props should render size 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-button wp-components-close-button css-1xa58mh"
+  class="wp-components-button wp-components-close-button css-92fcn3"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"

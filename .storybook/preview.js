@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider, ui } from '@wp-g2/styles';
 import {
@@ -17,6 +17,7 @@ import {
 	Subheading,
 	ComponentInspector,
 	View,
+	VStack,
 } from '@wp-g2/components';
 import { Hint } from '@wp-g2/hint';
 import { useLocalState } from '@wp-g2/utils';
@@ -74,6 +75,18 @@ function Themer({ inspector, setInspector }) {
 		false,
 	);
 
+	const prevIsDark = useRef(isDark);
+
+	useEffect(() => {
+		if (isDark !== prevIsDark.current) {
+			setThemeConfig((prev) => ({
+				...prev,
+				surfaceColor: isDark ? '#292929' : '#fff',
+			}));
+		}
+		prevIsDark.current = isDark;
+	}, [isDark]);
+
 	const update = (key) => (value) => {
 		setThemeConfig((prev) => ({ ...prev, [key]: value }));
 	};
@@ -103,7 +116,7 @@ function Themer({ inspector, setInspector }) {
 		controlSurfaceColor,
 		fontFamily,
 		fontSize,
-		surfaceColor: !isDark ? surfaceColor : null,
+		surfaceColor,
 	};
 
 	return (
@@ -143,92 +156,107 @@ function Themer({ inspector, setInspector }) {
 									<Subheading>Colors</Subheading>
 									<Separator />
 									<Spacer mb={4}>
-										<FormGroup label="Admin">
-											<ColorInput
-												value={colorAdmin}
-												onChange={update('colorAdmin')}
-											/>
-										</FormGroup>
-										<FormGroup label="Text">
-											<ColorInput
-												value={colorText}
-												fallback="#000000"
-												onChange={update('colorText')}
-											/>
-										</FormGroup>
-										<FormGroup label="Surface">
-											<ColorInput
-												value={surfaceColor}
-												onChange={update(
-													'surfaceColor',
-												)}
-											/>
-										</FormGroup>
-										<FormGroup label="Control Surface">
-											<ColorInput
-												value={controlSurfaceColor}
-												fallback="#ffffff"
-												onChange={update(
-													'controlSurfaceColor',
-												)}
-											/>
-										</FormGroup>
+										<VStack>
+											<FormGroup label="Admin">
+												<ColorInput
+													value={colorAdmin}
+													onChange={update(
+														'colorAdmin',
+													)}
+												/>
+											</FormGroup>
+											<FormGroup label="Text">
+												<ColorInput
+													value={colorText}
+													fallback="#000000"
+													onChange={update(
+														'colorText',
+													)}
+												/>
+											</FormGroup>
+											<FormGroup label="Surface">
+												<ColorInput
+													value={surfaceColor}
+													onChange={update(
+														'surfaceColor',
+													)}
+												/>
+											</FormGroup>
+											<FormGroup label="Control Surface">
+												<ColorInput
+													value={controlSurfaceColor}
+													fallback="#ffffff"
+													onChange={update(
+														'controlSurfaceColor',
+													)}
+												/>
+											</FormGroup>
+										</VStack>
 									</Spacer>
 									<Spacer mb={4}>
 										<Subheading>Controls</Subheading>
 										<Separator />
-										<FormGroup label="Border Radius">
-											<TextInput
-												type="number"
-												min={0}
-												value={parseInt(
-													controlBorderRadius,
-													10,
-												)}
-												onChange={(value) =>
-													update(
-														'controlBorderRadius',
-													)(`${value}px`)
-												}
-											/>
-										</FormGroup>
-										<FormGroup label="Height">
-											<TextInput
-												type="number"
-												min={0}
-												value={parseInt(
-													controlHeight,
-													10,
-												)}
-												onChange={(value) =>
-													update('controlHeight')(
-														`${value}px`,
-													)
-												}
-											/>
-										</FormGroup>
+										<VStack>
+											<FormGroup label="Border Radius">
+												<TextInput
+													type="number"
+													min={0}
+													value={parseInt(
+														controlBorderRadius,
+														10,
+													)}
+													onChange={(value) =>
+														update(
+															'controlBorderRadius',
+														)(`${value}px`)
+													}
+												/>
+											</FormGroup>
+											<FormGroup label="Height">
+												<TextInput
+													type="number"
+													min={0}
+													value={parseInt(
+														controlHeight,
+														10,
+													)}
+													onChange={(value) =>
+														update('controlHeight')(
+															`${value}px`,
+														)
+													}
+												/>
+											</FormGroup>
+										</VStack>
 									</Spacer>
 									<Spacer mb={4}>
 										<Subheading>Font</Subheading>
 										<Separator />
-										<FormGroup label="Family">
-											<TextInput
-												value={fontFamily}
-												onChange={update('fontFamily')}
-											/>
-										</FormGroup>
-										<FormGroup label="Size">
-											<TextInput
-												type="number"
-												min={0}
-												value={parseInt(fontSize, 10)}
-												onChange={(value) =>
-													update('fontSize')(
-														`${value}px`,
-													)
-												}
-											/>
-										</FormGroup>
+										<VStack>
+											<FormGroup label="Family">
+												<TextInput
+													value={fontFamily}
+													onChange={update(
+														'fontFamily',
+													)}
+												/>
+											</FormGroup>
+											<FormGroup label="Size">
+												<TextInput
+													type="number"
+													min={0}
+													value={parseInt(
+														fontSize,
+														10,
+													)}
+													onChange={(value) =>
+														update('fontSize')(
+															`${value}px`,
+														)
+													}
+												/>
+											</FormGroup>
+										</VStack>
 									</Spacer>
 									<Spacer mb={4}>
 										<Subheading>Card</Subheading>
