@@ -1,18 +1,23 @@
-import { ComponentsProvider } from '@wp-g2/context';
+import { ComponentsProvider, connect } from '@wp-g2/context';
+import { ns } from '@wp-g2/context';
 import { FiChevronRight, FiChrome, FiCompass } from '@wp-g2/icons';
-import { ui } from '@wp-g2/styles';
+import { get, styled, ui } from '@wp-g2/styles';
+import { useLocalState } from '@wp-g2/utils';
 import React from 'react';
 
 import {
 	Button,
 	ColorControl,
 	Container,
-	Divider,
 	FormGroup,
 	Grid,
 	Heading,
 	HStack,
 	Icon,
+	ListGroup,
+	ListGroupFooter,
+	ListGroupHeader,
+	ListGroups,
 	Spacer,
 	Subheading,
 	Surface,
@@ -27,13 +32,100 @@ export default {
 	title: 'Examples/WIP/ListGroups',
 };
 
-const GridItem = ({ children }) => {
+const selector = (target) => {
+	const key = Object.keys(ns());
+	const n = ns(target);
+
+	return `[${key}="${n[key]}"]`;
+};
+
+const SpacingVisualizerView = styled.div`
+	${selector('GridItem')} {
+		${selector('Container')} {
+			position: relative;
+
+			&::before {
+				width: 12px;
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				background: blue;
+				opacity: 0.05;
+				z-index: 1;
+			}
+		}
+	}
+
+	${selector('VStack')},
+	${selector('ListGroup')} {
+		> * {
+			position: relative;
+			&::before {
+				background: pink;
+				bottom: calc(${get('HStackSpacing')} * -1);
+				content: '';
+				height: ${get('HStackSpacing')};
+				left: 0;
+				opacity: 0.15;
+				pointer-events: none;
+				position: absolute;
+				right: 0;
+				z-index: 1;
+			}
+
+			&:last-child {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+	${selector('HStack')} {
+		> * {
+			position: relative;
+			&::before {
+				background: pink;
+				right: calc(${get('HStackSpacing')} * -1);
+				content: '';
+				height: ${get('HStackSpacing')};
+				top: 0;
+				bottom: 0;
+				opacity: 0.15;
+				pointer-events: none;
+				position: absolute;
+				z-index: 1;
+			}
+
+			&:last-child {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+`;
+
+const SpacingVisualizer = ({ children, visualize }) => {
+	if (!visualize) return children;
+	return <SpacingVisualizerView>{children}</SpacingVisualizerView>;
+};
+
+const BaseGridItem = ({ children, ...props }) => {
 	return (
-		<Surface border css={[ui.frame.height('100%'), ui.padding(4)]}>
+		<Surface
+			border
+			css={[ui.frame.height('100%'), ui.padding(4)]}
+			{...props}
+		>
 			<Container width={300}>{children}</Container>
 		</Surface>
 	);
 };
+
+const GridItem = connect(BaseGridItem, 'GridItem');
 
 const ExampleCluster = ({ horizontal = true }) => {
 	return (
@@ -113,11 +205,7 @@ const ExampleCluster = ({ horizontal = true }) => {
 const ListItem = ({ children, ...props }) => {
 	return (
 		<Button
-			css={[
-				ui.margin.x(`-5px`),
-				ui.padding.x(1),
-				{ width: `calc(100% + 10px)` },
-			]}
+			css={[ui.padding.x(1)]}
 			isBlock
 			suffix={
 				<Text isBlock variant="muted">
@@ -140,7 +228,7 @@ const ListItem = ({ children, ...props }) => {
 const ExampleCluster2 = () => {
 	return (
 		<GridItem>
-			<VStack spacing={8}>
+			<ListGroups>
 				<View>
 					<Spacer>
 						<Subheading>Title</Subheading>
@@ -154,79 +242,84 @@ const ExampleCluster2 = () => {
 						</ListItem>
 					</VStack>
 				</View>
-				<View>
-					<Spacer>
-						<Subheading>Title</Subheading>
-					</Spacer>
-					<VStack spacing={1}>
-						<ListItem>
-							<Text>Action</Text>
-						</ListItem>
-						<Divider />
-						<ListItem>
-							<Text>Action</Text>
-						</ListItem>
-						<Divider />
+				<ListGroup>
+					<ListGroupHeader>
+						Title
+						<Button>Thing</Button>
+					</ListGroupHeader>
+					<Grid>
 						<FormGroup label="Action">
 							<Switch />
 						</FormGroup>
-					</VStack>
-				</View>
-				<View>
-					<Spacer>
-						<Subheading>Title</Subheading>
-					</Spacer>
-					<VStack spacing={1}>
-						<ListItem prefix={<Icon icon={<FiChrome />} />}>
-							<Text>Action</Text>
-						</ListItem>
-						<Divider />
-						<ListItem prefix={<Icon icon={<FiCompass />} />}>
-							<Text>Action</Text>
-						</ListItem>
-						<Divider />
-						<ListItem prefix={<View css={{ width: 20 }} />}>
-							<Text>Action</Text>
-						</ListItem>
-					</VStack>
-				</View>
+						<FormGroup label="Action">
+							<Switch />
+						</FormGroup>
+						<FormGroup label="Action">
+							<Switch />
+						</FormGroup>
+						<FormGroup label="Action">
+							<Switch />
+						</FormGroup>
+						<FormGroup label="Action">
+							<Switch />
+						</FormGroup>
+					</Grid>
+				</ListGroup>
 
-				<View>
-					<Spacer>
-						<HStack>
-							<Subheading>Title</Subheading>
-							<Button size="small" variant="tertiary">
-								Edit
-							</Button>
-						</HStack>
-					</Spacer>
-					<VStack spacing={1}>
-						<ListItem prefix={<Icon icon={<FiChrome />} />}>
-							<Text>Action</Text>
-						</ListItem>
-						<Divider />
-						<ListItem prefix={<Icon icon={<FiCompass />} />}>
-							<Text>Action</Text>
-						</ListItem>
-						<Divider />
-					</VStack>
-				</View>
-			</VStack>
+				<ListGroup>
+					<ListGroupHeader>Title</ListGroupHeader>
+					<ListItem prefix={<Icon icon={<FiChrome />} />}>
+						<Text>Action</Text>
+					</ListItem>
+					<ListItem prefix={<Icon icon={<FiCompass />} />}>
+						<Text>Action</Text>
+					</ListItem>
+					<ListItem prefix={<View css={{ width: 20 }} />}>
+						<Text>Action</Text>
+					</ListItem>
+				</ListGroup>
+
+				<ListGroup separator={false}>
+					<ListGroupHeader>Title</ListGroupHeader>
+					<ListItem prefix={<Icon icon={<FiChrome />} />}>
+						<Text>Action</Text>
+					</ListItem>
+					<ListItem prefix={<Icon icon={<FiCompass />} />}>
+						<Text>Action</Text>
+					</ListItem>
+					<ListGroupFooter>Some footer caption</ListGroupFooter>
+				</ListGroup>
+			</ListGroups>
 		</GridItem>
 	);
 };
 
-export const _default = () => {
+const AllTheThings = () => {
+	const [visualize, setVisualize] = useLocalState(
+		'WIP/ListGroups/SpacingVisualizer',
+		false,
+	);
 	return (
 		<>
 			<Spacer mb={5}>
-				<Heading size={1}>Testing: Control Clusters</Heading>
+				<HStack>
+					<Heading size={1}>Testing: Control Clusters</Heading>
+					<FormGroup isInline label="Show Visualizer">
+						<Switch checked={visualize} onChange={setVisualize} />
+					</FormGroup>
+				</HStack>
 			</Spacer>
-			<Grid align="flex-start" columns={[1, 2, 4]} gap={5}>
-				<ExampleCluster />
-				<ExampleCluster horizontal={false} />
-				<ExampleCluster2 />
-			</Grid>
+			<SpacingVisualizer visualize={visualize}>
+				<Grid align="flex-start" columns={[1, 2, 4]} gap={5}>
+					<ExampleCluster />
+					<ExampleCluster horizontal={false} />
+					<ExampleCluster2 />
+				</Grid>
+			</SpacingVisualizer>
 		</>
 	);
+};
+
+export const _default = () => {
+	return <AllTheThings />;
 };

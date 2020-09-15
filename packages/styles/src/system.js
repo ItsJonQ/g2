@@ -26,6 +26,7 @@ export const {
 	compiler,
 	core,
 	createCoreElement,
+	createToken,
 	get,
 	styled,
 } = createStyleSystem(systemConfig);

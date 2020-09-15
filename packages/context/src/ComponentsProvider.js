@@ -17,11 +17,17 @@ export const useComponentsContext = () => useContext(ComponentsContext);
  * ```
  *
  * @param {any} children Children to render.
+ * @param {boolean} shallow Determines if the Provider should merge a parent Provider's context value.
  * @param {object} theme A theme to pass into the ThemeProvider from the Style system.
  * @param {object} value Props to render into connected components.
  * @returns {React.Component} A Provider wrapped component.
  */
-export function ComponentsProvider({ children, theme = {}, value = {} }) {
+export function ComponentsProvider({
+	children,
+	shallow = false,
+	theme = {},
+	value = {},
+}) {
 	const parentComponentsContext = useComponentsContext();
 
 	let mergedValues = value;
@@ -31,7 +37,11 @@ export function ComponentsProvider({ children, theme = {}, value = {} }) {
 	 * This model works similarly to CSS's cascading model.
 	 */
 	if (!isEmpty(parentComponentsContext)) {
-		mergedValues = deepMerge(parentComponentsContext, value);
+		if (shallow) {
+			mergedValues = { ...parentComponentsContext, ...value };
+		} else {
+			mergedValues = deepMerge(parentComponentsContext, value);
+		}
 	}
 
 	return (

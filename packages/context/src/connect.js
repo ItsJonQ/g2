@@ -2,7 +2,7 @@ import { css, cx } from '@wp-g2/styles';
 import { hoistNonReactStatics, is, kebabCase, uniq } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
-import { useComponentsContext } from './ComponentsProvider';
+import { ComponentsProvider, useComponentsContext } from './ComponentsProvider';
 import { cns, ns } from './utils';
 
 const REACT_TYPEOF_KEY = '$$typeof';
@@ -60,7 +60,14 @@ export function connect(Component, namespace, options = {}) {
 		}
 
 		const {
+			/**
+			 * "Forceful" overrides of component props coming from the Provider
+			 */
 			_overrides: overrideProps = {},
+			/**
+			 * Determines if the props should no longer be passed down.
+			 */
+			_shallow: shallowProp = false,
 			css: contextCSS,
 			...otherContextProps
 		} = contextProps;
@@ -90,18 +97,39 @@ export function connect(Component, namespace, options = {}) {
 			? renderChildren({ children, ...mergedProps })
 			: children;
 
-		return (
-			<Component
-				{...cns()}
-				{...ns(displayName)}
-				{...mergedProps}
-				{...overrideProps}
-				className={classes}
-				forwardedRef={forwardedRef}
-			>
-				{rendered}
-			</Component>
-		);
+		const finalComponentProps = {
+			...cns(),
+			...ns(displayName),
+			...mergedProps,
+			...overrideProps,
+			children: rendered,
+			className: classes,
+			forwardedRef,
+		};
+
+		/**
+		 * If "shallow" prop rendering is preferred, then we must "reset" the
+		 * the prop values so that it is no longer passed down.
+		 */
+		if (shallowProp) {
+			const nextContextProps = { ...contextProps };
+
+			if (is.array(key)) {
+				for (const k of key) {
+					nextContextProps[k] = {};
+				}
+			} else {
+				nextContextProps[key] = {};
+			}
+
+			return (
+				<ComponentsProvider shallow value={nextContextProps}>
+					<Component {...finalComponentProps} />
+				</ComponentsProvider>
+			);
+		}
+
+		return <Component {...finalComponentProps} />;
 	};
 
 	const ForwardedComponent = forwardRef(render);

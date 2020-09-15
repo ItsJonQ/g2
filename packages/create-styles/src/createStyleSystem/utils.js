@@ -12,6 +12,16 @@ export const DEFAULT_STYLE_SYSTEM_OPTIONS = {
 };
 
 /**
+ * Creates the (CSS Variable) design token used by the Style system.
+ *
+ * @param {string} key The variable (key).
+ * @returns {string} The token (CSS variable).
+ */
+export function createToken(key) {
+	return `${NAMESPACE}-${kebabCase(key)}`;
+}
+
+/**
  * The primary mechanism to retrieve Style system configs values - values that
  * have been transformed into CSS variables with a dedicated namespace.
  *
@@ -23,7 +33,7 @@ export const DEFAULT_STYLE_SYSTEM_OPTIONS = {
  * @returns {string} The compiled CSS variable associated with the config key.
  */
 export function get(key) {
-	return `var(${NAMESPACE}-${kebabCase(key)})`;
+	return `var(${createToken(key)})`;
 }
 
 /**
@@ -36,7 +46,7 @@ export function get(key) {
 export function transformValuesToReferences(values = {}) {
 	const next = {};
 	for (const [key, value] of Object.entries(values)) {
-		const ref = `var(${NAMESPACE}-${kebabCase(key)}, ${value})`;
+		const ref = `var(${createToken(key)}, ${value})`;
 		next[key] = ref;
 	}
 	return next;
@@ -55,7 +65,7 @@ export function transformValuesToVariables(values = {}) {
 
 	for (const [key, value] of Object.entries(values)) {
 		const ref = value;
-		next[`${NAMESPACE}-${kebabCase(key)}`] = ref;
+		next[`${createToken(key)}`] = ref;
 	}
 
 	return next;

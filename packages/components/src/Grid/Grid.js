@@ -4,10 +4,12 @@ import React from 'react';
 
 function Grid({
 	align,
+	columnGap,
 	columns = 2,
 	gap = 3,
 	isInline = false,
 	justify,
+	rowGap,
 	rows,
 	templateColumns,
 	templateRows,
@@ -26,6 +28,8 @@ function Grid({
 		gap,
 		gridTemplateColumns,
 		gridTemplateRows,
+		gridRowGap: rowGap,
+		gridColumnGap: columnGap,
 		justifyContent: justify,
 		verticalAlign: isInline ? 'middle' : null,
 	});

@@ -1745,6 +1745,7 @@ exports[`props should render HStack 1`] = `
   data-g2-c16t="true"
   data-g2-component="HStack"
   id="HStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 />
 `;
 
@@ -1754,6 +1755,7 @@ exports[`props should render HStack with css prop 1`] = `
   data-g2-c16t="true"
   data-g2-component="HStack"
   id="HStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 />
 `;
 
@@ -1763,6 +1765,7 @@ exports[`props should render HStack with css prop 2`] = `
   data-g2-c16t="true"
   data-g2-component="HStack"
   id="HStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 />
 `;
 
@@ -1944,6 +1947,251 @@ exports[`props should render List with css prop 2`] = `
   data-g2-c16t="true"
   data-g2-component="List"
   id="List"
+/>
+`;
+
+exports[`props should render ListGroup 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="ListGroup"
+  id="ListGroup"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+>
+  <div
+    class="wp-components-flex-item css-bg0v75"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      data-g2-c16t="true"
+      data-g2-component="ListGroupContent"
+    >
+      <div
+        class="wp-components-view css-j1yu9m"
+        data-g2-c16t="true"
+        data-g2-component="CardContent"
+      >
+        <div
+          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+          data-g2-c16t="true"
+          data-g2-component="VStack"
+          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+        />
+      </div>
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ListGroup with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="ListGroup"
+  id="ListGroup"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+>
+  <div
+    class="wp-components-flex-item css-bg0v75"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      data-g2-c16t="true"
+      data-g2-component="ListGroupContent"
+    >
+      <div
+        class="wp-components-view css-j1yu9m"
+        data-g2-c16t="true"
+        data-g2-component="CardContent"
+      >
+        <div
+          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+          data-g2-c16t="true"
+          data-g2-component="VStack"
+          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+        />
+      </div>
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ListGroup with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-mf5b48"
+  data-g2-c16t="true"
+  data-g2-component="ListGroup"
+  id="ListGroup"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+>
+  <div
+    class="wp-components-flex-item css-bg0v75"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      data-g2-c16t="true"
+      data-g2-component="ListGroupContent"
+    >
+      <div
+        class="wp-components-view css-j1yu9m"
+        data-g2-c16t="true"
+        data-g2-component="CardContent"
+      >
+        <div
+          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+          data-g2-c16t="true"
+          data-g2-component="VStack"
+          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+        />
+      </div>
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render ListGroupFooter 1`] = `
+<div
+  data-system-theme-provider="true"
+>
+  <div
+    class="wp-components-view wp-components-spacer css-axt7qg"
+    data-g2-c16t="true"
+    data-g2-component="Spacer"
+  >
+    <div
+      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-list-group-footer css-53sr0l"
+      data-g2-c16t="true"
+      data-g2-component="ListGroupFooter"
+      id="ListGroupFooter"
+      style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render ListGroupFooter with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-list-group-footer css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="ListGroupFooter"
+  id="ListGroupFooter"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+/>
+`;
+
+exports[`props should render ListGroupFooter with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-list-group-footer css-9mkxbw"
+  data-g2-c16t="true"
+  data-g2-component="ListGroupFooter"
+  id="ListGroupFooter"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+/>
+`;
+
+exports[`props should render ListGroupHeader 1`] = `
+<div
+  data-system-theme-provider="true"
+>
+  <div
+    class="wp-components-view wp-components-spacer css-awl3al"
+    data-g2-c16t="true"
+    data-g2-component="Spacer"
+  >
+    <div
+      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-list-group-header css-53sr0l"
+      data-g2-c16t="true"
+      data-g2-component="ListGroupHeader"
+      id="ListGroupHeader"
+      style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render ListGroupHeader with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-list-group-header css-53sr0l"
+  data-g2-c16t="true"
+  data-g2-component="ListGroupHeader"
+  id="ListGroupHeader"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+/>
+`;
+
+exports[`props should render ListGroupHeader with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-list-group-header css-9mkxbw"
+  data-g2-c16t="true"
+  data-g2-component="ListGroupHeader"
+  id="ListGroupHeader"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+/>
+`;
+
+exports[`props should render ListGroups 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="ListGroups"
+  id="ListGroups"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 6);"
+/>
+`;
+
+exports[`props should render ListGroups with css prop 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="ListGroups"
+  id="ListGroups"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 6);"
+/>
+`;
+
+exports[`props should render ListGroups with css prop 2`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-mf5b48"
+  data-g2-c16t="true"
+  data-g2-component="ListGroups"
+  id="ListGroups"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 6);"
 />
 `;
 
@@ -3780,6 +4028,7 @@ exports[`props should render VStack 1`] = `
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 />
 `;
 
@@ -3789,6 +4038,7 @@ exports[`props should render VStack with css prop 1`] = `
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 />
 `;
 
@@ -3798,6 +4048,7 @@ exports[`props should render VStack with css prop 2`] = `
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 />
 `;
 

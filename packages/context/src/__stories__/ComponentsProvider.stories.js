@@ -46,3 +46,32 @@ export const _default = () => {
 		</>
 	);
 };
+
+export const shallow = () => {
+	const value = {
+		Card: {
+			_shallow: true,
+			css: {
+				background: 'blue',
+			},
+			elevation: 5,
+		},
+	};
+
+	return (
+		<>
+			<ComponentsProvider value={value}>
+				<Card>
+					<CardBody css={[{ border: '3px solid green' }]}>
+						<Text optimizeReadabilityFor="blue">Card</Text>
+						<Card>
+							<CardBody>
+								<Text>Card</Text>
+							</CardBody>
+						</Card>
+					</CardBody>
+				</Card>
+			</ComponentsProvider>
+		</>
+	);
+};

@@ -3,9 +3,10 @@ import React from 'react';
 
 import { usePopoverContext } from '../Popover';
 import { Scrollable } from '../Scrollable';
+import { View } from '../View';
 import * as styles from './Card.styles';
 
-function CardBody({ className, ...props }) {
+function CardBody({ className, scrollable = true, ...props }) {
 	const { popover } = usePopoverContext();
 	const cx = [
 		styles.Body,
@@ -14,7 +15,11 @@ function CardBody({ className, ...props }) {
 		className,
 	];
 
-	return <Scrollable {...props} className={cx} />;
+	if (scrollable) {
+		return <Scrollable {...props} className={cx} />;
+	}
+
+	return <View {...props} className={cx} />;
 }
 
 export default connect(CardBody, 'CardBody');

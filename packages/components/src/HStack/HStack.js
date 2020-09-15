@@ -1,5 +1,6 @@
 import { connect, hasNamespace } from '@wp-g2/context';
 import { ns } from '@wp-g2/context';
+import { createToken, space } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -11,6 +12,7 @@ function HStack({
 	children,
 	forwardedRef,
 	spacing = 2,
+	style = {},
 	...props
 }) {
 	const align = getAlignmentProps(alignment);
@@ -35,6 +37,10 @@ function HStack({
 			{...align}
 			{...props}
 			ref={forwardedRef}
+			style={{
+				[createToken('HStackSpacing')]: space(spacing),
+				...style,
+			}}
 		>
 			{clonedChildren}
 		</Flex>

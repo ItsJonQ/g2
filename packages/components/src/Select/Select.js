@@ -5,7 +5,7 @@ import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 
 import { BaseField } from '../BaseField';
-import { Flex, FlexBlock } from '../Flex';
+import { Flex, FlexBlock, FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
@@ -26,7 +26,9 @@ function Select({
 	onChange = noop,
 	onFocus = noop,
 	options = [],
+	prefix,
 	size,
+	suffix,
 	value: valueProp,
 	...props
 }) {
@@ -72,6 +74,7 @@ function Select({
 			onClick={handleOnRootClick}
 			{...ns('SelectWrapper')}
 		>
+			{prefix && <FlexItem {...ns('SelectPrefix')}>{prefix}</FlexItem>}
 			<FlexBlock>
 				<InputView
 					as="select"
@@ -102,6 +105,7 @@ function Select({
 						})}
 				</InputView>
 			</FlexBlock>
+			{suffix && <FlexItem {...ns('SelectSuffix')}>{suffix}</FlexItem>}
 			<ArrowWrapperView>
 				<Text isBlock variant="muted">
 					<Icon icon={<FiChevronDown />} size={14} />

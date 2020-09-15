@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-14w80q"
+  data-g2-c16t="true"
+  data-g2-component="ListGroup"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+>
+  <div
+    class="wp-components-flex-item css-bg0v75"
+    data-g2-c16t="true"
+    data-g2-component="FlexItem"
+  >
+    <div
+      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      data-g2-c16t="true"
+      data-g2-component="ListGroupContent"
+    >
+      <div
+        class="wp-components-view css-j1yu9m"
+        data-g2-c16t="true"
+        data-g2-component="CardContent"
+      >
+        <div
+          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+          data-g2-c16t="true"
+          data-g2-component="VStack"
+          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+        >
+          <div
+            class="wp-components-flex-item wp-components-flex-block css-1c42zoa"
+            data-g2-c16t="true"
+            data-g2-component="FlexBlock"
+          >
+            I like warm hugs
+          </div>
+        </div>
+      </div>
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+      <div
+        class="wp-components-elevation css-16j6c8z"
+        data-g2-c16t="true"
+        data-g2-component="CardElevation"
+      />
+    </div>
+  </div>
+</div>
+`;

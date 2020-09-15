@@ -5,6 +5,7 @@ exports[`props should render Spacer 1`] = `
   class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
   data-g2-c16t="true"
   data-g2-component="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 5);"
 >
   <div
     class="wp-components-flex-item css-a6x9qu"
@@ -41,6 +42,7 @@ exports[`props should render alignment 1`] = `
   class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-19ocfe2"
   data-g2-c16t="true"
   data-g2-component="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 >
   <div
     class="wp-components-flex-item css-1lhy1y6"
@@ -72,6 +74,7 @@ exports[`props should render correctly 1`] = `
   class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
   data-g2-c16t="true"
   data-g2-component="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 >
   <div
     class="wp-components-flex-item css-1lhy1y6"
@@ -103,6 +106,7 @@ exports[`props should render spacing 1`] = `
   class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
   data-g2-c16t="true"
   data-g2-component="VStack"
+  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 5);"
 >
   <div
     class="wp-components-flex-item css-a6x9qu"

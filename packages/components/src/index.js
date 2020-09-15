@@ -41,6 +41,7 @@ export * from './Image';
 export * from './Initials';
 export * from './Link';
 export * from './List';
+export * from './ListGroup';
 export * from './MediaQuery';
 export * from './Menu';
 export * from './Modal';

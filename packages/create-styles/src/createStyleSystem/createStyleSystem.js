@@ -6,7 +6,7 @@ import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
 import { createStyledComponents } from './createStyledComponents';
 import { generateTheme } from './generateTheme';
-import { DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
+import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
@@ -27,6 +27,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {function} createCoreElement A function to create a coreElement (with settings from the Style system).
  * @property {function} css A function to compile CSS styles.
  * @property {function} cx A function to resolve + combine classNames.
+ * @property {function} createToken A function to generate a design token (CSS variable) used by the system.
  * @property {function} get The primary function to retrieve Style system variables.
  * @property {object} styled A set of styled components.
  * @property {React.Component} View The base <View /> component.
@@ -117,6 +118,7 @@ export function createStyleSystem(options = defaultOptions) {
 		compiler,
 		core,
 		createCoreElement: _createCoreElement,
+		createToken,
 		css,
 		cx,
 		get,
