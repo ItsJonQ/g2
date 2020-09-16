@@ -121,6 +121,7 @@ const BaseGridItem = ({ children, ...props }) => {
 		<Surface
 			border
 			css={[ui.frame.height('100%'), ui.padding(4)]}
+			variant="tertiary"
 			{...props}
 		>
 			<Container width={300}>{children}</Container>

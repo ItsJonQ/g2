@@ -7,12 +7,7 @@ import { useListGroupContext } from './ListGroup.Context';
 function ListGroupContent({ children, ...props }) {
 	const { inset } = useListGroupContext();
 
-	if (!inset)
-		return (
-			<Card elevation={0} isBorderless {...props}>
-				{children}
-			</Card>
-		);
+	if (!inset) return children;
 
 	return (
 		<Card elevation={0} isBorderless {...props}>

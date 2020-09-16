@@ -20,7 +20,7 @@ const DARK_MODE_PROPS = {
 	controlSurfaceColor: 'rgba(255, 255, 255, 0.3)',
 	controlTextActiveColor: get('white'),
 	surfaceBackgroundColor: get('colorBodyBackgroundDark'),
-	surfaceBackgroundSubtleColor: 'rgba(255, 255, 255, 0.05)',
+	surfaceBackgroundSubtleColor: '#151515',
 	surfaceBackgroundTintColor: '#252525',
 	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',
 	surfaceColor: '#292929',

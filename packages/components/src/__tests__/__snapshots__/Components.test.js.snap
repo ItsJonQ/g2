@@ -2084,33 +2084,11 @@ exports[`props should render ListGroup 1`] = `
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
       data-g2-c16t="true"
-      data-g2-component="ListGroupContent"
-    >
-      <div
-        class="wp-components-view css-j1yu9m"
-        data-g2-c16t="true"
-        data-g2-component="CardContent"
-      >
-        <div
-          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
-          data-g2-c16t="true"
-          data-g2-component="VStack"
-          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
-        />
-      </div>
-      <div
-        class="wp-components-elevation css-16j6c8z"
-        data-g2-c16t="true"
-        data-g2-component="CardElevation"
-      />
-      <div
-        class="wp-components-elevation css-16j6c8z"
-        data-g2-c16t="true"
-        data-g2-component="CardElevation"
-      />
-    </div>
+      data-g2-component="VStack"
+      style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+    />
   </div>
 </div>
 `;
@@ -2129,33 +2107,11 @@ exports[`props should render ListGroup with css prop 1`] = `
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
       data-g2-c16t="true"
-      data-g2-component="ListGroupContent"
-    >
-      <div
-        class="wp-components-view css-j1yu9m"
-        data-g2-c16t="true"
-        data-g2-component="CardContent"
-      >
-        <div
-          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
-          data-g2-c16t="true"
-          data-g2-component="VStack"
-          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
-        />
-      </div>
-      <div
-        class="wp-components-elevation css-16j6c8z"
-        data-g2-c16t="true"
-        data-g2-component="CardElevation"
-      />
-      <div
-        class="wp-components-elevation css-16j6c8z"
-        data-g2-c16t="true"
-        data-g2-component="CardElevation"
-      />
-    </div>
+      data-g2-component="VStack"
+      style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+    />
   </div>
 </div>
 `;
@@ -2174,33 +2130,11 @@ exports[`props should render ListGroup with css prop 2`] = `
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-surface wp-components-card wp-components-list-group-content css-1cpaz47"
+      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
       data-g2-c16t="true"
-      data-g2-component="ListGroupContent"
-    >
-      <div
-        class="wp-components-view css-j1yu9m"
-        data-g2-c16t="true"
-        data-g2-component="CardContent"
-      >
-        <div
-          class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
-          data-g2-c16t="true"
-          data-g2-component="VStack"
-          style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
-        />
-      </div>
-      <div
-        class="wp-components-elevation css-16j6c8z"
-        data-g2-c16t="true"
-        data-g2-component="CardElevation"
-      />
-      <div
-        class="wp-components-elevation css-16j6c8z"
-        data-g2-c16t="true"
-        data-g2-component="CardElevation"
-      />
-    </div>
+      data-g2-component="VStack"
+      style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
+    />
   </div>
 </div>
 `;
