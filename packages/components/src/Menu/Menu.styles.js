@@ -1,4 +1,4 @@
-import { css, get, space } from '@wp-g2/styles';
+import { css, get, highContrastMode, space } from '@wp-g2/styles';
 
 export const Menu = css`
 	outline: none;
@@ -6,7 +6,7 @@ export const Menu = css`
 `;
 
 export const MenuItem = css`
-	border: none;
+	border-color: transparent;
 	color: ${get('colorText')};
 	cursor: pointer;
 	font-size: ${get('fontSize')};
@@ -55,6 +55,13 @@ export const MenuItem = css`
 			background-color: ${get('colorText')};
 		}
 	}
+
+	${highContrastMode`
+		&:hover,
+		&:focus {
+			border-color: ${get('controlBorderColor')};
+		}
+	`}
 `;
 
 export const offset = css`
