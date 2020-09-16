@@ -16,7 +16,7 @@ function App() {
 					Hello
 				</Heading>
 				<Text>Welcome to the G2 Components Starter Kit!</Text>
-				<Text size="caption" variant="muted">
+				<Text size="caption">
 					Start editing to see some magic happen!
 				</Text>
 			</VStack>

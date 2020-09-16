@@ -4,7 +4,10 @@ import { FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
+import { BaseButton } from '../BaseButton';
+import { Flex } from '../Flex';
 import { Icon } from '../Icon';
+import { Text } from '../Text';
 import { View } from '../View';
 import { useMenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
@@ -14,7 +17,10 @@ function MenuItem({
 	className,
 	forwardedRef,
 	isBack = false,
+	isOffset = false,
+	prefix,
 	showArrow = false,
+	suffix,
 	...props
 }) {
 	const { menu } = useMenuContext();
@@ -24,25 +30,50 @@ function MenuItem({
 		styles.MenuItem,
 		shouldShowArrow && styles.showArrow,
 		isBack && styles.showBackArrow,
+		isOffset && styles.offset,
 		className,
 	]);
 
 	const Component = menu ? ReakitMenuItem : View;
 
+	const prevArrow = isBack && (
+		<Text isBlock variant="muted">
+			<Icon icon={<FiChevronLeft />} size={16} />
+		</Text>
+	);
+	const nextArrow = shouldShowArrow && (
+		<Text isBlock variant="muted">
+			<Icon icon={<FiChevronRight />} size={16} />
+		</Text>
+	);
+
+	const prefixContent = (prevArrow || prefix) && (
+		<Flex>
+			{prevArrow}
+			{prefix}
+		</Flex>
+	);
+
+	const suffixContent = (nextArrow || suffix) && (
+		<Flex>
+			{suffix}
+			{nextArrow}
+		</Flex>
+	);
+
 	return (
-		<Component {...props} {...menu} className={classes} ref={forwardedRef}>
-			{isBack && (
-				<View css={{ left: 8, position: 'absolute', top: 10 }}>
-					<Icon icon={<FiChevronLeft />} size={12} />
-				</View>
-			)}
+		<BaseButton
+			as={Component}
+			{...props}
+			{...menu}
+			className={classes}
+			prefix={prefixContent}
+			ref={forwardedRef}
+			suffix={suffixContent}
+			textAlign="left"
+		>
 			{children}
-			{shouldShowArrow && (
-				<View css={{ position: 'absolute', right: 4, top: 8 }}>
-					<Icon icon={<FiChevronRight />} size={16} />
-				</View>
-			)}
-		</Component>
+		</BaseButton>
 	);
 }
 

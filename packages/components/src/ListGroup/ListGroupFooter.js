@@ -17,9 +17,7 @@ function ListGroupFooter({ children, ...props }) {
 
 		return isTitle ? (
 			<Spacer key={_key}>
-				<Text size="caption" variant="muted">
-					{child}
-				</Text>
+				<Text size="caption">{child}</Text>
 			</Spacer>
 		) : (
 			child

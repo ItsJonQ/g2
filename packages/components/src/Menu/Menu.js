@@ -25,6 +25,7 @@ function Menu({ children, className, forwardedRef, ...props }) {
 				{...menuProps}
 				{...props}
 				className={classes}
+				isBlock
 				ref={forwardedRef}
 			>
 				{children}

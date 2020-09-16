@@ -22,6 +22,7 @@ function NavigatorLink({
 	const history = useHistory();
 
 	const classes = cx([styles.BaseLink, !isPlain && styles.Link, className]);
+	const isLink = !!to || !!href;
 
 	const handleOnClick = (event) => {
 		if (isBack) {
@@ -37,7 +38,11 @@ function NavigatorLink({
 	const content = (
 		<ComponentsProvider
 			value={{
-				MenuItem: { isBack: isBack, showArrow: !!to || showArrow },
+				MenuItem: {
+					isBack: isBack,
+					showArrow: isLink || showArrow,
+					tabIndex: -1,
+				},
 			}}
 		>
 			{children}

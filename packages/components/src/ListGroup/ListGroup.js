@@ -1,4 +1,5 @@
 import { ComponentsProvider, connect, hasNamespace } from '@wp-g2/context';
+import { useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React, { Fragment } from 'react';
 
@@ -9,9 +10,20 @@ import ListGroupContent from './ListGroupContent';
 
 function ListGroup({ children, separator = false, spacing, ...props }) {
 	const validChildren = getValidChildren(children);
+	const separatorValue = useResponsiveValue(separator);
 
 	let headerComponent;
 	let footerComponent;
+
+	/**
+	 * Shallowly adjusts child MenuItem components.
+	 */
+	const componentContextProps = {
+		MenuItem: {
+			isOffset: true,
+			_shallow: true,
+		},
+	};
 
 	/**
 	 * Shallowly adjusts child Grid components.
@@ -51,7 +63,7 @@ function ListGroup({ children, separator = false, spacing, ...props }) {
 		const isLast = index + 1 === filteredChildren.length;
 		const isGrid = hasNamespace(child, ['Grid']);
 		const _key = child.key || index;
-		const showDivider = separator && !isLast;
+		const showDivider = separatorValue && !isLast;
 
 		let content = child;
 
@@ -79,13 +91,15 @@ function ListGroup({ children, separator = false, spacing, ...props }) {
 		<VStack {...props} spacing={2}>
 			{headerComponent}
 			<ListGroupContent>
-				<VStack
-					autoWrap={false}
-					spacing={separator ? 0 : 2}
-					{...{ spacing }}
-				>
-					{clonedChildren}
-				</VStack>
+				<ComponentsProvider value={componentContextProps}>
+					<VStack
+						autoWrap={false}
+						spacing={separatorValue ? 0 : 2}
+						{...{ spacing }}
+					>
+						{clonedChildren}
+					</VStack>
+				</ComponentsProvider>
 			</ListGroupContent>
 			{footerComponent}
 		</VStack>

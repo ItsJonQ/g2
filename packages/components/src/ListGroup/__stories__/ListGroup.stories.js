@@ -10,6 +10,8 @@ import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
 
 import {
+	Animated,
+	AnimatedContainer,
 	Button,
 	Card,
 	CardBody,
@@ -86,95 +88,103 @@ const Example = () => {
 	return (
 		<Grid>
 			<Container width={260}>
-				<ListGroups>
-					{hasColor && (
-						<ListGroup>
-							<ListGroupHeader>Colors</ListGroupHeader>
-							<Grid columns={2}>
-								{colorText && (
-									<ColorControl color="black">
-										Text
-									</ColorControl>
-								)}
-								{colorBackground && (
-									<ColorControl color="#ddd">
-										Background
-									</ColorControl>
-								)}
-							</Grid>
-						</ListGroup>
-					)}
+				<AnimatedContainer>
+					<ListGroups>
+						{hasColor && (
+							<ListGroup>
+								<ListGroupHeader>Colors</ListGroupHeader>
+								<Grid columns={2}>
+									{colorText && (
+										<ColorControl color="black">
+											Text
+										</ColorControl>
+									)}
+									{colorBackground && (
+										<ColorControl color="#ddd">
+											Background
+										</ColorControl>
+									)}
+								</Grid>
+							</ListGroup>
+						)}
 
-					{hasTypography && (
-						<ListGroup>
-							<ListGroupHeader>
-								Typography
-								<Button
-									icon={<FiGrid />}
-									size="small"
-									variant="tertiary"
-								/>
-							</ListGroupHeader>
-							{fontFamily && (
-								<FormGroup label="Family">
-									<Select>
-										<option>Barlow</option>
-									</Select>
+						{hasTypography && (
+							<ListGroup>
+								<ListGroupHeader>
+									Typography
+									<Button
+										icon={<FiGrid />}
+										size="small"
+										variant="tertiary"
+									/>
+								</ListGroupHeader>
+								{fontFamily && (
+									<Animated auto key="fontFamily" layout>
+										<FormGroup label="Family">
+											<Select>
+												<option>Barlow</option>
+											</Select>
+										</FormGroup>
+									</Animated>
+								)}
+								<Grid>
+									{fontWeight && (
+										<Animated auto key="fontWeight" layout>
+											<Select
+												prefix={
+													<View
+														style={{
+															width: 24,
+															height: 24,
+															padding: 4,
+														}}
+													>
+														<Icon
+															icon={<FiBold />}
+															size={16}
+														/>
+													</View>
+												}
+											>
+												<option>Normal</option>
+											</Select>
+										</Animated>
+									)}
+									{fontSize && (
+										<Animated auto key="fontSize" layout>
+											<Select
+												prefix={
+													<View
+														style={{
+															width: 24,
+															height: 24,
+															padding: 4,
+														}}
+													>
+														<Icon
+															icon={<FiType />}
+															size={16}
+														/>
+													</View>
+												}
+											>
+												<option>16px</option>
+											</Select>
+										</Animated>
+									)}
+								</Grid>
+							</ListGroup>
+						)}
+						{hasFormatting && (
+							<ListGroup>
+								<ListGroupHeader>Formatting</ListGroupHeader>
+								<FormGroup label="Alignment">
+									<SegmentedControl options={align} />
 								</FormGroup>
-							)}
-							<Grid>
-								{fontWeight && (
-									<Select
-										prefix={
-											<View
-												style={{
-													width: 24,
-													height: 24,
-													padding: 4,
-												}}
-											>
-												<Icon
-													icon={<FiBold />}
-													size={16}
-												/>
-											</View>
-										}
-									>
-										<option>Normal</option>
-									</Select>
-								)}
-								{fontSize && (
-									<Select
-										prefix={
-											<View
-												style={{
-													width: 24,
-													height: 24,
-													padding: 4,
-												}}
-											>
-												<Icon
-													icon={<FiType />}
-													size={16}
-												/>
-											</View>
-										}
-									>
-										<option>16px</option>
-									</Select>
-								)}
-							</Grid>
-						</ListGroup>
-					)}
-					{hasFormatting && (
-						<ListGroup>
-							<ListGroupHeader>Formatting</ListGroupHeader>
-							<FormGroup label="Alignment">
-								<SegmentedControl options={align} />
-							</FormGroup>
-						</ListGroup>
-					)}
-				</ListGroups>
+							</ListGroup>
+						)}
+					</ListGroups>
+				</AnimatedContainer>
 			</Container>
 			<Container width={260}>
 				<Card>

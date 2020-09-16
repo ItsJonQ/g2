@@ -82,7 +82,7 @@ exports[`props should render correctly 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
+        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-1vy0w2p"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -91,7 +91,7 @@ exports[`props should render correctly 1`] = `
         type="button"
       >
         <span
-          class="wp-components-view wp-components-flex css-2r7rsp"
+          class="wp-components-view wp-components-flex css-k86duv"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >
@@ -244,7 +244,7 @@ exports[`props should render isLoading 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
+        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-1vy0w2p"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -253,7 +253,7 @@ exports[`props should render isLoading 1`] = `
         type="button"
       >
         <span
-          class="wp-components-view wp-components-flex css-2r7rsp"
+          class="wp-components-view wp-components-flex css-k86duv"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >
@@ -388,7 +388,7 @@ exports[`props should render placeholder 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
+        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-1vy0w2p"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -397,7 +397,7 @@ exports[`props should render placeholder 1`] = `
         type="button"
       >
         <span
-          class="wp-components-view wp-components-flex css-2r7rsp"
+          class="wp-components-view wp-components-flex css-k86duv"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >
@@ -535,7 +535,7 @@ exports[`props should render prefix 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
+        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-1vy0w2p"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -544,7 +544,7 @@ exports[`props should render prefix 1`] = `
         type="button"
       >
         <span
-          class="wp-components-view wp-components-flex css-2r7rsp"
+          class="wp-components-view wp-components-flex css-k86duv"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >
@@ -682,7 +682,7 @@ exports[`props should render suffix 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
+        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-1vy0w2p"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -691,7 +691,7 @@ exports[`props should render suffix 1`] = `
         type="button"
       >
         <span
-          class="wp-components-view wp-components-flex css-2r7rsp"
+          class="wp-components-view wp-components-flex css-k86duv"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >
@@ -826,7 +826,7 @@ exports[`props should render value 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-button wp-components-search-input-clear-button css-m7ro7v"
+        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-1vy0w2p"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="SearchInputClearButton"
@@ -835,7 +835,7 @@ exports[`props should render value 1`] = `
         type="button"
       >
         <span
-          class="wp-components-view wp-components-flex css-2r7rsp"
+          class="wp-components-view wp-components-flex css-k86duv"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >

@@ -1,15 +1,22 @@
 import { ComponentsProvider } from '@wp-g2/context';
-import { FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
+import { FiChevronLeft, FiDroplet, FiGrid, FiPlus, FiType } from '@wp-g2/icons';
 import { get, styled, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import {
+	Button,
 	CardBody,
+	ColorControl,
+	Divider,
 	FormGroup,
 	Grid,
 	Heading,
 	HStack,
 	Icon,
+	ListGroup,
+	ListGroupHeader,
+	ListGroups,
+	MenuItem,
 	Navigator,
 	NavigatorLink,
 	NavigatorScreen,
@@ -21,7 +28,6 @@ import {
 	Select,
 	Slider,
 	Spacer,
-	Subheading,
 	Surface,
 	Text,
 	TextInput,
@@ -41,32 +47,13 @@ const Screen = styled(Surface, { props: { variant: 'tertiary' } })`
 	top: 0;
 `;
 
-const SettingLink = ({ title, to }) => {
+const SettingLink = ({ prefix, title, to }) => {
 	return (
 		<NavigatorLink to={to}>
-			<HStack>
-				<Text weight={500}>{title}</Text>
-				<Icon color={get('colorText')} icon={<FiChevronRight />} />
-			</HStack>
+			<MenuItem prefix={prefix} showArrow>
+				<Text weight={600}>{title}</Text>
+			</MenuItem>
 		</NavigatorLink>
-	);
-};
-
-const ColorExample = ({ color, title }) => {
-	return (
-		<Spacer py={1}>
-			<HStack>
-				<Text>{title}</Text>
-				<View
-					css={[
-						{ background: color },
-						ui.frame({ width: 20, height: 20 }),
-						ui.borderRadius.circle,
-						{ boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.08) inset' },
-					]}
-				/>
-			</HStack>
-		</Spacer>
 	);
 };
 
@@ -78,31 +65,76 @@ const GlobalStylesScreen = () => {
 			`}
 		>
 			<CardBody>
-				<Spacer mb={3}>
-					<Subheading>Color</Subheading>
-				</Spacer>
-				<ColorExample color="#fff" title="Site Background" />
-				<ColorExample color="#000" title="Body Text" />
-				<ColorExample color="#0f6" title="Accent" />
-				<Spacer mt={3}>
-					<SettingLink title="Color" />
-				</Spacer>
-			</CardBody>
-			<CardBody>
-				<Spacer mb={3}>
-					<Subheading>Typography</Subheading>
-				</Spacer>
-				<FormGroup horizontal={false} label="Heading font">
-					<Select
-						options={[{ value: 'georgia', label: 'Georgia' }]}
+				<ListGroup>
+					<SettingLink
+						prefix={<Icon icon={<FiDroplet />} />}
+						title="Colors"
+						to="Colors"
 					/>
-				</FormGroup>
-				<FormGroup horizontal={false} label="Base font">
-					<Select options={[{ value: 'inter', label: 'Inter UI' }]} />
-				</FormGroup>
-				<Spacer mt={3}>
-					<SettingLink title="Typography" to="Typography" />
-				</Spacer>
+					<SettingLink
+						prefix={<Icon icon={<FiType />} />}
+						title="Typography"
+						to="Typography"
+					/>
+					<SettingLink
+						prefix={<Icon icon={<FiGrid />} />}
+						title="Spacing"
+					/>
+				</ListGroup>
+			</CardBody>
+
+			<Divider />
+
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>Blocks</ListGroupHeader>
+					<SettingLink title="Button" to="Buttons" />
+					<SettingLink title="Forms" />
+					<SettingLink title="Images" />
+				</ListGroup>
+			</CardBody>
+		</Screen>
+	);
+};
+
+const ColorsScreen = () => {
+	return (
+		<Screen
+			css={`
+				padding-top: 60px;
+			`}
+		>
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>Defaults</ListGroupHeader>
+					<ColorControl color="#fff">Site Background</ColorControl>
+					<ColorControl color="#000">Body Text</ColorControl>
+					<ColorControl color="#0f6">Accent</ColorControl>
+				</ListGroup>
+			</CardBody>
+			<Divider />
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>Theme</ListGroupHeader>
+					<ColorControl color="#111">Dark Gray</ColorControl>
+					<ColorControl color="#05f">Blues</ColorControl>
+				</ListGroup>
+			</CardBody>
+			<Divider />
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>
+						Custom
+						<Button
+							icon={<FiPlus />}
+							isControl
+							isSubtle
+							size="small"
+						/>
+					</ListGroupHeader>
+					<ColorControl color="#f00">Red</ColorControl>
+					<ColorControl color="#0f0">Green</ColorControl>
+				</ListGroup>
 			</CardBody>
 		</Screen>
 	);
@@ -144,49 +176,121 @@ const TypographyScreen = () => {
 			<Panel visible>
 				<PanelHeader title="Heading" />
 				<PanelBody>
-					<Spacer mb={3}>
-						<SegmentedControl isBlock options={headings} />
-					</Spacer>
-					<FormGroup label="Family">
-						<Select
-							options={[{ value: 'georgia', label: 'Georgia' }]}
-						/>
-					</FormGroup>
-					<FormGroup label="Size">
-						<Grid>
-							<TextInput value={32} />
-							<Slider />
-						</Grid>
-					</FormGroup>
-					<FormGroup label="Weight">
-						<Select options={[{ value: '500', label: '500' }]} />
-					</FormGroup>
-					<FormGroup label="Transform">
-						<Select options={[{ value: 'None', label: 'None' }]} />
-					</FormGroup>
+					<ListGroup>
+						<Spacer mb={3}>
+							<SegmentedControl isBlock options={headings} />
+						</Spacer>
+						<FormGroup label="Family">
+							<Select
+								options={[
+									{ value: 'georgia', label: 'Georgia' },
+								]}
+							/>
+						</FormGroup>
+						<FormGroup label="Size">
+							<Grid>
+								<TextInput value={32} />
+								<Slider />
+							</Grid>
+						</FormGroup>
+						<FormGroup label="Weight">
+							<Select
+								options={[{ value: '500', label: '500' }]}
+							/>
+						</FormGroup>
+						<FormGroup label="Transform">
+							<Select
+								options={[{ value: 'None', label: 'None' }]}
+							/>
+						</FormGroup>
+					</ListGroup>
 				</PanelBody>
 			</Panel>
 			<Panel visible>
-				<PanelHeader title="Paragraph" />
+				<PanelHeader title="Base Text" />
 				<PanelBody>
-					<FormGroup label="Family">
-						<Select
-							options={[{ value: 'georgia', label: 'Georgia' }]}
-						/>
-					</FormGroup>
-					<FormGroup label="Size">
-						<Grid>
-							<TextInput value={32} />
-							<Slider />
-						</Grid>
-					</FormGroup>
-					<FormGroup label="Weight">
-						<Select options={[{ value: '500', label: '500' }]} />
-					</FormGroup>
-					<FormGroup label="Transform">
-						<Select options={[{ value: 'None', label: 'None' }]} />
-					</FormGroup>
+					<ListGroup>
+						<FormGroup label="Family">
+							<Select
+								options={[
+									{ value: 'georgia', label: 'Georgia' },
+								]}
+							/>
+						</FormGroup>
+						<FormGroup label="Size">
+							<Grid>
+								<TextInput value={32} />
+								<Slider />
+							</Grid>
+						</FormGroup>
+						<FormGroup label="Weight">
+							<Select
+								options={[{ value: '500', label: '500' }]}
+							/>
+						</FormGroup>
+						<FormGroup label="Transform">
+							<Select
+								options={[{ value: 'None', label: 'None' }]}
+							/>
+						</FormGroup>
+					</ListGroup>
 				</PanelBody>
+			</Panel>
+		</Screen>
+	);
+};
+
+const ButtonsScreen = () => {
+	return (
+		<Screen
+			css={`
+				padding-top: 60px;
+			`}
+		>
+			<Panel visible>
+				<PanelHeader title="Typography" />
+				<PanelBody>
+					<ListGroup>
+						<FormGroup label="Family">
+							<Select
+								options={[
+									{ value: 'georgia', label: 'Georgia' },
+								]}
+							/>
+						</FormGroup>
+						<FormGroup label="Size">
+							<Grid>
+								<TextInput value={32} />
+								<Slider />
+							</Grid>
+						</FormGroup>
+						<FormGroup label="Weight">
+							<Select
+								options={[{ value: '500', label: '500' }]}
+							/>
+						</FormGroup>
+						<FormGroup label="Transform">
+							<Select
+								options={[{ value: 'None', label: 'None' }]}
+							/>
+						</FormGroup>
+					</ListGroup>
+				</PanelBody>
+			</Panel>
+			<Panel visible>
+				<PanelHeader title="Color" />
+				<PanelBody>
+					<ListGroup>
+						<ColorControl color="#111">Text</ColorControl>
+						<ColorControl color="#05f">Background</ColorControl>
+					</ListGroup>
+				</PanelBody>
+			</Panel>
+			<Panel>
+				<PanelHeader title="Behaviour" />
+			</Panel>
+			<Panel>
+				<PanelHeader title="Advanced" />
 			</Panel>
 		</Screen>
 	);
@@ -272,7 +376,9 @@ const screens = [
 		path: 'GlobalStyles',
 		title: 'Global Styles',
 	},
+	{ component: ColorsScreen, path: 'Colors', title: 'Colors' },
 	{ component: TypographyScreen, path: 'Typography', title: 'Typography' },
+	{ component: ButtonsScreen, path: 'Buttons', title: 'Buttons' },
 ];
 
 const Sidebar = ({ children }) => {

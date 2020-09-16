@@ -1,4 +1,4 @@
-import { css, get } from '@wp-g2/styles';
+import { css, get, space } from '@wp-g2/styles';
 
 export const Menu = css`
 	outline: none;
@@ -6,30 +6,31 @@ export const Menu = css`
 `;
 
 export const MenuItem = css`
-	appearance: none;
-	background: none;
 	border: none;
-	border-radius: 6px;
 	color: ${get('colorText')};
 	cursor: pointer;
-	display: block;
 	font-size: ${get('fontSize')};
 	outline: none;
-	padding: 8px 12px;
 	position: relative;
-	text-align: left;
 	text-decoration: none;
 	transition: background ${get('transitionDurationFastest')} linear;
 	width: 100%;
 
-	&:hover,
+	a:hover > &,
+	&:hover {
+		background: ${get('controlBackgroundBrightColor')};
+		box-shadow: none;
+	}
+
+	a:focus > &,
 	&:focus {
 		background: ${get('controlBackgroundColor')};
 		box-shadow: none;
 	}
 
+	a:active > &,
 	&:active {
-		background: ${get('controlBackgroundDimColor')};
+		background: ${get('controlBackgroundColor')};
 	}
 
 	&.is-active,
@@ -56,10 +57,21 @@ export const MenuItem = css`
 	}
 `;
 
+export const offset = css`
+	margin-bottom: ${space(-1)};
+	margin-left: ${space(-2)};
+	margin-right: ${space(-2)};
+	margin-top: ${space(-1)};
+	min-height: calc(${get('controlHeight')} + ${space(1)});
+	padding-bottom: ${space(2)};
+	padding-top: ${space(2)};
+	width: calc(100% + ${space(4)});
+`;
+
 export const showArrow = css`
-	padding-right: 32px;
+	padding-right: ${space(1)};
 `;
 
 export const showBackArrow = css`
-	padding-left: 28px;
+	padding-left: ${space(1)};
 `;

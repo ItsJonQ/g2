@@ -14,27 +14,21 @@ const Buttons = (props) => {
 	return (
 		<Spacer>
 			<Flex direction="row" justify="left" spacing={4}>
-				<Spacer>
-					<Text size={12} variant="muted">
-						Large
-					</Text>
-				</Spacer>
+				<Text size={12} variant="muted">
+					Large
+				</Text>
 				<Button size="large" {...props}>
 					Button
 				</Button>
-				<Spacer>
-					<Text size={12} variant="muted">
-						Medium
-					</Text>
-				</Spacer>
+				<Text size={12} variant="muted">
+					Medium
+				</Text>
 				<Button size="medium" {...props}>
 					Button
 				</Button>
-				<Spacer>
-					<Text size={12} variant="muted">
-						Small
-					</Text>
-				</Spacer>
+				<Text size={12} variant="muted">
+					Small
+				</Text>
 				<Button size="small" {...props}>
 					Button
 				</Button>
@@ -53,6 +47,8 @@ export const _default = () => {
 			<Buttons isDestructive variant="secondary" />
 			<Buttons isDestructive variant="tertiary" />
 			<Buttons isSubtle variant="secondary" />
+			<Buttons isControl />
+			<Buttons isControl isSubtle />
 		</>
 	);
 };

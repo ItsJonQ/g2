@@ -21,3 +21,4 @@ background.yellow = getBackgroundColor('yellow');
 
 background.control = background(get('controlBackgroundColor'));
 background.surface = background(get('surfaceBackgroundColor'));
+background.secondary = background(get('surfaceBackgroundSubtleColor'));

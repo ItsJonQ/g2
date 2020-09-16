@@ -18,6 +18,8 @@ import {
 	ListGroupFooter,
 	ListGroupHeader,
 	ListGroups,
+	MenuItem,
+	NavigatorLink,
 	Spacer,
 	Subheading,
 	Surface,
@@ -54,6 +56,7 @@ const SpacingVisualizerView = styled.div`
 				transform: translateX(-50%);
 				background: blue;
 				opacity: 0.05;
+				pointer-events: none;
 				z-index: 1;
 			}
 		}
@@ -202,95 +205,91 @@ const ExampleCluster = ({ horizontal = true }) => {
 	);
 };
 
-const ListItem = ({ children, ...props }) => {
+const ExampleCluster2 = (props) => {
 	return (
-		<Button
-			css={[ui.padding.x(1)]}
-			isBlock
-			suffix={
-				<Text isBlock variant="muted">
-					<Icon
-						color="currentColor"
-						icon={<FiChevronRight />}
-						size={20}
-					/>
-				</Text>
-			}
-			textAlign="left"
-			variant="tertiary"
-			{...props}
-		>
-			{children}
-		</Button>
-	);
-};
+		<ListGroups {...props}>
+			<ListGroup>
+				<ListGroupHeader>
+					Title
+					<Button size="xSmall" variant="tertiary">
+						Edit
+					</Button>
+				</ListGroupHeader>
+				<Grid columns={[1, 2]}>
+					<FormGroup label="Action">
+						<Switch />
+					</FormGroup>
+					<FormGroup label="Action">
+						<Switch />
+					</FormGroup>
+					<FormGroup label="Action">
+						<Switch />
+					</FormGroup>
+					<FormGroup label="Action">
+						<Switch />
+					</FormGroup>
+					<FormGroup label="Action">
+						<Switch />
+					</FormGroup>
+				</Grid>
+			</ListGroup>
 
-const ExampleCluster2 = () => {
-	return (
-		<GridItem>
-			<ListGroups>
-				<View>
-					<Spacer>
-						<Subheading>Title</Subheading>
-					</Spacer>
-					<VStack>
-						<ListItem>
+			<ListGroup separator={false}>
+				<ListGroupHeader>Title</ListGroupHeader>
+				<NavigatorLink href="#" isBack>
+					<MenuItem prefix={<Icon icon={<FiChrome />} />}>
+						<VStack spacing={0}>
 							<Text>Action</Text>
-						</ListItem>
-						<ListItem>
-							<Text>Action</Text>
-						</ListItem>
-					</VStack>
-				</View>
-				<ListGroup>
-					<ListGroupHeader>
-						Title
-						<Button>Thing</Button>
-					</ListGroupHeader>
-					<Grid>
-						<FormGroup label="Action">
-							<Switch />
-						</FormGroup>
-						<FormGroup label="Action">
-							<Switch />
-						</FormGroup>
-						<FormGroup label="Action">
-							<Switch />
-						</FormGroup>
-						<FormGroup label="Action">
-							<Switch />
-						</FormGroup>
-						<FormGroup label="Action">
-							<Switch />
-						</FormGroup>
-					</Grid>
-				</ListGroup>
-
-				<ListGroup>
-					<ListGroupHeader>Title</ListGroupHeader>
-					<ListItem prefix={<Icon icon={<FiChrome />} />}>
-						<Text>Action</Text>
-					</ListItem>
-					<ListItem prefix={<Icon icon={<FiCompass />} />}>
-						<Text>Action</Text>
-					</ListItem>
-					<ListItem prefix={<View css={{ width: 20 }} />}>
-						<Text>Action</Text>
-					</ListItem>
-				</ListGroup>
-
-				<ListGroup separator={false}>
-					<ListGroupHeader>Title</ListGroupHeader>
-					<ListItem prefix={<Icon icon={<FiChrome />} />}>
-						<Text>Action</Text>
-					</ListItem>
-					<ListItem prefix={<Icon icon={<FiCompass />} />}>
-						<Text>Action</Text>
-					</ListItem>
-					<ListGroupFooter>Some footer caption</ListGroupFooter>
-				</ListGroup>
-			</ListGroups>
-		</GridItem>
+							<Text size="caption">Help text.</Text>
+						</VStack>
+					</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink href="#">
+					<MenuItem prefix={<Icon icon={<FiCompass />} />}>
+						Action
+					</MenuItem>
+				</NavigatorLink>
+				<FormGroup label="Title">
+					<TextInput placeholder="Some Title" />
+				</FormGroup>
+				<NavigatorLink href="#">
+					<MenuItem
+						as="button"
+						prefix={<Icon icon={<FiCompass />} />}
+						suffix={
+							<Text isBlock size="caption">
+								Detail
+							</Text>
+						}
+					>
+						Action
+					</MenuItem>
+				</NavigatorLink>
+				<NavigatorLink href="#">
+					<MenuItem
+						as="button"
+						suffix={
+							<Text isBlock size="caption">
+								Detail
+							</Text>
+						}
+					>
+						Action
+					</MenuItem>
+				</NavigatorLink>
+				<MenuItem
+					as="button"
+					suffix={
+						<Text isBlock size="caption">
+							Detail
+						</Text>
+					}
+				>
+					Action
+				</MenuItem>
+				<ListGroupFooter>Some footer caption</ListGroupFooter>
+			</ListGroup>
+		</ListGroups>
 	);
 };
 
@@ -303,7 +302,7 @@ const AllTheThings = () => {
 		<>
 			<Spacer mb={5}>
 				<HStack>
-					<Heading size={1}>Testing: Control Clusters</Heading>
+					<Heading size={1}>ListGroup Examples</Heading>
 					<FormGroup isInline label="Show Visualizer">
 						<Switch checked={visualize} onChange={setVisualize} />
 					</FormGroup>
@@ -313,7 +312,12 @@ const AllTheThings = () => {
 				<Grid align="flex-start" columns={[1, 2, 4]} gap={5}>
 					<ExampleCluster />
 					<ExampleCluster horizontal={false} />
-					<ExampleCluster2 />
+					<GridItem>
+						<ExampleCluster2 />
+					</GridItem>
+					<GridItem css={[ui.background.secondary]}>
+						<ExampleCluster2 inset />
+					</GridItem>
 				</Grid>
 			</SpacingVisualizer>
 		</>

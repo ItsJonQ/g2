@@ -6,7 +6,7 @@ exports[`props should render correctly 1`] = `
   aria-controls="popover"
   aria-expanded="false"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -14,12 +14,12 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -40,7 +40,7 @@ exports[`props should render gutter 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -48,12 +48,12 @@ exports[`props should render gutter 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -74,7 +74,7 @@ exports[`props should render label 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -82,12 +82,12 @@ exports[`props should render label 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -108,7 +108,7 @@ exports[`props should render maxWidth 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -116,12 +116,12 @@ exports[`props should render maxWidth 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -142,7 +142,7 @@ exports[`props should render placement 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -150,12 +150,12 @@ exports[`props should render placement 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -176,7 +176,7 @@ exports[`props should render visible 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -184,12 +184,12 @@ exports[`props should render visible 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -210,7 +210,7 @@ exports[`props should render without animation 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -218,12 +218,12 @@ exports[`props should render without animation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -244,7 +244,7 @@ exports[`props should render without content 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -252,12 +252,12 @@ exports[`props should render without content 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -278,7 +278,7 @@ exports[`props should render without modal 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="wp-components-button css-94gk5l"
+  class="wp-components-base-button wp-components-button css-1c611v8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -286,12 +286,12 @@ exports[`props should render without modal 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-2r7rsp"
+    class="wp-components-view wp-components-flex css-k86duv"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item wp-components-flex-block css-13400lq"
+      class="wp-components-flex-item wp-components-flex-block css-13vmc3v"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >

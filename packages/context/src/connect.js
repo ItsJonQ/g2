@@ -11,7 +11,7 @@ const REACT_TYPEOF_KEY = '$$typeof';
  * Special key where the connected namespaces are stored.
  * This is attached to Context connected components as a static property.
  */
-const CONNECT_NAMESPACE = '__wpComponentsKey__';
+const CONNECT_NAMESPACE = '__styleSystemContextKey__';
 
 /**
  * Connects a component to the G2 Context system using a higher-order component.

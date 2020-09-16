@@ -12,6 +12,7 @@ const DARK_MODE_PROPS = {
 	colorText: '#E4E6EB',
 	colorTextInverted: '#050505',
 	controlBackgroundColor: 'rgba(255, 255, 255, 0.1)',
+	controlBackgroundBrightColor: 'rgba(255, 255, 255, 0.08)',
 	controlBackgroundDimColor: 'rgba(255, 255, 255, 0.2)',
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
 	controlPrimaryTextActiveColor: get('black'),

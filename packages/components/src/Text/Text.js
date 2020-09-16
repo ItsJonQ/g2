@@ -31,6 +31,7 @@ function Text({
 }) {
 	let content = children;
 	const isHighlighter = is.array(highlightWords) && highlightWords.length;
+	const isCaption = size === 'caption';
 
 	if (isHighlighter) {
 		content = createHighlighterText({
@@ -73,6 +74,7 @@ function Text({
 		isDestructive && styles.destructive,
 		isHighlighter && styles.highlighterText,
 		styles[isBlock && 'block'],
+		isCaption && styles.muted,
 		styles[variant],
 		upperCase && sx.upperCase,
 		className,

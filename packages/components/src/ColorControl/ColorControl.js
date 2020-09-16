@@ -13,6 +13,7 @@ function ColorControl({ children, className, color, ...props }) {
 		<Button
 			className={classes}
 			isBlock
+			isControl
 			isSubtle
 			textAlign="left"
 			variant="tertiary"
