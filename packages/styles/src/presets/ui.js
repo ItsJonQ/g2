@@ -1,3 +1,4 @@
+import { get } from '../core';
 import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
@@ -8,11 +9,12 @@ import { active, focus, hover } from './interactions';
 import { opacity } from './opacity';
 import { position } from './positions';
 import { shadow } from './shadows';
-import { margin, padding } from './spacing';
+import { margin, padding, space } from './spacing';
 import { offset, rotate, scale, scaleX, scaleY } from './transforms';
+import { value } from './values';
 import { zIndex } from './zIndex';
 
-export const system = {
+export const ui = {
 	active,
 	alignment,
 	animation,
@@ -22,6 +24,7 @@ export const system = {
 	focus,
 	font,
 	frame,
+	get,
 	hover,
 	margin,
 	offset,
@@ -33,8 +36,7 @@ export const system = {
 	scaleX,
 	scaleY,
 	shadow,
+	space,
+	value,
 	zIndex,
 };
-
-// TODO: Testing ui alias for system
-export const ui = system;

@@ -1,11 +1,11 @@
-import { get, styled, ui } from '@wp-g2/styles';
+import { styled, ui } from '@wp-g2/styles';
 
 export const PopoverContentView = styled.div`
 	${ui.zIndex('Popover')};
 	opacity: 0;
 	outline: none;
 	transform-origin: center center;
-	transition: opacity ${get('transitionDurationFastest')} linear;
+	transition: opacity ${ui.get('transitionDurationFastest')} linear;
 	width: 100%;
 
 	&[data-enter] {

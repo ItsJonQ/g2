@@ -1,5 +1,5 @@
 import { ComponentsProvider } from '@wp-g2/context';
-import { get } from '@wp-g2/styles';
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
 import {
@@ -32,7 +32,7 @@ export const Sidebar = ({ children }) => {
 					height: 100vh;
 					top: 0;
 					right: 0;
-					border-left: 1px solid ${get('colorDivider')};
+					border-left: 1px solid ${ui.get('colorDivider')};
 				`}
 			>
 				<Tabs selectedId="block">
@@ -42,7 +42,7 @@ export const Sidebar = ({ children }) => {
 					</TabList>
 					<TabPanel
 						css={{
-							height: `calc(100vh - (${get(
+							height: `calc(100vh - (${ui.get(
 								'controlHeightXLarge',
 							)} + 1px))`,
 						}}
@@ -82,7 +82,7 @@ export const Sidebar = ({ children }) => {
 					</TabPanel>
 					<TabPanel
 						css={{
-							height: `calc(100vh - (${get(
+							height: `calc(100vh - (${ui.get(
 								'controlHeightXLarge',
 							)} + 1px))`,
 						}}

@@ -1,7 +1,7 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const TabListView = styled.div`
-	border-bottom: 1px solid ${get('colorDivider')};
+	border-bottom: 1px solid ${ui.get('colorDivider')};
 	display: flex;
 	outline: none;
 	position: relative;
@@ -12,26 +12,26 @@ export const TabView = styled.button`
 	appearance: none;
 	background: transparent;
 	border: none;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 	cursor: pointer;
 	flex: 1;
 	justify-content: center;
-	min-height: ${get('controlHeightXLarge')};
+	min-height: ${ui.get('controlHeightXLarge')};
 	outline: none;
 	padding: 4px;
-	transition: color ${get('transitionDuration')} linear;
+	transition: color ${ui.get('transitionDuration')} linear;
 
 	&[aria-selected='true'] {
-		color: ${get('colorAdmin')};
+		color: ${ui.get('colorAdmin')};
 	}
 `;
 
 export const small = css`
-	min-height: ${get('controlHeightLarge')};
+	min-height: ${ui.get('controlHeightLarge')};
 `;
 
 export const xSmall = css`
-	min-height: ${get('controlHeight')};
+	min-height: ${ui.get('controlHeight')};
 `;
 
 export const TabPanelView = styled.div`
@@ -39,11 +39,11 @@ export const TabPanelView = styled.div`
 `;
 
 export const TabIndicatorView = styled.div`
-	background: ${get('colorAdmin')};
+	background: ${ui.get('colorAdmin')};
 	bottom: -1px;
 	height: 2px;
 	left: 0;
 	position: absolute;
-	transition: all ${get('transitionDuration')} ease;
+	transition: all ${ui.get('transitionDuration')} ease;
 	z-index: 1;
 `;

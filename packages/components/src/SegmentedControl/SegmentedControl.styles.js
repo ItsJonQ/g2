@@ -1,19 +1,19 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const SegmentedControl = css`
-	background: ${get('controlBackgroundColor')};
-	border: 1px solid ${get('controlBorderColor')};
-	border-radius: calc(${get('controlBorderRadius')} + 1px);
+	background: ${ui.get('controlBackgroundColor')};
+	border: 1px solid ${ui.get('controlBorderColor')};
+	border-radius: calc(${ui.get('controlBorderRadius')} + 1px);
 	display: inline-flex;
-	min-height: ${get('controlHeight')};
+	min-height: ${ui.get('controlHeight')};
 	min-width: 0;
 	padding: 1px;
 	position: relative;
-	transition: all ${get('transitionDurationFastest')} linear;
+	transition: all ${ui.get('transitionDurationFastest')} linear;
 
 	&:focus {
-		border-color: ${get('colorAdmin')};
-		box-shadow: ${get('controlBoxShadowFocus')};
+		border-color: ${ui.get('colorAdmin')};
+		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		outline: none;
 		z-index: 1;
 	}
@@ -25,14 +25,14 @@ export const block = css`
 `;
 
 export const BackdropView = styled.div`
-	background: ${get('controlSurfaceColor')};
-	border: 1px solid ${get('controlBorderColor')};
-	border-radius: ${get('controlBorderRadius')};
-	box-shadow: ${get('controlSurfaceBoxShadow')};
-	height: calc(${get('controlHeight')} - 4px);
+	background: ${ui.get('controlSurfaceColor')};
+	border: 1px solid ${ui.get('controlBorderColor')};
+	border-radius: ${ui.get('controlBorderRadius')};
+	box-shadow: ${ui.get('controlSurfaceBoxShadow')};
+	height: calc(${ui.get('controlHeight')} - 4px);
 	left: 0;
 	position: absolute;
-	transition: all ${get('transitionDurationFast')} ease;
+	transition: all ${ui.get('transitionDurationFast')} ease;
 	z-index: 1;
 `;
 
@@ -52,8 +52,8 @@ export const ButtonView = styled.button`
 	appearance: none;
 	background: transparent;
 	border: none;
-	border-radius: ${get('controlBorderRadius')};
-	color: ${get('colorText')};
+	border-radius: ${ui.get('controlBorderRadius')};
+	color: ${ui.get('colorText')};
 	cursor: pointer;
 	display: flex;
 	height: 100%;
@@ -63,8 +63,9 @@ export const ButtonView = styled.button`
 	padding: 0 12px;
 	position: relative;
 	text-align: center;
-	transition: background ${get('transitionDurationFast')} linear,
-		color ${get('transitionDurationFast')} linear, font-weight 60ms linear;
+	transition: background ${ui.get('transitionDurationFast')} linear,
+		color ${ui.get('transitionDurationFast')} linear,
+		font-weight 60ms linear;
 	user-select: none;
 	width: 100%;
 	z-index: 2;
@@ -74,7 +75,7 @@ export const ButtonView = styled.button`
 	}
 
 	&:active {
-		background: ${get('controlBackgroundColor')};
+		background: ${ui.get('controlBackgroundColor')};
 	}
 `;
 
@@ -88,17 +89,17 @@ export const ButtonContentView = styled.div`
 `;
 
 export const buttonActive = css`
-	color: ${get('controlTextActiveColor')};
+	color: ${ui.get('controlTextActiveColor')};
 	font-weight: bold;
 `;
 
 export const SeparatorView = styled.div`
-	background: ${get('colorDivider')};
+	background: ${ui.get('colorDivider')};
 	height: calc(100% - 4px - 4px);
 	position: absolute;
 	right: 0;
 	top: 4px;
-	transition: background ${get('transitionDuration')} linear;
+	transition: background ${ui.get('transitionDuration')} linear;
 	width: 1px;
 `;
 
@@ -115,9 +116,9 @@ export const LabelPlaceholderView = styled.div`
 `;
 
 export const large = css`
-	min-height: ${get('controlHeightLarge')};
+	min-height: ${ui.get('controlHeightLarge')};
 `;
 
 export const small = css`
-	min-height: ${get('controlHeightSmall')};
+	min-height: ${ui.get('controlHeightSmall')};
 `;

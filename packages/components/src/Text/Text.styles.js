@@ -1,7 +1,7 @@
-import { css, get } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Text = css`
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 `;
 
 export const block = css`
@@ -9,11 +9,11 @@ export const block = css`
 `;
 
 export const positive = css`
-	color: ${get('colorPositive')};
+	color: ${ui.get('colorPositive')};
 `;
 
 export const destructive = css`
-	color: ${get('colorDestructive')};
+	color: ${ui.get('colorDestructive')};
 `;
 
 export const muted = css`
@@ -22,7 +22,7 @@ export const muted = css`
 
 export const highlighterText = css`
 	mark {
-		background: ${get('yellowRgba70')};
+		background: ${ui.get('yellowRgba70')};
 		border-radius: 2px;
 		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset,
 			0 -1px 0 rgba(0, 0, 0, 0.1) inset;

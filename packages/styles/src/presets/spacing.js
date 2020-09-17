@@ -1,5 +1,6 @@
 import { space } from '../mixins/space';
 import { css } from '../style-system';
+export { space } from '../mixins/space';
 
 export function margin(value) {
 	return css({ margin: space(value) });

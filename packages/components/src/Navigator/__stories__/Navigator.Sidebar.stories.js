@@ -1,6 +1,5 @@
-import { faker, Schema, useListData } from '@wp-g2/protokit';
-import { get, styled, ThemeProvider } from '@wp-g2/styles';
-import { ui } from '@wp-g2/styles';
+import { faker, Schema } from '@wp-g2/protokit';
+import { styled, ThemeProvider, ui } from '@wp-g2/styles';
 import { chunk, useLocalState } from '@wp-g2/utils';
 import React, { useEffect, useState } from 'react';
 import {
@@ -437,7 +436,7 @@ const App = () => {
 	return (
 		<View
 			css={{
-				border: `2px solid ${get('surfaceBorderColor')}`,
+				border: `2px solid ${ui.get('surfaceBorderColor')}`,
 				bottom: 100,
 				left: 0,
 				position: 'fixed',

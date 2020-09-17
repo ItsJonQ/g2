@@ -1,4 +1,4 @@
-import { css, get, highContrastMode, space } from '@wp-g2/styles';
+import { css, highContrastMode, ui } from '@wp-g2/styles';
 
 export const Menu = css`
 	outline: none;
@@ -6,79 +6,76 @@ export const Menu = css`
 `;
 
 export const MenuItem = css`
+	${ui.font.color.text};
+	${ui.font.size()};
 	border-color: transparent;
-	color: ${get('colorText')};
 	cursor: pointer;
-	font-size: ${get('fontSize')};
 	outline: none;
 	position: relative;
 	text-decoration: none;
-	transition: background ${get('transitionDurationFastest')} linear;
+	transition: background ${ui.get('transitionDurationFastest')} linear;
 	width: 100%;
 
 	a:hover > &,
 	&:hover {
-		background: ${get('controlBackgroundBrightColor')};
+		background: ${ui.get('controlBackgroundBrightColor')};
 		box-shadow: none;
 	}
 
 	a:focus > &,
 	&:focus {
-		background: ${get('controlBackgroundColor')};
+		background: ${ui.get('controlBackgroundColor')};
 		box-shadow: none;
 	}
 
 	a:active > &,
 	&:active {
-		background: ${get('controlBackgroundColor')};
+		background: ${ui.get('controlBackgroundColor')};
 	}
 
 	&.is-active,
 	&[aria-current='page'] {
-		background-color: ${get('surfaceBackgroundSubtleColor')};
-		color: ${get('colorText')};
+		background-color: ${ui.get('surfaceBackgroundSubtleColor')};
+		color: ${ui.get('colorText')};
 
 		&:active {
-			color: ${get('colorTextInverted')};
+			color: ${ui.get('colorTextInverted')};
 		}
 
 		&:hover,
 		&:focus {
-			background-color: ${get('surfaceBackgroundSubtleColor')};
+			background-color: ${ui.get('surfaceBackgroundSubtleColor')};
 		}
 
 		&:focus {
-			border-color: ${get('surfaceBackgroundSubtleColor')};
+			border-color: ${ui.get('surfaceBackgroundSubtleColor')};
 		}
 
 		&:active {
-			background-color: ${get('colorText')};
+			background-color: ${ui.get('colorText')};
 		}
 	}
 
 	${highContrastMode`
 		&:hover,
 		&:focus {
-			border-color: ${get('controlBorderColor')};
+			border-color: ${ui.get('controlBorderColor')};
 		}
 	`}
 `;
 
 export const offset = css`
-	margin-bottom: ${space(-1)};
-	margin-left: ${space(-2)};
-	margin-right: ${space(-2)};
-	margin-top: ${space(-1)};
-	min-height: calc(${get('controlHeight')} + ${space(1)});
-	padding-bottom: ${space(2)};
-	padding-top: ${space(2)};
-	width: calc(100% + ${space(4)});
+	${ui.margin.x(-2)};
+	${ui.margin.y(-1)};
+	${ui.padding.y(2)};
+	min-height: calc(${ui.get('controlHeight')} + ${ui.space(1)});
+	width: calc(100% + ${ui.space(4)});
 `;
 
 export const showArrow = css`
-	padding-right: ${space(1)};
+	${ui.padding.right(1)};
 `;
 
 export const showBackArrow = css`
-	padding-left: ${space(1)};
+	${ui.padding.left(1)};
 `;

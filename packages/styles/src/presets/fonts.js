@@ -15,6 +15,8 @@ getFontColor.yellow = getFontColor(get('yellow500'));
 getFontColor.orange = getFontColor(get('orange500'));
 getFontColor.darkGray = getFontColor(get('darkGray500'));
 getFontColor.lightGray = getFontColor(get('lightGray500'));
+getFontColor.text = getFontColor(get('colorText'));
+getFontColor.textInverted = getFontColor(get('colorTextInverted'));
 
 const fontFamily = {
 	default: css({
@@ -32,6 +34,12 @@ const fontStyles = {
 		fontSize: getFontSize(10),
 		fontWeight: 600,
 		textTransform: 'uppercase',
+	}),
+	caption: css({
+		fontSize: getFontSize(10),
+		fontWeight: 600,
+		textTransform: 'uppercase',
+		opacity: 0.5,
 	}),
 };
 

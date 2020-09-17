@@ -14,6 +14,8 @@ declare interface FontStyleInterface {
 	italic: CSSClassName;
 	/** Adjusts the font to enable all small capitals. */
 	smallCaps: CSSClassName;
+	/** Adjusts the font to captions tyle. */
+	caption: CSSClassName;
 }
 
 declare interface FontSizeInterface {
@@ -60,6 +62,10 @@ declare type FontColor = {
 	darkGray: CSSClassName;
 	/** Applies admin color to the font. */
 	admin: CSSClassName;
+	/** Applies base text color to the font. */
+	text: CSSClassName;
+	/** Applies base inverted text color to the font. */
+	textInverted: CSSClassName;
 };
 
 declare interface FontColorInterface {

@@ -1,9 +1,9 @@
-import { css, get } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Placeholder = css`
 	align-items: center;
-	background: ${get('surfaceBackgroundSubtleColor')};
-	color: ${get('colorText')};
+	background: ${ui.get('surfaceBackgroundSubtleColor')};
+	color: ${ui.get('colorText')};
 	display: flex;
 	justify-content: center;
 `;

@@ -1,6 +1,6 @@
 import { ComponentsProvider } from '@wp-g2/context';
 import { FiChevronLeft, FiDroplet, FiGrid, FiPlus, FiType } from '@wp-g2/icons';
-import { get, styled, ui } from '@wp-g2/styles';
+import { styled, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import {
@@ -15,7 +15,6 @@ import {
 	Icon,
 	ListGroup,
 	ListGroupHeader,
-	ListGroups,
 	MenuItem,
 	Navigator,
 	NavigatorLink,
@@ -396,7 +395,7 @@ const Sidebar = ({ children }) => {
 					height: 100vh;
 					top: 0;
 					right: 0;
-					border-left: 1px solid ${get('colorDivider')};
+					border-left: 1px solid ${ui.get('colorDivider')};
 				`}
 			>
 				{children}

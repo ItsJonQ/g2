@@ -1,25 +1,25 @@
-import { css, get, space, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Button = css`
 	align-items: center;
 	appearance: none;
 	background-color: transparent;
 	border-color: transparent;
-	border-radius: ${get('controlBorderRadius')};
+	border-radius: ${ui.get('controlBorderRadius')};
 	border-style: solid;
 	border-width: 1px;
 	box-shadow: 0 0 0 2px transparent;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 	cursor: pointer;
 	display: inline-flex;
-	font-size: ${get('fontSize')};
+	font-size: ${ui.get('fontSize')};
 	line-height: 1;
-	min-height: ${get('controlHeight')};
+	min-height: ${ui.get('controlHeight')};
 	outline: none;
-	padding-bottom: ${space(1)};
-	padding-left: ${get('controlPaddingX')};
-	padding-right: ${get('controlPaddingX')};
-	padding-top: ${space(1)};
+	padding-bottom: ${ui.space(1)};
+	padding-left: ${ui.get('controlPaddingX')};
+	padding-right: ${ui.get('controlPaddingX')};
+	padding-top: ${ui.space(1)};
 	position: relative;
 	text-decoration: none;
 	user-select: none;
@@ -28,23 +28,23 @@ export const Button = css`
 	&:hover,
 	&:active,
 	&:focus {
-		transition: all ${get('transitionDuration')}
+		transition: all ${ui.get('transitionDuration')}
 			cubic-bezier(0.12, 0.8, 0.32, 1);
 	}
 
 	&[disabled]:not([aria-busy='true']),
 	&[aria-disabled='true']:not([aria-busy='true']) {
+		${ui.opacity.muted};
 		cursor: auto;
-		opacity: 0.5;
 	}
 
 	&:focus {
-		box-shadow: ${get('controlBoxShadowFocus')};
-		z-index: 1;
+		${ui.zIndex('ControlFocus', 1)};
+		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeight')};
+		min-width: ${ui.get('controlHeight')};
 	}
 
 	svg {
@@ -53,7 +53,7 @@ export const Button = css`
 `;
 
 export const destructive = css`
-	color: ${get('colorDestructive')};
+	color: ${ui.get('colorDestructive')};
 `;
 
 export const block = css`
@@ -66,52 +66,44 @@ export const rounded = css`
 `;
 
 export const large = css`
-	min-height: ${get('controlHeightLarge')};
+	min-height: ${ui.get('controlHeightLarge')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightLarge')};
+		min-width: ${ui.get('controlHeightLarge')};
 	}
 `;
 
 export const small = css`
-	min-height: ${get('controlHeightSmall')};
-	padding-bottom: ${space(0.5)};
-	padding-left: ${get('controlPaddingXSmall')};
-	padding-right: ${get('controlPaddingXSmall')};
-	padding-top: ${space(0.5)};
+	${ui.padding.y(ui.space(0.5))};
+	${ui.padding.x(ui.get('controlPaddingXSmall'))};
+	min-height: ${ui.get('controlHeightSmall')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlPaddingXSmall')};
+		min-width: ${ui.get('controlPaddingXSmall')};
 	}
 `;
 
 export const xSmall = css`
-	min-height: ${get('controlHeightXSmall')};
-	padding-bottom: ${space(0.5)};
-	padding-left: ${get('controlPaddingXXSmall')};
-	padding-right: ${get('controlPaddingXXSmall')};
-	padding-top: ${space(0.5)};
+	${ui.padding.y(ui.space(0.5))};
+	${ui.padding.x(ui.get('controlPaddingXXSmall'))};
+	min-height: ${ui.get('controlHeightXSmall')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightXXSmall')};
+		min-width: ${ui.get('controlHeightXXSmall')};
 	}
 `;
 
 export const xxSmall = css`
-	min-height: ${get('controlHeightXXSmall')};
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0;
+	${ui.padding(0)};
+	min-height: ${ui.get('controlHeightXXSmall')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightXXSmall')};
+		min-width: ${ui.get('controlHeightXXSmall')};
 	}
 `;
 
 export const icon = css`
-	padding-left: 0;
-	padding-right: 0;
+	${ui.padding.x(0)};
 `;
 
 export const loading = css`
@@ -119,7 +111,7 @@ export const loading = css`
 `;
 
 export const Content = css`
-	font-size: ${get('fontSize')};
+	font-size: ${ui.get('fontSize')};
 	/* line-height: 0; */
 	opacity: 1;
 	white-space: nowrap;
@@ -144,21 +136,21 @@ export const LoadingOverlay = css`
 `;
 
 export const control = css`
-	background-color: ${get('controlBackgroundColor')};
-	border: 1px solid ${get('controlBorderColor')};
-	color: ${get('colorText')};
-	font-family: ${get('fontFamily')};
-	font-size: ${get('fontSize')};
+	background-color: ${ui.get('controlBackgroundColor')};
+	border: 1px solid ${ui.get('controlBorderColor')};
+	color: ${ui.get('colorText')};
+	font-family: ${ui.get('fontFamily')};
+	font-size: ${ui.get('fontSize')};
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: ${get('colorText')};
+		color: ${ui.get('colorText')};
 	}
 
 	&:focus {
-		border-color: ${get('colorAdmin')};
-		box-shadow: ${get('controlBoxShadowFocus')};
+		border-color: ${ui.get('colorAdmin')};
+		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		z-index: 1;
 	}
 `;
@@ -169,13 +161,13 @@ export const subtleControl = css`
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: ${get('controlBackgroundColor')};
+		background-color: ${ui.get('controlBackgroundColor')};
 	}
 `;
 
 export const narrow = css`
-	padding-left: ${get('controlPaddingX')};
-	padding-right: ${get('controlPaddingX')};
+	padding-left: ${ui.get('controlPaddingX')};
+	padding-right: ${ui.get('controlPaddingX')};
 `;
 
 export const currentColor = css`

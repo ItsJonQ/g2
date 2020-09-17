@@ -1,4 +1,4 @@
-import { css, get } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const BaseLink = css`
 	outline: none;
@@ -6,5 +6,5 @@ export const BaseLink = css`
 `;
 
 export const Link = css`
-	color: ${get('colorAdmin')};
+	color: ${ui.get('colorAdmin')};
 `;

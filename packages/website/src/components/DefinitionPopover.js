@@ -9,7 +9,7 @@ import {
   Tabs,
   Text,
 } from "@wp-g2/components"
-import { get, styled } from "@wp-g2/styles"
+import { styled, ui } from "@wp-g2/styles"
 import { is } from "@wp-g2/utils"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
@@ -20,7 +20,7 @@ const CodeWrapperView = styled.span`
   &:hover {
     cursor: pointer;
     code {
-      background: ${get("yellow300")};
+      background: ${ui.get("yellow300")};
     }
   }
 `

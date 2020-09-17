@@ -1,4 +1,4 @@
-import { css, get, styled, ui } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const TooltipContent = css`
 	${ui.zIndex('Tooltip')};
@@ -16,7 +16,7 @@ export const TooltipPopoverView = styled.div`
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 6px;
 	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
-	color: ${get('white')};
+	color: ${ui.get('white')};
 	padding: 4px 8px;
 `;
 

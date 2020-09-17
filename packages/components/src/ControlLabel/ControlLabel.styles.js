@@ -1,9 +1,9 @@
-import { css, get, getHighDpi, styled } from '@wp-g2/styles';
+import { css, getHighDpi, styled, ui } from '@wp-g2/styles';
 
-const lineHeight = `calc(${get('fontSize')} * 1.2)`;
+const lineHeight = `calc(${ui.get('fontSize')} * 1.2)`;
 
 function getPadding(size) {
-	return `calc((${get(size)} - ${lineHeight}) / 2)`;
+	return `calc((${ui.get(size)} - ${lineHeight}) / 2)`;
 }
 
 const highDpiAdjust = getHighDpi(css`

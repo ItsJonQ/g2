@@ -1,9 +1,9 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export { scrollableScrollbar } from '../Scrollable/Scrollable.styles';
 
 export const focus = css`
-	border-color: ${get('colorAdmin')};
+	border-color: ${ui.get('colorAdmin')};
 	z-index: 1;
 `;
 
@@ -21,32 +21,32 @@ export const InputView = styled.input`
 	appearance: none;
 	background: transparent;
 	border: none;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 	display: block;
-	font-size: ${get('fontSizeInputMobile')};
+	font-size: ${ui.get('fontSizeInputMobile')};
 	line-height: 18px;
-	min-height: calc(${get('controlHeight')} - 2px);
+	min-height: calc(${ui.get('controlHeight')} - 2px);
 	outline: none;
-	padding-bottom: calc((${get('controlHeight')} - 2px - 18px) / 2);
-	padding-top: calc((${get('controlHeight')} - 2px - 18px) / 2);
+	padding-bottom: calc((${ui.get('controlHeight')} - 2px - 18px) / 2);
+	padding-top: calc((${ui.get('controlHeight')} - 2px - 18px) / 2);
 	resize: none;
 	width: 100%;
 
 	@media (min-width: 36em) {
-		font-size: ${get('fontSize')};
+		font-size: ${ui.get('fontSize')};
 	}
 `;
 
 export const large = css`
-	min-height: calc(${get('controlHeightLarge')} - 2px);
-	padding-bottom: calc((${get('controlHeightLarge')} - 2px - 18px) / 2);
-	padding-top: calc((${get('controlHeightLarge')} - 2px - 18px) / 2);
+	min-height: calc(${ui.get('controlHeightLarge')} - 2px);
+	padding-bottom: calc((${ui.get('controlHeightLarge')} - 2px - 18px) / 2);
+	padding-top: calc((${ui.get('controlHeightLarge')} - 2px - 18px) / 2);
 `;
 
 export const small = css`
-	min-height: calc(${get('controlHeightSmall')} - 2px);
-	padding-bottom: calc((${get('controlHeightSmall')} - 2px - 18px) / 2);
-	padding-top: calc((${get('controlHeightSmall')} - 2px - 18px) / 2);
+	min-height: calc(${ui.get('controlHeightSmall')} - 2px);
+	padding-bottom: calc((${ui.get('controlHeightSmall')} - 2px - 18px) / 2);
+	padding-top: calc((${ui.get('controlHeightSmall')} - 2px - 18px) / 2);
 `;
 
 export const resizable = css`

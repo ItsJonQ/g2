@@ -9,7 +9,7 @@ import {
 	useToolbarState,
 } from '@wp-g2/a11y';
 import * as IconSet from '@wp-g2/icons';
-import { get, styled } from '@wp-g2/styles';
+import { styled, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -23,8 +23,8 @@ const ToolbarContext = React.createContext({});
 const useToolbarContext = () => React.useContext(ToolbarContext);
 
 const ToolbarView = styled.div`
-	background: ${get('surfaceColor')};
-	border: 1px solid ${get('colorText')};
+	background: ${ui.get('surfaceColor')};
+	border: 1px solid ${ui.get('colorText')};
 	border-radius: 2px;
 	display: inline-flex;
 	padding: 0;
@@ -33,9 +33,9 @@ const ToolbarView = styled.div`
 const ToolbarButtonView = styled.button`
 	align-items: center;
 	appearance: none;
-	background: ${get('surfaceColor')};
+	background: ${ui.get('surfaceColor')};
 	border: none;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 	cursor: pointer;
 	display: flex;
 	height: 48px;
@@ -66,7 +66,7 @@ const ToolbarButtonView = styled.button`
 	}
 
   &:hover {
-    color: ${get('colorAdmin')};
+    color: ${ui.get('colorAdmin')};
   }
 
 	&::before {
@@ -103,19 +103,19 @@ const ToolbarButtonView = styled.button`
   }
 
 	&:focus {
-		/* color: ${get('colorTextInverted')};
+		/* color: ${ui.get('colorTextInverted')};
 
 		&::before {
 			background: black;
 		} */
     &::before {
-      box-shadow: 0 0 0 2px ${get('colorAdmin')};
+      box-shadow: 0 0 0 2px ${ui.get('colorAdmin')};
     }
 	}
 `;
 
 const ToolbarGroupView = styled.div`
-	border-right: 1px solid ${get('colorText')};
+	border-right: 1px solid ${ui.get('colorText')};
 	display: flex;
 
 	&:last-of-type {
@@ -129,8 +129,8 @@ const ToolbarButtonContentView = styled.span`
 `;
 
 const ToolbarDropdownView = styled.div`
-	background: ${get('surfaceColor')};
-	border: 1px solid ${get('colorText')};
+	background: ${ui.get('surfaceColor')};
+	border: 1px solid ${ui.get('colorText')};
 	border-radius: 2px;
 	min-width: 200px;
 	outline: none;
@@ -142,7 +142,7 @@ const ToolbarDropdownItemView = styled.button`
 	background: none;
 	border: none;
 	border-radius: 2px;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 	cursor: pointer;
 	display: block;
 	outline: none;
@@ -151,16 +151,16 @@ const ToolbarDropdownItemView = styled.button`
 	width: 100%;
 
 	&:hover {
-		color: ${get('colorAdmin')};
+		color: ${ui.get('colorAdmin')};
 	}
 
 	&:focus {
-		box-shadow: 0 0 0 2px ${get('colorAdmin')};
+		box-shadow: 0 0 0 2px ${ui.get('colorAdmin')};
 	}
 `;
 
 const ToolbarSeparatorView = styled.div`
-	border-top: 1px solid ${get('colorText')};
+	border-top: 1px solid ${ui.get('colorText')};
 	margin: 8px -8px;
 `;
 

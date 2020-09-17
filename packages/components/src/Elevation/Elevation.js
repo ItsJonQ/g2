@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, get, getBoxShadow } from '@wp-g2/styles';
+import { css, getBoxShadow, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -23,7 +23,7 @@ function Elevation({
 		activeValue = is.defined(active) ? active : undefined;
 	}
 
-	const transition = `box-shadow ${get('transitionDuration')} ${get(
+	const transition = `box-shadow ${ui.get('transitionDuration')} ${ui.get(
 		'transitionTimingFunction',
 	)}`;
 
@@ -33,7 +33,7 @@ function Elevation({
 		borderRadius,
 		bottom: offset,
 		boxShadow: getBoxShadow(value),
-		opacity: get('elevationIntensity'),
+		opacity: ui.get('elevationIntensity'),
 		left: offset,
 		right: offset,
 		top: offset,

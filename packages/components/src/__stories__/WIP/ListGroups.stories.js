@@ -1,7 +1,7 @@
 import { ComponentsProvider, connect } from '@wp-g2/context';
 import { ns } from '@wp-g2/context';
-import { FiChevronRight, FiChrome, FiCompass } from '@wp-g2/icons';
-import { get, styled, ui } from '@wp-g2/styles';
+import { FiChrome, FiCompass } from '@wp-g2/icons';
+import { styled, ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
 import React from 'react';
 
@@ -68,9 +68,9 @@ const SpacingVisualizerView = styled.div`
 			position: relative;
 			&::before {
 				background: pink;
-				bottom: calc(${get('HStackSpacing')} * -1);
+				bottom: calc(${ui.get('HStackSpacing')} * -1);
 				content: '';
-				height: ${get('HStackSpacing')};
+				height: ${ui.get('HStackSpacing')};
 				left: 0;
 				opacity: 0.15;
 				pointer-events: none;
@@ -91,9 +91,9 @@ const SpacingVisualizerView = styled.div`
 			position: relative;
 			&::before {
 				background: pink;
-				right: calc(${get('HStackSpacing')} * -1);
+				right: calc(${ui.get('HStackSpacing')} * -1);
 				content: '';
-				height: ${get('HStackSpacing')};
+				height: ${ui.get('HStackSpacing')};
 				top: 0;
 				bottom: 0;
 				opacity: 0.15;

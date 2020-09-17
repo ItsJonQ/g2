@@ -3,11 +3,15 @@ import { CSSClassName } from '../shared';
 import { AlignmentInterface } from './alignments';
 import { AnimationInterface } from './animations';
 import { BackgroundInterface } from './backgrounds';
-import { FrameInterface } from './dimensions';
 import { BorderInterface, BorderRadiusInterface } from './borders';
+import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
+import { GetInterface } from './get';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
+import { SpaceInterface } from './space';
+import { MarginInterface, PaddingInterface } from './spacing';
+import { ShadowInterface } from './shadows';
 import {
 	OffsetInterface,
 	ScaleInterface,
@@ -15,8 +19,8 @@ import {
 	ScaleYInterface,
 	RotateInterface,
 } from './transforms';
-import { MarginInterface, PaddingInterface } from './spacing';
-import { ShadowInterface } from './shadows';
+import { ValueInterface } from './values';
+import { ZIndexInterface } from './zIndex';
 
 declare interface InteractionInterface {
 	/** Applies custom modifiers based on an interaction. */
@@ -43,14 +47,16 @@ export declare interface SystemInterface {
 	borderRadius: BorderRadiusInterface;
 	/** Modify border styles based on system presets. */
 	border: BorderInterface;
-	/** Modify width/height styles. */
-	frame: FrameInterface;
 	/** Applies custom modifiers based on an focus interaction. */
 	focus: FocusInterface;
-	/** Applies custom modifiers based on an hover interaction. */
-	hover: HoverInterface;
+	/** Modify width/height styles. */
+	frame: FrameInterface;
 	/** Modify font styles based on system presets. */
 	font: FontInterface;
+	/** Applies custom modifiers based on an hover interaction. */
+	hover: HoverInterface;
+	/** Retrives a design token value from the style configuration. */
+	get: GetInterface;
 	/** Modify margin styles based on system presets. */
 	margin: MarginInterface;
 	/** Modify offset (transform) styles. */
@@ -69,11 +75,15 @@ export declare interface SystemInterface {
 	scaleX: ScaleXInterface;
 	/** Modify scaleY (transform) styles. */
 	scaleY: ScaleYInterface;
+	/** Calculates a value based on the grid system. */
+	space: SpaceInterface;
 	/** Modify box-shadow styles based on system presets. */
 	shadow: ShadowInterface;
+	/** Outputs a CSS number value, often with a unit. */
+	value: ValueInterface;
+	/** Modify z-index styles based on system presets. */
+	zIndex: ZIndexInterface;
 }
 
-/** Core system style presets. */
-export declare const system: SystemInterface;
 /** Core system style presets. */
 export declare const ui: SystemInterface;

@@ -1,19 +1,19 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const SliderView = styled.input`
 	appearance: none;
 	background-color: transparent;
 	border: 1px solid transparent;
-	border-radius: ${get('controlBorderRadius')};
+	border-radius: ${ui.get('controlBorderRadius')};
 	display: block;
-	height: ${get('controlHeight')};
+	height: ${ui.get('controlHeight')};
 	max-width: 100%;
 	min-width: 0;
-	padding: 4px;
+	padding: ${ui.space(1)};
 	width: 100%;
 
 	&:focus {
-		border-color: ${get('colorAdmin')};
+		border-color: ${ui.get('colorAdmin')};
 		outline: none;
 	}
 
@@ -24,36 +24,36 @@ export const SliderView = styled.input`
 	&::-webkit-slider-runnable-track {
 		background: linear-gradient(
 			to right,
-			${get('colorAdmin')} calc(var(--progress)),
-			${get('controlBackgroundDimColor')} calc(var(--progress))
+			${ui.get('colorAdmin')} calc(var(--progress)),
+			${ui.get('controlBackgroundDimColor')} calc(var(--progress))
 		);
 		border-radius: 2px;
 		height: 2px;
 		will-change: transform;
 
 		&:disabled {
-			background: ${get('controlBackgroundDimColor')};
+			background: ${ui.get('controlBackgroundDimColor')};
 		}
 	}
 	&::-moz-range-track {
 		background: linear-gradient(
 			to right,
-			${get('colorAdmin')} calc(var(--progress)),
-			${get('controlBackgroundDimColor')} calc(var(--progress))
+			${ui.get('colorAdmin')} calc(var(--progress)),
+			${ui.get('controlBackgroundDimColor')} calc(var(--progress))
 		);
 		border-radius: 2px;
 		height: 2px;
 		will-change: transform;
 
 		&:disabled {
-			background: ${get('controlBackgroundDimColor')};
+			background: ${ui.get('controlBackgroundDimColor')};
 		}
 	}
 
 	&::-webkit-slider-thumb {
 		appearance: none;
-		background-color: ${get('white')};
-		border: 1px solid ${get('controlBorderColor')};
+		background-color: ${ui.get('white')};
+		border: 1px solid ${ui.get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
 			0px 1px 1px 0px rgba(0, 0, 0, 0.3);
@@ -70,8 +70,8 @@ export const SliderView = styled.input`
 	}
 	&::-moz-range-thumb {
 		appearance: none;
-		background-color: ${get('white')};
-		border: 1px solid ${get('controlBorderColor')};
+		background-color: ${ui.get('white')};
+		border: 1px solid ${ui.get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
 			0px 1px 1px 0px rgba(0, 0, 0, 0.3);
@@ -89,9 +89,9 @@ export const SliderView = styled.input`
 `;
 
 export const large = css`
-	height: ${get('controlHeightLarge')};
+	height: ${ui.get('controlHeightLarge')};
 `;
 
 export const small = css`
-	height: ${get('controlHeightSmall')};
+	height: ${ui.get('controlHeightSmall')};
 `;

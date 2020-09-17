@@ -1,175 +1,170 @@
-import { css, get } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Button = css`
-	color: ${get('colorAdmin')};
+	color: ${ui.get('colorAdmin')};
 	font-weight: 600;
-	padding-left: ${get('controlPaddingXLarge')};
-	padding-right: ${get('controlPaddingXLarge')};
+	padding-left: ${ui.get('controlPaddingXLarge')};
+	padding-right: ${ui.get('controlPaddingXLarge')};
 
 	&:active {
-		color: ${get('colorText')};
+		color: ${ui.get('colorText')};
 	}
 `;
 
 export const large = css`
-	min-height: ${get('controlHeightLarge')};
+	min-height: ${ui.get('controlHeightLarge')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightLarge')};
+		min-width: ${ui.get('controlHeightLarge')};
 	}
 `;
 
 export const small = css`
-	min-height: ${get('controlHeightSmall')};
-	padding-left: ${get('controlPaddingX')};
-	padding-right: ${get('controlPaddingX')};
+	${ui.padding.x(ui.get('controlPaddingX'))};
+	min-height: ${ui.get('controlHeightSmall')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightSmall')};
+		min-width: ${ui.get('controlHeightSmall')};
 	}
 `;
 
 export const xSmall = css`
-	min-height: ${get('controlHeightXSmall')};
-	padding-left: ${get('controlPaddingXSmall')};
-	padding-right: ${get('controlPaddingXSmall')};
+	${ui.padding.x(ui.get('controlPaddingXSmall'))};
+	min-height: ${ui.get('controlHeightXSmall')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightXSmall')};
+		min-width: ${ui.get('controlHeightXSmall')};
 	}
 `;
 
 export const xxSmall = css`
-	min-height: ${get('controlHeightXXSmall')};
-	padding-left: 0;
-	padding-right: 0;
+	${ui.padding.x(ui.get('controlHeightXXSmall'))};
+	min-height: ${ui.get('controlHeightXXSmall')};
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightXXSmall')};
+		min-width: ${ui.get('controlHeightXXSmall')};
 	}
 `;
 
 export const half = css`
-	min-height: calc(${get('controlHeight')} / 2);
+	min-height: calc(${ui.get('controlHeight')} / 2);
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeight')};
+		min-width: ${ui.get('controlHeight')};
 	}
 `;
 
 export const halfLarge = css`
-	min-height: calc(${get('controlHeightLarge')} / 2);
+	min-height: calc(${ui.get('controlHeightLarge')} / 2);
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightLarge')};
+		min-width: ${ui.get('controlHeightLarge')};
 	}
 `;
 
 export const halfSmall = css`
-	min-height: calc(${get('controlHeightSmall')} / 2);
+	min-height: calc(${ui.get('controlHeightSmall')} / 2);
 
 	&[data-icon='true'] {
-		min-width: ${get('controlHeightSmall')};
+		min-width: ${ui.get('controlHeightSmall')};
 	}
 `;
 
 export const icon = css`
-	padding-left: 0;
-	padding-right: 0;
+	${ui.padding.x(0)};
 `;
 
 export const primary = css`
-	background-color: ${get('colorAdmin')};
-	color: ${get('controlPrimaryTextColor')};
+	background-color: ${ui.get('colorAdmin')};
+	color: ${ui.get('controlPrimaryTextColor')};
 
 	&:active {
-		color: ${get('colorTextInverted')};
+		color: ${ui.get('colorTextInverted')};
 	}
 
 	&:hover,
 	&:focus {
-		background-color: ${get('colorAdmin')};
+		background-color: ${ui.get('colorAdmin')};
 	}
 
 	&:focus {
-		border-color: ${get('colorAdmin')};
+		border-color: ${ui.get('colorAdmin')};
 	}
 
 	&:active {
-		background-color: ${get('colorText')};
+		background-color: ${ui.get('colorText')};
 	}
 `;
 
 export const secondary = css`
 	background-color: transparent;
-	border-color: ${get('colorAdmin')};
-	color: ${get('colorAdmin')};
+	border-color: ${ui.get('colorAdmin')};
+	color: ${ui.get('colorAdmin')};
 
 	&:hover,
 	&:active,
 	&:focus {
-		border-color: ${get('colorAdmin')};
-		color: ${get('colorAdmin')};
+		border-color: ${ui.get('colorAdmin')};
+		color: ${ui.get('colorAdmin')};
 	}
 
 	&:active {
-		border-color: ${get('colorText')};
-		color: ${get('colorText')};
+		border-color: ${ui.get('colorText')};
+		color: ${ui.get('colorText')};
 	}
 
 	&[data-destructive='true'] {
-		border-color: ${get('colorDestructive')};
-		color: ${get('colorDestructive')};
+		border-color: ${ui.get('colorDestructive')};
+		color: ${ui.get('colorDestructive')};
 
 		&:hover,
 		&:active,
 		&:focus {
-			border-color: ${get('colorDestructive')};
-			color: ${get('colorDestructive')};
+			border-color: ${ui.get('colorDestructive')};
+			color: ${ui.get('colorDestructive')};
 		}
 
 		&:active {
-			color: ${get('colorText')};
+			color: ${ui.get('colorText')};
 		}
 	}
 `;
 
 export const tertiary = css`
 	background-color: transparent;
-	border-color: ${get('controlBorderColor')};
+	border-color: ${ui.get('controlBorderColor')};
 `;
 
 export const link = css`
 	background: none;
 	border-color: transparent;
-	color: ${get('colorAdmin')};
+	color: ${ui.get('colorAdmin')};
 
 	&[data-destructive='true'] {
-		color: ${get('colorDestructive')};
+		color: ${ui.get('colorDestructive')};
 	}
 `;
 
 export const subtle = css`
 	border-color: transparent;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 
 	&:hover,
 	&:active,
 	&:focus {
 		border-color: transparent;
-		color: ${get('colorText')};
+		color: ${ui.get('colorText')};
 	}
 `;
 
 export const plainLink = css`
+	${ui.padding.x(0)};
 	background: none;
 	border-color: transparent;
-	color: ${get('colorAdmin')};
-	padding-left: 0;
-	padding-right: 0;
+	color: ${ui.get('colorAdmin')};
 
 	&[data-destructive='true'] {
-		color: ${get('colorDestructive')};
+		color: ${ui.get('colorDestructive')};
 	}
 
 	&:hover,
@@ -181,21 +176,21 @@ export const plainLink = css`
 `;
 
 export const control = css`
-	background-color: ${get('controlBackgroundColor')};
-	border: 1px solid ${get('controlBorderColor')};
-	color: ${get('colorText')};
-	font-family: ${get('fontFamily')};
-	font-size: ${get('fontSize')};
+	background-color: ${ui.get('controlBackgroundColor')};
+	border: 1px solid ${ui.get('controlBorderColor')};
+	color: ${ui.get('colorText')};
+	font-family: ${ui.get('fontFamily')};
+	font-size: ${ui.get('fontSize')};
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: ${get('colorText')};
+		color: ${ui.get('colorText')};
 	}
 
 	&:focus {
-		border-color: ${get('colorAdmin')};
-		box-shadow: ${get('controlBoxShadowFocus')};
+		border-color: ${ui.get('colorAdmin')};
+		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		z-index: 1;
 	}
 `;
@@ -206,6 +201,6 @@ export const subtleControl = css`
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: ${get('controlBackgroundColor')};
+		background-color: ${ui.get('controlBackgroundColor')};
 	}
 `;

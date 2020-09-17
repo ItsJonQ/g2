@@ -1,18 +1,18 @@
-import { css, get, styled, ui } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const BaseFieldView = styled.div`
 	${ui.background.control};
 	${ui.borderRadius.round};
-	border: 1px solid ${get('controlBorderColor')};
+	border: 1px solid ${ui.get('controlBorderColor')};
 	display: flex;
 	flex: 1;
-	font-family: ${get('fontFamily')};
-	font-size: ${get('fontSize')};
+	font-family: ${ui.get('fontFamily')};
+	font-size: ${ui.get('fontSize')};
 	outline: none;
 	padding-left: 8px;
 	padding-right: 8px;
 	position: relative;
-	transition: all ${get('transitionDurationFastest')} ease;
+	transition: all ${ui.get('transitionDurationFastest')} ease;
 	width: 100%;
 
 	&[disabled] {
@@ -20,22 +20,22 @@ export const BaseFieldView = styled.div`
 	}
 
 	&:hover {
-		border-color: ${get('controlBorderColorHover')};
+		border-color: ${ui.get('controlBorderColorHover')};
 	}
 
 	&:focus {
-		border-color: ${get('colorAdmin')};
-		box-shadow: ${get('controlBoxShadowFocus')};
+		border-color: ${ui.get('colorAdmin')};
+		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		z-index: 1;
 	}
 `;
 
 export const focus = css`
-	border-color: ${get('colorAdmin')};
-	box-shadow: ${get('controlBoxShadowFocus')};
+	border-color: ${ui.get('colorAdmin')};
+	box-shadow: ${ui.get('controlBoxShadowFocus')};
 	z-index: 1;
 
 	&:hover {
-		border-color: ${get('colorAdmin')};
+		border-color: ${ui.get('colorAdmin')};
 	}
 `;

@@ -1,8 +1,8 @@
-import { get, styled } from '@wp-g2/styles';
+import { styled, ui } from '@wp-g2/styles';
 
 export const ArrowIndicatorView = styled.div`
 	align-items: center;
-	color: ${get('colorText')};
+	color: ${ui.get('colorText')};
 	display: flex;
 	justify-content: center;
 `;

@@ -1,4 +1,4 @@
-import { css, get, styled, ui } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 function getSwitchWidth(height) {
 	return `calc(${getControlHeight(height)} * 1.85);`;
@@ -7,7 +7,7 @@ function getSwitchWidth(height) {
 export const SwitchView = styled.label`
 	cursor: pointer;
 	display: flex;
-	height: ${get('controlHeight')};
+	height: ${ui.get('controlHeight')};
 	margin: 0;
 	outline: none;
 	padding: 4px 0;
@@ -22,12 +22,12 @@ export const SwitchView = styled.label`
 `;
 
 export const large = css`
-	height: ${get('controlHeightLarge')};
+	height: ${ui.get('controlHeightLarge')};
 	width: ${getSwitchWidth('controlHeightLarge')};
 `;
 
 export const small = css`
-	height: ${get('controlHeightSmall')};
+	height: ${ui.get('controlHeightSmall')};
 	width: ${getSwitchWidth('controlHeightSmall')};
 `;
 
@@ -51,7 +51,7 @@ export const BackdropView = styled.div`
 	pointer-events: none;
 	position: absolute;
 	top: 4px;
-	transition: all ${get('transitionDurationFast')} linear;
+	transition: all ${ui.get('transitionDurationFast')} linear;
 	width: 100%;
 `;
 
@@ -68,10 +68,10 @@ export const backdropChecked = css`
 `;
 
 export const ToggleView = styled.div`
-	background: ${get('controlPrimaryTextColor')};
-	border: 1px solid ${get('controlBorderColor')};
+	background: ${ui.get('controlPrimaryTextColor')};
+	border: 1px solid ${ui.get('controlBorderColor')};
 	border-radius: ${getToggleHeight('controlHeight')};
-	box-shadow: ${get('controlSurfaceBoxShadow')};
+	box-shadow: ${ui.get('controlSurfaceBoxShadow')};
 	height: ${getToggleHeight('controlHeight')};
 	left: 2px;
 	pointer-events: none;
@@ -79,7 +79,7 @@ export const ToggleView = styled.div`
 	right: initial;
 	top: 6px;
 	transform: translate(0, 0);
-	transition: all ${get('transitionDurationFast')} linear;
+	transition: all ${ui.get('transitionDurationFast')} linear;
 	width: ${getToggleHeight('controlHeight')};
 
 	*:active > & {
@@ -117,7 +117,7 @@ export const formGroup = css`
 `;
 
 function getControlHeight(height) {
-	return `calc(${get(height)} - 8px)`;
+	return `calc(${ui.get(height)} - 8px)`;
 }
 
 function getToggleHeight(height) {

@@ -1,8 +1,8 @@
-import { css, get } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Card = css`
-	border-radius: ${get('cardBorderRadius')};
-	box-shadow: 0 0 0 1px ${get('surfaceBorderColor')};
+	border-radius: ${ui.get('cardBorderRadius')};
+	box-shadow: 0 0 0 1px ${ui.get('surfaceBorderColor')};
 	outline: none;
 `;
 
@@ -20,20 +20,20 @@ export const InnerBody = css`
 `;
 
 export const headerFooter = css`
-	border-color: ${get('colorDivider')};
+	border-color: ${ui.get('colorDivider')};
 	min-height: 44px;
 	padding: 4px 12px;
 `;
 
 export const borderRadius = css`
 	&:first-of-type {
-		border-top-left-radius: ${get('cardBorderRadius')};
-		border-top-right-radius: ${get('cardBorderRadius')};
+		border-top-left-radius: ${ui.get('cardBorderRadius')};
+		border-top-right-radius: ${ui.get('cardBorderRadius')};
 	}
 
 	&:last-of-type {
-		border-bottom-left-radius: ${get('cardBorderRadius')};
-		border-bottom-right-radius: ${get('cardBorderRadius')};
+		border-bottom-left-radius: ${ui.get('cardBorderRadius')};
+		border-bottom-right-radius: ${ui.get('cardBorderRadius')};
 	}
 `;
 

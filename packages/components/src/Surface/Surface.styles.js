@@ -1,13 +1,13 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const SurfaceView = styled.div`
-	background-color: ${get('surfaceColor')};
-	color: ${get('colorText')};
+	background-color: ${ui.get('surfaceColor')};
+	color: ${ui.get('colorText')};
 	position: relative;
 `;
 
 export const background = css`
-	background-color: ${get('surfaceBackgroundColor')};
+	background-color: ${ui.get('surfaceBackgroundColor')};
 `;
 
 export function getBorders({
@@ -17,7 +17,7 @@ export function getBorders({
 	borderRight,
 	borderTop,
 }) {
-	const borderStyle = `1px solid ${get('surfaceBorderColor')}`;
+	const borderStyle = `1px solid ${ui.get('surfaceBorderColor')}`;
 
 	return css({
 		border: border && borderStyle,
@@ -29,9 +29,9 @@ export function getBorders({
 }
 
 export const secondary = css`
-	background: ${get('surfaceBackgroundTintColor')};
+	background: ${ui.get('surfaceBackgroundTintColor')};
 `;
 
 export const tertiary = css`
-	background: ${get('surfaceBackgroundColor')};
+	background: ${ui.get('surfaceBackgroundColor')};
 `;

@@ -1,8 +1,8 @@
-import { css, get, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const Panel = css`
 	& + & {
-		border-top: 1px solid ${get('colorDivider')};
+		border-top: 1px solid ${ui.get('colorDivider')};
 	}
 `;
 

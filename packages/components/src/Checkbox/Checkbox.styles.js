@@ -1,10 +1,10 @@
-import { css, get, styled, ui } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const CheckboxWrapperView = styled.div`
 	${ui.alignment.content.center};
 
 	display: inline-flex;
-	height: ${get('controlHeight')};
+	height: ${ui.get('controlHeight')};
 	position: relative;
 	vertical-align: middle;
 `;
@@ -19,7 +19,7 @@ export const Checkbox = css`
 	margin: 0;
 	outline: none;
 	padding: 0;
-	transition: background ${get('transitionDurationFastest')} linear;
+	transition: background ${ui.get('transitionDurationFastest')} linear;
 	width: 16px;
 
 	&:focus {
@@ -47,7 +47,7 @@ export const CheckboxIconView = styled.div`
 	position: absolute;
 	right: 0;
 	top: 0;
-	transition: opacity ${get('transitionDurationFastest')} linear;
+	transition: opacity ${ui.get('transitionDurationFastest')} linear;
 
 	input:checked + & {
 		opacity: 1;
