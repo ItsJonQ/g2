@@ -1,5 +1,4 @@
 import { get } from '../core';
-import { ns } from '../namespaces';
 import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
@@ -7,6 +6,7 @@ import { border, borderRadius } from './borders';
 import { frame } from './dimensions';
 import { font } from './fonts';
 import { active, focus, hover } from './interactions';
+import { mode } from './modes';
 import { opacity } from './opacity';
 import { position } from './positions';
 import { shadow } from './shadows';
@@ -30,7 +30,7 @@ export const ui = {
 	get,
 	hover,
 	margin,
-	ns,
+	mode,
 	offset,
 	opacity,
 	padding,

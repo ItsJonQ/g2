@@ -7,7 +7,7 @@ import { BorderInterface, BorderRadiusInterface } from './borders';
 import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
 import { GetInterface } from './get';
-import { NamespaceInterface } from './namespaces';
+import { ModesInterface } from './modes';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
 import { SpaceInterface } from './space';
@@ -89,8 +89,8 @@ export declare interface SystemInterface {
 	get: GetInterface;
 	/** Modify margin styles based on system presets. */
 	margin: MarginInterface;
-	/** Renders namespace props for a Component. */
-	ns: NamespaceInterface;
+	/** Modify styles for a specific mode. */
+	mode: ModesInterface;
 	/** Modify offset (transform) styles. */
 	offset: OffsetInterface;
 	/** Modify opacity styles based on system presets. */

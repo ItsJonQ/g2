@@ -18,6 +18,7 @@ const Thing = ({ children = 'View', ...props }) => (
 			ui.border.all,
 			ui.animation.ease,
 			ui.hover(ui.background.red, ui.scale(1.2)),
+			ui.mode.dark([`border: 3px solid white`]),
 			ui.$('NestedThing').css([`border: 2px solid black`]),
 		]}
 	>
