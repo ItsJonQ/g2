@@ -10,10 +10,10 @@ import { GetInterface } from './get';
 import { NamespaceInterface } from './namespaces';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
-import { SelectorInterface } from './selectors';
 import { SpaceInterface } from './space';
 import { MarginInterface, PaddingInterface } from './spacing';
 import { ShadowInterface } from './shadows';
+import { StyleQueryInterface } from './styleQuery';
 import {
 	OffsetInterface,
 	ScaleInterface,
@@ -36,9 +36,35 @@ declare interface ActiveInterface extends InteractionInterface {}
 /** Applies custom modifiers based on an focus interaction. */
 declare interface FocusInterface extends InteractionInterface {}
 
+interface TT {
+	/**
+	 * Creates a style query for a Component. This namespace can be added to any
+	 * React component, allowing it to be targeted for custom style via
+	 * ui.$().css().
+	 *
+	 * @example
+	 * ```jsx
+	 * // Declaring a namespace for a component
+	 * <View {...ui.$('Olaf')} />
+	 * ```
+	 *
+	 * @example
+	 * ```jsx
+	 * // Targeting a namespaced component for styling
+	 * <View css={[ui.$('Olaf').css('background: white')]} />
+	 *   <View {...ui.$('Olaf')} />
+	 * </View/>
+	 * ```
+	 *
+	 * @param {string} ComponentName The namespace of the component
+	 * @returns {Object} The StyleQuery instance.
+	 */
+	(): void;
+}
+
 export declare interface SystemInterface {
-	/** Retrieves the HTML selector for a System Component. */
-	$: SelectorInterface;
+	/** Creates a style query for a Component. */
+	$: StyleQueryInterface;
 	/** Applies custom modifiers based on an active interaction. */
 	active: ActiveInterface;
 	/** Modify alignment styles based on system presets. */

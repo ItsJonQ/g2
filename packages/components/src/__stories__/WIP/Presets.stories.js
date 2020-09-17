@@ -18,11 +18,7 @@ const Thing = ({ children = 'View', ...props }) => (
 			ui.border.all,
 			ui.animation.ease,
 			ui.hover(ui.background.red, ui.scale(1.2)),
-			`
-			> ${ui.$('NestedThing')} {
-				border: 2px solid red;
-			}
-			`,
+			ui.$('NestedThing').css([`border: 2px solid black`]),
 		]}
 	>
 		{children}
@@ -33,7 +29,7 @@ export const _default = () => {
 	return (
 		<HStack alignment="left">
 			<Thing>
-				<Thing {...ui.ns('NestedThing')}>Nested View</Thing>
+				<Thing {...ui.$('NestedThing')}>Nested View</Thing>
 			</Thing>
 			<Thing />
 			<Spacer />
