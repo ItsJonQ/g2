@@ -9,6 +9,7 @@ function Button({
 	children,
 	className,
 	css: cssProp,
+	currentColor,
 	forwardedRef,
 	icon,
 	isControl = false,
@@ -27,6 +28,7 @@ function Button({
 		isControl && styles.control,
 		isSubtle && isControl && styles.subtleControl,
 		isIconOnly && styles.icon,
+		currentColor && styles.currentColor,
 		css(cssProp),
 		className,
 	]);

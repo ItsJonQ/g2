@@ -168,3 +168,4 @@ export const plainLink = css`
 export const subtle = baseButtonStyles.subtle;
 export const control = baseButtonStyles.control;
 export const subtleControl = baseButtonStyles.subtleControl;
+export const currentColor = baseButtonStyles.currentColor;

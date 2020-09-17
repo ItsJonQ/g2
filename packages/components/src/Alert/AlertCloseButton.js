@@ -15,7 +15,10 @@ function AlertCloseButton({
 	if (!isDismissable) return null;
 
 	return (
-		<CloseButtonWrapper cx={css({ color: styles.getTextColor(status) })}>
+		<CloseButtonWrapper
+			{...props}
+			cx={css({ color: styles.getTextColor(status) })}
+		>
 			<CloseButton
 				currentColor
 				iconSize={16}
