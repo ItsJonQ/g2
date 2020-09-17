@@ -9,7 +9,13 @@ export const Panel = css`
 export const PanelHeader = css`
 	cursor: pointer;
 	outline: none;
-	padding: 12px 12px;
+	padding: ${ui.space(3)};
+	position: relative;
+
+	&:focus {
+		${ui.zIndex('ControlFocus')};
+		box-shadow: 0 0 0 1px ${ui.get('colorAdmin')} inset;
+	}
 `;
 
 export const seamless = css`

@@ -1457,7 +1457,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
 exports[`props should render DropdownMenuItem 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-view wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-qve9l2"
+  class="wp-components-view wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-sufdka"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuItem"
@@ -1482,7 +1482,7 @@ exports[`props should render DropdownMenuItem 1`] = `
 exports[`props should render DropdownMenuItem with css prop 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-view wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-qve9l2"
+  class="wp-components-view wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-sufdka"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuItem"
@@ -1507,7 +1507,7 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
 exports[`props should render DropdownMenuItem with css prop 2`] = `
 <div
   aria-busy="false"
-  class="wp-components-view wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-85wp36"
+  class="wp-components-view wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-1ha4xjj"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuItem"
@@ -2018,7 +2018,7 @@ exports[`props should render Initials with css prop 2`] = `
 
 exports[`props should render Link 1`] = `
 <a
-  class="wp-components-text wp-components-link css-1ta0pmb"
+  class="wp-components-text wp-components-link css-5wsb9y"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -2027,7 +2027,7 @@ exports[`props should render Link 1`] = `
 
 exports[`props should render Link with css prop 1`] = `
 <a
-  class="wp-components-text wp-components-link css-1ta0pmb"
+  class="wp-components-text wp-components-link css-5wsb9y"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -2036,7 +2036,7 @@ exports[`props should render Link with css prop 1`] = `
 
 exports[`props should render Link with css prop 2`] = `
 <a
-  class="wp-components-text wp-components-link css-1ei3oxg"
+  class="wp-components-text wp-components-link css-xlssx1"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -2298,7 +2298,7 @@ exports[`props should render Menu with css prop 2`] = `
 exports[`props should render MenuItem 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-view wp-components-base-button wp-components-menu-item css-qve9l2"
+  class="wp-components-view wp-components-base-button wp-components-menu-item css-sufdka"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="MenuItem"
@@ -2323,7 +2323,7 @@ exports[`props should render MenuItem 1`] = `
 exports[`props should render MenuItem with css prop 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-view wp-components-base-button wp-components-menu-item css-qve9l2"
+  class="wp-components-view wp-components-base-button wp-components-menu-item css-sufdka"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="MenuItem"
@@ -2348,7 +2348,7 @@ exports[`props should render MenuItem with css prop 1`] = `
 exports[`props should render MenuItem with css prop 2`] = `
 <div
   aria-busy="false"
-  class="wp-components-view wp-components-base-button wp-components-menu-item css-85wp36"
+  class="wp-components-view wp-components-base-button wp-components-menu-item css-1ha4xjj"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="MenuItem"

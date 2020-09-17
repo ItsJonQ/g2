@@ -48,7 +48,7 @@ exports[`props should render correctly 1`] = `
       class="wp-components-animated css-zf0mza"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
-      style="height: 0px; opacity: 0;"
+      style="height: 0px; opacity: 0; visibility: hidden;"
     >
       Some people are worth melting for.
     </div>
@@ -102,7 +102,7 @@ exports[`props should render visible 1`] = `
       class="wp-components-animated css-zf0mza"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
-      style="height: auto; opacity: 1;"
+      style="height: auto; opacity: 1; visibility: visible;"
     >
       Some people are worth melting for.
     </div>

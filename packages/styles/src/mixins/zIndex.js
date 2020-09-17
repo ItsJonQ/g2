@@ -6,6 +6,7 @@ const Z_INDEX_REGISTRY = {
 	Popover: 9999,
 	Dropdown: 9998,
 	Modal: 999,
+	ControlFocus: 1,
 };
 
 export function getZIndex(namespace, fallback) {

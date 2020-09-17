@@ -39,7 +39,7 @@ export const Button = css`
 	}
 
 	&:focus {
-		${ui.zIndex('ControlFocus', 1)};
+		${ui.zIndex('ControlFocus')};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 

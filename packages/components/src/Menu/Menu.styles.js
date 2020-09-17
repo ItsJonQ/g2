@@ -19,13 +19,14 @@ export const MenuItem = css`
 	a:hover > &,
 	&:hover {
 		background: ${ui.get('controlBackgroundBrightColor')};
-		box-shadow: none;
 	}
 
 	a:focus > &,
 	&:focus {
+		${ui.zIndex('ControlFocus')};
 		background: ${ui.get('controlBackgroundColor')};
-		box-shadow: none;
+		border-color: ${ui.get('colorAdmin')};
+		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 
 	a:active > &,

@@ -1,8 +1,9 @@
-import { ComponentsProvider, connect } from '@wp-g2/context';
+import { ComponentsProvider, connect, hasNamespace } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
-import * as styles from '../Link/Link.styles';
+import * as linkStyles from '../Link/Link.styles';
+import * as styles from './Navigator.styles';
 import { NavLink, useHistory } from './Router';
 
 function NavigatorLink({
@@ -20,9 +21,17 @@ function NavigatorLink({
 	...props
 }) {
 	const history = useHistory();
+	const [child] = React.Children.toArray(children);
+	const isWrappingMenuItem = hasNamespace(child, ['MenuItem']);
 
-	const classes = cx([styles.BaseLink, !isPlain && styles.Link, className]);
 	const isLink = !!to || !!href;
+
+	const classes = cx([
+		linkStyles.BaseLink,
+		!isPlain && linkStyles.Link,
+		isWrappingMenuItem && styles.menuItemLink,
+		className,
+	]);
 
 	const handleOnClick = (event) => {
 		if (isBack) {

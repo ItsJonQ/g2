@@ -24,6 +24,7 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 				animate={{
 					height: isVisible ? 'auto' : 0,
 					opacity: isVisible ? 1 : 0,
+					visibility: isVisible ? 'visible' : 'hidden',
 				}}
 				className={cx([styles.innerContent])}
 				initial={false}
