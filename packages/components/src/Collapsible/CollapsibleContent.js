@@ -7,6 +7,23 @@ import { Animated } from '../Animated';
 import { useCollapsibleContext } from './Collapsible.Context';
 import * as styles from './Collapsible.styles';
 
+const animationVariants = {
+	visible: {
+		height: 'auto',
+		opacity: 1,
+		transitionEnd: {
+			display: 'block',
+		},
+	},
+	hidden: {
+		height: 0,
+		opacity: 0,
+		transitionEnd: {
+			display: 'none',
+		},
+	},
+};
+
 function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 	const { disclosure } = useCollapsibleContext();
 
@@ -21,14 +38,11 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 			{...disclosure}
 		>
 			<Animated
-				animate={{
-					height: isVisible ? 'auto' : 0,
-					opacity: isVisible ? 1 : 0,
-					visibility: isVisible ? 'visible' : 'hidden',
-				}}
+				animate={isVisible ? 'visible' : 'hidden'}
 				className={cx([styles.innerContent])}
 				initial={false}
 				transition={{ duration: 0.2 }}
+				variants={animationVariants}
 				{...ns('CollapsibleInnerContent')}
 			>
 				{children}
