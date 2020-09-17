@@ -5,10 +5,22 @@ import React from 'react';
 import * as styles from './ColorCircle.styles';
 const { ColorCircleView } = styles;
 
-function ColorCircle({ color: colorProp = 'purple', style = {}, ...props }) {
+function ColorCircle({
+	color: colorProp = 'purple',
+	size = 'medium',
+	style = {},
+	...props
+}) {
 	const backgroundColor = colorize(colorProp).toRgbString();
+	const cx = [styles[size]];
 
-	return <ColorCircleView style={{ ...style, backgroundColor }} {...props} />;
+	return (
+		<ColorCircleView
+			style={{ ...style, backgroundColor }}
+			{...props}
+			cx={cx}
+		/>
+	);
 }
 
 export default connect(ColorCircle, 'ColorCircle');

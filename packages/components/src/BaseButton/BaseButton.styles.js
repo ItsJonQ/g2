@@ -143,13 +143,13 @@ export const LoadingOverlay = css`
 `;
 
 export const subtle = css`
-	border-color: transparent;
+	border-color: ${ui.get('controlBorderColorSubtle')};
 	color: ${ui.get('colorText')};
 
 	&:hover,
 	&:active,
 	&:focus {
-		border-color: transparent;
+		border-color: ${ui.get('controlBorderColorSubtle')};
 		color: ${ui.get('colorText')};
 	}
 `;

@@ -2,7 +2,7 @@
 
 exports[`props should render CardInnerBody 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-azv6f"
+  class="wp-components-surface wp-components-card css-zktbol"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -12,20 +12,20 @@ exports[`props should render CardInnerBody 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-card-header css-tycr7a"
+      class="wp-components-view wp-components-flex wp-components-card-header css-1ldzg2o"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
     />
     <div
-      class="wp-components-card-inner-body css-1jwn1my"
+      class="wp-components-card-inner-body css-1jols3x"
       data-g2-c16t="true"
       data-g2-component="CardInnerBody"
     >
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-card-footer css-xk6v0j"
+      class="wp-components-view wp-components-flex wp-components-card-footer css-60wq1a"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
@@ -80,7 +80,7 @@ exports[`props should render CardInnerBody 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-azv6f"
+  class="wp-components-surface wp-components-card css-zktbol"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -90,13 +90,13 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-card-header css-tycr7a"
+      class="wp-components-view wp-components-flex wp-components-card-header css-1ldzg2o"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
     />
     <div
-      class="wp-components-scrollable wp-components-card-body css-3pyc4i"
+      class="wp-components-scrollable wp-components-card-body css-1ojbcxg"
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >
@@ -107,7 +107,7 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-card-footer css-xk6v0j"
+      class="wp-components-view wp-components-flex wp-components-card-footer css-60wq1a"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
@@ -162,7 +162,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render elevation 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-azv6f"
+  class="wp-components-surface wp-components-card css-zktbol"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -186,7 +186,7 @@ exports[`props should render elevation 1`] = `
 
 exports[`props should render no elevation 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-azv6f"
+  class="wp-components-surface wp-components-card css-zktbol"
   data-g2-c16t="true"
   data-g2-component="Card"
 >

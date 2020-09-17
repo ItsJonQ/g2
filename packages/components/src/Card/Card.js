@@ -13,25 +13,28 @@ function Card({
 	elevation = 2,
 	forwardedRef,
 	isBorderless = false,
+	isRounded = true,
 	...props
 }) {
 	const classes = cx([
 		styles.Card,
 		isBorderless && styles.borderless,
+		isRounded && styles.rounded,
 		className,
 	]);
+	const elevationBorderRadius = isRounded ? get('cardBorderRadius') : 0;
 
 	return (
 		<Surface {...props} className={classes} ref={forwardedRef}>
 			<View {...ns('CardContent')}>{children}</View>
 			<Elevation
-				css={{ borderRadius: get('cardBorderRadius') }}
+				css={{ borderRadius: elevationBorderRadius }}
 				isInteractive={false}
 				value={elevation ? 1 : 0}
 				{...ns('CardElevation')}
 			/>
 			<Elevation
-				css={{ borderRadius: get('cardBorderRadius') }}
+				css={{ borderRadius: elevationBorderRadius }}
 				isInteractive={false}
 				value={elevation}
 				{...ns('CardElevation')}

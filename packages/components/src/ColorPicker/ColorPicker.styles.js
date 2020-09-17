@@ -18,6 +18,10 @@ export const ColorPickerView = styled.div`
 			user-select: none;
 		}
 
+		> div:first-child {
+			padding-bottom: 50% !important;
+		}
+
 		input {
 			background: ${ui.get('controlBackgroundColor')} !important;
 			border: 1px solid ${ui.get('controlBorderColor')} !important;

@@ -6,9 +6,14 @@ import * as styles from './BaseField.styles';
 
 const { BaseFieldView } = styles;
 
-function BaseField({ isFocused, ...props }) {
+function BaseField({ isClickable, isFocused, isSubtle, ...props }) {
 	const { styles: controlGroupStyles } = useControlGroupContext();
-	const cx = [controlGroupStyles, isFocused && styles.focus];
+	const cx = [
+		controlGroupStyles,
+		isClickable && styles.clickable,
+		isFocused && styles.focus,
+		isSubtle && styles.subtle,
+	];
 
 	return <BaseFieldView {...props} cx={cx} />;
 }

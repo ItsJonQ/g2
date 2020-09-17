@@ -22,6 +22,7 @@ function Select({
 	disabled,
 	forwardedRef,
 	id: idProp,
+	isSubtle,
 	onBlur = noop,
 	onChange = noop,
 	onFocus = noop,
@@ -70,7 +71,9 @@ function Select({
 			className={classes}
 			disabled={disabled}
 			gap={0}
+			isClickable
 			isFocused={isFocused}
+			isSubtle={isSubtle}
 			onClick={handleOnRootClick}
 			{...ns('SelectWrapper')}
 		>

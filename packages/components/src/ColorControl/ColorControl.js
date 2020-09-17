@@ -18,7 +18,7 @@ function ColorControl({ children, className, color, ...props }) {
 			textAlign="left"
 			variant="tertiary"
 			{...props}
-			prefix={<ColorCircle color={color} />}
+			prefix={<ColorCircle color={color} size="small" />}
 		>
 			{children}
 		</Button>

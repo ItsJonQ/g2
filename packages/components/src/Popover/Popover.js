@@ -1,5 +1,6 @@
 import { PopoverDisclosure, usePopoverState } from '@wp-g2/a11y';
 import { connect } from '@wp-g2/context';
+import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
 
 import { PopoverContext } from './Popover.Context';
@@ -14,6 +15,7 @@ function Popover({
 	label,
 	maxWidth = 360,
 	modal = true,
+	onVisibleChange = noop,
 	placement,
 	trigger,
 	visible,
@@ -31,6 +33,10 @@ function Popover({
 		label: label || uniqueId,
 		popover,
 	};
+
+	useUpdateEffect(() => {
+		onVisibleChange(popover.visible);
+	}, [popover.visible]);
 
 	return (
 		<PopoverContext.Provider value={contextProps}>

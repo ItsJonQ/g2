@@ -9,7 +9,7 @@ exports[`props should render correctly 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-l3aa2e"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
@@ -72,7 +72,7 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-collapsible-content wp-components-panel-body css-12j8ok7"
+    class="wp-components-collapsible-content wp-components-panel-body css-li0a7z"
     data-g2-c16t="true"
     data-g2-component="PanelBody"
     hidden=""
@@ -80,7 +80,7 @@ exports[`props should render correctly 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-zf0mza"
+      class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0; visibility: hidden;"
@@ -105,7 +105,7 @@ exports[`props should render seamless 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-l3aa2e"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
@@ -168,7 +168,7 @@ exports[`props should render seamless 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-collapsible-content wp-components-panel-body css-12j8ok7"
+    class="wp-components-collapsible-content wp-components-panel-body css-li0a7z"
     data-g2-c16t="true"
     data-g2-component="PanelBody"
     hidden=""
@@ -176,7 +176,7 @@ exports[`props should render seamless 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-zf0mza"
+      class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0; visibility: hidden;"
@@ -200,7 +200,7 @@ exports[`props should render visible 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="true"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-l3aa2e"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
@@ -263,13 +263,13 @@ exports[`props should render visible 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-collapsible-content wp-components-panel-body css-12j8ok7"
+    class="wp-components-collapsible-content wp-components-panel-body css-li0a7z"
     data-g2-c16t="true"
     data-g2-component="PanelBody"
     id="panel"
   >
     <div
-      class="wp-components-animated css-zf0mza"
+      class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: auto; opacity: 1; visibility: visible;"

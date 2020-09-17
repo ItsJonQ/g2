@@ -1,5 +1,7 @@
 import { css, ui } from '@wp-g2/styles';
 
+import * as baseButtonStyles from '../BaseButton/BaseButton.styles';
+
 export const Button = css`
 	color: ${ui.get('colorAdmin')};
 	font-weight: 600;
@@ -145,18 +147,6 @@ export const link = css`
 	}
 `;
 
-export const subtle = css`
-	border-color: transparent;
-	color: ${ui.get('colorText')};
-
-	&:hover,
-	&:active,
-	&:focus {
-		border-color: transparent;
-		color: ${ui.get('colorText')};
-	}
-`;
-
 export const plainLink = css`
 	${ui.padding.x(0)};
 	background: none;
@@ -175,32 +165,6 @@ export const plainLink = css`
 	}
 `;
 
-export const control = css`
-	background-color: ${ui.get('controlBackgroundColor')};
-	border: 1px solid ${ui.get('controlBorderColor')};
-	color: ${ui.get('colorText')};
-	font-family: ${ui.get('fontFamily')};
-	font-size: ${ui.get('fontSize')};
-
-	&:hover,
-	&:active,
-	&:focus {
-		color: ${ui.get('colorText')};
-	}
-
-	&:focus {
-		border-color: ${ui.get('colorAdmin')};
-		box-shadow: ${ui.get('controlBoxShadowFocus')};
-		z-index: 1;
-	}
-`;
-
-export const subtleControl = css`
-	background-color: transparent;
-
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: ${ui.get('controlBackgroundColor')};
-	}
-`;
+export const subtle = baseButtonStyles.subtle;
+export const control = baseButtonStyles.control;
+export const subtleControl = baseButtonStyles.subtleControl;

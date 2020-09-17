@@ -10,7 +10,7 @@ exports[`props should render correctly 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="false"
-    class="wp-components-base-button wp-components-button wp-components-collapsible-trigger css-rup3gt"
+    class="wp-components-base-button wp-components-button wp-components-collapsible-trigger css-jde1sg"
     data-destructive="false"
     data-g2-c16t="true"
     data-g2-component="CollapsibleTrigger"
@@ -37,7 +37,7 @@ exports[`props should render correctly 1`] = `
     />
   </button>
   <div
-    class="wp-components-collapsible-content css-12j8ok7"
+    class="wp-components-collapsible-content css-li0a7z"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     hidden=""
@@ -45,7 +45,7 @@ exports[`props should render correctly 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-zf0mza"
+      class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0; visibility: hidden;"
@@ -66,7 +66,7 @@ exports[`props should render visible 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="true"
-    class="wp-components-base-button wp-components-button wp-components-collapsible-trigger css-rup3gt"
+    class="wp-components-base-button wp-components-button wp-components-collapsible-trigger css-jde1sg"
     data-destructive="false"
     data-g2-c16t="true"
     data-g2-component="CollapsibleTrigger"
@@ -93,13 +93,13 @@ exports[`props should render visible 1`] = `
     />
   </button>
   <div
-    class="wp-components-collapsible-content css-12j8ok7"
+    class="wp-components-collapsible-content css-li0a7z"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     id="collapsible"
   >
     <div
-      class="wp-components-animated css-zf0mza"
+      class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: auto; opacity: 1; visibility: visible;"

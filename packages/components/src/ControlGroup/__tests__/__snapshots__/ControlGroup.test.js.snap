@@ -89,7 +89,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-151rieb"
+      class="wp-components-view wp-components-flex wp-components-base-field wp-components-select css-kal5vj"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
