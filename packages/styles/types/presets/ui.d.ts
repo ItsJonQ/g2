@@ -7,8 +7,10 @@ import { BorderInterface, BorderRadiusInterface } from './borders';
 import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
 import { GetInterface } from './get';
+import { NamespaceInterface } from './namespaces';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
+import { SelectorInterface } from './selectors';
 import { SpaceInterface } from './space';
 import { MarginInterface, PaddingInterface } from './spacing';
 import { ShadowInterface } from './shadows';
@@ -35,6 +37,8 @@ declare interface ActiveInterface extends InteractionInterface {}
 declare interface FocusInterface extends InteractionInterface {}
 
 export declare interface SystemInterface {
+	/** Retrieves the HTML selector for a System Component. */
+	$: SelectorInterface;
 	/** Applies custom modifiers based on an active interaction. */
 	active: ActiveInterface;
 	/** Modify alignment styles based on system presets. */
@@ -59,6 +63,8 @@ export declare interface SystemInterface {
 	get: GetInterface;
 	/** Modify margin styles based on system presets. */
 	margin: MarginInterface;
+	/** Renders namespace props for a Component. */
+	ns: NamespaceInterface;
 	/** Modify offset (transform) styles. */
 	offset: OffsetInterface;
 	/** Modify opacity styles based on system presets. */

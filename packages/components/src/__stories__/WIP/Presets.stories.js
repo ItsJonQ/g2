@@ -7,8 +7,9 @@ export default {
 	title: 'Examples/WIP/Presets',
 };
 
-const Thing = () => (
+const Thing = ({ children = 'View', ...props }) => (
 	<View
+		{...props}
 		css={[
 			ui.font.default,
 			ui.background.green,
@@ -17,16 +18,23 @@ const Thing = () => (
 			ui.border.all,
 			ui.animation.ease,
 			ui.hover(ui.background.red, ui.scale(1.2)),
+			`
+			> ${ui.$('NestedThing')} {
+				border: 2px solid red;
+			}
+			`,
 		]}
 	>
-		View
+		{children}
 	</View>
 );
 
 export const _default = () => {
 	return (
 		<HStack alignment="left">
-			<Thing />
+			<Thing>
+				<Thing {...ui.ns('NestedThing')}>Nested View</Thing>
+			</Thing>
 			<Thing />
 			<Spacer />
 			<Thing />
