@@ -37,11 +37,11 @@ export default function Layout(props) {
           >
             <Grid
               className="LayoutsDocsWrapperContent"
-              gap={40}
+              gap={10}
               templateColumns="220px minmax(0, 1fr) 160px"
             >
               <View as="aside" css={[ui.position.relative]}>
-                <DocsNavigation />
+                <DocsNavigation path={props.path} />
               </View>
               <View as="main">
                 <View

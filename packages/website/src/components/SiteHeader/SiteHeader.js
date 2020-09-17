@@ -1,10 +1,11 @@
 import {
   Elevation,
   FormGroup,
-  Heading,
+  Grid,
   HStack,
   Icon,
   Link,
+  Spacer,
   Surface,
   Switch,
   Tooltip,
@@ -21,10 +22,8 @@ import { SiteSearch } from "../SiteSearch"
 function NavLink(props) {
   return (
     <Link
-      className="SiteHeaderLink"
+      as={GLink}
       css={[ui.padding.y(5), ui.padding.x(2)]}
-      rel="noopener"
-      target="_blank"
       weight="bold"
       {...props}
     />
@@ -37,7 +36,6 @@ export function SiteHeader() {
   return (
     <Surface
       as="header"
-      className="SiteHeader"
       css={{
         left: 0,
         padding: "8px 20px",
@@ -47,25 +45,20 @@ export function SiteHeader() {
         zIndex: 10,
       }}
     >
-      <View
-        className="SiteHeaderContent"
-        css={[ui.frame.width(1280), ui.alignment.center]}
-      >
-        <HStack className="SiteHeaderLinkWrapper">
-          <GLink aria-label="G2 Components" role="banner" to="/">
-            <HStack>
+      <View css={[ui.frame.width(1280), ui.alignment.center]}>
+        <HStack>
+          <Grid as="nav" templateColumns="100px minmax(0, 1fr)">
+            <GLink aria-label="G2 Components" role="banner" to="/">
               <Icon icon={<Logo />} size={32} />
-              <Heading className="SiteHeaderLogo" size={4}>
-                G2 Components
-              </Heading>
+            </GLink>
+            <HStack spacing={3}>
+              <NavLink to="/styles/">Styles</NavLink>
+              <NavLink to="/components/">Components</NavLink>
+              <NavLink to="/context/">Context</NavLink>
             </HStack>
-          </GLink>
-          <HStack as="nav" className="SiteHeaderSideLinks" spacing={6}>
-            <HStack>
-              <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
-              <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
-              <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
-            </HStack>
+          </Grid>
+          <Spacer />
+          <HStack>
             <FormGroup label="Inspect" templateColumns="1fr 1fr">
               <Tooltip
                 content="See how this site was built with G2!"
@@ -79,7 +72,7 @@ export function SiteHeader() {
           </HStack>
         </HStack>
       </View>
-      <Elevation className="SiteHeaderShadow" value={2} />
+      <Elevation value={2} />
     </Surface>
   )
 }

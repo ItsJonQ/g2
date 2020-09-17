@@ -7,12 +7,27 @@ import {
   View,
   VStack,
 } from "@wp-g2/components"
-import { cx, ui } from "@wp-g2/styles"
+import { ui } from "@wp-g2/styles"
 import { Link } from "gatsby"
 import { kebabCase } from "lodash"
 import React, { useEffect, useRef } from "react"
 
-import data from "../../data/navigation-components.json"
+import componentLinks from "../../data/navigation-components.json"
+import contextLinks from "../../data/navigation-context.json"
+import styleLinks from "../../data/navigation-styles.json"
+
+function getNavigationLinks(path) {
+  switch (true) {
+    case path.includes("/components"):
+      return componentLinks
+    case path.includes("/context"):
+      return contextLinks
+    case path.includes("/styles"):
+      return styleLinks
+    default:
+      return { sections: [] }
+  }
+}
 
 function Links({ links }) {
   if (!links) return null
@@ -20,12 +35,7 @@ function Links({ links }) {
   return (
     <Menu>
       {links.map(link => (
-        <MenuItem
-          as={Link}
-          className="DocsNavigationMenuItem"
-          key={link.title}
-          to={link.link}
-        >
+        <MenuItem as={Link} key={link.title} to={link.link}>
           {link.title}
         </MenuItem>
       ))}
@@ -38,7 +48,7 @@ function SubSection({ sections: sectionsProp }) {
   const sections = sectionsProp.filter(Boolean)
 
   return (
-    <VStack className="DocsNavigationSubSection" spacing={4}>
+    <VStack spacing={4}>
       {sections.map((section, index) => (
         <View key={section.title}>
           <Section isSubSection {...section} index={index} />
@@ -56,7 +66,6 @@ function Section({ index = 0, isSubSection, links, sections, title }) {
     <VStack
       aria-labelledby={id}
       as="section"
-      className={cx("DocsNavigationSection", isSubSection && "is-subSection")}
       css={[ui.margin.bottom(isSubSection ? 0 : 4)]}
       role="navigation"
       spacing={2}
@@ -64,10 +73,6 @@ function Section({ index = 0, isSubSection, links, sections, title }) {
       <View as="header">
         <TitleComponent
           as="h2"
-          className={cx(
-            "DocsNavigationSectionTitle",
-            isSubSection && "is-subSection"
-          )}
           id={id}
           size={!isSubSection ? 14 : 10}
           weight="bold"
@@ -82,8 +87,9 @@ function Section({ index = 0, isSubSection, links, sections, title }) {
   )
 }
 
-export function DocsNavigation() {
-  const sections = data.sections.filter(Boolean)
+export function DocsNavigation({ path }) {
+  const links = getNavigationLinks(path)
+  const sections = links.sections.filter(Boolean)
   const scrollableRef = useRef()
 
   useEffect(() => {
@@ -99,12 +105,8 @@ export function DocsNavigation() {
   }, [])
 
   return (
-    <View
-      className="DocsNavigation"
-      css={[ui.position.sticky, { top: 100 }, { marginTop: 20 }]}
-    >
+    <View css={[ui.position.sticky, { top: 100 }, { marginTop: 20 }]}>
       <Scrollable
-        className="DocsNavigationBody"
         css={[ui.frame.height("70vh"), ui.padding.right(3)]}
         ref={scrollableRef}
       >

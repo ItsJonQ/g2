@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "title": "Styles",
+      "links": [
+        {
+          "link": "/styles",
+          "title": "Getting Started"
+        },
+        {
+          "link": "/styles/writing",
+          "title": "Writing Styles"
+        },
+        {
+          "link": "/styles/design-tokens",
+          "title": "Design Tokens"
+        }
+      ]
+    },
+    {}
+  ]
+}

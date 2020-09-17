@@ -71,7 +71,7 @@ export const halfSmall = css`
 `;
 
 export const icon = css`
-	${ui.padding.x(0)};
+	${ui.padding(0)};
 `;
 
 export const primary = css`

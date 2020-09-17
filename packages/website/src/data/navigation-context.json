@@ -1,0 +1,14 @@
+{
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        {
+          "link": "/context",
+          "title": "Getting Started"
+        }
+      ]
+    },
+    {}
+  ]
+}

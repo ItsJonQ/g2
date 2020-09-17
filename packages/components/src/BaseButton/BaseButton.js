@@ -35,6 +35,7 @@ function BaseButton({
 	isRounded = false,
 	isSubtle = false,
 	justify = 'center',
+	noWrap = true,
 	prefix,
 	size = 'medium',
 	suffix,
@@ -50,9 +51,9 @@ function BaseButton({
 		styles.Button,
 		isBlock && styles.block,
 		isDestructive && styles.destructive,
-		isIconOnly && styles.icon,
 		styles[variant],
 		styles[size],
+		isIconOnly && styles.icon,
 		isSubtle && styles.subtle,
 		isControl && styles.control,
 		isSubtle && isControl && styles.subtleControl,
@@ -114,6 +115,7 @@ function BaseButton({
 						className={cx([
 							styles.Content,
 							isLoading && styles.loading,
+							noWrap && styles.noWrap,
 						])}
 						{...ns('ButtonContent')}
 					>

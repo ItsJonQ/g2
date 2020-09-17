@@ -64,6 +64,7 @@ function MenuItem({
 	return (
 		<BaseButton
 			as={Component}
+			noWrap={false}
 			{...props}
 			{...menu}
 			className={classes}

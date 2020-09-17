@@ -7,6 +7,6 @@ export * from './styled';
 export * from './hooks';
 export * from './mixins';
 export * from './namespaces';
-export { getIsReducedMotion, SUPPORTED_COLORS } from './theme';
+export { getIsReducedMotion, SUPPORTED_COLORS, config } from './theme';
 
 export * from './presets';

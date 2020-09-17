@@ -114,6 +114,9 @@ export const Content = css`
 	font-size: ${ui.get('fontSize')};
 	/* line-height: 0; */
 	opacity: 1;
+`;
+
+export const noWrap = css`
 	white-space: nowrap;
 `;
 
@@ -126,6 +129,10 @@ export const PrefixSuffix = css`
 	}
 `;
 
+export const CaretWrapper = css`
+	margin-right: ${ui.space(-2)};
+`;
+
 export const LoadingOverlay = css`
 	bottom: 0;
 	left: 0;
@@ -133,6 +140,18 @@ export const LoadingOverlay = css`
 	position: absolute;
 	right: 0;
 	top: 0;
+`;
+
+export const subtle = css`
+	border-color: transparent;
+	color: ${ui.get('colorText')};
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: transparent;
+		color: ${ui.get('colorText')};
+	}
 `;
 
 export const control = css`

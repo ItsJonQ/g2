@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-644kyn"
+      class="wp-components-base-button wp-components-button css-1gbtsah"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -71,7 +71,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-fyr9nw"
+      class="wp-components-base-button wp-components-button css-sa8ve7"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -144,7 +144,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-8j7z4o"
+      class="wp-components-base-button wp-components-button css-1wafirv"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -202,7 +202,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-wvgdot"
+      class="wp-components-base-button wp-components-button css-1qoyrq9"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -275,7 +275,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-gh3zmd"
+      class="wp-components-base-button wp-components-button css-nw23x4"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -330,7 +330,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-3efqtp"
+      class="wp-components-base-button wp-components-button css-nfvzjn"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"

@@ -1,5 +1,6 @@
 export * from "./AppProvider"
 export * from "./DefinitionPopover"
+export * from "./ConfigTable"
 export * from "./CopyToClipboardButton"
 export * from "./DocsNavigation"
 export * from "./DocsSearch"

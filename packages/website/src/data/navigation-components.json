@@ -4,12 +4,8 @@
       "title": "Introduction",
       "links": [
         {
-          "link": "/",
+          "link": "/components",
           "title": "Getting Started"
-        },
-        {
-          "link": "/installation/",
-          "title": "Installation"
         }
       ]
     },
