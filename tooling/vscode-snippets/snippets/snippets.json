@@ -126,6 +126,10 @@
 		],
 		"prefix": "g2-image"
 	},
+	"g2-components-index": {
+		"body": ["npm install @wp-g2/components"],
+		"prefix": "g2-index"
+	},
 	"g2-components-initials": {
 		"body": ["<Initials name=\"Elsa Oldenburg\" />"],
 		"prefix": "g2-initials"
