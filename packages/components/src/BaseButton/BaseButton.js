@@ -16,7 +16,7 @@ function BaseButton({
 	className,
 	css: cssProp,
 	currentColor,
-	disabled,
+	disabled = false,
 	elevation = 0,
 	elevationActive,
 	elevationFocus,
