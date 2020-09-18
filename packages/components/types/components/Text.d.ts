@@ -76,7 +76,7 @@ export declare type TextProps = TruncateProps & {
 	/**
 	 * Adjusts text size based on the typography system.
 	 */
-	size?: CSS['fontSize'] & TextSize;
+	size?: CSS['fontSize'] | TextSize;
 	/**
 	 * Enables text truncation.
 	 */
@@ -92,7 +92,7 @@ export declare type TextProps = TruncateProps & {
 	/**
 	 * Adjusts font-weight of the text.
 	 */
-	weight?: CSS['fontWeight'] & TextWeight;
+	weight?: CSS['fontWeight'] | TextWeight;
 };
 
 /**

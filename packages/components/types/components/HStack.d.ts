@@ -17,15 +17,10 @@ export declare type HStackAlignment =
 
 export declare type HStackProps = {
 	/**
-	 * The width:height ratio to render.
-	 * @default 1
-	 *
-	 * @example
-	 * ```a
-	 * <AspectRatio ratio={16/9} />
-	 * ```
+	 * Determines how the child elements are aligned.
+	 * @default 'edge'
 	 */
-	direction?: HStackAlignment & CSS['alignItems'];
+	alignment?: HStackAlignment | CSS['alignItems'];
 	/**
 	 * The amount of space between each child element.
 	 * @default 2

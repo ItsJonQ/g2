@@ -1,1 +1,1 @@
-export { View as BaseView } from '@wp-g2/styles';
+export { View as BaseView } from './View';

@@ -41,7 +41,7 @@ export declare type AvatarProps = {
 	 *
 	 * @default 'medium'
 	 */
-	size?: AvatarSize & CSS['width'];
+	size?: AvatarSize | CSS['width'];
 	/**
 	 * The source of the `Image`.
 	 */

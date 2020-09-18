@@ -14,7 +14,7 @@ export declare type HeadingProps = TextProps & {
 	 * Adjusts text size based on the typography system.
 	 * @default 3
 	 */
-	size: HeadingSize & TextSize & CSS['fontSize'];
+	size: HeadingSize | TextSize | CSS['fontSize'];
 };
 
 /**
