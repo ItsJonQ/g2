@@ -12,6 +12,7 @@ export declare type GridProps = {
 	align?: CSS['alignItems'];
 	/**
 	 * Adjusts the number of columns of the `Grid`.
+	 *
 	 * @default 2
 	 */
 	columns?: GridColumns;
@@ -21,6 +22,7 @@ export declare type GridProps = {
 	isInline?: boolean;
 	/**
 	 * Gap between each child.
+	 *
 	 * @default 3
 	 */
 	gap?: number;
@@ -45,4 +47,4 @@ export declare type GridProps = {
 /**
  * `Grid` is a primitive layout component that can arrange content in a grid configuration.
  */
-export declare const Grid: React.FC<GridProps & ConnectedProps>;
+export declare const Grid: React.FC<ConnectedProps & GridProps>;

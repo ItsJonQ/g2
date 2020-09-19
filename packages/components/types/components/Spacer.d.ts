@@ -20,6 +20,7 @@ export declare type SpacerProps = {
 	mt?: number;
 	/**
 	 * Adjusts bottom margins.
+	 *
 	 * @default 2
 	 */
 	mb?: number;
@@ -64,4 +65,4 @@ export declare type SpacerProps = {
 /**
  * `Spacer` is a primitive layout component that providers inner (`padding`) or outer (`margin`) space in-between components. It can also be used to adaptively provide space within an `HStack` or `VStack`.
  */
-export declare const Spacer: React.FC<SpacerProps & ConnectedProps>;
+export declare const Spacer: React.FC<ConnectedProps & SpacerProps>;

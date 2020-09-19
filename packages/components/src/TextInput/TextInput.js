@@ -5,7 +5,7 @@ import React, { useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { BaseField } from '../BaseField';
-import { Flex, FlexBlock, FlexItem } from '../Flex';
+import { FlexBlock, FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import * as styles from './TextInput.styles';
 
@@ -20,7 +20,6 @@ function TextInput({
 	gap = 2.5,
 	id: idProp,
 	isRounded = false,
-	isSeamless = false,
 	isResizable = false,
 	justify,
 	onBlur = noop,
@@ -76,7 +75,6 @@ function TextInput({
 	return (
 		<BaseField
 			align={align}
-			as={Flex}
 			className={classes}
 			disabled={disabled}
 			gap={gap}

@@ -34,4 +34,4 @@ export declare type SurfaceProps = {
 /**
  * `Surface` is a core component that renders a primary background color.
  */
-export declare const Surface: React.FC<SurfaceProps & ConnectedProps>;
+export declare const Surface: React.FC<ConnectedProps & SurfaceProps>;

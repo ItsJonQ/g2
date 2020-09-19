@@ -8,6 +8,7 @@ export declare type AnimatedProps = {
 	as?: AsProp;
 	/**
 	 * Automatically render mount/unmount animations.
+	 *
 	 * @default false
 	 */
 	auto?: boolean;

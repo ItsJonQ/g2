@@ -15,14 +15,16 @@ export declare type HStackAlignment =
 	| 'topLeft'
 	| 'topRight';
 
-export declare type HStackProps = {
+export declare type HStackProps = FlexProps & {
 	/**
 	 * Determines how the child elements are aligned.
+	 *
 	 * @default 'edge'
 	 */
 	alignment?: HStackAlignment | CSS['alignItems'];
 	/**
 	 * The amount of space between each child element.
+	 *
 	 * @default 2
 	 */
 	spacing?: CSS['width'];
@@ -31,4 +33,4 @@ export declare type HStackProps = {
 /**
  * `HStack` (Horizontal Stack) arranges child elements in a horizontal line.
  */
-export declare const HStack: React.FC<FlexProps & HStackProps & ConnectedProps>;
+export declare const HStack: React.FC<ConnectedProps & HStackProps>;

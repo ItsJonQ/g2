@@ -35,4 +35,4 @@ export declare type ElevationProps = {
 /**
  * `Elevation` is a core component that renders shadow, using the library's shadow system.
  */
-export declare const Elevation: React.FC<ElevationProps & ConnectedProps>;
+export declare const Elevation: React.FC<ConnectedProps & ElevationProps>;

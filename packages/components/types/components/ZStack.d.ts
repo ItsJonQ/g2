@@ -23,4 +23,4 @@ export declare type ZStackProps = {
 /**
  * `ZStack` (Z-layer Stack) arranges and layers child elements on the z-axis.
  */
-export declare const ZStack: React.FC<ZStackProps & ConnectedProps>;
+export declare const ZStack: React.FC<ConnectedProps & ZStackProps>;

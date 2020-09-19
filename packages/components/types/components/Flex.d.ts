@@ -45,7 +45,7 @@ export declare type FlexProps = {
 /**
  * `Flex` is a primitive layout component that adaptively aligns child content horizontally or vertically. `Flex` powers components like `HStack` and `VStack`.
  */
-export declare const Flex: React.FC<FlexProps & ConnectedProps>;
+export declare const Flex: React.FC<ConnectedProps & FlexProps>;
 
 export declare type FlexItemProps = {
 	/**
@@ -54,6 +54,7 @@ export declare type FlexItemProps = {
 	display: CSS['display'];
 	/**
 	 * Determines if `FlexItem` should render as an adaptive full-width block.
+	 *
 	 * @default true
 	 */
 	isBlock: boolean;
@@ -62,9 +63,11 @@ export declare type FlexItemProps = {
 /**
  * `FlexItem` is a primitive layout component that aligns content within layout containers like `Flex`.
  */
-export declare const FlexItem: React.FC<FlexItemProps & ConnectedProps>;
+export declare const FlexItem: React.FC<ConnectedProps & FlexItemProps>;
 
 /**
  * `FlexBlock` is a primitive layout component that adaptively resizes content within layout containers like `Flex`.
  */
-export declare const FlexBlock: React.FC<ConnectedProps>;
+export declare const FlexBlock: React.FC<
+	ConnectedProps & Omit<FlexItemProps, 'isBlock'>
+>;

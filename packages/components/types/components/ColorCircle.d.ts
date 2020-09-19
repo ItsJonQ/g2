@@ -10,6 +10,7 @@ export declare type ColorCircleProps = {
 	color?: CSS['color'];
 	/**
 	 * Determines the size of `ColorCircle`.
+	 *
 	 * @default 'medium'
 	 */
 	size?: ColorCircleSize;
@@ -18,4 +19,4 @@ export declare type ColorCircleProps = {
 /**
  * `ColorCircle` is a component that renders a color within a circle UI.
  */
-export declare const ColorCircle: React.FC<ColorCircleProps & ConnectedProps>;
+export declare const ColorCircle: React.FC<ConnectedProps & ColorCircleProps>;

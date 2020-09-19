@@ -5,7 +5,7 @@ import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 
 import { BaseField } from '../BaseField';
-import { Flex, FlexBlock, FlexItem } from '../Flex';
+import { FlexBlock, FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
@@ -67,7 +67,6 @@ function Select({
 
 	return (
 		<BaseField
-			as={Flex}
 			className={classes}
 			disabled={disabled}
 			gap={0}

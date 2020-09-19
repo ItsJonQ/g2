@@ -14,26 +14,31 @@ export declare type BadgeColor =
 export declare type BadgeProps = {
 	/**
 	 * The color of the `Badge`.
+	 *
 	 * @default 'standard'
 	 */
 	color?: BadgeColor;
 	/**
 	 * The (CSS) display of `Badge`.
+	 *
 	 * @default 'inline-block'
 	 */
 	display?: CSS['display'];
 	/**
 	 * Renders a bolder style variant.
+	 *
 	 * @default false
 	 */
 	isBold?: boolean;
 	/**
 	 * Renders a rounder style variant.
+	 *
 	 * @default false
 	 */
 	isRounded?: boolean;
 	/**
 	 * Truncates the text content.
+	 *
 	 * @default true
 	 */
 	truncate?: boolean;

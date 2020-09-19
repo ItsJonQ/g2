@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ConnectedProps } from './_shared';
 import { BadgeProps } from './Badge';
 
-export declare type TagProps = {
+export declare type TagProps = Pick<BadgeProps, 'color' | 'display'> & {
 	/**
 	 * A link for `Tag`.
 	 */
@@ -20,6 +20,4 @@ export declare type TagProps = {
 /**
  * `Tag` is a component that labels UI objects for navigation and context.
  */
-export declare const Tag: React.FC<
-	TagProps & ConnectedProps & Pick<BadgeProps, 'color' | 'display'>
->;
+export declare const Tag: React.FC<ConnectedProps & TagProps>;

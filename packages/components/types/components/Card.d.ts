@@ -8,11 +8,13 @@ export declare type CardProps = {
 	elevation?: number;
 	/**
 	 * Renders without a border.
+	 *
 	 * @default false
 	 */
 	isBorderless?: boolean;
 	/**
 	 * Renders with rounded corners.
+	 *
 	 * @default true
 	 */
 	isRounded?: boolean;
@@ -26,6 +28,7 @@ export declare const Card: React.FC<CardProps & ConnectedProps>;
 export declare type CardBodyProps = {
 	/**
 	 * Determines if `CardBody` is scrollable.
+	 *
 	 * @default true
 	 */
 	scrollable?: boolean;
@@ -34,13 +37,14 @@ export declare type CardBodyProps = {
 /**
  * `CardBody` is a layout component, rendering the contents of a `Card`.
  */
-export declare const CardBody: React.FC<CardBodyProps & ConnectedProps>;
+export declare const CardBody: React.FC<ConnectedProps & CardBodyProps>;
 
 export declare type CardHeaderSize = 'medium' | 'small' | 'xSmall';
 
 export declare type CardHeaderProps = {
 	/**
 	 * Determines the size of `CardHeader`.
+	 *
 	 * @default 'medium'
 	 */
 	size?: CardHeaderSize;
@@ -49,9 +53,9 @@ export declare type CardHeaderProps = {
 /**
  * `CardHeader` is a layout component, rendering the header contents of a `Card`.
  */
-export declare const CardHeader: React.FC<CardHeaderProps & ConnectedProps>;
+export declare const CardHeader: React.FC<ConnectedProps & CardHeaderProps>;
 
 /**
  * `CardFooter` is a layout component, rendering the footer content of a `Card`.
  */
-export declare const CardFooter: React.FC<CardHeaderProps & ConnectedProps>;
+export declare const CardFooter: React.FC<ConnectedProps & CardHeaderProps>;

@@ -26,3 +26,12 @@ export type FormElementProps = {
 	 */
 	label?: string;
 };
+
+export declare type SizeRangeDefault =
+	| 'xLarge'
+	| 'large'
+	| 'medium'
+	| 'small'
+	| 'xSmall';
+
+export declare type SizeRangeReduced = 'large' | 'medium' | 'small';

@@ -21,6 +21,7 @@ export declare type AlertProps = {
 	onDismiss?: () => void;
 	/**
 	 * The status of the `Alert`. Used to convey feedback to the user.
+	 *
 	 * @default 'default'
 	 */
 	status?: AlertStatus;

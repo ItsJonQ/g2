@@ -8,6 +8,7 @@ export declare type SpinnerProps = {
 	color?: CSS['color'];
 	/**
 	 * Size of `Spinner`.
+	 *
 	 * @default 16
 	 */
 	size?: number;
@@ -16,4 +17,4 @@ export declare type SpinnerProps = {
 /**
  * `Spinner` is a component that notifies users that an action is being processed.
  */
-export declare const Spinner: React.FC<SpinnerProps & ConnectedProps>;
+export declare const Spinner: React.FC<ConnectedProps & SpinnerProps>;

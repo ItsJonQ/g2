@@ -29,6 +29,7 @@ export declare type TextProps = TruncateProps & {
 	 */
 	align?: CSS['textAlign'];
 	/**
+	 *
 	 * @default 'span'
 	 */
 	as?: AsProp;
@@ -42,6 +43,7 @@ export declare type TextProps = TruncateProps & {
 	display?: CSS['display'];
 	/**
 	 * Renders a destructive color.
+	 *
 	 * @default false
 	 */
 	isDestructive?: boolean;
@@ -98,4 +100,4 @@ export declare type TextProps = TruncateProps & {
 /**
  * `Text` is a core component that renders text in the library, using the library's typography system.
  */
-export declare const Text: React.FC<TextProps & ConnectedProps>;
+export declare const Text: React.FC<ConnectedProps & TextProps>;

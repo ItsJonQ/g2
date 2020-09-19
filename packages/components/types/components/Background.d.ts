@@ -4,6 +4,7 @@ import { SurfaceProps, SurfaceVariant } from './Surface';
 
 export declare type BackgroundProps = SurfaceProps & {
 	/**
+	 *
 	 * @default 'secondary'
 	 */
 	variant?: SurfaceVariant;

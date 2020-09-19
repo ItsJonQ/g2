@@ -16,4 +16,4 @@ export declare type InitialsProps = TextProps & {
 /**
  * `Initials` renders Initialss and subtitles using the library's typography system.
  */
-export declare const Initials: React.FC<InitialsProps & ConnectedProps>;
+export declare const Initials: React.FC<ConnectedProps & InitialsProps>;

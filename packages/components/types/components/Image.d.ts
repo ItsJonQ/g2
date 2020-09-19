@@ -27,4 +27,4 @@ export declare type ImageProps = {
 /**
  * `Image` is a core component that renders images in the library.
  */
-export declare const Image: React.FC<ImageProps & ConnectedProps>;
+export declare const Image: React.FC<ConnectedProps & ImageProps>;

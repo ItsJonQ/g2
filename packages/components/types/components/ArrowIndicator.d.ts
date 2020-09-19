@@ -10,6 +10,7 @@ export declare type ArrowIndicatorDirection =
 export declare type ArrowIndicatorProps = {
 	/**
 	 * The direction of the `ArrowIndicator` icon.
+	 *
 	 * @default 'right'
 	 */
 	direction?: ArrowIndicatorDirection;
@@ -19,11 +20,13 @@ export declare type ArrowIndicatorProps = {
 	height?: CSS['height'];
 	/**
 	 * The arrow's icon size.
+	 *
 	 * @default 5
 	 */
 	iconSize?: CSS['width'];
 	/**
 	 * The height and width of the `ArrowIndicator`.
+	 *
 	 * @default 24
 	 */
 	size?: CSS['width'];
@@ -37,5 +40,5 @@ export declare type ArrowIndicatorProps = {
  * `ArrowIndicator` renders an arrow that represent the visibility of a Disclosure (collapsible) element.
  */
 export declare const ArrowIndicator: React.FC<
-	ArrowIndicatorProps & ConnectedProps
+	ConnectedProps & ArrowIndicatorProps
 >;

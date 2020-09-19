@@ -6,11 +6,13 @@ export declare type ContainerAlignment = 'left' | 'center' | 'right';
 export declare type ContainerProps = {
 	/**
 	 * Horizontal alignment of `Container`.
+	 *
 	 * @default 'center'
 	 */
 	alignment?: ContainerAlignment;
 	/**
 	 * The max-width of `Container`.
+	 *
 	 * @default 1280
 	 */
 	width?: ResponsiveCSSValue<CSS['width']>;
