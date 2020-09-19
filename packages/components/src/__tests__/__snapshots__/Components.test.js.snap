@@ -1010,7 +1010,7 @@ exports[`props should render ColorCircle 1`] = `
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
   id="ColorCircle"
-  style="background-color: rgb(128, 0, 128);"
+  style="background-color: rgb(0, 0, 0);"
 />
 `;
 
@@ -1020,7 +1020,7 @@ exports[`props should render ColorCircle with css prop 1`] = `
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
   id="ColorCircle"
-  style="background-color: rgb(128, 0, 128);"
+  style="background-color: rgb(0, 0, 0);"
 />
 `;
 
@@ -1030,7 +1030,7 @@ exports[`props should render ColorCircle with css prop 2`] = `
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
   id="ColorCircle"
-  style="background-color: rgb(128, 0, 128);"
+  style="background-color: rgb(0, 0, 0);"
 />
 `;
 
@@ -1059,7 +1059,7 @@ exports[`props should render ColorControl 1`] = `
         class="wp-components-color-circle css-o6owmm"
         data-g2-c16t="true"
         data-g2-component="ColorCircle"
-        style="background-color: rgb(128, 0, 128);"
+        style="background-color: rgb(0, 0, 0);"
       />
     </span>
   </span>
@@ -1096,7 +1096,7 @@ exports[`props should render ColorControl with css prop 1`] = `
         class="wp-components-color-circle css-o6owmm"
         data-g2-c16t="true"
         data-g2-component="ColorCircle"
-        style="background-color: rgb(128, 0, 128);"
+        style="background-color: rgb(0, 0, 0);"
       />
     </span>
   </span>
@@ -1133,7 +1133,7 @@ exports[`props should render ColorControl with css prop 2`] = `
         class="wp-components-color-circle css-o6owmm"
         data-g2-c16t="true"
         data-g2-component="ColorCircle"
-        style="background-color: rgb(128, 0, 128);"
+        style="background-color: rgb(0, 0, 0);"
       />
     </span>
   </span>

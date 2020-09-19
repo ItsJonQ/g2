@@ -12,8 +12,8 @@ function Badge({
 	children,
 	color: colorProp = 'standard',
 	display = 'inline-flex',
-	isBold,
-	isRounded,
+	isBold = false,
+	isRounded = false,
 	truncate = true,
 	...props
 }) {

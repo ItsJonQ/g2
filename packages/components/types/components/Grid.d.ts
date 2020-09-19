@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { ConnectedProps, CSS, ResponsiveCSSValue } from './_shared';
 
-export declare type GridColumns = Array<number | null> | number;
+export declare type GridColumns = ResponsiveCSSValue<number>;
 
-export declare type GridRows = Array<number | null> | number;
+export declare type GridRows = ResponsiveCSSValue<number>;
 
 export declare type GridProps = {
 	/**
@@ -12,12 +12,18 @@ export declare type GridProps = {
 	align?: CSS['alignItems'];
 	/**
 	 * Adjusts the number of columns of the `Grid`.
+	 * @default 2
 	 */
 	columns?: GridColumns;
 	/**
 	 * Changes the CSS display from `grid` to `inline-grid`.
 	 */
 	isInline?: boolean;
+	/**
+	 * Gap between each child.
+	 * @default 3
+	 */
+	gap?: number;
 	/**
 	 * Adjusts the inline alignment of children.
 	 */

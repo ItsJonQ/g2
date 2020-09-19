@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { CSS, ConnectedProps, ResponsiveCSSValue } from './_shared';
 
-export declare type FlexDirection =
-	| Array<CSS['flexDirection'] | null>
-	| CSS['flexDirection'];
+export declare type FlexDirection = ResponsiveCSSValue<CSS['flexDirection']>;
 
 export declare type FlexProps = {
 	/**

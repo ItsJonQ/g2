@@ -14,7 +14,7 @@ function Tag({
 	color = 'standard',
 	display = 'inline-flex',
 	href,
-	onRemove = { noop },
+	onRemove = noop,
 	removeButtonText,
 	...props
 }) {

@@ -6,7 +6,7 @@ import * as styles from './ColorCircle.styles';
 const { ColorCircleView } = styles;
 
 function ColorCircle({
-	color: colorProp = 'purple',
+	color: colorProp,
 	size = 'medium',
 	style = {},
 	...props

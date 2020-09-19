@@ -4,16 +4,10 @@ import React from 'react';
 
 import { CheckboxGroupContext } from './CheckboxGroup.Context';
 
-function CheckboxGroup({
-	children,
-	forwardedRef,
-	label = 'CheckboxGroup',
-	value,
-	...props
-}) {
-	const radio = useCheckboxState({ state: value });
+function CheckboxGroup({ children, value }) {
+	const checkbox = useCheckboxState({ state: value });
 	const contextProps = {
-		radio,
+		checkbox,
 	};
 
 	return (

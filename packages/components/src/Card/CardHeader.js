@@ -4,7 +4,7 @@ import React from 'react';
 import { Flex } from '../Flex';
 import * as styles from './Card.styles';
 
-function CardHeader({ className, size, ...props }) {
+function CardHeader({ className, size = 'medium', ...props }) {
 	const cx = [
 		styles.Header,
 		styles.borderRadius,
