@@ -8,7 +8,12 @@ import { ControlGroupContext } from './ControlGroup.Context';
 import * as styles from './ControlGroup.styles';
 import ControlGroupItem from './ControlGroupItem';
 
-function ControlGroup({ children, direction = 'row', isItemBlock, ...props }) {
+function ControlGroup({
+	children,
+	direction = 'row',
+	isItemBlock = false,
+	...props
+}) {
 	const validChildren = getValidChildren(children);
 	const isVertical = direction === 'column';
 
