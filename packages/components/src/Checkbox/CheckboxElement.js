@@ -1,7 +1,7 @@
 import { Checkbox as ReakitCheckbox } from '@wp-g2/a11y';
-import { connect, ns } from '@wp-g2/context';
+import { connect } from '@wp-g2/context';
 import { FiCheck } from '@wp-g2/icons';
-import { css, cx } from '@wp-g2/styles';
+import { css, cx, ui } from '@wp-g2/styles';
 import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
@@ -42,7 +42,7 @@ function CheckboxElement({
 	const checkedState = isEmpty(checkbox) ? checked : undefined;
 
 	return (
-		<CheckboxWrapperView {...ns('CheckboxWrapper')}>
+		<CheckboxWrapperView {...ui.$('CheckboxWrapper')}>
 			<ReakitCheckbox
 				checked={checkedState}
 				{...props}
@@ -52,7 +52,7 @@ function CheckboxElement({
 				onChange={handleOnChange}
 				ref={forwardedRef}
 			/>
-			<CheckboxIconView {...ns('CheckboxIcon')} aria-hidden>
+			<CheckboxIconView {...ui.$('CheckboxIcon')} aria-hidden>
 				<Icon icon={<FiCheck />} size={12} />
 			</CheckboxIconView>
 		</CheckboxWrapperView>

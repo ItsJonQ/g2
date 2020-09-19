@@ -1,5 +1,5 @@
 import { Button as ReakitButton } from '@wp-g2/a11y';
-import { connect, ns } from '@wp-g2/context';
+import { connect } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { css, cx, ui } from '@wp-g2/styles';
 import React from 'react';
@@ -92,7 +92,7 @@ function BaseButton({
 							styles.PrefixSuffix,
 							isLoading && styles.loading,
 						])}
-						{...ns('ButtonPrefix')}
+						{...ui.$('ButtonPrefix')}
 					>
 						{prefix}
 					</FlexItem>
@@ -104,7 +104,7 @@ function BaseButton({
 							styles.PrefixSuffix,
 							isLoading && styles.loading,
 						])}
-						{...ns('ButtonIcon')}
+						{...ui.$('ButtonIcon')}
 					>
 						<Icon icon={icon} size={iconSize} />
 					</FlexItem>
@@ -117,7 +117,7 @@ function BaseButton({
 							isLoading && styles.loading,
 							noWrap && styles.noWrap,
 						])}
-						{...ns('ButtonContent')}
+						{...ui.$('ButtonContent')}
 					>
 						{children}
 					</FlexBlock>
@@ -129,7 +129,7 @@ function BaseButton({
 							styles.PrefixSuffix,
 							isLoading && styles.loading,
 						])}
-						{...ns('ButtonSuffix')}
+						{...ui.$('ButtonSuffix')}
 					>
 						{suffix}
 					</FlexItem>
@@ -141,7 +141,7 @@ function BaseButton({
 							styles.CaretWrapper,
 							isLoading && styles.loading,
 						])}
-						{...ns('ButtonCaret')}
+						{...ui.$('ButtonCaret')}
 					>
 						<Icon icon={<FiChevronDown />} size={16} />
 					</FlexItem>
@@ -154,7 +154,7 @@ function BaseButton({
 				hover={elevationHover}
 				offset={-1}
 				value={elevation}
-				{...ns('ButtonElevation')}
+				{...ui.$('ButtonElevation')}
 			/>
 		</ReakitButton>
 	);

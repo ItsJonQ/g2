@@ -1,4 +1,4 @@
-import { ns } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import React, { useEffect, useState } from 'react';
 
 import * as styles from './SegmentedControl.styles';
@@ -11,7 +11,6 @@ function SegmentedControlBackdrop({
 	currentId,
 	items,
 	state,
-	...props
 }) {
 	const [left, setLeft] = useState(0);
 	const [width, setWidth] = useState(0);
@@ -47,7 +46,7 @@ function SegmentedControlBackdrop({
 	return (
 		<BackdropView
 			role="presentation"
-			{...ns('SegmentedControlBackdrop')}
+			{...ui.$('SegmentedControlBackdrop')}
 			style={{
 				transform: `translateX(${left}px)`,
 				transition: canAnimate ? null : 'none',

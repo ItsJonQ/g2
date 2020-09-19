@@ -1,5 +1,5 @@
-import { connect, ns } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
+import { connect } from '@wp-g2/context';
+import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
@@ -81,10 +81,12 @@ function TextInput({
 			isFocused={isFocused}
 			justify={justify}
 			onClick={handleOnRootClick}
-			{...ns('TextInputWrapper')}
+			{...ui.$('TextInputWrapper')}
 		>
-			{prefix && <FlexItem {...ns('TextInputPrefix')}>{prefix}</FlexItem>}
-			<FlexBlock {...ns('TextInputContent')}>
+			{prefix && (
+				<FlexItem {...ui.$('TextInputPrefix')}>{prefix}</FlexItem>
+			)}
+			<FlexBlock {...ui.$('TextInputContent')}>
 				<InputView
 					as={InputComponent}
 					cx={inputCx}
@@ -96,10 +98,12 @@ function TextInput({
 					ref={mergeRefs([inputRef, forwardedRef])}
 					value={value}
 					{...props}
-					{...ns('TextInput')}
+					{...ui.$('TextInput')}
 				/>
 			</FlexBlock>
-			{suffix && <FlexItem {...ns('TextInputSuffix')}>{suffix}</FlexItem>}
+			{suffix && (
+				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
+			)}
 		</BaseField>
 	);
 }

@@ -1,4 +1,4 @@
-import { ns } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import { is, memoize } from '@wp-g2/utils';
 import { findAll } from 'highlight-words-core';
 import { createElement } from 'react';
@@ -86,7 +86,7 @@ export function createHighlighterText({
 					: highlightStyle;
 
 			const props = {
-				...ns('TextHighlight'),
+				...ui.$('TextHighlight'),
 				children: text,
 				className: highlightClassNames,
 				key: index,
@@ -102,7 +102,7 @@ export function createHighlighterText({
 			return createElement(HighlightTag, props);
 		} else {
 			return createElement('span', {
-				...ns('Text'),
+				...ui.$('Text'),
 				children: text,
 				className: unhighlightClassName,
 				key: index,

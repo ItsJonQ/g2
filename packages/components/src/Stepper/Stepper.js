@@ -1,6 +1,6 @@
-import { connect, ns } from '@wp-g2/context';
+import { connect } from '@wp-g2/context';
 import { FiChevronDown, FiChevronUp, FiMinus, FiPlus } from '@wp-g2/icons';
-import { cx } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
@@ -82,7 +82,7 @@ function ControlButton({ isVertical, size, ...props }) {
 
 	return (
 		<Button
-			{...ns('StepperButton')}
+			{...ui.$('StepperButton')}
 			{...props}
 			iconSize={14}
 			isBlock

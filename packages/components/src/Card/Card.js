@@ -1,5 +1,5 @@
-import { connect, ns } from '@wp-g2/context';
-import { cx, get } from '@wp-g2/styles';
+import { connect } from '@wp-g2/context';
+import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Elevation } from '../Elevation';
@@ -22,22 +22,22 @@ function Card({
 		isRounded && styles.rounded,
 		className,
 	]);
-	const elevationBorderRadius = isRounded ? get('cardBorderRadius') : 0;
+	const elevationBorderRadius = isRounded ? ui.get('cardBorderRadius') : 0;
 
 	return (
 		<Surface {...props} className={classes} ref={forwardedRef}>
-			<View {...ns('CardContent')}>{children}</View>
+			<View {...ui.$('CardContent')}>{children}</View>
 			<Elevation
 				css={{ borderRadius: elevationBorderRadius }}
 				isInteractive={false}
 				value={elevation ? 1 : 0}
-				{...ns('CardElevation')}
+				{...ui.$('CardElevation')}
 			/>
 			<Elevation
 				css={{ borderRadius: elevationBorderRadius }}
 				isInteractive={false}
 				value={elevation}
-				{...ns('CardElevation')}
+				{...ui.$('CardElevation')}
 			/>
 		</Surface>
 	);

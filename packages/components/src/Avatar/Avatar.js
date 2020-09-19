@@ -1,4 +1,4 @@
-import { connect, ns } from '@wp-g2/context';
+import { connect } from '@wp-g2/context';
 import { css, get } from '@wp-g2/styles';
 import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
@@ -48,7 +48,7 @@ function Avatar({
 			{shouldRenderInitials && (
 				<View css={[ui.position.absolute, ui.alignment.center]}>
 					<Initials
-						{...ns('AvatarInitials')}
+						{...ui.$('AvatarInitials')}
 						align="center"
 						as="div"
 						lineHeight={1}
@@ -60,7 +60,7 @@ function Avatar({
 			)}
 			{src && (
 				<Image
-					{...ns('AvatarImage')}
+					{...ui.$('AvatarImage')}
 					alt={name}
 					aspectRatio={1}
 					css={[

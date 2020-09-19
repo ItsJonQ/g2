@@ -1,4 +1,5 @@
 import { ns } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
@@ -11,7 +12,7 @@ function TagRemoveButton({ onClick = noop, removeButtonText }) {
 	if (!removeButtonText) return null;
 
 	return (
-		<RemoveButtonView {...ns('TagRemoveButtonWrapper')}>
+		<RemoveButtonView {...ui.$('TagRemoveButtonWrapper')}>
 			<CloseButton
 				aria-label={removeButtonText}
 				currentColor
@@ -20,7 +21,7 @@ function TagRemoveButton({ onClick = noop, removeButtonText }) {
 				size="xSmall"
 				title={removeButtonText}
 				variant="tertiary"
-				{...ns('TagRemoveButton')}
+				{...ui.$('TagRemoveButton')}
 			/>
 		</RemoveButtonView>
 	);

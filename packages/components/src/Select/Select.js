@@ -1,6 +1,6 @@
-import { connect, ns } from '@wp-g2/context';
+import { connect } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
-import { cx } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 
@@ -74,9 +74,9 @@ function Select({
 			isFocused={isFocused}
 			isSubtle={isSubtle}
 			onClick={handleOnRootClick}
-			{...ns('SelectWrapper')}
+			{...ui.$('SelectWrapper')}
 		>
-			{prefix && <FlexItem {...ns('SelectPrefix')}>{prefix}</FlexItem>}
+			{prefix && <FlexItem {...ui.$('SelectPrefix')}>{prefix}</FlexItem>}
 			<FlexBlock>
 				<InputView
 					as="select"
@@ -89,7 +89,7 @@ function Select({
 					ref={mergeRefs([forwardedRef, inputRef])}
 					value={value}
 					{...props}
-					{...ns('Select')}
+					{...ui.$('Select')}
 				>
 					{children ||
 						options.map((option, index) => {
@@ -107,7 +107,7 @@ function Select({
 						})}
 				</InputView>
 			</FlexBlock>
-			{suffix && <FlexItem {...ns('SelectSuffix')}>{suffix}</FlexItem>}
+			{suffix && <FlexItem {...ui.$('SelectSuffix')}>{suffix}</FlexItem>}
 			<ArrowWrapperView>
 				<Text isBlock variant="muted">
 					<Icon icon={<FiChevronDown />} size={14} />

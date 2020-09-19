@@ -1,4 +1,5 @@
-import { connect, ns } from '@wp-g2/context';
+import { connect } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Animated } from '../Animated';
@@ -27,7 +28,7 @@ function Alert({
 					<FlexBlock>
 						<AlertTitle title={title} />
 						<View
-							{...ns('AlertContent')}
+							{...ui.$('AlertContent')}
 							cx={[isDismissable && styles.contentWithDismiss]}
 						>
 							{children}

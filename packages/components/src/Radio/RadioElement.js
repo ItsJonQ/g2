@@ -1,6 +1,6 @@
 import { Radio as ReakitRadio } from '@wp-g2/a11y';
-import { connect, ns } from '@wp-g2/context';
-import { css, cx } from '@wp-g2/styles';
+import { connect } from '@wp-g2/context';
+import { css, cx, ui } from '@wp-g2/styles';
 import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
@@ -40,7 +40,7 @@ function RadioElement({
 	const checkedState = isEmpty(radio) ? checked : undefined;
 
 	return (
-		<RadioWrapperView {...ns('RadioWrapper')}>
+		<RadioWrapperView {...ui.$('RadioWrapper')}>
 			<ReakitRadio
 				checked={checkedState}
 				{...props}
@@ -50,7 +50,7 @@ function RadioElement({
 				onChange={handleOnChange}
 				ref={forwardedRef}
 			/>
-			<RadioIconView {...ns('RadioIcon')} aria-hidden>
+			<RadioIconView {...ui.$('RadioIcon')} aria-hidden>
 				<RadioDotView />
 			</RadioIconView>
 		</RadioWrapperView>

@@ -1,5 +1,5 @@
-import { connect, ns } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { connect } from '@wp-g2/context';
+import { css, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -22,7 +22,7 @@ function ZStack({
 
 		return (
 			<View
-				{...ns('ZStackItem')}
+				{...ui.$('ZStackItem')}
 				cx={[
 					isLayered
 						? styles.positionAbsolute

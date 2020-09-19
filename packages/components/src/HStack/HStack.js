@@ -1,6 +1,5 @@
 import { connect, hasNamespace } from '@wp-g2/context';
-import { ns } from '@wp-g2/context';
-import { createToken, space } from '@wp-g2/styles';
+import { createToken, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -23,7 +22,11 @@ function HStack({
 
 		if (_isSpacer) {
 			return (
-				<FlexBlock key={child.key} {...child.props} {...ns('Spacer')} />
+				<FlexBlock
+					key={child.key}
+					{...child.props}
+					{...ui.$('Spacer')}
+				/>
 			);
 		}
 
@@ -38,7 +41,7 @@ function HStack({
 			{...props}
 			ref={forwardedRef}
 			style={{
-				[createToken('HStackSpacing')]: space(spacing),
+				[createToken('HStackSpacing')]: ui.space(spacing),
 				...style,
 			}}
 		>

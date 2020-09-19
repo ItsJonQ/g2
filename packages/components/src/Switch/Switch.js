@@ -1,6 +1,6 @@
-import { Radio } from '@wp-g2/a11y';
-import { Checkbox } from '@wp-g2/a11y';
-import { connect, ns } from '@wp-g2/context';
+import { Checkbox, Radio } from '@wp-g2/a11y';
+import { connect } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
 
@@ -74,9 +74,9 @@ function Switch({
 				onChange={toggle}
 				onFocus={handleOnFocus}
 				ref={forwardedRef}
-				{...ns('SwitchInput')}
+				{...ui.$('SwitchInput')}
 			/>
-			<VisuallyHidden {...ns('SwitchLabel')}>{label}</VisuallyHidden>
+			<VisuallyHidden {...ui.$('SwitchLabel')}>{label}</VisuallyHidden>
 		</SwitchView>
 	);
 }
