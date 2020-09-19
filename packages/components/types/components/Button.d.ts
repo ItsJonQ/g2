@@ -118,6 +118,8 @@ export declare type ButtonProps = {
 	prefix?: React.Component;
 	/**
 	 * Determines the size of `Button`.
+	 *
+	 * @default 'medium'
 	 */
 	size?: ButtonSize;
 	/**

@@ -19,6 +19,7 @@ function SegmentControl({
 	onChange,
 	size = 'medium',
 	value,
+	...props
 }) {
 	const containerRef = useRef();
 	const reakitRadio = useRadioState({
@@ -42,6 +43,7 @@ function SegmentControl({
 				isBlock && styles.block,
 				styles[size],
 			]}
+			{...props}
 			ref={mergeRefs([containerRef, forwardedRef])}
 		>
 			{resizeListener}

@@ -6,6 +6,7 @@ export declare type RadioGroupProps = Pick<FlexProps, 'gap'> &
 	Pick<GridProps, 'templateColumns'> & {
 		/**
 		 * ID that will serve as a base for all the items IDs.
+		 *
 		 * @see https://reakit.io/docs/radio/#useradiostate
 		 */
 		baseId?: string;
@@ -15,6 +16,7 @@ export declare type RadioGroupProps = Pick<FlexProps, 'gap'> &
 		disabled?: boolean;
 		/**
 		 * When an element is disabled, it may still be focusable. It works similarly to readOnly on form elements. In this case, only aria-disabled will be set.
+		 *
 		 * @see https://reakit.io/docs/radio/#radiogroup
 		 */
 		focusable?: boolean;

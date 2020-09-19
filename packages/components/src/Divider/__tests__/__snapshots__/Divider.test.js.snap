@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render margin 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider css-13omd46"
+  class="wp-components-divider css-majrdd"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"
@@ -23,7 +23,7 @@ exports[`props should render margin 1`] = `
 exports[`props should render marginBottom 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider css-185a4qm"
+  class="wp-components-divider css-r6crkc"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"
@@ -33,7 +33,7 @@ exports[`props should render marginBottom 1`] = `
 exports[`props should render marginTop 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider css-w2kgwo"
+  class="wp-components-divider css-4d8x12"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"

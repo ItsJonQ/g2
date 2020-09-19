@@ -12,6 +12,7 @@ export declare type CheckboxProps = FormElementProps &
 		/**
 		 * When an element is disabled, it may still be focusable. It works similarly to readOnly on form elements.
 		 * In this case, only aria-disabled will be set.
+		 *
 		 * @see https://reakit.io/docs/checkbox/#checkbox
 		 */
 		focusable?: boolean;
@@ -22,6 +23,7 @@ export declare type CheckboxProps = FormElementProps &
 		/**
 		 * Checkbox's value is going to be used when multiple checkboxes share the same state.
 		 * Checking a checkbox with value will add it to the state array.
+		 *
 		 * @see https://reakit.io/docs/checkbox/#checkbox
 		 */
 		value?: string | number;

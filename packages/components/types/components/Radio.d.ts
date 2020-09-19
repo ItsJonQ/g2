@@ -12,6 +12,7 @@ export declare type RadioProps = FormElementProps &
 		/**
 		 * When an element is disabled, it may still be focusable. It works similarly to readOnly on form elements.
 		 * In this case, only aria-disabled will be set.
+		 *
 		 * @see https://reakit.io/docs/radio/#radio
 		 */
 		focusable?: boolean;

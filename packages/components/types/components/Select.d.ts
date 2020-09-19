@@ -13,6 +13,16 @@ export declare type SelectProps = Omit<
 	FormElementProps & {
 		/**
 		 * Options to render within `Select`.
+		 *
+		 * @example
+		 * ```jsx
+		 * const options = [
+		 *  { id: 'elsa', value: 'elsa', label: 'Elsa' },
+		 *  { id: 'ana', value: 'ana', label: 'Ana' },
+		 * ]
+		 *
+		 * const Heroes = <Select options={options} />
+		 * ```
 		 */
 		options?: Array<unknown>;
 		/**
@@ -21,6 +31,8 @@ export declare type SelectProps = Omit<
 		prefix?: React.Component;
 		/**
 		 * Determines the size of `Select`.
+		 *
+		 * @default 'medium'
 		 */
 		size?: SizeRangeDefault;
 		/**

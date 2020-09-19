@@ -35,10 +35,20 @@ export declare type GridProps = {
 	rows?: GridRows;
 	/**
 	 * Adjusts the CSS grid `template-columns`.
+	 *
+	 * @example
+	 * ```jsx
+	 * <Grid templateColumns="1fr 300px 1fr" />
+	 * ```
 	 */
 	templateColumns?: CSS['gridTemplateColumns'];
 	/**
 	 * Adjusts the CSS grid `template-rows`.
+	 *
+	 * @example
+	 * ```jsx
+	 * <Grid templateRows="1fr 300px 1fr" />
+	 * ```
 	 */
 	templateRows?: CSS['gridTemplateRows'];
 };

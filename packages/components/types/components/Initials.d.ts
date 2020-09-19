@@ -4,8 +4,9 @@ import { TextProps } from './Text';
 export declare type InitialsProps = TextProps & {
 	/**
 	 * The name to render as initials.
+	 *
 	 * @example
-	 * ```
+	 * ```jsx
 	 * <Initials name="Elsa" />
 	 * ```
 	 */
