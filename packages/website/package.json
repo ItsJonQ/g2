@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/website",
-  "version": "0.0.67",
+  "version": "0.0.68",
   "private": true,
   "description": "Documentatoin website for G2 Components.",
   "author": "Jon Quach <hello@jonquach.com>",
@@ -16,10 +16,10 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
-    "@wp-g2/components": "^0.0.67",
-    "@wp-g2/gatsby-plugin-styles": "^0.0.67",
-    "@wp-g2/styles": "^0.0.67",
-    "@wp-g2/utils": "^0.0.67",
+    "@wp-g2/components": "^0.0.68",
+    "@wp-g2/gatsby-plugin-styles": "^0.0.68",
+    "@wp-g2/styles": "^0.0.68",
+    "@wp-g2/utils": "^0.0.68",
     "babel-preset-gatsby": "^0.5.5",
     "fuse.js": "^6.4.1",
     "gatsby": "^2.24.47",
