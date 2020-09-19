@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type TruncateEllisizeMode = 'auto' | 'head' | 'tail' | 'middle';
 
@@ -31,4 +30,4 @@ export declare type TruncateProps = {
 /**
  * `Truncate` is a typography primitive that trims text content. For almost all cases, it is recommended that `Text`, `Heading`, or `Subheading` is used to render text content. However, `Truncate` is available for custom implementations.
  */
-export declare const Truncate: React.FC<ConnectedProps & TruncateProps>;
+export declare const Truncate: PolymorphicComponent<TruncateProps>;

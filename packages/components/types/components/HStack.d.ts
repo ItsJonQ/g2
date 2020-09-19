@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { PolymorphicComponent, CSS } from './_shared';
 import { FlexProps } from './Flex';
 
 export declare type HStackAlignment =
@@ -33,4 +32,4 @@ export declare type HStackProps = FlexProps & {
 /**
  * `HStack` (Horizontal Stack) arranges child elements in a horizontal line.
  */
-export declare const HStack: React.FC<ConnectedProps & HStackProps>;
+export declare const HStack: PolymorphicComponent<HStackProps>;

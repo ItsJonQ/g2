@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, FormElementProps } from './_shared';
+import { PolymorphicComponent, FormElementProps } from './_shared';
 import { FlexProps } from './Flex';
 
 export declare type BaseFieldProps = FlexProps &
@@ -27,4 +26,4 @@ export declare type BaseFieldProps = FlexProps &
 /**
  * `BaseField` is a primitive component used to create form element components (e.g. `TextInput`).
  */
-export declare const BaseField: React.FC<ConnectedProps & BaseFieldProps>;
+export declare const BaseField: PolymorphicComponent<BaseFieldProps>;

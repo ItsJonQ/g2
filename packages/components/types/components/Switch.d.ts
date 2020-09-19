@@ -1,5 +1,8 @@
-import * as React from 'react';
-import { ConnectedProps, FormElementProps, SizeRangeReduced } from './_shared';
+import {
+	PolymorphicComponent,
+	FormElementProps,
+	SizeRangeReduced,
+} from './_shared';
 import { BadgeProps } from './Badge';
 
 export declare type SwitchSize = SizeRangeReduced;
@@ -23,4 +26,4 @@ export declare type SwitchProps = FormElementProps &
 /**
  * `Switch` is a form component that toggles a checked (on/off) state.
  */
-export declare const Switch: React.FC<ConnectedProps & SwitchProps>;
+export declare const Switch: PolymorphicComponent<SwitchProps, 'input'>;

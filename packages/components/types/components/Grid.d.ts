@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS, ResponsiveCSSValue } from './_shared';
+import { PolymorphicComponent, CSS, ResponsiveCSSValue } from './_shared';
 
 export declare type GridColumns = ResponsiveCSSValue<number>;
 
@@ -47,4 +46,4 @@ export declare type GridProps = {
 /**
  * `Grid` is a primitive layout component that can arrange content in a grid configuration.
  */
-export declare const Grid: React.FC<ConnectedProps & GridProps>;
+export declare const Grid: PolymorphicComponent<GridProps>;

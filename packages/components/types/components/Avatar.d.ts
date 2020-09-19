@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS, SizeRangeDefault } from './_shared';
+import { PolymorphicComponent, CSS, SizeRangeDefault } from './_shared';
 
 export declare type AvatarShape = 'circle' | 'square';
 
@@ -49,4 +48,4 @@ export declare type AvatarProps = {
 /**
  * `Avatar` renders either an `Image` or the `Initials` of a user.
  */
-export declare const Avatar: React.FC<ConnectedProps & AvatarProps>;
+export declare const Avatar: PolymorphicComponent<AvatarProps>;

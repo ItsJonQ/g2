@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { HTMLTagName } from './_tags';
 
+// TODO: Fix type with PolymorphicComponent implementation
+
 /**
  * Render the component as another React.Component or HTML Element.
  * @example
@@ -34,10 +36,10 @@ export interface Connect {
 	<T>(
 		WrappedComponent:
 			| ((props: T & ConnectedProps) => React.ReactNode)
-			| React.ComponentClass<T & ConnectedProps>
-			| React.FC<T & ConnectedProps>,
+			| React.ComponentClass<T>
+			| React.FC<T>,
 		namespace: string,
-	): React.ComponentClass<T & ConnectedProps> | React.FC<T & ConnectedProps>;
+	): React.ComponentClass<T> | React.FC<T>;
 }
 
 export declare const connect: Connect;

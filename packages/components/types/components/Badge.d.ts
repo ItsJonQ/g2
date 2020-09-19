@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { PolymorphicComponent, CSS } from './_shared';
 
 export declare type BadgeColor =
 	| 'standard'
@@ -47,4 +46,4 @@ export declare type BadgeProps = {
 /**
  * `Badge` is a component that displays the status of an object or of an action that’s been taken.
  */
-export declare const Badge: React.FC<BadgeProps & ConnectedProps>;
+export declare const Badge: PolymorphicComponent<BadgeProps>;

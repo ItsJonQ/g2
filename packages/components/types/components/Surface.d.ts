@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type SurfaceVariant = 'primary' | 'secondary' | 'tertiary';
 
@@ -34,4 +33,4 @@ export declare type SurfaceProps = {
 /**
  * `Surface` is a core component that renders a primary background color.
  */
-export declare const Surface: React.FC<ConnectedProps & SurfaceProps>;
+export declare const Surface: PolymorphicComponent<SurfaceProps>;

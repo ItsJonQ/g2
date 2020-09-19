@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { PolymorphicComponent, CSS } from './_shared';
 
 export declare type ImageProps = {
 	/**
@@ -27,4 +26,4 @@ export declare type ImageProps = {
 /**
  * `Image` is a core component that renders images in the library.
  */
-export declare const Image: React.FC<ConnectedProps & ImageProps>;
+export declare const Image: PolymorphicComponent<ImageProps, 'img'>;

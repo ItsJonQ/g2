@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { CSS, ConnectedProps, ResponsiveCSSValue } from './_shared';
+import { CSS, PolymorphicComponent, ResponsiveCSSValue } from './_shared';
 
 export declare type FlexDirection = ResponsiveCSSValue<CSS['flexDirection']>;
 
@@ -45,7 +44,7 @@ export declare type FlexProps = {
 /**
  * `Flex` is a primitive layout component that adaptively aligns child content horizontally or vertically. `Flex` powers components like `HStack` and `VStack`.
  */
-export declare const Flex: React.FC<ConnectedProps & FlexProps>;
+export declare const Flex: PolymorphicComponent<FlexProps>;
 
 export declare type FlexItemProps = {
 	/**
@@ -63,11 +62,12 @@ export declare type FlexItemProps = {
 /**
  * `FlexItem` is a primitive layout component that aligns content within layout containers like `Flex`.
  */
-export declare const FlexItem: React.FC<ConnectedProps & FlexItemProps>;
+export declare const FlexItem: PolymorphicComponent<FlexItemProps>;
 
 /**
  * `FlexBlock` is a primitive layout component that adaptively resizes content within layout containers like `Flex`.
  */
-export declare const FlexBlock: React.FC<
-	ConnectedProps & Omit<FlexItemProps, 'isBlock'>
->;
+export declare const FlexBlock: PolymorphicComponent<Omit<
+	FlexItemProps,
+	'isBlock'
+>>;

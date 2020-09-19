@@ -1,7 +1,8 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
+
+type VisuallyHiddenProps = {};
 
 /**
  * `VisuallyHidden` is used hide content from the visual client, but keep it readable for screen readers.
  */
-export declare const VisuallyHidden: React.FC<ConnectedProps>;
+export declare const VisuallyHidden: PolymorphicComponent<VisuallyHiddenProps>;

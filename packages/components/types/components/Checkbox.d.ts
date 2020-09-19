@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, FormElementProps } from './_shared';
+import { PolymorphicComponent, FormElementProps } from './_shared';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';
 
@@ -31,4 +30,4 @@ export declare type CheckboxProps = FormElementProps &
 /**
  * `Checkbox` is a form component gives users a way to make a range of selections (zero, one, or multiple).
  */
-export declare const Checkbox: React.FC<ConnectedProps & CheckboxProps>;
+export declare const Checkbox: PolymorphicComponent<CheckboxProps, 'input'>;

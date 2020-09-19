@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { CSS, ConnectedProps } from './_shared';
+import { CSS, PolymorphicComponent } from './_shared';
 
 export declare type SpinnerProps = {
 	/**
@@ -17,4 +16,4 @@ export declare type SpinnerProps = {
 /**
  * `Spinner` is a component that notifies users that an action is being processed.
  */
-export declare const Spinner: React.FC<ConnectedProps & SpinnerProps>;
+export declare const Spinner: PolymorphicComponent<SpinnerProps>;

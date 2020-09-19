@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@wp-g2/protokit": "^0.0.67",
+    "@types/react": "^16.9.46",
     "react-beautiful-dnd": "^13.0.0",
     "react-dnd": "^11.1.3",
     "react-dnd-html5-backend": "^11.1.3",

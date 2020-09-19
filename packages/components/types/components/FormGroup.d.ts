@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { TextProps } from './Text';
 
 export declare type FormGroupProps = {
@@ -24,4 +23,4 @@ export declare type FormGroupProps = {
 /**
  * `FormGroup` is a form component that groups a label with a form element (e.g. `Switch` or `TextInput`).
  */
-export declare const FormGroup: React.FC<FormGroupProps & ConnectedProps>;
+export declare const FormGroup: PolymorphicComponent<FormGroupProps>;

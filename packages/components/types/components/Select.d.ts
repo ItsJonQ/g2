@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { ConnectedProps, FormElementProps, SizeRangeDefault } from './_shared';
+import {
+	PolymorphicComponent,
+	FormElementProps,
+	SizeRangeDefault,
+} from './_shared';
 import { BaseFieldProps } from './BaseField';
 
 export declare type SelectProps = Omit<
@@ -28,4 +32,4 @@ export declare type SelectProps = Omit<
 /**
  * `Select` is a form component lets users choose options from an options menu.
  */
-export declare const Select: React.FC<ConnectedProps & SelectProps>;
+export declare const Select: PolymorphicComponent<SelectProps, 'select'>;

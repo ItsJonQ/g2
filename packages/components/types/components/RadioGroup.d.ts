@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';
 
@@ -32,4 +31,4 @@ export declare type RadioGroupProps = Pick<FlexProps, 'gap'> &
 /**
  * `RadioGroup` is a form component contains and coordinates the checked state of multiple `Radio` components.
  */
-export declare const RadioGroup: React.FC<ConnectedProps & RadioGroupProps>;
+export declare const RadioGroup: PolymorphicComponent<RadioGroupProps>;

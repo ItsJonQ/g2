@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, AsProp, CSS } from './_shared';
+import { PolymorphicComponent, CSS } from './_shared';
 import { TruncateProps } from './Truncate';
 
 export declare type TextSize =
@@ -28,11 +27,6 @@ export declare type TextProps = TruncateProps & {
 	 * Adjusts the text alignment.
 	 */
 	align?: CSS['textAlign'];
-	/**
-	 *
-	 * @default 'span'
-	 */
-	as?: AsProp;
 	/**
 	 * Adjusts the text color.
 	 */
@@ -100,4 +94,4 @@ export declare type TextProps = TruncateProps & {
 /**
  * `Text` is a core component that renders text in the library, using the library's typography system.
  */
-export declare const Text: React.FC<ConnectedProps & TextProps>;
+export declare const Text: PolymorphicComponent<TextProps, 'span'>;

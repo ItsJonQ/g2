@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { PolymorphicComponent, CSS } from './_shared';
 
 export declare type ArrowIndicatorDirection =
 	| 'top'
@@ -39,6 +38,4 @@ export declare type ArrowIndicatorProps = {
 /**
  * `ArrowIndicator` renders an arrow that represent the visibility of a Disclosure (collapsible) element.
  */
-export declare const ArrowIndicator: React.FC<
-	ConnectedProps & ArrowIndicatorProps
->;
+export declare const ArrowIndicator: PolymorphicComponent<ArrowIndicatorProps>;

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS } from './_shared';
+import { PolymorphicComponent, CSS } from './_shared';
 
 export declare type AspectRatioProps = {
 	/**
@@ -22,4 +21,4 @@ export declare type AspectRatioProps = {
 /**
  * `AspectRatio` renders content with a given width:height ratio. A common example would be the **HD** `16:9` ratio.
  */
-export declare const AspectRatio: React.FC<ConnectedProps & AspectRatioProps>;
+export declare const AspectRatio: PolymorphicComponent<AspectRatioProps>;

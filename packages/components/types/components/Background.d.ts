@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { SurfaceProps, SurfaceVariant } from './Surface';
 
 export declare type BackgroundProps = SurfaceProps & {
@@ -13,4 +12,4 @@ export declare type BackgroundProps = SurfaceProps & {
 /**
  * `Background` is a core component that renders a `Surface` with a secondary background color.
  */
-export declare const Background: React.FC<BackgroundProps & ConnectedProps>;
+export declare const Background: PolymorphicComponent<BackgroundProps>;

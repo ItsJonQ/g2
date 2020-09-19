@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type AlertStatus =
 	| 'default'
@@ -34,7 +34,7 @@ export declare type AlertProps = {
 /**
  * `Alert` provides contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
  */
-export declare const Alert: React.FC<AlertProps & ConnectedProps>;
+export declare const Alert: PolymorphicComponent<AlertProps>;
 
 /**
  * `Alerts` is a container that manages the mounting/unmount animations for child `Alert` components.

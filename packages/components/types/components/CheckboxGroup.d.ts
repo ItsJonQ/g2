@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { PolymorphicComponent } from './_shared';
 
 export declare type CheckboxGroupProps = {
 	/**
@@ -12,4 +12,4 @@ export declare type CheckboxGroupProps = {
 /**
  * `CheckboxGroup` is a form component contains and coordinates the checked state of multiple `Checkbox` components.
  */
-export declare const CheckboxGroup: React.FC<CheckboxGroupProps>;
+export declare const CheckboxGroup: PolymorphicComponent<CheckboxGroupProps>;

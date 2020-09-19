@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type SpacerProps = {
 	/**
@@ -65,4 +64,4 @@ export declare type SpacerProps = {
 /**
  * `Spacer` is a primitive layout component that providers inner (`padding`) or outer (`margin`) space in-between components. It can also be used to adaptively provide space within an `HStack` or `VStack`.
  */
-export declare const Spacer: React.FC<ConnectedProps & SpacerProps>;
+export declare const Spacer: PolymorphicComponent<SpacerProps>;

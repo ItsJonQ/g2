@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { CSS, ConnectedProps } from './_shared';
+import { CSS, PolymorphicComponent } from './_shared';
 
 export declare type ColorCircleSize = 'medium' | 'small';
 
@@ -19,4 +18,4 @@ export declare type ColorCircleProps = {
 /**
  * `ColorCircle` is a component that renders a color within a circle UI.
  */
-export declare const ColorCircle: React.FC<ConnectedProps & ColorCircleProps>;
+export declare const ColorCircle: PolymorphicComponent<ColorCircleProps>;

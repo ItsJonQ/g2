@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type ElevationProps = {
 	/**
@@ -35,4 +34,4 @@ export declare type ElevationProps = {
 /**
  * `Elevation` is a core component that renders shadow, using the library's shadow system.
  */
-export declare const Elevation: React.FC<ConnectedProps & ElevationProps>;
+export declare const Elevation: PolymorphicComponent<ElevationProps>;

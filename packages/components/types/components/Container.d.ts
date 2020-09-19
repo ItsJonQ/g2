@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { CSS, ConnectedProps, ResponsiveCSSValue } from './_shared';
+import { CSS, PolymorphicComponent, ResponsiveCSSValue } from './_shared';
 
 export declare type ContainerAlignment = 'left' | 'center' | 'right';
 
@@ -21,4 +20,4 @@ export declare type ContainerProps = {
 /**
  * `Container` is a layout component that responsively centers content within a defined width.
  */
-export declare const Container: React.FC<ContainerProps & ConnectedProps>;
+export declare const Container: PolymorphicComponent<ContainerProps>;

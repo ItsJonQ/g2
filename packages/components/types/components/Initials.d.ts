@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { TextProps } from './Text';
 
 export declare type InitialsProps = TextProps & {
@@ -16,4 +15,4 @@ export declare type InitialsProps = TextProps & {
 /**
  * `Initials` renders Initialss and subtitles using the library's typography system.
  */
-export declare const Initials: React.FC<ConnectedProps & InitialsProps>;
+export declare const Initials: PolymorphicComponent<InitialsProps>;

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type PortalProps = {
 	/**
@@ -14,4 +13,4 @@ export declare type PortalProps = {
  *
  * @see https://reakit.io/docs/portal/
  */
-export declare const Portal: React.FC<PortalProps>;
+export declare const Portal: PolymorphicComponent<PortalProps>;

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type CardProps = {
 	/**
@@ -23,7 +22,7 @@ export declare type CardProps = {
 /**
  * `Card` is a layout component, providing a flexible and extensible content container.
  */
-export declare const Card: React.FC<CardProps & ConnectedProps>;
+export declare const Card: PolymorphicComponent<CardProps>;
 
 export declare type CardBodyProps = {
 	/**
@@ -37,7 +36,7 @@ export declare type CardBodyProps = {
 /**
  * `CardBody` is a layout component, rendering the contents of a `Card`.
  */
-export declare const CardBody: React.FC<ConnectedProps & CardBodyProps>;
+export declare const CardBody: PolymorphicComponent<CardBodyProps>;
 
 export declare type CardHeaderSize = 'medium' | 'small' | 'xSmall';
 
@@ -53,9 +52,9 @@ export declare type CardHeaderProps = {
 /**
  * `CardHeader` is a layout component, rendering the header contents of a `Card`.
  */
-export declare const CardHeader: React.FC<ConnectedProps & CardHeaderProps>;
+export declare const CardHeader: PolymorphicComponent<CardHeaderProps>;
 
 /**
  * `CardFooter` is a layout component, rendering the footer content of a `Card`.
  */
-export declare const CardFooter: React.FC<ConnectedProps & CardHeaderProps>;
+export declare const CardFooter: PolymorphicComponent<CardHeaderProps>;

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type ZStackProps = {
 	/**
@@ -23,4 +22,4 @@ export declare type ZStackProps = {
 /**
  * `ZStack` (Z-layer Stack) arranges and layers child elements on the z-axis.
  */
-export declare const ZStack: React.FC<ConnectedProps & ZStackProps>;
+export declare const ZStack: PolymorphicComponent<ZStackProps>;

@@ -1,11 +1,7 @@
 import * as React from 'react';
-import { ConnectedProps, AsProp } from './_shared';
+import { PolymorphicComponent } from './_shared';
 
 export declare type AnimatedProps = {
-	/**
-	 * @default 'div'
-	 */
-	as?: AsProp;
 	/**
 	 * Automatically render mount/unmount animations.
 	 *
@@ -47,7 +43,7 @@ export declare type AnimatedProps = {
 /**
  * `Animated` is a component capable of handling complex animations. `Animated` is powered by [Framer Motion](https://www.framer.com/api/motion/animation/).
  */
-export declare const Animated: React.FC<AnimatedProps & ConnectedProps>;
+export declare const Animated: PolymorphicComponent<AnimatedProps>;
 
 /**
  * `AnimatedContainer` manages and synchronizes inner `Animated` components. `AnimatedContainer` is necessary for handling unmount/exit animations.

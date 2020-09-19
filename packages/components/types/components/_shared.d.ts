@@ -1,8 +1,44 @@
-export { AsProp, ConnectedProps } from '@wp-g2/context';
 import { PropertiesFallback } from 'csstype';
 
 export type CSS = PropertiesFallback<number | string>;
 export type ResponsiveCSSValue<T> = Array<T | null> | T;
+
+// Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts
+type PropsOf<
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	E extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
+> = JSX.LibraryManagedAttributes<E, React.ComponentPropsWithRef<E>>;
+
+interface ViewOwnProps<E extends React.ElementType = React.ElementType> {
+	/**
+	 * Render the component as another React.Component or HTML Element.
+	 * @example
+	 * ```
+	 * <View as="h1" />
+	 * ```
+	 */
+	as?: E;
+	/**
+	 * Render custom CSS using the style system.
+	 * @example
+	 * ```
+	 * <View css={`background: blue;`} />
+	 * ```
+	 */
+	css?: any;
+}
+
+export type ViewProps<E extends React.ElementType> = ViewOwnProps<E> &
+	Omit<PropsOf<E>, keyof ViewOwnProps>;
+
+export type PolymorphicComponentProps<E extends React.ElementType, P> = P &
+	ViewProps<E>;
+
+export type PolymorphicComponent<P, D extends React.ElementType = 'div'> = <
+	E extends React.ElementType = D
+>(
+	props: PolymorphicComponentProps<E, P>,
+) => JSX.Element;
 
 /**
  * Render the component as another React.Component or HTML Element.

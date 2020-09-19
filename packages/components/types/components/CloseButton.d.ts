@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { ButtonProps } from './Button';
 
 export declare type CloseButtonProps = ButtonProps & {
@@ -18,6 +17,7 @@ export declare type CloseButtonProps = ButtonProps & {
 /**
  * `CloseButton` is an action component used for dismissal actions.
  */
-export declare const CloseButtonProps: React.FC<
-	ConnectedProps & CloseButtonProps
+export declare const CloseButtonProps: PolymorphicComponent<
+	CloseButtonProps,
+	'button'
 >;

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { BadgeProps } from './Badge';
 
 export declare type TagProps = Pick<BadgeProps, 'color' | 'display'> & {
@@ -20,4 +19,4 @@ export declare type TagProps = Pick<BadgeProps, 'color' | 'display'> & {
 /**
  * `Tag` is a component that labels UI objects for navigation and context.
  */
-export declare const Tag: React.FC<ConnectedProps & TagProps>;
+export declare const Tag: PolymorphicComponent<TagProps>;

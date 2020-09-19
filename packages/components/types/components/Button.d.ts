@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { ConnectedProps, CSS, SizeRangeDefault } from './_shared';
+import { PolymorphicComponent, CSS, SizeRangeDefault } from './_shared';
 
 export declare type ButtonSize = SizeRangeDefault;
 
@@ -142,4 +141,4 @@ export declare type ButtonProps = {
 /**
  * `Button` is a component used to trigger an action or event, such as submitting a Form, opening a Dialog, canceling an action, or performing a delete operation.
  */
-export declare const Button: React.FC<ConnectedProps & ButtonProps>;
+export declare const Button: PolymorphicComponent<ButtonProps, 'button'>;

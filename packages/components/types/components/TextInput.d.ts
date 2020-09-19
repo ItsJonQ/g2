@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ConnectedProps, SizeRangeDefault } from './_shared';
+import { PolymorphicComponent, SizeRangeDefault } from './_shared';
 import { BaseFieldProps } from './BaseField';
 
 export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
@@ -72,4 +72,4 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 /**
  * `TextInput` is a form component lets users can enter content.
  */
-export declare const TextInput: React.FC<ConnectedProps & TextInputProps>;
+export declare const TextInput: PolymorphicComponent<TextInputProps, 'input'>;
