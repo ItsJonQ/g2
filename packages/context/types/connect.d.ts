@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { HTMLTagName } from './_tags';
 
 /**
  * Render the component as another React.Component or HTML Element.
@@ -7,7 +8,7 @@ import * as React from 'react';
  * <View as="h1" />
  * ```
  */
-export type AsProp = string | React.Component;
+export type AsProp = HTMLTagName | React.Component;
 
 export type ConnectedProps = React.HTMLAttributes<any> &
 	React.RefAttributes<any> & {

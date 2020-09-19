@@ -21,6 +21,7 @@ export * from './HStack';
 export * from './Image';
 export * from './Initials';
 export * from './Lozenge';
+export * from './Portal';
 export * from './Radio';
 export * from './RadioGroup';
 export * from './Spacer';
