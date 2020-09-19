@@ -28,7 +28,6 @@ export declare type GridProps = {
 	 * Adjusts the inline alignment of children.
 	 */
 	justify?: CSS['justifyContent'];
-
 	/**
 	 * Adjusts the number of rows of the `Grid`.
 	 */
