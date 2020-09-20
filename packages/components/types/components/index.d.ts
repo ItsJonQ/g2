@@ -28,6 +28,7 @@ export * from './Image';
 export * from './Initials';
 export * from './Lozenge';
 export * from './Placeholder';
+export * from './Popover';
 export * from './Portal';
 export * from './Radio';
 export * from './RadioGroup';
