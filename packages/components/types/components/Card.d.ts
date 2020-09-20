@@ -54,7 +54,9 @@ export declare type CardHeaderProps = {
  */
 export declare const CardHeader: PolymorphicComponent<CardHeaderProps>;
 
+export declare type CardFooterProps = CardHeaderProps & {};
+
 /**
  * `CardFooter` is a layout component, rendering the footer content of a `Card`.
  */
-export declare const CardFooter: PolymorphicComponent<CardHeaderProps>;
+export declare const CardFooter: PolymorphicComponent<CardFooterProps>;
