@@ -20,5 +20,12 @@ export declare type AspectRatioProps = {
 
 /**
  * `AspectRatio` renders content with a given width:height ratio. A common example would be the **HD** `16:9` ratio.
+ *
+ * @example
+ * ```jsx
+ * <AspectRatio ratio={21/9}>
+ * 	<Card>...</Card>
+ * </AspectRatio>
+ * ```
  */
 export declare const AspectRatio: PolymorphicComponent<AspectRatioProps>;

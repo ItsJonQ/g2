@@ -33,10 +33,29 @@ export declare type AlertProps = {
 
 /**
  * `Alert` provides contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+ *
+ * @example
+ * ```jsx
+ * <Alert status="info">
+ * 	<Text>Heads up!</Text>
+ * </Alert>
+ * ```
  */
 export declare const Alert: PolymorphicComponent<AlertProps>;
 
 /**
  * `Alerts` is a container that manages the mounting/unmount animations for child `Alert` components.
+ *
+ * @example
+ * ```jsx
+ * <Alerts>
+ * 	<Alert status="info">
+ * 		<Text>Heads up!</Text>
+ * 	</Alert>
+ * 	<Alert status="success">
+ * 		<Text>Amazing!</Text>
+ * 	</Alert>
+ * </Alerts>
+ * ```
  */
 export declare const Alerts: React.FC;

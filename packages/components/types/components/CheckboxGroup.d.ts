@@ -12,5 +12,14 @@ export declare type CheckboxGroupProps = {
 
 /**
  * `CheckboxGroup` is a form component contains and coordinates the checked state of multiple `Checkbox` components.
+ *
+ * @example
+ * ```jsx
+ * <CheckboxGroup>
+ * 	<Checkbox label="Elsa" value="elsa" />
+ * 	<Checkbox label="Ana" value="ana" />
+ * 	<Checkbox label="Olaf" value="olaf" />
+ * </CheckboxGroup>
+ * ```
  */
 export declare const CheckboxGroup: PolymorphicComponent<CheckboxGroupProps>;

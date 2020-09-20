@@ -1,10 +1,6 @@
 import { PolymorphicComponent, CSS } from './_shared';
 
-export declare type ArrowIndicatorDirection =
-	| 'top'
-	| 'right'
-	| 'bottom'
-	| 'left';
+export declare type ArrowIndicatorDirection = 'top' | 'right' | 'down' | 'left';
 
 export declare type ArrowIndicatorProps = {
 	/**
@@ -37,5 +33,10 @@ export declare type ArrowIndicatorProps = {
 
 /**
  * `ArrowIndicator` renders an arrow that represent the visibility of a Disclosure (collapsible) element.
+ *
+ * @example
+ * ```jsx
+ * <ArrowIndicator direction="down" />
+ * ```
  */
 export declare const ArrowIndicator: PolymorphicComponent<ArrowIndicatorProps>;

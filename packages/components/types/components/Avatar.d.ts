@@ -47,5 +47,10 @@ export declare type AvatarProps = {
 
 /**
  * `Avatar` renders either an `Image` or the `Initials` of a user.
+ *
+ * @example
+ * ```jsx
+ * <Avatar src={...} name="Olaf" />
+ * ```
  */
 export declare const Avatar: PolymorphicComponent<AvatarProps>;

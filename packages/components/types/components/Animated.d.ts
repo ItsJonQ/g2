@@ -42,11 +42,28 @@ export declare type AnimatedProps = {
 
 /**
  * `Animated` is a component capable of handling complex animations. `Animated` is powered by [Framer Motion](https://www.framer.com/api/motion/animation/).
+ *
+ * @example
+ * ```jsx
+ * <Animated auto layout>
+ * 	<Card>...</Card>
+ * </Animated>
+ * ```
  */
 export declare const Animated: PolymorphicComponent<AnimatedProps>;
 
 /**
  * `AnimatedContainer` manages and synchronizes inner `Animated` components. `AnimatedContainer` is necessary for handling unmount/exit animations.
+ *
+ * @example
+ * ```jsx
+ * <AnimatedContainer>
+ * 	...
+ * 	<Animated auto key="elsa">...</Animated>
+ * 	<Animated auto key="ana">...</Animated>
+ * 	...
+ * </AnimatedContainer>
+ * ```
  *
  * @see https://www.framer.com/api/motion/animation/#shared-layout-animations
  */

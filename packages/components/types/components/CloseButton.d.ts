@@ -16,6 +16,11 @@ export declare type CloseButtonProps = ButtonProps & {
 
 /**
  * `CloseButton` is an action component used for dismissal actions.
+ *
+ * @example
+ * ```jsx
+ * <CloseButton />
+ * ```
  */
 export declare const CloseButtonProps: PolymorphicComponent<
 	CloseButtonProps,

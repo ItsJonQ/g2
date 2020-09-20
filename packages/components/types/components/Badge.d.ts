@@ -45,5 +45,10 @@ export declare type BadgeProps = {
 
 /**
  * `Badge` is a component that displays the status of an object or of an action that’s been taken.
+ *
+ * @example
+ * ```jsx
+ * <Badge color="red">11</Badge>
+ * ```
  */
 export declare const Badge: PolymorphicComponent<BadgeProps>;

@@ -31,5 +31,10 @@ export declare type CheckboxProps = FormElementProps &
 
 /**
  * `Checkbox` is a form component gives users a way to make a range of selections (zero, one, or multiple).
+ *
+ * @example
+ * ```jsx
+ * <Checkbox label="Olaf" value="olaf" checked={true} />
+ * ```
  */
 export declare const Checkbox: PolymorphicComponent<CheckboxProps, 'input'>;
