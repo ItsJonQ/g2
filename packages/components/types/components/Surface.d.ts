@@ -6,18 +6,17 @@ export declare type SurfaceProps = {
 	/**
 	 *  Renders a border around the entire `Surface`.
 	 */
-
 	border?: boolean;
 	/**
-	 * Renders a top border.
+	 * Renders a bottom border.
 	 */
 	borderBottom?: boolean;
 	/**
-	 * Renders a top border.
+	 * Renders a left border.
 	 */
 	borderLeft?: boolean;
 	/**
-	 * Renders a top border.
+	 * Renders a right border.
 	 */
 	borderRight?: boolean;
 	/**
