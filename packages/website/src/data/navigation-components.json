@@ -117,6 +117,10 @@
               "title": "Button"
             },
             {
+              "link": "/components/select/",
+              "title": "Select"
+            },
+            {
               "link": "/components/textinput/",
               "title": "TextInput"
             }

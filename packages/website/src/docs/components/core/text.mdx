@@ -24,29 +24,34 @@ function Example() {
 
 ## Props
 
-| Name                   | Type                   | Default | Description                                                                                                    |
-| ---------------------- | ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------- |
-| align                  | `string`               |         | Adjusts the text alignment.                                                                                    |
-| as                     | `string`               | `span`  | Renders as another HTML element (or React component).                                                          |
-| color                  | `string`               |         | Adjust the text color.                                                                                         |
-| display                | `string`               |         | Adjusts the text CSS `display`.                                                                                |
-| ellipsis               | `string`               | `...`   | The ellipsis string when `truncate` is set.                                                                    |
-| ellipsizeMode          | `string`               | `auto`  | Determines where to truncate. `truncate` must first be set.                                                    |
-| highlightCaseSensitive | `boolean`              | `false` | Determines if `highlightWords` should be case sensitive.                                                       |
-| highlightEscape        | `boolean`              | `false` | Escape characters in `highlightWords` which are meaningful in regular expressions.                             |
-| highlightWords         | `Array<string>`        |         | Highlights words within the text content.                                                                      |
-| highlightSanitize      | `Array<string,regExp>` |         | Array of search words. String search terms are automatically cast to RegExps unless `highlightEscape` is true. |
-| limit                  | `number`               | `0`     | Determines the max characters when `truncate` is set.                                                          |
-| isBlock                | `boolean`              |         | Sets `Text` to have `display: block`.                                                                          |
-| isDestructive          | `boolean`              | `false` | Renders a destructive color.                                                                                   |
-| lineHeight             | `number`               |         | Adjusts all text line-height based on the typography system.                                                   |
-| optimizeReadabilityFor | `string`               |         | Optimizes text (black or white) readability for given background color.                                        |
-| size                   | `number`, `string`     |         | Adjusts text size based on the typography system.                                                              |
-| truncate               | `boolean`              |         | Enables text truncation.                                                                                       |
-| numberOfLines          | `boolean`              |         | Determines how many lines to truncate. `truncate` must first be set.                                           |
-| upperCase              | `boolean`              |         | Uppercases the text content.                                                                                   |
-| variant                | `string`               |         | Adjusts style variation of the text.                                                                           |
-| weight                 | `number`,`string`      |         | Adjusts font-weight of the text.                                                                               |
+<!-- props -->
+<!-- Automatically Generated -->
+
+| Name                   | Type                             | Default  | Description                                                                                                    |
+| ---------------------- | -------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| align                  | `CSS['textAlign']`               |          | Adjusts the text alignment.                                                                                    |
+| color                  | `CSS['color']`                   |          | Adjusts the text color.                                                                                        |
+| display                | `CSS['display']`                 |          | Adjusts the CSS display.                                                                                       |
+| ellipsis               | `string`                         | `'...'`  | The ellipsis string when `truncate` is set.                                                                    |
+| ellipsizeMode          | `TruncateEllisizeMode`           | `'auto'` | Determines where to truncate. `truncate` must first be set.                                                    |
+| highlightCaseSensitive | `boolean`                        |          | Escape characters in `highlightWords` which are meaningful in regular expressions.                             |
+| highlightEscape        | `boolean`                        |          | Determines if `highlightWords` should be case sensitive.                                                       |
+| highlightSanitize      | `boolean`                        |          | Array of search words. String search terms are automatically cast to RegExps unless `highlightEscape` is true. |
+| highlightWords         | `Array<string`,`any>`            |          | Highlights words within the text content.                                                                      |
+| isBlock                | `boolean`                        |          | Sets `Text` to have `display: block`.                                                                          |
+| isDestructive          | `boolean`                        | `false`  | Renders a destructive color.                                                                                   |
+| limit                  | `number`                         | `0`      | Determines the max characters when `truncate` is set.                                                          |
+| lineHeight             | `CSS['lineHeight']`              |          | Adjusts all text line-height based on the typography system.                                                   |
+| numberOfLines          | `number`                         |          | Determines how many lines to truncate. `truncate` must first be set.                                           |
+| optimizeReadabilityFor | `CSS['color']`                   |          | Optimizes text (black or white) readability for given background color.                                        |
+| size                   | `CSS['fontSize']`,`TextSize`     |          | Adjusts text size based on the typography system.                                                              |
+| truncate               | `boolean`                        |          | Enables text truncation.                                                                                       |
+| upperCase              | `boolean`                        |          | Uppercases the text content.                                                                                   |
+| variant                | `TextVariant`                    |          | Adjusts style variation of the text.                                                                           |
+| weight                 | `CSS['fontWeight']`,`TextWeight` |          | Adjusts font-weight of the text.                                                                               |
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ### align
 

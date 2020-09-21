@@ -1,4 +1,3 @@
-import { ns } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';

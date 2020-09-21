@@ -1,9 +1,27 @@
+import * as React from 'react';
 import { PolymorphicComponent } from './_shared';
 
 export declare type ViewProps = {
 	/**
+	 * Render the component as another React.Component or HTML Element.
+	 * @example
+	 * ```
+	 * <View as="h1" />
+	 * ```
+	 */
+	as?: React.Component | string;
+	/**
+	 * Render custom CSS using the style system.
+	 * @example
+	 * ```
+	 * <View css={`background: blue;`} />
+	 * ```
+	 */
+	css?: any;
+	/**
 	 * Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop.
 	 * Typically used "internally" to establish based styles for a `View`.
+	 *
 	 * @example
 	 * ```
 	 * <View cx={`background: blue;`} css={`color: white;`} />

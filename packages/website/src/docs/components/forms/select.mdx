@@ -1,0 +1,57 @@
+---
+title: Select
+type: forms
+slug: /components/select/
+keywords: ["select", "dropdown", "form control", "options"]
+---
+
+# Select
+
+`Select` is a form component lets users choose options from an options menu.
+
+## Usage
+
+```jsx live
+import { Select } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Select>
+      <option>Ana</option>
+      <option>Elsa</option>
+      <option>Kristoff</option>
+      <option>Olaf</option>
+    </Select>
+  )
+}
+```
+
+## Props
+
+<!-- props -->
+<!-- Automatically Generated -->
+
+| Name         | Type                    | Default           | Description                                                                     |
+| ------------ | ----------------------- | ----------------- | ------------------------------------------------------------------------------- |
+| align        | `CSS['alignItems']`     | `'center'`        | Aligns children using CSS Flexbox `align-items`.                                |
+| autoWrap     | `boolean`               | `true`            | Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements. |
+| defaultValue | `boolean`               |                   | The default (initial) state to use if `value` is undefined.                     |
+| direction    | `FlexDirection`         | `'row'`           | Renders content vertically (`column`) or horizontally (`row`).                  |
+| disabled     | `boolean`               |                   | Determines if element is disabled.                                              |
+| isSubtle     | `boolean`               | `false`           | Renders a subtle variant.                                                       |
+| justify      | `CSS['justifyContent']` | `'space-between'` | Justifies children using CSS Flexbox `justify-content`.                         |
+| label        | `string`                |                   | Label for the form element.                                                     |
+| options      | `Array<unknown>`        |                   | Options to render within `Select`.                                              |
+| prefix       | `React.Component`       |                   | Renders prefix content within `Select`.                                         |
+| size         | `SizeRangeDefault`      | `'medium'`        | Determines the size of `Select`.                                                |
+| suffix       | `React.Component`       |                   | Renders prefix content within `Select`.                                         |
+| value        | `any`                   |                   | Value for the form element.                                                     |
+| wrap         | `boolean`               | `false`           | Determines if children should wrap.                                             |
+
+<!-- /Automatically Generated -->
+<!-- /props -->
+
+## See Also
+
+- [Button](/components/button/)
+- [TextInput](/components/textinput/)

@@ -88,10 +88,22 @@ function Example() {
 
 `HStack` uses `Flex` underneath, so we have access to all of `Flex`'s props.
 
-| Name      | Type     | Default | Description                                     |
-| --------- | -------- | ------- | ----------------------------------------------- |
-| alignment | `string` | `edge`  | Determines how the child elements are aligned.  |
-| spacing   | `number` | `2`     | The amount of space between each child element. |
+<!-- props -->
+<!-- Automatically Generated -->
+
+| Name      | Type                                  | Default           | Description                                                                     |
+| --------- | ------------------------------------- | ----------------- | ------------------------------------------------------------------------------- |
+| align     | `CSS['alignItems']`                   | `'center'`        | Aligns children using CSS Flexbox `align-items`.                                |
+| alignment | `HStackAlignment`,`CSS['alignItems']` | `'edge'`          | Determines how the child elements are aligned.                                  |
+| autoWrap  | `boolean`                             | `true`            | Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements. |
+| direction | `FlexDirection`                       | `'row'`           | Renders content vertically (`column`) or horizontally (`row`).                  |
+| gap       | `number`                              | `2`               | The amount of space between each child element.                                 |
+| justify   | `CSS['justifyContent']`               | `'space-between'` | Justifies children using CSS Flexbox `justify-content`.                         |
+| spacing   | `CSS['width']`                        | `2`               | The amount of space between each child element.                                 |
+| wrap      | `boolean`                             | `false`           | Determines if children should wrap.                                             |
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ### alignment
 

@@ -7,7 +7,7 @@ keywords: ["textinput", "form control", "input", "field", "textarea"]
 
 # TextInput
 
-Documentation coming soon.
+`TextInput` is a form component that users can enter content into.
 
 ## Usage
 
@@ -19,6 +19,41 @@ function Example() {
 }
 ```
 
+## Props
+
+<!-- props -->
+<!-- Automatically Generated -->
+
+| Name           | Type                    | Default           | Description                                                                     |
+| -------------- | ----------------------- | ----------------- | ------------------------------------------------------------------------------- |
+| align          | `CSS['alignItems']`     | `'center'`        | Aligns children using CSS Flexbox `align-items`.                                |
+| autoWrap       | `boolean`               | `true`            | Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements. |
+| defaultValue   | `boolean`               |                   | The default (initial) state to use if `value` is undefined.                     |
+| direction      | `FlexDirection`         | `'row'`           | Renders content vertically (`column`) or horizontally (`row`).                  |
+| disabled       | `boolean`               |                   | Determines if element is disabled.                                              |
+| gap            | `number`                | `2.5`             | The amount of space between each child element.                                 |
+| isClickable    | `boolean`               | `false`           | Renders a `cursor: pointer` on hover.                                           |
+| isFocused      | `boolean`               | `false`           | Renders focus styles.                                                           |
+| isResizable    | `boolean`               | `false`           | Allows for the a multiline `TextInput` to tbe resizable by dragging.            |
+| isRounded      | `boolean`               | `false`           | Renders with rounded corners.                                                   |
+| isSubtle       | `boolean`               | `false`           | Renders a subtle variant.                                                       |
+| justify        | `CSS['justifyContent']` | `'space-between'` | Justifies children using CSS Flexbox `justify-content`.                         |
+| label          | `string`                |                   | Label for the form element.                                                     |
+| maxRows        | `number`                |                   | Maximum number of rows to show for a multiline `TextInput`.                     |
+| minRows        | `number`                |                   | Alias for `rows`.                                                               |
+| multiline      | `boolean`               | `false`           | Renders `TextInput` to allow for multiline lines (`textarea`).                  |
+| onHeightChange | `Function`              |                   | Callback function when the height changes with a multiline `TextInput`.         |
+| prefix         | `React.Component`       |                   | Renders prefix content within `TextInput`.                                      |
+| rows           | `number`                |                   | Minimal number of rows to show for a multiline `TextInput`.                     |
+| size           | `SizeRangeDefault`      |                   | Determines the size of `TextInput`.                                             |
+| suffix         | `React.Component`       |                   | Renders prefix content within `TextInput`.                                      |
+| value          | `any`                   |                   | Value for the form element.                                                     |
+| wrap           | `boolean`               | `false`           | Determines if children should wrap.                                             |
+
+<!-- /Automatically Generated -->
+<!-- /props -->
+
 ## See Also
 
 - [Button](/components/button/)
+- [Select](/components/select/)

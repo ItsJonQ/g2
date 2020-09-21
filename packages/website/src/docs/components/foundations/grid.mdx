@@ -34,15 +34,22 @@ function Example() {
 
 ## Props
 
-| Name            | Type                      | Default | Description                                           |
-| --------------- | ------------------------- | ------- | ----------------------------------------------------- |
-| align           | `string`                  |         | Adjusts the block alignment of children.              |
-| columns         | `Array<number>`, `number` | `2`     | Adjusts the number of columns of the `Grid`.          |
-| isInline        | `boolean`                 | `false` | Changes the CSS display from `grid` to `inline-grid`. |
-| justify         | `string`                  |         | Adjusts the inline alignment of children.             |
-| rows            | `Array<number>`, `number` |         | Adjusts the number of rows of the `Grid`.             |
-| templateColumns | `string`                  |         | Adjusts the CSS grid `template-columns`.              |
-| templateRows    | `string`                  |         | Adjusts the CSS grid `template-rows`.                 |
+<!-- props -->
+<!-- Automatically Generated -->
+
+| Name            | Type                         | Default | Description                                           |
+| --------------- | ---------------------------- | ------- | ----------------------------------------------------- |
+| align           | `CSS['alignItems']`          |         | Adjusts the block alignment of children.              |
+| columns         | `GridColumns`                | `2`     | Adjusts the number of columns of the `Grid`.          |
+| gap             | `number`                     | `3`     | Gap between each child.                               |
+| isInline        | `boolean`                    |         | Changes the CSS display from `grid` to `inline-grid`. |
+| justify         | `CSS['justifyContent']`      |         | Adjusts the inline alignment of children.             |
+| rows            | `GridRows`                   |         | Adjusts the number of rows of the `Grid`.             |
+| templateColumns | `CSS['gridTemplateColumns']` |         | Adjusts the CSS grid `template-columns`.              |
+| templateRows    | `CSS['gridTemplateRows']`    |         | Adjusts the CSS grid `template-rows`.                 |
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ## See Also
 

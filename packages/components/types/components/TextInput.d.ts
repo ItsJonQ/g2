@@ -70,7 +70,7 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 };
 
 /**
- * `TextInput` is a form component lets users can enter content.
+ * `TextInput` is a form component that users can enter content into.
  *
  * @example
  * ```jsx
