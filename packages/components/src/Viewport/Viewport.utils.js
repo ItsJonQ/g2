@@ -5,10 +5,10 @@ import { is } from '@wp-g2/utils';
  * https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints
  */
 export const BREAKPOINTS = {
+	xl: 1200,
 	lg: 992,
 	md: 768,
 	sm: 576,
-	xl: 1200,
 	xs: 575,
 };
 

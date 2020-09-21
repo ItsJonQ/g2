@@ -60,6 +60,7 @@ export * from './TextField';
 export * from './TextInput';
 export * from './Tooltip';
 export * from './View';
+export * from './Viewport';
 export * from './VisuallyHidden';
 export * from './VStack';
 export * from './ZStack';
