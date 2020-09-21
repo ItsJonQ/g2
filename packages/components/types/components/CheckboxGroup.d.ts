@@ -16,9 +16,9 @@ export declare type CheckboxGroupProps = {
  * @example
  * ```jsx
  * <CheckboxGroup>
- * 	<Checkbox label="Elsa" value="elsa" />
- * 	<Checkbox label="Ana" value="ana" />
- * 	<Checkbox label="Olaf" value="olaf" />
+ * 	<Checkbox label="Elsa" value="elsa" onChange={...} />
+ * 	<Checkbox label="Ana" value="ana" onChange={...}  />
+ * 	<Checkbox label="Olaf" value="olaf" onChange={...}  />
  * </CheckboxGroup>
  * ```
  */

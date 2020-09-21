@@ -25,5 +25,10 @@ export declare type ImageProps = {
 
 /**
  * `Image` is a core component that renders images in the library.
+ *
+ * @example
+ * ```jsx
+ * <Image src={...} />
+ * ```
  */
 export declare const Image: PolymorphicComponent<ImageProps, 'img'>;

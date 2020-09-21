@@ -21,6 +21,10 @@ export declare type CheckboxProps = FormElementProps &
 		 */
 		label?: string;
 		/**
+		 * Callback when `Checkbox` `checked` value changes.
+		 */
+		onChange?: (...args: any) => void;
+		/**
 		 * Checkbox's value is going to be used when multiple checkboxes share the same state.
 		 * Checking a checkbox with value will add it to the state array.
 		 *

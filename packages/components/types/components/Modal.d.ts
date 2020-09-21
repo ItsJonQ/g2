@@ -6,6 +6,15 @@ export declare type ModalProps = BaseModalProps & {};
 
 /**
  * `Modal` is an overlay component that renders a focused dialog with content and actions.
+ *
+ * @example
+ * ```jsx
+ * <Modal renderTrigger={<Button>Open Modal</Button>}>
+ *   <ModalHeader>...</ModalHeader>
+ *   <ModalBody>...</ModalBody>
+ *   <ModalFooter>...</ModalFooter>
+ * </Modal>
+ * ```
  */
 export declare const Modal: PolymorphicComponent<ModalProps>;
 

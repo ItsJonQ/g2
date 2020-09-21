@@ -12,5 +12,10 @@ export declare type ScrollableProps = {
 
 /**
  * `Scrollable` is a layout component that content in a scrollable container.
+ *
+ * @example
+ * ```jsx
+ * <Scrollable><View>...</View></Scrollable>
+ * ```
  */
 export declare const Scrollable: PolymorphicComponent<ScrollableProps>;

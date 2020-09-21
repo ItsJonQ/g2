@@ -21,6 +21,10 @@ export declare type RadioProps = FormElementProps &
 		 */
 		label?: string;
 		/**
+		 * Callback when `Radio` `checked` value changes.
+		 */
+		onChange?: (...args: any) => void;
+		/**
 		 * Value of `Radio`.
 		 */
 		value?: string | number;
@@ -28,5 +32,16 @@ export declare type RadioProps = FormElementProps &
 
 /**
  * `Radio` is a form component gives users a way to make a single selection.
+ *
+ * @example
+ * ```jsx
+ * <RadioGroup value={value} onChange={setValue}>
+ * 	<HStack>
+ * 		<Radio label="Ana" value="ana" />
+ * 		<Radio label="Elsa" value="elsa" />
+ * 		<Radio label="Olaf" value="olaf" />
+ * 	</HStack>
+ * </RadioGroup>
+ * ```
  */
 export declare const Radio: PolymorphicComponent<RadioProps, 'input'>;

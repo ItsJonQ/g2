@@ -15,5 +15,10 @@ export declare type PlaceholderProps = {
 
 /**
  * `Placeholder` is a layout component that renders placeholder user-interface element, typically used for loading states.
+ *
+ * @example
+ * ```jsx
+ * <Placeholder height={50} width={200} />
+ * ```
  */
 export declare const Placeholder: PolymorphicComponent<PlaceholderProps>;

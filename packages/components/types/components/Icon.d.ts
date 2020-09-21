@@ -26,5 +26,10 @@ export declare type IconProps = {
 
 /**
  * `Icon` is an image component that renders scalable SVG icon graphics.
+ *
+ * @example
+ * ```jsx
+ * <Icon icon={<FrozenIcon />} />
+ * ```
  */
 export declare const Icon: PolymorphicComponent<IconProps>;

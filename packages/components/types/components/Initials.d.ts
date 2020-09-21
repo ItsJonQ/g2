@@ -15,5 +15,10 @@ export declare type InitialsProps = TextProps & {
 
 /**
  * `Initials` renders Initialss and subtitles using the library's typography system.
+ *
+ * @example
+ * ```jsx
+ * <Initials name="Elsa Oldenberg" />
+ * ```
  */
 export declare const Initials: PolymorphicComponent<InitialsProps>;
