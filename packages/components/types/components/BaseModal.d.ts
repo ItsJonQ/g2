@@ -19,12 +19,12 @@ export declare type BaseModalProps = {
 	 *
 	 * @example
 	 * ```jsx
-	 * <Modal dtrigger={<Button>Open Modal</Button>}>
+	 * <Modal trigger={<Button>Open Modal</Button>}>
 	 *   ...
 	 * </Modal>
 	 * ```
 	 */
-	dtrigger?: React.Component;
+	trigger?: React.Component;
 	/**
 	 * The duration for the `Modal` open/closing animations.
 	 *
