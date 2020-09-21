@@ -8,7 +8,7 @@ exports[`props should render correctly 1`] = `
   style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 >
   <div
-    class="wp-components-flex-item css-bg0v75"
+    class="wp-components-view wp-components-flex-item css-bg0v75"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
@@ -19,7 +19,7 @@ exports[`props should render correctly 1`] = `
       style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1c42zoa"
+        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1c42zoa"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >

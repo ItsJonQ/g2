@@ -1,6 +1,8 @@
 import { connect } from '@wp-g2/context';
-import { BaseView, css, useResponsiveValue } from '@wp-g2/styles';
+import { css, useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
+
+import { View } from '../View';
 
 function Grid({
 	align,
@@ -34,7 +36,7 @@ function Grid({
 		verticalAlign: isInline ? 'middle' : null,
 	});
 
-	return <BaseView {...props} cx={cx} />;
+	return <View {...props} cx={cx} />;
 }
 
 export default connect(Grid, 'Grid');

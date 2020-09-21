@@ -7,7 +7,7 @@ exports[`props should render children 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -29,17 +29,17 @@ exports[`props should render children 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-19xoami"
+    class="wp-components-view wp-components-flex-item css-19xoami"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-ckswz2"
+      class="wp-components-view wp-components-text css-ckswz2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-1tw4gp0"
+        class="wp-components-view wp-components-icon css-1tw4gp0"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -72,7 +72,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -95,17 +95,17 @@ exports[`props should render correctly 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-19xoami"
+    class="wp-components-view wp-components-flex-item css-19xoami"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-ckswz2"
+      class="wp-components-view wp-components-text css-ckswz2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-1tw4gp0"
+        class="wp-components-view wp-components-icon css-1tw4gp0"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -139,7 +139,7 @@ exports[`props should render disabled 1`] = `
   disabled=""
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -163,17 +163,17 @@ exports[`props should render disabled 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-19xoami"
+    class="wp-components-view wp-components-flex-item css-19xoami"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-ckswz2"
+      class="wp-components-view wp-components-text css-ckswz2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-1tw4gp0"
+        class="wp-components-view wp-components-icon css-1tw4gp0"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -206,7 +206,7 @@ exports[`props should render readOnly 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -230,17 +230,17 @@ exports[`props should render readOnly 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-19xoami"
+    class="wp-components-view wp-components-flex-item css-19xoami"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-ckswz2"
+      class="wp-components-view wp-components-text css-ckswz2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-1tw4gp0"
+        class="wp-components-view wp-components-icon css-1tw4gp0"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -273,7 +273,7 @@ exports[`props should render required 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -297,17 +297,17 @@ exports[`props should render required 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-19xoami"
+    class="wp-components-view wp-components-flex-item css-19xoami"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-ckswz2"
+      class="wp-components-view wp-components-text css-ckswz2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-1tw4gp0"
+        class="wp-components-view wp-components-icon css-1tw4gp0"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -340,7 +340,7 @@ exports[`props should render size 1`] = `
   data-g2-component="SelectWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-14dt8fo"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-14dt8fo"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   >
@@ -363,17 +363,17 @@ exports[`props should render size 1`] = `
     </select>
   </div>
   <div
-    class="wp-components-flex-item css-19xoami"
+    class="wp-components-view wp-components-flex-item css-19xoami"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-text css-ckswz2"
+      class="wp-components-view wp-components-text css-ckswz2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="wp-components-icon css-1tw4gp0"
+        class="wp-components-view wp-components-icon css-1tw4gp0"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >

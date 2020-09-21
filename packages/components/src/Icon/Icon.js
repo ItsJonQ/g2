@@ -1,18 +1,11 @@
 import { connect } from '@wp-g2/context';
-import { BaseView, css } from '@wp-g2/styles';
+import { css } from '@wp-g2/styles';
 import React from 'react';
 
+import { View } from '../View';
 import * as styles from './Icon.styles';
 
-function Icon({
-	as = 'div',
-	children,
-	color,
-	forwardedRef,
-	icon,
-	size = 20,
-	...props
-}) {
+function Icon({ children, color, forwardedRef, icon, size = 20, ...props }) {
 	if (!icon) return null;
 	const sx = {};
 
@@ -35,9 +28,9 @@ function Icon({
 	const cx = [styles.Wrapper, sx.color, sx.size];
 
 	return (
-		<BaseView {...props} as={as} cx={cx}>
+		<View {...props} cx={cx}>
 			{IconComponent}
-		</BaseView>
+		</View>
 	);
 }
 

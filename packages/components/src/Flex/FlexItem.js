@@ -1,7 +1,8 @@
 import { connect } from '@wp-g2/context';
-import { BaseView, css } from '@wp-g2/styles';
+import { css } from '@wp-g2/styles';
 import React from 'react';
 
+import { View } from '../View';
 import { useFlexContext } from './Flex.Context';
 import * as styles from './Flex.styles';
 
@@ -16,7 +17,7 @@ function FlexItem({ display: displayProp, isBlock = false, ...props }) {
 
 	const cx = [styles.Item, sx.Base, isBlock && styles.block];
 
-	return <BaseView {...props} cx={cx} />;
+	return <View {...props} cx={cx} />;
 }
 
 export default connect(FlexItem, 'FlexItem');

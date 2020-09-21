@@ -1,15 +1,15 @@
 import { connect } from '@wp-g2/context';
-import { BaseView, css, cx, get, getFontSize } from '@wp-g2/styles';
+import { css, cx, get, getFontSize } from '@wp-g2/styles';
 import { getOptimalTextShade, is } from '@wp-g2/utils';
 import React from 'react';
 
 import { Truncate } from '../Truncate';
+import { View } from '../View';
 import * as styles from './Text.styles';
 import { createHighlighterText } from './Text.utils';
 
 function Text({
 	align,
-	as = 'span',
 	children,
 	className,
 	color,
@@ -81,8 +81,8 @@ function Text({
 	);
 
 	const componentProps = {
+		as: 'span',
 		...props,
-		as,
 		className: classes,
 	};
 
@@ -90,7 +90,7 @@ function Text({
 		return <Truncate {...componentProps}>{content}</Truncate>;
 	}
 
-	return <BaseView {...componentProps}>{content}</BaseView>;
+	return <View {...componentProps}>{content}</View>;
 }
 
 export default connect(Text, 'Text');

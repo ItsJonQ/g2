@@ -7,7 +7,7 @@ exports[`props should render alignLabel 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-view wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -17,7 +17,7 @@ exports[`props should render alignLabel 1`] = `
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
+        class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -31,7 +31,7 @@ exports[`props should render alignLabel 1`] = `
       data-g2-component="TextInputWrapper"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+        class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
@@ -55,7 +55,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-view wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -65,7 +65,7 @@ exports[`props should render correctly 1`] = `
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
+        class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -79,7 +79,7 @@ exports[`props should render correctly 1`] = `
       data-g2-component="TextInputWrapper"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+        class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
@@ -103,7 +103,7 @@ exports[`props should render label without prop correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-view wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -113,7 +113,7 @@ exports[`props should render label without prop correctly 1`] = `
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
+        class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -125,7 +125,7 @@ exports[`props should render label without prop correctly 1`] = `
       data-g2-component="TextInputWrapper"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+        class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
@@ -154,7 +154,7 @@ exports[`props should render vertically 1`] = `
     data-g2-component="ControlLabel"
   >
     <label
-      class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
+      class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
       for="fname"
@@ -168,7 +168,7 @@ exports[`props should render vertically 1`] = `
     data-g2-component="TextInputWrapper"
   >
     <div
-      class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
       data-g2-c16t="true"
       data-g2-component="TextInputContent"
     >

@@ -16,12 +16,12 @@ exports[`props should render correctly 1`] = `
     tabindex="0"
   >
     <div
-      class="wp-components-flex-item css-x168m"
+      class="wp-components-view wp-components-flex-item css-x168m"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-text css-1jk3501"
+        class="wp-components-view wp-components-text css-1jk3501"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -36,7 +36,7 @@ exports[`props should render correctly 1`] = `
             data-g2-component="View"
           >
             <div
-              class="wp-components-icon css-feyyos"
+              class="wp-components-view wp-components-icon css-feyyos"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -58,12 +58,12 @@ exports[`props should render correctly 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-1xgp14x"
+        class="wp-components-view wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -112,12 +112,12 @@ exports[`props should render seamless 1`] = `
     tabindex="0"
   >
     <div
-      class="wp-components-flex-item css-x168m"
+      class="wp-components-view wp-components-flex-item css-x168m"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-text css-1jk3501"
+        class="wp-components-view wp-components-text css-1jk3501"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -132,7 +132,7 @@ exports[`props should render seamless 1`] = `
             data-g2-component="View"
           >
             <div
-              class="wp-components-icon css-feyyos"
+              class="wp-components-view wp-components-icon css-feyyos"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -154,12 +154,12 @@ exports[`props should render seamless 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-1xgp14x"
+        class="wp-components-view wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -207,12 +207,12 @@ exports[`props should render visible 1`] = `
     tabindex="0"
   >
     <div
-      class="wp-components-flex-item css-x168m"
+      class="wp-components-view wp-components-flex-item css-x168m"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-text css-1jk3501"
+        class="wp-components-view wp-components-text css-1jk3501"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -227,7 +227,7 @@ exports[`props should render visible 1`] = `
             data-g2-component="View"
           >
             <div
-              class="wp-components-icon css-feyyos"
+              class="wp-components-view wp-components-icon css-feyyos"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -249,12 +249,12 @@ exports[`props should render visible 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-1xgp14x"
+        class="wp-components-view wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >

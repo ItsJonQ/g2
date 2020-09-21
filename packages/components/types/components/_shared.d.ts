@@ -17,7 +17,7 @@ interface ViewOwnProps<E extends React.ElementType = React.ElementType> {
 	 * <View as="h1" />
 	 * ```
 	 */
-	as?: E;
+	as?: E | string;
 	/**
 	 * Render custom CSS using the style system.
 	 * @example

@@ -6,7 +6,7 @@ import {
 } from '@wp-g2/icons';
 import React from 'react';
 
-import { BaseView, Icon, Spacer } from '../../index';
+import { Icon, Spacer, View } from '../../index';
 import { SegmentedControl } from '../index';
 
 export default {
@@ -57,7 +57,7 @@ export const _default = () => {
 	];
 
 	return (
-		<BaseView>
+		<View>
 			<Spacer css={{ width: [null, 300] }}>
 				<SegmentedControl isBlock options={align} />
 			</Spacer>
@@ -67,6 +67,6 @@ export const _default = () => {
 			<Spacer>
 				<SegmentedControl isAdaptiveWidth options={shortLong} />
 			</Spacer>
-		</BaseView>
+		</View>
 	);
 };

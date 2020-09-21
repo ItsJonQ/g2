@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BaseView } from '../../BaseView';
+import { View } from '../../index';
 import { Scrollable } from '../index';
 
 export default {
@@ -11,7 +11,7 @@ export default {
 export const _default = () => {
 	return (
 		<Scrollable css={{ height: 400, width: 300 }}>
-			<BaseView css={{ backgroundColor: '#eee', height: 1000 }} />
+			<View css={{ backgroundColor: '#eee', height: 1000 }} />
 		</Scrollable>
 	);
 };

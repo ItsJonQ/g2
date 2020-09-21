@@ -7,7 +7,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-1c1od6x"
+    class="wp-components-view wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -17,12 +17,12 @@ exports[`props should render correctly 1`] = `
       data-g2-component="View"
     >
       <span
-        class="wp-components-text css-1j5v64k"
+        class="wp-components-view wp-components-text css-1j5v64k"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-icon css-1d07aa5"
+          class="wp-components-view wp-components-icon css-1d07aa5"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -55,7 +55,7 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -70,7 +70,7 @@ exports[`props should render correctly 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -96,12 +96,12 @@ exports[`props should render correctly 1`] = `
           data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex-item css-bzokzn"
+            class="wp-components-view wp-components-flex-item css-bzokzn"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="wp-components-icon css-2zqc15"
+              class="wp-components-view wp-components-icon css-2zqc15"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -151,7 +151,7 @@ exports[`props should render isLoading 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-1c1od6x"
+    class="wp-components-view wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -217,7 +217,7 @@ exports[`props should render isLoading 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -232,7 +232,7 @@ exports[`props should render isLoading 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -258,12 +258,12 @@ exports[`props should render isLoading 1`] = `
           data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex-item css-bzokzn"
+            class="wp-components-view wp-components-flex-item css-bzokzn"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="wp-components-icon css-2zqc15"
+              class="wp-components-view wp-components-icon css-2zqc15"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -313,7 +313,7 @@ exports[`props should render placeholder 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-1c1od6x"
+    class="wp-components-view wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -323,12 +323,12 @@ exports[`props should render placeholder 1`] = `
       data-g2-component="View"
     >
       <span
-        class="wp-components-text css-1j5v64k"
+        class="wp-components-view wp-components-text css-1j5v64k"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-icon css-1d07aa5"
+          class="wp-components-view wp-components-icon css-1d07aa5"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -361,7 +361,7 @@ exports[`props should render placeholder 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -376,7 +376,7 @@ exports[`props should render placeholder 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -402,12 +402,12 @@ exports[`props should render placeholder 1`] = `
           data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex-item css-bzokzn"
+            class="wp-components-view wp-components-flex-item css-bzokzn"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="wp-components-icon css-2zqc15"
+              class="wp-components-view wp-components-icon css-2zqc15"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -457,7 +457,7 @@ exports[`props should render prefix 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-1c1od6x"
+    class="wp-components-view wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -467,12 +467,12 @@ exports[`props should render prefix 1`] = `
       data-g2-component="View"
     >
       <span
-        class="wp-components-text css-1j5v64k"
+        class="wp-components-view wp-components-text css-1j5v64k"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-icon css-1d07aa5"
+          class="wp-components-view wp-components-icon css-1d07aa5"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -508,7 +508,7 @@ exports[`props should render prefix 1`] = `
     </span>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -523,7 +523,7 @@ exports[`props should render prefix 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -549,12 +549,12 @@ exports[`props should render prefix 1`] = `
           data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex-item css-bzokzn"
+            class="wp-components-view wp-components-flex-item css-bzokzn"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="wp-components-icon css-2zqc15"
+              class="wp-components-view wp-components-icon css-2zqc15"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -604,7 +604,7 @@ exports[`props should render suffix 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-1c1od6x"
+    class="wp-components-view wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -614,12 +614,12 @@ exports[`props should render suffix 1`] = `
       data-g2-component="View"
     >
       <span
-        class="wp-components-text css-1j5v64k"
+        class="wp-components-view wp-components-text css-1j5v64k"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-icon css-1d07aa5"
+          class="wp-components-view wp-components-icon css-1d07aa5"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -652,7 +652,7 @@ exports[`props should render suffix 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -667,7 +667,7 @@ exports[`props should render suffix 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -696,12 +696,12 @@ exports[`props should render suffix 1`] = `
           data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex-item css-bzokzn"
+            class="wp-components-view wp-components-flex-item css-bzokzn"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="wp-components-icon css-2zqc15"
+              class="wp-components-view wp-components-icon css-2zqc15"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -751,7 +751,7 @@ exports[`props should render value 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item css-1c1od6x"
+    class="wp-components-view wp-components-flex-item css-1c1od6x"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -761,12 +761,12 @@ exports[`props should render value 1`] = `
       data-g2-component="View"
     >
       <span
-        class="wp-components-text css-1j5v64k"
+        class="wp-components-view wp-components-text css-1j5v64k"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="wp-components-icon css-1d07aa5"
+          class="wp-components-view wp-components-icon css-1d07aa5"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -799,7 +799,7 @@ exports[`props should render value 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1ftyfwb"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-1ftyfwb"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -814,7 +814,7 @@ exports[`props should render value 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -840,12 +840,12 @@ exports[`props should render value 1`] = `
           data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex-item css-bzokzn"
+            class="wp-components-view wp-components-flex-item css-bzokzn"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="wp-components-icon css-2zqc15"
+              class="wp-components-view wp-components-icon css-2zqc15"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >

@@ -7,12 +7,12 @@ exports[`props should render + wrap non Flex children 1`] = `
   data-g2-component="Flex"
 >
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
@@ -23,14 +23,14 @@ exports[`props should render + wrap non Flex children 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div />
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -44,12 +44,12 @@ exports[`props should render align 1`] = `
   data-g2-component="Flex"
 >
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -63,12 +63,12 @@ exports[`props should render correctly 1`] = `
   data-g2-component="Flex"
 >
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -82,12 +82,12 @@ exports[`props should render justify 1`] = `
   data-g2-component="Flex"
 >
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="wp-components-flex-item wp-components-flex-block css-4z9ate"
+    class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -102,7 +102,7 @@ exports[`props should render spacing 1`] = `
   spacing="5"
 >
   <div
-    class="wp-components-flex-item css-x168m"
+    class="wp-components-view wp-components-flex-item css-x168m"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
@@ -113,7 +113,7 @@ exports[`props should render spacing 1`] = `
     />
   </div>
   <div
-    class="wp-components-flex-item css-1suoifq"
+    class="wp-components-view wp-components-flex-item css-1suoifq"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
