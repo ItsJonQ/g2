@@ -1,5 +1,6 @@
 import { PolymorphicComponent, SizeRangeReduced } from './_shared';
 import { BaseModalProps } from './BaseModal';
+import { ButtonProps } from './Button';
 import { CardHeaderProps, CardBodyProps, CardFooterProps } from './Card';
 
 export declare type ModalProps = BaseModalProps & {
@@ -25,7 +26,7 @@ export declare type ModalProps = BaseModalProps & {
  */
 export declare const Modal: PolymorphicComponent<ModalProps>;
 
-export declare type ModalTriggerProps = {
+export declare type ModalTriggerProps = ButtonProps & {
 	/**
 	 * When an element is disabled, it may still be focusable. It works similarly to readOnly on form elements.
 	 * In this case, only aria-disabled will be set.
