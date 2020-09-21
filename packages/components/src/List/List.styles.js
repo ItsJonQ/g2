@@ -1,15 +1,15 @@
-import { css, space, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const ListView = styled.ul`
 	list-style: disc outside none;
 	margin: 0;
 	padding: 0;
-	padding-left: ${space(4)};
+	padding-left: ${ui.space(4)};
 `;
 
 export const ListItemView = styled.li`
 	margin: 0;
-	margin-bottom: ${space(2)};
+	margin-bottom: ${ui.space(2)};
 
 	&:last-child {
 		margin-bottom: 0;
@@ -18,5 +18,5 @@ export const ListItemView = styled.li`
 
 export const ordered = css`
 	list-style: decimal outside none;
-	padding-left: ${space(6)};
+	padding-left: ${ui.space(6)};
 `;
