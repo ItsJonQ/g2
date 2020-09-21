@@ -66,9 +66,20 @@ export declare type SpacerProps = {
  *
  * @example
  * ```jsx
+ * // Adding space for elements.
  * <Spacer py={10}>
  * 	<View>...</View>
  * </Spacer>
+ * ```
+ *
+ * @example
+ * ```jsx
+ * // Adding adaptive spacing with HStack
+ * <HStack>
+ * 	<View>...</View>
+ * 	<Spacer />
+ * 	<View>...</View>
+ * </HStack>
  * ```
  */
 export declare const Spacer: PolymorphicComponent<SpacerProps>;
