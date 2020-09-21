@@ -18,11 +18,11 @@ import styleLinks from "../../data/navigation-styles.json"
 
 function getNavigationLinks(path) {
   switch (true) {
-    case path.includes("/components"):
+    case path?.includes("/components"):
       return componentLinks
-    case path.includes("/context"):
+    case path?.includes("/context"):
       return contextLinks
-    case path.includes("/styles"):
+    case path?.includes("/styles"):
       return styleLinks
     default:
       return { sections: [] }
