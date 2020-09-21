@@ -93,5 +93,10 @@ export declare type TextProps = TruncateProps & {
 
 /**
  * `Text` is a core component that renders text in the library, using the library's typography system.
+ *
+ * @example
+ * ```jsx
+ * <Text weight={600}>Where the north wind meets the sea</Text>
+ * ```
  */
 export declare const Text: PolymorphicComponent<TextProps, 'span'>;

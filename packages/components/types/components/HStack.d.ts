@@ -31,5 +31,13 @@ export declare type HStackProps = FlexProps & {
 
 /**
  * `HStack` (Horizontal Stack) arranges child elements in a horizontal line.
+ *
+ * @example
+ * ```jsx
+ * <HStack>
+ * 	<View>...</View>
+ * 	<View>...</View>
+ * </HStack>
+ * ```
  */
 export declare const HStack: PolymorphicComponent<HStackProps>;

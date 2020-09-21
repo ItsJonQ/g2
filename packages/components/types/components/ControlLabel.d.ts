@@ -19,5 +19,10 @@ export declare type ControlLabelProps = TextProps & {
 /**
  * `ControlLabel` is a form component that associates a label with a form element (e.g. `Switch` or `TextInput`).
  * It is used internally within `FormGroup` for labelling.
+ *
+ * @example
+ * ```jsx
+ * <ControlLabel htmlFor="firstName">Name</ControlLabel>
+ * ```
  */
 export declare const ControlLabel: PolymorphicComponent<ControlLabelProps>;

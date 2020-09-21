@@ -55,5 +55,14 @@ export declare type GridProps = {
 
 /**
  * `Grid` is a primitive layout component that can arrange content in a grid configuration.
+ *
+ * @example
+ * ```jsx
+ * <Grid columns={3}>
+ * 	<View>...</View>
+ * 	<View>...</View>
+ * 	<View>...</View>
+ * </Grid>
+ * ```
  */
 export declare const Grid: PolymorphicComponent<GridProps>;

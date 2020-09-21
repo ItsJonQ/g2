@@ -18,5 +18,14 @@ export declare type TagProps = Pick<BadgeProps, 'color' | 'display'> & {
 
 /**
  * `Tag` is a component that labels UI objects for navigation and context.
+ *
+ * @example
+ * ```jsx
+ * <Flex wrap>
+ * 	<Tag>Ana</Tag>
+ * 	<Tag>Elsa</Tag>
+ * 	<Tag>Olaf</Tag>
+ * </Flex>
+ * ```
  */
 export declare const Tag: PolymorphicComponent<TagProps>;

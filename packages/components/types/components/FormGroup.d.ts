@@ -22,5 +22,12 @@ export declare type FormGroupProps = {
 
 /**
  * `FormGroup` is a form component that groups a label with a form element (e.g. `Switch` or `TextInput`).
+ *
+ * @example
+ * ```jsx
+ * <FormGroup label="First name">
+ * 	<TextInput />
+ * </FormGroup>
+ * ```
  */
 export declare const FormGroup: PolymorphicComponent<FormGroupProps>;

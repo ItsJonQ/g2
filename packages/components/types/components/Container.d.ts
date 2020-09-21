@@ -19,5 +19,12 @@ export declare type ContainerProps = {
 
 /**
  * `Container` is a layout component that responsively centers content within a defined width.
+ *
+ * @example
+ * ```jsx
+ * <Container width={800}>
+ * 	...
+ * </Container>
+ * ```
  */
 export declare const Container: PolymorphicComponent<ContainerProps>;

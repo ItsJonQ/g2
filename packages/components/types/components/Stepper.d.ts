@@ -34,5 +34,10 @@ export declare type StepperProps = ControlGroupProps & {
 
 /**
  * `Stepper` is a control component that lets users increment/decrement values.
+ *
+ * @example
+ * ```jsx
+ * <Stepper onIncrement={up} onDecrement={down} />
+ * ```
  */
 export declare const Stepper: PolymorphicComponent<StepperProps>;

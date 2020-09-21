@@ -3,5 +3,13 @@ import { HStackProps } from './HStack';
 
 /**
  * `VStack` (or Vertical Stack) is a layout component that arranges child elements in a vertical line.
+ *
+ * @example
+ * ```jsx
+ * <VStack>
+ * 	<View>...</View>
+ * 	<View>...</View>
+ * </VStack>
+ * ```
  */
 export declare const VStack: PolymorphicComponent<HStackProps>;

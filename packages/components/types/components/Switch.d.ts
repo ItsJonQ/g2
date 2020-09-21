@@ -25,5 +25,10 @@ export declare type SwitchProps = FormElementProps &
 
 /**
  * `Switch` is a form component that toggles a checked (on/off) state.
+ *
+ * @example
+ * ```jsx
+ * <Switch checked={on} onChange={setOn} />
+ * ```
  */
 export declare const Switch: PolymorphicComponent<SwitchProps, 'input'>;

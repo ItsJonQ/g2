@@ -17,5 +17,14 @@ export declare type DividerProps = {
 
 /**
  * `Divider` is a layout component that separates groups of related content.
+ *
+ * @example
+ * ```js
+ * <ListGroup>
+ * 	<FormGroup>...</FormGroup>
+ *  <Divider />
+ * 	<FormGroup>...</FormGroup>
+ * </ListGroup>
+ * ```
  */
 export declare const Divider: PolymorphicComponent<DividerProps, 'hr'>;

@@ -31,5 +31,10 @@ export declare type SurfaceProps = {
 
 /**
  * `Surface` is a core component that renders a primary background color.
+ *
+ * @example
+ * ```jsx
+ * <Surface>...</Surface>
+ * ```
  */
 export declare const Surface: PolymorphicComponent<SurfaceProps>;

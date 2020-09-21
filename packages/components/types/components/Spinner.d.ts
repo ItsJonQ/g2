@@ -15,5 +15,10 @@ export declare type SpinnerProps = {
 
 /**
  * `Spinner` is a component that notifies users that an action is being processed.
+ *
+ * @example
+ * ```jsx
+ * <Spinner />
+ * ```
  */
 export declare const Spinner: PolymorphicComponent<SpinnerProps>;

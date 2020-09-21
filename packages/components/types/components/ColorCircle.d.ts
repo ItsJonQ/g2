@@ -17,5 +17,10 @@ export declare type ColorCircleProps = {
 
 /**
  * `ColorCircle` is a component that renders a color within a circle UI.
+ *
+ * @example
+ * ```jsx
+ * <ColorCircle color="blue" />
+ * ```
  */
 export declare const ColorCircle: PolymorphicComponent<ColorCircleProps>;

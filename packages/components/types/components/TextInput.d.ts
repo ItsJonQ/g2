@@ -71,5 +71,10 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 
 /**
  * `TextInput` is a form component lets users can enter content.
+ *
+ * @example
+ * ```jsx
+ * <TextInput value={value} onChange={setValue} />
+ * ```
  */
 export declare const TextInput: PolymorphicComponent<TextInputProps, 'input'>;

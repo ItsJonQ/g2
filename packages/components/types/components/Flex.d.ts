@@ -43,6 +43,15 @@ export declare type FlexProps = {
 
 /**
  * `Flex` is a primitive layout component that adaptively aligns child content horizontally or vertically. `Flex` powers components like `HStack` and `VStack`.
+ *
+ * @example
+ * ```jsx
+ * <Flex>
+ * 	<FlexItem>...</FlexItem>
+ * 	<FlexBlock>...</FlexBlock>
+ * 	<View>...</View>
+ * </Flex>
+ * ```
  */
 export declare const Flex: PolymorphicComponent<FlexProps>;
 
@@ -61,11 +70,25 @@ export declare type FlexItemProps = {
 
 /**
  * `FlexItem` is a primitive layout component that aligns content within layout containers like `Flex`.
+ *
+ * @example
+ * ```jsx
+ * <Flex>
+ * 	<FlexItem>...</FlexItem>
+ * </Flex>
+ * ```
  */
 export declare const FlexItem: PolymorphicComponent<FlexItemProps>;
 
 /**
  * `FlexBlock` is a primitive layout component that adaptively resizes content within layout containers like `Flex`.
+ *
+ * @example
+ * ```jsx
+ * <Flex>
+ * 	<FlexBlock>...</FlexBlock>
+ * </Flex>
+ * ```
  */
 export declare const FlexBlock: PolymorphicComponent<Omit<
 	FlexItemProps,

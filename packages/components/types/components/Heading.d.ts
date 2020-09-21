@@ -15,5 +15,10 @@ export declare type HeadingProps = TextProps & {
 
 /**
  * `Heading` renders headings and titles using the library's typography system.
+ *
+ * @example
+ * ```jsx
+ * <Heading size={2}>Arendelle</Heading>
+ * ```
  */
 export declare const Heading: PolymorphicComponent<HeadingProps, 'div'>;

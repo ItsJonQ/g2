@@ -29,5 +29,10 @@ export declare type TruncateProps = {
 
 /**
  * `Truncate` is a typography primitive that trims text content. For almost all cases, it is recommended that `Text`, `Heading`, or `Subheading` is used to render text content. However, `Truncate` is available for custom implementations.
+ *
+ * @example
+ * ```jsx
+ * <Truncate>Where the north wind meets the sea</Truncate>
+ * ```
  */
 export declare const Truncate: PolymorphicComponent<TruncateProps>;

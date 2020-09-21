@@ -22,6 +22,11 @@ export declare type SearchInputProps = TextInputProps & {
 
 /**
  * `SearchInput` is a form component that lets users search for content.
+ *
+ * @example
+ * ```jsx
+ * <SearchInput placeholder="Search for..." />
+ * ```
  */
 export declare const SearchInput: PolymorphicComponent<
 	SearchInputProps,

@@ -43,5 +43,13 @@ export declare type SelectProps = Omit<
 
 /**
  * `Select` is a form component lets users choose options from an options menu.
+ *
+ * @example
+ * ```jsx
+ * <Select value={value} onChange={setValue}>
+ * 	<option>...</option>
+ * 	<option>...</option>
+ * </Select>
+ * ```
  */
 export declare const Select: PolymorphicComponent<SelectProps, 'select'>;

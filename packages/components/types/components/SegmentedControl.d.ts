@@ -54,6 +54,11 @@ export declare type SegmentedControlProps = Omit<
 
 /**
  * `SegmentedControl` is a form component that lets users choose options represented in horizontal segments.
+ *
+ * @example
+ * ```jsx
+ * <SegmentedControl options={[...]} />
+ * ```
  */
 export declare const SegmentedControl: PolymorphicComponent<
 	SegmentedControlProps,

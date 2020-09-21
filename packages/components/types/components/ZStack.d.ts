@@ -21,5 +21,13 @@ export declare type ZStackProps = {
 
 /**
  * `ZStack` (Z-layer Stack) arranges and layers child elements on the z-axis.
+ *
+ * @example
+ * ```jsx
+ * <ZStack>
+ * 	<View>...</View>
+ * 	<View>...</View>
+ * </ZStack>
+ * ```
  */
 export declare const ZStack: PolymorphicComponent<ZStackProps>;

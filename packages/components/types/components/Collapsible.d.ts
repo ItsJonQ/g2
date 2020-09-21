@@ -19,6 +19,14 @@ export declare type CollapsibleProps = {
 
 /**
  * `Collapsible` is a layout component that controls visibility of a section of content.
+ *
+ * @example
+ * ```jsx
+ * <Collapsible>
+ * 	<CollapsibleTrigger>Toggle</CollapsibleTrigger>
+ * 	<CollapsibleContent>...</CollapsibleContent>
+ * </Collapsible>
+ * ```
  */
 export declare const Collapsible: PolymorphicComponent<CollapsibleProps>;
 
@@ -37,6 +45,14 @@ export declare type CollapsibleTriggerProps = {
 
 /**
  * `CollapsibleTrigger` is a layout component that toggles the visible of a `Collapsible` section.
+ *
+ * @example
+ * ```jsx
+ * <Collapsible>
+ * 	<CollapsibleTrigger>Toggle</CollapsibleTrigger>
+ * 	<CollapsibleContent>...</CollapsibleContent>
+ * </Collapsible>
+ * ```
  */
 export declare const CollapsibleTrigger: PolymorphicComponent<CollapsibleTriggerProps>;
 
@@ -44,5 +60,13 @@ export declare type CollapsibleContentProps = {};
 
 /**
  * `CollapsibleContent` is a layout component that contains the content of a `Collapsible` section.
+ *
+ * @example
+ * ```jsx
+ * <Collapsible>
+ * 	<CollapsibleTrigger>Toggle</CollapsibleTrigger>
+ * 	<CollapsibleContent>...</CollapsibleContent>
+ * </Collapsible>
+ * ```
  */
 export declare const CollapsibleContent: PolymorphicComponent<CollapsibleContentProps>;

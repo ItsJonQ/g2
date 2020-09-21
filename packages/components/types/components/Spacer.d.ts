@@ -63,5 +63,12 @@ export declare type SpacerProps = {
 
 /**
  * `Spacer` is a primitive layout component that providers inner (`padding`) or outer (`margin`) space in-between components. It can also be used to adaptively provide space within an `HStack` or `VStack`.
+ *
+ * @example
+ * ```jsx
+ * <Spacer py={10}>
+ * 	<View>...</View>
+ * </Spacer>
+ * ```
  */
 export declare const Spacer: PolymorphicComponent<SpacerProps>;
