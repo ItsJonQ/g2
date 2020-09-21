@@ -19,7 +19,7 @@ export function SiteSearch() {
 
   return (
     <Modal
-      renderTrigger={
+      trigger={
         <ModalTrigger
           aria-label="Search"
           as={Button}

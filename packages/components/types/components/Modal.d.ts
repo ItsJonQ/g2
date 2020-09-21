@@ -1,15 +1,22 @@
-import { PolymorphicComponent } from './_shared';
+import { PolymorphicComponent, SizeRangeReduced } from './_shared';
 import { BaseModalProps } from './BaseModal';
 import { CardHeaderProps, CardBodyProps, CardFooterProps } from './Card';
 
-export declare type ModalProps = BaseModalProps & {};
+export declare type ModalProps = BaseModalProps & {
+	/**
+	 * The size (width) of the `Modal` dialog content element.
+	 *
+	 * @default 'md'
+	 */
+	size?: SizeRangeReduced;
+};
 
 /**
  * `Modal` is an overlay component that renders a focused dialog with content and actions.
  *
  * @example
  * ```jsx
- * <Modal renderTrigger={<Button>Open Modal</Button>}>
+ * <Modal trigger={<Button>Open Modal</Button>}>
  *   <ModalHeader>...</ModalHeader>
  *   <ModalBody>...</ModalBody>
  *   <ModalFooter>...</ModalFooter>
@@ -33,7 +40,7 @@ export declare type ModalTriggerProps = {
  *
  * @example
  * ```jsx
- * <Modal renderTrigger={<Button>Open Modal</Button>}>
+ * <Modal trigger={<Button>Open Modal</Button>}>
  *   ...
  * </Modal>
  * ```
@@ -67,7 +74,7 @@ export declare type ModalHeaderProps = CardHeaderProps & {
  *
  * @example
  * ```jsx
- * <Modal renderTrigger={<Button>Open Modal</Button>}>
+ * <Modal trigger={<Button>Open Modal</Button>}>
  *   <ModalHeader title="Hello" />
  *   ...
  * </Modal>
@@ -81,7 +88,7 @@ export declare type ModalBodyProps = CardBodyProps & {};
  *
  * @example
  * ```jsx
- * <Modal renderTrigger={<Button>Open Modal</Button>}>
+ * <Modal trigger={<Button>Open Modal</Button>}>
  *   <ModalHeader>...</ModalHeader>
  *   <ModalBody>...</ModalBody>
  *   <ModalFooter>...</ModalFooter>
@@ -98,7 +105,7 @@ export declare type ModalFooterProps = CardFooterProps & {};
  *
  * @example
  * ```jsx
- * <Modal renderTrigger={<Button>Open Modal</Button>}>
+ * <Modal trigger={<Button>Open Modal</Button>}>
  *   ...
  *   <ModalFooter>
  *     <Button>Save Changes</Button>

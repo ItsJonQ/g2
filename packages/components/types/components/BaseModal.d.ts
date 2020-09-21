@@ -19,16 +19,12 @@ export declare type BaseModalProps = {
 	 *
 	 * @example
 	 * ```jsx
-	 * <Modal renderTrigger={<Button>Open Modal</Button>}>
+	 * <Modal dtrigger={<Button>Open Modal</Button>}>
 	 *   ...
 	 * </Modal>
 	 * ```
 	 */
-	renderTrigger?: React.Component;
-	/**
-	 * The size (width) of the `Modal` dialog content element.
-	 */
-	size?: SizeRangeReduced;
+	dtrigger?: React.Component;
 	/**
 	 * The duration for the `Modal` open/closing animations.
 	 *

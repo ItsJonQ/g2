@@ -29,17 +29,15 @@ const CloseButton = React.forwardRef(
 
 export const _default = () => {
 	return (
-		<Modal renderTrigger={<ModalTrigger>Open</ModalTrigger>} visible>
+		<Modal trigger={<ModalTrigger>Open</ModalTrigger>} visible>
 			<ModalHeader title={'Modal Title'} />
 			<ModalBody>
 				<h2>First</h2>
-				<Modal renderTrigger={<ModalTrigger>Open</ModalTrigger>}>
+				<Modal trigger={<ModalTrigger>Open</ModalTrigger>}>
 					<ModalHeader title={'Inner Modal Title'} />
 					<ModalBody>
 						<h2>Second</h2>
-						<Modal
-							renderTrigger={<ModalTrigger>Open</ModalTrigger>}
-						>
+						<Modal trigger={<ModalTrigger>Open</ModalTrigger>}>
 							<ModalHeader title={'Third Inner Modal Title'} />
 							<ModalBody>
 								<h2>Third</h2>

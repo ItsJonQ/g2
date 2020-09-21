@@ -14,17 +14,13 @@ const MODAL_SIZES = {
 };
 
 function Modal({
-	backdropTransitionDuration = 250,
 	children,
 	className,
 	forwardedRef,
-	label = 'Modal',
-	renderTrigger = null,
+	/* Deprecate in favour of `trigger`*/
 	size = 'md',
 	transitionDuration = 200,
 	transitionTimingFunction = 'ease-in-out',
-	visible = false,
-	zIndex,
 	...props
 }) {
 	const maxWidth = MODAL_SIZES[size] || MODAL_SIZES.md;
@@ -72,13 +68,9 @@ function Modal({
 
 	const modalProps = {
 		...props,
-		backdropTransitionDuration,
-		renderTrigger,
 		size,
 		transitionDuration,
 		transitionTimingFunction,
-		visible,
-		zIndex,
 	};
 
 	return (

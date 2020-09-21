@@ -15,10 +15,11 @@ function BaseModal({
 	dialog: dialogProp,
 	forwardedRef,
 	label = 'Modal',
+	/* Deprecate in favour of `trigger`*/
 	renderTrigger = null,
-	size = 'md',
 	transitionDuration = 200,
 	transitionTimingFunction = 'ease-in-out',
+	trigger = null,
 	visible = false,
 	zIndex,
 	...props
@@ -77,9 +78,15 @@ function BaseModal({
 		dialogProps['data-underlayer'] = '';
 	}
 
+	const triggerProp = trigger || renderTrigger;
+
 	return (
 		<ModalContext.Provider value={contextProps}>
-			{is.function(renderTrigger) ? renderTrigger(dialog) : renderTrigger}
+			{is.function(triggerProp)
+				? triggerProp(dialog)
+				: triggerProp
+				? triggerProp
+				: null}
 			<Portal>
 				<DialogBackdrop {...dialog} className={cx(backdropStyles)}>
 					<View className={dialogWrapperStyles}>
