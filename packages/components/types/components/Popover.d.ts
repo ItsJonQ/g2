@@ -15,7 +15,7 @@ export declare type PopoverProps = PopperProps & {
 	/**
 	 * ID that will serve as a base for all the items IDs.
 	 *
-	 * @see https://reakit.io/docs/Popover/#usePopoverstate
+	 * @see https://reakit.io/docs/popover/#usepopoverstate
 	 */
 	baseId?: string;
 	/**
@@ -33,7 +33,7 @@ export declare type PopoverProps = PopperProps & {
 	 *
 	 * @default true
 	 *
-	 * @see https://reakit.io/docs/Popover/#Popover
+	 * @see https://reakit.io/docs/popover/#popover
 	 */
 	modal?: boolean;
 	/**
@@ -60,7 +60,7 @@ export declare type PopoverProps = PopperProps & {
 	 *
 	 * @default false
 	 *
-	 * @see https://reakit.io/docs/Popover/#usePopoverstate
+	 * @see https://reakit.io/docs/popover/#usepopoverstate
 	 */
 	visible?: boolean;
 };

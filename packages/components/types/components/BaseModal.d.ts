@@ -9,7 +9,7 @@ export declare type BaseModalProps = {
 	 */
 	backdropTransitionDuration?: number;
 	/**
-	 * The aria-label for the Modal for screen-readers.
+	 * The aria-label for the `Modal` for screen-readers.
 	 *
 	 * @see https://reakit.io/docs/dialog/
 	 */

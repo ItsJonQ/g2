@@ -8,8 +8,10 @@ function Dropdown({
 	animated = true,
 	animationDuration = 160,
 	animationTimingFunction = 'ease',
+	baseId,
 	children,
 	gutter = 4,
+	id,
 	label,
 	modal = true,
 	placement,
@@ -18,6 +20,7 @@ function Dropdown({
 }) {
 	const menu = useMenuState({
 		animated: animated ? animationDuration : undefined,
+		baseId: baseId || id,
 		gutter,
 		modal,
 		placement,

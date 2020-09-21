@@ -34,12 +34,26 @@ export type ConnectedProps = React.HTMLAttributes<any> &
 
 export interface Connect {
 	<T>(
+		/**
+		 * The component to connect.
+		 */
 		WrappedComponent:
 			| ((props: T & ConnectedProps) => React.ReactNode)
 			| React.ComponentClass<T>
 			| React.FC<T>,
+		/**
+		 * The namespace for the component.
+		 */
 		namespace: string,
 	): React.ComponentClass<T> | React.FC<T>;
 }
 
+/**
+ * A higher-order component that "connects" a component the Context system, registering it under a defined namespace.
+ *
+ * @example
+ * ```jsx
+ * const ConnectedComponent = connect(MyComponent, 'MyComponent')
+ * ```
+ */
 export declare const connect: Connect;

@@ -9,9 +9,11 @@ import PopoverContent from './PopoverContent';
 function Popover({
 	animated = true,
 	animationDuration = 160,
+	baseId,
 	children,
 	elevation = 5,
 	forwardedRef,
+	id,
 	label,
 	maxWidth = 360,
 	modal = true,
@@ -23,6 +25,7 @@ function Popover({
 }) {
 	const popover = usePopoverState({
 		animated: animated ? animationDuration : undefined,
+		baseId: baseId || id,
 		modal,
 		placement,
 		visible,

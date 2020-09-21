@@ -40,7 +40,7 @@ function BaseButton({
 	size = 'medium',
 	suffix,
 	textAlign = 'center',
-	variant = 'secondary',
+	variant,
 	...props
 }) {
 	const as = href ? 'a' : 'button';

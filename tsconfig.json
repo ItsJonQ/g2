@@ -5,6 +5,7 @@
 		"baseUrl": ".",
 		"declaration": true,
 		"esModuleInterop": true,
+		"emitDeclarationOnly": true,
 		"jsx": "react",
 		"lib": ["dom"],
 		"module": "esnext",
