@@ -134,6 +134,17 @@
 		"body": ["<Initials name=\"Elsa Oldenburg\" />"],
 		"prefix": "g2-initials"
 	},
+	"g2-components-select": {
+		"body": [
+			"<Select>",
+			"  <option>Ana</option>",
+			"  <option>Elsa</option>",
+			"  <option>Kristoff</option>",
+			"  <option>Olaf</option>",
+			"</Select>"
+		],
+		"prefix": "g2-select"
+	},
 	"g2-components-spacer": {
 		"body": [
 			"<View>",
