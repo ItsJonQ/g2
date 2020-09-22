@@ -1,7 +1,8 @@
 import { PolymorphicComponent } from './_shared';
+import { GridProps } from './Grid';
 import { TextProps } from './Text';
 
-export declare type FormGroupProps = {
+export declare type FormGroupProps = GridProps & {
 	/**
 	 * Aligns the label within `FormGroup`.
 	 *
