@@ -9,10 +9,27 @@ export declare type TruncateProps = {
 	 * @default '...'
 	 */
 	ellipsis?: string;
+
 	/**
-	 * Determines where to truncate. `truncate` must first be set.
+	 * Determines where to truncate. `truncate` must first be set. For example, we can truncate text right in the middle. To do this, we need to set `ellipsizeMode` to `middle` and a text `limit`.
 	 *
 	 * @default 'auto'
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Text } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 * 	return (
+	 * 		<Text truncate ellipsizeMode="middle" limit={40}>
+	 * 			Where the north wind meets the sea, there's a river full of memory. Sleep,
+	 * 			my darling, safe and sound, for in this river all is found. In her waters,
+	 * 			deep and true, lay the answers and a path for you. Dive down deep into her
+	 * 			sound, but not too far or you'll be drowned
+	 * 		</Text>
+	 * 	)
+	 * }
+	 * ```
 	 */
 	ellipsizeMode?: TruncateEllisizeMode;
 	/**
@@ -32,7 +49,18 @@ export declare type TruncateProps = {
  *
  * @example
  * ```jsx
- * <Truncate>Where the north wind meets the sea</Truncate>
+ * import { Truncate } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return (
+ *     <Truncate>
+ *       Where the north wind meets the sea, there's a river full of memory. Sleep,
+ *       my darling, safe and sound, for in this river all is found. In her waters,
+ *       deep and true, lay the answers and a path for you. Dive down deep into her
+ *       sound, but not too far or you'll be drowned
+ *     </Truncate>
+ *   );
+ * }
  * ```
  */
 export declare const Truncate: PolymorphicComponent<TruncateProps>;

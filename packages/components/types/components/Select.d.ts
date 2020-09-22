@@ -12,31 +12,73 @@ export declare type SelectProps = Omit<
 > &
 	FormElementProps & {
 		/**
+		 * @example
+		 * ```jsx
+		 * import { Select, Text } from `@wp-g2/components`
+		 *
+		 * function Example() {
+		 * 	return <Select size="small"><option>Ana</option></Select>
+		 * }
+		 * ```
+		 */
+		isSubtle?: boolean;
+		/**
 		 * Options to render within `Select`.
 		 *
 		 * @example
 		 * ```jsx
-		 * const options = [
-		 *  { id: 'elsa', value: 'elsa', label: 'Elsa' },
-		 *  { id: 'ana', value: 'ana', label: 'Ana' },
-		 * ]
+		 * import { Select } from `@wp-g2/components`
 		 *
-		 * const Heroes = <Select options={options} />
+		 * function Example() {
+		 *	const options = [
+		 *  	{ id: 'elsa', value: 'elsa', label: 'Elsa' },
+		 *  	{ id: 'ana', value: 'ana', label: 'Ana' },
+		 * 	]
+		 *
+		 * 	return <Select options={options} />
+		 * }
 		 * ```
 		 */
 		options?: Array<unknown>;
 		/**
 		 * Renders prefix content within `Select`.
+		 *
+		 * @example
+		 * ```jsx
+		 * import { Select, Text } from `@wp-g2/components`
+		 *
+		 * function Example() {
+		 * 	return <Select prefix={<Text>Before</Text>} />
+		 * }
+		 * ```
 		 */
 		prefix?: React.ReactElement;
 		/**
 		 * Determines the size of `Select`.
 		 *
 		 * @default 'medium'
+		 *
+		 * @example
+		 * ```jsx
+		 * import { Select, Text } from `@wp-g2/components`
+		 *
+		 * function Example() {
+		 * 	return <Select size="small"><option>Ana</option></Select>
+		 * }
+		 * ```
 		 */
 		size?: SizeRangeDefault;
 		/**
 		 * Renders prefix content within `Select`.
+		 *
+		 * @example
+		 * ```jsx
+		 * import { Select, Text } from `@wp-g2/components`
+		 *
+		 * function Example() {
+		 * 	return <Select suffix={<Text>After</Text>} />
+		 * }
+		 * ```
 		 */
 		suffix?: React.ReactElement;
 	};
@@ -46,10 +88,18 @@ export declare type SelectProps = Omit<
  *
  * @example
  * ```jsx
- * <Select value={value} onChange={setValue}>
- * 	<option>...</option>
- * 	<option>...</option>
- * </Select>
+ * import { Select } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return (
+ *     <Select>
+ *       <option>Ana</option>
+ *       <option>Elsa</option>
+ *       <option>Kristoff</option>
+ *       <option>Olaf</option>
+ *     </Select>
+ *   );
+ * }
  * ```
  */
 export declare const Select: PolymorphicComponent<SelectProps, 'select'>;

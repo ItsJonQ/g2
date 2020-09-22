@@ -12,6 +12,9 @@ keywords: ["view", "base", "div", "box", "core", "element", "ui"]
 
 **Everything** is a `View`, and a `View` is **everything**.
 
+<!-- props -->
+<!-- Automatically Generated -->
+
 ## Usage
 
 ```jsx live
@@ -28,87 +31,77 @@ function Example() {
 
 ## Props
 
-There are two primary but foundational props for a `View`.
+##### as
 
-<!-- props -->
-<!-- Automatically Generated -->
+**Type**: `React.ReactElement`
 
-| Name | Type                       | Default | Description                                                                                                                                                              |
-| ---- | -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| as   | `React.Component`,`string` |         | Render the component as another React.Component or HTML Element.                                                                                                         |
-| css  | `any`                      |         | Render custom CSS using the style system.                                                                                                                                |
-| cx   | `any`                      |         | Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop. Typically used "internally" to establish based styles for a `View`. |
-
-<!-- /Automatically Generated -->
-<!-- /props -->
-
-### as
-
-The `as` property is an important concept for a `View`. It is a powerful property that allows a `View` to render as **anything**.
+Render the component as another React Component or HTML Element.
 
 ```jsx live
-import { Text, View } from "@wp-g2/components"
+import { View } from "@wp-g2/components"
 
 function Example() {
   return (
-    <View as="ul">
-      <View as="li">
-        <Text>Into The Unknown</Text>
-      </View>
+    <View as="h1">
+      <span>Olaf</span>
     </View>
   )
 }
 ```
 
-### css
+##### css
 
-The `css` property allows for the `View` to performantly and reliably render any CSS styles using the libraries System system.
+**Type**: `any`
 
-#### string
-
-If you prefer a more "traditional" CSS-like workflow, you can pass a `string` into the `css` prop. The Style system supports Sass-like workflows, for example using `&` for nesting.
+Render custom CSS using the style system.
 
 ```jsx live
-import { Text, View } from "@wp-g2/components"
+import { View } from "@wp-g2/components"
 
 function Example() {
   return (
     <View
       css={`
-        background: dodgerblue;
-        &:hover {
-          background: yellow;
-        }
+        background: blue;
       `}
     >
-      <Text>Into The Unknown</Text>
+      <span>Olaf</span>
     </View>
   )
 }
 ```
 
-#### Object
+##### cx
 
-Another way to pass in styles is using a style Object.
+**Type**: `any`
+
+Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop.
+Typically used "internally" to establish based styles for a `View`.
 
 ```jsx live
-import { Text, View } from "@wp-g2/components"
+import { View } from "@wp-g2/components"
+import { css } from "@wp-g2/styles"
 
 function Example() {
   return (
     <View
-      css={{
-        background: "dodgerblue",
-        "&:hover": {
-          background: "yellow",
-        },
-      }}
+      cx={[
+        css`
+          background: blue;
+        `,
+      ]}
+      css={`
+        color: white;
+      `}
     >
-      <Text>Into The Unknown</Text>
+      <span>Olaf</span>
     </View>
   )
 }
 ```
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ## Styling
 

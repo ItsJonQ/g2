@@ -5,6 +5,7 @@ export const AvatarView = styled.div`
 	background: ${ui.get('lightGray500')};
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 	position: relative;
 `;
 

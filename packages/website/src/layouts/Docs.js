@@ -76,7 +76,7 @@ export const pageQuery = graphql`
         description
       }
       body
-      tableOfContents
+      tableOfContents(maxDepth: 3)
     }
   }
 `

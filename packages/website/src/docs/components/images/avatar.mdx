@@ -10,6 +10,9 @@ keywords: ["avatar", "image", "user", "initials"]
 
 `Avatar` renders either an `Image` or the `Initials` of a user.
 
+<!-- props -->
+<!-- Automatically Generated -->
+
 ## Usage
 
 ```jsx live
@@ -28,23 +31,21 @@ function Example() {
 
 ## Props
 
-<!-- props -->
-<!-- Automatically Generated -->
+##### animateOnImageLoad
 
-| Name               | Type                        | Default    | Description                           |
-| ------------------ | --------------------------- | ---------- | ------------------------------------- |
-| animateOnImageLoad | `boolean`                   | `true`     | Fades the image in when it is loaded. |
-| border             | `boolean`                   | `false`    | Renders a border around the `Avatar`. |
-| color              | `CSS['color']`              |            | Renders a custom background color.    |
-| name               | `string`                    | `false`    | The name to render as `Initials`.     |
-| shape              | `AvatarShape`               | `'circle'` | The shape of the `Avatar`.            |
-| size               | `AvatarSize`,`CSS['width']` | `'medium'` | The dimensions of the `Avatar`.       |
-| src                | `string`                    |            | The source of the `Image`.            |
+**Type**: `boolean`
 
-<!-- /Automatically Generated -->
-<!-- /props -->
+Fades the image in when it is loaded.
 
-### color
+##### border
+
+**Type**: `boolean`
+
+Renders a border around the `Avatar`.
+
+##### color
+
+**Type**: `CSS['color']`
 
 `Avatar` can be rendered with any background color. The background color is only visible if there is no `Image` (`src`).
 
@@ -56,7 +57,9 @@ function Example() {
 }
 ```
 
-### name
+##### name
+
+**Type**: `string`
 
 The name to render as `Initials`.
 
@@ -68,14 +71,14 @@ function Example() {
 }
 ```
 
-### shape
+##### shape
+
+**Type**: `"circle"`,`"square"`
 
 `Avatar` renders with a `circle` shape by default (`30px` x `30px`). There are handful of preset sizes (below). A custom shape (`border-radius`) can be provided by passing in a `number` value.
 
-| Value  | Description                        |
-| ------ | ---------------------------------- |
-| circle | Renders a circular shape.          |
-| square | Renders a rounded rectangle shape. |
+- `circle`: Renders a circular shape.
+- `square`: Renders a rounded rectangle shape.
 
 ```jsx live
 import { Avatar } from "@wp-g2/components"
@@ -92,17 +95,18 @@ function Example() {
 }
 ```
 
-### size
+##### size
 
+**Type**: `AvatarSize`,`CSS['width']`
+
+The dimensions of the `Avatar`.
 `Avatar` renders with a `medium` size by default (`30px` x `30px`). There are handful of preset sizes (below). A custom sizes can be provided by passing in a `number` value.
 
-| Value  | Description                                 |
-| ------ | ------------------------------------------- |
-| xLarge | Renders an `Avatar` that is `48px` x `48px` |
-| large  | Renders an `Avatar` that is `36px` x `36px` |
-| medium | Renders an `Avatar` that is `30px` x `30px` |
-| small  | Renders an `Avatar` that is `24px` x `24px` |
-| xSmall | Renders an `Avatar` that is `16px` x `16px` |
+- `xLarge`: Renders an `Avatar` that is `48px` x `48px`
+- `large`: Renders an `Avatar` that is `36px` x `36px`
+- `medium`: Renders an `Avatar` that is `30px` x `30px`
+- `small`: Renders an `Avatar` that is `24px` x `24px`
+- `xSmall`: Renders an `Avatar` that is `16px` x `16px`
 
 ```jsx live
 import { Avatar } from "@wp-g2/components"
@@ -118,6 +122,15 @@ function Example() {
   )
 }
 ```
+
+##### src
+
+**Type**: `string`
+
+The source of the `Image`.
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ## See Also
 

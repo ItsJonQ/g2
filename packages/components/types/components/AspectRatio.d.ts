@@ -23,9 +23,19 @@ export declare type AspectRatioProps = {
  *
  * @example
  * ```jsx
- * <AspectRatio ratio={21/9}>
- * 	<Card>...</Card>
- * </AspectRatio>
+ * import { AspectRatio } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return (
+ *     <AspectRatio ratio={16 / 9}>
+ *       <img
+ *         src="https://picsum.photos/seed/picsum/800/800"
+ *         alt="Snowy Mountains"
+ *         style={{ objectFit: "cover" }}
+ *       />
+ *     </AspectRatio>
+ *   );
+ * }
  * ```
  */
 export declare const AspectRatio: PolymorphicComponent<AspectRatioProps>;

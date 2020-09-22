@@ -22,7 +22,11 @@ export declare type ButtonProps = BaseButtonProps & {
  *
  * @example
  * ```jsx
- * <Button variant="primary">Go</Button>
+ * import { Button } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <Button variant="secondary">Let It Go</Button>;
+ * }
  * ```
  */
 export declare const Button: PolymorphicComponent<ButtonProps, 'button'>;

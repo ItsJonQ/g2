@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-avatar css-1523pzc"
+  class="wp-components-avatar css-6y3e8p"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -24,7 +24,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with a border 1`] = `
 <div
-  class="wp-components-avatar css-1m6lwu7"
+  class="wp-components-avatar css-1ocb9ff"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -63,7 +63,7 @@ exports[`props should render with a border 1`] = `
 
 exports[`props should render with a custom color 1`] = `
 <div
-  class="wp-components-avatar css-6mqtju"
+  class="wp-components-avatar css-qcoqpe"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -102,7 +102,7 @@ exports[`props should render with a custom color 1`] = `
 
 exports[`props should render with a custom size 1`] = `
 <div
-  class="wp-components-avatar css-11fvpid"
+  class="wp-components-avatar css-35zl2u"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -124,7 +124,7 @@ exports[`props should render with a custom size 1`] = `
 
 exports[`props should render with a custom small size + square 1`] = `
 <div
-  class="wp-components-avatar css-unxy2e"
+  class="wp-components-avatar css-1naj0gq"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -146,7 +146,7 @@ exports[`props should render with a custom small size + square 1`] = `
 
 exports[`props should render with a custom xSmall size + square 1`] = `
 <div
-  class="wp-components-avatar css-1nxtpyb"
+  class="wp-components-avatar css-1ka3zj6"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -168,7 +168,7 @@ exports[`props should render with a custom xSmall size + square 1`] = `
 
 exports[`props should render with an alternate shape 1`] = `
 <div
-  class="wp-components-avatar css-1je1ird"
+  class="wp-components-avatar css-17mz7p6"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -207,7 +207,7 @@ exports[`props should render with an alternate shape 1`] = `
 
 exports[`props should render with an alternate size 1`] = `
 <div
-  class="wp-components-avatar css-1rxohjs"
+  class="wp-components-avatar css-1pj9r2w"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -229,7 +229,7 @@ exports[`props should render with an alternate size 1`] = `
 
 exports[`props should render with animateOnImageLoad disabled 1`] = `
 <div
-  class="wp-components-avatar css-1523pzc"
+  class="wp-components-avatar css-6y3e8p"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
@@ -268,7 +268,7 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
 
 exports[`props should render with image src 1`] = `
 <div
-  class="wp-components-avatar css-1523pzc"
+  class="wp-components-avatar css-6y3e8p"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >

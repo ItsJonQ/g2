@@ -3,6 +3,22 @@ import { PolymorphicComponent } from './_shared';
 export declare type CardProps = {
 	/**
 	 * Size of the elevation shadow, based on the Style system's elevation system.
+	 * Elevating a `Card` can be done by adjusting the `elevation` prop. This may be helpful in highlighting certain content. For more information, check out `Elevation`.
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Card, CardBody, Text } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 *   return (
+	 *     <Card elevation={8}>
+	 *       <CardBody>
+	 *         <Text>Card Content</Text>
+	 *       </CardBody>
+	 *     </Card>
+	 *   );
+	 * }
+	 *```
 	 */
 	elevation?: number;
 	/**
@@ -22,11 +38,34 @@ export declare type CardProps = {
 /**
  * `Card` is a layout component, providing a flexible and extensible content container.
  *
+ * @remarks
+ * `Card` provides convenient sub-components such as `CardBody`, `CardHeader`, and `CardFooter`.
+ *
  * @example
  * ```jsx
- * <Card>
- * 	...
- * </Card>
+ * import {
+ *   Card,
+ *   CardHeader,
+ *   CardBody,
+ *   CardFooter,
+ *   Text,
+ * } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return (
+ *     <Card>
+ *       <CardHeader>
+ *         <Heading size={4}>Card Title</Heading>
+ *       </CardHeader>
+ *       <CardBody>
+ *         <Text>Card Content</Text>
+ *       </CardBody>
+ *       <CardFooter>
+ *         <Text>Card Footer</Text>
+ *       </CardFooter>
+ *     </Card>
+ *   );
+ * }
  * ```
  */
 export declare const Card: PolymorphicComponent<CardProps>;

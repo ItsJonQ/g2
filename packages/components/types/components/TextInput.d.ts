@@ -74,7 +74,11 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
  *
  * @example
  * ```jsx
- * <TextInput value={value} onChange={setValue} />
+ * import { TextInput } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <TextInput placeholder="First name" />
+ * }
  * ```
  */
 export declare const TextInput: PolymorphicComponent<TextInputProps, 'input'>;

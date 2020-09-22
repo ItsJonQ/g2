@@ -4,17 +4,27 @@ import { PolymorphicComponent } from './_shared';
 export declare type ViewProps = {
 	/**
 	 * Render the component as another React Component or HTML Element.
+	 *
 	 * @example
-	 * ```
-	 * <View as="h1" />
+	 * ```jsx
+	 * import { View } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 * 	return <View as="h1"><span>Olaf</span></View>
+	 * }
 	 * ```
 	 */
 	as?: React.ReactElement | string;
 	/**
 	 * Render custom CSS using the style system.
+	 *
 	 * @example
-	 * ```
-	 * <View css={`background: blue;`} />
+	 * ```jsx
+	 * import { View } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 * 	return <View css={`background: blue;`}><span>Olaf</span></View>
+	 * }
 	 * ```
 	 */
 	css?: any;
@@ -23,8 +33,13 @@ export declare type ViewProps = {
 	 * Typically used "internally" to establish based styles for a `View`.
 	 *
 	 * @example
-	 * ```
-	 * <View cx={`background: blue;`} css={`color: white;`} />
+	 * ```jsx
+	 * import { View } from `@wp-g2/components`
+	 * import { css } from `@wp-g2/styles`
+	 *
+	 * function Example() {
+	 * 	return <View cx={[css`background: blue;`]} css={`color: white;`}><span>Olaf</span></View>
+	 * }
 	 * ```
 	 */
 	cx?: any;
@@ -35,7 +50,15 @@ export declare type ViewProps = {
  *
  * @example
  * ```jsx
- * <View>...</View>
+ * import { Text, View } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return (
+ *     <View>
+ *       <Text>Into The Unknown</Text>
+ *     </View>
+ *   );
+ * }
  * ```
  */
 export declare const View: PolymorphicComponent<ViewProps>;

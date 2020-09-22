@@ -30,7 +30,7 @@ function TableOfContents({ currentId, headings = [] }) {
           <View as="li" key={heading.title}>
             <Link
               aria-current={
-                currentId === heading.url.replace("#", "") ? "page" : null
+                currentId === heading?.url?.replace("#", "") ? "page" : null
               }
               to={heading.url}
             >

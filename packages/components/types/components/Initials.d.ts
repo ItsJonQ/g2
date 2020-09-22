@@ -18,7 +18,11 @@ export declare type InitialsProps = TextProps & {
  *
  * @example
  * ```jsx
- * <Initials name="Elsa Oldenberg" />
+ * import { Initials } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <Initials name="Elsa Oldenburg" />;
+ * }
  * ```
  */
 export declare const Initials: PolymorphicComponent<InitialsProps>;

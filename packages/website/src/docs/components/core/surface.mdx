@@ -10,6 +10,9 @@ keywords: ["surface", "background"]
 
 `Surface` is a core component that renders a primary background color.
 
+<!-- props -->
+<!-- Automatically Generated -->
+
 ## Usage
 
 In the example below, notice how the `Surface` renders in white (or dark gray if in dark mode).
@@ -31,30 +34,45 @@ function Example() {
 
 ## Props
 
-<!-- props -->
-<!-- Automatically Generated -->
+##### border
 
-| Name         | Type             | Default | Description                                   |
-| ------------ | ---------------- | ------- | --------------------------------------------- |
-| border       | `boolean`        |         | Renders a border around the entire `Surface`. |
-| borderBottom | `boolean`        |         | Renders a bottom border.                      |
-| borderLeft   | `boolean`        |         | Renders a left border.                        |
-| borderRight  | `boolean`        |         | Renders a right border.                       |
-| borderTop    | `boolean`        |         | Renders a top border.                         |
-| variant      | `SurfaceVariant` |         | Modifies the background color of `Surface`.   |
+**Type**: `boolean`
 
-<!-- /Automatically Generated -->
-<!-- /props -->
+Renders a border around the entire `Surface`.
 
-### variant
+##### borderBottom
 
-`variant` modifies the background color or `Surface`.
+**Type**: `boolean`
 
-| Value     | Description                                                                            |
-| --------- | -------------------------------------------------------------------------------------- |
-| primary   | Used for almost all cases.                                                             |
-| secondary | Used as a secondary background for inner `Surface` components.                         |
-| tertiary  | Used as the app/site wide background. Visible in **dark mode** only. Use case is rare. |
+Renders a bottom border.
+
+##### borderLeft
+
+**Type**: `boolean`
+
+Renders a left border.
+
+##### borderRight
+
+**Type**: `boolean`
+
+Renders a right border.
+
+##### borderTop
+
+**Type**: `boolean`
+
+Renders a top border.
+
+##### variant
+
+**Type**: `"primary"`,`"secondary"`,`"tertiary"`
+
+Modifies the background color of `Surface`.
+
+- `primary`: Used for almost all cases.
+- `secondary`: Used as a secondary background for inner `Surface` components.
+- `tertiary`: Used as the app/site wide background. Visible in **dark mode** only. Use case is rare.
 
 ```jsx live
 import { Surface, Text, VStack } from "@wp-g2/components"
@@ -76,6 +94,9 @@ function Example() {
   )
 }
 ```
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ## See Also
 

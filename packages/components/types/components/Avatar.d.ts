@@ -18,25 +18,83 @@ export declare type AvatarProps = {
 	 */
 	border?: boolean;
 	/**
-	 * Renders a custom background color.
+	 * `Avatar` can be rendered with any background color. The background color is only visible if there is no `Image` (`src`).
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Avatar } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 *   return <Avatar color="blue" name="Elsa Oldenburg" size="medium" />;
+	 * }
+	 * ```
 	 */
 	color?: CSS['color'];
 	/**
 	 * The name to render as `Initials`.
 	 *
-	 * @default false
+	 * @example
+	 * ```jsx
+	 * import { Avatar } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 *   return <Avatar name="Elsa Oldenburg" size="medium" />;
+	 * }
+	 * ```
 	 */
 	name?: string;
 	/**
-	 * The shape of the `Avatar`.
+	 * `Avatar` renders with a `circle` shape by default (`30px` x `30px`). There are handful of preset sizes (below). A custom shape (`border-radius`) can be provided by passing in a `number` value.
+	 *
+	 * * `circle`: Renders a circular shape.
+	 * * `square`: Renders a rounded rectangle shape.
 	 *
 	 * @default 'circle'
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Avatar } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 *   return (
+	 *     <Avatar
+	 *       color="blue"
+	 *       src="https://picsum.photos/id/1041/300/300"
+	 *       name="Elsa Oldenburg"
+	 *       size="xLarge"
+	 *     />
+	 *   );
+	 * }
+	 * ```
 	 */
 	shape?: AvatarShape;
 	/**
 	 * The dimensions of the `Avatar`.
+	 * `Avatar` renders with a `medium` size by default (`30px` x `30px`). There are handful of preset sizes (below). A custom sizes can be provided by passing in a `number` value.
+	 *
+	 * * `xLarge`: Renders an `Avatar` that is `48px` x `48px`
+	 * * `large`: Renders an `Avatar` that is `36px` x `36px`
+	 * * `medium`: Renders an `Avatar` that is `30px` x `30px`
+	 * * `small`: Renders an `Avatar` that is `24px` x `24px`
+	 * * `xSmall`: Renders an `Avatar` that is `16px` x `16px`
 	 *
 	 * @default 'medium'
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Avatar } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 *   return (
+	 *     <Avatar
+	 *       color="blue"
+	 *       src="https://picsum.photos/id/1041/300/300"
+	 *       name="Elsa Oldenburg"
+	 *       size="xLarge"
+	 *     />
+	 *   );
+	 * }
+	 * ```
 	 */
 	size?: AvatarSize | CSS['width'];
 	/**
@@ -50,7 +108,17 @@ export declare type AvatarProps = {
  *
  * @example
  * ```jsx
- * <Avatar src={...} name="Olaf" />
+ * import { Avatar } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return (
+ *     <Avatar
+ *       name="Elsa Oldenburg"
+ *       src="https://picsum.photos/id/1041/300/300"
+ *       size="medium"
+ *     />
+ *   );
+ * }
  * ```
  */
 export declare const Avatar: PolymorphicComponent<AvatarProps>;

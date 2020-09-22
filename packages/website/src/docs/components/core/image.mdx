@@ -10,6 +10,9 @@ keywords: ["image", "aspect", "ratio", "responsive", "media"]
 
 `Image` is a core component that renders images in the library.
 
+<!-- props -->
+<!-- Automatically Generated -->
+
 ## Usage
 
 `Image` can be used just like a regular HTML `img`. However, unlike the HTML `img`, the `Image` core component is responsive **by default**.
@@ -31,20 +34,9 @@ function Example() {
 
 ## Props
 
-<!-- props -->
-<!-- Automatically Generated -->
+##### aspectRatio
 
-| Name        | Type               | Default | Description                                                                                                                  |
-| ----------- | ------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| aspectRatio | `number`           |         | Renders the image with a specific `AspectRatio`.                                                                             |
-| fit         | `CSS['objectFit']` |         | Resizes the image to fit a container, using CSS [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit). |
-| height      | `CSS['height']`    |         | The image height.                                                                                                            |
-| width       | `CSS['width']`     |         | The image width.                                                                                                             |
-
-<!-- /Automatically Generated -->
-<!-- /props -->
-
-### aspectRatio
+**Type**: `number`
 
 The `Image` width:height aspect ratio can be customized, rendering the content in an `AspectRatio`. If an `aspectRatio` is used, `Image` will default to a `fit` of `cover`.
 
@@ -62,17 +54,17 @@ function Example() {
 }
 ```
 
-### fit
+##### fit
 
-The `fit` prop accepts a variety of CSS [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) values:
+**Type**: `CSS['objectFit']`
 
-| Value      | Description                                                                   |
-| ---------- | ----------------------------------------------------------------------------- |
-| contain    | Resizes image to fit the container box, while maintaining it's aspect ratio.  |
-| cover      | Resizes image to fill the container box, while maintaining it's aspect ratio. |
-| fill       | Resizes image to fill the container box.                                      |
-| none       | Image will not be resized.                                                    |
-| scale-down | Image will be sized as if none or contain were specified.                     |
+Resizes the image to fit a container, using CSS [`object-fit`](https:*developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
+
+- `contain`: Resizes image to fit the container box, while maintaining it's aspect ratio.
+- `cover`: Resizes image to fill the container box, while maintaining it's aspect ratio.
+- `fill`: Resizes image to fill the container box.
+- `none`: Image will not be resized.
+- `scale-down`: Image will be sized as if none or contain were specified.
 
 ```jsx live
 import { Image } from "@wp-g2/components"
@@ -89,6 +81,21 @@ function Example() {
   )
 }
 ```
+
+##### height
+
+**Type**: `CSS['height']`
+
+The image height.
+
+##### width
+
+**Type**: `CSS['width']`
+
+The image width.
+
+<!-- /Automatically Generated -->
+<!-- /props -->
 
 ## See Also
 

@@ -1,13 +1,15 @@
 ---
 title: TextInput
 type: forms
+description: "`TextInput` is a form component that users can enter content into."
 slug: /components/textinput/
 keywords: ["textinput", "form control", "input", "field", "textarea"]
 ---
 
 # TextInput
 
-`TextInput` is a form component that users can enter content into.
+<!-- props -->
+<!-- Automatically Generated -->
 
 ## Usage
 
@@ -21,34 +23,233 @@ function Example() {
 
 ## Props
 
-<!-- props -->
-<!-- Automatically Generated -->
+##### align
 
-| Name           | Type                    | Default           | Description                                                                     |
-| -------------- | ----------------------- | ----------------- | ------------------------------------------------------------------------------- |
-| align          | `CSS['alignItems']`     | `'center'`        | Aligns children using CSS Flexbox `align-items`.                                |
-| autoWrap       | `boolean`               | `true`            | Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements. |
-| defaultValue   | `boolean`               |                   | The default (initial) state to use if `value` is undefined.                     |
-| direction      | `FlexDirection`         | `'row'`           | Renders content vertically (`column`) or horizontally (`row`).                  |
-| disabled       | `boolean`               |                   | Determines if element is disabled.                                              |
-| gap            | `number`                | `2.5`             | The amount of space between each child element.                                 |
-| isClickable    | `boolean`               | `false`           | Renders a `cursor: pointer` on hover.                                           |
-| isFocused      | `boolean`               | `false`           | Renders focus styles.                                                           |
-| isResizable    | `boolean`               | `false`           | Allows for the a multiline `TextInput` to tbe resizable by dragging.            |
-| isRounded      | `boolean`               | `false`           | Renders with rounded corners.                                                   |
-| isSubtle       | `boolean`               | `false`           | Renders a subtle variant.                                                       |
-| justify        | `CSS['justifyContent']` | `'space-between'` | Justifies children using CSS Flexbox `justify-content`.                         |
-| label          | `string`                |                   | Label for the form element.                                                     |
-| maxRows        | `number`                |                   | Maximum number of rows to show for a multiline `TextInput`.                     |
-| minRows        | `number`                |                   | Alias for `rows`.                                                               |
-| multiline      | `boolean`               | `false`           | Renders `TextInput` to allow for multiline lines (`textarea`).                  |
-| onHeightChange | `Function`              |                   | Callback function when the height changes with a multiline `TextInput`.         |
-| prefix         | `React.Component`       |                   | Renders prefix content within `TextInput`.                                      |
-| rows           | `number`                |                   | Minimal number of rows to show for a multiline `TextInput`.                     |
-| size           | `SizeRangeDefault`      |                   | Determines the size of `TextInput`.                                             |
-| suffix         | `React.Component`       |                   | Renders prefix content within `TextInput`.                                      |
-| value          | `any`                   |                   | Value for the form element.                                                     |
-| wrap           | `boolean`               | `false`           | Determines if children should wrap.                                             |
+**Type**: `CSS['alignItems']`
+
+Aligns children using CSS Flexbox `align-items`. Vertically aligns content if the `direction` is `row`, or horizontally aligns content if the `direction` is `column`.
+
+In the example below, `flex-start` will align the children content to the top.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex align="flex-start">
+      <View css={[ui.background.blue, { height: 100 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
+```
+
+##### autoWrap
+
+**Type**: `boolean`
+
+Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements.
+
+##### defaultValue
+
+**Type**: `boolean`
+
+The default (initial) state to use if `value` is undefined.
+
+##### direction
+
+**Type**: `FlexDirection`
+
+The direction flow of the children content can be adjusted with `direction`. `column` will align children vertically and `row` will align children horizontally.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex direction="column">
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
+```
+
+##### disabled
+
+**Type**: `boolean`
+
+Determines if element is disabled.
+
+##### gap
+
+**Type**: `number`
+
+The amount of space between each child element.
+
+##### isClickable
+
+**Type**: `boolean`
+
+Renders a `cursor: pointer` on hover.
+
+##### isFocused
+
+**Type**: `boolean`
+
+Renders focus styles.
+
+##### isResizable
+
+**Type**: `boolean`
+
+Allows for the a multiline `TextInput` to tbe resizable by dragging.
+
+##### isRounded
+
+**Type**: `boolean`
+
+Renders with rounded corners.
+
+##### isSubtle
+
+**Type**: `boolean`
+
+Renders a subtle variant.
+
+##### justify
+
+**Type**: `CSS['justifyContent']`
+
+Horizontally aligns content if the `direction` is `row`, or vertically aligns content if the `direction` is `column`.
+In the example below, `flex-start` will align the children content to the left.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start">
+      <View css={[ui.background.blue, { height: 100 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
+```
+
+##### label
+
+**Type**: `string`
+
+Label for the form element.
+
+##### maxRows
+
+**Type**: `number`
+
+Maximum number of rows to show for a multiline `TextInput`.
+
+##### minRows
+
+**Type**: `number`
+
+Alias for `rows`.
+
+##### multiline
+
+**Type**: `boolean`
+
+Renders `TextInput` to allow for multiline lines (`textarea`).
+
+##### onHeightChange
+
+**Type**: `Function`
+
+Callback function when the height changes with a multiline `TextInput`.
+
+##### prefix
+
+**Type**: `React.ReactElement`
+
+Renders prefix content within `TextInput`.
+
+##### rows
+
+**Type**: `number`
+
+Minimal number of rows to show for a multiline `TextInput`.
+
+##### size
+
+**Type**: `"xLarge"`,`"large"`,`"medium"`,`"small"`,`"xSmall"`
+
+Determines the size of `TextInput`.
+
+##### suffix
+
+**Type**: `React.ReactElement`
+
+Renders prefix content within `TextInput`.
+
+##### value
+
+**Type**: `any`
+
+Value for the form element.
+
+##### wrap
+
+**Type**: `boolean`
+
+Determines if children should wrap.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start" wrap>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Elsa</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Olaf</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Kristoff</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Queen Iduna</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>King Agnarr</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Yelena</Text>
+      </View>
+    </Flex>
+  )
+}
+```
 
 <!-- /Automatically Generated -->
 <!-- /props -->

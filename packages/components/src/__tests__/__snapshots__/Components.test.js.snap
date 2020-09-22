@@ -276,7 +276,7 @@ exports[`props should render AspectRatio with css prop 2`] = `
 
 exports[`props should render Avatar 1`] = `
 <div
-  class="wp-components-avatar css-1523pzc"
+  class="wp-components-avatar css-6y3e8p"
   data-g2-c16t="true"
   data-g2-component="Avatar"
   id="Avatar"
@@ -285,7 +285,7 @@ exports[`props should render Avatar 1`] = `
 
 exports[`props should render Avatar with css prop 1`] = `
 <div
-  class="wp-components-avatar css-1523pzc"
+  class="wp-components-avatar css-6y3e8p"
   data-g2-c16t="true"
   data-g2-component="Avatar"
   id="Avatar"
@@ -294,7 +294,7 @@ exports[`props should render Avatar with css prop 1`] = `
 
 exports[`props should render Avatar with css prop 2`] = `
 <div
-  class="wp-components-avatar css-1e4x2w4"
+  class="wp-components-avatar css-qywdmr"
   data-g2-c16t="true"
   data-g2-component="Avatar"
   id="Avatar"

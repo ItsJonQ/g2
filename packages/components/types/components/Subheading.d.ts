@@ -8,7 +8,11 @@ export declare type SubheadingProps = TextProps & {};
  *
  * @example
  * ```jsx
- * <Subheading>Arendelle</Heading>
+ * import { Subheading } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <Subheading>Into The Unknown</Subheading>;
+ * }
  * ```
  */
 export declare const Subheading: PolymorphicComponent<SubheadingProps, 'div'>;

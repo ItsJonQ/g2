@@ -1,6 +1,7 @@
 ---
 title: Select
 type: forms
+description: "`Select` is a form component lets users choose options from an options menu."
 slug: /components/select/
 keywords: ["select", "dropdown", "form control", "options"]
 ---
@@ -8,6 +9,9 @@ keywords: ["select", "dropdown", "form control", "options"]
 # Select
 
 `Select` is a form component lets users choose options from an options menu.
+
+<!-- props -->
+<!-- Automatically Generated -->
 
 ## Usage
 
@@ -28,25 +32,232 @@ function Example() {
 
 ## Props
 
-<!-- props -->
-<!-- Automatically Generated -->
+##### align
 
-| Name         | Type                    | Default           | Description                                                                     |
-| ------------ | ----------------------- | ----------------- | ------------------------------------------------------------------------------- |
-| align        | `CSS['alignItems']`     | `'center'`        | Aligns children using CSS Flexbox `align-items`.                                |
-| autoWrap     | `boolean`               | `true`            | Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements. |
-| defaultValue | `boolean`               |                   | The default (initial) state to use if `value` is undefined.                     |
-| direction    | `FlexDirection`         | `'row'`           | Renders content vertically (`column`) or horizontally (`row`).                  |
-| disabled     | `boolean`               |                   | Determines if element is disabled.                                              |
-| isSubtle     | `boolean`               | `false`           | Renders a subtle variant.                                                       |
-| justify      | `CSS['justifyContent']` | `'space-between'` | Justifies children using CSS Flexbox `justify-content`.                         |
-| label        | `string`                |                   | Label for the form element.                                                     |
-| options      | `Array<unknown>`        |                   | Options to render within `Select`.                                              |
-| prefix       | `React.Component`       |                   | Renders prefix content within `Select`.                                         |
-| size         | `SizeRangeDefault`      | `'medium'`        | Determines the size of `Select`.                                                |
-| suffix       | `React.Component`       |                   | Renders prefix content within `Select`.                                         |
-| value        | `any`                   |                   | Value for the form element.                                                     |
-| wrap         | `boolean`               | `false`           | Determines if children should wrap.                                             |
+**Type**: `CSS['alignItems']`
+
+Aligns children using CSS Flexbox `align-items`. Vertically aligns content if the `direction` is `row`, or horizontally aligns content if the `direction` is `column`.
+
+In the example below, `flex-start` will align the children content to the top.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex align="flex-start">
+      <View css={[ui.background.blue, { height: 100 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
+```
+
+##### autoWrap
+
+**Type**: `boolean`
+
+Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements.
+
+##### defaultValue
+
+**Type**: `boolean`
+
+The default (initial) state to use if `value` is undefined.
+
+##### direction
+
+**Type**: `FlexDirection`
+
+The direction flow of the children content can be adjusted with `direction`. `column` will align children vertically and `row` will align children horizontally.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex direction="column">
+      <View css={[ui.background.blue]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
+```
+
+##### disabled
+
+**Type**: `boolean`
+
+Determines if element is disabled.
+
+##### isSubtle
+
+**Type**: `boolean`
+
+Renders a subtle variant.
+
+```jsx live
+import { Select, Text } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Select size="small">
+      <option>Ana</option>
+    </Select>
+  )
+}
+```
+
+##### justify
+
+**Type**: `CSS['justifyContent']`
+
+Horizontally aligns content if the `direction` is `row`, or vertically aligns content if the `direction` is `column`.
+In the example below, `flex-start` will align the children content to the left.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start">
+      <View css={[ui.background.blue, { height: 100 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue]}>
+        <Text>Elsa</Text>
+      </View>
+    </Flex>
+  )
+}
+```
+
+##### label
+
+**Type**: `string`
+
+Label for the form element.
+
+##### options
+
+**Type**: `unknown[]`
+
+Options to render within `Select`.
+
+```jsx live
+import { Select } from "@wp-g2/components"
+
+function Example() {
+  const options = [
+    { id: "elsa", value: "elsa", label: "Elsa" },
+    { id: "ana", value: "ana", label: "Ana" },
+  ]
+
+  return <Select options={options} />
+}
+```
+
+##### prefix
+
+**Type**: `React.ReactElement`
+
+Renders prefix content within `Select`.
+
+```jsx live
+import { Select, Text } from "@wp-g2/components"
+
+function Example() {
+  return <Select prefix={<Text>Before</Text>} />
+}
+```
+
+##### size
+
+**Type**: `"xLarge"`,`"large"`,`"medium"`,`"small"`,`"xSmall"`
+
+Determines the size of `Select`.
+
+```jsx live
+import { Select, Text } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Select size="small">
+      <option>Ana</option>
+    </Select>
+  )
+}
+```
+
+##### suffix
+
+**Type**: `React.ReactElement`
+
+Renders prefix content within `Select`.
+
+```jsx live
+import { Select, Text } from "@wp-g2/components"
+
+function Example() {
+  return <Select suffix={<Text>After</Text>} />
+}
+```
+
+##### value
+
+**Type**: `any`
+
+Value for the form element.
+
+##### wrap
+
+**Type**: `boolean`
+
+Determines if children should wrap.
+
+```jsx live
+import { Flex, Text, View } from "@wp-g2/components"
+import { ui } from "@wp-g2/styles"
+
+function Example() {
+  return (
+    <Flex justify="flex-start" wrap>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Ana</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Elsa</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Olaf</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Kristoff</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Queen Iduna</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>King Agnarr</Text>
+      </View>
+      <View css={[ui.background.blue, { width: 200 }]}>
+        <Text>Yelena</Text>
+      </View>
+    </Flex>
+  )
+}
+```
 
 <!-- /Automatically Generated -->
 <!-- /props -->

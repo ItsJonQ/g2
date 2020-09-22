@@ -1,5 +1,5 @@
 const _ = require("lodash")
-const { Project } = require("ts-morph")
+const { Project, ts } = require("ts-morph")
 const { readFileSync, writeFileSync } = require("fs-extra")
 const glob = require("fast-glob")
 const path = require("path")
@@ -15,22 +15,59 @@ const markdownFiles = glob.sync([
   getFilePath("../src/docs/components/**/*{.md,.mdx}"),
 ])
 
+/**
+ * @param {import("ts-morph").Symbol} symbol
+ */
 function getDeclaration(symbol) {
   const declarations = symbol.getDeclarations()
   return declarations[0]
 }
 
+/**
+ * @param {import("ts-morph").Symbol} symbol
+ */
 function getJsDocs(symbol) {
   const jsDocs = getDeclaration(symbol).getJsDocs()
   return jsDocs[jsDocs.length - 1]
 }
 
+/**
+ * @param {import("ts-morph").Symbol} symbol
+ */
 function getComment(symbol) {
   const jsDocs = getJsDocs(symbol)
   if (!jsDocs) return ""
   return jsDocs.getDescription().trim()
 }
 
+/**
+ * @param {import("ts-morph").Symbol} symbol
+ */
+function getExample(symbol) {
+  const jsDocs = symbol
+    .getDeclarations()
+    .map(declaration => declaration.getJsDocs())
+
+  if (!jsDocs.length) return ""
+
+  let example
+
+  jsDocs.forEach(jsDoc => {
+    jsDoc.forEach(symbol => [
+      symbol.getTags().forEach(tag => {
+        if (tag.getText().includes("@example")) {
+          example = tag.getComment()
+        }
+      }),
+    ])
+  })
+
+  return example
+}
+
+/**
+ * @param {import("ts-morph").Symbol} symbol
+ */
 function getDefaultValue(symbol) {
   const jsDocs = getJsDocs(symbol)
   if (!jsDocs) return ""
@@ -46,19 +83,82 @@ function getDefaultValue(symbol) {
   return defaultValue
 }
 
+/**
+ * @param {import("ts-morph").Symbol} symbol
+ */
 function getDeclarationType(symbol) {
   const dec = symbol
     .getDeclarations()
     .map(dec => dec.getText())[0]
     .replace(";", "")
 
+  /**
+   * @see https://github.com/reakit/reakit/blob/4a1c644a758264f4da77a3f4e2bc28aed6a16a48/scripts/build/utils.js#L480
+   */
+  const typeAliases = symbol
+    .getDeclarations()[0]
+    .getType()
+    .getText(undefined, ts.TypeFormatFlags.InTypeAlias)
+    .replace(" | undefined", "")
+
+  /**
+   * Simplify any function types with just the word `Function`.
+   */
   if (dec.includes(") => ")) {
     return "Function"
   }
 
-  return dec.split(": ")[1]
+  /**
+   * Simplify React.ReactElement types with just the word `React.ReactElement`.
+   */
+  if (typeAliases.includes("ReactElement")) {
+    return "React.ReactElement"
+  }
+
+  /**
+   * Modifiy type aliases for any type that is not a CSS['...'] value.
+   * Otherwise, there would be too many values.
+   */
+  if (!dec.includes("CSS[") && typeAliases.length < 99) {
+    return typeAliases
+  } else {
+    return dec.split(": ")[1]
+  }
 }
 
+/**
+ * @param {import("ts-morph").Node<Node>} node
+ */
+function getUsageProps(node) {
+  const props = {
+    description: null,
+    example: null,
+  }
+
+  node.getSourceFile().forEachChild(n => {
+    if (props.description || props.example) return
+    if (!n.getJsDocs) return
+
+    const jsDoc = n.getJsDocs()[0]
+
+    if (jsDoc) {
+      jsDoc.getTags().forEach(tag => {
+        if (tag.getText().includes("@remarks")) {
+          props.description = tag.getComment()
+        }
+        if (tag.getText().includes("@example")) {
+          props.example = tag.getComment()
+        }
+      })
+    }
+  })
+
+  return props
+}
+
+/**
+ * @param {import("ts-morph").Node<Node>} node
+ */
 function getPropTypes(node) {
   const nodeType = node.getType()
 
@@ -67,12 +167,14 @@ function getPropTypes(node) {
     const description = getComment(props)
     const declarationType = getDeclarationType(props)
     const defaultValue = getDefaultValue(props)
+    const example = getExample(props)
 
     return {
       name,
       description,
       declarationType,
       defaultValue,
+      example,
     }
   })
 
@@ -81,6 +183,9 @@ function getPropTypes(node) {
   return sortedPropTypes
 }
 
+/**
+ * @param {import("ts-morph").SourceFile[]} sourceFiles
+ */
 function sortSourceFiles(sourceFiles) {
   return sourceFiles.sort((a, b) => {
     const aName = a.getBaseNameWithoutExtension()
@@ -92,33 +197,64 @@ function sortSourceFiles(sourceFiles) {
   })
 }
 
+/**
+ * @param {import("ts-morph").Node<Node>} node
+ */
 function shouldRenderPropTable(node, name) {
   if (node.getKindName() !== "TypeAliasDeclaration") return false
   return node.getText().includes(`${name}Props`)
 }
 
-function getPropTypesMarkdown(propTypes) {
+function getPropTypesMarkdown(propTypes, usageProps) {
   if (!propTypes.length) return ""
 
-  const template = [
-    `| Name | Type | Default | Description |`,
-    `| --- | --- | --- | --- |`,
-  ]
+  const template = []
+
+  const { description, example } = usageProps
+
+  if (description || example) {
+    template.push("## Usage")
+  }
+
+  if (description) {
+    template.push(description)
+  }
+
+  if (example) {
+    template.push(
+      example
+        .replace("```jsx", "```jsx live")
+        .replace("`@wp-g2/components`", "'@wp-g2/components'")
+        .replace("`@wp-g2/styles`", "'@wp-g2/styles'")
+        .replace("`@wp-g2/utils`", "'@wp-g2/utils'")
+    )
+  }
+
+  template.push("", "")
+
+  template.push("## Props", "")
 
   propTypes.forEach(propType => {
-    const { declarationType, defaultValue, description, name } = propType
+    const { declarationType, description, example, name } = propType
 
     const type = declarationType
       .split(" | ")
       .map(value => `\`${value}\``)
       .join(",")
 
-    const value =
-      typeof defaultValue === "undefined" ? "" : `\`${defaultValue}\``
-
-    template.push(
-      `| ${name} | ${type} | ${value} | ${description.replace(/\n/g, " ")} |`
-    )
+    template.push(`##### ${name}`)
+    template.push(`**Type**: ${type}`)
+    template.push("")
+    template.push(description)
+    if (example) {
+      template.push(
+        example
+          .replace("```jsx", "```jsx live")
+          .replace("`@wp-g2/components`", "'@wp-g2/components'")
+          .replace("`@wp-g2/styles`", "'@wp-g2/styles'")
+          .replace("`@wp-g2/utils`", "'@wp-g2/utils'")
+      )
+    }
   })
 
   const markdown = template.join("\n")
@@ -177,8 +313,9 @@ function generatePropsDocsFromTypes() {
 
         if (!mdContents.includes("<!-- props -->")) return
 
+        const usageProps = getUsageProps(node)
         const propTypes = getPropTypes(node)
-        const propTypesMarkdown = getPropTypesMarkdown(propTypes)
+        const propTypesMarkdown = getPropTypesMarkdown(propTypes, usageProps)
 
         const nextPropTypesMarkdown = [
           `<!-- props -->`,
@@ -188,10 +325,13 @@ function generatePropsDocsFromTypes() {
           `<!-- /props -->`,
         ].join("\n")
 
-        const nextMdContents = mdContents.replace(
+        let nextMdContents = mdContents.replace(
           /<!-- props -->([\s\S]*)<!-- \/props -->/gm,
           nextPropTypesMarkdown
         )
+        nextMdContents = prettier
+          .format(nextMdContents, { parser: "markdown" })
+          .trim()
 
         writeMarkdownContents(componentName, nextMdContents)
 
