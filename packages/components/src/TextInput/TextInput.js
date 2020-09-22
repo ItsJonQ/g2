@@ -12,6 +12,7 @@ import * as styles from './TextInput.styles';
 const { InputView } = styles;
 
 function TextInput({
+	__onBeforeChange = (event) => event?.target?.value,
 	align,
 	className,
 	disabled,
@@ -58,7 +59,7 @@ function TextInput({
 	const handleOnChange = (event) => {
 		const next = event.target.value;
 		setValue(next);
-		onChange(event.target.value, { event });
+		onChange(__onBeforeChange(event), { event });
 	};
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';

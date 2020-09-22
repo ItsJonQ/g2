@@ -16,7 +16,7 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "reakit": "^1.1.2"
+        "reakit": "next"
     },
     "peerDependencies": {
         "react": "^16.8.0",

@@ -35,7 +35,8 @@ export const MenuItem = css`
 	}
 
 	&.is-active,
-	&[aria-current='page'] {
+	&[aria-current='page'],
+	&[aria-selected='true'] {
 		background-color: ${ui.get('surfaceBackgroundSubtleColor')};
 		color: ${ui.get('colorText')};
 
