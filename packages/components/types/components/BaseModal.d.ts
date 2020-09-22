@@ -24,7 +24,7 @@ export declare type BaseModalProps = {
 	 * </Modal>
 	 * ```
 	 */
-	trigger?: React.Component;
+	trigger?: React.ReactElement;
 	/**
 	 * The duration for the `Modal` open/closing animations.
 	 *

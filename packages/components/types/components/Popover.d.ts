@@ -21,7 +21,7 @@ export declare type PopoverProps = PopperProps & {
 	/**
 	 * Content to render within the `Popover` floating label.
 	 */
-	content?: React.Component | string;
+	content?: React.ReactElement | string;
 	/**
 	 * Renders `Elevation` styles for the `Popover`.
 	 *
@@ -54,7 +54,7 @@ export declare type PopoverProps = PopperProps & {
 	 * </Popover>
 	 * ```
 	 */
-	trigger?: React.Component;
+	trigger?: React.ReactElement;
 	/**
 	 * Whether `Popover` is visible.
 	 *

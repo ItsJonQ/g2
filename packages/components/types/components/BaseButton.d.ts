@@ -46,7 +46,7 @@ export declare type BaseButtonProps = {
 	/**
 	 * Renders an `Icon` within the `Button`.
 	 */
-	icon?: React.Component;
+	icon?: React.ReactElement;
 	/**
 	 * Adjusts the size of the `Icon` within the `Button` (from the `icon` prop).
 	 */
@@ -108,7 +108,7 @@ export declare type BaseButtonProps = {
 	/**
 	 * Renders prefix content within `Button`.
 	 */
-	prefix?: React.Component;
+	prefix?: React.ReactElement;
 	/**
 	 * Determines the size of `Button`.
 	 *
@@ -118,7 +118,7 @@ export declare type BaseButtonProps = {
 	/**
 	 * Renders suffix content within `Button`.
 	 */
-	suffix?: React.Component;
+	suffix?: React.ReactElement;
 	/**
 	 * Modifies the text-align (CSS) styles of `Button` content.
 	 *

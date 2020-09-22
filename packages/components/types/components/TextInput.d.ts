@@ -54,7 +54,7 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	/**
 	 * Renders prefix content within `TextInput`.
 	 */
-	prefix?: React.Component;
+	prefix?: React.ReactElement;
 	/**
 	 * Minimal number of rows to show for a multiline `TextInput`.
 	 */
@@ -66,7 +66,7 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	/**
 	 * Renders prefix content within `TextInput`.
 	 */
-	suffix?: React.Component;
+	suffix?: React.ReactElement;
 };
 
 /**

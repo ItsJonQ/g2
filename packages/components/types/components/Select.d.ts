@@ -28,7 +28,7 @@ export declare type SelectProps = Omit<
 		/**
 		 * Renders prefix content within `Select`.
 		 */
-		prefix?: React.Component;
+		prefix?: React.ReactElement;
 		/**
 		 * Determines the size of `Select`.
 		 *
@@ -38,7 +38,7 @@ export declare type SelectProps = Omit<
 		/**
 		 * Renders prefix content within `Select`.
 		 */
-		suffix?: React.Component;
+		suffix?: React.ReactElement;
 	};
 
 /**

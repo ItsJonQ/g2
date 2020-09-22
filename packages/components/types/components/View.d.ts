@@ -3,13 +3,13 @@ import { PolymorphicComponent } from './_shared';
 
 export declare type ViewProps = {
 	/**
-	 * Render the component as another React.Component or HTML Element.
+	 * Render the component as another React Component or HTML Element.
 	 * @example
 	 * ```
 	 * <View as="h1" />
 	 * ```
 	 */
-	as?: React.Component | string;
+	as?: React.ReactElement | string;
 	/**
 	 * Render custom CSS using the style system.
 	 * @example

@@ -21,7 +21,7 @@ export declare type TooltipProps = PopperProps & {
 	/**
 	 * Content to render within the `Tooltip` floating label.
 	 */
-	content?: React.Component | string;
+	content?: React.ReactElement | string;
 	/**
 	 * Spacing between the `Tooltip` reference and the floating label.
 	 *

@@ -11,7 +11,7 @@ type PropsOf<
 
 interface ViewOwnProps<E extends React.ElementType = React.ElementType> {
 	/**
-	 * Render the component as another React.Component or HTML Element.
+	 * Render the component as another React Component or HTML Element.
 	 * @example
 	 * ```
 	 * <View as="h1" />
@@ -39,14 +39,6 @@ export type PolymorphicComponent<P, D extends React.ElementType = 'div'> = <
 >(
 	props: PolymorphicComponentProps<E, P>,
 ) => JSX.Element;
-
-/**
- * Render the component as another React.Component or HTML Element.
- * @example
- * ```
- * <View as="h1" />
- * ```
- */
 
 export type FormElementProps = {
 	/**
