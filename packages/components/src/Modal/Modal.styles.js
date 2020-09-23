@@ -1,4 +1,4 @@
-import { css, space, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const ModalHeader = css`
 	position: relative;
@@ -17,7 +17,7 @@ export const ModalTitleView = styled.div`
 
 export const ModalCloseButtonView = styled.div`
 	position: absolute;
-	right: ${space(2)};
+	right: ${ui.space(2)};
 	top: 50%;
 
 	transform: translate(0, -50%);

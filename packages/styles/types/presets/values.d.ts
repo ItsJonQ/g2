@@ -8,6 +8,8 @@ export declare interface ValueInterface {
 		min: CSSNumberValue,
 		max: CSSNumberValue,
 	) => string;
+	/** Converts a value into pixels, if applicable. */
+	px: (value: CSSNumberValue) => string;
 	/** Calculates a value based on the internal grid system. */
 	space: (value: CSSNumberValue) => string;
 }

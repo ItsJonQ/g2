@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, cx, getBreakpoint, space, toPx } from '@wp-g2/styles';
+import { css, cx, getBreakpoint, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { BaseModal } from '../BaseModal';
@@ -37,18 +37,18 @@ function Modal({
 		outline: none;
 		perspective: 800px;
 		position: relative;
-		top: ${space(4)};
-		transform: translate3d(-50%, ${space(5)}, 0);
+		top: ${ui.space(4)};
+		transform: translate3d(-50%, ${ui.space(5)}, 0);
 		transform-origin: top center;
 		transition: ${modalTransition};
 		width: 100%;
 
 		@media (min-height: 40em) {
-			top: ${space(4)};
+			top: ${ui.space(4)};
 		}
 
 		${getBreakpoint('md')`
-			max-width: ${toPx(maxWidth)};
+			max-width: ${ui.value.px(maxWidth)};
 			position: absolute;
 			top: 16%;
 		`}

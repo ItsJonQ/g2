@@ -1,4 +1,4 @@
-import { styled, toPx } from '@wp-g2/styles';
+import { styled, ui } from '@wp-g2/styles';
 
 import { WRAPPER_SIZE } from './Spinner.utils';
 
@@ -9,13 +9,13 @@ export const ContainerView = styled.div`
 `;
 
 export const BarsWrapperView = styled.div`
-	height: ${toPx(WRAPPER_SIZE)};
+	height: ${ui.value.px(WRAPPER_SIZE)};
 	left: 0;
 	opacity: 0.6;
 	position: absolute;
 	top: 0;
 	transform-origin: top left;
-	width: ${toPx(WRAPPER_SIZE)};
+	width: ${ui.value.px(WRAPPER_SIZE)};
 `;
 
 export const BarsView = styled.div`
