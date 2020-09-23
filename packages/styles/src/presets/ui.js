@@ -3,6 +3,7 @@ import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
 import { border, borderRadius } from './borders';
+import { color } from './colors';
 import { frame } from './dimensions';
 import { font } from './fonts';
 import { active, focus, hover } from './interactions';
@@ -24,6 +25,7 @@ export const ui = {
 	background,
 	border,
 	borderRadius,
+	color,
 	focus,
 	font,
 	frame,

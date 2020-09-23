@@ -4,6 +4,7 @@ import { AlignmentInterface } from './alignments';
 import { AnimationInterface } from './animations';
 import { BackgroundInterface } from './backgrounds';
 import { BorderInterface, BorderRadiusInterface } from './borders';
+import { ColorInterface } from './colors';
 import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
 import { GetInterface } from './get';
@@ -36,32 +37,6 @@ declare interface ActiveInterface extends InteractionInterface {}
 /** Applies custom modifiers based on an focus interaction. */
 declare interface FocusInterface extends InteractionInterface {}
 
-interface TT {
-	/**
-	 * Creates a style query for a Component. This namespace can be added to any
-	 * React component, allowing it to be targeted for custom style via
-	 * ui.$().css().
-	 *
-	 * @example
-	 * ```jsx
-	 * // Declaring a namespace for a component
-	 * <View {...ui.$('Olaf')} />
-	 * ```
-	 *
-	 * @example
-	 * ```jsx
-	 * // Targeting a namespaced component for styling
-	 * <View css={[ui.$('Olaf').css('background: white')]} />
-	 *   <View {...ui.$('Olaf')} />
-	 * </View/>
-	 * ```
-	 *
-	 * @param {string} ComponentName The namespace of the component
-	 * @returns {Object} The StyleQuery instance.
-	 */
-	(): void;
-}
-
 export declare interface SystemInterface {
 	/** Creates a style query for a Component. */
 	$: StyleQueryInterface;
@@ -77,6 +52,8 @@ export declare interface SystemInterface {
 	borderRadius: BorderRadiusInterface;
 	/** Modify border styles based on system presets. */
 	border: BorderInterface;
+	/** Get a color value. */
+	color: ColorInterface;
 	/** Applies custom modifiers based on an focus interaction. */
 	focus: FocusInterface;
 	/** Modify width/height styles. */
