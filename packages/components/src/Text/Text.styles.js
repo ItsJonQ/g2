@@ -1,7 +1,7 @@
 import { css, ui } from '@wp-g2/styles';
 
 export const Text = css`
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 `;
 
 export const block = css`

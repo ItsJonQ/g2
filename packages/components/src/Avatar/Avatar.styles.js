@@ -2,7 +2,7 @@ import { css, styled, ui } from '@wp-g2/styles';
 
 export const AvatarView = styled.div`
 	align-items: center;
-	background: ${ui.get('lightGray500')};
+	background: ${ui.color.lightGray};
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
@@ -10,5 +10,5 @@ export const AvatarView = styled.div`
 `;
 
 export const border = css`
-	box-shadow: 0 0 0 2px ${ui.get('white')};
+	box-shadow: 0 0 0 2px ${ui.color.white};
 `;

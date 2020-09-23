@@ -9,7 +9,7 @@ export const Button = css`
 	border-style: solid;
 	border-width: 1px;
 	box-shadow: 0 0 0 2px transparent;
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	cursor: pointer;
 	display: inline-flex;
 	font-size: ${ui.get('fontSize')};
@@ -144,31 +144,31 @@ export const LoadingOverlay = css`
 
 export const subtle = css`
 	border-color: ${ui.get('controlBorderColorSubtle')};
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 
 	&:hover,
 	&:active,
 	&:focus {
 		border-color: ${ui.get('controlBorderColorSubtle')};
-		color: ${ui.get('colorText')};
+		color: ${ui.color.text};
 	}
 `;
 
 export const control = css`
 	background-color: ${ui.get('controlBackgroundColor')};
 	border: 1px solid ${ui.get('controlBorderColor')};
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	font-family: ${ui.get('fontFamily')};
 	font-size: ${ui.get('fontSize')};
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: ${ui.get('colorText')};
+		color: ${ui.color.text};
 	}
 
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		z-index: 1;
 	}

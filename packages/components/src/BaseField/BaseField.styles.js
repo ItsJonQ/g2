@@ -24,7 +24,7 @@ export const BaseFieldView = styled.div`
 	}
 
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		z-index: 1;
 	}
@@ -35,12 +35,12 @@ export const clickable = css`
 `;
 
 export const focus = css`
-	border-color: ${ui.get('colorAdmin')};
+	border-color: ${ui.color.admin};
 	box-shadow: ${ui.get('controlBoxShadowFocus')};
 	z-index: 1;
 
 	&:hover {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 	}
 `;
 

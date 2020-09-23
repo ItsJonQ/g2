@@ -5,7 +5,7 @@ export const DebuggerView = styled.div`
 	background: rgba(0, 0, 0, 0.8);
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 3px;
-	color: ${ui.get('white')};
+	color: ${ui.color.white};
 	display: inline-flex;
 	font-family: ${ui.get('fontFamilyMono')};
 	font-size: ${ui.get('fontSizeXSmall')};

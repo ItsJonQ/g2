@@ -25,7 +25,7 @@ export const MenuItem = css`
 	&:focus {
 		${ui.zIndex('ControlFocus')};
 		background: ${ui.get('controlBackgroundColor')};
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 
@@ -38,10 +38,10 @@ export const MenuItem = css`
 	&[aria-current='page'],
 	&[aria-selected='true'] {
 		background-color: ${ui.get('surfaceBackgroundSubtleColor')};
-		color: ${ui.get('colorText')};
+		color: ${ui.color.text};
 
 		&:active {
-			color: ${ui.get('colorTextInverted')};
+			color: ${ui.color.textInverted};
 		}
 
 		&:hover,
@@ -54,7 +54,7 @@ export const MenuItem = css`
 		}
 
 		&:active {
-			background-color: ${ui.get('colorText')};
+			background-color: ${ui.color.text};
 		}
 	}
 

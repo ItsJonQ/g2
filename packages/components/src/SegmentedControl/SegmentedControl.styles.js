@@ -12,7 +12,7 @@ export const SegmentedControl = css`
 	transition: all ${ui.get('transitionDurationFastest')} linear;
 
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		outline: none;
 		z-index: 1;
@@ -53,7 +53,7 @@ export const ButtonView = styled.button`
 	background: transparent;
 	border: none;
 	border-radius: ${ui.get('controlBorderRadius')};
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	cursor: pointer;
 	display: flex;
 	height: 100%;

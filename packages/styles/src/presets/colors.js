@@ -8,7 +8,7 @@ export function color(value) {
 	return colorize(value);
 }
 
-color.admin = get('admin');
+color.admin = get('colorAdmin');
 color.text = get('colorText');
 color.textInverted = get('colorTextInverted');
 color.border = get('surfaceBorderColor');

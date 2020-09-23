@@ -12,7 +12,7 @@ export const ColorPickerButtonView = styled.button`
 	width: 100%;
 
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		outline: none;
 		z-index: 1;

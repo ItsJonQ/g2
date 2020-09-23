@@ -3,13 +3,13 @@ import { css, ui } from '@wp-g2/styles';
 import * as baseButtonStyles from '../BaseButton/BaseButton.styles';
 
 export const Button = css`
-	color: ${ui.get('colorAdmin')};
+	color: ${ui.color.admin};
 	font-weight: 600;
 	padding-left: ${ui.get('controlPaddingXLarge')};
 	padding-right: ${ui.get('controlPaddingXLarge')};
 
 	&:active {
-		color: ${ui.get('colorText')};
+		color: ${ui.color.text};
 	}
 `;
 
@@ -77,42 +77,42 @@ export const icon = css`
 `;
 
 export const primary = css`
-	background-color: ${ui.get('colorAdmin')};
+	background-color: ${ui.color.admin};
 	color: ${ui.get('controlPrimaryTextColor')};
 
 	&:active {
-		color: ${ui.get('colorTextInverted')};
+		color: ${ui.color.textInverted};
 	}
 
 	&:hover,
 	&:focus {
-		background-color: ${ui.get('colorAdmin')};
+		background-color: ${ui.color.admin};
 	}
 
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 	}
 
 	&:active {
-		background-color: ${ui.get('colorText')};
+		background-color: ${ui.color.text};
 	}
 `;
 
 export const secondary = css`
 	background-color: transparent;
-	border-color: ${ui.get('colorAdmin')};
-	color: ${ui.get('colorAdmin')};
+	border-color: ${ui.color.admin};
+	color: ${ui.color.admin};
 
 	&:hover,
 	&:active,
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
-		color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
+		color: ${ui.color.admin};
 	}
 
 	&:active {
-		border-color: ${ui.get('colorText')};
-		color: ${ui.get('colorText')};
+		border-color: ${ui.color.text};
+		color: ${ui.color.text};
 	}
 
 	&[data-destructive='true'] {
@@ -127,7 +127,7 @@ export const secondary = css`
 		}
 
 		&:active {
-			color: ${ui.get('colorText')};
+			color: ${ui.color.text};
 		}
 	}
 `;
@@ -140,7 +140,7 @@ export const tertiary = css`
 export const link = css`
 	background: none;
 	border-color: transparent;
-	color: ${ui.get('colorAdmin')};
+	color: ${ui.color.admin};
 
 	&[data-destructive='true'] {
 		color: ${ui.get('colorDestructive')};
@@ -151,7 +151,7 @@ export const plainLink = css`
 	${ui.padding.x(0)};
 	background: none;
 	border-color: transparent;
-	color: ${ui.get('colorAdmin')};
+	color: ${ui.color.admin};
 
 	&[data-destructive='true'] {
 		color: ${ui.get('colorDestructive')};

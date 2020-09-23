@@ -3,7 +3,7 @@ import { css, styled, ui } from '@wp-g2/styles';
 export { scrollableScrollbar } from '../Scrollable/Scrollable.styles';
 
 export const focus = css`
-	border-color: ${ui.get('colorAdmin')};
+	border-color: ${ui.color.admin};
 	z-index: 1;
 `;
 
@@ -21,7 +21,7 @@ export const InputView = styled.input`
 	appearance: none;
 	background: transparent;
 	border: none;
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	display: block;
 	font-size: ${ui.get('fontSizeInputMobile')};
 	line-height: 18px;

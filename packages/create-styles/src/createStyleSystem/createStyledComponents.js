@@ -80,11 +80,11 @@ export function createStyledComponents({ compiler, core }) {
 					 */
 					finalClasses = cx([
 						css(...interpolatedProps),
-						cxProp,
+						css(cxProp),
 						className,
 					]);
 				} else {
-					finalCxProp = [css(...interpolatedProps), cxProp];
+					finalCxProp = [css(...interpolatedProps), css(cxProp)];
 				}
 
 				return (

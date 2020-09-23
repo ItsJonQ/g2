@@ -13,7 +13,7 @@ export const SliderView = styled.input`
 	width: 100%;
 
 	&:focus {
-		border-color: ${ui.get('colorAdmin')};
+		border-color: ${ui.color.admin};
 		outline: none;
 	}
 
@@ -24,7 +24,7 @@ export const SliderView = styled.input`
 	&::-webkit-slider-runnable-track {
 		background: linear-gradient(
 			to right,
-			${ui.get('colorAdmin')} calc(var(--progress)),
+			${ui.color.admin} calc(var(--progress)),
 			${ui.get('controlBackgroundDimColor')} calc(var(--progress))
 		);
 		border-radius: 2px;
@@ -38,7 +38,7 @@ export const SliderView = styled.input`
 	&::-moz-range-track {
 		background: linear-gradient(
 			to right,
-			${ui.get('colorAdmin')} calc(var(--progress)),
+			${ui.color.admin} calc(var(--progress)),
 			${ui.get('controlBackgroundDimColor')} calc(var(--progress))
 		);
 		border-radius: 2px;
@@ -52,7 +52,7 @@ export const SliderView = styled.input`
 
 	&::-webkit-slider-thumb {
 		appearance: none;
-		background-color: ${ui.get('white')};
+		background-color: ${ui.color.white};
 		border: 1px solid ${ui.get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
@@ -70,7 +70,7 @@ export const SliderView = styled.input`
 	}
 	&::-moz-range-thumb {
 		appearance: none;
-		background-color: ${ui.get('white')};
+		background-color: ${ui.color.white};
 		border: 1px solid ${ui.get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),

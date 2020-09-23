@@ -24,7 +24,7 @@ const useToolbarContext = () => React.useContext(ToolbarContext);
 
 const ToolbarView = styled.div`
 	background: ${ui.get('surfaceColor')};
-	border: 1px solid ${ui.get('colorText')};
+	border: 1px solid ${ui.color.text};
 	border-radius: 2px;
 	display: inline-flex;
 	padding: 0;
@@ -35,7 +35,7 @@ const ToolbarButtonView = styled.button`
 	appearance: none;
 	background: ${ui.get('surfaceColor')};
 	border: none;
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	cursor: pointer;
 	display: flex;
 	height: 48px;
@@ -66,7 +66,7 @@ const ToolbarButtonView = styled.button`
 	}
 
   &:hover {
-    color: ${ui.get('colorAdmin')};
+    color: ${ui.color.admin};
   }
 
 	&::before {
@@ -103,19 +103,19 @@ const ToolbarButtonView = styled.button`
   }
 
 	&:focus {
-		/* color: ${ui.get('colorTextInverted')};
+		/* color: ${ui.color.textInverted};
 
 		&::before {
 			background: black;
 		} */
     &::before {
-      box-shadow: 0 0 0 2px ${ui.get('colorAdmin')};
+      box-shadow: 0 0 0 2px ${ui.color.admin};
     }
 	}
 `;
 
 const ToolbarGroupView = styled.div`
-	border-right: 1px solid ${ui.get('colorText')};
+	border-right: 1px solid ${ui.color.text};
 	display: flex;
 
 	&:last-of-type {
@@ -130,7 +130,7 @@ const ToolbarButtonContentView = styled.span`
 
 const ToolbarDropdownView = styled.div`
 	background: ${ui.get('surfaceColor')};
-	border: 1px solid ${ui.get('colorText')};
+	border: 1px solid ${ui.color.text};
 	border-radius: 2px;
 	min-width: 200px;
 	outline: none;
@@ -142,7 +142,7 @@ const ToolbarDropdownItemView = styled.button`
 	background: none;
 	border: none;
 	border-radius: 2px;
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	cursor: pointer;
 	display: block;
 	outline: none;
@@ -151,16 +151,16 @@ const ToolbarDropdownItemView = styled.button`
 	width: 100%;
 
 	&:hover {
-		color: ${ui.get('colorAdmin')};
+		color: ${ui.color.admin};
 	}
 
 	&:focus {
-		box-shadow: 0 0 0 2px ${ui.get('colorAdmin')};
+		box-shadow: 0 0 0 2px ${ui.color.admin};
 	}
 `;
 
 const ToolbarSeparatorView = styled.div`
-	border-top: 1px solid ${ui.get('colorText')};
+	border-top: 1px solid ${ui.color.text};
 	margin: 8px -8px;
 `;
 

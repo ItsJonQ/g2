@@ -2,7 +2,7 @@ import { css, styled, ui } from '@wp-g2/styles';
 
 export const SurfaceView = styled.div`
 	background-color: ${ui.get('surfaceColor')};
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	position: relative;
 `;
 

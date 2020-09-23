@@ -5,5 +5,5 @@ export const BaseLink = css`
 `;
 
 export const Link = css`
-	color: ${ui.get('colorAdmin')};
+	color: ${ui.color.admin};
 `;

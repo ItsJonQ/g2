@@ -12,7 +12,7 @@ export const TabView = styled.button`
 	appearance: none;
 	background: transparent;
 	border: none;
-	color: ${ui.get('colorText')};
+	color: ${ui.color.text};
 	cursor: pointer;
 	flex: 1;
 	justify-content: center;
@@ -22,7 +22,7 @@ export const TabView = styled.button`
 	transition: color ${ui.get('transitionDuration')} linear;
 
 	&[aria-selected='true'] {
-		color: ${ui.get('colorAdmin')};
+		color: ${ui.color.admin};
 	}
 `;
 
@@ -39,7 +39,7 @@ export const TabPanelView = styled.div`
 `;
 
 export const TabIndicatorView = styled.div`
-	background: ${ui.get('colorAdmin')};
+	background: ${ui.color.admin};
 	bottom: -1px;
 	height: 2px;
 	left: 0;

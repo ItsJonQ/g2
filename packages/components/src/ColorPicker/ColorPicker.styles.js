@@ -7,14 +7,14 @@ export const ColorPickerView = styled.div`
 		border-radius: 0px !important;
 		box-shadow: none !important;
 		box-sizing: border-box !important;
-		color: ${ui.get('colorText')} !important;
+		color: ${ui.color.text} !important;
 		font-family: inherit;
 		padding: 0 !important;
 		user-select: none;
 
 		* {
 			box-sizing: border-box !important;
-			color: ${ui.get('colorText')} !important;
+			color: ${ui.color.text} !important;
 			user-select: none;
 		}
 
@@ -27,7 +27,7 @@ export const ColorPickerView = styled.div`
 			border: 1px solid ${ui.get('controlBorderColor')} !important;
 			border-radius: 3px !important;
 			box-shadow: none !important;
-			color: ${ui.get('colorText')} !important;
+			color: ${ui.color.text} !important;
 			font-size: ${ui.get('fontSize')} !important;
 			line-height: 18px;
 			padding: 5px 8px !important;
@@ -35,7 +35,7 @@ export const ColorPickerView = styled.div`
 			width: 100% !important;
 
 			&:focus {
-				border-color: ${ui.get('colorAdmin')} !important;
+				border-color: ${ui.color.admin} !important;
 				outline: none !important;
 			}
 		}

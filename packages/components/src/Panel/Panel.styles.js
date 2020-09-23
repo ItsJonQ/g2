@@ -14,7 +14,7 @@ export const PanelHeader = css`
 
 	&:focus {
 		${ui.zIndex('ControlFocus')};
-		box-shadow: 0 0 0 1px ${ui.get('colorAdmin')} inset;
+		box-shadow: 0 0 0 1px ${ui.color.admin} inset;
 	}
 `;
 

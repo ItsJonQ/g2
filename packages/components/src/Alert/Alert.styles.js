@@ -1,4 +1,4 @@
-import { css, getBackgroundColor, styled, ui } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 export const AlertView = styled.div`
 	background: ${ui.get('controlBackgroundColor')};
@@ -18,19 +18,19 @@ export const contentWithDismiss = css`
 `;
 
 export const success = css`
-	${getBackgroundColor('green')};
+	${ui.background.green};
 `;
 
 export const warning = css`
-	${getBackgroundColor('yellow')};
+	${ui.background.yellow};
 `;
 
 export const critical = css`
-	${getBackgroundColor('red')};
+	${ui.background.red};
 `;
 
 export const info = css`
-	${getBackgroundColor('blue')};
+	${ui.background.blue};
 `;
 
 export function getTextColor(status) {

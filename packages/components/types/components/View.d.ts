@@ -1,7 +1,13 @@
 import * as React from 'react';
-import { PolymorphicComponent } from './_shared';
+import { InterpolatedCSS } from '@wp-g2/styles';
 
-export declare type ViewProps = {
+// Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts
+type PropsOf<
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	E extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
+> = JSX.LibraryManagedAttributes<E, React.ComponentPropsWithRef<E>>;
+
+export interface ViewOwnProps<E extends React.ElementType = React.ElementType> {
 	/**
 	 * Render the component as another React Component or HTML Element.
 	 *
@@ -10,11 +16,11 @@ export declare type ViewProps = {
 	 * import { View } from `@wp-g2/components`
 	 *
 	 * function Example() {
-	 * 	return <View as="h1"><span>Olaf</span></View>
+	 * 	return <View as="h1" />
 	 * }
 	 * ```
 	 */
-	as?: React.ReactElement | string;
+	as?: E | string;
 	/**
 	 * Render custom CSS using the style system.
 	 *
@@ -23,11 +29,11 @@ export declare type ViewProps = {
 	 * import { View } from `@wp-g2/components`
 	 *
 	 * function Example() {
-	 * 	return <View css={`background: blue;`}><span>Olaf</span></View>
+	 * 	return <View css={`background: white;`} />
 	 * }
 	 * ```
 	 */
-	css?: any;
+	css?: InterpolatedCSS;
 	/**
 	 * Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop.
 	 * Typically used "internally" to establish based styles for a `View`.
@@ -35,16 +41,26 @@ export declare type ViewProps = {
 	 * @example
 	 * ```jsx
 	 * import { View } from `@wp-g2/components`
-	 * import { css } from `@wp-g2/styles`
 	 *
 	 * function Example() {
-	 * 	return <View cx={[css`background: blue;`]} css={`color: white;`}><span>Olaf</span></View>
+	 * 	return <View cx={`background: blue;`} css={`color: white;`} />
 	 * }
 	 * ```
 	 */
 	cx?: any;
-};
+}
 
+type ViewProps<E extends React.ElementType> = ViewOwnProps<E> &
+	Omit<PropsOf<E>, keyof ViewOwnProps>;
+
+type PolymorphicComponentProps<E extends React.ElementType, P> = P &
+	ViewProps<E>;
+
+export type PolymorphicComponent<P, D extends React.ElementType = 'div'> = <
+	E extends React.ElementType = D
+>(
+	props: PolymorphicComponentProps<E, P>,
+) => JSX.Element;
 /**
  * `View` is a core component that renders everything in the library. It is the principle component in the entire library.
  *
@@ -61,4 +77,4 @@ export declare type ViewProps = {
  * }
  * ```
  */
-export declare const View: PolymorphicComponent<ViewProps>;
+export declare const View: PolymorphicComponent<{}, 'div'>;
