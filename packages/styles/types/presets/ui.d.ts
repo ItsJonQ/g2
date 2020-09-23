@@ -40,7 +40,14 @@ declare interface FocusInterface extends InteractionInterface {}
 export declare interface SystemInterface {
 	/** Creates a style query for a Component. */
 	$: StyleQueryInterface;
-	/** Applies custom modifiers based on an active interaction. */
+	/**
+	 * Applies custom modifiers based on an active interaction.
+	 *
+	 * @example
+	 * ```js
+	 * const styles = css(ui.active({ color: ui.color.black }))
+	 * ```
+	 */
 	active: ActiveInterface;
 	/** Modify alignment styles based on system presets. */
 	alignment: AlignmentInterface;
@@ -52,17 +59,41 @@ export declare interface SystemInterface {
 	borderRadius: BorderRadiusInterface;
 	/** Modify border styles based on system presets. */
 	border: BorderInterface;
-	/** Get a color value. */
+	/**
+	 * Get a color value.
+	 * @alias ui.values.color
+	 */
 	color: ColorInterface;
-	/** Applies custom modifiers based on an focus interaction. */
+	/**
+	 * Applies custom modifiers based on an focus interaction.
+	 *
+	 * @example
+	 * ```js
+	 * const styles = css(ui.focus({ color: ui.color.black }));
+	 * ```
+	 */
 	focus: FocusInterface;
 	/** Modify width/height styles. */
 	frame: FrameInterface;
 	/** Modify font styles based on system presets. */
 	font: FontInterface;
-	/** Applies custom modifiers based on an hover interaction. */
+	/**
+	 * Applies custom modifiers based on an hover interaction.
+	 *
+	 * @example
+	 * ```js
+	 * const styles = css(ui.hover({ color: ui.color.black }));
+	 * ```
+	 */
 	hover: HoverInterface;
-	/** Retrives a design token value from the style configuration. */
+	/**
+	 * Retrives a design token value from the style configuration.
+	 *
+	 * @example
+	 * ```js
+	 * const controlHeight = ui.get('controlHeight');
+	 * ```
+	 */
 	get: GetInterface;
 	/** Modify margin styles based on system presets. */
 	margin: MarginInterface;
@@ -84,13 +115,23 @@ export declare interface SystemInterface {
 	scaleX: ScaleXInterface;
 	/** Modify scaleY (transform) styles. */
 	scaleY: ScaleYInterface;
-	/** Calculates a value based on the grid system. */
+	/**
+	 * Calculates a value based on the grid system.
+	 * @alias ui.values.space
+	 */
 	space: SpaceInterface;
 	/** Modify box-shadow styles based on system presets. */
 	shadow: ShadowInterface;
 	/** Outputs a CSS number value, often with a unit. */
 	value: ValueInterface;
-	/** Modify z-index styles based on system presets. */
+	/**
+	 * Modify z-index styles based on system presets.
+	 *
+	 * @example
+	 * ```js
+	 * const modalStyles = css(ui.zIndex('Modal'))
+	 * ```
+	 */
 	zIndex: ZIndexInterface;
 }
 

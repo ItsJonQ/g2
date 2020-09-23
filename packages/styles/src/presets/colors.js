@@ -11,6 +11,7 @@ export function color(value) {
 color.admin = get('admin');
 color.text = get('colorText');
 color.textInverted = get('colorTextInverted');
+color.border = get('surfaceBorderColor');
 
 /**
  * Add supported colors to the color() method

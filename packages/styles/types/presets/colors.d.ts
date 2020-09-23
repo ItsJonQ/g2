@@ -690,6 +690,8 @@ export declare interface ColorInterface {
 	text: string;
 	/** The system textInverted color. */
 	textInverted: string;
+	/** The system border color. */
+	border: string;
 	/** The system blue color. */
 	blue: string;
 	/** The system blue100 color. */
