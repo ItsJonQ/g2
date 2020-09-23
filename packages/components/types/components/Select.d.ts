@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
 	PolymorphicComponent,
 	FormElementProps,
-	SizeRangeDefault,
+	SizeRangeReduced,
 } from './_shared';
 import { BaseFieldProps } from './BaseField';
 
@@ -67,7 +67,7 @@ export declare type SelectProps = Omit<
 		 * }
 		 * ```
 		 */
-		size?: SizeRangeDefault;
+		size?: SizeRangeReduced;
 		/**
 		 * Renders prefix content within `Select`.
 		 *

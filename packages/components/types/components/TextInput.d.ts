@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PolymorphicComponent, SizeRangeDefault } from './_shared';
+import { PolymorphicComponent, SizeRangeReduced } from './_shared';
 import { BaseFieldProps } from './BaseField';
 
 export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
@@ -62,7 +62,7 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	/**
 	 * Determines the size of `TextInput`.
 	 */
-	size?: SizeRangeDefault;
+	size?: SizeRangeReduced;
 	/**
 	 * Renders prefix content within `TextInput`.
 	 */
