@@ -8,6 +8,10 @@ export function color(value) {
 	return colorize(value);
 }
 
+color.admin = get('admin');
+color.text = get('colorText');
+color.textInverted = get('colorTextInverted');
+
 /**
  * Add supported colors to the color() method
  */

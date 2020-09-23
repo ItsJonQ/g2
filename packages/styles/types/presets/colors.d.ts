@@ -684,123 +684,128 @@ declare const tinycolor: Constructor;
 /** Get a color value. */
 export declare interface ColorInterface {
 	(color?: ColorInput, opts?: ConstructorOptions): Instance;
-	/** Gets blue color. */
+	/** The system admin color. */
+	admin: string;
+	/** The system text color. */
+	text: string;
+	/** The system textInverted color. */
+	textInverted: string;
+	/** The system blue color. */
 	blue: string;
-	/** Gets blue100 color. */
+	/** The system blue100 color. */
 	blue100: string;
-	/** Gets blue300 color. */
+	/** The system blue300 color. */
 	blue300: string;
-	/** Gets blue500 color. */
+	/** The system blue500 color. */
 	blue500: string;
-	/** Gets blue700 color. */
+	/** The system blue700 color. */
 	blue700: string;
-	/** Gets blue900 color. */
+	/** The system blue900 color. */
 	blue900: string;
-	/** Gets red color. */
+	/** The system red color. */
 	red: string;
-	/** Gets red100 color. */
+	/** The system red100 color. */
 	red100: string;
-	/** Gets red300 color. */
+	/** The system red300 color. */
 	red300: string;
-	/** Gets red500 color. */
+	/** The system red500 color. */
 	red500: string;
-	/** Gets red700 color. */
+	/** The system red700 color. */
 	red700: string;
-	/** Gets red900 color. */
+	/** The system red900 color. */
 	red900: string;
-	/** Gets purple color. */
+	/** The system purple color. */
 	purple: string;
-	/** Gets purple100 color. */
+	/** The system purple100 color. */
 	purple100: string;
-	/** Gets purple300 color. */
+	/** The system purple300 color. */
 	purple300: string;
-	/** Gets purple500 color. */
+	/** The system purple500 color. */
 	purple500: string;
-	/** Gets purple700 color. */
+	/** The system purple700 color. */
 	purple700: string;
-	/** Gets purple900 color. */
+	/** The system purple900 color. */
 	purple900: string;
-	/** Gets green color. */
+	/** The system green color. */
 	green: string;
-	/** Gets green100 color. */
+	/** The system green100 color. */
 	green100: string;
-	/** Gets green300 color. */
+	/** The system green300 color. */
 	green300: string;
-	/** Gets green500 color. */
+	/** The system green500 color. */
 	green500: string;
-	/** Gets green700 color. */
+	/** The system green700 color. */
 	green700: string;
-	/** Gets green900 color. */
+	/** The system green900 color. */
 	green900: string;
-	/** Gets yellow color. */
+	/** The system yellow color. */
 	yellow: string;
-	/** Gets yellow100 color. */
+	/** The system yellow100 color. */
 	yellow100: string;
-	/** Gets yellow300 color. */
+	/** The system yellow300 color. */
 	yellow300: string;
-	/** Gets yellow500 color. */
+	/** The system yellow500 color. */
 	yellow500: string;
-	/** Gets yellow700 color. */
+	/** The system yellow700 color. */
 	yellow700: string;
-	/** Gets yellow900 color. */
+	/** The system yellow900 color. */
 	yellow900: string;
-	/** Gets orange color. */
+	/** The system orange color. */
 	orange: string;
-	/** Gets orange100 color. */
+	/** The system orange100 color. */
 	orange100: string;
-	/** Gets orange300 color. */
+	/** The system orange300 color. */
 	orange300: string;
-	/** Gets orange500 color. */
+	/** The system orange500 color. */
 	orange500: string;
-	/** Gets orange700 color. */
+	/** The system orange700 color. */
 	orange700: string;
-	/** Gets orange900 color. */
+	/** The system orange900 color. */
 	orange900: string;
-	/** Gets darkGray color. */
+	/** The system darkGray color. */
 	darkGray: string;
-	/** Gets darkGray100 color. */
+	/** The system darkGray100 color. */
 	darkGray100: string;
-	/** Gets darkGray300 color. */
+	/** The system darkGray300 color. */
 	darkGray300: string;
-	/** Gets darkGray500 color. */
+	/** The system darkGray500 color. */
 	darkGray500: string;
-	/** Gets darkGray700 color. */
+	/** The system darkGray700 color. */
 	darkGray700: string;
-	/** Gets darkGray900 color. */
+	/** The system darkGray900 color. */
 	darkGray900: string;
-	/** Gets lightGray color. */
+	/** The system lightGray color. */
 	lightGray: string;
-	/** Gets lightGray100 color. */
+	/** The system lightGray100 color. */
 	lightGray100: string;
-	/** Gets lightGray300 color. */
+	/** The system lightGray300 color. */
 	lightGray300: string;
-	/** Gets lightGray500 color. */
+	/** The system lightGray500 color. */
 	lightGray500: string;
-	/** Gets lightGray700 color. */
+	/** The system lightGray700 color. */
 	lightGray700: string;
-	/** Gets lightGray900 color. */
+	/** The system lightGray900 color. */
 	lightGray900: string;
-
-	/** Gets black color. */
+	/** The system black color. */
 	black: string;
-	/** Gets blueberry color. */
+	/** The system blueberry color. */
 	blueberry: string;
-	/** Gets blueberryDark color. */
+	/** The system blueberryDark color. */
 	blueberryDark: string;
-	/** Gets greens color. */
+	/** The system greens color. */
 	greens: string;
-	/** Gets grey color. */
+	/** The system grey color. */
 	grey: string;
-	/** Gets greyBlack color. */
+	/** The system greyBlack color. */
 	greyBlack: string;
-	/** Gets lightBlue color. */
+	/** The system lightBlue color. */
 	lightBlue: string;
-	/** Gets lightGrey color. */
+	/** The system lightGrey color. */
 	lightGrey: string;
-	/** Gets lighterGrey color. */
+	/** The system lighterGrey color. */
 	lighterGrey: string;
-	/** Gets pomegrade color. */
+	/** The system pomegrade color. */
 	pomegrade: string;
-	/** Gets white color. */
+	/** The system white color. */
 	white: string;
 }
