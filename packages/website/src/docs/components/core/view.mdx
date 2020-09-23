@@ -78,28 +78,6 @@ function Example() {
 Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop.
 Typically used "internally" to establish based styles for a `View`.
 
-```jsx live
-import { View } from "@wp-g2/components"
-import { css } from "@wp-g2/styles"
-
-function Example() {
-  return (
-    <View
-      cx={[
-        css`
-          background: blue;
-        `,
-      ]}
-      css={`
-        color: white;
-      `}
-    >
-      <span>Olaf</span>
-    </View>
-  )
-}
-```
-
 <!-- /Automatically Generated -->
 <!-- /props -->
 

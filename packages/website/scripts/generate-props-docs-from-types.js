@@ -161,13 +161,22 @@ function getUsageProps(node) {
  */
 function getPropTypes(node) {
   const nodeType = node.getType()
+  const nodeFullText = node.getFullText()
 
   const propTypes = nodeType.getProperties().map(props => {
     const name = props.getEscapedName()
     const description = getComment(props)
     const declarationType = getDeclarationType(props)
     const defaultValue = getDefaultValue(props)
-    const example = getExample(props)
+    let example
+
+    /**
+     * We only want to use an example if it exists in the declared types of the
+     * file (rather than inheriting it from a compounded external type).
+     */
+    if (nodeFullText.includes(description)) {
+      example = getExample(props)
+    }
 
     return {
       name,

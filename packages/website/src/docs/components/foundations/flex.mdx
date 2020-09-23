@@ -48,24 +48,6 @@ Aligns children using CSS Flexbox `align-items`. Vertically aligns content if th
 
 In the example below, `flex-start` will align the children content to the top.
 
-```jsx live
-import { Flex, Text, View } from "@wp-g2/components"
-import { ui } from "@wp-g2/styles"
-
-function Example() {
-  return (
-    <Flex align="flex-start">
-      <View css={[ui.background.blue, { height: 100 }]}>
-        <Text>Ana</Text>
-      </View>
-      <View css={[ui.background.blue]}>
-        <Text>Elsa</Text>
-      </View>
-    </Flex>
-  )
-}
-```
-
 ##### autoWrap
 
 **Type**: `boolean`
@@ -126,24 +108,6 @@ function Example() {
 
 Horizontally aligns content if the `direction` is `row`, or vertically aligns content if the `direction` is `column`.
 In the example below, `flex-start` will align the children content to the left.
-
-```jsx live
-import { Flex, Text, View } from "@wp-g2/components"
-import { ui } from "@wp-g2/styles"
-
-function Example() {
-  return (
-    <Flex justify="flex-start">
-      <View css={[ui.background.blue, { height: 100 }]}>
-        <Text>Ana</Text>
-      </View>
-      <View css={[ui.background.blue]}>
-        <Text>Elsa</Text>
-      </View>
-    </Flex>
-  )
-}
-```
 
 ##### wrap
 
