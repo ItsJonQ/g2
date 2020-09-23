@@ -33,11 +33,6 @@ StyleQuery.prototype.getSelector = function () {
 StyleQuery.prototype.css = function (...args) {
 	const compiledStyles = css(...args);
 
-	console.log(`
-
-	${this.getSelector()} {
-		${compiledStyles};
-	}`);
 	/**
 	 * Currently does not support hoisting (e.g. dark-mode).
 	 */
