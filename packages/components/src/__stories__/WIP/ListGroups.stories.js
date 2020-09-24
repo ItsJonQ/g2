@@ -1,9 +1,8 @@
-import { ComponentsProvider, connect } from '@wp-g2/context';
-import { ns } from '@wp-g2/context';
+import { ComponentsProvider, connect, ns } from '@wp-g2/context';
 import { FiChrome, FiCompass } from '@wp-g2/icons';
-import { styled, ui } from '@wp-g2/styles';
+import { styled, ThemeProvider, ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
 	Button,
@@ -20,6 +19,7 @@ import {
 	ListGroups,
 	MenuItem,
 	NavigatorLink,
+	SegmentedControl,
 	Spacer,
 	Subheading,
 	Surface,
@@ -299,11 +299,27 @@ const AllTheThings = () => {
 		'WIP/ListGroups/SpacingVisualizer',
 		false,
 	);
+	const [gridBase, setGridBase] = useState(4);
+
 	return (
-		<>
+		<ThemeProvider theme={{ gridBase: ui.value.px(gridBase) }}>
 			<Spacer mb={5}>
 				<HStack>
 					<Heading size={1}>ListGroup Examples</Heading>
+					<FormGroup isInline label="Grid Base">
+						<SegmentedControl
+							onChange={setGridBase}
+							options={[
+								{ value: 2, label: '2px' },
+								{ value: 4, label: '4px' },
+								{ value: 6, label: '6px' },
+								{ value: 8, label: '8px' },
+								{ value: 10, label: '10px' },
+								{ value: 12, label: '12px' },
+							]}
+							value={gridBase}
+						/>
+					</FormGroup>
 					<FormGroup isInline label="Show Visualizer">
 						<Switch checked={visualize} onChange={setVisualize} />
 					</FormGroup>
@@ -321,7 +337,7 @@ const AllTheThings = () => {
 					</GridItem>
 				</Grid>
 			</SpacingVisualizer>
-		</>
+		</ThemeProvider>
 	);
 };
 
