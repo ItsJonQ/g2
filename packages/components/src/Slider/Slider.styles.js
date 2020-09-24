@@ -55,8 +55,8 @@ export const SliderView = styled.input`
 		background-color: ${ui.color.white};
 		border: 1px solid ${ui.get('controlBorderColor')};
 		border-radius: 50%;
-		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
-			0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),
+			${ui.get('controlSurfaceBoxShadow')};
 		cursor: pointer;
 		height: 12px;
 		margin-top: -5px;
@@ -73,8 +73,8 @@ export const SliderView = styled.input`
 		background-color: ${ui.color.white};
 		border: 1px solid ${ui.get('controlBorderColor')};
 		border-radius: 50%;
-		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
-			0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),
+			${ui.get('controlSurfaceBoxShadow')};
 		cursor: pointer;
 		height: 12px;
 		margin-top: -5px;

@@ -1,7 +1,7 @@
 import { ComponentsProvider } from '@wp-g2/context';
 import { ThemeProvider, ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
 	Card,
@@ -32,13 +32,14 @@ export const Sidebar = ({ children }) => {
 		false,
 	);
 	const [darkMode, setDarkMode] = useLocalState(
-		'G2/Components/Sidebar/outlinedControls',
+		'G2/Components/Sidebar/darkMode',
 		false,
 	);
 
 	const theme = {
 		controlBackgroundColor: outlinedControls && ui.get('surfaceColor'),
 		controlBorderColor: outlinedControls && ui.get('surfaceBorderColor'),
+		controlSurfaceBoxShadow: outlinedControls ? 'none' : null,
 	};
 
 	return (
@@ -67,7 +68,7 @@ export const Sidebar = ({ children }) => {
 							/>
 						</FormGroup>
 						<FormGroup
-							label="Bright Controls"
+							label="Outlined Controls"
 							templateColumns="1fr 1fr"
 						>
 							<Switch

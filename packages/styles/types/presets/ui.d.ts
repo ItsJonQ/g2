@@ -7,7 +7,7 @@ import { BorderInterface, BorderRadiusInterface } from './borders';
 import { ColorInterface } from './colors';
 import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
-import { GetInterface } from './get';
+import { GetInterface, GetTokenValueInterface } from './get';
 import { ModesInterface } from './modes';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
@@ -87,7 +87,7 @@ export declare interface SystemInterface {
 	 */
 	hover: HoverInterface;
 	/**
-	 * Retrives a design token value from the style configuration.
+	 * Retrives a design token from the style configuration.
 	 *
 	 * @example
 	 * ```js
@@ -95,6 +95,16 @@ export declare interface SystemInterface {
 	 * ```
 	 */
 	get: GetInterface;
+	/**
+	 * Development/debugging only!
+	 * Retrives a design token computed value from the style configuration.
+	 *
+	 * @example
+	 * ```js
+	 * const controlHeight = ui.getTokenValue('controlHeight');
+	 * ```
+	 */
+	getTokenValue: GetTokenValueInterface;
 	/** Modify margin styles based on system presets. */
 	margin: MarginInterface;
 	/** Modify styles for a specific mode. */

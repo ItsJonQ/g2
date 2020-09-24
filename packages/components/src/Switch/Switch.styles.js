@@ -40,7 +40,7 @@ export const inputHidden = css`
 
 export const BackdropView = styled.div`
 	${ui.background.control};
-	${ui.border.control};
+	${ui.border.control.default};
 	${ui.borderRadius.circle};
 
 	bottom: 4px;

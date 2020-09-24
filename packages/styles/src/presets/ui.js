@@ -1,4 +1,3 @@
-import { get } from '../core';
 import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
@@ -6,6 +5,7 @@ import { border, borderRadius } from './borders';
 import { color } from './colors';
 import { frame } from './dimensions';
 import { font } from './fonts';
+import { get, getTokenValue } from './get';
 import { active, focus, hover } from './interactions';
 import { mode } from './modes';
 import { opacity } from './opacity';
@@ -30,6 +30,7 @@ export const ui = {
 	font,
 	frame,
 	get,
+	getTokenValue,
 	hover,
 	margin,
 	mode,

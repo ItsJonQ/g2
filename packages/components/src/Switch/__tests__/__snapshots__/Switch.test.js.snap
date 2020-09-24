@@ -9,7 +9,7 @@ exports[`props should render checked 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-kusdgm"
+    class="wp-components-switch-backdrop css-1g3h45o"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
@@ -44,7 +44,7 @@ exports[`props should render correctly 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
+    class="wp-components-switch-backdrop css-8ieowc"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
@@ -78,7 +78,7 @@ exports[`props should render defaultValue 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-kusdgm"
+    class="wp-components-switch-backdrop css-1g3h45o"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
@@ -113,7 +113,7 @@ exports[`props should render disabled 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
+    class="wp-components-switch-backdrop css-8ieowc"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
@@ -150,7 +150,7 @@ exports[`props should render label 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
+    class="wp-components-switch-backdrop css-8ieowc"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
@@ -186,7 +186,7 @@ exports[`props should render size 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
+    class="wp-components-switch-backdrop css-8ieowc"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
@@ -220,7 +220,7 @@ exports[`props should render type 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-z9wuna"
+    class="wp-components-switch-backdrop css-8ieowc"
     data-g2-c16t="true"
     data-g2-component="SwitchBackdrop"
   />
