@@ -27,7 +27,7 @@ export declare type AspectRatioProps = {
  *
  * function Example() {
  *   return (
- *     <AspectRatio ratio={16 / 9}>
+ *     	<AspectRatio ratio={16 / 9}>
  *       <img
  *         src="https://picsum.photos/seed/picsum/800/800"
  *         alt="Snowy Mountains"

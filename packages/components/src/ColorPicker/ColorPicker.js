@@ -1,4 +1,5 @@
 import { connect } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import { noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 import { SketchPicker } from 'react-color';
@@ -8,6 +9,7 @@ const { ColorPickerView } = styles;
 
 function ColorPicker({
 	color: colorProp,
+	alpha,
 	onChange = noop,
 	disableAlpha = true,
 	presetColors = [],
@@ -19,14 +21,19 @@ function ColorPicker({
 	const [color, setColor] = useControlledState(colorProp);
 
 	const handleChangeComplete = (next) => {
-		setColor(next.hex);
-		onChange(next.hex);
+		let nextColor = next.hex;
+		if (!disableAlpha) {
+			nextColor = ui.color(next.rgb).toRgbString();
+		}
+		setColor(nextColor, { data: next });
+		onChange(nextColor, { data: next });
 	};
 
 	return (
 		<ColorPickerView {...props}>
 			<SketchPicker
-				color={color}
+				alpha={alpha}
+				color={ui.color(color).toRgb()}
 				disableAlpha={disableAlpha}
 				onChange={handleChangeComplete}
 				onChangeComplete={handleChangeComplete}

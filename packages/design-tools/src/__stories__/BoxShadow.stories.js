@@ -1,15 +1,18 @@
+import { useMotionValue } from '@wp-g2/animations';
 import {
 	Badge,
 	Button,
 	Card,
 	CardBody,
 	ColorCircle,
+	ColorPicker,
 	Container,
 	FormGroup,
 	Grid,
 	HStack,
 	ListGroup,
 	ListGroupHeader,
+	ListGroups,
 	MenuItem,
 	Popover,
 	Slider,
@@ -17,13 +20,13 @@ import {
 	Surface,
 	Text,
 	TextInput,
-	View,
 } from '@wp-g2/components';
 import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { Schema } from '@wp-g2/protokit';
 import { styled, ui } from '@wp-g2/styles';
 import { useListState } from '@wp-g2/utils';
 import React from 'react';
+import * as yup from 'yup';
 
 export default {
 	title: 'DesignTools/BoxShadow',
@@ -40,36 +43,97 @@ const Frame = styled(Surface)`
 	top: 0;
 `;
 
-const shadowSchema = new Schema({
+const shadowMockSchema = new Schema({
 	x: 0,
 	y: 1,
 	z: 0,
-	color: 'black',
-	alpha: 0.1,
+	color: 'rgba(0, 0, 0, 0.1)',
 });
 
-const ShadowValue = ({ label, onChange, value, min = -50, max = 50 }) => {
+/**
+ * Using yup to setup a schema, that will validate and transform values
+ * between the controls and data layer.
+ */
+const shadowSchema = yup.object().shape({
+	x: yup
+		.number()
+		.default(0)
+		.transform((v) => (isNaN(v) ? 0 : v)),
+	y: yup
+		.number()
+		.default(0)
+		.transform((v) => (isNaN(v) ? 0 : v)),
+	z: yup
+		.number()
+		.min(0)
+		.default(0)
+		.transform((v) => (isNaN(v) ? 0 : v)),
+	color: yup.string(),
+});
+
+const SliderTextInput = ({ max, min, onChange, value, ...props }) => {
 	return (
-		<FormGroup label={label}>
-			<Grid>
-				<Slider max={max} min={min} onChange={onChange} value={value} />
-				<TextInput
-					onChange={onChange}
-					suffix={
-						<Text isBlock size="caption" variant="muted">
-							PX
-						</Text>
-					}
-					type="number"
-					value={value}
-				/>
-			</Grid>
+		<Grid>
+			<Slider max={max} min={min} onChange={onChange} value={value} />
+			<TextInput
+				min={min}
+				onChange={onChange}
+				type="number"
+				value={value}
+				{...props}
+			/>
+		</Grid>
+	);
+};
+
+const ShadowValue = ({ label, onChange, value, min = -20, max = 20 }) => {
+	return (
+		<FormGroup label={label} templateColumns="minmax(0, 1fr) 3fr">
+			<SliderTextInput
+				max={max}
+				min={min}
+				onChange={onChange}
+				suffix={
+					<Text isBlock size="caption" variant="muted">
+						PX
+					</Text>
+				}
+				value={value}
+			/>
 		</FormGroup>
 	);
 };
 
-const ShadowEntry = ({ alpha, color, onRemove, onUpdate, x, y, z }) => {
-	const colorValue = getShadowColor({ color, alpha });
+const ShadowEntryView = ({ color, x, y, z }) => {
+	const colorValue = getShadowColor({ color });
+
+	return (
+		<HStack>
+			<ColorCircle color={colorValue} size="small" />
+			<HStack spacing={1}>
+				<Text isBlock size="caption" weight="bold">
+					X
+				</Text>
+				<Badge>{ui.value.px(x)}</Badge>
+			</HStack>
+			<HStack spacing={1}>
+				<Text isBlock size="caption" weight="bold">
+					Y
+				</Text>
+				<Badge>{ui.value.px(y)}</Badge>
+			</HStack>
+			<HStack spacing={1}>
+				<Text isBlock size="caption" weight="bold">
+					Z
+				</Text>
+				<Badge>{ui.value.px(z)}</Badge>
+			</HStack>
+			<Spacer />
+		</HStack>
+	);
+};
+
+const ShadowEntry = ({ color, onRemove, onUpdate, x, y, z }) => {
 	return (
 		<Popover
 			gutter={0}
@@ -78,26 +142,7 @@ const ShadowEntry = ({ alpha, color, onRemove, onUpdate, x, y, z }) => {
 			trigger={
 				<MenuItem>
 					<HStack>
-						<ColorCircle color={colorValue} size="small" />
-						<HStack spacing={1}>
-							<Text isBlock size="caption" weight="bold">
-								X
-							</Text>
-							<Badge>{ui.value.px(x)}</Badge>
-						</HStack>
-						<HStack spacing={1}>
-							<Text isBlock size="caption" weight="bold">
-								Y
-							</Text>
-							<Badge>{ui.value.px(y)}</Badge>
-						</HStack>
-						<HStack spacing={1}>
-							<Text isBlock size="caption" weight="bold">
-								Z
-							</Text>
-							<Badge>{ui.value.px(z)}</Badge>
-						</HStack>
-						<Spacer />
+						<ShadowEntryView color={color} x={x} y={y} z={z} />
 						<Button
 							icon={<FiMinus />}
 							isControl
@@ -110,33 +155,47 @@ const ShadowEntry = ({ alpha, color, onRemove, onUpdate, x, y, z }) => {
 			}
 		>
 			<CardBody>
-				<ListGroup>
-					<ListGroupHeader>Shadow Values</ListGroupHeader>
-					<ShadowValue
-						label="X"
-						onChange={(next) => onUpdate({ x: next })}
-						value={x}
-					/>
-					<ShadowValue
-						label="Y"
-						onChange={(next) => onUpdate({ y: next })}
-						value={y}
-					/>
-					<ShadowValue
-						label="Z"
-						min={0}
-						onChange={(next) => onUpdate({ z: next })}
-						value={z}
-					/>
-				</ListGroup>
+				<ListGroups>
+					<ListGroup>
+						<ListGroupHeader>Values</ListGroupHeader>
+						<ShadowValue
+							label="X"
+							onChange={(next) => onUpdate({ x: next })}
+							value={x}
+						/>
+						<ShadowValue
+							label="Y"
+							onChange={(next) => onUpdate({ y: next })}
+							value={y}
+						/>
+						<ShadowValue
+							label="Z"
+							min={0}
+							onChange={(next) => onUpdate({ z: next })}
+							value={z}
+						/>
+					</ListGroup>
+					<ListGroup>
+						<ListGroupHeader>Color</ListGroupHeader>
+						<ColorPicker
+							color={color}
+							disableAlpha={false}
+							onChange={(next) => {
+								onUpdate({
+									color: next,
+								});
+							}}
+						/>
+					</ListGroup>
+				</ListGroups>
 			</CardBody>
 		</Popover>
 	);
 };
 
 function getShadowColor(shadow) {
-	const { alpha, color } = shadow;
-	return ui.color(color).setAlpha(alpha).toRgbString();
+	const { color } = shadow;
+	return ui.color(color).toRgbString();
 }
 
 function getShadowStyle(shadows = []) {
@@ -183,21 +242,26 @@ const BoxShadowControl = ({
 };
 
 const Example = () => {
-	const [shadows, stateFn] = useListState([shadowSchema.makeOne()]);
-
-	const addShadow = () => {
-		stateFn.add(shadowSchema.makeOne());
-	};
-
-	const removeShadow = (id) => {
-		stateFn.remove({ id });
-	};
-
-	const updateShadow = (next) => {
-		stateFn.update(next);
-	};
-
+	const [shadows, stateFn] = useListState([shadowMockSchema.makeOne()]);
 	const boxShadow = getShadowStyle(shadows);
+
+	const addShadow = React.useCallback(() => {
+		stateFn.add(shadowMockSchema.makeOne());
+	}, [stateFn]);
+
+	const removeShadow = React.useCallback(
+		(id) => {
+			stateFn.remove({ id });
+		},
+		[stateFn],
+	);
+
+	const updateShadow = React.useCallback(
+		(next) => {
+			stateFn.update(shadowSchema.cast(next));
+		},
+		[stateFn],
+	);
 
 	return (
 		<Grid css={[ui.frame({ height: 500 })]}>

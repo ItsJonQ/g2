@@ -77,7 +77,8 @@
     "lodash": "^4.17.19",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "reakit-warning": "0.4.1"
+    "reakit-warning": "0.4.1",
+    "yup": "0.29.3"
   },
   "publishConfig": {
     "access": "public"
