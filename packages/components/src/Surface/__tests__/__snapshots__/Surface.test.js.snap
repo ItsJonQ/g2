@@ -2,7 +2,7 @@
 
 exports[`props should render borderBottom 1`] = `
 <div
-  class="wp-components-surface css-1y6bbu8"
+  class="wp-components-surface css-nmnysc"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -12,7 +12,7 @@ exports[`props should render borderBottom 1`] = `
 
 exports[`props should render borderLeft 1`] = `
 <div
-  class="wp-components-surface css-1t5hy6c"
+  class="wp-components-surface css-v4l0wt"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -22,7 +22,7 @@ exports[`props should render borderLeft 1`] = `
 
 exports[`props should render borderRight 1`] = `
 <div
-  class="wp-components-surface css-1dmxce1"
+  class="wp-components-surface css-10rsllr"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -32,7 +32,7 @@ exports[`props should render borderRight 1`] = `
 
 exports[`props should render borderTop 1`] = `
 <div
-  class="wp-components-surface css-zgf80d"
+  class="wp-components-surface css-iiuivz"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -42,7 +42,7 @@ exports[`props should render borderTop 1`] = `
 
 exports[`props should render borders 1`] = `
 <div
-  class="wp-components-surface css-1fkhmfm"
+  class="wp-components-surface css-1s90agt"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -52,7 +52,7 @@ exports[`props should render borders 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-surface css-1uslwia"
+  class="wp-components-surface css-143byaq"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -62,7 +62,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render variants 1`] = `
 <div
-  class="wp-components-surface css-1heuhr3"
+  class="wp-components-surface css-1ggy2of"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >

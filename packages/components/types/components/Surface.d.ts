@@ -1,10 +1,19 @@
 import { PolymorphicComponent } from './_shared';
 
-export declare type SurfaceVariant = 'primary' | 'secondary' | 'tertiary';
+export declare type SurfaceVariant =
+	| 'primary'
+	| 'secondary'
+	| 'tertiary'
+	| 'dotted'
+	| 'grid';
 
 export declare type SurfaceProps = {
 	/**
-	 *  Renders a border around the entire `Surface`.
+	 * Determines the grid size for "dotted" and "grid" variants.
+	 */
+	backgroundSize?: number;
+	/**
+	 * Renders a border around the entire `Surface`.
 	 */
 	border?: boolean;
 	/**

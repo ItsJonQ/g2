@@ -22,7 +22,7 @@ exports[`props should render max 1`] = `
   id="slider"
   max="50"
   min="0"
-  style="--progress: 50%;"
+  style="--progress: 100%;"
   type="range"
   value="50"
 />
@@ -36,7 +36,7 @@ exports[`props should render min 1`] = `
   id="slider"
   max="100"
   min="5"
-  style="--progress: 50%;"
+  style="--progress: 47.368421052631575%;"
   type="range"
   value="50"
 />

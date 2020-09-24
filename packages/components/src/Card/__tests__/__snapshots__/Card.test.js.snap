@@ -2,7 +2,7 @@
 
 exports[`props should render CardInnerBody 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-zktbol"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -80,7 +80,7 @@ exports[`props should render CardInnerBody 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-zktbol"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -162,7 +162,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render elevation 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-zktbol"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -186,7 +186,7 @@ exports[`props should render elevation 1`] = `
 
 exports[`props should render no elevation 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-zktbol"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
   data-g2-component="Card"
 >

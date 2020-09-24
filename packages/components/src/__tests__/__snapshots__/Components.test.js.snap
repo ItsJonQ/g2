@@ -303,7 +303,7 @@ exports[`props should render Avatar with css prop 2`] = `
 
 exports[`props should render Background 1`] = `
 <div
-  class="wp-components-surface wp-components-background css-1heuhr3"
+  class="wp-components-surface wp-components-background css-1ggy2of"
   data-g2-c16t="true"
   data-g2-component="Background"
   id="Background"
@@ -312,7 +312,7 @@ exports[`props should render Background 1`] = `
 
 exports[`props should render Background with css prop 1`] = `
 <div
-  class="wp-components-surface wp-components-background css-1heuhr3"
+  class="wp-components-surface wp-components-background css-1ggy2of"
   data-g2-c16t="true"
   data-g2-component="Background"
   id="Background"
@@ -321,7 +321,7 @@ exports[`props should render Background with css prop 1`] = `
 
 exports[`props should render Background with css prop 2`] = `
 <div
-  class="wp-components-surface wp-components-background css-1n1cs3a"
+  class="wp-components-surface wp-components-background css-61k4y8"
   data-g2-c16t="true"
   data-g2-component="Background"
   id="Background"
@@ -557,7 +557,7 @@ exports[`props should render Button with css prop 2`] = `
 
 exports[`props should render Card 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-zktbol"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
   data-g2-component="Card"
   id="Card"
@@ -582,7 +582,7 @@ exports[`props should render Card 1`] = `
 
 exports[`props should render Card with css prop 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-zktbol"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
   data-g2-component="Card"
   id="Card"
@@ -607,7 +607,7 @@ exports[`props should render Card with css prop 1`] = `
 
 exports[`props should render Card with css prop 2`] = `
 <div
-  class="wp-components-surface wp-components-card css-149dxss"
+  class="wp-components-surface wp-components-card css-17o0ew5"
   data-g2-c16t="true"
   data-g2-component="Card"
   id="Card"
@@ -1339,7 +1339,7 @@ exports[`props should render DropdownMenu 1`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface wp-components-card css-1byu4n8"
+    class="wp-components-surface wp-components-card css-1kzbz1g"
     data-g2-c16t="true"
     data-g2-component="Card"
   >
@@ -1380,7 +1380,7 @@ exports[`props should render DropdownMenu with css prop 1`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface wp-components-card css-1byu4n8"
+    class="wp-components-surface wp-components-card css-1kzbz1g"
     data-g2-c16t="true"
     data-g2-component="Card"
   >
@@ -1421,7 +1421,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface wp-components-card css-1byu4n8"
+    class="wp-components-surface wp-components-card css-1kzbz1g"
     data-g2-c16t="true"
     data-g2-component="Card"
   >
@@ -2918,7 +2918,7 @@ exports[`props should render SearchInput 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="SearchInput"
@@ -3040,7 +3040,7 @@ exports[`props should render Select 1`] = `
     data-g2-component="FlexBlock"
   >
     <select
-      class="css-exabpr"
+      class="css-1vcwply"
       data-g2-c16t="true"
       data-g2-component="Select"
       id="Select"
@@ -3784,7 +3784,7 @@ exports[`props should render Subheading with css prop 2`] = `
 
 exports[`props should render Surface 1`] = `
 <div
-  class="wp-components-surface css-1uslwia"
+  class="wp-components-surface css-143byaq"
   data-g2-c16t="true"
   data-g2-component="Surface"
   id="Surface"
@@ -3793,7 +3793,7 @@ exports[`props should render Surface 1`] = `
 
 exports[`props should render Surface with css prop 1`] = `
 <div
-  class="wp-components-surface css-1uslwia"
+  class="wp-components-surface css-143byaq"
   data-g2-c16t="true"
   data-g2-component="Surface"
   id="Surface"
@@ -3802,7 +3802,7 @@ exports[`props should render Surface with css prop 1`] = `
 
 exports[`props should render Surface with css prop 2`] = `
 <div
-  class="wp-components-surface css-1thyizh"
+  class="wp-components-surface css-fd7qwl"
   data-g2-c16t="true"
   data-g2-component="Surface"
   id="Surface"
@@ -4055,7 +4055,7 @@ exports[`props should render TextField 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="TextField"
@@ -4077,7 +4077,7 @@ exports[`props should render TextInput 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="TextInput"

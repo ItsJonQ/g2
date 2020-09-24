@@ -35,6 +35,17 @@ export const InputView = styled.input`
 	@media (min-width: 36em) {
 		font-size: ${ui.get('fontSize')};
 	}
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	/* Firefox */
+	&[type='number'] {
+		-moz-appearance: textfield;
+	}
 `;
 
 export const large = css`

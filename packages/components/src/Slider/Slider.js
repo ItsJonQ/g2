@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { clamp, noop, useControlledState } from '@wp-g2/utils';
+import { interpolate, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
@@ -27,7 +27,7 @@ function Slider({
 		onChange(next, { event });
 	};
 
-	const currentValue = clamp(value, min, max);
+	const currentValue = interpolate(value, [min, max], [0, 100]);
 	const componentStyles = {
 		...style,
 		'--progress': `${currentValue}%`,

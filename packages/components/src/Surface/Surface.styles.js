@@ -35,3 +35,33 @@ export const secondary = css`
 export const tertiary = css`
 	background: ${ui.get('surfaceBackgroundColor')};
 `;
+
+export const dotted = css`
+	background: linear-gradient(
+				90deg,
+				${ui.get('surfaceBackgroundColor')} 15px,
+				transparent 1%
+			)
+			center,
+		linear-gradient(
+				${ui.get('surfaceBackgroundColor')} 15px,
+				transparent 1%
+			)
+			center,
+		${ui.get('surfaceBorderBoldColor')};
+	background-size: 16px 16px;
+`;
+
+export const grid = css`
+	background: ${ui.get('surfaceBackgroundColor')};
+	background-image: linear-gradient(
+			${ui.get('surfaceBorderSubtleColor')} 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			90deg,
+			${ui.get('surfaceBorderSubtleColor')} 1px,
+			transparent 1px
+		);
+	background-size: 16px 16px;
+`;

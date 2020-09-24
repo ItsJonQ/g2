@@ -60,7 +60,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="search"
@@ -222,7 +222,7 @@ exports[`props should render isLoading 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="search"
@@ -366,7 +366,7 @@ exports[`props should render placeholder 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="search"
@@ -513,7 +513,7 @@ exports[`props should render prefix 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="search"
@@ -657,7 +657,7 @@ exports[`props should render suffix 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="search"
@@ -804,7 +804,7 @@ exports[`props should render value 1`] = `
     data-g2-component="TextInputContent"
   >
     <input
-      class="css-pgzgex"
+      class="css-uis2zj"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="search"

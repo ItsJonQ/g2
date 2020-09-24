@@ -60,6 +60,8 @@ const SURFACE_PROPS = {
 	surfaceBackgroundSubtleColor: '#F3F3F3',
 	surfaceBackgroundTintColor: '#F5F5F5',
 	surfaceBorderColor: 'rgba(0, 0, 0, 0.1)',
+	surfaceBorderBoldColor: 'rgba(0, 0, 0, 0.15)',
+	surfaceBorderSubtleColor: 'rgba(0, 0, 0, 0.05)',
 	surfaceColor: get('white'),
 };
 
