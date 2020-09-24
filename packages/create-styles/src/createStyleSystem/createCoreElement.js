@@ -114,9 +114,9 @@ export const createCoreElement = (
 			styles.reduceMotion,
 			compiledBaseStyles,
 			cxProp,
-			css(__css),
+			__css && css(__css),
 			className,
-			css(cssProp),
+			cssProp && css(cssProp),
 		);
 
 		/**

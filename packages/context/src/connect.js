@@ -90,8 +90,8 @@ export function connect(Component, namespace, options = {}) {
 			css(contextCSS),
 			// Resolve custom CSS from props
 			cxProp,
-			css(__css),
-			css(cssProp),
+			__css && css(__css),
+			cssProp && css(cssProp),
 			getStyledClassNameFromKey(key),
 			className,
 		);
