@@ -25,10 +25,10 @@ function Icon({ children, color, forwardedRef, icon, size = 20, ...props }) {
 		width: size,
 	});
 
-	const cx = [styles.Wrapper, sx.color, sx.size];
+	const __css = [styles.Wrapper, sx.color, sx.size];
 
 	return (
-		<View {...props} cx={cx}>
+		<View {...props} cx={__css}>
 			{IconComponent}
 		</View>
 	);

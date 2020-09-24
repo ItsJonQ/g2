@@ -23,14 +23,14 @@ function ArrowIndicator({
 	};
 	const rotate = rotations[direction] || rotations.right;
 
-	const cx = [
+	const __css = [
 		css({ height: height || size, width: width || size }),
 		ui.rotate(rotate),
 		ui.animation.default,
 	];
 
 	return (
-		<ArrowIndicatorView {...props} cx={cx}>
+		<ArrowIndicatorView {...props} cx={__css}>
 			<View animate={{ rotate }}>
 				<Icon
 					icon={

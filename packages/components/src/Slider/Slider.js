@@ -33,12 +33,12 @@ function Slider({
 		'--progress': `${currentValue}%`,
 	};
 
-	const cx = [styles[size]];
+	const __css = [styles[size]];
 
 	return (
 		<SliderView
 			{...props}
-			cx={cx}
+			cx={__css}
 			id={id}
 			max={max}
 			min={min}

@@ -41,14 +41,14 @@ function ZStack({
 		);
 	});
 
-	const cx = [
+	const __css = [
 		css({
 			paddingLeft: !isLayered ? offset : null,
 		}),
 	];
 
 	return (
-		<ZStackView {...props} cx={cx}>
+		<ZStackView {...props} cx={__css}>
 			{clonedChildren}
 		</ZStackView>
 	);

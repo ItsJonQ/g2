@@ -56,9 +56,10 @@ export function createStyledComponents({ compiler, core }) {
 					/**
 					 * Supporting the ability to render a styled component as anything else.
 					 */
+					__css,
 					as: asProp,
 					className,
-					cx: cxProp,
+					cx: cxProp, // Deprecated. Use __css instead.
 					...props
 				},
 				ref,
@@ -71,7 +72,7 @@ export function createStyledComponents({ compiler, core }) {
 					? is.string(asProp)
 					: is.string(tagName);
 
-				let finalCxProp;
+				let final__cssProp;
 				let finalClasses = className;
 
 				if (!isBaseTag) {
@@ -80,19 +81,24 @@ export function createStyledComponents({ compiler, core }) {
 					 */
 					finalClasses = cx([
 						css(...interpolatedProps),
+						css(__css),
 						css(cxProp),
 						className,
 					]);
 				} else {
-					finalCxProp = [css(...interpolatedProps), css(cxProp)];
+					final__cssProp = [
+						css(...interpolatedProps),
+						css(__css),
+						css(cxProp),
+					];
 				}
 
 				return (
 					<Box
 						as={baseTag}
 						{...mergedProps}
+						__css={final__cssProp}
 						className={finalClasses}
-						cx={finalCxProp}
 					/>
 				);
 			};

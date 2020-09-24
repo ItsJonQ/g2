@@ -34,13 +34,13 @@ export function Truncate({
 		overflow: hidden;
 	`;
 
-	const cx = [
+	const __css = [
 		shouldTruncate && !numberOfLines && styles.Truncate,
 		shouldTruncate && numberOfLines && sx.numberOfLines,
 	];
 
 	return (
-		<View as="span" {...props} cx={cx}>
+		<View as="span" {...props} cx={__css}>
 			{truncatedContent}
 		</View>
 	);

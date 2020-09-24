@@ -5,13 +5,13 @@ import * as styles from './Switch.styles';
 const { BackdropView } = styles;
 
 function SwitchBackdrop({ checked = false, isFocused = false, ...props }) {
-	const cx = [
+	const __css = [
 		isFocused && styles.focus,
 		checked && styles.backdropChecked,
 		checked && isFocused && styles.checkedFocus,
 	];
 
-	return <BackdropView aria-hidden={true} {...props} cx={cx} />;
+	return <BackdropView aria-hidden={true} {...props} cx={__css} />;
 }
 
 export default connect(SwitchBackdrop, 'SwitchBackdrop');

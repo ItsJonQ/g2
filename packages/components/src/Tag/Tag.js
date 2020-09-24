@@ -25,7 +25,7 @@ function Tag({
 		display,
 	});
 
-	const cx = [
+	const __css = [
 		sx.base,
 		styles.getBackground({ color: tagColor }),
 		styles.getBackgroundText({ color: tagColor }),
@@ -34,7 +34,7 @@ function Tag({
 	const asProp = href ? 'a' : 'span';
 
 	return (
-		<TagView {...props} as={asProp} cx={cx} href={href}>
+		<TagView {...props} as={asProp} cx={__css} href={href}>
 			<Text
 				className={styles.text}
 				color="currentColor"

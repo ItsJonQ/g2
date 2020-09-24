@@ -14,14 +14,14 @@ function BaseField({
 	...props
 }) {
 	const { styles: controlGroupStyles } = useControlGroupContext();
-	const cx = [
+	const __css = [
 		controlGroupStyles,
 		isClickable && styles.clickable,
 		isFocused && styles.focus,
 		isSubtle && styles.subtle,
 	];
 
-	return <BaseFieldView as={Flex} {...props} cx={cx} />;
+	return <BaseFieldView as={Flex} {...props} cx={__css} />;
 }
 
 export default connect(BaseField, 'BaseField');

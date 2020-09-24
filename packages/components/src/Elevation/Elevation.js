@@ -58,7 +58,7 @@ function Elevation({
 		}
 	`;
 
-	const cx = [
+	const __css = [
 		sx.Elevation,
 		sx.Base,
 		is.defined(hoverValue) && sx.hover,
@@ -66,7 +66,7 @@ function Elevation({
 		is.defined(focus) && sx.focus,
 	];
 
-	return <ElevationView {...props} cx={cx} />;
+	return <ElevationView {...props} cx={__css} />;
 }
 
 export default connect(Elevation, 'Elevation');

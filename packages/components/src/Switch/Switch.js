@@ -43,7 +43,7 @@ function Switch({
 
 	const Control = ControlComponent[type] || Checkbox;
 
-	const cx = [styles[size], contextId && horizontal && styles.formGroup];
+	const __css = [styles[size], contextId && horizontal && styles.formGroup];
 
 	const toggle = (event) => {
 		setChecked(!checked);
@@ -61,7 +61,7 @@ function Switch({
 	};
 
 	return (
-		<SwitchView {...props} cx={cx} htmlFor={id}>
+		<SwitchView {...props} cx={__css} htmlFor={id}>
 			<Backdrop checked={checked} isFocused={isFocused} size={size} />
 			<Toggle checked={checked} size={size} />
 			<Control

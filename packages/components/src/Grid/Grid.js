@@ -24,7 +24,7 @@ function Grid({
 		templateColumns || (!!columns && `repeat(${column}, 1fr)`);
 	const gridTemplateRows = templateRows || (!!rows && `repeat(${row}, 1fr)`);
 
-	const cx = css({
+	const __css = css({
 		alignItems: align,
 		display: isInline ? 'inline-grid' : 'grid',
 		gap,
@@ -36,7 +36,7 @@ function Grid({
 		verticalAlign: isInline ? 'middle' : null,
 	});
 
-	return <View {...props} cx={cx} />;
+	return <View {...props} cx={__css} />;
 }
 
 export default connect(Grid, 'Grid');

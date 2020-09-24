@@ -74,6 +74,7 @@ export const createCoreElement = (
 	const render = (
 		{
 			// Internal props
+			__css,
 			css: cssProp,
 			cx: cxProp,
 			// External props
@@ -113,6 +114,7 @@ export const createCoreElement = (
 			styles.reduceMotion,
 			compiledBaseStyles,
 			cxProp,
+			css(__css),
 			className,
 			css(cssProp),
 		);

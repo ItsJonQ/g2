@@ -7,9 +7,9 @@ import { ContainerView } from './Container.styles';
 
 function Container({ alignment = 'center', width = 1280, ...props }) {
 	const maxWidth = useResponsiveValue(width);
-	const cx = [css({ maxWidth }), styles[alignment]];
+	const __css = [css({ maxWidth }), styles[alignment]];
 
-	return <ContainerView {...props} cx={cx} />;
+	return <ContainerView {...props} cx={__css} />;
 }
 
 export default connect(Container, 'Container');

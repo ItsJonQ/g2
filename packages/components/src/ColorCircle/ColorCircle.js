@@ -12,13 +12,13 @@ function ColorCircle({
 	...props
 }) {
 	const backgroundColor = colorize(colorProp).toRgbString();
-	const cx = [styles[size]];
+	const __css = [styles[size]];
 
 	return (
 		<ColorCircleView
 			style={{ ...style, backgroundColor }}
 			{...props}
-			cx={cx}
+			cx={__css}
 		/>
 	);
 }

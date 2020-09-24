@@ -77,8 +77,10 @@ export function connect(Component, namespace, options = {}) {
 			: props;
 
 		const {
+			__css,
 			children,
 			css: cssProp,
+			cx: cxProp,
 			renderChildren,
 			...mergedProps
 		} = initialMergedProps;
@@ -87,6 +89,8 @@ export function connect(Component, namespace, options = {}) {
 			// Resolve custom CSS from ComponentsProvider
 			css(contextCSS),
 			// Resolve custom CSS from props
+			cxProp,
+			css(__css),
 			css(cssProp),
 			getStyledClassNameFromKey(key),
 			className,

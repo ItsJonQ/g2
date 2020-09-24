@@ -24,10 +24,10 @@ function Surface({
 		borderTop,
 	});
 
-	const cx = [sx.borders, styles[variant]];
+	const __css = [sx.borders, styles[variant]];
 
 	return (
-		<SurfaceView {...props} cx={cx}>
+		<SurfaceView {...props} cx={__css}>
 			{children}
 		</SurfaceView>
 	);

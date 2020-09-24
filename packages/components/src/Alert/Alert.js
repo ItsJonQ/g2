@@ -18,12 +18,12 @@ function Alert({
 	title,
 	...props
 }) {
-	const cx = [styles[status]];
+	const __css = [styles[status]];
 	const isDismissable = isDismissableProp || !!onDismiss;
 
 	return (
 		<Animated auto>
-			<AlertView {...props} cx={cx}>
+			<AlertView {...props} cx={__css}>
 				<Flex align="flex-start">
 					<FlexBlock>
 						<AlertTitle title={title} />

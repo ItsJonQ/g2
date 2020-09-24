@@ -21,11 +21,11 @@ function Image({ aspectRatio, fit, height, width, ...props }) {
 
 	sx.fitSize = css({ height: '100%', width: '100%' });
 
-	const cx = [sx.base, sx.fit, fit && sx.fitSize];
+	const __css = [sx.base, sx.fit, fit && sx.fitSize];
 
 	const imageProps = {
 		...props,
-		cx,
+		__css,
 		height,
 		width,
 	};

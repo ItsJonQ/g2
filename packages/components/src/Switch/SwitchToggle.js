@@ -5,13 +5,13 @@ import * as styles from './Switch.styles';
 const { ToggleView } = styles;
 
 function SwitchToggle({ checked = false, size = 'medium', ...props }) {
-	const cx = [
+	const __css = [
 		checked && styles.toggleChecked,
 		size === 'large' && styles.toggleLarge,
 		size === 'small' && styles.toggleSmall,
 	];
 
-	return <ToggleView aria-hidden={true} {...props} cx={cx} />;
+	return <ToggleView aria-hidden={true} {...props} cx={__css} />;
 }
 
 export default connect(SwitchToggle, 'SwitchToggle');

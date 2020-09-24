@@ -15,9 +15,9 @@ function FlexItem({ display: displayProp, isBlock = false, ...props }) {
 		[isReverse ? 'marginLeft' : 'marginRight']: !isColumn && !isLast && gap,
 	});
 
-	const cx = [styles.Item, sx.Base, isBlock && styles.block];
+	const __css = [styles.Item, sx.Base, isBlock && styles.block];
 
-	return <View {...props} cx={cx} />;
+	return <View {...props} cx={__css} />;
 }
 
 export default connect(FlexItem, 'FlexItem');

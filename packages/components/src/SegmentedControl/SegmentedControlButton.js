@@ -14,9 +14,9 @@ const {
 } = styles;
 
 function SegmentedControlSeparator({ isActive }) {
-	const cx = [isActive && styles.separatorActive];
+	const __css = [isActive && styles.separatorActive];
 
-	return <SeparatorView cx={cx} />;
+	return <SeparatorView cx={__css} />;
 }
 
 function SegmentedControlButton({

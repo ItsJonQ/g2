@@ -42,9 +42,9 @@ function Avatar({
 		borderRadius,
 	});
 
-	const cx = [sx.base, sx.borderRadius, border && styles.border];
+	const __css = [sx.base, sx.borderRadius, border && styles.border];
 	return (
-		<AvatarView {...props} cx={cx}>
+		<AvatarView {...props} cx={__css}>
 			{shouldRenderInitials && (
 				<View css={[ui.position.absolute, ui.alignment.center]}>
 					<Initials

@@ -45,7 +45,33 @@ export interface ViewOwnProps<E extends React.ElementType = React.ElementType> {
 	 * import { View } from `@wp-g2/components`
 	 *
 	 * function Example() {
-	 * 	return <View cx={`background: blue;`} css={`color: white;`} />
+	 * 	return <View __css={`background: blue;`} css={`color: white;`} />
+	 * }
+	 * ```
+	 */
+	__css?: InterpolatedCSS;
+	/**
+	 * Combines classNames as well as CSS style rules created with the `css` function.
+	 *
+	 * @example
+	 * ```jsx
+	 * import { css, cx } from `@wp-g2/styles`
+	 * import { View } from `@wp-g2/components`
+	 *
+	 * const Component = ({className, isWhite, ...props}) => {
+	 *  const bg = css`
+	 *    background: blue;
+	 *  `
+	 *  const text = css`
+	 *    color: white;
+	 *  `
+	 *  const classes = cx(
+	 *    bg, // Renders the bg CSS styles
+	 *    isWhite && text, // Conditionally renders the text CSS styles
+	 *    className // Renders an incoming className prop
+	 *  )
+	 *
+	 *  return <View cx={classes} {...props} />
 	 * }
 	 * ```
 	 */

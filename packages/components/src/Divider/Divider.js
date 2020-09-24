@@ -21,13 +21,13 @@ function Divider({ m, mb, mt, ...props }) {
 		margin-top: ${ui.space(mt)};
 	`;
 
-	const cx = [
+	const __css = [
 		!is.defined(m) && mb && sx.mb,
 		!is.defined(m) && mt && sx.mt,
 		is.defined(m) && sx.m,
 	];
 
-	return <Separator {...props} as={DividerView} cx={cx} />;
+	return <Separator {...props} as={DividerView} cx={__css} />;
 }
 
 export default connect(Divider, 'Divider');

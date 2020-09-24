@@ -10,11 +10,11 @@ const { PanelBodyView } = styles;
 function PanelBody({ children, ...props }) {
 	const { isSeamless } = usePanelContext();
 
-	const cx = [isSeamless && styles.seamless];
+	const __css = [isSeamless && styles.seamless];
 
 	return (
 		<CollapsibleContent {...props}>
-			<PanelBodyView cx={cx}>{children}</PanelBodyView>
+			<PanelBodyView cx={__css}>{children}</PanelBodyView>
 		</CollapsibleContent>
 	);
 }

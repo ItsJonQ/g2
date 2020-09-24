@@ -16,10 +16,10 @@ function ControlLabel({
 }) {
 	const { id: contextId } = useFormGroupContext();
 	const htmlFor = htmlForProp || contextId;
-	const cx = [styles[size]];
+	const __css = [styles[size]];
 
 	return (
-		<ControlLabelView cx={cx} {...props}>
+		<ControlLabelView cx={__css} {...props}>
 			<Text
 				as="label"
 				isBlock

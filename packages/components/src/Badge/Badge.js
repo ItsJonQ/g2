@@ -24,7 +24,7 @@ function Badge({
 		display,
 	});
 
-	const cx = [
+	const __css = [
 		sx.base,
 		truncate && styles.truncate,
 		styles.getBackground({ color: badgeColor, isBold }),
@@ -33,7 +33,7 @@ function Badge({
 	];
 
 	return (
-		<BadgeView {...props} cx={cx}>
+		<BadgeView {...props} cx={__css}>
 			<Text
 				className={styles.text}
 				color="currentColor"
