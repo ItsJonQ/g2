@@ -48,6 +48,7 @@ export * from './SearchInput';
 export * from './SegmentedControl';
 export * from './Select';
 export * from './Separator';
+export * from './Slider';
 export * from './Spacer';
 export * from './Spinner';
 export * from './Stepper';
