@@ -55,7 +55,7 @@ export interface ViewOwnProps<E extends React.ElementType = React.ElementType> {
 type ViewProps<E extends React.ElementType> = ViewOwnProps<E> &
 	Omit<PropsOf<E>, keyof ViewOwnProps>;
 
-type PolymorphicComponentProps<E extends React.ElementType, P> = P &
+export type PolymorphicComponentProps<E extends React.ElementType, P> = P &
 	ViewProps<E>;
 
 export type PolymorphicComponent<P, D extends React.ElementType = 'div'> = <

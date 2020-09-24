@@ -116,14 +116,14 @@ export const secondary = css`
 	}
 
 	&[data-destructive='true'] {
-		border-color: ${ui.get('colorDestructive')};
-		color: ${ui.get('colorDestructive')};
+		border-color: ${ui.color.destructive};
+		color: ${ui.color.destructive};
 
 		&:hover,
 		&:active,
 		&:focus {
-			border-color: ${ui.get('colorDestructive')};
-			color: ${ui.get('colorDestructive')};
+			border-color: ${ui.color.destructive};
+			color: ${ui.color.destructive};
 		}
 
 		&:active {
@@ -143,7 +143,7 @@ export const link = css`
 	color: ${ui.color.admin};
 
 	&[data-destructive='true'] {
-		color: ${ui.get('colorDestructive')};
+		color: ${ui.color.destructive};
 	}
 `;
 
@@ -154,7 +154,7 @@ export const plainLink = css`
 	color: ${ui.color.admin};
 
 	&[data-destructive='true'] {
-		color: ${ui.get('colorDestructive')};
+		color: ${ui.color.destructive};
 	}
 
 	&:hover,

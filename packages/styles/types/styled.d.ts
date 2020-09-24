@@ -1,6 +1,26 @@
-import { CreatePolymorphicComponent } from './components/Box';
+import * as React from 'react';
+import {
+	CreatePolymorphicComponent,
+	PolymorphicComponentProps,
+} from './components/Box';
 
 export interface StyledTags {
+	/**
+	 * Create a styled component from a base HTML tag or from another component.
+	 *
+	 * @example
+	 * ```jsx
+	 * import { styled, View } from `@wp-g2/styled`
+	 *
+	 * const StyledButton = styled.button`
+	 * 	background: blue;
+	 * `
+	 * const StyledView = styled(View)`
+	 * 	background: green;
+	 * `
+	 * ```
+	 */
+	(component: React.ReactElement | string): CreatePolymorphicComponent<{}>;
 	/**
 	 * @desc
 	 * HTML tags

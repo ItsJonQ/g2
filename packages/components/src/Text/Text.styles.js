@@ -9,11 +9,11 @@ export const block = css`
 `;
 
 export const positive = css`
-	color: ${ui.get('colorPositive')};
+	color: ${ui.color.positive};
 `;
 
 export const destructive = css`
-	color: ${ui.get('colorDestructive')};
+	color: ${ui.color.destructive};
 `;
 
 export const muted = css`

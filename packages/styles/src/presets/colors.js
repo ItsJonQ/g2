@@ -12,6 +12,8 @@ color.admin = get('colorAdmin');
 color.text = get('colorText');
 color.textInverted = get('colorTextInverted');
 color.border = get('surfaceBorderColor');
+color.positive = get('colorPositive');
+color.destructive = get('colorDestructive');
 
 /**
  * Add supported colors to the color() method

@@ -53,7 +53,7 @@ export const Button = css`
 `;
 
 export const destructive = css`
-	color: ${ui.get('colorDestructive')};
+	color: ${ui.color.destructive};
 `;
 
 export const block = css`
