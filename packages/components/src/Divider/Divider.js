@@ -22,8 +22,8 @@ function Divider({ m, mb, mt, ...props }) {
 	`;
 
 	const __css = [
-		!is.defined(m) && mb && sx.mb,
-		!is.defined(m) && mt && sx.mt,
+		!is.defined(m) && is.defined(mb) && sx.mb,
+		!is.defined(m) && is.defined(mt) && sx.mt,
 		is.defined(m) && sx.m,
 	];
 
