@@ -98,7 +98,7 @@ function BaseModal({
 							{...dialog}
 							{...dialogProps}
 						>
-							{children}
+							{(dialog.visible || dialog.animating) && children}
 						</Dialog>
 					</View>
 				</DialogBackdrop>

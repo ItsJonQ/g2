@@ -60,7 +60,7 @@ function Popover({
 				elevation={elevation}
 				maxWidth={maxWidth}
 			>
-				{children}
+				{(popover.visible || popover.animating) && children}
 			</PopoverContent>
 		</PopoverContext.Provider>
 	);
