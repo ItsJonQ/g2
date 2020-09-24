@@ -1,4 +1,3 @@
-import { useMotionValue } from '@wp-g2/animations';
 import {
 	Badge,
 	Button,
@@ -24,7 +23,7 @@ import {
 import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { Schema } from '@wp-g2/protokit';
 import { styled, ui } from '@wp-g2/styles';
-import { useListState } from '@wp-g2/utils';
+import isEqual from 'lodash/isEqual';
 import React from 'react';
 import * as yup from 'yup';
 
@@ -71,6 +70,98 @@ const shadowSchema = yup.object().shape({
 	color: yup.string(),
 });
 
+const ShadowsContext = React.createContext();
+
+function useShadows() {
+	const [shadows, setShadows] = React.useState([shadowMockSchema.makeOne()]);
+
+	const addShadow = React.useCallback(() => {
+		setShadows((prevState) => [...prevState, shadowMockSchema.makeOne()]);
+	}, []);
+
+	const removeShadow = React.useCallback((id) => {
+		setShadows((prevState) => {
+			const index = prevState.findIndex((item) => item.id === id);
+			return [
+				...prevState.slice(0, index),
+				...prevState.slice(index + 1),
+			];
+		});
+	}, []);
+
+	const updateShadow = React.useCallback((next) => {
+		setShadows((prevState) => {
+			const index = prevState.findIndex((item) => item.id === next.id);
+			const prevShadow = prevState[index];
+			return [
+				...prevState.slice(0, index),
+				shadowSchema.cast({ ...prevShadow, ...next }),
+				...prevState.slice(index + 1),
+			];
+		});
+	}, []);
+
+	return [shadows, { addShadow, removeShadow, updateShadow }];
+}
+
+const ShadowsProvider = ({ children }) => {
+	const [shadows, { addShadow, removeShadow, updateShadow }] = useShadows();
+	const [initialShadows] = React.useState(shadows);
+	const listenersRef = React.useRef(new Set());
+
+	const subscribe = React.useCallback((listener) => {
+		listenersRef.current.add(listener);
+		return () => listenersRef.current.delete(listener);
+	}, []);
+
+	React.useEffect(() => {
+		for (const listener of listenersRef.current) {
+			listener(shadows);
+		}
+	}, [shadows]);
+
+	const value = React.useMemo(
+		() => ({
+			initialShadows,
+			subscribe,
+			addShadow,
+			removeShadow,
+			updateShadow,
+		}),
+		[initialShadows, subscribe, addShadow, removeShadow, updateShadow],
+	);
+	return (
+		<ShadowsContext.Provider value={value}>
+			{children}
+		</ShadowsContext.Provider>
+	);
+};
+
+function useShadow(id, initialState) {
+	const { subscribe } = React.useContext(ShadowsContext);
+	const [state, setState] = React.useState(initialState);
+	React.useEffect(() => {
+		return subscribe((shadows) => {
+			setState(shadows.find((item) => item.id === id));
+		});
+	}, [subscribe, id]);
+	return state;
+}
+
+function useShadowProp(id, prop, initialState) {
+	const { subscribe } = React.useContext(ShadowsContext);
+	const [state, setState] = React.useState(initialState);
+	React.useEffect(() => {
+		return subscribe((shadows) => {
+			const shadow = shadows.find((item) => item.id === id);
+			if (shadow) {
+				setState(shadow[prop]);
+			}
+		});
+	}, [subscribe, prop, id]);
+	return state;
+}
+
 const SliderTextInput = ({ max, min, onChange, value, ...props }) => {
 	return (
 		<Grid>
@@ -86,7 +177,17 @@ const SliderTextInput = ({ max, min, onChange, value, ...props }) => {
 	);
 };
 
-const ShadowValue = ({ label, onChange, value, min = -20, max = 20 }) => {
+const ShadowValue = ({
+	label,
+	id,
+	prop,
+	initialValue,
+	min = -20,
+	max = 20,
+}) => {
+	const { updateShadow } = React.useContext(ShadowsContext);
+	const value = useShadowProp(id, prop, initialValue);
+	const onChange = (next) => updateShadow({ id, [prop]: next });
 	return (
 		<FormGroup label={label} templateColumns="minmax(0, 1fr) 3fr">
 			<SliderTextInput
@@ -104,9 +205,9 @@ const ShadowValue = ({ label, onChange, value, min = -20, max = 20 }) => {
 	);
 };
 
-const ShadowEntryView = ({ color, x, y, z }) => {
+const ShadowEntryView = ({ id, initialState }) => {
+	const { color, x, y, z } = useShadow(id, initialState);
 	const colorValue = getShadowColor({ color });
-
 	return (
 		<HStack>
 			<ColorCircle color={colorValue} size="small" />
@@ -133,7 +234,25 @@ const ShadowEntryView = ({ color, x, y, z }) => {
 	);
 };
 
-const ShadowEntry = ({ color, onRemove, onUpdate, x, y, z }) => {
+const StatefulColorPicker = ({ id, initialColor }) => {
+	const { updateShadow } = React.useContext(ShadowsContext);
+	const color = useShadowProp(id, 'color', initialColor);
+	return (
+		<ColorPicker
+			color={color}
+			disableAlpha={false}
+			onChange={(next) => {
+				updateShadow({
+					id,
+					color: next,
+				});
+			}}
+		/>
+	);
+};
+
+const ShadowEntry = React.memo(({ color, id, x, y, z }) => {
+	const { removeShadow } = React.useContext(ShadowsContext);
 	return (
 		<Popover
 			gutter={0}
@@ -142,12 +261,15 @@ const ShadowEntry = ({ color, onRemove, onUpdate, x, y, z }) => {
 			trigger={
 				<MenuItem>
 					<HStack>
-						<ShadowEntryView color={color} x={x} y={y} z={z} />
+						<ShadowEntryView
+							id={id}
+							initialState={{ color, x, y, z }}
+						/>
 						<Button
 							icon={<FiMinus />}
 							isControl
 							isSubtle
-							onClick={onRemove}
+							onClick={() => removeShadow(id)}
 							size="small"
 						/>
 					</HStack>
@@ -159,39 +281,34 @@ const ShadowEntry = ({ color, onRemove, onUpdate, x, y, z }) => {
 					<ListGroup>
 						<ListGroupHeader>Values</ListGroupHeader>
 						<ShadowValue
+							id={id}
+							initialValue={x}
 							label="X"
-							onChange={(next) => onUpdate({ x: next })}
-							value={x}
+							prop="x"
 						/>
 						<ShadowValue
+							id={id}
+							initialValue={y}
 							label="Y"
-							onChange={(next) => onUpdate({ y: next })}
-							value={y}
+							prop="y"
 						/>
 						<ShadowValue
+							id={id}
+							initialValue={z}
 							label="Z"
 							min={0}
-							onChange={(next) => onUpdate({ z: next })}
-							value={z}
+							prop="z"
 						/>
 					</ListGroup>
 					<ListGroup>
 						<ListGroupHeader>Color</ListGroupHeader>
-						<ColorPicker
-							color={color}
-							disableAlpha={false}
-							onChange={(next) => {
-								onUpdate({
-									color: next,
-								});
-							}}
-						/>
+						<StatefulColorPicker id={id} initialColor={color} />
 					</ListGroup>
 				</ListGroups>
 			</CardBody>
 		</Popover>
 	);
-};
+});
 
 function getShadowColor(shadow) {
 	const { color } = shadow;
@@ -208,12 +325,27 @@ function getShadowStyle(shadows = []) {
 	return styles.join(',') || 'none';
 }
 
-const BoxShadowControl = ({
-	shadows = [],
-	onAddShadow,
-	onRemoveShadow,
-	onUpdateShadow,
-}) => {
+const ShadowEntries = () => {
+	const { initialShadows, subscribe } = React.useContext(ShadowsContext);
+	const [shadows, setShadows] = React.useState(initialShadows);
+
+	React.useEffect(() => {
+		return subscribe((nextShadows) => {
+			const ids = shadows.map((item) => item.id);
+			const nextIds = nextShadows.map((item) => item.id);
+			if (!isEqual(ids, nextIds)) {
+				setShadows(nextShadows);
+			}
+		});
+	}, [subscribe, shadows]);
+
+	return shadows.map((shadow) => {
+		return <ShadowEntry {...shadow} />;
+	});
+};
+
+const BoxShadowControl = () => {
+	const { addShadow } = React.useContext(ShadowsContext);
 	return (
 		<ListGroup>
 			<ListGroupHeader>
@@ -222,78 +354,51 @@ const BoxShadowControl = ({
 					icon={<FiPlus />}
 					isControl
 					isSubtle
-					onClick={onAddShadow}
+					onClick={addShadow}
 					size="small"
 				/>
 			</ListGroupHeader>
-			{shadows.map((shadow) => {
-				return (
-					<ShadowEntry
-						{...shadow}
-						onRemove={() => onRemoveShadow(shadow.id)}
-						onUpdate={(next) => {
-							onUpdateShadow({ ...shadow, ...next });
-						}}
-					/>
-				);
-			})}
+			<ShadowEntries />
 		</ListGroup>
 	);
 };
 
-const Example = () => {
-	const [shadows, stateFn] = useListState([shadowMockSchema.makeOne()]);
+const MyCard = () => {
+	const { initialShadows, subscribe } = React.useContext(ShadowsContext);
+	const [shadows, setShadows] = React.useState(initialShadows);
 	const boxShadow = getShadowStyle(shadows);
-
-	const addShadow = React.useCallback(() => {
-		stateFn.add(shadowMockSchema.makeOne());
-	}, [stateFn]);
-
-	const removeShadow = React.useCallback(
-		(id) => {
-			stateFn.remove({ id });
-		},
-		[stateFn],
-	);
-
-	const updateShadow = React.useCallback(
-		(next) => {
-			stateFn.update(shadowSchema.cast(next));
-		},
-		[stateFn],
-	);
-
+	React.useEffect(() => subscribe(setShadows), [subscribe]);
 	return (
-		<Grid css={[ui.frame({ height: 500 })]}>
-			<Container width={300}>
-				<Card
-					css={[
-						{
-							border: `1px solid ${ui.get(
-								'controlBorderSubtleColor',
-							)}`,
-						},
-						ui.frame({ width: 100, height: 100 }),
-					]}
-					elevation={0}
-					style={{ boxShadow }}
-				>
+		<Card
+			css={[
+				{
+					border: `1px solid ${ui.get('controlBorderSubtleColor')}`,
+				},
+				ui.frame({ width: 100, height: 100 }),
+			]}
+			elevation={0}
+			style={{ boxShadow }}
+		/>
+	);
+};
+
+const Example = () => {
+	return (
+		<ShadowsProvider>
+			<Grid css={[ui.frame({ height: 500 })]}>
+				<Container width={300}>
+					<MyCard />
 					<CardBody />
-				</Card>
-			</Container>
-			<Container css={[{ width: 260 }]}>
-				<Card>
-					<CardBody>
-						<BoxShadowControl
-							onAddShadow={addShadow}
-							onRemoveShadow={removeShadow}
-							onUpdateShadow={updateShadow}
-							shadows={shadows}
-						/>
-					</CardBody>
-				</Card>
-			</Container>
-		</Grid>
+				</Container>
+				<Container css={[{ width: 260 }]}>
+					<Card>
+						<CardBody>
+							<BoxShadowControl />
+						</CardBody>
+					</Card>
+				</Container>
+			</Grid>
+		</ShadowsProvider>
 	);
 };
 
