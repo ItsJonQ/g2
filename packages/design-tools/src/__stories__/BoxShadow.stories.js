@@ -108,8 +108,14 @@ const ShadowsProvider = ({ children }) => {
 	const [shadows, { addShadow, removeShadow, updateShadow }] = useShadows();
 	const [initialShadows] = React.useState(shadows);
 	const listenersRef = React.useRef(new Set());
+	const shadowsRef = React.useRef(shadows);
+
+	React.useLayoutEffect(() => {
+		shadowsRef.current = shadows;
+	});
 
 	const subscribe = React.useCallback((listener) => {
+		listener(shadowsRef.current);
 		listenersRef.current.add(listener);
 		return () => listenersRef.current.delete(listener);
 	}, []);
