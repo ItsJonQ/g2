@@ -100,6 +100,12 @@ const CONTROL_PROPS = {
 	controlTextActiveColor: get('colorAdmin'),
 };
 
+const BUTTON_PROPS = {
+	buttonPrimaryColor: get('colorAdmin'),
+	buttonPrimaryTextColor: get('controlPrimaryTextColor'),
+	buttonPrimaryTextColorActive: get('controlPrimaryTextColor'),
+};
+
 const CARD_PROPS = {
 	cardBorderRadius: '8px',
 };
@@ -113,6 +119,7 @@ const BASE_THEME = {
 	...FONT_PROPS,
 	...SURFACE_PROPS,
 	...ANIMATION_PROPS,
+	...BUTTON_PROPS,
 	...GRID_PROPS,
 };
 

@@ -77,20 +77,20 @@ export const icon = css`
 `;
 
 export const primary = css`
-	background-color: ${ui.color.admin};
-	color: ${ui.get('controlPrimaryTextColor')};
+	background-color: ${ui.get('buttonPrimaryColor')};
+	color: ${ui.get('buttonPrimaryTextColor')};
 
 	&:active {
-		color: ${ui.color.textInverted};
+		color: ${ui.get('buttonPrimaryTextColorActive')};
 	}
 
 	&:hover,
 	&:focus {
-		background-color: ${ui.color.admin};
+		background-color: ${ui.get('buttonPrimaryColor')};
 	}
 
 	&:focus {
-		border-color: ${ui.color.admin};
+		border-color: ${ui.get('buttonPrimaryColor')};
 	}
 
 	&:active {
@@ -100,14 +100,14 @@ export const primary = css`
 
 export const secondary = css`
 	background-color: transparent;
-	border-color: ${ui.color.admin};
-	color: ${ui.color.admin};
+	border-color: ${ui.get('buttonPrimaryColor')};
+	color: ${ui.get('buttonPrimaryColor')};
 
 	&:hover,
 	&:active,
 	&:focus {
-		border-color: ${ui.color.admin};
-		color: ${ui.color.admin};
+		border-color: ${ui.get('buttonPrimaryColor')};
+		color: ${ui.get('buttonPrimaryColor')};
 	}
 
 	&:active {
