@@ -1,6 +1,6 @@
-import { css, styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
-export const BaseFieldView = styled.div`
+export const BaseField = css`
 	${ui.background.control};
 	${ui.borderRadius.round};
 	border: 1px solid ${ui.get('controlBorderColor')};

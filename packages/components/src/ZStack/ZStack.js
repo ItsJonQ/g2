@@ -1,4 +1,7 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
@@ -7,13 +10,15 @@ import { View } from '../View';
 import * as styles from './ZStack.styles';
 const { ZStackView } = styles;
 
-function ZStack({
-	children,
-	isLayered = true,
-	isReversed = false,
-	offset = 0,
-	...props
-}) {
+function ZStack(props, forwardedRef) {
+	const {
+		children,
+		isLayered = true,
+		isReversed = false,
+		offset = 0,
+		...otherProps
+	} = useContextSystem(props, 'ZStack');
+
 	const validChildren = getValidChildren(children);
 	const childrenCount = validChildren.length - 1;
 
@@ -48,10 +53,10 @@ function ZStack({
 	];
 
 	return (
-		<ZStackView {...props} cx={__css}>
+		<ZStackView {...otherProps} cx={__css} ref={forwardedRef}>
 			{clonedChildren}
 		</ZStackView>
 	);
 }
 
-export default connect(ZStack, 'ZStack');
+export default connectAndForwardRefComponent(ZStack, 'ZStack');

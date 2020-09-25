@@ -1,4 +1,7 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
@@ -11,28 +14,28 @@ import * as styles from './TextInput.styles';
 
 const { InputView } = styles;
 
-function TextInput({
-	__onBeforeChange = (event) => event?.target?.value,
-	align,
-	className,
-	disabled,
-	defaultValue,
-	forwardedRef,
-	gap = 2.5,
-	id: idProp,
-	isRounded = false,
-	isResizable = false,
-	justify,
-	onBlur = noop,
-	onFocus = noop,
-	onChange = noop,
-	multiline = false,
-	prefix,
-	size = 'medium',
-	suffix,
-	value: valueProp,
-	...props
-}) {
+function TextInput(props, forwardedRef) {
+	const {
+		__onBeforeChange = (event) => event?.target?.value,
+		align,
+		className,
+		disabled,
+		defaultValue,
+		gap = 2.5,
+		id: idProp,
+		isResizable = false,
+		justify,
+		onBlur = noop,
+		onFocus = noop,
+		onChange = noop,
+		multiline = false,
+		prefix,
+		size = 'medium',
+		suffix,
+		value: valueProp,
+		...otherProps
+	} = useContextSystem(props, 'TextInput');
+
 	const [value, setValue] = useControlledState(valueProp, {
 		initial: defaultValue,
 	});
@@ -98,7 +101,7 @@ function TextInput({
 					onFocus={handleOnFocus}
 					ref={mergeRefs([inputRef, forwardedRef])}
 					value={value}
-					{...props}
+					{...otherProps}
 					{...ui.$('TextInput')}
 				/>
 			</FlexBlock>
@@ -109,4 +112,4 @@ function TextInput({
 	);
 }
 
-export default connect(TextInput, 'TextInput');
+export default connectAndForwardRefComponent(TextInput, 'TextInput');

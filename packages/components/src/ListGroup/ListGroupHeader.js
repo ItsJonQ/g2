@@ -1,4 +1,8 @@
-import { ComponentsProvider, connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	ContextSystemProvider,
+	useContextSystem,
+} from '@wp-g2/context';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -7,7 +11,12 @@ import { Spacer } from '../Spacer';
 import { Subheading } from '../Subheading';
 import { useListGroupContext } from './ListGroup.Context';
 
-function ListGroupHeader({ children, ...props }) {
+function ListGroupHeader(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
+		'ListGroupHeader',
+	);
+
 	const { inset } = useListGroupContext();
 	const validChildren = React.Children.toArray(children);
 
@@ -25,12 +34,17 @@ function ListGroupHeader({ children, ...props }) {
 	});
 
 	return (
-		<ComponentsProvider value={{ Text: { size: 'subheading' } }}>
+		<ContextSystemProvider value={{ Text: { size: 'subheading' } }}>
 			<Spacer mb={0} px={inset ? 2 : 0}>
-				<HStack {...props}>{clonedChildren}</HStack>
+				<HStack {...otherProps} ref={forwardedRef}>
+					{clonedChildren}
+				</HStack>
 			</Spacer>
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 }
 
-export default connect(ListGroupHeader, 'ListGroupHeader');
+export default connectAndForwardRefComponent(
+	ListGroupHeader,
+	'ListGroupHeader',
+);

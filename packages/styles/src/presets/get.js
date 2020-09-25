@@ -2,6 +2,7 @@ import { warning } from '@wp-g2/utils';
 
 import { get } from '../core';
 export { get } from '../core';
+export { createToken } from '../system';
 
 export function getTokenValue(token) {
 	const cssVariable = get(token).replace('var(', '').replace(/\)$/g, '');

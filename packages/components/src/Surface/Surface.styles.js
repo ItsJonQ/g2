@@ -1,6 +1,6 @@
-import { css, styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
-export const SurfaceView = styled.div`
+export const Surface = css`
 	background-color: ${ui.get('surfaceColor')};
 	color: ${ui.color.text};
 	position: relative;

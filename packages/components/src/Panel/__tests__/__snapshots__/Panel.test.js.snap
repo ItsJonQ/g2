@@ -2,26 +2,26 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible wp-components-panel css-k6yva8"
+  class="wp-components-collapsible wp-components-panel css-k6yva8"
   data-g2-c16t="true"
   data-g2-component="Panel"
 >
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-view wp-components-flex-item css-x168m"
+      class="wp-components-flex-item css-1bku9vz"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-view wp-components-text css-1jk3501"
+        class="wp-components-text css-1jk3501"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -31,12 +31,10 @@ exports[`props should render correctly 1`] = `
           data-g2-component="ArrowIndicator"
         >
           <div
-            class="wp-components-view css-j1yu9m"
-            data-g2-c16t="true"
-            data-g2-component="View"
+            class="css-j1yu9m"
           >
             <div
-              class="wp-components-view wp-components-icon css-feyyos"
+              class="wp-components-icon css-feyyos"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -58,12 +56,12 @@ exports[`props should render correctly 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-view wp-components-text css-1xgp14x"
+        class="wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -97,7 +95,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render seamless 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible wp-components-panel css-k6yva8"
+  class="wp-components-collapsible wp-components-panel css-k6yva8"
   data-g2-c16t="true"
   data-g2-component="Panel"
   seamless=""
@@ -105,19 +103,19 @@ exports[`props should render seamless 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-view wp-components-flex-item css-x168m"
+      class="wp-components-flex-item css-1bku9vz"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-view wp-components-text css-1jk3501"
+        class="wp-components-text css-1jk3501"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -127,12 +125,10 @@ exports[`props should render seamless 1`] = `
           data-g2-component="ArrowIndicator"
         >
           <div
-            class="wp-components-view css-j1yu9m"
-            data-g2-c16t="true"
-            data-g2-component="View"
+            class="css-j1yu9m"
           >
             <div
-              class="wp-components-view wp-components-icon css-feyyos"
+              class="wp-components-icon css-feyyos"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -154,12 +150,12 @@ exports[`props should render seamless 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-view wp-components-text css-1xgp14x"
+        class="wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -193,26 +189,26 @@ exports[`props should render seamless 1`] = `
 
 exports[`props should render visible 1`] = `
 <div
-  class="wp-components-view wp-components-collapsible wp-components-panel css-k6yva8"
+  class="wp-components-collapsible wp-components-panel css-k6yva8"
   data-g2-c16t="true"
   data-g2-component="Panel"
 >
   <div
     aria-controls="panel"
     aria-expanded="true"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-view wp-components-flex-item css-x168m"
+      class="wp-components-flex-item css-1bku9vz"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="wp-components-view wp-components-text css-1jk3501"
+        class="wp-components-text css-1jk3501"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -222,12 +218,10 @@ exports[`props should render visible 1`] = `
           data-g2-component="ArrowIndicator"
         >
           <div
-            class="wp-components-view css-j1yu9m"
-            data-g2-c16t="true"
-            data-g2-component="View"
+            class="css-j1yu9m"
           >
             <div
-              class="wp-components-view wp-components-icon css-feyyos"
+              class="wp-components-icon css-feyyos"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -249,12 +243,12 @@ exports[`props should render visible 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-view wp-components-text css-1xgp14x"
+        class="wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >

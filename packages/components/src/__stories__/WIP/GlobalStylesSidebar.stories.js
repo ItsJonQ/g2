@@ -1,4 +1,4 @@
-import { ComponentsProvider } from '@wp-g2/context';
+import { ContextSystemProvider } from '@wp-g2/context';
 import { FiChevronLeft, FiDroplet, FiGrid, FiPlus, FiType } from '@wp-g2/icons';
 import { styled, ui } from '@wp-g2/styles';
 import React from 'react';
@@ -382,7 +382,7 @@ const screens = [
 
 const Sidebar = ({ children }) => {
 	return (
-		<ComponentsProvider
+		<ContextSystemProvider
 			value={{
 				Grid: { gap: 2 },
 				Icon: { size: 16 },
@@ -400,7 +400,7 @@ const Sidebar = ({ children }) => {
 			>
 				{children}
 			</View>
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 };
 

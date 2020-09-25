@@ -1,11 +1,22 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
 import * as styles from './Icon.styles';
 
-function Icon({ children, color, forwardedRef, icon, size = 20, ...props }) {
+function Icon(props, forwardedRef) {
+	const {
+		children,
+		color,
+		icon,
+		size = 20,
+		...otherProps
+	} = useContextSystem(props, 'Icon');
+
 	if (!icon) return null;
 	const sx = {};
 
@@ -28,10 +39,10 @@ function Icon({ children, color, forwardedRef, icon, size = 20, ...props }) {
 	const __css = [styles.Wrapper, sx.color, sx.size];
 
 	return (
-		<View {...props} cx={__css}>
+		<View {...otherProps} cx={__css}>
 			{IconComponent}
 		</View>
 	);
 }
 
-export default connect(Icon, 'Icon');
+export default connectAndForwardRefComponent(Icon, 'Icon');

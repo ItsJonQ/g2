@@ -1,15 +1,24 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
+import { View } from '../View';
 import * as styles from './Container.styles';
-import { ContainerView } from './Container.styles';
 
-function Container({ alignment = 'center', width = 1280, ...props }) {
+function Container(props, forwardedRef) {
+	const {
+		alignment = 'center',
+		width = 1280,
+		...otherProps
+	} = useContextSystem(props, 'Container');
+
 	const maxWidth = useResponsiveValue(width);
-	const __css = [css({ maxWidth }), styles[alignment]];
+	const __css = [css({ maxWidth, width: '100%' }), styles[alignment]];
 
-	return <ContainerView {...props} cx={__css} />;
+	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
-export default connect(Container, 'Container');
+export default connectAndForwardRefComponent(Container, 'Container');

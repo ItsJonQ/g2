@@ -1,4 +1,4 @@
-import { ComponentsProvider, connect, ns } from '@wp-g2/context';
+import { connect, ContextSystemProvider, ns } from '@wp-g2/context';
 import { FiChrome, FiCompass } from '@wp-g2/icons';
 import { styled, ThemeProvider, ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
@@ -134,7 +134,7 @@ const GridItem = connect(BaseGridItem, 'GridItem');
 const ExampleCluster = ({ horizontal = true }) => {
 	return (
 		<GridItem>
-			<ComponentsProvider value={{ FormGroup: { horizontal } }}>
+			<ContextSystemProvider value={{ FormGroup: { horizontal } }}>
 				<VStack spacing={8}>
 					<View>
 						<Spacer>
@@ -201,7 +201,7 @@ const ExampleCluster = ({ horizontal = true }) => {
 						)}
 					</View>
 				</VStack>
-			</ComponentsProvider>
+			</ContextSystemProvider>
 		</GridItem>
 	);
 };

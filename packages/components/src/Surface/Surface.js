@@ -2,6 +2,7 @@ import { connect } from '@wp-g2/context';
 import { css, ui } from '@wp-g2/styles';
 import React from 'react';
 
+import { View } from '../View';
 import { SurfaceView } from './Surface.styles';
 import * as styles from './Surface.styles';
 
@@ -27,6 +28,7 @@ function Surface({
 	});
 
 	const __css = [
+		styles.Surface,
 		sx.borders,
 		styles[variant],
 		css({
@@ -37,9 +39,9 @@ function Surface({
 	];
 
 	return (
-		<SurfaceView {...props} cx={__css}>
+		<View {...props} cx={__css}>
 			{children}
-		</SurfaceView>
+		</View>
 	);
 }
 

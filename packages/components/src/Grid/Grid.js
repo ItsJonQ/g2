@@ -1,22 +1,27 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
 
-function Grid({
-	align,
-	columnGap,
-	columns = 2,
-	gap = 3,
-	isInline = false,
-	justify,
-	rowGap,
-	rows,
-	templateColumns,
-	templateRows,
-	...props
-}) {
+function Grid(props, forwardedRef) {
+	const {
+		align,
+		columnGap,
+		columns = 2,
+		gap = 3,
+		isInline = false,
+		justify,
+		rowGap,
+		rows,
+		templateColumns,
+		templateRows,
+		...otherProps
+	} = useContextSystem(props, 'Grid');
+
 	const column = useResponsiveValue(columns);
 	const row = useResponsiveValue(rows);
 
@@ -36,7 +41,7 @@ function Grid({
 		verticalAlign: isInline ? 'middle' : null,
 	});
 
-	return <View {...props} cx={__css} />;
+	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
-export default connect(Grid, 'Grid');
+export default connectAndForwardRefComponent(Grid, 'Grid');

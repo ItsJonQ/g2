@@ -13,12 +13,12 @@ exports[`props should render animatedDuration 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -46,12 +46,12 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -79,12 +79,12 @@ exports[`props should render gutter 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -112,12 +112,12 @@ exports[`props should render placement 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -145,12 +145,12 @@ exports[`props should render visible 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -178,12 +178,12 @@ exports[`props should render without animation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -213,12 +213,12 @@ exports[`props should render without content 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -246,12 +246,12 @@ exports[`props should render without modal 1`] = `
   type="button"
 >
   <span
-    class="wp-components-view wp-components-flex css-k86duv"
+    class="wp-components-flex css-m9tbel"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+      class="wp-components-flex-item wp-components-flex-block css-18097f7"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
