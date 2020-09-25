@@ -1,5 +1,11 @@
-import { deepMerge, isEmpty } from '@wp-g2/utils';
-import React, { createContext, useContext } from 'react';
+import { deepEqual, deepMerge, isEmpty } from '@wp-g2/utils';
+import React, {
+	createContext,
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 
 export const ComponentsContext = createContext({});
 export const useComponentsContext = () => useContext(ComponentsContext);
@@ -20,26 +26,49 @@ export const useComponentsContext = () => useContext(ComponentsContext);
  * @param {object} value Props to render into connected components.
  * @returns {React.Component} A Provider wrapped component.
  */
-export function ComponentsProvider({ children, shallow = false, value = {} }) {
-	const parentComponentsContext = useComponentsContext();
+export function ComponentsProvider({ children, shallow = false, value }) {
+	const contextValue = useComponentsContextValue({ shallow, value });
 
+	return (
+		<ComponentsContext.Provider value={contextValue}>
+			{children}
+		</ComponentsContext.Provider>
+	);
+}
+
+function useComponentsContextValue({ shallow, value }) {
+	const previousValue = useComponentsContext();
+
+	const [contextValue, setContextValue] = useState(
+		getContextValue({ previousValue, value, shallow }),
+	);
+	const valueRef = useRef(value);
+
+	useEffect(() => {
+		if (deepEqual(value, valueRef.current)) return;
+
+		setContextValue(getContextValue({ previousValue, value, shallow }));
+
+		valueRef.current = value;
+	}, [shallow, value, previousValue]);
+
+	return contextValue;
+}
+
+function getContextValue({ previousValue, shallow = false, value = {} }) {
 	let mergedValues = value;
 
 	/**
 	 * Inheriting and resolving props from a potential parent ComponentsProvider.
 	 * This model works similarly to CSS's cascading model.
 	 */
-	if (!isEmpty(parentComponentsContext)) {
+	if (!isEmpty(previousValue)) {
 		if (shallow) {
-			mergedValues = { ...parentComponentsContext, ...value };
+			mergedValues = { ...previousValue, ...value };
 		} else {
-			mergedValues = deepMerge(parentComponentsContext, value);
+			mergedValues = deepMerge(previousValue, value);
 		}
 	}
 
-	return (
-		<ComponentsContext.Provider value={mergedValues}>
-			{children}
-		</ComponentsContext.Provider>
-	);
+	return mergedValues;
 }
