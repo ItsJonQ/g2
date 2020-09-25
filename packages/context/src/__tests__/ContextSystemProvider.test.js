@@ -2,17 +2,17 @@ import { render } from '@testing-library/react';
 import { View } from '@wp-g2/styles';
 import React from 'react';
 
-import { ComponentsProvider } from '../ComponentsProvider';
 import { connect } from '../connect';
+import { ContextSystemProvider } from '../ContextSystemProvider';
 
 describe('props', () => {
 	test('should render correctly', () => {
 		const Olaf = (props) => <View {...props} />;
 		const ConnectedOlaf = connect(Olaf, 'Olaf');
 		const { container } = render(
-			<ComponentsProvider>
+			<ContextSystemProvider>
 				<ConnectedOlaf />
-			</ComponentsProvider>,
+			</ContextSystemProvider>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -29,9 +29,9 @@ describe('props', () => {
 		};
 
 		const { container } = render(
-			<ComponentsProvider value={contextValue}>
+			<ContextSystemProvider value={contextValue}>
 				<ConnectedOlaf />
-			</ComponentsProvider>,
+			</ContextSystemProvider>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -50,9 +50,9 @@ describe('props', () => {
 
 		const { container } = render(
 			<>
-				<ComponentsProvider value={contextValue}>
+				<ContextSystemProvider value={contextValue}>
 					<ConnectedOlaf className="olaf" />
-				</ComponentsProvider>
+				</ContextSystemProvider>
 				<ConnectedOlaf className="olaf" />
 			</>,
 		);
@@ -78,14 +78,14 @@ describe('props', () => {
 
 		const { container } = render(
 			<>
-				<ComponentsProvider value={contextValue}>
+				<ContextSystemProvider value={contextValue}>
 					<ConnectedOlaf
 						className="olaf"
 						css={`
 							font-weight: bold;
 						`}
 					/>
-				</ComponentsProvider>
+				</ContextSystemProvider>
 			</>,
 		);
 
@@ -111,9 +111,9 @@ describe('props', () => {
 
 		const { container } = render(
 			<>
-				<ComponentsProvider value={contextValue}>
+				<ContextSystemProvider value={contextValue}>
 					<ConnectedOlaf className="olaf" quote="Hello" />
-				</ComponentsProvider>
+				</ContextSystemProvider>
 			</>,
 		);
 

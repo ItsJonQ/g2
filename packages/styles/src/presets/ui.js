@@ -5,7 +5,7 @@ import { border, borderRadius } from './borders';
 import { color } from './colors';
 import { frame } from './dimensions';
 import { font } from './fonts';
-import { get, getTokenValue } from './get';
+import { createToken, get, getTokenValue } from './get';
 import { active, focus, hover } from './interactions';
 import { mode } from './modes';
 import { opacity } from './opacity';
@@ -26,6 +26,7 @@ export const ui = {
 	border,
 	borderRadius,
 	color,
+	createToken,
 	focus,
 	font,
 	frame,

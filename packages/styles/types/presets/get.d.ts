@@ -14,3 +14,9 @@ export declare interface GetTokenValueInterface {
 	/** Retrives a design token computed value from the style configuration. */
 	(value: DesignTokens): CSSVariable;
 }
+
+/** Create a new design token namespace. */
+export declare interface CreateTokenInterface {
+	/** Create a new design token namespace. */
+	(namespace: string): CSSVariable;
+}

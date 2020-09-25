@@ -1,11 +1,16 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Text } from '../Text';
 import * as styles from './Subheading.styles';
 
-function Subheading({ className, ...props }) {
+function Subheading(props, forwardedRef) {
+	const { className, ...otherProps } = useContextSystem(props, 'Subheading');
+
 	const classes = cx([styles.uppercase, className]);
 
 	return (
@@ -14,9 +19,10 @@ function Subheading({ className, ...props }) {
 			size={10}
 			variant="muted"
 			weight={600}
-			{...props}
+			{...otherProps}
+			ref={forwardedRef}
 		/>
 	);
 }
 
-export default connect(Subheading, 'Subheading');
+export default connectAndForwardRefComponent(Subheading, 'Subheading');

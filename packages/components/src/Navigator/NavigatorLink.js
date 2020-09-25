@@ -1,4 +1,4 @@
-import { ComponentsProvider, connect, hasNamespace } from '@wp-g2/context';
+import { connect, ContextSystemProvider, hasNamespace } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -45,7 +45,7 @@ function NavigatorLink({
 	};
 
 	const content = (
-		<ComponentsProvider
+		<ContextSystemProvider
 			value={{
 				MenuItem: {
 					isBack: isBack,
@@ -55,7 +55,7 @@ function NavigatorLink({
 			}}
 		>
 			{children}
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 
 	if (!to) {

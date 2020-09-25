@@ -13,7 +13,7 @@
 
 ```jsx
 import React from 'react';
-import { connect, ComponentsProvider } from '@wp-g2/context';
+import { connect, ContextSystemProvider } from '@wp-g2/context';
 
 // Create a React component as normal.
 const Snowman = ({ isMelting: true }) => (
@@ -34,9 +34,9 @@ const App = () => {
 	};
 
 	return (
-		<ComponentsProvider value={contextValue}>
+		<ContextSystemProvider value={contextValue}>
 			<Olaf />
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 };
 ```

@@ -1,18 +1,32 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
 import { VStack } from '../VStack';
 import { ListGroupContext } from './ListGroup.Context';
 
-function ListGroups({ inset = false, ...props }) {
+function ListGroups(props, forwardedRef) {
+	const { inset = false, ...otherProps } = useContextSystem(
+		props,
+		'ListGroups',
+	);
+
 	const insetValue = useResponsiveValue(inset);
+	const value = React.useMemo(
+		() => ({
+			inset: insetValue,
+		}),
+		[insetValue],
+	);
 
 	return (
-		<ListGroupContext.Provider value={{ inset: insetValue }}>
-			<VStack spacing={6} {...props} />
+		<ListGroupContext.Provider value={value}>
+			<VStack spacing={6} {...otherProps} ref={forwardedRef} />
 		</ListGroupContext.Provider>
 	);
 }
 
-export default connect(ListGroups, 'ListGroups');
+export default connectAndForwardRefComponent(ListGroups, 'ListGroups');

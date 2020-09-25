@@ -1,37 +1,40 @@
 import { Checkbox, Radio } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
+import { View } from '../View';
 import { VisuallyHidden } from '../VisuallyHidden';
 import * as styles from './Switch.styles';
 import Backdrop from './SwitchBackdrop';
 import Toggle from './SwitchToggle';
-
-const { SwitchView } = styles;
 
 const ControlComponent = {
 	checkbox: Checkbox,
 	radio: Radio,
 };
 
-function Switch({
-	checked: checkedProp,
-	className,
-	disabled,
-	defaultValue,
-	forwardedRef,
-	id: idProp,
-	onBlur = noop,
-	onChange = noop,
-	onFocus = noop,
-	label,
-	size = 'medium',
-	type = 'checkbox',
-	...props
-}) {
+function Switch(props, forwardedRef) {
+	const {
+		checked: checkedProp,
+		className,
+		disabled,
+		defaultValue,
+		id: idProp,
+		onBlur = noop,
+		onChange = noop,
+		onFocus = noop,
+		label,
+		size = 'medium',
+		type = 'checkbox',
+		...otherProps
+	} = useContextSystem(props, forwardedRef);
+
 	const [isFocused, setIsFocused] = useState(false);
 	const [checked, setChecked] = useControlledState(checkedProp, {
 		initial: defaultValue || false,
@@ -43,7 +46,11 @@ function Switch({
 
 	const Control = ControlComponent[type] || Checkbox;
 
-	const __css = [styles[size], contextId && horizontal && styles.formGroup];
+	const __css = [
+		styles.Switch,
+		styles[size],
+		contextId && horizontal && styles.formGroup,
+	];
 
 	const toggle = (event) => {
 		setChecked(!checked);
@@ -61,11 +68,11 @@ function Switch({
 	};
 
 	return (
-		<SwitchView {...props} cx={__css} htmlFor={id}>
+		<View as="label" {...otherProps} cx={__css} htmlFor={id}>
 			<Backdrop checked={checked} isFocused={isFocused} size={size} />
 			<Toggle checked={checked} size={size} />
 			<Control
-				{...props}
+				{...otherProps}
 				checked={checked}
 				className={styles.inputHidden}
 				disabled={disabled}
@@ -77,8 +84,8 @@ function Switch({
 				{...ui.$('SwitchInput')}
 			/>
 			<VisuallyHidden {...ui.$('SwitchLabel')}>{label}</VisuallyHidden>
-		</SwitchView>
+		</View>
 	);
 }
 
-export default connect(Switch, 'Switch');
+export default connectAndForwardRefComponent(Switch, 'Switch');

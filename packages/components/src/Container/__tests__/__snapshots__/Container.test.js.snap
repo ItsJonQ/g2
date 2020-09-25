@@ -2,7 +2,7 @@
 
 exports[`props should render alignment 1`] = `
 <div
-  class="wp-components-container css-yzcih3"
+  class="wp-components-container css-1b38t0n"
   data-g2-c16t="true"
   data-g2-component="Container"
 >
@@ -12,7 +12,7 @@ exports[`props should render alignment 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-container css-9guak4"
+  class="wp-components-container css-1t6va38"
   data-g2-c16t="true"
   data-g2-component="Container"
 >
@@ -22,7 +22,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render width 1`] = `
 <div
-  class="wp-components-container css-12mkrw7"
+  class="wp-components-container css-511he8"
   data-g2-c16t="true"
   data-g2-component="Container"
 >

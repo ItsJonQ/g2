@@ -1,36 +1,40 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import React from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
 import { Text } from '../Text';
+import { View } from '../View';
 import * as styles from './ControlLabel.styles';
 
-const { ControlLabelView } = styles;
+function ControlLabel(props, forwardedRef) {
+	const {
+		children,
+		htmlFor: htmlForProp,
+		size = 'medium',
+		truncate = true,
+		...otherProps
+	} = useContextSystem(props, 'ControlLabel');
 
-function ControlLabel({
-	children,
-	htmlFor: htmlForProp,
-	size = 'medium',
-	truncate = true,
-	...props
-}) {
 	const { id: contextId } = useFormGroupContext();
 	const htmlFor = htmlForProp || contextId;
-	const __css = [styles[size]];
+	const __css = [styles.ControlLabel, styles[size]];
 
 	return (
-		<ControlLabelView cx={__css} {...props}>
+		<View cx={__css} {...otherProps} ref={forwardedRef}>
 			<Text
 				as="label"
 				isBlock
 				truncate={truncate}
-				{...props}
+				{...otherProps}
 				htmlFor={htmlFor}
 			>
 				{children}
 			</Text>
-		</ControlLabelView>
+		</View>
 	);
 }
 
-export default connect(ControlLabel, 'ControlLabel');
+export default connectAndForwardRefComponent(ControlLabel, 'ControlLabel');

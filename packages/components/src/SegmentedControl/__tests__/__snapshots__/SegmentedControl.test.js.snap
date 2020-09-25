@@ -4,7 +4,7 @@ exports[`props should render correctly 1`] = `
 <div
   aria-activedescendant="segmented-1"
   aria-label="SegmentControl"
-  class="wp-components-view wp-components-segment-control css-16al81f"
+  class="wp-components-segment-control css-16al81f"
   data-g2-c16t="true"
   data-g2-component="SegmentControl"
   id="segmented"
@@ -32,9 +32,7 @@ exports[`props should render correctly 1`] = `
     <button
       aria-checked="true"
       aria-selected="true"
-      class="wp-components-segmented-control-button css-sutwrl"
-      data-g2-c16t="true"
-      data-g2-component="SegmentedControlButton"
+      class="css-sutwrl"
       data-value="olaf"
       id="segmented-1"
       role="radio"
@@ -65,9 +63,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-checked="false"
-      class="wp-components-segmented-control-button css-12qns2z"
-      data-g2-c16t="true"
-      data-g2-component="SegmentedControlButton"
+      class="css-12qns2z"
       data-value="samantha"
       id="segmented-2"
       role="radio"

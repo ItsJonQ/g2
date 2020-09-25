@@ -2,12 +2,12 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-control-group wp-components-stepper css-1l1keo8"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-1963nm1"
   data-g2-c16t="true"
   data-g2-component="Stepper"
 >
   <div
-    class="wp-components-view wp-components-flex-item wp-components-control-group-item css-14dt8fo"
+    class="wp-components-flex-item wp-components-control-group-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -21,17 +21,17 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-k86duv"
+        class="wp-components-flex css-m9tbel"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-view wp-components-flex-item css-bzokzn"
+          class="wp-components-flex-item css-nlyp56"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-view wp-components-icon css-1tw4gp0"
+            class="wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -65,7 +65,7 @@ exports[`props should render correctly 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-view wp-components-flex-item wp-components-control-group-item css-9qi4f8"
+    class="wp-components-flex-item wp-components-control-group-item css-19py40s"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -79,17 +79,17 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-k86duv"
+        class="wp-components-flex css-m9tbel"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-view wp-components-flex-item css-bzokzn"
+          class="wp-components-flex-item css-nlyp56"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-view wp-components-icon css-1tw4gp0"
+            class="wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -133,12 +133,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-control-group wp-components-stepper css-1l1keo8"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-1963nm1"
   data-g2-c16t="true"
   data-g2-component="Stepper"
 >
   <div
-    class="wp-components-view wp-components-flex-item wp-components-control-group-item css-14dt8fo"
+    class="wp-components-flex-item wp-components-control-group-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -152,17 +152,17 @@ exports[`props should render size 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-k86duv"
+        class="wp-components-flex css-m9tbel"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-view wp-components-flex-item css-bzokzn"
+          class="wp-components-flex-item css-nlyp56"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-view wp-components-icon css-1tw4gp0"
+            class="wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -196,7 +196,7 @@ exports[`props should render size 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-view wp-components-flex-item wp-components-control-group-item css-9qi4f8"
+    class="wp-components-flex-item wp-components-control-group-item css-19py40s"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -210,17 +210,17 @@ exports[`props should render size 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-k86duv"
+        class="wp-components-flex css-m9tbel"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-view wp-components-flex-item css-bzokzn"
+          class="wp-components-flex-item css-nlyp56"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-view wp-components-icon css-1tw4gp0"
+            class="wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -264,12 +264,12 @@ exports[`props should render size 1`] = `
 
 exports[`props should render vertically 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-control-group wp-components-stepper css-14w80q"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-ndwrt9"
   data-g2-c16t="true"
   data-g2-component="Stepper"
 >
   <div
-    class="wp-components-view wp-components-flex-item wp-components-control-group-item css-1n36a32"
+    class="wp-components-flex-item wp-components-control-group-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -283,17 +283,17 @@ exports[`props should render vertically 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-k86duv"
+        class="wp-components-flex css-m9tbel"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-view wp-components-flex-item css-bzokzn"
+          class="wp-components-flex-item css-nlyp56"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-view wp-components-icon css-1tw4gp0"
+            class="wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -324,7 +324,7 @@ exports[`props should render vertically 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-view wp-components-flex-item wp-components-control-group-item css-r8yw7e"
+    class="wp-components-flex-item wp-components-control-group-item css-bkn53v"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -338,17 +338,17 @@ exports[`props should render vertically 1`] = `
       type="button"
     >
       <span
-        class="wp-components-view wp-components-flex css-k86duv"
+        class="wp-components-flex css-m9tbel"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-view wp-components-flex-item css-bzokzn"
+          class="wp-components-flex-item css-nlyp56"
           data-g2-c16t="true"
           data-g2-component="ButtonIcon"
         >
           <div
-            class="wp-components-view wp-components-icon css-1tw4gp0"
+            class="wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >

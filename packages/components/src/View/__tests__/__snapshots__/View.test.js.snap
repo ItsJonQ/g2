@@ -2,9 +2,7 @@
 
 exports[`props should render as another element 1`] = `
 <p
-  class="wp-components-view css-j1yu9m"
-  data-g2-c16t="true"
-  data-g2-component="View"
+  class="css-j1yu9m"
 >
   <span>
     Some people are worth melting for.
@@ -14,9 +12,7 @@ exports[`props should render as another element 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view css-j1yu9m"
-  data-g2-c16t="true"
-  data-g2-component="View"
+  class="css-j1yu9m"
 >
   <span>
     Some people are worth melting for.
@@ -26,9 +22,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with custom styles (Array) 1`] = `
 <p
-  class="wp-components-view css-1k7hfdr"
-  data-g2-c16t="true"
-  data-g2-component="View"
+  class="css-1k7hfdr"
 >
   <span>
     Some people are worth melting for.
@@ -38,9 +32,7 @@ exports[`props should render with custom styles (Array) 1`] = `
 
 exports[`props should render with custom styles (object) 1`] = `
 <p
-  class="wp-components-view css-9ricam"
-  data-g2-c16t="true"
-  data-g2-component="View"
+  class="css-9ricam"
 >
   <span>
     Some people are worth melting for.
@@ -50,9 +42,7 @@ exports[`props should render with custom styles (object) 1`] = `
 
 exports[`props should render with custom styles (string) 1`] = `
 <p
-  class="wp-components-view css-170o10"
-  data-g2-c16t="true"
-  data-g2-component="View"
+  class="css-170o10"
 >
   <span>
     Some people are worth melting for.

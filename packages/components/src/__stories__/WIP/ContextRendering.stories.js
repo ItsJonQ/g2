@@ -1,4 +1,4 @@
-import { ComponentsProvider } from '@wp-g2/context';
+import { ContextSystemProvider } from '@wp-g2/context';
 import {
 	cache,
 	compiler,
@@ -96,11 +96,11 @@ const Example = () => {
 			<Section title="Custom Context">
 				<VStack>
 					<Subheading>Inside Context</Subheading>
-					<ComponentsProvider
+					<ContextSystemProvider
 						value={{ FormGroup: { horizontal: false } }}
 					>
 						<Cluster />
-					</ComponentsProvider>
+					</ContextSystemProvider>
 					<Subheading>Outside Context</Subheading>
 					<Cluster />
 				</VStack>
@@ -143,11 +143,11 @@ const Example = () => {
 					<StyleFrameProvider>
 						<VStack>
 							<Subheading>Inside Context</Subheading>
-							<ComponentsProvider
+							<ContextSystemProvider
 								value={{ FormGroup: { horizontal: false } }}
 							>
 								<Cluster />
-							</ComponentsProvider>
+							</ContextSystemProvider>
 							<Subheading>Outside Context</Subheading>
 							<Cluster />
 						</VStack>

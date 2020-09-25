@@ -2,7 +2,7 @@
 
 exports[`props should render align 1`] = `
 <span
-  class="wp-components-view wp-components-text css-1wxp07y"
+  class="wp-components-text css-1wxp07y"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -12,7 +12,7 @@ exports[`props should render align 1`] = `
 
 exports[`props should render as another element 1`] = `
 <div
-  class="wp-components-view wp-components-text css-1j5v64k"
+  class="wp-components-text css-1j5v64k"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -22,7 +22,7 @@ exports[`props should render as another element 1`] = `
 
 exports[`props should render color 1`] = `
 <span
-  class="wp-components-view wp-components-text css-11b9cfw"
+  class="wp-components-text css-11b9cfw"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -32,7 +32,7 @@ exports[`props should render color 1`] = `
 
 exports[`props should render correctly 1`] = `
 <span
-  class="wp-components-view wp-components-text css-1j5v64k"
+  class="wp-components-text css-1j5v64k"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -42,7 +42,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render custom size 1`] = `
 <span
-  class="wp-components-view wp-components-text css-14o6hkn"
+  class="wp-components-text css-14o6hkn"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -52,7 +52,7 @@ exports[`props should render custom size 1`] = `
 
 exports[`props should render display 1`] = `
 <span
-  class="wp-components-view wp-components-text css-104o95s"
+  class="wp-components-text css-104o95s"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -62,7 +62,7 @@ exports[`props should render display 1`] = `
 
 exports[`props should render highlighted words 1`] = `
 <span
-  class="wp-components-view wp-components-text css-hr4v4k"
+  class="wp-components-text css-hr4v4k"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -89,7 +89,7 @@ exports[`props should render highlighted words 1`] = `
 
 exports[`props should render highlighted words with highlightCaseSensitive 1`] = `
 <span
-  class="wp-components-view wp-components-text css-hr4v4k"
+  class="wp-components-text css-hr4v4k"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -104,7 +104,7 @@ exports[`props should render highlighted words with highlightCaseSensitive 1`] =
 
 exports[`props should render highlighted words with undefined passed 1`] = `
 <span
-  class="wp-components-view wp-components-text css-1j5v64k"
+  class="wp-components-text css-1j5v64k"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -114,7 +114,7 @@ exports[`props should render highlighted words with undefined passed 1`] = `
 
 exports[`props should render isBlock 1`] = `
 <span
-  class="wp-components-view wp-components-text css-1jk3501"
+  class="wp-components-text css-1jk3501"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -124,7 +124,7 @@ exports[`props should render isBlock 1`] = `
 
 exports[`props should render lineHeight 1`] = `
 <span
-  class="wp-components-view wp-components-text css-u1l4v"
+  class="wp-components-text css-u1l4v"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -134,7 +134,7 @@ exports[`props should render lineHeight 1`] = `
 
 exports[`props should render optimizeReadabilityFor 1`] = `
 <span
-  class="wp-components-view wp-components-text css-28rm95"
+  class="wp-components-text css-28rm95"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -144,7 +144,7 @@ exports[`props should render optimizeReadabilityFor 1`] = `
 
 exports[`props should render size 1`] = `
 <span
-  class="wp-components-view wp-components-text css-nrydup"
+  class="wp-components-text css-nrydup"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -154,7 +154,7 @@ exports[`props should render size 1`] = `
 
 exports[`props should render truncate 1`] = `
 <span
-  class="wp-components-view wp-components-truncate wp-components-text css-18w9o67"
+  class="wp-components-truncate wp-components-text css-18w9o67"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -164,7 +164,7 @@ exports[`props should render truncate 1`] = `
 
 exports[`props should render upperCase 1`] = `
 <span
-  class="wp-components-view wp-components-text css-1qmbsxf"
+  class="wp-components-text css-1qmbsxf"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -174,7 +174,7 @@ exports[`props should render upperCase 1`] = `
 
 exports[`props should render variant 1`] = `
 <span
-  class="wp-components-view wp-components-text css-k2r72i"
+  class="wp-components-text css-k2r72i"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -184,7 +184,7 @@ exports[`props should render variant 1`] = `
 
 exports[`props should render weight 1`] = `
 <span
-  class="wp-components-view wp-components-text css-9bfe36"
+  class="wp-components-text css-9bfe36"
   data-g2-c16t="true"
   data-g2-component="Text"
 >

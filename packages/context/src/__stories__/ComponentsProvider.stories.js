@@ -2,11 +2,11 @@ import { Card, CardBody, Text } from '@wp-g2/components';
 import { ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { ComponentsProvider } from '../index';
+import { ContextSystemProvider } from '../index';
 
 export default {
-	component: ComponentsProvider,
-	title: 'Context/ComponentsProvider',
+	component: ContextSystemProvider,
+	title: 'Context/ContextSystemProvider',
 };
 
 export const _default = () => {
@@ -31,13 +31,13 @@ export const _default = () => {
 
 	return (
 		<>
-			<ComponentsProvider value={value}>
+			<ContextSystemProvider value={value}>
 				<Card>
 					<CardBody css={[{ border: '3px solid green' }]}>
 						<Text optimizeReadabilityFor="blue">Card</Text>
 					</CardBody>
 				</Card>
-			</ComponentsProvider>
+			</ContextSystemProvider>
 			<Card>
 				<CardBody>
 					<Text>Card</Text>
@@ -60,7 +60,7 @@ export const shallow = () => {
 
 	return (
 		<>
-			<ComponentsProvider value={value}>
+			<ContextSystemProvider value={value}>
 				<Card>
 					<CardBody css={[{ border: '3px solid green' }]}>
 						<Text optimizeReadabilityFor="blue">Card</Text>
@@ -71,7 +71,7 @@ export const shallow = () => {
 						</Card>
 					</CardBody>
 				</Card>
-			</ComponentsProvider>
+			</ContextSystemProvider>
 		</>
 	);
 };
