@@ -1,20 +1,25 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, getBoxShadow, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import { ElevationView } from './Elevation.styles';
 
-function Elevation({
-	active,
-	borderRadius = 'inherit',
-	focus,
-	hover,
-	isInteractive = false,
-	offset = 0,
-	value = 0,
-	...props
-}) {
+function Elevation(componentProps, forwardedRef) {
+	const {
+		active,
+		borderRadius = 'inherit',
+		focus,
+		hover,
+		isInteractive = false,
+		offset = 0,
+		value = 0,
+		...props
+	} = useContextSystem(componentProps, 'Elevation');
+
 	let hoverValue = is.defined(hover) ? hover : value * 2;
 	let activeValue = is.defined(active) ? hover : value / 2;
 
@@ -66,7 +71,7 @@ function Elevation({
 		is.defined(focus) && sx.focus,
 	];
 
-	return <ElevationView {...props} cx={__css} />;
+	return <ElevationView {...props} cx={__css} ref={forwardedRef} />;
 }
 
-export default connect(Elevation, 'Elevation');
+export default connectAndForwardRefComponent(Elevation, 'Elevation');

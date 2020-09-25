@@ -2,211 +2,159 @@
 
 exports[`props should render align 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-7cmdl8"
+  class="wp-components-grid css-7cmdl8"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-pegie0"
+  class="wp-components-grid css-pegie0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render custom columns 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-uxh12g"
+  class="wp-components-grid css-uxh12g"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render custom rows 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-1jyhcgk"
+  class="wp-components-grid css-1jyhcgk"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render custom templateColumns 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-12id820"
+  class="wp-components-grid css-12id820"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render custom templateRows 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-6bbedq"
+  class="wp-components-grid css-6bbedq"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render gap 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-gxz9wf"
+  class="wp-components-grid css-gxz9wf"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render isInline 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-18gwxf5"
+  class="wp-components-grid css-18gwxf5"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;
 
 exports[`props should render justify 1`] = `
 <div
-  class="wp-components-view wp-components-grid css-a7liz6"
+  class="wp-components-grid css-a7liz6"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
   <div
-    class="wp-components-view css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-j1yu9m"
   />
 </div>
 `;

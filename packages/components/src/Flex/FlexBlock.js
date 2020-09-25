@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	useContextSystem,
 } from '@wp-g2/context';
 import React from 'react';
@@ -11,6 +11,4 @@ function FlexBlock(componentProps, forwardedRef) {
 	return <FlexItem {...props} isBlock={true} ref={forwardedRef} />;
 }
 
-const ForwardedComponent = React.forwardRef(FlexBlock);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'FlexBlock');
+export default connectAndForwardRefComponent(FlexBlock, 'FlexBlock');

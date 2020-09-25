@@ -1,28 +1,33 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, cx, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import { View } from '../View';
 
-function Spacer({
-	className,
-	m,
-	mb = 2,
-	ml,
-	mr,
-	mt,
-	mx,
-	my,
-	p,
-	pb,
-	pl,
-	pr,
-	pt,
-	px,
-	py,
-	...props
-}) {
+function Spacer(componentProps, forwardedRef) {
+	const {
+		className,
+		m,
+		mb = 2,
+		ml,
+		mr,
+		mt,
+		mx,
+		my,
+		p,
+		pb,
+		pl,
+		pr,
+		pt,
+		px,
+		py,
+		...props
+	} = useContextSystem(componentProps, 'Spacer');
+
 	const classes = cx(
 		is.defined(mt) &&
 			css`
@@ -87,7 +92,7 @@ function Spacer({
 		className,
 	);
 
-	return <View className={classes} {...props} />;
+	return <View className={classes} {...props} ref={forwardedRef} />;
 }
 
-export default connect(Spacer, 'Spacer');
+export default connectAndForwardRefComponent(Spacer, 'Spacer');

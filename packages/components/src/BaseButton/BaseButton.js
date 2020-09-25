@@ -1,5 +1,8 @@
 import { Button as ReakitButton } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { css, cx, ui } from '@wp-g2/styles';
 import React from 'react';
@@ -11,38 +14,39 @@ import { Icon } from '../Icon';
 import * as styles from './BaseButton.styles';
 import LoadingOverlay from './BaseButtonLoadingOverlay';
 
-function BaseButton({
-	children,
-	className,
-	css: cssProp,
-	currentColor,
-	disabled = false,
-	elevation = 0,
-	elevationActive,
-	elevationFocus,
-	elevationHover,
-	forwardedRef,
-	gap = 2,
-	hasCaret = false,
-	href,
-	icon,
-	iconSize = 16,
-	isBlock = false,
-	isControl = false,
-	isDestructive = false,
-	isLoading = false,
-	isNarrow = false,
-	isRounded = false,
-	isSubtle = false,
-	justify = 'center',
-	noWrap = true,
-	prefix,
-	size = 'medium',
-	suffix,
-	textAlign = 'center',
-	variant,
-	...props
-}) {
+function BaseButton(componentProps, forwardedRef) {
+	const {
+		children,
+		className,
+		css: cssProp,
+		currentColor,
+		disabled = false,
+		elevation = 0,
+		elevationActive,
+		elevationFocus,
+		elevationHover,
+		gap = 2,
+		hasCaret = false,
+		href,
+		icon,
+		iconSize = 16,
+		isBlock = false,
+		isControl = false,
+		isDestructive = false,
+		isLoading = false,
+		isNarrow = false,
+		isRounded = false,
+		isSubtle = false,
+		justify = 'center',
+		noWrap = true,
+		prefix,
+		size = 'medium',
+		suffix,
+		textAlign = 'center',
+		variant,
+		...props
+	} = useContextSystem(componentProps, 'BaseButton');
+
 	const as = href ? 'a' : 'button';
 	const { styles: controlGroupStyles } = useControlGroupContext();
 	const isIconOnly = !!icon && !children;
@@ -160,4 +164,4 @@ function BaseButton({
 	);
 }
 
-export default connect(BaseButton, 'BaseButton');
+export default connectAndForwardRefComponent(BaseButton, 'BaseButton');

@@ -1,5 +1,8 @@
 import { MenuItem as ReakitMenuItem } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
@@ -12,17 +15,18 @@ import { View } from '../View';
 import { useMenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
 
-function MenuItem({
-	children,
-	className,
-	forwardedRef,
-	isBack = false,
-	isOffset = false,
-	prefix,
-	showArrow = false,
-	suffix,
-	...props
-}) {
+function MenuItem(componentProps, forwardedRef) {
+	const {
+		children,
+		className,
+		isBack = false,
+		isOffset = false,
+		prefix,
+		showArrow = false,
+		suffix,
+		...props
+	} = useContextSystem(componentProps, 'MenuItem');
+
 	const { menu } = useMenuContext();
 	const shouldShowArrow = !isBack && showArrow;
 
@@ -78,4 +82,4 @@ function MenuItem({
 	);
 }
 
-export default connect(MenuItem, 'MenuItem');
+export default connectAndForwardRefComponent(MenuItem, 'MenuItem');

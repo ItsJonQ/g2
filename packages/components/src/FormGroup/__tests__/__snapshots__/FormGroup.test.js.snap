@@ -2,12 +2,12 @@
 
 exports[`props should render alignLabel 1`] = `
 <div
-  class="wp-components-view wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-view wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -17,7 +17,7 @@ exports[`props should render alignLabel 1`] = `
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -26,12 +26,12 @@ exports[`props should render alignLabel 1`] = `
       </label>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-196otya"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
@@ -50,12 +50,12 @@ exports[`props should render alignLabel 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-view wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -65,7 +65,7 @@ exports[`props should render correctly 1`] = `
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
@@ -74,12 +74,12 @@ exports[`props should render correctly 1`] = `
       </label>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-196otya"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
@@ -98,12 +98,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render label without prop correctly 1`] = `
 <div
-  class="wp-components-view wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-view wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-grid wp-components-form-group css-13x1ydg"
     data-g2-c16t="true"
     data-g2-component="FormGroup"
   >
@@ -113,19 +113,19 @@ exports[`props should render label without prop correctly 1`] = `
       data-g2-component="ControlLabel"
     >
       <label
-        class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
+        class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
         data-g2-c16t="true"
         data-g2-component="ControlLabel"
         for="fname"
       />
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-196otya"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="TextInputContent"
       >
@@ -144,7 +144,7 @@ exports[`props should render label without prop correctly 1`] = `
 
 exports[`props should render vertically 1`] = `
 <div
-  class="wp-components-view wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
@@ -154,7 +154,7 @@ exports[`props should render vertically 1`] = `
     data-g2-component="ControlLabel"
   >
     <label
-      class="wp-components-view wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
+      class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
       for="fname"
@@ -163,12 +163,12 @@ exports[`props should render vertically 1`] = `
     </label>
   </div>
   <div
-    class="wp-components-view wp-components-flex wp-components-base-field wp-components-text-input css-196otya"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="TextInputContent"
     >

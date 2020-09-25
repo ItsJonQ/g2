@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	useContextSystem,
 } from '@wp-g2/context';
 import { css, ui } from '@wp-g2/styles';
@@ -28,6 +28,4 @@ function FlexItem(componentProps, forwardedRef) {
 	return <View {...props} cx={__css} ref={forwardedRef} />;
 }
 
-const ForwardedComponent = React.forwardRef(FlexItem);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'FlexItem');
+export default connectAndForwardRefComponent(FlexItem, 'FlexItem');

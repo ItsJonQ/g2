@@ -1,4 +1,4 @@
-import { css, getHighDpi, styled, ui } from '@wp-g2/styles';
+import { css, getHighDpi, ui } from '@wp-g2/styles';
 
 const lineHeight = `calc(${ui.get('fontSize')} * 1.2)`;
 
@@ -13,7 +13,7 @@ const highDpiAdjust = getHighDpi(css`
 	}
 `);
 
-export const ControlLabelView = styled.div`
+export const ControlLabel = css`
 	line-height: ${lineHeight};
 	padding-bottom: ${getPadding('controlHeight')};
 	padding-top: ${getPadding('controlHeight')};

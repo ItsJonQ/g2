@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	useContextSystem,
 } from '@wp-g2/context';
 import { css, cx, get } from '@wp-g2/styles';
@@ -27,6 +27,4 @@ function Heading(componentProps, forwardedRef) {
 	);
 }
 
-const ForwardedComponent = React.forwardRef(Heading);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'Heading');
+export default connectAndForwardRefComponent(Heading, 'Heading');

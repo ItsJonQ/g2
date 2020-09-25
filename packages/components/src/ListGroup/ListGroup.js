@@ -1,4 +1,9 @@
-import { ComponentsProvider, connect, hasNamespace } from '@wp-g2/context';
+import {
+	ComponentsProvider,
+	connectAndForwardRefComponent,
+	hasNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import { useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React, { Fragment } from 'react';
@@ -8,7 +13,11 @@ import { FlexBlock } from '../Flex';
 import { VStack } from '../VStack';
 import ListGroupContent from './ListGroupContent';
 
-function ListGroup({ children, separator = false, spacing, ...props }) {
+function ListGroup(componentProps, forwardedRef) {
+	const { children, separator = false, spacing, ...props } = useContextSystem(
+		componentProps,
+		'ListGroup',
+	);
 	const validChildren = getValidChildren(children);
 	const separatorValue = useResponsiveValue(separator);
 
@@ -94,7 +103,7 @@ function ListGroup({ children, separator = false, spacing, ...props }) {
 	});
 
 	return (
-		<VStack {...props} spacing={2}>
+		<VStack {...props} ref={forwardedRef} spacing={2}>
 			{headerComponent}
 			<ListGroupContent>
 				<ComponentsProvider value={componentContextProps}>
@@ -112,4 +121,4 @@ function ListGroup({ children, separator = false, spacing, ...props }) {
 	);
 }
 
-export default connect(ListGroup, 'ListGroup');
+export default connectAndForwardRefComponent(ListGroup, 'ListGroup');

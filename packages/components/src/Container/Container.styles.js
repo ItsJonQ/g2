@@ -1,8 +1,4 @@
-import { css, styled } from '@wp-g2/styles';
-
-export const ContainerView = styled.div`
-	width: 100%;
-`;
+import { css } from '@wp-g2/styles';
 
 export const left = css`
 	margin-right: auto;

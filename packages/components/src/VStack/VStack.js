@@ -1,10 +1,15 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import React from 'react';
 
 import { HStack } from '../HStack';
 
-function VStack({ forwardedRef, ...props }) {
+function VStack(componentProps, forwardedRef) {
+	const props = useContextSystem(componentProps, 'VStack');
+
 	return <HStack {...props} direction="column" ref={forwardedRef} />;
 }
 
-export default connect(VStack, 'VStack');
+export default connectAndForwardRefComponent(VStack, 'VStack');

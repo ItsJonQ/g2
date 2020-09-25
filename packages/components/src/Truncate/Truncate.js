@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	useContextSystem,
 } from '@wp-g2/context';
 import { css } from '@wp-g2/styles';
@@ -51,6 +51,4 @@ export function Truncate(componentProps, forwardedRef) {
 	);
 }
 
-const ForwardedComponent = React.forwardRef(Truncate);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'Truncate');
+export default connectAndForwardRefComponent(Truncate, 'Truncate');

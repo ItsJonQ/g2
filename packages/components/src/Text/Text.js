@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	useContextSystem,
 } from '@wp-g2/context';
 import { css, cx, get, getFontSize } from '@wp-g2/styles';
@@ -33,6 +33,7 @@ function Text(componentProps, forwardedRef) {
 		weight = 400,
 		...props
 	} = useContextSystem(componentProps, 'Text');
+
 	let content = children;
 	const isHighlighter = is.array(highlightWords) && highlightWords.length;
 	const isCaption = size === 'caption';
@@ -98,6 +99,4 @@ function Text(componentProps, forwardedRef) {
 	return <View {...finalComponentProps}>{content}</View>;
 }
 
-const ForwardedComponent = React.forwardRef(Text);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'Text');
+export default connectAndForwardRefComponent(Text, 'Text');

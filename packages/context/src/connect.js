@@ -38,6 +38,8 @@ export function connect(Component, namespace, options = {}) {
 		);
 
 		/**
+		 * TODO: Revisit shallow.
+		 *
 		 * If "shallow" prop rendering is preferred, then we must "reset" the
 		 * the prop values so that it is no longer passed down.
 		 */
@@ -75,6 +77,14 @@ export function connect(Component, namespace, options = {}) {
 	return hoistNonReactStatics(NamespacedComponent, Component);
 }
 
+/**
+ * "Connects" (or registers) a component within the Context system under
+ * a specified namespace.
+ *
+ * @param {React.ReactElement} Component The component to register into the Context system.
+ * @param {Array<string>|string} namespace The namespace to register the component under.
+ * @returns {React.ReactElement} The component, with registered namespace as static properties.
+ */
 export function connectComponentWithNamespace(Component, namespace) {
 	const displayName = is.array(namespace)
 		? namespace[0]
@@ -96,6 +106,23 @@ export function connectComponentWithNamespace(Component, namespace) {
 	Component[CONNECT_NAMESPACE] = uniq(mergedNamespace);
 
 	return Component;
+}
+
+/**
+ * Forwards ref (React.ForwardRef) and "Connects" (or registers) a component
+ * within the Context system under a specified namespace.
+ *
+ * This is an (experimental) evolution of the initial connect() HOC.
+ * The hope is that we can improve render performance by removing functional
+ * component wrappers.
+ *
+ * @param {React.ReactElement} Component The component to register into the Context system.
+ * @param {Array<string>|string} namespace The namespace to register the component under.
+ * @returns {React.ReactElement} The component, with registered namespace as static properties.
+ */
+export function connectAndForwardRefComponent(Component, namespace) {
+	const ForwardedComponent = forwardRef(Component);
+	return connectComponentWithNamespace(ForwardedComponent, namespace);
 }
 
 /**

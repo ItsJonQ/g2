@@ -13,25 +13,24 @@ exports[`props should render as dismissable 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-view wp-components-flex css-1u4iija"
+      class="wp-components-flex css-1u4iija"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="wp-components-view css-oabb2t"
-          data-g2-c16t="true"
+          class="css-oabb2t"
           data-g2-component="AlertContent"
         >
           I like warm hugs
         </div>
       </div>
       <div
-        class="wp-components-view wp-components-flex-item css-1bku9vz"
+        class="wp-components-flex-item css-1bku9vz"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
@@ -49,17 +48,17 @@ exports[`props should render as dismissable 1`] = `
             type="button"
           >
             <span
-              class="wp-components-view wp-components-flex css-m9tbel"
+              class="wp-components-flex css-m9tbel"
               data-g2-c16t="true"
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-view wp-components-flex-item css-nlyp56"
+                class="wp-components-flex-item css-nlyp56"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
                 <div
-                  class="wp-components-view wp-components-icon css-1k4as4"
+                  class="wp-components-icon css-1k4as4"
                   data-g2-c16t="true"
                   data-g2-component="Icon"
                 >
@@ -117,25 +116,24 @@ exports[`props should render correctly 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-view wp-components-flex css-1u4iija"
+      class="wp-components-flex css-1u4iija"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="wp-components-view css-j1yu9m"
-          data-g2-c16t="true"
+          class="css-j1yu9m"
           data-g2-component="AlertContent"
         >
           I like warm hugs
         </div>
       </div>
       <div
-        class="wp-components-view wp-components-flex-item css-1bku9vz"
+        class="wp-components-flex-item css-1bku9vz"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       />
@@ -146,8 +144,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with status 1`] = `
 <div
-  class="wp-components-view css-j1yu9m"
-  data-g2-c16t="true"
+  class="css-j1yu9m"
   data-g2-component="Alerts"
 >
   <div
@@ -162,25 +159,24 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-1u4iija"
+        class="wp-components-flex css-1u4iija"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-oabb2t"
-            data-g2-c16t="true"
+            class="css-oabb2t"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="wp-components-view wp-components-flex-item css-1bku9vz"
+          class="wp-components-flex-item css-1bku9vz"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
@@ -198,17 +194,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-m9tbel"
+                class="wp-components-flex css-m9tbel"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-view wp-components-flex-item css-nlyp56"
+                  class="wp-components-flex-item css-nlyp56"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-view wp-components-icon css-1k4as4"
+                    class="wp-components-icon css-1k4as4"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -263,25 +259,24 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-1u4iija"
+        class="wp-components-flex css-1u4iija"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-oabb2t"
-            data-g2-c16t="true"
+            class="css-oabb2t"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="wp-components-view wp-components-flex-item css-1bku9vz"
+          class="wp-components-flex-item css-1bku9vz"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
@@ -299,17 +294,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-m9tbel"
+                class="wp-components-flex css-m9tbel"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-view wp-components-flex-item css-nlyp56"
+                  class="wp-components-flex-item css-nlyp56"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-view wp-components-icon css-1k4as4"
+                    class="wp-components-icon css-1k4as4"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -364,25 +359,24 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-1u4iija"
+        class="wp-components-flex css-1u4iija"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-oabb2t"
-            data-g2-c16t="true"
+            class="css-oabb2t"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="wp-components-view wp-components-flex-item css-1bku9vz"
+          class="wp-components-flex-item css-1bku9vz"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
@@ -400,17 +394,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-m9tbel"
+                class="wp-components-flex css-m9tbel"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-view wp-components-flex-item css-nlyp56"
+                  class="wp-components-flex-item css-nlyp56"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-view wp-components-icon css-1k4as4"
+                    class="wp-components-icon css-1k4as4"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -465,25 +459,24 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-1u4iija"
+        class="wp-components-flex css-1u4iija"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-oabb2t"
-            data-g2-c16t="true"
+            class="css-oabb2t"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="wp-components-view wp-components-flex-item css-1bku9vz"
+          class="wp-components-flex-item css-1bku9vz"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
@@ -501,17 +494,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-m9tbel"
+                class="wp-components-flex css-m9tbel"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-view wp-components-flex-item css-nlyp56"
+                  class="wp-components-flex-item css-nlyp56"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-view wp-components-icon css-1k4as4"
+                    class="wp-components-icon css-1k4as4"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -566,25 +559,24 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-view wp-components-flex css-1u4iija"
+        class="wp-components-flex css-1u4iija"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="wp-components-view css-oabb2t"
-            data-g2-c16t="true"
+            class="css-oabb2t"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="wp-components-view wp-components-flex-item css-1bku9vz"
+          class="wp-components-flex-item css-1bku9vz"
           data-g2-c16t="true"
           data-g2-component="FlexItem"
         >
@@ -602,17 +594,17 @@ exports[`props should render with status 1`] = `
               type="button"
             >
               <span
-                class="wp-components-view wp-components-flex css-m9tbel"
+                class="wp-components-flex css-m9tbel"
                 data-g2-c16t="true"
                 data-g2-component="Flex"
               >
                 <span
-                  class="wp-components-view wp-components-flex-item css-nlyp56"
+                  class="wp-components-flex-item css-nlyp56"
                   data-g2-c16t="true"
                   data-g2-component="ButtonIcon"
                 >
                   <div
-                    class="wp-components-view wp-components-icon css-1k4as4"
+                    class="wp-components-icon css-1k4as4"
                     data-g2-c16t="true"
                     data-g2-component="Icon"
                   >
@@ -671,22 +663,22 @@ exports[`props should render with title 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-view wp-components-flex css-1u4iija"
+      class="wp-components-flex css-1u4iija"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="wp-components-view wp-components-spacer css-1pjan5r"
+          class="wp-components-spacer css-1pjan5r"
           data-g2-c16t="true"
           data-g2-component="Spacer"
         >
           <div
-            class="wp-components-view wp-components-text wp-components-heading css-bnjcxl"
+            class="wp-components-text wp-components-heading css-bnjcxl"
             data-g2-c16t="true"
             data-g2-component="Heading"
           >
@@ -694,15 +686,14 @@ exports[`props should render with title 1`] = `
           </div>
         </div>
         <div
-          class="wp-components-view css-j1yu9m"
-          data-g2-c16t="true"
+          class="css-j1yu9m"
           data-g2-component="AlertContent"
         >
           I like warm hugs
         </div>
       </div>
       <div
-        class="wp-components-view wp-components-flex-item css-1bku9vz"
+        class="wp-components-flex-item css-1bku9vz"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       />

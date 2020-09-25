@@ -5,6 +5,14 @@ import { useComponentsContext } from './ComponentsProvider';
 import { CONNECTED_NAMESPACE } from './constants';
 import { ns } from './utils';
 
+/**
+ * Custom hook that derives registered props from the Context system.
+ * These derived props are then consolidated with incoming component props.
+ *
+ * @param {Object} props Incoming props from the component.
+ * @param {Array<string>|string} namespace The namespace to register and to derive context props from.
+ * @param {function} forwardedRef React.forwardRef reference object.
+ */
 export function useContextSystem(props, namespace, forwardedRef) {
 	const context = useComponentsContext();
 	let contextProps;
@@ -77,7 +85,12 @@ export function useContextSystem(props, namespace, forwardedRef) {
 		: initialMergedProps.children;
 
 	for (const k in initialMergedProps) {
-		finalComponentProps[k] = initialMergedProps[k];
+		/**
+		 * Omitting CSS props.
+		 */
+		if (!['cx', 'css', '__css'].includes(k)) {
+			finalComponentProps[k] = initialMergedProps[k];
+		}
 	}
 
 	for (const k in overrideProps) {
@@ -91,7 +104,9 @@ export function useContextSystem(props, namespace, forwardedRef) {
 	/**
 	 * Omit props from finalComponentProps
 	 */
-	finalComponentProps._shallow = undefined;
+	if (finalComponentProps._shallow) {
+		finalComponentProps._shallow = undefined;
+	}
 
 	return finalComponentProps;
 }

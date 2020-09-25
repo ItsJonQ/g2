@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	hasNamespace,
 	useContextSystem,
 } from '@wp-g2/context';
@@ -79,6 +79,4 @@ export function Flex(componentProps, forwardedRef) {
 	);
 }
 
-const ForwardedComponent = React.forwardRef(Flex);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'Flex');
+export default connectAndForwardRefComponent(Flex, 'Flex');

@@ -1,19 +1,24 @@
-import { connect, hasNamespace } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	hasNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
-import { Flex, FlexBlock } from '../Flex';
+import { Flex, FlexItem } from '../Flex';
 import { getAlignmentProps } from './HStack.utils';
 
-function HStack({
-	alignment = 'edge',
-	children,
-	className,
-	forwardedRef,
-	spacing = 2,
-	...props
-}) {
+function HStack(componentProps, forwardedRef) {
+	const {
+		alignment = 'edge',
+		children,
+		className,
+		spacing = 2,
+		...props
+	} = useContextSystem(componentProps, 'HStack');
+
 	const align = getAlignmentProps(alignment);
 	const validChildren = getValidChildren(children);
 
@@ -22,7 +27,8 @@ function HStack({
 
 		if (_isSpacer) {
 			return (
-				<FlexBlock
+				<FlexItem
+					isBlock
 					key={child.key}
 					{...child.props}
 					{...ui.$('Spacer')}
@@ -54,4 +60,4 @@ function HStack({
 	);
 }
 
-export default connect(HStack, 'HStack');
+export default connectAndForwardRefComponent(HStack, 'HStack');

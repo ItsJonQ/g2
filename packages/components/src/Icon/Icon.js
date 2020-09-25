@@ -1,11 +1,19 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
 import * as styles from './Icon.styles';
 
-function Icon({ children, color, forwardedRef, icon, size = 20, ...props }) {
+function Icon(componentProps, forwardedRef) {
+	const { children, color, icon, size = 20, ...props } = useContextSystem(
+		componentProps,
+		'Icon',
+	);
+
 	if (!icon) return null;
 	const sx = {};
 
@@ -34,4 +42,4 @@ function Icon({ children, color, forwardedRef, icon, size = 20, ...props }) {
 	);
 }
 
-export default connect(Icon, 'Icon');
+export default connectAndForwardRefComponent(Icon, 'Icon');

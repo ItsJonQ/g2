@@ -7,12 +7,10 @@ exports[`props should render correctly 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-8o2ae8"
+      class="wp-components-text wp-components-initials css-8o2ae8"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -29,12 +27,10 @@ exports[`props should render with a border 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-8o2ae8"
+      class="wp-components-text wp-components-initials css-8o2ae8"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -68,12 +64,10 @@ exports[`props should render with a custom color 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-32gu8g"
+      class="wp-components-text wp-components-initials css-32gu8g"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -107,12 +101,10 @@ exports[`props should render with a custom size 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-1j3613t"
+      class="wp-components-text wp-components-initials css-1j3613t"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -129,12 +121,10 @@ exports[`props should render with a custom small size + square 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-1g8a9bf"
+      class="wp-components-text wp-components-initials css-1g8a9bf"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -151,12 +141,10 @@ exports[`props should render with a custom xSmall size + square 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-19qhcq0"
+      class="wp-components-text wp-components-initials css-19qhcq0"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -173,12 +161,10 @@ exports[`props should render with an alternate shape 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-32gu8g"
+      class="wp-components-text wp-components-initials css-32gu8g"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -212,12 +198,10 @@ exports[`props should render with an alternate size 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-1j3613t"
+      class="wp-components-text wp-components-initials css-1j3613t"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -234,12 +218,10 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-8o2ae8"
+      class="wp-components-text wp-components-initials css-8o2ae8"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -273,12 +255,10 @@ exports[`props should render with image src 1`] = `
   data-g2-component="Avatar"
 >
   <div
-    class="wp-components-view css-qze8kw"
-    data-g2-c16t="true"
-    data-g2-component="View"
+    class="css-qze8kw"
   >
     <div
-      class="wp-components-view wp-components-text wp-components-initials css-8o2ae8"
+      class="wp-components-text wp-components-initials css-8o2ae8"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >

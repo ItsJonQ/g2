@@ -1,4 +1,8 @@
-import { ComponentsProvider, connect } from '@wp-g2/context';
+import {
+	ComponentsProvider,
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -7,7 +11,11 @@ import { Spacer } from '../Spacer';
 import { Text } from '../Text';
 import { useListGroupContext } from './ListGroup.Context';
 
-function ListGroupFooter({ children, ...props }) {
+function ListGroupFooter(componentProps, forwardedRef) {
+	const { children, ...props } = useContextSystem(
+		componentProps,
+		'ListGroupFooter',
+	);
 	const { inset } = useListGroupContext();
 	const validChildren = React.Children.toArray(children);
 
@@ -29,10 +37,15 @@ function ListGroupFooter({ children, ...props }) {
 			value={{ Text: { size: 'caption', variant: 'muted' } }}
 		>
 			<Spacer mb={0} pt={1} px={inset ? 2 : 0}>
-				<HStack {...props}>{clonedChildren}</HStack>
+				<HStack {...props} ref={forwardedRef}>
+					{clonedChildren}
+				</HStack>
 			</Spacer>
 		</ComponentsProvider>
 	);
 }
 
-export default connect(ListGroupFooter, 'ListGroupFooter');
+export default connectAndForwardRefComponent(
+	ListGroupFooter,
+	'ListGroupFooter',
+);

@@ -1,23 +1,27 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectAndForwardRefComponent,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { BaseButton } from '../BaseButton';
 import * as styles from './Button.styles';
 
-function Button({
-	children,
-	className,
-	css: cssProp,
-	currentColor,
-	forwardedRef,
-	icon,
-	isControl = false,
-	isSubtle = false,
-	size = 'medium',
-	variant = 'secondary',
-	...props
-}) {
+function Button(componentProps, forwardedRef) {
+	const {
+		children,
+		className,
+		css: cssProp,
+		currentColor,
+		icon,
+		isControl = false,
+		isSubtle = false,
+		size = 'medium',
+		variant = 'secondary',
+		...props
+	} = useContextSystem(componentProps, 'Button');
+
 	const isIconOnly = !!icon && !children;
 
 	const classes = cx([
@@ -45,4 +49,4 @@ function Button({
 	);
 }
 
-export default connect(Button, 'Button');
+export default connectAndForwardRefComponent(Button, 'Button');

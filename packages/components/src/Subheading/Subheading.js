@@ -1,5 +1,5 @@
 import {
-	connectComponentWithNamespace,
+	connectAndForwardRefComponent,
 	useContextSystem,
 } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
@@ -27,6 +27,4 @@ function Subheading(componentProps, forwardedRef) {
 	);
 }
 
-const ForwardedComponent = React.forwardRef(Subheading);
-
-export default connectComponentWithNamespace(ForwardedComponent, 'Subheading');
+export default connectAndForwardRefComponent(Subheading, 'Subheading');
