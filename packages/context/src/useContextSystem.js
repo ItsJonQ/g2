@@ -1,8 +1,8 @@
 import { css, cx } from '@wp-g2/styles';
 import { is, kebabCase, uniq } from '@wp-g2/utils';
 
-import { useComponentsContext } from './ComponentsProvider';
 import { CONNECTED_NAMESPACE } from './constants';
+import { useComponentsContext } from './ContextSystemProvider';
 import { ns } from './utils';
 
 /**
@@ -69,7 +69,7 @@ export function useContextSystem(props, namespace, forwardedRef) {
 		: props;
 
 	const classes = cx(
-		// Resolve custom CSS from ComponentsProvider
+		// Resolve custom CSS from ContextSystemProvider
 		css(contextCSS),
 		// Resolve custom CSS from props
 		initialMergedProps.cx,

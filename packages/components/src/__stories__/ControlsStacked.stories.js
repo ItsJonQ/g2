@@ -1,4 +1,4 @@
-import { ComponentsProvider } from '@wp-g2/context';
+import { ContextSystemProvider } from '@wp-g2/context';
 import {
 	FiAlignCenter,
 	FiAlignLeft,
@@ -224,7 +224,7 @@ const ActionsControl = () => {
 
 export const ControlsStacked = () => {
 	return (
-		<ComponentsProvider value={{ FormGroup: { horizontal: false } }}>
+		<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
 			<Sidebar>
 				<Spacer />
 				<ResponsiveControls />
@@ -233,6 +233,6 @@ export const ControlsStacked = () => {
 				<TypographyControls />
 				<ActionsControl />
 			</Sidebar>
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 };

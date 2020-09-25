@@ -1,4 +1,4 @@
-import { ComponentsProvider } from '@wp-g2/context';
+import { ContextSystemProvider } from '@wp-g2/context';
 import { ThemeProvider, ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
 import React from 'react';
@@ -43,7 +43,7 @@ export const Sidebar = ({ children }) => {
 	};
 
 	return (
-		<ComponentsProvider
+		<ContextSystemProvider
 			value={{
 				Grid: { gap: 2 },
 				Icon: { size: 16 },
@@ -153,6 +153,6 @@ export const Sidebar = ({ children }) => {
 					</Tabs>
 				</Surface>
 			</ThemeProvider>
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 };

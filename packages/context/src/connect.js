@@ -55,9 +55,9 @@ export function connect(Component, namespace, options = {}) {
 		// 	}
 
 		// 	return (
-		// 		<ComponentsProvider shallow value={nextContextProps}>
+		// 		<ContextSystemProvider shallow value={nextContextProps}>
 		// 			<Component {...finalComponentProps} />
-		// 		</ComponentsProvider>
+		// 		</ContextSystemProvider>
 		// 	);
 		// }
 

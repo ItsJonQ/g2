@@ -1,6 +1,6 @@
 import {
-	ComponentsProvider,
 	connectAndForwardRefComponent,
+	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
 import { is } from '@wp-g2/utils';
@@ -34,13 +34,13 @@ function ListGroupHeader(props, forwardedRef) {
 	});
 
 	return (
-		<ComponentsProvider value={{ Text: { size: 'subheading' } }}>
+		<ContextSystemProvider value={{ Text: { size: 'subheading' } }}>
 			<Spacer mb={0} px={inset ? 2 : 0}>
 				<HStack {...otherProps} ref={forwardedRef}>
 					{clonedChildren}
 				</HStack>
 			</Spacer>
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 }
 

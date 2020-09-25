@@ -1,6 +1,6 @@
 import {
-	ComponentsProvider,
 	connectAndForwardRefComponent,
+	ContextSystemProvider,
 	hasNamespace,
 	useContextSystem,
 } from '@wp-g2/context';
@@ -86,9 +86,9 @@ function ListGroup(props, forwardedRef) {
 
 		if (isGrid) {
 			content = (
-				<ComponentsProvider value={gridContextProps}>
+				<ContextSystemProvider value={gridContextProps}>
 					{child}
-				</ComponentsProvider>
+				</ContextSystemProvider>
 			);
 		}
 
@@ -108,7 +108,7 @@ function ListGroup(props, forwardedRef) {
 		<VStack {...otherProps} ref={forwardedRef} spacing={2}>
 			{headerComponent}
 			<ListGroupContent>
-				<ComponentsProvider value={componentContextProps}>
+				<ContextSystemProvider value={componentContextProps}>
 					<VStack
 						autoWrap={false}
 						spacing={separatorValue ? 0 : 2}
@@ -116,7 +116,7 @@ function ListGroup(props, forwardedRef) {
 					>
 						{clonedChildren}
 					</VStack>
-				</ComponentsProvider>
+				</ContextSystemProvider>
 			</ListGroupContent>
 			{footerComponent}
 		</VStack>

@@ -1,6 +1,6 @@
 import {
-	ComponentsProvider,
 	connectAndForwardRefComponent,
+	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
 import { is } from '@wp-g2/utils';
@@ -33,7 +33,7 @@ function ListGroupFooter(props, forwardedRef) {
 	});
 
 	return (
-		<ComponentsProvider
+		<ContextSystemProvider
 			value={{ Text: { size: 'caption', variant: 'muted' } }}
 		>
 			<Spacer mb={0} pt={1} px={inset ? 2 : 0}>
@@ -41,7 +41,7 @@ function ListGroupFooter(props, forwardedRef) {
 					{clonedChildren}
 				</HStack>
 			</Spacer>
-		</ComponentsProvider>
+		</ContextSystemProvider>
 	);
 }
 

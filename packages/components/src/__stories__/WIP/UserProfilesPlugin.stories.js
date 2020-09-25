@@ -1,4 +1,4 @@
-import { ComponentsProvider } from '@wp-g2/context';
+import { ContextSystemProvider } from '@wp-g2/context';
 import { faker, Schema } from '@wp-g2/protokit';
 import { ui } from '@wp-g2/styles';
 import { arrayMove, useListState } from '@wp-g2/utils';
@@ -39,7 +39,7 @@ export default {
 const AppContext = createContext({});
 const useAppContext = () => useContext(AppContext);
 
-const componentsProviderValue = {
+const ContextSystemProviderValue = {
 	FormGroup: {
 		alignLabel: 'right',
 		gap: 7,
@@ -357,7 +357,9 @@ function App() {
 							</HStack>
 						</TabList>
 						<Surface css={[ui.padding(5)]} variant="secondary">
-							<ComponentsProvider value={componentsProviderValue}>
+							<ContextSystemProvider
+								value={ContextSystemProviderValue}
+							>
 								<Grid gap={28} templateColumns="1fr 280px">
 									<View>
 										<TabPanel>
@@ -377,7 +379,7 @@ function App() {
 										<Sidebar />
 									</View>
 								</Grid>
-							</ComponentsProvider>
+							</ContextSystemProvider>
 						</Surface>
 					</Tabs>
 				</Container>
