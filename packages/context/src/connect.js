@@ -120,7 +120,7 @@ export function connectComponentWithNamespace(Component, namespace) {
  * @param {Array<string>|string} namespace The namespace to register the component under.
  * @returns {React.ReactElement} The component, with registered namespace as static properties.
  */
-export function connectAndForwardRefComponent(Component, namespace) {
+export function contextConnect(Component, namespace) {
 	const ForwardedComponent = forwardRef(Component);
 	return connectComponentWithNamespace(ForwardedComponent, namespace);
 }

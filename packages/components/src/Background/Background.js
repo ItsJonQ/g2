@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Surface } from '../Surface';
@@ -12,4 +9,4 @@ function Background(props, forwardedRef) {
 	return <Surface variant="secondary" {...otherProps} ref={forwardedRef} />;
 }
 
-export default connectAndForwardRefComponent(Background, 'Background');
+export default contextConnect(Background, 'Background');

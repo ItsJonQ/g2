@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
@@ -59,4 +56,4 @@ function ZStack(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(ZStack, 'ZStack');
+export default contextConnect(ZStack, 'ZStack');

@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useUniqueId } from '@wp-g2/utils';
 import React from 'react';
 
@@ -49,4 +46,4 @@ function FormGroup(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(FormGroup, 'FormGroup');
+export default contextConnect(FormGroup, 'FormGroup');

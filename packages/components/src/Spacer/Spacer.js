@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
@@ -95,4 +92,4 @@ function Spacer(props, forwardedRef) {
 	return <View className={classes} {...otherProps} ref={forwardedRef} />;
 }
 
-export default connectAndForwardRefComponent(Spacer, 'Spacer');
+export default contextConnect(Spacer, 'Spacer');

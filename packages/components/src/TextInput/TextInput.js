@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
@@ -112,4 +109,4 @@ function TextInput(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(TextInput, 'TextInput');
+export default contextConnect(TextInput, 'TextInput');

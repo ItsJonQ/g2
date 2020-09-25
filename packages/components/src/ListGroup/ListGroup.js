@@ -1,5 +1,5 @@
 import {
-	connectAndForwardRefComponent,
+	contextConnect,
 	ContextSystemProvider,
 	hasNamespace,
 	useContextSystem,
@@ -123,4 +123,4 @@ function ListGroup(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(ListGroup, 'ListGroup');
+export default contextConnect(ListGroup, 'ListGroup');

@@ -1,8 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	hasNamespace,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, hasNamespace, useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
@@ -60,4 +56,4 @@ function HStack(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(HStack, 'HStack');
+export default contextConnect(HStack, 'HStack');

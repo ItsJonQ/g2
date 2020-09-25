@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -48,4 +45,4 @@ function Card(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(Card, 'Card');
+export default contextConnect(Card, 'Card');

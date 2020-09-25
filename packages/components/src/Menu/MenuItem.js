@@ -1,8 +1,5 @@
 import { MenuItem as ReakitMenuItem } from '@wp-g2/a11y';
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
@@ -82,4 +79,4 @@ function MenuItem(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(MenuItem, 'MenuItem');
+export default contextConnect(MenuItem, 'MenuItem');

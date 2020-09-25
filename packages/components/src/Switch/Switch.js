@@ -1,8 +1,5 @@
 import { Checkbox, Radio } from '@wp-g2/a11y';
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
@@ -88,4 +85,4 @@ function Switch(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(Switch, 'Switch');
+export default contextConnect(Switch, 'Switch');

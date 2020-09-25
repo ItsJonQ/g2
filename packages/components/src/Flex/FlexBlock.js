@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import FlexItem from './FlexItem';
@@ -12,4 +9,4 @@ function FlexBlock(props, forwardedRef) {
 	return <FlexItem {...otherProps} isBlock={true} ref={forwardedRef} />;
 }
 
-export default connectAndForwardRefComponent(FlexBlock, 'FlexBlock');
+export default contextConnect(FlexBlock, 'FlexBlock');

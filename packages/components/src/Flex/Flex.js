@@ -1,8 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	hasNamespace,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, hasNamespace, useContextSystem } from '@wp-g2/context';
 import { css, ui, useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
@@ -79,4 +75,4 @@ export function Flex(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(Flex, 'Flex');
+export default contextConnect(Flex, 'Flex');

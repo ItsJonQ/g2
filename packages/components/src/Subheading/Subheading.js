@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -25,4 +22,4 @@ function Subheading(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(Subheading, 'Subheading');
+export default contextConnect(Subheading, 'Subheading');

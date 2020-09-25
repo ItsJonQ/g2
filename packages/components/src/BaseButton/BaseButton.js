@@ -1,8 +1,5 @@
 import { Button as ReakitButton } from '@wp-g2/a11y';
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { css, cx, ui } from '@wp-g2/styles';
 import React from 'react';
@@ -164,4 +161,4 @@ function BaseButton(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(BaseButton, 'BaseButton');
+export default contextConnect(BaseButton, 'BaseButton');

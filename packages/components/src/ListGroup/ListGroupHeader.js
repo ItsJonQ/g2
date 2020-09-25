@@ -1,5 +1,5 @@
 import {
-	connectAndForwardRefComponent,
+	contextConnect,
 	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
@@ -44,7 +44,4 @@ function ListGroupHeader(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(
-	ListGroupHeader,
-	'ListGroupHeader',
-);
+export default contextConnect(ListGroupHeader, 'ListGroupHeader');

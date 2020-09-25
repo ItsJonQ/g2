@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
@@ -29,4 +26,4 @@ function ListGroups(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(ListGroups, 'ListGroups');
+export default contextConnect(ListGroups, 'ListGroups');

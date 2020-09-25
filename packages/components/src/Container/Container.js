@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
@@ -21,4 +18,4 @@ function Container(props, forwardedRef) {
 	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
-export default connectAndForwardRefComponent(Container, 'Container');
+export default contextConnect(Container, 'Container');

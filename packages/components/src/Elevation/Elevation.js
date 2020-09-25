@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, getBoxShadow, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
@@ -74,4 +71,4 @@ function Elevation(props, forwardedRef) {
 	return <ElevationView {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
-export default connectAndForwardRefComponent(Elevation, 'Elevation');
+export default contextConnect(Elevation, 'Elevation');

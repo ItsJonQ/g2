@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, get, getFontSize } from '@wp-g2/styles';
 import { getOptimalTextShade, is } from '@wp-g2/utils';
 import React from 'react';
@@ -99,4 +96,4 @@ function Text(props, forwardedRef) {
 	return <View {...finalComponentProps}>{content}</View>;
 }
 
-export default connectAndForwardRefComponent(Text, 'Text');
+export default contextConnect(Text, 'Text');

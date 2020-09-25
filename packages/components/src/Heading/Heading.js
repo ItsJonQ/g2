@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, get } from '@wp-g2/styles';
 import React from 'react';
 
@@ -27,4 +24,4 @@ function Heading(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(Heading, 'Heading');
+export default contextConnect(Heading, 'Heading');

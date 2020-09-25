@@ -1,5 +1,5 @@
 import {
-	connectAndForwardRefComponent,
+	contextConnect,
 	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
@@ -45,7 +45,4 @@ function ListGroupFooter(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(
-	ListGroupFooter,
-	'ListGroupFooter',
-);
+export default contextConnect(ListGroupFooter, 'ListGroupFooter');

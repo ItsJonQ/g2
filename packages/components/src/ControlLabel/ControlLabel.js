@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
@@ -37,4 +34,4 @@ function ControlLabel(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(ControlLabel, 'ControlLabel');
+export default contextConnect(ControlLabel, 'ControlLabel');

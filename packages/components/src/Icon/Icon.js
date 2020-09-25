@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css } from '@wp-g2/styles';
 import React from 'react';
 
@@ -45,4 +42,4 @@ function Icon(props, forwardedRef) {
 	);
 }
 
-export default connectAndForwardRefComponent(Icon, 'Icon');
+export default contextConnect(Icon, 'Icon');

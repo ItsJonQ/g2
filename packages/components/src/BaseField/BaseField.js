@@ -1,7 +1,4 @@
-import {
-	connectAndForwardRefComponent,
-	useContextSystem,
-} from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
@@ -29,4 +26,4 @@ function BaseField(props, forwardedRef) {
 	return <Flex {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
-export default connectAndForwardRefComponent(BaseField, 'BaseField');
+export default contextConnect(BaseField, 'BaseField');
