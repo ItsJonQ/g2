@@ -1,3 +1,4 @@
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
@@ -11,7 +12,14 @@ function SwitchToggle({ checked = false, size = 'medium', ...props }) {
 		size === 'small' && styles.toggleSmall,
 	];
 
-	return <View aria-hidden={true} {...props} cx={__css} />;
+	return (
+		<View
+			aria-hidden={true}
+			{...ui.$('SwitchToggle')}
+			{...props}
+			cx={__css}
+		/>
+	);
 }
 
 export default SwitchToggle;

@@ -15,7 +15,7 @@ function Card(props, forwardedRef) {
 		isBorderless = false,
 		isRounded = true,
 		...otherProps
-	} = useContextSystem(props, forwardedRef);
+	} = useContextSystem(props, 'Card');
 
 	const classes = cx([
 		styles.Card,

@@ -539,9 +539,57 @@ exports[`props should render Button with css prop 2`] = `
 
 exports[`props should render Card 1`] = `
 <div
-  class="wp-components-surface css-1qt13ik"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
-  data-g2-component="Surface"
+  data-g2-component="Card"
+  id="Card"
+>
+  <div
+    class="css-j1yu9m"
+    data-g2-component="CardContent"
+  />
+  <div
+    class="wp-components-elevation css-18hqkt0"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-1873flw"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render Card with css prop 1`] = `
+<div
+  class="wp-components-surface wp-components-card css-1qt13ik"
+  data-g2-c16t="true"
+  data-g2-component="Card"
+  id="Card"
+>
+  <div
+    class="css-j1yu9m"
+    data-g2-component="CardContent"
+  />
+  <div
+    class="wp-components-elevation css-18hqkt0"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="wp-components-elevation css-1873flw"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render Card with css prop 2`] = `
+<div
+  class="wp-components-surface wp-components-card css-17o0ew5"
+  data-g2-c16t="true"
+  data-g2-component="Card"
   id="Card"
 >
   <div
@@ -570,6 +618,7 @@ exports[`props should render CardBody 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -583,6 +632,7 @@ exports[`props should render CardBody with css prop 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -596,6 +646,7 @@ exports[`props should render CardBody with css prop 2`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -1270,9 +1321,9 @@ exports[`props should render DropdownMenu 1`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface css-1kzbz1g"
+    class="wp-components-surface wp-components-card css-1kzbz1g"
     data-g2-c16t="true"
-    data-g2-component="Surface"
+    data-g2-component="Card"
   >
     <div
       class="css-j1yu9m"
@@ -1285,6 +1336,7 @@ exports[`props should render DropdownMenu 1`] = `
       >
         <div
           class="css-1qs21wj"
+          data-g2-component="ScrollableContent"
         />
       </div>
     </div>
@@ -1310,9 +1362,9 @@ exports[`props should render DropdownMenu with css prop 1`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface css-1kzbz1g"
+    class="wp-components-surface wp-components-card css-1kzbz1g"
     data-g2-c16t="true"
-    data-g2-component="Surface"
+    data-g2-component="Card"
   >
     <div
       class="css-j1yu9m"
@@ -1325,6 +1377,7 @@ exports[`props should render DropdownMenu with css prop 1`] = `
       >
         <div
           class="css-1qs21wj"
+          data-g2-component="ScrollableContent"
         />
       </div>
     </div>
@@ -1350,9 +1403,9 @@ exports[`props should render DropdownMenu with css prop 2`] = `
   id="DropdownMenu"
 >
   <div
-    class="wp-components-surface css-1kzbz1g"
+    class="wp-components-surface wp-components-card css-1kzbz1g"
     data-g2-c16t="true"
-    data-g2-component="Surface"
+    data-g2-component="Card"
   >
     <div
       class="css-j1yu9m"
@@ -1365,6 +1418,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
       >
         <div
           class="css-1qs21wj"
+          data-g2-component="ScrollableContent"
         />
       </div>
     </div>
@@ -2289,6 +2343,7 @@ exports[`props should render ModalBody 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -2302,6 +2357,7 @@ exports[`props should render ModalBody with css prop 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -2315,6 +2371,7 @@ exports[`props should render ModalBody with css prop 2`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -2736,6 +2793,7 @@ exports[`props should render Scrollable 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -2749,6 +2807,7 @@ exports[`props should render Scrollable with css prop 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -2762,6 +2821,7 @@ exports[`props should render Scrollable with css prop 2`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   />
 </div>
 `;
@@ -3722,10 +3782,12 @@ exports[`props should render Switch 1`] = `
   <div
     aria-hidden="true"
     class="css-8ieowc"
+    data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
     class="css-1ptemzf"
+    data-g2-component="SwitchToggle"
   />
   <input
     aria-checked="false"

@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -7,7 +7,12 @@ import { Scrollable } from '../Scrollable';
 import { View } from '../View';
 import * as styles from './Card.styles';
 
-function CardBody({ className, scrollable = true, ...props }) {
+function CardBody(props, forwardedRef) {
+	const { className, scrollable = true, ...otherProps } = useContextSystem(
+		props,
+		'CardBody',
+	);
+
 	const { popover } = usePopoverContext();
 	const classes = cx([
 		styles.Body,
@@ -17,10 +22,16 @@ function CardBody({ className, scrollable = true, ...props }) {
 	]);
 
 	if (scrollable) {
-		return <Scrollable {...props} className={classes} />;
+		return (
+			<Scrollable
+				{...otherProps}
+				className={classes}
+				ref={forwardedRef}
+			/>
+		);
 	}
 
-	return <View {...props} className={classes} />;
+	return <View {...otherProps} className={classes} ref={forwardedRef} />;
 }
 
-export default connect(CardBody, 'CardBody');
+export default contextConnect(CardBody, 'CardBody');

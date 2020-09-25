@@ -7,9 +7,8 @@ import TextareaAutosize from 'react-textarea-autosize';
 import { BaseField } from '../BaseField';
 import { FlexBlock, FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
+import { View } from '../View';
 import * as styles from './TextInput.styles';
-
-const { InputView } = styles;
 
 function TextInput(props, forwardedRef) {
 	const {
@@ -67,6 +66,7 @@ function TextInput(props, forwardedRef) {
 	const classes = cx([multiline && styles.multiline, className]);
 
 	const inputCx = [
+		styles.Input,
 		styles[size],
 		multiline && styles.inputMultiline,
 		isResizable && styles.resizable,
@@ -88,7 +88,7 @@ function TextInput(props, forwardedRef) {
 				<FlexItem {...ui.$('TextInputPrefix')}>{prefix}</FlexItem>
 			)}
 			<FlexBlock {...ui.$('TextInputContent')}>
-				<InputView
+				<View
 					as={InputComponent}
 					cx={inputCx}
 					disabled={disabled}

@@ -3,7 +3,8 @@ import { css, getBoxShadow, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
-import { ElevationView } from './Elevation.styles';
+import { View } from '../View';
+import * as styles from './Elevation.styles';
 
 function Elevation(props, forwardedRef) {
 	const {
@@ -61,6 +62,7 @@ function Elevation(props, forwardedRef) {
 	`;
 
 	const __css = [
+		styles.Elevation,
 		sx.Elevation,
 		sx.Base,
 		is.defined(hoverValue) && sx.hover,
@@ -68,7 +70,7 @@ function Elevation(props, forwardedRef) {
 		is.defined(focus) && sx.focus,
 	];
 
-	return <ElevationView {...otherProps} cx={__css} ref={forwardedRef} />;
+	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
 export default contextConnect(Elevation, 'Elevation');

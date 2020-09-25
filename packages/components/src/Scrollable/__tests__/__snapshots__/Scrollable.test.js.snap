@@ -8,6 +8,7 @@ exports[`props should render correctly 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   >
     Some people are worth melting for.
   </div>
@@ -22,6 +23,7 @@ exports[`props should render smoothScroll 1`] = `
 >
   <div
     class="css-1qs21wj"
+    data-g2-component="ScrollableContent"
   >
     Some people are worth melting for.
   </div>

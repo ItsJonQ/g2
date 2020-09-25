@@ -2,9 +2,9 @@
 
 exports[`props should render CardInnerBody 1`] = `
 <div
-  class="wp-components-surface css-1qt13ik"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
-  data-g2-component="Surface"
+  data-g2-component="Card"
 >
   <div
     class="css-j1yu9m"
@@ -79,9 +79,9 @@ exports[`props should render CardInnerBody 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-surface css-1qt13ik"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
-  data-g2-component="Surface"
+  data-g2-component="Card"
 >
   <div
     class="css-j1yu9m"
@@ -100,6 +100,7 @@ exports[`props should render correctly 1`] = `
     >
       <div
         class="css-1qs21wj"
+        data-g2-component="ScrollableContent"
       >
         Some people are worth melting for.
       </div>
@@ -160,9 +161,9 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render elevation 1`] = `
 <div
-  class="wp-components-surface css-1qt13ik"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
-  data-g2-component="Surface"
+  data-g2-component="Card"
 >
   <div
     class="css-j1yu9m"
@@ -183,9 +184,9 @@ exports[`props should render elevation 1`] = `
 
 exports[`props should render no elevation 1`] = `
 <div
-  class="wp-components-surface css-1qt13ik"
+  class="wp-components-surface wp-components-card css-1qt13ik"
   data-g2-c16t="true"
-  data-g2-component="Surface"
+  data-g2-component="Card"
 >
   <div
     class="css-j1yu9m"

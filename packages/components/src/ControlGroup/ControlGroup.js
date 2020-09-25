@@ -1,4 +1,4 @@
-import { connect, hasNamespace } from '@wp-g2/context';
+import { contextConnect, hasNamespace, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
@@ -8,12 +8,14 @@ import { ControlGroupContext } from './ControlGroup.Context';
 import * as styles from './ControlGroup.styles';
 import ControlGroupItem from './ControlGroupItem';
 
-function ControlGroup({
-	children,
-	direction = 'row',
-	isItemBlock = false,
-	...props
-}) {
+function ControlGroup(props, forwardedRef) {
+	const {
+		children,
+		direction = 'row',
+		isItemBlock = false,
+		...otherProps
+	} = useContextSystem(props, 'ControlGroup');
+
 	const validChildren = getValidChildren(children);
 	const isVertical = direction === 'column';
 
@@ -60,10 +62,16 @@ function ControlGroup({
 	});
 
 	return (
-		<Flex autoWrap={false} direction={direction} gap={0} {...props}>
+		<Flex
+			autoWrap={false}
+			direction={direction}
+			gap={0}
+			{...otherProps}
+			ref={forwardedRef}
+		>
 			{clonedChildren}
 		</Flex>
 	);
 }
 
-export default connect(ControlGroup, 'ControlGroup');
+export default contextConnect(ControlGroup, 'ControlGroup');

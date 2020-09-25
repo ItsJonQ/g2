@@ -1,11 +1,16 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Flex } from '../Flex';
 import * as styles from './Card.styles';
 
-function CardHeader({ className, size = 'medium', ...props }) {
+function CardHeader(props, forwardedRef) {
+	const { className, size = 'medium', ...otherProps } = useContextSystem(
+		props,
+		'CardHeader',
+	);
+
 	const classes = cx([
 		styles.Header,
 		styles.borderRadius,
@@ -14,7 +19,7 @@ function CardHeader({ className, size = 'medium', ...props }) {
 		className,
 	]);
 
-	return <Flex {...props} className={classes} />;
+	return <Flex {...otherProps} className={classes} ref={forwardedRef} />;
 }
 
-export default connect(CardHeader, 'CardHeader');
+export default contextConnect(CardHeader, 'CardHeader');

@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
@@ -10,29 +10,30 @@ import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import * as TextInputStyles from '../TextInput/TextInput.styles';
+import { View } from '../View';
 import * as styles from './Select.styles';
 
 const { ArrowWrapperView } = styles;
-const { InputView } = TextInputStyles;
 
-function Select({
-	className,
-	children,
-	defaultValue,
-	disabled,
-	forwardedRef,
-	id: idProp,
-	isSubtle,
-	onBlur = noop,
-	onChange = noop,
-	onFocus = noop,
-	options = [],
-	prefix,
-	size,
-	suffix,
-	value: valueProp,
-	...props
-}) {
+function Select(props, forwardedRef) {
+	const {
+		className,
+		children,
+		defaultValue,
+		disabled,
+		id: idProp,
+		isSubtle,
+		onBlur = noop,
+		onChange = noop,
+		onFocus = noop,
+		options = [],
+		prefix,
+		size,
+		suffix,
+		value: valueProp,
+		...otherProps
+	} = useContextSystem(props, 'Select');
+
 	const [value, setValue] = useControlledState(valueProp, {
 		initial: defaultValue,
 	});
@@ -63,7 +64,11 @@ function Select({
 	};
 
 	const classes = cx([styles.base, className]);
-	const inputCx = cx([styles.select, TextInputStyles[size]]);
+	const inputCx = cx([
+		TextInputStyles.Input,
+		styles.select,
+		TextInputStyles[size],
+	]);
 
 	return (
 		<BaseField
@@ -78,7 +83,7 @@ function Select({
 		>
 			{prefix && <FlexItem {...ui.$('SelectPrefix')}>{prefix}</FlexItem>}
 			<FlexBlock>
-				<InputView
+				<View
 					as="select"
 					cx={inputCx}
 					disabled={disabled}
@@ -88,7 +93,7 @@ function Select({
 					onFocus={handleOnFocus}
 					ref={mergeRefs([forwardedRef, inputRef])}
 					value={value}
-					{...props}
+					{...otherProps}
 					{...ui.$('Select')}
 				>
 					{children ||
@@ -105,7 +110,7 @@ function Select({
 								</option>
 							);
 						})}
-				</InputView>
+				</View>
 			</FlexBlock>
 			{suffix && <FlexItem {...ui.$('SelectSuffix')}>{suffix}</FlexItem>}
 			<ArrowWrapperView>
@@ -117,4 +122,4 @@ function Select({
 	);
 }
 
-export default connect(Select, 'Select');
+export default contextConnect(Select, 'Select');

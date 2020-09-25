@@ -1,4 +1,4 @@
-import { css, styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export { scrollableScrollbar } from '../Scrollable/Scrollable.styles';
 
@@ -17,7 +17,7 @@ export const inputMultiline = css`
 	padding-right: 8px;
 `;
 
-export const InputView = styled.input`
+export const Input = css`
 	appearance: none;
 	background: transparent;
 	border: none;

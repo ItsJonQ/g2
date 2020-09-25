@@ -1,19 +1,23 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Card, CardBody } from '../Card';
 import { useListGroupContext } from './ListGroup.Context';
 
-function ListGroupContent({ children, ...props }) {
+function ListGroupContent(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
+		'ListGroupContent',
+	);
 	const { inset } = useListGroupContext();
 
 	if (!inset) return children;
 
 	return (
-		<Card elevation={0} isBorderless {...props}>
+		<Card elevation={0} isBorderless {...otherProps} ref={forwardedRef}>
 			<CardBody scrollable={false}>{children}</CardBody>
 		</Card>
 	);
 }
 
-export default connect(ListGroupContent, 'ListGroupContent');
+export default contextConnect(ListGroupContent, 'ListGroupContent');
