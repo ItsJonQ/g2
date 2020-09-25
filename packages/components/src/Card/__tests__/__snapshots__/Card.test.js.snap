@@ -12,7 +12,7 @@ exports[`props should render CardInnerBody 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-card-header css-1ldzg2o"
+      class="wp-components-view wp-components-flex wp-components-card-header css-13wu4bh"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -25,12 +25,12 @@ exports[`props should render CardInnerBody 1`] = `
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-card-footer css-60wq1a"
+      class="wp-components-view wp-components-flex wp-components-card-footer css-b5lq72"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <div
-        class="wp-components-view wp-components-flex-item css-1suoifq"
+        class="wp-components-view wp-components-flex-item css-1bku9vz"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
@@ -44,12 +44,12 @@ exports[`props should render CardInnerBody 1`] = `
           type="button"
         >
           <span
-            class="wp-components-view wp-components-flex css-k86duv"
+            class="wp-components-view wp-components-flex css-m9tbel"
             data-g2-c16t="true"
             data-g2-component="Flex"
           >
             <span
-              class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+              class="wp-components-view wp-components-flex-item wp-components-flex-block css-18097f7"
               data-g2-c16t="true"
               data-g2-component="ButtonContent"
             >
@@ -90,7 +90,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-card-header css-1ldzg2o"
+      class="wp-components-view wp-components-flex wp-components-card-header css-13wu4bh"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -107,12 +107,12 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-view wp-components-flex wp-components-card-footer css-60wq1a"
+      class="wp-components-view wp-components-flex wp-components-card-footer css-b5lq72"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <div
-        class="wp-components-view wp-components-flex-item css-1suoifq"
+        class="wp-components-view wp-components-flex-item css-1bku9vz"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
@@ -126,12 +126,12 @@ exports[`props should render correctly 1`] = `
           type="button"
         >
           <span
-            class="wp-components-view wp-components-flex css-k86duv"
+            class="wp-components-view wp-components-flex css-m9tbel"
             data-g2-c16t="true"
             data-g2-component="Flex"
           >
             <span
-              class="wp-components-view wp-components-flex-item wp-components-flex-block css-2fa4s0"
+              class="wp-components-view wp-components-flex-item wp-components-flex-block css-18097f7"
               data-g2-c16t="true"
               data-g2-component="ButtonContent"
             >

@@ -1,21 +1,26 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectComponentWithNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { SurfaceView } from './Surface.styles';
 import * as styles from './Surface.styles';
 
-function Surface({
-	backgroundSize = 16,
-	border,
-	borderBottom,
-	borderLeft,
-	borderRight,
-	borderTop,
-	children,
-	variant = 'primary',
-	...props
-}) {
+function Surface(componentProps, forwardedRef) {
+	const {
+		backgroundSize = 16,
+		border,
+		borderBottom,
+		borderLeft,
+		borderRight,
+		borderTop,
+		children,
+		variant = 'primary',
+		...props
+	} = useContextSystem(componentProps, 'Surface');
+
 	const sx = {};
 
 	sx.borders = styles.getBorders({
@@ -37,10 +42,12 @@ function Surface({
 	];
 
 	return (
-		<SurfaceView {...props} cx={__css}>
+		<SurfaceView {...props} cx={__css} ref={forwardedRef}>
 			{children}
 		</SurfaceView>
 	);
 }
 
-export default connect(Surface, 'Surface');
+const ForwardedComponent = React.forwardRef(Surface);
+
+export default connectComponentWithNamespace(ForwardedComponent, 'Surface');

@@ -1,4 +1,7 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectComponentWithNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css } from '@wp-g2/styles';
 import React from 'react';
 
@@ -10,14 +13,16 @@ import {
 	truncateContent,
 } from './Truncate.utils';
 
-export function Truncate({
-	children,
-	ellipsis = TRUNCATE_ELLIPSIS,
-	ellipsizeMode = TRUNCATE_TYPE.auto,
-	limit = 0,
-	numberOfLines = 0,
-	...props
-}) {
+export function Truncate(componentProps, forwardedRef) {
+	const {
+		children,
+		ellipsis = TRUNCATE_ELLIPSIS,
+		ellipsizeMode = TRUNCATE_TYPE.auto,
+		limit = 0,
+		numberOfLines = 0,
+		...props
+	} = useContextSystem(componentProps, 'Truncate');
+
 	const truncatedContent = truncateContent(children, {
 		ellipsis,
 		ellipsizeMode,
@@ -40,10 +45,12 @@ export function Truncate({
 	];
 
 	return (
-		<View as="span" {...props} cx={__css}>
+		<View as="span" {...props} cx={__css} ref={forwardedRef}>
 			{truncatedContent}
 		</View>
 	);
 }
 
-export default connect(Truncate, 'Truncate');
+const ForwardedComponent = React.forwardRef(Truncate);
+
+export default connectComponentWithNamespace(ForwardedComponent, 'Truncate');

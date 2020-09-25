@@ -1,10 +1,16 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectComponentWithNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import React from 'react';
 
 import { Surface } from '../Surface';
 
-function Background(props) {
-	return <Surface variant="secondary" {...props} />;
+function Background(componentProps, forwardedRef) {
+	const props = useContextSystem(componentProps, 'Background');
+	return <Surface variant="secondary" {...props} ref={forwardedRef} />;
 }
 
-export default connect(Background, 'Background');
+const ForwardedComponent = React.forwardRef(Background);
+
+export default connectComponentWithNamespace(ForwardedComponent, 'Background');

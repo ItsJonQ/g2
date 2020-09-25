@@ -1,5 +1,5 @@
 import { connect, hasNamespace } from '@wp-g2/context';
-import { createToken, ui } from '@wp-g2/styles';
+import { css, cx, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -9,9 +9,9 @@ import { getAlignmentProps } from './HStack.utils';
 function HStack({
 	alignment = 'edge',
 	children,
+	className,
 	forwardedRef,
 	spacing = 2,
-	style = {},
 	...props
 }) {
 	const align = getAlignmentProps(alignment);
@@ -33,17 +33,21 @@ function HStack({
 		return child;
 	});
 
+	const classes = cx([
+		css({
+			[ui.createToken('HStackSpacing')]: ui.space(spacing),
+		}),
+		className,
+	]);
+
 	return (
 		<Flex
 			gap={spacing}
 			justify="center"
 			{...align}
 			{...props}
+			className={classes}
 			ref={forwardedRef}
-			style={{
-				[createToken('HStackSpacing')]: ui.space(spacing),
-				...style,
-			}}
 		>
 			{clonedChildren}
 		</Flex>

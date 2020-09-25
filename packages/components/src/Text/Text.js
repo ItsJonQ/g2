@@ -1,4 +1,7 @@
-import { connect } from '@wp-g2/context';
+import {
+	connectComponentWithNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import { css, cx, get, getFontSize } from '@wp-g2/styles';
 import { getOptimalTextShade, is } from '@wp-g2/utils';
 import React from 'react';
@@ -8,27 +11,28 @@ import { View } from '../View';
 import * as styles from './Text.styles';
 import { createHighlighterText } from './Text.utils';
 
-function Text({
-	align,
-	children,
-	className,
-	color,
-	isDestructive = false,
-	display,
-	highlightEscape = false,
-	highlightCaseSensitive = false,
-	highlightWords = [],
-	highlightSanitize,
-	isBlock = false,
-	lineHeight = 1.2,
-	optimizeReadabilityFor,
-	size,
-	truncate = false,
-	upperCase = false,
-	variant,
-	weight = 400,
-	...props
-}) {
+function Text(componentProps, forwardedRef) {
+	const {
+		align,
+		children,
+		className,
+		color,
+		isDestructive = false,
+		display,
+		highlightEscape = false,
+		highlightCaseSensitive = false,
+		highlightWords = [],
+		highlightSanitize,
+		isBlock = false,
+		lineHeight = 1.2,
+		optimizeReadabilityFor,
+		size,
+		truncate = false,
+		upperCase = false,
+		variant,
+		weight = 400,
+		...props
+	} = useContextSystem(componentProps, 'Text');
 	let content = children;
 	const isHighlighter = is.array(highlightWords) && highlightWords.length;
 	const isCaption = size === 'caption';
@@ -80,17 +84,20 @@ function Text({
 		className,
 	);
 
-	const componentProps = {
+	const finalComponentProps = {
 		as: 'span',
 		...props,
 		className: classes,
+		ref: forwardedRef,
 	};
 
 	if (truncate) {
-		return <Truncate {...componentProps}>{content}</Truncate>;
+		return <Truncate {...finalComponentProps}>{content}</Truncate>;
 	}
 
-	return <View {...componentProps}>{content}</View>;
+	return <View {...finalComponentProps}>{content}</View>;
 }
 
-export default connect(Text, 'Text');
+const ForwardedComponent = React.forwardRef(Text);
+
+export default connectComponentWithNamespace(ForwardedComponent, 'Text');

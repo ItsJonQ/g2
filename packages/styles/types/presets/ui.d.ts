@@ -7,7 +7,11 @@ import { BorderInterface, BorderRadiusInterface } from './borders';
 import { ColorInterface } from './colors';
 import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
-import { GetInterface, GetTokenValueInterface } from './get';
+import {
+	CreateTokenInterface,
+	GetInterface,
+	GetTokenValueInterface,
+} from './get';
 import { ModesInterface } from './modes';
 import { OpacityInterface } from './opacity';
 import { PositionInterface } from './positions';
@@ -64,6 +68,21 @@ export declare interface SystemInterface {
 	 * @alias ui.values.color
 	 */
 	color: ColorInterface;
+	/**
+	 * Creates a new custom design token namespace.
+	 * This is typically for locally scoped usage.
+	 * This new namespace is not added to the global design token collection.
+	 *
+	 * @example
+	 * ```js
+	 * const customCss = css({
+	 * 	[ui.createToken('CustomComponentHeight')]: ui.space(3)
+	 * })
+	 * // The "CustomComponentHeight" token can then be retrived with:
+	 * // ui.get('CustomComponentHeight')
+	 * ```
+	 */
+	createToken: CreateTokenInterface;
 	/**
 	 * Applies custom modifiers based on an focus interaction.
 	 *

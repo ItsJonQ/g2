@@ -1,23 +1,33 @@
-import { connect } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import {
+	connectComponentWithNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
+import { css, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
-import { useFlexContext } from './Flex.Context';
 import * as styles from './Flex.styles';
 
-function FlexItem({ display: displayProp, isBlock = false, ...props }) {
-	const { display, gap, isColumn, isLast, isReverse } = useFlexContext();
+function FlexItem(componentProps, forwardedRef) {
+	const {
+		display: displayProp,
+		isBlock = false,
+		...props
+	} = useContextSystem(componentProps, 'FlexItem');
 	const sx = {};
+
 	sx.Base = css({
-		display: displayProp || display,
-		marginBottom: isColumn && !isLast && gap,
-		[isReverse ? 'marginLeft' : 'marginRight']: !isColumn && !isLast && gap,
+		display: displayProp || ui.get('FlexItemDisplay'),
+		marginBottom: ui.get('FlexItemMarginBottom'),
+		marginLeft: ui.get('FlexItemMarginLeft'),
+		marginRight: ui.get('FlexItemMarginRight'),
 	});
 
 	const __css = [styles.Item, sx.Base, isBlock && styles.block];
 
-	return <View {...props} cx={__css} />;
+	return <View {...props} cx={__css} ref={forwardedRef} />;
 }
 
-export default connect(FlexItem, 'FlexItem');
+const ForwardedComponent = React.forwardRef(FlexItem);
+
+export default connectComponentWithNamespace(ForwardedComponent, 'FlexItem');

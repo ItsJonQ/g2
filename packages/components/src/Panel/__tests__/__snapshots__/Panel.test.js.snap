@@ -9,14 +9,14 @@ exports[`props should render correctly 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-view wp-components-flex-item css-x168m"
+      class="wp-components-view wp-components-flex-item css-1bku9vz"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
@@ -58,7 +58,7 @@ exports[`props should render correctly 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
@@ -105,14 +105,14 @@ exports[`props should render seamless 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-view wp-components-flex-item css-x168m"
+      class="wp-components-view wp-components-flex-item css-1bku9vz"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
@@ -154,7 +154,7 @@ exports[`props should render seamless 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
@@ -200,14 +200,14 @@ exports[`props should render visible 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="true"
-    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-19vdigr"
+    class="wp-components-view wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
     <div
-      class="wp-components-view wp-components-flex-item css-x168m"
+      class="wp-components-view wp-components-flex-item css-1bku9vz"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
@@ -249,7 +249,7 @@ exports[`props should render visible 1`] = `
       </span>
     </div>
     <div
-      class="wp-components-view wp-components-flex-item wp-components-flex-block css-4z9ate"
+      class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >

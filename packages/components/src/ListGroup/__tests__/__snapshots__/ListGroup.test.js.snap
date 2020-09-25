@@ -2,24 +2,22 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-14w80q"
+  class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1tl6qyk"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
-  style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
 >
   <div
-    class="wp-components-view wp-components-flex-item css-bg0v75"
+    class="wp-components-view wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <div
-      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-14w80q"
+      class="wp-components-view wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
       data-g2-c16t="true"
       data-g2-component="VStack"
-      style="--wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);"
     >
       <div
-        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1c42zoa"
+        class="wp-components-view wp-components-flex-item wp-components-flex-block css-1j3zl9k"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >

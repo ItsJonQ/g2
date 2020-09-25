@@ -18,23 +18,29 @@ function ListGroup({ children, separator = false, spacing, ...props }) {
 	/**
 	 * Shallowly adjusts child MenuItem components.
 	 */
-	const componentContextProps = {
-		MenuItem: {
-			isOffset: true,
-			_shallow: true,
-		},
-	};
+	const componentContextProps = React.useMemo(
+		() => ({
+			MenuItem: {
+				isOffset: true,
+				_shallow: true,
+			},
+		}),
+		[],
+	);
 
 	/**
 	 * Shallowly adjusts child Grid components.
 	 */
-	const gridContextProps = {
-		Grid: {
-			gap: 3,
-			rowGap: 2,
-			_shallow: true,
-		},
-	};
+	const gridContextProps = React.useMemo(
+		() => ({
+			Grid: {
+				gap: 3,
+				rowGap: 2,
+				_shallow: true,
+			},
+		}),
+		[],
+	);
 
 	/**
 	 * We're scanning for potential ListGroupHeader and ListGroupFooter components.

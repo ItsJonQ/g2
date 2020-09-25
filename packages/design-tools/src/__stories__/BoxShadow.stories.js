@@ -19,6 +19,7 @@ import {
 	Surface,
 	Text,
 	TextInput,
+	VStack,
 } from '@wp-g2/components';
 import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { Schema } from '@wp-g2/protokit';
@@ -345,9 +346,13 @@ const ShadowEntries = () => {
 		});
 	}, [subscribe, shadows]);
 
-	return shadows.map((shadow) => {
-		return <ShadowEntry {...shadow} />;
-	});
+	return (
+		<VStack>
+			{shadows.map((shadow) => {
+				return <ShadowEntry {...shadow} />;
+			})}
+		</VStack>
+	);
 };
 
 const BoxShadowControl = () => {

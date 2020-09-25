@@ -7,9 +7,15 @@ import { ListGroupContext } from './ListGroup.Context';
 
 function ListGroups({ inset = false, ...props }) {
 	const insetValue = useResponsiveValue(inset);
+	const value = React.useMemo(
+		() => ({
+			inset: insetValue,
+		}),
+		[insetValue],
+	);
 
 	return (
-		<ListGroupContext.Provider value={{ inset: insetValue }}>
+		<ListGroupContext.Provider value={value}>
 			<VStack spacing={6} {...props} />
 		</ListGroupContext.Provider>
 	);
