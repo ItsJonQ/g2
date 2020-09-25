@@ -3721,15 +3721,11 @@ exports[`props should render Switch 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-8ieowc"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-8ieowc"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1ptemzf"
   />
   <input
     aria-checked="false"

@@ -1,10 +1,10 @@
-import { css, styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 function getSwitchWidth(height) {
 	return `calc(${getControlHeight(height)} * 1.85);`;
 }
 
-export const SwitchView = styled.label`
+export const Switch = css`
 	cursor: pointer;
 	display: flex;
 	height: ${ui.get('controlHeight')};
@@ -38,7 +38,7 @@ export const inputHidden = css`
 	z-index: -1;
 `;
 
-export const BackdropView = styled.div`
+export const Backdrop = css`
 	${ui.background.control};
 	${ui.border.control.default};
 	${ui.borderRadius.circle};
@@ -67,7 +67,7 @@ export const backdropChecked = css`
 	${ui.background.admin};
 `;
 
-export const ToggleView = styled.div`
+export const Toggle = css`
 	background: ${ui.get('controlPrimaryTextColor')};
 	border: 1px solid ${ui.get('controlBorderColor')};
 	border-radius: ${getToggleHeight('controlHeight')};

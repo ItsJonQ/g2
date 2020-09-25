@@ -8,15 +8,11 @@ exports[`props should render checked 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-1g3h45o"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-1g3h45o"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1b8magm"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1b8magm"
   />
   <input
     aria-checked="true"
@@ -42,15 +38,11 @@ exports[`props should render correctly 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-8ieowc"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-8ieowc"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1ptemzf"
   />
   <input
     aria-checked="false"
@@ -75,15 +67,11 @@ exports[`props should render defaultValue 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-1g3h45o"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-1g3h45o"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1b8magm"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1b8magm"
   />
   <input
     aria-checked="true"
@@ -109,15 +97,11 @@ exports[`props should render disabled 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-8ieowc"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-8ieowc"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1ptemzf"
   />
   <input
     aria-checked="false"
@@ -145,15 +129,11 @@ exports[`props should render label 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-8ieowc"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-8ieowc"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1ptemzf"
   />
   <input
     aria-checked="false"
@@ -180,15 +160,11 @@ exports[`props should render size 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-8ieowc"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-8ieowc"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-h9i19v"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-h9i19v"
   />
   <input
     aria-checked="false"
@@ -213,15 +189,11 @@ exports[`props should render type 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-switch-backdrop css-8ieowc"
-    data-g2-c16t="true"
-    data-g2-component="SwitchBackdrop"
+    class="css-8ieowc"
   />
   <div
     aria-hidden="true"
-    class="wp-components-switch-toggle css-1ptemzf"
-    data-g2-c16t="true"
-    data-g2-component="SwitchToggle"
+    class="css-1ptemzf"
   />
   <input
     aria-checked="false"

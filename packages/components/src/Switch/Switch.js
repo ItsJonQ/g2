@@ -8,12 +8,11 @@ import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
+import { View } from '../View';
 import { VisuallyHidden } from '../VisuallyHidden';
 import * as styles from './Switch.styles';
 import Backdrop from './SwitchBackdrop';
 import Toggle from './SwitchToggle';
-
-const { SwitchView } = styles;
 
 const ControlComponent = {
 	checkbox: Checkbox,
@@ -47,7 +46,11 @@ function Switch(props, forwardedRef) {
 
 	const Control = ControlComponent[type] || Checkbox;
 
-	const __css = [styles[size], contextId && horizontal && styles.formGroup];
+	const __css = [
+		styles.Switch,
+		styles[size],
+		contextId && horizontal && styles.formGroup,
+	];
 
 	const toggle = (event) => {
 		setChecked(!checked);
@@ -65,7 +68,7 @@ function Switch(props, forwardedRef) {
 	};
 
 	return (
-		<SwitchView {...otherProps} cx={__css} htmlFor={id}>
+		<View as="label" {...otherProps} cx={__css} htmlFor={id}>
 			<Backdrop checked={checked} isFocused={isFocused} size={size} />
 			<Toggle checked={checked} size={size} />
 			<Control
@@ -81,7 +84,7 @@ function Switch(props, forwardedRef) {
 				{...ui.$('SwitchInput')}
 			/>
 			<VisuallyHidden {...ui.$('SwitchLabel')}>{label}</VisuallyHidden>
-		</SwitchView>
+		</View>
 	);
 }
 
