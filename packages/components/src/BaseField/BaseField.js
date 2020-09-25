@@ -8,13 +8,13 @@ import { useControlGroupContext } from '../ControlGroup';
 import { Flex } from '../Flex';
 import * as styles from './BaseField.styles';
 
-function BaseField(componentProps, forwardedRef) {
+function BaseField(props, forwardedRef) {
 	const {
 		isClickable = false,
 		isFocused = false,
 		isSubtle = false,
-		...props
-	} = useContextSystem(componentProps, 'BaseField');
+		...otherProps
+	} = useContextSystem(props, 'BaseField');
 
 	const { styles: controlGroupStyles } = useControlGroupContext();
 
@@ -26,7 +26,7 @@ function BaseField(componentProps, forwardedRef) {
 		isSubtle && styles.subtle,
 	];
 
-	return <Flex {...props} cx={__css} ref={forwardedRef} />;
+	return <Flex {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(BaseField, 'BaseField');

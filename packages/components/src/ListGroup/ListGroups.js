@@ -8,9 +8,9 @@ import React from 'react';
 import { VStack } from '../VStack';
 import { ListGroupContext } from './ListGroup.Context';
 
-function ListGroups(componentProps, forwardedRef) {
-	const { inset = false, ...props } = useContextSystem(
-		componentProps,
+function ListGroups(props, forwardedRef) {
+	const { inset = false, ...otherProps } = useContextSystem(
+		props,
 		'ListGroups',
 	);
 
@@ -24,7 +24,7 @@ function ListGroups(componentProps, forwardedRef) {
 
 	return (
 		<ListGroupContext.Provider value={value}>
-			<VStack spacing={6} {...props} ref={forwardedRef} />
+			<VStack spacing={6} {...otherProps} ref={forwardedRef} />
 		</ListGroupContext.Provider>
 	);
 }

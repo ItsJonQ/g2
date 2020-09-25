@@ -8,7 +8,7 @@ import React from 'react';
 
 import { View } from '../View';
 
-function Spacer(componentProps, forwardedRef) {
+function Spacer(props, forwardedRef) {
 	const {
 		className,
 		m,
@@ -25,8 +25,8 @@ function Spacer(componentProps, forwardedRef) {
 		pt,
 		px,
 		py,
-		...props
-	} = useContextSystem(componentProps, 'Spacer');
+		...otherProps
+	} = useContextSystem(props, 'Spacer');
 
 	const classes = cx(
 		is.defined(mt) &&
@@ -92,7 +92,7 @@ function Spacer(componentProps, forwardedRef) {
 		className,
 	);
 
-	return <View className={classes} {...props} ref={forwardedRef} />;
+	return <View className={classes} {...otherProps} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(Spacer, 'Spacer');

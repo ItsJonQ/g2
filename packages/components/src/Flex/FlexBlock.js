@@ -6,9 +6,10 @@ import React from 'react';
 
 import FlexItem from './FlexItem';
 
-function FlexBlock(componentProps, forwardedRef) {
-	const props = useContextSystem(componentProps, 'FlexBlock');
-	return <FlexItem {...props} isBlock={true} ref={forwardedRef} />;
+function FlexBlock(props, forwardedRef) {
+	const otherProps = useContextSystem(props, 'FlexBlock');
+
+	return <FlexItem {...otherProps} isBlock={true} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(FlexBlock, 'FlexBlock');

@@ -10,15 +10,15 @@ import { Surface } from '../Surface';
 import { View } from '../View';
 import * as styles from './Card.styles';
 
-function Card(componentProps, forwardedRef) {
+function Card(props, forwardedRef) {
 	const {
 		children,
 		className,
 		elevation = 2,
 		isBorderless = false,
 		isRounded = true,
-		...props
-	} = useContextSystem(componentProps, forwardedRef);
+		...otherProps
+	} = useContextSystem(props, forwardedRef);
 
 	const classes = cx([
 		styles.Card,
@@ -30,7 +30,7 @@ function Card(componentProps, forwardedRef) {
 	const elevationBorderRadius = isRounded ? ui.get('cardBorderRadius') : 0;
 
 	return (
-		<Surface {...props} className={classes} ref={forwardedRef}>
+		<Surface {...otherProps} className={classes} ref={forwardedRef}>
 			<View {...ui.$('CardContent')}>{children}</View>
 			<Elevation
 				css={{ borderRadius: elevationBorderRadius }}

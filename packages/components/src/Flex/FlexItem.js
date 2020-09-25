@@ -8,12 +8,12 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Flex.styles';
 
-function FlexItem(componentProps, forwardedRef) {
+function FlexItem(props, forwardedRef) {
 	const {
 		display: displayProp,
 		isBlock = false,
-		...props
-	} = useContextSystem(componentProps, 'FlexItem');
+		...otherProps
+	} = useContextSystem(props, 'FlexItem');
 	const sx = {};
 
 	sx.Base = css({
@@ -25,7 +25,7 @@ function FlexItem(componentProps, forwardedRef) {
 
 	const __css = [styles.Item, sx.Base, isBlock && styles.block];
 
-	return <View {...props} cx={__css} ref={forwardedRef} />;
+	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(FlexItem, 'FlexItem');

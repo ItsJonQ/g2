@@ -8,7 +8,7 @@ import React from 'react';
 import { BaseButton } from '../BaseButton';
 import * as styles from './Button.styles';
 
-function Button(componentProps, forwardedRef) {
+function Button(props, forwardedRef) {
 	const {
 		children,
 		className,
@@ -19,8 +19,8 @@ function Button(componentProps, forwardedRef) {
 		isSubtle = false,
 		size = 'medium',
 		variant = 'secondary',
-		...props
-	} = useContextSystem(componentProps, 'Button');
+		...otherProps
+	} = useContextSystem(props, 'Button');
 
 	const isIconOnly = !!icon && !children;
 
@@ -42,7 +42,7 @@ function Button(componentProps, forwardedRef) {
 			className={classes}
 			icon={icon}
 			ref={forwardedRef}
-			{...props}
+			{...otherProps}
 		>
 			{children}
 		</BaseButton>

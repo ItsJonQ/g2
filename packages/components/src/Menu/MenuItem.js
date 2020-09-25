@@ -15,7 +15,7 @@ import { View } from '../View';
 import { useMenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
 
-function MenuItem(componentProps, forwardedRef) {
+function MenuItem(props, forwardedRef) {
 	const {
 		children,
 		className,
@@ -24,8 +24,8 @@ function MenuItem(componentProps, forwardedRef) {
 		prefix,
 		showArrow = false,
 		suffix,
-		...props
-	} = useContextSystem(componentProps, 'MenuItem');
+		...otherProps
+	} = useContextSystem(props, 'MenuItem');
 
 	const { menu } = useMenuContext();
 	const shouldShowArrow = !isBack && showArrow;
@@ -69,7 +69,7 @@ function MenuItem(componentProps, forwardedRef) {
 		<BaseButton
 			as={Component}
 			noWrap={false}
-			{...props}
+			{...otherProps}
 			{...menu}
 			className={classes}
 			prefix={prefixContent}

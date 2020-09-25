@@ -11,7 +11,7 @@ import { View } from '../View';
 import * as styles from './Text.styles';
 import { createHighlighterText } from './Text.utils';
 
-function Text(componentProps, forwardedRef) {
+function Text(props, forwardedRef) {
 	const {
 		align,
 		children,
@@ -31,8 +31,8 @@ function Text(componentProps, forwardedRef) {
 		upperCase = false,
 		variant,
 		weight = 400,
-		...props
-	} = useContextSystem(componentProps, 'Text');
+		...otherProps
+	} = useContextSystem(props, 'Text');
 
 	let content = children;
 	const isHighlighter = is.array(highlightWords) && highlightWords.length;
@@ -87,7 +87,7 @@ function Text(componentProps, forwardedRef) {
 
 	const finalComponentProps = {
 		as: 'span',
-		...props,
+		...otherProps,
 		className: classes,
 		ref: forwardedRef,
 	};

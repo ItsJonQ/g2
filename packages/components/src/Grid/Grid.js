@@ -7,7 +7,7 @@ import React from 'react';
 
 import { View } from '../View';
 
-function Grid(componentProps, forwardedRef) {
+function Grid(props, forwardedRef) {
 	const {
 		align,
 		columnGap,
@@ -19,8 +19,8 @@ function Grid(componentProps, forwardedRef) {
 		rows,
 		templateColumns,
 		templateRows,
-		...props
-	} = useContextSystem(componentProps, 'Grid');
+		...otherProps
+	} = useContextSystem(props, 'Grid');
 
 	const column = useResponsiveValue(columns);
 	const row = useResponsiveValue(rows);
@@ -41,7 +41,7 @@ function Grid(componentProps, forwardedRef) {
 		verticalAlign: isInline ? 'middle' : null,
 	});
 
-	return <View {...props} cx={__css} ref={forwardedRef} />;
+	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(Grid, 'Grid');

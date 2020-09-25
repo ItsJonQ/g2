@@ -13,15 +13,15 @@ import {
 	truncateContent,
 } from './Truncate.utils';
 
-export function Truncate(componentProps, forwardedRef) {
+export function Truncate(props, forwardedRef) {
 	const {
 		children,
 		ellipsis = TRUNCATE_ELLIPSIS,
 		ellipsizeMode = TRUNCATE_TYPE.auto,
 		limit = 0,
 		numberOfLines = 0,
-		...props
-	} = useContextSystem(componentProps, 'Truncate');
+		...otherProps
+	} = useContextSystem(props, 'Truncate');
 
 	const truncatedContent = truncateContent(children, {
 		ellipsis,
@@ -45,7 +45,7 @@ export function Truncate(componentProps, forwardedRef) {
 	];
 
 	return (
-		<View as="span" {...props} cx={__css} ref={forwardedRef}>
+		<View as="span" {...otherProps} cx={__css} ref={forwardedRef}>
 			{truncatedContent}
 		</View>
 	);

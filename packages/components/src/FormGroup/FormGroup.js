@@ -10,15 +10,15 @@ import { Grid } from '../Grid';
 import { View } from '../View';
 import { FormGroupContext } from './FormGroup.Context';
 
-function FormGroup(componentProps, forwardedRef) {
+function FormGroup(props, forwardedRef) {
 	const {
 		alignLabel = 'left',
 		children,
 		horizontal = true,
 		id: idProp,
 		label,
-		...props
-	} = useContextSystem(componentProps, 'FormGroup');
+		...otherProps
+	} = useContextSystem(props, 'FormGroup');
 
 	const id = useUniqueId(FormGroup, 'form-group', idProp);
 	const contextProps = { id, horizontal };
@@ -36,9 +36,9 @@ function FormGroup(componentProps, forwardedRef) {
 
 	return (
 		<FormGroupContext.Provider value={contextProps}>
-			<View {...props} ref={forwardedRef}>
+			<View {...otherProps} ref={forwardedRef}>
 				{horizontal ? (
-					<Grid templateColumns="minmax(0, 1fr) 2fr" {...props}>
+					<Grid templateColumns="minmax(0, 1fr) 2fr" {...otherProps}>
 						{contentMarkup}
 					</Grid>
 				) : (

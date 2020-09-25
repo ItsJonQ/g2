@@ -8,7 +8,7 @@ import React from 'react';
 
 import { ElevationView } from './Elevation.styles';
 
-function Elevation(componentProps, forwardedRef) {
+function Elevation(props, forwardedRef) {
 	const {
 		active,
 		borderRadius = 'inherit',
@@ -17,8 +17,8 @@ function Elevation(componentProps, forwardedRef) {
 		isInteractive = false,
 		offset = 0,
 		value = 0,
-		...props
-	} = useContextSystem(componentProps, 'Elevation');
+		...otherProps
+	} = useContextSystem(props, 'Elevation');
 
 	let hoverValue = is.defined(hover) ? hover : value * 2;
 	let activeValue = is.defined(active) ? hover : value / 2;
@@ -71,7 +71,7 @@ function Elevation(componentProps, forwardedRef) {
 		is.defined(focus) && sx.focus,
 	];
 
-	return <ElevationView {...props} cx={__css} ref={forwardedRef} />;
+	return <ElevationView {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(Elevation, 'Elevation');

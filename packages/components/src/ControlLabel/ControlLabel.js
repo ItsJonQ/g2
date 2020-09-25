@@ -9,26 +9,26 @@ import { Text } from '../Text';
 import { View } from '../View';
 import * as styles from './ControlLabel.styles';
 
-function ControlLabel(componentProps, forwardedRef) {
+function ControlLabel(props, forwardedRef) {
 	const {
 		children,
 		htmlFor: htmlForProp,
 		size = 'medium',
 		truncate = true,
-		...props
-	} = useContextSystem(componentProps, 'ControlLabel');
+		...otherProps
+	} = useContextSystem(props, 'ControlLabel');
 
 	const { id: contextId } = useFormGroupContext();
 	const htmlFor = htmlForProp || contextId;
 	const __css = [styles.ControlLabel, styles[size]];
 
 	return (
-		<View cx={__css} {...props} ref={forwardedRef}>
+		<View cx={__css} {...otherProps} ref={forwardedRef}>
 			<Text
 				as="label"
 				isBlock
 				truncate={truncate}
-				{...props}
+				{...otherProps}
 				htmlFor={htmlFor}
 			>
 				{children}

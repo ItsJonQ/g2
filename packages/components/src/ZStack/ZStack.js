@@ -10,14 +10,14 @@ import { View } from '../View';
 import * as styles from './ZStack.styles';
 const { ZStackView } = styles;
 
-function ZStack(componentProps, forwardedRef) {
+function ZStack(props, forwardedRef) {
 	const {
 		children,
 		isLayered = true,
 		isReversed = false,
 		offset = 0,
-		...props
-	} = useContextSystem(componentProps, 'ZStack');
+		...otherProps
+	} = useContextSystem(props, 'ZStack');
 
 	const validChildren = getValidChildren(children);
 	const childrenCount = validChildren.length - 1;
@@ -53,7 +53,7 @@ function ZStack(componentProps, forwardedRef) {
 	];
 
 	return (
-		<ZStackView {...props} cx={__css} ref={forwardedRef}>
+		<ZStackView {...otherProps} cx={__css} ref={forwardedRef}>
 			{clonedChildren}
 		</ZStackView>
 	);

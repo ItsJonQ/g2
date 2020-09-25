@@ -8,11 +8,9 @@ import React from 'react';
 import { Text } from '../Text';
 import * as styles from './Subheading.styles';
 
-function Subheading(componentProps, forwardedRef) {
-	const { className, ...props } = useContextSystem(
-		componentProps,
-		'Subheading',
-	);
+function Subheading(props, forwardedRef) {
+	const { className, ...otherProps } = useContextSystem(props, 'Subheading');
+
 	const classes = cx([styles.uppercase, className]);
 
 	return (
@@ -21,7 +19,7 @@ function Subheading(componentProps, forwardedRef) {
 			size={10}
 			variant="muted"
 			weight={600}
-			{...props}
+			{...otherProps}
 			ref={forwardedRef}
 		/>
 	);

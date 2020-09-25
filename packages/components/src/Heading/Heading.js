@@ -7,9 +7,9 @@ import React from 'react';
 
 import { Text } from '../Text';
 
-function Heading(componentProps, forwardedRef) {
-	const { as = 'div', className, size = 3, ...props } = useContextSystem(
-		componentProps,
+function Heading(props, forwardedRef) {
+	const { as = 'div', className, size = 3, ...otherProps } = useContextSystem(
+		props,
 		'Heading',
 	);
 	const classes = cx([css({ fontSize: get(`fontSizeH${size}`) }), className]);
@@ -21,7 +21,7 @@ function Heading(componentProps, forwardedRef) {
 			isBlock
 			size={size}
 			weight={600}
-			{...props}
+			{...otherProps}
 			ref={forwardedRef}
 		/>
 	);

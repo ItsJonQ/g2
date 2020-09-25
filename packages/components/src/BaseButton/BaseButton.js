@@ -14,7 +14,7 @@ import { Icon } from '../Icon';
 import * as styles from './BaseButton.styles';
 import LoadingOverlay from './BaseButtonLoadingOverlay';
 
-function BaseButton(componentProps, forwardedRef) {
+function BaseButton(props, forwardedRef) {
 	const {
 		children,
 		className,
@@ -44,8 +44,8 @@ function BaseButton(componentProps, forwardedRef) {
 		suffix,
 		textAlign = 'center',
 		variant,
-		...props
-	} = useContextSystem(componentProps, 'BaseButton');
+		...otherProps
+	} = useContextSystem(props, 'BaseButton');
 
 	const as = href ? 'a' : 'button';
 	const { styles: controlGroupStyles } = useControlGroupContext();
@@ -79,7 +79,7 @@ function BaseButton(componentProps, forwardedRef) {
 			data-icon={!!icon}
 			disabled={disabled || isLoading}
 			href={href}
-			{...props}
+			{...otherProps}
 			ref={forwardedRef}
 		>
 			<LoadingOverlay isLoading={isLoading} />

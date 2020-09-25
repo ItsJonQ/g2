@@ -11,9 +11,9 @@ import { Spacer } from '../Spacer';
 import { Subheading } from '../Subheading';
 import { useListGroupContext } from './ListGroup.Context';
 
-function ListGroupHeader(componentProps, forwardedRef) {
-	const { children, ...props } = useContextSystem(
-		componentProps,
+function ListGroupHeader(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
 		'ListGroupHeader',
 	);
 
@@ -36,7 +36,7 @@ function ListGroupHeader(componentProps, forwardedRef) {
 	return (
 		<ComponentsProvider value={{ Text: { size: 'subheading' } }}>
 			<Spacer mb={0} px={inset ? 2 : 0}>
-				<HStack {...props} ref={forwardedRef}>
+				<HStack {...otherProps} ref={forwardedRef}>
 					{clonedChildren}
 				</HStack>
 			</Spacer>

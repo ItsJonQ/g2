@@ -20,7 +20,7 @@ const ControlComponent = {
 	radio: Radio,
 };
 
-function Switch(componentProps, forwardedRef) {
+function Switch(props, forwardedRef) {
 	const {
 		checked: checkedProp,
 		className,
@@ -33,8 +33,8 @@ function Switch(componentProps, forwardedRef) {
 		label,
 		size = 'medium',
 		type = 'checkbox',
-		...props
-	} = useContextSystem(componentProps, forwardedRef);
+		...otherProps
+	} = useContextSystem(props, forwardedRef);
 
 	const [isFocused, setIsFocused] = useState(false);
 	const [checked, setChecked] = useControlledState(checkedProp, {
@@ -65,11 +65,11 @@ function Switch(componentProps, forwardedRef) {
 	};
 
 	return (
-		<SwitchView {...props} cx={__css} htmlFor={id}>
+		<SwitchView {...otherProps} cx={__css} htmlFor={id}>
 			<Backdrop checked={checked} isFocused={isFocused} size={size} />
 			<Toggle checked={checked} size={size} />
 			<Control
-				{...props}
+				{...otherProps}
 				checked={checked}
 				className={styles.inputHidden}
 				disabled={disabled}

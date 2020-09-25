@@ -6,10 +6,10 @@ import React from 'react';
 
 import { HStack } from '../HStack';
 
-function VStack(componentProps, forwardedRef) {
-	const props = useContextSystem(componentProps, 'VStack');
+function VStack(props, forwardedRef) {
+	const otherProps = useContextSystem(props, 'VStack');
 
-	return <HStack {...props} direction="column" ref={forwardedRef} />;
+	return <HStack {...otherProps} direction="column" ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(VStack, 'VStack');

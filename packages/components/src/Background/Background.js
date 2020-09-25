@@ -6,10 +6,10 @@ import React from 'react';
 
 import { Surface } from '../Surface';
 
-function Background(componentProps, forwardedRef) {
-	const props = useContextSystem(componentProps, 'Background');
+function Background(props, forwardedRef) {
+	const otherProps = useContextSystem(props, 'Background');
 
-	return <Surface variant="secondary" {...props} ref={forwardedRef} />;
+	return <Surface variant="secondary" {...otherProps} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(Background, 'Background');

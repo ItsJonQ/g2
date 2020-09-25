@@ -11,9 +11,9 @@ import { Spacer } from '../Spacer';
 import { Text } from '../Text';
 import { useListGroupContext } from './ListGroup.Context';
 
-function ListGroupFooter(componentProps, forwardedRef) {
-	const { children, ...props } = useContextSystem(
-		componentProps,
+function ListGroupFooter(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
 		'ListGroupFooter',
 	);
 	const { inset } = useListGroupContext();
@@ -37,7 +37,7 @@ function ListGroupFooter(componentProps, forwardedRef) {
 			value={{ Text: { size: 'caption', variant: 'muted' } }}
 		>
 			<Spacer mb={0} pt={1} px={inset ? 2 : 0}>
-				<HStack {...props} ref={forwardedRef}>
+				<HStack {...otherProps} ref={forwardedRef}>
 					{clonedChildren}
 				</HStack>
 			</Spacer>

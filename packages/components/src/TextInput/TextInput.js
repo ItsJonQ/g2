@@ -14,7 +14,7 @@ import * as styles from './TextInput.styles';
 
 const { InputView } = styles;
 
-function TextInput(componentProps, forwardedRef) {
+function TextInput(props, forwardedRef) {
 	const {
 		__onBeforeChange = (event) => event?.target?.value,
 		align,
@@ -33,8 +33,8 @@ function TextInput(componentProps, forwardedRef) {
 		size = 'medium',
 		suffix,
 		value: valueProp,
-		...props
-	} = useContextSystem(componentProps, 'TextInput');
+		...otherProps
+	} = useContextSystem(props, 'TextInput');
 
 	const [value, setValue] = useControlledState(valueProp, {
 		initial: defaultValue,
@@ -101,7 +101,7 @@ function TextInput(componentProps, forwardedRef) {
 					onFocus={handleOnFocus}
 					ref={mergeRefs([inputRef, forwardedRef])}
 					value={value}
-					{...props}
+					{...otherProps}
 					{...ui.$('TextInput')}
 				/>
 			</FlexBlock>

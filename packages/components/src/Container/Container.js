@@ -8,16 +8,17 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Container.styles';
 
-function Container(componentProps, forwardedRef) {
-	const { alignment = 'center', width = 1280, ...props } = useContextSystem(
-		componentProps,
-		'Container',
-	);
+function Container(props, forwardedRef) {
+	const {
+		alignment = 'center',
+		width = 1280,
+		...otherProps
+	} = useContextSystem(props, 'Container');
 
 	const maxWidth = useResponsiveValue(width);
 	const __css = [css({ maxWidth, width: '100%' }), styles[alignment]];
 
-	return <View {...props} cx={__css} ref={forwardedRef} />;
+	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }
 
 export default connectAndForwardRefComponent(Container, 'Container');

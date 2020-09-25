@@ -10,14 +10,14 @@ import React from 'react';
 import { Flex, FlexItem } from '../Flex';
 import { getAlignmentProps } from './HStack.utils';
 
-function HStack(componentProps, forwardedRef) {
+function HStack(props, forwardedRef) {
 	const {
 		alignment = 'edge',
 		children,
 		className,
 		spacing = 2,
-		...props
-	} = useContextSystem(componentProps, 'HStack');
+		...otherProps
+	} = useContextSystem(props, 'HStack');
 
 	const align = getAlignmentProps(alignment);
 	const validChildren = getValidChildren(children);
@@ -51,7 +51,7 @@ function HStack(componentProps, forwardedRef) {
 			gap={spacing}
 			justify="center"
 			{...align}
-			{...props}
+			{...otherProps}
 			className={classes}
 			ref={forwardedRef}
 		>

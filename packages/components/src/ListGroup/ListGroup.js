@@ -13,11 +13,13 @@ import { FlexBlock } from '../Flex';
 import { VStack } from '../VStack';
 import ListGroupContent from './ListGroupContent';
 
-function ListGroup(componentProps, forwardedRef) {
-	const { children, separator = false, spacing, ...props } = useContextSystem(
-		componentProps,
-		'ListGroup',
-	);
+function ListGroup(props, forwardedRef) {
+	const {
+		children,
+		separator = false,
+		spacing,
+		...otherProps
+	} = useContextSystem(props, 'ListGroup');
 	const validChildren = getValidChildren(children);
 	const separatorValue = useResponsiveValue(separator);
 
@@ -103,7 +105,7 @@ function ListGroup(componentProps, forwardedRef) {
 	});
 
 	return (
-		<VStack {...props} ref={forwardedRef} spacing={2}>
+		<VStack {...otherProps} ref={forwardedRef} spacing={2}>
 			{headerComponent}
 			<ListGroupContent>
 				<ComponentsProvider value={componentContextProps}>

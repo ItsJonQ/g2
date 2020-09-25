@@ -11,7 +11,7 @@ import { View } from '../View';
 import * as styles from './Flex.styles';
 import FlexItem from './FlexItem';
 
-export function Flex(componentProps, forwardedRef) {
+export function Flex(props, forwardedRef) {
 	const {
 		align = 'center',
 		autoWrap = true,
@@ -20,8 +20,8 @@ export function Flex(componentProps, forwardedRef) {
 		gap = 2,
 		justify = 'space-between',
 		wrap = false,
-		...props
-	} = useContextSystem(componentProps, 'Flex');
+		...otherProps
+	} = useContextSystem(props, 'Flex');
 
 	const direction = useResponsiveValue(directionProp);
 
@@ -73,7 +73,7 @@ export function Flex(componentProps, forwardedRef) {
 	const __css = [styles.Flex, sx.Base];
 
 	return (
-		<View {...props} cx={__css} ref={forwardedRef}>
+		<View {...otherProps} cx={__css} ref={forwardedRef}>
 			{clonedChildren}
 		</View>
 	);

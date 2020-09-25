@@ -8,11 +8,14 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Icon.styles';
 
-function Icon(componentProps, forwardedRef) {
-	const { children, color, icon, size = 20, ...props } = useContextSystem(
-		componentProps,
-		'Icon',
-	);
+function Icon(props, forwardedRef) {
+	const {
+		children,
+		color,
+		icon,
+		size = 20,
+		...otherProps
+	} = useContextSystem(props, 'Icon');
 
 	if (!icon) return null;
 	const sx = {};
@@ -36,7 +39,7 @@ function Icon(componentProps, forwardedRef) {
 	const __css = [styles.Wrapper, sx.color, sx.size];
 
 	return (
-		<View {...props} cx={__css}>
+		<View {...otherProps} cx={__css}>
 			{IconComponent}
 		</View>
 	);
