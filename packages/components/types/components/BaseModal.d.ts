@@ -26,12 +26,6 @@ export declare type BaseModalProps = {
 	 */
 	trigger?: React.ReactElement;
 	/**
-	 * The duration for the `Modal` open/closing animations.
-	 *
-	 * @default 200
-	 */
-	transitionDuration?: number;
-	/**
 	 * The easing (timing-function) for the `Modal` open/closing animations.
 	 *
 	 * @default 'ease-in-out'

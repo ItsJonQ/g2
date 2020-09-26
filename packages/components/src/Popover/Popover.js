@@ -1,36 +1,38 @@
 import { PopoverDisclosure, usePopoverState } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
 
 import { PopoverContext } from './Popover.Context';
 import PopoverContent from './PopoverContent';
 
-function Popover({
-	animated = true,
-	animationDuration = 160,
-	baseId,
-	children,
-	elevation = 5,
-	forwardedRef,
-	id,
-	label,
-	maxWidth = 360,
-	modal = true,
-	onVisibleChange = noop,
-	placement,
-	trigger,
-	visible,
-	...props
-}) {
+function Popover(props, forwardedRef) {
+	const {
+		animated = true,
+		animationDuration = 160,
+		baseId,
+		children,
+		elevation = 5,
+		id,
+		label,
+		maxWidth = 360,
+		modal = true,
+		onVisibleChange = noop,
+		placement,
+		trigger,
+		visible,
+		...otherProps
+	} = useContextSystem(props, 'Popover');
+
 	const popover = usePopoverState({
 		animated: animated ? animationDuration : undefined,
 		baseId: baseId || id,
 		modal,
 		placement,
 		visible,
-		...props,
+		...otherProps,
 	});
+
 	const uniqueId = `popover-${popover.baseId}`;
 	const contextProps = {
 		label: label || uniqueId,
@@ -56,14 +58,14 @@ function Popover({
 			)}
 			<PopoverContent
 				ref={forwardedRef}
-				{...props}
+				{...otherProps}
 				elevation={elevation}
 				maxWidth={maxWidth}
 			>
-				{(popover.visible || popover.animating) && children}
+				{children}
 			</PopoverContent>
 		</PopoverContext.Provider>
 	);
 }
 
-export default connect(Popover, 'Popover');
+export default contextConnect(Popover, 'Popover');

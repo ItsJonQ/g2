@@ -6,7 +6,7 @@ import React from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { Elevation } from '../Elevation';
-import { Flex, FlexBlock, FlexItem } from '../Flex';
+import { Flex, FlexItem } from '../Flex';
 import { Icon } from '../Icon';
 import * as styles from './BaseButton.styles';
 import LoadingOverlay from './BaseButtonLoadingOverlay';
@@ -111,17 +111,18 @@ function BaseButton(props, forwardedRef) {
 					</FlexItem>
 				)}
 				{children && (
-					<FlexBlock
+					<FlexItem
 						as="span"
 						className={cx([
 							styles.Content,
 							isLoading && styles.loading,
 							noWrap && styles.noWrap,
 						])}
+						isBlock
 						{...ui.$('ButtonContent')}
 					>
 						{children}
-					</FlexBlock>
+					</FlexItem>
 				)}
 				{suffix && (
 					<FlexItem

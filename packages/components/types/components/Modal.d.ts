@@ -10,6 +10,12 @@ export declare type ModalProps = BaseModalProps & {
 	 * @default 'md'
 	 */
 	size?: SizeRangeReduced;
+	/**
+	 * The duration for the `Modal` open/closing animations.
+	 *
+	 * @default 200
+	 */
+	transitionDuration?: number;
 };
 
 /**

@@ -1,6 +1,6 @@
-import { styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
-export const DividerView = styled.hr`
+export const Divider = css`
 	border-color: ${ui.get('colorDivider')};
 	border-width: 0 0 1px 0;
 	height: 0;

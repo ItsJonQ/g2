@@ -1,22 +1,23 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Button } from '../Button';
 import { useModalContext } from './Modal.Context';
 import { ModalCloseButtonView } from './Modal.styles';
 
-function ModalCloseButton({
-	closeLabel = 'Close',
-	forwardedRef,
-	showCloseLabel,
-	...props
-}) {
+function ModalCloseButton(props, forwardedRef) {
+	const {
+		closeLabel = 'Close',
+		showCloseLabel,
+		...otherProps
+	} = useContextSystem(props, 'ModalCloseButton');
+
 	const { dialog } = useModalContext();
 
 	if (!showCloseLabel) return null;
 
 	return (
-		<ModalCloseButtonView {...props}>
+		<ModalCloseButtonView {...otherProps}>
 			<Button
 				isNarrow
 				onClick={dialog.hide}
@@ -29,4 +30,4 @@ function ModalCloseButton({
 	);
 }
 
-export default connect(ModalCloseButton, 'ModalCloseButton');
+export default contextConnect(ModalCloseButton, 'ModalCloseButton');

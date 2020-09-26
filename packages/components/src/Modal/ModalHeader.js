@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -7,19 +7,20 @@ import * as styles from './Modal.styles';
 import ModalCloseButton from './ModalCloseButton';
 import ModalTitle from './ModalTitle';
 
-function ModalHeader({
-	children,
-	className,
-	closeLabel = 'Close',
-	forwardedRef,
-	showCloseLabel = true,
-	title,
-	...props
-}) {
+function ModalHeader(props, forwardedRef) {
+	const {
+		children,
+		className,
+		closeLabel = 'Close',
+		showCloseLabel = true,
+		title,
+		...otherProps
+	} = useContextSystem(props, 'ModalHeader');
+
 	const classes = cx([styles.ModalHeader, className]);
 
 	return (
-		<CardHeader ref={forwardedRef} {...props} className={classes}>
+		<CardHeader {...otherProps} className={classes} ref={forwardedRef}>
 			{children}
 			<ModalTitle>{title}</ModalTitle>
 			<ModalCloseButton
@@ -30,4 +31,4 @@ function ModalHeader({
 	);
 }
 
-export default connect(ModalHeader, 'ModalHeader');
+export default contextConnect(ModalHeader, 'ModalHeader');

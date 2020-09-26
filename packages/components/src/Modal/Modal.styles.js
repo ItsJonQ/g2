@@ -4,7 +4,7 @@ export const ModalHeader = css`
 	position: relative;
 `;
 
-export const ModalTitleView = styled.div`
+export const ModalTitle = css`
 	font-weight: 600;
 	left: 50%;
 	line-height: 1;

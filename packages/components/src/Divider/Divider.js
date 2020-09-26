@@ -1,14 +1,17 @@
 import { Separator } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
-import { css, ui } from '@wp-g2/styles';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { css, cx, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import * as styles from './Divider.styles';
 
-const { DividerView } = styles;
+function Divider(props, forwardedRef) {
+	const { className, m, mb, mt, ...otherProps } = useContextSystem(
+		props,
+		'Divider',
+	);
 
-function Divider({ m, mb, mt, ...props }) {
 	const sx = {};
 	sx.mt = css`
 		margin-top: ${ui.space(mt)};
@@ -21,13 +24,15 @@ function Divider({ m, mb, mt, ...props }) {
 		margin-top: ${ui.space(mt)};
 	`;
 
-	const __css = [
+	const classes = cx([
+		styles.Divider,
 		!is.defined(m) && is.defined(mb) && sx.mb,
 		!is.defined(m) && is.defined(mt) && sx.mt,
 		is.defined(m) && sx.m,
-	];
+		className,
+	]);
 
-	return <Separator {...props} as={DividerView} cx={__css} />;
+	return <Separator {...otherProps} className={classes} ref={forwardedRef} />;
 }
 
-export default connect(Divider, 'Divider');
+export default contextConnect(Divider, 'Divider');

@@ -1,24 +1,25 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { CardFooter } from '../Card';
 
-function ModalFooter({
-	children,
-	forwardedRef,
-	justify = 'flex-start',
-	...props
-}) {
+function ModalFooter(props, forwardedRef) {
+	const {
+		children,
+		justify = 'flex-start',
+		...otherProps
+	} = useContextSystem(props, 'ModalFooter');
+
 	return (
 		<CardFooter
 			direction="row-reverse"
 			justify={justify}
+			{...otherProps}
 			ref={forwardedRef}
-			{...props}
 		>
 			{children}
 		</CardFooter>
 	);
 }
 
-export default connect(ModalFooter, 'ModalFooter');
+export default contextConnect(ModalFooter, 'ModalFooter');

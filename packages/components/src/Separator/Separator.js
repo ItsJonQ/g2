@@ -1,10 +1,15 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Divider } from '../Divider';
 
-function Separator({ mb = 3, mt = 3, ...props }) {
-	return <Divider {...props} mb={mb} mt={mt} />;
+function Separator(props, forwardedRef) {
+	const { mb = 3, mt = 3, ...otherProps } = useContextSystem(
+		props,
+		'Separator',
+	);
+
+	return <Divider {...otherProps} mb={mb} mt={mt} ref={forwardedRef} />;
 }
 
-export default connect(Separator, 'Separator');
+export default contextConnect(Separator, 'Separator');

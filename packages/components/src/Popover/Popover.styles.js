@@ -1,6 +1,6 @@
-import { styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
-export const PopoverContentView = styled.div`
+export const PopoverContent = css`
 	${ui.zIndex('Popover')};
 	opacity: 0;
 	outline: none;

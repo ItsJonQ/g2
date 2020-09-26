@@ -1,5 +1,5 @@
 import { Dialog, DialogBackdrop, useDialogState } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, getZIndex, reducedMotion, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
@@ -8,22 +8,22 @@ import { Portal } from '../Portal';
 import { View } from '../View';
 import { ModalContext, useModalState } from './BaseModal.Context';
 
-function BaseModal({
-	backdropTransitionDuration = 250,
-	children,
-	className,
-	dialog: dialogProp,
-	forwardedRef,
-	label = 'Modal',
-	/* Deprecate in favour of `trigger`*/
-	renderTrigger = null,
-	transitionDuration = 200,
-	transitionTimingFunction = 'ease-in-out',
-	trigger = null,
-	visible = false,
-	zIndex,
-	...props
-}) {
+function BaseModal(props, forwardedRef) {
+	const {
+		backdropTransitionDuration = 250,
+		children,
+		className,
+		dialog: dialogProp,
+		label = 'Modal',
+		/* Deprecate in favour of `trigger`*/
+		renderTrigger = null,
+		transitionTimingFunction = 'ease-in-out',
+		trigger = null,
+		visible = false,
+		zIndex,
+		...otherProps
+	} = useContextSystem(props, 'BaseModal');
+
 	const _dialog = useDialogState({ animated: true, visible });
 	const dialog = dialogProp || _dialog;
 
@@ -70,7 +70,7 @@ function BaseModal({
 	};
 
 	const dialogProps = {
-		...props,
+		...otherProps,
 		...dialog,
 	};
 
@@ -107,4 +107,4 @@ function BaseModal({
 	);
 }
 
-export default connect(BaseModal, 'BaseModal');
+export default contextConnect(BaseModal, 'BaseModal');

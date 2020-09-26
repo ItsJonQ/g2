@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, getBreakpoint, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -13,16 +13,17 @@ const MODAL_SIZES = {
 	sm: 400,
 };
 
-function Modal({
-	children,
-	className,
-	forwardedRef,
-	/* Deprecate in favour of `trigger`*/
-	size = 'md',
-	transitionDuration = 200,
-	transitionTimingFunction = 'ease-in-out',
-	...props
-}) {
+function Modal(props, forwardedRef) {
+	const {
+		children,
+		className,
+		/* Deprecate in favour of `trigger`*/
+		size = 'md',
+		transitionDuration = 200,
+		transitionTimingFunction = 'ease-in-out',
+		...otherProps
+	} = useContextSystem(props, 'Modal');
+
 	const maxWidth = MODAL_SIZES[size] || MODAL_SIZES.md;
 
 	const modalTransition = `
@@ -67,9 +68,8 @@ function Modal({
 	const classes = cx(baseStyles, className);
 
 	const modalProps = {
-		...props,
+		...otherProps,
 		size,
-		transitionDuration,
 		transitionTimingFunction,
 	};
 
@@ -80,4 +80,4 @@ function Modal({
 	);
 }
 
-export default connect(Modal, 'Modal');
+export default contextConnect(Modal, 'Modal');

@@ -5,13 +5,7 @@ import * as styles from './SegmentedControl.styles';
 
 const { BackdropView } = styles;
 
-function SegmentedControlBackdrop({
-	containerRef,
-	containerWidth,
-	currentId,
-	items,
-	state,
-}) {
+function SegmentedControlBackdrop({ containerRef, containerWidth, state }) {
 	const [left, setLeft] = useState(0);
 	const [width, setWidth] = useState(0);
 	const [canAnimate, setCanAnimate] = useState(false);

@@ -1,12 +1,19 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { ModalTitleView } from './Modal.styles';
+import { View } from '../View';
+import * as styles from './Modal.styles';
 
-function ModalTitle({ children, ...props }) {
+function ModalTitle(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(props, 'ModalTitle');
+
 	if (!children) return null;
 
-	return <ModalTitleView {...props}>{children}</ModalTitleView>;
+	return (
+		<View {...otherProps} __css={styles.ModalTitle} ref={forwardedRef}>
+			{children}
+		</View>
+	);
 }
 
-export default connect(ModalTitle, 'ModalTitle');
+export default contextConnect(ModalTitle, 'ModalTitle');

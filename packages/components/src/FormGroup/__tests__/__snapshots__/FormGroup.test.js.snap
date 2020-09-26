@@ -2,47 +2,41 @@
 
 exports[`props should render alignLabel 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-grid wp-components-form-group css-13x1ydg"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-control-label css-1iwo04m"
     data-g2-c16t="true"
-    data-g2-component="FormGroup"
+    data-g2-component="ControlLabel"
   >
-    <div
-      class="wp-components-control-label css-1iwo04m"
+    <label
+      class="wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
+      for="fname"
     >
-      <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
-        data-g2-c16t="true"
-        data-g2-component="ControlLabel"
-        for="fname"
-      >
-        First name
-      </label>
-    </div>
+      First name
+    </label>
+  </div>
+  <div
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+    data-g2-c16t="true"
+    data-g2-component="TextInputWrapper"
+  >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
-      data-g2-component="TextInputWrapper"
+      data-g2-component="TextInputContent"
     >
-      <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      <input
+        class="css-uis2zj"
         data-g2-c16t="true"
-        data-g2-component="TextInputContent"
-      >
-        <input
-          class="css-uis2zj"
-          data-g2-c16t="true"
-          data-g2-component="TextInput"
-          id="fname"
-          value=""
-        />
-      </div>
+        data-g2-component="TextInput"
+        id="fname"
+        value=""
+      />
     </div>
   </div>
 </div>
@@ -50,47 +44,41 @@ exports[`props should render alignLabel 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-grid wp-components-form-group css-13x1ydg"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-control-label css-1iwo04m"
     data-g2-c16t="true"
-    data-g2-component="FormGroup"
+    data-g2-component="ControlLabel"
   >
-    <div
-      class="wp-components-control-label css-1iwo04m"
+    <label
+      class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
+      for="fname"
     >
-      <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
-        data-g2-c16t="true"
-        data-g2-component="ControlLabel"
-        for="fname"
-      >
-        First name
-      </label>
-    </div>
+      First name
+    </label>
+  </div>
+  <div
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+    data-g2-c16t="true"
+    data-g2-component="TextInputWrapper"
+  >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
-      data-g2-component="TextInputWrapper"
+      data-g2-component="TextInputContent"
     >
-      <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      <input
+        class="css-uis2zj"
         data-g2-c16t="true"
-        data-g2-component="TextInputContent"
-      >
-        <input
-          class="css-uis2zj"
-          data-g2-c16t="true"
-          data-g2-component="TextInput"
-          id="fname"
-          value=""
-        />
-      </div>
+        data-g2-component="TextInput"
+        id="fname"
+        value=""
+      />
     </div>
   </div>
 </div>
@@ -98,45 +86,39 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render label without prop correctly 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-grid wp-components-form-group css-13x1ydg"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <div
-    class="wp-components-grid wp-components-form-group css-13x1ydg"
+    class="wp-components-control-label css-1iwo04m"
     data-g2-c16t="true"
-    data-g2-component="FormGroup"
+    data-g2-component="ControlLabel"
   >
-    <div
-      class="wp-components-control-label css-1iwo04m"
+    <label
+      class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
       data-g2-c16t="true"
       data-g2-component="ControlLabel"
-    >
-      <label
-        class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
-        data-g2-c16t="true"
-        data-g2-component="ControlLabel"
-        for="fname"
-      />
-    </div>
+      for="fname"
+    />
+  </div>
+  <div
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+    data-g2-c16t="true"
+    data-g2-component="TextInputWrapper"
+  >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
-      data-g2-component="TextInputWrapper"
+      data-g2-component="TextInputContent"
     >
-      <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      <input
+        class="css-uis2zj"
         data-g2-c16t="true"
-        data-g2-component="TextInputContent"
-      >
-        <input
-          class="css-uis2zj"
-          data-g2-c16t="true"
-          data-g2-component="TextInput"
-          id="fname"
-          value=""
-        />
-      </div>
+        data-g2-component="TextInput"
+        id="fname"
+        value=""
+      />
     </div>
   </div>
 </div>
