@@ -64,9 +64,7 @@ export function useContextSystem(props, namespace, forwardedRef) {
 		...otherContextProps
 	} = contextProps;
 
-	const initialMergedProps = is.plainObject(contextProps)
-		? { ...otherContextProps, ...props }
-		: props;
+	const initialMergedProps = Object.assign({}, otherContextProps, props);
 
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider
