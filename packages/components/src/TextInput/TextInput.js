@@ -1,7 +1,7 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { BaseField } from '../BaseField';
@@ -12,7 +12,7 @@ import * as styles from './TextInput.styles';
 
 function TextInput(props, forwardedRef) {
 	const {
-		__onBeforeChange = (event) => event?.target?.value,
+		__onBeforeChange = defaultOnBeforeChange,
 		align,
 		className,
 		disabled,
@@ -41,25 +41,34 @@ function TextInput(props, forwardedRef) {
 	const { id: contextId } = useFormGroupContext();
 	const id = idProp || contextId;
 
-	const handleOnRootClick = () => {
+	const handleOnRootClick = useCallback(() => {
 		inputRef.current.focus();
-	};
+	}, []);
 
-	const handleOnBlur = (event) => {
-		onBlur(event);
-		setIsFocused(false);
-	};
+	const handleOnBlur = useCallback(
+		(event) => {
+			onBlur(event);
+			setIsFocused(false);
+		},
+		[onBlur],
+	);
 
-	const handleOnFocus = (event) => {
-		onFocus(event);
-		setIsFocused(true);
-	};
+	const handleOnFocus = useCallback(
+		(event) => {
+			onFocus(event);
+			setIsFocused(true);
+		},
+		[onFocus],
+	);
 
-	const handleOnChange = (event) => {
-		const next = event.target.value;
-		setValue(next);
-		onChange(__onBeforeChange(event), { event });
-	};
+	const handleOnChange = useCallback(
+		(event) => {
+			const next = event.target.value;
+			setValue(next);
+			onChange(__onBeforeChange(event), { event });
+		},
+		[__onBeforeChange, onChange, setValue],
+	);
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
@@ -107,6 +116,10 @@ function TextInput(props, forwardedRef) {
 			)}
 		</BaseField>
 	);
+}
+
+function defaultOnBeforeChange(event) {
+	return event?.target?.value;
 }
 
 export default contextConnect(TextInput, 'TextInput');

@@ -51,41 +51,36 @@ const SliderTextInput = ({ onChange, value }) => {
 	);
 };
 
-const DimensionCard = ({ onChange, title, x, y, z }) => {
+const DimensionCard = React.memo(({ onChange, title, x, y, z }) => {
+	const update = React.useCallback(
+		(key) => (next) => {
+			onChange({ [key]: next });
+		},
+		[onChange],
+	);
+
 	return (
 		<Card>
 			<CardBody>
 				<ListGroup>
 					<ListGroupHeader>Dimensions</ListGroupHeader>
 					<FormGroup label="Title">
-						<TextInput
-							onChange={(next) => onChange({ title: next })}
-							value={title}
-						/>
+						<TextInput onChange={update('title')} value={title} />
 					</FormGroup>
 					<FormGroup label="x">
-						<SliderTextInput
-							onChange={(next) => onChange({ x: next })}
-							value={x}
-						/>
+						<SliderTextInput onChange={update('x')} value={x} />
 					</FormGroup>
 					<FormGroup label="y">
-						<SliderTextInput
-							onChange={(next) => onChange({ y: next })}
-							value={y}
-						/>
+						<SliderTextInput onChange={update('y')} value={y} />
 					</FormGroup>
 					<FormGroup label="z">
-						<SliderTextInput
-							onChange={(next) => onChange({ z: next })}
-							value={z}
-						/>
+						<SliderTextInput onChange={update('z')} value={z} />
 					</FormGroup>
 				</ListGroup>
 			</CardBody>
 		</Card>
 	);
-};
+});
 
 const Example = () => {
 	const [dimensions, setDimensions] = useState([...dimensionSchema.make(10)]);
@@ -94,17 +89,20 @@ const Example = () => {
 		setDimensions((prev) => [...prev, dimensionSchema.makeOne()]);
 	};
 
-	const updateDimension = (id) => (next) => {
-		setDimensions((prev) =>
-			prev.map((d) => {
-				if (d.id !== id) return d;
-				return {
-					...d,
-					...next,
-				};
-			}),
-		);
-	};
+	const updateDimension = React.useCallback(
+		(id) => (next) => {
+			setDimensions((prev) =>
+				prev.map((d) => {
+					if (d.id !== id) return d;
+					return {
+						...d,
+						...next,
+					};
+				}),
+			);
+		},
+		[],
+	);
 
 	return (
 		<>

@@ -18,7 +18,11 @@ function FormGroup(props, forwardedRef) {
 	} = useContextSystem(props, 'FormGroup');
 
 	const id = useUniqueId(FormGroup, 'form-group', idProp);
-	const contextProps = { id, horizontal };
+
+	const contextProps = React.useMemo(() => ({ id, horizontal }), [
+		id,
+		horizontal,
+	]);
 
 	const labelMarkup = label ? (
 		<ControlLabel align={alignLabel}>{label}</ControlLabel>
