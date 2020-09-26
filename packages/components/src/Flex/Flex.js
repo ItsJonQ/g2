@@ -1,5 +1,5 @@
 import { contextConnect, hasNamespace, useContextSystem } from '@wp-g2/context';
-import { css, ui, useResponsiveValue } from '@wp-g2/styles';
+import { css, cx, ui, useResponsiveValue } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -66,7 +66,7 @@ export function Flex(props, forwardedRef) {
 		},
 	});
 
-	const __css = [styles.Flex, sx.Base];
+	const __css = cx([styles.Flex, sx.Base]);
 
 	return (
 		<View {...otherProps} cx={__css} ref={forwardedRef}>

@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, getBoxShadow, ui } from '@wp-g2/styles';
+import { css, cx, getBoxShadow, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -61,14 +61,14 @@ function Elevation(props, forwardedRef) {
 		}
 	`;
 
-	const __css = [
+	const __css = cx([
 		styles.Elevation,
 		sx.Elevation,
 		sx.Base,
 		is.defined(hoverValue) && sx.hover,
 		is.defined(activeValue) && sx.active,
 		is.defined(focus) && sx.focus,
-	];
+	]);
 
 	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }

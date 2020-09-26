@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, ui } from '@wp-g2/styles';
+import { css, cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Icon } from '../Icon';
@@ -23,11 +23,11 @@ function ArrowIndicator({
 	};
 	const rotate = rotations[direction] || rotations.right;
 
-	const __css = [
+	const __css = cx([
 		css({ height: height || size, width: width || size }),
 		ui.rotate(rotate),
 		ui.animation.default,
-	];
+	]);
 
 	return (
 		<ArrowIndicatorView {...props} cx={__css}>

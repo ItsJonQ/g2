@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
@@ -36,10 +36,10 @@ export function Truncate(props, forwardedRef) {
 		overflow: hidden;
 	`;
 
-	const __css = [
+	const __css = cx([
 		shouldTruncate && !numberOfLines && styles.Truncate,
 		shouldTruncate && numberOfLines && sx.numberOfLines,
-	];
+	]);
 
 	return (
 		<View as="span" {...otherProps} cx={__css} ref={forwardedRef}>

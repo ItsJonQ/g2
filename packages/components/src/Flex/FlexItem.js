@@ -20,7 +20,7 @@ function FlexItem(props, forwardedRef) {
 		marginRight: ui.get('FlexItemMarginRight'),
 	});
 
-	const __css = [styles.Item, sx.Base, isBlock && styles.block];
+	const __css = css([styles.Item, sx.Base, isBlock && styles.block]);
 
 	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }

@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, useResponsiveValue } from '@wp-g2/styles';
+import { css, cx, useResponsiveValue } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
@@ -13,7 +13,7 @@ function Container(props, forwardedRef) {
 	} = useContextSystem(props, 'Container');
 
 	const maxWidth = useResponsiveValue(width);
-	const __css = [css({ maxWidth, width: '100%' }), styles[alignment]];
+	const __css = cx([css({ maxWidth, width: '100%' }), styles[alignment]]);
 
 	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }

@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
@@ -33,7 +33,7 @@ function Icon(props, forwardedRef) {
 		width: size,
 	});
 
-	const __css = [styles.Wrapper, sx.color, sx.size];
+	const __css = cx([styles.Wrapper, sx.color, sx.size]);
 
 	return (
 		<View {...otherProps} cx={__css}>

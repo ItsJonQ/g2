@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
@@ -25,11 +25,11 @@ function Tag({
 		display,
 	});
 
-	const __css = [
+	const __css = cx([
 		sx.base,
 		styles.getBackground({ color: tagColor }),
 		styles.getBackgroundText({ color: tagColor }),
-	];
+	]);
 
 	const asProp = href ? 'a' : 'span';
 

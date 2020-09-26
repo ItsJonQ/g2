@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css, get } from '@wp-g2/styles';
+import { css, cx, get } from '@wp-g2/styles';
 import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
 
@@ -42,7 +42,8 @@ function Avatar({
 		borderRadius,
 	});
 
-	const __css = [sx.base, sx.borderRadius, border && styles.border];
+	const __css = cx([sx.base, sx.borderRadius, border && styles.border]);
+
 	return (
 		<AvatarView {...props} cx={__css}>
 			{shouldRenderInitials && (

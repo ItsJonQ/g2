@@ -1,4 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
@@ -15,13 +16,13 @@ function BaseField(props, forwardedRef) {
 
 	const { styles: controlGroupStyles } = useControlGroupContext();
 
-	const __css = [
+	const __css = cx([
 		styles.BaseField,
 		controlGroupStyles,
 		isClickable && styles.clickable,
 		isFocused && styles.focus,
 		isSubtle && styles.subtle,
-	];
+	]);
 
 	return <Flex {...otherProps} cx={__css} ref={forwardedRef} />;
 }

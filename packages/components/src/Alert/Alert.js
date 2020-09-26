@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { ui } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Animated } from '../Animated';
@@ -18,7 +18,7 @@ function Alert({
 	title,
 	...props
 }) {
-	const __css = [styles[status]];
+	const __css = cx([styles[status]]);
 	const isDismissable = isDismissableProp || !!onDismiss;
 
 	return (

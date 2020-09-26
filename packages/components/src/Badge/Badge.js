@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Text } from '../Text';
@@ -24,13 +24,13 @@ function Badge({
 		display,
 	});
 
-	const __css = [
+	const __css = cx([
 		sx.base,
 		truncate && styles.truncate,
 		styles.getBackground({ color: badgeColor, isBold }),
 		styles.getBackgroundText({ color: badgeColor, isBold }),
 		isRounded && styles.rounded,
-	];
+	]);
 
 	return (
 		<BadgeView {...props} cx={__css}>

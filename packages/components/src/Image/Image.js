@@ -1,5 +1,5 @@
 import { connect } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { AspectRatio } from '../AspectRatio';
@@ -21,7 +21,7 @@ function Image({ aspectRatio, fit, height, width, ...props }) {
 
 	sx.fitSize = css({ height: '100%', width: '100%' });
 
-	const __css = [sx.base, sx.fit, fit && sx.fitSize];
+	const __css = cx([sx.base, sx.fit, fit && sx.fitSize]);
 
 	const imageProps = {
 		...props,

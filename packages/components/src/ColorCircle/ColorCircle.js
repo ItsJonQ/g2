@@ -1,4 +1,5 @@
 import { connect } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import { colorize } from '@wp-g2/utils';
 import React from 'react';
 
@@ -12,7 +13,7 @@ function ColorCircle({
 	...props
 }) {
 	const backgroundColor = colorize(colorProp).toRgbString();
-	const __css = [styles[size]];
+	const __css = cx([styles[size]]);
 
 	return (
 		<ColorCircleView

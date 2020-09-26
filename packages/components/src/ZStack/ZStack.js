@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, ui } from '@wp-g2/styles';
+import { css, cx, ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -43,11 +43,11 @@ function ZStack(props, forwardedRef) {
 		);
 	});
 
-	const __css = [
+	const __css = cx([
 		css({
 			paddingLeft: !isLayered ? offset : null,
 		}),
-	];
+	]);
 
 	return (
 		<ZStackView {...otherProps} cx={__css} ref={forwardedRef}>

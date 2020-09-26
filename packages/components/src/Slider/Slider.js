@@ -1,4 +1,5 @@
 import { connect } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import { interpolate, noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
 
@@ -33,7 +34,7 @@ function Slider({
 		'--progress': `${currentValue}%`,
 	};
 
-	const __css = [styles[size]];
+	const __css = cx([styles[size]]);
 
 	return (
 		<SliderView

@@ -1,4 +1,5 @@
 import { connect } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { CollapsibleContent } from '../Collapsible';
@@ -10,7 +11,7 @@ const { PanelBodyView } = styles;
 function PanelBody({ children, ...props }) {
 	const { isSeamless } = usePanelContext();
 
-	const __css = [isSeamless && styles.seamless];
+	const __css = cx([isSeamless && styles.seamless]);
 
 	return (
 		<CollapsibleContent {...props}>

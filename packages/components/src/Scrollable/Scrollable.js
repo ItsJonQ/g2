@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { ui } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
@@ -11,11 +11,11 @@ function Scrollable(props, forwardedRef) {
 		'Scrollable',
 	);
 
-	const __css = [
+	const __css = cx([
 		styles.Scrollable,
 		styles.scrollableScrollbar,
 		smoothScroll && styles.smoothScroll,
-	];
+	]);
 
 	return (
 		<View {...otherProps} cx={__css} ref={forwardedRef}>

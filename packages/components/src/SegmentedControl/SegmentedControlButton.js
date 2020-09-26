@@ -1,5 +1,5 @@
 import { Radio } from '@wp-g2/a11y';
-import { ui } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import * as styles from './SegmentedControl.styles';
@@ -13,7 +13,7 @@ const {
 } = styles;
 
 function SegmentedControlSeparator({ isActive }) {
-	const __css = [isActive && styles.separatorActive];
+	const __css = cx([isActive && styles.separatorActive]);
 
 	return <SeparatorView cx={__css} />;
 }

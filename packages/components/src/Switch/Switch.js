@@ -1,6 +1,6 @@
 import { Checkbox, Radio } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { ui } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import React, { useState } from 'react';
 
@@ -43,11 +43,11 @@ function Switch(props, forwardedRef) {
 
 	const Control = ControlComponent[type] || Checkbox;
 
-	const __css = [
+	const __css = cx([
 		styles.Switch,
 		styles[size],
 		contextId && horizontal && styles.formGroup,
-	];
+	]);
 
 	const toggle = (event) => {
 		setChecked(!checked);

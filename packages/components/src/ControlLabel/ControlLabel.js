@@ -1,4 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
@@ -17,7 +18,7 @@ function ControlLabel(props, forwardedRef) {
 
 	const { id: contextId } = useFormGroupContext();
 	const htmlFor = htmlForProp || contextId;
-	const __css = [styles.ControlLabel, styles[size]];
+	const __css = cx([styles.ControlLabel, styles[size]]);
 
 	return (
 		<View cx={__css} {...otherProps} ref={forwardedRef}>

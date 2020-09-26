@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, ui } from '@wp-g2/styles';
+import { css, cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
@@ -28,7 +28,7 @@ function Surface(props, forwardedRef) {
 		borderTop,
 	});
 
-	const __css = [
+	const __css = cx([
 		styles.Surface,
 		sx.borders,
 		styles[variant],
@@ -37,7 +37,7 @@ function Surface(props, forwardedRef) {
 				backgroundSize,
 			)}`,
 		}),
-	];
+	]);
 
 	return (
 		<View {...otherProps} cx={__css} ref={forwardedRef}>

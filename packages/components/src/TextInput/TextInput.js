@@ -65,13 +65,13 @@ function TextInput(props, forwardedRef) {
 
 	const classes = cx([multiline && styles.multiline, className]);
 
-	const inputCx = [
+	const inputCx = cx([
 		styles.Input,
 		styles[size],
 		multiline && styles.inputMultiline,
 		isResizable && styles.resizable,
 		multiline && styles.scrollableScrollbar,
-	];
+	]);
 
 	return (
 		<BaseField
