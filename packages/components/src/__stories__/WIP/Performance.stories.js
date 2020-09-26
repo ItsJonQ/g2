@@ -42,21 +42,35 @@ const dimensionSchema = new Schema(() => ({
 	z: 0,
 }));
 
-const SliderTextInput = React.memo(({ onChange, value }) => {
+const SliderTextInput = React.memo(({ onChange, prop, value }) => {
+	const handleOnChange = React.useCallback(
+		(next) => {
+			onChange({ [prop]: next });
+		},
+		[onChange, prop],
+	);
+
 	return (
 		<Grid>
-			<Slider onChange={onChange} value={value} />
-			<TextInput onChange={onChange} value={value} />
+			<Slider onChange={handleOnChange} value={value} />
+			<TextInput onChange={handleOnChange} value={value} />
 		</Grid>
 	);
 });
 
-const DimensionCard = React.memo(({ onChange, title, x, y, z }) => {
+const DimensionCard = React.memo(({ id, onChange, title, x, y, z }) => {
 	const update = React.useCallback(
 		(key) => (next) => {
-			onChange({ [key]: next });
+			onChange({ id, [key]: next });
 		},
-		[onChange],
+		[onChange, id],
+	);
+
+	const updateValue = React.useCallback(
+		(next) => {
+			onChange({ id, ...next });
+		},
+		[onChange, id],
 	);
 
 	return (
@@ -68,13 +82,25 @@ const DimensionCard = React.memo(({ onChange, title, x, y, z }) => {
 						<TextInput onChange={update('title')} value={title} />
 					</FormGroup>
 					<FormGroup label="x">
-						<SliderTextInput onChange={update('x')} value={x} />
+						<SliderTextInput
+							onChange={updateValue}
+							prop="x"
+							value={x}
+						/>
 					</FormGroup>
 					<FormGroup label="y">
-						<SliderTextInput onChange={update('y')} value={y} />
+						<SliderTextInput
+							onChange={updateValue}
+							prop="y"
+							value={y}
+						/>
 					</FormGroup>
 					<FormGroup label="z">
-						<SliderTextInput onChange={update('z')} value={z} />
+						<SliderTextInput
+							onChange={updateValue}
+							prop="z"
+							value={z}
+						/>
 					</FormGroup>
 				</ListGroup>
 			</CardBody>
@@ -83,26 +109,23 @@ const DimensionCard = React.memo(({ onChange, title, x, y, z }) => {
 });
 
 const Example = () => {
-	const [dimensions, setDimensions] = useState([...dimensionSchema.make(10)]);
+	const [dimensions, setDimensions] = useState([...dimensionSchema.make(1)]);
 
 	const addDimension = () => {
 		setDimensions((prev) => [...prev, dimensionSchema.makeOne()]);
 	};
 
-	const updateDimension = React.useCallback(
-		(id) => (next) => {
-			setDimensions((prev) =>
-				prev.map((d) => {
-					if (d.id !== id) return d;
-					return {
-						...d,
-						...next,
-					};
-				}),
-			);
-		},
-		[],
-	);
+	const updateDimension = React.useCallback((next) => {
+		setDimensions((prev) =>
+			prev.map((d) => {
+				if (d.id !== next.id) return d;
+				return {
+					...d,
+					...next,
+				};
+			}),
+		);
+	}, []);
 
 	return (
 		<>
@@ -121,7 +144,7 @@ const Example = () => {
 							return (
 								<DimensionCard
 									{...item}
-									onChange={updateDimension(item.id)}
+									onChange={updateDimension}
 								/>
 							);
 						})}

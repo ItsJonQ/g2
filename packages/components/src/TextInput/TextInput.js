@@ -5,7 +5,7 @@ import React, { useCallback, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { BaseField } from '../BaseField';
-import { FlexBlock, FlexItem } from '../Flex';
+import { FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { View } from '../View';
 import * as styles from './TextInput.styles';
@@ -96,7 +96,7 @@ function TextInput(props, forwardedRef) {
 			{prefix && (
 				<FlexItem {...ui.$('TextInputPrefix')}>{prefix}</FlexItem>
 			)}
-			<FlexBlock {...ui.$('TextInputContent')}>
+			<FlexItem isBlock {...ui.$('TextInputContent')}>
 				<View
 					as={InputComponent}
 					cx={inputCx}
@@ -110,7 +110,7 @@ function TextInput(props, forwardedRef) {
 					{...otherProps}
 					{...ui.$('TextInput')}
 				/>
-			</FlexBlock>
+			</FlexItem>
 			{suffix && (
 				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
 			)}
