@@ -83,4 +83,4 @@ function ThemeProvider({
 	);
 }
 
-export default ThemeProvider;
+export default React.memo(ThemeProvider);

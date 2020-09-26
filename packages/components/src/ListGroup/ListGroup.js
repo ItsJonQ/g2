@@ -9,7 +9,7 @@ import { getValidChildren } from '@wp-g2/utils';
 import React, { Fragment } from 'react';
 
 import { Divider } from '../Divider';
-import { FlexBlock } from '../Flex';
+import { FlexItem } from '../Flex';
 import { VStack } from '../VStack';
 import ListGroupContent from './ListGroupContent';
 
@@ -88,11 +88,11 @@ function ListGroup(props, forwardedRef) {
 
 		return (
 			<Fragment key={_key}>
-				<FlexBlock>{content}</FlexBlock>
+				<FlexItem isBlock>{content}</FlexItem>
 				{showDivider && (
-					<FlexBlock>
+					<FlexItem isBlock>
 						<Divider />
-					</FlexBlock>
+					</FlexItem>
 				)}
 			</Fragment>
 		);

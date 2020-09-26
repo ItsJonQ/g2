@@ -2815,7 +2815,7 @@ exports[`props should render SearchInput 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+    class="wp-components-flex-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -3947,7 +3947,7 @@ exports[`props should render TextField 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+    class="wp-components-flex-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >
@@ -3969,7 +3969,7 @@ exports[`props should render TextInput 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+    class="wp-components-flex-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="TextInputContent"
   >

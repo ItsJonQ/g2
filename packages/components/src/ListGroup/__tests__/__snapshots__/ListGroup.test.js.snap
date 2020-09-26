@@ -17,9 +17,9 @@ exports[`props should render correctly 1`] = `
       data-g2-component="VStack"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="wp-components-flex-item css-1j3zl9k"
         data-g2-c16t="true"
-        data-g2-component="FlexBlock"
+        data-g2-component="FlexItem"
       >
         I like warm hugs
       </div>

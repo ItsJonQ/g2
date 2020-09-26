@@ -26,15 +26,17 @@ export const useComponentsContext = () => useContext(ComponentsContext);
  * @param {object} value Props to render into connected components.
  * @returns {React.Component} A Provider wrapped component.
  */
-export function ContextSystemProvider({ children, shallow = false, value }) {
-	const contextValue = useComponentsContextValue({ shallow, value });
+export const ContextSystemProvider = React.memo(
+	({ children, shallow = false, value }) => {
+		const contextValue = useComponentsContextValue({ shallow, value });
 
-	return (
-		<ComponentsContext.Provider value={contextValue}>
-			{children}
-		</ComponentsContext.Provider>
-	);
-}
+		return (
+			<ComponentsContext.Provider value={contextValue}>
+				{children}
+			</ComponentsContext.Provider>
+		);
+	},
+);
 
 function useComponentsContextValue({ shallow, value }) {
 	const previousValue = useComponentsContext();

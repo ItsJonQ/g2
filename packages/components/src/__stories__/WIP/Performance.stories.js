@@ -53,15 +53,15 @@ const SliderTextInput = React.memo(({ onChange, prop, value }) => {
 	return (
 		<Grid>
 			<Slider onChange={handleOnChange} value={value} />
-			<TextInput onChange={handleOnChange} value={value} />
+			<TextInput onChange={handleOnChange} type="number" value={value} />
 		</Grid>
 	);
 });
 
 const DimensionCard = React.memo(({ id, onChange, title, x, y, z }) => {
-	const update = React.useCallback(
-		(key) => (next) => {
-			onChange({ id, [key]: next });
+	const updateTitle = React.useCallback(
+		(next) => {
+			onChange({ id, title: next });
 		},
 		[onChange, id],
 	);
@@ -79,7 +79,7 @@ const DimensionCard = React.memo(({ id, onChange, title, x, y, z }) => {
 				<ListGroup>
 					<ListGroupHeader>Dimensions</ListGroupHeader>
 					<FormGroup label="Title">
-						<TextInput onChange={update('title')} value={title} />
+						<TextInput onChange={updateTitle} value={title} />
 					</FormGroup>
 					<FormGroup label="x">
 						<SliderTextInput

@@ -14,6 +14,7 @@ function CardBody(props, forwardedRef) {
 	);
 
 	const { popover } = usePopoverContext();
+
 	const classes = cx([
 		styles.Body,
 		styles.borderRadius,

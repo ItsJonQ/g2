@@ -137,11 +137,16 @@ export const createCoreElement = (
 			}
 		}
 
+		// eslint-disable-next-line
+		const refs = React.useMemo(() => {
+			return mergeRefs([forwardedRef, ref]);
+		}, [forwardedRef, ref]);
+
 		return React.createElement(
 			element,
 			{
 				className: classes,
-				ref: mergeRefs([forwardedRef, ref]),
+				ref: refs,
 				...newProps,
 			},
 			children,

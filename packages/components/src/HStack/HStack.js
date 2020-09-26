@@ -18,14 +18,15 @@ function HStack(props, forwardedRef) {
 	const align = getAlignmentProps(alignment);
 	const validChildren = getValidChildren(children);
 
-	const clonedChildren = validChildren.map((child) => {
+	const clonedChildren = validChildren.map((child, index) => {
+		const _key = child.key || `hstack-${index}`;
 		const _isSpacer = hasNamespace(child, ['Spacer']);
 
 		if (_isSpacer) {
 			return (
 				<FlexItem
 					isBlock
-					key={child.key}
+					key={_key}
 					{...child.props}
 					{...ui.$('Spacer')}
 				/>

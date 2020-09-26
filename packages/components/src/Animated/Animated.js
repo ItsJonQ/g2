@@ -1,5 +1,5 @@
 import { motion, useSystemReducedMotion } from '@wp-g2/animations';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { createCoreElement, useReducedMotion } from '@wp-g2/styles';
 import { is, memoize } from '@wp-g2/utils';
 import React from 'react';
@@ -11,7 +11,13 @@ const createAnimated = function (tagName) {
 
 const memoizedCreateAnimated = memoize(createAnimated);
 
-function Animated({ as = 'div', auto = false, children, ...props }) {
+function Animated(props, forwardedRef) {
+	const {
+		as = 'div',
+		auto = false,
+		children,
+		...otherProps
+	} = useContextSystem(props, 'Animated');
 	const [isProviderReducedMotion] = useReducedMotion();
 	const isSystemReducedMotion = useSystemReducedMotion();
 
@@ -48,7 +54,8 @@ function Animated({ as = 'div', auto = false, children, ...props }) {
 
 	let finalProps = {
 		...baseProps,
-		...props,
+		...otherProps,
+		ref: forwardedRef,
 	};
 
 	if (isReducedMotion) {
@@ -62,4 +69,4 @@ function Animated({ as = 'div', auto = false, children, ...props }) {
 	return <Component {...finalProps}>{children}</Component>;
 }
 
-export default connect(Animated, 'Animated');
+export default contextConnect(Animated, 'Animated');

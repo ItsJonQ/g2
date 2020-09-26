@@ -1,23 +1,26 @@
 import { TooltipReference, useTooltipState } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
 
 import { TooltipContext } from './Tooltip.Context';
 import TooltipContent from './TooltipContent';
 
-function Tooltip({
-	animated = true,
-	animationDuration = 160,
-	baseId,
-	children,
-	content,
-	gutter = 4,
-	id,
-	modal = true,
-	placement,
-	visible = false,
-	...props
-}) {
+function Tooltip(props, forwardedRef) {
+	const {
+		animated = true,
+		animationDuration = 160,
+		baseId,
+		children,
+		content,
+		gutter = 4,
+		id,
+		modal = true,
+		placement,
+		visible = false,
+		...otherProps
+	} = useContextSystem(props, 'Tooltip');
+
 	const tooltip = useTooltipState({
 		animated: animated ? animationDuration : undefined,
 		baseId: baseId || id,
@@ -25,20 +28,26 @@ function Tooltip({
 		placement,
 		unstable_portal: modal,
 		visible,
-		...props,
+		...otherProps,
 	});
-	const contextProps = {
-		tooltip,
-	};
+
+	const contextProps = React.useMemo(
+		() => ({
+			tooltip,
+		}),
+		[tooltip],
+	);
+
+	const childRef = children?.ref;
+	const refs = React.useMemo(() => {
+		return mergeRefs([forwardedRef, childRef]);
+	}, [childRef, forwardedRef]);
+
 	return (
 		<TooltipContext.Provider value={contextProps}>
 			{content && <TooltipContent>{content}</TooltipContent>}
 			{children && (
-				<TooltipReference
-					{...tooltip}
-					ref={children.ref}
-					{...children.props}
-				>
+				<TooltipReference {...tooltip} {...children.props} ref={refs}>
 					{(referenceProps) =>
 						React.cloneElement(children, referenceProps)
 					}
@@ -48,4 +57,4 @@ function Tooltip({
 	);
 }
 
-export default connect(Tooltip, 'Tooltip');
+export default contextConnect(Tooltip, 'Tooltip');

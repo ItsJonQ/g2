@@ -26,7 +26,7 @@ export function Flex(props, forwardedRef) {
 	const isReverse = direction?.includes('reverse');
 
 	const clonedChildren = validChildren.map((child, index) => {
-		const _key = child.key || index;
+		const _key = child.key || `flex-${index}`;
 		const _isSubComponent = hasNamespace(child, ['FlexBlock', 'FlexItem']);
 
 		const _child =

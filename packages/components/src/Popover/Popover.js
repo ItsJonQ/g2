@@ -1,7 +1,7 @@
 import { PopoverDisclosure, usePopoverState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { PopoverContext } from './Popover.Context';
 import PopoverContent from './PopoverContent';
@@ -34,10 +34,22 @@ function Popover(props, forwardedRef) {
 	});
 
 	const uniqueId = `popover-${popover.baseId}`;
-	const contextProps = {
-		label: label || uniqueId,
-		popover,
-	};
+	const labelId = label || uniqueId;
+
+	const contextProps = React.useMemo(
+		() => ({
+			label: labelId,
+			popover,
+		}),
+		[labelId, popover],
+	);
+
+	const triggerContent = useCallback(
+		(triggerProps) => {
+			return React.cloneElement(trigger, triggerProps);
+		},
+		[trigger],
+	);
 
 	useUpdateEffect(() => {
 		onVisibleChange(popover.visible);
@@ -51,9 +63,7 @@ function Popover(props, forwardedRef) {
 					ref={trigger.ref}
 					{...trigger.props}
 				>
-					{(triggerProps) =>
-						React.cloneElement(trigger, triggerProps)
-					}
+					{triggerContent}
 				</PopoverDisclosure>
 			)}
 			<PopoverContent
