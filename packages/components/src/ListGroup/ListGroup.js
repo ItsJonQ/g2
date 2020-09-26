@@ -13,6 +13,27 @@ import { FlexBlock } from '../Flex';
 import { VStack } from '../VStack';
 import ListGroupContent from './ListGroupContent';
 
+/**
+ * Shallowly adjusts child MenuItem components.
+ */
+const listGroupContextValue = {
+	MenuItem: {
+		isOffset: true,
+		_shallow: true,
+	},
+};
+
+/**
+ * Shallowly adjusts child Grid components.
+ */
+const listGroupGridContextProps = {
+	Grid: {
+		gap: 3,
+		rowGap: 2,
+		_shallow: true,
+	},
+};
+
 function ListGroup(props, forwardedRef) {
 	const {
 		children,
@@ -25,33 +46,6 @@ function ListGroup(props, forwardedRef) {
 
 	let headerComponent;
 	let footerComponent;
-
-	/**
-	 * Shallowly adjusts child MenuItem components.
-	 */
-	const componentContextProps = React.useMemo(
-		() => ({
-			MenuItem: {
-				isOffset: true,
-				_shallow: true,
-			},
-		}),
-		[],
-	);
-
-	/**
-	 * Shallowly adjusts child Grid components.
-	 */
-	const gridContextProps = React.useMemo(
-		() => ({
-			Grid: {
-				gap: 3,
-				rowGap: 2,
-				_shallow: true,
-			},
-		}),
-		[],
-	);
 
 	/**
 	 * We're scanning for potential ListGroupHeader and ListGroupFooter components.
@@ -86,7 +80,7 @@ function ListGroup(props, forwardedRef) {
 
 		if (isGrid) {
 			content = (
-				<ContextSystemProvider value={gridContextProps}>
+				<ContextSystemProvider value={listGroupGridContextProps}>
 					{child}
 				</ContextSystemProvider>
 			);
@@ -105,10 +99,10 @@ function ListGroup(props, forwardedRef) {
 	});
 
 	return (
-		<VStack {...otherProps} ref={forwardedRef} spacing={2}>
-			{headerComponent}
-			<ListGroupContent>
-				<ContextSystemProvider value={componentContextProps}>
+		<ContextSystemProvider value={listGroupContextValue}>
+			<VStack {...otherProps} ref={forwardedRef} spacing={2}>
+				{headerComponent}
+				<ListGroupContent>
 					<VStack
 						autoWrap={false}
 						spacing={separatorValue ? 0 : 2}
@@ -116,10 +110,10 @@ function ListGroup(props, forwardedRef) {
 					>
 						{clonedChildren}
 					</VStack>
-				</ContextSystemProvider>
-			</ListGroupContent>
-			{footerComponent}
-		</VStack>
+				</ListGroupContent>
+				{footerComponent}
+			</VStack>
+		</ContextSystemProvider>
 	);
 }
 

@@ -42,14 +42,14 @@ const dimensionSchema = new Schema(() => ({
 	z: 0,
 }));
 
-const SliderTextInput = ({ onChange, value }) => {
+const SliderTextInput = React.memo(({ onChange, value }) => {
 	return (
 		<Grid>
 			<Slider onChange={onChange} value={value} />
 			<TextInput onChange={onChange} value={value} />
 		</Grid>
 	);
-};
+});
 
 const DimensionCard = React.memo(({ onChange, title, x, y, z }) => {
 	const update = React.useCallback(
