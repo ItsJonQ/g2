@@ -1,3 +1,4 @@
+import { atom, Provider, useAtom } from '@wp-g2/atomic';
 import {
 	Button,
 	Card,
@@ -15,7 +16,6 @@ import {
 } from '@wp-g2/components';
 import { Schema } from '@wp-g2/protokit';
 import { css, styled, ui } from '@wp-g2/styles';
-import { atom, Provider, useAtom } from 'jotai';
 import React from 'react';
 
 export default {
