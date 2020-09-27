@@ -17,7 +17,7 @@ import {
 } from '@wp-g2/components';
 import { Schema } from '@wp-g2/protokit';
 import { css, styled, ui } from '@wp-g2/styles';
-import { createStore, shallowCompare } from '@wp-g2/utils';
+import { createStore, shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
 export default {

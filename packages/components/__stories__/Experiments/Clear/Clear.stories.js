@@ -1,6 +1,6 @@
 import { Animated, Sortable, Text, View } from '@wp-g2/components';
-import { createStore } from '@wp-g2/context';
 import { ThemeProvider } from '@wp-g2/styles';
+import { createStore } from '@wp-g2/substate';
 import { arrayMove, colorize } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';

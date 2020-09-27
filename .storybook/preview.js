@@ -55,7 +55,7 @@ const defaultThemeConfig = {
 	fontSize: '13px',
 };
 
-function Themer({ inspector, setInspector }) {
+const Themer = React.memo(({ inspector, setInspector }) => {
 	const [themeConfig, setThemeConfig] = useLocalState(
 		'themeConfig',
 		defaultThemeConfig,
@@ -365,7 +365,7 @@ function Themer({ inspector, setInspector }) {
 			</View>
 		</View>
 	);
-}
+});
 
 function StoryDecorator(storyFn) {
 	const [inspector, setInspector] = useLocalState('inspector', false);

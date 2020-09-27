@@ -1,6 +1,7 @@
 export * from './useBoolState';
 export * from './useClipboard';
 export * from './useControlledState';
+export * from './useIsomorphicLayoutEffect';
 export * from './useListState';
 export * from './useLocalState';
 export * from './useMediaQuery';

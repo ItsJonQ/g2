@@ -1,4 +1,4 @@
-import { createStore } from '@wp-g2/context';
+import { createStore } from '@wp-g2/substate';
 import { createContext, useContext, useEffect, useRef } from 'react';
 
 export const ModalContext = createContext({ dialog: {} });
