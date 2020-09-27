@@ -1,5 +1,5 @@
 import { css, cx } from '@wp-g2/styles';
-import { is, kebabCase, uniq } from '@wp-g2/utils';
+import { is, kebabCase, memoize, uniq } from '@wp-g2/utils';
 
 import { CONNECTED_NAMESPACE } from './constants';
 import { useComponentsContext } from './ContextSystemProvider';
@@ -73,7 +73,7 @@ export function useContextSystem(props, namespace, forwardedRef) {
 		initialMergedProps.cx,
 		initialMergedProps.__css && css(initialMergedProps.__css),
 		initialMergedProps.css && css(initialMergedProps.css),
-		getStyledClassNameFromKey(key),
+		memoizedGetStyledClassNameFromKey(key),
 		props.className,
 	);
 
@@ -139,3 +139,5 @@ function getStyledClassNameFromKey(key) {
 
 	return '';
 }
+
+const memoizedGetStyledClassNameFromKey = memoize(getStyledClassNameFromKey);

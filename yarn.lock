@@ -18432,7 +18432,7 @@ react-live@^2.2.2:
     react-simple-code-editor "^0.10.0"
     unescape "^1.0.1"
 
-react-merge-refs@^1.0.0:
+react-merge-refs@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
@@ -18845,17 +18845,29 @@ reakit-utils@^0.13.1:
   resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.13.1.tgz#060b8b2a55eea1170c6d8ff37cd98c10c63ee55c"
   integrity sha512-NBKgsot3tU91gZgK5MTInI/PR0T3kIsTmbU5MbGggSOcwU2dG/kbE8IrM2lC6ayCSL2W2QWkijT6kewdrIX7Gw==
 
+reakit-utils@^0.14.4:
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.14.4.tgz#1ecf035faf58960ba48eac2963f70269596effcf"
+  integrity sha512-jDEf/NmZVJ6fs10G16ifD+RFhQikSLN7VfjRHu0CPoUj4g6lFXd5PPcRXCY81qiqc9FVHjr2d2fmsw1hs6xUxA==
+
 reakit-utils@^0.15.0-alpha.2:
   version "0.15.0-alpha.2"
   resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.15.0-alpha.2.tgz#1e4572fc11b264a22321af533d9aa6c4c34d108f"
   integrity sha512-+x5LdmlK9dhS9LQG+45xUT5oIbVV4T1mo/XMR8fw2SZtsDZJGjmj0jCCbKoNOSH1BIphYB5NKhP+ABdHGE5IvQ==
 
-reakit-warning@0.4.1, reakit-warning@^0.4.1:
+reakit-warning@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/reakit-warning/-/reakit-warning-0.4.1.tgz#a715302812c5fc7f89f35772d650423f09029b00"
   integrity sha512-AgnRN6cf8DYBF/mK2JEMFVL67Sbon8fDbFy1kfm0EDibtGsMOQtsFYfozZL7TwmJ4yg68VMhg8tmPHchVQRrlg==
   dependencies:
     reakit-utils "^0.13.1"
+
+reakit-warning@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/reakit-warning/-/reakit-warning-0.5.5.tgz#551afcfd9b0c3dc92eab21fcca001fc2ebbc8465"
+  integrity sha512-OuP1r7rlSSJZsoLuc0CPA2ACPKnWO8HDbFktiiidbT67UjuX6udYV1AUsIgMJ8ado9K5gZGjPj7IB/GDYo9Yjg==
+  dependencies:
+    reakit-utils "^0.14.4"
 
 reakit-warning@^0.6.0-alpha.2:
   version "0.6.0-alpha.2"
@@ -21485,6 +21497,11 @@ tinycolor2@^1.4.1:
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
   integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
 
+tinycolor2@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
+  integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
+
 title-case@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/title-case/-/title-case-2.1.1.tgz#3e127216da58d2bc5becf137ab91dae3a7cd8faa"
@@ -22391,10 +22408,10 @@ use-context-selector@^1.1.4:
   resolved "https://registry.yarnpkg.com/use-context-selector/-/use-context-selector-1.1.4.tgz#11c1cc3856a7ea06972a7b1e0402ce86b9a8ed31"
   integrity sha512-qJ1KFw6G7XUTdyiUODz+XO0fRdfB6qApjZP/R+uqtO5ptGdmmq276z2my5hU8SFhzFEwXCj7tFNFA9w8LVkjJQ==
 
-use-enhanced-state@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.10.tgz#00f1e20d0bfbf79f2fbe059fd7cecb848c030083"
-  integrity sha512-6R5SSSNFdgIlj+Fem8WDikPHxcM1C36cHEDQD9INy81K/Y3BHdVLh3LOyU8ilD+bNpqOoPgMLlx+6RN4SGjOcQ==
+use-enhanced-state@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.12.tgz#a7ac51529be618168aef6caa50e99efd0ee5e9ee"
+  integrity sha512-ll0LP+G/v/S35N9kzQ7PNLr5CFgdIwEv2N+UbOO/j7a/jUXd4TnB3eX532y7YNgJAQjqAfTWcOyMTx5DyapK8Q==
   dependencies:
     "@itsjonq/is" "0.0.2"
     array-move "^3.0.0"
@@ -23608,10 +23625,10 @@ zustand@^2.2.3:
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-2.2.4.tgz#3b38f9192ae06e6a737ce2d78cbdc321b1c7f185"
   integrity sha512-THkjmdAT3h7WzLGDFmC7LVdDOxplYXOdXy0rIEIe/Yn5NDUZNEpywurVdereUlL/hR0Yxm/P7uiSGNYw1eYxBA==
 
-zustand@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.0.0.tgz#218c2fb659d0cfb156683f3a6aa185896930721f"
-  integrity sha512-3vd7uYwDSmYA5mT5/78RQhZXFEud+YlD46hTpFAtkr45dzN6R61d3TnFBXmAAbz+mEeQ/koRx0rkf2P0/gMDTA==
+zustand@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.1.3.tgz#33df7f56ec11b3003458b60606addc94225b282c"
+  integrity sha512-Otuzh3r0GsatvsUWeXEwdYjZEw1TItWcAXwDGEHdXE4/k6WbAdVDxC21t/Poq4ZMB+2VaQNKICWu7eCBUJ65tQ==
 
 zwitch@^1.0.0:
   version "1.0.5"
