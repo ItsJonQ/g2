@@ -16,7 +16,7 @@ import {
 import { Schema } from '@wp-g2/protokit';
 import { css, styled, ui } from '@wp-g2/styles';
 import { atom, Provider, useAtom } from 'jotai';
-import React, { useState } from 'react';
+import React from 'react';
 
 export default {
 	title: 'DesignTools/GenericTool/PerformanceTest',
@@ -59,12 +59,29 @@ const SliderTextInput = React.memo(({ id, prop, value }) => {
 	);
 });
 
-const DimensionCard = React.memo(({ id, x, y, z }) => {
+const TitleInput = React.memo(({ id, value }) => {
+	const { updateDimension: atom } = useDimensionsContext();
+	const [, updateDimension] = useAtom(atom);
+
+	const handleOnChange = React.useCallback(
+		(next) => {
+			updateDimension({ id, prop: 'title', value: next });
+		},
+		[updateDimension, id],
+	);
+
+	return <TextInput onChange={handleOnChange} value={value} />;
+});
+
+const DimensionCard = React.memo(({ id, title, x, y, z }) => {
 	return (
 		<Card>
 			<CardBody>
 				<ListGroup>
 					<ListGroupHeader>Dimensions</ListGroupHeader>
+					<FormGroup label="Title">
+						<TitleInput id={id} value={title} />
+					</FormGroup>
 					<FormGroup label="x">
 						<SliderTextInput id={id} prop="x" value={x} />
 					</FormGroup>
@@ -83,7 +100,7 @@ const DimensionCard = React.memo(({ id, x, y, z }) => {
 const DimensonsContext = React.createContext({ dimensions: [] });
 const useDimensionsContext = () => React.useContext(DimensonsContext);
 
-const DimensionsList = () => {
+const DimensionsList = React.memo(() => {
 	const { dimensions: atom } = useDimensionsContext();
 	const [dimensions] = useAtom(atom);
 
@@ -94,9 +111,9 @@ const DimensionsList = () => {
 			})}
 		</ListGroup>
 	);
-};
+});
 
-const AddDimensionsButton = () => {
+const AddDimensionsButton = React.memo(() => {
 	const { addDimension: atom } = useDimensionsContext();
 	const [, addDimension] = useAtom(atom);
 
@@ -105,10 +122,10 @@ const AddDimensionsButton = () => {
 			Add New
 		</Button>
 	);
-};
+});
 
 const Example = () => {
-	const dimensions = atom([...dimensionSchema.make(2)]);
+	const dimensions = atom([...dimensionSchema.make(10)]);
 
 	const updateDimension = atom(
 		(get) => get(dimensions),
@@ -131,14 +148,11 @@ const Example = () => {
 		},
 	);
 
-	const contextValue = React.useMemo(
-		() => ({
-			addDimension,
-			updateDimension,
-			dimensions,
-		}),
-		[addDimension, dimensions, updateDimension],
-	);
+	const contextValue = {
+		addDimension,
+		updateDimension,
+		dimensions,
+	};
 
 	return (
 		<>
