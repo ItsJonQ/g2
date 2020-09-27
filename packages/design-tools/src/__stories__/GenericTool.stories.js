@@ -81,11 +81,9 @@ const DimensionCard = React.memo(({ id, title, x, y, z }) => {
 			<CardBody>
 				<ListGroup>
 					<ListGroupHeader>Dimensions</ListGroupHeader>
-					<Provider>
-						<FormGroup label="Title">
-							<TitleInput id={id} value={title} />
-						</FormGroup>
-					</Provider>
+					<FormGroup label="Title">
+						<TitleInput id={id} value={title} />
+					</FormGroup>
 					<FormGroup label="x">
 						<SliderTextInput id={id} prop="x" value={x} />
 					</FormGroup>
