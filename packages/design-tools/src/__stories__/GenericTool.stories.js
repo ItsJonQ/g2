@@ -6,10 +6,12 @@ import {
 	Container,
 	FormGroup,
 	Grid,
+	Heading,
 	HStack,
 	ListGroup,
 	ListGroupHeader,
 	Slider,
+	Spacer,
 	Surface,
 	TextInput,
 	VStack,
@@ -19,7 +21,7 @@ import { css, styled, ui } from '@wp-g2/styles';
 import React from 'react';
 
 export default {
-	title: 'DesignTools/GenericTool/PerformanceTest',
+	title: 'DesignTools/GenericTool/AtomicState/PerformanceTest',
 };
 
 const Frame = styled(Surface)`
@@ -79,9 +81,11 @@ const DimensionCard = React.memo(({ id, title, x, y, z }) => {
 			<CardBody>
 				<ListGroup>
 					<ListGroupHeader>Dimensions</ListGroupHeader>
-					<FormGroup label="Title">
-						<TitleInput id={id} value={title} />
-					</FormGroup>
+					<Provider>
+						<FormGroup label="Title">
+							<TitleInput id={id} value={title} />
+						</FormGroup>
+					</Provider>
 					<FormGroup label="x">
 						<SliderTextInput id={id} prop="x" value={x} />
 					</FormGroup>
@@ -160,6 +164,9 @@ const Example = () => {
 				css={css([ui.position.relative, ui.zIndex(2)])}
 				width={600}
 			>
+				<Spacer>
+					<Heading>Using atomic (Jotai)</Heading>
+				</Spacer>
 				<DimensonsContext.Provider value={contextValue}>
 					<Provider>
 						<VStack>
