@@ -5,7 +5,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "sideEffects": false,
-  "private": false,
+  "private": true,
   "types": "types",
   "scripts": {
     "clean": "rm -rf dist",
