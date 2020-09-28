@@ -130,7 +130,9 @@ export const PrefixSuffix = css`
 `;
 
 export const CaretWrapper = css`
-	margin-right: ${ui.space(-2)};
+	margin-left: ${ui.space(-2)};
+	position: relative;
+	right: ${ui.space(-2)};
 `;
 
 export const LoadingOverlay = css`
