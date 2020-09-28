@@ -22,7 +22,7 @@ import { createStore, shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
 export default {
-	title: 'DesignTools/GenericTool/StoreState/PerformanceTest',
+	title: 'DesignTools/GenericTool/SubState/PerformanceTest',
 };
 
 const Frame = styled(Surface)`
@@ -62,6 +62,10 @@ const createExampleStore = () => {
 		add: () =>
 			set((state) => ({
 				dimensions: [...state.dimensions, dimensionSchema.makeOne()],
+			})),
+		add10: () =>
+			set((state) => ({
+				dimensions: [...state.dimensions, ...dimensionSchema.make(10)],
 			})),
 		update: (_arg) => {
 			const { id, prop, value } = _arg;
@@ -194,6 +198,13 @@ const AddDimensionsButton = React.memo(() => {
 	);
 });
 
+const AddLotsOfDimensionsButton = React.memo(() => {
+	const { useStore } = useDimensionsContext();
+	const { add10 } = useStore();
+
+	return <Button onClick={add10}>Add 10</Button>;
+});
+
 const DimensionsCount = React.memo(() => {
 	const count = useDimensionsCount();
 	return (
@@ -222,6 +233,8 @@ const Example = () => {
 					<VStack>
 						<HStack>
 							<DimensionsCount />
+							<Spacer />
+							<AddLotsOfDimensionsButton />
 							<AddDimensionsButton />
 						</HStack>
 						<DimensionsList />

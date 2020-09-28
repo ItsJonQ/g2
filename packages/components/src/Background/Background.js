@@ -1,12 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { Surface } from '../Surface';
+import { View } from '../View';
+import { useBackground } from './useBackground';
 
 function Background(props, forwardedRef) {
-	const otherProps = useContextSystem(props, 'Background');
+	const otherProps = useBackground(props);
 
-	return <Surface variant="secondary" {...otherProps} ref={forwardedRef} />;
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(Background, 'Background');

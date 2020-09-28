@@ -16,7 +16,7 @@ exports[`props should render correctly 1`] = `
     tabindex="0"
   >
     <span
-      class="wp-components-text css-1jk3501"
+      class="wp-components-truncate wp-components-text css-1jk3501"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -50,12 +50,12 @@ exports[`props should render correctly 1`] = `
       </div>
     </span>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      class="css-1g8hj12"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-1xgp14x"
+        class="wp-components-truncate wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -104,7 +104,7 @@ exports[`props should render seamless 1`] = `
     tabindex="0"
   >
     <span
-      class="wp-components-text css-1jk3501"
+      class="wp-components-truncate wp-components-text css-1jk3501"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -138,12 +138,12 @@ exports[`props should render seamless 1`] = `
       </div>
     </span>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      class="css-1g8hj12"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-1xgp14x"
+        class="wp-components-truncate wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
@@ -191,7 +191,7 @@ exports[`props should render visible 1`] = `
     tabindex="0"
   >
     <span
-      class="wp-components-text css-1jk3501"
+      class="wp-components-truncate wp-components-text css-1jk3501"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -225,12 +225,12 @@ exports[`props should render visible 1`] = `
       </div>
     </span>
     <div
-      class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      class="css-1g8hj12"
       data-g2-c16t="true"
       data-g2-component="FlexBlock"
     >
       <span
-        class="wp-components-text css-1xgp14x"
+        class="wp-components-truncate wp-components-text css-1xgp14x"
         data-g2-c16t="true"
         data-g2-component="Text"
       >

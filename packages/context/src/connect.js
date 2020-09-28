@@ -12,6 +12,9 @@ const REACT_TYPEOF_KEY = '$$typeof';
 const CONNECT_NAMESPACE = '__styleSystemContextKey__';
 
 /**
+ * # DEPRECATED
+ * ## use contextConnect() instead.
+ *
  * Connects a component to the G2 Context system using a higher-order component.
  * The workflow for this connect HOC is similar to that of Redux.
  *

@@ -1,28 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, ui } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
 import { View } from '../View';
-import * as styles from './Flex.styles';
+import { useFlexItem } from './useFlexItem';
 
 function FlexItem(props, forwardedRef) {
-	const {
-		display: displayProp,
-		isBlock = false,
-		...otherProps
-	} = useContextSystem(props, 'FlexItem');
-	const sx = {};
+	const otherProps = useFlexItem(props);
 
-	sx.Base = css({
-		display: displayProp || ui.get('FlexItemDisplay'),
-		marginBottom: ui.get('FlexItemMarginBottom'),
-		marginLeft: ui.get('FlexItemMarginLeft'),
-		marginRight: ui.get('FlexItemMarginRight'),
-	});
-
-	const __css = css([styles.Item, sx.Base, isBlock && styles.block]);
-
-	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(FlexItem, 'FlexItem');

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
-<span
-  class="wp-components-text wp-components-subheading css-1kaqd9h"
+<div
+  class="wp-components-truncate wp-components-text wp-components-subheading css-1ky4hnw"
   data-g2-c16t="true"
   data-g2-component="Subheading"
 >
   Some people are worth melting for.
-</span>
+</div>
 `;

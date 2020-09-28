@@ -1,12 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import FlexItem from './FlexItem';
+import { View } from '../View';
+import { useFlexBlock } from './useFlexBlock';
 
 function FlexBlock(props, forwardedRef) {
-	const otherProps = useContextSystem(props, 'FlexBlock');
+	const otherProps = useFlexBlock(props);
 
-	return <FlexItem {...otherProps} isBlock={true} ref={forwardedRef} />;
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(FlexBlock, 'FlexBlock');

@@ -1,27 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, cx, get } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { Text } from '../Text';
+import { View } from '../View';
+import { useHeading } from './useHeading';
 
 function Heading(props, forwardedRef) {
-	const { as = 'div', className, size = 3, ...otherProps } = useContextSystem(
-		props,
-		'Heading',
-	);
-	const classes = cx([css({ fontSize: get(`fontSizeH${size}`) }), className]);
+	const otherProps = useHeading(props);
 
-	return (
-		<Text
-			as={as}
-			className={classes}
-			isBlock
-			size={size}
-			weight={600}
-			{...otherProps}
-			ref={forwardedRef}
-		/>
-	);
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(Heading, 'Heading');

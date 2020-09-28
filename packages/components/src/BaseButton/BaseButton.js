@@ -82,7 +82,7 @@ function BaseButton(props, forwardedRef) {
 			<LoadingOverlay isLoading={isLoading} />
 			<Flex
 				as="span"
-				css={[ui.frame.height('100%')]}
+				css={ui.frame.height('100%')}
 				gap={gap}
 				justify={justify}
 			>

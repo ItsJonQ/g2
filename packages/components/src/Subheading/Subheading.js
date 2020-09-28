@@ -1,25 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { Text } from '../Text';
-import * as styles from './Subheading.styles';
+import { View } from '../View';
+import { useSubheading } from './useSubheading';
 
 function Subheading(props, forwardedRef) {
-	const { className, ...otherProps } = useContextSystem(props, 'Subheading');
+	const otherProps = useSubheading(props);
 
-	const classes = cx([styles.uppercase, className]);
-
-	return (
-		<Text
-			className={classes}
-			size={10}
-			variant="muted"
-			weight={600}
-			{...otherProps}
-			ref={forwardedRef}
-		/>
-	);
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(Subheading, 'Subheading');

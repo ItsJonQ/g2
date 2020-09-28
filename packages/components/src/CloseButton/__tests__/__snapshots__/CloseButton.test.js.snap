@@ -16,7 +16,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-nlyp56"
+      class="css-6wai7"
       data-g2-c16t="true"
       data-g2-component="ButtonIcon"
     >
@@ -77,7 +77,7 @@ exports[`props should render size 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-nlyp56"
+      class="css-6wai7"
       data-g2-c16t="true"
       data-g2-component="ButtonIcon"
     >
@@ -138,7 +138,7 @@ exports[`props should render variant 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-nlyp56"
+      class="css-6wai7"
       data-g2-c16t="true"
       data-g2-component="ButtonIcon"
     >

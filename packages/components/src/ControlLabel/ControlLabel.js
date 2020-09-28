@@ -26,9 +26,8 @@ function ControlLabel(props, forwardedRef) {
 			isBlock
 			truncate={truncate}
 			{...otherProps}
-			ref={forwardedRef}
-			{...otherProps}
 			htmlFor={htmlFor}
+			ref={forwardedRef}
 		>
 			{children}
 		</Text>

@@ -1,49 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, cx, ui } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
 import { View } from '../View';
-import * as styles from './Surface.styles';
+import { useSurface } from './useSurface';
 
 function Surface(props, forwardedRef) {
-	const {
-		backgroundSize = 16,
-		border,
-		borderBottom,
-		borderLeft,
-		borderRight,
-		borderTop,
-		children,
-		variant = 'primary',
-		...otherProps
-	} = useContextSystem(props, 'Surface');
+	const otherProps = useSurface(props);
 
-	const sx = {};
-
-	sx.borders = styles.getBorders({
-		border,
-		borderBottom,
-		borderLeft,
-		borderRight,
-		borderTop,
-	});
-
-	const __css = cx([
-		styles.Surface,
-		sx.borders,
-		styles[variant],
-		css({
-			backgroundSize: `${ui.value.px(backgroundSize)} ${ui.value.px(
-				backgroundSize,
-			)}`,
-		}),
-	]);
-
-	return (
-		<View {...otherProps} cx={__css} ref={forwardedRef}>
-			{children}
-		</View>
-	);
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(Surface, 'Surface');

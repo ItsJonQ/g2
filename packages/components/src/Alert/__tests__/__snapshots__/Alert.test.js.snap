@@ -18,7 +18,7 @@ exports[`props should render as dismissable 1`] = `
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="css-1g8hj12"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
@@ -48,7 +48,7 @@ exports[`props should render as dismissable 1`] = `
             data-g2-component="Flex"
           >
             <span
-              class="wp-components-flex-item css-nlyp56"
+              class="css-6wai7"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
@@ -115,7 +115,7 @@ exports[`props should render correctly 1`] = `
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="css-1g8hj12"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
@@ -153,7 +153,7 @@ exports[`props should render with status 1`] = `
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="css-1g8hj12"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -183,7 +183,7 @@ exports[`props should render with status 1`] = `
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-flex-item css-nlyp56"
+                class="css-6wai7"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
@@ -247,7 +247,7 @@ exports[`props should render with status 1`] = `
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="css-1g8hj12"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -277,7 +277,7 @@ exports[`props should render with status 1`] = `
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-flex-item css-nlyp56"
+                class="css-6wai7"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
@@ -341,7 +341,7 @@ exports[`props should render with status 1`] = `
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="css-1g8hj12"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -371,7 +371,7 @@ exports[`props should render with status 1`] = `
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-flex-item css-nlyp56"
+                class="css-6wai7"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
@@ -435,7 +435,7 @@ exports[`props should render with status 1`] = `
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="css-1g8hj12"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -465,7 +465,7 @@ exports[`props should render with status 1`] = `
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-flex-item css-nlyp56"
+                class="css-6wai7"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
@@ -529,7 +529,7 @@ exports[`props should render with status 1`] = `
         data-g2-component="Flex"
       >
         <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          class="css-1g8hj12"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -559,7 +559,7 @@ exports[`props should render with status 1`] = `
               data-g2-component="Flex"
             >
               <span
-                class="wp-components-flex-item css-nlyp56"
+                class="css-6wai7"
                 data-g2-c16t="true"
                 data-g2-component="ButtonIcon"
               >
@@ -627,7 +627,7 @@ exports[`props should render with title 1`] = `
       data-g2-component="Flex"
     >
       <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        class="css-1g8hj12"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
@@ -637,7 +637,7 @@ exports[`props should render with title 1`] = `
           data-g2-component="Spacer"
         >
           <div
-            class="wp-components-text wp-components-heading css-bnjcxl"
+            class="wp-components-truncate wp-components-text wp-components-heading css-1eg87yz"
             data-g2-c16t="true"
             data-g2-component="Heading"
           >

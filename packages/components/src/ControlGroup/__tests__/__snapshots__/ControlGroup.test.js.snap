@@ -7,7 +7,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1bku9vz"
+    class="css-9vnecn"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -26,7 +26,7 @@ exports[`props should render correctly 1`] = `
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex-item css-18097f7"
+          class="css-1om21wv"
           data-g2-c16t="true"
           data-g2-component="ButtonContent"
         >
@@ -41,7 +41,7 @@ exports[`props should render correctly 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1kqydgx"
+    class="css-13t5k0m"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -60,7 +60,7 @@ exports[`props should render correctly 1`] = `
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex-item css-18097f7"
+          class="css-1om21wv"
           data-g2-c16t="true"
           data-g2-component="ButtonContent"
         >
@@ -84,7 +84,7 @@ exports[`props should render mixed control types 1`] = `
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1bku9vz"
+    class="css-9vnecn"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -100,12 +100,12 @@ exports[`props should render mixed control types 1`] = `
         id="salutations"
       />
       <div
-        class="wp-components-flex-item css-1hp6bbu"
+        class="css-2av5m8"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
         <span
-          class="wp-components-text css-ckswz2"
+          class="wp-components-truncate wp-components-text css-ckswz2"
           data-g2-c16t="true"
           data-g2-component="Text"
         >
@@ -136,7 +136,7 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1kqydgx"
+    class="css-13t5k0m"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -155,7 +155,7 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1kqydgx"
+    class="css-13t5k0m"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -174,7 +174,7 @@ exports[`props should render mixed control types 1`] = `
         data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex-item css-18097f7"
+          class="css-1om21wv"
           data-g2-c16t="true"
           data-g2-component="ButtonContent"
         >

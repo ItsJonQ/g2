@@ -1,33 +1,17 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx, ui } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Elevation } from '../Elevation';
-import { Surface } from '../Surface';
 import { View } from '../View';
-import * as styles from './Card.styles';
+import { useCard } from './useCard';
 
 function Card(props, forwardedRef) {
-	const {
-		children,
-		className,
-		elevation = 2,
-		isBorderless = false,
-		isRounded = true,
-		...otherProps
-	} = useContextSystem(props, 'Card');
-
-	const classes = cx([
-		styles.Card,
-		isBorderless && styles.borderless,
-		isRounded && styles.rounded,
-		className,
-	]);
-
+	const { children, elevation, isRounded, ...otherProps } = useCard(props);
 	const elevationBorderRadius = isRounded ? ui.get('cardBorderRadius') : 0;
 
 	return (
-		<Surface {...otherProps} className={classes} ref={forwardedRef}>
+		<View {...otherProps} ref={forwardedRef}>
 			<View {...ui.$('CardContent')}>{children}</View>
 			<Elevation
 				css={{ borderRadius: elevationBorderRadius }}
@@ -41,7 +25,7 @@ function Card(props, forwardedRef) {
 				value={elevation}
 				{...ui.$('CardElevation')}
 			/>
-		</Surface>
+		</View>
 	);
 }
 

@@ -1,3 +1,5 @@
+import { is } from '@wp-g2/utils';
+
 import { get } from '../core';
 
 export const BASE_FONT_SIZE = 13;
@@ -12,6 +14,8 @@ const PRESET_FONT_SIZES = {
 };
 
 export function getFontSize(size = BASE_FONT_SIZE) {
+	if (!is.number(size)) return size;
+
 	if (PRESET_FONT_SIZES[size]) {
 		return getFontSize(PRESET_FONT_SIZES[size]);
 	}

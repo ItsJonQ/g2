@@ -33,7 +33,7 @@ export const truncate = () => {
 
 export const highlight = () => {
 	return (
-		<Text highlightWords={['con']} truncate>
+		<Text highlightWords={['con']}>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
 			facilisis dictum tortor, eu tincidunt justo scelerisque tincidunt.
 			Duis semper dui id augue malesuada, ut feugiat nisi aliquam.

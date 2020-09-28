@@ -18,7 +18,7 @@ exports[`props should render animatedDuration 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -51,7 +51,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -84,7 +84,7 @@ exports[`props should render gutter 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -117,7 +117,7 @@ exports[`props should render placement 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -150,7 +150,7 @@ exports[`props should render visible 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -183,7 +183,7 @@ exports[`props should render without animation 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -218,7 +218,7 @@ exports[`props should render without content 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
@@ -251,7 +251,7 @@ exports[`props should render without modal 1`] = `
     data-g2-component="Flex"
   >
     <span
-      class="wp-components-flex-item css-18097f7"
+      class="css-1om21wv"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >

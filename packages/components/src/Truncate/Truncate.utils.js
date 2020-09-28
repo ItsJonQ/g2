@@ -6,6 +6,7 @@ export const TRUNCATE_TYPE = {
 	head: 'head',
 	middle: 'middle',
 	tail: 'tail',
+	none: 'none',
 };
 
 export const TRUNCATE_DEFAULT_PROPS = {
@@ -49,6 +50,11 @@ export function truncateMiddle(word, headLength, tailLength, ellipsis) {
 export function truncateContent(words = '', props) {
 	const mergedProps = { ...TRUNCATE_DEFAULT_PROPS, ...props };
 	const { ellipsis, ellipsizeMode, limit } = mergedProps;
+
+	if (ellipsizeMode === TRUNCATE_TYPE.none) {
+		return words;
+	}
+
 	let truncateHead;
 	let truncateTail;
 

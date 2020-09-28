@@ -93,7 +93,7 @@ export function useContextSystem(props, namespace, forwardedRef) {
 
 	finalComponentProps.children = rendered;
 	finalComponentProps.className = classes;
-	finalComponentProps.forwardedRef = forwardedRef;
+	// finalComponentProps.forwardedRef = forwardedRef;
 
 	/**
 	 * Omit props from finalComponentProps
