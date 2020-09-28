@@ -32,6 +32,8 @@
         "lodash.upperfirst": "^4.3.1",
         "memize": "^1.1.0",
         "react-merge-refs": "^1.1.0",
+        "@ngard/tiny-omit": "^1.0.0",
+        "@ngard/tiny-pick": "^1.0.0",
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.5.5",
         "tinycolor2": "^1.4.2",

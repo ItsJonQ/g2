@@ -1,5 +1,5 @@
 import { css, cx } from '@wp-g2/styles';
-import { is, kebabCase, memoize, uniq } from '@wp-g2/utils';
+import { is, kebabCase, memoize, omit, uniq } from '@wp-g2/utils';
 
 import { CONNECTED_NAMESPACE } from './constants';
 import { useContextStoreContext } from './ContextSystemProvider';
@@ -56,14 +56,9 @@ export function useContextSystem(props, namespace, forwardedRef) {
 			{};
 	}
 
-	const {
-		/**
-		 * "Forceful" overrides of component props coming from the Provider
-		 */
-		_overrides: overrideProps = {},
-		css: contextCSS,
-		...otherContextProps
-	} = contextProps;
+	const otherContextProps = omit(contextProps, ['_overrides', 'css']);
+	const contextCSS = contextProps.css;
+	const overrideProps = contextProps._overrides || {};
 
 	const initialMergedProps = Object.assign({}, otherContextProps, props);
 

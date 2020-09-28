@@ -2754,6 +2754,16 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@ngard/tiny-omit@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ngard/tiny-omit/-/tiny-omit-1.0.0.tgz#4f297b2235d0fb8a8c4fca0f446cbdffaf9a3644"
+  integrity sha512-caJKBagtphVUoGtjskunTJweirtO1WyrAghxbSNMNhLaoS4seiDSy0DQ0PkFNkcFHeLxAVb7K64FxwszKnqigw==
+
+"@ngard/tiny-pick@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ngard/tiny-pick/-/tiny-pick-1.0.0.tgz#01b8a3fd773fca09e5fbf5296057ad2ec833a5fb"
+  integrity sha512-/mHtYxLe8UEJPWz//kEX30xrwGKq2ikkTFZQJ7lAgQl9ao98NFlwz1A1JpCjw3W6ABB4ouP+GakkFlHQbDXpPA==
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"

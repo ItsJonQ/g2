@@ -12,9 +12,6 @@ export const createContextSystemStore = (initialState = {}) => {
 	const contextSystemStore = createStore((set) => ({
 		context: initialState,
 		setContext: (next = {}) => {
-			/**
-			 * We'll only handle shallow merges for now.
-			 */
 			set((prev) => {
 				return {
 					context: deepMerge(prev.context, next),
