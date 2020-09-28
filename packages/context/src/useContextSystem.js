@@ -2,10 +2,7 @@ import { css, cx } from '@wp-g2/styles';
 import { is, kebabCase, memoize, uniq } from '@wp-g2/utils';
 
 import { CONNECTED_NAMESPACE } from './constants';
-import {
-	useComponentsContext,
-	useContextStoreContext,
-} from './ContextSystemProvider';
+import { useContextStoreContext } from './ContextSystemProvider';
 import { ns } from './utils';
 
 /**

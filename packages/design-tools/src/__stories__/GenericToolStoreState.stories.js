@@ -12,6 +12,7 @@ import {
 	Slider,
 	Spacer,
 	Surface,
+	Text,
 	TextInput,
 	VStack,
 } from '@wp-g2/components';
@@ -79,10 +80,15 @@ const createExampleStore = () => {
  */
 const useDimension = (id) => {
 	const { useStore } = useDimensionsContext();
-	const { update } = useStore();
-	const dimension = useStore(
+	const [dimension, update] = useStore(
 		React.useCallback(
-			(state) => state.dimensions.find((i) => i.id === id),
+			(state) => {
+				/**
+				 * Selecting the individual item from the store.
+				 */
+				const item = state.dimensions.find((i) => i.id === id) || {};
+				return [item, state.update];
+			},
 			[id],
 		),
 		/**
@@ -92,7 +98,21 @@ const useDimension = (id) => {
 		shallowCompare,
 	);
 
-	return [dimension || {}, update];
+	return [dimension, update];
+};
+
+const useDimensionIds = () => {
+	const { useStore } = useDimensionsContext();
+	const ids = useStore((state) => state.dimensions.map((item) => item.id));
+
+	return ids;
+};
+
+const useDimensionsCount = () => {
+	const { useStore } = useDimensionsContext();
+	const count = useStore((state) => state.dimensions.length);
+
+	return count;
 };
 
 const SliderTextInput = React.memo(({ id, prop }) => {
@@ -152,13 +172,12 @@ const DimensionCard = React.memo(({ id }) => {
 });
 
 const DimensionsList = React.memo(() => {
-	const { useStore } = useDimensionsContext();
-	const { dimensions } = useStore();
+	const dimensions = useDimensionIds();
 
 	return (
 		<ListGroup>
-			{dimensions.map((item) => {
-				return <DimensionCard id={item.id} key={item.id} />;
+			{dimensions.map((id) => {
+				return <DimensionCard id={id} key={id} />;
 			})}
 		</ListGroup>
 	);
@@ -172,6 +191,15 @@ const AddDimensionsButton = React.memo(() => {
 		<Button onClick={add} variant="primary">
 			Add New
 		</Button>
+	);
+});
+
+const DimensionsCount = React.memo(() => {
+	const count = useDimensionsCount();
+	return (
+		<Text>
+			Items <strong>({count})</strong>
+		</Text>
 	);
 });
 
@@ -193,6 +221,7 @@ const Example = () => {
 				<DimensonsContext.Provider value={contextValue}>
 					<VStack>
 						<HStack>
+							<DimensionsCount />
 							<AddDimensionsButton />
 						</HStack>
 						<DimensionsList />
