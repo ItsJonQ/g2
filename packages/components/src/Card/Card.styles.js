@@ -9,19 +9,27 @@ export const Header = css`
 	border-bottom: 1px solid;
 `;
 
+export const Content = css`
+	height: 100%;
+`;
+
 export const Body = css`
-	${ui.padding(3)};
+	height: 100%;
+	padding: ${ui.get('cardPadding')};
 `;
 
 export const InnerBody = css`
-	${ui.margin.x(-3)};
+	margin-left: calc(${ui.get('cardPadding')} * -1);
+	margin-right: calc(${ui.get('cardPadding')} * -1);
 `;
 
 export const headerFooter = css`
-	${ui.padding.x(3)};
-	${ui.padding.y(1)};
 	border-color: ${ui.get('colorDivider')};
-	min-height: 44px;
+	min-height: ${ui.get('cardHeaderHeight')};
+	padding-bottom: ${ui.get('cardHeaderFooterPaddingY')};
+	padding-left: ${ui.get('cardPaddingX')};
+	padding-right: ${ui.get('cardPaddingX')};
+	padding-top: ${ui.get('cardHeaderFooterPaddingY')};
 `;
 
 export const borderRadius = css`

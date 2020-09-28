@@ -23,7 +23,7 @@ export function useFlex(props) {
 
 	sx.Base = css({
 		[ui.createToken('FlexGap')]: ui.space(gap),
-		[ui.createToken('FlexItemDisplay')]: isColumn ? 'block' : undefined,
+		[ui.createToken('FlexItemDisplay')]: isColumn ? 'block' : null,
 		[ui.createToken('FlexItemMarginBottom')]: isColumn
 			? ui.get('FlexGap')
 			: 0,
@@ -33,8 +33,9 @@ export function useFlex(props) {
 			!isColumn && isReverse ? ui.get('FlexGap') : 0,
 		alignItems: isColumn ? 'normal' : align,
 		flexDirection: direction,
-		flexWrap: wrap ? 'wrap' : undefined,
+		flexWrap: wrap ? 'wrap' : null,
 		justifyContent: justify,
+		height: isColumn ? '100%' : null,
 		/**
 		 * Workaround to optimize DOM rendering.
 		 * We'll enhance alignment with naive parent flex assumptions.

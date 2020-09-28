@@ -81,6 +81,7 @@ export declare type CardBodyProps = {
 
 /**
  * `CardBody` is a layout component, rendering the contents of a `Card`.
+ * Multiple `CardBody` components can be used within `Card` if needed.
  *
  * @example
  * ```jsx

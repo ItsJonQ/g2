@@ -6,10 +6,12 @@ import { Flex } from '../Flex';
 import * as styles from './Card.styles';
 
 function CardFooter(props, forwardedRef) {
-	const { className, size = 'medium', ...otherProps } = useContextSystem(
-		props,
-		'CardFooter',
-	);
+	const {
+		className,
+		justify = 'flex-end',
+		size = 'medium',
+		...otherProps
+	} = useContextSystem(props, 'CardFooter');
 
 	const classes = cx([
 		styles.borderRadius,
@@ -18,7 +20,14 @@ function CardFooter(props, forwardedRef) {
 		className,
 	]);
 
-	return <Flex {...otherProps} className={classes} ref={forwardedRef} />;
+	return (
+		<Flex
+			{...otherProps}
+			className={classes}
+			justify={justify}
+			ref={forwardedRef}
+		/>
+	);
 }
 
 export default contextConnect(CardFooter, 'CardFooter');

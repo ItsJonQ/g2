@@ -108,6 +108,11 @@ const BUTTON_PROPS = {
 
 const CARD_PROPS = {
 	cardBorderRadius: '8px',
+	cardPaddingX: '12px',
+	cardPaddingY: '12px',
+	cardPadding: `${get('cardPaddingX')} ${get('cardPaddingY')}`,
+	cardHeaderFooterPaddingY: '4px',
+	cardHeaderHeight: '44px',
 };
 
 const BASE_THEME = {

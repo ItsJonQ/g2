@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Elevation } from '../Elevation';
 import { View } from '../View';
+import * as styles from './Card.styles';
 import { useCard } from './useCard';
 
 function Card(props, forwardedRef) {
@@ -12,7 +13,9 @@ function Card(props, forwardedRef) {
 
 	return (
 		<View {...otherProps} ref={forwardedRef}>
-			<View {...ui.$('CardContent')}>{children}</View>
+			<View {...ui.$('CardContent')} css={styles.Content}>
+				{children}
+			</View>
 			<Elevation
 				css={{ borderRadius: elevationBorderRadius }}
 				isInteractive={false}

@@ -5,6 +5,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "sideEffects": false,
+  "types": "types",
   "scripts": {
     "clean": "rm -rf dist",
     "build:es": "BUILD_FORMAT=es zero build -d dist/es",
@@ -15,6 +16,7 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
+    "@types/faker": "^5.1.2",
     "@wp-g2/utils": "^0.0.76",
     "faker": "^4.1.0",
     "faker-schema": "^1.0.2",

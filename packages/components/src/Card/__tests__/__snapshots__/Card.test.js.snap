@@ -7,24 +7,24 @@ exports[`props should render CardInnerBody 1`] = `
   data-g2-component="Card"
 >
   <div
-    class="css-j1yu9m"
+    class="css-e1hgjj"
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-wqbl37"
+      class="wp-components-flex wp-components-card-header css-1lzhbb"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
     />
     <div
-      class="wp-components-card-inner-body css-1jols3x"
+      class="wp-components-card-inner-body css-rlgt1m"
       data-g2-c16t="true"
       data-g2-component="CardInnerBody"
     >
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-1nuyb0q"
+      class="wp-components-flex wp-components-card-footer css-skobos"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
@@ -72,17 +72,17 @@ exports[`props should render correctly 1`] = `
   data-g2-component="Card"
 >
   <div
-    class="css-j1yu9m"
+    class="css-e1hgjj"
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-wqbl37"
+      class="wp-components-flex wp-components-card-header css-1lzhbb"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
     />
     <div
-      class="wp-components-scrollable wp-components-card-body css-1ojbcxg"
+      class="wp-components-scrollable wp-components-card-body css-815zk"
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >
@@ -94,7 +94,7 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-1nuyb0q"
+      class="wp-components-flex wp-components-card-footer css-skobos"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
@@ -142,7 +142,7 @@ exports[`props should render elevation 1`] = `
   data-g2-component="Card"
 >
   <div
-    class="css-j1yu9m"
+    class="css-e1hgjj"
     data-g2-component="CardContent"
   />
   <div
@@ -165,7 +165,7 @@ exports[`props should render no elevation 1`] = `
   data-g2-component="Card"
 >
   <div
-    class="css-j1yu9m"
+    class="css-e1hgjj"
     data-g2-component="CardContent"
   />
   <div
