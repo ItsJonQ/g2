@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
@@ -9,15 +9,16 @@ import { TAG_COLORS } from './Tag.utils';
 import TagRemoveButton from './TagRemoveButton';
 const { TagView } = styles;
 
-function Tag({
-	children,
-	color = 'standard',
-	display = 'inline-flex',
-	href,
-	onRemove = noop,
-	removeButtonText,
-	...props
-}) {
+function Tag(props, forwardedRef) {
+	const {
+		children,
+		color = 'standard',
+		display = 'inline-flex',
+		href,
+		onRemove = noop,
+		removeButtonText,
+		...otherProps
+	} = useContextSystem(props, 'Tag');
 	const tagColor = TAG_COLORS[color] || TAG_COLORS.standard;
 	const sx = {};
 
@@ -34,7 +35,13 @@ function Tag({
 	const asProp = href ? 'a' : 'span';
 
 	return (
-		<TagView {...props} as={asProp} cx={__css} href={href}>
+		<TagView
+			{...otherProps}
+			as={asProp}
+			cx={__css}
+			href={href}
+			ref={forwardedRef}
+		>
 			<Text
 				className={styles.text}
 				color="currentColor"
@@ -52,4 +59,4 @@ function Tag({
 	);
 }
 
-export default connect(Tag, 'Tag');
+export default contextConnect(Tag, 'Tag');

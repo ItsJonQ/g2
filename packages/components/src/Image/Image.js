@@ -1,11 +1,15 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { AspectRatio } from '../AspectRatio';
 import { ImageView } from './Image.styles';
 
-function Image({ aspectRatio, fit, height, width, ...props }) {
+function Image(props, forwardedRef) {
+	const { aspectRatio, fit, height, width, ...otherProps } = useContextSystem(
+		props,
+		'Image',
+	);
 	const sx = {};
 	const aspectFit = aspectRatio && !fit ? 'cover' : fit;
 	const preferredFit = aspectRatio ? aspectFit : fit;
@@ -24,10 +28,11 @@ function Image({ aspectRatio, fit, height, width, ...props }) {
 	const __css = cx([sx.base, sx.fit, fit && sx.fitSize]);
 
 	const imageProps = {
-		...props,
+		...otherProps,
 		__css,
 		height,
 		width,
+		ref: forwardedRef,
 	};
 
 	if (aspectRatio) {
@@ -41,4 +46,4 @@ function Image({ aspectRatio, fit, height, width, ...props }) {
 	return <ImageView {...imageProps} />;
 }
 
-export default connect(Image, 'Image');
+export default contextConnect(Image, 'Image');

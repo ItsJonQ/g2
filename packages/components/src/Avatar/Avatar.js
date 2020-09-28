@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, get } from '@wp-g2/styles';
 import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
@@ -10,16 +10,18 @@ import { AvatarView } from './Avatar.styles';
 import * as styles from './Avatar.styles';
 import { getBorderRadius, getInitialsTextSize, getSize } from './Avatar.utils';
 
-function Avatar({
-	animateOnImageLoad = true,
-	border = false,
-	color = get('lightGray500'),
-	name,
-	shape = 'circle',
-	size: sizeProp = 'medium',
-	src,
-	...props
-}) {
+function Avatar(props, forwardedRef) {
+	const {
+		animateOnImageLoad = true,
+		border = false,
+		color = get('lightGray500'),
+		name,
+		shape = 'circle',
+		size: sizeProp = 'medium',
+		src,
+		...otherProps
+	} = useContextSystem(props, 'Avatar');
+
 	const [imageLoaded, setImageLoaded] = useState(!animateOnImageLoad);
 	const size = getSize(sizeProp);
 	const borderRadius = getBorderRadius(shape, size);
@@ -45,9 +47,9 @@ function Avatar({
 	const __css = cx([sx.base, sx.borderRadius, border && styles.border]);
 
 	return (
-		<AvatarView {...props} cx={__css}>
+		<AvatarView {...otherProps} cx={__css} ref={forwardedRef}>
 			{shouldRenderInitials && (
-				<View css={[ui.position.absolute, ui.alignment.center]}>
+				<View css={css([ui.position.absolute, ui.alignment.center])}>
 					<Initials
 						{...ui.$('AvatarInitials')}
 						align="center"
@@ -64,7 +66,7 @@ function Avatar({
 					{...ui.$('AvatarImage')}
 					alt={name}
 					aspectRatio={1}
-					css={[
+					css={css([
 						{
 							borderRadius,
 							// Prevents image clipping from revealing background colour
@@ -72,7 +74,7 @@ function Avatar({
 						},
 						ui.opacity(imageLoaded ? 1 : 0),
 						ui.animation.default,
-					]}
+					])}
 					onLoad={handleOnImageLoad}
 					src={src}
 				/>
@@ -81,4 +83,4 @@ function Avatar({
 	);
 }
 
-export default connect(Avatar, 'Avatar');
+export default contextConnect(Avatar, 'Avatar');

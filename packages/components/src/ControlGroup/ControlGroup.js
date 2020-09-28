@@ -62,13 +62,7 @@ function ControlGroup(props, forwardedRef) {
 	});
 
 	return (
-		<Flex
-			autoWrap={false}
-			direction={direction}
-			gap={0}
-			{...otherProps}
-			ref={forwardedRef}
-		>
+		<Flex direction={direction} gap={0} {...otherProps} ref={forwardedRef}>
 			{clonedChildren}
 		</Flex>
 	);

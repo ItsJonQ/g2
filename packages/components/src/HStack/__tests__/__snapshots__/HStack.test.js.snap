@@ -2,113 +2,65 @@
 
 exports[`props should render Spacer 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-1uij2dg"
+  class="wp-components-flex wp-components-h-stack css-4qwq0s"
   data-g2-c16t="true"
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
   <div
     class="wp-components-flex-item css-1j3zl9k"
     data-g2-c16t="true"
     data-g2-component="Spacer"
   />
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
 </div>
 `;
 
 exports[`props should render alignment 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-x0hmeh"
+  class="wp-components-flex wp-components-h-stack css-hvm5bc"
   data-g2-c16t="true"
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
 </div>
 `;
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-2oqkbq"
+  class="wp-components-flex wp-components-h-stack css-uwh7tl"
   data-g2-c16t="true"
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
 </div>
 `;
 
 exports[`props should render spacing 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-1uij2dg"
+  class="wp-components-flex wp-components-h-stack css-4qwq0s"
   data-g2-c16t="true"
   data-g2-component="HStack"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
   <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="css-j1yu9m"
-    />
-  </div>
+    class="css-j1yu9m"
+  />
 </div>
 `;

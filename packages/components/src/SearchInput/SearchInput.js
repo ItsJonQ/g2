@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiSearch } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
@@ -12,19 +12,23 @@ import { View } from '../View';
 import * as styles from './SearchInput.styles';
 import ClearButton from './SearchInputClearButton';
 
-function SearchInput({
-	className,
-	forwardedRef,
-	isLoading = false,
-	placeholder = 'Search...',
-	prefix,
-	onChange = noop,
-	onClear = noop,
-	suffix,
-	value,
-	...props
-}) {
-	const [state, setState] = useControlledState(value);
+function SearchInput(props, forwardedRef) {
+	const {
+		className,
+		defaultValue = '',
+		isLoading = false,
+		placeholder = 'Search...',
+		prefix,
+		onChange = noop,
+		onClear = noop,
+		suffix,
+		value,
+		...otherProps
+	} = useContextSystem(props, 'SearchInput');
+
+	const [state, setState] = useControlledState(value, {
+		initial: defaultValue,
+	});
 	const textInputRef = useRef();
 
 	const handleOnChange = (next, changeProps) => {
@@ -60,12 +64,12 @@ function SearchInput({
 			}
 			type="search"
 			value={state}
-			{...props}
+			{...otherProps}
 		/>
 	);
 }
 
-function SearchPrefix({ isLoading = false, prefix }) {
+const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
 	return (
 		<>
 			<View css={[ui.opacity(0.5), ui.margin.right(-1)]}>
@@ -80,6 +84,6 @@ function SearchPrefix({ isLoading = false, prefix }) {
 			{prefix}
 		</>
 	);
-}
+});
 
-export default connect(SearchInput, 'SearchInput');
+export default contextConnect(SearchInput, 'SearchInput');

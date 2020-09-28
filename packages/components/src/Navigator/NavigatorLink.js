@@ -1,4 +1,9 @@
-import { connect, ContextSystemProvider, hasNamespace } from '@wp-g2/context';
+import {
+	contextConnect,
+	ContextSystemProvider,
+	hasNamespace,
+	useContextSystem,
+} from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -6,20 +11,21 @@ import * as linkStyles from '../Link/Link.styles';
 import * as styles from './Navigator.styles';
 import { NavLink, useHistory } from './Router';
 
-function NavigatorLink({
-	as,
-	children,
-	className,
-	exact,
-	forwardedRef,
-	href,
-	isBack,
-	isPlain,
-	params,
-	showArrow,
-	to,
-	...props
-}) {
+function NavigatorLink(props, forwardedRef) {
+	const {
+		as,
+		children,
+		className,
+		exact,
+		href,
+		isBack,
+		isPlain,
+		params,
+		showArrow,
+		to,
+		...otherProps
+	} = useContextSystem(props, 'NavigatorLink');
+
 	const history = useHistory();
 	const [child] = React.Children.toArray(children);
 	const isWrappingMenuItem = hasNamespace(child, ['MenuItem']);
@@ -63,7 +69,7 @@ function NavigatorLink({
 			<a
 				href={href || '#'}
 				ref={forwardedRef}
-				{...props}
+				{...otherProps}
 				className={classes}
 				onClick={handleOnClick}
 			>
@@ -74,7 +80,7 @@ function NavigatorLink({
 
 	return (
 		<NavLink
-			{...props}
+			{...otherProps}
 			activeClassName="is-active"
 			className={classes}
 			exact={exact}
@@ -87,4 +93,4 @@ function NavigatorLink({
 	);
 }
 
-export default connect(NavigatorLink, 'NavigatorLink');
+export default contextConnect(NavigatorLink, 'NavigatorLink');

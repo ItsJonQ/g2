@@ -1,11 +1,13 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import * as styles from './List.styles';
 const { ListItemView } = styles;
 
-function ListItem({ ...props }) {
-	return <ListItemView {...props} />;
+function ListItem(props, forwardedRef) {
+	const { ...otherProps } = useContextSystem(props, 'ListItem');
+
+	return <ListItemView {...otherProps} ref={forwardedRef} />;
 }
 
-export default connect(ListItem, 'ListItem');
+export default contextConnect(ListItem, 'ListItem');

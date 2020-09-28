@@ -16,7 +16,7 @@ function TextInput(props, forwardedRef) {
 		align,
 		className,
 		disabled,
-		defaultValue,
+		defaultValue = '',
 		gap = 2.5,
 		id: idProp,
 		isResizable = false,

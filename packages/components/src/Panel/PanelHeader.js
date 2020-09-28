@@ -1,15 +1,19 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { ArrowIndicator } from '../ArrowIndicator';
 import { CollapsibleTrigger, useCollapsibleContext } from '../Collapsible';
-import { Flex, FlexBlock, FlexItem } from '../Flex';
+import { Flex, FlexBlock } from '../Flex';
 import { Text } from '../Text';
 import { usePanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
 
-function PanelHeader({ children, className, title, ...props }) {
+function PanelHeader(props, forwardedRef) {
+	const { children, className, title, ...otherProps } = useContextSystem(
+		props,
+		'PanelHeader',
+	);
 	const { disclosure } = useCollapsibleContext();
 	const { isSeamless } = usePanelContext();
 	const { visible } = disclosure;
@@ -24,15 +28,18 @@ function PanelHeader({ children, className, title, ...props }) {
 	]);
 
 	return (
-		<CollapsibleTrigger as={Flex} className={classes} {...props}>
-			<FlexItem>
-				<Text isBlock>
-					<ArrowIndicator direction={direction} size={5} width={5} />
-				</Text>
-			</FlexItem>
+		<CollapsibleTrigger
+			as={Flex}
+			className={classes}
+			{...otherProps}
+			ref={forwardedRef}
+		>
+			<Text isBlock>
+				<ArrowIndicator direction={direction} size={5} width={5} />
+			</Text>
 			<FlexBlock>{content}</FlexBlock>
 		</CollapsibleTrigger>
 	);
 }
 
-export default connect(PanelHeader, 'PanelHeader');
+export default contextConnect(PanelHeader, 'PanelHeader');

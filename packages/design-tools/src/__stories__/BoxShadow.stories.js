@@ -19,6 +19,7 @@ import {
 	Surface,
 	Text,
 	TextInput,
+	View,
 	VStack,
 } from '@wp-g2/components';
 import { FiMinus, FiPlus } from '@wp-g2/icons';
@@ -216,27 +217,22 @@ const ShadowEntryView = ({ id, initialState }) => {
 	const { color, x, y, z } = useShadow(id, initialState);
 	const colorValue = getShadowColor({ color });
 	return (
-		<HStack>
-			<ColorCircle color={colorValue} size="small" />
-			<HStack spacing={1}>
-				<Text isBlock size="caption" weight="bold">
-					X
-				</Text>
-				<Badge>{ui.value.px(x)}</Badge>
-			</HStack>
-			<HStack spacing={1}>
-				<Text isBlock size="caption" weight="bold">
-					Y
-				</Text>
-				<Badge>{ui.value.px(y)}</Badge>
-			</HStack>
-			<HStack spacing={1}>
-				<Text isBlock size="caption" weight="bold">
-					Z
-				</Text>
-				<Badge>{ui.value.px(z)}</Badge>
-			</HStack>
-			<Spacer />
+		<HStack alignment="left">
+			<View>
+				<ColorCircle color={colorValue} size="small" />
+			</View>
+			<Text isBlock size="caption" weight="bold">
+				X
+			</Text>
+			<Badge>{ui.value.px(x)}</Badge>
+			<Text isBlock size="caption" weight="bold">
+				Y
+			</Text>
+			<Badge>{ui.value.px(y)}</Badge>
+			<Text isBlock size="caption" weight="bold">
+				Z
+			</Text>
+			<Badge>{ui.value.px(z)}</Badge>
 		</HStack>
 	);
 };

@@ -14,7 +14,7 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -48,7 +48,7 @@ exports[`props should render gutter 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -82,7 +82,7 @@ exports[`props should render label 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -116,7 +116,7 @@ exports[`props should render maxWidth 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -150,7 +150,7 @@ exports[`props should render placement 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -184,7 +184,7 @@ exports[`props should render visible 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -218,7 +218,7 @@ exports[`props should render without animation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -252,7 +252,7 @@ exports[`props should render without content 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -286,7 +286,7 @@ exports[`props should render without modal 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >

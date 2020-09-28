@@ -1,5 +1,5 @@
 import { TabPanel } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { mergeRefs } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 
@@ -7,7 +7,11 @@ import { View } from '../View';
 import { useNavigationStackContext } from './NavigationStack.Context';
 import { useCurrentPanelNode } from './NavigationStack.utils';
 
-function NavigationStackScreen({ children, forwardedRef, ...props }) {
+function NavigationStackScreen(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
+		'NavigationStackScreen',
+	);
 	const { __isRendered, tab } = useNavigationStackContext();
 	const tabRef = useRef();
 	const nodeRef = useRef();
@@ -23,7 +27,7 @@ function NavigationStackScreen({ children, forwardedRef, ...props }) {
 	return (
 		<TabPanel
 			{...tab}
-			{...props}
+			{...otherProps}
 			ref={mergeRefs([tabRef, forwardedRef])}
 			style={{
 				display: 'block',
@@ -37,4 +41,4 @@ function NavigationStackScreen({ children, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(NavigationStackScreen, 'NavigationStackScreen');
+export default contextConnect(NavigationStackScreen, 'NavigationStackScreen');

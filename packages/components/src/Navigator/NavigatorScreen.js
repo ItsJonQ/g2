@@ -1,24 +1,26 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Animated } from '../Animated';
 import { Route } from './Router';
 
-function NavigatorScreen({
-	animationEnterDelay = 0,
-	animationEnterDuration = 0.14,
-	animationExitDelay = 0,
-	animationExitDuration = 0.14,
-	children,
-	component,
-	path,
-	render,
-	...props
-}) {
+function NavigatorScreen(props, forwardedRef) {
+	const {
+		animationEnterDelay = 0,
+		animationEnterDuration = 0.14,
+		animationExitDelay = 0,
+		animationExitDuration = 0.14,
+		children,
+		component,
+		path,
+		render,
+		...otherProps
+	} = useContextSystem(props, 'NavigatorScreen');
 	return (
 		<Route
-			{...props}
+			{...otherProps}
 			path={path}
+			ref={forwardedRef}
 			render={(routeProps) => {
 				const { history } = routeProps;
 				const isBack =
@@ -74,4 +76,4 @@ function NavigatorScreen({
 	);
 }
 
-export default connect(NavigatorScreen, 'NavigatorScreen');
+export default contextConnect(NavigatorScreen, 'NavigatorScreen');

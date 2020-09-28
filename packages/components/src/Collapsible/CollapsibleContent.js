@@ -1,5 +1,5 @@
 import { DisclosureContent } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -24,7 +24,11 @@ const animationVariants = {
 	},
 };
 
-function CollapsibleContent({ children, className, forwardedRef, ...props }) {
+function CollapsibleContent(props, forwardedRef) {
+	const { children, className, ...otherProps } = useContextSystem(
+		props,
+		'CollapsibleContent',
+	);
 	const { disclosure } = useCollapsibleContext();
 
 	const isVisible = disclosure.visible;
@@ -34,7 +38,7 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 		<DisclosureContent
 			className={classes}
 			ref={forwardedRef}
-			{...props}
+			{...otherProps}
 			{...disclosure}
 		>
 			<Animated
@@ -51,4 +55,4 @@ function CollapsibleContent({ children, className, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(CollapsibleContent, 'CollapsibleContent');
+export default contextConnect(CollapsibleContent, 'CollapsibleContent');

@@ -1,15 +1,17 @@
 import { MenuButton } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Button } from '../Button';
 import { useDropdownContext } from './Dropdown.Context';
 
-function DropdownTrigger({ forwardedRef, ...props }) {
+function DropdownTrigger(props, forwardedRef) {
+	const { ...otherProps } = useContextSystem(props, 'DropdownTrigger');
 	const { menu } = useDropdownContext();
+
 	const componentProps = {
 		hasCaret: true,
-		...props,
+		...otherProps,
 		ref: forwardedRef,
 	};
 
@@ -20,4 +22,4 @@ function DropdownTrigger({ forwardedRef, ...props }) {
 	return <MenuButton as={Button} {...componentProps} {...menu} />;
 }
 
-export default connect(DropdownTrigger, 'DropdownTrigger');
+export default contextConnect(DropdownTrigger, 'DropdownTrigger');

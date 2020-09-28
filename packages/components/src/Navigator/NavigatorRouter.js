@@ -1,4 +1,3 @@
-import { connect } from '@wp-g2/context';
 import React, { useEffect } from 'react';
 
 import { MemoryRouter } from './Router';
@@ -22,4 +21,4 @@ function NavigatorRouter({ children, initialPath }) {
 	return children;
 }
 
-export default connect(NavigatorRouter, 'NavigatorRouter');
+export default React.memo(NavigatorRouter);

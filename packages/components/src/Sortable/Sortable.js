@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiMenu } from '@wp-g2/icons';
 import { styled } from '@wp-g2/styles';
 import { arrayMove, noop } from '@wp-g2/utils';
@@ -121,17 +121,19 @@ export const SortableContainer = sortableContainer(({ children, ...props }) => {
 	return <View {...props}>{children}</View>;
 });
 
-function Sortable({
-	isSortable,
-	items,
-	onRemove = noop,
-	distance = 5,
-	renderItem,
-	setItems,
-	useDragHandle = true,
-	itemComponent,
-	...props
-}) {
+function Sortable(props, forwardedRef) {
+	const {
+		isSortable,
+		items,
+		onRemove = noop,
+		distance = 5,
+		renderItem,
+		setItems,
+		useDragHandle = true,
+		itemComponent,
+		...otherProps
+	} = useContextSystem(props, 'Sortable');
+
 	const onSortEnd = ({ newIndex, oldIndex }) => {
 		if (setItems) {
 			setItems(arrayMove(items, oldIndex, newIndex));
@@ -142,8 +144,9 @@ function Sortable({
 		<SortableContainer
 			lockAxis="y"
 			onSortEnd={onSortEnd}
-			{...props}
+			{...otherProps}
 			distance={distance}
+			ref={forwardedRef}
 			useDragHandle={useDragHandle}
 		>
 			<AnimatedContainer initial={false}>
@@ -168,4 +171,4 @@ function Sortable({
 	);
 }
 
-export default connect(Sortable, 'Sortable');
+export default contextConnect(Sortable, 'Sortable');

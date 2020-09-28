@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
 
@@ -6,7 +6,11 @@ import { View } from '../View';
 import { useNavigationStackContext } from './NavigationStack.Context';
 import { useCurrentPanelIndex } from './NavigationStack.utils';
 
-function NavigationStackScreens({ children, forwardedRef, ...props }) {
+function NavigationStackScreens(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
+		'NavigationStackScreens',
+	);
 	const currentIndex = useCurrentPanelIndex();
 	const {
 		__isRendered,
@@ -30,7 +34,7 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 
 	return (
 		<View
-			{...props}
+			{...otherProps}
 			css={{
 				overflow: 'hidden',
 				position: 'relative',
@@ -60,4 +64,4 @@ function NavigationStackScreens({ children, forwardedRef, ...props }) {
 	);
 }
 
-export default connect(NavigationStackScreens, 'NavigationStackScreens');
+export default contextConnect(NavigationStackScreens, 'NavigationStackScreens');

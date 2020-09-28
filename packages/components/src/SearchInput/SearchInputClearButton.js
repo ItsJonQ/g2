@@ -1,4 +1,3 @@
-import { connect } from '@wp-g2/context';
 import { FiX } from '@wp-g2/icons';
 import { isValueEmpty, noop } from '@wp-g2/utils';
 import React from 'react';
@@ -6,7 +5,7 @@ import React from 'react';
 import { Button } from '../Button';
 import { View } from '../View';
 
-function SearchInputClearButton({ onClick = noop, value, ...props }) {
+function SearchInputClearButton({ onClick = noop, value, ...otherProps }) {
 	const hasValue = !isValueEmpty(value);
 
 	const handleOnClick = (event) => {
@@ -29,10 +28,10 @@ function SearchInputClearButton({ onClick = noop, value, ...props }) {
 				onClick={handleOnClick}
 				size="xxSmall"
 				tabIndex={-1}
-				{...props}
+				{...otherProps}
 			/>
 		</View>
 	);
 }
 
-export default connect(SearchInputClearButton, 'SearchInputClearButton');
+export default React.memo(SearchInputClearButton);

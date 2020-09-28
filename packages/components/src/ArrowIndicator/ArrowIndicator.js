@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -7,14 +7,16 @@ import { View } from '../View';
 import * as styles from './ArrowIndicator.styles';
 const { ArrowIndicatorView } = styles;
 
-function ArrowIndicator({
-	direction = 'right',
-	height,
-	iconSize = 5,
-	size = 24,
-	width,
-	...props
-}) {
+function ArrowIndicator(props, forwardedRef) {
+	const {
+		direction = 'right',
+		height,
+		iconSize = 5,
+		size = 24,
+		width,
+		...otherProps
+	} = useContextSystem(props, 'ArrowIndicator');
+
 	const rotations = {
 		down: 90,
 		left: 180,
@@ -30,7 +32,7 @@ function ArrowIndicator({
 	]);
 
 	return (
-		<ArrowIndicatorView {...props} cx={__css}>
+		<ArrowIndicatorView {...otherProps} cx={__css} ref={forwardedRef}>
 			<View animate={{ rotate }}>
 				<Icon
 					icon={
@@ -51,4 +53,4 @@ function ArrowIndicator({
 	);
 }
 
-export default connect(ArrowIndicator, 'ArrowIndicator');
+export default contextConnect(ArrowIndicator, 'ArrowIndicator');

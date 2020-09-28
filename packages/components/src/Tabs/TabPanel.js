@@ -1,12 +1,13 @@
 import { TabPanel as ReakitTabPanel } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';
 const { TabPanelView } = styles;
 
-function TabPanel({ forwardedRef, ...props }) {
+function TabPanel(props, forwardedRef) {
+	const { ...otherProps } = useContextSystem(props, 'TabPanel');
 	const { tab } = useTabsContext();
 
 	return (
@@ -14,9 +15,9 @@ function TabPanel({ forwardedRef, ...props }) {
 			as={TabPanelView}
 			ref={forwardedRef}
 			{...tab}
-			{...props}
+			{...otherProps}
 		/>
 	);
 }
 
-export default connect(TabPanel, 'TabPanel');
+export default contextConnect(TabPanel, 'TabPanel');

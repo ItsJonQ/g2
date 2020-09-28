@@ -35,7 +35,7 @@ export declare type FlexProps = {
 	 *
 	 * @default true
 	 */
-	autoWrap?: boolean;
+	// autoWrap?: boolean;
 	/**
 	 * The direction flow of the children content can be adjusted with `direction`. `column` will align children vertically and `row` will align children horizontally.
 	 *

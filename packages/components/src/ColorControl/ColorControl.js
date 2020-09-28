@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -6,7 +6,11 @@ import { Button } from '../Button';
 import { ColorCircle } from '../ColorCircle';
 import * as styles from './ColorControl.styles';
 
-function ColorControl({ children, className, color, ...props }) {
+function ColorControl(props, forwardedRef) {
+	const { children, className, color, ...otherProps } = useContextSystem(
+		props,
+		'ColorControl',
+	);
 	const classes = cx([styles.ColorControl, className]);
 
 	return (
@@ -15,9 +19,10 @@ function ColorControl({ children, className, color, ...props }) {
 			isBlock
 			isControl
 			isSubtle
+			ref={forwardedRef}
 			textAlign="left"
 			variant="tertiary"
-			{...props}
+			{...otherProps}
 			prefix={<ColorCircle color={color} size="small" />}
 		>
 			{children}
@@ -25,4 +30,4 @@ function ColorControl({ children, className, color, ...props }) {
 	);
 }
 
-export default connect(ColorControl, 'ColorControl');
+export default contextConnect(ColorControl, 'ColorControl');

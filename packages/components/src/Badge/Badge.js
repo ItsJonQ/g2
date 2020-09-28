@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -8,15 +8,17 @@ import { BADGE_COLORS } from './Badge.utils';
 
 const { BadgeView } = styles;
 
-function Badge({
-	children,
-	color: colorProp = 'standard',
-	display = 'inline-flex',
-	isBold = false,
-	isRounded = false,
-	truncate = true,
-	...props
-}) {
+function Badge(props, forwardedRef) {
+	const {
+		children,
+		color: colorProp = 'standard',
+		display = 'inline-flex',
+		isBold = false,
+		isRounded = false,
+		truncate = true,
+		...otherProps
+	} = useContextSystem(props, 'Badge');
+
 	const badgeColor = BADGE_COLORS[colorProp] || BADGE_COLORS.standard;
 	const sx = {};
 
@@ -33,7 +35,7 @@ function Badge({
 	]);
 
 	return (
-		<BadgeView {...props} cx={__css}>
+		<BadgeView {...otherProps} cx={__css} ref={forwardedRef}>
 			<Text
 				className={styles.text}
 				color="currentColor"
@@ -50,4 +52,4 @@ function Badge({
 	);
 }
 
-export default connect(Badge, 'Badge');
+export default contextConnect(Badge, 'Badge');

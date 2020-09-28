@@ -1,4 +1,3 @@
-import { connect } from '@wp-g2/context';
 import React from 'react';
 
 import { AnimatedContainer } from '../Animated';
@@ -18,4 +17,4 @@ function NavigatorSwitch({ children }) {
 	);
 }
 
-export default connect(NavigatorSwitch, 'NavigatorSwitch');
+export default React.memo(NavigatorSwitch);

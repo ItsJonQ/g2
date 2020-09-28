@@ -1,5 +1,5 @@
 import { Tab as ReakitTab } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
@@ -7,7 +7,8 @@ import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';
 const { TabView } = styles;
 
-function Tab({ className, forwardedRef, size, ...props }) {
+function Tab(props, forwardedRef) {
+	const { className, size, ...otherProps } = useContextSystem(props, 'Tab');
 	const { tab } = useTabsContext();
 	const classes = cx([styles[size], className]);
 
@@ -17,9 +18,9 @@ function Tab({ className, forwardedRef, size, ...props }) {
 			className={classes}
 			ref={forwardedRef}
 			{...tab}
-			{...props}
+			{...otherProps}
 		/>
 	);
 }
 
-export default connect(Tab, 'Tab');
+export default contextConnect(Tab, 'Tab');

@@ -1,14 +1,39 @@
-import { deepEqual, deepMerge, isEmpty } from '@wp-g2/utils';
-import React, {
-	createContext,
-	useContext,
-	useEffect,
-	useRef,
-	useState,
-} from 'react';
+import { createStore } from '@wp-g2/substate';
+import { deepEqual, deepMerge, useIsomorphicLayoutEffect } from '@wp-g2/utils';
+import React, { createContext, useContext, useRef } from 'react';
 
 export const ComponentsContext = createContext({});
 export const useComponentsContext = () => useContext(ComponentsContext);
+
+/**
+ * Creates an instance of a Context System store.
+ */
+export const createContextSystemStore = (initialState = {}) => {
+	const contextSystemStore = createStore((set) => ({
+		context: initialState,
+		setContext: (next = {}) => {
+			/**
+			 * We'll only handle shallow merges for now.
+			 */
+			set((prev) => {
+				return {
+					context: deepMerge(prev.context, next),
+				};
+			});
+		},
+	}));
+
+	return contextSystemStore;
+};
+
+const rootContextSystemStore = createContextSystemStore();
+export const useContextSystemStore = (store = rootContextSystemStore) =>
+	store();
+
+export const ContextStoreContext = createContext({
+	store: rootContextSystemStore,
+});
+export const useContextStoreContext = () => useContext(ContextStoreContext);
 
 /**
  * A Provider component that can modify props for connected components within
@@ -28,49 +53,75 @@ export const useComponentsContext = () => useContext(ComponentsContext);
  */
 export const ContextSystemProvider = React.memo(
 	({ children, shallow = false, value }) => {
-		const contextValue = useComponentsContextValue({ shallow, value });
+		const store = useContextSystemBridge({ value });
+		const contextValue = React.useMemo(() => ({ store }), [store]);
 
 		return (
-			<ComponentsContext.Provider value={contextValue}>
+			<ContextStoreContext.Provider value={contextValue}>
 				{children}
-			</ComponentsContext.Provider>
+			</ContextStoreContext.Provider>
 		);
 	},
 );
 
-function useComponentsContextValue({ shallow, value }) {
-	const previousValue = useComponentsContext();
+function useContextSystemBridge({ value }) {
+	const { store: parentStore } = useContextStoreContext();
+	const store = React.useRef(createContextSystemStore(value)).current;
 
-	const [contextValue, setContextValue] = useState(
-		getContextValue({ previousValue, value, shallow }),
-	);
-	const valueRef = useRef(value);
+	const { context: parentContext } = parentStore();
+	const { setContext } = store();
 
-	useEffect(() => {
-		if (deepEqual(value, valueRef.current)) return;
+	const valueRef = useRef();
+	const parentContextRef = useRef();
 
-		setContextValue(getContextValue({ previousValue, value, shallow }));
-
-		valueRef.current = value;
-	}, [shallow, value, previousValue]);
-
-	return contextValue;
-}
-
-function getContextValue({ previousValue, shallow = false, value = {} }) {
-	let mergedValues = value;
-
-	/**
-	 * Inheriting and resolving props from a potential parent ContextSystemProvider.
-	 * This model works similarly to CSS's cascading model.
-	 */
-	if (!isEmpty(previousValue)) {
-		if (shallow) {
-			mergedValues = { ...previousValue, ...value };
-		} else {
-			mergedValues = deepMerge(previousValue, value);
+	useIsomorphicLayoutEffect(() => {
+		if (!deepEqual(value, valueRef.current)) {
+			setContext(value);
+			valueRef.current = value;
 		}
-	}
 
-	return mergedValues;
+		if (!deepEqual(parentContext, parentContextRef.current)) {
+			setContext(parentContext);
+			parentContextRef.current = parentContext;
+		}
+	}, [value, setContext, parentContext]);
+
+	return store;
 }
+
+// function useComponentsContextValue({ shallow, value }) {
+// 	const previousValue = useComponentsContext();
+
+// 	const [contextValue, setContextValue] = useState(
+// 		getContextValue({ previousValue, value, shallow }),
+// 	);
+// 	const valueRef = useRef(value);
+
+// 	useEffect(() => {
+// 		if (deepEqual(value, valueRef.current)) return;
+
+// 		setContextValue(getContextValue({ previousValue, value, shallow }));
+
+// 		valueRef.current = value;
+// 	}, [shallow, value, previousValue]);
+
+// 	return contextValue;
+// }
+
+// function getContextValue({ previousValue, shallow = false, value = {} }) {
+// 	let mergedValues = value;
+
+// 	/**
+// 	 * Inheriting and resolving props from a potential parent ContextSystemProvider.
+// 	 * This model works similarly to CSS's cascading model.
+// 	 */
+// 	if (!isEmpty(previousValue)) {
+// 		if (shallow) {
+// 			mergedValues = { ...previousValue, ...value };
+// 		} else {
+// 			mergedValues = deepMerge(previousValue, value);
+// 		}
+// 	}
+
+// 	return mergedValues;
+// }

@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiChevronDown, FiChevronUp, FiMinus, FiPlus } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
@@ -8,14 +8,16 @@ import { Button } from '../Button';
 import { ControlGroup } from '../ControlGroup';
 import * as styles from './Stepper.styles';
 
-function Stepper({
-	className,
-	direction = 'horizontal',
-	onIncrement = noop,
-	onDecrement = noop,
-	size,
-	...props
-}) {
+function Stepper(props, forwardedRef) {
+	const {
+		className,
+		direction = 'horizontal',
+		onIncrement = noop,
+		onDecrement = noop,
+		size,
+		...otherProps
+	} = useContextSystem(props, 'Stepper');
+
 	const isVertical = direction === 'vertical';
 	const controlGroupDirection = isVertical ? 'column' : 'row';
 
@@ -63,7 +65,8 @@ function Stepper({
 			className={classes}
 			direction={controlGroupDirection}
 			isItemBlock
-			{...props}
+			{...otherProps}
+			ref={forwardedRef}
 		>
 			{buttons}
 		</ControlGroup>
@@ -92,4 +95,4 @@ function ControlButton({ isVertical, size, ...props }) {
 	);
 }
 
-export default connect(Stepper, 'Stepper');
+export default contextConnect(Stepper, 'Stepper');

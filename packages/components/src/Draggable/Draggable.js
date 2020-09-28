@@ -1,11 +1,12 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { DraggableView } from './Draggable.styles';
-import * as styles from './Draggable.styles';
 
-function Draggable({ ...props }) {
-	return <DraggableView {...props} />;
+function Draggable(props, forwardedRef) {
+	const { ...otherProps } = useContextSystem(props, 'Draggable');
+
+	return <DraggableView {...otherProps} ref={forwardedRef} />;
 }
 
-export default connect(Draggable, 'Draggable');
+export default contextConnect(Draggable, 'Draggable');

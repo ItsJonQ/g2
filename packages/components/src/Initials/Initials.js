@@ -1,17 +1,18 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { Text } from '../Text';
 import { getInitials } from './Initials.utils';
 
-function Initials({ name, ...props }) {
+function Initials(props, forwardedRef) {
+	const { name, ...otherProps } = useContextSystem(props, 'Initials');
 	const initials = getInitials(name);
 
 	return (
-		<Text weight={500} {...props}>
+		<Text weight={500} {...otherProps} ref={forwardedRef}>
 			{initials}
 		</Text>
 	);
 }
 
-export default connect(Initials, 'Initials');
+export default contextConnect(Initials, 'Initials');

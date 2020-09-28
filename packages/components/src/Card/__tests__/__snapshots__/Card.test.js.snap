@@ -11,7 +11,7 @@ exports[`props should render CardInnerBody 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-13wu4bh"
+      class="wp-components-flex wp-components-card-header css-d68z6g"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -24,44 +24,38 @@ exports[`props should render CardInnerBody 1`] = `
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-b5lq72"
+      class="wp-components-flex wp-components-card-footer css-83z55d"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
-      <div
-        class="wp-components-flex-item css-1bku9vz"
+      <button
+        aria-busy="false"
+        class="wp-components-base-button wp-components-button css-1x8lw6z"
+        data-destructive="false"
         data-g2-c16t="true"
-        data-g2-component="FlexItem"
+        data-g2-component="Button"
+        data-icon="false"
+        type="button"
       >
-        <button
-          aria-busy="false"
-          class="wp-components-base-button wp-components-button css-1x8lw6z"
-          data-destructive="false"
+        <span
+          class="wp-components-flex css-19zk68e"
           data-g2-c16t="true"
-          data-g2-component="Button"
-          data-icon="false"
-          type="button"
+          data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex css-m9tbel"
+            class="wp-components-flex-item css-18097f7"
             data-g2-c16t="true"
-            data-g2-component="Flex"
+            data-g2-component="ButtonContent"
           >
-            <span
-              class="wp-components-flex-item css-18097f7"
-              data-g2-c16t="true"
-              data-g2-component="ButtonContent"
-            >
-              Agree
-            </span>
+            Agree
           </span>
-          <span
-            class="wp-components-elevation css-17x6dun"
-            data-g2-c16t="true"
-            data-g2-component="ButtonElevation"
-          />
-        </button>
-      </div>
+        </span>
+        <span
+          class="wp-components-elevation css-17x6dun"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -88,7 +82,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-13wu4bh"
+      class="wp-components-flex wp-components-card-header css-d68z6g"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -106,44 +100,38 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-b5lq72"
+      class="wp-components-flex wp-components-card-footer css-83z55d"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
-      <div
-        class="wp-components-flex-item css-1bku9vz"
+      <button
+        aria-busy="false"
+        class="wp-components-base-button wp-components-button css-1x8lw6z"
+        data-destructive="false"
         data-g2-c16t="true"
-        data-g2-component="FlexItem"
+        data-g2-component="Button"
+        data-icon="false"
+        type="button"
       >
-        <button
-          aria-busy="false"
-          class="wp-components-base-button wp-components-button css-1x8lw6z"
-          data-destructive="false"
+        <span
+          class="wp-components-flex css-19zk68e"
           data-g2-c16t="true"
-          data-g2-component="Button"
-          data-icon="false"
-          type="button"
+          data-g2-component="Flex"
         >
           <span
-            class="wp-components-flex css-m9tbel"
+            class="wp-components-flex-item css-18097f7"
             data-g2-c16t="true"
-            data-g2-component="Flex"
+            data-g2-component="ButtonContent"
           >
-            <span
-              class="wp-components-flex-item css-18097f7"
-              data-g2-c16t="true"
-              data-g2-component="ButtonContent"
-            >
-              Agree
-            </span>
+            Agree
           </span>
-          <span
-            class="wp-components-elevation css-17x6dun"
-            data-g2-c16t="true"
-            data-g2-component="ButtonElevation"
-          />
-        </button>
-      </div>
+        </span>
+        <span
+          class="wp-components-elevation css-17x6dun"
+          data-g2-c16t="true"
+          data-g2-component="ButtonElevation"
+        />
+      </button>
     </div>
   </div>
   <div

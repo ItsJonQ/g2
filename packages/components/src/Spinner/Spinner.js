@@ -1,11 +1,16 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { get } from '@wp-g2/styles';
 import React from 'react';
 
 import { BarsView, BarsWrapperView, ContainerView } from './Spinner.styles';
 import { BASE_SIZE, WRAPPER_SIZE } from './Spinner.utils';
 
-function Spinner({ color = get('colorText'), size = BASE_SIZE, ...props }) {
+function Spinner(props, forwardedRef) {
+	const {
+		color = get('colorText'),
+		size = BASE_SIZE,
+		...otherProps
+	} = useContextSystem(props, 'Spinner');
 	const ratio = size / BASE_SIZE;
 	const scale = (ratio * BASE_SIZE) / WRAPPER_SIZE;
 	const transform = `scale(${scale})`;
@@ -14,8 +19,9 @@ function Spinner({ color = get('colorText'), size = BASE_SIZE, ...props }) {
 
 	return (
 		<ContainerView
-			{...props}
+			{...otherProps}
 			aria-busy={true}
+			ref={forwardedRef}
 			style={{ height: size, width: size }}
 		>
 			<BarsWrapperView aria-hidden={true} style={styles}>
@@ -38,4 +44,4 @@ function Spinner({ color = get('colorText'), size = BASE_SIZE, ...props }) {
 	);
 }
 
-export default connect(Spinner, 'Spinner');
+export default contextConnect(Spinner, 'Spinner');

@@ -14,7 +14,7 @@ exports[`props should render Alert 1`] = `
     id="Alert"
   >
     <div
-      class="wp-components-flex css-1u4iija"
+      class="wp-components-flex css-9rac5a"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
@@ -28,11 +28,6 @@ exports[`props should render Alert 1`] = `
           data-g2-component="AlertContent"
         />
       </div>
-      <div
-        class="wp-components-flex-item css-1bku9vz"
-        data-g2-c16t="true"
-        data-g2-component="FlexItem"
-      />
     </div>
   </div>
 </div>
@@ -46,7 +41,7 @@ exports[`props should render Alert with css prop 1`] = `
   id="Alert"
 >
   <div
-    class="wp-components-flex css-1u4iija"
+    class="wp-components-flex css-9rac5a"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -60,11 +55,6 @@ exports[`props should render Alert with css prop 1`] = `
         data-g2-component="AlertContent"
       />
     </div>
-    <div
-      class="wp-components-flex-item css-1bku9vz"
-      data-g2-c16t="true"
-      data-g2-component="FlexItem"
-    />
   </div>
 </div>
 `;
@@ -77,7 +67,7 @@ exports[`props should render Alert with css prop 2`] = `
   id="Alert"
 >
   <div
-    class="wp-components-flex css-1u4iija"
+    class="wp-components-flex css-9rac5a"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -91,11 +81,6 @@ exports[`props should render Alert with css prop 2`] = `
         data-g2-component="AlertContent"
       />
     </div>
-    <div
-      class="wp-components-flex-item css-1bku9vz"
-      data-g2-c16t="true"
-      data-g2-component="FlexItem"
-    />
   </div>
 </div>
 `;
@@ -376,7 +361,7 @@ exports[`props should render BaseButton 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -400,7 +385,7 @@ exports[`props should render BaseButton with css prop 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -424,7 +409,7 @@ exports[`props should render BaseButton with css prop 2`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -438,7 +423,7 @@ exports[`props should render BaseButton with css prop 2`] = `
 
 exports[`props should render BaseField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-nybqfv"
+  class="wp-components-flex wp-components-base-field css-1twbukc"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -447,7 +432,7 @@ exports[`props should render BaseField 1`] = `
 
 exports[`props should render BaseField with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-nybqfv"
+  class="wp-components-flex wp-components-base-field css-1twbukc"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -456,7 +441,7 @@ exports[`props should render BaseField with css prop 1`] = `
 
 exports[`props should render BaseField with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-1rg2x5g"
+  class="wp-components-flex wp-components-base-field css-1bp4fpz"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -477,7 +462,7 @@ exports[`props should render Button 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -501,7 +486,7 @@ exports[`props should render Button with css prop 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -525,7 +510,7 @@ exports[`props should render Button with css prop 2`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -653,7 +638,7 @@ exports[`props should render CardBody with css prop 2`] = `
 
 exports[`props should render CardFooter 1`] = `
 <div
-  class="wp-components-flex wp-components-card-footer css-b5lq72"
+  class="wp-components-flex wp-components-card-footer css-83z55d"
   data-g2-c16t="true"
   data-g2-component="CardFooter"
   id="CardFooter"
@@ -662,7 +647,7 @@ exports[`props should render CardFooter 1`] = `
 
 exports[`props should render CardFooter with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-card-footer css-b5lq72"
+  class="wp-components-flex wp-components-card-footer css-83z55d"
   data-g2-c16t="true"
   data-g2-component="CardFooter"
   id="CardFooter"
@@ -671,7 +656,7 @@ exports[`props should render CardFooter with css prop 1`] = `
 
 exports[`props should render CardFooter with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-card-footer css-6py9do"
+  class="wp-components-flex wp-components-card-footer css-3qxm4b"
   data-g2-c16t="true"
   data-g2-component="CardFooter"
   id="CardFooter"
@@ -680,7 +665,7 @@ exports[`props should render CardFooter with css prop 2`] = `
 
 exports[`props should render CardHeader 1`] = `
 <div
-  class="wp-components-flex wp-components-card-header css-13wu4bh"
+  class="wp-components-flex wp-components-card-header css-d68z6g"
   data-g2-c16t="true"
   data-g2-component="CardHeader"
   id="CardHeader"
@@ -689,7 +674,7 @@ exports[`props should render CardHeader 1`] = `
 
 exports[`props should render CardHeader with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-card-header css-13wu4bh"
+  class="wp-components-flex wp-components-card-header css-d68z6g"
   data-g2-c16t="true"
   data-g2-component="CardHeader"
   id="CardHeader"
@@ -698,7 +683,7 @@ exports[`props should render CardHeader with css prop 1`] = `
 
 exports[`props should render CardHeader with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-card-header css-st1k0e"
+  class="wp-components-flex wp-components-card-header css-1sr228r"
   data-g2-c16t="true"
   data-g2-component="CardHeader"
   id="CardHeader"
@@ -812,7 +797,7 @@ exports[`props should render CloseButton 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -874,7 +859,7 @@ exports[`props should render CloseButton with css prop 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -936,7 +921,7 @@ exports[`props should render CloseButton with css prop 2`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1028,7 +1013,7 @@ exports[`props should render ColorControl 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1065,7 +1050,7 @@ exports[`props should render ColorControl with css prop 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1102,7 +1087,7 @@ exports[`props should render ColorControl with css prop 2`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1183,7 +1168,7 @@ exports[`props should render Container with css prop 2`] = `
 
 exports[`props should render ControlGroup 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-ohsd22"
+  class="wp-components-flex wp-components-control-group css-5iqw3e"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
   id="ControlGroup"
@@ -1192,7 +1177,7 @@ exports[`props should render ControlGroup 1`] = `
 
 exports[`props should render ControlGroup with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-ohsd22"
+  class="wp-components-flex wp-components-control-group css-5iqw3e"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
   id="ControlGroup"
@@ -1201,7 +1186,7 @@ exports[`props should render ControlGroup with css prop 1`] = `
 
 exports[`props should render ControlGroup with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-16dp2qo"
+  class="wp-components-flex wp-components-control-group css-fdu9d3"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
   id="ControlGroup"
@@ -1275,8 +1260,6 @@ exports[`props should render ControlLabel with css prop 2`] = `
   id="ControlLabel"
 />
 `;
-
-exports[`props should render Debugger 1`] = `null`;
 
 exports[`props should render Divider 1`] = `
 <hr
@@ -1449,7 +1432,7 @@ exports[`props should render DropdownMenuItem 1`] = `
   tabindex="0"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -1474,7 +1457,7 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   tabindex="0"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -1499,7 +1482,7 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   tabindex="0"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -1523,7 +1506,7 @@ exports[`props should render DropdownTrigger 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1576,7 +1559,7 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1629,7 +1612,7 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -1699,7 +1682,7 @@ exports[`props should render Elevation with css prop 2`] = `
 
 exports[`props should render Flex 1`] = `
 <div
-  class="wp-components-flex css-1l46mi3"
+  class="wp-components-flex css-1yvcu1v"
   data-g2-c16t="true"
   data-g2-component="Flex"
   id="Flex"
@@ -1708,7 +1691,7 @@ exports[`props should render Flex 1`] = `
 
 exports[`props should render Flex with css prop 1`] = `
 <div
-  class="wp-components-flex css-1l46mi3"
+  class="wp-components-flex css-1yvcu1v"
   data-g2-c16t="true"
   data-g2-component="Flex"
   id="Flex"
@@ -1717,7 +1700,7 @@ exports[`props should render Flex with css prop 1`] = `
 
 exports[`props should render Flex with css prop 2`] = `
 <div
-  class="wp-components-flex css-4l83oc"
+  class="wp-components-flex css-ps3gry"
   data-g2-c16t="true"
   data-g2-component="Flex"
   id="Flex"
@@ -1831,7 +1814,7 @@ exports[`props should render Grid with css prop 2`] = `
 
 exports[`props should render HStack 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-2oqkbq"
+  class="wp-components-flex wp-components-h-stack css-uwh7tl"
   data-g2-c16t="true"
   data-g2-component="HStack"
   id="HStack"
@@ -1840,7 +1823,7 @@ exports[`props should render HStack 1`] = `
 
 exports[`props should render HStack with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-2oqkbq"
+  class="wp-components-flex wp-components-h-stack css-uwh7tl"
   data-g2-c16t="true"
   data-g2-component="HStack"
   id="HStack"
@@ -1849,7 +1832,7 @@ exports[`props should render HStack with css prop 1`] = `
 
 exports[`props should render HStack with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack css-1epyk4l"
+  class="wp-components-flex wp-components-h-stack css-1ebr7au"
   data-g2-c16t="true"
   data-g2-component="HStack"
   id="HStack"
@@ -1886,7 +1869,7 @@ exports[`props should render Heading with css prop 2`] = `
 exports[`props should render HelpTip 1`] = `
 <span
   aria-describedby="HelpTip"
-  class="css-1k2c6c"
+  class="css-157zw4n"
   tabindex="0"
 >
   <div
@@ -1896,14 +1879,13 @@ exports[`props should render HelpTip 1`] = `
   >
     <svg
       fill="none"
-      height="14"
-      size="14"
+      height="1em"
       stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
       viewBox="0 0 24 24"
-      width="14"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
@@ -2037,64 +2019,46 @@ exports[`props should render List with css prop 2`] = `
 
 exports[`props should render ListGroup 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1tl6qyk"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-19muqfp"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
-      data-g2-c16t="true"
-      data-g2-component="VStack"
-    />
-  </div>
+    data-g2-component="VStack"
+  />
 </div>
 `;
 
 exports[`props should render ListGroup with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1tl6qyk"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-19muqfp"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
-      data-g2-c16t="true"
-      data-g2-component="VStack"
-    />
-  </div>
+    data-g2-component="VStack"
+  />
 </div>
 `;
 
 exports[`props should render ListGroup with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-7wz8zy"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1xpgueq"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <div
-      class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
-      data-g2-c16t="true"
-      data-g2-component="VStack"
-    />
-  </div>
+    data-g2-component="VStack"
+  />
 </div>
 `;
 
@@ -2105,7 +2069,7 @@ exports[`props should render ListGroupFooter 1`] = `
   data-g2-component="Spacer"
 >
   <div
-    class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-2oqkbq"
+    class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-uwh7tl"
     data-g2-c16t="true"
     data-g2-component="ListGroupFooter"
     id="ListGroupFooter"
@@ -2115,7 +2079,7 @@ exports[`props should render ListGroupFooter 1`] = `
 
 exports[`props should render ListGroupFooter with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-2oqkbq"
+  class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-uwh7tl"
   data-g2-c16t="true"
   data-g2-component="ListGroupFooter"
   id="ListGroupFooter"
@@ -2124,7 +2088,7 @@ exports[`props should render ListGroupFooter with css prop 1`] = `
 
 exports[`props should render ListGroupFooter with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-1epyk4l"
+  class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-1ebr7au"
   data-g2-c16t="true"
   data-g2-component="ListGroupFooter"
   id="ListGroupFooter"
@@ -2138,7 +2102,7 @@ exports[`props should render ListGroupHeader 1`] = `
   data-g2-component="Spacer"
 >
   <div
-    class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-2oqkbq"
+    class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-uwh7tl"
     data-g2-c16t="true"
     data-g2-component="ListGroupHeader"
     id="ListGroupHeader"
@@ -2148,7 +2112,7 @@ exports[`props should render ListGroupHeader 1`] = `
 
 exports[`props should render ListGroupHeader with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-2oqkbq"
+  class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-uwh7tl"
   data-g2-c16t="true"
   data-g2-component="ListGroupHeader"
   id="ListGroupHeader"
@@ -2157,7 +2121,7 @@ exports[`props should render ListGroupHeader with css prop 1`] = `
 
 exports[`props should render ListGroupHeader with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-1epyk4l"
+  class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-1ebr7au"
   data-g2-c16t="true"
   data-g2-component="ListGroupHeader"
   id="ListGroupHeader"
@@ -2166,7 +2130,7 @@ exports[`props should render ListGroupHeader with css prop 2`] = `
 
 exports[`props should render ListGroups 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-1plip6l"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-124zu7x"
   data-g2-c16t="true"
   data-g2-component="ListGroups"
   id="ListGroups"
@@ -2175,7 +2139,7 @@ exports[`props should render ListGroups 1`] = `
 
 exports[`props should render ListGroups with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-1plip6l"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-124zu7x"
   data-g2-c16t="true"
   data-g2-component="ListGroups"
   id="ListGroups"
@@ -2184,7 +2148,7 @@ exports[`props should render ListGroups with css prop 1`] = `
 
 exports[`props should render ListGroups with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-918zpf"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-1skoaku"
   data-g2-c16t="true"
   data-g2-component="ListGroups"
   id="ListGroups"
@@ -2258,7 +2222,7 @@ exports[`props should render MenuItem 1`] = `
   tabindex="0"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -2283,7 +2247,7 @@ exports[`props should render MenuItem with css prop 1`] = `
   tabindex="0"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -2308,7 +2272,7 @@ exports[`props should render MenuItem with css prop 2`] = `
   tabindex="0"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -2366,7 +2330,7 @@ exports[`props should render ModalBody with css prop 2`] = `
 
 exports[`props should render ModalFooter 1`] = `
 <div
-  class="wp-components-flex wp-components-card-footer wp-components-modal-footer css-kanklc"
+  class="wp-components-flex wp-components-card-footer wp-components-modal-footer css-wxf5jo"
   data-g2-c16t="true"
   data-g2-component="ModalFooter"
   id="ModalFooter"
@@ -2375,7 +2339,7 @@ exports[`props should render ModalFooter 1`] = `
 
 exports[`props should render ModalFooter with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-card-footer wp-components-modal-footer css-kanklc"
+  class="wp-components-flex wp-components-card-footer wp-components-modal-footer css-wxf5jo"
   data-g2-c16t="true"
   data-g2-component="ModalFooter"
   id="ModalFooter"
@@ -2384,7 +2348,7 @@ exports[`props should render ModalFooter with css prop 1`] = `
 
 exports[`props should render ModalFooter with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-card-footer wp-components-modal-footer css-4xneau"
+  class="wp-components-flex wp-components-card-footer wp-components-modal-footer css-4spd51"
   data-g2-c16t="true"
   data-g2-component="ModalFooter"
   id="ModalFooter"
@@ -2393,165 +2357,132 @@ exports[`props should render ModalFooter with css prop 2`] = `
 
 exports[`props should render ModalHeader 1`] = `
 <div
-  class="wp-components-flex wp-components-card-header wp-components-modal-header css-1lhkys2"
+  class="wp-components-flex wp-components-card-header wp-components-modal-header css-egdv9t"
   data-g2-c16t="true"
   data-g2-component="ModalHeader"
   id="ModalHeader"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-modal-close-button css-7iavjl"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  />
-  <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
+    data-g2-component="ModalCloseButton"
   >
-    <div
-      class="wp-components-modal-close-button css-7iavjl"
+    <button
+      aria-busy="false"
+      class="wp-components-base-button wp-components-button css-196wedh"
+      data-destructive="false"
       data-g2-c16t="true"
-      data-g2-component="ModalCloseButton"
+      data-g2-component="Button"
+      data-icon="false"
+      type="button"
     >
-      <button
-        aria-busy="false"
-        class="wp-components-base-button wp-components-button css-196wedh"
-        data-destructive="false"
+      <span
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
-        data-g2-component="Button"
-        data-icon="false"
-        type="button"
+        data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex css-m9tbel"
+          class="wp-components-flex-item css-18097f7"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonContent"
         >
-          <span
-            class="wp-components-flex-item css-18097f7"
-            data-g2-c16t="true"
-            data-g2-component="ButtonContent"
-          >
-            Close
-          </span>
+          Close
         </span>
-        <span
-          class="wp-components-elevation css-17x6dun"
-          data-g2-c16t="true"
-          data-g2-component="ButtonElevation"
-        />
-      </button>
-    </div>
+      </span>
+      <span
+        class="wp-components-elevation css-17x6dun"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
   </div>
 </div>
 `;
 
 exports[`props should render ModalHeader with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-card-header wp-components-modal-header css-1lhkys2"
+  class="wp-components-flex wp-components-card-header wp-components-modal-header css-egdv9t"
   data-g2-c16t="true"
   data-g2-component="ModalHeader"
   id="ModalHeader"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-modal-close-button css-7iavjl"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  />
-  <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
+    data-g2-component="ModalCloseButton"
   >
-    <div
-      class="wp-components-modal-close-button css-7iavjl"
+    <button
+      aria-busy="false"
+      class="wp-components-base-button wp-components-button css-196wedh"
+      data-destructive="false"
       data-g2-c16t="true"
-      data-g2-component="ModalCloseButton"
+      data-g2-component="Button"
+      data-icon="false"
+      type="button"
     >
-      <button
-        aria-busy="false"
-        class="wp-components-base-button wp-components-button css-196wedh"
-        data-destructive="false"
+      <span
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
-        data-g2-component="Button"
-        data-icon="false"
-        type="button"
+        data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex css-m9tbel"
+          class="wp-components-flex-item css-18097f7"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonContent"
         >
-          <span
-            class="wp-components-flex-item css-18097f7"
-            data-g2-c16t="true"
-            data-g2-component="ButtonContent"
-          >
-            Close
-          </span>
+          Close
         </span>
-        <span
-          class="wp-components-elevation css-17x6dun"
-          data-g2-c16t="true"
-          data-g2-component="ButtonElevation"
-        />
-      </button>
-    </div>
+      </span>
+      <span
+        class="wp-components-elevation css-17x6dun"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
   </div>
 </div>
 `;
 
 exports[`props should render ModalHeader with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-card-header wp-components-modal-header css-1oskn5r"
+  class="wp-components-flex wp-components-card-header wp-components-modal-header css-13dbjdu"
   data-g2-c16t="true"
   data-g2-component="ModalHeader"
   id="ModalHeader"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-modal-close-button css-7iavjl"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  />
-  <div
-    class="wp-components-flex-item css-1bku9vz"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
+    data-g2-component="ModalCloseButton"
   >
-    <div
-      class="wp-components-modal-close-button css-7iavjl"
+    <button
+      aria-busy="false"
+      class="wp-components-base-button wp-components-button css-196wedh"
+      data-destructive="false"
       data-g2-c16t="true"
-      data-g2-component="ModalCloseButton"
+      data-g2-component="Button"
+      data-icon="false"
+      type="button"
     >
-      <button
-        aria-busy="false"
-        class="wp-components-base-button wp-components-button css-196wedh"
-        data-destructive="false"
+      <span
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
-        data-g2-component="Button"
-        data-icon="false"
-        type="button"
+        data-g2-component="Flex"
       >
         <span
-          class="wp-components-flex css-m9tbel"
+          class="wp-components-flex-item css-18097f7"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonContent"
         >
-          <span
-            class="wp-components-flex-item css-18097f7"
-            data-g2-c16t="true"
-            data-g2-component="ButtonContent"
-          >
-            Close
-          </span>
+          Close
         </span>
-        <span
-          class="wp-components-elevation css-17x6dun"
-          data-g2-c16t="true"
-          data-g2-component="ButtonElevation"
-        />
-      </button>
-    </div>
+      </span>
+      <span
+        class="wp-components-elevation css-17x6dun"
+        data-g2-c16t="true"
+        data-g2-component="ButtonElevation"
+      />
+    </button>
   </div>
 </div>
 `;
@@ -2572,7 +2503,7 @@ exports[`props should render ModalTrigger 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-m9tbel"
+    class="wp-components-flex css-19zk68e"
     data-g2-c16t="true"
     data-g2-component="Flex"
   />
@@ -2764,7 +2695,7 @@ exports[`props should render Scrollable with css prop 2`] = `
 
 exports[`props should render SearchInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1rp5pon"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-19lpzxa"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -2840,16 +2771,16 @@ exports[`props should render SearchInput 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button wp-components-search-input-clear-button css-16q1cru"
+        class="wp-components-base-button wp-components-button css-16q1cru"
         data-destructive="false"
         data-g2-c16t="true"
-        data-g2-component="SearchInputClearButton"
+        data-g2-component="Button"
         data-icon="true"
         tabindex="-1"
         type="button"
       >
         <span
-          class="wp-components-flex css-m9tbel"
+          class="wp-components-flex css-19zk68e"
           data-g2-c16t="true"
           data-g2-component="Flex"
         >
@@ -2905,9 +2836,61 @@ exports[`props should render SearchInput 1`] = `
 exports[`props should render SegmentedControl 1`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segment-control css-16al81f"
+  class="wp-components-segmented-control css-16al81f"
   data-g2-c16t="true"
-  data-g2-component="SegmentControl"
+  data-g2-component="SegmentedControl"
+  id="SegmentedControl"
+  role="radiogroup"
+  tabindex="0"
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+  <div
+    class="css-k5346k"
+    data-g2-component="SegmentedControlBackdrop"
+    role="presentation"
+    style="transform: translateX(0px); transition: none; width: 0px;"
+  />
+</div>
+`;
+
+exports[`props should render SegmentedControl with css prop 1`] = `
+<div
+  aria-label="SegmentControl"
+  class="wp-components-segmented-control css-16al81f"
+  data-g2-c16t="true"
+  data-g2-component="SegmentedControl"
+  id="SegmentedControl"
+  role="radiogroup"
+  tabindex="0"
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+  <div
+    class="css-k5346k"
+    data-g2-component="SegmentedControlBackdrop"
+    role="presentation"
+    style="transform: translateX(0px); transition: none; width: 0px;"
+  />
+</div>
+`;
+
+exports[`props should render SegmentedControl with css prop 2`] = `
+<div
+  aria-label="SegmentControl"
+  class="wp-components-segmented-control css-1raidjg"
+  data-g2-c16t="true"
+  data-g2-component="SegmentedControl"
   id="SegmentedControl"
   role="radiogroup"
   tabindex="0"
@@ -2930,7 +2913,7 @@ exports[`props should render SegmentedControl 1`] = `
 
 exports[`props should render Select 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-select css-iht2bc"
+  class="wp-components-flex wp-components-base-field wp-components-select css-fmi5m7"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
@@ -3261,7 +3244,7 @@ exports[`props should render Spinner with css prop 2`] = `
 
 exports[`props should render Stepper 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group wp-components-stepper css-1963nm1"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-1e52q0b"
   data-g2-c16t="true"
   data-g2-component="Stepper"
   id="Stepper"
@@ -3281,7 +3264,7 @@ exports[`props should render Stepper 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -3339,7 +3322,7 @@ exports[`props should render Stepper 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -3393,7 +3376,7 @@ exports[`props should render Stepper 1`] = `
 
 exports[`props should render Stepper with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group wp-components-stepper css-1963nm1"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-1e52q0b"
   data-g2-c16t="true"
   data-g2-component="Stepper"
   id="Stepper"
@@ -3413,7 +3396,7 @@ exports[`props should render Stepper with css prop 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -3471,7 +3454,7 @@ exports[`props should render Stepper with css prop 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -3525,7 +3508,7 @@ exports[`props should render Stepper with css prop 1`] = `
 
 exports[`props should render Stepper with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-control-group wp-components-stepper css-qqtdpg"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-3zumao"
   data-g2-c16t="true"
   data-g2-component="Stepper"
   id="Stepper"
@@ -3545,7 +3528,7 @@ exports[`props should render Stepper with css prop 2`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -3603,7 +3586,7 @@ exports[`props should render Stepper with css prop 2`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -3866,8 +3849,6 @@ exports[`props should render TabPanel with css prop 2`] = `
 />
 `;
 
-exports[`props should render Tabs 1`] = `null`;
-
 exports[`props should render Tag 1`] = `
 <span
   class="wp-components-tag css-16ertor"
@@ -3942,7 +3923,7 @@ exports[`props should render Text with css prop 2`] = `
 
 exports[`props should render TextField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-4s65ol"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -3964,7 +3945,7 @@ exports[`props should render TextField 1`] = `
 
 exports[`props should render TextInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-3wj9wn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-4s65ol"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -4015,7 +3996,7 @@ exports[`props should render Truncate with css prop 2`] = `
 
 exports[`props should render VStack 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
@@ -4024,7 +4005,7 @@ exports[`props should render VStack 1`] = `
 
 exports[`props should render VStack with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
@@ -4033,7 +4014,7 @@ exports[`props should render VStack with css prop 1`] = `
 
 exports[`props should render VStack with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-7wz8zy"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1xpgueq"
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"

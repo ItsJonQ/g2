@@ -1,16 +1,13 @@
-import { contextConnect, hasNamespace, useContextSystem } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, ui, useResponsiveValue } from '@wp-g2/styles';
-import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
 import { View } from '../View';
 import * as styles from './Flex.styles';
-import FlexItem from './FlexItem';
 
 export function Flex(props, forwardedRef) {
 	const {
 		align = 'center',
-		autoWrap = true,
 		children,
 		direction: directionProp = 'row',
 		gap = 2,
@@ -22,22 +19,7 @@ export function Flex(props, forwardedRef) {
 	const direction = useResponsiveValue(directionProp);
 
 	const isColumn = !!direction?.includes('column');
-	const validChildren = getValidChildren(children);
 	const isReverse = direction?.includes('reverse');
-
-	const clonedChildren = validChildren.map((child, index) => {
-		const _key = child.key || `flex-${index}`;
-		const _isSubComponent = hasNamespace(child, ['FlexBlock', 'FlexItem']);
-
-		const _child =
-			!_isSubComponent && autoWrap ? (
-				<FlexItem key={_key}>{child}</FlexItem>
-			) : (
-				child
-			);
-
-		return _child;
-	});
 
 	const sx = {};
 
@@ -56,6 +38,17 @@ export function Flex(props, forwardedRef) {
 		flexWrap: wrap ? 'wrap' : undefined,
 		justifyContent: justify,
 		/**
+		 * Workaround to optimize DOM rendering.
+		 * We'll enhance alignment with naive parent flex assumptions.
+		 * Trade-off:
+		 * Far less DOM less. However, UI rendering is not as reliable.
+		 */
+		'> *': {
+			marginBottom: isColumn ? ui.get('FlexGap') : null,
+			marginLeft: !isColumn && isReverse ? ui.get('FlexGap') : null,
+			marginRight: !isColumn && !isReverse ? ui.get('FlexGap') : null,
+		},
+		/**
 		 * Workaround to help with performance. Using CSS rules to target rather
 		 * than passing data via context.
 		 */
@@ -70,7 +63,7 @@ export function Flex(props, forwardedRef) {
 
 	return (
 		<View {...otherProps} cx={__css} ref={forwardedRef}>
-			{clonedChildren}
+			{children}
 		</View>
 	);
 }

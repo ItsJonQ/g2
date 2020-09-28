@@ -2,28 +2,16 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1tl6qyk"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-19muqfp"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
 >
   <div
-    class="wp-components-flex-item css-1bku9vz"
+    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
     data-g2-c16t="true"
-    data-g2-component="FlexItem"
+    data-g2-component="VStack"
   >
-    <div
-      class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1tl6qyk"
-      data-g2-c16t="true"
-      data-g2-component="VStack"
-    >
-      <div
-        class="wp-components-flex-item css-1j3zl9k"
-        data-g2-c16t="true"
-        data-g2-component="FlexItem"
-      >
-        I like warm hugs
-      </div>
-    </div>
+    I like warm hugs
   </div>
 </div>
 `;

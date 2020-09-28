@@ -1,15 +1,20 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { NavigatorView } from './Navigator.styles';
 import NavigatorSwitch from './NavigatorSwitch';
 
-function NavigatorScreens({ children, ...props }) {
+function NavigatorScreens(props, forwardedRef) {
+	const { children, ...otherProps } = useContextSystem(
+		props,
+		'NavigatorScreens',
+	);
+
 	return (
-		<NavigatorView {...props}>
+		<NavigatorView {...otherProps} ref={forwardedRef}>
 			<NavigatorSwitch>{children}</NavigatorSwitch>
 		</NavigatorView>
 	);
 }
 
-export default connect(NavigatorScreens, 'NavigatorScreens');
+export default contextConnect(NavigatorScreens, 'NavigatorScreens');

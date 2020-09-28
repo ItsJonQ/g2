@@ -13,7 +13,7 @@ exports[`props should render as dismissable 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-1u4iija"
+      class="wp-components-flex css-9rac5a"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
@@ -30,10 +30,234 @@ exports[`props should render as dismissable 1`] = `
         </div>
       </div>
       <div
-        class="wp-components-flex-item css-1bku9vz"
-        data-g2-c16t="true"
-        data-g2-component="FlexItem"
+        class="css-19dflv5"
       >
+        <button
+          aria-busy="false"
+          class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+          data-destructive="false"
+          data-g2-c16t="true"
+          data-g2-component="CloseButton"
+          data-icon="true"
+          title="Dismiss"
+          type="button"
+        >
+          <span
+            class="wp-components-flex css-19zk68e"
+            data-g2-c16t="true"
+            data-g2-component="Flex"
+          >
+            <span
+              class="wp-components-flex-item css-nlyp56"
+              data-g2-c16t="true"
+              data-g2-component="ButtonIcon"
+            >
+              <div
+                class="wp-components-icon css-1k4as4"
+                data-g2-c16t="true"
+                data-g2-component="Icon"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  size="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="18"
+                    x2="6"
+                    y1="6"
+                    y2="18"
+                  />
+                  <line
+                    x1="6"
+                    x2="18"
+                    y1="6"
+                    y2="18"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <span
+            class="wp-components-elevation css-17x6dun"
+            data-g2-c16t="true"
+            data-g2-component="ButtonElevation"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-animated css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-17vh6wg"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-flex css-9rac5a"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="css-j1yu9m"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render with status 1`] = `
+<div
+  class="css-j1yu9m"
+  data-g2-component="Alerts"
+>
+  <div
+    class="wp-components-animated css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Animated"
+    style="opacity: 1; transform: none;"
+  >
+    <div
+      class="wp-components-alert css-3n26nx"
+      data-g2-c16t="true"
+      data-g2-component="Alert"
+    >
+      <div
+        class="wp-components-flex css-9rac5a"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <div
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          data-g2-c16t="true"
+          data-g2-component="FlexBlock"
+        >
+          <div
+            class="css-oabb2t"
+            data-g2-component="AlertContent"
+          >
+            I like warm hugs
+          </div>
+        </div>
+        <div
+          class="css-1f2v6o8"
+        >
+          <button
+            aria-busy="false"
+            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            data-destructive="false"
+            data-g2-c16t="true"
+            data-g2-component="CloseButton"
+            data-icon="true"
+            title="Dismiss"
+            type="button"
+          >
+            <span
+              class="wp-components-flex css-19zk68e"
+              data-g2-c16t="true"
+              data-g2-component="Flex"
+            >
+              <span
+                class="wp-components-flex-item css-nlyp56"
+                data-g2-c16t="true"
+                data-g2-component="ButtonIcon"
+              >
+                <div
+                  class="wp-components-icon css-1k4as4"
+                  data-g2-c16t="true"
+                  data-g2-component="Icon"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    size="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="18"
+                      x2="6"
+                      y1="6"
+                      y2="18"
+                    />
+                    <line
+                      x1="6"
+                      x2="18"
+                      y1="6"
+                      y2="18"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="wp-components-elevation css-17x6dun"
+              data-g2-c16t="true"
+              data-g2-component="ButtonElevation"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="wp-components-animated css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Animated"
+    style="opacity: 1; transform: none;"
+  >
+    <div
+      class="wp-components-alert css-11u2t7j"
+      data-g2-c16t="true"
+      data-g2-component="Alert"
+    >
+      <div
+        class="wp-components-flex css-9rac5a"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <div
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          data-g2-c16t="true"
+          data-g2-component="FlexBlock"
+        >
+          <div
+            class="css-oabb2t"
+            data-g2-component="AlertContent"
+          >
+            I like warm hugs
+          </div>
+        </div>
         <div
           class="css-19dflv5"
         >
@@ -48,7 +272,289 @@ exports[`props should render as dismissable 1`] = `
             type="button"
           >
             <span
-              class="wp-components-flex css-m9tbel"
+              class="wp-components-flex css-19zk68e"
+              data-g2-c16t="true"
+              data-g2-component="Flex"
+            >
+              <span
+                class="wp-components-flex-item css-nlyp56"
+                data-g2-c16t="true"
+                data-g2-component="ButtonIcon"
+              >
+                <div
+                  class="wp-components-icon css-1k4as4"
+                  data-g2-c16t="true"
+                  data-g2-component="Icon"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    size="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="18"
+                      x2="6"
+                      y1="6"
+                      y2="18"
+                    />
+                    <line
+                      x1="6"
+                      x2="18"
+                      y1="6"
+                      y2="18"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="wp-components-elevation css-17x6dun"
+              data-g2-c16t="true"
+              data-g2-component="ButtonElevation"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="wp-components-animated css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Animated"
+    style="opacity: 1; transform: none;"
+  >
+    <div
+      class="wp-components-alert css-1hfieli"
+      data-g2-c16t="true"
+      data-g2-component="Alert"
+    >
+      <div
+        class="wp-components-flex css-9rac5a"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <div
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          data-g2-c16t="true"
+          data-g2-component="FlexBlock"
+        >
+          <div
+            class="css-oabb2t"
+            data-g2-component="AlertContent"
+          >
+            I like warm hugs
+          </div>
+        </div>
+        <div
+          class="css-vzr214"
+        >
+          <button
+            aria-busy="false"
+            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            data-destructive="false"
+            data-g2-c16t="true"
+            data-g2-component="CloseButton"
+            data-icon="true"
+            title="Dismiss"
+            type="button"
+          >
+            <span
+              class="wp-components-flex css-19zk68e"
+              data-g2-c16t="true"
+              data-g2-component="Flex"
+            >
+              <span
+                class="wp-components-flex-item css-nlyp56"
+                data-g2-c16t="true"
+                data-g2-component="ButtonIcon"
+              >
+                <div
+                  class="wp-components-icon css-1k4as4"
+                  data-g2-c16t="true"
+                  data-g2-component="Icon"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    size="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="18"
+                      x2="6"
+                      y1="6"
+                      y2="18"
+                    />
+                    <line
+                      x1="6"
+                      x2="18"
+                      y1="6"
+                      y2="18"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="wp-components-elevation css-17x6dun"
+              data-g2-c16t="true"
+              data-g2-component="ButtonElevation"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="wp-components-animated css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Animated"
+    style="opacity: 1; transform: none;"
+  >
+    <div
+      class="wp-components-alert css-1vybbdx"
+      data-g2-c16t="true"
+      data-g2-component="Alert"
+    >
+      <div
+        class="wp-components-flex css-9rac5a"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <div
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          data-g2-c16t="true"
+          data-g2-component="FlexBlock"
+        >
+          <div
+            class="css-oabb2t"
+            data-g2-component="AlertContent"
+          >
+            I like warm hugs
+          </div>
+        </div>
+        <div
+          class="css-w9yvet"
+        >
+          <button
+            aria-busy="false"
+            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            data-destructive="false"
+            data-g2-c16t="true"
+            data-g2-component="CloseButton"
+            data-icon="true"
+            title="Dismiss"
+            type="button"
+          >
+            <span
+              class="wp-components-flex css-19zk68e"
+              data-g2-c16t="true"
+              data-g2-component="Flex"
+            >
+              <span
+                class="wp-components-flex-item css-nlyp56"
+                data-g2-c16t="true"
+                data-g2-component="ButtonIcon"
+              >
+                <div
+                  class="wp-components-icon css-1k4as4"
+                  data-g2-c16t="true"
+                  data-g2-component="Icon"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    size="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="18"
+                      x2="6"
+                      y1="6"
+                      y2="18"
+                    />
+                    <line
+                      x1="6"
+                      x2="18"
+                      y1="6"
+                      y2="18"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="wp-components-elevation css-17x6dun"
+              data-g2-c16t="true"
+              data-g2-component="ButtonElevation"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="wp-components-animated css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Animated"
+    style="opacity: 1; transform: none;"
+  >
+    <div
+      class="wp-components-alert css-17vh6wg"
+      data-g2-c16t="true"
+      data-g2-component="Alert"
+    >
+      <div
+        class="wp-components-flex css-9rac5a"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <div
+          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+          data-g2-c16t="true"
+          data-g2-component="FlexBlock"
+        >
+          <div
+            class="css-oabb2t"
+            data-g2-component="AlertContent"
+          >
+            I like warm hugs
+          </div>
+        </div>
+        <div
+          class="css-2viu79"
+        >
+          <button
+            aria-busy="false"
+            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            data-destructive="false"
+            data-g2-c16t="true"
+            data-g2-component="CloseButton"
+            data-icon="true"
+            title="Dismiss"
+            type="button"
+          >
+            <span
+              class="wp-components-flex css-19zk68e"
               data-g2-c16t="true"
               data-g2-component="Flex"
             >
@@ -103,553 +609,6 @@ exports[`props should render as dismissable 1`] = `
 </div>
 `;
 
-exports[`props should render correctly 1`] = `
-<div
-  class="wp-components-animated css-j1yu9m"
-  data-g2-c16t="true"
-  data-g2-component="Animated"
-  style="opacity: 0; transform: scale(0.9) translateZ(0);"
->
-  <div
-    class="wp-components-alert css-17vh6wg"
-    data-g2-c16t="true"
-    data-g2-component="Alert"
-  >
-    <div
-      class="wp-components-flex css-1u4iija"
-      data-g2-c16t="true"
-      data-g2-component="Flex"
-    >
-      <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
-        data-g2-c16t="true"
-        data-g2-component="FlexBlock"
-      >
-        <div
-          class="css-j1yu9m"
-          data-g2-component="AlertContent"
-        >
-          I like warm hugs
-        </div>
-      </div>
-      <div
-        class="wp-components-flex-item css-1bku9vz"
-        data-g2-c16t="true"
-        data-g2-component="FlexItem"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props should render with status 1`] = `
-<div
-  class="css-j1yu9m"
-  data-g2-component="Alerts"
->
-  <div
-    class="wp-components-animated css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="Animated"
-    style="opacity: 1; transform: none;"
-  >
-    <div
-      class="wp-components-alert css-3n26nx"
-      data-g2-c16t="true"
-      data-g2-component="Alert"
-    >
-      <div
-        class="wp-components-flex css-1u4iija"
-        data-g2-c16t="true"
-        data-g2-component="Flex"
-      >
-        <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
-          data-g2-c16t="true"
-          data-g2-component="FlexBlock"
-        >
-          <div
-            class="css-oabb2t"
-            data-g2-component="AlertContent"
-          >
-            I like warm hugs
-          </div>
-        </div>
-        <div
-          class="wp-components-flex-item css-1bku9vz"
-          data-g2-c16t="true"
-          data-g2-component="FlexItem"
-        >
-          <div
-            class="css-1f2v6o8"
-          >
-            <button
-              aria-busy="false"
-              class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
-              data-destructive="false"
-              data-g2-c16t="true"
-              data-g2-component="CloseButton"
-              data-icon="true"
-              title="Dismiss"
-              type="button"
-            >
-              <span
-                class="wp-components-flex css-m9tbel"
-                data-g2-c16t="true"
-                data-g2-component="Flex"
-              >
-                <span
-                  class="wp-components-flex-item css-nlyp56"
-                  data-g2-c16t="true"
-                  data-g2-component="ButtonIcon"
-                >
-                  <div
-                    class="wp-components-icon css-1k4as4"
-                    data-g2-c16t="true"
-                    data-g2-component="Icon"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      size="16"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        x1="18"
-                        x2="6"
-                        y1="6"
-                        y2="18"
-                      />
-                      <line
-                        x1="6"
-                        x2="18"
-                        y1="6"
-                        y2="18"
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </span>
-              <span
-                class="wp-components-elevation css-17x6dun"
-                data-g2-c16t="true"
-                data-g2-component="ButtonElevation"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="wp-components-animated css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="Animated"
-    style="opacity: 1; transform: none;"
-  >
-    <div
-      class="wp-components-alert css-11u2t7j"
-      data-g2-c16t="true"
-      data-g2-component="Alert"
-    >
-      <div
-        class="wp-components-flex css-1u4iija"
-        data-g2-c16t="true"
-        data-g2-component="Flex"
-      >
-        <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
-          data-g2-c16t="true"
-          data-g2-component="FlexBlock"
-        >
-          <div
-            class="css-oabb2t"
-            data-g2-component="AlertContent"
-          >
-            I like warm hugs
-          </div>
-        </div>
-        <div
-          class="wp-components-flex-item css-1bku9vz"
-          data-g2-c16t="true"
-          data-g2-component="FlexItem"
-        >
-          <div
-            class="css-19dflv5"
-          >
-            <button
-              aria-busy="false"
-              class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
-              data-destructive="false"
-              data-g2-c16t="true"
-              data-g2-component="CloseButton"
-              data-icon="true"
-              title="Dismiss"
-              type="button"
-            >
-              <span
-                class="wp-components-flex css-m9tbel"
-                data-g2-c16t="true"
-                data-g2-component="Flex"
-              >
-                <span
-                  class="wp-components-flex-item css-nlyp56"
-                  data-g2-c16t="true"
-                  data-g2-component="ButtonIcon"
-                >
-                  <div
-                    class="wp-components-icon css-1k4as4"
-                    data-g2-c16t="true"
-                    data-g2-component="Icon"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      size="16"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        x1="18"
-                        x2="6"
-                        y1="6"
-                        y2="18"
-                      />
-                      <line
-                        x1="6"
-                        x2="18"
-                        y1="6"
-                        y2="18"
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </span>
-              <span
-                class="wp-components-elevation css-17x6dun"
-                data-g2-c16t="true"
-                data-g2-component="ButtonElevation"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="wp-components-animated css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="Animated"
-    style="opacity: 1; transform: none;"
-  >
-    <div
-      class="wp-components-alert css-1hfieli"
-      data-g2-c16t="true"
-      data-g2-component="Alert"
-    >
-      <div
-        class="wp-components-flex css-1u4iija"
-        data-g2-c16t="true"
-        data-g2-component="Flex"
-      >
-        <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
-          data-g2-c16t="true"
-          data-g2-component="FlexBlock"
-        >
-          <div
-            class="css-oabb2t"
-            data-g2-component="AlertContent"
-          >
-            I like warm hugs
-          </div>
-        </div>
-        <div
-          class="wp-components-flex-item css-1bku9vz"
-          data-g2-c16t="true"
-          data-g2-component="FlexItem"
-        >
-          <div
-            class="css-vzr214"
-          >
-            <button
-              aria-busy="false"
-              class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
-              data-destructive="false"
-              data-g2-c16t="true"
-              data-g2-component="CloseButton"
-              data-icon="true"
-              title="Dismiss"
-              type="button"
-            >
-              <span
-                class="wp-components-flex css-m9tbel"
-                data-g2-c16t="true"
-                data-g2-component="Flex"
-              >
-                <span
-                  class="wp-components-flex-item css-nlyp56"
-                  data-g2-c16t="true"
-                  data-g2-component="ButtonIcon"
-                >
-                  <div
-                    class="wp-components-icon css-1k4as4"
-                    data-g2-c16t="true"
-                    data-g2-component="Icon"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      size="16"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        x1="18"
-                        x2="6"
-                        y1="6"
-                        y2="18"
-                      />
-                      <line
-                        x1="6"
-                        x2="18"
-                        y1="6"
-                        y2="18"
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </span>
-              <span
-                class="wp-components-elevation css-17x6dun"
-                data-g2-c16t="true"
-                data-g2-component="ButtonElevation"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="wp-components-animated css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="Animated"
-    style="opacity: 1; transform: none;"
-  >
-    <div
-      class="wp-components-alert css-1vybbdx"
-      data-g2-c16t="true"
-      data-g2-component="Alert"
-    >
-      <div
-        class="wp-components-flex css-1u4iija"
-        data-g2-c16t="true"
-        data-g2-component="Flex"
-      >
-        <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
-          data-g2-c16t="true"
-          data-g2-component="FlexBlock"
-        >
-          <div
-            class="css-oabb2t"
-            data-g2-component="AlertContent"
-          >
-            I like warm hugs
-          </div>
-        </div>
-        <div
-          class="wp-components-flex-item css-1bku9vz"
-          data-g2-c16t="true"
-          data-g2-component="FlexItem"
-        >
-          <div
-            class="css-w9yvet"
-          >
-            <button
-              aria-busy="false"
-              class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
-              data-destructive="false"
-              data-g2-c16t="true"
-              data-g2-component="CloseButton"
-              data-icon="true"
-              title="Dismiss"
-              type="button"
-            >
-              <span
-                class="wp-components-flex css-m9tbel"
-                data-g2-c16t="true"
-                data-g2-component="Flex"
-              >
-                <span
-                  class="wp-components-flex-item css-nlyp56"
-                  data-g2-c16t="true"
-                  data-g2-component="ButtonIcon"
-                >
-                  <div
-                    class="wp-components-icon css-1k4as4"
-                    data-g2-c16t="true"
-                    data-g2-component="Icon"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      size="16"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        x1="18"
-                        x2="6"
-                        y1="6"
-                        y2="18"
-                      />
-                      <line
-                        x1="6"
-                        x2="18"
-                        y1="6"
-                        y2="18"
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </span>
-              <span
-                class="wp-components-elevation css-17x6dun"
-                data-g2-c16t="true"
-                data-g2-component="ButtonElevation"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="wp-components-animated css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="Animated"
-    style="opacity: 1; transform: none;"
-  >
-    <div
-      class="wp-components-alert css-17vh6wg"
-      data-g2-c16t="true"
-      data-g2-component="Alert"
-    >
-      <div
-        class="wp-components-flex css-1u4iija"
-        data-g2-c16t="true"
-        data-g2-component="Flex"
-      >
-        <div
-          class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
-          data-g2-c16t="true"
-          data-g2-component="FlexBlock"
-        >
-          <div
-            class="css-oabb2t"
-            data-g2-component="AlertContent"
-          >
-            I like warm hugs
-          </div>
-        </div>
-        <div
-          class="wp-components-flex-item css-1bku9vz"
-          data-g2-c16t="true"
-          data-g2-component="FlexItem"
-        >
-          <div
-            class="css-2viu79"
-          >
-            <button
-              aria-busy="false"
-              class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
-              data-destructive="false"
-              data-g2-c16t="true"
-              data-g2-component="CloseButton"
-              data-icon="true"
-              title="Dismiss"
-              type="button"
-            >
-              <span
-                class="wp-components-flex css-m9tbel"
-                data-g2-c16t="true"
-                data-g2-component="Flex"
-              >
-                <span
-                  class="wp-components-flex-item css-nlyp56"
-                  data-g2-c16t="true"
-                  data-g2-component="ButtonIcon"
-                >
-                  <div
-                    class="wp-components-icon css-1k4as4"
-                    data-g2-c16t="true"
-                    data-g2-component="Icon"
-                  >
-                    <svg
-                      fill="none"
-                      height="16"
-                      size="16"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      width="16"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        x1="18"
-                        x2="6"
-                        y1="6"
-                        y2="18"
-                      />
-                      <line
-                        x1="6"
-                        x2="18"
-                        y1="6"
-                        y2="18"
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </span>
-              <span
-                class="wp-components-elevation css-17x6dun"
-                data-g2-c16t="true"
-                data-g2-component="ButtonElevation"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`props should render with title 1`] = `
 <div
   class="wp-components-animated css-j1yu9m"
@@ -663,7 +622,7 @@ exports[`props should render with title 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-1u4iija"
+      class="wp-components-flex css-9rac5a"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
@@ -692,11 +651,6 @@ exports[`props should render with title 1`] = `
           I like warm hugs
         </div>
       </div>
-      <div
-        class="wp-components-flex-item css-1bku9vz"
-        data-g2-c16t="true"
-        data-g2-component="FlexItem"
-      />
     </div>
   </div>
 </div>

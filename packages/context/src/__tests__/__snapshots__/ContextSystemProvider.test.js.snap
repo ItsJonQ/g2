@@ -30,7 +30,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render css props + provided css 1`] = `
 <div
-  class="wp-components-olaf olaf css-1r6lrag"
+  class="wp-components-olaf olaf css-bu21rl"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 />
@@ -38,7 +38,7 @@ exports[`props should render css props + provided css 1`] = `
 
 exports[`props should render css props 1`] = `
 <div
-  class="wp-components-olaf olaf css-1dqvrac"
+  class="wp-components-olaf olaf css-dsibsb"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 />

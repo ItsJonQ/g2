@@ -1,28 +1,39 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiHelpCircle } from '@wp-g2/icons';
-import { ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Icon } from '../Icon';
 import { Tooltip } from '../Tooltip';
 import { View } from '../View';
 
-function HelpTip({ as, children, iconSize = 14, ...props }) {
+function HelpTip(props, forwardedRef) {
+	const { as, children, iconSize = 14, ...otherProps } = useContextSystem(
+		props,
+		'HelpTip',
+	);
+
+	const handleOnClick = React.useCallback((event) => {
+		event.preventDefault();
+	}, []);
+
+	const helpIcon = React.memo(() => <FiHelpCircle />, []);
+
 	return (
-		<Tooltip {...props} content={children}>
+		<Tooltip {...otherProps} content={children} ref={forwardedRef}>
 			<View
 				as={as || 'span'}
-				css={`
+				css={css`
 					cursor: pointer;
-					vertical-align: middle;
 					padding-left: ${ui.space(1)};
 					padding-right: ${ui.space(1)};
+					vertical-align: middle;
 				`}
-				onClick={(event) => event.preventDefault()}
+				onClick={handleOnClick}
 			>
 				<Icon
 					color={ui.get('colorText')}
-					css={`
+					css={css`
 						display: inline-flex;
 						opacity: 0.5;
 
@@ -30,7 +41,7 @@ function HelpTip({ as, children, iconSize = 14, ...props }) {
 							fill: none;
 						}
 					`}
-					icon={<FiHelpCircle />}
+					icon={helpIcon}
 					size={iconSize}
 				/>
 			</View>
@@ -38,4 +49,4 @@ function HelpTip({ as, children, iconSize = 14, ...props }) {
 	);
 }
 
-export default connect(HelpTip, 'HelpTip');
+export default contextConnect(HelpTip, 'HelpTip');

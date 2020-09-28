@@ -1,4 +1,3 @@
-import { connect } from '@wp-g2/context';
 import React from 'react';
 
 import { ColorSwatch } from '../ColorSwatch';
@@ -13,4 +12,4 @@ function ColorField({ color, ...props }) {
 	);
 }
 
-export default connect(ColorField, 'ColorField');
+export default React.memo(ColorField);

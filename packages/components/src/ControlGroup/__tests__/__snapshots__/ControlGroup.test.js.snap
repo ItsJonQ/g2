@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-ohsd22"
+  class="wp-components-flex wp-components-control-group css-5iqw3e"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
 >
@@ -21,7 +21,7 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -55,7 +55,7 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -79,7 +79,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render mixed control types 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-ohsd22"
+  class="wp-components-flex wp-components-control-group css-5iqw3e"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
 >
@@ -89,7 +89,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-select css-1pv1jbj"
+      class="wp-components-flex wp-components-base-field wp-components-select css-196u925"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
@@ -147,7 +147,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-na2rxq"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-rpatkt"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
@@ -181,7 +181,7 @@ exports[`props should render mixed control types 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-m9tbel"
+        class="wp-components-flex css-19zk68e"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >

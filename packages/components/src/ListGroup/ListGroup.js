@@ -9,7 +9,6 @@ import { getValidChildren } from '@wp-g2/utils';
 import React, { Fragment } from 'react';
 
 import { Divider } from '../Divider';
-import { FlexItem } from '../Flex';
 import { VStack } from '../VStack';
 import ListGroupContent from './ListGroupContent';
 
@@ -88,12 +87,8 @@ function ListGroup(props, forwardedRef) {
 
 		return (
 			<Fragment key={_key}>
-				<FlexItem isBlock>{content}</FlexItem>
-				{showDivider && (
-					<FlexItem isBlock>
-						<Divider />
-					</FlexItem>
-				)}
+				{content}
+				{showDivider && <Divider />}
 			</Fragment>
 		);
 	});
@@ -103,11 +98,7 @@ function ListGroup(props, forwardedRef) {
 			<VStack {...otherProps} ref={forwardedRef} spacing={2}>
 				{headerComponent}
 				<ListGroupContent>
-					<VStack
-						autoWrap={false}
-						spacing={separatorValue ? 0 : 2}
-						{...{ spacing }}
-					>
+					<VStack spacing={separatorValue ? 0 : 2} {...{ spacing }}>
 						{clonedChildren}
 					</VStack>
 				</ListGroupContent>

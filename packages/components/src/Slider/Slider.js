@@ -1,4 +1,3 @@
-import { connect } from '@wp-g2/context';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { interpolate, noop, useControlledState } from '@wp-g2/utils';

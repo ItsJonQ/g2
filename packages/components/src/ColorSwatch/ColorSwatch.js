@@ -1,4 +1,3 @@
-import { connect } from '@wp-g2/context';
 import { colorize } from '@wp-g2/utils';
 import React from 'react';
 
@@ -11,4 +10,4 @@ function ColorSwatch({ color: colorProp = 'purple', ...props }) {
 	return <ColorSwatchView style={{ backgroundColor }} />;
 }
 
-export default connect(ColorSwatch, 'ColorSwatch');
+export default React.memo(ColorSwatch);

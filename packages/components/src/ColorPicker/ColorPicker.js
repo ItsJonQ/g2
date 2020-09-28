@@ -1,4 +1,4 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { noop, useControlledState } from '@wp-g2/utils';
 import React from 'react';
@@ -7,17 +7,18 @@ import { SketchPicker } from 'react-color';
 import * as styles from './ColorPicker.styles';
 const { ColorPickerView } = styles;
 
-function ColorPicker({
-	color: colorProp,
-	alpha,
-	onChange = noop,
-	disableAlpha = true,
-	presetColors = [],
-	renderers,
-	onSwatchHover,
-	width = '100%',
-	...props
-}) {
+function ColorPicker(props, forwardedRef) {
+	const {
+		color: colorProp,
+		alpha,
+		onChange = noop,
+		disableAlpha = true,
+		presetColors = [],
+		renderers,
+		onSwatchHover,
+		width = '100%',
+		...otherProps
+	} = useContextSystem(props, 'ColorPicker');
 	const [color, setColor] = useControlledState(colorProp);
 
 	const handleChangeComplete = (next) => {
@@ -30,7 +31,7 @@ function ColorPicker({
 	};
 
 	return (
-		<ColorPickerView {...props}>
+		<ColorPickerView {...otherProps} ref={forwardedRef}>
 			<SketchPicker
 				alpha={alpha}
 				color={ui.color(color).toRgb()}
@@ -46,4 +47,4 @@ function ColorPicker({
 	);
 }
 
-export default connect(ColorPicker, 'ColorPicker');
+export default contextConnect(ColorPicker, 'ColorPicker');

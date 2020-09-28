@@ -2,7 +2,10 @@ import { css, cx } from '@wp-g2/styles';
 import { is, kebabCase, memoize, uniq } from '@wp-g2/utils';
 
 import { CONNECTED_NAMESPACE } from './constants';
-import { useComponentsContext } from './ContextSystemProvider';
+import {
+	useComponentsContext,
+	useContextStoreContext,
+} from './ContextSystemProvider';
 import { ns } from './utils';
 
 /**
@@ -14,7 +17,8 @@ import { ns } from './utils';
  * @param {function} forwardedRef React.forwardRef reference object.
  */
 export function useContextSystem(props, namespace, forwardedRef) {
-	const context = useComponentsContext();
+	const { store } = useContextStoreContext();
+	const { context } = store();
 	let contextProps;
 
 	const displayName = is.array(namespace) ? namespace[0] : namespace;

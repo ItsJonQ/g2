@@ -4,7 +4,7 @@ import {
 	unstable_ComboboxPopover as ReakitComboboxPopover,
 	unstable_useComboboxState as useComboboxState,
 } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { useResizeAware } from '@wp-g2/utils';
 import React, { useRef } from 'react';
@@ -13,8 +13,9 @@ import { DropdownMenu, DropdownMenuItem } from '../Dropdown';
 import { TextInput } from '../TextInput';
 import { View } from '../View';
 
-function Combobox({ modal = true, ...props }) {
-	const combobox = useComboboxState({ modal });
+function Combobox(props, forwardedRef) {
+	const { modal = true, ...otherProps } = useContextSystem(props, 'Combobox');
+	const combobox = useComboboxState({ modal, ...otherProps });
 	const inputWrapperRef = useRef();
 	const [resizeListener, sizes] = useResizeAware();
 
@@ -26,6 +27,7 @@ function Combobox({ modal = true, ...props }) {
 				__onBeforeChange={(event) => event}
 				aria-label="Fruit"
 				as={TextInput}
+				ref={forwardedRef}
 				unstable_referenceRef={inputWrapperRef.current}
 			/>
 			<ReakitComboboxPopover
@@ -62,4 +64,4 @@ function Combobox({ modal = true, ...props }) {
 	);
 }
 
-export default connect(Combobox, 'Combobox');
+export default contextConnect(Combobox, 'Combobox');

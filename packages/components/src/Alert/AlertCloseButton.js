@@ -29,4 +29,4 @@ function AlertCloseButton({
 	);
 }
 
-export default AlertCloseButton;
+export default React.memo(AlertCloseButton);

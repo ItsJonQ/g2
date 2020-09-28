@@ -1,5 +1,4 @@
 import { useTabState } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
 import { useResizeAware } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 
@@ -19,4 +18,4 @@ function Tabs({ children, selectedId }) {
 	);
 }
 
-export default connect(Tabs, 'Tabs');
+export default React.memo(Tabs);

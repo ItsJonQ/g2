@@ -5,7 +5,7 @@ import * as styles from './Tabs.styles';
 
 const { TabIndicatorView } = styles;
 
-function TabIndicator({ ...props }) {
+function TabIndicator() {
 	const { listRef: containerRef, sizes, tab } = useTabsContext();
 	const [left, setLeft] = useState(0);
 	const [width, setWidth] = useState(0);
@@ -41,16 +41,13 @@ function TabIndicator({ ...props }) {
 		}
 	}, [canAnimate, containerRef, containerWidth, tab]);
 
-	return (
-		<TabIndicatorView
-			role="presentation"
-			style={{
-				transform: `translateX(${left}px)`,
-				transition: canAnimate ? null : 'none',
-				width,
-			}}
-		/>
-	);
+	const viewStyle = {
+		transform: `translateX(${left}px)`,
+		transition: canAnimate ? null : 'none',
+		width,
+	};
+
+	return <TabIndicatorView role="presentation" style={viewStyle} />;
 }
 
-export default TabIndicator;
+export default React.memo(TabIndicator);

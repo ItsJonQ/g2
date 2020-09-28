@@ -1,5 +1,5 @@
 import { TabList as ReakitTabList } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
 
@@ -8,7 +8,11 @@ import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';
 const { TabListView } = styles;
 
-function TabList({ children, forwardedRef, label = 'Tabs', ...props }) {
+function TabList(props, forwardedRef) {
+	const { children, label = 'Tabs', ...otherProps } = useContextSystem(
+		props,
+		'TabList',
+	);
 	const { listRef, resizeListener, tab } = useTabsContext();
 
 	return (
@@ -17,7 +21,7 @@ function TabList({ children, forwardedRef, label = 'Tabs', ...props }) {
 			as={TabListView}
 			ref={mergeRefs([forwardedRef, listRef])}
 			{...tab}
-			{...props}
+			{...otherProps}
 		>
 			{resizeListener}
 			{children}
@@ -26,4 +30,4 @@ function TabList({ children, forwardedRef, label = 'Tabs', ...props }) {
 	);
 }
 
-export default connect(TabList, 'TabList');
+export default contextConnect(TabList, 'TabList');

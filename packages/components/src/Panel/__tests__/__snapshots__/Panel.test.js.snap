@@ -9,52 +9,46 @@ exports[`props should render correctly 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-2p6qpx"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
-    <div
-      class="wp-components-flex-item css-1bku9vz"
+    <span
+      class="wp-components-text css-1jk3501"
       data-g2-c16t="true"
-      data-g2-component="FlexItem"
+      data-g2-component="Text"
     >
-      <span
-        class="wp-components-text css-1jk3501"
+      <div
+        class="wp-components-arrow-indicator css-ei3g6o"
         data-g2-c16t="true"
-        data-g2-component="Text"
+        data-g2-component="ArrowIndicator"
       >
         <div
-          class="wp-components-arrow-indicator css-ei3g6o"
-          data-g2-c16t="true"
-          data-g2-component="ArrowIndicator"
+          class="css-j1yu9m"
         >
           <div
-            class="css-j1yu9m"
+            class="wp-components-icon css-feyyos"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-feyyos"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="currentColor"
+              height="5"
+              size="5"
+              viewBox="0 0 24 24"
+              width="5"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="currentColor"
-                height="5"
-                size="5"
-                viewBox="0 0 24 24"
-                width="5"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12l-18 12v-24z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M21 12l-18 12v-24z"
+              />
+            </svg>
           </div>
         </div>
-      </span>
-    </div>
+      </div>
+    </span>
     <div
       class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
@@ -103,52 +97,46 @@ exports[`props should render seamless 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-2p6qpx"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
-    <div
-      class="wp-components-flex-item css-1bku9vz"
+    <span
+      class="wp-components-text css-1jk3501"
       data-g2-c16t="true"
-      data-g2-component="FlexItem"
+      data-g2-component="Text"
     >
-      <span
-        class="wp-components-text css-1jk3501"
+      <div
+        class="wp-components-arrow-indicator css-ei3g6o"
         data-g2-c16t="true"
-        data-g2-component="Text"
+        data-g2-component="ArrowIndicator"
       >
         <div
-          class="wp-components-arrow-indicator css-ei3g6o"
-          data-g2-c16t="true"
-          data-g2-component="ArrowIndicator"
+          class="css-j1yu9m"
         >
           <div
-            class="css-j1yu9m"
+            class="wp-components-icon css-feyyos"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-feyyos"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="currentColor"
+              height="5"
+              size="5"
+              viewBox="0 0 24 24"
+              width="5"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="currentColor"
-                height="5"
-                size="5"
-                viewBox="0 0 24 24"
-                width="5"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12l-18 12v-24z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M21 12l-18 12v-24z"
+              />
+            </svg>
           </div>
         </div>
-      </span>
-    </div>
+      </div>
+    </span>
     <div
       class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"
@@ -196,52 +184,46 @@ exports[`props should render visible 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="true"
-    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-1m0ews"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-2p6qpx"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
     tabindex="0"
   >
-    <div
-      class="wp-components-flex-item css-1bku9vz"
+    <span
+      class="wp-components-text css-1jk3501"
       data-g2-c16t="true"
-      data-g2-component="FlexItem"
+      data-g2-component="Text"
     >
-      <span
-        class="wp-components-text css-1jk3501"
+      <div
+        class="wp-components-arrow-indicator css-nvpsar"
         data-g2-c16t="true"
-        data-g2-component="Text"
+        data-g2-component="ArrowIndicator"
       >
         <div
-          class="wp-components-arrow-indicator css-nvpsar"
-          data-g2-c16t="true"
-          data-g2-component="ArrowIndicator"
+          class="css-j1yu9m"
         >
           <div
-            class="css-j1yu9m"
+            class="wp-components-icon css-feyyos"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-feyyos"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="currentColor"
+              height="5"
+              size="5"
+              viewBox="0 0 24 24"
+              width="5"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="currentColor"
-                height="5"
-                size="5"
-                viewBox="0 0 24 24"
-                width="5"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12l-18 12v-24z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M21 12l-18 12v-24z"
+              />
+            </svg>
           </div>
         </div>
-      </span>
-    </div>
+      </div>
+    </span>
     <div
       class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
       data-g2-c16t="true"

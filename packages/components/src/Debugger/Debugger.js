@@ -1,13 +1,12 @@
-import { connect } from '@wp-g2/context';
 import { IS_DEV_ENV } from '@wp-g2/utils';
 import React from 'react';
 
 import { DebuggerView } from './Debugger.styles';
 
-function Debugger({ __force = false, ...props }) {
+function Debugger({ __force = false, ...otherProps }) {
 	if (!IS_DEV_ENV && !__force) return null;
 
-	return <DebuggerView {...props} />;
+	return <DebuggerView {...otherProps} />;
 }
 
-export default connect(Debugger, 'Debugger');
+export default React.memo(Debugger);

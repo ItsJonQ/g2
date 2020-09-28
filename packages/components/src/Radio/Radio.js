@@ -1,18 +1,19 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { ControlLabel } from '../ControlLabel';
 import { FormGroup } from '../FormGroup';
 import RadioElement from './RadioElement';
 
-function Radio({
-	forwardedRef,
-	gap,
-	label,
-	templateColumns = 'auto 1fr',
-	...props
-}) {
-	if (!label) return <RadioElement {...props} ref={forwardedRef} />;
+function Radio(props, forwardedRef) {
+	const {
+		gap,
+		label,
+		templateColumns = 'auto 1fr',
+		...otherProps
+	} = useContextSystem(props, 'Radio');
+
+	if (!label) return <RadioElement {...otherProps} ref={forwardedRef} />;
 
 	return (
 		<FormGroup gap={gap} isInline templateColumns={templateColumns}>
@@ -22,4 +23,4 @@ function Radio({
 	);
 }
 
-export default connect(Radio, 'Radio');
+export default contextConnect(Radio, 'Radio');

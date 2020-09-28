@@ -1,11 +1,13 @@
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
 import { <%= name %>View } from './<%= name %>.styles';
 import * as styles from './<%= name %>.styles';
 
-function <%= name %> ({ ...props }) {
-	return <<%= name %>View {...props } />;
+function <%= name %> (props, forwardedRef) {
+	const {...otherProps} = useContextSystem(props, '<%= name %>')
+	
+	return <<%= name %>View {...otherProps } />;
 }
 
-export default connect(<%= name %>, '<%= name %>');
+export default contextConnect(<%= name %>, '<%= name %>');

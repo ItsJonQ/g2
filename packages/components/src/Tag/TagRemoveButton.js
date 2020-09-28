@@ -26,4 +26,4 @@ function TagRemoveButton({ onClick = noop, removeButtonText }) {
 	);
 }
 
-export default TagRemoveButton;
+export default React.memo(TagRemoveButton);

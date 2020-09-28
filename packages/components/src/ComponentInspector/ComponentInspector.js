@@ -1,5 +1,5 @@
-import { connect, ns } from '@wp-g2/context';
-import { is } from '@wp-g2/utils';
+import { contextConnect, ns, useContextSystem } from '@wp-g2/context';
+import { is, mergeRefs } from '@wp-g2/utils';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Debugger } from '../Debugger';
@@ -7,7 +7,14 @@ import { ComponentInspectorView } from './ComponentInspector.styles';
 
 const [NAMESPACE] = Object.keys(ns());
 
-function ComponentInspector({ children, disabled = false, visible, ...props }) {
+function ComponentInspector(props, forwardedRef) {
+	const {
+		children,
+		disabled = false,
+		visible,
+		...otherProps
+	} = useContextSystem(props, 'ComponentInspector');
+
 	const nodeRef = useRef();
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 	const [label, setLabel] = useState();
@@ -64,8 +71,8 @@ function ComponentInspector({ children, disabled = false, visible, ...props }) {
 	return (
 		<ComponentInspectorView
 			disabled={disabled || isHidden}
-			ref={nodeRef}
-			{...props}
+			ref={mergeRefs([forwardedRef, nodeRef])}
+			{...otherProps}
 		>
 			{showDebugger && (
 				<Debugger
@@ -85,4 +92,4 @@ function ComponentInspector({ children, disabled = false, visible, ...props }) {
 	);
 }
 
-export default connect(ComponentInspector, 'ComponentInspector');
+export default contextConnect(ComponentInspector, 'ComponentInspector');

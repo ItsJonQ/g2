@@ -1,4 +1,3 @@
-import { useTheme } from '@wp-g2/create-styles';
 import { useEffect, useState } from 'react';
 
 import { breakpoints } from '../style-system';
@@ -49,11 +48,10 @@ export const useBreakpointIndex = (options = {}) => {
 };
 
 export function useResponsiveValue(values, options = {}) {
-	const { theme } = useTheme();
 	const index = useBreakpointIndex(options);
 
 	if (!Array.isArray(values)) return values;
 
-	const array = typeof values === 'function' ? values(theme) : values;
+	const array = typeof values === 'function' ? values() : values;
 	return array[index >= array.length ? array.length - 1 : index];
 }

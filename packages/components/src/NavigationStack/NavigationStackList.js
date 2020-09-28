@@ -1,5 +1,4 @@
 import { Tab, TabList } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
 import React from 'react';
 
 import { VisuallyHidden } from '../VisuallyHidden';
@@ -23,4 +22,4 @@ function NavigationStackList() {
 		</VisuallyHidden>
 	);
 }
-export default connect(NavigationStackList, 'NavigationStackList');
+export default React.memo(NavigationStackList);

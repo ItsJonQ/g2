@@ -1,5 +1,5 @@
 import { Checkbox as ReakitCheckbox } from '@wp-g2/a11y';
-import { connect } from '@wp-g2/context';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiCheck } from '@wp-g2/icons';
 import { css, cx, ui } from '@wp-g2/styles';
 import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
@@ -11,16 +11,17 @@ import { Icon } from '../Icon';
 import { CheckboxIconView, CheckboxWrapperView } from './Checkbox.styles';
 import * as styles from './Checkbox.styles';
 
-function CheckboxElement({
-	checked: checkedProp,
-	className,
-	css: cssProp,
-	defaultValue,
-	id: idProp,
-	onChange = noop,
-	forwardedRef,
-	...props
-}) {
+function CheckboxElement(props, forwardedRef) {
+	const {
+		checked: checkedProp,
+		className,
+		css: cssProp,
+		defaultValue,
+		id: idProp,
+		onChange = noop,
+		...otherProps
+	} = useContextSystem(props, 'CheckboxElement');
+
 	const { checkbox } = useCheckboxGroupContext();
 	const { id: contextId } = useFormGroupContext();
 	const id = idProp || contextId;
@@ -45,7 +46,7 @@ function CheckboxElement({
 		<CheckboxWrapperView {...ui.$('CheckboxWrapper')}>
 			<ReakitCheckbox
 				checked={checkedState}
-				{...props}
+				{...otherProps}
 				{...checkbox}
 				className={classes}
 				id={id}
@@ -59,4 +60,4 @@ function CheckboxElement({
 	);
 }
 
-export default connect(CheckboxElement, 'CheckboxElement');
+export default contextConnect(CheckboxElement, 'CheckboxElement');
