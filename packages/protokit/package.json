@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/protokit",
-  "version": "0.0.75",
+  "version": "0.0.76",
   "description": "Prototyping Toolkit for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -15,7 +15,7 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/utils": "^0.0.75",
+    "@wp-g2/utils": "^0.0.76",
     "faker": "^4.1.0",
     "faker-schema": "^1.0.2",
     "fuse.js": "^6.4.1"
