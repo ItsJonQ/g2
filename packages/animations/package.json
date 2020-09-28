@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/animations",
-    "version": "0.0.76",
+    "version": "0.0.77",
     "description": "Animation System for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
