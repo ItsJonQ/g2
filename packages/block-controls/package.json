@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/block-controls",
-    "version": "0.0.74",
+    "version": "0.0.75",
     "description": "",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -16,8 +16,8 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "@wp-g2/components": "^0.0.74",
-        "@wp-g2/utils": "^0.0.74"
+        "@wp-g2/components": "^0.0.75",
+        "@wp-g2/utils": "^0.0.75"
     },
     "peerDependencies": {
         "react": "^16.8.0",

@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.74",
+    "version": "0.0.75",
     "description": "Utilities for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -16,8 +16,10 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "@wp-g2/substate": "^0.0.74",
         "@itsjonq/is": "^0.0.5",
+        "@ngard/tiny-omit": "^1.0.0",
+        "@ngard/tiny-pick": "^1.0.0",
+        "@wp-g2/substate": "^0.0.75",
         "array-move": "^3.0.0",
         "copy-to-clipboard": "^3.3.1",
         "deepmerge": "^4.2.2",
@@ -32,8 +34,6 @@
         "lodash.upperfirst": "^4.3.1",
         "memize": "^1.1.0",
         "react-merge-refs": "^1.1.0",
-        "@ngard/tiny-omit": "^1.0.0",
-        "@ngard/tiny-pick": "^1.0.0",
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.5.5",
         "tinycolor2": "^1.4.2",
