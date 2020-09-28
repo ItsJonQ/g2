@@ -14,11 +14,11 @@ const PRESET_FONT_SIZES = {
 };
 
 export function getFontSize(size = BASE_FONT_SIZE) {
-	if (!is.number(size)) return size;
-
 	if (PRESET_FONT_SIZES[size]) {
 		return getFontSize(PRESET_FONT_SIZES[size]);
 	}
+
+	if (!is.number(size)) return size;
 
 	const ratio = size / BASE_FONT_SIZE;
 	return `calc(${ratio} * ${get('fontSize')})`;

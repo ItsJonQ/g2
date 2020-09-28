@@ -3,7 +3,7 @@
 exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button wp-components-close-button css-10nbsdp"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-4wwn81"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -11,47 +11,41 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-n2bnnp"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonIcon"
   >
-    <span
-      class="css-6wai7"
+    <div
+      class="wp-components-icon css-1d07aa5"
       data-g2-c16t="true"
-      data-g2-component="ButtonIcon"
+      data-g2-component="Icon"
     >
-      <div
-        class="wp-components-icon css-1d07aa5"
-        data-g2-c16t="true"
-        data-g2-component="Icon"
+      <svg
+        fill="none"
+        height="12"
+        size="12"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          fill="none"
-          height="12"
-          size="12"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </div>
-    </span>
+        <line
+          x1="18"
+          x2="6"
+          y1="6"
+          y2="18"
+        />
+        <line
+          x1="6"
+          x2="18"
+          y1="6"
+          y2="18"
+        />
+      </svg>
+    </div>
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -64,7 +58,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render size 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button wp-components-close-button css-f2910g"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-xetakm"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -72,47 +66,41 @@ exports[`props should render size 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-n2bnnp"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonIcon"
   >
-    <span
-      class="css-6wai7"
+    <div
+      class="wp-components-icon css-1d07aa5"
       data-g2-c16t="true"
-      data-g2-component="ButtonIcon"
+      data-g2-component="Icon"
     >
-      <div
-        class="wp-components-icon css-1d07aa5"
-        data-g2-c16t="true"
-        data-g2-component="Icon"
+      <svg
+        fill="none"
+        height="12"
+        size="12"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          fill="none"
-          height="12"
-          size="12"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </div>
-    </span>
+        <line
+          x1="18"
+          x2="6"
+          y1="6"
+          y2="18"
+        />
+        <line
+          x1="6"
+          x2="18"
+          y1="6"
+          y2="18"
+        />
+      </svg>
+    </div>
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -125,7 +113,7 @@ exports[`props should render size 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button wp-components-close-button css-ymgfrs"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-ew7jo1"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="CloseButton"
@@ -133,47 +121,41 @@ exports[`props should render variant 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-n2bnnp"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonIcon"
   >
-    <span
-      class="css-6wai7"
+    <div
+      class="wp-components-icon css-1d07aa5"
       data-g2-c16t="true"
-      data-g2-component="ButtonIcon"
+      data-g2-component="Icon"
     >
-      <div
-        class="wp-components-icon css-1d07aa5"
-        data-g2-c16t="true"
-        data-g2-component="Icon"
+      <svg
+        fill="none"
+        height="12"
+        size="12"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          fill="none"
-          height="12"
-          size="12"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </div>
-    </span>
+        <line
+          x1="18"
+          x2="6"
+          y1="6"
+          y2="18"
+        />
+        <line
+          x1="6"
+          x2="18"
+          y1="6"
+          y2="18"
+        />
+      </svg>
+    </div>
   </span>
   <span
     class="wp-components-elevation css-17x6dun"

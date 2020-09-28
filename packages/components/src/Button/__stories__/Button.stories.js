@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { Flex } from '../../Flex';
-import { Spacer } from '../../Spacer';
-import { Text } from '../../Text';
+import { Flex, Spacer, Text } from '../../index';
 import { Button } from '../index';
 
 export default {
@@ -49,6 +47,19 @@ export const _default = () => {
 			<Buttons isSubtle variant="secondary" />
 			<Buttons isControl />
 			<Buttons isControl isSubtle />
+			<Buttons
+				elevation={2}
+				prefix={<Text>Prefix</Text>}
+				suffix={<Text>Suffix</Text>}
+				variant="secondary"
+			/>
+			<Buttons
+				elevation={2}
+				isLoading
+				prefix={<Text>Prefix</Text>}
+				suffix={<Text>Suffix</Text>}
+				variant="secondary"
+			/>
 		</>
 	);
 };

@@ -2,18 +2,18 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group wp-components-stepper css-133iomh"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-153ua32"
   data-g2-c16t="true"
   data-g2-component="Stepper"
 >
   <div
-    class="css-q1q4pn"
+    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-1ay7uwa"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1w935ee"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -21,41 +21,35 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-ylu66o"
+        class="wp-components-flex-item css-n2bnnp"
         data-g2-c16t="true"
-        data-g2-component="Flex"
+        data-g2-component="ButtonIcon"
       >
-        <span
-          class="css-6wai7"
+        <div
+          class="wp-components-icon css-1tw4gp0"
           data-g2-c16t="true"
-          data-g2-component="ButtonIcon"
+          data-g2-component="Icon"
         >
-          <div
-            class="wp-components-icon css-1tw4gp0"
-            data-g2-c16t="true"
-            data-g2-component="Icon"
+          <svg
+            fill="none"
+            height="14"
+            size="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="none"
-              height="14"
-              size="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
-              />
-            </svg>
-          </div>
-        </span>
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </div>
       </span>
       <span
         class="wp-components-elevation css-17x6dun"
@@ -65,13 +59,13 @@ exports[`props should render correctly 1`] = `
     </button>
   </div>
   <div
-    class="css-evtua"
+    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-iwltri"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1md5lle"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -79,47 +73,41 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-ylu66o"
+        class="wp-components-flex-item css-n2bnnp"
         data-g2-c16t="true"
-        data-g2-component="Flex"
+        data-g2-component="ButtonIcon"
       >
-        <span
-          class="css-6wai7"
+        <div
+          class="wp-components-icon css-1tw4gp0"
           data-g2-c16t="true"
-          data-g2-component="ButtonIcon"
+          data-g2-component="Icon"
         >
-          <div
-            class="wp-components-icon css-1tw4gp0"
-            data-g2-c16t="true"
-            data-g2-component="Icon"
+          <svg
+            fill="none"
+            height="14"
+            size="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="none"
-              height="14"
-              size="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="12"
-                x2="12"
-                y1="5"
-                y2="19"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
-              />
-            </svg>
-          </div>
-        </span>
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </div>
       </span>
       <span
         class="wp-components-elevation css-17x6dun"
@@ -133,18 +121,18 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group wp-components-stepper css-133iomh"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-153ua32"
   data-g2-c16t="true"
   data-g2-component="Stepper"
 >
   <div
-    class="css-q1q4pn"
+    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-vrsgbp"
+      class="wp-components-flex wp-components-base-button wp-components-button css-17axzz4"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -152,41 +140,35 @@ exports[`props should render size 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-ylu66o"
+        class="wp-components-flex-item css-n2bnnp"
         data-g2-c16t="true"
-        data-g2-component="Flex"
+        data-g2-component="ButtonIcon"
       >
-        <span
-          class="css-6wai7"
+        <div
+          class="wp-components-icon css-1tw4gp0"
           data-g2-c16t="true"
-          data-g2-component="ButtonIcon"
+          data-g2-component="Icon"
         >
-          <div
-            class="wp-components-icon css-1tw4gp0"
-            data-g2-c16t="true"
-            data-g2-component="Icon"
+          <svg
+            fill="none"
+            height="14"
+            size="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="none"
-              height="14"
-              size="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
-              />
-            </svg>
-          </div>
-        </span>
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </div>
       </span>
       <span
         class="wp-components-elevation css-17x6dun"
@@ -196,13 +178,13 @@ exports[`props should render size 1`] = `
     </button>
   </div>
   <div
-    class="css-evtua"
+    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-1ozy2u"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1pluhvh"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -210,47 +192,41 @@ exports[`props should render size 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-ylu66o"
+        class="wp-components-flex-item css-n2bnnp"
         data-g2-c16t="true"
-        data-g2-component="Flex"
+        data-g2-component="ButtonIcon"
       >
-        <span
-          class="css-6wai7"
+        <div
+          class="wp-components-icon css-1tw4gp0"
           data-g2-c16t="true"
-          data-g2-component="ButtonIcon"
+          data-g2-component="Icon"
         >
-          <div
-            class="wp-components-icon css-1tw4gp0"
-            data-g2-c16t="true"
-            data-g2-component="Icon"
+          <svg
+            fill="none"
+            height="14"
+            size="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="none"
-              height="14"
-              size="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="12"
-                x2="12"
-                y1="5"
-                y2="19"
-              />
-              <line
-                x1="5"
-                x2="19"
-                y1="12"
-                y2="12"
-              />
-            </svg>
-          </div>
-        </span>
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </div>
       </span>
       <span
         class="wp-components-elevation css-17x6dun"
@@ -264,18 +240,18 @@ exports[`props should render size 1`] = `
 
 exports[`props should render vertically 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group wp-components-stepper css-ylf0bx"
+  class="wp-components-flex wp-components-control-group wp-components-stepper css-1qwmsub"
   data-g2-c16t="true"
   data-g2-component="Stepper"
 >
   <div
-    class="css-q1q4pn"
+    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-jyxotf"
+      class="wp-components-flex wp-components-base-button wp-components-button css-8g441m"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -283,38 +259,32 @@ exports[`props should render vertically 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-ylu66o"
+        class="wp-components-flex-item css-n2bnnp"
         data-g2-c16t="true"
-        data-g2-component="Flex"
+        data-g2-component="ButtonIcon"
       >
-        <span
-          class="css-6wai7"
+        <div
+          class="wp-components-icon css-1tw4gp0"
           data-g2-c16t="true"
-          data-g2-component="ButtonIcon"
+          data-g2-component="Icon"
         >
-          <div
-            class="wp-components-icon css-1tw4gp0"
-            data-g2-c16t="true"
-            data-g2-component="Icon"
+          <svg
+            fill="none"
+            height="14"
+            size="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="none"
-              height="14"
-              size="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="18 15 12 9 6 15"
-              />
-            </svg>
-          </div>
-        </span>
+            <polyline
+              points="18 15 12 9 6 15"
+            />
+          </svg>
+        </div>
       </span>
       <span
         class="wp-components-elevation css-17x6dun"
@@ -324,13 +294,13 @@ exports[`props should render vertically 1`] = `
     </button>
   </div>
   <div
-    class="css-ykfknf"
+    class="wp-components-flex-item wp-components-control-group-item css-98bc7i"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-base-button wp-components-button css-73y4zx"
+      class="wp-components-flex wp-components-base-button wp-components-button css-4btbid"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="StepperButton"
@@ -338,38 +308,32 @@ exports[`props should render vertically 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex css-ylu66o"
+        class="wp-components-flex-item css-n2bnnp"
         data-g2-c16t="true"
-        data-g2-component="Flex"
+        data-g2-component="ButtonIcon"
       >
-        <span
-          class="css-6wai7"
+        <div
+          class="wp-components-icon css-1tw4gp0"
           data-g2-c16t="true"
-          data-g2-component="ButtonIcon"
+          data-g2-component="Icon"
         >
-          <div
-            class="wp-components-icon css-1tw4gp0"
-            data-g2-c16t="true"
-            data-g2-component="Icon"
+          <svg
+            fill="none"
+            height="14"
+            size="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="none"
-              height="14"
-              size="14"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="6 9 12 15 18 9"
-              />
-            </svg>
-          </div>
-        </span>
+            <polyline
+              points="6 9 12 15 18 9"
+            />
+          </svg>
+        </div>
       </span>
       <span
         class="wp-components-elevation css-17x6dun"

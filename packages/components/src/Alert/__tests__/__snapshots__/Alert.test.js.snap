@@ -13,12 +13,12 @@ exports[`props should render as dismissable 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-1d0g5wo"
+      class="wp-components-flex css-oy15td"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="css-1g8hj12"
+        class="wp-components-flex-item wp-components-flex-block css-zkdzda"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
@@ -34,7 +34,7 @@ exports[`props should render as dismissable 1`] = `
       >
         <button
           aria-busy="false"
-          class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+          class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
           data-destructive="false"
           data-g2-c16t="true"
           data-g2-component="CloseButton"
@@ -43,12 +43,136 @@ exports[`props should render as dismissable 1`] = `
           type="button"
         >
           <span
-            class="wp-components-flex css-ylu66o"
+            class="wp-components-flex-item css-n2bnnp"
             data-g2-c16t="true"
-            data-g2-component="Flex"
+            data-g2-component="ButtonIcon"
+          >
+            <div
+              class="wp-components-icon css-1k4as4"
+              data-g2-c16t="true"
+              data-g2-component="Icon"
+            >
+              <svg
+                fill="none"
+                height="16"
+                size="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </span>
+          <span
+            class="wp-components-elevation css-17x6dun"
+            data-g2-c16t="true"
+            data-g2-component="ButtonElevation"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+<div
+  class="wp-components-animated css-j1yu9m"
+  data-g2-c16t="true"
+  data-g2-component="Animated"
+  style="opacity: 0; transform: scale(0.9) translateZ(0);"
+>
+  <div
+    class="wp-components-alert css-17vh6wg"
+    data-g2-c16t="true"
+    data-g2-component="Alert"
+  >
+    <div
+      class="wp-components-flex css-oy15td"
+      data-g2-c16t="true"
+      data-g2-component="Flex"
+    >
+      <div
+        class="wp-components-flex-item wp-components-flex-block css-zkdzda"
+        data-g2-c16t="true"
+        data-g2-component="FlexBlock"
+      >
+        <div
+          class="css-j1yu9m"
+          data-g2-component="AlertContent"
+        >
+          I like warm hugs
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render with status 1`] = `
+<div
+  class="css-j1yu9m"
+  data-g2-component="Alerts"
+>
+  <div
+    class="wp-components-animated css-j1yu9m"
+    data-g2-c16t="true"
+    data-g2-component="Animated"
+    style="opacity: 1; transform: none;"
+  >
+    <div
+      class="wp-components-alert css-3n26nx"
+      data-g2-c16t="true"
+      data-g2-component="Alert"
+    >
+      <div
+        class="wp-components-flex css-oy15td"
+        data-g2-c16t="true"
+        data-g2-component="Flex"
+      >
+        <div
+          class="wp-components-flex-item wp-components-flex-block css-zkdzda"
+          data-g2-c16t="true"
+          data-g2-component="FlexBlock"
+        >
+          <div
+            class="css-oabb2t"
+            data-g2-component="AlertContent"
+          >
+            I like warm hugs
+          </div>
+        </div>
+        <div
+          class="css-1f2v6o8"
+        >
+          <button
+            aria-busy="false"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+            data-destructive="false"
+            data-g2-c16t="true"
+            data-g2-component="CloseButton"
+            data-icon="true"
+            title="Dismiss"
+            type="button"
           >
             <span
-              class="css-6wai7"
+              class="wp-components-flex-item css-n2bnnp"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
@@ -84,142 +208,6 @@ exports[`props should render as dismissable 1`] = `
                 </svg>
               </div>
             </span>
-          </span>
-          <span
-            class="wp-components-elevation css-17x6dun"
-            data-g2-c16t="true"
-            data-g2-component="ButtonElevation"
-          />
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props should render correctly 1`] = `
-<div
-  class="wp-components-animated css-j1yu9m"
-  data-g2-c16t="true"
-  data-g2-component="Animated"
-  style="opacity: 0; transform: scale(0.9) translateZ(0);"
->
-  <div
-    class="wp-components-alert css-17vh6wg"
-    data-g2-c16t="true"
-    data-g2-component="Alert"
-  >
-    <div
-      class="wp-components-flex css-1d0g5wo"
-      data-g2-c16t="true"
-      data-g2-component="Flex"
-    >
-      <div
-        class="css-1g8hj12"
-        data-g2-c16t="true"
-        data-g2-component="FlexBlock"
-      >
-        <div
-          class="css-j1yu9m"
-          data-g2-component="AlertContent"
-        >
-          I like warm hugs
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`props should render with status 1`] = `
-<div
-  class="css-j1yu9m"
-  data-g2-component="Alerts"
->
-  <div
-    class="wp-components-animated css-j1yu9m"
-    data-g2-c16t="true"
-    data-g2-component="Animated"
-    style="opacity: 1; transform: none;"
-  >
-    <div
-      class="wp-components-alert css-3n26nx"
-      data-g2-c16t="true"
-      data-g2-component="Alert"
-    >
-      <div
-        class="wp-components-flex css-1d0g5wo"
-        data-g2-c16t="true"
-        data-g2-component="Flex"
-      >
-        <div
-          class="css-1g8hj12"
-          data-g2-c16t="true"
-          data-g2-component="FlexBlock"
-        >
-          <div
-            class="css-oabb2t"
-            data-g2-component="AlertContent"
-          >
-            I like warm hugs
-          </div>
-        </div>
-        <div
-          class="css-1f2v6o8"
-        >
-          <button
-            aria-busy="false"
-            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
-            data-destructive="false"
-            data-g2-c16t="true"
-            data-g2-component="CloseButton"
-            data-icon="true"
-            title="Dismiss"
-            type="button"
-          >
-            <span
-              class="wp-components-flex css-ylu66o"
-              data-g2-c16t="true"
-              data-g2-component="Flex"
-            >
-              <span
-                class="css-6wai7"
-                data-g2-c16t="true"
-                data-g2-component="ButtonIcon"
-              >
-                <div
-                  class="wp-components-icon css-1k4as4"
-                  data-g2-c16t="true"
-                  data-g2-component="Icon"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    size="16"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="18"
-                      x2="6"
-                      y1="6"
-                      y2="18"
-                    />
-                    <line
-                      x1="6"
-                      x2="18"
-                      y1="6"
-                      y2="18"
-                    />
-                  </svg>
-                </div>
-              </span>
-            </span>
             <span
               class="wp-components-elevation css-17x6dun"
               data-g2-c16t="true"
@@ -242,12 +230,12 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-1d0g5wo"
+        class="wp-components-flex css-oy15td"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="css-1g8hj12"
+          class="wp-components-flex-item wp-components-flex-block css-zkdzda"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -263,7 +251,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -272,47 +260,41 @@ exports[`props should render with status 1`] = `
             type="button"
           >
             <span
-              class="wp-components-flex css-ylu66o"
+              class="wp-components-flex-item css-n2bnnp"
               data-g2-c16t="true"
-              data-g2-component="Flex"
+              data-g2-component="ButtonIcon"
             >
-              <span
-                class="css-6wai7"
+              <div
+                class="wp-components-icon css-1k4as4"
                 data-g2-c16t="true"
-                data-g2-component="ButtonIcon"
+                data-g2-component="Icon"
               >
-                <div
-                  class="wp-components-icon css-1k4as4"
-                  data-g2-c16t="true"
-                  data-g2-component="Icon"
+                <svg
+                  fill="none"
+                  height="16"
+                  size="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    fill="none"
-                    height="16"
-                    size="16"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="18"
-                      x2="6"
-                      y1="6"
-                      y2="18"
-                    />
-                    <line
-                      x1="6"
-                      x2="18"
-                      y1="6"
-                      y2="18"
-                    />
-                  </svg>
-                </div>
-              </span>
+                  <line
+                    x1="18"
+                    x2="6"
+                    y1="6"
+                    y2="18"
+                  />
+                  <line
+                    x1="6"
+                    x2="18"
+                    y1="6"
+                    y2="18"
+                  />
+                </svg>
+              </div>
             </span>
             <span
               class="wp-components-elevation css-17x6dun"
@@ -336,12 +318,12 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-1d0g5wo"
+        class="wp-components-flex css-oy15td"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="css-1g8hj12"
+          class="wp-components-flex-item wp-components-flex-block css-zkdzda"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -357,7 +339,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -366,47 +348,41 @@ exports[`props should render with status 1`] = `
             type="button"
           >
             <span
-              class="wp-components-flex css-ylu66o"
+              class="wp-components-flex-item css-n2bnnp"
               data-g2-c16t="true"
-              data-g2-component="Flex"
+              data-g2-component="ButtonIcon"
             >
-              <span
-                class="css-6wai7"
+              <div
+                class="wp-components-icon css-1k4as4"
                 data-g2-c16t="true"
-                data-g2-component="ButtonIcon"
+                data-g2-component="Icon"
               >
-                <div
-                  class="wp-components-icon css-1k4as4"
-                  data-g2-c16t="true"
-                  data-g2-component="Icon"
+                <svg
+                  fill="none"
+                  height="16"
+                  size="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    fill="none"
-                    height="16"
-                    size="16"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="18"
-                      x2="6"
-                      y1="6"
-                      y2="18"
-                    />
-                    <line
-                      x1="6"
-                      x2="18"
-                      y1="6"
-                      y2="18"
-                    />
-                  </svg>
-                </div>
-              </span>
+                  <line
+                    x1="18"
+                    x2="6"
+                    y1="6"
+                    y2="18"
+                  />
+                  <line
+                    x1="6"
+                    x2="18"
+                    y1="6"
+                    y2="18"
+                  />
+                </svg>
+              </div>
             </span>
             <span
               class="wp-components-elevation css-17x6dun"
@@ -430,12 +406,12 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-1d0g5wo"
+        class="wp-components-flex css-oy15td"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="css-1g8hj12"
+          class="wp-components-flex-item wp-components-flex-block css-zkdzda"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -451,7 +427,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -460,47 +436,41 @@ exports[`props should render with status 1`] = `
             type="button"
           >
             <span
-              class="wp-components-flex css-ylu66o"
+              class="wp-components-flex-item css-n2bnnp"
               data-g2-c16t="true"
-              data-g2-component="Flex"
+              data-g2-component="ButtonIcon"
             >
-              <span
-                class="css-6wai7"
+              <div
+                class="wp-components-icon css-1k4as4"
                 data-g2-c16t="true"
-                data-g2-component="ButtonIcon"
+                data-g2-component="Icon"
               >
-                <div
-                  class="wp-components-icon css-1k4as4"
-                  data-g2-c16t="true"
-                  data-g2-component="Icon"
+                <svg
+                  fill="none"
+                  height="16"
+                  size="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    fill="none"
-                    height="16"
-                    size="16"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="18"
-                      x2="6"
-                      y1="6"
-                      y2="18"
-                    />
-                    <line
-                      x1="6"
-                      x2="18"
-                      y1="6"
-                      y2="18"
-                    />
-                  </svg>
-                </div>
-              </span>
+                  <line
+                    x1="18"
+                    x2="6"
+                    y1="6"
+                    y2="18"
+                  />
+                  <line
+                    x1="6"
+                    x2="18"
+                    y1="6"
+                    y2="18"
+                  />
+                </svg>
+              </div>
             </span>
             <span
               class="wp-components-elevation css-17x6dun"
@@ -524,12 +494,12 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-1d0g5wo"
+        class="wp-components-flex css-oy15td"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="css-1g8hj12"
+          class="wp-components-flex-item wp-components-flex-block css-zkdzda"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
@@ -545,7 +515,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-base-button wp-components-button wp-components-close-button css-7a3bsk"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -554,47 +524,41 @@ exports[`props should render with status 1`] = `
             type="button"
           >
             <span
-              class="wp-components-flex css-ylu66o"
+              class="wp-components-flex-item css-n2bnnp"
               data-g2-c16t="true"
-              data-g2-component="Flex"
+              data-g2-component="ButtonIcon"
             >
-              <span
-                class="css-6wai7"
+              <div
+                class="wp-components-icon css-1k4as4"
                 data-g2-c16t="true"
-                data-g2-component="ButtonIcon"
+                data-g2-component="Icon"
               >
-                <div
-                  class="wp-components-icon css-1k4as4"
-                  data-g2-c16t="true"
-                  data-g2-component="Icon"
+                <svg
+                  fill="none"
+                  height="16"
+                  size="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    fill="none"
-                    height="16"
-                    size="16"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="18"
-                      x2="6"
-                      y1="6"
-                      y2="18"
-                    />
-                    <line
-                      x1="6"
-                      x2="18"
-                      y1="6"
-                      y2="18"
-                    />
-                  </svg>
-                </div>
-              </span>
+                  <line
+                    x1="18"
+                    x2="6"
+                    y1="6"
+                    y2="18"
+                  />
+                  <line
+                    x1="6"
+                    x2="18"
+                    y1="6"
+                    y2="18"
+                  />
+                </svg>
+              </div>
             </span>
             <span
               class="wp-components-elevation css-17x6dun"
@@ -622,12 +586,12 @@ exports[`props should render with title 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-1d0g5wo"
+      class="wp-components-flex css-oy15td"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="css-1g8hj12"
+        class="wp-components-flex-item wp-components-flex-block css-zkdzda"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >

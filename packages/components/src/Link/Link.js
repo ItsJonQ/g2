@@ -1,20 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { Text } from '../Text';
-import * as styles from './Link.styles';
+import { View } from '../View';
+import { useLink } from './useLink';
 
 function Link(props, forwardedRef) {
-	const { className, isPlain, ...otherProps } = useContextSystem(
-		props,
-		'Link',
-	);
-	const classes = cx([styles.BaseLink, !isPlain && styles.Link], className);
+	const otherProps = useLink(props);
 
-	return (
-		<Text as="a" {...otherProps} className={classes} ref={forwardedRef} />
-	);
+	return <View as="a" {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(Link, 'Link');

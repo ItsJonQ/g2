@@ -2,7 +2,7 @@
 
 exports[`props should render Spacer 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-q03nou"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-18qivch"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
@@ -10,7 +10,7 @@ exports[`props should render Spacer 1`] = `
     class="css-j1yu9m"
   />
   <div
-    class="css-nhu5fg"
+    class="wp-components-flex-item css-zkdzda"
     data-g2-c16t="true"
     data-g2-component="Spacer"
   />
@@ -22,7 +22,7 @@ exports[`props should render Spacer 1`] = `
 
 exports[`props should render alignment 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-dy9a5k"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-l9c4fx"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
@@ -37,7 +37,7 @@ exports[`props should render alignment 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-ayxe9q"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1g7sj4q"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >
@@ -52,7 +52,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render spacing 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-q03nou"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-18qivch"
   data-g2-c16t="true"
   data-g2-component="VStack"
 >

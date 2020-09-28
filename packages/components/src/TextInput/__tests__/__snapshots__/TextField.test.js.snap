@@ -2,7 +2,7 @@
 
 exports[`props should render align 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-rw2f9"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-1rw338e"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -18,7 +18,7 @@ exports[`props should render align 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -34,7 +34,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render defaultValue 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -50,7 +50,7 @@ exports[`props should render defaultValue 1`] = `
 
 exports[`props should render disabled 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
   disabled=""
@@ -68,7 +68,7 @@ exports[`props should render disabled 1`] = `
 
 exports[`props should render gap 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-eoaycm"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-pb5oq1"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -84,7 +84,7 @@ exports[`props should render gap 1`] = `
 
 exports[`props should render isRounded 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -100,7 +100,7 @@ exports[`props should render isRounded 1`] = `
 
 exports[`props should render isSeamless 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -116,7 +116,7 @@ exports[`props should render isSeamless 1`] = `
 
 exports[`props should render justify 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-1ez1zzt"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-1m142dg"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -132,7 +132,7 @@ exports[`props should render justify 1`] = `
 
 exports[`props should render multiline 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-eb4rls"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-sbqiuf"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -147,12 +147,12 @@ exports[`props should render multiline 1`] = `
 
 exports[`props should render prefix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -172,7 +172,7 @@ exports[`props should render prefix 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -188,7 +188,7 @@ exports[`props should render size 1`] = `
 
 exports[`props should render suffix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -200,7 +200,7 @@ exports[`props should render suffix 1`] = `
     value=""
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -213,7 +213,7 @@ exports[`props should render suffix 1`] = `
 
 exports[`props should render value 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

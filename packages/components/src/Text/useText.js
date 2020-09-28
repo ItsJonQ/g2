@@ -81,11 +81,19 @@ export function useText(props) {
 		className,
 	);
 
+	let finalEllipsizeMode = 'undefined';
+	if (truncate === true) {
+		finalEllipsizeMode = 'auto';
+	}
+	if (truncate === false) {
+		finalEllipsizeMode = 'none';
+	}
+
 	const finalComponentProps = {
 		...otherProps,
 		className: classes,
 		children,
-		ellipsizeMode: ellipsizeMode || !truncate ? 'none' : 'undefined',
+		ellipsizeMode: ellipsizeMode || finalEllipsizeMode,
 	};
 
 	const truncateProps = useTruncate(finalComponentProps);

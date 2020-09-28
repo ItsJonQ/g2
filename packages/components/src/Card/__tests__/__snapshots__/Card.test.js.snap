@@ -11,7 +11,7 @@ exports[`props should render CardInnerBody 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-dk7z7s"
+      class="wp-components-flex wp-components-card-header css-wqbl37"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -24,13 +24,13 @@ exports[`props should render CardInnerBody 1`] = `
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-ergqyc"
+      class="wp-components-flex wp-components-card-footer css-1nuyb0q"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <button
         aria-busy="false"
-        class="wp-components-base-button wp-components-button css-1x8lw6z"
+        class="wp-components-flex wp-components-base-button wp-components-button css-wej0j3"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -38,17 +38,11 @@ exports[`props should render CardInnerBody 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-19mrak6"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonContent"
         >
-          <span
-            class="css-1om21wv"
-            data-g2-c16t="true"
-            data-g2-component="ButtonContent"
-          >
-            Agree
-          </span>
+          Agree
         </span>
         <span
           class="wp-components-elevation css-17x6dun"
@@ -82,7 +76,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-dk7z7s"
+      class="wp-components-flex wp-components-card-header css-wqbl37"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -100,13 +94,13 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-ergqyc"
+      class="wp-components-flex wp-components-card-footer css-1nuyb0q"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <button
         aria-busy="false"
-        class="wp-components-base-button wp-components-button css-1x8lw6z"
+        class="wp-components-flex wp-components-base-button wp-components-button css-wej0j3"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -114,17 +108,11 @@ exports[`props should render correctly 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-19mrak6"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonContent"
         >
-          <span
-            class="css-1om21wv"
-            data-g2-c16t="true"
-            data-g2-component="ButtonContent"
-          >
-            Agree
-          </span>
+          Agree
         </span>
         <span
           class="wp-components-elevation css-17x6dun"

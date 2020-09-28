@@ -1,5 +1,5 @@
 import { useContextSystem } from '@wp-g2/context';
-import { css, ui } from '@wp-g2/styles';
+import { css, cx, ui } from '@wp-g2/styles';
 
 import * as styles from './Flex.styles';
 
@@ -14,12 +14,12 @@ export function useFlexItem(props) {
 
 	sx.Base = css({
 		display: displayProp || ui.get('FlexItemDisplay'),
-		marginBottom: ui.get('FlexItemMarginBottom'),
-		marginLeft: ui.get('FlexItemMarginLeft'),
-		marginRight: ui.get('FlexItemMarginRight'),
+		// marginBottom: ui.get('FlexItemMarginBottom'),
+		// marginLeft: ui.get('FlexItemMarginLeft'),
+		// marginRight: ui.get('FlexItemMarginRight'),
 	});
 
-	const classes = css([
+	const classes = cx([
 		styles.Item,
 		sx.Base,
 		isBlock && styles.block,

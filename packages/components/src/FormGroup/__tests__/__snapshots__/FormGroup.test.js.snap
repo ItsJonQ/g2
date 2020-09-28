@@ -7,7 +7,7 @@ exports[`props should render alignLabel 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-oghrji"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-dtitas"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -15,7 +15,7 @@ exports[`props should render alignLabel 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -37,7 +37,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-gproz5"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-5dqldp"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -45,7 +45,7 @@ exports[`props should render correctly 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -67,13 +67,13 @@ exports[`props should render label without prop correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-1j24in7"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-trnfgt"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
   />
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -95,7 +95,7 @@ exports[`props should render vertically 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-gproz5"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-5dqldp"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -103,7 +103,7 @@ exports[`props should render vertically 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-y9yw3x"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-kwtihv"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >

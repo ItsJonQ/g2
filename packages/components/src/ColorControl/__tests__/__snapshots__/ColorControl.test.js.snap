@@ -3,7 +3,7 @@
 exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button wp-components-color-control css-1nfqg1p"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-1v516w8"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ColorControl"
@@ -11,29 +11,23 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-n2bnnp"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonPrefix"
   >
-    <span
-      class="css-6wai7"
+    <div
+      class="wp-components-color-circle css-o6owmm"
       data-g2-c16t="true"
-      data-g2-component="ButtonPrefix"
-    >
-      <div
-        class="wp-components-color-circle css-o6owmm"
-        data-g2-c16t="true"
-        data-g2-component="ColorCircle"
-        style="background-color: rgb(0, 0, 255);"
-      />
-    </span>
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      I like warm hugs
-    </span>
+      data-g2-component="ColorCircle"
+      style="background-color: rgb(0, 0, 255);"
+    />
+  </span>
+  <span
+    class="wp-components-flex-item css-19mrak6"
+    data-g2-c16t="true"
+    data-g2-component="ButtonContent"
+  >
+    I like warm hugs
   </span>
   <span
     class="wp-components-elevation css-17x6dun"

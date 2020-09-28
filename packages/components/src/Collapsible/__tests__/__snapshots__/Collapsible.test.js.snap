@@ -10,7 +10,7 @@ exports[`props should render correctly 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="false"
-    class="wp-components-base-button wp-components-button wp-components-collapsible-trigger css-1ywf1p8"
+    class="wp-components-flex wp-components-base-button wp-components-button wp-components-collapsible-trigger css-8ci99z"
     data-destructive="false"
     data-g2-c16t="true"
     data-g2-component="CollapsibleTrigger"
@@ -18,17 +18,11 @@ exports[`props should render correctly 1`] = `
     type="button"
   >
     <span
-      class="wp-components-flex css-ylu66o"
+      class="wp-components-flex-item css-19mrak6"
       data-g2-c16t="true"
-      data-g2-component="Flex"
+      data-g2-component="ButtonContent"
     >
-      <span
-        class="css-1om21wv"
-        data-g2-c16t="true"
-        data-g2-component="ButtonContent"
-      >
-        Show/Hide
-      </span>
+      Show/Hide
     </span>
     <span
       class="wp-components-elevation css-17x6dun"
@@ -66,7 +60,7 @@ exports[`props should render visible 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="true"
-    class="wp-components-base-button wp-components-button wp-components-collapsible-trigger css-1ywf1p8"
+    class="wp-components-flex wp-components-base-button wp-components-button wp-components-collapsible-trigger css-8ci99z"
     data-destructive="false"
     data-g2-c16t="true"
     data-g2-component="CollapsibleTrigger"
@@ -74,17 +68,11 @@ exports[`props should render visible 1`] = `
     type="button"
   >
     <span
-      class="wp-components-flex css-ylu66o"
+      class="wp-components-flex-item css-19mrak6"
       data-g2-c16t="true"
-      data-g2-component="Flex"
+      data-g2-component="ButtonContent"
     >
-      <span
-        class="css-1om21wv"
-        data-g2-c16t="true"
-        data-g2-component="ButtonContent"
-      >
-        Show/Hide
-      </span>
+      Show/Hide
     </span>
     <span
       class="wp-components-elevation css-17x6dun"

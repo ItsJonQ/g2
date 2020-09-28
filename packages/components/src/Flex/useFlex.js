@@ -41,20 +41,20 @@ export function useFlex(props) {
 		 * Trade-off:
 		 * Far less DOM less. However, UI rendering is not as reliable.
 		 */
-		'> *': {
-			marginBottom: isColumn ? ui.space(gap) : null,
-			marginLeft: !isColumn && isReverse ? ui.space(gap) : null,
-			marginRight: !isColumn && !isReverse ? ui.space(gap) : null,
+		'> * + *': {
+			marginTop: isColumn ? ui.space(gap) : null,
+			marginRight: !isColumn && isReverse ? ui.space(gap) : null,
+			marginLeft: !isColumn && !isReverse ? ui.space(gap) : null,
 		},
 		/**
 		 * Workaround to help with performance. Using CSS rules to target rather
 		 * than passing data via context.
 		 */
-		'> *:last-child': {
-			marginBottom: isColumn && 0,
-			marginRight: !isColumn && !isReverse && 0,
-			marginLeft: !isColumn && isReverse && 0,
-		},
+		// '> *:last-child': {
+		// 	marginBottom: isColumn && 0,
+		// 	marginRight: !isColumn && !isReverse && 0,
+		// 	marginLeft: !isColumn && isReverse && 0,
+		// },
 	});
 
 	const classes = cx([styles.Flex, sx.Base, className]);

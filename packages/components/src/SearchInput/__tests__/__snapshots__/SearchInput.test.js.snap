@@ -2,12 +2,12 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1opys9h"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -62,7 +62,7 @@ exports[`props should render correctly 1`] = `
     value=""
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -72,7 +72,7 @@ exports[`props should render correctly 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button css-16q1cru"
+        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -81,47 +81,41 @@ exports[`props should render correctly 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-n2bnnp"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonIcon"
         >
-          <span
-            class="css-6wai7"
+          <div
+            class="wp-components-icon css-2zqc15"
             data-g2-c16t="true"
-            data-g2-component="ButtonIcon"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-2zqc15"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="none"
+              height="10"
+              size="10"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="10"
-                size="10"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
-                />
-              </svg>
-            </div>
-          </span>
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
         </span>
         <span
           class="wp-components-elevation css-17x6dun"
@@ -136,12 +130,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isLoading 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1opys9h"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -214,7 +208,7 @@ exports[`props should render isLoading 1`] = `
     value=""
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -224,7 +218,7 @@ exports[`props should render isLoading 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button css-16q1cru"
+        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -233,47 +227,41 @@ exports[`props should render isLoading 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-n2bnnp"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonIcon"
         >
-          <span
-            class="css-6wai7"
+          <div
+            class="wp-components-icon css-2zqc15"
             data-g2-c16t="true"
-            data-g2-component="ButtonIcon"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-2zqc15"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="none"
+              height="10"
+              size="10"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="10"
-                size="10"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
-                />
-              </svg>
-            </div>
-          </span>
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
         </span>
         <span
           class="wp-components-elevation css-17x6dun"
@@ -288,12 +276,12 @@ exports[`props should render isLoading 1`] = `
 
 exports[`props should render placeholder 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1opys9h"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -348,7 +336,7 @@ exports[`props should render placeholder 1`] = `
     value=""
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -358,7 +346,7 @@ exports[`props should render placeholder 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button css-16q1cru"
+        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -367,47 +355,41 @@ exports[`props should render placeholder 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-n2bnnp"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonIcon"
         >
-          <span
-            class="css-6wai7"
+          <div
+            class="wp-components-icon css-2zqc15"
             data-g2-c16t="true"
-            data-g2-component="ButtonIcon"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-2zqc15"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="none"
+              height="10"
+              size="10"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="10"
-                size="10"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
-                />
-              </svg>
-            </div>
-          </span>
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
         </span>
         <span
           class="wp-components-elevation css-17x6dun"
@@ -422,12 +404,12 @@ exports[`props should render placeholder 1`] = `
 
 exports[`props should render prefix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1opys9h"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -485,7 +467,7 @@ exports[`props should render prefix 1`] = `
     value=""
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -495,7 +477,7 @@ exports[`props should render prefix 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button css-16q1cru"
+        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -504,47 +486,41 @@ exports[`props should render prefix 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-n2bnnp"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonIcon"
         >
-          <span
-            class="css-6wai7"
+          <div
+            class="wp-components-icon css-2zqc15"
             data-g2-c16t="true"
-            data-g2-component="ButtonIcon"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-2zqc15"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="none"
+              height="10"
+              size="10"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="10"
-                size="10"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
-                />
-              </svg>
-            </div>
-          </span>
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
         </span>
         <span
           class="wp-components-elevation css-17x6dun"
@@ -559,12 +535,12 @@ exports[`props should render prefix 1`] = `
 
 exports[`props should render suffix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1opys9h"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -619,7 +595,7 @@ exports[`props should render suffix 1`] = `
     value=""
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -632,7 +608,7 @@ exports[`props should render suffix 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button css-16q1cru"
+        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -641,47 +617,41 @@ exports[`props should render suffix 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-n2bnnp"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonIcon"
         >
-          <span
-            class="css-6wai7"
+          <div
+            class="wp-components-icon css-2zqc15"
             data-g2-c16t="true"
-            data-g2-component="ButtonIcon"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-2zqc15"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="none"
+              height="10"
+              size="10"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="10"
-                size="10"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
-                />
-              </svg>
-            </div>
-          </span>
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
         </span>
         <span
           class="wp-components-elevation css-17x6dun"
@@ -696,12 +666,12 @@ exports[`props should render suffix 1`] = `
 
 exports[`props should render value 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1opys9h"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputPrefix"
   >
@@ -756,7 +726,7 @@ exports[`props should render value 1`] = `
     value="q"
   />
   <div
-    class="css-1xlcbup"
+    class="wp-components-flex-item css-19kxsx5"
     data-g2-c16t="true"
     data-g2-component="TextInputSuffix"
   >
@@ -766,7 +736,7 @@ exports[`props should render value 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-base-button wp-components-button css-16q1cru"
+        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -775,47 +745,41 @@ exports[`props should render value 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex css-ylu66o"
+          class="wp-components-flex-item css-n2bnnp"
           data-g2-c16t="true"
-          data-g2-component="Flex"
+          data-g2-component="ButtonIcon"
         >
-          <span
-            class="css-6wai7"
+          <div
+            class="wp-components-icon css-2zqc15"
             data-g2-c16t="true"
-            data-g2-component="ButtonIcon"
+            data-g2-component="Icon"
           >
-            <div
-              class="wp-components-icon css-2zqc15"
-              data-g2-c16t="true"
-              data-g2-component="Icon"
+            <svg
+              fill="none"
+              height="10"
+              size="10"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="10"
-                size="10"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
-                />
-              </svg>
-            </div>
-          </span>
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </div>
         </span>
         <span
           class="wp-components-elevation css-17x6dun"

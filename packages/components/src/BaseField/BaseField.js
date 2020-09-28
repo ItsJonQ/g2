@@ -1,35 +1,13 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { useControlGroupContext } from '../ControlGroup';
-import { useFlex } from '../Flex';
 import { View } from '../View';
-import * as styles from './BaseField.styles';
+import { useBaseField } from './useBaseField';
 
 function BaseField(props, forwardedRef) {
-	const {
-		className,
-		isClickable = false,
-		isFocused = false,
-		isSubtle = false,
-		...otherProps
-	} = useContextSystem(props, 'BaseField');
+	const otherProps = useBaseField(props);
 
-	const { styles: controlGroupStyles } = useControlGroupContext();
-
-	const classes = cx([
-		styles.BaseField,
-		controlGroupStyles,
-		isClickable && styles.clickable,
-		isFocused && styles.focus,
-		isSubtle && styles.subtle,
-		className,
-	]);
-
-	const flexProps = useFlex({ className: classes, ...otherProps });
-
-	return <View {...flexProps} ref={forwardedRef} />;
+	return <View {...otherProps} ref={forwardedRef} />;
 }
 
 export default contextConnect(BaseField, 'BaseField');

@@ -3,7 +3,7 @@
 exports[`props should render (Flex) gap 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-1m2clai"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -11,17 +11,11 @@ exports[`props should render (Flex) gap 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-d1z7fa"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -34,7 +28,7 @@ exports[`props should render (Flex) gap 1`] = `
 exports[`props should render as link (href) 1`] = `
 <a
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -42,17 +36,11 @@ exports[`props should render as link (href) 1`] = `
   href="#"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -65,7 +53,7 @@ exports[`props should render as link (href) 1`] = `
 exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -73,17 +61,11 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -97,7 +79,7 @@ exports[`props should render disabled 1`] = `
 <button
   aria-busy="false"
   aria-disabled="true"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -107,17 +89,11 @@ exports[`props should render disabled 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -130,7 +106,7 @@ exports[`props should render disabled 1`] = `
 exports[`props should render elevation 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -138,17 +114,11 @@ exports[`props should render elevation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-9spiy4"
@@ -161,7 +131,7 @@ exports[`props should render elevation 1`] = `
 exports[`props should render hasCaret 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -169,45 +139,39 @@ exports[`props should render hasCaret 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
+    Let It Go
+  </span>
+  <span
+    class="wp-components-flex-item css-1l598hg"
+    data-g2-c16t="true"
+    data-g2-component="ButtonCaret"
+  >
+    <div
+      class="wp-components-icon css-1k4as4"
       data-g2-c16t="true"
-      data-g2-component="ButtonContent"
+      data-g2-component="Icon"
     >
-      Let It Go
-    </span>
-    <span
-      class="css-13as2rn"
-      data-g2-c16t="true"
-      data-g2-component="ButtonCaret"
-    >
-      <div
-        class="wp-components-icon css-1k4as4"
-        data-g2-c16t="true"
-        data-g2-component="Icon"
+      <svg
+        fill="none"
+        height="16"
+        size="16"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          fill="none"
-          height="16"
-          size="16"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <polyline
-            points="6 9 12 15 18 9"
-          />
-        </svg>
-      </div>
-    </span>
+        <polyline
+          points="6 9 12 15 18 9"
+        />
+      </svg>
+    </div>
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -220,7 +184,7 @@ exports[`props should render hasCaret 1`] = `
 exports[`props should render icon 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -228,30 +192,24 @@ exports[`props should render icon 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-n2bnnp"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonIcon"
   >
-    <span
-      class="css-6wai7"
+    <div
+      class="wp-components-icon css-1k4as4"
       data-g2-c16t="true"
-      data-g2-component="ButtonIcon"
+      data-g2-component="Icon"
     >
-      <div
-        class="wp-components-icon css-1k4as4"
-        data-g2-c16t="true"
-        data-g2-component="Icon"
-      >
-        <svg />
-      </div>
-    </span>
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+      <svg />
+    </div>
+  </span>
+  <span
+    class="wp-components-flex-item css-19mrak6"
+    data-g2-c16t="true"
+    data-g2-component="ButtonContent"
+  >
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -264,7 +222,7 @@ exports[`props should render icon 1`] = `
 exports[`props should render isControl 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-782ngo"
+  class="wp-components-flex wp-components-base-button wp-components-button css-1quhlny"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -272,17 +230,11 @@ exports[`props should render isControl 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -295,25 +247,19 @@ exports[`props should render isControl 1`] = `
 exports[`props should render isDestructive 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1k9nu1y"
-  data-destructive="true"
+  class="wp-components-flex wp-components-base-button wp-components-button css-y8s1ds"
+  data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -327,7 +273,7 @@ exports[`props should render isLoading 1`] = `
 <button
   aria-busy="true"
   aria-disabled="true"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -338,7 +284,7 @@ exports[`props should render isLoading 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-flex css-1nieslm"
+    class="wp-components-flex css-sbrtwb"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -399,17 +345,11 @@ exports[`props should render isLoading 1`] = `
     </div>
   </div>
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-187ch7s"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-sxd941"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -422,7 +362,7 @@ exports[`props should render isLoading 1`] = `
 exports[`props should render isNarrow 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-h9c22o"
+  class="wp-components-flex wp-components-base-button wp-components-button css-z51qq2"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -430,17 +370,11 @@ exports[`props should render isNarrow 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -453,7 +387,7 @@ exports[`props should render isNarrow 1`] = `
 exports[`props should render isRounded 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1tgvkvh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18urw0v"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -461,17 +395,11 @@ exports[`props should render isRounded 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -484,7 +412,7 @@ exports[`props should render isRounded 1`] = `
 exports[`props should render isSubtle 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-40qkzu"
+  class="wp-components-flex wp-components-base-button wp-components-button css-sjrdvm"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -492,17 +420,11 @@ exports[`props should render isSubtle 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -515,7 +437,7 @@ exports[`props should render isSubtle 1`] = `
 exports[`props should render prefix 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -523,26 +445,20 @@ exports[`props should render prefix 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-n2bnnp"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonPrefix"
   >
-    <span
-      class="css-6wai7"
-      data-g2-c16t="true"
-      data-g2-component="ButtonPrefix"
-    >
-      <span>
-        Let
-      </span>
+    <span>
+      Let
     </span>
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+  </span>
+  <span
+    class="wp-components-flex-item css-19mrak6"
+    data-g2-c16t="true"
+    data-g2-component="ButtonContent"
+  >
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -555,7 +471,7 @@ exports[`props should render prefix 1`] = `
 exports[`props should render size 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-sgcvey"
+  class="wp-components-flex wp-components-base-button wp-components-button css-z8anlr"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -563,17 +479,11 @@ exports[`props should render size 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
@@ -586,7 +496,7 @@ exports[`props should render size 1`] = `
 exports[`props should render suffix 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1kiyg7d"
+  class="wp-components-flex wp-components-base-button wp-components-button css-18vpwks"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -594,25 +504,19 @@ exports[`props should render suffix 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
-    <span
-      class="css-6wai7"
-      data-g2-c16t="true"
-      data-g2-component="ButtonSuffix"
-    >
-      <span>
-        Let
-      </span>
+    Let It Go
+  </span>
+  <span
+    class="wp-components-flex-item css-n2bnnp"
+    data-g2-c16t="true"
+    data-g2-component="ButtonSuffix"
+  >
+    <span>
+      Let
     </span>
   </span>
   <span
@@ -626,7 +530,7 @@ exports[`props should render suffix 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-base-button wp-components-button css-1x8lw6z"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wej0j3"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="Button"
@@ -634,17 +538,11 @@ exports[`props should render variant 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-ylu66o"
+    class="wp-components-flex-item css-19mrak6"
     data-g2-c16t="true"
-    data-g2-component="Flex"
+    data-g2-component="ButtonContent"
   >
-    <span
-      class="css-1om21wv"
-      data-g2-c16t="true"
-      data-g2-component="ButtonContent"
-    >
-      Let It Go
-    </span>
+    Let It Go
   </span>
   <span
     class="wp-components-elevation css-17x6dun"
