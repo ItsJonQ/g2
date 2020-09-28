@@ -6,18 +6,12 @@ exports[`props should render correctly 1`] = `
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="text-input"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="text-input"
+    value=""
+  />
 </div>
 `;

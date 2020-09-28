@@ -23,6 +23,7 @@ export const Input = css`
 	border: none;
 	color: ${ui.color.text};
 	display: block;
+	flex: 1;
 	font-size: ${ui.get('fontSizeInputMobile')};
 	line-height: 18px;
 	min-height: calc(${ui.get('controlHeight')} - 2px);

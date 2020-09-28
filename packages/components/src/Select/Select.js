@@ -5,7 +5,7 @@ import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 
 import { BaseField } from '../BaseField';
-import { FlexBlock, FlexItem } from '../Flex';
+import { FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
@@ -82,36 +82,34 @@ function Select(props, forwardedRef) {
 			{...ui.$('SelectWrapper')}
 		>
 			{prefix && <FlexItem {...ui.$('SelectPrefix')}>{prefix}</FlexItem>}
-			<FlexBlock>
-				<View
-					as="select"
-					cx={inputCx}
-					disabled={disabled}
-					id={id}
-					onBlur={handleOnBlur}
-					onChange={handleOnChange}
-					onFocus={handleOnFocus}
-					ref={mergeRefs([forwardedRef, inputRef])}
-					value={value}
-					{...otherProps}
-					{...ui.$('Select')}
-				>
-					{children ||
-						options.map((option, index) => {
-							const { id, label, value, ...optionProps } = option;
+			<View
+				as="select"
+				cx={inputCx}
+				disabled={disabled}
+				id={id}
+				onBlur={handleOnBlur}
+				onChange={handleOnChange}
+				onFocus={handleOnFocus}
+				ref={mergeRefs([forwardedRef, inputRef])}
+				value={value}
+				{...otherProps}
+				{...ui.$('Select')}
+			>
+				{children ||
+					options.map((option, index) => {
+						const { id, label, value, ...optionProps } = option;
 
-							return (
-								<option
-									key={id || value || index}
-									value={value}
-									{...optionProps}
-								>
-									{label}
-								</option>
-							);
-						})}
-				</View>
-			</FlexBlock>
+						return (
+							<option
+								key={id || value || index}
+								value={value}
+								{...optionProps}
+							>
+								{label}
+							</option>
+						);
+					})}
+			</View>
 			{suffix && <FlexItem {...ui.$('SelectSuffix')}>{suffix}</FlexItem>}
 			<ArrowWrapperView>
 				<Text isBlock variant="muted">

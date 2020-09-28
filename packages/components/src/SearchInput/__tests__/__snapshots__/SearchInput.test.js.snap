@@ -52,21 +52,15 @@ exports[`props should render correctly 1`] = `
       </span>
     </div>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="search"
-      placeholder="Search..."
-      type="search"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="search"
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
@@ -210,21 +204,15 @@ exports[`props should render isLoading 1`] = `
       </div>
     </div>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="search"
-      placeholder="Search..."
-      type="search"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="search"
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
@@ -350,21 +338,15 @@ exports[`props should render placeholder 1`] = `
       </span>
     </div>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="search"
-      placeholder="Searching for..."
-      type="search"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="search"
+    placeholder="Searching for..."
+    type="search"
+    value=""
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
@@ -493,21 +475,15 @@ exports[`props should render prefix 1`] = `
       prefix
     </span>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="search"
-      placeholder="Search..."
-      type="search"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="search"
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
@@ -633,21 +609,15 @@ exports[`props should render suffix 1`] = `
       </span>
     </div>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="search"
-      placeholder="Search..."
-      type="search"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="search"
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
@@ -776,21 +746,15 @@ exports[`props should render value 1`] = `
       </span>
     </div>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="search"
-      placeholder="Search..."
-      type="search"
-      value="q"
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="search"
+    placeholder="Search..."
+    type="search"
+    value="q"
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"

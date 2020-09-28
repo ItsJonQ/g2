@@ -3,6 +3,7 @@ import {
 	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
+import { css, cx, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -12,7 +13,7 @@ import { Subheading } from '../Subheading';
 import { useListGroupContext } from './ListGroup.Context';
 
 function ListGroupHeader(props, forwardedRef) {
-	const { children, ...otherProps } = useContextSystem(
+	const { children, className, ...otherProps } = useContextSystem(
 		props,
 		'ListGroupHeader',
 	);
@@ -33,13 +34,19 @@ function ListGroupHeader(props, forwardedRef) {
 		);
 	});
 
+	const classes = cx([
+		css({
+			paddingLeft: inset ? ui.space(2) : null,
+			paddingRight: inset ? ui.space(2) : null,
+		}),
+		className,
+	]);
+
 	return (
 		<ContextSystemProvider value={{ Text: { size: 'subheading' } }}>
-			<Spacer mb={0} px={inset ? 2 : 0}>
-				<HStack {...otherProps} ref={forwardedRef}>
-					{clonedChildren}
-				</HStack>
-			</Spacer>
+			<HStack {...otherProps} className={classes} ref={forwardedRef}>
+				{clonedChildren}
+			</HStack>
 		</ContextSystemProvider>
 	);
 }

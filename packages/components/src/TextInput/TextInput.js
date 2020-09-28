@@ -96,21 +96,19 @@ function TextInput(props, forwardedRef) {
 			{prefix && (
 				<FlexItem {...ui.$('TextInputPrefix')}>{prefix}</FlexItem>
 			)}
-			<FlexItem isBlock {...ui.$('TextInputContent')}>
-				<View
-					as={InputComponent}
-					cx={inputCx}
-					disabled={disabled}
-					id={id}
-					onBlur={handleOnBlur}
-					onChange={handleOnChange}
-					onFocus={handleOnFocus}
-					ref={mergeRefs([inputRef, forwardedRef])}
-					value={value}
-					{...otherProps}
-					{...ui.$('TextInput')}
-				/>
-			</FlexItem>
+			<View
+				as={InputComponent}
+				cx={inputCx}
+				disabled={disabled}
+				id={id}
+				onBlur={handleOnBlur}
+				onChange={handleOnChange}
+				onFocus={handleOnFocus}
+				ref={mergeRefs([inputRef, forwardedRef])}
+				value={value}
+				{...otherProps}
+				{...ui.$('TextInput')}
+			/>
 			{suffix && (
 				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
 			)}

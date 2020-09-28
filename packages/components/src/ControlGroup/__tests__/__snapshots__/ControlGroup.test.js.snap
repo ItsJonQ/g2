@@ -93,18 +93,12 @@ exports[`props should render mixed control types 1`] = `
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
-      <div
-        class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+      <select
+        class="css-1vhtx5r"
         data-g2-c16t="true"
-        data-g2-component="FlexBlock"
-      >
-        <select
-          class="css-1vcwply"
-          data-g2-c16t="true"
-          data-g2-component="Select"
-          id="salutations"
-        />
-      </div>
+        data-g2-component="Select"
+        id="salutations"
+      />
       <div
         class="wp-components-flex-item css-1hp6bbu"
         data-g2-c16t="true"
@@ -151,19 +145,13 @@ exports[`props should render mixed control types 1`] = `
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
-      <div
-        class="wp-components-flex-item css-1j3zl9k"
+      <input
+        class="css-7h3rix"
         data-g2-c16t="true"
-        data-g2-component="TextInputContent"
-      >
-        <input
-          class="css-uis2zj"
-          data-g2-c16t="true"
-          data-g2-component="TextInput"
-          id="fname"
-          value=""
-        />
-      </div>
+        data-g2-component="TextInput"
+        id="fname"
+        value=""
+      />
     </div>
   </div>
   <div

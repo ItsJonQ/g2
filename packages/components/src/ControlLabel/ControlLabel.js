@@ -4,7 +4,6 @@ import React from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
 import { Text } from '../Text';
-import { View } from '../View';
 import * as styles from './ControlLabel.styles';
 
 function ControlLabel(props, forwardedRef) {
@@ -21,17 +20,18 @@ function ControlLabel(props, forwardedRef) {
 	const __css = cx([styles.ControlLabel, styles[size]]);
 
 	return (
-		<View cx={__css} {...otherProps} ref={forwardedRef}>
-			<Text
-				as="label"
-				isBlock
-				truncate={truncate}
-				{...otherProps}
-				htmlFor={htmlFor}
-			>
-				{children}
-			</Text>
-		</View>
+		<Text
+			as="label"
+			cx={__css}
+			isBlock
+			truncate={truncate}
+			{...otherProps}
+			ref={forwardedRef}
+			{...otherProps}
+			htmlFor={htmlFor}
+		>
+			{children}
+		</Text>
 	);
 }
 

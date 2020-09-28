@@ -1221,40 +1221,26 @@ exports[`props should render ControlGroupItem with css prop 2`] = `
 `;
 
 exports[`props should render ControlLabel 1`] = `
-<div
-  class="wp-components-control-label css-1iwo04m"
+<label
+  class="wp-components-truncate wp-components-text wp-components-control-label css-trnfgt"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
->
-  <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
-    data-g2-c16t="true"
-    data-g2-component="ControlLabel"
-    id="ControlLabel"
-  />
-</div>
+/>
 `;
 
 exports[`props should render ControlLabel with css prop 1`] = `
-<div
-  class="wp-components-control-label css-1iwo04m"
+<label
+  class="wp-components-truncate wp-components-text wp-components-control-label css-trnfgt"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
->
-  <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
-    data-g2-c16t="true"
-    data-g2-component="ControlLabel"
-    id="ControlLabel"
-  />
-</div>
+/>
 `;
 
 exports[`props should render ControlLabel with css prop 2`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-14q5hg6"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
@@ -2097,17 +2083,11 @@ exports[`props should render ListGroupFooter with css prop 2`] = `
 
 exports[`props should render ListGroupHeader 1`] = `
 <div
-  class="wp-components-spacer css-awl3al"
+  class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-uwh7tl"
   data-g2-c16t="true"
-  data-g2-component="Spacer"
->
-  <div
-    class="wp-components-flex wp-components-h-stack wp-components-list-group-header css-uwh7tl"
-    data-g2-c16t="true"
-    data-g2-component="ListGroupHeader"
-    id="ListGroupHeader"
-  />
-</div>
+  data-g2-component="ListGroupHeader"
+  id="ListGroupHeader"
+/>
 `;
 
 exports[`props should render ListGroupHeader with css prop 1`] = `
@@ -2745,21 +2725,15 @@ exports[`props should render SearchInput 1`] = `
       </span>
     </div>
   </div>
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="SearchInput"
-      placeholder="Search..."
-      type="search"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="SearchInput"
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
   <div
     class="wp-components-flex-item css-1bku9vz"
     data-g2-c16t="true"
@@ -2917,18 +2891,12 @@ exports[`props should render Select 1`] = `
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
-  <div
-    class="wp-components-flex-item wp-components-flex-block css-1j3zl9k"
+  <select
+    class="css-1vhtx5r"
     data-g2-c16t="true"
-    data-g2-component="FlexBlock"
-  >
-    <select
-      class="css-1vcwply"
-      data-g2-c16t="true"
-      data-g2-component="Select"
-      id="Select"
-    />
-  </div>
+    data-g2-component="Select"
+    id="Select"
+  />
   <div
     class="wp-components-flex-item css-1hp6bbu"
     data-g2-c16t="true"
@@ -3927,19 +3895,13 @@ exports[`props should render TextField 1`] = `
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="TextField"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="TextField"
+    value=""
+  />
 </div>
 `;
 
@@ -3949,19 +3911,13 @@ exports[`props should render TextInput 1`] = `
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
-  <div
-    class="wp-components-flex-item css-1j3zl9k"
+  <input
+    class="css-7h3rix"
     data-g2-c16t="true"
-    data-g2-component="TextInputContent"
-  >
-    <input
-      class="css-uis2zj"
-      data-g2-c16t="true"
-      data-g2-component="TextInput"
-      id="TextInput"
-      value=""
-    />
-  </div>
+    data-g2-component="TextInput"
+    id="TextInput"
+    value=""
+  />
 </div>
 `;
 

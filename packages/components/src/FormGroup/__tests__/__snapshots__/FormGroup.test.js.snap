@@ -6,38 +6,26 @@ exports[`props should render alignLabel 1`] = `
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
-  <div
-    class="wp-components-control-label css-1iwo04m"
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-dtitas"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
+    for="fname"
   >
-    <label
-      class="wp-components-truncate wp-components-text wp-components-control-label css-xz8znn"
-      data-g2-c16t="true"
-      data-g2-component="ControlLabel"
-      for="fname"
-    >
-      First name
-    </label>
-  </div>
+    First name
+  </label>
   <div
     class="wp-components-flex wp-components-base-field wp-components-text-input css-4s65ol"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
-    <div
-      class="wp-components-flex-item css-1j3zl9k"
+    <input
+      class="css-7h3rix"
       data-g2-c16t="true"
-      data-g2-component="TextInputContent"
-    >
-      <input
-        class="css-uis2zj"
-        data-g2-c16t="true"
-        data-g2-component="TextInput"
-        id="fname"
-        value=""
-      />
-    </div>
+      data-g2-component="TextInput"
+      id="fname"
+      value=""
+    />
   </div>
 </div>
 `;
@@ -48,38 +36,26 @@ exports[`props should render correctly 1`] = `
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
-  <div
-    class="wp-components-control-label css-1iwo04m"
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-5dqldp"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
+    for="fname"
   >
-    <label
-      class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
-      data-g2-c16t="true"
-      data-g2-component="ControlLabel"
-      for="fname"
-    >
-      First name
-    </label>
-  </div>
+    First name
+  </label>
   <div
     class="wp-components-flex wp-components-base-field wp-components-text-input css-4s65ol"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
-    <div
-      class="wp-components-flex-item css-1j3zl9k"
+    <input
+      class="css-7h3rix"
       data-g2-c16t="true"
-      data-g2-component="TextInputContent"
-    >
-      <input
-        class="css-uis2zj"
-        data-g2-c16t="true"
-        data-g2-component="TextInput"
-        id="fname"
-        value=""
-      />
-    </div>
+      data-g2-component="TextInput"
+      id="fname"
+      value=""
+    />
   </div>
 </div>
 `;
@@ -90,36 +66,24 @@ exports[`props should render label without prop correctly 1`] = `
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
-  <div
-    class="wp-components-control-label css-1iwo04m"
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-trnfgt"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
-  >
-    <label
-      class="wp-components-truncate wp-components-text wp-components-control-label css-szzvvn"
-      data-g2-c16t="true"
-      data-g2-component="ControlLabel"
-      for="fname"
-    />
-  </div>
+    for="fname"
+  />
   <div
     class="wp-components-flex wp-components-base-field wp-components-text-input css-4s65ol"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
-    <div
-      class="wp-components-flex-item css-1j3zl9k"
+    <input
+      class="css-7h3rix"
       data-g2-c16t="true"
-      data-g2-component="TextInputContent"
-    >
-      <input
-        class="css-uis2zj"
-        data-g2-c16t="true"
-        data-g2-component="TextInput"
-        id="fname"
-        value=""
-      />
-    </div>
+      data-g2-component="TextInput"
+      id="fname"
+      value=""
+    />
   </div>
 </div>
 `;
@@ -130,38 +94,26 @@ exports[`props should render vertically 1`] = `
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
-  <div
-    class="wp-components-control-label css-1iwo04m"
+  <label
+    class="wp-components-truncate wp-components-text wp-components-control-label css-5dqldp"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
+    for="fname"
   >
-    <label
-      class="wp-components-truncate wp-components-text wp-components-control-label css-1giptkw"
-      data-g2-c16t="true"
-      data-g2-component="ControlLabel"
-      for="fname"
-    >
-      First name
-    </label>
-  </div>
+    First name
+  </label>
   <div
     class="wp-components-flex wp-components-base-field wp-components-text-input css-4s65ol"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
-    <div
-      class="wp-components-flex-item css-1j3zl9k"
+    <input
+      class="css-7h3rix"
       data-g2-c16t="true"
-      data-g2-component="TextInputContent"
-    >
-      <input
-        class="css-uis2zj"
-        data-g2-c16t="true"
-        data-g2-component="TextInput"
-        id="fname"
-        value=""
-      />
-    </div>
+      data-g2-component="TextInput"
+      id="fname"
+      value=""
+    />
   </div>
 </div>
 `;
