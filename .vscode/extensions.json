@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"itsjonq.vscode-snippet-wp-g2",
+		"jpoissonnier.vscode-styled-components"
+	]
+}
