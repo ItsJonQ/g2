@@ -1,4 +1,3 @@
-import { ThemeProvider as BaseThemeProvider } from 'emotion-theming';
 import React, { useRef } from 'react';
 
 import { useHydrateGlobalStyles } from '../../hooks';
@@ -70,16 +69,14 @@ function ThemeProvider({
 	useReducedMotionMode({ isGlobal, isReducedMotion, ref: nodeRef });
 
 	return (
-		<BaseThemeProvider theme={theme}>
-			<div
-				{...props}
-				data-system-theme-provider
-				ref={nodeRef}
-				style={themeStyles}
-			>
-				{children}
-			</div>
-		</BaseThemeProvider>
+		<div
+			{...props}
+			data-system-theme-provider
+			ref={nodeRef}
+			style={themeStyles}
+		>
+			{children}
+		</div>
 	);
 }
 

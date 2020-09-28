@@ -9,7 +9,7 @@ exports[`props should render correctly 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-2p6qpx"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-vg5dr9"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
@@ -97,7 +97,7 @@ exports[`props should render seamless 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="false"
-    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-2p6qpx"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-vg5dr9"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"
@@ -184,7 +184,7 @@ exports[`props should render visible 1`] = `
   <div
     aria-controls="panel"
     aria-expanded="true"
-    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-2p6qpx"
+    class="wp-components-flex wp-components-collapsible-trigger wp-components-panel-header css-vg5dr9"
     data-g2-c16t="true"
     data-g2-component="PanelHeader"
     role="button"

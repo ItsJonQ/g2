@@ -216,13 +216,15 @@ export function Hint({
 								onChange={setAutoAnalyze}
 							/>
 						</FormGroup>
-						<Button
-							isBlock
-							isLoading={isAnalyzing}
-							onClick={onClick}
-						>
-							Analyze
-						</Button>
+						<View>
+							<Button
+								isBlock
+								isLoading={isAnalyzing}
+								onClick={onClick}
+							>
+								Analyze
+							</Button>
+						</View>
 					</CardFooter>
 				</Popover>
 			</Card>

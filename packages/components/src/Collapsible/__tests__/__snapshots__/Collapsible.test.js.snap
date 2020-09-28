@@ -18,7 +18,7 @@ exports[`props should render correctly 1`] = `
     type="button"
   >
     <span
-      class="wp-components-flex css-19zk68e"
+      class="wp-components-flex css-ylu66o"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
@@ -74,7 +74,7 @@ exports[`props should render visible 1`] = `
     type="button"
   >
     <span
-      class="wp-components-flex css-19zk68e"
+      class="wp-components-flex css-ylu66o"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >

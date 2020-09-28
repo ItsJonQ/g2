@@ -11,7 +11,7 @@ exports[`props should render (Flex) gap 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-arwd12"
+    class="wp-components-flex css-d1z7fa"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -42,7 +42,7 @@ exports[`props should render as link (href) 1`] = `
   href="#"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -73,7 +73,7 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -107,7 +107,7 @@ exports[`props should render disabled 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -138,7 +138,7 @@ exports[`props should render elevation 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -169,7 +169,7 @@ exports[`props should render hasCaret 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -228,7 +228,7 @@ exports[`props should render icon 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -272,7 +272,7 @@ exports[`props should render isControl 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -303,7 +303,7 @@ exports[`props should render isDestructive 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -338,7 +338,7 @@ exports[`props should render isLoading 1`] = `
 >
   <div
     aria-hidden="true"
-    class="wp-components-flex css-1epvfzc"
+    class="wp-components-flex css-1nieslm"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -399,7 +399,7 @@ exports[`props should render isLoading 1`] = `
     </div>
   </div>
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -430,7 +430,7 @@ exports[`props should render isNarrow 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -461,7 +461,7 @@ exports[`props should render isRounded 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -492,7 +492,7 @@ exports[`props should render isSubtle 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -523,7 +523,7 @@ exports[`props should render prefix 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -563,7 +563,7 @@ exports[`props should render size 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -594,7 +594,7 @@ exports[`props should render suffix 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
@@ -634,7 +634,7 @@ exports[`props should render variant 1`] = `
   type="button"
 >
   <span
-    class="wp-components-flex css-19zk68e"
+    class="wp-components-flex css-ylu66o"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >

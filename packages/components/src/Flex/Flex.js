@@ -44,9 +44,9 @@ export function Flex(props, forwardedRef) {
 		 * Far less DOM less. However, UI rendering is not as reliable.
 		 */
 		'> *': {
-			marginBottom: isColumn ? ui.get('FlexGap') : null,
-			marginLeft: !isColumn && isReverse ? ui.get('FlexGap') : null,
-			marginRight: !isColumn && !isReverse ? ui.get('FlexGap') : null,
+			marginBottom: isColumn ? ui.space(gap) : null,
+			marginLeft: !isColumn && isReverse ? ui.space(gap) : null,
+			marginRight: !isColumn && !isReverse ? ui.space(gap) : null,
 		},
 		/**
 		 * Workaround to help with performance. Using CSS rules to target rather

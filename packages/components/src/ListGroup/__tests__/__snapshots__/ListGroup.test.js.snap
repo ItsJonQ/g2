@@ -2,12 +2,12 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-19muqfp"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-ayxe9q"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
 >
   <div
-    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-19muqfp"
+    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-ayxe9q"
     data-g2-c16t="true"
     data-g2-component="VStack"
   >

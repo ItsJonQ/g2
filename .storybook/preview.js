@@ -6,6 +6,9 @@ import {
 	Card,
 	CardBody,
 	Separator,
+	ListGroup,
+	ListGroupHeader,
+	ListGroups,
 	ControlLabel,
 	FormGroup as BaseFormGroup,
 	Flex,
@@ -153,10 +156,11 @@ const Themer = React.memo(({ inspector, setInspector }) => {
 								}
 							>
 								<CardBody>
-									<Subheading>Colors</Subheading>
-									<Separator />
-									<Spacer mb={4}>
-										<VStack>
+									<ListGroups>
+										<ListGroup>
+											<ListGroupHeader>
+												Colors
+											</ListGroupHeader>
 											<FormGroup label="Admin">
 												<ColorInput
 													value={colorAdmin}
@@ -191,12 +195,11 @@ const Themer = React.memo(({ inspector, setInspector }) => {
 													)}
 												/>
 											</FormGroup>
-										</VStack>
-									</Spacer>
-									<Spacer mb={4}>
-										<Subheading>Controls</Subheading>
-										<Separator />
-										<VStack>
+										</ListGroup>
+										<ListGroup>
+											<ListGroupHeader>
+												Controls
+											</ListGroupHeader>
 											<FormGroup label="Border Radius">
 												<TextInput
 													type="number"
@@ -227,12 +230,11 @@ const Themer = React.memo(({ inspector, setInspector }) => {
 													}
 												/>
 											</FormGroup>
-										</VStack>
-									</Spacer>
-									<Spacer mb={4}>
-										<Subheading>Font</Subheading>
-										<Separator />
-										<VStack>
+										</ListGroup>
+										<ListGroup>
+											<ListGroupHeader>
+												Font
+											</ListGroupHeader>
 											<FormGroup label="Family">
 												<TextInput
 													value={fontFamily}
@@ -256,27 +258,28 @@ const Themer = React.memo(({ inspector, setInspector }) => {
 													}
 												/>
 											</FormGroup>
-										</VStack>
-									</Spacer>
-									<Spacer mb={4}>
-										<Subheading>Card</Subheading>
-										<Separator />
-										<FormGroup label="Border Radius">
-											<TextInput
-												type="number"
-												min={0}
-												value={parseInt(
-													cardBorderRadius,
-													10,
-												)}
-												onChange={(value) =>
-													update('cardBorderRadius')(
-														`${value}px`,
-													)
-												}
-											/>
-										</FormGroup>
-									</Spacer>
+										</ListGroup>
+										<ListGroup>
+											<ListGroupHeader>
+												Card
+											</ListGroupHeader>
+											<FormGroup label="Border Radius">
+												<TextInput
+													type="number"
+													min={0}
+													value={parseInt(
+														cardBorderRadius,
+														10,
+													)}
+													onChange={(value) =>
+														update(
+															'cardBorderRadius',
+														)(`${value}px`)
+													}
+												/>
+											</FormGroup>
+										</ListGroup>
+									</ListGroups>
 									<Separator />
 									<Button
 										isBlock

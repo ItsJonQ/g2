@@ -1,5 +1,6 @@
-import { deepEqual, is } from '@wp-g2/utils';
-import { useEffect, useRef, useState } from 'react';
+import { createStore } from '@wp-g2/substate';
+import { is, shallowEqual, useIsomorphicLayoutEffect } from '@wp-g2/utils';
+import { useEffect, useRef } from 'react';
 
 import {
 	transformValuesToVariables,
@@ -135,6 +136,17 @@ export function useReducedMotionMode({
 	}, [isGlobal, isReducedMotion, ref]);
 }
 
+function createThemeStore(initialTheme = {}) {
+	return createStore((set) => ({
+		theme: initialTheme,
+		setTheme: (next) => {
+			set((prev) => {
+				return { theme: { ...prev.theme, ...next } };
+			});
+		},
+	}));
+}
+
 /**
  * @typedef UseThemeStyles
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
@@ -146,7 +158,8 @@ export function useReducedMotionMode({
  * @param {UseThemeStyles} props Props for the hook.
  */
 export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
-	const [themeStyles, setThemeStyles] = useState({});
+	const store = useRef(createThemeStore()).current;
+	const { setTheme: setThemeStyles, theme: themeStyles } = store();
 
 	/**
 	 * Used to track/compare changes for theme prop changes.
@@ -174,12 +187,12 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 		didInjectGlobalStyles.current = true;
 	}
 
-	useEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		/**
 		 * We only want to update + set the theme if there's a change.
-		 * Since themes (potentially) be nested, we need to do a deepEqual check.
+		 * Since themes (potentially) be nested, we need to do a shallowEqual check.
 		 */
-		if (deepEqual(themeRef.current, theme)) return;
+		if (shallowEqual(themeRef.current, theme)) return;
 
 		themeRef.current = theme;
 		const rootNode = document.documentElement;
@@ -203,9 +216,9 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 			 * Otherwise, we can set it to the themeStyles state, which will be
 			 * rendered as custom properties on the ThemeProvider (HTMLDivElement).
 			 */
-			setThemeStyles((prev) => ({ ...prev, ...nextTheme }));
+			setThemeStyles(nextTheme);
 		}
-	}, [injectGlobal, isGlobal, theme]);
+	}, [injectGlobal, isGlobal, setThemeStyles, theme]);
 
 	return themeStyles;
 }
