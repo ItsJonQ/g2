@@ -60,7 +60,7 @@ export function useFlex(props) {
 		// },
 	});
 
-	const classes = cx([styles.Flex, sx.Base, className]);
+	const classes = cx(styles.Flex, sx.Base, className);
 
 	return {
 		...otherProps,

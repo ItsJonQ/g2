@@ -21,11 +21,11 @@ function PanelHeader(props, forwardedRef) {
 	const content = title ? <Text weight={500}>{title}</Text> : children;
 	const direction = visible ? 'down' : 'right';
 
-	const classes = cx([
+	const classes = cx(
 		styles.PanelHeader,
 		isSeamless && styles.seamless,
 		className,
-	]);
+	);
 
 	return (
 		<CollapsibleTrigger

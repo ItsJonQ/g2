@@ -18,7 +18,7 @@ function Menu(props, forwardedRef) {
 		menu,
 	};
 
-	const classes = cx([styles.Menu, className]);
+	const classes = cx(styles.Menu, className);
 	const menuProps = menu || {};
 	const Component = menu ? ReakitMenu : View;
 

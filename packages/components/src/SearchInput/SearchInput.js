@@ -47,7 +47,7 @@ function SearchInput(props, forwardedRef) {
 		}
 	};
 
-	const classes = cx([styles.SearchInput, className]);
+	const classes = cx(styles.SearchInput, className);
 
 	return (
 		<TextInput

@@ -32,7 +32,7 @@ function CollapsibleContent(props, forwardedRef) {
 	const { disclosure } = useCollapsibleContext();
 
 	const isVisible = disclosure.visible;
-	const classes = cx([styles.CollapsibleContent, className]);
+	const classes = cx(styles.CollapsibleContent, className);
 
 	return (
 		<DisclosureContent
@@ -43,7 +43,7 @@ function CollapsibleContent(props, forwardedRef) {
 		>
 			<Animated
 				animate={isVisible ? 'visible' : 'hidden'}
-				className={cx([styles.innerContent])}
+				className={cx(styles.innerContent)}
 				initial={false}
 				transition={{ duration: 0.2 }}
 				variants={animationVariants}

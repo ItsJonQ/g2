@@ -17,7 +17,7 @@ function PopoverContent(props, forwardedRef) {
 	} = useContextSystem(props, 'PopoverContent');
 
 	const { label, popover } = usePopoverContext();
-	const classes = cx([styles.PopoverContent, css({ maxWidth }), className]);
+	const classes = cx(styles.PopoverContent, css({ maxWidth }), className);
 
 	return (
 		<ReakitPopover

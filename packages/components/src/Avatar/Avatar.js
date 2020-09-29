@@ -44,7 +44,7 @@ function Avatar(props, forwardedRef) {
 		borderRadius,
 	});
 
-	const __css = cx([sx.base, sx.borderRadius, border && styles.border]);
+	const __css = cx(sx.base, sx.borderRadius, border && styles.border);
 
 	return (
 		<AvatarView {...otherProps} cx={__css} ref={forwardedRef}>

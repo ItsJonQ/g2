@@ -7,13 +7,15 @@ export function createComponent({
 	as = 'div',
 	namespace = 'Component',
 	useHook = () => ({}),
+	memo = true,
 }) {
 	function Component(props, forwardedRef) {
 		const otherProps = useHook(props);
 
 		return <View as={as} {...otherProps} ref={forwardedRef} />;
 	}
+
 	Component.displayName = namespace;
 
-	return contextConnect(Component, namespace);
+	return contextConnect(Component, namespace, { memo });
 }

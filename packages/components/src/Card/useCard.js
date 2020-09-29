@@ -13,12 +13,12 @@ export function useCard(props) {
 		...otherProps
 	} = useContextSystem(props, 'Card');
 
-	const classes = cx([
+	const classes = cx(
 		styles.Card,
 		isBorderless && styles.borderless,
 		isRounded && styles.rounded,
 		className,
-	]);
+	);
 
 	const surfaceProps = useSurface({ ...otherProps, className: classes });
 

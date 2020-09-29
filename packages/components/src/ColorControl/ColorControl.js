@@ -11,7 +11,7 @@ function ColorControl(props, forwardedRef) {
 		props,
 		'ColorControl',
 	);
-	const classes = cx([styles.ColorControl, className]);
+	const classes = cx(styles.ColorControl, className);
 
 	return (
 		<Button

@@ -13,7 +13,7 @@ function List(props, forwardedRef) {
 	const isNumber = type === 'ordered';
 	const asProp = isNumber ? 'ol' : 'ul';
 
-	const __css = cx([isNumber && styles.ordered]);
+	const __css = cx(isNumber && styles.ordered);
 
 	return (
 		<ListView as={asProp} {...otherProps} cx={__css} ref={forwardedRef} />

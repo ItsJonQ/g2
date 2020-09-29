@@ -79,12 +79,12 @@ export function createStyledComponents({ compiler, core }) {
 					/**
 					 * Adjusting the css compiling for non base HTML elements.
 					 */
-					finalClasses = cx([
+					finalClasses = cx(
 						css(...interpolatedProps),
 						css(__css),
 						css(cxProp),
 						className,
-					]);
+					);
 				} else {
 					final__cssProp = [
 						css(...interpolatedProps),

@@ -47,7 +47,7 @@ const fontSizes = {
 	body: css({ fontSize: getFontSize(13) }),
 	caption: css({ fontSize: getFontSize(10) }),
 	footnote: css({ fontSize: getFontSize(11) }),
-	headline: cx([fontStyles.bold, css({ fontSize: getFontSize(13) })]),
+	headline: cx(fontStyles.bold, css({ fontSize: getFontSize(13) })),
 	largeTitle: css({ fontSize: getFontSize(28) }),
 	subheadline: css({ fontSize: getFontSize(12) }),
 	title: css({ fontSize: getFontSize(20) }),

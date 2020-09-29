@@ -13,7 +13,7 @@ function CollapsibleTrigger(props, forwardedRef) {
 	);
 
 	const { disclosure } = useCollapsibleContext();
-	const classes = cx([styles.CollapsibleTrigger, className]);
+	const classes = cx(styles.CollapsibleTrigger, className);
 
 	return (
 		<Disclosure

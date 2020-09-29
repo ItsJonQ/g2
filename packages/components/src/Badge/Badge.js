@@ -26,13 +26,13 @@ function Badge(props, forwardedRef) {
 		display,
 	});
 
-	const __css = cx([
+	const __css = cx(
 		sx.base,
 		truncate && styles.truncate,
 		styles.getBackground({ color: badgeColor, isBold }),
 		styles.getBackgroundText({ color: badgeColor, isBold }),
 		isRounded && styles.rounded,
-	]);
+	);
 
 	return (
 		<BadgeView {...otherProps} cx={__css} ref={forwardedRef}>

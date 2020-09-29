@@ -5,12 +5,12 @@ import { View } from '../View';
 import * as styles from './Switch.styles';
 
 function SwitchBackdrop({ checked = false, isFocused = false, ...props }) {
-	const __css = cx([
+	const __css = cx(
 		styles.Backdrop,
 		isFocused && styles.focus,
 		checked && styles.backdropChecked,
 		checked && isFocused && styles.checkedFocus,
-	]);
+	);
 
 	return (
 		<View

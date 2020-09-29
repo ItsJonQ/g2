@@ -25,11 +25,11 @@ function ArrowIndicator(props, forwardedRef) {
 	};
 	const rotate = rotations[direction] || rotations.right;
 
-	const __css = cx([
+	const __css = cx(
 		css({ height: height || size, width: width || size }),
 		ui.rotate(rotate),
 		ui.animation.default,
-	]);
+	);
 
 	return (
 		<ArrowIndicatorView {...otherProps} cx={__css} ref={forwardedRef}>

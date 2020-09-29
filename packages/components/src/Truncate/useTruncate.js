@@ -38,11 +38,11 @@ export function useTruncate(props) {
 		overflow: hidden;
 	`;
 
-	const classes = cx([
+	const classes = cx(
 		shouldTruncate && !numberOfLines && styles.Truncate,
 		shouldTruncate && numberOfLines && sx.numberOfLines,
 		className,
-	]);
+	);
 
 	return {
 		...otherProps,

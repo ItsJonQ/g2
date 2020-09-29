@@ -3,16 +3,22 @@ import {
 	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
+import { FlexItem } from '../Flex';
 import { HStack } from '../HStack';
-import { Spacer } from '../Spacer';
 import { Text } from '../Text';
 import { useListGroupContext } from './ListGroup.Context';
+import * as styles from './ListGroup.styles';
+
+const listGroupTextContextProps = {
+	Text: { size: 'caption', variant: 'muted' },
+};
 
 function ListGroupFooter(props, forwardedRef) {
-	const { children, ...otherProps } = useContextSystem(
+	const { children, className, ...otherProps } = useContextSystem(
 		props,
 		'ListGroupFooter',
 	);
@@ -24,24 +30,22 @@ function ListGroupFooter(props, forwardedRef) {
 		const isTitle = is.string(child);
 
 		return isTitle ? (
-			<Spacer key={_key}>
+			<FlexItem isBlock key={_key}>
 				<Text size="caption">{child}</Text>
-			</Spacer>
+			</FlexItem>
 		) : (
 			child
 		);
 	});
 
+	const classes = cx(inset && styles.headerFooterInset, className);
+
 	return (
-		<ContextSystemProvider
-			value={{ Text: { size: 'caption', variant: 'muted' } }}
-		>
-			<Spacer mb={0} pt={1} px={inset ? 2 : 0}>
-				<HStack {...otherProps} ref={forwardedRef}>
-					{clonedChildren}
-				</HStack>
-			</Spacer>
-		</ContextSystemProvider>
+		<HStack {...otherProps} className={classes} ref={forwardedRef}>
+			<ContextSystemProvider value={listGroupTextContextProps}>
+				{clonedChildren}
+			</ContextSystemProvider>
+		</HStack>
 	);
 }
 

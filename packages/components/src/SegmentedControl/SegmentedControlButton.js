@@ -13,7 +13,7 @@ const {
 } = styles;
 
 function SegmentedControlSeparator({ isActive }) {
-	const __css = cx([isActive && styles.separatorActive]);
+	const __css = cx(isActive && styles.separatorActive);
 
 	return <SeparatorView cx={__css} />;
 }

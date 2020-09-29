@@ -1,72 +1,21 @@
-import { motion, useSystemReducedMotion } from '@wp-g2/animations';
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { createCoreElement, useReducedMotion } from '@wp-g2/styles';
-import { is, memoize } from '@wp-g2/utils';
+import { contextConnect } from '@wp-g2/context';
+import { is } from '@wp-g2/utils';
 import React from 'react';
 
-const createAnimated = function (tagName) {
-	const motionComponent = motion[tagName];
-	return createCoreElement(motionComponent);
-};
-
-const memoizedCreateAnimated = memoize(createAnimated);
+import { createAnimated } from './Animated.utils';
+import { useAnimated } from './useAnimated';
 
 function Animated(props, forwardedRef) {
-	const {
-		as = 'div',
-		auto = false,
-		children,
-		...otherProps
-	} = useContextSystem(props, 'Animated');
-	const [isProviderReducedMotion] = useReducedMotion();
-	const isSystemReducedMotion = useSystemReducedMotion();
-
-	const isReducedMotion = isSystemReducedMotion || isProviderReducedMotion;
+	const { as, children, ...otherProps } = useAnimated(props);
 
 	const tagName = is.string(as) ? as : 'div';
-	const Component = memoizedCreateAnimated(tagName);
+	const Component = createAnimated(tagName);
 
-	let baseProps = {
-		initial: false,
-	};
-
-	if (auto) {
-		baseProps = {
-			animate: {
-				opacity: 1,
-				scale: 1,
-				transition: props.transition || {
-					duration: 0.2,
-					ease: 'easeInOut',
-				},
-			},
-			exit: {
-				opacity: 0,
-				scale: 0.9,
-				transition: {
-					duration: 0.2,
-					ease: 'easeInOut',
-				},
-			},
-			initial: { opacity: 0, scale: 0.9 },
-		};
-	}
-
-	let finalProps = {
-		...baseProps,
-		...otherProps,
-		ref: forwardedRef,
-	};
-
-	if (isReducedMotion) {
-		finalProps = {
-			...finalProps,
-			layout: undefined,
-			transition: { duration: 0 },
-		};
-	}
-
-	return <Component {...finalProps}>{children}</Component>;
+	return (
+		<Component {...otherProps} ref={forwardedRef}>
+			{children}
+		</Component>
+	);
 }
 
 export default contextConnect(Animated, 'Animated');

@@ -32,12 +32,12 @@ function NavigatorLink(props, forwardedRef) {
 
 	const isLink = !!to || !!href;
 
-	const classes = cx([
+	const classes = cx(
 		linkStyles.BaseLink,
 		!isPlain && linkStyles.Link,
 		isWrappingMenuItem && styles.menuItemLink,
 		className,
-	]);
+	);
 
 	const handleOnClick = (event) => {
 		if (isBack) {

@@ -36,12 +36,12 @@ export function useHStack(props) {
 		return child;
 	});
 
-	const classes = cx([
+	const classes = cx(
 		css({
 			[ui.createToken('HStackSpacing')]: ui.space(spacing),
 		}),
 		className,
-	]);
+	);
 
 	const flexProps = useFlex({
 		className: classes,

@@ -36,11 +36,11 @@ function SegmentControl(props, forwardedRef) {
 		state: value || reakitRadio.state || options[0]?.value,
 	};
 
-	const __css = cx([
+	const __css = cx(
 		styles.SegmentedControl,
 		isBlock && styles.block,
 		styles[size],
-	]);
+	);
 
 	return (
 		<RadioGroup

@@ -15,7 +15,7 @@ function TooltipContent(props, forwardedRef) {
 		'TooltipContent',
 	);
 	const { tooltip } = useTooltipContext();
-	const classes = cx([styles.TooltipContent, className]);
+	const classes = cx(styles.TooltipContent, className);
 
 	return (
 		<ReakitTooltip

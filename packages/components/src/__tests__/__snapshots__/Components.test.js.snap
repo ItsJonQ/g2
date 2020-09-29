@@ -1880,13 +1880,7 @@ exports[`props should render ListGroup 1`] = `
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
->
-  <div
-    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1hznlui"
-    data-g2-c16t="true"
-    data-g2-component="VStack"
-  />
-</div>
+/>
 `;
 
 exports[`props should render ListGroup with css prop 1`] = `
@@ -1895,13 +1889,7 @@ exports[`props should render ListGroup with css prop 1`] = `
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
->
-  <div
-    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1hznlui"
-    data-g2-c16t="true"
-    data-g2-component="VStack"
-  />
-</div>
+/>
 `;
 
 exports[`props should render ListGroup with css prop 2`] = `
@@ -1910,28 +1898,16 @@ exports[`props should render ListGroup with css prop 2`] = `
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
->
-  <div
-    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1hznlui"
-    data-g2-c16t="true"
-    data-g2-component="VStack"
-  />
-</div>
+/>
 `;
 
 exports[`props should render ListGroupFooter 1`] = `
 <div
-  class="wp-components-spacer css-axt7qg"
+  class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-1jiui0z"
   data-g2-c16t="true"
-  data-g2-component="Spacer"
->
-  <div
-    class="wp-components-flex wp-components-h-stack wp-components-list-group-footer css-1jiui0z"
-    data-g2-c16t="true"
-    data-g2-component="ListGroupFooter"
-    id="ListGroupFooter"
-  />
-</div>
+  data-g2-component="ListGroupFooter"
+  id="ListGroupFooter"
+/>
 `;
 
 exports[`props should render ListGroupFooter with css prop 1`] = `

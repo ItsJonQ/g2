@@ -8,7 +8,7 @@ import * as styles from './Card.styles';
 function CardInnerBody(props, forwardedRef) {
 	const otherProps = useContextSystem(props, 'CardInnerBody');
 
-	const __css = cx([styles.InnerBody]);
+	const __css = cx(styles.InnerBody);
 
 	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
 }

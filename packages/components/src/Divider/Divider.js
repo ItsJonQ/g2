@@ -24,13 +24,13 @@ function Divider(props, forwardedRef) {
 		margin-top: ${ui.space(mt)};
 	`;
 
-	const classes = cx([
+	const classes = cx(
 		styles.Divider,
 		!is.defined(m) && is.defined(mb) && sx.mb,
 		!is.defined(m) && is.defined(mt) && sx.mt,
 		is.defined(m) && sx.m,
 		className,
-	]);
+	);
 
 	return <Separator {...otherProps} className={classes} ref={forwardedRef} />;
 }

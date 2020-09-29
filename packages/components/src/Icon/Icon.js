@@ -33,7 +33,7 @@ function Icon(props, forwardedRef) {
 		width: size,
 	});
 
-	const __css = cx([styles.Wrapper, sx.color, sx.size]);
+	const __css = cx(styles.Wrapper, sx.color, sx.size);
 
 	return (
 		<View {...otherProps} cx={__css}>

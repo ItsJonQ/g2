@@ -23,14 +23,14 @@ export default {
 };
 
 const ColorSet = ({ color }) => {
-	const classes = cx([
+	const classes = cx(
 		css`
 			${getBackgroundColor(color)}
 		`,
 		css`
 			${getBackgroundColorText(color)}
 		`,
-	]);
+	);
 
 	return (
 		<Card>
@@ -40,14 +40,14 @@ const ColorSet = ({ color }) => {
 };
 
 const ColorSetBold = ({ color }) => {
-	const classes = cx([
+	const classes = cx(
 		css`
 			${getBackgroundColor(color, { isBold: true })}
 		`,
 		css`
 			${getBackgroundColorText(color, { isBold: true })}
 		`,
-	]);
+	);
 
 	return (
 		<Card>

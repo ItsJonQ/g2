@@ -36,7 +36,7 @@ export function useGrid(props) {
 		verticalAlign: isInline ? 'middle' : null,
 	});
 
-	const classes = cx([__css, className]);
+	const classes = cx(__css, className);
 
 	return {
 		...otherProps,

@@ -12,7 +12,8 @@ function ListGroups(props, forwardedRef) {
 	);
 
 	const insetValue = useResponsiveValue(inset);
-	const value = React.useMemo(
+
+	const contextValue = React.useMemo(
 		() => ({
 			inset: insetValue,
 		}),
@@ -20,7 +21,7 @@ function ListGroups(props, forwardedRef) {
 	);
 
 	return (
-		<ListGroupContext.Provider value={value}>
+		<ListGroupContext.Provider value={contextValue}>
 			<VStack spacing={6} {...otherProps} ref={forwardedRef} />
 		</ListGroupContext.Provider>
 	);

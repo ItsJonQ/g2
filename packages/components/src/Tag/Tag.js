@@ -26,11 +26,11 @@ function Tag(props, forwardedRef) {
 		display,
 	});
 
-	const __css = cx([
+	const __css = cx(
 		sx.base,
 		styles.getBackground({ color: tagColor }),
 		styles.getBackgroundText({ color: tagColor }),
-	]);
+	);
 
 	const asProp = href ? 'a' : 'span';
 

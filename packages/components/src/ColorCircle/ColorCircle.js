@@ -15,7 +15,7 @@ function ColorCircle(props, forwardedRef) {
 	} = useContextSystem(props, 'ColorCircle');
 
 	const backgroundColor = colorize(colorProp).toRgbString();
-	const __css = cx([styles[size]]);
+	const __css = cx(styles[size]);
 
 	return (
 		<ColorCircleView

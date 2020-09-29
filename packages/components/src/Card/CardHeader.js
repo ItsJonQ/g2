@@ -11,13 +11,13 @@ function CardHeader(props, forwardedRef) {
 		'CardHeader',
 	);
 
-	const classes = cx([
+	const classes = cx(
 		styles.Header,
 		styles.borderRadius,
 		styles.headerFooter,
 		styles[size],
 		className,
-	]);
+	);
 
 	return <Flex {...otherProps} className={classes} ref={forwardedRef} />;
 }

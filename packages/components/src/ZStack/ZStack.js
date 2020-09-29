@@ -43,11 +43,11 @@ function ZStack(props, forwardedRef) {
 		);
 	});
 
-	const __css = cx([
+	const __css = cx(
 		css({
 			paddingLeft: !isLayered ? offset : null,
 		}),
-	]);
+	);
 
 	return (
 		<ZStackView {...otherProps} cx={__css} ref={forwardedRef}>

@@ -21,7 +21,7 @@ function Stepper(props, forwardedRef) {
 	const isVertical = direction === 'vertical';
 	const controlGroupDirection = isVertical ? 'column' : 'row';
 
-	const classes = cx([!isVertical && styles.Stepper, className]);
+	const classes = cx(!isVertical && styles.Stepper, className);
 
 	const AddIcon = isVertical ? <FiChevronUp /> : <FiPlus />;
 	const MinusIcon = isVertical ? <FiChevronDown /> : <FiMinus />;

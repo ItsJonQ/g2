@@ -17,7 +17,7 @@ function ModalHeader(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'ModalHeader');
 
-	const classes = cx([styles.ModalHeader, className]);
+	const classes = cx(styles.ModalHeader, className);
 
 	return (
 		<CardHeader {...otherProps} className={classes} ref={forwardedRef}>

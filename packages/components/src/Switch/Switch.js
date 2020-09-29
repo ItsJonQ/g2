@@ -43,11 +43,11 @@ function Switch(props, forwardedRef) {
 
 	const Control = ControlComponent[type] || Checkbox;
 
-	const __css = cx([
+	const __css = cx(
 		styles.Switch,
 		styles[size],
 		contextId && horizontal && styles.formGroup,
-	]);
+	);
 
 	const toggle = (event) => {
 		setChecked(!checked);

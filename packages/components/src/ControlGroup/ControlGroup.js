@@ -27,11 +27,11 @@ function ControlGroup(props, forwardedRef) {
 
 		const _key = child.key || index;
 
-		const contextStyles = cx([
+		const contextStyles = cx(
 			isFirst ? (isVertical ? styles.firstRow : styles.first) : undefined,
 			isMiddle && styles.middle,
 			isLast ? (isVertical ? styles.lastRow : styles.last) : undefined,
-		]);
+		);
 
 		const contextProps = {
 			isFirst,

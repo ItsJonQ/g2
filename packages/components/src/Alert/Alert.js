@@ -19,7 +19,7 @@ function Alert(props, forwardedRef) {
 		title,
 		...otherProps
 	} = useContextSystem(props, 'Alert');
-	const __css = cx([styles[status]]);
+	const __css = cx(styles[status]);
 	const isDismissable = isDismissableProp || !!onDismiss;
 
 	return (

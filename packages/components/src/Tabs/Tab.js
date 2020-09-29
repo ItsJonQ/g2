@@ -10,7 +10,7 @@ const { TabView } = styles;
 function Tab(props, forwardedRef) {
 	const { className, size, ...otherProps } = useContextSystem(props, 'Tab');
 	const { tab } = useTabsContext();
-	const classes = cx([styles[size], className]);
+	const classes = cx(styles[size], className);
 
 	return (
 		<ReakitTab

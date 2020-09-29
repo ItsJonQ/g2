@@ -15,12 +15,12 @@ function CardBody(props, forwardedRef) {
 
 	const { popover } = usePopoverContext();
 
-	const classes = cx([
+	const classes = cx(
 		styles.Body,
 		styles.borderRadius,
 		popover && styles.popoverBody,
 		className,
-	]);
+	);
 
 	if (scrollable) {
 		return (

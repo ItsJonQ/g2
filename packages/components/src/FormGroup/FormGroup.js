@@ -29,32 +29,28 @@ function FormGroup(props, forwardedRef) {
 	) : null;
 
 	const contentMarkup = (
-		<>
+		<FormGroupContext.Provider value={contextProps}>
 			{labelMarkup}
 			{children}
-		</>
+		</FormGroupContext.Provider>
 	);
 
 	if (horizontal) {
 		return (
-			<FormGroupContext.Provider value={contextProps}>
-				<Grid
-					templateColumns="minmax(0, 1fr) 2fr"
-					{...otherProps}
-					ref={forwardedRef}
-				>
-					{contentMarkup}
-				</Grid>
-			</FormGroupContext.Provider>
+			<Grid
+				templateColumns="minmax(0, 1fr) 2fr"
+				{...otherProps}
+				ref={forwardedRef}
+			>
+				{contentMarkup}
+			</Grid>
 		);
 	}
 
 	return (
-		<FormGroupContext.Provider value={contextProps}>
-			<View {...otherProps} ref={forwardedRef}>
-				{contentMarkup}
-			</View>
-		</FormGroupContext.Provider>
+		<View {...otherProps} ref={forwardedRef}>
+			{contentMarkup}
+		</View>
 	);
 }
 

@@ -123,8 +123,14 @@ export function connectComponentWithNamespace(Component, namespace) {
  * @param {Array<string>|string} namespace The namespace to register the component under.
  * @returns {React.ReactElement} The component, with registered namespace as static properties.
  */
-export function contextConnect(Component, namespace) {
-	const WrappedComponent = React.memo(forwardRef(Component));
+export function contextConnect(Component, namespace, options = {}) {
+	const { memo = true } = options;
+
+	let WrappedComponent = forwardRef(Component);
+	if (memo) {
+		WrappedComponent = React.memo(WrappedComponent);
+	}
+
 	return connectComponentWithNamespace(WrappedComponent, namespace);
 }
 

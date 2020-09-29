@@ -21,7 +21,7 @@ function Button(props, forwardedRef) {
 
 	const isIconOnly = !!icon && !children;
 
-	const classes = cx([
+	const classes = cx(
 		styles.Button,
 		styles[variant],
 		styles[size],
@@ -32,7 +32,7 @@ function Button(props, forwardedRef) {
 		currentColor && styles.currentColor,
 		css(cssProp),
 		className,
-	]);
+	);
 
 	return (
 		<BaseButton

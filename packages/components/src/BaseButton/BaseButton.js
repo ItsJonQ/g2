@@ -48,10 +48,10 @@ function BaseButton(props, forwardedRef) {
 			{prefix && (
 				<FlexItem
 					as="span"
-					className={cx([
+					className={cx(
 						styles.PrefixSuffix,
 						isLoading && styles.loading,
-					])}
+					)}
 					{...ui.$('ButtonPrefix')}
 				>
 					{prefix}
@@ -60,10 +60,10 @@ function BaseButton(props, forwardedRef) {
 			{icon && (
 				<FlexItem
 					as="span"
-					className={cx([
+					className={cx(
 						styles.PrefixSuffix,
 						isLoading && styles.loading,
-					])}
+					)}
 					{...ui.$('ButtonIcon')}
 				>
 					<Icon icon={icon} size={iconSize} />
@@ -72,11 +72,11 @@ function BaseButton(props, forwardedRef) {
 			{children && (
 				<FlexItem
 					as="span"
-					className={cx([
+					className={cx(
 						styles.Content,
 						isLoading && styles.loading,
 						noWrap && styles.noWrap,
-					])}
+					)}
 					isBlock
 					{...ui.$('ButtonContent')}
 				>
@@ -86,10 +86,10 @@ function BaseButton(props, forwardedRef) {
 			{suffix && (
 				<FlexItem
 					as="span"
-					className={cx([
+					className={cx(
 						styles.PrefixSuffix,
 						isLoading && styles.loading,
-					])}
+					)}
 					{...ui.$('ButtonSuffix')}
 				>
 					{suffix}
@@ -98,10 +98,10 @@ function BaseButton(props, forwardedRef) {
 			{hasCaret && (
 				<FlexItem
 					as="span"
-					className={cx([
+					className={cx(
 						styles.CaretWrapper,
 						isLoading && styles.loading,
-					])}
+					)}
 					{...ui.$('ButtonCaret')}
 				>
 					<Icon icon={<FiChevronDown />} size={16} />

@@ -19,7 +19,7 @@ function DropdownMenu(props, forwardedRef) {
 	} = useContextSystem(props, 'DropdownMenu');
 
 	const { label, menu } = useDropdownContext();
-	const classes = cx([styles.DropdownMenu, css({ minWidth }), className]);
+	const classes = cx(styles.DropdownMenu, css({ minWidth }), className);
 
 	return (
 		<Menu

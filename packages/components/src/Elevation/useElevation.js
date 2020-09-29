@@ -60,7 +60,7 @@ export function useElevation(props) {
 		}
 	`;
 
-	const classes = cx([
+	const classes = cx(
 		styles.Elevation,
 		sx.Elevation,
 		sx.Base,
@@ -68,7 +68,7 @@ export function useElevation(props) {
 		is.defined(activeValue) && sx.active,
 		is.defined(focus) && sx.focus,
 		className,
-	]);
+	);
 
 	return {
 		...otherProps,

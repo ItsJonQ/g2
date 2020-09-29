@@ -16,14 +16,14 @@ export function useBaseField(props) {
 
 	const { styles: controlGroupStyles } = useControlGroupContext();
 
-	const classes = cx([
+	const classes = cx(
 		styles.BaseField,
 		controlGroupStyles,
 		isClickable && styles.clickable,
 		isFocused && styles.focus,
 		isSubtle && styles.subtle,
 		className,
-	]);
+	);
 
 	const flexProps = useFlex({ className: classes, ...otherProps });
 

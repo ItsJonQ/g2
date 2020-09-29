@@ -21,7 +21,7 @@ export function useControlLabel(props) {
 
 	const { id: contextId } = useFormGroupContext();
 	const htmlFor = htmlForProp || contextId;
-	const classes = cx([styles.ControlLabel, styles[size], className]);
+	const classes = cx(styles.ControlLabel, styles[size], className);
 
 	return {
 		...textProps,

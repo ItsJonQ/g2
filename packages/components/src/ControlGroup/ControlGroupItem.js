@@ -20,7 +20,7 @@ function ControlGroupItem(props, forwardedRef) {
 		offsetStyles = isVertical ? styles.offsetVertical : styles.offset;
 	}
 
-	const classes = cx([offsetStyles, className]);
+	const classes = cx(offsetStyles, className);
 
 	return <FlexItem {...otherProps} className={classes} ref={forwardedRef} />;
 }

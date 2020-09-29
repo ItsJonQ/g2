@@ -13,12 +13,12 @@ function CardFooter(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'CardFooter');
 
-	const classes = cx([
+	const classes = cx(
 		styles.borderRadius,
 		styles.headerFooter,
 		styles[size],
 		className,
-	]);
+	);
 
 	return (
 		<Flex

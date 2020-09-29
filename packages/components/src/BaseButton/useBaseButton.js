@@ -47,7 +47,7 @@ export function useBaseButton(props) {
 	const { styles: controlGroupStyles } = useControlGroupContext();
 	const isIconOnly = !!icon && !children;
 
-	const classes = cx([
+	const classes = cx(
 		flexClassName,
 		styles.Button,
 		isBlock && styles.block,
@@ -65,7 +65,7 @@ export function useBaseButton(props) {
 		css({ textAlign }),
 		css(cssProp),
 		className,
-	]);
+	);
 
 	return {
 		...flexProps,

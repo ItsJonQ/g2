@@ -9,13 +9,14 @@ import { getValidChildren } from '@wp-g2/utils';
 import React, { Fragment } from 'react';
 
 import { Divider } from '../Divider';
-import { VStack } from '../VStack';
+import { View } from '../View';
+import { useVStack } from '../VStack';
 import ListGroupContent from './ListGroupContent';
 
 /**
  * Shallowly adjusts child MenuItem components.
  */
-const listGroupContextValue = {
+const listGroupContextProps = {
 	MenuItem: {
 		isOffset: true,
 		_shallow: true,
@@ -40,6 +41,8 @@ function ListGroup(props, forwardedRef) {
 		spacing,
 		...otherProps
 	} = useContextSystem(props, 'ListGroup');
+	const vStackProps = useVStack({ spacing: 2, ...otherProps });
+
 	const validChildren = getValidChildren(children);
 	const separatorValue = useResponsiveValue(separator);
 
@@ -94,17 +97,15 @@ function ListGroup(props, forwardedRef) {
 	});
 
 	return (
-		<ContextSystemProvider value={listGroupContextValue}>
-			<VStack {...otherProps} ref={forwardedRef} spacing={2}>
-				{headerComponent}
-				<ListGroupContent>
-					<VStack spacing={separatorValue ? 0 : 2} {...{ spacing }}>
-						{clonedChildren}
-					</VStack>
-				</ListGroupContent>
-				{footerComponent}
-			</VStack>
-		</ContextSystemProvider>
+		<View {...vStackProps} ref={forwardedRef}>
+			{headerComponent}
+			<ListGroupContent spacing={separatorValue ? 0 : 2} {...{ spacing }}>
+				<ContextSystemProvider value={listGroupContextProps}>
+					{clonedChildren}
+				</ContextSystemProvider>
+			</ListGroupContent>
+			{footerComponent}
+		</View>
 	);
 }
 

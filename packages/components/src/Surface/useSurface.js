@@ -26,7 +26,7 @@ export function useSurface(props) {
 		borderTop,
 	});
 
-	const classes = cx([
+	const classes = cx(
 		styles.Surface,
 		sx.borders,
 		styles[variant],
@@ -36,7 +36,7 @@ export function useSurface(props) {
 			)}`,
 		}),
 		className,
-	]);
+	);
 
 	return {
 		...otherProps,

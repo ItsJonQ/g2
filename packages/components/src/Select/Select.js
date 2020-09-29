@@ -78,6 +78,22 @@ function Select(props, forwardedRef) {
 		TextInputStyles[size],
 	);
 
+	const content =
+		children ||
+		options.map((option, index) => {
+			const { id, label, value, ...optionProps } = option;
+
+			return (
+				<option
+					key={id || value || index}
+					value={value}
+					{...optionProps}
+				>
+					{label}
+				</option>
+			);
+		});
+
 	return (
 		<View
 			{...baseFieldProps}
@@ -100,20 +116,7 @@ function Select(props, forwardedRef) {
 				{...otherProps}
 				{...ui.$('Select')}
 			>
-				{children ||
-					options.map((option, index) => {
-						const { id, label, value, ...optionProps } = option;
-
-						return (
-							<option
-								key={id || value || index}
-								value={value}
-								{...optionProps}
-							>
-								{label}
-							</option>
-						);
-					})}
+				{content}
 			</View>
 			{suffix && <FlexItem {...ui.$('SelectSuffix')}>{suffix}</FlexItem>}
 			<ArrowWrapperView>

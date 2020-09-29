@@ -3,14 +3,17 @@ import {
 	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
-import { css, cx, ui } from '@wp-g2/styles';
+import { cx } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
+import { FlexItem } from '../Flex';
 import { HStack } from '../HStack';
-import { Spacer } from '../Spacer';
 import { Subheading } from '../Subheading';
 import { useListGroupContext } from './ListGroup.Context';
+import * as styles from './ListGroup.styles';
+
+const listGroupTextContextProps = { Text: { size: 'subheading' } };
 
 function ListGroupHeader(props, forwardedRef) {
 	const { children, className, ...otherProps } = useContextSystem(
@@ -26,28 +29,22 @@ function ListGroupHeader(props, forwardedRef) {
 		const isTitle = is.string(child);
 
 		return isTitle ? (
-			<Spacer key={_key}>
+			<FlexItem isBlock key={_key}>
 				<Subheading>{child}</Subheading>
-			</Spacer>
+			</FlexItem>
 		) : (
 			child
 		);
 	});
 
-	const classes = cx([
-		css({
-			paddingLeft: inset ? ui.space(2) : null,
-			paddingRight: inset ? ui.space(2) : null,
-		}),
-		className,
-	]);
+	const classes = cx(inset && styles.headerFooterInset, className);
 
 	return (
-		<ContextSystemProvider value={{ Text: { size: 'subheading' } }}>
-			<HStack {...otherProps} className={classes} ref={forwardedRef}>
+		<HStack {...otherProps} className={classes} ref={forwardedRef}>
+			<ContextSystemProvider value={listGroupTextContextProps}>
 				{clonedChildren}
-			</HStack>
-		</ContextSystemProvider>
+			</ContextSystemProvider>
+		</HStack>
 	);
 }
 

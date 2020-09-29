@@ -18,7 +18,7 @@ function AspectRatio(props, forwardedRef) {
 	const clonedChild =
 		child &&
 		React.cloneElement(child, {
-			className: cx([styles.content, child.className]),
+			className: cx(styles.content, child.className),
 		});
 
 	const __css = cx(css({ maxWidth: width }));

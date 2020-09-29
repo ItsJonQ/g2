@@ -9,12 +9,12 @@ export function useScrollable(props) {
 		'Scrollable',
 	);
 
-	const classes = cx([
+	const classes = cx(
 		styles.Scrollable,
 		styles.scrollableScrollbar,
 		smoothScroll && styles.smoothScroll,
 		className,
-	]);
+	);
 
 	return {
 		...otherProps,

@@ -14,7 +14,7 @@ function Panel(props, forwardedRef) {
 		isSeamless = false,
 		...otherProps
 	} = useContextSystem(props, 'Panel');
-	const classes = cx([styles.Panel, className]);
+	const classes = cx(styles.Panel, className);
 
 	return (
 		<PanelContext.Provider value={{ isSeamless }}>

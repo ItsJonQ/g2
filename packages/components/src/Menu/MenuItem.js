@@ -27,13 +27,13 @@ function MenuItem(props, forwardedRef) {
 	const { menu } = useMenuContext();
 	const shouldShowArrow = !isBack && showArrow;
 
-	const classes = cx([
+	const classes = cx(
 		styles.MenuItem,
 		shouldShowArrow && styles.showArrow,
 		isBack && styles.showBackArrow,
 		isOffset && styles.offset,
 		className,
-	]);
+	);
 
 	const Component = menu ? ReakitMenuItem : View;
 

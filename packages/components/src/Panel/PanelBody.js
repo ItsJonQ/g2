@@ -12,7 +12,7 @@ function PanelBody(props, forwardedRef) {
 	const { children, ...otherProps } = useContextSystem(props, 'PanelBody');
 	const { isSeamless } = usePanelContext();
 
-	const __css = cx([isSeamless && styles.seamless]);
+	const __css = cx(isSeamless && styles.seamless);
 
 	return (
 		<CollapsibleContent {...otherProps} ref={forwardedRef}>

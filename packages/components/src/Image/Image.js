@@ -25,7 +25,7 @@ function Image(props, forwardedRef) {
 
 	sx.fitSize = css({ height: '100%', width: '100%' });
 
-	const __css = cx([sx.base, sx.fit, fit && sx.fitSize]);
+	const __css = cx(sx.base, sx.fit, fit && sx.fitSize);
 
 	const imageProps = {
 		...otherProps,

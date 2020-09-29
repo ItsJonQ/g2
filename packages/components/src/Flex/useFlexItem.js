@@ -19,12 +19,12 @@ export function useFlexItem(props) {
 		// marginRight: ui.get('FlexItemMarginRight'),
 	});
 
-	const classes = cx([
+	const classes = cx(
 		styles.Item,
 		sx.Base,
 		isBlock && styles.block,
 		className,
-	]);
+	);
 
 	return {
 		...otherProps,

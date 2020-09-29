@@ -5,12 +5,12 @@ import { View } from '../View';
 import * as styles from './Switch.styles';
 
 function SwitchToggle({ checked = false, size = 'medium', ...props }) {
-	const __css = cx([
+	const __css = cx(
 		styles.Toggle,
 		checked && styles.toggleChecked,
 		size === 'large' && styles.toggleLarge,
 		size === 'small' && styles.toggleSmall,
-	]);
+	);
 
 	return (
 		<View
