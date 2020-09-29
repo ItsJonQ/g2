@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/substate",
-  "version": "0.0.77",
+  "version": "0.0.78",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
