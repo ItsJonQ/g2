@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-scrollable css-d4wazc"
+  class="wp-components-scrollable css-1fusbgi"
   data-g2-c16t="true"
   data-g2-component="Scrollable"
 >
@@ -12,7 +12,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render smoothScroll 1`] = `
 <div
-  class="wp-components-scrollable css-pv1w1q"
+  class="wp-components-scrollable css-194tzq1"
   data-g2-c16t="true"
   data-g2-component="Scrollable"
 >

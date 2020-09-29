@@ -1,4 +1,6 @@
+import { useMotionValue } from '@wp-g2/animations';
 import {
+	Animated,
 	Badge,
 	Button,
 	Card,
@@ -24,7 +26,7 @@ import {
 } from '@wp-g2/components';
 import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { Schema } from '@wp-g2/protokit';
-import { styled, ui } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 import isEqual from 'lodash/isEqual';
 import React from 'react';
 import * as yup from 'yup';
@@ -213,6 +215,133 @@ const ShadowValue = ({
 	);
 };
 
+const ShadowPositioner = ({ id, initialX, initialY }) => {
+	const { updateShadow } = React.useContext(ShadowsContext);
+	const x = useShadowProp(id, 'x', initialX);
+	const y = useShadowProp(id, 'y', initialY);
+	const constraintsRef = React.useRef(null);
+	const isDragX = useMotionValue(false);
+	const isDragging = useMotionValue(false);
+	const isAxisLock = useMotionValue(false);
+
+	const axis =
+		isDragging.get() && isAxisLock.get()
+			? isDragX.get()
+				? 'x'
+				: 'y'
+			: true;
+
+	const onChange = (next) => {
+		const { offset } = next;
+		const xLock = axis === 'x';
+		const yLock = axis === 'y';
+		const noLock = axis === true;
+
+		const nextValues = { id };
+
+		if (xLock) {
+			nextValues.x = Math.round(offset.x);
+		}
+		if (yLock) {
+			nextValues.y = Math.round(offset.y);
+		}
+		if (noLock) {
+			nextValues.x = Math.round(offset.x);
+			nextValues.y = Math.round(offset.y);
+		}
+
+		updateShadow(nextValues);
+	};
+
+	return (
+		<Card
+			backgroundSize={12}
+			css={css([
+				`
+				cursor: pointer;
+				height: 100px;
+				&:active {
+					cursor: grabbing;
+				}
+			`,
+			])}
+			ref={constraintsRef}
+			variant="dotted"
+		>
+			<View
+				css={css({
+					height: '100%',
+					width: '1px',
+					background: ui.get('surfaceBorderColor'),
+					position: 'absolute',
+					left: '50%',
+					top: 0,
+					transform: 'translateX(-50%)',
+				})}
+			/>
+			<View
+				css={css({
+					width: '100%',
+					height: '1px',
+					background: ui.get('surfaceBorderColor'),
+					position: 'absolute',
+					top: '50%',
+					left: 0,
+					transform: 'translateY(-50%)',
+				})}
+			/>
+			<View
+				css={css([
+					ui.alignment.content.center,
+					ui.frame.height('100%'),
+				])}
+			>
+				<Animated
+					css={css([
+						`
+						width: 30px;
+						height: 30px;
+					`,
+						ui.zIndex(2),
+					])}
+					drag={axis}
+					dragConstraints={constraintsRef}
+					dragElastic={0}
+					dragMomentum={false}
+					onDrag={(event, info) => {
+						const vx = Math.abs(info.velocity.x);
+						const vy = Math.abs(info.velocity.y);
+						const threshold = 10;
+						isDragX.set(vx - threshold > vy);
+						isDragging.set(true);
+						isAxisLock.set(event.shiftKey);
+
+						onChange(info);
+					}}
+					onDragEnd={() => {
+						isDragging.set(false);
+						isAxisLock.set(false);
+					}}
+					style={{ x, y }}
+					transition={{ ease: 'easeOut', duration: 0 }}
+				>
+					<Card
+						css={`
+							cursor: grab;
+							width: 30px;
+							height: 30px;
+							&:active {
+								cursor: grabbing;
+							}
+						`}
+						tabIndex={0}
+					/>
+				</Animated>
+			</View>
+		</Card>
+	);
+};
+
 const ShadowEntryView = ({ id, initialState }) => {
 	const { color, x, y, z } = useShadow(id, initialState);
 	const colorValue = getShadowColor({ color });
@@ -278,11 +407,13 @@ const ShadowEntry = React.memo(({ color, id, x, y, z }) => {
 					</HStack>
 				</MenuItem>
 			}
+			visible
 		>
 			<CardBody>
 				<ListGroups>
 					<ListGroup>
 						<ListGroupHeader>Values</ListGroupHeader>
+						<ShadowPositioner id={id} initialX={x} initialY={y} />
 						<ShadowValue
 							id={id}
 							initialValue={x}

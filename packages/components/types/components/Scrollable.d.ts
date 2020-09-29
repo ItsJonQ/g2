@@ -1,7 +1,14 @@
 import { PolymorphicComponent } from './_shared';
-import { FlexProps } from './Flex';
+
+export declare type ScrollableDirection = 'x' | 'y' | 'auto';
 
 export declare type ScrollableProps = {
+	/**
+	 * Renders a scrollbar for a specific axis when content overflows.
+	 *
+	 * @default 'y'
+	 */
+	scrollDirection?: ScrollableDirection;
 	/**
 	 * Enables (CSS) smooth scrolling.
 	 *

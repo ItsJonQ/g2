@@ -31,9 +31,12 @@ export function useSurface(props) {
 		sx.borders,
 		styles[variant],
 		css({
-			backgroundSize: `${ui.value.px(backgroundSize)} ${ui.value.px(
+			[ui.createToken('surfaceBackgroundSize')]: ui.value.px(
 				backgroundSize,
-			)}`,
+			),
+			[ui.createToken('surfaceBackgroundSizeDotted')]: ui.value.px(
+				backgroundSize - 1,
+			),
 		}),
 		className,
 	);

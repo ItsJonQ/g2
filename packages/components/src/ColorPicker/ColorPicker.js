@@ -1,8 +1,8 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { ui } from '@wp-g2/styles';
-import { noop, useControlledState } from '@wp-g2/utils';
-import React from 'react';
-import { SketchPicker } from 'react-color';
+import { css, cx, ui } from '@wp-g2/styles';
+import { noop } from '@wp-g2/utils';
+import React, { useCallback } from 'react';
+import { RgbaColorPicker } from 'react-colorful';
 
 import * as styles from './ColorPicker.styles';
 const { ColorPickerView } = styles;
@@ -13,38 +13,43 @@ function ColorPicker(props, forwardedRef) {
 		alpha,
 		onChange = noop,
 		disableAlpha = true,
-		presetColors = [],
-		renderers,
-		onSwatchHover,
 		width = '100%',
 		...otherProps
 	} = useContextSystem(props, 'ColorPicker');
-	const [color, setColor] = useControlledState(colorProp);
+	const initialColor = getInitialColor(colorProp, disableAlpha);
+	const [color] = React.useState(initialColor);
 
-	const handleChangeComplete = (next) => {
-		let nextColor = next.hex;
-		if (!disableAlpha) {
-			nextColor = ui.color(next.rgb).toRgbString();
-		}
-		setColor(nextColor, { data: next });
-		onChange(nextColor, { data: next });
-	};
+	const handleOnChange = useCallback(
+		(next) => {
+			const nextColor = getColor(next, disableAlpha);
+			onChange(nextColor, { data: next });
+		},
+		[disableAlpha, onChange],
+	);
+
+	const __css = cx(css({ width }), disableAlpha && styles.disableAlpha);
 
 	return (
-		<ColorPickerView {...otherProps} ref={forwardedRef}>
-			<SketchPicker
-				alpha={alpha}
-				color={ui.color(color).toRgb()}
-				disableAlpha={disableAlpha}
-				onChange={handleChangeComplete}
-				onChangeComplete={handleChangeComplete}
-				onSwatchHover={onSwatchHover}
-				presetColors={presetColors}
-				renderers={renderers}
+		<ColorPickerView {...otherProps} __css={__css} ref={forwardedRef}>
+			<RgbaColorPicker
+				color={color}
+				onChange={handleOnChange}
 				width={width}
 			/>
 		</ColorPickerView>
 	);
+}
+
+function getColor(color, disableAlpha) {
+	return disableAlpha
+		? ui.color(color).toHexString()
+		: ui.color(color).toRgbString();
+}
+
+function getInitialColor(color, disableAlpha) {
+	return disableAlpha
+		? ui.color(color).toHexString()
+		: ui.color(color).toRgb();
 }
 
 export default contextConnect(ColorPicker, 'ColorPicker');

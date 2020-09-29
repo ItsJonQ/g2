@@ -18537,7 +18537,7 @@ react-clientside-effect@^1.2.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-react-color@^2.17.0, react-color@^2.17.3, react-color@^2.18.1:
+react-color@^2.17.0, react-color@^2.17.3:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.18.1.tgz#2cda8cc8e06a9e2c52ad391a30ddad31972472f4"
   integrity sha512-X5XpyJS6ncplZs74ak0JJoqPi+33Nzpv5RYWWxn17bslih+X7OlgmfpmGC1fNvdkK7/SGWYf1JJdn7D2n5gSuQ==
@@ -18548,6 +18548,11 @@ react-color@^2.17.0, react-color@^2.17.3, react-color@^2.18.1:
     prop-types "^15.5.10"
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
+
+react-colorful@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-4.1.1.tgz#40ee4253be0adc9372ed60fba78fc1edfe2c1bf2"
+  integrity sha512-bbjVBfkL4opMWxzrJacp1rFUfJwCfCLv0gsW8aO4hpdCkp48PtA8rx4IxAEfWSCP3yFqwqJhGz9dwMRh6GI+2g==
 
 react-dev-utils@^10.0.0:
   version "10.2.1"

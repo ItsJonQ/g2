@@ -49,6 +49,9 @@ export declare type AnimatedProps = {
  * 	<Card>...</Card>
  * </Animated>
  * ```
+ *
+ * @see
+ * https://www.framer.com/api/motion/
  */
 export declare const Animated: PolymorphicComponent<AnimatedProps>;
 
@@ -65,6 +68,7 @@ export declare const Animated: PolymorphicComponent<AnimatedProps>;
  * </AnimatedContainer>
  * ```
  *
- * @see https://www.framer.com/api/motion/animation/#shared-layout-animations
+ * @see
+ * https://www.framer.com/api/motion/animation/#shared-layout-animations
  */
 export declare const AnimatedContainer: React.FC;

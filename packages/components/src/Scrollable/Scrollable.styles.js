@@ -31,7 +31,6 @@ export const scrollableScrollbar = css`
 
 export const Scrollable = css`
 	height: 100%;
-	overflow-y: auto;
 `;
 
 export const Content = css`
@@ -40,4 +39,18 @@ export const Content = css`
 
 export const smoothScroll = css`
 	scroll-behavior: smooth;
+`;
+
+export const scrollX = css`
+	overflow-x: auto;
+	overflow-y: hidden;
+`;
+
+export const scrollY = css`
+	overflow-x: hidden;
+	overflow-y: auto;
+`;
+
+export const scrollAuto = css`
+	overflow-y: auto;
 `;

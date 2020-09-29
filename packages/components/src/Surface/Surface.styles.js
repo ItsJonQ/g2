@@ -39,17 +39,20 @@ export const tertiary = css`
 export const dotted = css`
 	background: linear-gradient(
 				90deg,
-				${ui.get('surfaceBackgroundColor')} 15px,
+				${ui.get('surfaceBackgroundColor')}
+					${ui.get('surfaceBackgroundSizeDotted')},
 				transparent 1%
 			)
 			center,
 		linear-gradient(
-				${ui.get('surfaceBackgroundColor')} 15px,
+				${ui.get('surfaceBackgroundColor')}
+					${ui.get('surfaceBackgroundSizeDotted')},
 				transparent 1%
 			)
 			center,
 		${ui.get('surfaceBorderBoldColor')};
-	background-size: 16px 16px;
+	background-size: ${ui.get('surfaceBackgroundSize')}
+		${ui.get('surfaceBackgroundSize')};
 `;
 
 export const grid = css`
@@ -63,5 +66,6 @@ export const grid = css`
 			${ui.get('surfaceBorderSubtleColor')} 1px,
 			transparent 1px
 		);
-	background-size: 16px 16px;
+	background-size: ${ui.get('surfaceBackgroundSize')}
+		${ui.get('surfaceBackgroundSize')};
 `;

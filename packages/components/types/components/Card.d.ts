@@ -1,6 +1,7 @@
 import { PolymorphicComponent } from './_shared';
+import { SurfaceProps } from './Surface';
 
-export declare type CardProps = {
+export declare type CardProps = SurfaceProps & {
 	/**
 	 * Size of the elevation shadow, based on the Style system's elevation system.
 	 * Elevating a `Card` can be done by adjusting the `elevation` prop. This may be helpful in highlighting certain content. For more information, check out `Elevation`.
