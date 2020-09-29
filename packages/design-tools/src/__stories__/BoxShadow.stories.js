@@ -407,7 +407,6 @@ const ShadowEntry = React.memo(({ color, id, x, y, z }) => {
 					</HStack>
 				</MenuItem>
 			}
-			visible
 		>
 			<CardBody>
 				<ListGroups>
