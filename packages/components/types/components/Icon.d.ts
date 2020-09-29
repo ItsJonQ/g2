@@ -17,6 +17,17 @@ export declare type IconProps = {
 	 */
 	icon?: unknown;
 	/**
+	 * Adjusts the display and alignment of `Icon` for use within Text based components.
+	 *
+	 * @example
+	 * ```jsx
+	 * <Text>
+	 * 	Olaf! <Icon icon={<OlafIcon />} inline />
+	 * </Text>
+	 * ```
+	 */
+	inline?: boolean;
+	/**
 	 * The size of `Icon`.
 	 *
 	 * @default 20
