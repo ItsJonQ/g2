@@ -13,7 +13,7 @@ exports[`props should render as dismissable 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-oy15td"
+      class="wp-components-flex css-1806uq"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
@@ -34,7 +34,7 @@ exports[`props should render as dismissable 1`] = `
       >
         <button
           aria-busy="false"
-          class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+          class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18q9pyv"
           data-destructive="false"
           data-g2-c16t="true"
           data-g2-component="CloseButton"
@@ -104,7 +104,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-oy15td"
+      class="wp-components-flex css-1806uq"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
@@ -142,7 +142,7 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-oy15td"
+        class="wp-components-flex css-1806uq"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -163,7 +163,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18q9pyv"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -230,7 +230,7 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-oy15td"
+        class="wp-components-flex css-1806uq"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -251,7 +251,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18q9pyv"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -318,7 +318,7 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-oy15td"
+        class="wp-components-flex css-1806uq"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -339,7 +339,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18q9pyv"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -406,7 +406,7 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-oy15td"
+        class="wp-components-flex css-1806uq"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -427,7 +427,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18q9pyv"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -494,7 +494,7 @@ exports[`props should render with status 1`] = `
       data-g2-component="Alert"
     >
       <div
-        class="wp-components-flex css-oy15td"
+        class="wp-components-flex css-1806uq"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
@@ -515,7 +515,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-tlee1j"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18q9pyv"
             data-destructive="false"
             data-g2-c16t="true"
             data-g2-component="CloseButton"
@@ -586,7 +586,7 @@ exports[`props should render with title 1`] = `
     data-g2-component="Alert"
   >
     <div
-      class="wp-components-flex css-oy15td"
+      class="wp-components-flex css-1806uq"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >

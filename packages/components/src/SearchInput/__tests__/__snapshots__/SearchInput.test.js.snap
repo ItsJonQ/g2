@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -72,7 +72,7 @@ exports[`props should render correctly 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
+        class="wp-components-flex wp-components-base-button wp-components-button css-1660ftr"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -130,7 +130,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isLoading 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -218,7 +218,7 @@ exports[`props should render isLoading 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
+        class="wp-components-flex wp-components-base-button wp-components-button css-1660ftr"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -276,7 +276,7 @@ exports[`props should render isLoading 1`] = `
 
 exports[`props should render placeholder 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -346,7 +346,7 @@ exports[`props should render placeholder 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
+        class="wp-components-flex wp-components-base-button wp-components-button css-1660ftr"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -404,7 +404,7 @@ exports[`props should render placeholder 1`] = `
 
 exports[`props should render prefix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -477,7 +477,7 @@ exports[`props should render prefix 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
+        class="wp-components-flex wp-components-base-button wp-components-button css-1660ftr"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -535,7 +535,7 @@ exports[`props should render prefix 1`] = `
 
 exports[`props should render suffix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -608,7 +608,7 @@ exports[`props should render suffix 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
+        class="wp-components-flex wp-components-base-button wp-components-button css-1660ftr"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -666,7 +666,7 @@ exports[`props should render suffix 1`] = `
 
 exports[`props should render value 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-110t2tn"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -736,7 +736,7 @@ exports[`props should render value 1`] = `
       <button
         aria-busy="false"
         aria-label="Clear"
-        class="wp-components-flex wp-components-base-button wp-components-button css-zi6r5g"
+        class="wp-components-flex wp-components-base-button wp-components-button css-1660ftr"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"

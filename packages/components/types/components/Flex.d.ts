@@ -62,6 +62,31 @@ export declare type FlexProps = {
 	 */
 	direction?: FlexDirection;
 	/**
+	 * Expands to the maximum available width (if horizontal) or height (if vertical).
+	 *
+	 * @default true
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Flex, Text, View } from `@wp-g2/components`
+	 * import { ui } from `@wp-g2/styles`
+	 *
+	 * function Example() {
+	 *   return (
+	 *     <Flex direction="row" expanded>
+	 *       <View css={[ui.background.blue]}>
+	 *         <Text>Ana</Text>
+	 *       </View>
+	 *       <View css={[ui.background.blue]}>
+	 *         <Text>Elsa</Text>
+	 *       </View>
+	 *     </Flex>
+	 *   )
+	 * }
+	 * ```
+	 */
+	expanded?: boolean;
+	/**
 	 * Spacing in between each child can be adjusted by using `gap`. The value of `gap` works as a multiplier to the library's grid system (base of `4px`).
 	 *
 	 * @default 2

@@ -11,7 +11,7 @@ exports[`props should render CardInnerBody 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-1lzhbb"
+      class="wp-components-flex wp-components-card-header css-okk3an"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -24,13 +24,13 @@ exports[`props should render CardInnerBody 1`] = `
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-skobos"
+      class="wp-components-flex wp-components-card-footer css-k5kjzk"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <button
         aria-busy="false"
-        class="wp-components-flex wp-components-base-button wp-components-button css-wej0j3"
+        class="wp-components-flex wp-components-base-button wp-components-button css-oop7py"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"
@@ -76,7 +76,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-1lzhbb"
+      class="wp-components-flex wp-components-card-header css-okk3an"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
@@ -89,13 +89,13 @@ exports[`props should render correctly 1`] = `
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-skobos"
+      class="wp-components-flex wp-components-card-footer css-k5kjzk"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <button
         aria-busy="false"
-        class="wp-components-flex wp-components-base-button wp-components-button css-wej0j3"
+        class="wp-components-flex wp-components-base-button wp-components-button css-oop7py"
         data-destructive="false"
         data-g2-c16t="true"
         data-g2-component="Button"

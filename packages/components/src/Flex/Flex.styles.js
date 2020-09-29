@@ -2,7 +2,6 @@ import { css } from '@wp-g2/styles';
 
 export const Flex = css`
 	display: flex;
-	width: 100%;
 `;
 
 export const Item = css`

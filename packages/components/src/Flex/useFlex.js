@@ -8,6 +8,7 @@ export function useFlex(props) {
 		align = 'center',
 		className,
 		direction: directionProp = 'row',
+		expanded = true,
 		gap = 2,
 		justify = 'space-between',
 		wrap = false,
@@ -35,7 +36,8 @@ export function useFlex(props) {
 		flexDirection: direction,
 		flexWrap: wrap ? 'wrap' : null,
 		justifyContent: justify,
-		height: isColumn ? '100%' : null,
+		height: isColumn && expanded ? '100%' : null,
+		width: !isColumn && expanded ? '100%' : null,
 		/**
 		 * Workaround to optimize DOM rendering.
 		 * We'll enhance alignment with naive parent flex assumptions.
