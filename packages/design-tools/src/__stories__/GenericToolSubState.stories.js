@@ -80,9 +80,9 @@ const createExampleStore = () => {
 };
 
 /**
- * A hook to get/set a single item in the store's state (list).
+ * A hook to get/set a single item value in the store's state (list).
  */
-const useDimension = (id) => {
+const useDimensionProp = (id, prop) => {
 	const { useStore } = useDimensionsContext();
 	const [dimension, update] = useStore(
 		React.useCallback(
@@ -91,9 +91,9 @@ const useDimension = (id) => {
 				 * Selecting the individual item from the store.
 				 */
 				const item = state.dimensions.find((i) => i.id === id) || {};
-				return [item, state.update];
+				return [item[prop], state.update];
 			},
-			[id],
+			[id, prop],
 		),
 		/**
 		 * Not sure if it helps...
@@ -120,8 +120,7 @@ const useDimensionsCount = () => {
 };
 
 const SliderTextInput = React.memo(({ id, prop }) => {
-	const [dimension, update] = useDimension(id);
-	const value = dimension[prop];
+	const [value, update] = useDimensionProp(id, prop);
 
 	const handleOnChange = React.useCallback(
 		(next) => {
@@ -139,7 +138,7 @@ const SliderTextInput = React.memo(({ id, prop }) => {
 });
 
 const TitleInput = React.memo(({ id }) => {
-	const [{ title: value }, update] = useDimension(id);
+	const [value, update] = useDimensionProp(id, 'title');
 
 	const handleOnChange = React.useCallback(
 		(next) => {
