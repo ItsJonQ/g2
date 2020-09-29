@@ -1,5 +1,7 @@
+import { FiScissors } from '@wp-g2/icons';
 import React from 'react';
 
+import { Icon, Link } from '../../index';
 import { Text } from '../index';
 
 export default {
@@ -47,6 +49,19 @@ export const highlight = () => {
 			Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
 			posuere cubilia curae; Vivamus nec pretium velit, sit amet
 			consectetur ante. Praesent porttitor ex eget fermentum mattis.
+		</Text>
+	);
+};
+
+export const textLinkIcon = () => {
+	return (
+		<Text>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
+			<Link>Link</Link>
+			<Icon icon={<FiScissors />} inline />.{' '}
+			<Link>
+				Link <Icon icon={<FiScissors />} inline />
+			</Link>
 		</Text>
 	);
 };

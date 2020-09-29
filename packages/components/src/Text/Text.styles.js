@@ -28,3 +28,7 @@ export const highlighterText = css`
 			0 -1px 0 rgba(0, 0, 0, 0.1) inset;
 	}
 `;
+
+export const upperCase = css`
+	text-transform: uppercase;
+`;

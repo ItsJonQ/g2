@@ -566,7 +566,7 @@ exports[`props should render Card with css prop 2`] = `
 
 exports[`props should render CardBody 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body css-klzm1k"
+  class="wp-components-scrollable wp-components-card-body css-1un9gzz"
   data-g2-c16t="true"
   data-g2-component="CardBody"
   id="CardBody"
@@ -575,7 +575,7 @@ exports[`props should render CardBody 1`] = `
 
 exports[`props should render CardBody with css prop 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body css-klzm1k"
+  class="wp-components-scrollable wp-components-card-body css-1un9gzz"
   data-g2-c16t="true"
   data-g2-component="CardBody"
   id="CardBody"
@@ -584,7 +584,7 @@ exports[`props should render CardBody with css prop 1`] = `
 
 exports[`props should render CardBody with css prop 2`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body css-qhe5xw"
+  class="wp-components-scrollable wp-components-card-body css-1g7czl9"
   data-g2-c16t="true"
   data-g2-component="CardBody"
   id="CardBody"
@@ -2100,7 +2100,7 @@ exports[`props should render Modal 1`] = `null`;
 
 exports[`props should render ModalBody 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-klzm1k"
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1un9gzz"
   data-g2-c16t="true"
   data-g2-component="ModalBody"
   id="ModalBody"
@@ -2109,7 +2109,7 @@ exports[`props should render ModalBody 1`] = `
 
 exports[`props should render ModalBody with css prop 1`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-klzm1k"
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1un9gzz"
   data-g2-c16t="true"
   data-g2-component="ModalBody"
   id="ModalBody"
@@ -2118,7 +2118,7 @@ exports[`props should render ModalBody with css prop 1`] = `
 
 exports[`props should render ModalBody with css prop 2`] = `
 <div
-  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-qhe5xw"
+  class="wp-components-scrollable wp-components-card-body wp-components-modal-body css-1g7czl9"
   data-g2-c16t="true"
   data-g2-component="ModalBody"
   id="ModalBody"

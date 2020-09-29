@@ -8,3 +8,8 @@ export const Wrapper = css`
 		display: block;
 	}
 `;
+
+export const inline = css`
+	display: inline-block;
+	vertical-align: middle;
+`;

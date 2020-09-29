@@ -14,7 +14,8 @@ export const Content = css`
 `;
 
 export const Body = css`
-	height: 100%;
+	height: auto;
+	max-height: 100%;
 	padding: ${ui.get('cardPadding')};
 `;
 

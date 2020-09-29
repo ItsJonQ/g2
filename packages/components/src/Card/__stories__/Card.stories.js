@@ -33,6 +33,19 @@ const ExampleCard = () => {
 						</Text>
 					</VStack>
 				</CardBody>
+				<Divider />
+				<CardBody>
+					<VStack expanded={false}>
+						<Heading>{faker.lorem.sentence()}</Heading>
+						<Text>
+							{faker.random.arrayElement([
+								faker.lorem.sentence(),
+								faker.lorem.words(),
+								faker.lorem.paragraphs(),
+							])}
+						</Text>
+					</VStack>
+				</CardBody>
 				<Spacer />
 				<Divider />
 				<CardFooter>

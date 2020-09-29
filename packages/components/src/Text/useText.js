@@ -1,6 +1,7 @@
-import { useContextSystem } from '@wp-g2/context';
+import { hasNamespace, useContextSystem } from '@wp-g2/context';
 import { css, cx, get, getFontSize } from '@wp-g2/styles';
 import { getOptimalTextShade, is } from '@wp-g2/utils';
+import React from 'react';
 
 import { useTruncate } from '../Truncate';
 import * as styles from './Text.styles';
@@ -97,6 +98,24 @@ export function useText(props) {
 	};
 
 	const truncateProps = useTruncate(finalComponentProps);
+
+	/**
+	 * Enhance child `<Link />` components to inherit font size.
+	 */
+	if (!truncate && is.array(children)) {
+		content = React.Children.map(children, (child) => {
+			if (!is.plainObject(child)) return child;
+
+			const isLink = hasNamespace(child, ['Link']);
+			if (isLink) {
+				return React.cloneElement(child, {
+					size: child.props.size || 'inherit',
+				});
+			}
+
+			return child;
+		});
+	}
 
 	return {
 		...truncateProps,

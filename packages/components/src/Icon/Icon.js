@@ -10,6 +10,7 @@ function Icon(props, forwardedRef) {
 		children,
 		color,
 		icon,
+		inline,
 		size = 20,
 		...otherProps
 	} = useContextSystem(props, 'Icon');
@@ -33,7 +34,12 @@ function Icon(props, forwardedRef) {
 		width: size,
 	});
 
-	const __css = cx(styles.Wrapper, sx.color, sx.size);
+	const __css = cx(
+		styles.Wrapper,
+		sx.color,
+		sx.size,
+		inline && styles.inline,
+	);
 
 	return (
 		<View {...otherProps} cx={__css}>
