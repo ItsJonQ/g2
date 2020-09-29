@@ -20,7 +20,7 @@ export default {
 const ExampleCard = () => {
 	return (
 		<Card>
-			<VStack expanded>
+			<VStack>
 				<CardBody>
 					<VStack expanded={false}>
 						<Heading>{faker.lorem.sentence()}</Heading>
