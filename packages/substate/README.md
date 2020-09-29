@@ -1,4 +1,4 @@
-# Atomic
+# Substate
 
 > Experimental high performance subscription-based state management (powered by Zustand).
 
