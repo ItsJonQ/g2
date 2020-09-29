@@ -1,13 +1,7 @@
-import { contextConnect } from '@wp-g2/context';
-import React from 'react';
-
-import { View } from '../View';
+import { createComponent } from '../utils';
 import { useSubheading } from './useSubheading';
 
-function Subheading(props, forwardedRef) {
-	const otherProps = useSubheading(props);
-
-	return <View {...otherProps} ref={forwardedRef} />;
-}
-
-export default contextConnect(Subheading, 'Subheading');
+export default createComponent({
+	useHook: useSubheading,
+	namespace: 'Subheading',
+});

@@ -4,7 +4,7 @@ import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useRef, useState } from 'react';
 
-import { BaseField } from '../BaseField';
+import { useBaseField } from '../BaseField';
 import { FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { Icon } from '../Icon';
@@ -17,8 +17,8 @@ const { ArrowWrapperView } = styles;
 
 function Select(props, forwardedRef) {
 	const {
-		className,
 		children,
+		className,
 		defaultValue,
 		disabled,
 		id: idProp,
@@ -39,6 +39,14 @@ function Select(props, forwardedRef) {
 	});
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
+
+	const baseFieldProps = useBaseField({
+		disabled,
+		gap: 0,
+		isClickable: true,
+		isFocused,
+		isSubtle,
+	});
 
 	const { id: contextId } = useFormGroupContext();
 	const id = idProp || contextId;
@@ -63,21 +71,18 @@ function Select(props, forwardedRef) {
 		onChange(event.target.value, { event });
 	};
 
-	const classes = cx([styles.base, className]);
-	const inputCx = cx([
+	const classes = cx(baseFieldProps.className, styles.base, className);
+	const inputCx = cx(
 		TextInputStyles.Input,
 		styles.select,
 		TextInputStyles[size],
-	]);
+	);
 
 	return (
-		<BaseField
+		<View
+			{...baseFieldProps}
 			className={classes}
 			disabled={disabled}
-			gap={0}
-			isClickable
-			isFocused={isFocused}
-			isSubtle={isSubtle}
 			onClick={handleOnRootClick}
 			{...ui.$('SelectWrapper')}
 		>
@@ -116,7 +121,7 @@ function Select(props, forwardedRef) {
 					<Icon icon={<FiChevronDown />} size={14} />
 				</Text>
 			</ArrowWrapperView>
-		</BaseField>
+		</View>
 	);
 }
 

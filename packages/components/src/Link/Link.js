@@ -1,13 +1,8 @@
-import { contextConnect } from '@wp-g2/context';
-import React from 'react';
-
-import { View } from '../View';
+import { createComponent } from '../utils';
 import { useLink } from './useLink';
 
-function Link(props, forwardedRef) {
-	const otherProps = useLink(props);
-
-	return <View as="a" {...otherProps} ref={forwardedRef} />;
-}
-
-export default contextConnect(Link, 'Link');
+export default createComponent({
+	as: 'a',
+	useHook: useLink,
+	namespace: 'Link',
+});

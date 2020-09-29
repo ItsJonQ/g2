@@ -38,8 +38,7 @@
         "reakit-warning": "^0.5.5",
         "tinycolor2": "^1.4.2",
         "use-enhanced-state": "^0.0.12",
-        "use-isomorphic-layout-effect": "^1.0.0",
-        "zustand": "^3.1.3"
+        "use-isomorphic-layout-effect": "^1.0.0"
     },
     "peerDependencies": {
         "react": "^16.8.0",

@@ -1,13 +1,8 @@
-import { contextConnect } from '@wp-g2/context';
-import React from 'react';
-
-import { View } from '../View';
+import { createComponent } from '../utils';
 import { useTruncate } from './useTruncate';
 
-export function Truncate(props, forwardedRef) {
-	const otherProps = useTruncate(props);
-
-	return <View as="span" {...otherProps} ref={forwardedRef} />;
-}
-
-export default contextConnect(Truncate, 'Truncate');
+export default createComponent({
+	as: 'span',
+	useHook: useTruncate,
+	namespace: 'Truncate',
+});

@@ -1,13 +1,7 @@
-import { contextConnect } from '@wp-g2/context';
-import React from 'react';
-
-import { View } from '../View';
+import { createComponent } from '../utils';
 import { useVStack } from './useVStack';
 
-function VStack(props, forwardedRef) {
-	const otherProps = useVStack(props);
-
-	return <View {...otherProps} ref={forwardedRef} />;
-}
-
-export default contextConnect(VStack, 'VStack');
+export default createComponent({
+	useHook: useVStack,
+	namespace: 'VStack',
+});

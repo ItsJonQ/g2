@@ -1,6 +1,7 @@
 import { get } from '@wp-g2/create-styles';
 
 import { BACKGROUND_COLOR_PROPS, G2_COLORS, WORDPRESS_COLORS } from './tokens';
+import { space } from './utils';
 
 export const SUPPORTED_COLORS = [
 	'blue',
@@ -108,10 +109,10 @@ const BUTTON_PROPS = {
 
 const CARD_PROPS = {
 	cardBorderRadius: '8px',
-	cardPaddingX: '12px',
-	cardPaddingY: '12px',
+	cardPaddingX: space(3),
+	cardPaddingY: space(3),
 	cardPadding: `${get('cardPaddingX')} ${get('cardPaddingY')}`,
-	cardHeaderFooterPaddingY: '4px',
+	cardHeaderFooterPaddingY: space(1),
 	cardHeaderHeight: '44px',
 };
 

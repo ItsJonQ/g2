@@ -1,13 +1,7 @@
-import { contextConnect } from '@wp-g2/context';
-import React from 'react';
-
-import { View } from '../View';
+import { createComponent } from '../utils';
 import { useGrid } from './useGrid';
 
-function Grid(props, forwardedRef) {
-	const otherProps = useGrid(props);
-
-	return <View {...otherProps} ref={forwardedRef} />;
-}
-
-export default contextConnect(Grid, 'Grid');
+export default createComponent({
+	useHook: useGrid,
+	namespace: 'Grid',
+});

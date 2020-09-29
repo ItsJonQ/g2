@@ -1,6 +1,6 @@
-import { css, styled, ui } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
-export const SliderView = styled.input`
+export const Slider = css`
 	appearance: none;
 	background-color: transparent;
 	border: 1px solid transparent;

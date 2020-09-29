@@ -86,12 +86,7 @@ exports[`props should render correctly 1`] = `
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >
-      <div
-        class="css-1qs21wj"
-        data-g2-component="ScrollableContent"
-      >
-        Some people are worth melting for.
-      </div>
+      Some people are worth melting for.
     </div>
     <div
       class="wp-components-flex wp-components-card-footer css-skobos"

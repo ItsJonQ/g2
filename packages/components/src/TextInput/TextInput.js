@@ -4,7 +4,7 @@ import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useCallback, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { BaseField } from '../BaseField';
+import { useBaseField } from '../BaseField';
 import { FlexItem } from '../Flex';
 import { useFormGroupContext } from '../FormGroup';
 import { View } from '../View';
@@ -37,6 +37,14 @@ function TextInput(props, forwardedRef) {
 	});
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef();
+
+	const baseFieldProps = useBaseField({
+		align,
+		disabled,
+		gap,
+		isFocused,
+		justify,
+	});
 
 	const { id: contextId } = useFormGroupContext();
 	const id = idProp || contextId;
@@ -72,24 +80,25 @@ function TextInput(props, forwardedRef) {
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
-	const classes = cx([multiline && styles.multiline, className]);
+	const classes = cx(
+		baseFieldProps.className,
+		multiline && styles.multiline,
+		className,
+	);
 
-	const inputCx = cx([
+	const inputCx = cx(
 		styles.Input,
 		styles[size],
 		multiline && styles.inputMultiline,
 		isResizable && styles.resizable,
 		multiline && styles.scrollableScrollbar,
-	]);
+	);
 
 	return (
-		<BaseField
-			align={align}
+		<View
+			{...baseFieldProps}
 			className={classes}
 			disabled={disabled}
-			gap={gap}
-			isFocused={isFocused}
-			justify={justify}
 			onClick={handleOnRootClick}
 			{...ui.$('TextInputWrapper')}
 		>
@@ -112,7 +121,7 @@ function TextInput(props, forwardedRef) {
 			{suffix && (
 				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
 			)}
-		</BaseField>
+		</View>
 	);
 }
 
