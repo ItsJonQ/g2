@@ -75,7 +75,7 @@ exports[`props should render correctly 1`] = `
       class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
-      style="display: none; height: 0px; opacity: 0;"
+      style="height: 0px; opacity: 0; display: none;"
     >
       <div
         class="css-1op8pye"
@@ -163,7 +163,7 @@ exports[`props should render seamless 1`] = `
       class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
-      style="display: none; height: 0px; opacity: 0;"
+      style="height: 0px; opacity: 0; display: none;"
     >
       <div
         class="css-1op8pye"
@@ -248,7 +248,7 @@ exports[`props should render visible 1`] = `
       class="wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
-      style="display: block; height: auto; opacity: 1;"
+      style="height: auto; opacity: 1; display: block;"
     >
       <div
         class="css-1op8pye"
