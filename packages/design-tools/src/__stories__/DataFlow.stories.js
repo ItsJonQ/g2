@@ -28,6 +28,10 @@ export default {
 
 const dataStore = createStore((set) => ({
 	height: 0,
+	width: 0,
+	x: 0,
+	y: 0,
+	z: 0,
 }));
 
 const AppContext = React.createContext({ dataStore });
@@ -37,21 +41,20 @@ const useSubState = (fn) => {
 	return React.useRef(createStore(fn)).current;
 };
 
-const TextControl = ({
-	onChange = noop,
-	onUpdate = noop,
-	validate,
-	value: initialValue,
-}) => {
-	const textControl = useTextControl({
-		onChange,
-		validate,
-		onUpdate,
-		value: initialValue,
-	});
+const TextControl = React.memo(
+	({ onChange = noop, onUpdate = noop, validate, value: initialValue }) => {
+		const textControl = useTextControl({
+			onChange,
+			validate,
+			onUpdate,
+			value: initialValue,
+		});
 
-	return <TextInput {...textControl} autoComplete="off" spellCheck={false} />;
-};
+		return (
+			<TextInput {...textControl} autoComplete="off" spellCheck={false} />
+		);
+	},
+);
 
 function useTextControl({
 	onBlur = noop,
@@ -166,32 +169,40 @@ const RenderedValues = () => {
 	);
 };
 
-const DataControl = ({ label = 'Label', prop, validate, onUpdate = noop }) => {
+const useDataStoreValue = ({ prop }) => {
 	const { dataStore } = useAppContext();
-	const data = dataStore();
+	const value = dataStore(React.useCallback((state) => state[prop], [prop]));
 
-	const handleOnChange = React.useCallback(
-		(next) => {
-			dataStore.setState({ [prop]: next });
-		},
-		[dataStore, prop],
-	);
-
-	return (
-		<FormGroup label={label}>
-			<Grid templateColumns="1fr auto">
-				<TextControl
-					onChange={handleOnChange}
-					onUpdate={onUpdate}
-					validate={validate}
-					value={data[prop]}
-				/>
-			</Grid>
-		</FormGroup>
-	);
+	return [value, dataStore];
 };
 
-const ChangeNotification = ({ store }) => {
+const DataControl = React.memo(
+	({ label = 'Label', prop, validate, onUpdate = noop }) => {
+		const [value, dataStore] = useDataStoreValue({ prop });
+
+		const handleOnChange = React.useCallback(
+			(next) => {
+				dataStore.setState({ [prop]: next });
+			},
+			[dataStore, prop],
+		);
+
+		return (
+			<FormGroup label={label}>
+				<Grid templateColumns="1fr auto">
+					<TextControl
+						onChange={handleOnChange}
+						onUpdate={onUpdate}
+						validate={validate}
+						value={value}
+					/>
+				</Grid>
+			</FormGroup>
+		);
+	},
+);
+
+const ChangeNotification = React.memo(({ store }) => {
 	const { count, visible } = store();
 	const timeoutRef = React.useRef();
 
@@ -223,7 +234,7 @@ const ChangeNotification = ({ store }) => {
 			Incoming Change
 		</Badge>
 	);
-};
+});
 
 const useChangeStore = () => {
 	return useSubState((set) => ({
@@ -235,9 +246,9 @@ const useChangeStore = () => {
 	}));
 };
 
-const DataStoreLayer = () => {
+const DataStoreLayer = React.memo(() => {
 	const store = useChangeStore();
-	const { increment } = store();
+	const increment = store(React.useCallback((state) => state.increment, []));
 
 	return (
 		<VStack>
@@ -252,16 +263,40 @@ const DataStoreLayer = () => {
 							prop="height"
 							validate={/^[0-9]*$/gi}
 						/>
+						<DataControl
+							label="Width"
+							onUpdate={increment}
+							prop="width"
+							validate={/^[0-9]*$/gi}
+						/>
+						<DataControl
+							label="X"
+							onUpdate={increment}
+							prop="x"
+							validate={/^[0-9]*$/gi}
+						/>
+						<DataControl
+							label="Y"
+							onUpdate={increment}
+							prop="y"
+							validate={/^[0-9]*$/gi}
+						/>
+						<DataControl
+							label="Z"
+							onUpdate={increment}
+							prop="z"
+							validate={/^[0-9]*$/gi}
+						/>
 					</ListGroup>
 				</CardBody>
 			</Card>
 		</VStack>
 	);
-};
+});
 
-const ControlsLayer = () => {
+const ControlsLayer = React.memo(() => {
 	const store = useChangeStore();
-	const { increment } = store();
+	const increment = store(React.useCallback((state) => state.increment, []));
 
 	return (
 		<VStack>
@@ -278,14 +313,38 @@ const ControlsLayer = () => {
 							prop="height"
 							validate={/^[0-9]*$/gi}
 						/>
+						<DataControl
+							label="Width"
+							onUpdate={increment}
+							prop="width"
+							validate={/^[0-9]*$/gi}
+						/>
+						<DataControl
+							label="X"
+							onUpdate={increment}
+							prop="x"
+							validate={/^[0-9]*$/gi}
+						/>
+						<DataControl
+							label="Y"
+							onUpdate={increment}
+							prop="y"
+							validate={/^[0-9]*$/gi}
+						/>
+						<DataControl
+							label="Z"
+							onUpdate={increment}
+							prop="z"
+							validate={/^[0-9]*$/gi}
+						/>
 					</ListGroup>
 				</CardBody>
 			</Card>
 		</VStack>
 	);
-};
+});
 
-const RenderedLayer = () => {
+const RenderedLayer = React.memo(() => {
 	const { dataStore } = useAppContext();
 	const store = useChangeStore();
 
@@ -308,7 +367,7 @@ const RenderedLayer = () => {
 			</Card>
 		</VStack>
 	);
-};
+});
 
 const Example = () => {
 	return (
