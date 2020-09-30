@@ -1,6 +1,5 @@
 import {
 	Badge,
-	Button,
 	Card,
 	CardBody,
 	Container,
@@ -10,17 +9,15 @@ import {
 	ListGroup,
 	ListGroupHeader,
 	Spacer,
-	Surface,
 	Text,
 	TextInput,
 	View,
 	VStack,
 } from '@wp-g2/components';
-import { css, styled, ui } from '@wp-g2/styles';
+import { ui } from '@wp-g2/styles';
 import { createStore } from '@wp-g2/substate';
 import { is, noop } from '@wp-g2/utils';
 import React from 'react';
-import * as yup from 'yup';
 
 export default {
 	title: 'DesignTools/DataFlow',
