@@ -330,7 +330,14 @@ const Example = () => {
 			`}
 			gap={0}
 		>
-			<Surface borderRight css={ui.padding(5)}>
+			<Surface
+				borderRight
+				css={[
+					ui.padding(5),
+					ui.alignment.content.center,
+					{ height: '100vh' },
+				]}
+			>
 				<VStack expanded={false} spacing={8}>
 					<TouchPadControl
 						circlePositionX={circlePositionX}
@@ -346,7 +353,13 @@ const Example = () => {
 					/>
 				</VStack>
 			</Surface>
-			<Surface css={[ui.padding(5), ui.alignment.center]}>
+			<Surface
+				css={[
+					ui.padding(5),
+					ui.alignment.content.center,
+					{ height: '100vh' },
+				]}
+			>
 				<Animated
 					css={[
 						ui.background.admin,

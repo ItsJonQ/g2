@@ -1876,7 +1876,7 @@ exports[`props should render List with css prop 2`] = `
 
 exports[`props should render ListGroup 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1hznlui"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-111mesx"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
@@ -1885,7 +1885,7 @@ exports[`props should render ListGroup 1`] = `
 
 exports[`props should render ListGroup with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1hznlui"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-111mesx"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
@@ -1894,7 +1894,7 @@ exports[`props should render ListGroup with css prop 1`] = `
 
 exports[`props should render ListGroup with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1s7257a"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-group css-1nijv0t"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
   id="ListGroup"
@@ -1957,7 +1957,7 @@ exports[`props should render ListGroupHeader with css prop 2`] = `
 
 exports[`props should render ListGroups 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-m2xr06"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-qkmwvu"
   data-g2-c16t="true"
   data-g2-component="ListGroups"
   id="ListGroups"
@@ -1966,7 +1966,7 @@ exports[`props should render ListGroups 1`] = `
 
 exports[`props should render ListGroups with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-m2xr06"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-qkmwvu"
   data-g2-c16t="true"
   data-g2-component="ListGroups"
   id="ListGroups"
@@ -1975,7 +1975,7 @@ exports[`props should render ListGroups with css prop 1`] = `
 
 exports[`props should render ListGroups with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-k3t9ba"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack wp-components-list-groups css-1rcikdt"
   data-g2-c16t="true"
   data-g2-component="ListGroups"
   id="ListGroups"
@@ -3689,7 +3689,7 @@ exports[`props should render Truncate with css prop 2`] = `
 
 exports[`props should render VStack 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1hznlui"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-111mesx"
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
@@ -3698,7 +3698,7 @@ exports[`props should render VStack 1`] = `
 
 exports[`props should render VStack with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1hznlui"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-111mesx"
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
@@ -3707,7 +3707,7 @@ exports[`props should render VStack with css prop 1`] = `
 
 exports[`props should render VStack with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1s7257a"
+  class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1nijv0t"
   data-g2-c16t="true"
   data-g2-component="VStack"
   id="VStack"
