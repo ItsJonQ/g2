@@ -3,5 +3,5 @@ import { useSubheading } from './useSubheading';
 
 export default createComponent({
 	useHook: useSubheading,
-	namespace: 'Subheading',
+	name: 'Subheading',
 });

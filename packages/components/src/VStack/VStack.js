@@ -3,5 +3,5 @@ import { useVStack } from './useVStack';
 
 export default createComponent({
 	useHook: useVStack,
-	namespace: 'VStack',
+	name: 'VStack',
 });

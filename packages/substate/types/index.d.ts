@@ -73,8 +73,32 @@ interface UseStore<T extends State> {
  * function Component() {
  *   const berries = useStore(selector)
  * ```
+ *
  * @see https://github.com/pmndrs/zustand
  */
 export function createStore<TState extends State>(
+	createState: StateCreator<TState> | StoreApi<TState>,
+): UseStore<TState>;
+
+/**
+ * Create a store instance with state and actions that can be locally within a Component.
+ *
+ *
+ * @example
+ * ```jsx
+ * import { useSubState } from `@wp-g2/substate`
+ *
+ * const Example = () => {
+ *	const store = useSubState(set => ({
+ *		bears: 0,
+ * 		increasePopulation: () => set(state => ({ bears: state.bears + 1 })),
+ * 		removeAllBears: () => set({ bears: 0 })
+ * 	}))
+ * }
+ * ```
+ *
+ * @see https://github.com/pmndrs/zustand
+ */
+export function useSubState<TState extends State>(
 	createState: StateCreator<TState> | StoreApi<TState>,
 ): UseStore<TState>;

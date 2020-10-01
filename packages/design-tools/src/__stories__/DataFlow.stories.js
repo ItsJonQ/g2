@@ -15,7 +15,7 @@ import {
 	VStack,
 } from '@wp-g2/components';
 import { ui } from '@wp-g2/styles';
-import { createStore } from '@wp-g2/substate';
+import { createStore, useSubState } from '@wp-g2/substate';
 import { is, noop } from '@wp-g2/utils';
 import React from 'react';
 
@@ -33,10 +33,6 @@ const dataStore = createStore((set) => ({
 
 const AppContext = React.createContext({ dataStore });
 const useAppContext = () => React.useContext(AppContext);
-
-const useSubState = (fn) => {
-	return React.useRef(createStore(fn)).current;
-};
 
 const TextControl = React.memo(
 	({ onChange = noop, onUpdate = noop, validate, value: initialValue }) => {

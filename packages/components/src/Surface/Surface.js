@@ -3,5 +3,5 @@ import { useSurface } from './useSurface';
 
 export default createComponent({
 	useHook: useSurface,
-	namespace: 'Surface',
+	name: 'Surface',
 });

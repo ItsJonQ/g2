@@ -3,5 +3,5 @@ import { useBackground } from './useBackground';
 
 export default createComponent({
 	useHook: useBackground,
-	namespace: 'Background',
+	name: 'Background',
 });

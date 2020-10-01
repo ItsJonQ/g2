@@ -3,5 +3,5 @@ import { useBaseField } from './useBaseField';
 
 export default createComponent({
 	useHook: useBaseField,
-	namespace: 'BaseField',
+	name: 'BaseField',
 });

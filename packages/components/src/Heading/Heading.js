@@ -3,5 +3,5 @@ import { useHeading } from './useHeading';
 
 export default createComponent({
 	useHook: useHeading,
-	namespace: 'Heading',
+	name: 'Heading',
 });

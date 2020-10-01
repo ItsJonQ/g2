@@ -44,7 +44,7 @@ export interface Connect {
 		/**
 		 * The namespace for the component.
 		 */
-		namespace: string,
+		name: string,
 	): React.ComponentClass<T> | React.FC<T>;
 }
 

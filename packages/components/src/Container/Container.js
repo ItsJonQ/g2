@@ -3,5 +3,5 @@ import { useContainer } from './useContainer';
 
 export default createComponent({
 	useHook: useContainer,
-	namespace: 'Container',
+	name: 'Container',
 });

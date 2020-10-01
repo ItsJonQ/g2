@@ -4,5 +4,5 @@ import { useSlider } from './useSlider';
 export default createComponent({
 	as: 'input',
 	useHook: useSlider,
-	namespace: 'Slider',
+	name: 'Slider',
 });

@@ -3,5 +3,5 @@ import { useHStack } from './useHStack';
 
 export default createComponent({
 	useHook: useHStack,
-	namespace: 'HStack',
+	name: 'HStack',
 });

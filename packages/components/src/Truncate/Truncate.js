@@ -4,5 +4,5 @@ import { useTruncate } from './useTruncate';
 export default createComponent({
 	as: 'span',
 	useHook: useTruncate,
-	namespace: 'Truncate',
+	name: 'Truncate',
 });

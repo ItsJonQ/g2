@@ -5,7 +5,7 @@ import { View } from '../View';
 
 export function createComponent({
 	as = 'div',
-	namespace = 'Component',
+	name = 'Component',
 	useHook = () => ({}),
 	memo = true,
 }) {
@@ -15,7 +15,7 @@ export function createComponent({
 		return <View as={as} {...otherProps} ref={forwardedRef} />;
 	}
 
-	Component.displayName = namespace;
+	Component.displayName = name;
 
-	return contextConnect(Component, namespace, { memo });
+	return contextConnect(Component, name, { memo });
 }

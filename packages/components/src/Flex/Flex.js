@@ -3,5 +3,5 @@ import { useFlex } from './useFlex';
 
 export default createComponent({
 	useHook: useFlex,
-	namespace: 'Flex',
+	name: 'Flex',
 });
