@@ -31,21 +31,27 @@ function SearchInput(props, forwardedRef) {
 	});
 	const textInputRef = useRef();
 
-	const handleOnChange = (next, changeProps) => {
-		onChange(next, changeProps);
-		setState(next);
-	};
+	const handleOnChange = React.useCallback(
+		(next, changeProps) => {
+			onChange(next, changeProps);
+			setState(next);
+		},
+		[onChange, setState],
+	);
 
-	const handleOnClearClick = (event) => {
-		const clearValue = '';
-		setState(clearValue);
-		onChange(clearValue, { event });
-		onClear(event);
+	const handleOnClearClick = React.useCallback(
+		(event) => {
+			const clearValue = '';
+			setState(clearValue);
+			onChange(clearValue, { event });
+			onClear(event);
 
-		if (textInputRef.current) {
-			textInputRef.current.focus();
-		}
-	};
+			if (textInputRef.current) {
+				textInputRef.current.focus();
+			}
+		},
+		[onChange, onClear, setState],
+	);
 
 	const classes = cx(styles.SearchInput, className);
 
@@ -57,10 +63,11 @@ function SearchInput(props, forwardedRef) {
 			prefix={<SearchPrefix isLoading={isLoading} prefix={prefix} />}
 			ref={mergeRefs([forwardedRef, textInputRef])}
 			suffix={
-				<>
-					{suffix}
-					<ClearButton onClick={handleOnClearClick} value={state} />
-				</>
+				<SearchSuffix
+					onClick={handleOnClearClick}
+					suffix={suffix}
+					value={!!state}
+				/>
 			}
 			type="search"
 			value={state}
@@ -69,7 +76,18 @@ function SearchInput(props, forwardedRef) {
 	);
 }
 
+const SearchSuffix = React.memo(({ onClick, suffix, value }) => {
+	return (
+		<>
+			{suffix}
+			<ClearButton onClick={onClick} value={value ? true : undefined} />
+		</>
+	);
+});
+
 const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
+	const SearchIcon = React.useMemo(() => <FiSearch />, []);
+
 	return (
 		<>
 			<View css={[ui.opacity(0.5), ui.margin.right(-1)]}>
@@ -77,7 +95,7 @@ const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
 					<Spinner size={16} />
 				) : (
 					<Text>
-						<Icon icon={<FiSearch />} size={12} />
+						<Icon icon={SearchIcon} size={12} />
 					</Text>
 				)}
 			</View>
