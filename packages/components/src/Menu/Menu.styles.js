@@ -9,6 +9,7 @@ export const MenuItem = css`
 	${ui.font.color.text};
 	${ui.font.size()};
 	border-color: transparent;
+	box-sizing: border-box;
 	cursor: pointer;
 	outline: none;
 	position: relative;

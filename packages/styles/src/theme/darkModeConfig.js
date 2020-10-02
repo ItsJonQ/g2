@@ -17,6 +17,7 @@ const DARK_MODE_PROPS = {
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
 	controlPrimaryTextActiveColor: get('black'),
 	controlPrimaryTextColor: get('white'),
+	buttonPrimaryTextColorActive: get('controlPrimaryTextActiveColor'),
 	controlSurfaceColor: 'rgba(255, 255, 255, 0.3)',
 	controlTextActiveColor: get('white'),
 	surfaceBackgroundColor: get('colorBodyBackgroundDark'),

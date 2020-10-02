@@ -9,6 +9,7 @@ export const Button = css`
 	border-style: solid;
 	border-width: 1px;
 	box-shadow: 0 0 0 2px transparent;
+	box-sizing: border-box;
 	color: ${ui.color.text};
 	cursor: pointer;
 	display: inline-flex;
