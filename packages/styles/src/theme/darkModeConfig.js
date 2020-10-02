@@ -5,6 +5,7 @@ import { DARK_MODE_COLORS, DARK_MODE_RGBA_COLORS } from './tokens';
 const DARK_MODE_PROPS = {
 	...DARK_MODE_COLORS,
 	...DARK_MODE_RGBA_COLORS,
+	buttonPrimaryTextColorActive: get('controlPrimaryTextActiveColor'),
 	colorDivider: 'rgba(255, 255, 255, 0.1)',
 	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',
@@ -17,7 +18,6 @@ const DARK_MODE_PROPS = {
 	controlBorderSubtleColor: 'rgba(255, 255, 255, 0.5)',
 	controlPrimaryTextActiveColor: get('black'),
 	controlPrimaryTextColor: get('white'),
-	buttonPrimaryTextColorActive: get('controlPrimaryTextActiveColor'),
 	controlSurfaceColor: 'rgba(255, 255, 255, 0.3)',
 	controlTextActiveColor: get('white'),
 	surfaceBackgroundColor: get('colorBodyBackgroundDark'),
