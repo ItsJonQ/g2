@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/protokit",
-  "version": "0.0.81",
+  "version": "0.0.82",
   "description": "Prototyping Toolkit for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/faker": "^5.1.2",
-    "@wp-g2/utils": "^0.0.81",
+    "@wp-g2/utils": "^0.0.82",
     "faker": "^4.1.0",
     "faker-schema": "^1.0.2",
     "fuse.js": "^6.4.1"
