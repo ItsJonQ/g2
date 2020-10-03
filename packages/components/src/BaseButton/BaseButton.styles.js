@@ -23,6 +23,7 @@ export const Button = css`
 	padding-top: ${ui.space(1)};
 	position: relative;
 	text-decoration: none;
+	touch-action: manipulation; /* Prevents zooming on mobile */
 	user-select: none;
 	width: auto;
 

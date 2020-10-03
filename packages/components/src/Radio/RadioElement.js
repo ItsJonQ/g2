@@ -2,7 +2,7 @@ import { Radio as ReakitRadio } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
 import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
 import { useRadioGroupContext } from '../RadioGroup';
@@ -30,13 +30,16 @@ function RadioElement(props, forwardedRef) {
 
 	const classes = cx(styles.Radio, [css(cssProp), className]);
 
-	const handleOnChange = (event) => {
-		const next = event.target.checked;
-		if (isEmpty(radio)) {
-			setChecked(next);
-		}
-		onChange(next, { event });
-	};
+	const handleOnChange = useCallback(
+		(event) => {
+			const next = event.target.checked;
+			if (isEmpty(radio)) {
+				setChecked(next);
+			}
+			onChange(next, { event });
+		},
+		[onChange, radio, setChecked],
+	);
 
 	const checkedState = isEmpty(radio) ? checked : undefined;
 

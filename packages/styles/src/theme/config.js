@@ -116,6 +116,10 @@ const CARD_PROPS = {
 	cardHeaderHeight: '44px',
 };
 
+const SEGMENTED_CONTROL_PROPS = {
+	segmentedControlFontSize: '12px',
+};
+
 const BASE_THEME = {
 	...G2_COLORS,
 	...COLOR_PROPS,
@@ -127,6 +131,7 @@ const BASE_THEME = {
 	...ANIMATION_PROPS,
 	...BUTTON_PROPS,
 	...GRID_PROPS,
+	...SEGMENTED_CONTROL_PROPS,
 };
 
 export const config = BASE_THEME;

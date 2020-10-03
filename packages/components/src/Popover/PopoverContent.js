@@ -4,6 +4,7 @@ import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Card } from '../Card';
+import { View } from '../View';
 import { usePopoverContext } from './Popover.Context';
 import * as styles from './Popover.styles';
 
@@ -22,6 +23,7 @@ function PopoverContent(props, forwardedRef) {
 	return (
 		<ReakitPopover
 			aria-label={label}
+			as={View}
 			className={classes}
 			{...otherProps}
 			{...popover}

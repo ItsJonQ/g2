@@ -16,9 +16,12 @@ function RadioGroup(props, forwardedRef) {
 	} = useContextSystem(props, 'RadioGroup');
 
 	const radio = useRadioState({ baseId: baseId || id, state: value });
-	const contextProps = {
-		radio,
-	};
+	const contextProps = React.useMemo(
+		() => ({
+			radio,
+		}),
+		[radio],
+	);
 
 	return (
 		<RadioGroupContext.Provider value={contextProps}>

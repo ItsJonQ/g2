@@ -12,12 +12,6 @@ const {
 	SeparatorView,
 } = styles;
 
-function SegmentedControlSeparator({ isActive }) {
-	const __css = cx(isActive && styles.separatorActive);
-
-	return <SeparatorView cx={__css} />;
-}
-
 function SegmentedControlButton({
 	forwardedRef,
 	isBlock = false,
@@ -52,12 +46,21 @@ function SegmentedControlButton({
 					{label}
 				</LabelPlaceholderView>
 			</Radio>
-			<SegmentedControlSeparator
-				isActive={!showSeparator}
-				{...ui.$('SegmentedControlButtonSeparator')}
-			/>
+			<SegmentedControlSeparator isActive={!showSeparator} />
 		</LabelView>
 	);
 }
 
-export default SegmentedControlButton;
+const SegmentedControlSeparator = React.memo(({ isActive }) => {
+	const __css = cx(isActive && styles.separatorActive);
+
+	return (
+		<SeparatorView
+			aria-hidden
+			cx={__css}
+			{...ui.$('SegmentedControlButtonSeparator')}
+		/>
+	);
+});
+
+export default React.memo(SegmentedControlButton);

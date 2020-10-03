@@ -80,7 +80,7 @@ export const ButtonView = styled.button`
 `;
 
 export const ButtonContentView = styled.div`
-	font-size: 12px;
+	font-size: ${ui.get('segmentedControlFontSize')};
 	left: 50%;
 	line-height: 1;
 	position: absolute;
@@ -108,7 +108,7 @@ export const separatorActive = css`
 `;
 
 export const LabelPlaceholderView = styled.div`
-	font-size: 12px;
+	font-size: ${ui.get('segmentedControlFontSize')};
 	font-weight: bold;
 	height: 0;
 	overflow: hidden;

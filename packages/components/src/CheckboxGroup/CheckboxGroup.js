@@ -7,9 +7,12 @@ import { CheckboxGroupContext } from './CheckboxGroup.Context';
 function CheckboxGroup(props, forwardedRef) {
 	const { children, value } = useContextSystem(props, 'CheckboxGroup');
 	const checkbox = useCheckboxState({ state: value });
-	const contextProps = {
-		checkbox,
-	};
+	const contextProps = React.useMemo(
+		() => ({
+			checkbox,
+		}),
+		[checkbox],
+	);
 
 	return (
 		<CheckboxGroupContext.Provider ref={forwardedRef} value={contextProps}>

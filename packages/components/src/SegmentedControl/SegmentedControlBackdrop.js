@@ -50,4 +50,4 @@ function SegmentedControlBackdrop({ containerRef, containerWidth, state }) {
 	);
 }
 
-export default SegmentedControlBackdrop;
+export default React.memo(SegmentedControlBackdrop);

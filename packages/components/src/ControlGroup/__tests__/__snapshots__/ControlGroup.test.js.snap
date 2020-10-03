@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-dmdqm"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1aedolu"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"
@@ -41,7 +41,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-elnjoo"
+      class="wp-components-flex wp-components-base-button wp-components-button css-s75eus"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"
@@ -149,7 +149,7 @@ exports[`props should render mixed control types 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-elnjoo"
+      class="wp-components-flex wp-components-base-button wp-components-button css-s75eus"
       data-destructive="false"
       data-g2-c16t="true"
       data-g2-component="Button"

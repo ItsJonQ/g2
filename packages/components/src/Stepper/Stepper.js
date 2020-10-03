@@ -73,7 +73,7 @@ function Stepper(props, forwardedRef) {
 	);
 }
 
-function ControlButton({ isVertical, size, ...props }) {
+const ControlButton = React.memo(({ isVertical, size, ...props }) => {
 	let buttonSize = isVertical ? 'half' : 'medium';
 
 	if (size === 'large') {
@@ -93,6 +93,6 @@ function ControlButton({ isVertical, size, ...props }) {
 			size={buttonSize}
 		/>
 	);
-}
+});
 
 export default contextConnect(Stepper, 'Stepper');

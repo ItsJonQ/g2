@@ -39,21 +39,23 @@ exports[`props should render correctly 1`] = `
       tabindex="-1"
     >
       <div
-        class="css-1ts9vyd"
+        class="css-3qll00"
         data-g2-component="SegmentedControlButtonContent"
       >
         O
       </div>
       <div
         aria-hidden="true"
-        class="css-g3gtcz"
+        class="css-1ka4cln"
         data-g2-component="SegmentedControlButtonContentPlaceholder"
       >
         O
       </div>
     </button>
     <div
+      aria-hidden="true"
       class="css-ijiudc"
+      data-g2-component="SegmentedControlButtonSeparator"
     />
   </div>
   <div
@@ -70,21 +72,23 @@ exports[`props should render correctly 1`] = `
       tabindex="-1"
     >
       <div
-        class="css-1ts9vyd"
+        class="css-3qll00"
         data-g2-component="SegmentedControlButtonContent"
       >
         S
       </div>
       <div
         aria-hidden="true"
-        class="css-g3gtcz"
+        class="css-1ka4cln"
         data-g2-component="SegmentedControlButtonContentPlaceholder"
       >
         S
       </div>
     </button>
     <div
+      aria-hidden="true"
       class="css-ijiudc"
+      data-g2-component="SegmentedControlButtonSeparator"
     />
   </div>
 </div>
