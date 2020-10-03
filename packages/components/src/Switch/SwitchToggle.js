@@ -4,10 +4,9 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Switch.styles';
 
-function SwitchToggle({ checked = false, size = 'medium', ...props }) {
+function SwitchToggle({ size = 'medium', ...props }) {
 	const __css = cx(
 		styles.Toggle,
-		checked && styles.toggleChecked,
 		size === 'large' && styles.toggleLarge,
 		size === 'small' && styles.toggleSmall,
 	);
@@ -22,4 +21,4 @@ function SwitchToggle({ checked = false, size = 'medium', ...props }) {
 	);
 }
 
-export default SwitchToggle;
+export default React.memo(SwitchToggle);

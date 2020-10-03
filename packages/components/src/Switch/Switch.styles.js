@@ -53,18 +53,18 @@ export const Backdrop = css`
 	top: 4px;
 	transition: all ${ui.get('transitionDurationFast')} linear;
 	width: 100%;
+
+	input:checked ~ & {
+		${ui.background.admin};
+	}
 `;
 
 export const focus = css`
 	${ui.border.control.focus};
-`;
 
-export const checkedFocus = css`
-	${ui.border.control.default};
-`;
-
-export const backdropChecked = css`
-	${ui.background.admin};
+	input:checked ~ & {
+		${ui.border.control.default};
+	}
 `;
 
 export const Toggle = css`
@@ -84,6 +84,11 @@ export const Toggle = css`
 
 	*:active > & {
 		width: ${getControlHeight('controlHeight')};
+	}
+
+	input:checked ~ & {
+		left: initial;
+		right: 2px;
 	}
 `;
 
@@ -105,11 +110,6 @@ export const toggleSmall = css`
 	*:active > & {
 		width: ${getControlHeight('controlHeightSmall')};
 	}
-`;
-
-export const toggleChecked = css`
-	left: initial;
-	right: 2px;
 `;
 
 export const formGroup = css`

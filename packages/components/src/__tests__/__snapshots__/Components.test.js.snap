@@ -3399,20 +3399,11 @@ exports[`props should render Surface with css prop 2`] = `
 
 exports[`props should render Switch 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="Switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-8ieowc"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1ptemzf"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="false"
     class="css-175q9tm"
@@ -3420,6 +3411,16 @@ exports[`props should render Switch 1`] = `
     data-g2-component="SwitchInput"
     id="Switch"
     type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"

@@ -10,9 +10,9 @@ export default {
 export const _default = () => {
 	return (
 		<>
-			<Switch size="large" />
-			<Switch />
-			<Switch size="small" />
+			<Switch onChange={console.log} size="large" />
+			<Switch onChange={console.log} />
+			<Switch onChange={console.log} size="small" />
 		</>
 	);
 };

@@ -2,20 +2,11 @@
 
 exports[`props should render checked 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-1g3h45o"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1b8magm"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="true"
     checked=""
@@ -24,6 +15,16 @@ exports[`props should render checked 1`] = `
     data-g2-component="SwitchInput"
     id="switch"
     type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"
@@ -34,20 +35,11 @@ exports[`props should render checked 1`] = `
 
 exports[`props should render correctly 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-8ieowc"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1ptemzf"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="false"
     class="css-175q9tm"
@@ -55,6 +47,16 @@ exports[`props should render correctly 1`] = `
     data-g2-component="SwitchInput"
     id="switch"
     type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"
@@ -65,20 +67,11 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render defaultValue 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-1g3h45o"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1b8magm"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="true"
     checked=""
@@ -87,6 +80,16 @@ exports[`props should render defaultValue 1`] = `
     data-g2-component="SwitchInput"
     id="switch"
     type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"
@@ -97,20 +100,11 @@ exports[`props should render defaultValue 1`] = `
 
 exports[`props should render disabled 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-8ieowc"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1ptemzf"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="false"
     aria-disabled="true"
@@ -122,6 +116,16 @@ exports[`props should render disabled 1`] = `
     style="pointer-events: none;"
     type="checkbox"
   />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
+  />
   <span
     data-g2-component="SwitchLabel"
     style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
@@ -131,20 +135,11 @@ exports[`props should render disabled 1`] = `
 
 exports[`props should render label 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-8ieowc"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1ptemzf"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="false"
     class="css-175q9tm"
@@ -152,6 +147,16 @@ exports[`props should render label 1`] = `
     data-g2-component="SwitchInput"
     id="switch"
     type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"
@@ -164,20 +169,11 @@ exports[`props should render label 1`] = `
 
 exports[`props should render size 1`] = `
 <label
-  class="css-11jud02"
+  class="wp-components-switch css-11jud02"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-8ieowc"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-h9i19v"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="false"
     class="css-175q9tm"
@@ -185,6 +181,16 @@ exports[`props should render size 1`] = `
     data-g2-component="SwitchInput"
     id="switch"
     type="checkbox"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-dvdcqh"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"
@@ -195,20 +201,11 @@ exports[`props should render size 1`] = `
 
 exports[`props should render type 1`] = `
 <label
-  class="css-1qim1rt"
+  class="wp-components-switch css-1qim1rt"
   data-g2-c16t="true"
+  data-g2-component="Switch"
   for="switch"
 >
-  <div
-    aria-hidden="true"
-    class="css-8ieowc"
-    data-g2-component="SwitchBackdrop"
-  />
-  <div
-    aria-hidden="true"
-    class="css-1ptemzf"
-    data-g2-component="SwitchToggle"
-  />
   <input
     aria-checked="false"
     class="css-175q9tm"
@@ -217,6 +214,16 @@ exports[`props should render type 1`] = `
     id="switch"
     tabindex="0"
     type="radio"
+  />
+  <div
+    aria-hidden="true"
+    class="css-14zgccs"
+    data-g2-component="SwitchBackdrop"
+  />
+  <div
+    aria-hidden="true"
+    class="css-ae81tz"
+    data-g2-component="SwitchToggle"
   />
   <span
     data-g2-component="SwitchLabel"

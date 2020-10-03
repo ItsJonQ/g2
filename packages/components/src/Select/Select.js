@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 
 import { useBaseField } from '../BaseField';
 import { FlexItem } from '../Flex';
@@ -51,27 +51,37 @@ function Select(props, forwardedRef) {
 	const { id: contextId } = useFormGroupContext();
 	const id = idProp || contextId;
 
-	const handleOnRootClick = () => {
+	const handleOnRootClick = useCallback(() => {
 		inputRef.current.focus();
-	};
+	}, []);
 
-	const handleOnBlur = (event) => {
-		onBlur(event);
-		setIsFocused(false);
-	};
+	const handleOnBlur = useCallback(
+		(event) => {
+			onBlur(event);
+			setIsFocused(false);
+		},
+		[onBlur],
+	);
 
-	const handleOnFocus = (event) => {
-		onFocus(event);
-		setIsFocused(true);
-	};
+	const handleOnFocus = useCallback(
+		(event) => {
+			onFocus(event);
+			setIsFocused(true);
+		},
+		[onFocus],
+	);
 
-	const handleOnChange = (event) => {
-		const next = event.target.value;
-		setValue(next);
-		onChange(event.target.value, { event });
-	};
+	const handleOnChange = useCallback(
+		(event) => {
+			const next = event.target.value;
+			setValue(next);
+			onChange(event.target.value, { event });
+		},
+		[onChange, setValue],
+	);
 
 	const classes = cx(baseFieldProps.className, styles.base, className);
+
 	const inputCx = cx(
 		TextInputStyles.Input,
 		styles.select,
@@ -119,13 +129,19 @@ function Select(props, forwardedRef) {
 				{content}
 			</View>
 			{suffix && <FlexItem {...ui.$('SelectSuffix')}>{suffix}</FlexItem>}
-			<ArrowWrapperView>
-				<Text isBlock variant="muted">
-					<Icon icon={<FiChevronDown />} size={14} />
-				</Text>
-			</ArrowWrapperView>
+			<SelectArrow />
 		</View>
 	);
 }
+
+const SelectArrow = React.memo(() => {
+	return (
+		<ArrowWrapperView>
+			<Text isBlock variant="muted">
+				<Icon icon={<FiChevronDown />} size={14} />
+			</Text>
+		</ArrowWrapperView>
+	);
+});
 
 export default contextConnect(Select, 'Select');

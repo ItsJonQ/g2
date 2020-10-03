@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiSearch } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 
 import { Icon } from '../Icon';
 import { Spinner } from '../Spinner';
@@ -31,7 +31,7 @@ function SearchInput(props, forwardedRef) {
 	});
 	const textInputRef = useRef();
 
-	const handleOnChange = React.useCallback(
+	const handleOnChange = useCallback(
 		(next, changeProps) => {
 			onChange(next, changeProps);
 			setState(next);
@@ -39,7 +39,7 @@ function SearchInput(props, forwardedRef) {
 		[onChange, setState],
 	);
 
-	const handleOnClearClick = React.useCallback(
+	const handleOnClearClick = useCallback(
 		(event) => {
 			const clearValue = '';
 			setState(clearValue);

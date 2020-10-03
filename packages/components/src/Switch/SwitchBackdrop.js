@@ -4,13 +4,8 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Switch.styles';
 
-function SwitchBackdrop({ checked = false, isFocused = false, ...props }) {
-	const __css = cx(
-		styles.Backdrop,
-		isFocused && styles.focus,
-		checked && styles.backdropChecked,
-		checked && isFocused && styles.checkedFocus,
-	);
+function SwitchBackdrop({ isFocused = false, ...props }) {
+	const __css = cx(styles.Backdrop, isFocused && styles.focus);
 
 	return (
 		<View
@@ -22,4 +17,4 @@ function SwitchBackdrop({ checked = false, isFocused = false, ...props }) {
 	);
 }
 
-export default SwitchBackdrop;
+export default React.memo(SwitchBackdrop);
