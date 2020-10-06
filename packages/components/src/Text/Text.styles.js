@@ -17,7 +17,7 @@ export const destructive = css`
 `;
 
 export const muted = css`
-	opacity: 0.6;
+	opacity: 0.48;
 `;
 
 export const highlighterText = css`

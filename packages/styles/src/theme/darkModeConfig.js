@@ -12,6 +12,7 @@ const DARK_MODE_PROPS = {
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#E4E6EB',
 	colorTextInverted: '#050505',
+	colorTextHeading: '#ffffff',
 	controlBackgroundColor: 'rgba(255, 255, 255, 0.1)',
 	controlBackgroundBrightColor: 'rgba(255, 255, 255, 0.08)',
 	controlBackgroundDimColor: 'rgba(255, 255, 255, 0.2)',

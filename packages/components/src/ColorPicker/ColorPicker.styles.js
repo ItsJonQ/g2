@@ -94,6 +94,7 @@ export const ColorPickerView = styled.div`
 		bottom: 0;
 		border-radius: inherit;
 		touch-action: none;
+		outline: none;
 	}
 
 	._3nKPH:focus {
@@ -148,5 +149,10 @@ export const ColorPickerView = styled.div`
 export const disableAlpha = css`
 	.react-colorful__alpha {
 		display: none;
+	}
+
+	.react-colorful__saturation {
+		border-bottom-left-radius: ${ui.get('controlBorderRadius')};
+		border-bottom-right-radius: ${ui.get('controlBorderRadius')};
 	}
 `;

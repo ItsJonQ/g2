@@ -35,8 +35,9 @@ const COLOR_PROPS = {
 	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
 	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
-	colorText: '#050505',
+	colorText: '#3a3b3c',
 	colorTextInverted: get('white'),
+	colorTextHeading: '#050505',
 };
 
 const FONT_PROPS = {
