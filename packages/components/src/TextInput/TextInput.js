@@ -1,132 +1,20 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx, ui } from '@wp-g2/styles';
-import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
-import React, { useCallback, useRef, useState } from 'react';
-import TextareaAutosize from 'react-textarea-autosize';
+import React from 'react';
 
-import { useBaseField } from '../BaseField';
-import { FlexItem } from '../Flex';
-import { useFormGroupContext } from '../FormGroup';
-import { View } from '../View';
-import * as styles from './TextInput.styles';
+import BasicTextInput from './BasicTextInput';
+import EnrichedTextInput from './EnrichedTextInput';
 
 function TextInput(props, forwardedRef) {
-	const {
-		__onBeforeChange = defaultOnBeforeChange,
-		align,
-		className,
-		disabled,
-		defaultValue = '',
-		gap = 2.5,
-		id: idProp,
-		isResizable = false,
-		justify,
-		onBlur = noop,
-		onFocus = noop,
-		onChange = noop,
-		multiline = false,
-		prefix,
-		size = 'medium',
-		suffix,
-		value: valueProp,
-		...otherProps
-	} = useContextSystem(props, 'TextInput');
-
-	const [value, setValue] = useControlledState(valueProp, {
-		initial: defaultValue,
-	});
-	const [isFocused, setIsFocused] = useState(false);
-	const inputRef = useRef();
-
-	const baseFieldProps = useBaseField({
-		align,
-		disabled,
-		gap,
-		isFocused,
-		justify,
-	});
-
-	const { id: contextId } = useFormGroupContext();
-	const id = idProp || contextId;
-
-	const handleOnRootClick = useCallback(() => {
-		inputRef.current.focus();
-	}, []);
-
-	const handleOnBlur = useCallback(
-		(event) => {
-			onBlur(event);
-			setIsFocused(false);
-		},
-		[onBlur],
+	const { enriched = true, ...otherProps } = useContextSystem(
+		props,
+		'TextInput',
 	);
 
-	const handleOnFocus = useCallback(
-		(event) => {
-			onFocus(event);
-			setIsFocused(true);
-		},
-		[onFocus],
-	);
-
-	const handleOnChange = useCallback(
-		(event) => {
-			const next = event.target.value;
-			setValue(next);
-			onChange(__onBeforeChange(event), { event });
-		},
-		[__onBeforeChange, onChange, setValue],
-	);
-
-	const InputComponent = multiline ? TextareaAutosize : 'input';
-
-	const classes = cx(
-		baseFieldProps.className,
-		multiline && styles.multiline,
-		className,
-	);
-
-	const inputCx = cx(
-		styles.Input,
-		styles[size],
-		multiline && styles.inputMultiline,
-		isResizable && styles.resizable,
-		multiline && styles.scrollableScrollbar,
-	);
-
-	return (
-		<View
-			{...baseFieldProps}
-			className={classes}
-			disabled={disabled}
-			onClick={handleOnRootClick}
-			{...ui.$('TextInputWrapper')}
-		>
-			{prefix && (
-				<FlexItem {...ui.$('TextInputPrefix')}>{prefix}</FlexItem>
-			)}
-			<View
-				as={InputComponent}
-				cx={inputCx}
-				disabled={disabled}
-				id={id}
-				onBlur={handleOnBlur}
-				onChange={handleOnChange}
-				onFocus={handleOnFocus}
-				ref={mergeRefs([inputRef, forwardedRef])}
-				value={value}
-				{...otherProps}
-				{...ui.$('TextInput')}
-			/>
-			{suffix && (
-				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
-			)}
-		</View>
-	);
-}
-
-function defaultOnBeforeChange(event) {
-	return event?.target?.value;
+	if (enriched) {
+		return <EnrichedTextInput {...otherProps} ref={forwardedRef} />;
+	} else {
+		return <BasicTextInput {...otherProps} ref={forwardedRef} />;
+	}
 }
 
 export default contextConnect(TextInput, 'TextInput');

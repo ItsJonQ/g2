@@ -64,3 +64,48 @@ export const small = css`
 export const resizable = css`
 	resize: vertical;
 `;
+
+export const Spinner = css`
+	cursor: pointer;
+	margin: 0 -4px 0 0 !important;
+	opacity: 0.4;
+	user-select: none;
+
+	*:hover > & {
+		opacity: 1;
+	}
+`;
+
+export const SpinnerArrow = css`
+	border-radius: ${ui.get('controlBorderRadius')};
+	color: ${ui.get('colorText')};
+	padding: 0 4px;
+
+	&:active {
+		background-color: ${ui.get('controlBackgroundColor')};
+	}
+
+	[data-dragging='true'] > & {
+		background-color: transparent;
+	}
+`;
+
+export const SpinnerArrowUp = css`
+	${SpinnerArrow};
+	margin-bottom: -1px;
+`;
+
+export const SpinnerArrowDown = css`
+	${SpinnerArrow};
+	margin-top: -1px;
+`;
+
+export const spinnerDragging = css`
+	opacity: 1;
+`;
+
+export const globalDraggable = css`
+	* {
+		cursor: ns-resize;
+	}
+`;

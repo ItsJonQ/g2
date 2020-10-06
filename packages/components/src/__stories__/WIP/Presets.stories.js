@@ -26,20 +26,19 @@ const Thing = ({ children = 'View', ...props }) => (
 	</View>
 );
 
+const Tammie = () => {
+	return (
+		<View css={[ui.scale(1), ui.hover(ui.scale(2)), ui.animation.default]}>
+			Tammie!
+			<span>TEA!</span>
+		</View>
+	);
+};
+
 export const _default = () => {
 	return (
 		<HStack alignment="left">
-			<Thing>
-				<Thing {...ui.$('NestedThing')}>Nested View</Thing>
-			</Thing>
-			<Thing />
-			<Spacer />
-			<Thing />
-			<Thing />
-			<Thing />
-			<Spacer />
-			<Thing />
-			<Thing />
+			<Tammie />
 		</HStack>
 	);
 };

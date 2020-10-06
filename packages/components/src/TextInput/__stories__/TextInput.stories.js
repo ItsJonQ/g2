@@ -11,6 +11,10 @@ export const _default = () => {
 	return <TextInput />;
 };
 
+export const number = () => {
+	return <TextInput type="number" />;
+};
+
 export const multiline = () => {
 	return <TextInput maxRows={6} minRows={3} multiline />;
 };
