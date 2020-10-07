@@ -1,6 +1,6 @@
 import { useDrag } from '@wp-g2/gestures';
 import { ui } from '@wp-g2/styles';
-import { noop } from '@wp-g2/utils';
+import { clamp, noop } from '@wp-g2/utils';
 import React, {
 	useCallback,
 	useEffect,
@@ -114,13 +114,12 @@ function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 const UpDownArrows = React.memo(
 	({ isDragging = false, onIncrement = noop, onDecrement = noop }) => {
 		const timeoutRef = useRef();
-		const intervalRef = useRef();
 		const timeoutDurationStart = 500;
-		const intervalDurationStart = 50;
+		const timeoutDurationRef = useRef(timeoutDurationStart);
 
 		const handleOnClearTimers = useCallback((event) => {
 			clearTimeout(timeoutRef.current);
-			clearInterval(intervalRef.current);
+			timeoutDurationRef.current = timeoutDurationStart;
 		}, []);
 
 		useEffect(() => {
@@ -131,26 +130,36 @@ const UpDownArrows = React.memo(
 
 		const handleOnMouseDownIncrement = useCallback(
 			(event) => {
-				event.preventDefault();
+				if (event) {
+					event.preventDefault();
+				}
 				timeoutRef.current = setTimeout(() => {
-					intervalRef.current = setInterval(
-						onIncrement,
-						intervalDurationStart,
+					onIncrement();
+					timeoutDurationRef.current = clamp(
+						timeoutDurationRef.current / 2,
+						0,
+						timeoutDurationStart,
 					);
-				}, timeoutDurationStart);
+					handleOnMouseDownIncrement();
+				}, timeoutDurationRef.current);
 			},
 			[onIncrement],
 		);
 
 		const handleOnMouseDownDecrement = useCallback(
 			(event) => {
-				event.preventDefault();
+				if (event) {
+					event.preventDefault();
+				}
 				timeoutRef.current = setTimeout(() => {
-					intervalRef.current = setInterval(
-						onDecrement,
-						intervalDurationStart,
+					onDecrement();
+					timeoutDurationRef.current = clamp(
+						timeoutDurationRef.current / 2,
+						0,
+						timeoutDurationStart,
 					);
-				}, timeoutDurationStart);
+					handleOnMouseDownDecrement();
+				}, timeoutDurationRef.current);
 			},
 			[onDecrement],
 		);
