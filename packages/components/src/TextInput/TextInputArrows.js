@@ -15,26 +15,26 @@ import { VStack } from '../VStack';
 import * as styles from './TextInput.styles';
 
 function TextInputArrows(props, forwardedRef) {
-	const { __store, dragAxis, onCommitChange = noop } = props;
+	const { __store, dragAxis } = props;
 	const store = useRef(__store).current;
 
 	const incrementValue = useCallback(
 		(boost) => {
 			store.getState().increment(boost);
-			onCommitChange();
+			store.getState().commitValue();
 		},
-		[onCommitChange, store],
+		[store],
 	);
 
 	const decrementValue = useCallback(
 		(boost) => {
 			store.getState().decrement(boost);
-			onCommitChange();
+			store.getState().commitValue();
 		},
-		[onCommitChange, store],
+		[store],
 	);
 
-	const { dragGestures, isDragging } = useDragGesture({
+	const { dragGestures } = useDragGesture({
 		dragAxis,
 		onIncrement: incrementValue,
 		onDecrement: decrementValue,
@@ -43,15 +43,13 @@ function TextInputArrows(props, forwardedRef) {
 	return (
 		<View {...dragGestures()}>
 			<VStack
-				css={[styles.Spinner, isDragging && styles.spinnerDragging]}
-				data-dragging={isDragging}
+				className={styles.Spinner}
 				expanded={true}
 				spacing={0}
 				{...ui.$('TextInputArrows')}
 				ref={forwardedRef}
 			>
 				<UpDownArrows
-					isDragging={isDragging}
 					onDecrement={decrementValue}
 					onIncrement={incrementValue}
 				/>
@@ -106,6 +104,10 @@ function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 			boost = shouldIncrement ? boost : boost * -1;
 			boost = boost - 1;
 
+			if (dragRaf.current) {
+				cancelAnimationFrame(dragRaf.current);
+			}
+
 			dragRaf.current = requestAnimationFrame(() => {
 				if (shouldIncrement) {
 					onIncrement(boost);
@@ -121,7 +123,7 @@ function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 }
 
 const UpDownArrows = React.memo(
-	({ isDragging = false, onIncrement = noop, onDecrement = noop }) => {
+	({ onIncrement = noop, onDecrement = noop }) => {
 		const timeoutRef = useRef();
 		const timeoutDurationStart = 500;
 		const timeoutDurationEnd = 20;
@@ -131,12 +133,6 @@ const UpDownArrows = React.memo(
 			clearTimeout(timeoutRef.current);
 			timeoutDurationRef.current = timeoutDurationStart;
 		}, []);
-
-		useEffect(() => {
-			if (isDragging) {
-				handleOnClearTimers();
-			}
-		}, [handleOnClearTimers, isDragging]);
 
 		const handleOnMouseDownIncrement = useCallback(
 			(event) => {
@@ -184,7 +180,7 @@ const UpDownArrows = React.memo(
 		return (
 			<>
 				<View
-					css={styles.SpinnerArrowUp}
+					className={styles.SpinnerArrowUp}
 					onClick={onIncrement}
 					onMouseDown={handleOnMouseDownIncrement}
 					onMouseLeave={handleOnClearTimers}
@@ -195,7 +191,7 @@ const UpDownArrows = React.memo(
 					<Icon icon={arrowUp} size={12} />
 				</View>
 				<View
-					css={styles.SpinnerArrowDown}
+					className={styles.SpinnerArrowDown}
 					onClick={onDecrement}
 					onMouseDown={handleOnMouseDownDecrement}
 					onMouseLeave={handleOnClearTimers}

@@ -1,7 +1,7 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { createStore, useSubState } from '@wp-g2/substate';
-import { add, is, noop, useSealedState } from '@wp-g2/utils';
+import { add, is, noop, roundClampString, useSealedState } from '@wp-g2/utils';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -11,6 +11,7 @@ import * as styles from './TextInput.styles';
 
 const KEYS = {
 	ENTER: 13,
+	ESC: 27,
 	Z: 90,
 	UP: 38,
 	DOWN: 40,
@@ -18,18 +19,23 @@ const KEYS = {
 
 const useTextInputSubState = (
 	value,
-	{ initialValue: initialValueProp, type, onValueSync = noop },
+	{ initialValue: initialValueProp, min, max, type, onValueSync = noop },
 ) => {
 	const initialValue = is.defined(value) ? value : initialValueProp;
 
 	const store = useSubState((set) => ({
+		incomingValue: initialValue,
 		lastValue: initialValue,
 		value: initialValue,
 		type,
+		min,
+		max,
 		inputRef: null,
 
 		setValue: (next) => set({ value: next }),
+		setIncomingValue: (next) => set({ incomingValue: next }),
 		setLastValue: (next) => set({ lastValue: next }),
+		commitValue: () => set((prev) => ({ lastValue: prev.value })),
 		resetValue: () => set((prev) => ({ value: prev.lastValue })),
 
 		increment: (boost = 0) => {
@@ -61,9 +67,16 @@ const useTextInputSubState = (
 	}));
 
 	useEffect(() => {
-		if (is.defined(value) && value !== store.getState().value) {
-			store.getState().setValue(value);
-			onValueSync();
+		if (is.defined(value)) {
+			store.setState((prev) => {
+				const next = { incomingValue: value };
+				if (value !== prev.value) {
+					next.value = value;
+					onValueSync();
+				}
+
+				return next;
+			});
 		}
 	}, [onValueSync, store, value]);
 
@@ -151,21 +164,22 @@ function useUndoTimeout() {
 
 function useFocusHandlers({
 	isCommitOnBlurOrEnter = true,
-	onCommitChange = noop,
 	onBlur = noop,
 	onFocus = noop,
+	store,
 }) {
 	const [isFocused, setIsFocused] = useState(false);
 
 	const handleOnBlur = useCallback(
 		(event) => {
+			const { commitValue } = store.getState();
 			if (isCommitOnBlurOrEnter) {
-				onCommitChange();
+				commitValue();
 			}
 			onBlur(event);
 			setIsFocused(false);
 		},
-		[isCommitOnBlurOrEnter, onBlur, onCommitChange],
+		[isCommitOnBlurOrEnter, onBlur, store],
 	);
 
 	const handleOnFocus = useCallback(
@@ -185,7 +199,6 @@ function useFocusHandlers({
 
 function useKeyboardHandlers({
 	onChange = noop,
-	onCommitChange = noop,
 	multiline = false,
 	onKeyDown = noop,
 	onEnterKeyDown = noop,
@@ -193,19 +206,37 @@ function useKeyboardHandlers({
 }) {
 	const { setUndoTimeout } = useUndoTimeout();
 
-	const handleOnKeyDown = useCallback(
+	const handleOnKeyUp = useCallback(
 		(event) => {
-			const isNumberInput = store.getState().type === 'number';
+			const { commitValue, resetValue } = store.getState();
 
 			switch (event.keyCode) {
 				case KEYS.ENTER:
 					if (!multiline) {
 						event.preventDefault();
-						onCommitChange();
+						commitValue();
 					}
 					onEnterKeyDown(event);
 					break;
 
+				case KEYS.ESC:
+					resetValue();
+					commitValue();
+					onEnterKeyDown(event);
+					break;
+				default:
+					break;
+			}
+		},
+		[multiline, onEnterKeyDown, store],
+	);
+
+	const handleOnKeyDown = useCallback(
+		(event) => {
+			const { commitValue } = store.getState();
+			const isNumberInput = store.getState().type === 'number';
+
+			switch (event.keyCode) {
 				case KEYS.Z:
 					if (event.metaKey || event.ctrlKey) {
 						event.persist();
@@ -219,7 +250,7 @@ function useKeyboardHandlers({
 					if (isNumberInput) {
 						event.preventDefault();
 						store.getState().increment();
-						onCommitChange();
+						commitValue();
 					}
 					break;
 
@@ -227,7 +258,7 @@ function useKeyboardHandlers({
 					if (isNumberInput) {
 						event.preventDefault();
 						store.getState().decrement();
-						onCommitChange();
+						commitValue();
 					}
 					break;
 
@@ -237,18 +268,10 @@ function useKeyboardHandlers({
 
 			onKeyDown(event);
 		},
-		[
-			store,
-			onKeyDown,
-			multiline,
-			onEnterKeyDown,
-			onCommitChange,
-			setUndoTimeout,
-			onChange,
-		],
+		[store, onKeyDown, setUndoTimeout, onChange],
 	);
 
-	return { onKeyDown: handleOnKeyDown };
+	return { onKeyUp: handleOnKeyUp, onKeyDown: handleOnKeyDown };
 }
 
 function useChangeHandlers({
@@ -261,6 +284,7 @@ function useChangeHandlers({
 		(event) => {
 			const { setValue } = store.getState();
 			const next = event.target.value;
+
 			setValue(next);
 
 			if (!isCommitOnBlurOrEnter) {
@@ -271,14 +295,23 @@ function useChangeHandlers({
 	);
 
 	const handleOnCommitChange = useCallback(() => {
+		const { step } = jumpStepStore.getState();
 		const {
-			lastValue: prev,
+			incomingValue,
+			max,
+			min,
 			resetValue,
 			setLastValue,
-			value: next,
+			type,
+			value,
 		} = store.getState();
+		let next = value;
 
-		if (prev === next) return;
+		if (incomingValue === next) return;
+
+		if (type === 'number') {
+			next = roundClampString(next, min, max, step);
+		}
 
 		if (validate) {
 			try {
@@ -302,12 +335,28 @@ function useChangeHandlers({
 				resetValue();
 			}
 		} else {
-			setLastValue(next);
+			setLastValue(roundClampString(next));
 			onChange(next);
 		}
 	}, [onChange, store, validate]);
 
-	return { onChange: handleOnChange, onCommitChange: handleOnCommitChange };
+	/**
+	 * Subscribes the onCommitChange handler to fire when lastValue updates.
+	 * lastValue is the only updated when TextInput is ready to broadcast
+	 * it's changes to the onChange (prop) handler.
+	 */
+	useEffect(() => {
+		const unsub = store.subscribe(
+			handleOnCommitChange,
+			(state) => state.lastValue,
+		);
+
+		return unsub;
+	}, [handleOnCommitChange, store]);
+
+	return {
+		onChange: handleOnChange,
+	};
 }
 
 export function useTextInput(props) {
@@ -323,10 +372,13 @@ export function useTextInput(props) {
 		isResizable = false,
 		isShiftStepEnabled = true,
 		justify,
+		min,
+		max,
 		multiline = false,
 		onBlur = noop,
 		onChange = noop,
 		onFocus = noop,
+		onKeyUp = noop,
 		onKeyDown = noop,
 		onEnterKeyDown = noop,
 		onValueSync = noop,
@@ -343,6 +395,8 @@ export function useTextInput(props) {
 
 	const store = useTextInputSubState(valueProp, {
 		initialValue: defaultValue,
+		max,
+		min,
 		onValueSync,
 		type,
 	});
@@ -362,7 +416,7 @@ export function useTextInput(props) {
 		step,
 	});
 
-	const { onChange: handleOnChange, onCommitChange } = useChangeHandlers({
+	const { onChange: handleOnChange } = useChangeHandlers({
 		isCommitOnBlurOrEnter,
 		onChange,
 		store,
@@ -377,14 +431,17 @@ export function useTextInput(props) {
 		isCommitOnBlurOrEnter,
 		onBlur,
 		onFocus,
-		onCommitChange,
+		store,
 	});
 
-	const { onKeyDown: handleOnKeyDown } = useKeyboardHandlers({
-		onCommitChange,
+	const {
+		onKeyDown: handleOnKeyDown,
+		onKeyUp: handleOnKeyUp,
+	} = useKeyboardHandlers({
 		onChange: handleOnChange,
 		onEnterKeyDown,
 		onKeyDown,
+		onKeyUp,
 		multiline,
 		store,
 	});
@@ -422,10 +479,13 @@ export function useTextInput(props) {
 		...otherProps,
 		className: inputClasses,
 		id,
+		min,
+		max,
 		onBlur: handleOnBlur,
 		onChange: handleOnChange,
 		onFocus: handleOnFocus,
 		onKeyDown: handleOnKeyDown,
+		onKeyUp: handleOnKeyUp,
 		step,
 		type,
 		value,
@@ -438,7 +498,6 @@ export function useTextInput(props) {
 		inputProps,
 		inputRef,
 		onClick: handleOnRootClick,
-		onCommitChange,
 		className: classes,
 	};
 }

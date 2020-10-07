@@ -9,6 +9,7 @@ import {
 	ListGroup,
 	ListGroupHeader,
 	Spacer,
+	Switch,
 	Text,
 	TextInput,
 	View,
@@ -16,7 +17,7 @@ import {
 } from '@wp-g2/components';
 import { ui } from '@wp-g2/styles';
 import { createStore, useSubState } from '@wp-g2/substate';
-import { is, noop } from '@wp-g2/utils';
+import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 export default {
@@ -33,6 +34,10 @@ const dataStore = createStore((set) => ({
 
 const AppContext = React.createContext({ dataStore });
 const useAppContext = () => React.useContext(AppContext);
+
+function getRandomInt(max) {
+	return Math.floor(Math.random() * Math.floor(max));
+}
 
 const TextControl = React.memo(
 	({ onChange = noop, onUpdate = noop, ...otherProps }) => {
@@ -226,6 +231,74 @@ const RenderedLayer = React.memo(() => {
 	);
 });
 
+const Autopilot = React.memo(() => {
+	const store = useSubState((set) => ({
+		value: 0,
+		setValue: (next) => set({ value: Number(next) }),
+	}));
+
+	const { setValue, value } = store();
+	const autoPilotTimerRef = React.useRef();
+
+	React.useEffect(() => {
+		const inputFields = document.querySelectorAll(
+			'[data-g2-component="TextInput"]:not([data-autopilot="true"])',
+		);
+
+		clearTimeout(autoPilotTimerRef.current);
+
+		const tick = () => {
+			autoPilotTimerRef.current = setTimeout(() => {
+				clearTimeout(autoPilotTimerRef.current);
+				try {
+					const index = getRandomInt(inputFields.length);
+					const node = inputFields[index];
+					const nodeEventHandlersKey = Object.keys(
+						node,
+					).find((keys) => keys.includes('__reactEventHandlers'));
+					const nodeReactHandlers = node[nodeEventHandlersKey];
+
+					nodeReactHandlers.onFocus();
+					nodeReactHandlers.onChange({
+						target: { value: getRandomInt(100000) },
+					});
+					nodeReactHandlers.onBlur();
+				} catch (err) {
+					console.log(err);
+				}
+				tick();
+			}, 100 / value);
+		};
+
+		if (value) {
+			tick();
+		} else {
+			clearTimeout(autoPilotTimerRef.current);
+		}
+
+		return () => {
+			clearTimeout(autoPilotTimerRef.current);
+		};
+	}, [value]);
+
+	return (
+		<FormGroup
+			css="width: 300px"
+			label="Autopilot (Stress Test)"
+			templateColumns="1fr 100px"
+		>
+			<TextInput
+				data-autopilot="true"
+				max={11}
+				min={0}
+				onChange={setValue}
+				type="number"
+				value={value}
+			/>
+		</FormGroup>
+	);
+});
+
 const Example = () => {
 	return (
 		<Grid columns={3}>
@@ -261,6 +334,9 @@ export const _default = () => {
 							The rendered layer only accepts incoming data only.
 						</Text>
 					</VStack>
+				</Spacer>
+				<Spacer my={4}>
+					<Autopilot />
 				</Spacer>
 				<Example />
 			</Container>

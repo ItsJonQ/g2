@@ -77,12 +77,8 @@ export const SpinnerArrow = css`
 	color: ${ui.get('colorText')};
 	padding: 0 4px;
 
-	&:active {
+	&:hover:active {
 		background-color: ${ui.get('controlBackgroundColor')};
-	}
-
-	[data-dragging='true'] > & {
-		background-color: transparent;
 	}
 `;
 
