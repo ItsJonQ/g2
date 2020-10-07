@@ -12,7 +12,8 @@ export const BaseField = css`
 	padding-left: 8px;
 	padding-right: 8px;
 	position: relative;
-	transition: all ${ui.get('transitionDurationFastest')} ease;
+	transition: border-color ${ui.get('transitionDurationFastest')} ease,
+		box-shadow ${ui.get('transitionDurationFastest')} ease;
 	width: 100%;
 
 	&[disabled] {

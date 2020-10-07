@@ -408,7 +408,7 @@ exports[`props should render BaseButton with css prop 2`] = `
 
 exports[`props should render BaseField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-hy55wd"
+  class="wp-components-flex wp-components-base-field css-1tn7fgt"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -417,7 +417,7 @@ exports[`props should render BaseField 1`] = `
 
 exports[`props should render BaseField with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-hy55wd"
+  class="wp-components-flex wp-components-base-field css-1tn7fgt"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -426,7 +426,7 @@ exports[`props should render BaseField with css prop 1`] = `
 
 exports[`props should render BaseField with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-dekmoz"
+  class="wp-components-flex wp-components-base-field css-13t9ly9"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -2454,7 +2454,7 @@ exports[`props should render Scrollable with css prop 2`] = `
 
 exports[`props should render SearchInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ez28hr"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-zzazsf"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -2553,7 +2553,7 @@ exports[`props should render SegmentedControl with css prop 2`] = `
 
 exports[`props should render Select 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-select css-17zeg8j"
+  class="wp-components-flex wp-components-base-field wp-components-select css-280ak8"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
@@ -3522,7 +3522,7 @@ exports[`props should render Text with css prop 2`] = `
 
 exports[`props should render TextField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-m6ef6e"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-in42v"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -3541,7 +3541,7 @@ exports[`props should render TextField 1`] = `
 
 exports[`props should render TextInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-m6ef6e"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-in42v"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

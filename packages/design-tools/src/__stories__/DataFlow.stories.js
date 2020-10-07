@@ -152,32 +152,15 @@ const DataStoreLayer = React.memo(() => {
 							label="Height"
 							onUpdate={increment}
 							prop="height"
-							validate={/^[0-9]*$/gi}
 						/>
 						<DataControl
 							label="Width"
 							onUpdate={increment}
 							prop="width"
-							validate={/^[0-9]*$/gi}
 						/>
-						<DataControl
-							label="X"
-							onUpdate={increment}
-							prop="x"
-							validate={/^[0-9]*$/gi}
-						/>
-						<DataControl
-							label="Y"
-							onUpdate={increment}
-							prop="y"
-							validate={/^[0-9]*$/gi}
-						/>
-						<DataControl
-							label="Z"
-							onUpdate={increment}
-							prop="z"
-							validate={/^[0-9]*$/gi}
-						/>
+						<DataControl label="X" onUpdate={increment} prop="x" />
+						<DataControl label="Y" onUpdate={increment} prop="y" />
+						<DataControl label="Z" onUpdate={increment} prop="z" />
 					</ListGroup>
 				</CardBody>
 			</Card>
@@ -202,32 +185,15 @@ const ControlsLayer = React.memo(() => {
 							label="Height"
 							onUpdate={increment}
 							prop="height"
-							validate={/^[0-9]*$/gi}
 						/>
 						<DataControl
 							label="Width"
 							onUpdate={increment}
 							prop="width"
-							validate={/^[0-9]*$/gi}
 						/>
-						<DataControl
-							label="X"
-							onUpdate={increment}
-							prop="x"
-							validate={/^[0-9]*$/gi}
-						/>
-						<DataControl
-							label="Y"
-							onUpdate={increment}
-							prop="y"
-							validate={/^[0-9]*$/gi}
-						/>
-						<DataControl
-							label="Z"
-							onUpdate={increment}
-							prop="z"
-							validate={/^[0-9]*$/gi}
-						/>
+						<DataControl label="X" onUpdate={increment} prop="x" />
+						<DataControl label="Y" onUpdate={increment} prop="y" />
+						<DataControl label="Z" onUpdate={increment} prop="z" />
 					</ListGroup>
 				</CardBody>
 			</Card>

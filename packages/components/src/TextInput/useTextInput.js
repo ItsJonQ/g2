@@ -1,14 +1,7 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { createStore, useSubState } from '@wp-g2/substate';
-import {
-	add,
-	is,
-	noop,
-	roundClamp,
-	subtract,
-	useSealedState,
-} from '@wp-g2/utils';
+import { add, is, noop, useSealedState } from '@wp-g2/utils';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -25,13 +18,7 @@ const KEYS = {
 
 const useTextInputSubState = (
 	value,
-	{
-		initialValue: initialValueProp,
-		max = Infinity,
-		min = -Infinity,
-		type,
-		onValueSync = noop,
-	},
+	{ initialValue: initialValueProp, type, onValueSync = noop },
 ) => {
 	const initialValue = is.defined(value) ? value : initialValueProp;
 
@@ -39,6 +26,7 @@ const useTextInputSubState = (
 		lastValue: initialValue,
 		value: initialValue,
 		type,
+		inputRef: null,
 
 		setValue: (next) => set({ value: next }),
 		setLastValue: (next) => set({ lastValue: next }),
@@ -47,23 +35,27 @@ const useTextInputSubState = (
 		increment: (boost = 0) => {
 			set((prev) => {
 				if (prev.type !== 'number') return prev;
+				if (!prev.inputRef) return prev;
+
 				const step = jumpStepStore.getState().step;
+				const nextValue = add(boost, step);
 
-				let nextValue = add(prev.value, boost, step);
-				nextValue = roundClamp(nextValue, min, max, step);
+				prev.inputRef.stepUp(nextValue);
 
-				return { value: nextValue.toString() };
+				return { value: prev.inputRef.value.toString() };
 			});
 		},
 		decrement: (boost = 0) => {
 			set((prev) => {
 				if (prev.type !== 'number') return prev;
+				if (!prev.inputRef) return prev;
+
 				const step = jumpStepStore.getState().step;
+				const nextValue = add(boost, step);
 
-				let nextValue = subtract(prev.value, boost, step);
-				nextValue = roundClamp(nextValue, min, max, step);
+				prev.inputRef.stepDown(nextValue);
 
-				return { value: nextValue.toString() };
+				return { value: prev.inputRef.value.toString() };
 			});
 		},
 	}));
@@ -213,7 +205,7 @@ function useKeyboardHandlers({
 					if (event.metaKey || event.ctrlKey) {
 						event.persist();
 						setUndoTimeout(() => {
-							onChange(event.target.value);
+							onChange(event);
 						});
 					}
 					break;
@@ -266,7 +258,14 @@ function useChangeHandlers({
 	);
 
 	const handleOnCommitChange = useCallback(() => {
-		const { resetValue, setLastValue, value: next } = store.getState();
+		const {
+			lastValue: prev,
+			resetValue,
+			setLastValue,
+			value: next,
+		} = store.getState();
+
+		if (prev === next) return;
 
 		if (validate) {
 			try {
@@ -311,8 +310,6 @@ export function useTextInput(props) {
 		isResizable = false,
 		isShiftStepEnabled = true,
 		justify,
-		max,
-		min,
 		multiline = false,
 		onBlur = noop,
 		onChange = noop,
@@ -328,17 +325,22 @@ export function useTextInput(props) {
 		...otherProps
 	} = useContextSystem(props, 'TextInput');
 
-	const inputRef = useRef();
 	const id = useFormGroupContextId(idProp);
 
 	const store = useTextInputSubState(valueProp, {
 		initialValue: defaultValue,
-		max,
-		min,
 		onValueSync,
 		type,
 	});
 	const { value } = store();
+
+	const inputRef = useRef();
+
+	useEffect(() => {
+		if (inputRef.current) {
+			store.setState({ inputRef: inputRef.current });
+		}
+	}, [store]);
 
 	useJumpStep({
 		isShiftStepEnabled,
@@ -404,8 +406,6 @@ export function useTextInput(props) {
 		as: InputComponent,
 		className: inputClasses,
 		id,
-		max,
-		min,
 		onBlur: handleOnBlur,
 		onChange: handleOnChange,
 		onFocus: handleOnFocus,
