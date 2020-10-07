@@ -63,6 +63,7 @@ function TextInputArrows(props, forwardedRef) {
 function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 	const [dragState, setDragState] = useState(false);
 	const threshold = 10;
+	const dragRaf = useRef();
 
 	useEffect(() => {
 		if (dragState) {
@@ -83,6 +84,12 @@ function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 		}
 	}, [dragState]);
 
+	useEffect(() => {
+		return () => {
+			cancelAnimationFrame(dragRaf.current);
+		};
+	}, []);
+
 	const dragGestures = useDrag(
 		(state) => {
 			const [x, y] = state.delta;
@@ -99,7 +106,7 @@ function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 			boost = shouldIncrement ? boost : boost * -1;
 			boost = boost - 1;
 
-			requestAnimationFrame(() => {
+			dragRaf.current = requestAnimationFrame(() => {
 				if (shouldIncrement) {
 					onIncrement(boost);
 				} else {
