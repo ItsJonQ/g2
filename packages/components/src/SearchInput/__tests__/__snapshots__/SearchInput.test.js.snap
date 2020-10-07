@@ -8,7 +8,7 @@ exports[`props should render correctly 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-7h3rix"
+    class="css-16e6wng"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="search"
@@ -29,7 +29,7 @@ exports[`props should render isLoading 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-7h3rix"
+    class="css-16e6wng"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="search"
@@ -50,7 +50,7 @@ exports[`props should render placeholder 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-7h3rix"
+    class="css-16e6wng"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="search"
@@ -71,7 +71,7 @@ exports[`props should render prefix 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-7h3rix"
+    class="css-16e6wng"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="search"
@@ -92,7 +92,7 @@ exports[`props should render suffix 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-7h3rix"
+    class="css-16e6wng"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="search"
@@ -113,7 +113,7 @@ exports[`props should render value 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-7h3rix"
+    class="css-16e6wng"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="search"

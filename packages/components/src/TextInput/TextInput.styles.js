@@ -21,6 +21,9 @@ export const Input = css`
 	appearance: none;
 	background: transparent;
 	border: none;
+	border-radius: ${ui.get('controlBorderRadius')};
+	box-shadow: none;
+	box-sizing: border-box;
 	color: ${ui.color.text};
 	display: block;
 	flex: 1;
@@ -28,6 +31,7 @@ export const Input = css`
 	line-height: 18px;
 	min-height: calc(${ui.get('controlHeight')} - 2px);
 	outline: none;
+	padding: 0;
 	padding-bottom: calc((${ui.get('controlHeight')} - 2px - 18px) / 2);
 	padding-top: calc((${ui.get('controlHeight')} - 2px - 18px) / 2);
 	resize: none;
