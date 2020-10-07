@@ -115,6 +115,7 @@ const UpDownArrows = React.memo(
 	({ isDragging = false, onIncrement = noop, onDecrement = noop }) => {
 		const timeoutRef = useRef();
 		const timeoutDurationStart = 500;
+		const timeoutDurationEnd = 20;
 		const timeoutDurationRef = useRef(timeoutDurationStart);
 
 		const handleOnClearTimers = useCallback((event) => {
@@ -137,7 +138,7 @@ const UpDownArrows = React.memo(
 					onIncrement();
 					timeoutDurationRef.current = clamp(
 						timeoutDurationRef.current / 2,
-						0,
+						timeoutDurationEnd,
 						timeoutDurationStart,
 					);
 					handleOnMouseDownIncrement();
@@ -155,7 +156,7 @@ const UpDownArrows = React.memo(
 					onDecrement();
 					timeoutDurationRef.current = clamp(
 						timeoutDurationRef.current / 2,
-						0,
+						timeoutDurationEnd,
 						timeoutDurationStart,
 					);
 					handleOnMouseDownDecrement();
