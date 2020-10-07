@@ -25,15 +25,25 @@ const KEYS = {
 
 const useTextInputSubState = (
 	value,
-	{ initialValue, max = Infinity, min = -Infinity, type },
+	{
+		initialValue: initialValueProp,
+		max = Infinity,
+		min = -Infinity,
+		type,
+		onValueSync = noop,
+	},
 ) => {
+	const initialValue = is.defined(value) ? value : initialValueProp;
+
 	const store = useSubState((set) => ({
-		lastValue: value || initialValue,
-		value: value || initialValue,
+		lastValue: initialValue,
+		value: initialValue,
+		type,
+
 		setValue: (next) => set({ value: next }),
 		setLastValue: (next) => set({ lastValue: next }),
 		resetValue: () => set((prev) => ({ value: prev.lastValue })),
-		type,
+
 		increment: (boost = 0) => {
 			set((prev) => {
 				if (prev.type !== 'number') return prev;
@@ -61,8 +71,9 @@ const useTextInputSubState = (
 	useEffect(() => {
 		if (is.defined(value) && value !== store.getState().value) {
 			store.getState().setValue(value);
+			onValueSync();
 		}
-	}, [store, value]);
+	}, [onValueSync, store, value]);
 
 	return store;
 };
@@ -307,6 +318,7 @@ export function useTextInput(props) {
 		onChange = noop,
 		onFocus = noop,
 		onKeyDown = noop,
+		onValueSync = noop,
 		shiftStep = 10,
 		size = 'medium',
 		step,
@@ -321,8 +333,9 @@ export function useTextInput(props) {
 
 	const store = useTextInputSubState(valueProp, {
 		initialValue: defaultValue,
-		min,
 		max,
+		min,
+		onValueSync,
 		type,
 	});
 	const { value } = store();

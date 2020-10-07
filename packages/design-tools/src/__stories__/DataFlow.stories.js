@@ -35,119 +35,16 @@ const AppContext = React.createContext({ dataStore });
 const useAppContext = () => React.useContext(AppContext);
 
 const TextControl = React.memo(
-	({ onChange = noop, onUpdate = noop, validate, value: initialValue }) => {
-		const textControl = useTextControl({
-			onChange,
-			validate,
-			onUpdate,
-			value: initialValue,
-		});
-
+	({ onChange = noop, onUpdate = noop, ...otherProps }) => {
 		return (
-			<TextInput {...textControl} autoComplete="off" spellCheck={false} />
+			<TextInput
+				{...otherProps}
+				onChange={onChange}
+				onValueSync={onUpdate}
+			/>
 		);
 	},
 );
-
-function useTextControl({
-	onBlur = noop,
-	onChange = noop,
-	validate,
-	value: initialValue,
-	onKeyDown = noop,
-	onUpdate = noop,
-}) {
-	const store = useSubState((set) => ({
-		value: initialValue,
-		setValue: (next) => set({ value: next }),
-	}));
-
-	const { setValue, value } = store();
-	const undoTimeoutRef = React.useRef();
-
-	React.useEffect(() => {
-		if (initialValue !== store.getState().value) {
-			onUpdate(initialValue, store.getState().value);
-			store.setState({ value: initialValue });
-		}
-	}, [initialValue, onUpdate, store]);
-
-	React.useEffect(() => {
-		return () => {
-			if (undoTimeoutRef.current) {
-				clearTimeout(undoTimeoutRef.curremt);
-			}
-		};
-	}, []);
-
-	const handleOnChange = React.useCallback(() => {
-		const next = store.getState().value;
-		if (next === initialValue) return;
-
-		if (validate) {
-			try {
-				const regex = new RegExp(validate);
-
-				if (is.function(validate)) {
-					if (validate(next)) {
-						onChange(next);
-					} else {
-						store.setState({ value: initialValue });
-					}
-					return;
-				}
-
-				if (regex.test(next)) {
-					onChange(next);
-				} else {
-					store.setState({ value: initialValue });
-				}
-			} catch (err) {
-				store.setState({ value: initialValue });
-			}
-		} else {
-			onChange(next);
-		}
-	}, [initialValue, onChange, store, validate]);
-
-	const handleOnKeyDown = React.useCallback(
-		(event) => {
-			// Enter press
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				handleOnChange();
-			}
-			// Undo press
-			if (event.keyCode === 90 && (event.metaKey || event.ctrlKey)) {
-				if (undoTimeoutRef.current) {
-					clearTimeout(undoTimeoutRef.current);
-				}
-				event.persist();
-				undoTimeoutRef.current = setTimeout(() => {
-					onChange(event.target.value);
-				}, 60);
-			}
-
-			onKeyDown(event);
-		},
-		[handleOnChange, onChange, onKeyDown],
-	);
-
-	const handleOnBlur = React.useCallback(
-		(event) => {
-			handleOnChange();
-			onBlur(event);
-		},
-		[handleOnChange, onBlur],
-	);
-
-	return {
-		onBlur: handleOnBlur,
-		onKeyDown: handleOnKeyDown,
-		onChange: setValue,
-		value,
-	};
-}
 
 const RenderedValues = () => {
 	const { dataStore } = useAppContext();
@@ -186,6 +83,7 @@ const DataControl = React.memo(
 					<TextControl
 						onChange={handleOnChange}
 						onUpdate={onUpdate}
+						type="number"
 						validate={validate}
 						value={value}
 					/>
