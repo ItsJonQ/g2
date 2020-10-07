@@ -1,7 +1,7 @@
 {
   "name": "vscode-snippet-wp-g2",
   "displayName": "G2 Components Snippets",
-  "version": "0.0.86",
+  "version": "0.0.87",
   "description": "VS Code snippets for G2 Components.",
   "sideEffects": false,
   "scripts": {
