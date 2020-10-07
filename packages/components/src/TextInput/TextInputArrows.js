@@ -99,11 +99,13 @@ function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
 			boost = shouldIncrement ? boost : boost * -1;
 			boost = boost - 1;
 
-			if (shouldIncrement) {
-				onIncrement(boost);
-			} else {
-				onDecrement(boost);
-			}
+			requestAnimationFrame(() => {
+				if (shouldIncrement) {
+					onIncrement(boost);
+				} else {
+					onDecrement(boost);
+				}
+			});
 		},
 		{ axis: dragAxis, threshold },
 	);
