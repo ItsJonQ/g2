@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Container } from '../../Container';
 import { TextInput } from '../index';
 
 export default {
@@ -12,7 +13,16 @@ export const _default = () => {
 };
 
 export const number = () => {
-	return <TextInput type="number" />;
+	return (
+		<Container
+			css={`
+				margin-top: 20vh;
+			`}
+			width={480}
+		>
+			<TextInput type="number" />
+		</Container>
+	);
 };
 
 export const multiline = () => {

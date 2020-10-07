@@ -20,10 +20,13 @@ exports[`props should render alignLabel 1`] = `
     data-g2-component="TextInputWrapper"
   >
     <input
+      autocomplete="off"
       class="css-7h3rix"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
+      spellcheck="false"
+      type="text"
       value=""
     />
   </div>
@@ -50,10 +53,13 @@ exports[`props should render correctly 1`] = `
     data-g2-component="TextInputWrapper"
   >
     <input
+      autocomplete="off"
       class="css-7h3rix"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
+      spellcheck="false"
+      type="text"
       value=""
     />
   </div>
@@ -78,10 +84,13 @@ exports[`props should render label without prop correctly 1`] = `
     data-g2-component="TextInputWrapper"
   >
     <input
+      autocomplete="off"
       class="css-7h3rix"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
+      spellcheck="false"
+      type="text"
       value=""
     />
   </div>
@@ -108,10 +117,13 @@ exports[`props should render vertically 1`] = `
     data-g2-component="TextInputWrapper"
   >
     <input
+      autocomplete="off"
       class="css-7h3rix"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
+      spellcheck="false"
+      type="text"
       value=""
     />
   </div>

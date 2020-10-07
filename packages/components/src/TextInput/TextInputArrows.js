@@ -1,98 +1,195 @@
 import { useDrag } from '@wp-g2/gestures';
+import { ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, {
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react';
 
 import { Icon } from '../Icon';
 import { View } from '../View';
 import { VStack } from '../VStack';
 import * as styles from './TextInput.styles';
 
-function useDragGesture({ onIncrement = noop, onDecrement = noop }) {
-	const [isDragging, setIsDragging] = useState(false);
+function TextInputArrows(props, forwardedRef) {
+	const { __store, dragAxis, onCommitChange = noop } = props;
+	const store = useRef(__store).current;
 
-	useEffect(() => {
-		if (isDragging) {
-			document.documentElement.classList.add(styles.globalDraggable);
-		} else {
-			document.documentElement.classList.remove(styles.globalDraggable);
-		}
-	}, [isDragging]);
-
-	const dragGestures = useDrag(
-		(state) => {
-			const [x, y] = state.delta;
-
-			let movement = x + y;
-			const isMovementY = Math.abs(y) > Math.abs(x);
-
-			setIsDragging(state.dragging);
-
-			if (movement === 0) return;
-
-			const shouldIncrement = isMovementY ? movement < 0 : movement > 0;
-
-			if (shouldIncrement) {
-				onIncrement();
-			} else {
-				onDecrement();
-			}
+	const incrementValue = useCallback(
+		(boost) => {
+			store.getState().increment(boost);
+			onCommitChange();
 		},
-		{ threshold: 10 },
+		[onCommitChange, store],
 	);
 
-	return { isDragging, dragGestures };
-}
-
-function TextInputArrows(props, forwardedRef) {
-	const { __store: store, jumpStep, onCommitChange = noop } = props;
-
-	const incrementValue = useCallback(() => {
-		store.getState().increment(jumpStep);
-		onCommitChange();
-	}, [store, jumpStep, onCommitChange]);
-
-	const decrementValue = useCallback(() => {
-		store.getState().decrement(jumpStep);
-		onCommitChange();
-	}, [store, jumpStep, onCommitChange]);
+	const decrementValue = useCallback(
+		(boost) => {
+			store.getState().decrement(boost);
+			onCommitChange();
+		},
+		[onCommitChange, store],
+	);
 
 	const { dragGestures, isDragging } = useDragGesture({
+		dragAxis,
 		onIncrement: incrementValue,
 		onDecrement: decrementValue,
 	});
 
-	const handleOnMouseDown = useCallback((event) => {
-		event.preventDefault();
-	}, []);
-
 	return (
-		<VStack
-			css={[styles.Spinner, isDragging && styles.spinnerDragging]}
-			data-dragging={isDragging}
-			expanded={true}
-			spacing={0}
-			{...dragGestures()}
-			ref={forwardedRef}
-		>
-			<View
-				css={styles.SpinnerArrowUp}
-				onClick={incrementValue}
-				onMouseDown={handleOnMouseDown}
-				tabIndex={-1}
+		<View {...dragGestures()}>
+			<VStack
+				css={[styles.Spinner, isDragging && styles.spinnerDragging]}
+				data-dragging={isDragging}
+				expanded={true}
+				spacing={0}
+				{...ui.$('TextInputArrows')}
+				ref={forwardedRef}
 			>
-				<Icon icon={<ArrowUp />} size={12} />
-			</View>
-			<View
-				css={styles.SpinnerArrowDown}
-				onClick={decrementValue}
-				onMouseDown={handleOnMouseDown}
-				tabIndex={-1}
-			>
-				<Icon icon={<ArrowDown />} size={12} />
-			</View>
-		</VStack>
+				<UpDownArrows
+					isDragging={isDragging}
+					onDecrement={decrementValue}
+					onIncrement={incrementValue}
+				/>
+			</VStack>
+		</View>
 	);
 }
+
+function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
+	const [dragState, setDragState] = useState(false);
+	const threshold = 10;
+
+	useEffect(() => {
+		if (dragState) {
+			if (dragState === 'x') {
+				document.documentElement.classList.add(styles.globalDraggableX);
+				document.documentElement.classList.remove(
+					styles.globalDraggableY,
+				);
+			} else {
+				document.documentElement.classList.remove(
+					styles.globalDraggableX,
+				);
+				document.documentElement.classList.add(styles.globalDraggableY);
+			}
+		} else {
+			document.documentElement.classList.remove(styles.globalDraggableX);
+			document.documentElement.classList.remove(styles.globalDraggableY);
+		}
+	}, [dragState]);
+
+	const dragGestures = useDrag(
+		(state) => {
+			const [x, y] = state.delta;
+			setDragState(state.dragging ? state.axis : false);
+
+			const isMovementY = state.axis === 'y';
+			let movement = isMovementY ? y * -1 : x;
+
+			if (Math.abs(movement) === 0) return;
+
+			const shouldIncrement = movement > 0;
+
+			let boost = movement === threshold ? 0 : movement;
+			boost = shouldIncrement ? boost : boost * -1;
+			boost = boost - 1;
+
+			if (shouldIncrement) {
+				onIncrement(boost);
+			} else {
+				onDecrement(boost);
+			}
+		},
+		{ axis: dragAxis, threshold },
+	);
+
+	return { isDragging: !!dragState, dragGestures };
+}
+
+const UpDownArrows = React.memo(
+	({ isDragging = false, onIncrement = noop, onDecrement = noop }) => {
+		const timeoutRef = useRef();
+		const intervalRef = useRef();
+		const timeoutDurationStart = 500;
+		const intervalDurationStart = 50;
+
+		const handleOnClearTimers = useCallback((event) => {
+			clearTimeout(timeoutRef.current);
+			clearInterval(intervalRef.current);
+		}, []);
+
+		useEffect(() => {
+			if (isDragging) {
+				handleOnClearTimers();
+			}
+		}, [handleOnClearTimers, isDragging]);
+
+		const handleOnMouseDownIncrement = useCallback(
+			(event) => {
+				event.preventDefault();
+				timeoutRef.current = setTimeout(() => {
+					intervalRef.current = setInterval(
+						onIncrement,
+						intervalDurationStart,
+					);
+				}, timeoutDurationStart);
+			},
+			[onIncrement],
+		);
+
+		const handleOnMouseDownDecrement = useCallback(
+			(event) => {
+				event.preventDefault();
+				timeoutRef.current = setTimeout(() => {
+					intervalRef.current = setInterval(
+						onDecrement,
+						intervalDurationStart,
+					);
+				}, timeoutDurationStart);
+			},
+			[onDecrement],
+		);
+
+		useEffect(() => {
+			return () => handleOnClearTimers();
+		}, [handleOnClearTimers]);
+
+		const arrowUp = useMemo(() => <ArrowUp />, []);
+		const arrowDown = useMemo(() => <ArrowDown />, []);
+
+		return (
+			<>
+				<View
+					css={styles.SpinnerArrowUp}
+					onClick={onIncrement}
+					onMouseDown={handleOnMouseDownIncrement}
+					onMouseLeave={handleOnClearTimers}
+					onMouseUp={handleOnClearTimers}
+					tabIndex={-1}
+					{...ui.$('TextInputArrowUp')}
+				>
+					<Icon icon={arrowUp} size={12} />
+				</View>
+				<View
+					css={styles.SpinnerArrowDown}
+					onClick={onDecrement}
+					onMouseDown={handleOnMouseDownDecrement}
+					onMouseLeave={handleOnClearTimers}
+					onMouseUp={handleOnClearTimers}
+					tabIndex={-1}
+					{...ui.$('TextInputArrowDown')}
+				>
+					<Icon icon={arrowDown} size={12} />
+				</View>
+			</>
+		);
+	},
+);
 
 const ArrowUp = () => (
 	<svg

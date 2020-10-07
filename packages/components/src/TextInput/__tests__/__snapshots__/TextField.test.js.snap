@@ -7,10 +7,13 @@ exports[`props should render align 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -23,10 +26,13 @@ exports[`props should render correctly 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -39,10 +45,13 @@ exports[`props should render defaultValue 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value="Olaf"
   />
 </div>
@@ -56,11 +65,14 @@ exports[`props should render disabled 1`] = `
   disabled=""
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     disabled=""
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -73,10 +85,13 @@ exports[`props should render gap 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -89,10 +104,13 @@ exports[`props should render isRounded 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -105,10 +123,13 @@ exports[`props should render isSeamless 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -121,10 +142,13 @@ exports[`props should render justify 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -137,10 +161,13 @@ exports[`props should render multiline 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <textarea
+    autocomplete="off"
     class="css-m7fi32"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
   />
 </div>
 `;
@@ -151,20 +178,15 @@ exports[`props should render prefix 1`] = `
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
-  <div
-    class="wp-components-flex-item css-19kxsx5"
-    data-g2-c16t="true"
-    data-g2-component="TextInputPrefix"
-  >
-    <span>
-      prefix
-    </span>
-  </div>
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    prefix="[object Object]"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -177,10 +199,13 @@ exports[`props should render size 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-791mwm"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
 </div>
@@ -193,21 +218,15 @@ exports[`props should render suffix 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value=""
   />
-  <div
-    class="wp-components-flex-item css-19kxsx5"
-    data-g2-c16t="true"
-    data-g2-component="TextInputSuffix"
-  >
-    <span>
-      suffix
-    </span>
-  </div>
 </div>
 `;
 
@@ -218,10 +237,13 @@ exports[`props should render value 1`] = `
   data-g2-component="TextInputWrapper"
 >
   <input
+    autocomplete="off"
     class="css-7h3rix"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
     value="Olaf"
   />
 </div>

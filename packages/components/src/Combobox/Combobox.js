@@ -24,7 +24,6 @@ function Combobox(props, forwardedRef) {
 			{resizeListener}
 			<ReakitCombobox
 				{...combobox}
-				__onBeforeChange={(event) => event}
 				aria-label="Fruit"
 				as={TextInput}
 				ref={forwardedRef}

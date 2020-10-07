@@ -196,14 +196,12 @@ const JoystickControl = ({ circlePositionX, circlePositionY }) => {
 };
 
 const DragInput = ({ circlePositionX, circlePositionY }) => {
-	const [isDrag, setIsDrag] = React.useState(false);
 	const inputRef = React.useRef();
 	const px = useMotionValue(0);
 	const py = useMotionValue(0);
 
 	const [x, setX] = React.useState(0);
 	const [y, setY] = React.useState(0);
-	const [axis, setAxis] = React.useState('x');
 
 	React.useEffect(() => {
 		const unsubX = circlePositionX.onChange(setX);
@@ -215,62 +213,6 @@ const DragInput = ({ circlePositionX, circlePositionY }) => {
 		};
 	}, [circlePositionX, circlePositionY]);
 
-	useUpdateEffect(() => {
-		const updatePosition = (event) => {
-			px.set(px.get() + event.movementX);
-			py.set(py.get() + event.movementY);
-
-			if (axis === 'x') {
-				circlePositionX.set(
-					circlePositionX.get() + event.movementX + event.movementY,
-				);
-			} else {
-				circlePositionY.set(
-					circlePositionY.get() + event.movementX + event.movementY,
-				);
-			}
-		};
-
-		if (isDrag) {
-			// eslint-disable-next-line
-			inputRef.current?.requestPointerLock?.();
-			document.addEventListener('mousemove', updatePosition, false);
-		} else {
-			// eslint-disable-next-line
-			document.exitPointerLock?.();
-			document.removeEventListener('mousemove', updatePosition, false);
-		}
-		return () => {
-			document.removeEventListener('mousemove', updatePosition, false);
-		};
-	}, [isDrag, axis]);
-
-	const dragX = useDrag(
-		(state) => {
-			if (state.dragging !== isDrag) {
-				setIsDrag(state.dragging);
-				px.set(state.initial[0]);
-				py.set(state.initial[1]);
-				circlePositionX.set(0);
-				setAxis('x');
-			}
-		},
-		{ threshold: 10 },
-	);
-
-	const dragY = useDrag(
-		(state) => {
-			if (state.dragging !== isDrag) {
-				setIsDrag(state.dragging);
-				px.set(state.initial[0]);
-				py.set(state.initial[1]);
-				circlePositionY.set(0);
-				setAxis('y');
-			}
-		},
-		{ threshold: 10 },
-	);
-
 	return (
 		<VStack
 			css={`
@@ -278,34 +220,20 @@ const DragInput = ({ circlePositionX, circlePositionY }) => {
 			`}
 			expanded={false}
 		>
-			<Animated
-				style={{
-					x: px,
-					y: py,
-					position: 'fixed',
-					top: 0,
-					left: 0,
-					opacity: isDrag ? 1 : 0,
-				}}
-			>
-				<Text size={20}>↔</Text>
-			</Animated>
 			<Subheading>Drag Input Control</Subheading>
 			<HStack alignment="left" expanded={false} spacing={8}>
 				<FormGroup label="x">
 					<TextInput
-						ref={inputRef}
-						{...dragX()}
 						onChange={(n) => circlePositionX.set(Number(n))}
+						ref={inputRef}
 						type="number"
 						value={x}
 					/>
 				</FormGroup>
 				<FormGroup label="y">
 					<TextInput
-						ref={inputRef}
-						{...dragY()}
 						onChange={(n) => circlePositionY.set(Number(n))}
+						ref={inputRef}
 						type="number"
 						value={y}
 					/>

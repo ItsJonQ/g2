@@ -134,10 +134,13 @@ exports[`props should render mixed control types 1`] = `
       data-g2-component="TextInputWrapper"
     >
       <input
+        autocomplete="off"
         class="css-7h3rix"
         data-g2-c16t="true"
         data-g2-component="TextInput"
         id="fname"
+        spellcheck="false"
+        type="text"
         value=""
       />
     </div>

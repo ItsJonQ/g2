@@ -1,77 +1,168 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import { useSubState } from '@wp-g2/substate';
+import { createStore, useSubState } from '@wp-g2/substate';
 import {
 	add,
 	is,
 	noop,
 	roundClamp,
 	subtract,
-	useControlledState,
+	useSealedState,
 } from '@wp-g2/utils';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { useBaseField } from '../BaseField';
-import { useFormGroupContext } from '../FormGroup';
+import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
-import { useJumpStep } from './useJumpStep';
 
-function defaultOnBeforeChange(event) {
-	return event?.target?.value;
+const KEYS = {
+	ENTER: 13,
+	Z: 90,
+	UP: 38,
+	DOWN: 40,
+};
+
+const useTextInputSubState = (
+	value,
+	{ initialValue, max = Infinity, min = -Infinity, type },
+) => {
+	const store = useSubState((set) => ({
+		lastValue: value || initialValue,
+		value: value || initialValue,
+		setValue: (next) => set({ value: next }),
+		setLastValue: (next) => set({ lastValue: next }),
+		resetValue: () => set((prev) => ({ value: prev.lastValue })),
+		type,
+		increment: (boost = 0) => {
+			set((prev) => {
+				if (prev.type !== 'number') return prev;
+				const step = jumpStepStore.getState().step;
+
+				let nextValue = add(prev.value, boost, step);
+				nextValue = roundClamp(nextValue, min, max, step);
+
+				return { value: nextValue.toString() };
+			});
+		},
+		decrement: (boost = 0) => {
+			set((prev) => {
+				if (prev.type !== 'number') return prev;
+				const step = jumpStepStore.getState().step;
+
+				let nextValue = subtract(prev.value, boost, step);
+				nextValue = roundClamp(nextValue, min, max, step);
+
+				return { value: nextValue.toString() };
+			});
+		},
+	}));
+
+	useEffect(() => {
+		if (is.defined(value) && value !== store.getState().value) {
+			store.getState().setValue(value);
+		}
+	}, [store, value]);
+
+	return store;
+};
+
+const jumpStepStore = createStore((set) => ({
+	isShiftKey: false,
+	setIsShiftKey: (next) =>
+		set((prev) => {
+			if (prev.isShiftKey === next) return prev;
+			return { isShiftKey: next };
+		}),
+	step: 1,
+}));
+
+/**
+ * A custom hook that calculates a step value (used by elements like input
+ * [type="number"]). This value can be modified based on whether the Shift
+ * key is being held down.
+ *
+ * For example, a shiftStep of 10, and a step of 1...
+ * Starting from 10, the next incremented value will be 11.
+ *
+ * Holding down shift...
+ * Starting from 10, the next incremented value will be 20.
+ */
+export function useJumpStep({
+	isShiftStepEnabled: isShiftStepEnabledProp = true,
+	shiftStep: shiftStepProp = 10,
+	step: stepProp = 1,
+}) {
+	const { isShiftKey } = jumpStepStore();
+
+	const isShiftStepEnabled = useSealedState(isShiftStepEnabledProp);
+	const shiftStep = useSealedState(shiftStepProp);
+	const step = useSealedState(stepProp);
+
+	useEffect(() => {
+		const handleOnKeyPress = (event) => {
+			const { shiftKey } = event;
+			if (jumpStepStore.getState().isShiftKey !== shiftKey) {
+				const isEnabled = isShiftStepEnabled && shiftKey;
+				const nextStep = isEnabled ? shiftStep * step : step;
+
+				jumpStepStore.setState({
+					isShiftKey: shiftKey,
+					step: nextStep,
+				});
+			}
+		};
+
+		window.addEventListener('keydown', handleOnKeyPress);
+		window.addEventListener('keyup', handleOnKeyPress);
+
+		return () => {
+			window.removeEventListener('keydown', handleOnKeyPress);
+			window.removeEventListener('keyup', handleOnKeyPress);
+		};
+	}, [isShiftKey, isShiftStepEnabled, shiftStep, step]);
 }
 
-export function useTextInput(props) {
-	const {
-		__onBeforeChange = defaultOnBeforeChange,
-		__store,
-		jumpStep,
-		align,
-		className,
-		onCommitChange = noop,
-		disabled,
-		defaultValue = '',
-		enriched = false,
-		gap = 2.5,
-		id: idProp,
-		isResizable = false,
-		justify,
-		onBlur = noop,
-		onFocus = noop,
-		onChange = noop,
-		multiline = false,
-		size = 'medium',
-		value: valueProp,
-		...otherProps
-	} = useContextSystem(props, 'TextInput');
+function useUndoTimeout() {
+	const undoTimeoutRef = useRef();
 
-	const [value, setValue] = useControlledState(valueProp, {
-		initial: defaultValue,
-	});
-	const [isFocused, setIsFocused] = useState(false);
-	const inputRef = useRef();
+	const setUndoTimeout = useCallback((fn) => {
+		if (undoTimeoutRef.current) {
+			clearTimeout(undoTimeoutRef.current);
+		}
 
-	const baseFieldProps = useBaseField({
-		align,
-		disabled,
-		gap,
-		isFocused,
-		justify,
-	});
-
-	const { id: contextId } = useFormGroupContext();
-	const id = idProp || contextId;
-
-	const handleOnRootClick = useCallback(() => {
-		inputRef.current.focus();
+		undoTimeoutRef.current = setTimeout(fn, 60);
 	}, []);
+
+	useEffect(() => {
+		const undoTimeout = undoTimeoutRef.current;
+		return () => {
+			if (undoTimeout) {
+				clearTimeout(undoTimeout);
+			}
+		};
+	}, []);
+
+	return { undoTimeoutRef, setUndoTimeout };
+}
+
+function useFocusHandlers({
+	isCommitOnBlurOrEnter = true,
+	onCommitChange = noop,
+	onBlur = noop,
+	onFocus = noop,
+}) {
+	const [isFocused, setIsFocused] = useState(false);
 
 	const handleOnBlur = useCallback(
 		(event) => {
+			if (isCommitOnBlurOrEnter) {
+				onCommitChange();
+			}
 			onBlur(event);
 			setIsFocused(false);
 		},
-		[onBlur],
+		[isCommitOnBlurOrEnter, onBlur, onCommitChange],
 	);
 
 	const handleOnFocus = useCallback(
@@ -82,14 +173,202 @@ export function useTextInput(props) {
 		[onFocus],
 	);
 
+	return {
+		isFocused,
+		onBlur: handleOnBlur,
+		onFocus: handleOnFocus,
+	};
+}
+
+function useKeyboardHandlers({
+	onChange = noop,
+	onCommitChange = noop,
+	onKeyDown = noop,
+	store,
+}) {
+	const { setUndoTimeout } = useUndoTimeout();
+
+	const handleOnKeyDown = useCallback(
+		(event) => {
+			const isNumberInput = store.getState().type === 'number';
+
+			switch (event.keyCode) {
+				case KEYS.ENTER:
+					event.preventDefault();
+					onCommitChange();
+					break;
+
+				case KEYS.Z:
+					if (event.metaKey || event.ctrlKey) {
+						event.persist();
+						setUndoTimeout(() => {
+							onChange(event.target.value);
+						});
+					}
+					break;
+
+				case KEYS.UP:
+					if (isNumberInput) {
+						event.preventDefault();
+						store.getState().increment();
+						onCommitChange();
+					}
+					break;
+
+				case KEYS.DOWN:
+					if (isNumberInput) {
+						event.preventDefault();
+						store.getState().decrement();
+						onCommitChange();
+					}
+					break;
+
+				default:
+					break;
+			}
+
+			onKeyDown(event);
+		},
+		[store, onKeyDown, onCommitChange, setUndoTimeout, onChange],
+	);
+
+	return { onKeyDown: handleOnKeyDown };
+}
+
+function useChangeHandlers({
+	isCommitOnBlurOrEnter,
+	onChange = noop,
+	store,
+	validate,
+}) {
 	const handleOnChange = useCallback(
 		(event) => {
+			const { setValue } = store.getState();
 			const next = event.target.value;
 			setValue(next);
-			onChange(__onBeforeChange(event), { event });
+
+			if (!isCommitOnBlurOrEnter) {
+				onChange(event.target.value, { event });
+			}
 		},
-		[__onBeforeChange, onChange, setValue],
+		[isCommitOnBlurOrEnter, onChange, store],
 	);
+
+	const handleOnCommitChange = useCallback(() => {
+		const { resetValue, setLastValue, value: next } = store.getState();
+
+		if (validate) {
+			try {
+				if (is.function(validate)) {
+					if (validate(next)) {
+						onChange(next);
+						setLastValue(next);
+					} else {
+						resetValue();
+					}
+				}
+
+				const regex = new RegExp(validate);
+				if (regex.test(next)) {
+					onChange(next);
+					setLastValue(next);
+				} else {
+					resetValue();
+				}
+			} catch (err) {
+				resetValue();
+			}
+		} else {
+			setLastValue(next);
+			onChange(next);
+		}
+	}, [onChange, store, validate]);
+
+	return { onChange: handleOnChange, onCommitChange: handleOnCommitChange };
+}
+
+export function useTextInput(props) {
+	const {
+		align,
+		className,
+		dragAxis,
+		defaultValue = '',
+		disabled,
+		gap = 2.5,
+		id: idProp,
+		isCommitOnBlurOrEnter = true,
+		isResizable = false,
+		isShiftStepEnabled = true,
+		justify,
+		max,
+		min,
+		multiline = false,
+		onBlur = noop,
+		onChange = noop,
+		onFocus = noop,
+		onKeyDown = noop,
+		shiftStep = 10,
+		size = 'medium',
+		step,
+		type = 'text',
+		validate,
+		value: valueProp,
+		...otherProps
+	} = useContextSystem(props, 'TextInput');
+
+	const inputRef = useRef();
+	const id = useFormGroupContextId(idProp);
+
+	const store = useTextInputSubState(valueProp, {
+		initialValue: defaultValue,
+		min,
+		max,
+		type,
+	});
+	const { value } = store();
+
+	useJumpStep({
+		isShiftStepEnabled,
+		shiftStep,
+		step,
+	});
+
+	const { onChange: handleOnChange, onCommitChange } = useChangeHandlers({
+		isCommitOnBlurOrEnter,
+		onChange,
+		store,
+		validate,
+	});
+
+	const {
+		isFocused,
+		onBlur: handleOnBlur,
+		onFocus: handleOnFocus,
+	} = useFocusHandlers({
+		isCommitOnBlurOrEnter,
+		onBlur,
+		onFocus,
+		onCommitChange,
+	});
+
+	const { onKeyDown: handleOnKeyDown } = useKeyboardHandlers({
+		onCommitChange,
+		onChange: handleOnChange,
+		onKeyDown,
+		store,
+	});
+
+	const handleOnRootClick = useCallback(() => {
+		inputRef.current.focus();
+	}, []);
+
+	const baseFieldProps = useBaseField({
+		align,
+		disabled,
+		gap,
+		isFocused,
+		justify,
+	});
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
@@ -110,182 +389,27 @@ export function useTextInput(props) {
 	const inputProps = {
 		...otherProps,
 		as: InputComponent,
-		id,
 		className: inputClasses,
-		onFocus: handleOnFocus,
-		onChange: handleOnChange,
+		id,
+		max,
+		min,
 		onBlur: handleOnBlur,
+		onChange: handleOnChange,
+		onFocus: handleOnFocus,
+		onKeyDown: handleOnKeyDown,
+		step,
+		type,
 		value,
 	};
 
 	return {
 		...baseFieldProps,
-		__store,
-		enriched,
+		__store: store,
+		dragAxis,
 		inputProps,
-		jumpStep,
 		inputRef,
 		onClick: handleOnRootClick,
 		onCommitChange,
 		className: classes,
-	};
-}
-
-export function useEnrichedTextInput({
-	onBlur = noop,
-	onChange = noop,
-	isCommitOnBlurOrEnter = true,
-	isShiftStepEnabled = true,
-	validate,
-	value: initialValue,
-	onKeyDown = noop,
-	max = Infinity,
-	min = -Infinity,
-	shiftStep = 10,
-	step = 1,
-	type = 'text',
-}) {
-	const inputRef = useRef();
-	const isNumberInput = type === 'number';
-
-	const jumpStep = useJumpStep({
-		isShiftStepEnabled,
-		shiftStep,
-		step,
-	});
-
-	const store = useSubState((set) => ({
-		__step: step,
-		value: initialValue,
-		setValue: (next) => set({ value: next }),
-		increment: (bump) =>
-			set((prev) => {
-				let nextValue = add(prev.value, bump);
-				nextValue = roundClamp(nextValue, min, max, bump);
-				return { value: nextValue.toString() };
-			}),
-		decrement: (bump) =>
-			set((prev) => {
-				let nextValue = subtract(prev.value, bump);
-				nextValue = roundClamp(nextValue, min, max, bump);
-				return { value: nextValue.toString() };
-			}),
-	}));
-
-	const { setValue, value } = store();
-	const undoTimeoutRef = useRef();
-
-	useEffect(() => {
-		if (initialValue !== store.getState().value) {
-			store.setState({ value: initialValue });
-		}
-	}, [initialValue, store]);
-
-	useEffect(() => {
-		return () => {
-			if (undoTimeoutRef.current) {
-				clearTimeout(undoTimeoutRef.curremt);
-			}
-		};
-	}, []);
-
-	const commitChange = useCallback(() => {
-		const next = store.getState().value;
-
-		if (next === initialValue && isCommitOnBlurOrEnter) {
-			return;
-		}
-
-		if (validate) {
-			try {
-				const regex = new RegExp(validate);
-
-				if (is.function(validate)) {
-					if (validate(next)) {
-						onChange(next);
-					} else {
-						store.setState({ value: initialValue });
-					}
-					return;
-				}
-
-				if (regex.test(next)) {
-					onChange(next);
-				} else {
-					store.setState({ value: initialValue });
-				}
-			} catch (err) {
-				store.setState({ value: initialValue });
-			}
-		} else {
-			onChange(next);
-		}
-	}, [initialValue, isCommitOnBlurOrEnter, onChange, store, validate]);
-
-	const handleOnKeyDown = useCallback(
-		(event) => {
-			// Enter press
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				commitChange();
-			}
-
-			// Undo press
-			if (event.keyCode === 90 && (event.metaKey || event.ctrlKey)) {
-				if (undoTimeoutRef.current) {
-					clearTimeout(undoTimeoutRef.current);
-				}
-				event.persist();
-				undoTimeoutRef.current = setTimeout(() => {
-					onChange(event.target.value);
-				}, 60);
-			}
-
-			// Arrow handling
-			if (isNumberInput) {
-				if (event.keyCode === 38 || event.keyCode === 40) {
-					event.preventDefault();
-					if (event.keyCode === 38) {
-						store.getState().increment(jumpStep);
-					} else {
-						store.getState().decrement(jumpStep);
-					}
-					commitChange();
-				}
-			}
-
-			onKeyDown(event);
-		},
-		[isNumberInput, onKeyDown, commitChange, onChange, store, jumpStep],
-	);
-
-	const handleOnBlur = useCallback(
-		(event) => {
-			commitChange();
-			onBlur(event);
-		},
-		[commitChange, onBlur],
-	);
-
-	const handleOnChange = useCallback(
-		(next) => {
-			setValue(next);
-		},
-		[setValue],
-	);
-
-	return {
-		onBlur: handleOnBlur,
-		onKeyDown: handleOnKeyDown,
-		onChange: handleOnChange,
-		onCommitChange: commitChange,
-		jumpStep,
-		type,
-		value,
-		min,
-		max,
-		step,
-		inputRef,
-		__store: store,
 	};
 }

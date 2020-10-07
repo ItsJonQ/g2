@@ -16,7 +16,7 @@ export { default as clamp } from 'lodash.clamp';
  */
 export function roundClamp(
 	value = 0,
-	min = Infinity,
+	min = -Infinity,
 	max = Infinity,
 	step = 1,
 ) {

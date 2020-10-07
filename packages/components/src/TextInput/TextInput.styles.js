@@ -68,12 +68,8 @@ export const resizable = css`
 export const Spinner = css`
 	cursor: pointer;
 	margin: 0 -4px 0 0 !important;
-	opacity: 0.4;
+	opacity: 0.8;
 	user-select: none;
-
-	*:hover > & {
-		opacity: 1;
-	}
 `;
 
 export const SpinnerArrow = css`
@@ -100,11 +96,13 @@ export const SpinnerArrowDown = css`
 	margin-top: -1px;
 `;
 
-export const spinnerDragging = css`
-	opacity: 1;
+export const globalDraggableX = css`
+	* {
+		cursor: ew-resize;
+	}
 `;
 
-export const globalDraggable = css`
+export const globalDraggableY = css`
 	* {
 		cursor: ns-resize;
 	}
