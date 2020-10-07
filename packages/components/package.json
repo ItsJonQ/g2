@@ -20,6 +20,7 @@
     "@wp-g2/a11y": "^0.0.87",
     "@wp-g2/animations": "^0.0.87",
     "@wp-g2/context": "^0.0.87",
+    "@wp-g2/gestures": "^0.0.87",
     "@wp-g2/icons": "^0.0.87",
     "@wp-g2/styles": "^0.0.87",
     "@wp-g2/substate": "^0.0.87",
