@@ -1,6 +1,8 @@
 import React from 'react';
+import NumberFormat from 'react-number-format';
 
 import { Container } from '../../Container';
+import { Text, VStack } from '../../index';
 import { TextInput } from '../index';
 
 export default {
@@ -27,4 +29,19 @@ export const number = () => {
 
 export const multiline = () => {
 	return <TextInput maxRows={6} minRows={3} multiline />;
+};
+
+export const custom = () => {
+	return (
+		<VStack>
+			<Text>
+				Rendered using <code>react-number-format</code>
+			</Text>
+			<TextInput
+				as={NumberFormat}
+				prefix={'$'}
+				thousandSeparator={true}
+			/>
+		</VStack>
+	);
 };

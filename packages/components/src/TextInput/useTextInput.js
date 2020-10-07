@@ -186,7 +186,9 @@ function useFocusHandlers({
 function useKeyboardHandlers({
 	onChange = noop,
 	onCommitChange = noop,
+	multiline = false,
 	onKeyDown = noop,
+	onEnterKeyDown = noop,
 	store,
 }) {
 	const { setUndoTimeout } = useUndoTimeout();
@@ -197,8 +199,11 @@ function useKeyboardHandlers({
 
 			switch (event.keyCode) {
 				case KEYS.ENTER:
-					event.preventDefault();
-					onCommitChange();
+					if (!multiline) {
+						event.preventDefault();
+						onCommitChange();
+					}
+					onEnterKeyDown(event);
 					break;
 
 				case KEYS.Z:
@@ -232,7 +237,15 @@ function useKeyboardHandlers({
 
 			onKeyDown(event);
 		},
-		[store, onKeyDown, onCommitChange, setUndoTimeout, onChange],
+		[
+			store,
+			onKeyDown,
+			multiline,
+			onEnterKeyDown,
+			onCommitChange,
+			setUndoTimeout,
+			onChange,
+		],
 	);
 
 	return { onKeyDown: handleOnKeyDown };
@@ -315,6 +328,7 @@ export function useTextInput(props) {
 		onChange = noop,
 		onFocus = noop,
 		onKeyDown = noop,
+		onEnterKeyDown = noop,
 		onValueSync = noop,
 		shiftStep = 10,
 		size = 'medium',
@@ -369,7 +383,9 @@ export function useTextInput(props) {
 	const { onKeyDown: handleOnKeyDown } = useKeyboardHandlers({
 		onCommitChange,
 		onChange: handleOnChange,
+		onEnterKeyDown,
 		onKeyDown,
+		multiline,
 		store,
 	});
 
@@ -402,8 +418,8 @@ export function useTextInput(props) {
 	);
 
 	const inputProps = {
-		...otherProps,
 		as: InputComponent,
+		...otherProps,
 		className: inputClasses,
 		id,
 		onBlur: handleOnBlur,
