@@ -1,7 +1,14 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { createStore, useSubState } from '@wp-g2/substate';
-import { add, is, noop, roundClampString, useSealedState } from '@wp-g2/utils';
+import {
+	add,
+	is,
+	noop,
+	roundClampString,
+	useSealedState,
+	useUpdateEffect,
+} from '@wp-g2/utils';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -79,6 +86,9 @@ const useTextInputSubState = (
 			});
 		}
 	}, [onValueSync, store, value]);
+
+	useUpdateEffect(() => store.setState({ min }), [min]);
+	useUpdateEffect(() => store.setState({ max }), [max]);
 
 	return store;
 };
@@ -302,6 +312,7 @@ function useChangeHandlers({
 			min,
 			resetValue,
 			setLastValue,
+			setValue,
 			type,
 			value,
 		} = store.getState();
@@ -317,8 +328,9 @@ function useChangeHandlers({
 			try {
 				if (is.function(validate)) {
 					if (validate(next)) {
-						onChange(next);
 						setLastValue(next);
+						setValue(next);
+						onChange(next);
 					} else {
 						resetValue();
 					}
@@ -326,8 +338,9 @@ function useChangeHandlers({
 
 				const regex = new RegExp(validate);
 				if (regex.test(next)) {
-					onChange(next);
 					setLastValue(next);
+					setValue(next);
+					onChange(next);
 				} else {
 					resetValue();
 				}
@@ -335,7 +348,8 @@ function useChangeHandlers({
 				resetValue();
 			}
 		} else {
-			setLastValue(roundClampString(next));
+			setLastValue(next);
+			setValue(next);
 			onChange(next);
 		}
 	}, [onChange, store, validate]);
