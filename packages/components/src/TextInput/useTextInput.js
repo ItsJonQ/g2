@@ -149,6 +149,18 @@ export function useJumpStep({
 	}, [isShiftKey, isShiftStepEnabled, shiftStep, step]);
 }
 
+function useInputRef({ store }) {
+	const inputRef = useRef();
+
+	useEffect(() => {
+		if (inputRef.current) {
+			store.setState({ inputRef: inputRef.current });
+		}
+	}, [store]);
+
+	return inputRef;
+}
+
 function useUndoTimeout() {
 	const undoTimeoutRef = useRef();
 
@@ -290,6 +302,17 @@ function useChangeHandlers({
 	store,
 	validate,
 }) {
+	const handleOnFinalizeChange = useCallback(
+		(next) => {
+			const { setLastValue, setValue } = store.getState();
+
+			setLastValue(next);
+			setValue(next);
+			onChange(next);
+		},
+		[store, onChange],
+	);
+
 	const handleOnChange = useCallback(
 		(event) => {
 			const { setValue } = store.getState();
@@ -311,8 +334,6 @@ function useChangeHandlers({
 			max,
 			min,
 			resetValue,
-			setLastValue,
-			setValue,
 			type,
 			value,
 		} = store.getState();
@@ -324,35 +345,28 @@ function useChangeHandlers({
 			next = roundClampString(next, min, max, step);
 		}
 
-		if (validate) {
-			try {
-				if (is.function(validate)) {
-					if (validate(next)) {
-						setLastValue(next);
-						setValue(next);
-						onChange(next);
-					} else {
-						resetValue();
-					}
-				}
+		if (!validate) {
+			handleOnFinalizeChange(next);
+		}
 
-				const regex = new RegExp(validate);
-				if (regex.test(next)) {
-					setLastValue(next);
-					setValue(next);
-					onChange(next);
-				} else {
-					resetValue();
-				}
-			} catch (err) {
+		try {
+			let shouldFinalize = true;
+
+			if (is.function(validate)) {
+				shouldFinalize = validate(next);
+			} else {
+				shouldFinalize = new RegExp(validate).test(next);
+			}
+
+			if (shouldFinalize) {
+				handleOnFinalizeChange(next);
+			} else {
 				resetValue();
 			}
-		} else {
-			setLastValue(next);
-			setValue(next);
-			onChange(next);
+		} catch (err) {
+			resetValue();
 		}
-	}, [onChange, store, validate]);
+	}, [handleOnFinalizeChange, store, validate]);
 
 	/**
 	 * Subscribes the onCommitChange handler to fire when lastValue updates.
@@ -373,21 +387,9 @@ function useChangeHandlers({
 	};
 }
 
-export function useTextInput(props) {
+function useEventHandlers(props) {
 	const {
-		align,
-		className,
-		dragAxis,
-		defaultValue = '',
-		disabled,
-		gap = 2.5,
-		id: idProp,
 		isCommitOnBlurOrEnter = true,
-		isResizable = false,
-		isShiftStepEnabled = true,
-		justify,
-		min,
-		max,
 		multiline = false,
 		onBlur = noop,
 		onChange = noop,
@@ -395,40 +397,9 @@ export function useTextInput(props) {
 		onKeyUp = noop,
 		onKeyDown = noop,
 		onEnterKeyDown = noop,
-		onValueSync = noop,
-		shiftStep = 10,
-		size = 'medium',
-		step,
-		type = 'text',
 		validate,
-		value: valueProp,
-		...otherProps
-	} = useContextSystem(props, 'TextInput');
-
-	const id = useFormGroupContextId(idProp);
-
-	const store = useTextInputSubState(valueProp, {
-		initialValue: defaultValue,
-		max,
-		min,
-		onValueSync,
-		type,
-	});
-	const { value } = store();
-
-	const inputRef = useRef();
-
-	useEffect(() => {
-		if (inputRef.current) {
-			store.setState({ inputRef: inputRef.current });
-		}
-	}, [store]);
-
-	useJumpStep({
-		isShiftStepEnabled,
-		shiftStep,
-		step,
-	});
+		store,
+	} = props;
 
 	const { onChange: handleOnChange } = useChangeHandlers({
 		isCommitOnBlurOrEnter,
@@ -460,9 +431,68 @@ export function useTextInput(props) {
 		store,
 	});
 
+	return {
+		isFocused,
+		onChange: handleOnBlur,
+		onFocus: handleOnFocus,
+		onKeyDown: handleOnKeyDown,
+		onKeyUp: handleOnKeyUp,
+	};
+}
+
+export function useTextInput(props) {
+	const combinedProps = useContextSystem(props, 'TextInput');
+	const {
+		align,
+		className,
+		dragAxis,
+		defaultValue = '',
+		disabled,
+		gap = 2.5,
+		id: idProp,
+		isResizable = false,
+		isShiftStepEnabled = true,
+		justify,
+		min,
+		max,
+		multiline = false,
+		onValueSync = noop,
+		shiftStep = 10,
+		size = 'medium',
+		step,
+		type = 'text',
+		validate,
+		value: valueProp,
+		...otherProps
+	} = combinedProps;
+
+	const id = useFormGroupContextId(idProp);
+
+	const store = useTextInputSubState(valueProp, {
+		initialValue: defaultValue,
+		max,
+		min,
+		onValueSync,
+		type,
+	});
+	const { value } = store();
+
+	useJumpStep({
+		isShiftStepEnabled,
+		shiftStep,
+		step,
+	});
+
+	const inputRef = useInputRef({ store });
+
+	const { isFocused, ...eventHandlers } = useEventHandlers({
+		...combinedProps,
+		store,
+	});
+
 	const handleOnRootClick = useCallback(() => {
 		inputRef.current.focus();
-	}, []);
+	}, [inputRef]);
 
 	const baseFieldProps = useBaseField({
 		align,
@@ -491,15 +521,11 @@ export function useTextInput(props) {
 	const inputProps = {
 		as: InputComponent,
 		...otherProps,
+		...eventHandlers,
 		className: inputClasses,
 		id,
 		min,
 		max,
-		onBlur: handleOnBlur,
-		onChange: handleOnChange,
-		onFocus: handleOnFocus,
-		onKeyDown: handleOnKeyDown,
-		onKeyUp: handleOnKeyUp,
 		step,
 		type,
 		value,
