@@ -1,6 +1,7 @@
+import { SeparatorProps } from '@wp-g2/a11y';
 import { PolymorphicComponent } from './_shared';
 
-export declare type DividerProps = {
+export declare type DividerProps = SeparatorProps & {
 	/**
 	 * Adjusts all margins.
 	 */

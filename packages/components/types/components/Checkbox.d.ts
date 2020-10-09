@@ -1,8 +1,10 @@
+import { CheckboxProps as ReakitCheckboxProps } from '@wp-g2/a11y';
 import { PolymorphicComponent, FormElementProps } from './_shared';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';
 
-export declare type CheckboxProps = FormElementProps &
+export declare type CheckboxProps = ReakitCheckboxProps &
+	FormElementProps &
 	Pick<FlexProps, 'gap'> &
 	Pick<GridProps, 'templateColumns'> & {
 		/**

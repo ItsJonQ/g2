@@ -4,8 +4,9 @@ import React, { useRef } from 'react';
 
 import { TabsContext } from './Tabs.Context';
 
-function Tabs({ children, selectedId }) {
-	const tab = useTabState({ selectedId });
+function Tabs(props) {
+	const { children, ...otherProps } = props;
+	const tab = useTabState(otherProps);
 	const listRef = useRef();
 	const [resizeListener, sizes] = useResizeAware();
 

@@ -1,3 +1,4 @@
+import { DisclosureProps, DisclosureContentProps } from '@wp-g2/a11y';
 import { PolymorphicComponent } from './_shared';
 
 export declare type CollapsibleProps = {
@@ -30,7 +31,7 @@ export declare type CollapsibleProps = {
  */
 export declare const Collapsible: PolymorphicComponent<CollapsibleProps>;
 
-export declare type CollapsibleTriggerProps = {
+export declare type CollapsibleTriggerProps = DisclosureProps & {
 	/**
 	 * Renders in a disabled state.
 	 */
@@ -56,7 +57,7 @@ export declare type CollapsibleTriggerProps = {
  */
 export declare const CollapsibleTrigger: PolymorphicComponent<CollapsibleTriggerProps>;
 
-export declare type CollapsibleContentProps = {};
+export declare type CollapsibleContentProps = DisclosureContentProps;
 
 /**
  * `CollapsibleContent` is a layout component that contains the content of a `Collapsible` section.

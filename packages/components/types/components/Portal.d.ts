@@ -1,10 +1,11 @@
+import * as React from 'react';
 import { PolymorphicComponent } from './_shared';
 
 export declare type PortalProps = {
 	/**
 	 * Components to portal render at the document.body scope.
 	 */
-	children?: any;
+	children?: React.ReactNode;
 };
 
 /**

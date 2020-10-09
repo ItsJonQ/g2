@@ -1,8 +1,10 @@
+import { RadioGroupProps as ReakitRadioGroupProps } from '@wp-g2/a11y';
 import { PolymorphicComponent } from './_shared';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';
 
-export declare type RadioGroupProps = Pick<FlexProps, 'gap'> &
+export declare type RadioGroupProps = ReakitRadioGroupProps &
+	Pick<FlexProps, 'gap'> &
 	Pick<GridProps, 'templateColumns'> & {
 		/**
 		 * ID that will serve as a base for all the items IDs.

@@ -1,4 +1,4 @@
-import { useCheckboxState } from '@wp-g2/a11y/';
+import { useCheckboxState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 

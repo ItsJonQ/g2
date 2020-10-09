@@ -1,8 +1,9 @@
 import { PolymorphicComponent, CSS, SizeRangeDefault } from './_shared';
+import { ButtonProps } from '@wp-g2/a11y';
 
 export declare type BaseButtonSize = SizeRangeDefault;
 
-export declare type BaseButtonProps = {
+export declare type BaseButtonProps = ButtonProps & {
 	/**
 	 * Renders `Button` in a disabled state.
 	 *

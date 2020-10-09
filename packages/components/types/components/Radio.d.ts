@@ -1,8 +1,10 @@
+import { RadioProps as ReakitRadioProps } from '@wp-g2/a11y';
 import { PolymorphicComponent, FormElementProps } from './_shared';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';
 
-export declare type RadioProps = FormElementProps &
+export declare type RadioProps = ReakitRadioProps &
+	FormElementProps &
 	Pick<FlexProps, 'gap'> &
 	Pick<GridProps, 'templateColumns'> & {
 		/**

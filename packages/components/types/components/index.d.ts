@@ -55,6 +55,7 @@ export * from './Stepper';
 export * from './Subheading';
 export * from './Surface';
 export * from './Switch';
+export * from './Tabs';
 export * from './Tag';
 export * from './Text';
 export * from './TextField';
