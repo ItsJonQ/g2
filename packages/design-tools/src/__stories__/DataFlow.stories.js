@@ -25,11 +25,11 @@ export default {
 };
 
 const dataStore = createStore((set) => ({
-	height: 0,
-	width: 0,
+	height: 50,
+	width: 50,
 	x: 0,
 	y: 0,
-	z: 0,
+	opacity: 100,
 }));
 
 const AppContext = React.createContext({ dataStore });
@@ -64,6 +64,37 @@ const RenderedValues = () => {
 	);
 };
 
+const RenderedUI = () => {
+	const { dataStore } = useAppContext();
+	const data = dataStore();
+
+	const { height, opacity, width, x, y } = data;
+	const style = {
+		height: `${height}px`,
+		width: `${width}px`,
+		transform: `translate(${x}px, ${y}px)`,
+		opacity: opacity / 100,
+	};
+
+	return (
+		<View
+			css={[
+				ui.frame.height(200),
+				ui.alignment.content.center,
+				'overflow: hidden;',
+			]}
+		>
+			<View
+				css={`
+					background: ${ui.get('colorText')};
+					border-radius: 8px;
+				`}
+				style={style}
+			/>
+		</View>
+	);
+};
+
 const useDataStoreValue = ({ prop }) => {
 	const { dataStore } = useAppContext();
 	const value = dataStore(React.useCallback((state) => state[prop], [prop]));
@@ -86,6 +117,8 @@ const DataControl = React.memo(
 			<FormGroup label={label}>
 				<Grid templateColumns="1fr auto">
 					<TextControl
+						max={100}
+						min={0}
 						onChange={handleOnChange}
 						onUpdate={onUpdate}
 						type="number"
@@ -163,9 +196,13 @@ const DataStoreLayer = React.memo(() => {
 							onUpdate={increment}
 							prop="width"
 						/>
+						<DataControl
+							label="Opacity"
+							onUpdate={increment}
+							prop="opacity"
+						/>
 						<DataControl label="X" onUpdate={increment} prop="x" />
 						<DataControl label="Y" onUpdate={increment} prop="y" />
-						<DataControl label="Z" onUpdate={increment} prop="z" />
 					</ListGroup>
 				</CardBody>
 			</Card>
@@ -196,9 +233,13 @@ const ControlsLayer = React.memo(() => {
 							onUpdate={increment}
 							prop="width"
 						/>
+						<DataControl
+							label="Opacity"
+							onUpdate={increment}
+							prop="opacity"
+						/>
 						<DataControl label="X" onUpdate={increment} prop="x" />
 						<DataControl label="Y" onUpdate={increment} prop="y" />
-						<DataControl label="Z" onUpdate={increment} prop="z" />
 					</ListGroup>
 				</CardBody>
 			</Card>
@@ -224,6 +265,16 @@ const RenderedLayer = React.memo(() => {
 					<ListGroup>
 						<ListGroupHeader>Rendered (Attributes)</ListGroupHeader>
 						<RenderedValues />
+					</ListGroup>
+				</CardBody>
+			</Card>
+			<Card>
+				<CardBody>
+					<ListGroup>
+						<ListGroupHeader>
+							Rendered (UI): Sub Optimized
+						</ListGroupHeader>
+						<RenderedUI />
 					</ListGroup>
 				</CardBody>
 			</Card>
@@ -260,7 +311,7 @@ const Autopilot = React.memo(() => {
 
 					nodeReactHandlers.onFocus();
 					nodeReactHandlers.onChange({
-						target: { value: getRandomInt(100000) },
+						target: { value: getRandomInt(100) },
 					});
 					nodeReactHandlers.onBlur();
 				} catch (err) {
