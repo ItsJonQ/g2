@@ -1,5 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, cx } from '@wp-g2/styles';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { BaseButton } from '../BaseButton';
@@ -9,7 +9,6 @@ function Button(props, forwardedRef) {
 	const {
 		children,
 		className,
-		css: cssProp,
 		currentColor,
 		icon,
 		isControl = false,
@@ -30,7 +29,6 @@ function Button(props, forwardedRef) {
 		isSubtle && isControl && styles.subtleControl,
 		isIconOnly && styles.icon,
 		currentColor && styles.currentColor,
-		css(cssProp),
 		className,
 	);
 

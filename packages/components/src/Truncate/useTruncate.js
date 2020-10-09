@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
+import { useMemo } from 'react';
 
 import * as styles from './Truncate.styles';
 import {
@@ -29,20 +30,22 @@ export function useTruncate(props) {
 		ellipsizeMode === TRUNCATE_TYPE.auto &&
 		ellipsizeMode !== TRUNCATE_TYPE.none;
 
-	const sx = {};
+	const classes = useMemo(() => {
+		const sx = {};
 
-	sx.numberOfLines = css`
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: ${numberOfLines};
-		display: -webkit-box;
-		overflow: hidden;
-	`;
+		sx.numberOfLines = css`
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: ${numberOfLines};
+			display: -webkit-box;
+			overflow: hidden;
+		`;
 
-	const classes = cx(
-		shouldTruncate && !numberOfLines && styles.Truncate,
-		shouldTruncate && numberOfLines && sx.numberOfLines,
-		className,
-	);
+		return cx(
+			shouldTruncate && !numberOfLines && styles.Truncate,
+			shouldTruncate && numberOfLines && sx.numberOfLines,
+			className,
+		);
+	}, [className, numberOfLines, shouldTruncate]);
 
 	return {
 		...otherProps,

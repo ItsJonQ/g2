@@ -433,7 +433,8 @@ function useEventHandlers(props) {
 
 	return {
 		isFocused,
-		onChange: handleOnBlur,
+		onBlur: handleOnBlur,
+		onChange: handleOnChange,
 		onFocus: handleOnFocus,
 		onKeyDown: handleOnKeyDown,
 		onKeyUp: handleOnKeyUp,

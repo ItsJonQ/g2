@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, useResponsiveValue } from '@wp-g2/styles';
+import { useMemo } from 'react';
 
 export function useGrid(props) {
 	const {
@@ -24,19 +25,31 @@ export function useGrid(props) {
 		templateColumns || (!!columns && `repeat(${column}, 1fr)`);
 	const gridTemplateRows = templateRows || (!!rows && `repeat(${row}, 1fr)`);
 
-	const __css = css({
-		alignItems: align,
-		display: isInline ? 'inline-grid' : 'grid',
+	const classes = useMemo(() => {
+		const __css = css({
+			alignItems: align,
+			display: isInline ? 'inline-grid' : 'grid',
+			gap,
+			gridTemplateColumns,
+			gridTemplateRows,
+			gridRowGap: rowGap,
+			gridColumnGap: columnGap,
+			justifyContent: justify,
+			verticalAlign: isInline ? 'middle' : null,
+		});
+
+		return cx(__css, className);
+	}, [
+		align,
+		className,
+		columnGap,
 		gap,
 		gridTemplateColumns,
 		gridTemplateRows,
-		gridRowGap: rowGap,
-		gridColumnGap: columnGap,
-		justifyContent: justify,
-		verticalAlign: isInline ? 'middle' : null,
-	});
-
-	const classes = cx(__css, className);
+		isInline,
+		justify,
+		rowGap,
+	]);
 
 	return {
 		...otherProps,

@@ -1,7 +1,7 @@
 import { hasNamespace, useContextSystem } from '@wp-g2/context';
 import { css, cx, get, getFontSize } from '@wp-g2/styles';
 import { getOptimalTextShade, is } from '@wp-g2/utils';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { useTruncate } from '../Truncate';
 import * as styles from './Text.styles';
@@ -45,42 +45,59 @@ export function useText(props) {
 		});
 	}
 
-	const sx = {};
+	const classes = useMemo(() => {
+		const sx = {};
 
-	sx.Base = css({
+		sx.Base = css({
+			color,
+			display,
+			fontSize: getFontSize(size),
+			fontWeight: weight,
+			lineHeight,
+			textAlign: align,
+		});
+
+		sx.upperCase = css({ textTransform: 'uppercase' });
+
+		sx.optimalTextColor = null;
+
+		if (optimizeReadabilityFor) {
+			const isOptimalTextColorDark =
+				getOptimalTextShade(optimizeReadabilityFor) === 'dark';
+
+			sx.optimalTextColor = isOptimalTextColorDark
+				? css({ color: get('black') })
+				: css({ color: get('white') });
+		}
+
+		return cx(
+			styles.Text,
+			sx.Base,
+			sx.optimalTextColor,
+			isDestructive && styles.destructive,
+			isHighlighter && styles.highlighterText,
+			styles[isBlock && 'block'],
+			isCaption && styles.muted,
+			styles[variant],
+			upperCase && sx.upperCase,
+			className,
+		);
+	}, [
+		align,
+		className,
 		color,
 		display,
-		fontSize: getFontSize(size),
-		fontWeight: weight,
+		isBlock,
+		isCaption,
+		isDestructive,
+		isHighlighter,
 		lineHeight,
-		textAlign: align,
-	});
-
-	sx.upperCase = css({ textTransform: 'uppercase' });
-
-	sx.optimalTextColor = null;
-
-	if (optimizeReadabilityFor) {
-		const isOptimalTextColorDark =
-			getOptimalTextShade(optimizeReadabilityFor) === 'dark';
-
-		sx.optimalTextColor = isOptimalTextColorDark
-			? css({ color: get('black') })
-			: css({ color: get('white') });
-	}
-
-	const classes = cx(
-		styles.Text,
-		sx.Base,
-		sx.optimalTextColor,
-		isDestructive && styles.destructive,
-		isHighlighter && styles.highlighterText,
-		styles[isBlock && 'block'],
-		isCaption && styles.muted,
-		styles[variant],
-		upperCase && sx.upperCase,
-		className,
-	);
+		optimizeReadabilityFor,
+		size,
+		upperCase,
+		variant,
+		weight,
+	]);
 
 	let finalEllipsizeMode = 'undefined';
 	if (truncate === true) {
