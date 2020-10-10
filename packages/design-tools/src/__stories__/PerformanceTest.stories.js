@@ -241,7 +241,10 @@ const SimulatedControlsView = React.memo(() => {
 
 const DataView = React.memo(() => {
 	const state = useAppStoreState((state) => state);
-
+	const itemstore = useItemStore();
+	const items = Object.keys(itemstore)
+		.filter((v, i) => i < 149)
+		.map((i) => Math.round(itemstore[i][0]));
 	return (
 		<Card>
 			<CardBody>
@@ -253,7 +256,8 @@ const DataView = React.memo(() => {
 						white-space: break-spaces;
 					`}
 				>
-					{JSON.stringify(state, null, 2)}
+					{JSON.stringify(state)}
+					{JSON.stringify(items)}
 				</View>
 			</CardBody>
 		</Card>
