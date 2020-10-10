@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
+import { useMemo } from 'react';
 
 import { useSurface } from '../Surface';
 import * as styles from './Card.styles';
@@ -13,12 +14,14 @@ export function useCard(props) {
 		...otherProps
 	} = useContextSystem(props, 'Card');
 
-	const classes = cx(
-		styles.Card,
-		isBorderless && styles.borderless,
-		isRounded && styles.rounded,
-		className,
-	);
+	const classes = useMemo(() => {
+		return cx(
+			styles.Card,
+			isBorderless && styles.borderless,
+			isRounded && styles.rounded,
+			className,
+		);
+	}, [className, isBorderless, isRounded]);
 
 	const surfaceProps = useSurface({ ...otherProps, className: classes });
 

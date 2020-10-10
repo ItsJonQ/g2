@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
+import { useMemo } from 'react';
 
 import * as styles from './Surface.styles';
 
@@ -16,30 +17,41 @@ export function useSurface(props) {
 		...otherProps
 	} = useContextSystem(props, 'Surface');
 
-	const sx = {};
+	const classes = useMemo(() => {
+		const sx = {};
 
-	sx.borders = styles.getBorders({
+		sx.borders = styles.getBorders({
+			border,
+			borderBottom,
+			borderLeft,
+			borderRight,
+			borderTop,
+		});
+
+		return cx(
+			styles.Surface,
+			sx.borders,
+			styles[variant],
+			css({
+				[ui.createToken('surfaceBackgroundSize')]: ui.value.px(
+					backgroundSize,
+				),
+				[ui.createToken('surfaceBackgroundSizeDotted')]: ui.value.px(
+					backgroundSize - 1,
+				),
+			}),
+			className,
+		);
+	}, [
+		backgroundSize,
 		border,
 		borderBottom,
 		borderLeft,
 		borderRight,
 		borderTop,
-	});
-
-	const classes = cx(
-		styles.Surface,
-		sx.borders,
-		styles[variant],
-		css({
-			[ui.createToken('surfaceBackgroundSize')]: ui.value.px(
-				backgroundSize,
-			),
-			[ui.createToken('surfaceBackgroundSizeDotted')]: ui.value.px(
-				backgroundSize - 1,
-			),
-		}),
 		className,
-	);
+		variant,
+	]);
 
 	return {
 		...otherProps,

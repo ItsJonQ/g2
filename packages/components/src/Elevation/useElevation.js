@@ -1,6 +1,7 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, getBoxShadow, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
+import { useMemo } from 'react';
 
 import * as styles from './Elevation.styles';
 
@@ -29,46 +30,57 @@ export function useElevation(props) {
 		'transitionTimingFunction',
 	)}`;
 
-	const sx = {};
+	const classes = useMemo(() => {
+		const sx = {};
 
-	sx.Base = css({
+		sx.Base = css({
+			borderRadius,
+			bottom: offset,
+			boxShadow: getBoxShadow(value),
+			opacity: ui.get('elevationIntensity'),
+			left: offset,
+			right: offset,
+			top: offset,
+			transition,
+		});
+
+		sx.hover = css`
+			*:hover > & {
+				box-shadow: ${getBoxShadow(hoverValue)};
+			}
+		`;
+
+		sx.active = css`
+			*:active > & {
+				box-shadow: ${getBoxShadow(activeValue)};
+			}
+		`;
+
+		sx.focus = css`
+			*:focus > & {
+				box-shadow: ${getBoxShadow(focus)};
+			}
+		`;
+
+		return cx(
+			styles.Elevation,
+			sx.Elevation,
+			sx.Base,
+			is.defined(hoverValue) && sx.hover,
+			is.defined(activeValue) && sx.active,
+			is.defined(focus) && sx.focus,
+			className,
+		);
+	}, [
+		activeValue,
 		borderRadius,
-		bottom: offset,
-		boxShadow: getBoxShadow(value),
-		opacity: ui.get('elevationIntensity'),
-		left: offset,
-		right: offset,
-		top: offset,
-		transition,
-	});
-
-	sx.hover = css`
-		*:hover > & {
-			box-shadow: ${getBoxShadow(hoverValue)};
-		}
-	`;
-
-	sx.active = css`
-		*:active > & {
-			box-shadow: ${getBoxShadow(activeValue)};
-		}
-	`;
-
-	sx.focus = css`
-		*:focus > & {
-			box-shadow: ${getBoxShadow(focus)};
-		}
-	`;
-
-	const classes = cx(
-		styles.Elevation,
-		sx.Elevation,
-		sx.Base,
-		is.defined(hoverValue) && sx.hover,
-		is.defined(activeValue) && sx.active,
-		is.defined(focus) && sx.focus,
 		className,
-	);
+		focus,
+		hoverValue,
+		offset,
+		transition,
+		value,
+	]);
 
 	return {
 		...otherProps,

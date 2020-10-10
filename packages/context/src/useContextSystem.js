@@ -1,5 +1,6 @@
 import { css, cx } from '@wp-g2/styles';
 import { is, kebabCase, memoize, omit, uniq } from '@wp-g2/utils';
+import { useMemo } from 'react';
 
 import { CONNECTED_NAMESPACE } from './constants';
 import { useContextStoreContext } from './ContextSystemProvider';
@@ -62,15 +63,26 @@ export function useContextSystem(props, namespace, forwardedRef) {
 
 	const initialMergedProps = Object.assign({}, otherContextProps, props);
 
-	const classes = cx(
-		// Resolve custom CSS from ContextSystemProvider
-		contextCSS && css(contextCSS),
-		// Resolve custom CSS from props
-		initialMergedProps.cx,
-		initialMergedProps.__css && css(initialMergedProps.__css),
-		initialMergedProps.css && css(initialMergedProps.css),
-		memoizedGetStyledClassNameFromKey(key),
-		props.className,
+	const classes = useMemo(
+		() =>
+			cx(
+				// Resolve custom CSS from ContextSystemProvider
+				contextCSS && css(contextCSS),
+				// Resolve custom CSS from props
+				initialMergedProps.cx,
+				initialMergedProps.__css && css(initialMergedProps.__css),
+				initialMergedProps.css && css(initialMergedProps.css),
+				memoizedGetStyledClassNameFromKey(key),
+				props.className,
+			),
+		[
+			contextCSS,
+			initialMergedProps.__css,
+			initialMergedProps.css,
+			initialMergedProps.cx,
+			key,
+			props.className,
+		],
 	);
 
 	// Provides the ability to customize the render of the component.

@@ -1,7 +1,7 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { interpolate, noop, useControlledState } from '@wp-g2/utils';
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { useFormGroupContext } from '../FormGroup';
 import * as styles from './Slider.styles';
@@ -38,7 +38,10 @@ export function useSlider(props) {
 		'--progress': `${currentValue}%`,
 	};
 
-	const classes = cx(styles.Slider, styles[size], className);
+	const classes = useMemo(() => cx(styles.Slider, styles[size], className), [
+		className,
+		size,
+	]);
 
 	return {
 		...otherProps,
