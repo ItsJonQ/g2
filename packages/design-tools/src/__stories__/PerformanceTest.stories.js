@@ -265,6 +265,7 @@ const ItemView = ui.css`
 	width: 100px;
 	height: 2px;
 	background: ${ui.get('colorText')};
+	transition: transform 200ms ease-in-out;
 	opacity: 0.2;
 `;
 
