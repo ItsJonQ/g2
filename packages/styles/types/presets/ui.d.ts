@@ -5,6 +5,7 @@ import { AnimationInterface } from './animations';
 import { BackgroundInterface } from './backgrounds';
 import { BorderInterface, BorderRadiusInterface } from './borders';
 import { ColorInterface } from './colors';
+import { CSSInterface } from './css';
 import { FrameInterface } from './dimensions';
 import { FontInterface } from './fonts';
 import {
@@ -83,6 +84,11 @@ export declare interface SystemInterface {
 	 * ```
 	 */
 	createToken: CreateTokenInterface;
+	/**
+	 * Creates a set of CSS style rules, resulting in unique className.
+	 * This className can then be added to a React component via the className prop.
+	 */
+	css: CSSInterface;
 	/**
 	 * Applies custom modifiers based on an focus interaction.
 	 *

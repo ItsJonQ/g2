@@ -3,6 +3,7 @@ import { animation } from './animations';
 import { background } from './backgrounds';
 import { border, borderRadius } from './borders';
 import { color } from './colors';
+import { css } from './css';
 import { frame } from './dimensions';
 import { font } from './fonts';
 import { createToken, get, getTokenValue } from './get';
@@ -27,6 +28,7 @@ export const ui = {
 	borderRadius,
 	color,
 	createToken,
+	css,
 	focus,
 	font,
 	frame,

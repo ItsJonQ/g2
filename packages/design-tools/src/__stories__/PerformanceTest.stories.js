@@ -1,5 +1,6 @@
 import { StatsGraph } from '@helpscout/stats';
 import {
+	Alert,
 	Badge,
 	Button,
 	Card,
@@ -26,6 +27,31 @@ import { createStore, useSubState } from '@wp-g2/substate';
 import { clamp } from '@wp-g2/utils';
 import React from 'react';
 
+const ids = [...Array(150)].fill(0).map((v, i) => i);
+const calcXY = () => [
+	(Math.random() * window.innerWidth) / 2.5,
+	(Math.random() * window.innerHeight) / 2,
+];
+
+const useItemStore = createStore((set) => ({
+	items: ids,
+	...ids.reduce((acc, id) => ({ ...acc, [id]: calcXY() }), 0),
+	advance() {
+		// Set all coordinates randomly
+		set((state) => {
+			const coords = {};
+			for (let i = 0; i < state.items.length; i++)
+				coords[state.items[i]] = calcXY();
+			return coords;
+		});
+	},
+}));
+
+const useReducedMotion = createStore((set) => ({
+	value: false,
+	toggle: () => set((prev) => ({ value: !prev.value })),
+}));
+
 export default {
 	title: 'DesignTools/PerformanceTest',
 };
@@ -42,7 +68,6 @@ const dataStore = createStore((set) => ({
 
 const AppContext = React.createContext({ dataStore });
 const useAppContext = () => React.useContext(AppContext);
-const useAppStore = (...args) => useAppContext().dataStore;
 const useAppStoreState = (...args) => useAppContext().dataStore(...args);
 
 const getTestNode = (query) => document.querySelector(`[data-test="${query}"]`);
@@ -71,39 +96,11 @@ const Autopilot = React.memo(() => {
 	const autoPilotTimerRef = React.useRef();
 
 	const tickOnce = React.useCallback(() => {
-		clearTimeout(autoPilotTimerRef.current);
+		cancelAnimationFrame(autoPilotTimerRef.current);
 
 		updateTestNode('search', faker.lorem.sentence());
 		updateTestNode(
-			'height',
-			faker.random.number({
-				min: 0,
-				max: 100,
-			}),
-		);
-		updateTestNode(
-			'width',
-			faker.random.number({
-				min: 0,
-				max: 100,
-			}),
-		);
-		updateTestNode(
-			'opacity',
-			faker.random.number({
-				min: 0,
-				max: 100,
-			}),
-		);
-		updateTestNode(
-			'x',
-			faker.random.number({
-				min: 0,
-				max: 100,
-			}),
-		);
-		updateTestNode(
-			'y',
+			faker.random.arrayElement(['height', 'width', 'opacity', 'x', 'y']),
 			faker.random.number({
 				min: 0,
 				max: 100,
@@ -112,25 +109,38 @@ const Autopilot = React.memo(() => {
 	}, []);
 
 	React.useEffect(() => {
-		clearTimeout(autoPilotTimerRef.current);
+		return dataStore.subscribe(useItemStore.getState().advance);
+	});
+
+	React.useEffect(() => {
+		tickOnce();
+	}, [tickOnce]);
+
+	React.useEffect(() => {
+		cancelAnimationFrame(autoPilotTimerRef.current);
 
 		const tick = () => {
-			autoPilotTimerRef.current = setTimeout(() => {
+			autoPilotTimerRef.current = requestAnimationFrame(() => {
 				tickOnce();
 				tick();
-			}, 60);
+			});
 		};
 
 		if (value) {
 			tick();
 		} else {
-			clearTimeout(autoPilotTimerRef.current);
+			cancelAnimationFrame(autoPilotTimerRef.current);
 		}
 
 		return () => {
-			clearTimeout(autoPilotTimerRef.current);
+			cancelAnimationFrame(autoPilotTimerRef.current);
 		};
 	}, [tickOnce, value]);
+
+	const handleOnTickClick = React.useCallback(() => {
+		tickOnce();
+		setValue(false);
+	}, [setValue, tickOnce]);
 
 	return (
 		<HStack alignment="left">
@@ -144,7 +154,7 @@ const Autopilot = React.memo(() => {
 					onChange={setValue}
 				/>
 			</FormGroup>
-			<Button onClick={tickOnce}>Tick</Button>
+			<Button onClick={handleOnTickClick}>Tick</Button>
 		</HStack>
 	);
 });
@@ -249,18 +259,34 @@ const DataView = React.memo(() => {
 	);
 });
 
-const RenderView = React.memo(() => {
-	const state = useAppStoreState((state) => state);
-	const { height, opacity, searchQuery = '', width, x, y } = state;
-	const algo = clamp(
-		Math.round((searchQuery.length * 2 * width) / (height / 2)),
-		0,
-		200,
+const ItemView = ui.css`
+	position: absolute;
+	width: 100px;
+	height: 2px;
+	background: ${ui.get('colorText')};
+	opacity: 0.2;
+`;
+
+const RenderItemView = React.memo(({ id, offset }) => {
+	// Bind component to store, render it on coordinate changes
+	const coords = useItemStore((state) => state[id]);
+	const { value: reducedMotion } = useReducedMotion();
+	const [x] = coords;
+	const opacity = reducedMotion ? 0 : x / (window.innerWidth / 4);
+
+	return (
+		<View
+			className={ItemView}
+			style={{
+				transform: `translate(${x}px, ${offset}px)`,
+				opacity,
+			}}
+		/>
 	);
+});
 
-	const algoNum = isNaN(algo) ? 200 : algo;
-
-	const shapes = [...Array(algoNum)].fill(0);
+const RenderView = React.memo(() => {
+	const items = useItemStore((state) => state.items);
 
 	return (
 		<Card>
@@ -271,22 +297,8 @@ const RenderView = React.memo(() => {
 						position: relative;
 					`}
 				>
-					{shapes.map((v, index) => (
-						<View
-							key={index}
-							style={{
-								position: 'absolute',
-								top: 0,
-								left: 0,
-								transform: `translate(${+x * index}px, ${
-									+y * index
-								}px)`,
-								height: +width - index,
-								width: +width - index,
-								opacity: opacity / 100 - index / 100,
-								background: ui.get('colorText'),
-							}}
-						/>
+					{items.map((id, index) => (
+						<RenderItemView id={id} key={id} offset={index * 3} />
 					))}
 				</View>
 			</CardBody>
@@ -296,15 +308,13 @@ const RenderView = React.memo(() => {
 
 const Example = () => {
 	return (
-		<Grid templateColumns="1fr 1fr 2fr">
+		<Grid templateColumns="1fr 3fr">
 			<View>
 				<VStack expanded={false}>
 					<SimulatedSearchView />
+					<SimulatedControlsView />
 					<DataView />
 				</VStack>
-			</View>
-			<View>
-				<SimulatedControlsView />
 			</View>
 			<View>
 				<RenderView />
@@ -313,12 +323,35 @@ const Example = () => {
 	);
 };
 
+const ReducedMotionToggle = React.memo(() => {
+	const { toggle, value } = useReducedMotion();
+
+	return (
+		<FormGroup label="Reduced Motion" templateColumns="160px 60px">
+			<Switch checked={value} onChange={toggle} />
+		</FormGroup>
+	);
+});
+
 export const _default = () => {
 	return (
 		<AppContext.Provider value={{ dataStore }}>
 			<StatsGraph />
 			<Container>
 				<Spacer mb={8} py={4}>
+					<Spacer mb={5}>
+						<Alert status="warning">
+							<Text>
+								<span aria-label="Warning" role="img">
+									⚠️
+								</span>{' '}
+								<strong>Warning</strong>: The test contains
+								rapid flashing lights that may does discomfort
+								and/or seizures for those with photosensitive
+								epilepsy.
+							</Text>
+						</Alert>
+					</Spacer>
 					<VStack>
 						<Heading>Performance Tests</Heading>
 						<Text>
@@ -328,7 +361,10 @@ export const _default = () => {
 					</VStack>
 				</Spacer>
 				<Spacer my={4}>
-					<Autopilot />
+					<HStack>
+						<Autopilot />
+						<ReducedMotionToggle />
+					</HStack>
 				</Spacer>
 				<Example />
 			</Container>
