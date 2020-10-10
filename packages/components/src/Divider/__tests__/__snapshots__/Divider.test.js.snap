@@ -3,7 +3,7 @@
 exports[`props should render correctly 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider css-q6ydzw"
+  class="css-q6ydzw wp-components-divider"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"

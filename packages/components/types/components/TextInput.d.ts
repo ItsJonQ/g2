@@ -4,17 +4,23 @@ import { BaseFieldProps } from './BaseField';
 
 export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	/**
+	 * The amount of space between each child element.
+	 *
+	 * @default 2.5
+	 */
+	gap?: number;
+	/**
 	 * Renders a `cursor: pointer` on hover.
 	 *
 	 * @default false
 	 */
 	isClickable?: boolean;
 	/**
-	 * The amount of space between each child element.
+	 * Fires the `onChange` callback after pressing `ENTER` or focusing away.
 	 *
 	 * @default 2.5
 	 */
-	gap?: number;
+	isCommitOnBlurOrEnter?: boolean;
 	/**
 	 * Renders with rounded corners.
 	 *

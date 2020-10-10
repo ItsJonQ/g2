@@ -1,3 +1,4 @@
+import { StatsGraph } from '@helpscout/stats';
 import {
 	Badge,
 	Card,
@@ -369,6 +370,7 @@ const Example = () => {
 export const _default = () => {
 	return (
 		<AppContext.Provider value={{ dataStore }}>
+			<StatsGraph />
 			<Container>
 				<Spacer mb={8} py={4}>
 					<VStack>

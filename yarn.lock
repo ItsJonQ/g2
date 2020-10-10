@@ -1499,6 +1499,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@helpscout/stats@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@helpscout/stats/-/stats-0.0.5.tgz#37a22f25ec3a8c409106139a8ac34c706f34ddd9"
+  integrity sha512-Amh8AVMQwropQR35am5QdkMDDnqHTTsJiC9qZWw98H3RMf0lTtsXMcncGNbqO1yrknfLB51yQMg10c7zEqHFnQ==
+
 "@humanmade/react-slot-fill@^0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@humanmade/react-slot-fill/-/react-slot-fill-0.0.4.tgz#070a61a623762498865d039cf08ebc8bb52e3082"

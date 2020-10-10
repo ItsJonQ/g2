@@ -64,7 +64,7 @@ export function useContextSystem(props, namespace, forwardedRef) {
 
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider
-		css(contextCSS),
+		contextCSS && css(contextCSS),
 		// Resolve custom CSS from props
 		initialMergedProps.cx,
 		initialMergedProps.__css && css(initialMergedProps.__css),

@@ -64,7 +64,7 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-collapsible-content wp-components-panel-body css-li0a7z"
+    class="css-li0a7z wp-components-collapsible-content wp-components-panel-body"
     data-g2-c16t="true"
     data-g2-component="PanelBody"
     hidden=""
@@ -152,7 +152,7 @@ exports[`props should render seamless 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-collapsible-content wp-components-panel-body css-li0a7z"
+    class="css-li0a7z wp-components-collapsible-content wp-components-panel-body"
     data-g2-c16t="true"
     data-g2-component="PanelBody"
     hidden=""
@@ -239,7 +239,7 @@ exports[`props should render visible 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-collapsible-content wp-components-panel-body css-li0a7z"
+    class="css-li0a7z wp-components-collapsible-content wp-components-panel-body"
     data-g2-c16t="true"
     data-g2-component="PanelBody"
     id="panel"

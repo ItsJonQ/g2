@@ -9,7 +9,7 @@ import {
 	useSealedState,
 	useUpdateEffect,
 } from '@wp-g2/utils';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { useBaseField } from '../BaseField';
@@ -505,18 +505,26 @@ export function useTextInput(props) {
 
 	const InputComponent = multiline ? TextareaAutosize : 'input';
 
-	const classes = cx(
-		baseFieldProps.className,
-		multiline && styles.multiline,
-		className,
+	const classes = useMemo(
+		() =>
+			cx(
+				baseFieldProps.className,
+				multiline && styles.multiline,
+				className,
+			),
+		[baseFieldProps.className, className, multiline],
 	);
 
-	const inputClasses = cx(
-		styles.Input,
-		styles[size],
-		multiline && styles.inputMultiline,
-		isResizable && styles.resizable,
-		multiline && styles.scrollableScrollbar,
+	const inputClasses = useMemo(
+		() =>
+			cx(
+				styles.Input,
+				styles[size],
+				multiline && styles.inputMultiline,
+				isResizable && styles.resizable,
+				multiline && styles.scrollableScrollbar,
+			),
+		[isResizable, multiline, size],
 	);
 
 	const inputProps = {

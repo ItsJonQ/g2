@@ -25,6 +25,7 @@
     "@wp-g2/styles": "^0.0.92",
     "@wp-g2/substate": "^0.0.92",
     "@wp-g2/utils": "^0.0.92",
+    "@helpscout/stats": "^0.0.5",
     "jotai": "^0.7.1",
     "yup": "^0.29.3"
   },
