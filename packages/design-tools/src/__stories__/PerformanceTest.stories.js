@@ -262,7 +262,6 @@ const RenderView = React.memo(() => {
 
 	const shapes = [...Array(algoNum)].fill(0);
 
-	console.log(algo);
 	return (
 		<Card>
 			<CardBody>
