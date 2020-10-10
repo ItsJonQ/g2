@@ -1,6 +1,7 @@
 import { StatsGraph } from '@helpscout/stats';
 import {
 	Alert,
+	Alerts,
 	Badge,
 	Button,
 	Card,
@@ -340,17 +341,19 @@ export const _default = () => {
 			<Container>
 				<Spacer mb={8} py={4}>
 					<Spacer mb={5}>
-						<Alert status="warning">
-							<Text>
-								<span aria-label="Warning" role="img">
-									⚠️
-								</span>{' '}
-								<strong>Warning</strong>: The test contains
-								rapid flashing lights that may does discomfort
-								and/or seizures for those with photosensitive
-								epilepsy.
-							</Text>
-						</Alert>
+						<Alerts>
+							<Alert status="warning">
+								<Text>
+									<span aria-label="Warning" role="img">
+										⚠️
+									</span>{' '}
+									<strong>Warning</strong>: The test contains
+									rapid flashing lights that may does
+									discomfort and/or seizures for those with
+									photosensitive epilepsy.
+								</Text>
+							</Alert>
+						</Alerts>
 					</Spacer>
 					<VStack>
 						<Heading>Performance Tests</Heading>
