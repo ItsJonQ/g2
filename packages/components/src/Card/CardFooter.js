@@ -1,6 +1,6 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { Flex } from '../Flex';
 import * as styles from './Card.styles';
@@ -13,11 +13,15 @@ function CardFooter(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'CardFooter');
 
-	const classes = cx(
-		styles.borderRadius,
-		styles.headerFooter,
-		styles[size],
-		className,
+	const classes = useMemo(
+		() =>
+			cx(
+				styles.borderRadius,
+				styles.headerFooter,
+				styles[size],
+				className,
+			),
+		[className, size],
 	);
 
 	return (

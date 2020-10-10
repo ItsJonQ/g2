@@ -1,6 +1,6 @@
 import { contextConnect } from '@wp-g2/context';
-import { ui } from '@wp-g2/styles';
-import React from 'react';
+import { css, ui } from '@wp-g2/styles';
+import React, { useMemo } from 'react';
 
 import { Elevation } from '../Elevation';
 import { View } from '../View';
@@ -11,19 +11,24 @@ function Card(props, forwardedRef) {
 	const { children, elevation, isRounded, ...otherProps } = useCard(props);
 	const elevationBorderRadius = isRounded ? ui.get('cardBorderRadius') : 0;
 
+	const elevationClassName = useMemo(
+		() => css({ borderRadius: elevationBorderRadius }),
+		[elevationBorderRadius],
+	);
+
 	return (
 		<View {...otherProps} ref={forwardedRef}>
 			<View {...ui.$('CardContent')} css={styles.Content}>
 				{children}
 			</View>
 			<Elevation
-				css={{ borderRadius: elevationBorderRadius }}
+				className={elevationClassName}
 				isInteractive={false}
 				value={elevation ? 1 : 0}
 				{...ui.$('CardElevation')}
 			/>
 			<Elevation
-				css={{ borderRadius: elevationBorderRadius }}
+				className={elevationClassName}
 				isInteractive={false}
 				value={elevation}
 				{...ui.$('CardElevation')}

@@ -26,8 +26,7 @@ export function useScrollable(props) {
 		[className, scrollDirection, smoothScroll],
 	);
 
-	return {
-		...otherProps,
+	return Object.assign(otherProps, {
 		className: classes,
-	};
+	});
 }

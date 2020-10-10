@@ -2,7 +2,6 @@ import { StatsGraph } from '@helpscout/stats';
 import {
 	Alert,
 	Alerts,
-	Badge,
 	Button,
 	Card,
 	CardBody,
@@ -12,7 +11,6 @@ import {
 	Heading,
 	HStack,
 	ListGroup,
-	ListGroupHeader,
 	SearchInput,
 	Slider,
 	Spacer,
@@ -25,10 +23,9 @@ import {
 import { faker } from '@wp-g2/protokit';
 import { ui } from '@wp-g2/styles';
 import { createStore, useSubState } from '@wp-g2/substate';
-import { clamp } from '@wp-g2/utils';
 import React from 'react';
 
-const ids = [...Array(150)].fill(0).map((v, i) => i);
+const ids = [...Array(120)].fill(0).map((v, i) => i);
 const calcXY = () => [
 	(Math.random() * window.innerWidth) / 2.5,
 	(Math.random() * window.innerHeight) / 2,
@@ -278,7 +275,7 @@ const RenderItemView = React.memo(({ id, offset }) => {
 	const coords = useItemStore((state) => state[id]);
 	const { value: reducedMotion } = useReducedMotion();
 	const [x] = coords;
-	const opacity = reducedMotion ? 0 : x / (window.innerWidth / 4);
+	const opacity = reducedMotion ? 0 : 0.2;
 
 	return (
 		<View

@@ -527,26 +527,29 @@ export function useTextInput(props) {
 		[isResizable, multiline, size],
 	);
 
-	const inputProps = {
-		as: InputComponent,
-		...otherProps,
-		...eventHandlers,
-		className: inputClasses,
-		id,
-		min,
-		max,
-		step,
-		type,
-		value,
-	};
+	const inputProps = Object.assign(
+		{
+			as: InputComponent,
+		},
+		otherProps,
+		eventHandlers,
+		{
+			className: inputClasses,
+			id,
+			min,
+			max,
+			step,
+			type,
+			value,
+		},
+	);
 
-	return {
-		...baseFieldProps,
+	return Object.assign(baseFieldProps, {
 		__store: store,
 		dragAxis,
 		inputProps,
 		inputRef,
 		onClick: handleOnRootClick,
 		className: classes,
-	};
+	});
 }

@@ -129,8 +129,10 @@ const UpDownArrows = React.memo(
 		const timeoutDurationEnd = 20;
 		const timeoutDurationRef = useRef(timeoutDurationStart);
 
-		const handleOnClearTimers = useCallback((event) => {
-			clearTimeout(timeoutRef.current);
+		const handleOnClearTimers = useCallback(() => {
+			if (timeoutRef.current) {
+				clearTimeout(timeoutRef.current);
+			}
 			timeoutDurationRef.current = timeoutDurationStart;
 		}, []);
 

@@ -134,8 +134,7 @@ export function useText(props) {
 		});
 	}
 
-	return {
-		...truncateProps,
+	return Object.assign(truncateProps, {
 		children: truncate ? truncateProps.children : content,
-	};
+	});
 }

@@ -51,15 +51,6 @@ export function useFlex(props) {
 				marginRight: !isColumn && isReverse ? ui.space(gap) : null,
 				marginLeft: !isColumn && !isReverse ? ui.space(gap) : null,
 			},
-			/**
-			 * Workaround to help with performance. Using CSS rules to target rather
-			 * than passing data via context.
-			 */
-			// '> *:last-child': {
-			// 	marginBottom: isColumn && 0,
-			// 	marginRight: !isColumn && !isReverse && 0,
-			// 	marginLeft: !isColumn && isReverse && 0,
-			// },
 		});
 
 		return cx(styles.Flex, sx.Base, className);
@@ -75,8 +66,5 @@ export function useFlex(props) {
 		wrap,
 	]);
 
-	return {
-		...otherProps,
-		className: classes,
-	};
+	return Object.assign(otherProps, { className: classes });
 }

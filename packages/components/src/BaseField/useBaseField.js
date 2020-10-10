@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
+import { useMemo } from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { useFlex } from '../Flex';
@@ -16,16 +17,22 @@ export function useBaseField(props) {
 
 	const { styles: controlGroupStyles } = useControlGroupContext();
 
-	const classes = cx(
-		styles.BaseField,
-		controlGroupStyles,
-		isClickable && styles.clickable,
-		isFocused && styles.focus,
-		isSubtle && styles.subtle,
-		className,
+	const classes = useMemo(
+		() =>
+			cx(
+				styles.BaseField,
+				controlGroupStyles,
+				isClickable && styles.clickable,
+				isFocused && styles.focus,
+				isSubtle && styles.subtle,
+				className,
+			),
+		[className, controlGroupStyles, isClickable, isFocused, isSubtle],
 	);
 
-	const flexProps = useFlex({ className: classes, ...otherProps });
+	const flexProps = useFlex(
+		Object.assign(otherProps, { className: classes }),
+	);
 
 	return flexProps;
 }

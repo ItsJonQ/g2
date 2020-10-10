@@ -18,19 +18,19 @@ export function useElevation(props) {
 		...otherProps
 	} = useContextSystem(props, 'Elevation');
 
-	let hoverValue = is.defined(hover) ? hover : value * 2;
-	let activeValue = is.defined(active) ? hover : value / 2;
-
-	if (!isInteractive) {
-		hoverValue = is.defined(hover) ? hover : undefined;
-		activeValue = is.defined(active) ? active : undefined;
-	}
-
-	const transition = `box-shadow ${ui.get('transitionDuration')} ${ui.get(
-		'transitionTimingFunction',
-	)}`;
-
 	const classes = useMemo(() => {
+		let hoverValue = is.defined(hover) ? hover : value * 2;
+		let activeValue = is.defined(active) ? hover : value / 2;
+
+		if (!isInteractive) {
+			hoverValue = is.defined(hover) ? hover : undefined;
+			activeValue = is.defined(active) ? active : undefined;
+		}
+
+		const transition = `box-shadow ${ui.get('transitionDuration')} ${ui.get(
+			'transitionTimingFunction',
+		)}`;
+
 		const sx = {};
 
 		sx.Base = css({
@@ -72,18 +72,15 @@ export function useElevation(props) {
 			className,
 		);
 	}, [
-		activeValue,
+		active,
 		borderRadius,
 		className,
 		focus,
-		hoverValue,
+		hover,
+		isInteractive,
 		offset,
-		transition,
 		value,
 	]);
 
-	return {
-		...otherProps,
-		className: classes,
-	};
+	return Object.assign(otherProps, { className: classes });
 }
