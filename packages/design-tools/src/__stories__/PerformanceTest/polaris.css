@@ -1,0 +1,42 @@
+.vstack {
+	display: flex;
+	flex-direction: column;
+}
+
+.vstack > * + * {
+	margin-top: 10px;
+}
+
+.data-content {
+	font-size: 10px;
+	line-height: 10px;
+	word-break: break-all;
+	white-space: break-spaces;
+}
+
+.grid-content {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 20px;
+}
+
+.stripe-ui {
+	position: absolute;
+	width: 100px;
+	height: 2px;
+	background: #999;
+	transition: transform 200ms ease-in-out;
+	opacity: 0.2;
+}
+
+.render-view {
+	height: 50vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider-number-input {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
