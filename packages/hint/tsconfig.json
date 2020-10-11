@@ -6,13 +6,9 @@
 	},
 	"include": ["src/**/*"],
 	"references": [
-		{ "path": "../a11y" },
-		{ "path": "../animations" },
-		{ "path": "../context" },
-		{ "path": "../gestures" },
+		{ "path": "../components" },
 		{ "path": "../icons" },
 		{ "path": "../styles" },
-		{ "path": "../substate" },
 		{ "path": "../utils" }
 	]
 }

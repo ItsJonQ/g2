@@ -1,35 +1,23 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"allowSyntheticDefaultImports": true,
-		"baseUrl": ".",
-		"declaration": true,
-		"esModuleInterop": true,
-		"emitDeclarationOnly": true,
-		"jsx": "react",
-		"lib": ["dom"],
-		"module": "esnext",
-		"moduleResolution": "node",
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitAny": false,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"resolveJsonModule": true,
-		"strict": true,
-		"strictFunctionTypes": false,
-		"stripInternal": true,
-		"target": "esnext"
-	},
-	"include": ["packages/*/types/**/*"],
-	"exclude": [
-		"dist",
-		"src",
-		"node_modules",
-		".remake",
-		".github",
-		".storybook",
-		"packages/website",
-		"packages/**/dist"
-	]
+	"references": [
+		{ "path": "packages/a11y" },
+		{ "path": "packages/animations" },
+		{ "path": "packages/atomic" },
+		{ "path": "packages/babel-plugin-styles" },
+		{ "path": "packages/block-controls" },
+		{ "path": "packages/components" },
+		{ "path": "packages/context" },
+		{ "path": "packages/create-styles" },
+		{ "path": "packages/design-tools" },
+		{ "path": "packages/gatsby-plugin-styles" },
+		{ "path": "packages/gestures" },
+		{ "path": "packages/hint" },
+		{ "path": "packages/icons" },
+		{ "path": "packages/protokit" },
+		{ "path": "packages/styles" },
+		{ "path": "packages/substate" },
+		{ "path": "packages/utils" },
+		{ "path": "packages/website" }
+	],
+	"files": []
 }
