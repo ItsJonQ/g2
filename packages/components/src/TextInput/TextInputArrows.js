@@ -41,20 +41,19 @@ function TextInputArrows(props, forwardedRef) {
 	});
 
 	return (
-		<View {...dragGestures()}>
-			<VStack
-				className={styles.Spinner}
-				expanded={true}
-				spacing={0}
-				{...ui.$('TextInputArrows')}
-				ref={forwardedRef}
-			>
-				<UpDownArrows
-					onDecrement={decrementValue}
-					onIncrement={incrementValue}
-				/>
-			</VStack>
-		</View>
+		<VStack
+			{...dragGestures()}
+			className={styles.Spinner}
+			expanded={true}
+			spacing={0}
+			{...ui.$('TextInputArrows')}
+			ref={forwardedRef}
+		>
+			<UpDownArrows
+				onDecrement={decrementValue}
+				onIncrement={incrementValue}
+			/>
+		</VStack>
 	);
 }
 
