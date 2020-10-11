@@ -181,7 +181,7 @@ const UpDownArrows = React.memo(
 
 		return (
 			<>
-				<View
+				<Icon
 					className={styles.SpinnerArrowUp}
 					onClick={onIncrement}
 					onMouseDown={handleOnMouseDownIncrement}
@@ -189,10 +189,12 @@ const UpDownArrows = React.memo(
 					onMouseUp={handleOnClearTimers}
 					tabIndex={-1}
 					{...ui.$('TextInputArrowUp')}
-				>
-					<Icon icon={arrowUp} size={12} />
-				</View>
-				<View
+					icon={arrowUp}
+					size={12}
+					width={20}
+				/>
+
+				<Icon
 					className={styles.SpinnerArrowDown}
 					onClick={onDecrement}
 					onMouseDown={handleOnMouseDownDecrement}
@@ -200,9 +202,10 @@ const UpDownArrows = React.memo(
 					onMouseUp={handleOnClearTimers}
 					tabIndex={-1}
 					{...ui.$('TextInputArrowDown')}
-				>
-					<Icon icon={arrowDown} size={12} />
-				</View>
+					icon={arrowDown}
+					size={12}
+					width={20}
+				/>
 			</>
 		);
 	},

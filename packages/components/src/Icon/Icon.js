@@ -1,6 +1,6 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { View } from '../View';
 import * as styles from './Icon.styles';
@@ -8,24 +8,38 @@ import * as styles from './Icon.styles';
 function Icon(props, forwardedRef) {
 	const {
 		children,
+		className,
 		color,
+		height,
 		icon,
 		inline,
 		size = 20,
+		width,
 		...otherProps
 	} = useContextSystem(props, 'Icon');
 
+	const classes = useMemo(() => {
+		const sx = {};
+
+		sx.color = css({
+			color,
+		});
+
+		sx.size = css({
+			height: height || size,
+			width: width || size,
+		});
+
+		return cx(
+			styles.Wrapper,
+			sx.color,
+			sx.size,
+			inline && styles.inline,
+			className,
+		);
+	}, [className, color, height, inline, size, width]);
+
 	if (!icon) return null;
-	const sx = {};
-
-	sx.color = css({
-		color,
-	});
-
-	sx.size = css({
-		height: size,
-		width: size,
-	});
 
 	const IconComponent = React.cloneElement(icon, {
 		height: size,
@@ -34,15 +48,8 @@ function Icon(props, forwardedRef) {
 		width: size,
 	});
 
-	const __css = cx(
-		styles.Wrapper,
-		sx.color,
-		sx.size,
-		inline && styles.inline,
-	);
-
 	return (
-		<View {...otherProps} cx={__css}>
+		<View {...otherProps} className={classes}>
 			{IconComponent}
 		</View>
 	);

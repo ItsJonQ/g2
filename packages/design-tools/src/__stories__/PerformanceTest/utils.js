@@ -75,12 +75,6 @@ export const useDataOutput = () => {
 		JSON.stringify(items),
 		JSON.stringify(items),
 		JSON.stringify(items),
-		JSON.stringify(items),
-		JSON.stringify(items),
-		JSON.stringify(items),
-		JSON.stringify(items),
-		JSON.stringify(items),
-		JSON.stringify(items),
 	].join('');
 };
 

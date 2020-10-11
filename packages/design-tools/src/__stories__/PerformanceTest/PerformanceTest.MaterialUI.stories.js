@@ -126,7 +126,9 @@ const SimulatedSearchView = React.memo(() => {
 
 const SimulatedControlsView = React.memo(() => {
 	const styles = useVStackStyles();
-	const items = useItemStore((state) => state.items);
+	const items = useItemStore((state) =>
+		state.items.filter((v, i) => i % 3 === 0),
+	);
 
 	return (
 		<Card>
