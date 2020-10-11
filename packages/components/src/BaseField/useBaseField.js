@@ -30,9 +30,7 @@ export function useBaseField(props) {
 		[className, controlGroupStyles, isClickable, isFocused, isSubtle],
 	);
 
-	const flexProps = useFlex(
-		Object.assign(otherProps, { className: classes }),
-	);
+	const flexProps = useFlex({ ...otherProps, className: classes });
 
 	return flexProps;
 }

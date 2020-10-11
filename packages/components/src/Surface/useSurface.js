@@ -53,7 +53,5 @@ export function useSurface(props) {
 		variant,
 	]);
 
-	return Object.assign(otherProps, {
-		className: classes,
-	});
+	return { ...otherProps, className: classes };
 }

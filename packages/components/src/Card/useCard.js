@@ -23,12 +23,11 @@ export function useCard(props) {
 		);
 	}, [className, isBorderless, isRounded]);
 
-	const surfaceProps = useSurface(
-		Object.assign(otherProps, { className: classes }),
-	);
+	const surfaceProps = useSurface({ ...otherProps, className: classes });
 
-	return Object.assign(surfaceProps, {
+	return {
+		...surfaceProps,
 		elevation,
 		isRounded,
-	});
+	};
 }

@@ -45,18 +45,14 @@ export function useHStack(props) {
 		);
 	}, [className, spacing]);
 
-	const propsForFlex = Object.assign(
-		{
-			className: classes,
-			children: clonedChildren,
-			justify: 'center',
-		},
-		align,
-		otherProps,
-		{
-			gap: spacing,
-		},
-	);
+	const propsForFlex = {
+		className: classes,
+		children: clonedChildren,
+		justify: 'center',
+		...align,
+		...otherProps,
+		gap: spacing,
+	};
 
 	const flexProps = useFlex(propsForFlex);
 

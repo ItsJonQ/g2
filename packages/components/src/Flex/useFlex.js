@@ -66,5 +66,5 @@ export function useFlex(props) {
 		wrap,
 	]);
 
-	return Object.assign(otherProps, { className: classes });
+	return { ...otherProps, className: classes };
 }

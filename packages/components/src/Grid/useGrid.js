@@ -51,5 +51,5 @@ export function useGrid(props) {
 		rowGap,
 	]);
 
-	return Object.assign(otherProps, { className: classes });
+	return { ...otherProps, className: classes };
 }

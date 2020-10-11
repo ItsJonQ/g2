@@ -47,8 +47,5 @@ export function useTruncate(props) {
 		);
 	}, [className, numberOfLines, shouldTruncate]);
 
-	return Object.assign(otherProps, {
-		className: classes,
-		children: truncatedContent,
-	});
+	return { ...otherProps, className: classes, children: truncatedContent };
 }

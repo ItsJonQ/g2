@@ -82,5 +82,5 @@ export function useElevation(props) {
 		value,
 	]);
 
-	return Object.assign(otherProps, { className: classes });
+	return { ...otherProps, className: classes };
 }
