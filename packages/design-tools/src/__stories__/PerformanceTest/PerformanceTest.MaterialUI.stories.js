@@ -15,7 +15,7 @@ import {
 	dataStore,
 	PageHeader,
 	useAppStoreState,
-	useItemData,
+	useDataOutput,
 	useItemStore,
 	useReducedMotion,
 } from './utils';
@@ -33,19 +33,20 @@ const useVStackStyles = makeStyles((theme) => ({
 }));
 
 const HighPerfSlider = React.memo(({ prop, ...props }) => {
-	const [value, setState] = useAppStoreState((state) => [
-		state[prop],
-		state.setState,
-	]);
+	const coords = useItemStore((state) => state[prop]);
+	const setItem = useItemStore((state) => state.setItem);
+	const [value, y] = coords;
 
 	const handleOnChange = React.useCallback(
-		(event, newValue) => setState({ [prop]: newValue }),
-		[prop, setState],
+		(event, next) => {
+			setItem({ id: prop, value: [next, y] });
+		},
+		[prop, setItem, y],
 	);
 
 	return (
 		<Slider
-			max={100}
+			max={1000}
 			min={0}
 			onChange={handleOnChange}
 			value={value}
@@ -55,19 +56,20 @@ const HighPerfSlider = React.memo(({ prop, ...props }) => {
 });
 
 const HighPerfTextInput = React.memo(({ prop, ...props }) => {
-	const [value, setState] = useAppStoreState((state) => [
-		state[prop],
-		state.setState,
-	]);
+	const coords = useItemStore((state) => state[prop]);
+	const setItem = useItemStore((state) => state.setItem);
+	const [value, y] = coords;
 
 	const handleOnChange = React.useCallback(
-		(event) => setState({ [prop]: event.target.value }),
-		[prop, setState],
+		(event) => {
+			setItem({ id: prop, value: [event.target.value, y] });
+		},
+		[prop, setItem, y],
 	);
 
 	return (
 		<TextField
-			max={100}
+			max={1000}
 			min={0}
 			onChange={handleOnChange}
 			value={value}
@@ -79,14 +81,19 @@ const HighPerfTextInput = React.memo(({ prop, ...props }) => {
 const SliderNumberInput = React.memo(({ prop }) => {
 	return (
 		<Grid container spacing={2}>
-			<Grid item xs={4}>
+			<Grid item xs={2}>
 				<Typography>{prop}</Typography>
 			</Grid>
-			<Grid item xs={4}>
+			<Grid item xs={5}>
 				<HighPerfSlider prop={prop} />
 			</Grid>
-			<Grid item xs={4}>
-				<HighPerfTextInput data-test={prop} prop={prop} type="number" />
+			<Grid item xs={5}>
+				<HighPerfTextInput
+					data-test={prop}
+					fullWidth
+					prop={prop}
+					type="number"
+				/>
 			</Grid>
 		</Grid>
 	);
@@ -119,16 +126,15 @@ const SimulatedSearchView = React.memo(() => {
 
 const SimulatedControlsView = React.memo(() => {
 	const styles = useVStackStyles();
+	const items = useItemStore((state) => state.items);
 
 	return (
 		<Card>
 			<CardContent>
 				<Box className={styles.root}>
-					<SliderNumberInput prop="height" />
-					<SliderNumberInput prop="width" />
-					<SliderNumberInput prop="opacity" />
-					<SliderNumberInput prop="x" />
-					<SliderNumberInput prop="y" />
+					{items.map((prop) => (
+						<SliderNumberInput key={prop} prop={prop} />
+					))}
 				</Box>
 			</CardContent>
 		</Card>
@@ -145,18 +151,14 @@ const useDataViewStyles = makeStyles(() => ({
 }));
 
 const DataView = React.memo(() => {
-	const state = useAppStoreState((state) => state);
-	const items = useItemData();
+	const data = useDataOutput();
 
 	const styles = useDataViewStyles();
 
 	return (
-		<Card cklas>
+		<Card>
 			<CardContent>
-				<Box className={styles.data}>
-					{JSON.stringify(state)}
-					{JSON.stringify(items)}
-				</Box>
+				<Box className={styles.data}>{data}</Box>
 			</CardContent>
 		</Card>
 	);
@@ -223,10 +225,10 @@ const Example = () => {
 			<Grid className={vStackStyles.root} item xs={4}>
 				<SimulatedSearchView />
 				<SimulatedControlsView />
-				<DataView />
 			</Grid>
-			<Grid item xs={8}>
+			<Grid className={vStackStyles.root} item xs={8}>
 				<RenderView />
+				<DataView />
 			</Grid>
 		</Grid>
 	);

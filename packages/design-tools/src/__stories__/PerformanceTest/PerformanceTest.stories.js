@@ -20,7 +20,7 @@ import {
 	dataStore,
 	PageHeader,
 	useAppStoreState,
-	useItemData,
+	useDataOutput,
 	useItemStore,
 	useReducedMotion,
 } from './utils';
@@ -30,19 +30,20 @@ export default {
 };
 
 const HighPerfControl = React.memo(({ prop, ...props }) => {
-	const [value, setState] = useAppStoreState((state) => [
-		state[prop],
-		state.setState,
-	]);
+	const coords = useItemStore((state) => state[prop]);
+	const setItem = useItemStore((state) => state.setItem);
+	const [value, y] = coords;
 
 	const handleOnChange = React.useCallback(
-		(next) => setState({ [prop]: next }),
-		[prop, setState],
+		(next) => {
+			setItem({ id: prop, value: [next, y] });
+		},
+		[prop, setItem, y],
 	);
 
 	return (
 		<View
-			max={100}
+			max={1000}
 			min={0}
 			onChange={handleOnChange}
 			value={value}
@@ -53,15 +54,10 @@ const HighPerfControl = React.memo(({ prop, ...props }) => {
 
 const SliderNumberInput = React.memo(({ prop }) => {
 	return (
-		<FormGroup label={prop}>
+		<FormGroup label={`${prop}`} templateColumns="50px 1fr">
 			<Grid>
 				<HighPerfControl as={Slider} prop={prop} />
-				<HighPerfControl
-					as={TextInput}
-					data-test={prop}
-					prop={prop}
-					type="number"
-				/>
+				<HighPerfControl as={TextInput} prop={prop} type="number" />
 			</Grid>
 		</FormGroup>
 	);
@@ -93,15 +89,15 @@ const SimulatedSearchView = React.memo(() => {
 });
 
 const SimulatedControlsView = React.memo(() => {
+	const items = useItemStore((state) => state.items);
+
 	return (
 		<Card>
 			<CardBody>
 				<ListGroup>
-					<SliderNumberInput prop="height" />
-					<SliderNumberInput prop="width" />
-					<SliderNumberInput prop="opacity" />
-					<SliderNumberInput prop="x" />
-					<SliderNumberInput prop="y" />
+					{items.map((prop) => (
+						<SliderNumberInput key={prop} prop={prop} />
+					))}
 				</ListGroup>
 			</CardBody>
 		</Card>
@@ -109,8 +105,7 @@ const SimulatedControlsView = React.memo(() => {
 });
 
 const DataView = React.memo(() => {
-	const state = useAppStoreState((state) => state);
-	const items = useItemData();
+	const data = useDataOutput();
 
 	return (
 		<Card>
@@ -123,8 +118,7 @@ const DataView = React.memo(() => {
 						white-space: break-spaces;
 					`}
 				>
-					{JSON.stringify(state)}
-					{JSON.stringify(items)}
+					{data}
 				</View>
 			</CardBody>
 		</Card>
@@ -166,7 +160,7 @@ const RenderView = React.memo(() => {
 			<CardBody>
 				<View
 					css={`
-						height: 50vh;
+						height: 375px;
 						position: relative;
 					`}
 				>
@@ -186,11 +180,13 @@ const Example = () => {
 				<VStack expanded={false}>
 					<SimulatedSearchView />
 					<SimulatedControlsView />
-					<DataView />
 				</VStack>
 			</View>
 			<View>
-				<RenderView />
+				<VStack expanded={false}>
+					<RenderView />
+					<DataView />
+				</VStack>
 			</View>
 		</Grid>
 	);

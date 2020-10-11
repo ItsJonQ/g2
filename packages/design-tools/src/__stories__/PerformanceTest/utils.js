@@ -16,13 +16,14 @@ import React from 'react';
 
 const ids = [...Array(120)].fill(0).map((v, i) => i);
 const calcXY = () => [
-	(Math.random() * window.innerWidth) / 2.5,
-	(Math.random() * window.innerHeight) / 2,
+	Math.round((Math.random() * window.innerWidth) / 2.5),
+	Math.round((Math.random() * window.innerHeight) / 2),
 ];
 
 export const useItemStore = createStore((set) => ({
 	items: ids,
 	...ids.reduce((acc, id) => ({ ...acc, [id]: calcXY() }), 0),
+	setItem: ({ id, value }) => set({ [id]: value }),
 	advance() {
 		// Set all coordinates randomly
 		set((state) => {
@@ -38,7 +39,7 @@ export const useItemData = () => {
 	const itemstore = useItemStore();
 	const items = Object.keys(itemstore)
 		.filter((v, i) => i < 149)
-		.map((i) => Math.round(itemstore[i][0]));
+		.map((i) => itemstore[i]);
 
 	return items;
 };
@@ -49,14 +50,39 @@ export const useReducedMotion = createStore((set) => ({
 }));
 
 export const dataStore = createStore((set) => ({
-	height: 50,
-	width: 50,
-	x: 0,
-	y: 0,
-	opacity: 100,
 	searchQuery: '',
 	setState: set,
 }));
+
+export const useDataOutput = () => {
+	const state = useAppStoreState((state) => state);
+	const items = useItemData();
+
+	return [
+		JSON.stringify(state),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+		JSON.stringify(items),
+	].join('');
+};
 
 export const AppContext = React.createContext({ dataStore });
 export const useAppContext = () => React.useContext(AppContext);
@@ -73,20 +99,7 @@ export const Autopilot = React.memo(() => {
 
 	const tickOnce = React.useCallback(() => {
 		cancelAnimationFrame(autoPilotTimerRef.current);
-
-		const nextProp = faker.random.arrayElement([
-			'height',
-			'width',
-			'opacity',
-			'x',
-			'y',
-		]);
-		const nextPropValue = faker.random.number({
-			min: 0,
-			max: 100,
-		});
 		dataStore.setState({ searchQuery: faker.lorem.sentence() });
-		dataStore.setState({ [nextProp]: nextPropValue });
 	}, []);
 
 	React.useEffect(() => {

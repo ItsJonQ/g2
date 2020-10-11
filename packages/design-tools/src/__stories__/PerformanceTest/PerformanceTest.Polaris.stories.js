@@ -17,7 +17,7 @@ import {
 	dataStore,
 	PageHeader,
 	useAppStoreState,
-	useItemData,
+	useDataOutput,
 	useItemStore,
 	useReducedMotion,
 } from './utils';
@@ -27,19 +27,20 @@ export default {
 };
 
 const HighPerfSlider = React.memo(({ prop, ...props }) => {
-	const [value, setState] = useAppStoreState((state) => [
-		state[prop],
-		state.setState,
-	]);
+	const coords = useItemStore((state) => state[prop]);
+	const setItem = useItemStore((state) => state.setItem);
+	const [value, y] = coords;
 
 	const handleOnChange = React.useCallback(
-		(next) => setState({ [prop]: next }),
-		[prop, setState],
+		(next) => {
+			setItem({ id: prop, value: [next, y] });
+		},
+		[prop, setItem, y],
 	);
 
 	return (
 		<RangeSlider
-			max={100}
+			max={1000}
 			min={0}
 			onChange={handleOnChange}
 			value={value}
@@ -49,21 +50,20 @@ const HighPerfSlider = React.memo(({ prop, ...props }) => {
 });
 
 const HighPerfTextInput = React.memo(({ prop, ...props }) => {
-	const [value, setState] = useAppStoreState((state) => [
-		state[prop],
-		state.setState,
-	]);
+	const coords = useItemStore((state) => state[prop]);
+	const setItem = useItemStore((state) => state.setItem);
+	const [value, y] = coords;
 
 	const handleOnChange = React.useCallback(
-		(next) => setState({ [prop]: next }),
-		[prop, setState],
+		(next) => {
+			setItem({ id: prop, value: [next, y] });
+		},
+		[prop, setItem, y],
 	);
-
-	console.log(value);
 
 	return (
 		<TextField
-			max={100}
+			max={1000}
 			min={0}
 			onChange={handleOnChange}
 			value={value.toString()}
@@ -83,14 +83,14 @@ const SliderNumberInput = React.memo(({ prop }) => {
 });
 
 const SimulatedControlsView = React.memo(() => {
+	const items = useItemStore((state) => state.items);
+
 	return (
 		<Card sectioned>
 			<div className="vstack">
-				<SliderNumberInput prop="height" />
-				<SliderNumberInput prop="width" />
-				<SliderNumberInput prop="opacity" />
-				<SliderNumberInput prop="x" />
-				<SliderNumberInput prop="y" />
+				{items.map((prop) => (
+					<SliderNumberInput key={prop} prop={prop} />
+				))}
 			</div>
 		</Card>
 	);
@@ -152,15 +152,10 @@ const SimulatedSearchView = React.memo(() => {
 });
 
 const DataView = React.memo(() => {
-	const state = useAppStoreState((state) => state);
-	const items = useItemData();
-
+	const data = useDataOutput();
 	return (
 		<Card sectioned>
-			<div className="data-content">
-				{JSON.stringify(state)}
-				{JSON.stringify(items)}
-			</div>
+			<div className="data-content">{data}</div>
 		</Card>
 	);
 });
@@ -171,9 +166,11 @@ const Example = () => {
 			<div className="vstack">
 				<SimulatedSearchView />
 				<SimulatedControlsView />
+			</div>
+			<div className="vstack">
+				<RenderView />
 				<DataView />
 			</div>
-			<RenderView />
 		</div>
 	);
 };
