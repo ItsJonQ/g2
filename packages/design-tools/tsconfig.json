@@ -6,11 +6,12 @@
 	},
 	"include": ["src/**/*"],
 	"references": [
-		{ "path": "../a11y" },
 		{ "path": "../animations" },
-		{ "path": "../context" },
+		{ "path": "../atomic" },
+		{ "path": "../components" },
 		{ "path": "../gestures" },
 		{ "path": "../icons" },
+		{ "path": "../protokit" },
 		{ "path": "../styles" },
 		{ "path": "../substate" },
 		{ "path": "../utils" }

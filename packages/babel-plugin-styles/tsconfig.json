@@ -4,5 +4,6 @@
 		"rootDir": "src",
 		"declarationDir": "types"
 	},
-	"include": ["src/**/*"]
+	"include": ["src/**/*"],
+	"references": [{ "path": "../styles" }]
 }
