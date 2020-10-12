@@ -13,7 +13,7 @@ import { ns } from './utils';
  * @param {Array<string>|string} namespace The namespace to register and to derive context props from.
  * @param {function} forwardedRef React.forwardRef reference object.
  */
-export function useContextSystem(props, namespace, forwardedRef) {
+export function useContextSystem(props, namespace) {
 	const { store } = useContextStoreContext();
 	const { context } = store();
 	let contextProps;

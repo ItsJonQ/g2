@@ -68,38 +68,16 @@ export function createStyledComponents({ compiler, core }) {
 				const mergedProps = { ...extraProps, ...props, ref };
 
 				const baseTag = asProp || tagName;
-				const isBaseTag = asProp
-					? is.string(asProp)
-					: is.string(tagName);
 
-				let final__cssProp;
-				let finalClasses = className;
-
-				if (!isBaseTag) {
-					/**
-					 * Adjusting the css compiling for non base HTML elements.
-					 */
-					finalClasses = cx(
-						css(...interpolatedProps),
-						css(__css),
-						css(cxProp),
-						className,
-					);
-				} else {
-					final__cssProp = [
-						css(...interpolatedProps),
-						css(__css),
-						css(cxProp),
-					];
-				}
+				const classes = cx(
+					css(...interpolatedProps),
+					__css && css(__css),
+					cxProp && css(cxProp),
+					className,
+				);
 
 				return (
-					<Box
-						as={baseTag}
-						{...mergedProps}
-						__css={final__cssProp}
-						className={finalClasses}
-					/>
+					<Box as={baseTag} {...mergedProps} className={classes} />
 				);
 			};
 

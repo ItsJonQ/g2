@@ -10,7 +10,6 @@ import React, {
 } from 'react';
 
 import { Icon } from '../Icon';
-import { View } from '../View';
 import { VStack } from '../VStack';
 import * as styles from './TextInput.styles';
 
@@ -192,7 +191,6 @@ const UpDownArrows = React.memo(
 					size={12}
 					width={20}
 				/>
-
 				<Icon
 					className={styles.SpinnerArrowDown}
 					onClick={onDecrement}
