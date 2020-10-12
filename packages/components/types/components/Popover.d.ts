@@ -31,14 +31,6 @@ export declare type PopoverProps = PopoverState &
 		 */
 		elevation?: number;
 		/**
-		 * Whether or not the dialog should be rendered within `Portal`. It's true by default if modal is true.
-		 *
-		 * @default true
-		 *
-		 * @see https://reakit.io/docs/popover/#popover
-		 */
-		modal?: boolean;
-		/**
 		 * Max-width for the `Popover` element.
 		 */
 		maxWidth?: CSS['maxWidth'];

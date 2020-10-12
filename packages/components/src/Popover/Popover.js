@@ -3,6 +3,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
+import { Portal } from '../Portal';
 import { PopoverContext } from './Popover.Context';
 import PopoverContent from './PopoverContent';
 
@@ -16,7 +17,6 @@ function Popover(props, forwardedRef) {
 		id,
 		label,
 		maxWidth = 360,
-		modal = true,
 		onVisibleChange = noop,
 		placement,
 		trigger,
@@ -27,7 +27,6 @@ function Popover(props, forwardedRef) {
 	const popover = usePopoverState({
 		animated: animated ? animationDuration : undefined,
 		baseId: baseId || id,
-		modal,
 		placement,
 		visible,
 		...otherProps,
@@ -66,14 +65,16 @@ function Popover(props, forwardedRef) {
 					{triggerContent}
 				</PopoverDisclosure>
 			)}
-			<PopoverContent
-				ref={forwardedRef}
-				{...otherProps}
-				elevation={elevation}
-				maxWidth={maxWidth}
-			>
-				{children}
-			</PopoverContent>
+			<Portal>
+				<PopoverContent
+					ref={forwardedRef}
+					{...otherProps}
+					elevation={elevation}
+					maxWidth={maxWidth}
+				>
+					{children}
+				</PopoverContent>
+			</Portal>
 		</PopoverContext.Provider>
 	);
 }
