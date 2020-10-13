@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { interpolate, noop, useControlledState } from '@wp-g2/utils';
 import { useCallback, useMemo } from 'react';
 
-import { useFormGroupContext } from '../FormGroup';
+import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './Slider.styles';
 
 export function useSlider(props) {
@@ -20,8 +20,7 @@ export function useSlider(props) {
 	} = useContextSystem(props, 'Slider');
 
 	const [value, setValue] = useControlledState(valueProp, { initial: 50 });
-	const { id: contextId } = useFormGroupContext();
-	const id = idProp || contextId;
+	const id = useFormGroupContextId(idProp);
 
 	const handleOnChange = useCallback(
 		(event) => {

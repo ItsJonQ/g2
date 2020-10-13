@@ -4,7 +4,7 @@ import { css, cx, ui } from '@wp-g2/styles';
 import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
-import { useFormGroupContext } from '../FormGroup';
+import { useFormGroupContextId } from '../FormGroup';
 import { useRadioGroupContext } from '../RadioGroup';
 import { RadioDotView, RadioIconView, RadioWrapperView } from './Radio.styles';
 import * as styles from './Radio.styles';
@@ -21,8 +21,7 @@ function RadioElement(props, forwardedRef) {
 	} = useContextSystem(props, 'RadioElement');
 
 	const { radio } = useRadioGroupContext();
-	const { id: contextId } = useFormGroupContext();
-	const id = idProp || contextId;
+	const id = useFormGroupContextId(idProp);
 
 	const [checked, setChecked] = useControlledState(checkedProp, {
 		initial: defaultValue || false,

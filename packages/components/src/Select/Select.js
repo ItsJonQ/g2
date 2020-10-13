@@ -6,7 +6,7 @@ import React, { useCallback, useRef, useState } from 'react';
 
 import { useBaseField } from '../BaseField';
 import { FlexItem } from '../Flex';
-import { useFormGroupContext } from '../FormGroup';
+import { useFormGroupContextId } from '../FormGroup';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import * as TextInputStyles from '../TextInput/TextInput.styles';
@@ -48,8 +48,7 @@ function Select(props, forwardedRef) {
 		isSubtle,
 	});
 
-	const { id: contextId } = useFormGroupContext();
-	const id = idProp || contextId;
+	const id = useFormGroupContextId(idProp);
 
 	const handleOnRootClick = useCallback(() => {
 		inputRef.current.focus();

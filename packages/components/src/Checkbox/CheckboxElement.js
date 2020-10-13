@@ -6,7 +6,7 @@ import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
 import { useCheckboxGroupContext } from '../CheckboxGroup';
-import { useFormGroupContext } from '../FormGroup';
+import { useFormGroupContextId } from '../FormGroup';
 import { Icon } from '../Icon';
 import { CheckboxIconView, CheckboxWrapperView } from './Checkbox.styles';
 import * as styles from './Checkbox.styles';
@@ -23,8 +23,7 @@ function CheckboxElement(props, forwardedRef) {
 	} = useContextSystem(props, 'CheckboxElement');
 
 	const { checkbox } = useCheckboxGroupContext();
-	const { id: contextId } = useFormGroupContext();
-	const id = idProp || contextId;
+	const id = useFormGroupContextId(idProp);
 
 	const [checked, setChecked] = useControlledState(checkedProp, {
 		initial: defaultValue || false,

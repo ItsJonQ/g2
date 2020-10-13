@@ -4,7 +4,7 @@ import { cx } from '@wp-g2/styles';
 import { noop, useControlledState, useUniqueId } from '@wp-g2/utils';
 import { useCallback, useState } from 'react';
 
-import { useFormGroupContext } from '../FormGroup';
+import { useFormGroupContext, useFormGroupContextId } from '../FormGroup';
 import * as styles from './Switch.styles';
 
 const ControlComponent = {
@@ -34,7 +34,7 @@ export function useSwitch(props) {
 
 	const uniqueId = useUniqueId(useSwitch, 'switch', idProp);
 	const { horizontal, id: contextId } = useFormGroupContext();
-	const id = idProp || contextId || uniqueId;
+	const id = useFormGroupContextId(idProp || uniqueId);
 
 	const Component = ControlComponent[type] || Checkbox;
 
