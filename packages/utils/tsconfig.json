@@ -2,7 +2,8 @@
 	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
 		"rootDir": "src",
-		"declarationDir": "types"
+		"declarationDir": "types",
+		"noImplicitAny": false
 	},
 	"include": ["src/**/*"],
 	"references": [{ "path": "../substate" }]
