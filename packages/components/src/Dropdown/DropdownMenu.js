@@ -14,13 +14,21 @@ function DropdownMenu(props, forwardedRef) {
 		className,
 		elevation = 3,
 		hideOnClickOutside = true,
+		maxWidth,
 		minWidth = 200,
 		...otherProps
 	} = useContextSystem(props, 'DropdownMenu');
 
 	const { label, menu } = useDropdownContext();
-	const classes = cx(styles.DropdownMenu, css({ minWidth }), className);
 
+	const classes = cx(
+		styles.DropdownMenu,
+		css({ maxWidth, minWidth }),
+		className,
+	);
+
+	const cardClasses = css({ maxHeight: '50vh', minHeight: 24 });
+	const scrollableClasses = css({ maxHeight: '50vh', padding: 4 });
 	return (
 		<Menu
 			aria-label={label}
@@ -30,11 +38,8 @@ function DropdownMenu(props, forwardedRef) {
 			menu={menu}
 			ref={forwardedRef}
 		>
-			<Card
-				css={css({ maxHeight: '50vh', minHeight: 24 })}
-				elevation={elevation}
-			>
-				<Scrollable css={css({ maxHeight: '50vh', padding: 4 })}>
+			<Card className={cardClasses} elevation={elevation}>
+				<Scrollable className={scrollableClasses}>
 					{children}
 				</Scrollable>
 			</Card>

@@ -146,7 +146,7 @@ exports[`props should render elevation 1`] = `
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-zytxex"
+    class="wp-components-elevation css-fmvmxl"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -169,7 +169,7 @@ exports[`props should render no elevation 1`] = `
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-12htjgm"
+    class="wp-components-elevation css-10dmg8u"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />

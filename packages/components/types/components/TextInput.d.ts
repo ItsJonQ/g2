@@ -62,10 +62,6 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	 */
 	prefix?: React.ReactElement;
 	/**
-	 * Minimal number of rows to show for a multiline `TextInput`.
-	 */
-	rows?: number;
-	/**
 	 * Determines the size of `TextInput`.
 	 */
 	size?: SizeRangeReduced;

@@ -1,7 +1,8 @@
 import { MenuItem as ReakitMenuItem } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
+import { FiCheck, FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import { BaseButton } from '../BaseButton';
@@ -18,6 +19,7 @@ function MenuItem(props, forwardedRef) {
 		className,
 		isBack = false,
 		isOffset = false,
+		isSelected,
 		prefix,
 		showArrow = false,
 		suffix,
@@ -42,14 +44,26 @@ function MenuItem(props, forwardedRef) {
 			<Icon icon={<FiChevronLeft />} size={16} />
 		</Text>
 	);
+
 	const nextArrow = shouldShowArrow && (
 		<Text isBlock variant="muted">
 			<Icon icon={<FiChevronRight />} size={16} />
 		</Text>
 	);
 
-	const prefixContent = (prevArrow || prefix) && (
+	const selectedContent = is.defined(isSelected) && (
+		<Text isBlock>
+			<Icon
+				icon={<FiCheck />}
+				size={16}
+				style={{ opacity: isSelected ? 1 : 0 }}
+			/>
+		</Text>
+	);
+
+	const prefixContent = (selectedContent || prevArrow || prefix) && (
 		<Flex>
+			{selectedContent}
 			{prevArrow}
 			{prefix}
 		</Flex>

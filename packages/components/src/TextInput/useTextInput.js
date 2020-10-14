@@ -6,7 +6,7 @@ import {
 	is,
 	noop,
 	roundClampString,
-	useSealedState,
+	subtract,
 	useUpdateEffect,
 } from '@wp-g2/utils';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -26,18 +26,28 @@ const KEYS = {
 
 const useTextInputSubState = (
 	value,
-	{ initialValue: initialValueProp, min, max, type, onValueSync = noop },
+	{
+		initialValue: initialValueProp,
+		max,
+		min,
+		onValueSync = noop,
+		shiftStep = 10,
+		step = 1,
+		type,
+	},
 ) => {
 	const initialValue = is.defined(value) ? value : initialValueProp;
 
 	const store = useSubState((set) => ({
 		incomingValue: initialValue,
-		lastValue: initialValue,
-		value: initialValue,
-		type,
-		min,
-		max,
 		inputRef: null,
+		lastValue: initialValue,
+		max,
+		min,
+		shiftStep,
+		step,
+		type,
+		value: initialValue,
 
 		setValue: (next) => set({ value: next }),
 		setIncomingValue: (next) => set({ incomingValue: next }),
@@ -50,12 +60,20 @@ const useTextInputSubState = (
 				if (prev.type !== 'number') return prev;
 				if (!prev.inputRef) return prev;
 
-				const step = jumpStepStore.getState().step;
+				const { isShiftKey } = jumpStepStore.getState();
+				const step = isShiftKey ? prev.step * prev.shiftKey : prev.step;
+
 				const nextValue = add(boost, step);
+				const final = roundClampString(
+					add(nextValue, prev.value),
+					prev.min,
+					prev.max,
+					prev.step,
+				);
 
-				prev.inputRef.stepUp(nextValue);
+				prev.inputRef.value = final;
 
-				return { value: prev.inputRef.value.toString() };
+				return { value: final };
 			});
 		},
 		decrement: (boost = 0) => {
@@ -63,12 +81,20 @@ const useTextInputSubState = (
 				if (prev.type !== 'number') return prev;
 				if (!prev.inputRef) return prev;
 
-				const step = jumpStepStore.getState().step;
+				const { isShiftKey } = jumpStepStore.getState();
+				const step = isShiftKey ? prev.step * prev.shiftKey : prev.step;
+
 				const nextValue = add(boost, step);
+				const final = roundClampString(
+					subtract(prev.value, nextValue),
+					prev.min,
+					prev.max,
+					prev.step,
+				);
 
-				prev.inputRef.stepDown(nextValue);
+				prev.inputRef.value = final;
 
-				return { value: prev.inputRef.value.toString() };
+				return { value: final };
 			});
 		},
 	}));
@@ -90,6 +116,8 @@ const useTextInputSubState = (
 	useUpdateEffect(() => store.setState({ min }), [min]);
 	useUpdateEffect(() => store.setState({ max }), [max]);
 
+	useJumpStep();
+
 	return store;
 };
 
@@ -100,7 +128,6 @@ const jumpStepStore = createStore((set) => ({
 			if (prev.isShiftKey === next) return prev;
 			return { isShiftKey: next };
 		}),
-	step: 1,
 }));
 
 /**
@@ -114,27 +141,13 @@ const jumpStepStore = createStore((set) => ({
  * Holding down shift...
  * Starting from 10, the next incremented value will be 20.
  */
-export function useJumpStep({
-	isShiftStepEnabled: isShiftStepEnabledProp = true,
-	shiftStep: shiftStepProp = 10,
-	step: stepProp = 1,
-}) {
-	const { isShiftKey } = jumpStepStore();
-
-	const isShiftStepEnabled = useSealedState(isShiftStepEnabledProp);
-	const shiftStep = useSealedState(shiftStepProp);
-	const step = useSealedState(stepProp);
-
+export function useJumpStep() {
 	useEffect(() => {
 		const handleOnKeyPress = (event) => {
 			const { shiftKey } = event;
 			if (jumpStepStore.getState().isShiftKey !== shiftKey) {
-				const isEnabled = isShiftStepEnabled && shiftKey;
-				const nextStep = isEnabled ? shiftStep * step : step;
-
 				jumpStepStore.setState({
 					isShiftKey: shiftKey,
-					step: nextStep,
 				});
 			}
 		};
@@ -146,7 +159,7 @@ export function useJumpStep({
 			window.removeEventListener('keydown', handleOnKeyPress);
 			window.removeEventListener('keyup', handleOnKeyPress);
 		};
-	}, [isShiftKey, isShiftStepEnabled, shiftStep, step]);
+	}, []);
 }
 
 function useInputRef({ store }) {
@@ -328,12 +341,12 @@ function useChangeHandlers({
 	);
 
 	const handleOnCommitChange = useCallback(() => {
-		const { step } = jumpStepStore.getState();
 		const {
 			incomingValue,
 			max,
 			min,
 			resetValue,
+			step,
 			type,
 			value,
 		} = store.getState();
@@ -446,21 +459,23 @@ export function useTextInput(props) {
 	const {
 		align,
 		className,
-		dragAxis,
 		defaultValue = '',
 		disabled,
+		dragAxis,
 		gap = 2.5,
 		id: idProp,
 		isResizable = false,
 		isShiftStepEnabled = true,
 		justify,
-		min,
 		max,
+		min,
 		multiline = false,
 		onValueSync = noop,
+		prefix,
 		shiftStep = 10,
 		size = 'medium',
 		step,
+		suffix,
 		type = 'text',
 		validate,
 		value: valueProp,
@@ -471,18 +486,15 @@ export function useTextInput(props) {
 
 	const store = useTextInputSubState(valueProp, {
 		initialValue: defaultValue,
+		isShiftStepEnabled,
 		max,
 		min,
 		onValueSync,
+		shiftStep,
+		step,
 		type,
 	});
 	const { value } = store();
-
-	useJumpStep({
-		isShiftStepEnabled,
-		shiftStep,
-		step,
-	});
 
 	const inputRef = useInputRef({ store });
 
@@ -543,10 +555,12 @@ export function useTextInput(props) {
 	return {
 		...baseFieldProps,
 		__store: store,
+		className: classes,
 		dragAxis,
 		inputProps,
 		inputRef,
 		onClick: handleOnRootClick,
-		className: classes,
+		prefix,
+		suffix,
 	};
 }

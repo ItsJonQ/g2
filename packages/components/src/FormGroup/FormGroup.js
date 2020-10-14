@@ -11,6 +11,7 @@ function FormGroup(props, forwardedRef) {
 	const {
 		alignLabel = 'left',
 		children,
+		helpText,
 		horizontal = true,
 		id: idProp,
 		label,

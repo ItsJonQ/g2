@@ -112,7 +112,13 @@ export declare type DropdownMenuProps = MenuProps & {
 	 */
 	hideOnClickOutside?: boolean;
 	/**
+	 * The maximum width of `DropdownMenu`.
+	 */
+	maxWidth?: CSS['maxWidth'];
+	/**
 	 * The minimum width of `DropdownMenu`.
+	 *
+	 * @default 200
 	 */
 	minWidth?: CSS['minWidth'];
 };
