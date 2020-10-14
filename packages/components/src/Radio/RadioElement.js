@@ -1,7 +1,7 @@
 import { Radio as ReakitRadio } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
-import { isEmpty, noop, useControlledState } from '@wp-g2/utils';
+import { is, noop, useControlledState } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
 import { useFormGroupContextId } from '../FormGroup';
@@ -32,7 +32,7 @@ function RadioElement(props, forwardedRef) {
 	const handleOnChange = useCallback(
 		(event) => {
 			const next = event.target.checked;
-			if (isEmpty(radio)) {
+			if (is.empty(radio)) {
 				setChecked(next);
 			}
 			onChange(next, { event });
@@ -40,7 +40,7 @@ function RadioElement(props, forwardedRef) {
 		[onChange, radio, setChecked],
 	);
 
-	const checkedState = isEmpty(radio) ? checked : undefined;
+	const checkedState = is.empty(radio) ? checked : undefined;
 
 	return (
 		<RadioWrapperView {...ui.$('RadioWrapper')}>

@@ -8,5 +8,5 @@ export default {
 };
 
 export const _default = () => {
-	return <UnitInput />;
+	return <UnitInput value="13px" />;
 };

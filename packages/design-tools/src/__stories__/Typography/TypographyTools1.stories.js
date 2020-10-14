@@ -29,7 +29,7 @@ export default {
 const typographyStore = createStore((set) => ({
 	fontFamily: 'Inter',
 	fontWeight: 'Normal',
-	fontSize: '13',
+	fontSize: '13px',
 	lineHeight: '1.5',
 	letterSpacing: '1',
 	setState: (next) => set(next),
@@ -39,7 +39,7 @@ const useTypography = typographyStore;
 const typographyOptionKeys = {
 	fontSize: {
 		label: 'Font Size',
-		value: '13',
+		value: '13px',
 	},
 	fontFamily: {
 		label: 'Font Family',

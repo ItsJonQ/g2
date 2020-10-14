@@ -31,6 +31,8 @@ const useTextInputSubState = (
 		initialValue: initialValueProp,
 		max,
 		min,
+		onIncrement,
+		onDecrement,
 		onValueSync = noop,
 		shiftStep = 10,
 		step = 1,
@@ -64,7 +66,14 @@ const useTextInputSubState = (
 				if (!prev.inputRef) return prev;
 
 				const { isShiftKey } = jumpStepStore.getState();
-				const step = isShiftKey ? prev.step * prev.shiftKey : prev.step;
+
+				if (onIncrement) {
+					return onIncrement({ ...prev, boost, isShiftKey });
+				}
+
+				const step = isShiftKey
+					? prev.step * prev.shiftStep
+					: prev.step;
 
 				const nextValue = add(boost, step);
 				const final = roundClampString(
@@ -73,8 +82,6 @@ const useTextInputSubState = (
 					prev.max,
 					prev.step,
 				);
-
-				prev.inputRef.value = final;
 
 				return { value: final };
 			});
@@ -86,6 +93,11 @@ const useTextInputSubState = (
 				if (!prev.inputRef) return prev;
 
 				const { isShiftKey } = jumpStepStore.getState();
+
+				if (onDecrement) {
+					return onDecrement({ ...prev, boost, isShiftKey });
+				}
+
 				const step = isShiftKey ? prev.step * prev.shiftKey : prev.step;
 
 				const nextValue = add(boost, step);
@@ -95,8 +107,6 @@ const useTextInputSubState = (
 					prev.max,
 					prev.step,
 				);
-
-				prev.inputRef.value = final;
 
 				return { value: final };
 			});
@@ -125,7 +135,7 @@ const useTextInputSubState = (
 	return store;
 };
 
-const jumpStepStore = createStore((set) => ({
+export const jumpStepStore = createStore((set) => ({
 	isShiftKey: false,
 	setIsShiftKey: (next) =>
 		set((prev) => {
@@ -166,7 +176,7 @@ export function useJumpStep() {
 	}, []);
 }
 
-function useInputRef({ store }) {
+export function useInputRef({ store }) {
 	const inputRef = useRef();
 
 	useEffect(() => {
@@ -178,7 +188,7 @@ function useInputRef({ store }) {
 	return inputRef;
 }
 
-function useUndoTimeout() {
+export function useUndoTimeout() {
 	const undoTimeoutRef = useRef();
 
 	const setUndoTimeout = useCallback((fn) => {
@@ -236,7 +246,7 @@ function useFocusHandlers({
 	};
 }
 
-function useKeyboardHandlers({
+export function useKeyboardHandlers({
 	onChange = noop,
 	multiline = false,
 	onKeyDown = noop,
@@ -273,7 +283,8 @@ function useKeyboardHandlers({
 	const handleOnKeyDown = useCallback(
 		(event) => {
 			const { commitValue } = store.getState();
-			const isNumberInput = store.getState().type === 'number';
+			const { format, type } = store.getState();
+			const isNumberInput = format === 'number' || type === 'number';
 
 			switch (event.keyCode) {
 				case KEYS.Z:
@@ -404,7 +415,7 @@ function useChangeHandlers({
 	};
 }
 
-function useEventHandlers(props) {
+export function useEventHandlers(props) {
 	const {
 		isCommitOnBlurOrEnter = true,
 		multiline = false,
@@ -475,6 +486,8 @@ export function useTextInput(props) {
 		max,
 		min,
 		multiline = false,
+		onIncrement,
+		onDecrement,
 		onValueSync = noop,
 		prefix,
 		shiftStep = 10,
@@ -495,6 +508,8 @@ export function useTextInput(props) {
 		isShiftStepEnabled,
 		max,
 		min,
+		onIncrement,
+		onDecrement,
 		onValueSync,
 		shiftStep,
 		step,
