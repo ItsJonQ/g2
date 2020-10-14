@@ -13,6 +13,7 @@ function TextInput(props, forwardedRef) {
 		__store,
 		disabled,
 		dragAxis,
+		format,
 		inputProps,
 		inputRef,
 		onCommitChange,
@@ -21,7 +22,8 @@ function TextInput(props, forwardedRef) {
 		...otherProps
 	} = useTextInput(props);
 
-	const showTextInputArrows = inputProps.type === 'number';
+	const showTextInputArrows =
+		format === 'number' || inputProps.type === 'number';
 
 	return (
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>

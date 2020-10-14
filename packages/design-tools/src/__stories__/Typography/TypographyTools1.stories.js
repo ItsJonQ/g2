@@ -13,6 +13,7 @@ import {
 	Select,
 	Surface,
 	TextInput,
+	UnitInput,
 	View,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
@@ -119,10 +120,9 @@ const FontStyleControl = React.memo(() => {
 		<Grid columns={3}>
 			{fontSize && (
 				<FormGroup label="Size">
-					<TextInput
+					<UnitInput
 						min={0}
 						onChange={handleOnChange('fontSize')}
-						type="number"
 						value={fontSize}
 					/>
 				</FormGroup>

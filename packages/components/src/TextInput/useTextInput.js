@@ -27,6 +27,7 @@ const KEYS = {
 const useTextInputSubState = (
 	value,
 	{
+		format,
 		initialValue: initialValueProp,
 		max,
 		min,
@@ -39,6 +40,7 @@ const useTextInputSubState = (
 	const initialValue = is.defined(value) ? value : initialValueProp;
 
 	const store = useSubState((set) => ({
+		format,
 		incomingValue: initialValue,
 		inputRef: null,
 		lastValue: initialValue,
@@ -57,7 +59,8 @@ const useTextInputSubState = (
 
 		increment: (boost = 0) => {
 			set((prev) => {
-				if (prev.type !== 'number') return prev;
+				if (prev.type !== 'number' && prev.format !== 'number')
+					return prev;
 				if (!prev.inputRef) return prev;
 
 				const { isShiftKey } = jumpStepStore.getState();
@@ -78,7 +81,8 @@ const useTextInputSubState = (
 		},
 		decrement: (boost = 0) => {
 			set((prev) => {
-				if (prev.type !== 'number') return prev;
+				if (prev.type !== 'number' && prev.format !== 'number')
+					return prev;
 				if (!prev.inputRef) return prev;
 
 				const { isShiftKey } = jumpStepStore.getState();
@@ -463,6 +467,7 @@ export function useTextInput(props) {
 		disabled,
 		dragAxis,
 		gap = 2.5,
+		format,
 		id: idProp,
 		isResizable = false,
 		isShiftStepEnabled = true,
@@ -485,6 +490,7 @@ export function useTextInput(props) {
 	const id = useFormGroupContextId(idProp);
 
 	const store = useTextInputSubState(valueProp, {
+		format,
 		initialValue: defaultValue,
 		isShiftStepEnabled,
 		max,
@@ -557,6 +563,7 @@ export function useTextInput(props) {
 		__store: store,
 		className: classes,
 		dragAxis,
+		format,
 		inputProps,
 		inputRef,
 		onClick: handleOnRootClick,

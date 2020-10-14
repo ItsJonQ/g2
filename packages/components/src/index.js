@@ -77,5 +77,6 @@ export * from './Tooltip';
 export * from './Truncate';
 export * from './Viewport';
 export * from './VisuallyHidden';
+export * from './UnitInput';
 export * from './VStack';
 export * from './ZStack';
