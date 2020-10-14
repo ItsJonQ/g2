@@ -3,7 +3,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiCheck, FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { BaseButton } from '../BaseButton';
 import { Flex } from '../Flex';
@@ -39,42 +39,62 @@ function MenuItem(props, forwardedRef) {
 
 	const Component = menu ? ReakitMenuItem : View;
 
-	const prevArrow = isBack && (
-		<Text isBlock variant="muted">
-			<Icon icon={<FiChevronLeft />} size={16} />
-		</Text>
+	const prevArrow = useMemo(
+		() =>
+			isBack && (
+				<Text isBlock variant="muted">
+					<Icon icon={<FiChevronLeft />} size={16} />
+				</Text>
+			),
+		[isBack],
 	);
 
-	const nextArrow = shouldShowArrow && (
-		<Text isBlock variant="muted">
-			<Icon icon={<FiChevronRight />} size={16} />
-		</Text>
+	const nextArrow = useMemo(
+		() =>
+			shouldShowArrow && (
+				<Text isBlock variant="muted">
+					<Icon icon={<FiChevronRight />} size={16} />
+				</Text>
+			),
+		[shouldShowArrow],
 	);
 
-	const selectedContent = is.defined(isSelected) && (
-		<Text isBlock>
-			<Icon
-				icon={<FiCheck />}
-				size={16}
-				style={{ opacity: isSelected ? 1 : 0 }}
-			/>
-		</Text>
+	const selectedContent = useMemo(
+		() =>
+			is.defined(isSelected) && (
+				<Text isBlock>
+					<Icon
+						icon={<FiCheck />}
+						size={16}
+						style={{ opacity: isSelected ? 1 : 0 }}
+					/>
+				</Text>
+			),
+		[isSelected],
 	);
 
-	const prefixContent = (selectedContent || prevArrow || prefix) && (
-		<Flex>
-			{selectedContent}
-			{prevArrow}
-			{prefix}
-		</Flex>
-	);
+	const prefixContent = useMemo(() => {
+		return (
+			(selectedContent || prevArrow || prefix) && (
+				<Flex>
+					{selectedContent}
+					{prevArrow}
+					{prefix}
+				</Flex>
+			)
+		);
+	}, [prefix, prevArrow, selectedContent]);
 
-	const suffixContent = (nextArrow || suffix) && (
-		<Flex>
-			{suffix}
-			{nextArrow}
-		</Flex>
-	);
+	const suffixContent = useMemo(() => {
+		return (
+			(nextArrow || suffix) && (
+				<Flex>
+					{suffix}
+					{nextArrow}
+				</Flex>
+			)
+		);
+	}, [nextArrow, suffix]);
 
 	return (
 		<BaseButton

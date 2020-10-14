@@ -1,5 +1,5 @@
 export function toPx(value) {
-	if (!isNaN(Number(value))) {
+	if (!isNaN(Number(value)) && value !== null) {
 		return `${value}px`;
 	}
 

@@ -96,6 +96,24 @@ export const primary = css`
 	&:active {
 		background-color: ${ui.color.text};
 	}
+
+	&[data-destructive='true'] {
+		background-color: ${ui.color.destructive};
+
+		&:hover,
+		&:focus {
+			background-color: ${ui.color.destructive};
+		}
+
+		&:focus {
+			background-color: ${ui.color.destructive};
+			border-color: ${ui.color.destructive};
+		}
+
+		&:active {
+			background-color: ${ui.color.text};
+		}
+	}
 `;
 
 export const secondary = css`
@@ -135,6 +153,14 @@ export const secondary = css`
 export const tertiary = css`
 	background-color: transparent;
 	border-color: ${ui.get('controlBorderColor')};
+
+	&[data-destructive='true'] {
+		color: ${ui.color.destructive};
+
+		&:active {
+			color: ${ui.color.text};
+		}
+	}
 `;
 
 export const link = css`
@@ -144,6 +170,10 @@ export const link = css`
 
 	&[data-destructive='true'] {
 		color: ${ui.color.destructive};
+
+		&:active {
+			color: ${ui.color.text};
+		}
 	}
 `;
 
@@ -153,15 +183,19 @@ export const plainLink = css`
 	border-color: transparent;
 	color: ${ui.color.admin};
 
-	&[data-destructive='true'] {
-		color: ${ui.color.destructive};
-	}
-
 	&:hover,
 	&:active,
 	&:focus {
 		background-color: transparent;
 		text-decoration: underline;
+	}
+
+	&[data-destructive='true'] {
+		color: ${ui.color.destructive};
+
+		&:active {
+			color: ${ui.color.text};
+		}
 	}
 `;
 

@@ -80,6 +80,7 @@ export function useBaseButton(props) {
 		elevationHover,
 		hasCaret,
 		icon,
+		isDestructive,
 		prefix,
 		suffix,
 		iconSize,

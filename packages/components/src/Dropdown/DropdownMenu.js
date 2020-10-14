@@ -27,8 +27,6 @@ function DropdownMenu(props, forwardedRef) {
 		className,
 	);
 
-	const cardClasses = css({ maxHeight: '50vh', minHeight: 24 });
-	const scrollableClasses = css({ maxHeight: '50vh', padding: 4 });
 	return (
 		<Menu
 			aria-label={label}
@@ -38,13 +36,21 @@ function DropdownMenu(props, forwardedRef) {
 			menu={menu}
 			ref={forwardedRef}
 		>
-			<Card className={cardClasses} elevation={elevation}>
-				<Scrollable className={scrollableClasses}>
+			{(menu?.visible || menu?.animating) && (
+				<DropdownMenuCard elevation={elevation}>
 					{children}
-				</Scrollable>
-			</Card>
+				</DropdownMenuCard>
+			)}
 		</Menu>
 	);
 }
+
+const DropdownMenuCard = React.memo(({ children, elevation }) => {
+	return (
+		<Card className={styles.Card} elevation={elevation}>
+			<Scrollable className={styles.Scrollable}>{children}</Scrollable>
+		</Card>
+	);
+});
 
 export default contextConnect(DropdownMenu, 'DropdownMenu');

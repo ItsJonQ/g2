@@ -1,6 +1,6 @@
 import { useMenuState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { DropdownContext } from './Dropdown.Context';
 
@@ -30,13 +30,16 @@ function Dropdown(props, forwardedRef) {
 		...otherProps,
 	});
 
-	const uniqueId = `dropdown-${menu.baseId}`;
-	const contextProps = {
-		animationDuration,
-		animationTimingFunction,
-		label: label || uniqueId,
-		menu,
-	};
+	const contextProps = useMemo(() => {
+		const uniqueId = `dropdown-${menu.baseId}`;
+
+		return {
+			animationDuration,
+			animationTimingFunction,
+			label: label || uniqueId,
+			menu,
+		};
+	}, [animationDuration, animationTimingFunction, label, menu]);
 
 	return (
 		<DropdownContext.Provider ref={forwardedRef} value={contextProps}>

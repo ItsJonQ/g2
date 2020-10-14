@@ -11,3 +11,13 @@ export const DropdownMenu = css`
 		opacity: 1;
 	}
 `;
+
+export const Card = css`
+	max-height: 50vh;
+	min-height: 24px;
+`;
+
+export const Scrollable = css`
+	max-height: 50vh;
+	padding: 4px;
+`;

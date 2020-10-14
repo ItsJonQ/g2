@@ -18,7 +18,7 @@ import {
 import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMoreHorizontal } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
-import { createStore } from '@wp-g2/substate';
+import { createStore, shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
 export default {
@@ -100,7 +100,10 @@ const TypographyOptions = React.memo(() => {
 });
 
 const FontStyleControl = React.memo(() => {
-	const { fontSize, letterSpacing, lineHeight } = useTypography();
+	const [fontSize, letterSpacing, lineHeight] = useTypography(
+		(state) => [state.fontSize, state.letterSpacing, state.lineHeight],
+		shallowCompare,
+	);
 
 	const handleOnChange = React.useCallback(
 		(key) => (value) => {
@@ -127,7 +130,7 @@ const FontStyleControl = React.memo(() => {
 			{letterSpacing && (
 				<FormGroup label="Spacing">
 					<TextInput
-						min={-2}
+						min={-10}
 						onChange={handleOnChange('letterSpacing')}
 						step={0.5}
 						type="number"
@@ -151,11 +154,14 @@ const FontStyleControl = React.memo(() => {
 });
 
 const FontFamilyControl = React.memo(() => {
-	const { fontFamily, fontWeight, setState } = useTypography();
+	const [fontFamily, fontWeight] = useTypography(
+		(state) => [state.fontFamily, state.fontWeight],
+		shallowCompare,
+	);
 
 	const handleOnChange = React.useCallback(
-		(key) => (value) => setState({ [key]: value }),
-		[setState],
+		(key) => (value) => typographyStore.setState({ [key]: value }),
+		[],
 	);
 
 	if (![fontFamily, fontFamily].filter(Boolean).length) return null;
@@ -231,18 +237,20 @@ const Example = () => {
 					</CardBody>
 				</Card>
 			</View>
-			<Card>
-				<CardBody>
-					<ListGroup>
-						<ListGroupHeader>
-							Typography
-							<TypographyOptions />
-						</ListGroupHeader>
-						<FontFamilyControl />
-						<FontStyleControl />
-					</ListGroup>
-				</CardBody>
-			</Card>
+			<View>
+				<Card>
+					<CardBody>
+						<ListGroup>
+							<ListGroupHeader>
+								Typography
+								<TypographyOptions />
+							</ListGroupHeader>
+							<FontFamilyControl />
+							<FontStyleControl />
+						</ListGroup>
+					</CardBody>
+				</Card>
+			</View>
 		</Grid>
 	);
 };
