@@ -7,7 +7,10 @@ import React from 'react';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { UnitInput } from '../UnitInput';
+import { baseParseUnit, createUnitValue } from '../UnitInput/UnitInput.utils';
 import { View } from '../View';
+
+const UNITS = ['px', 'em', 'rem', '%', 'vh', 'vmin', 'vmax', 'vw'];
 
 function PresetSelect({ onChange = noop, presets = [] }) {
 	const selectRef = React.useRef();
@@ -66,6 +69,11 @@ function PresetSelect({ onChange = noop, presets = [] }) {
 	);
 }
 
+function findUnitMatch({ units = UNITS, value = '' }) {
+	const match = units.find((unit) => unit.indexOf(value.toLowerCase()) === 0);
+	return match;
+}
+
 function findMatch({ presets = [], value }) {
 	const match = presets.find((entry) => {
 		const { key, label } = entry;
@@ -90,8 +98,10 @@ function PresetPlaceholder({ presets, value }) {
 			.toLowerCase()
 			.replace(value.toLowerCase(), value);
 	} else {
-		if (Number(value) && value !== null) {
-			placeholderValue = `${value}px`;
+		const [parsedValue, parsedUnit] = baseParseUnit(value);
+		if (Number(parsedValue) && parsedValue !== null) {
+			const unit = findUnitMatch({ value: parsedUnit });
+			placeholderValue = createUnitValue(parsedValue, unit);
 		}
 	}
 
@@ -135,8 +145,11 @@ function PresetInput(props, forwardedRef) {
 			return match.label;
 		}
 
-		if (Number(next) && next !== null) {
-			return `${next}px`;
+		const [parsedValue, parsedUnit] = baseParseUnit(next);
+
+		if (Number(parsedValue) && parsedValue !== null) {
+			const unit = findUnitMatch({ value: parsedUnit });
+			return createUnitValue(parsedValue, unit);
 		}
 
 		return next;

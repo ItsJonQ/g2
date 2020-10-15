@@ -46,10 +46,9 @@ export function hasUnits(units) {
  * Parses a number and unit from a value.
  *
  * @param {string} initialValue Value to parse
- * @param {Array<Object>} units Units to derive from.
  * @return {Array<number, string>} The extracted number and unit.
  */
-export function parseUnit(initialValue, units = CSS_UNITS) {
+export function baseParseUnit(initialValue) {
 	const value = String(initialValue).trim();
 
 	let num = parseFloat(value, 10);
@@ -60,8 +59,22 @@ export function parseUnit(initialValue, units = CSS_UNITS) {
 	let unit = unitMatch !== undefined ? unitMatch : '';
 	unit = unit.toLowerCase();
 
+	return [num, unit];
+}
+
+/**
+ * Parses a number and unit from a value.
+ *
+ * @param {string} initialValue Value to parse
+ * @param {Array<Object>} units Units to derive from.
+ * @return {Array<number, string>} The extracted number and unit.
+ */
+export function parseUnit(initialValue, units = CSS_UNITS) {
+	const [num, _unit] = baseParseUnit(initialValue);
+	let unit;
+
 	if (hasUnits(units)) {
-		const match = units.find((item) => item.value === unit);
+		const match = units.find((item) => item.value === _unit);
 		unit = match?.value;
 	} else {
 		unit = DEFAULT_UNIT.value;
