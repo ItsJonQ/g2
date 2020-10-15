@@ -14,6 +14,8 @@ function TextInput(props, forwardedRef) {
 		disabled,
 		dragAxis,
 		format,
+		hideArrows = false,
+		innerContent,
 		inputProps,
 		inputRef,
 		onCommitChange,
@@ -22,8 +24,8 @@ function TextInput(props, forwardedRef) {
 		...otherProps
 	} = useTextInput(props);
 
-	const showTextInputArrows =
-		format === 'number' || inputProps.type === 'number';
+	const isNumberInput = format === 'number' || inputProps.type === 'number';
+	const showTextInputArrows = !hideArrows && isNumberInput;
 
 	return (
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>
@@ -38,15 +40,16 @@ function TextInput(props, forwardedRef) {
 				ref={mergeRefs([inputRef, forwardedRef])}
 				{...ui.$('TextInput')}
 			/>
-			{suffix && (
-				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
-			)}
+			{innerContent}
 			{showTextInputArrows && (
 				<TextInputArrows
 					__store={__store}
 					dragAxis={dragAxis}
 					onCommitChange={onCommitChange}
 				/>
+			)}
+			{suffix && (
+				<FlexItem {...ui.$('TextInputSuffix')}>{suffix}</FlexItem>
 			)}
 		</View>
 	);

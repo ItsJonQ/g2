@@ -327,32 +327,45 @@ export function useKeyboardHandlers({
 function useChangeHandlers({
 	isCommitOnBlurOrEnter,
 	onChange = noop,
+	onBeforeCommit,
+	onValueChange = noop,
 	store,
 	validate,
 }) {
 	const handleOnFinalizeChange = useCallback(
 		(next) => {
 			const { setLastValue, setValue } = store.getState();
+			let final = next;
 
-			setLastValue(next);
-			setValue(next);
-			onChange(next);
+			if (onBeforeCommit) {
+				final = onBeforeCommit(next, store.getState());
+			}
+
+			setLastValue(final);
+			setValue(final);
+			onChange(final);
 		},
-		[store, onChange],
+		[store, onBeforeCommit, onChange],
 	);
 
 	const handleOnChange = useCallback(
 		(event) => {
 			const { setValue } = store.getState();
-			const next = event.target.value;
 
-			setValue(next);
+			let final = event.target.value;
+
+			setValue(final);
+			onValueChange(final);
 
 			if (!isCommitOnBlurOrEnter) {
-				onChange(event.target.value, { event });
+				if (onBeforeCommit) {
+					final = onBeforeCommit(final, store.getState());
+				}
+
+				onChange(final, { event });
 			}
 		},
-		[isCommitOnBlurOrEnter, onChange, store],
+		[isCommitOnBlurOrEnter, onBeforeCommit, onChange, onValueChange, store],
 	);
 
 	const handleOnCommitChange = useCallback(() => {
@@ -419,19 +432,23 @@ export function useEventHandlers(props) {
 	const {
 		isCommitOnBlurOrEnter = true,
 		multiline = false,
+		onBeforeCommit,
 		onBlur = noop,
 		onChange = noop,
 		onFocus = noop,
 		onKeyUp = noop,
 		onKeyDown = noop,
 		onEnterKeyDown = noop,
+		onValueChange = noop,
 		validate,
 		store,
 	} = props;
 
 	const { onChange: handleOnChange } = useChangeHandlers({
 		isCommitOnBlurOrEnter,
+		onBeforeCommit,
 		onChange,
+		onValueChange,
 		store,
 		validate,
 	});
@@ -478,7 +495,9 @@ export function useTextInput(props) {
 		dragAxis,
 		gap = 2.5,
 		format,
+		hideArrows = false,
 		id: idProp,
+		innerContent,
 		isResizable = false,
 		isShiftStepEnabled = true,
 		justify,
@@ -487,6 +506,8 @@ export function useTextInput(props) {
 		multiline = false,
 		onIncrement,
 		onDecrement,
+		onBeforeCommit,
+		onValueChange,
 		onValueSync = noop,
 		prefix,
 		shiftStep = 10,
@@ -520,6 +541,8 @@ export function useTextInput(props) {
 
 	const { isFocused, ...eventHandlers } = useEventHandlers({
 		...combinedProps,
+		onBeforeCommit,
+		onValueChange,
 		store,
 	});
 
@@ -578,6 +601,8 @@ export function useTextInput(props) {
 		className: classes,
 		dragAxis,
 		format,
+		hideArrows,
+		innerContent,
 		inputProps,
 		inputRef,
 		onClick: handleOnRootClick,

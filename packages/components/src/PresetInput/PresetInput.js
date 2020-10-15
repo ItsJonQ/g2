@@ -1,0 +1,175 @@
+import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { FiChevronDown } from '@wp-g2/icons';
+import { ui } from '@wp-g2/styles';
+import { noop } from '@wp-g2/utils';
+import React from 'react';
+
+import { Icon } from '../Icon';
+import { Text } from '../Text';
+import { UnitInput } from '../UnitInput';
+import { View } from '../View';
+
+function PresetSelect({ onChange = noop, presets = [] }) {
+	const selectRef = React.useRef();
+	return (
+		<View
+			css={`
+				border-left: 1px solid ${ui.get('surfaceBorderColor')};
+				position: relative;
+				width: 24px;
+				height: 20px;
+				padding-left: 4px;
+				padding-right: 4px;
+				overflow: hidden;
+				display: flex;
+				margin: 0 -7px 0 0;
+				align-items: center;
+				justify-content: center;
+			`}
+		>
+			<View
+				css={`
+					position: relative;
+					z-index: 1;
+					pointer-events: none;
+				`}
+			>
+				<Text isBlock variant="muted">
+					<Icon icon={<FiChevronDown />} size={12} />
+				</Text>
+			</View>
+			<View
+				as="select"
+				css={`
+					height: 100%;
+					opacity: 0;
+					z-index: 0;
+					width: 100%;
+					position: absolute;
+				`}
+				onChange={(e) => {
+					const match = presets.find((p) => p.key === e.target.value);
+					if (match) {
+						onChange(match.label);
+					}
+				}}
+				onClick={(e) => e.stopPropagation()}
+				ref={selectRef}
+			>
+				{presets.map((preset) => (
+					<option key={preset.key} value={preset.key}>
+						{preset.label}
+					</option>
+				))}
+			</View>
+		</View>
+	);
+}
+
+function findMatch({ presets = [], value }) {
+	const match = presets.find((entry) => {
+		const { key, label } = entry;
+		if (!value) return false;
+		const matcher = value.toLowerCase();
+
+		return (
+			key?.toLowerCase().indexOf(matcher) === 0 ||
+			label?.toLowerCase().indexOf(matcher) === 0
+		);
+	});
+
+	return match;
+}
+
+function PresetPlaceholder({ presets, value }) {
+	const match = findMatch({ presets, value });
+	let placeholderValue;
+
+	if (match) {
+		placeholderValue = match.label
+			.toLowerCase()
+			.replace(value.toLowerCase(), value);
+	} else {
+		if (Number(value) && value !== null) {
+			placeholderValue = `${value}px`;
+		}
+	}
+
+	if (!placeholderValue) return null;
+
+	return (
+		<View
+			css={`
+				position: absolute;
+				top: 4px;
+				left: -2px;
+				opacity: 0.4;
+				pointer-events: none;
+				user-select: none;
+			`}
+		>
+			{placeholderValue}
+		</View>
+	);
+}
+
+function PresetInput(props, forwardedRef) {
+	const [placeholder, setPlaceholder] = React.useState('');
+	const { onChange = noop, presets, value, ...otherProps } = useContextSystem(
+		props,
+		'PresetInput',
+	);
+
+	const handleOnChange = (next) => {
+		onChange(next);
+		setPlaceholder('');
+	};
+
+	const handleOnValueChange = (next) => {
+		setPlaceholder(next);
+	};
+
+	const handleOnBeforeCommit = (next, store) => {
+		const match = findMatch({ presets, value: placeholder });
+		if (match) {
+			return match.label;
+		}
+
+		if (Number(next) && next !== null) {
+			return `${next}px`;
+		}
+
+		return next;
+	};
+
+	const suffix = (
+		<PresetSelect
+			onChange={handleOnChange}
+			presets={presets}
+			value={value}
+		/>
+	);
+
+	return (
+		<View
+			css={`
+				position: relative;
+			`}
+		>
+			<UnitInput
+				{...otherProps}
+				hideArrows
+				innerContent={
+					<PresetPlaceholder presets={presets} value={placeholder} />
+				}
+				onBeforeCommit={handleOnBeforeCommit}
+				onChange={handleOnChange}
+				onValueChange={handleOnValueChange}
+				suffix={suffix}
+				value={value}
+			/>
+		</View>
+	);
+}
+
+export default contextConnect(PresetInput, 'PresetInput');
