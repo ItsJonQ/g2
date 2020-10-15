@@ -20,27 +20,31 @@ const isNumber = (value) => !isNaN(Number(value)) && value !== null;
 function PresetPlaceholder({ onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
 	const [isFocused, setIsFocused] = React.useState(false);
+	const selectRef = React.useRef();
 
 	let unit;
 
 	const [parsedValue, parsedUnit] = baseParseUnit(value);
 
 	React.useEffect(() => {
-		const handleOnSelectionEnd = () =>
-			requestAnimationFrame(() => setIsSelecting(false));
+		const handleOnSelectionStart = (event) => {
+			if (event.target === selectRef.current) return;
+			setIsSelecting(true);
+		};
+		const handleOnSelectionEnd = () => setIsSelecting(false);
+
 		document.addEventListener('mouseup', handleOnSelectionEnd);
+		document.addEventListener('mousedown', handleOnSelectionStart);
+
 		return () => {
 			document.removeEventListener('mouseup', handleOnSelectionEnd);
+			document.removeEventListener('mousedown', handleOnSelectionStart);
 		};
 	}, []);
 
 	if (isNumber(parsedValue)) {
 		unit = findUnitMatch({ value: parsedUnit });
 	}
-
-	const handleOnMouseDown = React.useCallback((event) => {
-		setIsSelecting(true);
-	}, []);
 
 	const handleOnChangeSelect = (event) => {
 		const unit = event.target.value;
@@ -55,21 +59,24 @@ function PresetPlaceholder({ onChange, value }) {
 	return (
 		<View
 			css={[
+				textInputStyles.Input,
 				`
 				margin: 0 !important;
 				position: absolute;
 				top: 0;
 				left: 8px;
-				width: 'auto',
+				width: auto;
 			`,
-				textInputStyles.Input,
 				{ pointerEvents: isSelecting ? 'none' : 'initial' },
 			]}
-			onMouseDown={handleOnMouseDown}
 		>
 			<View
 				as="span"
-				css={[textInputStyles.inputFontSize, ui.opacity(0)]}
+				css={[
+					textInputStyles.inputFontSize,
+					ui.opacity(0),
+					{ pointerEvents: 'none' },
+				]}
 			>
 				{parsedValue}
 			</View>
@@ -109,6 +116,7 @@ function PresetPlaceholder({ onChange, value }) {
 					onClick={(e) => e.stopPropagation()}
 					onFocus={() => setIsFocused(true)}
 					onMouseDown={(e) => e.stopPropagation()}
+					ref={selectRef}
 				>
 					{UNITS.map((unit) => (
 						<option key={unit} value={unit}>
