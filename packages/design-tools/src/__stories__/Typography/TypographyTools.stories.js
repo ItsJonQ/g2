@@ -19,6 +19,7 @@ import {
 	TextInput,
 	UnitInput,
 	View,
+	VStack,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMinus, FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
@@ -36,57 +37,54 @@ export default {
 	title: 'DesignTools/TypographyTools',
 };
 
-const TypographyOptions = React.memo(
-	({ addIcon = <FiMoreHorizontal />, showActiveOnly = false }) => {
-		const { setState, ...settings } = useTypography();
-		const optionsEntries = Object.entries(typographyOptionKeys).filter(
-			(entry) => {
-				if (!showActiveOnly) return true;
-				return !settings[entry[0]];
-			},
-		);
+const TypographyOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
+	const { setState, ...settings } = useTypography();
+	const optionsEntries = Object.entries(typographyOptionKeys);
 
-		const handleOnToggle = React.useCallback(
-			({ prop, value }) => () => {
-				typographyStore.setState({ [prop]: value });
-			},
-			[],
-		);
+	// const hasEntries = Object.keys(settings).filter((key, index) => {
+	// 	return !!optionsEntries[index][1];
+	// }).length;
 
-		return (
-			<Dropdown placement="bottom-end">
-				<DropdownTrigger
-					hasCaret={false}
-					icon={addIcon}
-					isControl
-					isSubtle
-					size="xSmall"
-				/>
-				<DropdownMenu maxWidth={160} minWidth={160}>
-					{optionsEntries.map(([key, value]) => {
-						const isSelected = showActiveOnly
-							? undefined
-							: !!settings[key];
+	const handleOnToggle = React.useCallback(
+		({ prop, value }) => () => {
+			typographyStore.setState({ [prop]: value });
+		},
+		[],
+	);
 
-						return (
-							<DropdownMenuItem
-								isSelected={isSelected}
-								key={key}
-								onClick={handleOnToggle({
-									prop: key,
-									value: isSelected ? null : value.value,
-								})}
-								value={key}
-							>
-								{value.label}
-							</DropdownMenuItem>
-						);
-					})}
-				</DropdownMenu>
-			</Dropdown>
-		);
-	},
-);
+	// if (showActiveOnly && !hasEntries) return null;
+
+	return (
+		<Dropdown placement="bottom-end">
+			<DropdownTrigger
+				hasCaret={false}
+				icon={addIcon}
+				isControl
+				isSubtle
+				size="xSmall"
+			/>
+			<DropdownMenu maxWidth={160} minWidth={160}>
+				{optionsEntries.map(([key, value]) => {
+					const isSelected = !!settings[key];
+
+					return (
+						<DropdownMenuItem
+							isSelected={isSelected}
+							key={key}
+							onClick={handleOnToggle({
+								prop: key,
+								value: isSelected ? null : value.value,
+							})}
+							value={key}
+						>
+							{value.label}
+						</DropdownMenuItem>
+					);
+				})}
+			</DropdownMenu>
+		</Dropdown>
+	);
+});
 
 const FontStyleControl = React.memo(() => {
 	const [fontSize, letterSpacing, lineHeight] = useTypography(
@@ -216,12 +214,17 @@ const CombinedFormGroup = React.memo(
 						css={`
 							opacity: 0;
 							pointer-events: none;
+							&:focus {
+								opacity: 1;
+								pointer-events: initial;
+							}
 						`}
 						icon={<FiMinus />}
 						isControl
 						isSubtle
 						onClick={handleOnRemove}
 						size="xSmall"
+						tabIndex={-1}
 					/>
 				</HStack>
 				<Component

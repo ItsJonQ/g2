@@ -15,13 +15,13 @@ export const typographyStore = createStore((set) => ({
 export const useTypography = typographyStore;
 
 export const typographyOptionKeys = {
-	fontSize: {
-		label: 'Font Size',
-		value: '13px',
-	},
 	fontFamily: {
 		label: 'Font Family',
 		value: 'Inter',
+	},
+	fontSize: {
+		label: 'Font Size',
+		value: '13px',
 	},
 	fontWeight: {
 		label: 'Font Weight',
