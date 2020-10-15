@@ -469,6 +469,7 @@ const CombinedFormGroupInputStepper = React.memo(
 				<View>
 					<Grid>
 						<Component
+							hideArrows
 							max={max}
 							min={min}
 							onChange={handleOnChange}
