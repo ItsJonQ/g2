@@ -29,9 +29,11 @@ const excludeList = [
 	'NavigatorSwitch',
 	'PanelBody',
 	'PanelHeader',
+	'PresetInput',
 	'Portal',
 	'SlotFill',
 	'Sortable',
+	'UnitInput',
 ];
 
 const TestableComponents = Object.entries(Components).filter(([key, value]) => {

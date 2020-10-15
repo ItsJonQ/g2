@@ -12,8 +12,6 @@ function UnitInput(props, forwardedRef) {
 	const handleOnIncrement = React.useCallback((prev) => {
 		const [value, unit] = parseUnit(prev.value);
 
-		if (!unit) return;
-
 		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
 
 		const nextValue = add(prev.boost, step);
@@ -30,15 +28,13 @@ function UnitInput(props, forwardedRef) {
 			});
 		}
 
-		const final = createUnitValue(clampedValue, unit);
+		const final = unit ? createUnitValue(clampedValue, unit) : clampedValue;
 
 		return { value: final };
 	}, []);
 
 	const handleOnDecrement = React.useCallback((prev) => {
 		const [value, unit] = parseUnit(prev.value);
-
-		if (!unit) return;
 
 		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
 
@@ -56,7 +52,7 @@ function UnitInput(props, forwardedRef) {
 			});
 		}
 
-		const final = createUnitValue(clampedValue, unit);
+		const final = unit ? createUnitValue(clampedValue, unit) : clampedValue;
 
 		return { value: final };
 	}, []);

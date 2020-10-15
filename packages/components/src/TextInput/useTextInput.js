@@ -98,7 +98,9 @@ const useTextInputSubState = (
 					return onDecrement({ ...prev, boost, isShiftKey });
 				}
 
-				const step = isShiftKey ? prev.step * prev.shiftKey : prev.step;
+				const step = isShiftKey
+					? prev.step * prev.shiftStep
+					: prev.step;
 
 				const nextValue = add(boost, step);
 				const final = roundClampString(

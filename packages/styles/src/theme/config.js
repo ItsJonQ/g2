@@ -121,6 +121,24 @@ const SEGMENTED_CONTROL_PROPS = {
 	segmentedControlFontSize: '12px',
 };
 
+const SLIDER_PROPS = {
+	sliderThumbBackground: get('white'),
+	sliderThumbBorderColor: get('controlBorderColor'),
+	sliderThumbBoxShadow: `0 0 2px rgba(0, 0, 0, 0.2), ${get(
+		'controlSurfaceBoxShadow',
+	)}`,
+};
+
+const SWITCH_PROPS = {
+	switchToggleBackground: get('controlPrimaryTextColor'),
+	switchToggleBackgroundActive: get('controlPrimaryTextColor'),
+	switchToggleBorderColor: get('controlBorderColor'),
+	switchToggleBoxShadow: get('controlSurfaceBoxShadow'),
+	switchBackdropBackground: get('controlBackgroundColor'),
+	switchBackdropBackgroundActive: get('colorAdmin'),
+	switchBackdropBorderColor: get('controlBorderColor'),
+};
+
 const BASE_THEME = {
 	...G2_COLORS,
 	...COLOR_PROPS,
@@ -133,6 +151,8 @@ const BASE_THEME = {
 	...BUTTON_PROPS,
 	...GRID_PROPS,
 	...SEGMENTED_CONTROL_PROPS,
+	...SLIDER_PROPS,
+	...SWITCH_PROPS,
 };
 
 export const config = BASE_THEME;

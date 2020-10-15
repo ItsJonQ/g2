@@ -14,8 +14,12 @@ import {
 	HStack,
 	ListGroup,
 	ListGroupHeader,
+	PresetInput,
 	Select,
+	Slider,
+	Spacer,
 	Surface,
+	Switch,
 	TextInput,
 	UnitInput,
 	View,
@@ -23,7 +27,9 @@ import {
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMinus, FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
+import { ThemeProvider, ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
+import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import {
@@ -65,7 +71,7 @@ const TypographyOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 			/>
 			<DropdownMenu maxWidth={160} minWidth={160}>
 				{optionsEntries.map(([key, value]) => {
-					const isSelected = !!settings[key];
+					const isSelected = is.defined(settings[key]);
 
 					return (
 						<DropdownMenuItem
@@ -180,7 +186,13 @@ const FontFamilyControl = React.memo(() => {
 });
 
 const CombinedFormGroup = React.memo(
-	({ Component = TextInput, label, prop, ...otherProps }) => {
+	({
+		Component = TextInput,
+		label,
+		prop,
+		showRemove = true,
+		...otherProps
+	}) => {
 		const [value] = useTypography((state) => [state[prop]], shallowCompare);
 
 		const handleOnChange = React.useCallback(
@@ -194,7 +206,7 @@ const CombinedFormGroup = React.memo(
 			typographyStore.setState({ [prop]: null });
 		}, [prop]);
 
-		if (!value) return null;
+		if (!is.defined(value)) return null;
 
 		return (
 			<FormGroup
@@ -209,23 +221,25 @@ const CombinedFormGroup = React.memo(
 			>
 				<HStack>
 					<ControlLabel>{label}</ControlLabel>
-					<Button
-						className="action"
-						css={`
-							opacity: 0;
-							pointer-events: none;
-							&:focus {
-								opacity: 1;
-								pointer-events: initial;
-							}
-						`}
-						icon={<FiMinus />}
-						isControl
-						isSubtle
-						onClick={handleOnRemove}
-						size="xSmall"
-						tabIndex={-1}
-					/>
+					{showRemove && (
+						<Button
+							className="action"
+							css={`
+								opacity: 0;
+								pointer-events: none;
+								&:focus {
+									opacity: 1;
+									pointer-events: initial;
+								}
+							`}
+							icon={<FiMinus />}
+							isControl
+							isSubtle
+							onClick={handleOnRemove}
+							size="xSmall"
+							tabIndex={-1}
+						/>
+					)}
 				</HStack>
 				<Component
 					onChange={handleOnChange}
@@ -236,6 +250,257 @@ const CombinedFormGroup = React.memo(
 		);
 	},
 );
+
+const CombinedFormGroupSwitch = React.memo(
+	({
+		Component = TextInput,
+		label,
+		prop,
+		showRemove = true,
+		...otherProps
+	}) => {
+		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+
+		const handleOnChange = React.useCallback(
+			(value) => {
+				typographyStore.setState({ [prop]: value });
+			},
+			[prop],
+		);
+
+		const handleOnRemove = React.useCallback(() => {
+			typographyStore.setState({ [prop]: null });
+		}, [prop]);
+
+		if (!is.defined(value)) return null;
+
+		return (
+			<FormGroup
+				css={`
+					&:hover {
+						.action {
+							opacity: 1;
+							pointer-events: initial;
+						}
+					}
+				`}
+				horizontal
+				templateColumns="1fr"
+			>
+				<HStack>
+					<ControlLabel>{label}</ControlLabel>
+					<Spacer />
+					<Switch
+						checked={!!value}
+						onChange={handleOnChange}
+						{...otherProps}
+					/>
+					{showRemove && (
+						<Button
+							className="action"
+							css={`
+								opacity: 0;
+								pointer-events: none;
+								&:focus {
+									opacity: 1;
+									pointer-events: initial;
+								}
+							`}
+							icon={<FiMinus />}
+							isControl
+							isSubtle
+							onClick={handleOnRemove}
+							size="xSmall"
+							tabIndex={-1}
+						/>
+					)}
+				</HStack>
+			</FormGroup>
+		);
+	},
+);
+
+const CombinedFormGroupSwitchAlt = React.memo(
+	({ label, prop, ...otherProps }) => {
+		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+
+		const handleOnChange = React.useCallback(
+			(value) => {
+				typographyStore.setState({ [prop]: value });
+			},
+			[prop],
+		);
+
+		if (!is.defined(value)) return null;
+
+		return (
+			<FormGroup
+				css={`
+					&:hover {
+						.action {
+							opacity: 1;
+							pointer-events: initial;
+						}
+					}
+				`}
+				templateColumns="1fr"
+			>
+				<HStack alignment="left">
+					<Switch
+						checked={!!value}
+						onChange={handleOnChange}
+						size="small"
+						{...otherProps}
+						css={`
+							margin: 0;
+						`}
+					/>
+					<ControlLabel>{label}</ControlLabel>
+				</HStack>
+			</FormGroup>
+		);
+	},
+);
+
+const CombinedFormGroupInputSlider = React.memo(
+	({
+		Component = TextInput,
+		label,
+		prop,
+		min,
+		truncate = true,
+		max,
+		showRemove = true,
+		...otherProps
+	}) => {
+		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+
+		const handleOnChange = React.useCallback(
+			(value) => {
+				typographyStore.setState({ [prop]: value });
+			},
+			[prop],
+		);
+
+		if (!value == null) return null;
+
+		return (
+			<FormGroup
+				align="center"
+				css={`
+					&:hover {
+						.action {
+							opacity: 1;
+							pointer-events: initial;
+						}
+					}
+				`}
+			>
+				<ControlLabel truncate={truncate}>{label}</ControlLabel>
+				<View>
+					<Grid>
+						<Component
+							max={max}
+							min={min}
+							onChange={handleOnChange}
+							value={value}
+							{...otherProps}
+						/>
+						<Slider
+							max={20}
+							min={min}
+							onChange={handleOnChange}
+							value={value}
+						/>
+					</Grid>
+				</View>
+			</FormGroup>
+		);
+	},
+);
+
+const presets = [
+	{
+		label: 'Small',
+		key: 'small',
+		value: '10px',
+	},
+	{
+		label: 'Medium',
+		key: 'medium',
+		value: '16px',
+	},
+	{
+		label: 'Large',
+		key: 'large',
+		value: '21px',
+	},
+];
+
+const ExampleThree = () => {
+	return (
+		<Card>
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>
+						Typography
+						<TypographyOptions
+							addIcon={<FiMoreHorizontal />}
+							showActiveOnly
+						/>
+					</ListGroupHeader>
+					<CombinedFormGroup
+						label="Font"
+						prop="fontFamily"
+						showRemove={false}
+					/>
+					<CombinedFormGroup
+						Component={Select}
+						label="Weight"
+						prop="fontWeight"
+						showRemove={false}
+					>
+						<option value="Lighter">Light</option>
+						<option value="Normal">Regular</option>
+						<option value="Bold">Bold</option>
+						<option value="Bolder">Bolder</option>
+					</CombinedFormGroup>
+					<CombinedFormGroupInputSlider
+						Component={UnitInput}
+						label="Size"
+						min={0}
+						prop="fontSize"
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupInputSlider
+						Component={UnitInput}
+						label="Line Height"
+						min={0}
+						prop="lineHeight"
+						step={0.5}
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupInputSlider
+						Component={UnitInput}
+						label="Letter Spacing"
+						min={-10}
+						prop="letterSpacing"
+						step={0.5}
+						truncate={false}
+						type="number"
+					/>
+
+					<CombinedFormGroupSwitchAlt
+						label="Drop Cap"
+						prop="dropCap"
+					/>
+				</ListGroup>
+			</CardBody>
+		</Card>
+	);
+};
 
 const ExampleTwo = () => {
 	return (
@@ -262,8 +527,9 @@ const ExampleTwo = () => {
 							<option value="Bolder">Bolder</option>
 						</CombinedFormGroup>
 						<CombinedFormGroup
-							Component={UnitInput}
+							Component={PresetInput}
 							label="Size"
+							presets={presets}
 							prop="fontSize"
 						/>
 						<CombinedFormGroup
@@ -277,6 +543,7 @@ const ExampleTwo = () => {
 							type="number"
 						/>
 					</Grid>
+					<CombinedFormGroupSwitch label="Drop Cap" prop="dropCap" />
 				</ListGroup>
 			</CardBody>
 		</Card>
@@ -314,26 +581,24 @@ const Wrapper = ({ children }) => {
 				`}
 				variant="dotted"
 			/>
-			<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
-				<Container width={800}>
-					<Grid
-						css={`
-							margin-top: 30vh;
-						`}
-						templateColumns="1fr 265px"
-					>
-						<View>
-							<Card>
-								<CardBody>
-									<Preview />
-								</CardBody>
-							</Card>
-						</View>
-						<View>{children}</View>
-					</Grid>
-					);
-				</Container>
-			</ContextSystemProvider>
+			<Container width={800}>
+				<Grid
+					css={`
+						margin-top: 30vh;
+					`}
+					templateColumns="1fr 265px"
+				>
+					<View>
+						<Card>
+							<CardBody>
+								<Preview />
+							</CardBody>
+						</Card>
+					</View>
+					<View>{children}</View>
+				</Grid>
+				);
+			</Container>
 		</>
 	);
 };
@@ -341,7 +606,9 @@ const Wrapper = ({ children }) => {
 export const _options = () => {
 	return (
 		<Wrapper>
-			<ExampleOne />
+			<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
+				<ExampleOne />
+			</ContextSystemProvider>
 		</Wrapper>
 	);
 };
@@ -349,7 +616,43 @@ export const _options = () => {
 export const _plusMinus = () => {
 	return (
 		<Wrapper>
-			<ExampleTwo />
+			<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
+				<ExampleTwo />
+			</ContextSystemProvider>
 		</Wrapper>
+	);
+};
+
+export const _baseLine = () => {
+	const theme = {
+		controlBackgroundColor: 'transparent',
+		controlBorderColor: ui.get('surfaceBorderColor'),
+		controlBorderColorSubtle: 'transparent',
+		controlBorderColorHover: ui.get('surfaceBorderColor'),
+		sliderThumbBorderColor: 'transparent',
+		sliderThumbBoxShadow: 'none',
+		sliderThumbBackground: ui.get('colorAdmin'),
+		switchBackdropBackground: 'transparent',
+		switchBackdropBackgroundActive: ui.get('colorText'),
+		switchBackdropBorderColor: ui.get('colorText'),
+		switchToggleBackground: ui.get('colorText'),
+		switchToggleBackgroundActive: ui.get('colorTextInverted'),
+		switchToggleBoxShadow: 'none',
+	};
+
+	React.useEffect(() => {
+		typographyStore.setState({ fontSize: 13 });
+	}, []);
+
+	return (
+		<ThemeProvider theme={theme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{ FormGroup: { horizontal: true } }}
+				>
+					<ExampleThree />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
 	);
 };

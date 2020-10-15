@@ -941,7 +941,7 @@ exports[`props should render ColorCircle with css prop 2`] = `
 exports[`props should render ColorControl 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-10ttmqx"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-90o1hp"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ColorControl"
@@ -972,7 +972,7 @@ exports[`props should render ColorControl 1`] = `
 exports[`props should render ColorControl with css prop 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-10ttmqx"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-90o1hp"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ColorControl"
@@ -1003,7 +1003,7 @@ exports[`props should render ColorControl with css prop 1`] = `
 exports[`props should render ColorControl with css prop 2`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-py6skg"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-17yd0au"
   data-destructive="false"
   data-g2-c16t="true"
   data-g2-component="ColorControl"
@@ -2663,7 +2663,7 @@ exports[`props should render Separator with css prop 2`] = `
 
 exports[`props should render Slider 1`] = `
 <input
-  class="wp-components-slider css-1ushle"
+  class="wp-components-slider css-1equ9c3"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -2677,7 +2677,7 @@ exports[`props should render Slider 1`] = `
 
 exports[`props should render Slider with css prop 1`] = `
 <input
-  class="wp-components-slider css-1ushle"
+  class="wp-components-slider css-1equ9c3"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -2691,7 +2691,7 @@ exports[`props should render Slider with css prop 1`] = `
 
 exports[`props should render Slider with css prop 2`] = `
 <input
-  class="wp-components-slider css-l5qgqv"
+  class="wp-components-slider css-bnhdbm"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -3335,12 +3335,12 @@ exports[`props should render Switch 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-14zgccs"
+    class="css-l4d04r"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-ae81tz"
+    class="css-6fduh"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -3613,65 +3613,6 @@ exports[`props should render Truncate with css prop 2`] = `
   data-g2-component="Truncate"
   id="Truncate"
 />
-`;
-
-exports[`props should render UnitInput 1`] = `
-<div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-unit-input css-in42v"
-  data-g2-c16t="true"
-  data-g2-component="TextInputWrapper"
->
-  <input
-    autocomplete="off"
-    class="css-16e6wng"
-    data-g2-c16t="true"
-    data-g2-component="TextInput"
-    id="UnitInput"
-    spellcheck="false"
-    type="text"
-    value=""
-  />
-  <div
-    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1fis89g"
-    data-g2-c16t="true"
-    data-g2-component="TextInputArrows"
-  >
-    <div
-      class="wp-components-icon css-1jnftqj"
-      data-g2-c16t="true"
-      data-g2-component="TextInputArrowUp"
-      tabindex="-1"
-    >
-      <svg
-        aria-hidden="true"
-        fill="currentColor"
-        focusable="false"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M15 12l-5-5-5 5h10z"
-        />
-      </svg>
-    </div>
-    <div
-      class="wp-components-icon css-1u35c1v"
-      data-g2-c16t="true"
-      data-g2-component="TextInputArrowDown"
-      tabindex="-1"
-    >
-      <svg
-        aria-hidden="true"
-        fill="currentColor"
-        focusable="false"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M5 8l5 5 5-5H5z"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
 `;
 
 exports[`props should render VStack 1`] = `

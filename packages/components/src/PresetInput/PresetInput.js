@@ -4,6 +4,7 @@ import { ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
+import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { UnitInput } from '../UnitInput';
@@ -19,28 +20,29 @@ function PresetSelect({ onChange = noop, presets = [] }) {
 			css={`
 				border-left: 1px solid ${ui.get('surfaceBorderColor')};
 				position: relative;
-				width: 24px;
+				width: 26px;
 				height: 20px;
-				padding-left: 4px;
-				padding-right: 4px;
-				overflow: hidden;
 				display: flex;
-				margin: 0 -7px 0 0;
+				margin: 0 -8px 0 0;
 				align-items: center;
 				justify-content: center;
 			`}
 		>
-			<View
+			<Button
 				css={`
 					position: relative;
 					z-index: 1;
+					padding-left: 4px;
+					padding-right: 4px;
+					min-width: auto !important;
 					pointer-events: none;
 				`}
-			>
-				<Text isBlock variant="muted">
-					<Icon icon={<FiChevronDown />} size={12} />
-				</Text>
-			</View>
+				icon={<FiChevronDown />}
+				iconSize={14}
+				isBlock
+				isControl
+				isSubtle
+			/>
 			<View
 				as="select"
 				css={`
