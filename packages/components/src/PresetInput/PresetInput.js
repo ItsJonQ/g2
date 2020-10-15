@@ -42,6 +42,7 @@ function PresetSelect({ onChange = noop, presets = [] }) {
 				isBlock
 				isControl
 				isSubtle
+				tabIndex={-1}
 			/>
 			<View
 				as="select"
@@ -60,6 +61,7 @@ function PresetSelect({ onChange = noop, presets = [] }) {
 				}}
 				onClick={(e) => e.stopPropagation()}
 				ref={selectRef}
+				tabIndex={-1}
 			>
 				{presets.map((preset) => (
 					<option key={preset.key} value={preset.key}>

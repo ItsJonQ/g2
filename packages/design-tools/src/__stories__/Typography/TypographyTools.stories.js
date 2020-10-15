@@ -18,6 +18,7 @@ import {
 	Select,
 	Slider,
 	Spacer,
+	Stepper,
 	Surface,
 	Switch,
 	TextInput,
@@ -29,7 +30,7 @@ import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMinus, FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
 import { ThemeProvider, ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
-import { is } from '@wp-g2/utils';
+import { add, is, subtract } from '@wp-g2/utils';
 import React from 'react';
 
 import {
@@ -419,6 +420,75 @@ const CombinedFormGroupInputSlider = React.memo(
 	},
 );
 
+const CombinedFormGroupInputStepper = React.memo(
+	({
+		Component = TextInput,
+		label,
+		prop,
+		min,
+		truncate = true,
+		max,
+		showRemove = true,
+		...otherProps
+	}) => {
+		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+
+		const handleOnChange = React.useCallback(
+			(value) => {
+				typographyStore.setState({ [prop]: value });
+			},
+			[prop],
+		);
+
+		const handleOnIncrement = React.useCallback(() => {
+			typographyStore.setState((prev) => {
+				return { [prop]: add(prev[prop], 1).toString() };
+			});
+		}, [prop]);
+		const handleOnDecrement = React.useCallback(() => {
+			typographyStore.setState((prev) => {
+				return { [prop]: subtract(prev[prop], 1).toString() };
+			});
+		}, [prop]);
+
+		if (!value == null) return null;
+
+		return (
+			<FormGroup
+				align="center"
+				css={`
+					&:hover {
+						.action {
+							opacity: 1;
+							pointer-events: initial;
+						}
+					}
+				`}
+			>
+				<ControlLabel truncate={truncate}>{label}</ControlLabel>
+				<View>
+					<Grid>
+						<Component
+							max={max}
+							min={min}
+							onChange={handleOnChange}
+							value={value}
+							{...otherProps}
+						/>
+						<Stepper
+							min={min}
+							onChange={handleOnChange}
+							onDecrement={handleOnDecrement}
+							onIncrement={handleOnIncrement}
+							value={value}
+						/>
+					</Grid>
+				</View>
+			</FormGroup>
+		);
+	},
+);
+
 const presets = [
 	{
 		label: 'Small',
@@ -436,6 +506,70 @@ const presets = [
 		value: '21px',
 	},
 ];
+
+const ExampleFour = () => {
+	return (
+		<Card>
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>
+						Typography
+						<TypographyOptions
+							addIcon={<FiMoreHorizontal />}
+							showActiveOnly
+						/>
+					</ListGroupHeader>
+					<CombinedFormGroup
+						label="Font"
+						prop="fontFamily"
+						showRemove={false}
+					/>
+					<CombinedFormGroup
+						Component={Select}
+						label="Weight"
+						prop="fontWeight"
+						showRemove={false}
+					>
+						<option value="Lighter">Light</option>
+						<option value="Normal">Regular</option>
+						<option value="Bold">Bold</option>
+						<option value="Bolder">Bolder</option>
+					</CombinedFormGroup>
+					<CombinedFormGroupInputSlider
+						Component={UnitInput}
+						label="Size"
+						min={0}
+						prop="fontSize"
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupInputStepper
+						Component={UnitInput}
+						label="Line Height"
+						min={0}
+						prop="lineHeight"
+						step={0.5}
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupInputStepper
+						Component={UnitInput}
+						label="Letter Spacing"
+						min={-10}
+						prop="letterSpacing"
+						step={0.5}
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupSwitchAlt
+						label="Drop Cap"
+						prop="dropCap"
+					/>
+				</ListGroup>
+			</CardBody>
+		</Card>
+	);
+};
 
 const ExampleThree = () => {
 	return (
@@ -623,34 +757,52 @@ export const _plusMinus = () => {
 	);
 };
 
-export const _baseLine = () => {
-	const theme = {
-		controlBackgroundColor: 'transparent',
-		controlBorderColor: ui.get('surfaceBorderColor'),
-		controlBorderColorSubtle: 'transparent',
-		controlBorderColorHover: ui.get('surfaceBorderColor'),
-		sliderThumbBorderColor: 'transparent',
-		sliderThumbBoxShadow: 'none',
-		sliderThumbBackground: ui.get('colorAdmin'),
-		switchBackdropBackground: 'transparent',
-		switchBackdropBackgroundActive: ui.get('colorText'),
-		switchBackdropBorderColor: ui.get('colorText'),
-		switchToggleBackground: ui.get('colorText'),
-		switchToggleBackgroundActive: ui.get('colorTextInverted'),
-		switchToggleBoxShadow: 'none',
-	};
+const baseLineTheme = {
+	controlBackgroundColor: 'transparent',
+	controlBorderColor: ui.get('surfaceBorderColor'),
+	controlBorderColorSubtle: 'transparent',
+	controlBorderColorHover: ui.get('surfaceBorderColor'),
+	sliderThumbBorderColor: 'transparent',
+	sliderThumbBoxShadow: 'none',
+	sliderThumbBackground: ui.get('colorAdmin'),
+	switchBackdropBackground: 'transparent',
+	switchBackdropBackgroundActive: ui.get('colorText'),
+	switchBackdropBorderColor: ui.get('colorText'),
+	switchToggleBackground: ui.get('colorText'),
+	switchToggleBackgroundActive: ui.get('colorTextInverted'),
+	switchToggleBoxShadow: 'none',
+};
 
+export const _baseLine = () => {
 	React.useEffect(() => {
 		typographyStore.setState({ fontSize: 13 });
 	}, []);
 
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={baseLineTheme}>
 			<Wrapper>
 				<ContextSystemProvider
 					value={{ FormGroup: { horizontal: true } }}
 				>
 					<ExampleThree />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _baseLineStepper = () => {
+	React.useEffect(() => {
+		typographyStore.setState({ fontSize: 13 });
+	}, []);
+
+	return (
+		<ThemeProvider theme={baseLineTheme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{ FormGroup: { horizontal: true } }}
+				>
+					<ExampleFour />
 				</ContextSystemProvider>
 			</Wrapper>
 		</ThemeProvider>

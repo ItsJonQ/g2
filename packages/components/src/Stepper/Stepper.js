@@ -48,14 +48,14 @@ function Stepper(props, forwardedRef) {
 					icon={MinusIcon}
 					isVertical={isVertical}
 					key="minus"
-					onClick={onIncrement}
+					onClick={onDecrement}
 					size={size}
 				/>,
 				<ControlButton
 					icon={AddIcon}
 					isVertical={isVertical}
 					key="plus"
-					onClick={onDecrement}
+					onClick={onIncrement}
 					size={size}
 				/>,
 		  ];
