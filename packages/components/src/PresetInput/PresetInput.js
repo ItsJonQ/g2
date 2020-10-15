@@ -5,15 +5,10 @@ import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Button } from '../Button';
-import { Icon } from '../Icon';
-import { Text } from '../Text';
 import { UnitInput } from '../UnitInput';
-import { baseParseUnit, createUnitValue } from '../UnitInput/UnitInput.utils';
 import { View } from '../View';
 
-const UNITS = ['px', 'em', 'rem', '%', 'vh', 'vmin', 'vmax', 'vw'];
-
-function PresetSelect({ onChange = noop, presets = [] }) {
+function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
 	const selectRef = React.useRef();
 	return (
 		<View
@@ -73,11 +68,6 @@ function PresetSelect({ onChange = noop, presets = [] }) {
 	);
 }
 
-function findUnitMatch({ units = UNITS, value = '' }) {
-	const match = units.find((unit) => unit.indexOf(value.toLowerCase()) === 0);
-	return match;
-}
-
 function findMatch({ presets = [], value }) {
 	const match = presets.find((entry) => {
 		const { key, label } = entry;
@@ -101,12 +91,6 @@ function PresetPlaceholder({ presets, value }) {
 		placeholderValue = match.label
 			.toLowerCase()
 			.replace(value.toLowerCase(), value);
-	} else {
-		const [parsedValue, parsedUnit] = baseParseUnit(value);
-		if (Number(parsedValue) && parsedValue !== null) {
-			const unit = findUnitMatch({ value: parsedUnit });
-			placeholderValue = createUnitValue(parsedValue, unit);
-		}
 	}
 
 	if (!placeholderValue) return null;
@@ -149,13 +133,6 @@ function PresetInput(props, forwardedRef) {
 			return match.label;
 		}
 
-		const [parsedValue, parsedUnit] = baseParseUnit(next);
-
-		if (Number(parsedValue) && parsedValue !== null) {
-			const unit = findUnitMatch({ value: parsedUnit });
-			return createUnitValue(parsedValue, unit);
-		}
-
 		return next;
 	};
 
@@ -182,6 +159,7 @@ function PresetInput(props, forwardedRef) {
 				onBeforeCommit={handleOnBeforeCommit}
 				onChange={handleOnChange}
 				onValueChange={handleOnValueChange}
+				ref={forwardedRef}
 				suffix={suffix}
 				value={value}
 			/>

@@ -38,6 +38,7 @@ const COLOR_PROPS = {
 	colorText: '#3a3b3c',
 	colorTextInverted: get('white'),
 	colorTextHeading: '#050505',
+	colorTextMuted: '#8a8b8c',
 };
 
 const FONT_PROPS = {

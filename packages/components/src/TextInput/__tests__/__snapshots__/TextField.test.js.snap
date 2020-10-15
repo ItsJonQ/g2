@@ -8,7 +8,7 @@ exports[`props should render align 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -27,7 +27,7 @@ exports[`props should render correctly 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -46,7 +46,7 @@ exports[`props should render defaultValue 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -66,7 +66,7 @@ exports[`props should render disabled 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     disabled=""
@@ -86,7 +86,7 @@ exports[`props should render gap 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -105,7 +105,7 @@ exports[`props should render isRounded 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -124,7 +124,7 @@ exports[`props should render isSeamless 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -143,7 +143,7 @@ exports[`props should render justify 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -162,7 +162,7 @@ exports[`props should render multiline 1`] = `
 >
   <textarea
     autocomplete="off"
-    class="css-kal1tb"
+    class="css-1snlima"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -189,7 +189,7 @@ exports[`props should render prefix 1`] = `
   </div>
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -208,7 +208,7 @@ exports[`props should render size 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-1dqg2qw"
+    class="css-1jaiw9i"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -227,7 +227,7 @@ exports[`props should render suffix 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -255,7 +255,7 @@ exports[`props should render value 1`] = `
 >
   <input
     autocomplete="off"
-    class="css-16e6wng"
+    class="css-zn43e4"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"

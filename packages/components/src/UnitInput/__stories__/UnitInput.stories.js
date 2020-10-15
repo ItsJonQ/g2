@@ -7,6 +7,12 @@ export default {
 	title: 'Components/UnitInput',
 };
 
+const Example = () => {
+	const [value, setValue] = React.useState('13px');
+
+	return <UnitInput onChange={setValue} value={value} />;
+};
+
 export const _default = () => {
-	return <UnitInput value="13px" />;
+	return <Example />;
 };

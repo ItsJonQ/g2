@@ -7,7 +7,7 @@ exports[`props should render children 1`] = `
   data-g2-component="SelectWrapper"
 >
   <select
-    class="css-7vrdmx"
+    class="css-pjq1vj"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -66,7 +66,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="SelectWrapper"
 >
   <select
-    class="css-7vrdmx"
+    class="css-pjq1vj"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -127,7 +127,7 @@ exports[`props should render disabled 1`] = `
   disabled=""
 >
   <select
-    class="css-7vrdmx"
+    class="css-pjq1vj"
     data-g2-c16t="true"
     data-g2-component="Select"
     disabled=""
@@ -188,7 +188,7 @@ exports[`props should render readOnly 1`] = `
   data-g2-component="SelectWrapper"
 >
   <select
-    class="css-7vrdmx"
+    class="css-pjq1vj"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -249,7 +249,7 @@ exports[`props should render required 1`] = `
   data-g2-component="SelectWrapper"
 >
   <select
-    class="css-7vrdmx"
+    class="css-pjq1vj"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -310,7 +310,7 @@ exports[`props should render size 1`] = `
   data-g2-component="SelectWrapper"
 >
   <select
-    class="css-mfc0y6"
+    class="css-1kjecn5"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"

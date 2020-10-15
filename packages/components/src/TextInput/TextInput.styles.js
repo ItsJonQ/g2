@@ -17,6 +17,14 @@ export const inputMultiline = css`
 	padding-right: 8px;
 `;
 
+export const inputFontSize = css`
+	font-size: ${ui.get('fontSizeInputMobile')};
+
+	@media (min-width: 36em) {
+		font-size: ${ui.get('fontSize')};
+	}
+`;
+
 export const Input = css`
 	appearance: none;
 	background: transparent;
@@ -27,7 +35,6 @@ export const Input = css`
 	color: ${ui.color.text};
 	display: block;
 	flex: 1;
-	font-size: ${ui.get('fontSizeInputMobile')};
 	line-height: 18px;
 	min-height: calc(${ui.get('controlHeight')} - 2px);
 	outline: none;
@@ -37,9 +44,7 @@ export const Input = css`
 	resize: none;
 	width: 100%;
 
-	@media (min-width: 36em) {
-		font-size: ${ui.get('fontSize')};
-	}
+	${inputFontSize};
 
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
