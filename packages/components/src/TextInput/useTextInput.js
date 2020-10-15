@@ -247,7 +247,6 @@ function useFocusHandlers({
 }
 
 export function useKeyboardHandlers({
-	onChange = noop,
 	multiline = false,
 	onKeyDown = noop,
 	onEnterKeyDown = noop,
@@ -282,7 +281,7 @@ export function useKeyboardHandlers({
 
 	const handleOnKeyDown = useCallback(
 		(event) => {
-			const { commitValue } = store.getState();
+			const { commitValue, setValue } = store.getState();
 			const { format, type } = store.getState();
 			const isNumberInput = format === 'number' || type === 'number';
 
@@ -291,7 +290,8 @@ export function useKeyboardHandlers({
 					if (event.metaKey || event.ctrlKey) {
 						event.persist();
 						setUndoTimeout(() => {
-							onChange(event);
+							setValue(event.target.value);
+							commitValue();
 						});
 					}
 					break;
@@ -318,7 +318,7 @@ export function useKeyboardHandlers({
 
 			onKeyDown(event);
 		},
-		[store, onKeyDown, setUndoTimeout, onChange],
+		[store, onKeyDown, setUndoTimeout],
 	);
 
 	return { onKeyUp: handleOnKeyUp, onKeyDown: handleOnKeyDown };
@@ -451,7 +451,6 @@ export function useEventHandlers(props) {
 		onKeyDown: handleOnKeyDown,
 		onKeyUp: handleOnKeyUp,
 	} = useKeyboardHandlers({
-		onChange: handleOnChange,
 		onEnterKeyDown,
 		onKeyDown,
 		onKeyUp,

@@ -3632,12 +3632,12 @@ exports[`props should render UnitInput 1`] = `
     value=""
   />
   <div
-    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-bv5fib"
+    class="wp-components-flex wp-components-h-stack wp-components-v-stack css-1fis89g"
     data-g2-c16t="true"
     data-g2-component="TextInputArrows"
   >
     <div
-      class="wp-components-icon css-1vrpdm9"
+      class="wp-components-icon css-1jnftqj"
       data-g2-c16t="true"
       data-g2-component="TextInputArrowUp"
       tabindex="-1"
@@ -3654,7 +3654,7 @@ exports[`props should render UnitInput 1`] = `
       </svg>
     </div>
     <div
-      class="wp-components-icon css-7v1vli"
+      class="wp-components-icon css-1u35c1v"
       data-g2-c16t="true"
       data-g2-component="TextInputArrowDown"
       tabindex="-1"

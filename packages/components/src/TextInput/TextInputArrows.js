@@ -189,7 +189,7 @@ const UpDownArrows = React.memo(
 					{...ui.$('TextInputArrowUp')}
 					icon={arrowUp}
 					size={12}
-					width={20}
+					width={16}
 				/>
 				<Icon
 					className={styles.SpinnerArrowDown}
@@ -201,7 +201,7 @@ const UpDownArrows = React.memo(
 					{...ui.$('TextInputArrowDown')}
 					icon={arrowDown}
 					size={12}
-					width={20}
+					width={16}
 				/>
 			</>
 		);

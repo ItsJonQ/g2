@@ -71,15 +71,15 @@ export const resizable = css`
 
 export const Spinner = css`
 	cursor: pointer;
-	margin: 0 -4px 0 0 !important;
-	opacity: 0.8;
+	margin: 1px -6px 0 0 !important;
+	opacity: 0.6;
 	user-select: none;
 `;
 
 export const SpinnerArrow = css`
 	border-radius: ${ui.get('controlBorderRadius')};
 	color: ${ui.get('colorText')};
-	padding: 0 4px;
+	padding: 0 2px;
 
 	&:hover:active {
 		background-color: ${ui.get('controlBackgroundColor')};
