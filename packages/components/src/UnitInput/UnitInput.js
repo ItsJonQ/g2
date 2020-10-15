@@ -12,6 +12,8 @@ function UnitInput(props, forwardedRef) {
 	const handleOnIncrement = React.useCallback((prev) => {
 		const [value, unit] = parseUnit(prev.value);
 
+		if (!unit) return;
+
 		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
 
 		const nextValue = add(prev.boost, step);
@@ -35,6 +37,8 @@ function UnitInput(props, forwardedRef) {
 
 	const handleOnDecrement = React.useCallback((prev) => {
 		const [value, unit] = parseUnit(prev.value);
+
+		if (!unit) return;
 
 		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
 
