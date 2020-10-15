@@ -15,22 +15,26 @@ function findUnitMatch({ units = UNITS, value = '' }) {
 	return match;
 }
 
+const isNumber = (value) => !isNaN(Number(value)) && value !== null;
+
 function PresetPlaceholder({ onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
+	const [isFocused, setIsFocused] = React.useState(false);
 
 	let unit;
 
 	const [parsedValue, parsedUnit] = baseParseUnit(value);
 
 	React.useEffect(() => {
-		const handleOnSelectionEnd = () => setIsSelecting(false);
+		const handleOnSelectionEnd = () =>
+			requestAnimationFrame(() => setIsSelecting(false));
 		document.addEventListener('mouseup', handleOnSelectionEnd);
 		return () => {
 			document.removeEventListener('mouseup', handleOnSelectionEnd);
 		};
 	}, []);
 
-	if (Number(parsedValue) && parsedValue !== null) {
+	if (isNumber(parsedValue)) {
 		unit = findUnitMatch({ value: parsedUnit });
 	}
 
@@ -56,6 +60,7 @@ function PresetPlaceholder({ onChange, value }) {
 				position: absolute;
 				top: 0;
 				left: 8px;
+				width: 'auto',
 			`,
 				textInputStyles.Input,
 				{ pointerEvents: isSelecting ? 'none' : 'initial' },
@@ -71,14 +76,18 @@ function PresetPlaceholder({ onChange, value }) {
 			<View
 				as="span"
 				css={[
+					textInputStyles.inputFontSize,
 					{
 						background: ui.get('controlBackgroundDimColor'),
 						cursor: 'pointer',
 						position: 'relative',
 					},
+					isFocused && {
+						background: ui.color.admin,
+						color: ui.color.white,
+					},
 					ui.opacity(isTypeAhead ? 0.5 : 1),
 					ui.borderRadius.round,
-					textInputStyles.inputFontSize,
 				]}
 			>
 				{unit}
@@ -95,10 +104,11 @@ function PresetPlaceholder({ onChange, value }) {
 						height: 100%;
 						cursor: pointer;
 					`}
+					onBlur={() => setIsFocused(false)}
 					onChange={handleOnChangeSelect}
 					onClick={(e) => e.stopPropagation()}
+					onFocus={() => setIsFocused(true)}
 					onMouseDown={(e) => e.stopPropagation()}
-					tabIndex={-1}
 				>
 					{UNITS.map((unit) => (
 						<option key={unit} value={unit}>
@@ -115,6 +125,7 @@ function UnitInput(props, forwardedRef) {
 	const [placeholder, setPlaceholder] = React.useState('');
 	const {
 		onBeforeCommit,
+		min = 0,
 		onChange = noop,
 		onValueChange = noop,
 		innerContent,
@@ -126,7 +137,7 @@ function UnitInput(props, forwardedRef) {
 	React.useEffect(() => {
 		const [parsedValue, parsedUnit] = baseParseUnit(value);
 
-		if (Number(parsedValue) && parsedValue !== null) {
+		if (isNumber(parsedValue)) {
 			const unit = findUnitMatch({ value: parsedUnit });
 			if (unit) {
 				setPlaceholder(createUnitValue(parsedValue, unit));
@@ -152,7 +163,7 @@ function UnitInput(props, forwardedRef) {
 		const [parsedValue, parsedUnit] = baseParseUnit(next);
 		let commitValue = next;
 
-		if (Number(parsedValue) && parsedValue !== null) {
+		if (isNumber(parsedValue)) {
 			const unit = findUnitMatch({ value: parsedUnit });
 			commitValue = createUnitValue(parsedValue, unit);
 		}
@@ -233,6 +244,7 @@ function UnitInput(props, forwardedRef) {
 				{...otherProps}
 				format="number"
 				innerContent={enhancedInnerContent}
+				min={min}
 				onBeforeCommit={handleOnBeforeCommit}
 				onChange={handleOnChange}
 				onDecrement={handleOnDecrement}
