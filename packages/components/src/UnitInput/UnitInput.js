@@ -168,7 +168,7 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 						background: ui.color.admin,
 						color: ui.color.white,
 					},
-					ui.opacity(isTypeAhead ? 0.5 : 1),
+					ui.opacity(!isFocused && isTypeAhead ? 0.5 : 1),
 					ui.borderRadius.round,
 				]}
 			>
@@ -196,6 +196,16 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 						if (e.keyCode === 8) {
 							e.preventDefault();
 							handleOnRemoveUnit(e);
+						}
+						// Select all
+						if ((e.keyCode === 65 && e.metaKey) || e.ctrlKey) {
+							e.preventDefault();
+							inputRef.current.focus();
+						}
+						// Left/Right arrow
+						if (e.keyCode === 37 || e.keyCode === 39) {
+							e.preventDefault();
+							inputRef.current.focus();
 						}
 					}}
 					onMouseDown={(e) => e.stopPropagation()}
