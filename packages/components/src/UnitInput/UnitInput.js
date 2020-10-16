@@ -25,10 +25,28 @@ function findUnitMatch({ units = UNITS, value = '' }) {
 function PresetPlaceholder({ inputRef, onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
 	const [isFocused, setIsFocused] = React.useState(false);
+	const [width, setWidth] = React.useState();
 	const selectRef = React.useRef();
 
 	let [parsedValue, parsedUnit] = baseParseUnit(value);
 	let unit;
+
+	React.useEffect(() => {});
+
+	React.useEffect(() => {
+		const handleOnResize = () => {
+			if (inputRef.current) {
+				setWidth(inputRef.current.clientWidth);
+			}
+		};
+
+		handleOnResize();
+
+		window.addEventListener('resize', handleOnResize);
+		return () => {
+			window.removeEventListener('resize', handleOnResize);
+		};
+	}, [inputRef]);
 
 	React.useEffect(() => {
 		const handleOnSelectionStart = (event) => {
@@ -99,10 +117,13 @@ function PresetPlaceholder({ inputRef, onChange, value }) {
 				position: absolute;
 				top: 0;
 				left: 8px;
-				width: auto;
+				overflow: hidden;
 			`,
 				{ pointerEvents: isSelecting ? 'none' : 'initial' },
 			]}
+			style={{
+				width: width || '100%',
+			}}
 		>
 			<View
 				as="span"
