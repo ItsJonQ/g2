@@ -438,6 +438,18 @@ export function useDragHandlers({ dragAxis, store }) {
 
 	useEffect(() => {
 		if (dragState) {
+			if (window.getSelection) {
+				if (window.getSelection().empty) {
+					// Chrome
+					window.getSelection().empty();
+				} else if (window.getSelection().removeAllRanges) {
+					// Firefox
+					window.getSelection().removeAllRanges();
+				}
+			} else if (document.selection) {
+				// IE?
+				document.selection.empty();
+			}
 			if (dragState === 'x') {
 				document.documentElement.classList.add(styles.globalDraggableX);
 				document.documentElement.classList.remove(
