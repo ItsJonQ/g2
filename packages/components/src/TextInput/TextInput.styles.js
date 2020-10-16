@@ -74,8 +74,17 @@ export const resizable = css`
 	resize: vertical;
 `;
 
+export const SpinnerWrapper = css`
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	min-height: 0;
+`;
+
 export const Spinner = css`
 	cursor: pointer;
+	height: 24px;
 	margin: 1px -6px 0 0 !important;
 	opacity: 0.6;
 	user-select: none;

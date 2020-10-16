@@ -14343,6 +14343,11 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
+isnumeric@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/isnumeric/-/isnumeric-0.2.0.tgz#a2347ba360de19e33d0ffd590fddf7755cbf2e64"
+  integrity sha1-ojR7o2DeGeM9D/1ZD933dVy/LmQ=
+
 isobject@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
@@ -23682,6 +23687,14 @@ unistore@^3.5.1:
   resolved "https://registry.yarnpkg.com/unistore/-/unistore-3.5.2.tgz#ec3ae07bc497fb35ff8b99f85c878ec47c787cb4"
   integrity sha512-2Aa4eX0Ua1umyiI3Eai6Li+wXYOHgaDBGOPB3Hvw7PAVuD30TAyh5kS4yNKb2fLDbQgizvPhKQRcYnOdfsm4VQ==
 
+units-css@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/units-css/-/units-css-0.4.0.tgz#d6228653a51983d7c16ff28f8b9dc3b1ffed3a07"
+  integrity sha1-1iKGU6UZg9fBb/KPi53Dsf/tOgc=
+  dependencies:
+    isnumeric "^0.2.0"
+    viewport-dimensions "^0.2.0"
+
 universal-user-agent@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-4.0.1.tgz#fd8d6cb773a679a709e967ef8288a31fcc03e557"
@@ -24130,6 +24143,11 @@ vfile@^4.0.0:
     replace-ext "1.0.0"
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
+
+viewport-dimensions@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/viewport-dimensions/-/viewport-dimensions-0.2.0.tgz#de740747db5387fd1725f5175e91bac76afdf36c"
+  integrity sha1-3nQHR9tTh/0XJfUXXpG6x2r982w=
 
 vlq@^0.2.2:
   version "0.2.3"

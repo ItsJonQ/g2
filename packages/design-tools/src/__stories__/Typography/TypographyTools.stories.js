@@ -24,7 +24,6 @@ import {
 	TextInput,
 	UnitInput,
 	View,
-	VStack,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMinus, FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
@@ -32,6 +31,7 @@ import { ThemeProvider, ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
 import { add, is, subtract } from '@wp-g2/utils';
 import React from 'react';
+import CSSUnit from 'units-css';
 
 import {
 	Preview,
@@ -384,6 +384,7 @@ const CombinedFormGroupInputSlider = React.memo(
 		);
 
 		if (!value == null) return null;
+		const cssValue = CSSUnit.parse(value);
 
 		return (
 			<FormGroup
@@ -411,7 +412,7 @@ const CombinedFormGroupInputSlider = React.memo(
 							max={20}
 							min={min}
 							onChange={handleOnChange}
-							value={value}
+							value={cssValue.value}
 						/>
 					</Grid>
 				</View>
@@ -545,7 +546,6 @@ const ExampleFour = () => {
 						type="number"
 					/>
 					<CombinedFormGroupInputStepper
-						Component={UnitInput}
 						label="Line Height"
 						min={0}
 						prop="lineHeight"
@@ -609,7 +609,6 @@ const ExampleThree = () => {
 						type="number"
 					/>
 					<CombinedFormGroupInputSlider
-						Component={UnitInput}
 						label="Line Height"
 						min={0}
 						prop="lineHeight"

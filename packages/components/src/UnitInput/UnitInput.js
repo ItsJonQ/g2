@@ -20,9 +20,8 @@ function PresetPlaceholder({ onChange, value }) {
 	const [isFocused, setIsFocused] = React.useState(false);
 	const selectRef = React.useRef();
 
+	let [parsedValue, parsedUnit] = baseParseUnit(value);
 	let unit;
-
-	const [parsedValue, parsedUnit] = baseParseUnit(value);
 
 	React.useEffect(() => {
 		const handleOnSelectionStart = (event) => {
@@ -40,17 +39,26 @@ function PresetPlaceholder({ onChange, value }) {
 		};
 	}, []);
 
-	if (is.numeric(parsedValue)) {
-		unit = findUnitMatch({ value: parsedUnit });
-	}
-
 	const handleOnChangeSelect = (event) => {
 		const unit = event.target.value;
 		const [parsedValue] = baseParseUnit(value);
 		onChange(createUnitValue(parsedValue, unit));
 	};
 
+	if (is.numeric(parsedValue)) {
+		unit = findUnitMatch({ value: parsedUnit });
+	}
+
 	if (!unit) return null;
+
+	if (/\.$/g.test(value)) {
+		parsedValue = value;
+	}
+
+	// Disallow values where a dot follows a character, e.g. 1.p
+	if (/\.[a-zA-Z]/g.test(value)) {
+		return null;
+	}
 
 	const isTypeAhead = parsedUnit !== unit;
 

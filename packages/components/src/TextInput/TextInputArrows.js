@@ -10,6 +10,7 @@ import React, {
 } from 'react';
 
 import { Icon } from '../Icon';
+import { View } from '../View';
 import { VStack } from '../VStack';
 import * as styles from './TextInput.styles';
 
@@ -40,19 +41,21 @@ function TextInputArrows(props, forwardedRef) {
 	});
 
 	return (
-		<VStack
-			{...dragGestures()}
-			className={styles.Spinner}
-			expanded={true}
-			spacing={0}
-			{...ui.$('TextInputArrows')}
-			ref={forwardedRef}
-		>
-			<UpDownArrows
-				onDecrement={decrementValue}
-				onIncrement={incrementValue}
-			/>
-		</VStack>
+		<View className={styles.SpinnerWrapper}>
+			<VStack
+				{...dragGestures()}
+				className={styles.Spinner}
+				expanded={true}
+				spacing={0}
+				{...ui.$('TextInputArrows')}
+				ref={forwardedRef}
+			>
+				<UpDownArrows
+					onDecrement={decrementValue}
+					onIncrement={incrementValue}
+				/>
+			</VStack>
+		</View>
 	);
 }
 
