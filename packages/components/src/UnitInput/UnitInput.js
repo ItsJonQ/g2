@@ -15,7 +15,8 @@ function findUnitMatch({ units = UNITS, value = '' }) {
 	return match;
 }
 
-const isNumber = (value) => !isNaN(Number(value)) && value !== null;
+const isNumber = (value) =>
+	!isNaN(Number(value)) && value !== null && value !== '';
 
 function PresetPlaceholder({ onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
