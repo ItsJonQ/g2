@@ -13,6 +13,7 @@ import { Icon } from '../Icon';
 import { View } from '../View';
 import { VStack } from '../VStack';
 import * as styles from './TextInput.styles';
+import { useDragHandlers } from './useTextInput';
 
 function TextInputArrows(props, forwardedRef) {
 	const { __store, dragAxis } = props;
@@ -34,16 +35,15 @@ function TextInputArrows(props, forwardedRef) {
 		[store],
 	);
 
-	const { dragGestures } = useDragGesture({
+	const dragHandlers = useDragHandlers({
 		dragAxis,
-		onIncrement: incrementValue,
-		onDecrement: decrementValue,
+		store: __store,
 	});
 
 	return (
 		<View className={styles.SpinnerWrapper}>
 			<VStack
-				{...dragGestures()}
+				{...dragHandlers}
 				className={styles.Spinner}
 				expanded={true}
 				spacing={0}
@@ -57,70 +57,6 @@ function TextInputArrows(props, forwardedRef) {
 			</VStack>
 		</View>
 	);
-}
-
-function useDragGesture({ dragAxis, onIncrement = noop, onDecrement = noop }) {
-	const [dragState, setDragState] = useState(false);
-	const threshold = 10;
-	const dragRaf = useRef();
-
-	useEffect(() => {
-		if (dragState) {
-			if (dragState === 'x') {
-				document.documentElement.classList.add(styles.globalDraggableX);
-				document.documentElement.classList.remove(
-					styles.globalDraggableY,
-				);
-			} else {
-				document.documentElement.classList.remove(
-					styles.globalDraggableX,
-				);
-				document.documentElement.classList.add(styles.globalDraggableY);
-			}
-		} else {
-			document.documentElement.classList.remove(styles.globalDraggableX);
-			document.documentElement.classList.remove(styles.globalDraggableY);
-		}
-	}, [dragState]);
-
-	useEffect(() => {
-		return () => {
-			cancelAnimationFrame(dragRaf.current);
-		};
-	}, []);
-
-	const dragGestures = useDrag(
-		(state) => {
-			const [x, y] = state.delta;
-			setDragState(state.dragging ? state.axis : false);
-
-			const isMovementY = state.axis === 'y';
-			let movement = isMovementY ? y * -1 : x;
-
-			if (Math.abs(movement) === 0) return;
-
-			const shouldIncrement = movement > 0;
-
-			let boost = movement === threshold ? 0 : movement;
-			boost = shouldIncrement ? boost : boost * -1;
-			boost = boost - 1;
-
-			if (dragRaf.current) {
-				cancelAnimationFrame(dragRaf.current);
-			}
-
-			dragRaf.current = requestAnimationFrame(() => {
-				if (shouldIncrement) {
-					onIncrement(boost);
-				} else {
-					onDecrement(boost);
-				}
-			});
-		},
-		{ axis: dragAxis, threshold },
-	);
-
-	return { isDragging: !!dragState, dragGestures };
 }
 
 const UpDownArrows = React.memo(

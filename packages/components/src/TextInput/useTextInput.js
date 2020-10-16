@@ -1,4 +1,5 @@
 import { useContextSystem } from '@wp-g2/context';
+import { useDrag } from '@wp-g2/gestures';
 import { cx } from '@wp-g2/styles';
 import { createStore, useSubState } from '@wp-g2/substate';
 import {
@@ -430,8 +431,75 @@ function useChangeHandlers({
 	};
 }
 
+export function useDragHandlers({ dragAxis, store }) {
+	const [dragState, setDragState] = useState(false);
+	const threshold = 10;
+	const dragRaf = useRef();
+
+	useEffect(() => {
+		if (dragState) {
+			if (dragState === 'x') {
+				document.documentElement.classList.add(styles.globalDraggableX);
+				document.documentElement.classList.remove(
+					styles.globalDraggableY,
+				);
+			} else {
+				document.documentElement.classList.remove(
+					styles.globalDraggableX,
+				);
+				document.documentElement.classList.add(styles.globalDraggableY);
+			}
+		} else {
+			document.documentElement.classList.remove(styles.globalDraggableX);
+			document.documentElement.classList.remove(styles.globalDraggableY);
+		}
+	}, [dragState]);
+
+	useEffect(() => {
+		return () => {
+			cancelAnimationFrame(dragRaf.current);
+		};
+	}, []);
+
+	const dragGestures = useDrag(
+		(state) => {
+			const [x, y] = state.delta;
+			setDragState(state.dragging ? state.axis : false);
+
+			const isMovementY = state.axis === 'y';
+			let movement = isMovementY ? y * -1 : x;
+
+			if (Math.abs(movement) === 0) return;
+
+			const shouldIncrement = movement > 0;
+
+			let boost = movement === threshold ? 0 : movement;
+			boost = shouldIncrement ? boost : boost * -1;
+			boost = boost - 1;
+
+			if (dragRaf.current) {
+				cancelAnimationFrame(dragRaf.current);
+			}
+
+			dragRaf.current = requestAnimationFrame(() => {
+				if (shouldIncrement) {
+					store.getState().increment(boost);
+					store.getState().commitValue();
+				} else {
+					store.getState().decrement(boost);
+					store.getState().commitValue();
+				}
+			});
+		},
+		{ axis: dragAxis, threshold },
+	);
+
+	return dragGestures();
+}
+
 export function useEventHandlers(props) {
 	const {
+		dragAxis,
 		isCommitOnBlurOrEnter = true,
 		multiline = false,
 		onBeforeCommit,
@@ -445,6 +513,8 @@ export function useEventHandlers(props) {
 		validate,
 		store,
 	} = props;
+
+	const dragHandlers = useDragHandlers({ dragAxis, store });
 
 	const { onChange: handleOnChange } = useChangeHandlers({
 		isCommitOnBlurOrEnter,
@@ -484,6 +554,7 @@ export function useEventHandlers(props) {
 		onFocus: handleOnFocus,
 		onKeyDown: handleOnKeyDown,
 		onKeyUp: handleOnKeyUp,
+		...dragHandlers,
 	};
 }
 

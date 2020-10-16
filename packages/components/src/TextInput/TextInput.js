@@ -12,7 +12,6 @@ function TextInput(props, forwardedRef) {
 	const {
 		__store,
 		disabled,
-		dragAxis,
 		format,
 		hideArrows = false,
 		innerContent,
@@ -44,7 +43,6 @@ function TextInput(props, forwardedRef) {
 			{showTextInputArrows && (
 				<TextInputArrows
 					__store={__store}
-					dragAxis={dragAxis}
 					onCommitChange={onCommitChange}
 				/>
 			)}
