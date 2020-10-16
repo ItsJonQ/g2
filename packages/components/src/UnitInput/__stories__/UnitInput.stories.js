@@ -1,7 +1,5 @@
 import { createStore } from '@wp-g2/substate';
-import * as CSSOM from 'css-typed-om';
 import React from 'react';
-import CSSUnits from 'units-css';
 
 import { FormGroup, ListGroup } from '../../index';
 import { UnitInput } from '../index';
@@ -13,9 +11,8 @@ export default {
 	title: 'Components/UnitInput',
 };
 
-const _tmpNode = document.createElement('div');
-const computedStyleMap = Object.create(CSSOM.StylePropertyMap.prototype);
-computedStyleMap.style = _tmpNode.style;
+const __styleTestNode__ = document.createElement('div');
+const computedStyleMap = __styleTestNode__.style;
 
 const getCSSValue = (initialValue) => {
 	const [value, unit] = baseParseUnit(initialValue);
@@ -26,8 +23,8 @@ const getCSSValue = (initialValue) => {
 
 const isValidCSSValueForProp = (prop, value) => {
 	const next = getCSSValue(value);
-	computedStyleMap.set(prop, next);
-	return computedStyleMap.style[prop] === value;
+	computedStyleMap[prop] = next;
+	return computedStyleMap[prop] === value;
 };
 
 const everythingInitialState = validStyleProps

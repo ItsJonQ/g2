@@ -26,7 +26,6 @@
     "@wp-g2/substate": "^0.0.92",
     "@wp-g2/utils": "^0.0.92",
     "csstype": "^3.0.3",
-    "css-typed-om": "^0.4.0",
     "highlight-words-core": "^1.2.2",
     "history": "^4.9.0",
     "path-to-regexp": "^1.7.0",
@@ -35,8 +34,7 @@
     "react-router-dom": "^5.2.0",
     "react-sortable-hoc": "^1.11.0",
     "react-spring": "^8.0.27",
-    "react-textarea-autosize": "^8.2.0",
-    "units-css": "^0.4.0"
+    "react-textarea-autosize": "^8.2.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.46",

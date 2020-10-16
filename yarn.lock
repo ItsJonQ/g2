@@ -8560,11 +8560,6 @@ css-tree@1.0.0-alpha.39:
     mdn-data "2.0.6"
     source-map "^0.6.1"
 
-css-typed-om@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/css-typed-om/-/css-typed-om-0.4.0.tgz#c9bb93feab7400b4ff43d1227e59d39bbba439e9"
-  integrity sha512-wa2sUHPTAol+SmOoeaKv20PZ+6wiJIvLG+z5NFnV1trOIcSN0LLxdrMriXKo9wkdABshcfMToT4CmQ/z3CPlcg==
-
 css-vendor@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/css-vendor/-/css-vendor-2.0.8.tgz#e47f91d3bd3117d49180a3c935e62e3d9f7f449d"
