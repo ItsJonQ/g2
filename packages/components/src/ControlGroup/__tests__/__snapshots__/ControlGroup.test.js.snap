@@ -13,8 +13,9 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1aedolu"
+      class="wp-components-flex wp-components-base-button wp-components-button css-ogxw9"
       data-destructive="false"
+      data-focused="false"
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
@@ -41,8 +42,9 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-s75eus"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1df67qx"
       data-destructive="false"
+      data-focused="false"
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
@@ -77,7 +79,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-select css-gf4yup"
+      class="wp-components-flex wp-components-base-field wp-components-select css-13cny3o"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
@@ -129,7 +131,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-6t14sh"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-sika8k"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
@@ -152,8 +154,9 @@ exports[`props should render mixed control types 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-s75eus"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1df67qx"
       data-destructive="false"
+      data-focused="false"
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"

@@ -10,15 +10,17 @@ import { View } from '../View';
 
 function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
 	const selectRef = React.useRef();
+	const [isFocused, setIsFocused] = React.useState(false);
+
 	return (
 		<View
 			css={`
-				border-left: 1px solid ${ui.get('surfaceBorderColor')};
+				box-shadow: 1px 0 0 ${ui.get('surfaceBorderColor')} inset;
 				position: relative;
 				width: 26px;
 				height: 20px;
 				display: flex;
-				margin: 0 -8px 0 0;
+				margin: 0 -9px 0 0;
 				align-items: center;
 				justify-content: center;
 			`}
@@ -36,6 +38,8 @@ function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
 				iconSize={14}
 				isBlock
 				isControl
+				isFocused={isFocused}
+				isSplit
 				isSubtle
 				tabIndex={-1}
 			/>
@@ -46,8 +50,10 @@ function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
 					opacity: 0;
 					z-index: 0;
 					width: 100%;
+					cursor: pointer;
 					position: absolute;
 				`}
+				onBlur={() => setIsFocused(false)}
 				onChange={(e) => {
 					const match = presets.find((p) => p.key === e.target.value);
 					if (match) {
@@ -55,8 +61,9 @@ function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
 					}
 				}}
 				onClick={(e) => e.stopPropagation()}
+				onFocus={() => setIsFocused(true)}
 				ref={selectRef}
-				tabIndex={-1}
+				title="Change preset"
 			>
 				{presets.map((preset) => (
 					<option key={preset.key} value={preset.key}>

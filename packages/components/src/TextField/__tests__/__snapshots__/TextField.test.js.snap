@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-in42v"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-1iozk7"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

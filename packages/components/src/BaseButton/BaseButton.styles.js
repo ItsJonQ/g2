@@ -201,3 +201,8 @@ export const currentColor = css`
 		color: currentColor;
 	}
 `;
+
+export const split = css`
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+`;

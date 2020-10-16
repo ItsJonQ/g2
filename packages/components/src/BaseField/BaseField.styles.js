@@ -24,7 +24,8 @@ export const BaseField = css`
 		border-color: ${ui.get('controlBorderColorHover')};
 	}
 
-	&:focus {
+	&:focus,
+	&[data-focused='true'] {
 		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 		z-index: 1;
@@ -50,7 +51,8 @@ export const subtle = css`
 
 	&:hover,
 	&:active,
-	&:focus {
+	&:focus,
+	&[data-focused='true'] {
 		${ui.background.control};
 	}
 `;

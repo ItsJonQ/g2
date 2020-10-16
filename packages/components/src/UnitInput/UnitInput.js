@@ -1,6 +1,6 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
-import { add, noop, roundClampString, subtract } from '@wp-g2/utils';
+import { add, is, noop, roundClampString, subtract } from '@wp-g2/utils';
 import React, { useEffect, useRef } from 'react';
 
 import { TextInput } from '../TextInput';
@@ -14,9 +14,6 @@ function findUnitMatch({ units = UNITS, value = '' }) {
 	const match = units.find((unit) => unit.indexOf(value.toLowerCase()) === 0);
 	return match;
 }
-
-const isNumber = (value) =>
-	!isNaN(Number(value)) && value !== null && value !== '';
 
 function PresetPlaceholder({ onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
@@ -43,7 +40,7 @@ function PresetPlaceholder({ onChange, value }) {
 		};
 	}, []);
 
-	if (isNumber(parsedValue)) {
+	if (is.numeric(parsedValue)) {
 		unit = findUnitMatch({ value: parsedUnit });
 	}
 
@@ -86,8 +83,10 @@ function PresetPlaceholder({ onChange, value }) {
 				css={[
 					textInputStyles.inputFontSize,
 					{
-						background: ui.get('controlBackgroundDimColor'),
+						color: ui.color.admin,
 						cursor: 'pointer',
+						textDecorationLine: 'underline',
+						textDecorationStyle: 'dotted',
 						position: 'relative',
 					},
 					isFocused && {
@@ -116,8 +115,17 @@ function PresetPlaceholder({ onChange, value }) {
 					onChange={handleOnChangeSelect}
 					onClick={(e) => e.stopPropagation()}
 					onFocus={() => setIsFocused(true)}
+					onKeyDown={(e) => {
+						if (e.keyCode === 13) {
+							e.preventDefault();
+							console.log('focus');
+							e.target.focus();
+							e.target.click();
+						}
+					}}
 					onMouseDown={(e) => e.stopPropagation()}
 					ref={selectRef}
+					title="Change unit"
 				>
 					{UNITS.map((unit) => (
 						<option key={unit} value={unit}>
@@ -146,7 +154,7 @@ function UnitInput(props, forwardedRef) {
 	React.useEffect(() => {
 		const [parsedValue, parsedUnit] = baseParseUnit(value);
 
-		if (isNumber(parsedValue)) {
+		if (is.numeric(parsedValue)) {
 			const unit = findUnitMatch({ value: parsedUnit });
 			if (unit) {
 				setPlaceholder(createUnitValue(parsedValue, unit));
@@ -172,7 +180,7 @@ function UnitInput(props, forwardedRef) {
 		const [parsedValue, parsedUnit] = baseParseUnit(next);
 		let commitValue = next;
 
-		if (isNumber(parsedValue)) {
+		if (is.numeric(parsedValue)) {
 			const unit = findUnitMatch({ value: parsedUnit });
 			commitValue = createUnitValue(parsedValue, unit);
 		}
@@ -186,6 +194,8 @@ function UnitInput(props, forwardedRef) {
 
 	const handleOnIncrement = React.useCallback((prev) => {
 		const [value, unit] = parseUnit(prev.value);
+
+		if (!is.numeric(value)) return;
 
 		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
 
@@ -210,6 +220,8 @@ function UnitInput(props, forwardedRef) {
 
 	const handleOnDecrement = React.useCallback((prev) => {
 		const [value, unit] = parseUnit(prev.value);
+
+		if (!is.numeric(value)) return;
 
 		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
 

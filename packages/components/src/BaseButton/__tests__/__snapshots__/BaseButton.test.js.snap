@@ -5,6 +5,7 @@ exports[`props should render correctly 1`] = `
   aria-busy="false"
   class="wp-components-flex wp-components-base-button css-wout2n"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="BaseButton"
   data-icon="false"

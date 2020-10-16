@@ -85,11 +85,13 @@ export const primary = css`
 	}
 
 	&:hover,
-	&:focus {
+	&:focus,
+	&[data-focused='true'] {
 		background-color: ${ui.get('buttonPrimaryColor')};
 	}
 
-	&:focus {
+	&:focus,
+	&[data-focused='true'] {
 		border-color: ${ui.get('buttonPrimaryColor')};
 	}
 
@@ -101,11 +103,13 @@ export const primary = css`
 		background-color: ${ui.color.destructive};
 
 		&:hover,
-		&:focus {
+		&:focus,
+		&[data-focused='true'] {
 			background-color: ${ui.color.destructive};
 		}
 
-		&:focus {
+		&:focus,
+		&[data-focused='true'] {
 			background-color: ${ui.color.destructive};
 			border-color: ${ui.color.destructive};
 		}
@@ -123,7 +127,8 @@ export const secondary = css`
 
 	&:hover,
 	&:active,
-	&:focus {
+	&:focus,
+	&[data-focused='true'] {
 		border-color: ${ui.get('buttonPrimaryColor')};
 		color: ${ui.get('buttonPrimaryColor')};
 	}
@@ -139,7 +144,8 @@ export const secondary = css`
 
 		&:hover,
 		&:active,
-		&:focus {
+		&:focus,
+		&[data-focused='true'] {
 			border-color: ${ui.color.destructive};
 			color: ${ui.color.destructive};
 		}
@@ -185,7 +191,8 @@ export const plainLink = css`
 
 	&:hover,
 	&:active,
-	&:focus {
+	&:focus,
+	&[data-focused='true'] {
 		background-color: transparent;
 		text-decoration: underline;
 	}

@@ -3,8 +3,9 @@
 exports[`props should render (Flex) gap 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1r19pbr"
+  class="wp-components-flex wp-components-base-button wp-components-button css-1h1dw5i"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -28,8 +29,9 @@ exports[`props should render (Flex) gap 1`] = `
 exports[`props should render as link (href) 1`] = `
 <a
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -53,8 +55,9 @@ exports[`props should render as link (href) 1`] = `
 exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -79,8 +82,9 @@ exports[`props should render disabled 1`] = `
 <button
   aria-busy="false"
   aria-disabled="true"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -106,8 +110,9 @@ exports[`props should render disabled 1`] = `
 exports[`props should render elevation 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -131,8 +136,9 @@ exports[`props should render elevation 1`] = `
 exports[`props should render hasCaret 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -184,8 +190,9 @@ exports[`props should render hasCaret 1`] = `
 exports[`props should render icon 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="true"
@@ -222,8 +229,9 @@ exports[`props should render icon 1`] = `
 exports[`props should render isControl 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-rcboc9"
+  class="wp-components-flex wp-components-base-button wp-components-button css-ck853r"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -247,8 +255,9 @@ exports[`props should render isControl 1`] = `
 exports[`props should render isDestructive 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-he2g3k"
+  class="wp-components-flex wp-components-base-button wp-components-button css-6hkxw8"
   data-destructive="true"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -273,8 +282,9 @@ exports[`props should render isLoading 1`] = `
 <button
   aria-busy="true"
   aria-disabled="true"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -362,8 +372,9 @@ exports[`props should render isLoading 1`] = `
 exports[`props should render isNarrow 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-7z1qo0"
+  class="wp-components-flex wp-components-base-button wp-components-button css-37ktx3"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -387,8 +398,9 @@ exports[`props should render isNarrow 1`] = `
 exports[`props should render isRounded 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1885cjg"
+  class="wp-components-flex wp-components-base-button wp-components-button css-t2aop9"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -412,8 +424,9 @@ exports[`props should render isRounded 1`] = `
 exports[`props should render isSubtle 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1h20zk1"
+  class="wp-components-flex wp-components-base-button wp-components-button css-1tsvjyz"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -437,8 +450,9 @@ exports[`props should render isSubtle 1`] = `
 exports[`props should render prefix 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -471,8 +485,9 @@ exports[`props should render prefix 1`] = `
 exports[`props should render size 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1m8dknh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-12z7h3q"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -496,8 +511,9 @@ exports[`props should render size 1`] = `
 exports[`props should render suffix 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-1pzv0xh"
+  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
@@ -530,8 +546,9 @@ exports[`props should render suffix 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-zf7x8w"
+  class="wp-components-flex wp-components-base-button wp-components-button css-k89ajh"
   data-destructive="false"
+  data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"

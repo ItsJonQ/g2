@@ -24,6 +24,7 @@ function BaseButton(props, forwardedRef) {
 		icon,
 		iconSize = 16,
 		isDestructive = false,
+		isFocused = false,
 		isLoading = false,
 		noWrap = true,
 		prefix,
@@ -38,6 +39,7 @@ function BaseButton(props, forwardedRef) {
 			aria-busy={isLoading}
 			as={as}
 			data-destructive={isDestructive}
+			data-focused={isFocused}
 			data-icon={!!icon}
 			disabled={disabled || isLoading}
 			href={href}
