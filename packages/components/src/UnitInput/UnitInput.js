@@ -31,8 +31,6 @@ function PresetPlaceholder({ inputRef, onChange, value }) {
 	let [parsedValue, parsedUnit] = baseParseUnit(value);
 	let unit;
 
-	React.useEffect(() => {});
-
 	React.useEffect(() => {
 		const handleOnResize = () => {
 			if (inputRef.current) {
@@ -209,11 +207,15 @@ function UnitInput(props, forwardedRef) {
 	} = useContextSystem(props, 'UnitInput');
 	const raf = useRef();
 	const inputRef = useRef();
+	const lastValueRef = useRef();
+	const lastChangeValueRef = useRef();
 
 	React.useEffect(() => {
+		if (value === lastValueRef.current) return;
+
 		const [parsedValue, parsedUnit] = baseParseUnit(value);
 
-		if (is.numeric(parsedValue)) {
+		if (is.numeric(parsedValue) && parsedUnit) {
 			const unit = findUnitMatch({ value: parsedUnit });
 			if (unit) {
 				setPlaceholder(createUnitValue(parsedValue, unit));
@@ -223,11 +225,15 @@ function UnitInput(props, forwardedRef) {
 		} else {
 			setPlaceholder('');
 		}
+		lastValueRef.current = value;
 	}, [value]);
 
 	const handleOnChange = (next) => {
+		if (lastChangeValueRef.current === next) return;
+
 		onChange(next);
 		setPlaceholder(next);
+		lastChangeValueRef.current = next;
 	};
 
 	const handleOnValueChange = (next) => {

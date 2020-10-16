@@ -1,7 +1,7 @@
 import { useContextSystem } from '@wp-g2/context';
 import { useDrag } from '@wp-g2/gestures';
 import { cx } from '@wp-g2/styles';
-import { createStore, useSubState } from '@wp-g2/substate';
+import { createStore, shallowCompare, useSubState } from '@wp-g2/substate';
 import {
 	add,
 	is,
@@ -43,6 +43,7 @@ const useTextInputSubState = (
 	const initialValue = is.defined(value) ? value : initialValueProp;
 
 	const store = useSubState((set) => ({
+		prevValue: null,
 		format,
 		incomingValue: initialValue,
 		inputRef: null,
@@ -56,9 +57,18 @@ const useTextInputSubState = (
 
 		setValue: (next) => set({ value: next }),
 		setIncomingValue: (next) => set({ incomingValue: next }),
-		setLastValue: (next) => set({ lastValue: next }),
-		commitValue: () => set((prev) => ({ lastValue: prev.value })),
-		resetValue: () => set((prev) => ({ value: prev.lastValue })),
+		setLastValue: (next) =>
+			set((prev) => ({ prevValue: prev.lastValue, lastValue: next })),
+		commitValue: () =>
+			set((prev) => ({
+				prevValue: prev.lastValue,
+				lastValue: prev.value,
+			})),
+		resetValue: () =>
+			set((prev) => ({
+				value: prev.prevValue,
+				lastValue: prev.prevValue,
+			})),
 
 		increment: (boost = 0) => {
 			set((prev) => {
@@ -421,6 +431,7 @@ function useChangeHandlers({
 		const unsub = store.subscribe(
 			handleOnCommitChange,
 			(state) => state.lastValue,
+			shallowCompare,
 		);
 
 		return unsub;
