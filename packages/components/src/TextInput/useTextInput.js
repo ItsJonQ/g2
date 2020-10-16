@@ -514,7 +514,7 @@ export function useEventHandlers(props) {
 		store,
 	} = props;
 
-	const dragHandlers = useDragHandlers({ dragAxis, store });
+	const dragHandlers = useDragHandlers({ dragAxis: 'y', store });
 
 	const { onChange: handleOnChange } = useChangeHandlers({
 		isCommitOnBlurOrEnter,
