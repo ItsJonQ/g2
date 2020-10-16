@@ -6,6 +6,10 @@ import React from 'react';
 
 import { Button } from '../Button';
 import { UnitInput } from '../UnitInput';
+import {
+	isValidCSSValueForProp,
+	isValidNumericUnitValue,
+} from '../UnitInput/UnitInput.utils';
 import { View } from '../View';
 
 function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
@@ -94,10 +98,10 @@ function PresetPlaceholder({ presets, value }) {
 	const match = findMatch({ presets, value });
 	let placeholderValue;
 
-	if (match) {
-		placeholderValue = match.label
-			.toLowerCase()
-			.replace(value.toLowerCase(), value);
+	if (match && match.label !== value) {
+		const end = match.label.substring(value.length, match.label.length);
+
+		placeholderValue = [value, end].join('');
 	}
 
 	if (!placeholderValue) return null;
@@ -120,10 +124,14 @@ function PresetPlaceholder({ presets, value }) {
 
 function PresetInput(props, forwardedRef) {
 	const [placeholder, setPlaceholder] = React.useState('');
-	const { onChange = noop, presets, value, ...otherProps } = useContextSystem(
-		props,
-		'PresetInput',
-	);
+	const {
+		cssProp,
+		onChange = noop,
+		validate,
+		presets,
+		value,
+		...otherProps
+	} = useContextSystem(props, 'PresetInput');
 
 	const handleOnChange = (next) => {
 		onChange(next);
@@ -143,6 +151,22 @@ function PresetInput(props, forwardedRef) {
 		return next;
 	};
 
+	const handleOnValidate = (next) => {
+		switch (true) {
+			case !!findMatch({ presets, value: next }):
+				return true;
+
+			case isValidNumericUnitValue(next):
+				if (cssProp && !isValidCSSValueForProp(cssProp, next)) {
+					return false;
+				}
+				return true;
+
+			default:
+				return false;
+		}
+	};
+
 	const suffix = (
 		<PresetSelect
 			onChange={handleOnChange}
@@ -159,6 +183,7 @@ function PresetInput(props, forwardedRef) {
 		>
 			<UnitInput
 				{...otherProps}
+				cssProp={cssProp}
 				hideArrows
 				innerContent={
 					<PresetPlaceholder presets={presets} value={placeholder} />
@@ -168,6 +193,7 @@ function PresetInput(props, forwardedRef) {
 				onValueChange={handleOnValueChange}
 				ref={forwardedRef}
 				suffix={suffix}
+				validate={validate || handleOnValidate}
 				value={value}
 			/>
 		</View>

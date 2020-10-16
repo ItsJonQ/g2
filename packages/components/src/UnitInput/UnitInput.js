@@ -17,6 +17,7 @@ import {
 	baseParseUnit,
 	createUnitValue,
 	isValidCSSValueForProp,
+	isValidNumericUnitValue,
 	parseUnit,
 } from './UnitInput.utils';
 
@@ -96,21 +97,7 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 		parsedValue = value;
 	}
 
-	// Disallow values that contains spaces
-	if (/ /g.test(value)) {
-		return null;
-	}
-
-	// Disallow values that do not start with alphanumeric characters.
-	if (/^\W/g.test(value)) {
-		// Allow for negative numbers, e.g. -1
-		if (!/^-\w/g.test(value)) {
-			return null;
-		}
-	}
-
-	// Disallow values where a dot follows a character, e.g. 1.p
-	if (/\.[a-zA-Z]/g.test(value)) {
+	if (!isValidNumericUnitValue(value)) {
 		return null;
 	}
 
@@ -119,7 +106,8 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 		!isValidCSSValueForProp(
 			cssProp,
 			createUnitValue(parsedValue, parsedUnit),
-		)
+		) &&
+		!isValidCSSValueForProp(cssProp, createUnitValue(parsedValue, unit))
 	) {
 		return null;
 	}
@@ -201,6 +189,10 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 						if ((e.keyCode === 65 && e.metaKey) || e.ctrlKey) {
 							e.preventDefault();
 							inputRef.current.focus();
+							inputRef.current.setSelectionRange(
+								0,
+								inputRef.current.value.length,
+							);
 						}
 						// Left/Right arrow
 						if (e.keyCode === 37 || e.keyCode === 39) {
@@ -232,6 +224,7 @@ function UnitInput(props, forwardedRef) {
 		min = 0,
 		onChange = noop,
 		onValueChange = noop,
+		validate,
 		innerContent,
 		value,
 		...otherProps
@@ -274,12 +267,18 @@ function UnitInput(props, forwardedRef) {
 		lastChangeValueRef.current = next;
 	};
 
+	const handleOnReset = (next) => {
+		onChange(next);
+		setPlaceholder(next);
+		lastChangeValueRef.current = next;
+	};
+
 	const handleOnValueChange = (next) => {
 		setPlaceholder(next);
 		onValueChange(next);
 	};
 
-	const handleOnBeforeCommit = (next) => {
+	const serializeCommitValue = (next) => {
 		const [parsedValue, parsedUnit] = baseParseUnit(next);
 		let commitValue = next;
 
@@ -292,6 +291,12 @@ function UnitInput(props, forwardedRef) {
 		if (!isValidCSSValueForProp(cssProp, commitValue)) {
 			commitValue = next;
 		}
+
+		return commitValue;
+	};
+
+	const handleOnBeforeCommit = (next) => {
+		const commitValue = serializeCommitValue(next);
 
 		if (onBeforeCommit) {
 			return onBeforeCommit(commitValue);
@@ -382,6 +387,11 @@ function UnitInput(props, forwardedRef) {
 		[cssProp],
 	);
 
+	const handleOnValidate = (next, store) => {
+		const validationValue = serializeCommitValue(next);
+		return is.function(validate) ? validate(validationValue, store) : true;
+	};
+
 	useEffect(() => {
 		return () => {
 			if (raf.current) {
@@ -414,9 +424,10 @@ function UnitInput(props, forwardedRef) {
 				onDecrement={handleOnDecrement}
 				onIncrement={handleOnIncrement}
 				onValueChange={handleOnValueChange}
-				onValueReset={handleOnChange}
+				onValueReset={handleOnReset}
 				ref={mergeRefs([forwardedRef, inputRef])}
 				type="text"
+				validate={handleOnValidate}
 				value={value}
 			/>
 		</>

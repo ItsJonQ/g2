@@ -419,10 +419,13 @@ function useChangeHandlers({
 			let shouldFinalize = true;
 
 			if (is.function(validate)) {
-				shouldFinalize = validate(next);
-			} else {
-				shouldFinalize = new RegExp(validate).test(next);
+				shouldFinalize = validate(next, store.getState());
 			}
+
+			// TODO: Support Regex validation.
+			// } else {
+			// 	shouldFinalize = new RegExp(validate).test(next);
+			// }
 
 			if (shouldFinalize) {
 				handleOnFinalizeChange(next);

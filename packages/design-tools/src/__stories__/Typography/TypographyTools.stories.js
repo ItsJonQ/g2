@@ -34,6 +34,7 @@ import React from 'react';
 import CSSUnit from 'units-css';
 
 import {
+	presets,
 	Preview,
 	typographyOptionKeys,
 	typographyStore,
@@ -502,24 +503,6 @@ const CombinedFormGroupInputStepper = React.memo(
 	},
 );
 
-const presets = [
-	{
-		label: 'Small',
-		key: 'small',
-		value: '10px',
-	},
-	{
-		label: 'Medium',
-		key: 'medium',
-		value: '16px',
-	},
-	{
-		label: 'Large',
-		key: 'large',
-		value: '21px',
-	},
-];
-
 const ExampleFour = () => {
 	return (
 		<Card>
@@ -731,7 +714,7 @@ const Wrapper = ({ children }) => {
 					css={`
 						margin-top: 30vh;
 					`}
-					templateColumns="1fr 265px"
+					templateColumns="minmax(0, 1fr) 265px"
 				>
 					<View>
 						<Card>

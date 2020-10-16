@@ -15,6 +15,40 @@ export const typographyStore = createStore((set) => ({
 
 export const useTypography = typographyStore;
 
+export const presets = [
+	{
+		label: 'Small',
+		key: 'small',
+		value: '10px',
+	},
+	{
+		label: 'Medium',
+		key: 'medium',
+		value: '16px',
+	},
+	{
+		label: 'Large',
+		key: 'large',
+		value: '21px',
+	},
+];
+
+const createPresetParser = ({ presets = [] }) => {
+	const parse = (next) => {
+		const presetItem = presets.find((i) => i?.label === next);
+		return presetItem?.value || next;
+	};
+
+	const serialize = (next) => next;
+
+	return {
+		parse,
+		serialize,
+	};
+};
+
+export const presetParser = createPresetParser({ presets });
+
 export const typographyOptionKeys = {
 	fontFamily: {
 		label: 'Font Family',
@@ -67,6 +101,9 @@ export const Preview = React.memo(() => {
 			}
 		`;
 	}
+
+	const fontSizeValue = presetParser.parse(fontSize);
+
 	return (
 		<ListGroup>
 			<ListGroupHeader>Preview</ListGroupHeader>
@@ -74,7 +111,7 @@ export const Preview = React.memo(() => {
 				<View css={dropCapStyles}>
 					<div
 						style={{
-							fontSize: ui.value.px(fontSize),
+							fontSize: fontSizeValue,
 							fontFamily,
 							fontWeight,
 							letterSpacing: ui.value.px(letterSpacing),

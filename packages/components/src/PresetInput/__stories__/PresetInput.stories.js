@@ -18,28 +18,44 @@ export default {
 	title: 'Components/PresetInput',
 };
 
+/**
+ * Maybe a way to translate values between?
+ */
+const createPresetParser = ({ presets = [] }) => {
+	const parse = (next) => {
+		const presetItem = presets.find((i) => i?.label === next);
+		return presetItem?.value || next;
+	};
+
+	const serialize = (next) => next;
+
+	return {
+		parse,
+		serialize,
+	};
+};
+
 const Example = () => {
 	const [value, setValue] = React.useState('13px');
 	const presets = [
 		{
-			label: 'Small',
+			label: 'Tiny Tiny',
 			key: 'small',
-			value: '10px',
+			value: '9px',
 		},
 		{
-			label: 'Medium',
+			label: 'Medium Sized',
 			key: 'medium',
-			value: '16px',
+			value: '17px',
 		},
 		{
-			label: 'Large',
+			label: 'Largeeeee',
 			key: 'large',
-			value: '21px',
+			value: '28px',
 		},
 	];
-
-	const presetItem = presets.find((i) => i.label === value);
-	const fontSize = presetItem ? presetItem.value : value;
+	const parser = createPresetParser({ presets });
+	const fontSize = parser.parse(value);
 
 	return (
 		<Container
@@ -74,8 +90,11 @@ const Example = () => {
 						<CardBody>
 							<FormGroup horizontal={false} label="Size">
 								<PresetInput
+									cssProp="fontSize"
 									min={0}
-									onChange={(n) => setValue(n)}
+									onChange={(next) =>
+										setValue(parser.serialize(next))
+									}
 									presets={presets}
 									value={value}
 								/>

@@ -37,6 +37,30 @@ export const isValidCSSValueForProp = (prop, value) => {
 	return __computedStyleMap[prop] === value;
 };
 
+export const isValidNumericUnitValue = (value) => {
+	if (is.numeric(value)) return true;
+
+	// Disallow values that contains spaces
+	if (/ /g.test(value)) {
+		return false;
+	}
+
+	// Disallow values that do not start with alphanumeric characters.
+	if (/^\W/g.test(value)) {
+		// Allow for negative numbers, e.g. -1
+		if (!/^-\w/g.test(value)) {
+			return false;
+		}
+	}
+
+	// Disallow values where a dot follows a character, e.g. 1.p
+	if (/\.[a-zA-Z]/g.test(value)) {
+		return false;
+	}
+
+	return true;
+};
+
 /**
  * Handles legacy value + unit handling.
  * This component use to manage both incoming value and units separately.
