@@ -79,6 +79,7 @@ export const SpinnerWrapper = css`
 	display: flex;
 	height: 100%;
 	justify-content: center;
+	margin: 0 !important;
 	min-height: 0;
 `;
 
