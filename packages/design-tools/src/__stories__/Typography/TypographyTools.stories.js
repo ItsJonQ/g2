@@ -374,16 +374,23 @@ const CombinedFormGroupInputSlider = React.memo(
 		showRemove = true,
 		...otherProps
 	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+		const value = useTypography((state) => state[prop], shallowCompare);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.setState((prev) => {
+					const { unit } = CSSUnit.parse(prev[prop]);
+					const { value: nextValue } = CSSUnit.parse(value);
+
+					const next = unit ? `${nextValue}${unit}` : value;
+
+					return { [prop]: next };
+				});
 			},
 			[prop],
 		);
 
-		if (!value == null) return null;
+		if (value === null) return null;
 		const cssValue = CSSUnit.parse(value);
 
 		return (
@@ -432,7 +439,7 @@ const CombinedFormGroupInputStepper = React.memo(
 		showRemove = true,
 		...otherProps
 	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+		const value = useTypography((state) => state[prop], shallowCompare);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -452,7 +459,7 @@ const CombinedFormGroupInputStepper = React.memo(
 			});
 		}, [prop]);
 
-		if (!value == null) return null;
+		if (value === null) return null;
 
 		return (
 			<FormGroup
@@ -774,10 +781,6 @@ const baseLineTheme = {
 };
 
 export const _baseLine = () => {
-	React.useEffect(() => {
-		typographyStore.setState({ fontSize: 13 });
-	}, []);
-
 	return (
 		<ThemeProvider theme={baseLineTheme}>
 			<Wrapper>
@@ -792,10 +795,6 @@ export const _baseLine = () => {
 };
 
 export const _baseLineStepper = () => {
-	React.useEffect(() => {
-		typographyStore.setState({ fontSize: 13 });
-	}, []);
-
 	return (
 		<ThemeProvider theme={baseLineTheme}>
 			<Wrapper>
