@@ -447,9 +447,15 @@ export const CombinedFormGroupInputSlider = React.memo(
 						CSSUnit.parse(value).unit ||
 						CSSUnit.parse(prev[prop]).unit;
 
-					const { value: nextValue } = CSSUnit.parse(value);
+					const { unit: nextUnit, value: nextValue } = CSSUnit.parse(
+						value,
+					);
 
-					const next = unit ? `${nextValue}${unit}` : value;
+					let next = unit ? `${nextValue}${unit}` : value;
+
+					if (nextValue === 0 && nextUnit === value) {
+						next = value;
+					}
 
 					return { [prop]: next };
 				});
