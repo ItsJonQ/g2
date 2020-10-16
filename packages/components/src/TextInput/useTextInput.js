@@ -499,7 +499,6 @@ export function useDragHandlers({ dragAxis, store }) {
 
 export function useEventHandlers(props) {
 	const {
-		dragAxis,
 		isCommitOnBlurOrEnter = true,
 		multiline = false,
 		onBeforeCommit,
@@ -513,8 +512,6 @@ export function useEventHandlers(props) {
 		validate,
 		store,
 	} = props;
-
-	const dragHandlers = useDragHandlers({ dragAxis: 'y', store });
 
 	const { onChange: handleOnChange } = useChangeHandlers({
 		isCommitOnBlurOrEnter,
@@ -554,7 +551,6 @@ export function useEventHandlers(props) {
 		onFocus: handleOnFocus,
 		onKeyDown: handleOnKeyDown,
 		onKeyUp: handleOnKeyUp,
-		...dragHandlers,
 	};
 }
 
@@ -619,6 +615,8 @@ export function useTextInput(props) {
 		store,
 	});
 
+	const dragHandlers = useDragHandlers({ dragAxis: 'y', store });
+
 	const handleOnRootClick = useCallback(() => {
 		inputRef.current.focus();
 	}, [inputRef]);
@@ -670,6 +668,7 @@ export function useTextInput(props) {
 
 	return {
 		...baseFieldProps,
+		...dragHandlers,
 		__store: store,
 		className: classes,
 		dragAxis,

@@ -1,13 +1,7 @@
 import { useDrag } from '@wp-g2/gestures';
 import { ui } from '@wp-g2/styles';
 import { clamp, noop } from '@wp-g2/utils';
-import React, {
-	useCallback,
-	useEffect,
-	useMemo,
-	useRef,
-	useState,
-} from 'react';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 
 import { Icon } from '../Icon';
 import { View } from '../View';

@@ -1,6 +1,13 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
-import { add, is, noop, roundClampString, subtract } from '@wp-g2/utils';
+import {
+	add,
+	is,
+	mergeRefs,
+	noop,
+	roundClampString,
+	subtract,
+} from '@wp-g2/utils';
 import React, { useEffect, useRef } from 'react';
 
 import { TextInput } from '../TextInput';
@@ -15,7 +22,7 @@ function findUnitMatch({ units = UNITS, value = '' }) {
 	return match;
 }
 
-function PresetPlaceholder({ onChange, value }) {
+function PresetPlaceholder({ inputRef, onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
 	const [isFocused, setIsFocused] = React.useState(false);
 	const selectRef = React.useRef();
@@ -43,6 +50,19 @@ function PresetPlaceholder({ onChange, value }) {
 		const unit = event.target.value;
 		const [parsedValue] = baseParseUnit(value);
 		onChange(createUnitValue(parsedValue, unit));
+
+		if (inputRef.current) {
+			inputRef.current.focus();
+		}
+	};
+
+	const handleOnRemoveUnit = (event) => {
+		const [parsedValue] = baseParseUnit(value);
+		onChange(parsedValue);
+
+		if (inputRef.current) {
+			inputRef.current.focus();
+		}
 	};
 
 	if (is.numeric(parsedValue)) {
@@ -53,6 +73,14 @@ function PresetPlaceholder({ onChange, value }) {
 
 	if (/\.$/g.test(value)) {
 		parsedValue = value;
+	}
+
+	// Disallow values that do not start with alphanumeric characters.
+	if (/^\W/g.test(value)) {
+		// Allow for negative numbers, e.g. -1
+		if (!/^-\w/g.test(value)) {
+			return null;
+		}
 	}
 
 	// Disallow values where a dot follows a character, e.g. 1.p
@@ -108,6 +136,7 @@ function PresetPlaceholder({ onChange, value }) {
 				{unit}
 				<View
 					as="select"
+					autoFocus={false}
 					css={`
 						appearance: none;
 						border: none;
@@ -124,16 +153,16 @@ function PresetPlaceholder({ onChange, value }) {
 					onClick={(e) => e.stopPropagation()}
 					onFocus={() => setIsFocused(true)}
 					onKeyDown={(e) => {
-						if (e.keyCode === 13) {
+						// Delete
+						if (e.keyCode === 8) {
 							e.preventDefault();
-							console.log('focus');
-							e.target.focus();
-							e.target.click();
+							handleOnRemoveUnit(e);
 						}
 					}}
 					onMouseDown={(e) => e.stopPropagation()}
 					ref={selectRef}
 					title="Change unit"
+					value={parsedUnit}
 				>
 					{UNITS.map((unit) => (
 						<option key={unit} value={unit}>
@@ -158,6 +187,7 @@ function UnitInput(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'UnitInput');
 	const raf = useRef();
+	const inputRef = useRef();
 
 	React.useEffect(() => {
 		const [parsedValue, parsedUnit] = baseParseUnit(value);
@@ -262,7 +292,11 @@ function UnitInput(props, forwardedRef) {
 
 	const enhancedInnerContent = (
 		<>
-			<PresetPlaceholder onChange={handleOnChange} value={placeholder} />
+			<PresetPlaceholder
+				inputRef={inputRef}
+				onChange={handleOnChange}
+				value={placeholder}
+			/>
 			{innerContent}
 		</>
 	);
@@ -279,7 +313,7 @@ function UnitInput(props, forwardedRef) {
 				onDecrement={handleOnDecrement}
 				onIncrement={handleOnIncrement}
 				onValueChange={handleOnValueChange}
-				ref={forwardedRef}
+				ref={mergeRefs([forwardedRef, inputRef])}
 				type="text"
 				value={value}
 			/>
