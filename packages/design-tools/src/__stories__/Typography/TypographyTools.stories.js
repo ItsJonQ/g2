@@ -379,7 +379,11 @@ const CombinedFormGroupInputSlider = React.memo(
 		const handleOnChange = React.useCallback(
 			(value) => {
 				typographyStore.setState((prev) => {
-					const { unit } = CSSUnit.parse(prev[prop]);
+					// Handles unit changes
+					const unit =
+						CSSUnit.parse(value).unit ||
+						CSSUnit.parse(prev[prop]).unit;
+
 					const { value: nextValue } = CSSUnit.parse(value);
 
 					const next = unit ? `${nextValue}${unit}` : value;
