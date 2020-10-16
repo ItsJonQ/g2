@@ -3,6 +3,7 @@ import { ui } from '@wp-g2/styles';
 import {
 	add,
 	is,
+	isFirefox,
 	mergeRefs,
 	noop,
 	roundClampString,
@@ -55,7 +56,9 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 	React.useEffect(() => {
 		const handleOnSelectionStart = (event) => {
 			if (event.target === selectRef.current) return;
-			setIsSelecting(true);
+			if (!isFirefox()) {
+				setIsSelecting(true);
+			}
 		};
 		const handleOnSelectionEnd = () => setIsSelecting(false);
 
@@ -146,15 +149,17 @@ function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 				css={[
 					textInputStyles.inputFontSize,
 					{
-						color: ui.color.admin,
+						color: isTypeAhead ? ui.color.admin : 'transparent',
 						cursor: 'pointer',
 						textDecorationLine: 'underline',
-						textDecorationStyle: 'dotted',
+						textDecorationStyle: 'solid',
+						textDecorationColor: ui.color.admin,
 						position: 'relative',
 					},
 					isFocused && {
 						background: ui.color.admin,
 						color: ui.color.white,
+						textDecoration: 'none',
 					},
 					ui.opacity(!isFocused && isTypeAhead ? 0.5 : 1),
 					ui.borderRadius.round,

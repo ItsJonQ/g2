@@ -24,7 +24,7 @@ function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {
 				width: 26px;
 				height: 20px;
 				display: flex;
-				margin: 0 -9px 0 0;
+				margin: 0 -9px 0 -5px;
 				align-items: center;
 				justify-content: center;
 			`}

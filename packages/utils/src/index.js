@@ -1,4 +1,5 @@
 export * from './arrays';
+export * from './browser';
 export * from './clipboard';
 export * from './colors';
 export * from './deepEqual';
