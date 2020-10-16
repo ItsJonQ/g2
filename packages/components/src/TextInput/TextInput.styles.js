@@ -86,7 +86,7 @@ export const SpinnerWrapper = css`
 export const Spinner = css`
 	cursor: pointer;
 	height: 24px;
-	margin: 1px -6px 0 0 !important;
+	margin: 0 -6px 0 0 !important;
 	opacity: 0.6;
 	user-select: none;
 `;

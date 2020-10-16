@@ -12,7 +12,6 @@ export const validStyleProps = [
 	'borderWidth',
 	'bottom',
 	'columnCount',
-	'columnFill',
 	'columnGap',
 	'columnRule',
 	'columnRuleWidth',

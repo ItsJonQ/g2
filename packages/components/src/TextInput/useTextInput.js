@@ -34,6 +34,7 @@ const useTextInputSubState = (
 		min,
 		onIncrement,
 		onDecrement,
+		onValueReset = noop,
 		onValueSync = noop,
 		shiftStep = 10,
 		step = 1,
@@ -41,15 +42,18 @@ const useTextInputSubState = (
 	},
 ) => {
 	const initialValue = is.defined(value) ? value : initialValueProp;
+	const isTypeNumeric = format === 'number' || type === 'number';
 
 	const store = useSubState((set) => ({
-		prevValue: null,
+		__resetCounter: 0,
 		format,
 		incomingValue: initialValue,
 		inputRef: null,
+		isTypeNumeric,
 		lastValue: initialValue,
 		max,
 		min,
+		prevValue: null,
 		shiftStep,
 		step,
 		type,
@@ -66,14 +70,14 @@ const useTextInputSubState = (
 			})),
 		resetValue: () =>
 			set((prev) => ({
+				__resetCounter: prev.__resetCounter + 1,
 				value: prev.prevValue,
 				lastValue: prev.prevValue,
 			})),
 
 		increment: (boost = 0) => {
 			set((prev) => {
-				if (prev.type !== 'number' && prev.format !== 'number')
-					return prev;
+				if (!prev.isTypeNumeric) return prev;
 				if (!prev.inputRef) return prev;
 
 				const { isShiftKey } = jumpStepStore.getState();
@@ -99,8 +103,7 @@ const useTextInputSubState = (
 		},
 		decrement: (boost = 0) => {
 			set((prev) => {
-				if (prev.type !== 'number' && prev.format !== 'number')
-					return prev;
+				if (!prev.isTypeNumeric) return prev;
 				if (!prev.inputRef) return prev;
 
 				const { isShiftKey } = jumpStepStore.getState();
@@ -139,6 +142,17 @@ const useTextInputSubState = (
 			});
 		}
 	}, [onValueSync, store, value]);
+
+	useEffect(() => {
+		return store.subscribe(
+			() => {
+				const currentState = store.getState();
+				onValueReset(currentState.value, currentState);
+			},
+			(state) => state.__resetCounter,
+			shallowCompare,
+		);
+	}, [store, onValueReset]);
 
 	useUpdateEffect(() => store.setState({ min }), [min]);
 	useUpdateEffect(() => store.setState({ max }), [max]);
@@ -294,9 +308,7 @@ export function useKeyboardHandlers({
 
 	const handleOnKeyDown = useCallback(
 		(event) => {
-			const { commitValue, setValue } = store.getState();
-			const { format, type } = store.getState();
-			const isNumberInput = format === 'number' || type === 'number';
+			const { commitValue, isTypeNumeric, setValue } = store.getState();
 
 			switch (event.keyCode) {
 				case KEYS.Z:
@@ -310,7 +322,7 @@ export function useKeyboardHandlers({
 					break;
 
 				case KEYS.UP:
-					if (isNumberInput) {
+					if (isTypeNumeric) {
 						event.preventDefault();
 						store.getState().increment();
 						commitValue();
@@ -318,7 +330,7 @@ export function useKeyboardHandlers({
 					break;
 
 				case KEYS.DOWN:
-					if (isNumberInput) {
+					if (isTypeNumeric) {
 						event.preventDefault();
 						store.getState().decrement();
 						commitValue();
@@ -444,11 +456,16 @@ function useChangeHandlers({
 
 export function useDragHandlers({ dragAxis, store }) {
 	const [dragState, setDragState] = useState(false);
-	const threshold = 10;
+	const { isTypeNumeric } = store.getState();
+
 	const dragRaf = useRef();
+	const threshold = 10;
 
 	useEffect(() => {
 		if (dragState) {
+			/**
+			 * Clear selection
+			 */
 			if (window.getSelection) {
 				if (window.getSelection().empty) {
 					// Chrome
@@ -461,6 +478,7 @@ export function useDragHandlers({ dragAxis, store }) {
 				// IE?
 				document.selection.empty();
 			}
+
 			if (dragState === 'x') {
 				document.documentElement.classList.add(styles.globalDraggableX);
 				document.documentElement.classList.remove(
@@ -517,7 +535,7 @@ export function useDragHandlers({ dragAxis, store }) {
 		{ axis: dragAxis, threshold },
 	);
 
-	return dragGestures();
+	return isTypeNumeric ? dragGestures() : {};
 }
 
 export function useEventHandlers(props) {
@@ -600,6 +618,7 @@ export function useTextInput(props) {
 		onDecrement,
 		onBeforeCommit,
 		onValueChange,
+		onValueReset = noop,
 		onValueSync = noop,
 		prefix,
 		shiftStep = 10,
@@ -622,12 +641,13 @@ export function useTextInput(props) {
 		min,
 		onIncrement,
 		onDecrement,
+		onValueReset,
 		onValueSync,
 		shiftStep,
 		step,
 		type,
 	});
-	const { value } = store();
+	const { isTypeNumeric, value } = store();
 
 	const inputRef = useInputRef({ store });
 
@@ -700,6 +720,7 @@ export function useTextInput(props) {
 		innerContent,
 		inputProps,
 		inputRef,
+		isTypeNumeric,
 		onClick: handleOnRootClick,
 		prefix,
 		suffix,

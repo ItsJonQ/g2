@@ -13,7 +13,12 @@ import React, { useEffect, useRef } from 'react';
 import { TextInput } from '../TextInput';
 import * as textInputStyles from '../TextInput/TextInput.styles';
 import { View } from '../View';
-import { baseParseUnit, createUnitValue, parseUnit } from './UnitInput.utils';
+import {
+	baseParseUnit,
+	createUnitValue,
+	isValidCSSValueForProp,
+	parseUnit,
+} from './UnitInput.utils';
 
 const UNITS = ['px', '%', 'em', 'rem', 'vh', 'vw', 'vmin', 'vmax'];
 
@@ -22,7 +27,7 @@ function findUnitMatch({ units = UNITS, value = '' }) {
 	return match;
 }
 
-function PresetPlaceholder({ inputRef, onChange, value }) {
+function PresetPlaceholder({ cssProp, inputRef, onChange, value }) {
 	const [isSelecting, setIsSelecting] = React.useState(false);
 	const [isFocused, setIsFocused] = React.useState(false);
 	const [width, setWidth] = React.useState();
@@ -91,6 +96,11 @@ function PresetPlaceholder({ inputRef, onChange, value }) {
 		parsedValue = value;
 	}
 
+	// Disallow values that contains spaces
+	if (/ /g.test(value)) {
+		return null;
+	}
+
 	// Disallow values that do not start with alphanumeric characters.
 	if (/^\W/g.test(value)) {
 		// Allow for negative numbers, e.g. -1
@@ -101,6 +111,16 @@ function PresetPlaceholder({ inputRef, onChange, value }) {
 
 	// Disallow values where a dot follows a character, e.g. 1.p
 	if (/\.[a-zA-Z]/g.test(value)) {
+		return null;
+	}
+
+	// Disallow values if they are invalid for a specified CSS property.
+	if (
+		!isValidCSSValueForProp(
+			cssProp,
+			createUnitValue(parsedValue, parsedUnit),
+		)
+	) {
 		return null;
 	}
 
@@ -197,6 +217,7 @@ function PresetPlaceholder({ inputRef, onChange, value }) {
 function UnitInput(props, forwardedRef) {
 	const [placeholder, setPlaceholder] = React.useState('');
 	const {
+		cssProp,
 		onBeforeCommit,
 		min = 0,
 		onChange = noop,
@@ -205,6 +226,7 @@ function UnitInput(props, forwardedRef) {
 		value,
 		...otherProps
 	} = useContextSystem(props, 'UnitInput');
+
 	const raf = useRef();
 	const inputRef = useRef();
 	const lastValueRef = useRef();
@@ -212,8 +234,15 @@ function UnitInput(props, forwardedRef) {
 
 	React.useEffect(() => {
 		if (value === lastValueRef.current) return;
+		lastValueRef.current = value;
 
 		const [parsedValue, parsedUnit] = baseParseUnit(value);
+
+		// Disallow values if they are invalid for a specified CSS property.
+		if (!isValidCSSValueForProp(cssProp, value)) {
+			setPlaceholder('');
+			return;
+		}
 
 		if (is.numeric(parsedValue) && parsedUnit) {
 			const unit = findUnitMatch({ value: parsedUnit });
@@ -225,8 +254,7 @@ function UnitInput(props, forwardedRef) {
 		} else {
 			setPlaceholder('');
 		}
-		lastValueRef.current = value;
-	}, [value]);
+	}, [cssProp, value]);
 
 	const handleOnChange = (next) => {
 		if (lastChangeValueRef.current === next) return;
@@ -250,6 +278,11 @@ function UnitInput(props, forwardedRef) {
 			commitValue = createUnitValue(parsedValue, unit);
 		}
 
+		// Disallow values if they are invalid for a specified CSS property.
+		if (!isValidCSSValueForProp(cssProp, commitValue)) {
+			commitValue = next;
+		}
+
 		if (onBeforeCommit) {
 			return onBeforeCommit(commitValue);
 		}
@@ -257,57 +290,87 @@ function UnitInput(props, forwardedRef) {
 		return commitValue;
 	};
 
-	const handleOnIncrement = React.useCallback((prev) => {
-		const [value, unit] = parseUnit(prev.value);
+	const handleOnIncrement = React.useCallback(
+		(prev) => {
+			const [value, unit] = parseUnit(prev.value);
 
-		if (!is.numeric(value)) return;
+			if (!is.numeric(value)) return;
 
-		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
+			const step = prev.isShiftKey
+				? prev.step * prev.shiftStep
+				: prev.step;
 
-		const nextValue = add(prev.boost, step);
-		const clampedValue = roundClampString(
-			add(nextValue, value),
-			prev.min,
-			prev.max,
-			prev.step,
-		);
+			const nextValue = add(prev.boost, step);
+			const clampedValue = roundClampString(
+				add(nextValue, value),
+				prev.min,
+				prev.max,
+				prev.step,
+			);
 
-		if (prev.inputRef.setSelectionRange) {
-			raf.current = requestAnimationFrame(() => {
-				prev.inputRef.setSelectionRange(0, String(clampedValue).length);
-			});
-		}
+			if (prev.inputRef.setSelectionRange) {
+				raf.current = requestAnimationFrame(() => {
+					prev.inputRef.setSelectionRange(
+						0,
+						String(clampedValue).length,
+					);
+				});
+			}
 
-		const final = unit ? createUnitValue(clampedValue, unit) : clampedValue;
+			let final = unit
+				? createUnitValue(clampedValue, unit)
+				: clampedValue;
 
-		return { value: final };
-	}, []);
+			// Disallow values if they are invalid for a specified CSS property.
+			if (!isValidCSSValueForProp(cssProp, final)) {
+				final = clampedValue;
+			}
 
-	const handleOnDecrement = React.useCallback((prev) => {
-		const [value, unit] = parseUnit(prev.value);
+			return { value: final };
+		},
+		[cssProp],
+	);
 
-		if (!is.numeric(value)) return;
+	const handleOnDecrement = React.useCallback(
+		(prev) => {
+			const [value, unit] = parseUnit(prev.value);
 
-		const step = prev.isShiftKey ? prev.step * prev.shiftStep : prev.step;
+			if (!is.numeric(value)) return;
 
-		const nextValue = add(prev.boost, step);
-		const clampedValue = roundClampString(
-			subtract(value, nextValue),
-			prev.min,
-			prev.max,
-			prev.step,
-		);
+			const step = prev.isShiftKey
+				? prev.step * prev.shiftStep
+				: prev.step;
 
-		if (prev.inputRef.setSelectionRange) {
-			raf.current = requestAnimationFrame(() => {
-				prev.inputRef.setSelectionRange(0, String(clampedValue).length);
-			});
-		}
+			const nextValue = add(prev.boost, step);
+			const clampedValue = roundClampString(
+				subtract(value, nextValue),
+				prev.min,
+				prev.max,
+				prev.step,
+			);
 
-		const final = unit ? createUnitValue(clampedValue, unit) : clampedValue;
+			if (prev.inputRef.setSelectionRange) {
+				raf.current = requestAnimationFrame(() => {
+					prev.inputRef.setSelectionRange(
+						0,
+						String(clampedValue).length,
+					);
+				});
+			}
 
-		return { value: final };
-	}, []);
+			let final = unit
+				? createUnitValue(clampedValue, unit)
+				: clampedValue;
+
+			// Disallow values if they are invalid for a specified CSS property.
+			if (!isValidCSSValueForProp(cssProp, final)) {
+				final = clampedValue;
+			}
+
+			return { value: final };
+		},
+		[cssProp],
+	);
 
 	useEffect(() => {
 		return () => {
@@ -320,6 +383,7 @@ function UnitInput(props, forwardedRef) {
 	const enhancedInnerContent = (
 		<>
 			<PresetPlaceholder
+				cssProp={cssProp}
 				inputRef={inputRef}
 				onChange={handleOnChange}
 				value={placeholder}
@@ -340,6 +404,7 @@ function UnitInput(props, forwardedRef) {
 				onDecrement={handleOnDecrement}
 				onIncrement={handleOnIncrement}
 				onValueChange={handleOnValueChange}
+				onValueReset={handleOnChange}
 				ref={mergeRefs([forwardedRef, inputRef])}
 				type="text"
 				value={value}

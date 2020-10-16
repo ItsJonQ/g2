@@ -3,28 +3,12 @@ import React from 'react';
 
 import { FormGroup, ListGroup } from '../../index';
 import { UnitInput } from '../index';
-import { baseParseUnit } from '../UnitInput.utils';
+import { isValidCSSValueForProp } from '../UnitInput.utils';
 import { validStyleProps } from './utils';
 
 export default {
 	component: UnitInput,
 	title: 'Components/UnitInput',
-};
-
-const __styleTestNode__ = document.createElement('div');
-const computedStyleMap = __styleTestNode__.style;
-
-const getCSSValue = (initialValue) => {
-	const [value, unit] = baseParseUnit(initialValue);
-	const next = !unit ? value : `${value}${unit}`;
-
-	return next;
-};
-
-const isValidCSSValueForProp = (prop, value) => {
-	const next = getCSSValue(value);
-	computedStyleMap[prop] = next;
-	return computedStyleMap[prop] === value;
 };
 
 const everythingInitialState = validStyleProps
@@ -51,9 +35,11 @@ const CSSEntry = React.memo(({ prop }) => {
 	const update = (next) => {
 		valueStore.setState({ [prop]: next });
 	};
+
 	return (
 		<FormGroup label={prop}>
 			<UnitInput
+				cssProp={prop}
 				onChange={update}
 				validate={(next) => {
 					return isValidCSSValueForProp(prop, next);
@@ -67,20 +53,9 @@ const CSSEntry = React.memo(({ prop }) => {
 const Everything = () => {
 	const { setState, ...state } = useValueStore();
 
-	// const update = (prop) => (next) => {
-	// 	setState((prev) =>
-	// 		prev.map((item) => {
-	// 			if (item.prop === prop) {
-	// 				return { ...item, value: next };
-	// 			}
-	// 			return item;
-	// 		}),
-	// 	);
-	// };
-
 	return (
 		<ListGroup>
-			{Object.entries(state).map(([key, item]) => {
+			{Object.entries(state).map(([key]) => {
 				return <CSSEntry key={key} prop={key} />;
 			})}
 		</ListGroup>

@@ -14,6 +14,29 @@ export const CSS_UNITS = [
 
 export const DEFAULT_UNIT = CSS_UNITS[0];
 
+const __styleTestNode = document.createElement('div');
+const __computedStyleMap = __styleTestNode.style;
+
+export const getCSSValue = (initialValue) => {
+	const [value, unit] = baseParseUnit(initialValue);
+	const next = !unit ? value : `${value}${unit}`;
+
+	return next;
+};
+
+export const isValidCSSValueForProp = (prop, value) => {
+	if (!is.string(prop)) return true;
+	if (is.undefined(__computedStyleMap[prop])) return true;
+
+	// Reset
+	__computedStyleMap[prop] = '';
+
+	const next = getCSSValue(value);
+	__computedStyleMap[prop] = next;
+
+	return __computedStyleMap[prop] === value;
+};
+
 /**
  * Handles legacy value + unit handling.
  * This component use to manage both incoming value and units separately.

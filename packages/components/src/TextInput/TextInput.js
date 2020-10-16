@@ -12,19 +12,18 @@ function TextInput(props, forwardedRef) {
 	const {
 		__store,
 		disabled,
-		format,
 		hideArrows = false,
 		innerContent,
 		inputProps,
 		inputRef,
+		isTypeNumeric,
 		onCommitChange,
 		prefix,
 		suffix,
 		...otherProps
 	} = useTextInput(props);
 
-	const isNumberInput = format === 'number' || inputProps.type === 'number';
-	const showTextInputArrows = !hideArrows && isNumberInput;
+	const showTextInputArrows = !hideArrows && isTypeNumeric;
 
 	return (
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>
