@@ -1,509 +1,55 @@
-import { StatsGraph } from '@helpscout/stats';
 import {
-	Button,
 	Card,
 	CardBody,
-	Container,
-	ControlLabel,
-	Dropdown,
-	DropdownMenu,
-	DropdownMenuItem,
-	DropdownTrigger,
-	FormGroup,
 	Grid,
-	HStack,
 	ListGroup,
 	ListGroupHeader,
+	ListGroups,
 	PresetInput,
 	Select,
-	Slider,
-	Spacer,
-	Stepper,
-	Surface,
-	Switch,
-	TextInput,
 	UnitInput,
-	View,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
-import { FiMinus, FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
+import { FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
 import { ThemeProvider, ui } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
-import { add, is, subtract } from '@wp-g2/utils';
 import React from 'react';
-import CSSUnit from 'units-css';
 
+import { fontFamilyPresets, presets, Wrapper } from './components';
 import {
-	presets,
-	Preview,
-	typographyOptionKeys,
-	typographyStore,
-	useTypography,
-} from './components';
+	CombinedFormGroup,
+	CombinedFormGroupInputSlider,
+	CombinedFormGroupInputStepper,
+	CombinedFormGroupSwitch,
+	CombinedFormGroupSwitchAlt,
+	CombinedFormGroupSwitchLeft,
+	DimensionsPanel,
+	FontFamilyControl,
+	FontStyleControl,
+	TypographyOptions,
+} from './controls';
 
 export default {
 	title: 'DesignTools/TypographyTools',
 };
 
-const TypographyOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
-	const { setState, ...settings } = useTypography();
-	const optionsEntries = Object.entries(typographyOptionKeys);
-
-	// const hasEntries = Object.keys(settings).filter((key, index) => {
-	// 	return !!optionsEntries[index][1];
-	// }).length;
-
-	const handleOnToggle = React.useCallback(
-		({ prop, value }) => () => {
-			typographyStore.setState({ [prop]: value });
-		},
-		[],
-	);
-
-	// if (showActiveOnly && !hasEntries) return null;
-
+const ExampleOne = () => {
 	return (
-		<Dropdown placement="bottom-end">
-			<DropdownTrigger
-				hasCaret={false}
-				icon={addIcon}
-				isControl
-				isSubtle
-				size="xSmall"
-			/>
-			<DropdownMenu maxWidth={160} minWidth={160}>
-				{optionsEntries.map(([key, value]) => {
-					const isSelected = is.defined(settings[key]);
-
-					return (
-						<DropdownMenuItem
-							isSelected={isSelected}
-							key={key}
-							onClick={handleOnToggle({
-								prop: key,
-								value: isSelected ? null : value.value,
-							})}
-							value={key}
-						>
-							{value.label}
-						</DropdownMenuItem>
-					);
-				})}
-			</DropdownMenu>
-		</Dropdown>
+		<Card>
+			<CardBody>
+				<ListGroup>
+					<ListGroupHeader>
+						Typography
+						<TypographyOptions />
+					</ListGroupHeader>
+					<FontFamilyControl />
+					<FontStyleControl />
+				</ListGroup>
+			</CardBody>
+		</Card>
 	);
-});
+};
 
-const FontStyleControl = React.memo(() => {
-	const [fontSize, letterSpacing, lineHeight] = useTypography(
-		(state) => [state.fontSize, state.letterSpacing, state.lineHeight],
-		shallowCompare,
-	);
-
-	const handleOnChange = React.useCallback(
-		(key) => (value) => {
-			typographyStore.setState({ [key]: value });
-		},
-		[],
-	);
-
-	if (![fontSize, lineHeight, letterSpacing].filter(Boolean).length)
-		return null;
-
-	return (
-		<Grid columns={3}>
-			{fontSize && (
-				<FormGroup label="Size">
-					<UnitInput
-						min={0}
-						onChange={handleOnChange('fontSize')}
-						value={fontSize}
-					/>
-				</FormGroup>
-			)}
-			{letterSpacing && (
-				<FormGroup label="Spacing">
-					<TextInput
-						min={-10}
-						onChange={handleOnChange('letterSpacing')}
-						step={0.5}
-						type="number"
-						value={letterSpacing}
-					/>
-				</FormGroup>
-			)}
-			{lineHeight && (
-				<FormGroup label="Height">
-					<TextInput
-						min={0}
-						onChange={handleOnChange('lineHeight')}
-						step={0.5}
-						type="number"
-						value={lineHeight}
-					/>
-				</FormGroup>
-			)}
-		</Grid>
-	);
-});
-
-const FontFamilyControl = React.memo(() => {
-	const [fontFamily, fontWeight] = useTypography(
-		(state) => [state.fontFamily, state.fontWeight],
-		shallowCompare,
-	);
-
-	const handleOnChange = React.useCallback(
-		(key) => (value) => typographyStore.setState({ [key]: value }),
-		[],
-	);
-
-	if (![fontFamily, fontFamily].filter(Boolean).length) return null;
-
-	return (
-		<Grid>
-			{fontFamily && (
-				<FormGroup label="Family">
-					<TextInput
-						onChange={handleOnChange('fontFamily')}
-						value={fontFamily}
-					/>
-				</FormGroup>
-			)}
-			{fontWeight && (
-				<FormGroup label="Weight">
-					<Select
-						onChange={handleOnChange('fontWeight')}
-						value={fontWeight}
-					>
-						<option value="Lighter">Light</option>
-						<option value="Normal">Regular</option>
-						<option value="Bold">Bold</option>
-						<option value="Bolder">Bolder</option>
-					</Select>
-				</FormGroup>
-			)}
-		</Grid>
-	);
-});
-
-const CombinedFormGroup = React.memo(
-	({
-		Component = TextInput,
-		label,
-		prop,
-		showRemove = true,
-		...otherProps
-	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
-
-		const handleOnChange = React.useCallback(
-			(value) => {
-				typographyStore.setState({ [prop]: value });
-			},
-			[prop],
-		);
-
-		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
-		}, [prop]);
-
-		if (!is.defined(value)) return null;
-
-		return (
-			<FormGroup
-				css={`
-					&:hover {
-						.action {
-							opacity: 1;
-							pointer-events: initial;
-						}
-					}
-				`}
-			>
-				<HStack>
-					<ControlLabel>{label}</ControlLabel>
-					{showRemove && (
-						<Button
-							className="action"
-							css={`
-								opacity: 0;
-								pointer-events: none;
-								&:focus {
-									opacity: 1;
-									pointer-events: initial;
-								}
-							`}
-							icon={<FiMinus />}
-							isControl
-							isSubtle
-							onClick={handleOnRemove}
-							size="xSmall"
-							tabIndex={-1}
-						/>
-					)}
-				</HStack>
-				<Component
-					onChange={handleOnChange}
-					value={value}
-					{...otherProps}
-				/>
-			</FormGroup>
-		);
-	},
-);
-
-const CombinedFormGroupSwitch = React.memo(
-	({
-		Component = TextInput,
-		label,
-		prop,
-		showRemove = true,
-		...otherProps
-	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
-
-		const handleOnChange = React.useCallback(
-			(value) => {
-				typographyStore.setState({ [prop]: value });
-			},
-			[prop],
-		);
-
-		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
-		}, [prop]);
-
-		if (!is.defined(value)) return null;
-
-		return (
-			<FormGroup
-				css={`
-					&:hover {
-						.action {
-							opacity: 1;
-							pointer-events: initial;
-						}
-					}
-				`}
-				horizontal
-				templateColumns="1fr"
-			>
-				<HStack>
-					<ControlLabel>{label}</ControlLabel>
-					<Spacer />
-					<Switch
-						checked={!!value}
-						onChange={handleOnChange}
-						{...otherProps}
-					/>
-					{showRemove && (
-						<Button
-							className="action"
-							css={`
-								opacity: 0;
-								pointer-events: none;
-								&:focus {
-									opacity: 1;
-									pointer-events: initial;
-								}
-							`}
-							icon={<FiMinus />}
-							isControl
-							isSubtle
-							onClick={handleOnRemove}
-							size="xSmall"
-							tabIndex={-1}
-						/>
-					)}
-				</HStack>
-			</FormGroup>
-		);
-	},
-);
-
-const CombinedFormGroupSwitchAlt = React.memo(
-	({ label, prop, ...otherProps }) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
-
-		const handleOnChange = React.useCallback(
-			(value) => {
-				typographyStore.setState({ [prop]: value });
-			},
-			[prop],
-		);
-
-		if (!is.defined(value)) return null;
-
-		return (
-			<FormGroup
-				css={`
-					&:hover {
-						.action {
-							opacity: 1;
-							pointer-events: initial;
-						}
-					}
-				`}
-				templateColumns="1fr"
-			>
-				<HStack alignment="left">
-					<Switch
-						checked={!!value}
-						onChange={handleOnChange}
-						size="small"
-						{...otherProps}
-						css={`
-							margin: 0;
-						`}
-					/>
-					<ControlLabel>{label}</ControlLabel>
-				</HStack>
-			</FormGroup>
-		);
-	},
-);
-
-const CombinedFormGroupInputSlider = React.memo(
-	({
-		Component = TextInput,
-		label,
-		prop,
-		min,
-		truncate = true,
-		max,
-		showRemove = true,
-		...otherProps
-	}) => {
-		const value = useTypography((state) => state[prop], shallowCompare);
-
-		const handleOnChange = React.useCallback(
-			(value) => {
-				typographyStore.setState((prev) => {
-					// Handles unit changes
-					const unit =
-						CSSUnit.parse(value).unit ||
-						CSSUnit.parse(prev[prop]).unit;
-
-					const { value: nextValue } = CSSUnit.parse(value);
-
-					const next = unit ? `${nextValue}${unit}` : value;
-
-					return { [prop]: next };
-				});
-			},
-			[prop],
-		);
-
-		if (value === null) return null;
-		const cssValue = CSSUnit.parse(value);
-
-		return (
-			<FormGroup
-				align="center"
-				css={`
-					&:hover {
-						.action {
-							opacity: 1;
-							pointer-events: initial;
-						}
-					}
-				`}
-			>
-				<ControlLabel truncate={truncate}>{label}</ControlLabel>
-				<View>
-					<Grid>
-						<Component
-							max={max}
-							min={min}
-							onChange={handleOnChange}
-							value={value}
-							{...otherProps}
-						/>
-						<Slider
-							max={20}
-							min={min}
-							onChange={handleOnChange}
-							value={cssValue.value}
-						/>
-					</Grid>
-				</View>
-			</FormGroup>
-		);
-	},
-);
-
-const CombinedFormGroupInputStepper = React.memo(
-	({
-		Component = TextInput,
-		label,
-		prop,
-		min,
-		truncate = true,
-		max,
-		showRemove = true,
-		...otherProps
-	}) => {
-		const value = useTypography((state) => state[prop], shallowCompare);
-
-		const handleOnChange = React.useCallback(
-			(value) => {
-				typographyStore.setState({ [prop]: value });
-			},
-			[prop],
-		);
-
-		const handleOnIncrement = React.useCallback(() => {
-			typographyStore.setState((prev) => {
-				return { [prop]: add(prev[prop], 1).toString() };
-			});
-		}, [prop]);
-		const handleOnDecrement = React.useCallback(() => {
-			typographyStore.setState((prev) => {
-				return { [prop]: subtract(prev[prop], 1).toString() };
-			});
-		}, [prop]);
-
-		if (value === null) return null;
-
-		return (
-			<FormGroup
-				align="center"
-				css={`
-					&:hover {
-						.action {
-							opacity: 1;
-							pointer-events: initial;
-						}
-					}
-				`}
-			>
-				<ControlLabel truncate={truncate}>{label}</ControlLabel>
-				<View>
-					<Grid>
-						<Component
-							hideArrows
-							max={max}
-							min={min}
-							onChange={handleOnChange}
-							value={value}
-							{...otherProps}
-						/>
-						<Stepper
-							min={min}
-							onChange={handleOnChange}
-							onDecrement={handleOnDecrement}
-							onIncrement={handleOnIncrement}
-							value={value}
-						/>
-					</Grid>
-				</View>
-			</FormGroup>
-		);
-	},
-);
-
-const ExampleFour = () => {
+const ExampleTwo = () => {
 	return (
 		<Card>
 			<CardBody>
@@ -511,55 +57,40 @@ const ExampleFour = () => {
 					<ListGroupHeader>
 						Typography
 						<TypographyOptions
-							addIcon={<FiMoreHorizontal />}
+							addIcon={<FiPlus />}
 							showActiveOnly
 						/>
 					</ListGroupHeader>
-					<CombinedFormGroup
-						label="Font"
-						prop="fontFamily"
-						showRemove={false}
-					/>
-					<CombinedFormGroup
-						Component={Select}
-						label="Weight"
-						prop="fontWeight"
-						showRemove={false}
-					>
-						<option value="Lighter">Light</option>
-						<option value="Normal">Regular</option>
-						<option value="Bold">Bold</option>
-						<option value="Bolder">Bolder</option>
-					</CombinedFormGroup>
-					<CombinedFormGroupInputSlider
-						Component={UnitInput}
-						label="Size"
-						min={0}
-						prop="fontSize"
-						truncate={false}
-						type="number"
-					/>
-					<CombinedFormGroupInputStepper
-						label="Line Height"
-						min={0}
-						prop="lineHeight"
-						step={0.5}
-						truncate={false}
-						type="number"
-					/>
-					<CombinedFormGroupInputStepper
-						Component={UnitInput}
-						label="Letter Spacing"
-						min={-10}
-						prop="letterSpacing"
-						step={0.5}
-						truncate={false}
-						type="number"
-					/>
-					<CombinedFormGroupSwitchAlt
-						label="Drop Cap"
-						prop="dropCap"
-					/>
+					<Grid>
+						<CombinedFormGroup label="Family" prop="fontFamily" />
+						<CombinedFormGroup
+							Component={Select}
+							label="Weight"
+							prop="fontWeight"
+						>
+							<option value="Lighter">Light</option>
+							<option value="Normal">Regular</option>
+							<option value="Bold">Bold</option>
+							<option value="Bolder">Bolder</option>
+						</CombinedFormGroup>
+						<CombinedFormGroup
+							Component={PresetInput}
+							label="Size"
+							presets={presets}
+							prop="fontSize"
+						/>
+						<CombinedFormGroup
+							label="Spacing"
+							prop="letterSpacing"
+							type="number"
+						/>
+						<CombinedFormGroup
+							label="Height"
+							prop="lineHeight"
+							type="number"
+						/>
+					</Grid>
+					<CombinedFormGroupSwitch label="Drop Cap" prop="dropCap" />
 				</ListGroup>
 			</CardBody>
 		</Card>
@@ -630,7 +161,7 @@ const ExampleThree = () => {
 	);
 };
 
-const ExampleTwo = () => {
+const ExampleFour = () => {
 	return (
 		<Card>
 			<CardBody>
@@ -638,16 +169,89 @@ const ExampleTwo = () => {
 					<ListGroupHeader>
 						Typography
 						<TypographyOptions
-							addIcon={<FiPlus />}
+							addIcon={<FiMoreHorizontal />}
 							showActiveOnly
 						/>
 					</ListGroupHeader>
-					<Grid>
-						<CombinedFormGroup label="Family" prop="fontFamily" />
+					<CombinedFormGroup
+						label="Font"
+						prop="fontFamily"
+						showRemove={false}
+					/>
+					<CombinedFormGroup
+						Component={Select}
+						label="Weight"
+						prop="fontWeight"
+						showRemove={false}
+					>
+						<option value="Lighter">Light</option>
+						<option value="Normal">Regular</option>
+						<option value="Bold">Bold</option>
+						<option value="Bolder">Bolder</option>
+					</CombinedFormGroup>
+					<CombinedFormGroupInputSlider
+						Component={UnitInput}
+						label="Size"
+						min={0}
+						prop="fontSize"
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupInputStepper
+						label="Line Height"
+						min={0}
+						prop="lineHeight"
+						step={0.5}
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupInputStepper
+						Component={UnitInput}
+						label="Letter Spacing"
+						min={-10}
+						prop="letterSpacing"
+						step={0.5}
+						truncate={false}
+						type="number"
+					/>
+					<CombinedFormGroupSwitchAlt
+						label="Drop Cap"
+						prop="dropCap"
+					/>
+				</ListGroup>
+			</CardBody>
+		</Card>
+	);
+};
+
+const ExampleFive = ({ truncate = false }) => {
+	return (
+		<Card>
+			<CardBody>
+				<ListGroups>
+					<ListGroup>
+						<ListGroupHeader>
+							Typography
+							<TypographyOptions
+								addIcon={<FiPlus />}
+								showActiveOnly
+							/>
+						</ListGroupHeader>
+						<CombinedFormGroup
+							Component={PresetInput}
+							format="text"
+							label="Font"
+							presets={fontFamilyPresets}
+							prop="fontFamily"
+							showRemove={false}
+							showRemoveRight
+						/>
 						<CombinedFormGroup
 							Component={Select}
 							label="Weight"
 							prop="fontWeight"
+							showRemove={false}
+							showRemoveRight
 						>
 							<option value="Lighter">Light</option>
 							<option value="Normal">Regular</option>
@@ -656,78 +260,133 @@ const ExampleTwo = () => {
 						</CombinedFormGroup>
 						<CombinedFormGroup
 							Component={PresetInput}
+							cssProp="fontSize"
 							label="Size"
+							min={0}
 							presets={presets}
 							prop="fontSize"
+							showRemove={false}
+							showRemoveRight
+							truncate={truncate}
 						/>
-						<CombinedFormGroup
-							label="Spacing"
-							prop="letterSpacing"
-							type="number"
-						/>
-						<CombinedFormGroup
-							label="Height"
+						<CombinedFormGroupInputSlider
+							Component={UnitInput}
+							cssProp="lineHeight"
+							label="Line Height"
+							min={0}
 							prop="lineHeight"
+							showRemove={false}
+							showRemoveRight
+							step={0.5}
+							truncate={truncate}
 							type="number"
 						/>
-					</Grid>
-					<CombinedFormGroupSwitch label="Drop Cap" prop="dropCap" />
-				</ListGroup>
+						<CombinedFormGroupInputStepper
+							Component={UnitInput}
+							cssProp="letterSpacing"
+							label="Letter Spacing"
+							min={-10}
+							prop="letterSpacing"
+							showRemove={false}
+							showRemoveRight
+							step={0.5}
+							truncate={truncate}
+							type="number"
+						/>
+						<CombinedFormGroupSwitchLeft
+							label="Drop Cap"
+							prop="dropCap"
+							showRemove={false}
+							showRemoveRight
+						/>
+					</ListGroup>
+					<DimensionsPanel />
+				</ListGroups>
 			</CardBody>
 		</Card>
 	);
 };
 
-const ExampleOne = () => {
+const ExampleSix = () => {
 	return (
 		<Card>
 			<CardBody>
-				<ListGroup>
-					<ListGroupHeader>
-						Typography
-						<TypographyOptions />
-					</ListGroupHeader>
-					<FontFamilyControl />
-					<FontStyleControl />
-				</ListGroup>
+				<ListGroups>
+					<ListGroup>
+						<ListGroupHeader>
+							Typography
+							<TypographyOptions
+								addIcon={<FiPlus />}
+								showActiveOnly
+							/>
+						</ListGroupHeader>
+						<CombinedFormGroup
+							Component={PresetInput}
+							format="text"
+							label="Font"
+							presets={fontFamilyPresets}
+							prop="fontFamily"
+							showRemove={false}
+							showResetRight
+						/>
+						<CombinedFormGroup
+							Component={Select}
+							label="Weight"
+							prop="fontWeight"
+							showRemove={false}
+							showResetRight
+						>
+							<option value="Lighter">Light</option>
+							<option value="Normal">Regular</option>
+							<option value="Bold">Bold</option>
+							<option value="Bolder">Bolder</option>
+						</CombinedFormGroup>
+						<CombinedFormGroup
+							Component={PresetInput}
+							cssProp="fontSize"
+							label="Size"
+							min={0}
+							presets={presets}
+							prop="fontSize"
+							showRemove={false}
+							showResetRight
+							truncate={false}
+						/>
+						<CombinedFormGroupInputSlider
+							Component={UnitInput}
+							cssProp="lineHeight"
+							label="Line Height"
+							min={0}
+							prop="lineHeight"
+							showRemove={false}
+							showResetRight
+							step={0.5}
+							truncate={false}
+							type="number"
+						/>
+						<CombinedFormGroupInputStepper
+							Component={UnitInput}
+							cssProp="letterSpacing"
+							label="Letter Spacing"
+							min={-10}
+							prop="letterSpacing"
+							showRemove={false}
+							showResetRight
+							step={0.5}
+							truncate={false}
+							type="number"
+						/>
+						<CombinedFormGroupSwitchLeft
+							label="Drop Cap"
+							prop="dropCap"
+							showRemove={false}
+							showResetRight
+						/>
+					</ListGroup>
+					<DimensionsPanel />
+				</ListGroups>
 			</CardBody>
 		</Card>
-	);
-};
-
-const Wrapper = ({ children }) => {
-	return (
-		<>
-			<StatsGraph />
-			<Surface
-				css={`
-					position: fixed;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-				`}
-				variant="dotted"
-			/>
-			<Container width={800}>
-				<Grid
-					css={`
-						margin-top: 30vh;
-					`}
-					templateColumns="minmax(0, 1fr) 265px"
-				>
-					<View>
-						<Card>
-							<CardBody>
-								<Preview />
-							</CardBody>
-						</Card>
-					</View>
-					<View>{children}</View>
-				</Grid>
-				);
-			</Container>
-		</>
 	);
 };
 
@@ -789,6 +448,57 @@ export const _baseLineStepper = () => {
 					value={{ FormGroup: { horizontal: true } }}
 				>
 					<ExampleFour />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _plusMinusInline = () => {
+	return (
+		<ThemeProvider theme={baseLineTheme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: true },
+					}}
+				>
+					<ExampleFive />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _plusResetInput = () => {
+	return (
+		<ThemeProvider theme={baseLineTheme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: true },
+					}}
+				>
+					<ExampleSix />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _plusMinusInlineTruncate = () => {
+	return (
+		<ThemeProvider theme={baseLineTheme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: true },
+					}}
+				>
+					<ExampleFive truncate />
 				</ContextSystemProvider>
 			</Wrapper>
 		</ThemeProvider>

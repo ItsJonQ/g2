@@ -90,7 +90,7 @@ exports[`props should render mixed control types 1`] = `
         id="salutations"
       />
       <div
-        class="wp-components-flex-item css-9qyxxx"
+        class="wp-components-flex-item css-5yrsrk"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >

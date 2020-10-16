@@ -420,8 +420,8 @@ function UnitInput(props, forwardedRef) {
 	return (
 		<>
 			<TextInput
-				{...otherProps}
 				format="number"
+				{...otherProps}
 				innerContent={enhancedInnerContent}
 				min={min}
 				onBeforeCommit={handleOnBeforeCommit}

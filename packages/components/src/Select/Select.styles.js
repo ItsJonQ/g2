@@ -16,7 +16,7 @@ export const ArrowWrapperView = styled(FlexItem)`
 	bottom: 0;
 	display: flex;
 	justify-content: center;
-	padding: 0 8px;
+	padding: 0 5px;
 	pointer-events: none;
 	position: absolute;
 	right: 0;
