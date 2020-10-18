@@ -89,8 +89,8 @@ export function createStore<TState extends State>(
  * import { useSubState } from `@wp-g2/substate`
  *
  * const Example = () => {
- *	const store = useSubState(set => ({
- *		bears: 0,
+ * 	const store = useSubState(set => ({
+ * 		bears: 0,
  * 		increasePopulation: () => set(state => ({ bears: state.bears + 1 })),
  * 		removeAllBears: () => set({ bears: 0 })
  * 	}))
