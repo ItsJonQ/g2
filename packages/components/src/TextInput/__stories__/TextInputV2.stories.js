@@ -1,6 +1,17 @@
 import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { add, noop, roundClampString, subtract } from '@wp-g2/utils';
+import {
+	add,
+	createUnitValue,
+	is,
+	isValidNumericUnitValue,
+	noop,
+	parseUnitValue,
+	roundClampString,
+	subtract,
+} from '@wp-g2/utils';
 import React from 'react';
+
+import { Container, Grid, Text, View } from '../../index';
 
 export default {
 	title: 'Components/TextInputV2',
@@ -15,27 +26,7 @@ function normalizeArrowKey(event) {
 	return key;
 }
 
-const useTextInputState = ({
-	type = 'text',
-	value: incomingValue = '',
-} = {}) => {
-	const store = useSubState((set) => ({
-		// State
-		type,
-		value: incomingValue,
-		previousValue: '',
-		commitValue: '',
-
-		// Actions
-		change: (next) =>
-			set((prev) => ({ previousValue: prev.value, value: next })),
-		commit: () =>
-			set((prev) => ({
-				previousValue: prev.value,
-				commitValue: prev.value,
-			})),
-	}));
-
+const useControlledValue = ({ store, value: incomingValue }) => {
 	React.useEffect(() => {
 		store.getState().change(incomingValue);
 	}, [incomingValue, store]);
@@ -43,9 +34,74 @@ const useTextInputState = ({
 	const value = store((state) => state.value);
 
 	return {
-		store,
 		value,
 	};
+};
+
+const mergeEvent = (handler, extraHandler) => {
+	if (!is.function(handler) || !is.function(extraHandler)) return handler;
+
+	return (...args) => {
+		handler(...args);
+		extraHandler(...args);
+	};
+};
+
+const mergeEventHandlers = (handlers = {}, extraHandlers = {}) => {
+	const mergedHandlers = { ...handlers };
+
+	for (const [key, handler] of Object.entries(mergedHandlers)) {
+		if (is.function(extraHandlers[key])) {
+			mergedHandlers[key] = mergeEvent(handler, extraHandlers[key]);
+		}
+	}
+
+	return mergedHandlers;
+};
+
+const useTextInputState = ({
+	type = 'text',
+	validate,
+	value: incomingValue = '',
+} = {}) => {
+	const store = useSubState((set) => ({
+		// State
+		type,
+		value: incomingValue,
+		previousValue: incomingValue,
+		commitValue: '',
+
+		// Actions
+		change: (next) => set(() => ({ value: next })),
+		commit: () => {
+			let isValid = true;
+			const current = store.getState();
+
+			if (is.function(validate)) {
+				isValid = validate(current.value, current) !== false;
+			}
+
+			if (isValid) {
+				current.commitComplete();
+			} else {
+				current.commitRevert();
+			}
+		},
+		commitRevert: () => {
+			set((prev) => ({
+				value: prev.previousValue,
+			}));
+		},
+		commitComplete: () =>
+			set((prev) => ({
+				previousValue: prev.value,
+				commitValue: prev.value,
+			})),
+	}));
+
+	const { value } = useControlledValue({ store, value: incomingValue });
+
+	return { value, store };
 };
 
 const useKeyboardHandlers = ({ store }) => {
@@ -93,21 +149,6 @@ const useChangeHandlers = ({ store }) => {
 	};
 };
 
-const mergeEventHandlers = (handlers = {}, extraHandlers = {}) => {
-	const mergedHandlers = { ...handlers };
-
-	for (const [key, handler] of Object.entries(mergedHandlers)) {
-		if (extraHandlers[key]) {
-			mergedHandlers[key] = (event) => {
-				handler(event);
-				extraHandlers[key](event);
-			};
-		}
-	}
-
-	return mergedHandlers;
-};
-
 const useEventHandlers = ({ store, ...props }) => {
 	const changeHandlers = useChangeHandlers({ store });
 	const focusHandlers = useFocusHandlers({ store });
@@ -124,8 +165,8 @@ const useEventHandlers = ({ store, ...props }) => {
 	return mergeEventHandlers(mergedHandlers, otherProps);
 };
 
-const useTextInput = (props = { onChange: noop }) => {
-	const { onChange, ...otherProps } = props;
+const useTextInput = (props = {}) => {
+	const { onChange = noop, ...otherProps } = props;
 	const { store, ...inputState } = useTextInputState(otherProps);
 
 	const eventHandlers = useEventHandlers({ store, ...otherProps });
@@ -236,25 +277,183 @@ const useTextInputNumber = (props) => {
 	};
 };
 
-const TextInput = React.memo(({ onChange, value }) => {
-	const { store, ...textInput } = useTextInput({ onChange, value });
+const useUnitFocusHandlers = ({ store, typeAheadStore }) => {
+	const handleOnBlur = React.useCallback(() => {
+		const { typeAhead } = typeAheadStore.getState();
+		if (typeAhead) {
+			store.getState().change(typeAhead);
+			store.getState().commit();
+		}
+	}, [store, typeAheadStore]);
 
-	return <input {...textInput} />;
+	return {
+		onBlur: handleOnBlur,
+	};
+};
+
+const useUnitChangeHandlers = ({ store, typeAheadStore }) => {
+	const handleOnValueChange = React.useCallback(
+		(value) => {
+			const [parsedValue, parsedUnit] = parseUnitValue(value);
+			if (!isValidNumericUnitValue(value)) {
+				typeAheadStore.getState().clear();
+				return;
+			}
+
+			let unit = findUnitMatch({ value: parsedUnit });
+			if (!parsedUnit && !unit) {
+				unit = 'px';
+			}
+
+			typeAheadStore
+				.getState()
+				.change(createUnitValue(parsedValue, unit));
+		},
+		[typeAheadStore],
+	);
+
+	const handleOnValueCommit = React.useCallback(
+		(value) => {
+			const [parsedValue, parsedUnit] = parseUnitValue(value);
+
+			if (!isValidNumericUnitValue(value) || !parsedUnit) {
+				typeAheadStore.getState().clear();
+				return;
+			}
+
+			let unit = findUnitMatch({ value: parsedUnit });
+			if (!parsedUnit && !unit) {
+				unit = 'px';
+			}
+
+			const next = createUnitValue(parsedValue, unit);
+
+			typeAheadStore.getState().change(next);
+
+			store.getState().change(next);
+			store.getState().commit();
+		},
+		[store, typeAheadStore],
+	);
+
+	React.useEffect(() => {
+		return store.subscribe(
+			handleOnValueChange,
+			(state) => state.value,
+			shallowCompare,
+		);
+	}, [handleOnValueChange, store]);
+
+	React.useEffect(() => {
+		return store.subscribe(
+			handleOnValueCommit,
+			(state) => state.commitValue,
+			shallowCompare,
+		);
+	}, [handleOnValueCommit, store]);
+};
+
+const useTextInputUnit = (props) => {
+	const typeAheadStore = useSubState((set) => ({
+		typeAhead: '',
+		clear: () => set({ typeAhead: '' }),
+		change: (next) => set({ typeAhead: next }),
+	}));
+
+	const validate = () => !!typeAheadStore.getState().typeAhead;
+
+	const { store, ...textInput } = useTextInputNumber({ ...props, validate });
+
+	useUnitChangeHandlers({ store, typeAheadStore });
+
+	const focusHandlers = useUnitFocusHandlers({ store, typeAheadStore });
+	const mergedEventHandlers = mergeEventHandlers(focusHandlers, textInput);
+
+	const typeAhead = typeAheadStore((state) => state.typeAhead);
+
+	return { ...textInput, ...mergedEventHandlers, typeAhead };
+};
+
+const TextInput = React.memo((props) => {
+	const { store, ...textInput } = useTextInput(props);
+
+	return <View as="input" {...textInput} />;
 });
 
-const NumberInput = React.memo(({ onChange, value }) => {
-	const { store, ...textInput } = useTextInputNumber({ onChange, value });
+const UNITS = ['px', '%', 'em', 'rem', 'vh', 'vw', 'vmin', 'vmax'];
 
-	return <input type="number" {...textInput} />;
+function findUnitMatch({ units = UNITS, value = '' }) {
+	const match = units.find((unit) => unit.indexOf(value.toLowerCase()) === 0);
+	return match;
+}
+
+const NumberInput = React.memo((props) => {
+	const { store, ...textInput } = useTextInputNumber(props);
+
+	return <View as="input" type="number" {...textInput} />;
+});
+
+const UnitInput = React.memo((props) => {
+	const { store, typeAhead, ...textInput } = useTextInputUnit({
+		...props,
+		validate: noop,
+	});
+
+	return (
+		<View
+			css={`
+				position: relative;
+			`}
+		>
+			<View
+				as="input"
+				css={`
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0.2;
+					pointer-events: none;
+					z-index: 1;
+				`}
+				onChange={noop}
+				tabIndex={-1}
+				type="text"
+				value={typeAhead}
+			/>
+			<View as="input" type="text" {...textInput} />
+		</View>
+	);
 });
 
 const Example = () => {
 	const [value, setValue] = React.useState('123');
 
 	return (
-		<>
-			<NumberInput onChange={setValue} value={value} />
-			<br />
+		<Container width={480}>
+			<Grid>
+				<Text>Text</Text>
+				<TextInput
+					onBlur={() => console.log('blur')}
+					onChange={setValue}
+					value={value}
+				/>
+			</Grid>
+			<Grid>
+				<Text>Number</Text>
+				<NumberInput
+					onBlur={() => console.log('blur')}
+					onChange={setValue}
+					value={value}
+				/>
+			</Grid>
+			<Grid>
+				<Text>Unit</Text>
+				<UnitInput
+					onBlur={() => console.log('blur')}
+					onChange={setValue}
+					value={value}
+				/>
+			</Grid>
 			State: {value}
 			<br />
 			<button
@@ -266,7 +465,7 @@ const Example = () => {
 			>
 				Force Controlled Update
 			</button>
-		</>
+		</Container>
 	);
 };
 

@@ -15,6 +15,7 @@ export * from './other';
 export * from './react';
 export * from './strings';
 export * from './values';
+export * from './unitValues';
 export * from './warning';
 
 // Deprecated. use @wp-g2/substate
