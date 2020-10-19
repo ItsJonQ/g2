@@ -1,6 +1,18 @@
 import { config } from '../../src/theme/config';
 
-type DesignTokens = keyof typeof config;
+export type DesignTokens = keyof typeof config;
 
-/** Retrives a design token value from the style configuration. */
-export const get: (value: DesignTokens) => string;
+export declare interface GetInterface {
+	/**
+	 * Retrives a design token value from the style configuration.
+	 * The value will be a generated CSS variable from the Style system, rather than actual value.
+	 *
+	 * @example
+	 * ```
+	 * get('colorAdmin');
+	 * ```
+	 */
+	(value: DesignTokens): string;
+}
+
+export const get: GetInterface;

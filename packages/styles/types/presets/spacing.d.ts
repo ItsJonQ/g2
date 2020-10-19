@@ -2,7 +2,7 @@ import { CSSClassName } from '../shared';
 
 type SpacingValue = number | string;
 
-type SpacingFunction = (value: number | string) => CSSClassName;
+export type SpacingFunction = (value: number | string) => CSSClassName;
 
 /** Modify margin styles based on system presets. */
 export declare interface MarginInterface {

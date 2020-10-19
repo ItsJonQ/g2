@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider, ui } from '@wp-g2/styles';
+import { ThemeProvider, createTheme, ui } from '@wp-g2/styles';
 import {
 	Button,
 	Card,
@@ -60,7 +60,7 @@ const defaultThemeConfig = {
 
 const Themer = React.memo(({ inspector, setInspector }) => {
 	const [themeConfig, setThemeConfig] = useLocalState(
-		'themeConfig',
+		'g2/themeConfig',
 		defaultThemeConfig,
 	);
 
@@ -110,7 +110,7 @@ const Themer = React.memo(({ inspector, setInspector }) => {
 		surfaceColor,
 	} = themeConfig;
 
-	const theme = {
+	const theme = createTheme(() => ({
 		cardBorderRadius,
 		colorAdmin,
 		colorText,
@@ -120,7 +120,7 @@ const Themer = React.memo(({ inspector, setInspector }) => {
 		fontFamily,
 		fontSize,
 		surfaceColor,
-	};
+	}));
 
 	return (
 		<View

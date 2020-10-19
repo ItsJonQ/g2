@@ -681,6 +681,19 @@ interface Instance {
 
 declare const tinycolor: Constructor;
 
+export declare interface ColorFunctionInterface {
+	/**
+	 * Creates a color value.
+	 *
+	 * @example
+	 * ```js
+	 * color('red').setAlpha(0.5).toRgbString();
+	 * // rgba(255, 0, 0, 0.5)
+	 * ```
+	 */
+	(color?: ColorInput, opts?: ConstructorOptions): Instance;
+}
+
 /** Get a color value. */
 export declare interface ColorInterface {
 	(color?: ColorInput, opts?: ConstructorOptions): Instance;
