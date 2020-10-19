@@ -3,7 +3,9 @@ import {
 	add,
 	createUnitValue,
 	is,
+	isValidCSSValueForProp,
 	isValidNumericUnitValue,
+	mergeRefs,
 	noop,
 	parseUnitValue,
 	roundClampString,
@@ -41,9 +43,9 @@ const useControlledValue = ({ store, value: incomingValue }) => {
 const mergeEvent = (handler, extraHandler) => {
 	if (!is.function(handler) || !is.function(extraHandler)) return handler;
 
-	return (...args) => {
-		handler(...args);
-		extraHandler(...args);
+	return (event) => {
+		handler(event);
+		extraHandler(event);
 	};
 };
 
@@ -70,6 +72,7 @@ const useTextInputState = ({
 		value: incomingValue,
 		previousValue: incomingValue,
 		commitValue: '',
+		inputRef: null,
 
 		// Actions
 		change: (next) => set(() => ({ value: next })),
@@ -97,6 +100,16 @@ const useTextInputState = ({
 				previousValue: prev.value,
 				commitValue: prev.value,
 			})),
+		setInputRef: (event) => {
+			if (store.getState().inputRef) return;
+			set({ inputRef: event?.target });
+		},
+
+		// Selectors
+		getIsReverted: () => {
+			const { previousValue, value } = store.getState();
+			return previousValue === value;
+		},
 	}));
 
 	const { value } = useControlledValue({ store, value: incomingValue });
@@ -104,11 +117,25 @@ const useTextInputState = ({
 	return { value, store };
 };
 
+export function useInputRef({ store }) {
+	const inputRef = React.useRef();
+
+	React.useEffect(() => {
+		if (inputRef.current) {
+			store.setState({ inputRef: inputRef.current });
+		}
+	}, [store]);
+
+	return inputRef;
+}
+
 const useKeyboardHandlers = ({ store }) => {
 	const keyboardHandlers = React.useMemo(
 		() => ({
 			Enter(event) {
+				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
+
 				store.getState().commit();
 			},
 		}),
@@ -132,9 +159,13 @@ const useKeyboardHandlers = ({ store }) => {
 
 const useFocusHandlers = ({ store }) => {
 	const handleOnBlur = React.useCallback(store.getState().commit, [store]);
+	const handleOnFocus = React.useCallback(store.getState().setInputRef, [
+		store,
+	]);
 
 	return {
 		onBlur: handleOnBlur,
+		onFocus: handleOnFocus,
 	};
 };
 
@@ -166,9 +197,10 @@ const useEventHandlers = ({ store, ...props }) => {
 };
 
 const useTextInput = (props = {}) => {
-	const { onChange = noop, ...otherProps } = props;
+	const { onChange = noop, ref, ...otherProps } = props;
 	const { store, ...inputState } = useTextInputState(otherProps);
 
+	const inputRef = useInputRef({ store });
 	const eventHandlers = useEventHandlers({ store, ...otherProps });
 
 	React.useEffect(() => {
@@ -183,6 +215,7 @@ const useTextInput = (props = {}) => {
 		store,
 		...inputState,
 		...eventHandlers,
+		ref: mergeRefs([inputRef, ref]),
 	};
 };
 
@@ -228,11 +261,15 @@ const useNumberKeyboardHandlers = ({ max, min, step, store }) => {
 	const keyboardHandlers = React.useMemo(
 		() => ({
 			ArrowUp(event) {
+				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
+
 				increment(event.shiftKey ? 10 : 1);
 			},
 			ArrowDown(event) {
+				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
+
 				decrement(event.shiftKey ? 10 : 1);
 			},
 		}),
@@ -291,9 +328,175 @@ const useUnitFocusHandlers = ({ store, typeAheadStore }) => {
 	};
 };
 
+const useUnitActions = ({ cssProp, max, min, step, store }) => {
+	const raf = React.useRef();
+	const increment = React.useCallback(
+		(jumpStep = 1) => {
+			const {
+				change,
+				commit,
+				inputRef,
+				value: storeValue,
+			} = store.getState();
+
+			const [value, unit] = parseUnitValue(storeValue);
+
+			if (!is.numeric(value)) return;
+
+			const nextValue = add(jumpStep, step);
+			const clampedValue = roundClampString(
+				add(nextValue, value),
+				min,
+				max,
+				step,
+			);
+
+			if (inputRef?.setSelectionRange) {
+				raf.current = requestAnimationFrame(() => {
+					inputRef.setSelectionRange(0, String(clampedValue).length);
+				});
+			}
+
+			let final = unit
+				? createUnitValue(clampedValue, unit)
+				: clampedValue;
+
+			// Disallow values if they are invalid for a specified CSS property.
+			if (!isValidCSSValueForProp(cssProp, final)) {
+				final = clampedValue;
+			}
+
+			change(final);
+			commit();
+		},
+		[cssProp, max, min, step, store],
+	);
+
+	const decrement = React.useCallback(
+		(jumpStep = 1) => {
+			const {
+				change,
+				commit,
+				inputRef,
+				value: storeValue,
+			} = store.getState();
+
+			const [value, unit] = parseUnitValue(storeValue);
+
+			if (!is.numeric(value)) return;
+
+			const nextValue = add(jumpStep, step);
+			const clampedValue = roundClampString(
+				subtract(value, nextValue),
+				min,
+				max,
+				step,
+			);
+
+			if (inputRef?.setSelectionRange) {
+				raf.current = requestAnimationFrame(() => {
+					inputRef.setSelectionRange(0, String(clampedValue).length);
+				});
+			}
+
+			let final = unit
+				? createUnitValue(clampedValue, unit)
+				: clampedValue;
+
+			// Disallow values if they are invalid for a specified CSS property.
+			if (!isValidCSSValueForProp(cssProp, final)) {
+				final = clampedValue;
+			}
+
+			change(final);
+			commit();
+		},
+		[cssProp, max, min, step, store],
+	);
+
+	React.useEffect(() => {
+		return () => {
+			if (raf.current) {
+				cancelAnimationFrame(raf.current);
+			}
+		};
+	}, []);
+
+	return {
+		increment,
+		decrement,
+	};
+};
+
+const useUnitKeyboardHandlers = ({
+	cssProp,
+	max,
+	min,
+	step,
+	store,
+	typeAheadStore,
+}) => {
+	const { decrement, increment } = useUnitActions({
+		cssProp,
+		store,
+		max,
+		min,
+		step,
+	});
+
+	const keyboardHandlers = React.useMemo(
+		() => ({
+			ArrowUp(event) {
+				if (event.isDefaultPrevented()) return;
+				event.preventDefault();
+
+				increment(event.shiftKey ? 10 : 1);
+			},
+			ArrowDown(event) {
+				if (event.isDefaultPrevented()) return;
+				event.preventDefault();
+
+				decrement(event.shiftKey ? 10 : 1);
+			},
+			Enter(event) {
+				if (event.isDefaultPrevented()) return;
+				event.preventDefault();
+
+				const { commit, commitRevert, value } = store.getState();
+				const [, parsedUnit] = parseUnitValue(value);
+
+				if (!hasUnitMatchExact({ value: parsedUnit })) {
+					typeAheadStore.getState().clear();
+					commitRevert();
+					return;
+				}
+
+				commit();
+			},
+		}),
+		[decrement, increment, store, typeAheadStore],
+	);
+
+	const handleOnKeyDown = React.useCallback(
+		(event) => {
+			const key = normalizeArrowKey(event);
+			if (key && keyboardHandlers[key]) {
+				keyboardHandlers[key](event);
+			}
+		},
+		[keyboardHandlers],
+	);
+
+	return {
+		onKeyDown: handleOnKeyDown,
+	};
+};
+
 const useUnitChangeHandlers = ({ store, typeAheadStore }) => {
 	const handleOnValueChange = React.useCallback(
 		(value) => {
+			if (store.getState().getIsReverted()) return;
+
 			const [parsedValue, parsedUnit] = parseUnitValue(value);
 			if (!isValidNumericUnitValue(value)) {
 				typeAheadStore.getState().clear();
@@ -309,7 +512,7 @@ const useUnitChangeHandlers = ({ store, typeAheadStore }) => {
 				.getState()
 				.change(createUnitValue(parsedValue, unit));
 		},
-		[typeAheadStore],
+		[store, typeAheadStore],
 	);
 
 	const handleOnValueCommit = React.useCallback(
@@ -367,7 +570,9 @@ const useTextInputUnit = (props) => {
 	useUnitChangeHandlers({ store, typeAheadStore });
 
 	const focusHandlers = useUnitFocusHandlers({ store, typeAheadStore });
-	const mergedEventHandlers = mergeEventHandlers(focusHandlers, textInput);
+	const keyboardHandlers = useUnitKeyboardHandlers({ store, typeAheadStore });
+	const eventHandlers = { ...focusHandlers, ...keyboardHandlers };
+	const mergedEventHandlers = mergeEventHandlers(eventHandlers, textInput);
 
 	const typeAhead = typeAheadStore((state) => state.typeAhead);
 
@@ -385,6 +590,20 @@ const UNITS = ['px', '%', 'em', 'rem', 'vh', 'vw', 'vmin', 'vmax'];
 function findUnitMatch({ units = UNITS, value = '' }) {
 	const match = units.find((unit) => unit.indexOf(value.toLowerCase()) === 0);
 	return match;
+}
+
+function findUnitMatchExact({ units = UNITS, value = '' }) {
+	const match = units.find(
+		(unit) => unit.toLowerCase() === value.toLowerCase(),
+	);
+	return match;
+}
+
+function hasUnitMatchExact({ units = UNITS, value = '' }) {
+	const unit = findUnitMatch({ value });
+	const exactUnit = findUnitMatchExact({ value });
+
+	return value && unit === exactUnit;
 }
 
 const NumberInput = React.memo((props) => {
