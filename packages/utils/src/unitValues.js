@@ -44,6 +44,11 @@ export const isValidNumericUnitValue = (value) => {
 		return false;
 	}
 
+	// Disallow values where the last character is a symbol
+	if (/[-!$^&*()_+|~=`{}[\]:";'<>?,./]$/g.test(value)) {
+		return false;
+	}
+
 	// Allow numerics.
 	if (is.numeric(value)) return true;
 
@@ -57,6 +62,11 @@ export const isValidNumericUnitValue = (value) => {
 
 	// Disallow values where a dot follows a character, e.g. 1.p
 	if (/\.[a-zA-Z]/g.test(value)) {
+		return false;
+	}
+
+	// Disable values where there are multiple . chracters.
+	if (/\d+\.\d+\.\d+/g.test(value)) {
 		return false;
 	}
 

@@ -30,7 +30,7 @@ function normalizeArrowKey(event) {
 
 const useControlledValue = ({ store, value: incomingValue }) => {
 	React.useEffect(() => {
-		store.getState().change(incomingValue);
+		store.getState().changeSync(incomingValue);
 	}, [incomingValue, store]);
 
 	const value = store((state) => state.value);
@@ -62,19 +62,27 @@ const mergeEventHandlers = (handlers = {}, extraHandlers = {}) => {
 };
 
 const useTextInputState = ({
+	format,
+	shiftStep = 10,
+	step = 1,
 	type = 'text',
 	validate,
 	value: incomingValue = '',
 } = {}) => {
+	const isTypeNumeric = format === 'number' || type === 'number';
+
 	const store = useSubState((set) => ({
 		// State
-		type,
-		value: incomingValue,
-		previousValue: incomingValue,
 		commitValue: '',
 		inputRef: null,
+		isTypeNumeric,
+		previousValue: incomingValue,
+		shiftStep,
+		step,
+		value: incomingValue,
 
 		// Actions
+		changeSync: (next) => set(() => ({ previousValue: next, value: next })),
 		change: (next) => set(() => ({ value: next })),
 		commit: () => {
 			let isValid = true;
@@ -213,6 +221,7 @@ const useTextInput = (props = {}) => {
 
 	return {
 		store,
+		...otherProps,
 		...inputState,
 		...eventHandlers,
 		ref: mergeRefs([inputRef, ref]),
@@ -264,16 +273,20 @@ const useNumberKeyboardHandlers = ({ max, min, step, store }) => {
 				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
 
-				increment(event.shiftKey ? 10 : 1);
+				const { shiftStep, step } = store.getState();
+
+				increment(event.shiftKey ? shiftStep * step : step);
 			},
 			ArrowDown(event) {
 				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
 
-				decrement(event.shiftKey ? 10 : 1);
+				const { shiftStep, step } = store.getState();
+
+				decrement(event.shiftKey ? shiftStep * step : step);
 			},
 		}),
-		[decrement, increment],
+		[decrement, increment, store],
 	);
 
 	const handleOnKeyDown = React.useCallback(
@@ -450,13 +463,17 @@ const useUnitKeyboardHandlers = ({
 				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
 
-				increment(event.shiftKey ? 10 : 1);
+				const { shiftStep, step } = store.getState();
+
+				increment(event.shiftKey ? shiftStep * step : step);
 			},
 			ArrowDown(event) {
 				if (event.isDefaultPrevented()) return;
 				event.preventDefault();
 
-				decrement(event.shiftKey ? 10 : 1);
+				const { shiftStep, step } = store.getState();
+
+				decrement(event.shiftKey ? shiftStep * step : step);
 			},
 			Enter(event) {
 				if (event.isDefaultPrevented()) return;
@@ -465,7 +482,7 @@ const useUnitKeyboardHandlers = ({
 				const { commit, commitRevert, value } = store.getState();
 				const [, parsedUnit] = parseUnitValue(value);
 
-				if (!hasUnitMatchExact({ value: parsedUnit })) {
+				if (parsedUnit && !hasUnitMatchExact({ value: parsedUnit })) {
 					typeAheadStore.getState().clear();
 					commitRevert();
 					return;
@@ -495,9 +512,13 @@ const useUnitKeyboardHandlers = ({
 const useUnitChangeHandlers = ({ store, typeAheadStore }) => {
 	const handleOnValueChange = React.useCallback(
 		(value) => {
-			if (store.getState().getIsReverted()) return;
+			if (store.getState().getIsReverted()) {
+				typeAheadStore.getState().clear();
+				return;
+			}
 
 			const [parsedValue, parsedUnit] = parseUnitValue(value);
+
 			if (!isValidNumericUnitValue(value)) {
 				typeAheadStore.getState().clear();
 				return;
