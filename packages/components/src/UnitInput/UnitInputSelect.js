@@ -29,10 +29,10 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 		shallowCompare,
 	);
 
-	const [isSelecting, setIsSelecting] = React.useState(false);
 	const [isFocused, setIsFocused] = React.useState(false);
 	const [width, setWidth] = React.useState();
 	const selectRef = React.useRef();
+	const wrapperRef = React.useRef();
 
 	let [parsedValue, parsedUnit] = baseParseUnit(value);
 	let unit;
@@ -40,7 +40,7 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 	React.useEffect(() => {
 		const handleOnResize = () => {
 			if (inputRef) {
-				setWidth(inputRef.clientWidth);
+				setWidth(inputRef.current.clientWidth);
 			}
 		};
 
@@ -56,10 +56,16 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 		const handleOnSelectionStart = (event) => {
 			if (event.target === selectRef.current) return;
 			if (!isFirefox()) {
-				setIsSelecting(true);
+				if (wrapperRef.current) {
+					wrapperRef.current.style.pointerEvents = 'none';
+				}
 			}
 		};
-		const handleOnSelectionEnd = () => setIsSelecting(false);
+		const handleOnSelectionEnd = () => {
+			if (wrapperRef.current) {
+				wrapperRef.current.style.pointerEvents = null;
+			}
+		};
 
 		document.addEventListener('mouseup', handleOnSelectionEnd);
 		document.addEventListener('mousedown', handleOnSelectionStart);
@@ -80,7 +86,7 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 		store.getState().commit(next);
 
 		if (inputRef) {
-			inputRef.focus();
+			inputRef.current.focus();
 		}
 	};
 
@@ -92,7 +98,7 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 		store.getState().commit(parsedValue);
 
 		if (inputRef) {
-			inputRef.focus();
+			inputRef.current.focus();
 		}
 	};
 
@@ -135,9 +141,9 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 				left: 8px;
 				overflow: hidden;
 			`,
-				{ pointerEvents: isSelecting ? 'none' : 'initial' },
 				ui.opacity(isPlaceholder ? 0.5 : 1),
 			]}
+			ref={wrapperRef}
 			style={{
 				width: width || '100%',
 			}}

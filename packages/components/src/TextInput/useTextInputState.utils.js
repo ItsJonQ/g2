@@ -1,6 +1,6 @@
 import { useDrag } from '@wp-g2/gestures';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { clearSelection, noop } from '@wp-g2/utils';
+import { clearSelection, noop, useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
 
 import * as styles from './TextInput.styles';
@@ -49,7 +49,7 @@ export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 };
 
 export function useControlledValue({ store, value: incomingValue }) {
-	React.useEffect(() => {
+	useUpdateEffect(() => {
 		if (incomingValue === store.getState().value) return;
 		store.getState().changeSync(incomingValue);
 	}, [incomingValue, store]);

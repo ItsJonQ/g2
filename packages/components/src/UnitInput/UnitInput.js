@@ -1,4 +1,4 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { contextConnect } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
@@ -29,17 +29,6 @@ function UnitInput(props, forwardedRef) {
 
 	const showTextInputArrows = !hideArrows && isTypeNumeric;
 
-	const enhancedInnerContent = (
-		<>
-			<UnitInputSelect
-				inputRef={inputRef}
-				store={__store}
-				unitStore={__unitStore}
-			/>
-			{innerContent}
-		</>
-	);
-
 	return (
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>
 			{prefix && (
@@ -53,7 +42,11 @@ function UnitInput(props, forwardedRef) {
 				ref={mergeRefs([inputRef, forwardedRef])}
 				{...ui.$('TextInput')}
 			/>
-			{enhancedInnerContent}
+			<UnitInputSelect
+				inputRef={inputRef}
+				store={__store}
+				unitStore={__unitStore}
+			/>
 			{showTextInputArrows && (
 				<TextInputArrows
 					__store={__store}

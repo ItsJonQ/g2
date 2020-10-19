@@ -29,6 +29,7 @@ const useTextInputStore = ({
 	validate,
 	value: incomingValue,
 } = {}) => {
+	const inputRef = React.useRef();
 	const isTypeNumeric = format === 'number' || type === 'number';
 	const initialValue = is.defined(incomingValue)
 		? incomingValue
@@ -38,7 +39,7 @@ const useTextInputStore = ({
 		// State
 		commitValue: '',
 		dragAxis,
-		inputRef: null,
+		inputRef,
 		isCommitOnBlurOrEnter,
 		isFocused: false,
 		isShiftStepEnabled,
@@ -88,7 +89,7 @@ const useTextInputStore = ({
 	}));
 
 	const { value } = useControlledValue({ store, value: incomingValue });
-	const inputRef = store((state) => state.inputRef, shallowCompare);
+	// const inputRef = store((state) => state.inputRef, shallowCompare);
 
 	return { inputRef, value, store };
 };
@@ -237,7 +238,7 @@ export const useTextInputState = (props = {}) => {
 		...otherProps,
 	});
 
-	const __internalInputRef = useInputRef({ store });
+	// const __internalInputRef = useInputRef({ store });
 
 	const { shiftStepStore } = useShiftStepState({
 		step: store.getState().step,
@@ -261,13 +262,12 @@ export const useTextInputState = (props = {}) => {
 
 	return {
 		store,
-		...otherProps,
 		...inputState,
 		...eventHandlers,
 		decrement,
 		increment,
 		max,
 		min,
-		ref: mergeRefs([__internalInputRef, ref]),
+		ref: mergeRefs([inputRef, ref]),
 	};
 };

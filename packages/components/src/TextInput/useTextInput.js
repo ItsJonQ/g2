@@ -61,9 +61,7 @@ export function useTextInput(props) {
 	const { inputRef, isFocused, isTypeNumeric, value } = store();
 
 	const handleOnRootClick = useCallback(() => {
-		if (inputRef) {
-			inputRef.focus();
-		}
+		inputRef.current.focus();
 	}, [inputRef]);
 
 	const baseFieldProps = useBaseField({
