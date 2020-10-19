@@ -1,18 +1,15 @@
-import { add, is, roundClampString, subtract } from '@wp-g2/utils';
+import {
+	add,
+	is,
+	normalizeArrowKey,
+	roundClampString,
+	subtract,
+} from '@wp-g2/utils';
 import React from 'react';
 
-import { HStack } from '../../HStack';
-import { View } from '../../View';
-import { useTextInput } from './TextInput';
-import { TextInputArrows } from './TextInputArrows';
-import {
-	mergeEventHandlers,
-	normalizeArrowKey,
-	useDragHandlers,
-	useShiftStepState,
-} from './utils';
+import { useDragHandlers } from './useTextInputState.utils';
 
-const useNumberActions = ({ max, min, shiftStepStore, store }) => {
+export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	const increment = React.useCallback(
 		(jumpStep = 0) => {
 			const { change, commit, value } = store.getState();
@@ -63,7 +60,7 @@ const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	};
 };
 
-const useNumberKeyboardHandlers = ({ decrement, increment }) => {
+export const useNumberKeyboardHandlers = ({ decrement, increment }) => {
 	const keyboardHandlers = React.useMemo(
 		() => ({
 			ArrowUp(event) {
@@ -97,7 +94,7 @@ const useNumberKeyboardHandlers = ({ decrement, increment }) => {
 	};
 };
 
-const useNumberEventHandlers = ({ decrement, increment, store }) => {
+export const useNumberEventHandlers = ({ decrement, increment, store }) => {
 	const dragHandlers = useDragHandlers({ store, decrement, increment });
 
 	const keyboardHandlers = useNumberKeyboardHandlers({
@@ -110,56 +107,3 @@ const useNumberEventHandlers = ({ decrement, increment, store }) => {
 		...keyboardHandlers,
 	};
 };
-
-export const useTextInputNumber = (props) => {
-	const { max, min, step } = props;
-	const { store, ...textInput } = useTextInput({
-		format: 'number',
-		type: 'number',
-		...props,
-	});
-
-	const { shiftStepStore } = useShiftStepState({
-		step: store.getState().step,
-		shiftStep: store.getState().shiftStep,
-	});
-
-	const { decrement, increment } = useNumberActions({
-		max,
-		min,
-		shiftStepStore,
-		store,
-	});
-
-	const eventHandlers = useNumberEventHandlers({
-		store,
-		decrement,
-		increment,
-	});
-
-	const mergedEventHandlers = mergeEventHandlers(eventHandlers, textInput);
-
-	return {
-		store,
-		...textInput,
-		...mergedEventHandlers,
-		decrement,
-		increment,
-		min,
-		max,
-		step,
-	};
-};
-
-export const NumberInput = React.memo((props) => {
-	const { decrement, increment, store, ...textInput } = useTextInputNumber(
-		props,
-	);
-
-	return (
-		<HStack>
-			<View as="input" type="number" {...textInput} />
-			<TextInputArrows decrement={decrement} increment={increment} />
-		</HStack>
-	);
-});

@@ -1,36 +1,9 @@
 import { useDrag } from '@wp-g2/gestures';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { is, noop } from '@wp-g2/utils';
+import { clearSelection, noop } from '@wp-g2/utils';
 import React from 'react';
 
-import * as styles from '../TextInput.styles';
-
-export function clearSelection() {
-	/**
-	 * Clear selection
-	 */
-	if (window.getSelection) {
-		if (window.getSelection().empty) {
-			// Chrome
-			window.getSelection().empty();
-		} else if (window.getSelection().removeAllRanges) {
-			// Firefox
-			window.getSelection().removeAllRanges();
-		}
-	} else if (document.selection) {
-		// IE?
-		document.selection.empty();
-	}
-}
-
-export function normalizeArrowKey(event) {
-	const { key, keyCode } = event;
-	/* istanbul ignore next (ie) */
-	if (keyCode >= 37 && keyCode <= 40 && key.indexOf('Arrow') !== 0) {
-		return `Arrow${key}`;
-	}
-	return key;
-}
+import * as styles from './TextInput.styles';
 
 export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 	const shiftStepStore = useSubState(() => ({
@@ -74,36 +47,6 @@ export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 		isShiftKey,
 	};
 };
-
-export function mergeEvent(handler, extraHandler) {
-	if (!is.function(handler) || !is.function(extraHandler)) return handler;
-
-	return (event) => {
-		handler(event);
-		extraHandler(event);
-	};
-}
-
-export function mergeEventHandlers(handlers = {}, extraHandlers = {}) {
-	const mergedHandlers = { ...handlers };
-
-	for (const [key, handler] of Object.entries(mergedHandlers)) {
-		if (is.function(extraHandlers[key])) {
-			mergedHandlers[key] = mergeEvent(handler, extraHandlers[key]);
-		}
-	}
-
-	return mergedHandlers;
-}
-
-export function mergeValidationFunctions(validate, extraValidate) {
-	if (!is.function(validate)) return;
-	if (!is.function(extraValidate)) return validate;
-
-	return (...args) => {
-		return validate(...args) || extraValidate(...args);
-	};
-}
 
 export function useControlledValue({ store, value: incomingValue }) {
 	React.useEffect(() => {

@@ -10,8 +10,8 @@ import {
 } from './utils';
 
 const useTextInputState = ({
-	dragAxis,
-	format,
+	dragAxis = 'y',
+	format = 'text',
 	shiftStep = 10,
 	step = 1,
 	type = 'text',

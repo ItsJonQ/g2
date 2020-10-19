@@ -1,4 +1,3 @@
-import { useDrag } from '@wp-g2/gestures';
 import { ui } from '@wp-g2/styles';
 import { clamp, noop } from '@wp-g2/utils';
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
@@ -7,32 +6,33 @@ import { Icon } from '../Icon';
 import { View } from '../View';
 import { VStack } from '../VStack';
 import * as styles from './TextInput.styles';
-import { useDragHandlers } from './useTextInput';
+import { useDragHandlers } from './useTextInputState.utils';
 
 function TextInputArrows(props, forwardedRef) {
-	const { __store, dragAxis } = props;
+	const { __store, decrement, increment } = props;
 	const store = useRef(__store).current;
+
+	const dragHandlers = useDragHandlers({
+		increment,
+		decrement,
+		store: __store,
+	});
 
 	const incrementValue = useCallback(
 		(boost) => {
-			store.getState().increment(boost);
-			store.getState().commitValue();
+			increment(boost);
+			store.getState().commit();
 		},
-		[store],
+		[increment, store],
 	);
 
 	const decrementValue = useCallback(
 		(boost) => {
-			store.getState().decrement(boost);
-			store.getState().commitValue();
+			decrement(boost);
+			store.getState().commit();
 		},
-		[store],
+		[decrement, store],
 	);
-
-	const dragHandlers = useDragHandlers({
-		dragAxis,
-		store: __store,
-	});
 
 	return (
 		<View className={styles.SpinnerWrapper}>

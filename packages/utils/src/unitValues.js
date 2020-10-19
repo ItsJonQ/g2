@@ -30,7 +30,7 @@ export const isValidCSSValueForProp = (prop, value) => {
 	const next = getCSSValue(value);
 	computedStyleMap[prop] = next;
 
-	return computedStyleMap[prop] === value;
+	return computedStyleMap[prop].includes(value);
 };
 
 export const isValidNumericUnitValue = (value) => {

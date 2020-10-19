@@ -11,13 +11,14 @@ import { useTextInput } from './useTextInput';
 function TextInput(props, forwardedRef) {
 	const {
 		__store,
+		decrement,
 		disabled,
 		hideArrows = false,
+		increment,
 		innerContent,
 		inputProps,
 		inputRef,
 		isTypeNumeric,
-		onCommitChange,
 		prefix,
 		suffix,
 		...otherProps
@@ -42,7 +43,8 @@ function TextInput(props, forwardedRef) {
 			{showTextInputArrows && (
 				<TextInputArrows
 					__store={__store}
-					onCommitChange={onCommitChange}
+					decrement={decrement}
+					increment={increment}
 				/>
 			)}
 			{suffix && (

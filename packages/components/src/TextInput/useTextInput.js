@@ -1,602 +1,12 @@
 import { useContextSystem } from '@wp-g2/context';
-import { useDrag } from '@wp-g2/gestures';
 import { cx } from '@wp-g2/styles';
-import { createStore, shallowCompare, useSubState } from '@wp-g2/substate';
-import {
-	add,
-	is,
-	noop,
-	roundClampString,
-	subtract,
-	useUpdateEffect,
-} from '@wp-g2/utils';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { useBaseField } from '../BaseField';
 import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
-
-const KEYS = {
-	ENTER: 13,
-	ESC: 27,
-	Z: 90,
-	UP: 38,
-	DOWN: 40,
-};
-
-const useTextInputSubState = (
-	value,
-	{
-		format,
-		initialValue: initialValueProp,
-		max,
-		min,
-		onIncrement,
-		onDecrement,
-		onValueReset = noop,
-		onValueSync = noop,
-		shiftStep = 10,
-		step = 1,
-		type,
-	},
-) => {
-	const initialValue = is.defined(value) ? value : initialValueProp;
-	const isTypeNumeric = format === 'number' || type === 'number';
-
-	const store = useSubState((set) => ({
-		__resetCounter: 0,
-		format,
-		incomingValue: initialValue,
-		inputRef: null,
-		isTypeNumeric,
-		lastValue: initialValue,
-		max,
-		min,
-		prevValue: null,
-		shiftStep,
-		step,
-		type,
-		value: initialValue,
-
-		setValue: (next) => set({ value: next }),
-		setIncomingValue: (next) => set({ incomingValue: next }),
-		setLastValue: (next) =>
-			set((prev) => ({ prevValue: prev.lastValue, lastValue: next })),
-		commitValue: () =>
-			set((prev) => ({
-				prevValue: prev.lastValue,
-				lastValue: prev.value,
-			})),
-		resetValue: () =>
-			set((prev) => ({
-				__resetCounter: prev.__resetCounter + 1,
-				value: prev.prevValue,
-				lastValue: prev.prevValue,
-			})),
-
-		increment: (boost = 0) => {
-			set((prev) => {
-				if (!prev.isTypeNumeric) return prev;
-				if (!prev.inputRef) return prev;
-
-				const { isShiftKey } = jumpStepStore.getState();
-
-				if (onIncrement) {
-					return onIncrement({ ...prev, boost, isShiftKey });
-				}
-
-				const step = isShiftKey
-					? prev.step * prev.shiftStep
-					: prev.step;
-
-				const nextValue = add(boost, step);
-				const final = roundClampString(
-					add(nextValue, prev.value),
-					prev.min,
-					prev.max,
-					prev.step,
-				);
-
-				return { value: final };
-			});
-		},
-		decrement: (boost = 0) => {
-			set((prev) => {
-				if (!prev.isTypeNumeric) return prev;
-				if (!prev.inputRef) return prev;
-
-				const { isShiftKey } = jumpStepStore.getState();
-
-				if (onDecrement) {
-					return onDecrement({ ...prev, boost, isShiftKey });
-				}
-
-				const step = isShiftKey
-					? prev.step * prev.shiftStep
-					: prev.step;
-
-				const nextValue = add(boost, step);
-				const final = roundClampString(
-					subtract(prev.value, nextValue),
-					prev.min,
-					prev.max,
-					prev.step,
-				);
-
-				return { value: final };
-			});
-		},
-	}));
-
-	useEffect(() => {
-		if (is.defined(value)) {
-			store.setState((prev) => {
-				const next = { incomingValue: value };
-				if (value !== prev.value) {
-					next.value = value;
-					onValueSync();
-				}
-
-				return next;
-			});
-		}
-	}, [onValueSync, store, value]);
-
-	useEffect(() => {
-		return store.subscribe(
-			() => {
-				const currentState = store.getState();
-				onValueReset(currentState.value, currentState);
-			},
-			(state) => state.__resetCounter,
-			shallowCompare,
-		);
-	}, [store, onValueReset]);
-
-	useUpdateEffect(() => store.setState({ min }), [min]);
-	useUpdateEffect(() => store.setState({ max }), [max]);
-
-	useJumpStep();
-
-	return store;
-};
-
-export const jumpStepStore = createStore((set) => ({
-	isShiftKey: false,
-	setIsShiftKey: (next) =>
-		set((prev) => {
-			if (prev.isShiftKey === next) return prev;
-			return { isShiftKey: next };
-		}),
-}));
-
-/**
- * A custom hook that calculates a step value (used by elements like input
- * [type="number"]). This value can be modified based on whether the Shift
- * key is being held down.
- *
- * For example, a shiftStep of 10, and a step of 1...
- * Starting from 10, the next incremented value will be 11.
- *
- * Holding down shift...
- * Starting from 10, the next incremented value will be 20.
- */
-export function useJumpStep() {
-	useEffect(() => {
-		const handleOnKeyPress = (event) => {
-			const { shiftKey } = event;
-			if (jumpStepStore.getState().isShiftKey !== shiftKey) {
-				jumpStepStore.setState({
-					isShiftKey: shiftKey,
-				});
-			}
-		};
-
-		window.addEventListener('keydown', handleOnKeyPress);
-		window.addEventListener('keyup', handleOnKeyPress);
-
-		return () => {
-			window.removeEventListener('keydown', handleOnKeyPress);
-			window.removeEventListener('keyup', handleOnKeyPress);
-		};
-	}, []);
-}
-
-export function useInputRef({ store }) {
-	const inputRef = useRef();
-
-	useEffect(() => {
-		if (inputRef.current) {
-			store.setState({ inputRef: inputRef.current });
-		}
-	}, [store]);
-
-	return inputRef;
-}
-
-export function useUndoTimeout() {
-	const undoTimeoutRef = useRef();
-
-	const setUndoTimeout = useCallback((fn) => {
-		if (undoTimeoutRef.current) {
-			clearTimeout(undoTimeoutRef.current);
-		}
-
-		undoTimeoutRef.current = setTimeout(fn, 60);
-	}, []);
-
-	useEffect(() => {
-		const undoTimeout = undoTimeoutRef.current;
-		return () => {
-			if (undoTimeout) {
-				clearTimeout(undoTimeout);
-			}
-		};
-	}, []);
-
-	return { undoTimeoutRef, setUndoTimeout };
-}
-
-function useFocusHandlers({
-	isCommitOnBlurOrEnter = true,
-	onBlur = noop,
-	onFocus = noop,
-	store,
-}) {
-	const [isFocused, setIsFocused] = useState(false);
-
-	const handleOnBlur = useCallback(
-		(event) => {
-			const { commitValue } = store.getState();
-			if (isCommitOnBlurOrEnter) {
-				commitValue();
-			}
-			onBlur(event);
-			setIsFocused(false);
-		},
-		[isCommitOnBlurOrEnter, onBlur, store],
-	);
-
-	const handleOnFocus = useCallback(
-		(event) => {
-			onFocus(event);
-			setIsFocused(true);
-		},
-		[onFocus],
-	);
-
-	return {
-		isFocused,
-		onBlur: handleOnBlur,
-		onFocus: handleOnFocus,
-	};
-}
-
-export function useKeyboardHandlers({
-	multiline = false,
-	onKeyDown = noop,
-	onEnterKeyDown = noop,
-	store,
-}) {
-	const { setUndoTimeout } = useUndoTimeout();
-
-	const handleOnKeyUp = useCallback(
-		(event) => {
-			const { commitValue, resetValue } = store.getState();
-
-			switch (event.keyCode) {
-				case KEYS.ENTER:
-					if (!multiline) {
-						event.preventDefault();
-						commitValue();
-					}
-					onEnterKeyDown(event);
-					break;
-
-				case KEYS.ESC:
-					resetValue();
-					commitValue();
-					onEnterKeyDown(event);
-					break;
-				default:
-					break;
-			}
-		},
-		[multiline, onEnterKeyDown, store],
-	);
-
-	const handleOnKeyDown = useCallback(
-		(event) => {
-			const { commitValue, isTypeNumeric, setValue } = store.getState();
-
-			switch (event.keyCode) {
-				case KEYS.Z:
-					if (event.metaKey || event.ctrlKey) {
-						event.persist();
-						setUndoTimeout(() => {
-							setValue(event.target.value);
-							commitValue();
-						});
-					}
-					break;
-
-				case KEYS.UP:
-					if (isTypeNumeric) {
-						event.preventDefault();
-						store.getState().increment();
-						commitValue();
-					}
-					break;
-
-				case KEYS.DOWN:
-					if (isTypeNumeric) {
-						event.preventDefault();
-						store.getState().decrement();
-						commitValue();
-					}
-					break;
-
-				default:
-					break;
-			}
-
-			onKeyDown(event);
-		},
-		[store, onKeyDown, setUndoTimeout],
-	);
-
-	return { onKeyUp: handleOnKeyUp, onKeyDown: handleOnKeyDown };
-}
-
-function useChangeHandlers({
-	isCommitOnBlurOrEnter,
-	onChange = noop,
-	onBeforeCommit,
-	onValueChange = noop,
-	store,
-	validate,
-}) {
-	const handleOnFinalizeChange = useCallback(
-		(next) => {
-			const { setLastValue, setValue } = store.getState();
-			let final = next;
-
-			if (onBeforeCommit) {
-				final = onBeforeCommit(next, store.getState());
-			}
-
-			setLastValue(final);
-			setValue(final);
-			onChange(final);
-		},
-		[store, onBeforeCommit, onChange],
-	);
-
-	const handleOnChange = useCallback(
-		(event) => {
-			const { setValue } = store.getState();
-
-			let final = event.target.value;
-
-			setValue(final);
-			onValueChange(final);
-
-			if (!isCommitOnBlurOrEnter) {
-				if (onBeforeCommit) {
-					final = onBeforeCommit(final, store.getState());
-				}
-
-				onChange(final, { event });
-			}
-		},
-		[isCommitOnBlurOrEnter, onBeforeCommit, onChange, onValueChange, store],
-	);
-
-	const handleOnCommitChange = useCallback(() => {
-		const {
-			incomingValue,
-			max,
-			min,
-			resetValue,
-			step,
-			type,
-			value,
-		} = store.getState();
-		let next = value;
-
-		if (incomingValue === next) return;
-
-		if (type === 'number') {
-			next = roundClampString(next, min, max, step);
-		}
-
-		if (!validate) {
-			handleOnFinalizeChange(next);
-		}
-
-		try {
-			let shouldFinalize = true;
-
-			if (is.function(validate)) {
-				shouldFinalize = validate(next, store.getState());
-			}
-
-			// TODO: Support Regex validation.
-			// } else {
-			// 	shouldFinalize = new RegExp(validate).test(next);
-			// }
-
-			if (shouldFinalize) {
-				handleOnFinalizeChange(next);
-			} else {
-				resetValue();
-			}
-		} catch (err) {
-			resetValue();
-		}
-	}, [handleOnFinalizeChange, store, validate]);
-
-	/**
-	 * Subscribes the onCommitChange handler to fire when lastValue updates.
-	 * lastValue is the only updated when TextInput is ready to broadcast
-	 * it's changes to the onChange (prop) handler.
-	 */
-	useEffect(() => {
-		const unsub = store.subscribe(
-			handleOnCommitChange,
-			(state) => state.lastValue,
-			shallowCompare,
-		);
-
-		return unsub;
-	}, [handleOnCommitChange, store]);
-
-	return {
-		onChange: handleOnChange,
-	};
-}
-
-export function useDragHandlers({ dragAxis, store }) {
-	const [dragState, setDragState] = useState(false);
-	const { isTypeNumeric } = store.getState();
-
-	const dragRaf = useRef();
-	const threshold = 10;
-
-	useEffect(() => {
-		if (dragState) {
-			/**
-			 * Clear selection
-			 */
-			if (window.getSelection) {
-				if (window.getSelection().empty) {
-					// Chrome
-					window.getSelection().empty();
-				} else if (window.getSelection().removeAllRanges) {
-					// Firefox
-					window.getSelection().removeAllRanges();
-				}
-			} else if (document.selection) {
-				// IE?
-				document.selection.empty();
-			}
-
-			if (dragState === 'x') {
-				document.documentElement.classList.add(styles.globalDraggableX);
-				document.documentElement.classList.remove(
-					styles.globalDraggableY,
-				);
-			} else {
-				document.documentElement.classList.remove(
-					styles.globalDraggableX,
-				);
-				document.documentElement.classList.add(styles.globalDraggableY);
-			}
-		} else {
-			document.documentElement.classList.remove(styles.globalDraggableX);
-			document.documentElement.classList.remove(styles.globalDraggableY);
-		}
-	}, [dragState]);
-
-	useEffect(() => {
-		return () => {
-			cancelAnimationFrame(dragRaf.current);
-		};
-	}, []);
-
-	const dragGestures = useDrag(
-		(state) => {
-			const [x, y] = state.delta;
-			setDragState(state.dragging ? state.axis : false);
-
-			const isMovementY = state.axis === 'y';
-			let movement = isMovementY ? y * -1 : x;
-
-			if (Math.abs(movement) === 0) return;
-
-			const shouldIncrement = movement > 0;
-
-			let boost = movement === threshold ? 0 : movement;
-			boost = shouldIncrement ? boost : boost * -1;
-			boost = boost - 1;
-
-			if (dragRaf.current) {
-				cancelAnimationFrame(dragRaf.current);
-			}
-
-			dragRaf.current = requestAnimationFrame(() => {
-				if (shouldIncrement) {
-					store.getState().increment(boost);
-					store.getState().commitValue();
-				} else {
-					store.getState().decrement(boost);
-					store.getState().commitValue();
-				}
-			});
-		},
-		{ axis: dragAxis, threshold },
-	);
-
-	return isTypeNumeric ? dragGestures() : {};
-}
-
-export function useEventHandlers(props) {
-	const {
-		isCommitOnBlurOrEnter = true,
-		multiline = false,
-		onBeforeCommit,
-		onBlur = noop,
-		onChange = noop,
-		onFocus = noop,
-		onKeyUp = noop,
-		onKeyDown = noop,
-		onEnterKeyDown = noop,
-		onValueChange = noop,
-		validate,
-		store,
-	} = props;
-
-	const { onChange: handleOnChange } = useChangeHandlers({
-		isCommitOnBlurOrEnter,
-		onBeforeCommit,
-		onChange,
-		onValueChange,
-		store,
-		validate,
-	});
-
-	const {
-		isFocused,
-		onBlur: handleOnBlur,
-		onFocus: handleOnFocus,
-	} = useFocusHandlers({
-		isCommitOnBlurOrEnter,
-		onBlur,
-		onFocus,
-		store,
-	});
-
-	const {
-		onKeyDown: handleOnKeyDown,
-		onKeyUp: handleOnKeyUp,
-	} = useKeyboardHandlers({
-		onEnterKeyDown,
-		onKeyDown,
-		onKeyUp,
-		multiline,
-		store,
-	});
-
-	return {
-		isFocused,
-		onBlur: handleOnBlur,
-		onChange: handleOnChange,
-		onFocus: handleOnFocus,
-		onKeyDown: handleOnKeyDown,
-		onKeyUp: handleOnKeyUp,
-	};
-}
+import { useTextInputState } from './useTextInputState';
 
 export function useTextInput(props) {
 	const combinedProps = useContextSystem(props, 'TextInput');
@@ -606,8 +16,8 @@ export function useTextInput(props) {
 		defaultValue = '',
 		disabled,
 		dragAxis,
-		gap = 2.5,
 		format,
+		gap = 2.5,
 		hideArrows = false,
 		id: idProp,
 		innerContent,
@@ -617,12 +27,6 @@ export function useTextInput(props) {
 		max,
 		min,
 		multiline = false,
-		onIncrement,
-		onDecrement,
-		onBeforeCommit,
-		onValueChange,
-		onValueReset = noop,
-		onValueSync = noop,
 		prefix,
 		shiftStep = 10,
 		size = 'medium',
@@ -636,35 +40,30 @@ export function useTextInput(props) {
 
 	const id = useFormGroupContextId(idProp);
 
-	const store = useTextInputSubState(valueProp, {
+	const {
+		decrement,
+		increment,
+		store,
+		...textInputState
+	} = useTextInputState({
 		format,
 		initialValue: defaultValue,
 		isShiftStepEnabled,
 		max,
 		min,
-		onIncrement,
-		onDecrement,
-		onValueReset,
-		onValueSync,
 		shiftStep,
 		step,
+		value: valueProp,
+		validate,
 		type,
 	});
-	const { isTypeNumeric, value } = store();
 
-	const inputRef = useInputRef({ store });
-
-	const { isFocused, ...eventHandlers } = useEventHandlers({
-		...combinedProps,
-		onBeforeCommit,
-		onValueChange,
-		store,
-	});
-
-	const dragHandlers = useDragHandlers({ dragAxis: 'y', store });
+	const { inputRef, isFocused, isTypeNumeric, value } = store();
 
 	const handleOnRootClick = useCallback(() => {
-		inputRef.current.focus();
+		if (inputRef) {
+			inputRef.focus();
+		}
 	}, [inputRef]);
 
 	const baseFieldProps = useBaseField({
@@ -702,7 +101,7 @@ export function useTextInput(props) {
 	const inputProps = {
 		as: InputComponent,
 		...otherProps,
-		...eventHandlers,
+		...textInputState,
 		className: inputClasses,
 		id,
 		min,
@@ -714,10 +113,11 @@ export function useTextInput(props) {
 
 	return {
 		...baseFieldProps,
-		...dragHandlers,
 		__store: store,
 		className: classes,
 		dragAxis,
+		decrement,
+		increment,
 		format,
 		hideArrows,
 		innerContent,

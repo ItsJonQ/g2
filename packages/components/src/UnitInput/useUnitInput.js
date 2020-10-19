@@ -5,7 +5,9 @@ import {
 	is,
 	isValidCSSValueForProp,
 	isValidNumericUnitValue,
-	noop,
+	mergeEventHandlers,
+	mergeValidationFunctions,
+	normalizeArrowKey,
 	omit,
 	parseUnitValue,
 	roundClampString,
@@ -13,16 +15,11 @@ import {
 } from '@wp-g2/utils';
 import React from 'react';
 
-import { View } from '../../View';
-import { useTextInputNumber } from './NumberInput';
-import { TextInputArrows } from './TextInputArrows';
+import { useTextInput } from '../TextInput/useTextInput';
 import {
-	mergeEventHandlers,
-	mergeValidationFunctions,
-	normalizeArrowKey,
 	useDragHandlers,
 	useShiftStepState,
-} from './utils';
+} from '../TextInput/useTextInputState.utils';
 
 const UNITS = ['px', '%', 'em', 'rem', 'vh', 'vw', 'vmin', 'vmax'];
 
@@ -247,6 +244,44 @@ const useUnitKeyboardHandlers = ({
 };
 
 const useUnitChangeHandlers = ({ store, unitStore }) => {
+	const lastValueRef = React.useRef();
+	const didInitialParse = React.useRef(false);
+	const __value = store((state) => state.value);
+
+	const handleOnInitialParse = React.useCallback(
+		(value) => {
+			if (didInitialParse.current) return;
+			didInitialParse.current = true;
+
+			const cssProp = unitStore.getState().cssProp;
+
+			if (value === lastValueRef.current) return;
+			lastValueRef.current = value;
+
+			const [parsedValue, parsedUnit] = parseUnitValue(value);
+
+			// Disallow values if they are invalid for a specified CSS property.
+			if (!isValidCSSValueForProp(cssProp, value)) {
+				unitStore.getState().clear();
+				return;
+			}
+
+			if (is.numeric(parsedValue) && parsedUnit) {
+				const unit = findUnitMatch({ value: parsedUnit });
+				if (unit) {
+					unitStore
+						.getState()
+						.change(createUnitValue(parsedValue, unit));
+				} else {
+					unitStore.getState().clear();
+				}
+			} else {
+				unitStore.getState().clear();
+			}
+		},
+		[unitStore],
+	);
+
 	const handleOnValueChange = React.useCallback(
 		(value) => {
 			if (store.getState().getIsReverted()) {
@@ -264,6 +299,11 @@ const useUnitChangeHandlers = ({ store, unitStore }) => {
 			let unit = findUnitMatch({ value: parsedUnit });
 			if (!parsedUnit && !unit) {
 				unit = 'px';
+			}
+
+			if (!unit) {
+				unitStore.getState().clear();
+				return;
 			}
 
 			unitStore.getState().change(createUnitValue(parsedValue, unit));
@@ -318,6 +358,11 @@ const useUnitChangeHandlers = ({ store, unitStore }) => {
 			shallowCompare,
 		);
 	}, [handleOnValueCommit, store]);
+
+	React.useEffect(() => handleOnInitialParse(__value), [
+		__value,
+		handleOnInitialParse,
+	]);
 };
 
 const useUnitEventHandlers = ({ decrement, increment, store, unitStore }) => {
@@ -336,13 +381,12 @@ const useUnitEventHandlers = ({ decrement, increment, store, unitStore }) => {
 	return { ...dragHandlers, ...focusHandlers, ...keyboardHandlers };
 };
 
-export const useTextInputUnit = (props) => {
+export const useUnitInput = (props) => {
 	const { cssProp, max, min, validate: validateProp } = props;
 
 	const unitStore = useUnitStore({ cssProp });
 
 	const validate = (commitValue) => {
-		console.log(commitValue);
 		if (cssProp) {
 			return isValidCSSValueForProp(cssProp, commitValue);
 		}
@@ -351,7 +395,7 @@ export const useTextInputUnit = (props) => {
 
 	const mergedValidations = mergeValidationFunctions(validate, validateProp);
 
-	const { store, ...numberTextInput } = useTextInputNumber({
+	const { __store: store, ...baseTextInput } = useTextInput({
 		format: 'number',
 		type: 'text',
 		validate: mergedValidations,
@@ -361,7 +405,10 @@ export const useTextInputUnit = (props) => {
 	/**
 	 * Replacing the drag gestures from NumberInput with ones from UnitInput.
 	 */
-	const textInput = omit(numberTextInput, ['onMouseDown', 'onTouchStart']);
+	const textInputProps = omit(baseTextInput.inputProps, [
+		'onMouseDown',
+		'onTouchStart',
+	]);
 
 	const { shiftStepStore } = useShiftStepState({
 		step: store.getState().step,
@@ -383,55 +430,18 @@ export const useTextInputUnit = (props) => {
 		unitStore,
 	});
 
-	const mergedEventHandlers = mergeEventHandlers(eventHandlers, textInput);
-
+	baseTextInput.inputProps = {
+		...textInputProps,
+		...mergeEventHandlers(eventHandlers, textInputProps),
+	};
 	const typeAhead = unitStore((state) => state.typeAhead);
 
 	return {
-		store,
-		...textInput,
-		...mergedEventHandlers,
+		__store: store,
+		__unitStore: unitStore,
+		...baseTextInput,
 		typeAhead,
 		decrement,
 		increment,
 	};
 };
-
-export const UnitInput = React.memo((props) => {
-	const {
-		decrement,
-		increment,
-		store,
-		typeAhead,
-		...textInput
-	} = useTextInputUnit({
-		...props,
-		validate: noop,
-	});
-
-	return (
-		<View
-			css={`
-				position: relative;
-			`}
-		>
-			<View
-				as="input"
-				css={`
-					position: absolute;
-					top: 0;
-					left: 0;
-					opacity: 0.2;
-					pointer-events: none;
-					z-index: 1;
-				`}
-				onChange={noop}
-				tabIndex={-1}
-				type="text"
-				value={typeAhead}
-			/>
-			<View as="input" type="text" {...textInput} />
-			<TextInputArrows decrement={decrement} increment={increment} />
-		</View>
-	);
-});
