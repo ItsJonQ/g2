@@ -61,9 +61,13 @@ export function useControlledValue({ store, value: incomingValue }) {
 	};
 }
 
-export function useDragHandlers({ decrement, increment, store }) {
+export function useBaseDragHandlers({
+	decrement,
+	dragAxis,
+	increment,
+	isTypeNumeric = true,
+}) {
 	const [dragState, setDragState] = React.useState(false);
-	const { dragAxis, isTypeNumeric } = store.getState();
 
 	const dragRaf = React.useRef();
 	const threshold = 10;
@@ -131,4 +135,15 @@ export function useDragHandlers({ decrement, increment, store }) {
 		: { onMouseDown: noop, onTouchStart: noop };
 
 	return gestures;
+}
+
+export function useDragHandlers({ decrement, increment, store }) {
+	const { dragAxis, isTypeNumeric } = store.getState();
+
+	return useBaseDragHandlers({
+		dragAxis,
+		isTypeNumeric,
+		increment,
+		decrement,
+	});
 }

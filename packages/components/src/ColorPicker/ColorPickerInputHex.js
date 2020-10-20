@@ -1,0 +1,61 @@
+import { ui } from '@wp-g2/styles';
+import { shallowCompare } from '@wp-g2/substate';
+import React from 'react';
+
+import { FormGroup } from '../FormGroup';
+import { Text } from '../Text';
+import { TextInput } from '../TextInput';
+import { useNumberKeyboardHandlers } from '../TextInput/useTextInputNumberState';
+import { useBaseDragHandlers } from '../TextInput/useTextInputState.utils';
+import { useColorPickerContext } from './ColorPicker.Context';
+
+export const ColorInputHex = React.memo(({ label = 'Hex', ...otherProps }) => {
+	const { store } = useColorPickerContext();
+	const [value, setValue, increment, decrement] = store(
+		(state) => [
+			state.hex(),
+			state.change.hex,
+			state.increment,
+			state.decrement,
+		],
+		shallowCompare,
+	);
+
+	const dragHandlers = useBaseDragHandlers({
+		increment,
+		decrement,
+		isTypeNumeric: true,
+		dragAxis: 'y',
+	});
+
+	const keyboardHandlers = useNumberKeyboardHandlers({
+		increment,
+		decrement,
+		stopIfEventDefaultPrevented: false,
+	});
+
+	const handleOnChange = React.useCallback(
+		(next) => {
+			setValue(ui.color(next).toHexString());
+		},
+		[setValue],
+	);
+
+	const handleOnValidate = React.useCallback((next) => {
+		return ui.color(next).isValid();
+	}, []);
+
+	return (
+		<FormGroup label={label}>
+			<TextInput
+				{...otherProps}
+				{...dragHandlers}
+				{...keyboardHandlers}
+				onChange={handleOnChange}
+				prefix={<Text variant="muted">#</Text>}
+				validate={handleOnValidate}
+				value={value}
+			/>
+		</FormGroup>
+	);
+});

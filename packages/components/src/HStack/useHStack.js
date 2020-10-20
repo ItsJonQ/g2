@@ -11,11 +11,12 @@ export function useHStack(props) {
 		alignment = 'edge',
 		children,
 		className,
+		direction,
 		spacing = 2,
 		...otherProps
 	} = useContextSystem(props, 'HStack');
 
-	const align = getAlignmentProps(alignment);
+	const align = getAlignmentProps(alignment, direction);
 
 	const validChildren = getValidChildren(children);
 	const clonedChildren = validChildren.map((child, index) => {
@@ -48,6 +49,7 @@ export function useHStack(props) {
 	const propsForFlex = {
 		className: classes,
 		children: clonedChildren,
+		direction,
 		justify: 'center',
 		...align,
 		...otherProps,

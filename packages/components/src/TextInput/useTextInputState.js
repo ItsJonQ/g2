@@ -175,6 +175,8 @@ const useTextInputStore = ({
 			current.dispatch({ type: actionTypes.commitComplete });
 		},
 		increment: (next) => {
+			if (!isTypeNumeric) return;
+
 			const current = store.getState();
 			if (next === current.value) return;
 
@@ -185,6 +187,8 @@ const useTextInputStore = ({
 			current.commit();
 		},
 		decrement: (next) => {
+			if (!isTypeNumeric) return;
+
 			const current = store.getState();
 			if (next === current.value) return;
 

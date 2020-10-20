@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Container, Grid, VStack } from '../../index';
 import { ColorPicker } from '../index';
 
 export default {
@@ -9,18 +10,46 @@ export default {
 
 const Example = () => {
 	const [color, setColor] = React.useState('red');
+
+	const handleOnChange = (next, data) => {
+		// console.log(data);
+		setColor(next);
+	};
+
 	return (
-		<>
-			<p>{color}</p>
+		<Container>
 			<p>
-				<input
-					onChange={(e) => setColor(e.target.value)}
-					type="color"
-					value={color}
-				/>
+				<strong>{color}</strong>
 			</p>
-			<ColorPicker color={color} onChange={setColor} width={300} />
-		</>
+			<VStack spacing={10}>
+				<Grid gap={8}>
+					<ColorPicker
+						color={color}
+						onChange={handleOnChange}
+						width={300}
+					/>
+					<ColorPicker
+						color={color}
+						onChange={setColor}
+						width={300}
+					/>
+				</Grid>
+				<Grid gap={8}>
+					<ColorPicker
+						color={color}
+						disableAlpha={false}
+						onChange={setColor}
+						width={300}
+					/>
+					<ColorPicker
+						color={color}
+						disableAlpha={false}
+						onChange={setColor}
+						width={300}
+					/>
+				</Grid>
+			</VStack>
+		</Container>
 	);
 };
 

@@ -16,8 +16,9 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 
 			if (!is.numeric(value)) return;
 
-			const shiftStep = shiftStepStore.getState().getShiftValue();
-			const nextValue = add(jumpStep, shiftStep);
+			const { getShiftValue, step } = shiftStepStore.getState();
+			const shiftStep = getShiftValue();
+			const nextValue = add(jumpStep * step, shiftStep);
 
 			const next = roundClampString(
 				add(value, nextValue),
@@ -37,8 +38,9 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 
 			if (!is.numeric(value)) return;
 
-			const shiftStep = shiftStepStore.getState().getShiftValue();
-			const nextValue = add(jumpStep, shiftStep);
+			const { getShiftValue, step } = shiftStepStore.getState();
+			const shiftStep = getShiftValue();
+			const nextValue = add(jumpStep * step, shiftStep);
 
 			const next = roundClampString(
 				subtract(value, nextValue),
@@ -58,23 +60,31 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	};
 };
 
-export const useNumberKeyboardHandlers = ({ decrement, increment }) => {
+export const useNumberKeyboardHandlers = ({
+	decrement,
+	increment,
+	stopIfEventDefaultPrevented = true,
+}) => {
 	const keyboardHandlers = React.useMemo(
 		() => ({
 			ArrowUp(event) {
-				if (event.isDefaultPrevented()) return;
+				if (stopIfEventDefaultPrevented && event.isDefaultPrevented())
+					return;
+
 				event.preventDefault();
 
 				increment();
 			},
 			ArrowDown(event) {
-				if (event.isDefaultPrevented()) return;
+				if (stopIfEventDefaultPrevented && event.isDefaultPrevented())
+					return;
+
 				event.preventDefault();
 
 				decrement();
 			},
 		}),
-		[decrement, increment],
+		[decrement, increment, stopIfEventDefaultPrevented],
 	);
 
 	const handleOnKeyDown = React.useCallback(
