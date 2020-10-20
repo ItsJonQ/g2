@@ -17,13 +17,11 @@ function UnitInput(props, forwardedRef) {
 		disabled,
 		hideArrows = false,
 		increment,
-		innerContent,
 		inputProps,
 		inputRef,
 		isTypeNumeric,
 		prefix,
 		suffix,
-		typeAhead,
 		...otherProps
 	} = useUnitInput(props);
 
@@ -42,7 +40,6 @@ function UnitInput(props, forwardedRef) {
 				ref={mergeRefs([inputRef, forwardedRef])}
 				{...ui.$('TextInput')}
 			/>
-			{innerContent}
 			<UnitInputSelect
 				inputRef={inputRef}
 				store={__store}

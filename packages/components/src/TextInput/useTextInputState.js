@@ -136,6 +136,10 @@ const useTextInputStore = ({
 			const hasValidation = is.function(validate);
 			const current = store.getState();
 
+			current.dispatch({
+				type: actionTypes.commit,
+			});
+
 			if (hasValidation) {
 				current.dispatch({
 					type: actionTypes.validateStart,
@@ -178,9 +182,7 @@ const useTextInputStore = ({
 				type: actionTypes.increment,
 				payload: { value: next },
 			});
-			current.dispatch({
-				type: actionTypes.commit,
-			});
+			current.commit();
 		},
 		decrement: (next) => {
 			const current = store.getState();
@@ -190,9 +192,7 @@ const useTextInputStore = ({
 				type: actionTypes.decrement,
 				payload: { value: next },
 			});
-			current.dispatch({
-				type: actionTypes.commit,
-			});
+			current.commit();
 		},
 		// Selectors
 		getIsReverted: () => {

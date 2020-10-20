@@ -15,7 +15,6 @@ function TextInput(props, forwardedRef) {
 		disabled,
 		hideArrows = false,
 		increment,
-		innerContent,
 		inputProps,
 		inputRef,
 		isTypeNumeric,
@@ -39,7 +38,6 @@ function TextInput(props, forwardedRef) {
 				ref={mergeRefs([inputRef, forwardedRef])}
 				{...ui.$('TextInput')}
 			/>
-			{innerContent}
 			{showTextInputArrows && (
 				<TextInputArrows
 					__store={__store}

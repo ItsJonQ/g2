@@ -408,6 +408,8 @@ export const useUnitInput = (props) => {
 	const unitStore = useUnitStore({ cssProp });
 
 	const validate = (commitValue) => {
+		if (commitValue === '') return false;
+
 		if (cssProp) {
 			return isValidCSSValueForProp(cssProp, commitValue);
 		}
@@ -453,14 +455,12 @@ export const useUnitInput = (props) => {
 		...mergeEventHandlers(eventHandlers, textInput.inputProps),
 		type: 'text',
 	};
-	const typeAhead = unitStore((state) => state.typeAhead);
 
 	return {
 		__store: store,
 		__unitStore: unitStore,
 		...textInput,
 		...mergedDragHandlers,
-		typeAhead,
 		decrement,
 		increment,
 	};

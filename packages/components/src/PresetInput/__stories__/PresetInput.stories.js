@@ -90,6 +90,9 @@ const Example = () => {
 						<CardBody>
 							<FormGroup horizontal={false} label="Size">
 								<PresetInput
+									__debugger={(action, state) =>
+										console.log(action, state)
+									}
 									cssProp="fontSize"
 									min={0}
 									onChange={(next) =>
