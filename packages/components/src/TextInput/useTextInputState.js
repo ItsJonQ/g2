@@ -20,6 +20,8 @@ import {
 const actionTypes = {
 	sync: 'SYNC_VALUE',
 	change: 'CHANGE_VALUE',
+	increment: 'INCREMENT_VALUE',
+	decrement: 'DECREMENT_VALUE',
 	commit: 'COMMIT_START',
 	commitRevert: 'COMMIT_REVERT',
 	commitComplete: 'COMMIT_COMPLETE',
@@ -43,6 +45,16 @@ const reducer = (state, action) => {
 				value: payload.value,
 			};
 
+		case actionTypes.increment:
+			return {
+				value: payload.value,
+			};
+
+		case actionTypes.decrement:
+			return {
+				value: payload.value,
+			};
+
 		case actionTypes.commitRevert:
 			return {
 				value: state.previousValue,
@@ -60,7 +72,7 @@ const reducer = (state, action) => {
 };
 
 const useTextInputStore = ({
-	__debugger = false,
+	__debugger,
 	dragAxis = 'y',
 	format = 'text',
 	initialValue: initialValueProp,
@@ -80,7 +92,6 @@ const useTextInputStore = ({
 
 	const store = useSubState((set) => ({
 		// State
-		__debugger,
 		actionTypes,
 		commitValue: '',
 		dragAxis,
@@ -98,8 +109,8 @@ const useTextInputStore = ({
 		dispatch: (args) =>
 			set((state) => {
 				const next = reducer(state, args);
-				if (state.__debugger) {
-					console.log(args, next);
+				if (is.function(__debugger)) {
+					__debugger(args, next, state);
 				}
 				return next;
 			}),
@@ -113,6 +124,8 @@ const useTextInputStore = ({
 		},
 		change: (next) => {
 			const current = store.getState();
+			if (next === current.value) return;
+
 			current.dispatch({
 				type: actionTypes.change,
 				payload: { value: next },
@@ -157,7 +170,30 @@ const useTextInputStore = ({
 			const current = store.getState();
 			current.dispatch({ type: actionTypes.commitComplete });
 		},
+		increment: (next) => {
+			const current = store.getState();
+			if (next === current.value) return;
 
+			current.dispatch({
+				type: actionTypes.increment,
+				payload: { value: next },
+			});
+			current.dispatch({
+				type: actionTypes.commit,
+			});
+		},
+		decrement: (next) => {
+			const current = store.getState();
+			if (next === current.value) return;
+
+			current.dispatch({
+				type: actionTypes.decrement,
+				payload: { value: next },
+			});
+			current.dispatch({
+				type: actionTypes.commit,
+			});
+		},
 		// Selectors
 		getIsReverted: () => {
 			const { previousValue, value } = store.getState();

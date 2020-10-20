@@ -118,10 +118,8 @@ export function useDragHandlers({ decrement, increment, store }) {
 			dragRaf.current = requestAnimationFrame(() => {
 				if (shouldIncrement) {
 					increment(boost);
-					store.getState().commit();
 				} else {
 					decrement(boost);
-					store.getState().commit();
 				}
 			});
 		},

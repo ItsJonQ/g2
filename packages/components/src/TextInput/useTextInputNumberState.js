@@ -12,7 +12,7 @@ import { useDragHandlers } from './useTextInputState.utils';
 export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	const increment = React.useCallback(
 		(jumpStep = 0) => {
-			const { change, commit, value } = store.getState();
+			const { increment, value } = store.getState();
 
 			if (!is.numeric(value)) return;
 
@@ -26,15 +26,14 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 				shiftStep,
 			);
 
-			change(next);
-			commit();
+			increment(next);
 		},
 		[max, min, shiftStepStore, store],
 	);
 
 	const decrement = React.useCallback(
 		(jumpStep = 0) => {
-			const { change, commit, value } = store.getState();
+			const { decrement, value } = store.getState();
 
 			if (!is.numeric(value)) return;
 
@@ -48,8 +47,7 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 				shiftStep,
 			);
 
-			change(next);
-			commit();
+			decrement(next);
 		},
 		[max, min, shiftStepStore, store],
 	);

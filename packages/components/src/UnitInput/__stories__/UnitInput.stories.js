@@ -67,7 +67,7 @@ const Example = () => {
 
 	return (
 		<UnitInput
-			__debugger
+			__debugger={console.log}
 			cssProp="columnWidth"
 			onChange={setValue}
 			value={value}

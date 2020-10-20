@@ -8,6 +8,7 @@ import {
 	mergeEventHandlers,
 	mergeValidationFunctions,
 	normalizeArrowKey,
+	omit,
 	parseUnitValue,
 	roundClampString,
 	subtract,
@@ -78,12 +79,7 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 	const increment = React.useCallback(
 		(jumpStep = 0) => {
 			const { cssProp } = unitStore.getState();
-			const {
-				change,
-				commit,
-				inputRef,
-				value: storeValue,
-			} = store.getState();
+			const { increment, inputRef, value: storeValue } = store.getState();
 
 			const [value, unit] = parseUnitValue(storeValue);
 
@@ -99,9 +95,12 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 				shiftStep,
 			);
 
-			if (inputRef?.setSelectionRange) {
+			if (inputRef.current.setSelectionRange) {
 				raf.current = requestAnimationFrame(() => {
-					inputRef.setSelectionRange(0, String(clampedValue).length);
+					inputRef.current.setSelectionRange(
+						0,
+						String(clampedValue).length,
+					);
 				});
 			}
 
@@ -122,10 +121,7 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 				}
 			}
 
-			if (final !== storeValue) {
-				change(final);
-				commit();
-			}
+			increment(final);
 		},
 		[max, min, shiftStepStore, store, unitStore],
 	);
@@ -133,12 +129,7 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 	const decrement = React.useCallback(
 		(jumpStep = 0) => {
 			const { cssProp } = unitStore.getState();
-			const {
-				change,
-				commit,
-				inputRef,
-				value: storeValue,
-			} = store.getState();
+			const { decrement, inputRef, value: storeValue } = store.getState();
 
 			const [value, unit] = parseUnitValue(storeValue);
 
@@ -153,9 +144,12 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 				shiftStep,
 			);
 
-			if (inputRef?.setSelectionRange) {
+			if (inputRef.current.setSelectionRange) {
 				raf.current = requestAnimationFrame(() => {
-					inputRef.setSelectionRange(0, String(clampedValue).length);
+					inputRef.current.setSelectionRange(
+						0,
+						String(clampedValue).length,
+					);
 				});
 			}
 
@@ -180,10 +174,7 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 				}
 			}
 
-			if (final !== storeValue) {
-				change(final);
-				commit();
-			}
+			decrement(final);
 		},
 		[max, min, shiftStepStore, store, unitStore],
 	);
@@ -425,12 +416,14 @@ export const useUnitInput = (props) => {
 
 	const mergedValidations = mergeValidationFunctions(validate, validateProp);
 
-	const { __store: store, ...textInput } = useTextInput({
+	const { __store: store, ...baseTextInput } = useTextInput({
 		format: 'number',
 		type: 'text',
 		validate: mergedValidations,
 		...props,
 	});
+
+	const textInput = omit(baseTextInput, ['onTouchStart', 'onMouseDown']);
 
 	const { shiftStepStore } = useShiftStepState({
 		step: store.getState().step,
@@ -453,6 +446,7 @@ export const useUnitInput = (props) => {
 	});
 
 	const dragHandlers = useDragHandlers({ store, decrement, increment });
+	const mergedDragHandlers = mergeEventHandlers(dragHandlers, props);
 
 	textInput.inputProps = {
 		...textInput.inputProps,
@@ -465,7 +459,7 @@ export const useUnitInput = (props) => {
 		__store: store,
 		__unitStore: unitStore,
 		...textInput,
-		...dragHandlers,
+		...mergedDragHandlers,
 		typeAhead,
 		decrement,
 		increment,

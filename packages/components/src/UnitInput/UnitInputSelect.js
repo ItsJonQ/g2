@@ -99,7 +99,6 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 
 		unitStore.getState().clear();
 		store.getState().change(parsedValue);
-		store.getState().commit(parsedValue);
 
 		if (inputRef) {
 			inputRef.current.focus();
