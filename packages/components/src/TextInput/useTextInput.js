@@ -8,6 +8,21 @@ import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
 import { useTextInputState } from './useTextInputState';
 
+const useRootEventHandlers = ({ inputRef }) => {
+	const handleOnClick = useCallback(() => {
+		inputRef.current.focus();
+	}, [inputRef]);
+
+	const handleOnTouchStart = useCallback(() => {
+		inputRef.current.focus();
+	}, [inputRef]);
+
+	return {
+		onClick: handleOnClick,
+		onTouchStart: handleOnTouchStart,
+	};
+};
+
 export function useTextInput(props) {
 	const combinedProps = useContextSystem(props, 'TextInput');
 	const {
@@ -46,6 +61,7 @@ export function useTextInput(props) {
 		store,
 		...textInputState
 	} = useTextInputState({
+		...otherProps,
 		format,
 		initialValue: defaultValue,
 		isShiftStepEnabled,
@@ -60,9 +76,7 @@ export function useTextInput(props) {
 
 	const { inputRef, isFocused, isTypeNumeric, value } = store();
 
-	const handleOnRootClick = useCallback(() => {
-		inputRef.current.focus();
-	}, [inputRef]);
+	const rootEventHandlers = useRootEventHandlers({ inputRef });
 
 	const baseFieldProps = useBaseField({
 		align,
@@ -111,6 +125,7 @@ export function useTextInput(props) {
 
 	return {
 		...baseFieldProps,
+		...rootEventHandlers,
 		__store: store,
 		className: classes,
 		dragAxis,
@@ -122,7 +137,6 @@ export function useTextInput(props) {
 		inputProps,
 		inputRef,
 		isTypeNumeric,
-		onClick: handleOnRootClick,
 		prefix,
 		suffix,
 	};

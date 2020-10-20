@@ -42,6 +42,7 @@ function UnitInput(props, forwardedRef) {
 				ref={mergeRefs([inputRef, forwardedRef])}
 				{...ui.$('TextInput')}
 			/>
+			{innerContent}
 			<UnitInputSelect
 				inputRef={inputRef}
 				store={__store}

@@ -1,16 +1,18 @@
 import { ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
-import { is, isFirefox, noop } from '@wp-g2/utils';
+import {
+	createUnitValue,
+	is,
+	isFirefox,
+	isValidCSSValueForProp,
+	isValidNumericUnitValue,
+	noop,
+	parseUnitValue,
+} from '@wp-g2/utils';
 import React from 'react';
 
 import * as textInputStyles from '../TextInput/TextInput.styles';
 import { View } from '../View';
-import {
-	baseParseUnit,
-	createUnitValue,
-	isValidCSSValueForProp,
-	isValidNumericUnitValue,
-} from './UnitInput.utils';
 
 const UNITS = ['px', '%', 'em', 'rem', 'vh', 'vw', 'vmin', 'vmax'];
 
@@ -34,7 +36,7 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 	const selectRef = React.useRef();
 	const wrapperRef = React.useRef();
 
-	let [parsedValue, parsedUnit] = baseParseUnit(value);
+	let [parsedValue, parsedUnit] = parseUnitValue(value);
 	let unit;
 
 	React.useEffect(() => {
@@ -67,18 +69,20 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 			}
 		};
 
-		document.addEventListener('mouseup', handleOnSelectionEnd);
 		document.addEventListener('mousedown', handleOnSelectionStart);
+		document.addEventListener('touchstart', handleOnSelectionStart);
+		document.addEventListener('mouseup', handleOnSelectionEnd);
 
 		return () => {
-			document.removeEventListener('mouseup', handleOnSelectionEnd);
 			document.removeEventListener('mousedown', handleOnSelectionStart);
+			document.removeEventListener('touchstart', handleOnSelectionStart);
+			document.removeEventListener('mouseup', handleOnSelectionEnd);
 		};
 	}, []);
 
 	const handleOnChangeSelect = (event) => {
 		const unit = event.target.value;
-		const [parsedValue] = baseParseUnit(value);
+		const [parsedValue] = parseUnitValue(value);
 		const next = createUnitValue(parsedValue, unit);
 
 		unitStore.getState().change(next);
@@ -91,7 +95,7 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 	};
 
 	const handleOnRemoveUnit = (event) => {
-		const [parsedValue] = baseParseUnit(value);
+		const [parsedValue] = parseUnitValue(value);
 
 		unitStore.getState().clear();
 		store.getState().change(parsedValue);
@@ -143,6 +147,9 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 			`,
 				ui.opacity(isPlaceholder ? 0.5 : 1),
 			]}
+			onClick={() => {
+				inputRef.current.focus();
+			}}
 			ref={wrapperRef}
 			style={{
 				width: width || '100%',
@@ -220,6 +227,7 @@ function UnitInputSelect({ onChange = noop, store, unitStore }) {
 						}
 					}}
 					onMouseDown={(e) => e.stopPropagation()}
+					onTouchStart={(e) => e.stopPropagation()}
 					ref={selectRef}
 					title="Change unit"
 					value={parsedUnit}

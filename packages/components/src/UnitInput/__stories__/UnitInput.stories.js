@@ -1,9 +1,9 @@
 import { createStore } from '@wp-g2/substate';
+import { isValidCSSValueForProp } from '@wp-g2/utils';
 import React from 'react';
 
 import { FormGroup, ListGroup } from '../../index';
 import { UnitInput } from '../index';
-import { isValidCSSValueForProp } from '../UnitInput.utils';
 import { validStyleProps } from './utils';
 
 export default {
@@ -65,7 +65,9 @@ const Everything = () => {
 const Example = () => {
 	const [value, setValue] = React.useState('13px');
 
-	return <UnitInput onChange={setValue} value={value} />;
+	return (
+		<UnitInput cssProp="columnWidth" onChange={setValue} value={value} />
+	);
 };
 
 export const _default = () => {

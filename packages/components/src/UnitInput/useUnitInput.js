@@ -8,7 +8,6 @@ import {
 	mergeEventHandlers,
 	mergeValidationFunctions,
 	normalizeArrowKey,
-	omit,
 	parseUnitValue,
 	roundClampString,
 	subtract,
@@ -211,7 +210,9 @@ const useUnitKeyboardHandlers = ({
 						unitStore.getState().clear();
 						commitRevert();
 					} else {
-						unitStore.getState().clear();
+						if (!parsedUnit) {
+							unitStore.getState().clear();
+						}
 						commit();
 					}
 				}
@@ -284,14 +285,20 @@ const useUnitChangeHandlers = ({ store, unitStore }) => {
 
 	const handleOnValueChange = React.useCallback(
 		(value) => {
-			if (store.getState().getIsReverted()) {
-				unitStore.getState().clear();
-				return;
-			}
-
 			const [parsedValue, parsedUnit] = parseUnitValue(value);
 
-			if (!isValidNumericUnitValue(value)) {
+			if (store.getState().getIsReverted()) {
+				if (
+					isValidNumericUnitValue(value) &&
+					value !== unitStore.getState().typeAhead &&
+					!parsedUnit
+				) {
+					unitStore.getState().clear();
+					return;
+				}
+			}
+
+			if (!isValidNumericUnitValue(parsedValue)) {
 				unitStore.getState().clear();
 				return;
 			}
@@ -368,8 +375,6 @@ const useUnitChangeHandlers = ({ store, unitStore }) => {
 const useUnitEventHandlers = ({ decrement, increment, store, unitStore }) => {
 	useUnitChangeHandlers({ store, unitStore });
 
-	const dragHandlers = useDragHandlers({ store, decrement, increment });
-
 	const focusHandlers = useUnitFocusHandlers({ store, unitStore });
 	const keyboardHandlers = useUnitKeyboardHandlers({
 		store,
@@ -378,11 +383,11 @@ const useUnitEventHandlers = ({ decrement, increment, store, unitStore }) => {
 		unitStore,
 	});
 
-	return { ...dragHandlers, ...focusHandlers, ...keyboardHandlers };
+	return { ...focusHandlers, ...keyboardHandlers };
 };
 
 export const useUnitInput = (props) => {
-	const { cssProp, max, min, validate: validateProp } = props;
+	const { cssProp, max, min = 0, validate: validateProp } = props;
 
 	const unitStore = useUnitStore({ cssProp });
 
@@ -395,20 +400,12 @@ export const useUnitInput = (props) => {
 
 	const mergedValidations = mergeValidationFunctions(validate, validateProp);
 
-	const { __store: store, ...baseTextInput } = useTextInput({
+	const { __store: store, ...textInput } = useTextInput({
 		format: 'number',
 		type: 'text',
 		validate: mergedValidations,
 		...props,
 	});
-
-	/**
-	 * Replacing the drag gestures from NumberInput with ones from UnitInput.
-	 */
-	const textInputProps = omit(baseTextInput.inputProps, [
-		'onMouseDown',
-		'onTouchStart',
-	]);
 
 	const { shiftStepStore } = useShiftStepState({
 		step: store.getState().step,
@@ -430,16 +427,20 @@ export const useUnitInput = (props) => {
 		unitStore,
 	});
 
-	baseTextInput.inputProps = {
-		...textInputProps,
-		...mergeEventHandlers(eventHandlers, textInputProps),
+	const dragHandlers = useDragHandlers({ store, decrement, increment });
+
+	textInput.inputProps = {
+		...textInput.inputProps,
+		...mergeEventHandlers(eventHandlers, textInput.inputProps),
+		type: 'text',
 	};
 	const typeAhead = unitStore((state) => state.typeAhead);
 
 	return {
 		__store: store,
 		__unitStore: unitStore,
-		...baseTextInput,
+		...textInput,
+		...dragHandlers,
 		typeAhead,
 		decrement,
 		increment,

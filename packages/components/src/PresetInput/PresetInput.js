@@ -1,15 +1,15 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
-import { noop } from '@wp-g2/utils';
+import {
+	isValidCSSValueForProp,
+	isValidNumericUnitValue,
+	noop,
+} from '@wp-g2/utils';
 import React from 'react';
 
 import { Button } from '../Button';
 import { UnitInput } from '../UnitInput';
-import {
-	isValidCSSValueForProp,
-	isValidNumericUnitValue,
-} from '../UnitInput/UnitInput.utils';
 import { View } from '../View';
 
 function PresetSelect({ onChange = noop, presets = [] }, forwardedRef) {

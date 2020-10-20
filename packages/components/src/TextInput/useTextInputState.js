@@ -89,7 +89,6 @@ const useTextInputStore = ({
 	}));
 
 	const { value } = useControlledValue({ store, value: incomingValue });
-	// const inputRef = store((state) => state.inputRef, shallowCompare);
 
 	return { inputRef, value, store };
 };
@@ -179,7 +178,9 @@ const useChangeHandlers = ({ onChange = noop, store }) => {
 
 	React.useEffect(() => {
 		return store.subscribe(
-			(value) => onChange(value),
+			(value) => {
+				onChange(value);
+			},
 			(state) => state.commitValue,
 			shallowCompare,
 		);
