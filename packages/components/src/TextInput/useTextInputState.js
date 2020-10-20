@@ -328,6 +328,7 @@ const useEventHandlers = ({
 	const { onChange: onChangeProp, ...otherProps } = props;
 
 	const mergedHandlers = {
+		...numberEventHandlers,
 		...changeHandlers,
 		...focusHandlers,
 		...mergedKeyboardEventHandlers,
@@ -354,8 +355,6 @@ export const useTextInputState = (props = {}) => {
 		shiftStep,
 		...otherProps,
 	});
-
-	// const __internalInputRef = useInputRef({ store });
 
 	const { shiftStepStore } = useShiftStepState({
 		step: store.getState().step,
