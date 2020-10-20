@@ -11,13 +11,13 @@ import { useTextInput } from './useTextInput';
 function TextInput(props, forwardedRef) {
 	const {
 		__store,
+		decrement,
 		disabled,
 		hideArrows = false,
-		innerContent,
+		increment,
 		inputProps,
 		inputRef,
 		isTypeNumeric,
-		onCommitChange,
 		prefix,
 		suffix,
 		...otherProps
@@ -38,11 +38,11 @@ function TextInput(props, forwardedRef) {
 				ref={mergeRefs([inputRef, forwardedRef])}
 				{...ui.$('TextInput')}
 			/>
-			{innerContent}
 			{showTextInputArrows && (
 				<TextInputArrows
 					__store={__store}
-					onCommitChange={onCommitChange}
+					decrement={decrement}
+					increment={increment}
 				/>
 			)}
 			{suffix && (
