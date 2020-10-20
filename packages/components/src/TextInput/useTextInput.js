@@ -26,6 +26,7 @@ const useRootEventHandlers = ({ inputRef }) => {
 export function useTextInput(props) {
 	const combinedProps = useContextSystem(props, 'TextInput');
 	const {
+		__debugger = false,
 		align,
 		className,
 		defaultValue = '',
@@ -62,6 +63,7 @@ export function useTextInput(props) {
 		...textInputState
 	} = useTextInputState({
 		...otherProps,
+		__debugger,
 		format,
 		initialValue: defaultValue,
 		isShiftStepEnabled,

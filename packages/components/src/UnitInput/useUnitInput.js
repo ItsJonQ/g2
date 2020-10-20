@@ -56,9 +56,10 @@ const useUnitFocusHandlers = ({ store, unitStore }) => {
 	const handleOnBlur = React.useCallback(
 		(event) => {
 			if (event.isPropagationStopped()) return;
-
+			const { getIsReverted } = store.getState();
 			const { typeAhead } = unitStore.getState();
-			if (typeAhead) {
+
+			if (typeAhead && !getIsReverted()) {
 				store.getState().change(typeAhead);
 				store.getState().commit();
 			}
@@ -113,8 +114,18 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 				final = clampedValue;
 			}
 
-			change(final);
-			commit();
+			// Increment for zero
+			if (is.numericZero(value) && cssProp) {
+				const maybeFinal = createUnitValue(clampedValue, 'px');
+				if (isValidCSSValueForProp(cssProp, maybeFinal)) {
+					final = maybeFinal;
+				}
+			}
+
+			if (final !== storeValue) {
+				change(final);
+				commit();
+			}
 		},
 		[max, min, shiftStepStore, store, unitStore],
 	);
@@ -157,8 +168,22 @@ const useUnitActions = ({ max, min, shiftStepStore, store, unitStore }) => {
 				final = clampedValue;
 			}
 
-			change(final);
-			commit();
+			// Increment for zero
+			if (
+				is.numericZero(value) &&
+				!is.numericZero(clampedValue) &&
+				cssProp
+			) {
+				const maybeFinal = createUnitValue(clampedValue, 'px');
+				if (isValidCSSValueForProp(cssProp, maybeFinal)) {
+					final = maybeFinal;
+				}
+			}
+
+			if (final !== storeValue) {
+				change(final);
+				commit();
+			}
 		},
 		[max, min, shiftStepStore, store, unitStore],
 	);

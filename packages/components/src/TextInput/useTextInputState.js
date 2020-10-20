@@ -17,7 +17,50 @@ import {
 	useShiftStepState,
 } from './useTextInputState.utils';
 
+const actionTypes = {
+	sync: 'SYNC_VALUE',
+	change: 'CHANGE_VALUE',
+	commit: 'COMMIT_START',
+	commitRevert: 'COMMIT_REVERT',
+	commitComplete: 'COMMIT_COMPLETE',
+	validateStart: 'VALIDATE_START',
+	validateSuccess: 'VALIDATE_SUCCESS',
+	validateFailed: 'VALIDATE_FAILED',
+};
+
+const reducer = (state, action) => {
+	const { payload, type } = action;
+
+	switch (type) {
+		case actionTypes.sync:
+			return {
+				previousValue: payload.value,
+				value: payload.value,
+			};
+
+		case actionTypes.change:
+			return {
+				value: payload.value,
+			};
+
+		case actionTypes.commitRevert:
+			return {
+				value: state.previousValue,
+			};
+
+		case actionTypes.commitComplete:
+			return {
+				previousValue: state.value,
+				commitValue: state.value,
+			};
+
+		default:
+			return;
+	}
+};
+
 const useTextInputStore = ({
+	__debugger = false,
 	dragAxis = 'y',
 	format = 'text',
 	initialValue: initialValueProp,
@@ -37,6 +80,8 @@ const useTextInputStore = ({
 
 	const store = useSubState((set) => ({
 		// State
+		__debugger,
+		actionTypes,
 		commitValue: '',
 		dragAxis,
 		inputRef,
@@ -50,35 +95,67 @@ const useTextInputStore = ({
 		value: initialValue,
 
 		// Actions
-		changeSync: (next) => set(() => ({ previousValue: next, value: next })),
-		change: (next) => set(() => ({ value: next })),
+		dispatch: (args) =>
+			set((state) => {
+				const next = reducer(state, args);
+				if (state.__debugger) {
+					console.log(args, next);
+				}
+				return next;
+			}),
+
+		changeSync: (next) => {
+			const current = store.getState();
+			current.dispatch({
+				type: actionTypes.sync,
+				payload: { value: next },
+			});
+		},
+		change: (next) => {
+			const current = store.getState();
+			current.dispatch({
+				type: actionTypes.change,
+				payload: { value: next },
+			});
+		},
 		commit: () => {
 			let isValid = true;
+			const hasValidation = is.function(validate);
 			const current = store.getState();
 
-			if (is.function(validate)) {
+			if (hasValidation) {
+				current.dispatch({
+					type: actionTypes.validateStart,
+					payload: { value: current.value },
+				});
 				isValid = validate(current.value, current) !== false;
 			}
 
 			if (isValid) {
+				if (hasValidation) {
+					current.dispatch({
+						type: actionTypes.validateSuccess,
+						payload: { value: current.value },
+					});
+				}
 				current.commitComplete();
 			} else {
+				if (hasValidation) {
+					current.dispatch({
+						type: actionTypes.validateFailed,
+						payload: { value: current.value },
+					});
+				}
 				current.commitRevert();
 			}
 		},
 		commitRevert: () => {
-			set((prev) => ({
-				value: prev.previousValue,
-			}));
+			const current = store.getState();
+			current.dispatch({ type: actionTypes.commitRevert });
 		},
-		commitComplete: () =>
-			set((prev) => ({
-				previousValue: prev.value,
-				commitValue: prev.value,
-			})),
-		setInputRef: (event) => {
-			if (store.getState().inputRef) return;
-			set({ inputRef: event?.target });
+		commitComplete: () => {
+			const current = store.getState();
+			current.dispatch({ type: actionTypes.commitComplete });
 		},
 
 		// Selectors
@@ -139,10 +216,10 @@ const useKeyboardHandlers = ({ store }) => {
 
 const useFocusHandlers = ({ store }) => {
 	const handleOnBlur = React.useCallback(() => {
-		const { isCommitOnBlurOrEnter } = store.getState();
+		const { getIsReverted, isCommitOnBlurOrEnter } = store.getState();
 		store.setState({ isFocused: false });
 
-		if (isCommitOnBlurOrEnter) {
+		if (isCommitOnBlurOrEnter && !getIsReverted()) {
 			store.getState().commit();
 		}
 	}, [store]);
@@ -150,7 +227,6 @@ const useFocusHandlers = ({ store }) => {
 	const handleOnFocus = React.useCallback(
 		(event) => {
 			store.setState({ isFocused: true });
-			store.getState().setInputRef(event);
 		},
 		[store],
 	);
@@ -170,10 +246,10 @@ const useChangeHandlers = ({ onChange = noop, store }) => {
 			const { isCommitOnBlurOrEnter } = store.getState();
 
 			if (!isCommitOnBlurOrEnter) {
-				onChange(next);
+				store.getState().commit();
 			}
 		},
-		[onChange, store],
+		[store],
 	);
 
 	React.useEffect(() => {
@@ -208,13 +284,17 @@ const useEventHandlers = ({
 		increment,
 	});
 
+	const mergedKeyboardEventHandlers = mergeEventHandlers(
+		keyboardHandlers,
+		numberEventHandlers,
+	);
+
 	const { onChange: onChangeProp, ...otherProps } = props;
 
 	const mergedHandlers = {
 		...changeHandlers,
 		...focusHandlers,
-		...keyboardHandlers,
-		...numberEventHandlers,
+		...mergedKeyboardEventHandlers,
 	};
 
 	return mergeEventHandlers(mergedHandlers, otherProps);

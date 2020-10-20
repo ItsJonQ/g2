@@ -16,7 +16,12 @@ function isNumeric(o) {
 	);
 }
 
+function isNumericZero(o) {
+	return o === 0 || o === '0';
+}
+
 baseIs.empty = isEmpty;
 baseIs.numeric = isNumeric;
+baseIs.numericZero = isNumericZero;
 
 export const is = baseIs;
