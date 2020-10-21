@@ -406,10 +406,8 @@ const ExampleSeven = () => {
 							/>
 						</ListGroupHeader>
 						<CombinedFormGroup
-							Component={PresetInput}
 							format="text"
 							label="Font"
-							presets={fontFamilyPresets}
 							prop="fontFamily"
 							showRemove={false}
 						/>
