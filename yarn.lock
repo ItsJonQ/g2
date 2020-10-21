@@ -19453,7 +19453,7 @@ react-color@^2.17.0, react-color@^2.17.3:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
-react-colorful@^4.1.1:
+react-colorful@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-4.1.1.tgz#40ee4253be0adc9372ed60fba78fc1edfe2c1bf2"
   integrity sha512-bbjVBfkL4opMWxzrJacp1rFUfJwCfCLv0gsW8aO4hpdCkp48PtA8rx4IxAEfWSCP3yFqwqJhGz9dwMRh6GI+2g==

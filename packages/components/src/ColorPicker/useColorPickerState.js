@@ -12,7 +12,7 @@ export function useColorPickerState(props) {
 		inputType = 'hex',
 		showPreview = true,
 	} = props;
-	const initialColor = getInitialColor(colorProp, disableAlpha);
+	const initialColor = getColor(colorProp, disableAlpha);
 
 	const store = useSubState((set) => ({
 		// State
@@ -98,7 +98,7 @@ export function useColorPickerState(props) {
 
 				const nextState = {
 					colorForElementPreviousValue: prev.colorForElement,
-					colorForElement: getInitialColor(next, prev.disableAlpha),
+					colorForElement: getColor(next, prev.disableAlpha),
 					color: next,
 				};
 
@@ -175,8 +175,9 @@ export function useColorPickerState(props) {
 				didIncomingChange.current = false;
 				return;
 			}
+
 			handleOnCommit(nextColor);
-			currentColor.current = getInitialColor(next, disableAlpha);
+			currentColor.current = getColor(next, disableAlpha);
 
 			store.getState().commit(nextColor);
 		},
@@ -194,20 +195,20 @@ export function useColorPickerState(props) {
 	useUpdateEffect(() => {
 		if (isEqualColor(colorProp, currentColor.current)) return;
 
-		const next = getInitialColor(colorProp, disableAlpha);
+		const next = getColor(colorProp, disableAlpha);
 
 		didIncomingChange.current = true;
 
 		store.getState().commit(next);
-		store.setState({ colorForElement: getInitialColor(colorProp) });
+		store.setState({ colorForElement: getColor(colorProp) });
 
-		currentColor.current = getInitialColor(colorProp);
+		currentColor.current = getColor(colorProp);
 	}, [colorProp, disableAlpha]);
 
 	useUpdateEffect(() => {
 		if (isEqualColor(internalColor, currentColor.current)) return;
 
-		const next = getInitialColor(internalColor, disableAlpha);
+		const next = getColor(internalColor, disableAlpha);
 
 		store.setState({ colorForElement: next });
 
@@ -220,13 +221,7 @@ export function useColorPickerState(props) {
 	};
 }
 
-function getColor(color, disableAlpha) {
-	return disableAlpha
-		? ui.color(color).toHexString()
-		: ui.color(color).toRgbString();
-}
-
-function getInitialColor(color) {
+function getColor(color) {
 	return ui.color(color).toRgbString();
 }
 
