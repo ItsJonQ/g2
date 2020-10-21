@@ -776,10 +776,7 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 export const ColorPanel = () => {
 	return (
 		<ListGroup>
-			<ListGroupHeader>
-				Color
-				<ColorOptions />
-			</ListGroupHeader>
+			<ListGroupHeader>Color</ListGroupHeader>
 			<CombinedColorControl label="Background" prop="backgroundColor" />
 			<CombinedColorControl label="Text" prop="textColor" />
 		</ListGroup>
