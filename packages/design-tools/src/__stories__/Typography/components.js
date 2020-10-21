@@ -84,6 +84,23 @@ export const typographyStore = createStore((set) => ({
 	reset: (prop) => set({ [prop]: initialState[prop] }),
 }));
 
+export const colorPaletteStore = createStore(() => ({
+	Black: '#000',
+	White: '#fff',
+	Gray: '#ccc',
+	Blue: '#00f',
+	Orange: '#0f5',
+	Yellow: '#FFFF00',
+}));
+
+export const sidebarPanelStore = createStore((set) => ({
+	overlay: false,
+	toggleOverlay: () => set((prev) => ({ overlay: !prev.overlay })),
+	on: () => set({ overlay: true }),
+	off: () => set({ overlay: false }),
+	set: (next) => set({ overlay: next }),
+}));
+
 export const useTypography = typographyStore;
 export const useGlobalStyles = typographyStore;
 

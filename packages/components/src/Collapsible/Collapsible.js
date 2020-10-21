@@ -25,6 +25,14 @@ function Collapsible(props, forwardedRef) {
 	};
 
 	useUpdateEffect(() => {
+		if (!visible) {
+			disclosure.hide();
+		} else {
+			disclosure.show();
+		}
+	}, [visible]);
+
+	useUpdateEffect(() => {
 		onVisibleChange(disclosure.visible);
 	}, [disclosure.visible]);
 

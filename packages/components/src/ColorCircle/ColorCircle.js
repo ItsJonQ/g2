@@ -10,12 +10,21 @@ function ColorCircle(props, forwardedRef) {
 	const {
 		color: colorProp,
 		size = 'medium',
+		isActive = false,
+		isInteractive = false,
+		variant = 'default',
 		style = {},
 		...otherProps
 	} = useContextSystem(props, 'ColorCircle');
 
 	const backgroundColor = colorize(colorProp).toRgbString();
-	const __css = cx(styles[size]);
+	const __css = cx(
+		styles[size],
+		styles[variant],
+		styles.expand,
+		isActive && styles.active,
+		isInteractive && styles.interactive,
+	);
 
 	return (
 		<ColorCircleView

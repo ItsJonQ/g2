@@ -158,6 +158,7 @@ export const disableAlpha = css`
 `;
 
 export const suffixText = css`
+	margin: 0 !important;
 	pointer-events: none;
 	text-align: left;
 	user-select: none;

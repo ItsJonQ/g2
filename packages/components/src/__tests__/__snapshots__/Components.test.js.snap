@@ -919,7 +919,7 @@ exports[`props should render CloseButton with css prop 2`] = `
 
 exports[`props should render ColorCircle 1`] = `
 <div
-  class="wp-components-color-circle css-9yz74c"
+  class="wp-components-color-circle css-1jsegi"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
   id="ColorCircle"
@@ -929,7 +929,7 @@ exports[`props should render ColorCircle 1`] = `
 
 exports[`props should render ColorCircle with css prop 1`] = `
 <div
-  class="wp-components-color-circle css-9yz74c"
+  class="wp-components-color-circle css-1jsegi"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
   id="ColorCircle"
@@ -939,7 +939,7 @@ exports[`props should render ColorCircle with css prop 1`] = `
 
 exports[`props should render ColorCircle with css prop 2`] = `
 <div
-  class="wp-components-color-circle css-1gix5ck"
+  class="wp-components-color-circle css-9bjp6k"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
   id="ColorCircle"
@@ -965,7 +965,7 @@ exports[`props should render ColorControl 1`] = `
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="wp-components-color-circle css-1x9gp4a"
+      class="wp-components-color-circle css-mv29v4"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
       style="background-color: rgb(0, 0, 0);"
@@ -997,7 +997,7 @@ exports[`props should render ColorControl with css prop 1`] = `
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="wp-components-color-circle css-1x9gp4a"
+      class="wp-components-color-circle css-mv29v4"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
       style="background-color: rgb(0, 0, 0);"
@@ -1029,7 +1029,7 @@ exports[`props should render ColorControl with css prop 2`] = `
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="wp-components-color-circle css-1x9gp4a"
+      class="wp-components-color-circle css-mv29v4"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
       style="background-color: rgb(0, 0, 0);"

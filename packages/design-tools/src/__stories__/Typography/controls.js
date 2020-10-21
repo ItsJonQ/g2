@@ -3,6 +3,7 @@ import {
 	Collapsible,
 	CollapsibleContent,
 	CollapsibleTrigger,
+	ColorCircle,
 	ColorControl,
 	ColorPicker,
 	ControlLabel,
@@ -16,14 +17,19 @@ import {
 	HStack,
 	ListGroup,
 	ListGroupHeader,
+	ListGroups,
+	Popover,
 	Select,
 	Slider,
 	Spacer,
 	Stepper,
+	Surface,
 	Switch,
+	Text,
 	TextInput,
 	UnitInput,
 	View,
+	VStack,
 } from '@wp-g2/components';
 import {
 	FiCornerUpLeft,
@@ -39,7 +45,9 @@ import CSSUnit from 'units-css';
 
 import {
 	colorOptionKeys,
+	colorPaletteStore,
 	dimensionsOptionKeys,
+	sidebarPanelStore,
 	typographyOptionKeys,
 	typographyStore,
 	useGlobalStyles,
@@ -635,6 +643,50 @@ export const CombinedColorControl = React.memo(({ label, prop }) => {
 	return <ColorSetting label={label} prop={prop} />;
 });
 
+const ColorPaletteControl = React.memo(({ prop }) => {
+	const currentColor = typographyStore(
+		(state) => state[prop],
+		shallowCompare,
+	);
+	const colors = colorPaletteStore(
+		(state) => Object.entries(state),
+		shallowCompare,
+	);
+
+	const handleOnClick = React.useCallback(
+		(value) => {
+			return () => {
+				typographyStore.setState({ [prop]: value });
+			};
+		},
+		[prop],
+	);
+
+	const isColorActive = (value) => {
+		return (
+			ui.color(currentColor).toRgbString() ===
+			ui.color(value).toRgbString()
+		);
+	};
+
+	return (
+		<VStack spacing={3}>
+			<Text>Theme palette</Text>
+			<Grid columns={7} gap={1}>
+				{colors.map(([k, v]) => (
+					<ColorCircle
+						color={v}
+						isActive={isColorActive(v)}
+						isInteractive
+						key={k}
+						onClick={handleOnClick(v)}
+					/>
+				))}
+			</Grid>
+		</VStack>
+	);
+});
+
 const ColorSetting = ({
 	label,
 	onVisibleChange = noop,
@@ -647,6 +699,7 @@ const ColorSetting = ({
 	const handleOnVisibleChange = (next) => {
 		setVisible(next);
 		onVisibleChange(next);
+		sidebarPanelStore.getState().set(next);
 	};
 
 	const handleOnChange = React.useCallback(
@@ -655,6 +708,18 @@ const ColorSetting = ({
 		},
 		[prop],
 	);
+
+	React.useEffect(() => {
+		return sidebarPanelStore.subscribe(
+			(next) => {
+				if (!next) {
+					setVisible(false);
+				}
+			},
+			(state) => state.overlay,
+			shallowCompare,
+		);
+	}, []);
 
 	return (
 		<Collapsible
@@ -677,8 +742,33 @@ const ColorSetting = ({
 				</CollapsibleTrigger>
 			</HStack>
 			<CollapsibleContent css={ui.margin.x(-3)}>
-				<View css={ui.padding(3)}>
-					<ColorPicker color={value} onChange={handleOnChange} />
+				<View css={[ui.padding(3), ui.padding.bottom(5)]}>
+					<ListGroups>
+						<ListGroup>
+							<ColorPaletteControl prop={prop} />
+						</ListGroup>
+						<ListGroup>
+							<Popover
+								maxWidth={265}
+								placement="bottom"
+								trigger={
+									<ColorCircle
+										color={value}
+										isInteractive
+										size="large"
+										variant="pill"
+									/>
+								}
+							>
+								<View css={ui.padding(3)}>
+									<ColorPicker
+										color={value}
+										onChange={handleOnChange}
+									/>
+								</View>
+							</Popover>
+						</ListGroup>
+					</ListGroups>
 				</View>
 			</CollapsibleContent>
 		</Collapsible>
@@ -814,3 +904,23 @@ export const DimensionsPanel = () => {
 		</ListGroup>
 	);
 };
+
+export const PanelOverlay = React.memo(() => {
+	const [visible, off] = sidebarPanelStore(
+		(state) => [state.overlay, state.off],
+		shallowCompare,
+	);
+
+	return (
+		<Surface
+			css={[
+				ui.borderRadius(8),
+				ui.opacity(visible ? 0.8 : 0),
+				{ cursor: 'pointer', pointerEvents: visible ? null : 'none' },
+				ui.position.full,
+				ui.zIndex(1),
+			]}
+			onClick={off}
+		/>
+	);
+});

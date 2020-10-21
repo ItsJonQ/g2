@@ -26,6 +26,7 @@ import {
 	DimensionsPanel,
 	FontFamilyControl,
 	FontStyleControl,
+	PanelOverlay,
 	TypographyOptions,
 } from './controls';
 
@@ -394,6 +395,7 @@ const ExampleSix = () => {
 const ExampleSeven = () => {
 	return (
 		<Card>
+			<PanelOverlay />
 			<CardBody>
 				<ListGroups>
 					<ListGroup>

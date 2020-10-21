@@ -4,6 +4,12 @@ export const ColorCircleView = styled.div`
 	${ui.borderRadius.circle};
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 	outline: none;
+	position: relative;
+`;
+
+export const large = css`
+	height: 30px;
+	width: 30px;
 `;
 
 export const medium = css`
@@ -14,4 +20,37 @@ export const medium = css`
 export const small = css`
 	height: 20px;
 	width: 20px;
+`;
+
+export const active = css`
+	&::before {
+		${ui.borderRadius.circle};
+		border: 2px solid ${ui.color.admin};
+		content: '';
+		height: calc(100% + 8px);
+		left: -4px;
+		position: absolute;
+		top: -4px;
+		width: calc(100% + 8px);
+	}
+`;
+
+export const interactive = css`
+	${ui.animation.default};
+	cursor: pointer;
+
+	&:active {
+		opacity: 0.6;
+	}
+`;
+
+export const pill = css`
+	border-radius: 9999px;
+	width: 100%;
+`;
+
+export const expand = css`
+	&[aria-expanded='true'] {
+		${active};
+	}
 `;

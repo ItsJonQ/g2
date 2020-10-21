@@ -26,7 +26,7 @@ export const PresetInputSelectButton = css`
 	padding-right: 4px;
 	pointer-events: none;
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 `;
 
 export const PresetInputSelectElement = css`
