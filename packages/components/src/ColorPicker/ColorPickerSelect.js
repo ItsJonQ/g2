@@ -2,15 +2,15 @@ import { ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
-import { ColorSwatch } from '../ColorSwatch';
 import { Grid } from '../Grid';
 import { Select } from '../Select';
 import { useColorPickerContext } from './ColorPicker.Context';
+import { ColorPickerPreview } from './ColorPickerPreview';
 
 export const ColorPickerSelect = React.memo(() => {
 	const { store } = useColorPickerContext();
-	const [value, color, showPreview] = store(
-		(state) => [state.inputType, state.rgb(), state.showPreview],
+	const [value, showPreview] = store(
+		(state) => [state.inputType, state.showPreview],
 		shallowCompare,
 	);
 
@@ -32,7 +32,7 @@ export const ColorPickerSelect = React.memo(() => {
 				<option label="RGB" value="rgb" />
 				<option label="HSL" value="hsl" />
 			</Select>
-			{showPreview && <ColorSwatch color={color} />}
+			{showPreview && <ColorPickerPreview />}
 		</Grid>
 	);
 });

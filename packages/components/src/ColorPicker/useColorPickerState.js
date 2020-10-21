@@ -27,6 +27,26 @@ export function useColorPickerState(props) {
 		hsl: () => ui.color(store.getState().color).toHsl(),
 		hex: () => ui.color(store.getState().color).toHex(),
 		rgb: () => ui.color(store.getState().color).toRgb(),
+		getColorValue: () => {
+			const { color, inputType } = store.getState();
+			let colorValue = color;
+
+			switch (inputType) {
+				case 'hex':
+					colorValue = ui.color(color).toHexString();
+					break;
+				case 'rgb':
+					colorValue = ui.color(color).toRgbString();
+					break;
+				case 'hsl':
+					colorValue = ui.color(color).toHslString();
+					break;
+				default:
+					break;
+			}
+
+			return colorValue;
+		},
 
 		// Actions
 		setColor: (next) => set({ color: next }),

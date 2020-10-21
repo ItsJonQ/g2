@@ -163,3 +163,12 @@ export const suffixText = css`
 	user-select: none;
 	width: 16px;
 `;
+
+export const ColorPreview = css`
+	${ui.animation.default};
+	cursor: pointer;
+
+	&:active {
+		opacity: 0.6;
+	}
+`;
