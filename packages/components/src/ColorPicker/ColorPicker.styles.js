@@ -161,7 +161,7 @@ export const suffixText = css`
 	pointer-events: none;
 	text-align: left;
 	user-select: none;
-	width: 16px;
+	width: 10px;
 `;
 
 export const ColorPreview = css`

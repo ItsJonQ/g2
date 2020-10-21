@@ -32,7 +32,7 @@ export const typographyOptionKeys = {
 	},
 	letterSpacing: {
 		label: 'Letter Spacing',
-		value: '1',
+		value: '1px',
 	},
 	dropCap: {
 		label: 'Drop Cap',
