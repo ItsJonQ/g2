@@ -11,7 +11,7 @@ import {
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
-import { ThemeProvider, ui } from '@wp-g2/styles';
+import { createTheme, ThemeProvider, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { fontFamilyPresets, presets, Wrapper } from './components';
@@ -505,6 +505,24 @@ const baseLineTheme = {
 	switchToggleBoxShadow: 'none',
 };
 
+const baseLineThemeNext = createTheme(() => ({
+	cardBorderRadius: '4px',
+	controlBackgroundColor: 'transparent',
+	controlBorderColor: ui.get('colorText'),
+	controlBorderColorSubtle: 'transparent',
+	controlBorderColorHover: ui.get('colorText'),
+	controlBorderRadius: '2px',
+	sliderThumbBorderColor: 'transparent',
+	sliderThumbBoxShadow: 'none',
+	sliderThumbBackground: ui.get('colorAdmin'),
+	switchBackdropBackground: 'transparent',
+	switchBackdropBackgroundActive: ui.get('colorText'),
+	switchBackdropBorderColor: ui.get('colorText'),
+	switchToggleBackground: ui.get('colorText'),
+	switchToggleBackgroundActive: ui.get('colorTextInverted'),
+	switchToggleBoxShadow: 'none',
+}));
+
 export const _baseLine = () => {
 	return (
 		<ThemeProvider theme={baseLineTheme}>
@@ -587,6 +605,23 @@ export const _plusMinusInlineTruncate = () => {
 export const _ellipsisWithColor = () => {
 	return (
 		<ThemeProvider theme={baseLineTheme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: false },
+					}}
+				>
+					<ExampleSeven truncate />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _ellipsisWithColorAltTheme = () => {
+	return (
+		<ThemeProvider isGlobal theme={baseLineThemeNext}>
 			<Wrapper>
 				<ContextSystemProvider
 					value={{

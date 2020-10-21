@@ -691,7 +691,7 @@ const ColorSetting = ({
 	label,
 	onVisibleChange = noop,
 	prop,
-	showElevation,
+	showElevation = false,
 }) => {
 	const [visible, setVisible] = React.useState(false);
 	const value = useGlobalStyles((state) => state[prop], shallowCompare);
