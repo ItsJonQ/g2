@@ -42,7 +42,7 @@ export const ColorPickerView = styled.div`
 
 	.react-colorful__saturation {
 		flex-grow: 1;
-		border-bottom: ${ui.value.px(colorControlHeight / 2)} solid #000;
+		/* border-bottom: ${ui.value.px(colorControlHeight / 2)} solid #000; */
 		background-image: linear-gradient(0deg, #000, transparent),
 			linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0));
 	}
@@ -95,6 +95,13 @@ export const ColorPickerView = styled.div`
 		border-radius: inherit;
 		touch-action: none;
 		outline: none;
+	}
+
+	.react-colorful__saturation {
+		._3nKPH {
+			top: 0;
+			bottom: 0;
+		}
 	}
 
 	._3nKPH:focus {
