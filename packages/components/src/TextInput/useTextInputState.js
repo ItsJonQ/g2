@@ -10,7 +10,7 @@ import React from 'react';
 
 import {
 	useNumberActions,
-	useNumberEventHandlers,
+	useNumberKeyboardHandlers,
 } from './useTextInputNumberState';
 import {
 	useControlledValue,
@@ -318,7 +318,7 @@ const useEventHandlers = ({
 	const focusHandlers = useFocusHandlers({ store });
 	const keyboardHandlers = useKeyboardHandlers({ store });
 
-	const numberEventHandlers = useNumberEventHandlers({
+	const numberKeyboardEventHandlers = useNumberKeyboardHandlers({
 		store,
 		decrement,
 		increment,
@@ -326,13 +326,12 @@ const useEventHandlers = ({
 
 	const mergedKeyboardEventHandlers = mergeEventHandlers(
 		keyboardHandlers,
-		numberEventHandlers,
+		numberKeyboardEventHandlers,
 	);
 
 	const { onChange: onChangeProp, ...otherProps } = props;
 
 	const mergedHandlers = {
-		...numberEventHandlers,
 		...changeHandlers,
 		...focusHandlers,
 		...mergedKeyboardEventHandlers,

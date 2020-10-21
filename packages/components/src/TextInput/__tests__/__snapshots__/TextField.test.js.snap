@@ -178,15 +178,9 @@ exports[`props should render prefix 1`] = `
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
-  <div
-    class="wp-components-flex-item css-19kxsx5"
-    data-g2-c16t="true"
-    data-g2-component="TextInputPrefix"
-  >
-    <span>
-      prefix
-    </span>
-  </div>
+  <span>
+    prefix
+  </span>
   <input
     autocomplete="off"
     class="css-zn43e4"
@@ -235,15 +229,9 @@ exports[`props should render suffix 1`] = `
     type="text"
     value=""
   />
-  <div
-    class="wp-components-flex-item css-19kxsx5"
-    data-g2-c16t="true"
-    data-g2-component="TextInputSuffix"
-  >
-    <span>
-      suffix
-    </span>
-  </div>
+  <span>
+    suffix
+  </span>
 </div>
 `;
 

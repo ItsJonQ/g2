@@ -7,8 +7,11 @@ import { useBaseField } from '../BaseField';
 import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
 import { useTextInputState } from './useTextInputState';
+import { useDragHandlers } from './useTextInputState.utils';
 
-const useRootEventHandlers = ({ inputRef }) => {
+const useRootEventHandlers = ({ decrement, increment, inputRef, store }) => {
+	const dragHandlers = useDragHandlers({ store, increment, decrement });
+
 	const handleOnClick = useCallback(() => {
 		inputRef.current.focus();
 	}, [inputRef]);
@@ -18,6 +21,7 @@ const useRootEventHandlers = ({ inputRef }) => {
 	}, [inputRef]);
 
 	return {
+		...dragHandlers,
 		onClick: handleOnClick,
 		onTouchStart: handleOnTouchStart,
 	};
@@ -36,6 +40,7 @@ export function useTextInput(props) {
 		gap = 2.5,
 		hideArrows = false,
 		id: idProp,
+		isCommitOnBlurOrEnter = true,
 		isResizable = false,
 		isShiftStepEnabled = true,
 		justify,
@@ -65,6 +70,7 @@ export function useTextInput(props) {
 		__debugger,
 		format,
 		initialValue: defaultValue,
+		isCommitOnBlurOrEnter,
 		isShiftStepEnabled,
 		max,
 		min,
@@ -77,7 +83,12 @@ export function useTextInput(props) {
 
 	const { inputRef, isFocused, isTypeNumeric, value } = store();
 
-	const rootEventHandlers = useRootEventHandlers({ inputRef });
+	const rootEventHandlers = useRootEventHandlers({
+		inputRef,
+		decrement,
+		increment,
+		store,
+	});
 
 	const baseFieldProps = useBaseField({
 		align,

@@ -38,12 +38,14 @@ const Example = () => {
 					<ColorPicker
 						color={color}
 						disableAlpha={false}
+						inputType="rgb"
 						onChange={setColor}
 						width={300}
 					/>
 					<ColorPicker
 						color={color}
 						disableAlpha={false}
+						inputType="hsl"
 						onChange={setColor}
 						width={300}
 					/>

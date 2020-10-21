@@ -58,6 +58,7 @@ function SearchInput(props, forwardedRef) {
 	return (
 		<TextInput
 			className={classes}
+			isCommitOnBlurOrEnter={false}
 			onChange={handleOnChange}
 			placeholder={placeholder}
 			prefix={<SearchPrefix isLoading={isLoading} prefix={prefix} />}

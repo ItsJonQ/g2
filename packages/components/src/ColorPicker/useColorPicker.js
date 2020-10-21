@@ -10,6 +10,8 @@ export function useColorPicker(props) {
 		color,
 		alpha,
 		onChange = noop,
+		inputType = 'hex',
+		showPreview = true,
 		changeFormat = 'rgb',
 		disableAlpha = true,
 		width = '100%',
@@ -21,6 +23,8 @@ export function useColorPicker(props) {
 		onChange,
 		changeFormat,
 		disableAlpha,
+		inputType,
+		showPreview,
 	});
 	const classes = cx(disableAlpha && styles.disableAlpha);
 

@@ -5,10 +5,45 @@ import React from 'react';
 import { FormGroup } from '../FormGroup';
 import { Grid } from '../Grid';
 import { Slider } from '../Slider';
+import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { VStack } from '../VStack';
 import { useColorPickerContext } from './ColorPicker.Context';
+import * as styles from './ColorPicker.styles';
 import { ColorInputHex } from './ColorPickerInputHex';
+
+export const ColorInputSliderAlpha = React.memo(
+	({ label = 'Alpha', type = 'rgb', ...otherProps }) => {
+		const parse = React.useCallback((next) => {
+			return interpolate(next, [0, 1], [0, 100]);
+		}, []);
+
+		const serialize = React.useCallback((next) => {
+			return interpolate(next, [100, 0], [1, 0]);
+		}, []);
+
+		const suffix = (
+			<Text className={styles.suffixText} isBlock variant="muted">
+				%
+			</Text>
+		);
+
+		return (
+			<ColorInputSlider
+				label={label}
+				max={100}
+				min={0}
+				parse={parse}
+				prop="a"
+				serialize={serialize}
+				step={1}
+				suffix={suffix}
+				type={type}
+				{...otherProps}
+			/>
+		);
+	},
+);
 
 export const ColorInputSlider = React.memo(
 	({
@@ -87,14 +122,7 @@ export const ColorPickerRGBInputs = React.memo(() => {
 			<ColorInputSlider label="Red" prop="r" type="rgb" />
 			<ColorInputSlider label="Green" prop="g" type="rgb" />
 			<ColorInputSlider label="Blue" prop="b" type="rgb" />
-			<ColorInputSlider
-				label="Alpha"
-				max={1}
-				min={0}
-				prop="a"
-				step={0.01}
-				type="rgb"
-			/>
+			<ColorInputSliderAlpha label="Alpha" type="rgb" />
 		</VStack>
 	);
 });
@@ -108,14 +136,26 @@ export const ColorPickerHSLInputs = React.memo(() => {
 		return interpolate(next, [100, 0], [1, 0]);
 	}, []);
 
+	const degrees = (
+		<Text className={styles.suffixText} isBlock variant="muted">
+			°
+		</Text>
+	);
+	const percentage = (
+		<Text className={styles.suffixText} isBlock variant="muted">
+			%
+		</Text>
+	);
+
 	return (
 		<VStack>
 			<ColorInputSlider
 				label="Hue"
-				max={359}
+				max={360}
 				min={0}
 				prop="h"
 				step={1}
+				suffix={degrees}
 				type="hsl"
 			/>
 			<ColorInputSlider
@@ -125,6 +165,7 @@ export const ColorPickerHSLInputs = React.memo(() => {
 				parse={parse}
 				prop="s"
 				serialize={serialize}
+				suffix={percentage}
 				type="hsl"
 			/>
 			<ColorInputSlider
@@ -134,16 +175,10 @@ export const ColorPickerHSLInputs = React.memo(() => {
 				parse={parse}
 				prop="l"
 				serialize={serialize}
+				suffix={percentage}
 				type="hsl"
 			/>
-			<ColorInputSlider
-				label="Alpha"
-				max={1}
-				min={0}
-				prop="a"
-				step={0.01}
-				type="hsl"
-			/>
+			<ColorInputSliderAlpha label="Alpha" type="hsl" />
 		</VStack>
 	);
 });

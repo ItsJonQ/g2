@@ -64,6 +64,7 @@ export function useControlledValue({ store, value: incomingValue }) {
 export function useBaseDragHandlers({
 	decrement,
 	dragAxis,
+	enableTouchGestures = false,
 	increment,
 	isTypeNumeric = true,
 }) {
@@ -134,13 +135,23 @@ export function useBaseDragHandlers({
 		? dragGestures()
 		: { onMouseDown: noop, onTouchStart: noop };
 
+	if (!enableTouchGestures) {
+		gestures.onTouchStart = noop;
+	}
+
 	return gestures;
 }
 
-export function useDragHandlers({ decrement, increment, store }) {
+export function useDragHandlers({
+	decrement,
+	enableTouchGestures,
+	increment,
+	store,
+}) {
 	const { dragAxis, isTypeNumeric } = store.getState();
 
 	return useBaseDragHandlers({
+		enableTouchGestures,
 		dragAxis,
 		isTypeNumeric,
 		increment,

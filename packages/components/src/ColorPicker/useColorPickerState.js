@@ -9,16 +9,19 @@ export function useColorPickerState(props) {
 		changeFormat,
 		onChange = noop,
 		disableAlpha = true,
+		inputType = 'hex',
+		showPreview = true,
 	} = props;
 	const initialColor = getInitialColor(colorProp, disableAlpha);
 
 	const store = useSubState((set) => ({
+		// State
 		colorForElement: initialColor,
 		color: getColor(colorProp, disableAlpha),
 		changeFormat,
-		inputType: 'hex',
+		inputType,
 		disableAlpha,
-		setColor: (next) => set({ color: next }),
+		showPreview,
 
 		// Selectors
 		hsl: () => ui.color(store.getState().color).toHsl(),
@@ -26,6 +29,8 @@ export function useColorPickerState(props) {
 		rgb: () => ui.color(store.getState().color).toRgb(),
 
 		// Actions
+		setColor: (next) => set({ color: next }),
+
 		increment: () => {
 			const { b, g, r } = store.getState().rgb();
 			const next = { r, g, b };

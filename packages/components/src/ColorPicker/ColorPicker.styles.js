@@ -156,3 +156,10 @@ export const disableAlpha = css`
 		border-bottom-right-radius: ${ui.get('controlBorderRadius')};
 	}
 `;
+
+export const suffixText = css`
+	pointer-events: none;
+	text-align: left;
+	user-select: none;
+	width: 16px;
+`;
