@@ -46,7 +46,7 @@ export const ColorInputHex = React.memo(({ label = 'Hex', ...otherProps }) => {
 	}, []);
 
 	return (
-		<FormGroup label={label}>
+		<FormGroup horizontal label={label}>
 			<TextInput
 				{...otherProps}
 				{...dragHandlers}

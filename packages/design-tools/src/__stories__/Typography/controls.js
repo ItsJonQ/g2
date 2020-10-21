@@ -1,10 +1,16 @@
 import {
 	Button,
+	Collapsible,
+	CollapsibleContent,
+	CollapsibleTrigger,
+	ColorControl,
+	ColorPicker,
 	ControlLabel,
 	Dropdown,
 	DropdownMenu,
 	DropdownMenuItem,
 	DropdownTrigger,
+	Elevation,
 	FormGroup,
 	Grid,
 	HStack,
@@ -17,6 +23,7 @@ import {
 	Switch,
 	TextInput,
 	UnitInput,
+	View,
 } from '@wp-g2/components';
 import {
 	FiCornerUpLeft,
@@ -24,16 +31,18 @@ import {
 	FiMoreHorizontal,
 	FiPlus,
 } from '@wp-g2/icons';
+import { ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
-import { add, is, subtract } from '@wp-g2/utils';
+import { add, is, noop, subtract } from '@wp-g2/utils';
 import React from 'react';
 import CSSUnit from 'units-css';
 
 import {
-	dimensionsOptionsKeys,
+	colorOptionKeys,
+	dimensionsOptionKeys,
 	typographyOptionKeys,
 	typographyStore,
-	useTypography,
+	useGlobalStyles,
 } from './components';
 
 export default {
@@ -67,9 +76,11 @@ const ResetButton = (props) => (
 );
 
 export const TypographyOptions = React.memo(
-	({ addIcon = <FiMoreHorizontal /> }) => {
-		const { setState, ...settings } = useTypography();
-		const optionsEntries = Object.entries(typographyOptionKeys);
+	({ addIcon = <FiMoreHorizontal />, exclude = [] }) => {
+		const { setState, ...settings } = useGlobalStyles();
+		const optionsEntries = Object.entries(typographyOptionKeys).filter(
+			([k]) => !exclude.includes(k),
+		);
 
 		// const hasEntries = Object.keys(settings).filter((key, index) => {
 		// 	return !!optionsEntries[index][1];
@@ -118,7 +129,7 @@ export const TypographyOptions = React.memo(
 );
 
 export const FontStyleControl = React.memo(() => {
-	const [fontSize, letterSpacing, lineHeight] = useTypography(
+	const [fontSize, letterSpacing, lineHeight] = useGlobalStyles(
 		(state) => [state.fontSize, state.letterSpacing, state.lineHeight],
 		shallowCompare,
 	);
@@ -171,7 +182,7 @@ export const FontStyleControl = React.memo(() => {
 });
 
 export const FontFamilyControl = React.memo(() => {
-	const [fontFamily, fontWeight] = useTypography(
+	const [fontFamily, fontWeight] = useGlobalStyles(
 		(state) => [state.fontFamily, state.fontWeight],
 		shallowCompare,
 	);
@@ -220,7 +231,10 @@ export const CombinedFormGroup = React.memo(
 		showResetRight,
 		...otherProps
 	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+		const [value] = useGlobalStyles(
+			(state) => [state[prop]],
+			shallowCompare,
+		);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -278,7 +292,10 @@ export const CombinedFormGroupSwitch = React.memo(
 		showRemove = true,
 		...otherProps
 	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+		const [value] = useGlobalStyles(
+			(state) => [state[prop]],
+			shallowCompare,
+		);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -331,7 +348,10 @@ export const CombinedFormGroupSwitchLeft = React.memo(
 		showResetRight,
 		...otherProps
 	}) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+		const [value] = useGlobalStyles(
+			(state) => [state[prop]],
+			shallowCompare,
+		);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -383,7 +403,10 @@ export const CombinedFormGroupSwitchLeft = React.memo(
 
 export const CombinedFormGroupSwitchAlt = React.memo(
 	({ label, prop, ...otherProps }) => {
-		const [value] = useTypography((state) => [state[prop]], shallowCompare);
+		const [value] = useGlobalStyles(
+			(state) => [state[prop]],
+			shallowCompare,
+		);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -437,7 +460,7 @@ export const CombinedFormGroupInputSlider = React.memo(
 		showResetRight,
 		...otherProps
 	}) => {
-		const value = useTypography((state) => state[prop], shallowCompare);
+		const value = useGlobalStyles((state) => state[prop], shallowCompare);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -531,7 +554,7 @@ export const CombinedFormGroupInputStepper = React.memo(
 		showResetRight,
 		...otherProps
 	}) => {
-		const value = useTypography((state) => state[prop], shallowCompare);
+		const value = useGlobalStyles((state) => state[prop], shallowCompare);
 
 		const handleOnChange = React.useCallback(
 			(value) => {
@@ -608,10 +631,64 @@ export const CombinedFormGroupInputStepper = React.memo(
 	},
 );
 
+export const CombinedColorControl = React.memo(({ label, prop }) => {
+	return <ColorSetting label={label} prop={prop} />;
+});
+
+const ColorSetting = ({
+	label,
+	onVisibleChange = noop,
+	prop,
+	showElevation,
+}) => {
+	const [visible, setVisible] = React.useState(false);
+	const value = useGlobalStyles((state) => state[prop], shallowCompare);
+
+	const handleOnVisibleChange = (next) => {
+		setVisible(next);
+		onVisibleChange(next);
+	};
+
+	const handleOnChange = React.useCallback(
+		(value) => {
+			typographyStore.setState({ [prop]: value });
+		},
+		[prop],
+	);
+
+	return (
+		<Collapsible
+			css={[ui.position.relative, ui.zIndex(visible ? 10 : 0)]}
+			onVisibleChange={handleOnVisibleChange}
+			visible={visible}
+		>
+			<Elevation offset={-8} value={showElevation && visible ? 4 : 0} />
+			<HStack
+				css={[
+					ui.hover(
+						ui.$('ColorAction').css({
+							opacity: 1,
+						}),
+					),
+				]}
+			>
+				<CollapsibleTrigger as={ColorControl} color={value}>
+					{label}
+				</CollapsibleTrigger>
+			</HStack>
+			<CollapsibleContent css={ui.margin.x(-3)}>
+				<View css={ui.padding(3)}>
+					<ColorPicker color={value} onChange={handleOnChange} />
+				</View>
+			</CollapsibleContent>
+		</Collapsible>
+	);
+};
+
 export const DimensionsOptions = React.memo(
 	({ addIcon = <FiMoreHorizontal /> }) => {
-		const { setState, ...settings } = useTypography();
-		const optionsEntries = Object.entries(dimensionsOptionsKeys);
+		const { setState, ...settings } = useGlobalStyles();
+		const optionsEntries = Object.entries(dimensionsOptionKeys);
 
 		const handleOnToggle = React.useCallback(
 			({ prop, value }) => () => {
@@ -652,6 +729,62 @@ export const DimensionsOptions = React.memo(
 		);
 	},
 );
+
+export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
+	const { setState, ...settings } = useGlobalStyles();
+	const optionsEntries = Object.entries(colorOptionKeys);
+
+	const handleOnToggle = React.useCallback(
+		({ prop, value }) => () => {
+			typographyStore.setState({ [prop]: value });
+		},
+		[],
+	);
+
+	return (
+		<Dropdown placement="bottom-end">
+			<DropdownTrigger
+				hasCaret={false}
+				icon={addIcon}
+				isControl
+				isSubtle
+				size="xSmall"
+			/>
+			<DropdownMenu maxWidth={160} minWidth={160}>
+				{optionsEntries.map(([key, value]) => {
+					const isSelected = is.defined(settings[key]);
+
+					return (
+						<DropdownMenuItem
+							isSelected={isSelected}
+							key={key}
+							onClick={handleOnToggle({
+								prop: key,
+								value: isSelected ? null : value.value,
+							})}
+							value={key}
+						>
+							{value.label}
+						</DropdownMenuItem>
+					);
+				})}
+			</DropdownMenu>
+		</Dropdown>
+	);
+});
+
+export const ColorPanel = () => {
+	return (
+		<ListGroup>
+			<ListGroupHeader>
+				Color
+				<ColorOptions />
+			</ListGroupHeader>
+			<CombinedColorControl label="Background" prop="backgroundColor" />
+			<CombinedColorControl label="Text" prop="textColor" />
+		</ListGroup>
+	);
+};
 
 export const DimensionsPanel = () => {
 	return (

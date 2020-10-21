@@ -16,6 +16,7 @@ export function useColorPickerState(props) {
 
 	const store = useSubState((set) => ({
 		// State
+		colorForElementPreviousValue: '',
 		colorForElement: initialColor,
 		color: getColor(colorProp, disableAlpha),
 		changeFormat,
@@ -49,8 +50,6 @@ export function useColorPickerState(props) {
 		},
 
 		// Actions
-		setColor: (next) => set({ color: next }),
-
 		increment: () => {
 			const { b, g, r } = store.getState().rgb();
 			const next = { r, g, b };
@@ -92,8 +91,16 @@ export function useColorPickerState(props) {
 
 		commit: (next) => {
 			set((prev) => {
+				if (isEqualColor(prev.colorForElementPreviousValue, next))
+					return;
+
 				const hasAlpha = ui.color(next).getAlpha() !== 1;
-				const nextState = { color: next };
+
+				const nextState = {
+					colorForElementPreviousValue: prev.colorForElement,
+					colorForElement: getInitialColor(next, prev.disableAlpha),
+					color: next,
+				};
 
 				if (prev.disableAlpha && hasAlpha) {
 					nextState.disableAlpha = false;

@@ -16,6 +16,7 @@ import React from 'react';
 
 import { fontFamilyPresets, presets, Wrapper } from './components';
 import {
+	ColorPanel,
 	CombinedFormGroup,
 	CombinedFormGroupInputSlider,
 	CombinedFormGroupInputStepper,
@@ -390,6 +391,84 @@ const ExampleSix = () => {
 	);
 };
 
+const ExampleSeven = () => {
+	return (
+		<Card>
+			<CardBody>
+				<ListGroups>
+					<ListGroup>
+						<ListGroupHeader>
+							Typography
+							<TypographyOptions
+								addIcon={<FiMoreHorizontal />}
+								exclude={['dropCap']}
+								showActiveOnly
+							/>
+						</ListGroupHeader>
+						<CombinedFormGroup
+							Component={PresetInput}
+							format="text"
+							label="Font"
+							presets={fontFamilyPresets}
+							prop="fontFamily"
+							showRemove={false}
+						/>
+
+						<Grid>
+							<CombinedFormGroup
+								Component={PresetInput}
+								cssProp="fontSize"
+								label="Size"
+								min={0}
+								presets={presets}
+								prop="fontSize"
+								showRemove={false}
+								truncate={false}
+							/>
+							<CombinedFormGroup
+								Component={Select}
+								label="Weight"
+								prop="fontWeight"
+								showRemove={false}
+							>
+								<option value="Lighter">Light</option>
+								<option value="Normal">Regular</option>
+								<option value="Bold">Bold</option>
+								<option value="Bolder">Bolder</option>
+							</CombinedFormGroup>
+						</Grid>
+						<Grid>
+							<CombinedFormGroup
+								Component={UnitInput}
+								cssProp="lineHeight"
+								label="Line Height"
+								min={0}
+								prop="lineHeight"
+								showRemove={false}
+								step={0.5}
+								truncate={false}
+								type="number"
+							/>
+							<CombinedFormGroup
+								Component={UnitInput}
+								cssProp="letterSpacing"
+								label="Letter Spacing"
+								min={-10}
+								prop="letterSpacing"
+								showRemove={false}
+								step={0.5}
+								truncate={false}
+								type="number"
+							/>
+						</Grid>
+					</ListGroup>
+					<ColorPanel />
+				</ListGroups>
+			</CardBody>
+		</Card>
+	);
+};
+
 export const _options = () => {
 	return (
 		<Wrapper>
@@ -499,6 +578,23 @@ export const _plusMinusInlineTruncate = () => {
 					}}
 				>
 					<ExampleFive truncate />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _ellipsisWithColor = () => {
+	return (
+		<ThemeProvider theme={baseLineTheme}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: false },
+					}}
+				>
+					<ExampleSeven truncate />
 				</ContextSystemProvider>
 			</Wrapper>
 		</ThemeProvider>

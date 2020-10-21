@@ -91,7 +91,7 @@ export const ColorInputSlider = React.memo(
 		if (prop === 'a' && disableAlpha) return null;
 
 		return (
-			<FormGroup label={label}>
+			<FormGroup horizontal label={label}>
 				<Grid>
 					<TextInput
 						{...otherProps}

@@ -13,16 +13,71 @@ import { ui } from '@wp-g2/styles';
 import { createStore } from '@wp-g2/substate';
 import React from 'react';
 
-const initialState = {
-	fontFamily: 'Inter',
-	fontWeight: 'Normal',
-	fontSize: '13px',
-	lineHeight: '1.5',
-	letterSpacing: '1',
-	dropCap: false,
-	height: '120px',
-	padding: '24px',
+export const typographyOptionKeys = {
+	fontFamily: {
+		label: 'Font Family',
+		value: 'Inter',
+	},
+	fontSize: {
+		label: 'Font Size',
+		value: '13px',
+	},
+	fontWeight: {
+		label: 'Font Weight',
+		value: 'Normal',
+	},
+	lineHeight: {
+		label: 'Line Height',
+		value: '1.5',
+	},
+	letterSpacing: {
+		label: 'Letter Spacing',
+		value: '1',
+	},
+	dropCap: {
+		label: 'Drop Cap',
+		value: false,
+	},
 };
+
+const createStateFromOptions = (options) => {
+	return Object.entries(options).reduce((state, [k, v]) => {
+		return { ...state, [k]: v.value };
+	}, {});
+};
+
+export const dimensionsOptionKeys = {
+	height: {
+		label: 'Height',
+		value: '120px',
+	},
+	padding: {
+		label: 'Padding',
+		value: '24px',
+	},
+};
+
+export const colorOptionKeys = {
+	backgroundColor: {
+		label: 'Background',
+		value: 'white',
+	},
+	textColor: {
+		label: 'Text',
+		value: 'black',
+	},
+};
+
+const typographyState = createStateFromOptions(typographyOptionKeys);
+const dimensionsState = createStateFromOptions(dimensionsOptionKeys);
+const colorState = createStateFromOptions(colorOptionKeys);
+
+const initialState = {
+	...typographyState,
+	...dimensionsState,
+	...colorState,
+};
+
 export const typographyStore = createStore((set) => ({
 	...initialState,
 	setState: (next) => set(next),
@@ -30,6 +85,7 @@ export const typographyStore = createStore((set) => ({
 }));
 
 export const useTypography = typographyStore;
+export const useGlobalStyles = typographyStore;
 
 export const presets = [
 	{
@@ -91,46 +147,9 @@ export const fontFamilyParser = createPresetParser({
 	presets: fontFamilyPresets,
 });
 
-export const typographyOptionKeys = {
-	fontFamily: {
-		label: 'Font Family',
-		value: 'Inter',
-	},
-	fontSize: {
-		label: 'Font Size',
-		value: '13px',
-	},
-	fontWeight: {
-		label: 'Font Weight',
-		value: 'Normal',
-	},
-	lineHeight: {
-		label: 'Line Height',
-		value: '1.5',
-	},
-	letterSpacing: {
-		label: 'Letter Spacing',
-		value: '1',
-	},
-	dropCap: {
-		label: 'Drop Cap',
-		value: false,
-	},
-};
-
-export const dimensionsOptionsKeys = {
-	height: {
-		label: 'Height',
-		value: '120px',
-	},
-	padding: {
-		label: 'Padding',
-		value: '24px',
-	},
-};
-
 export const Preview = React.memo(() => {
 	const {
+		backgroundColor,
 		dropCap,
 		fontFamily,
 		fontSize,
@@ -139,6 +158,7 @@ export const Preview = React.memo(() => {
 		letterSpacing,
 		lineHeight,
 		padding,
+		textColor,
 	} = useTypography();
 
 	let dropCapStyles;
@@ -168,6 +188,7 @@ export const Preview = React.memo(() => {
 					<View
 						style={{
 							border: '1px solid rgba(100, 100, 100, 0.1)',
+							backgroundColor,
 							height,
 							padding,
 						}}
@@ -179,6 +200,7 @@ export const Preview = React.memo(() => {
 								fontWeight,
 								letterSpacing: ui.value.px(letterSpacing),
 								lineHeight,
+								color: textColor,
 							}}
 						>
 							Gutenberg
@@ -207,7 +229,7 @@ export const Wrapper = ({ children }) => {
 			<Container width={800}>
 				<Grid
 					css={`
-						margin-top: 10vh;
+						margin-top: 5vh;
 					`}
 					templateColumns="minmax(0, 1fr) 265px"
 				>
