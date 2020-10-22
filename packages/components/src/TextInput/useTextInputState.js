@@ -277,7 +277,11 @@ const useFocusHandlers = ({ store }) => {
 	};
 };
 
-const useChangeHandlers = ({ onChange = noop, store }) => {
+const useChangeHandlers = ({
+	onChange = noop,
+	onValueChange = noop,
+	store,
+}) => {
 	const handleOnChange = React.useCallback(
 		(event) => {
 			const next = event.target.value;
@@ -291,6 +295,16 @@ const useChangeHandlers = ({ onChange = noop, store }) => {
 		},
 		[store],
 	);
+
+	React.useEffect(() => {
+		return store.subscribe(
+			(value) => {
+				onValueChange(value);
+			},
+			(state) => state.value,
+			shallowCompare,
+		);
+	}, [onValueChange, store]);
 
 	React.useEffect(() => {
 		return store.subscribe(
@@ -311,10 +325,15 @@ const useEventHandlers = ({
 	decrement = noop,
 	increment = noop,
 	onChange = noop,
+	onValueChange = noop,
 	store,
 	...props
 }) => {
-	const changeHandlers = useChangeHandlers({ onChange, store });
+	const changeHandlers = useChangeHandlers({
+		onChange,
+		onValueChange,
+		store,
+	});
 	const focusHandlers = useFocusHandlers({ store });
 	const keyboardHandlers = useKeyboardHandlers({ store });
 
@@ -343,6 +362,7 @@ const useEventHandlers = ({
 export const useTextInputState = (props = {}) => {
 	const {
 		onChange = noop,
+		onValueChange = noop,
 		min,
 		max,
 		ref,
@@ -375,6 +395,7 @@ export const useTextInputState = (props = {}) => {
 		decrement,
 		increment,
 		onChange,
+		onValueChange,
 		store,
 		...otherProps,
 	});

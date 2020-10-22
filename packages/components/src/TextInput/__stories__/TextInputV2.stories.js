@@ -4,7 +4,7 @@ import { Container, Grid, Text } from '../../index';
 import { NumberInput } from './NumberInput';
 import { PresetInput } from './PresetInput';
 import { TextInput } from './TextInput';
-import { UnitInput } from './UnitInput';
+import { UnitInput } from './UnitInputV2';
 
 export default {
 	title: 'Components/TextInputV2',
