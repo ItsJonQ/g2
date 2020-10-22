@@ -33,7 +33,7 @@ function Collapsible(props, forwardedRef) {
 	}, [visible]);
 
 	useUpdateEffect(() => {
-		onVisibleChange(disclosure.visible);
+		onVisibleChange(disclosure.visible, disclosure);
 	}, [disclosure.visible]);
 
 	return (

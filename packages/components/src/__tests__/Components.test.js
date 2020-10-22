@@ -7,6 +7,7 @@ import * as Components from '../index';
 const [NAMESPACE] = Object.keys(ns());
 
 const excludeList = [
+	'Accordion',
 	'Alerts',
 	'Collapsible',
 	'CollapsibleContent',
@@ -27,6 +28,7 @@ const excludeList = [
 	'NavigatorScreen',
 	'NavigatorScreens',
 	'NavigatorSwitch',
+	'Panel',
 	'PanelBody',
 	'PanelHeader',
 	'PresetInput',
