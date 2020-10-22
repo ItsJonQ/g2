@@ -9,7 +9,7 @@ import {
 } from '@wp-g2/utils';
 import React from 'react';
 
-import TextInput from '../TextInput';
+import { TextInput } from '../TextInput';
 const UNITS = ['px', '%', 'em', 'rem', 'vh', 'vw', 'vmin', 'vmax'];
 
 function findUnitMatchExact({ units = UNITS, value = '' }) {
@@ -98,6 +98,7 @@ function useUnitInput(props) {
 	const handleOnCommit = React.useCallback(
 		(next) => {
 			unitStore.getState().commit(next);
+
 			onChange(next);
 		},
 		[onChange, unitStore],
@@ -154,6 +155,7 @@ export function UnitInput(props) {
 			onChange={(e) => onSelectChange(e.target.value)}
 			onClick={(e) => e.stopPropagation()}
 			onMouseDown={(e) => e.stopPropagation()}
+			style={{ width: 40 }}
 			title="Change unit"
 			value={unit}
 		>

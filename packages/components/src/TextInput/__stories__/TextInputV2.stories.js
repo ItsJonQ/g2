@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Container, Grid, Text } from '../../index';
+import { UnitInputV2 as UnitInput } from '../../UnitInput';
 import { NumberInput } from './NumberInput';
 import { PresetInput } from './PresetInput';
 import { TextInput } from './TextInput';
-import { UnitInput } from './UnitInputV2';
 
 export default {
 	title: 'Components/TextInputV2',
@@ -33,6 +33,9 @@ const Example = () => {
 
 	return (
 		<Container width={480}>
+			<p>
+				<Text>CSS Prop: margin</Text>
+			</p>
 			<Grid>
 				<Text>Text</Text>
 				<TextInput

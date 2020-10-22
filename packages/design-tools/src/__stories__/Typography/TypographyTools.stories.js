@@ -1,12 +1,14 @@
 import {
 	Card,
 	CardBody,
+	FormGroup,
 	Grid,
 	ListGroup,
 	ListGroupHeader,
 	ListGroups,
 	PresetInput,
 	Select,
+	Text,
 	UnitInput,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
@@ -407,6 +409,14 @@ const ExampleSeven = () => {
 								showActiveOnly
 							/>
 						</ListGroupHeader>
+						<FormGroup label="Preset">
+							<Select>
+								<option>Small</option>
+								<option>Medium</option>
+								<option>Large</option>
+								<option value="custom">Custom</option>
+							</Select>
+						</FormGroup>
 						<CombinedFormGroup
 							format="text"
 							label="Font"
@@ -436,10 +446,7 @@ const ExampleSeven = () => {
 								<option value="Bold">Bold</option>
 								<option value="Bolder">Bolder</option>
 							</CombinedFormGroup>
-						</Grid>
-						<Grid>
-							<CombinedFormGroup
-								Component={UnitInput}
+							<CombinedFormGroupInputStepper
 								cssProp="lineHeight"
 								label="Line Height"
 								min={0}
@@ -461,6 +468,9 @@ const ExampleSeven = () => {
 								type="number"
 							/>
 						</Grid>
+						<Text isBlock variant="muted">
+							From: Template (Sidebar)
+						</Text>
 					</ListGroup>
 					<ColorPanel />
 				</ListGroups>
@@ -511,6 +521,7 @@ const baseLineThemeNext = createTheme(() => ({
 	controlBorderColor: ui.get('colorText'),
 	controlBorderColorSubtle: 'transparent',
 	controlBorderColorHover: ui.get('colorText'),
+	controlHeight: '40px',
 	controlBorderRadius: '2px',
 	sliderThumbBorderColor: 'transparent',
 	sliderThumbBoxShadow: 'none',

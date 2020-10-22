@@ -604,6 +604,7 @@ export const CombinedFormGroupInputStepper = React.memo(
 						}
 					}
 				`}
+				gap={0}
 			>
 				<ControlLabel
 					title={truncate ? label : null}
@@ -612,7 +613,7 @@ export const CombinedFormGroupInputStepper = React.memo(
 					{label}
 				</ControlLabel>
 				<HStack>
-					<Grid>
+					<Grid gap={0}>
 						<Component
 							hideArrows
 							max={max}
@@ -691,7 +692,7 @@ const ColorSetting = ({
 	label,
 	onVisibleChange = noop,
 	prop,
-	showElevation = false,
+	showElevation = true,
 }) => {
 	const [visible, setVisible] = React.useState(false);
 	const value = useGlobalStyles((state) => state[prop], shallowCompare);
