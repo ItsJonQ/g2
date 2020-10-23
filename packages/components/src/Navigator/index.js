@@ -9,5 +9,4 @@ export { default as NavigatorLink } from './NavigatorLink';
 export { default as withNavigator } from './withNavigator';
 
 export * from './Navigator.Context';
-export * from './Navigator.utils';
 export * from './Navigator.hooks';

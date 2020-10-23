@@ -7,6 +7,5 @@ module.exports = {
 		'../packages/design-tools/src/**/*.stories.js',
 		'../packages/context/src/**/*.stories.js',
 		'../packages/animations/src/**/*.stories.js',
-		'../packages/block-controls/src/**/*.stories.js',
 	],
 };
