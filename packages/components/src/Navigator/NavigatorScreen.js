@@ -27,14 +27,16 @@ function NavigatorScreen(props, forwardedRef) {
 					history?.action === 'POP' ||
 					history?.location?.state?.isBack;
 
+				const combinedProps = { ...routeProps, ...otherProps };
+
 				const content = children
 					? typeof children === 'function'
-						? children(routeProps)
+						? children(combinedProps)
 						: children
 					: component
-					? React.createElement(component, routeProps)
+					? React.createElement(component, combinedProps)
 					: render
-					? render(routeProps)
+					? render(combinedProps)
 					: null;
 
 				const animate = {

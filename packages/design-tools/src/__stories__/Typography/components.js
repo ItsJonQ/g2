@@ -158,6 +158,21 @@ export const colorPaletteStore = createStore(() => ({
 	Yellow: '#FFFF00',
 }));
 
+export const themeColorPaletteStore = createStore(() => ({
+	Black: '#000',
+	White: '#fff',
+	Azure: '#F0FFFF',
+	BlanchedAlmond: '#FFEBCD',
+	Blue: '#00f',
+	BlueViolet: '#8A2BE2',
+	Chocolate: '#D2691E',
+	DarkBlue: '#00008B',
+	Gray: '#ccc',
+	Orange: '#0f5',
+	Yellow: '#FFFF00',
+	Gold: '#FFD700',
+}));
+
 export const sidebarPanelStore = createStore((set) => ({
 	overlay: false,
 	toggleOverlay: () => set((prev) => ({ overlay: !prev.overlay })),

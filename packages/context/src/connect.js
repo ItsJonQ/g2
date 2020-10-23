@@ -152,6 +152,8 @@ export function getConnectNamespace(Component) {
  * @returns {boolean} The result.
  */
 export function hasConnectNamespace(Component, match) {
+	if (!Component) return false;
+
 	const BaseComponent = Component[REACT_TYPEOF_KEY]
 		? Component.type
 		: Component;

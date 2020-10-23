@@ -20,6 +20,10 @@ import {
 	NavigationStackPrevious,
 	NavigationStackScreen,
 	NavigationStackScreens,
+	Navigator,
+	NavigatorLink,
+	NavigatorScreen,
+	NavigatorScreens,
 	Panel,
 	PanelBody,
 	PanelHeader,
@@ -55,6 +59,7 @@ import {
 	colorPaletteStore,
 	dimensionsOptionKeys,
 	sidebarPanelStore,
+	themeColorPaletteStore,
 	typographyOptionKeys,
 	typographyStore,
 	useGlobalStyles,
@@ -632,49 +637,48 @@ export const CombinedColorControl = React.memo(({ label, prop }) => {
 	return <ColorSetting label={label} prop={prop} />;
 });
 
-const ColorPaletteControl = React.memo(({ label = 'Theme palette', prop }) => {
-	const currentColor = typographyStore(
-		(state) => state[prop],
-		shallowCompare,
-	);
-	const colors = colorPaletteStore(
-		(state) => Object.entries(state),
-		shallowCompare,
-	);
-
-	const handleOnClick = React.useCallback(
-		(value) => {
-			return () => {
-				typographyStore.getState().set({ [prop]: value });
-			};
-		},
-		[prop],
-	);
-
-	const isColorActive = (value) => {
-		return (
-			ui.color(currentColor).toRgbString() ===
-			ui.color(value).toRgbString()
+export const ColorPaletteControl = React.memo(
+	({ label = 'Theme palette', prop, store = colorPaletteStore }) => {
+		const currentColor = typographyStore(
+			(state) => state[prop],
+			shallowCompare,
 		);
-	};
+		const colors = store((state) => Object.entries(state), shallowCompare);
 
-	return (
-		<VStack spacing={3}>
-			<Text>{label}</Text>
-			<Grid columns={7} gap={1}>
-				{colors.map(([k, v]) => (
-					<ColorCircle
-						color={v}
-						isActive={isColorActive(v)}
-						isInteractive
-						key={k}
-						onClick={handleOnClick(v)}
-					/>
-				))}
-			</Grid>
-		</VStack>
-	);
-});
+		const handleOnClick = React.useCallback(
+			(value) => {
+				return () => {
+					typographyStore.getState().set({ [prop]: value });
+				};
+			},
+			[prop],
+		);
+
+		const isColorActive = (value) => {
+			return (
+				ui.color(currentColor).toRgbString() ===
+				ui.color(value).toRgbString()
+			);
+		};
+
+		return (
+			<VStack spacing={3}>
+				<Text>{label}</Text>
+				<Grid columns={7} gap={2}>
+					{colors.map(([k, v]) => (
+						<ColorCircle
+							color={v}
+							isActive={isColorActive(v)}
+							isInteractive
+							key={k}
+							onClick={handleOnClick(v)}
+						/>
+					))}
+				</Grid>
+			</VStack>
+		);
+	},
+);
 
 const ColorSetting = ({ label, prop }) => {
 	const value = useGlobalStyles((state) => state[prop], shallowCompare);
@@ -694,56 +698,7 @@ const ColorSetting = ({ label, prop }) => {
 			<PanelBody>
 				<View css={[ui.padding.bottom(5)]}>
 					<VStack spacing={5}>
-						<View css={{ height: 60 }}>
-							<NavigationStack autoHeight={false}>
-								<HStack
-									css={[
-										ui.position.absolute,
-										{ top: 4, right: 8, width: 'auto' },
-										ui.zIndex(10),
-									]}
-								>
-									<NavigationStackPrevious
-										icon={<FiChevronLeft />}
-										isControl
-										isSubtle
-										size="small"
-									/>
-									<NavigationStackNext
-										icon={<FiChevronRight />}
-										isControl
-										isSubtle
-										size="small"
-									/>
-								</HStack>
-								<NavigationStackScreens>
-									<NavigationStackScreen>
-										<View css={ui.padding.x(1)}>
-											<ColorPaletteControl
-												label="Theme palette"
-												prop={prop}
-											/>
-										</View>
-									</NavigationStackScreen>
-									<NavigationStackScreen>
-										<View css={ui.padding.x(1)}>
-											<ColorPaletteControl
-												label="Core palette"
-												prop={prop}
-											/>
-										</View>
-									</NavigationStackScreen>
-									<NavigationStackScreen>
-										<View css={ui.padding.x(1)}>
-											<ColorPaletteControl
-												label="Custom palette"
-												prop={prop}
-											/>
-										</View>
-									</NavigationStackScreen>
-								</NavigationStackScreens>
-							</NavigationStack>
-						</View>
+						<ColorNavigator prop={prop} />
 						<Popover
 							maxWidth={265}
 							placement="bottom"
@@ -870,6 +825,71 @@ export const ColorPanel = () => {
 				<CombinedColorControl label="Text" prop="textColor" />
 			</Accordion>
 		</ListGroup>
+	);
+};
+
+const ThemePalette = ({ prop }) => {
+	return (
+		<View css={ui.padding(2)}>
+			<ColorPaletteControl prop={prop} />
+		</View>
+	);
+};
+
+const CorePalette = ({ prop }) => {
+	return (
+		<View css={ui.padding(2)}>
+			<ColorPaletteControl
+				label="Core palette"
+				prop={prop}
+				store={themeColorPaletteStore}
+			/>
+		</View>
+	);
+};
+
+const screens = [
+	{ component: ThemePalette, path: 'Theme' },
+	{ component: CorePalette, path: 'Core' },
+];
+
+const NavigatorButton = ({ icon, ...props }) => {
+	return (
+		<NavigatorLink {...props}>
+			<Button icon={icon} isControl isSubtle size="small" />
+		</NavigatorLink>
+	);
+};
+
+export const ColorNavigator = ({ prop = 'backgroundColor' }) => {
+	return (
+		<View css={[ui.position.relative, ui.margin.x(-2)]}>
+			<Navigator initialPath="Theme">
+				<HStack
+					css={[
+						ui.position.absolute,
+						{ top: 0, right: 4, width: 'auto' },
+						ui.zIndex(10),
+					]}
+				>
+					<NavigatorButton
+						icon={<FiChevronLeft />}
+						isBack
+						to="Theme"
+					/>
+					<NavigatorButton icon={<FiChevronRight />} to="Core" />
+				</HStack>
+				<NavigatorScreens>
+					{screens.map((screen) => (
+						<NavigatorScreen
+							{...screen}
+							key={screen.path}
+							prop={prop}
+						/>
+					))}
+				</NavigatorScreens>
+			</Navigator>
+		</View>
 	);
 };
 
