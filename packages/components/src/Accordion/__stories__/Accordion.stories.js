@@ -16,60 +16,49 @@ export default {
 	title: 'Components/Accordion',
 };
 
-export const _default = () => {
+const Example = () => {
+	const [current, setCurrent] = React.useState();
+
 	return (
 		<ListGroups>
 			<ListGroup>
 				<ListGroupHeader>Accordion</ListGroupHeader>
-				<Accordion>
-					<Panel>
+				<Accordion current={current} onChange={setCurrent}>
+					<Panel id="one">
 						<PanelHeader>Panel 1</PanelHeader>
 						<PanelBody>Content</PanelBody>
 					</Panel>
-					<Panel>
+					<Panel id="two">
 						<PanelHeader>Panel 2</PanelHeader>
 						<PanelBody>Content</PanelBody>
 					</Panel>
-					<Panel>
+					<Panel id="three">
 						<PanelHeader>Panel 3</PanelHeader>
 						<PanelBody>Content</PanelBody>
 					</Panel>
 				</Accordion>
 			</ListGroup>
 			<ListGroup>
-				<ListGroupHeader>Accordion (Allow Multiple)</ListGroupHeader>
-				<Accordion allowMultiple>
-					<Panel>
+				<ListGroupHeader>Accordion (Another set)</ListGroupHeader>
+				<Accordion current={current} onChange={setCurrent}>
+					<Panel id="one">
 						<PanelHeader>Panel 1</PanelHeader>
 						<PanelBody>Content</PanelBody>
 					</Panel>
-					<Panel>
+					<Panel id="two">
 						<PanelHeader>Panel 2</PanelHeader>
 						<PanelBody>Content</PanelBody>
 					</Panel>
-					<Panel>
+					<Panel id="three">
 						<PanelHeader>Panel 3</PanelHeader>
 						<PanelBody>Content</PanelBody>
 					</Panel>
 				</Accordion>
-			</ListGroup>
-			<ListGroup>
-				<ListGroupHeader>Panels</ListGroupHeader>
-				<VStack spacing={0}>
-					<Panel>
-						<PanelHeader>Panel 1</PanelHeader>
-						<PanelBody>Content</PanelBody>
-					</Panel>
-					<Panel>
-						<PanelHeader>Panel 2</PanelHeader>
-						<PanelBody>Content</PanelBody>
-					</Panel>
-					<Panel>
-						<PanelHeader>Panel 3</PanelHeader>
-						<PanelBody>Content</PanelBody>
-					</Panel>
-				</VStack>
 			</ListGroup>
 		</ListGroups>
 	);
+};
+
+export const _default = () => {
+	return <Example />;
 };

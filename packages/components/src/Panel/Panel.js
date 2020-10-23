@@ -1,7 +1,7 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { noop, useUniqueId } from '@wp-g2/utils';
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { useAccordionContext } from '../Accordion';
 import { Collapsible } from '../Collapsible';
@@ -28,7 +28,7 @@ function Panel(props, forwardedRef) {
 		visible: visibleProp,
 	});
 
-	const handleOnVisibleChange = React.useCallback(
+	const handleOnVisibleChange = useCallback(
 		(next, disclosure) => {
 			setVisible(next);
 			onVisibleChange(next, disclosure);

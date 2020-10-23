@@ -1,27 +1,73 @@
 import { useContextSystem } from '@wp-g2/context';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { useUpdateEffect } from '@wp-g2/utils';
-import React from 'react';
+import { is, noop, simpleEqual, uniq, useUpdateEffect } from '@wp-g2/utils';
+import { useCallback, useEffect, useMemo } from 'react';
+
+const isCurrentValid = (current) => is.array(current) || is.string(current);
+
+const sanitizeState = (next) => uniq(next.filter(Boolean));
+
+const setCurrentState = (prev = [], next) => {
+	if (!isCurrentValid(next)) return prev;
+	const nextState = is.array(next) ? [...prev, ...next] : [...prev, next];
+
+	return sanitizeState(nextState);
+};
 
 export function useAccordion(props) {
-	const { allowMultiple = false, current, ...otherProps } = useContextSystem(
-		props,
-		'Accordion',
-	);
+	const {
+		allowMultiple = false,
+		current,
+		onChange = noop,
+		...otherProps
+	} = useContextSystem(props, 'Accordion');
 
-	const accordionStatesStore = useSubState((set) => ({
+	const accordionStore = useSubState((set) => ({
 		// State
-		current: [current],
+		current: setCurrentState([], current),
 
 		// Actions
-		add: (next) => set((prev) => ({ current: [...prev.current, next] })),
-		remove: (next) =>
-			set((prev) => prev.current.filter((id) => id === next)),
-		set: (next) => set({ current: [next] }),
+		add: (next) => {
+			if (!isCurrentValid(next)) return;
+
+			set((prev) => {
+				return { current: setCurrentState(prev.current, next) };
+			});
+		},
+
+		remove: (next) => {
+			if (!isCurrentValid(next)) return;
+
+			set((prev) => {
+				return {
+					current: sanitizeState(
+						prev.current.filter((id) => id === next),
+					),
+				};
+			});
+		},
+
+		set: (next) => {
+			if (!isCurrentValid(next)) return;
+			if (accordionStore.getState().isEqual(next)) return;
+
+			if (allowMultiple) {
+				return accordionStore.getState().add(next);
+			}
+			set(() => {
+				const nextState = is.array(next) ? [next[0]] : [next];
+				return { current: sanitizeState(nextState) };
+			});
+		},
+
+		clear: () => {
+			set(() => ({ current: [] }));
+		},
 
 		// Selectors
-		has: (id) => accordionStatesStore.getState().current.includes(id),
-		isVisible: (id) => !!accordionStatesStore.getState().has(id),
+		has: (id) => accordionStore.getState().current.includes(id),
+		isEqual: (next) => simpleEqual(accordionStore.getState().current, next),
+		isVisible: (id) => !!accordionStore.getState().has(id),
 	}));
 
 	const store = useSubState(
@@ -30,22 +76,24 @@ export function useAccordion(props) {
 			update: ({ id, visible = false }) => {
 				if (visible) {
 					if (allowMultiple) {
-						accordionStatesStore.getState().add(id);
+						accordionStore.getState().add(id);
 					} else {
-						accordionStatesStore.getState().set(id);
+						accordionStore.getState().set(id);
 					}
 				} else {
 					if (allowMultiple) {
-						accordionStatesStore.getState().remove(id);
+						accordionStore.getState().remove(id);
+					} else {
+						accordionStore.getState().clear();
 					}
 				}
 			},
 			useAccordionState: ({ id, visible }) => {
-				const state = accordionStatesStore(
+				const state = accordionStore(
 					(prev) => prev.isVisible(id),
 					shallowCompare,
 				);
-				const setState = React.useCallback(
+				const setState = useCallback(
 					(next) => {
 						store.getState().update({ id, visible: next });
 					},
@@ -63,18 +111,27 @@ export function useAccordion(props) {
 		[],
 	);
 
-	const contextValue = React.useMemo(
+	// Sync incoming current prop
+	useUpdateEffect(() => {
+		accordionStore.getState().set(current);
+	}, [current]);
+
+	// Commit current state to prop
+	useEffect(() => {
+		return accordionStore.subscribe(
+			onChange,
+			(state) => state.current,
+			shallowCompare,
+		);
+	}, [accordionStore, onChange]);
+
+	const contextValue = useMemo(
 		() => ({
 			store,
 			useAccordionState: store.getState().useAccordionState,
 		}),
 		[store],
 	);
-
-	// Sync
-	useUpdateEffect(() => {
-		accordionStatesStore.getState().set(current);
-	}, [current]);
 
 	return {
 		contextValue,
