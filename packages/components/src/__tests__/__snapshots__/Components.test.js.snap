@@ -2233,30 +2233,6 @@ exports[`props should render ModalTrigger 1`] = `
 </button>
 `;
 
-exports[`props should render Panel 1`] = `
-<div
-  class="wp-components-collapsible wp-components-panel css-k6yva8"
-  data-g2-c16t="true"
-  data-g2-component="Panel"
-/>
-`;
-
-exports[`props should render Panel with css prop 1`] = `
-<div
-  class="wp-components-collapsible wp-components-panel css-k6yva8"
-  data-g2-c16t="true"
-  data-g2-component="Panel"
-/>
-`;
-
-exports[`props should render Panel with css prop 2`] = `
-<div
-  class="wp-components-collapsible wp-components-panel css-ysyfxm"
-  data-g2-c16t="true"
-  data-g2-component="Panel"
-/>
-`;
-
 exports[`props should render Placeholder 1`] = `
 <div
   class="wp-components-placeholder css-1lmo8em"
