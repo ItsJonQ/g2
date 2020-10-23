@@ -1,4 +1,4 @@
-# Atomic
+# Gestures
 
 > Experimental gestures library (powered by react-use-gesture).
 
