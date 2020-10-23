@@ -119,10 +119,7 @@ export function useAccordion(props) {
 	// Commit current state to prop
 	useEffect(() => {
 		return accordionStore.subscribe(
-			(next) => {
-				onChange(next);
-				console.log(next);
-			},
+			onChange,
 			(state) => state.current,
 			shallowCompare,
 		);

@@ -17,6 +17,7 @@ export function usePositionPanels() {
 	});
 
 	if (__isRendered && autoHeight && containerNode) {
+		console.log('usePositionPanels');
 		containerNode.style.height = `${currentPanelNode?.children[0].clientHeight}px`;
 	}
 }

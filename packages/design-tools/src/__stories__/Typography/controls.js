@@ -9,13 +9,17 @@ import {
 	DropdownMenu,
 	DropdownMenuItem,
 	DropdownTrigger,
-	Elevation,
 	FormGroup,
 	Grid,
 	HStack,
 	ListGroup,
 	ListGroupHeader,
 	ListGroups,
+	NavigationStack,
+	NavigationStackNext,
+	NavigationStackPrevious,
+	NavigationStackScreen,
+	NavigationStackScreens,
 	Panel,
 	PanelBody,
 	PanelHeader,
@@ -33,6 +37,8 @@ import {
 	VStack,
 } from '@wp-g2/components';
 import {
+	FiChevronLeft,
+	FiChevronRight,
 	FiCornerUpLeft,
 	FiMinus,
 	FiMoreHorizontal,
@@ -626,7 +632,7 @@ export const CombinedColorControl = React.memo(({ label, prop }) => {
 	return <ColorSetting label={label} prop={prop} />;
 });
 
-const ColorPaletteControl = React.memo(({ prop }) => {
+const ColorPaletteControl = React.memo(({ label = 'Theme palette', prop }) => {
 	const currentColor = typographyStore(
 		(state) => state[prop],
 		shallowCompare,
@@ -654,7 +660,7 @@ const ColorPaletteControl = React.memo(({ prop }) => {
 
 	return (
 		<VStack spacing={3}>
-			<Text>Theme palette</Text>
+			<Text>{label}</Text>
 			<Grid columns={7} gap={1}>
 				{colors.map(([k, v]) => (
 					<ColorCircle
@@ -670,20 +676,8 @@ const ColorPaletteControl = React.memo(({ prop }) => {
 	);
 });
 
-const ColorSetting = ({
-	label,
-	onVisibleChange = noop,
-	prop,
-	showElevation = true,
-}) => {
-	const [visible, setVisible] = React.useState(false);
+const ColorSetting = ({ label, prop }) => {
 	const value = useGlobalStyles((state) => state[prop], shallowCompare);
-
-	const handleOnVisibleChange = (next) => {
-		setVisible(next);
-		onVisibleChange(next);
-		sidebarPanelStore.getState().set(next);
-	};
 
 	const handleOnChange = React.useCallback(
 		(value) => {
@@ -692,18 +686,6 @@ const ColorSetting = ({
 		[prop],
 	);
 
-	React.useEffect(() => {
-		return sidebarPanelStore.subscribe(
-			(next) => {
-				if (!next) {
-					setVisible(false);
-				}
-			},
-			(state) => state.overlay,
-			shallowCompare,
-		);
-	}, []);
-
 	return (
 		<Panel css={[ui.margin.x(-3)]} isBorderless>
 			<PanelHeader as={ColorControl} color={value} hideArrow>
@@ -711,32 +693,77 @@ const ColorSetting = ({
 			</PanelHeader>
 			<PanelBody>
 				<View css={[ui.padding.bottom(5)]}>
-					<ListGroups>
-						<ListGroup>
-							<ColorPaletteControl prop={prop} />
-						</ListGroup>
-						<ListGroup>
-							<Popover
-								maxWidth={265}
-								placement="bottom"
-								trigger={
-									<ColorCircle
-										color={value}
-										isInteractive
-										size="large"
-										variant="pill"
+					<VStack spacing={5}>
+						<View css={{ height: 60 }}>
+							<NavigationStack autoHeight={false}>
+								<HStack
+									css={[
+										ui.position.absolute,
+										{ top: 4, right: 8, width: 'auto' },
+										ui.zIndex(10),
+									]}
+								>
+									<NavigationStackPrevious
+										icon={<FiChevronLeft />}
+										isControl
+										isSubtle
+										size="small"
 									/>
-								}
-							>
-								<View css={ui.padding(3)}>
-									<ColorPicker
-										color={value}
-										onChange={handleOnChange}
+									<NavigationStackNext
+										icon={<FiChevronRight />}
+										isControl
+										isSubtle
+										size="small"
 									/>
-								</View>
-							</Popover>
-						</ListGroup>
-					</ListGroups>
+								</HStack>
+								<NavigationStackScreens>
+									<NavigationStackScreen>
+										<View css={ui.padding.x(1)}>
+											<ColorPaletteControl
+												label="Theme palette"
+												prop={prop}
+											/>
+										</View>
+									</NavigationStackScreen>
+									<NavigationStackScreen>
+										<View css={ui.padding.x(1)}>
+											<ColorPaletteControl
+												label="Core palette"
+												prop={prop}
+											/>
+										</View>
+									</NavigationStackScreen>
+									<NavigationStackScreen>
+										<View css={ui.padding.x(1)}>
+											<ColorPaletteControl
+												label="Custom palette"
+												prop={prop}
+											/>
+										</View>
+									</NavigationStackScreen>
+								</NavigationStackScreens>
+							</NavigationStack>
+						</View>
+						<Popover
+							maxWidth={265}
+							placement="bottom"
+							trigger={
+								<ColorCircle
+									color={value}
+									isInteractive
+									size="large"
+									variant="pill"
+								/>
+							}
+						>
+							<View css={ui.padding(3)}>
+								<ColorPicker
+									color={value}
+									onChange={handleOnChange}
+								/>
+							</View>
+						</Popover>
+					</VStack>
 				</View>
 			</PanelBody>
 		</Panel>
