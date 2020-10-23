@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Container, Grid, Text } from '../../index';
-import { UnitInputV2 as UnitInput } from '../../UnitInput';
 import { NumberInput } from './NumberInput';
 import { PresetInput } from './PresetInput';
 import { TextInput } from './TextInput';
+import { UnitInput } from './UnitInput';
 
 export default {
 	title: 'Components/TextInputV2',

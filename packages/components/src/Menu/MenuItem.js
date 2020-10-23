@@ -2,8 +2,8 @@ import { MenuItem as ReakitMenuItem } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiCheck, FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
-import { is } from '@wp-g2/utils';
-import React, { useMemo } from 'react';
+import { is, noop } from '@wp-g2/utils';
+import React, { useCallback, useMemo } from 'react';
 
 import { BaseButton } from '../BaseButton';
 import { Flex } from '../Flex';
@@ -17,9 +17,11 @@ function MenuItem(props, forwardedRef) {
 	const {
 		children,
 		className,
+		closeOnClick = false,
 		isBack = false,
 		isOffset = false,
 		isSelected,
+		onClick = noop,
 		prefix,
 		showArrow = false,
 		suffix,
@@ -96,6 +98,16 @@ function MenuItem(props, forwardedRef) {
 		);
 	}, [nextArrow, suffix]);
 
+	const handleOnClick = useCallback(
+		(event) => {
+			onClick(event);
+			if (menu?.hide && closeOnClick) {
+				menu.hide();
+			}
+		},
+		[closeOnClick, menu, onClick],
+	);
+
 	return (
 		<BaseButton
 			as={Component}
@@ -103,6 +115,7 @@ function MenuItem(props, forwardedRef) {
 			{...otherProps}
 			{...menu}
 			className={classes}
+			onClick={handleOnClick}
 			prefix={prefixContent}
 			ref={forwardedRef}
 			suffix={suffixContent}

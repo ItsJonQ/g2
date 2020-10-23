@@ -20,6 +20,7 @@ import {
 	ListGroups,
 	Popover,
 	Select,
+	Separator,
 	Slider,
 	Spacer,
 	Stepper,
@@ -86,22 +87,17 @@ const ResetButton = (props) => (
 export const TypographyOptions = React.memo(
 	({ addIcon = <FiMoreHorizontal />, exclude = [] }) => {
 		const { setState, ...settings } = useGlobalStyles();
+
 		const optionsEntries = Object.entries(typographyOptionKeys).filter(
 			([k]) => !exclude.includes(k),
 		);
 
-		// const hasEntries = Object.keys(settings).filter((key, index) => {
-		// 	return !!optionsEntries[index][1];
-		// }).length;
-
 		const handleOnToggle = React.useCallback(
 			({ prop, value }) => () => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[],
 		);
-
-		// if (showActiveOnly && !hasEntries) return null;
 
 		return (
 			<Dropdown placement="bottom-end">
@@ -130,6 +126,13 @@ export const TypographyOptions = React.memo(
 							</DropdownMenuItem>
 						);
 					})}
+					<Separator />
+					<DropdownMenuItem
+						closeOnClick
+						onClick={typographyStore.getState().resetAll}
+					>
+						Reset All
+					</DropdownMenuItem>
 				</DropdownMenu>
 			</Dropdown>
 		);
@@ -246,13 +249,13 @@ export const CombinedFormGroup = React.memo(
 
 		const handleOnChange = React.useCallback(
 			(value) => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[prop],
 		);
 
 		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
+			typographyStore.getState().set({ [prop]: null });
 		}, [prop]);
 
 		const handleOnReset = React.useCallback(() => {
@@ -307,13 +310,13 @@ export const CombinedFormGroupSwitch = React.memo(
 
 		const handleOnChange = React.useCallback(
 			(value) => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[prop],
 		);
 
 		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
+			typographyStore.getState().set({ [prop]: null });
 		}, [prop]);
 
 		if (!is.defined(value)) return null;
@@ -363,13 +366,13 @@ export const CombinedFormGroupSwitchLeft = React.memo(
 
 		const handleOnChange = React.useCallback(
 			(value) => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[prop],
 		);
 
 		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
+			typographyStore.getState().set({ [prop]: null });
 		}, [prop]);
 
 		const handleOnReset = React.useCallback(() => {
@@ -418,7 +421,7 @@ export const CombinedFormGroupSwitchAlt = React.memo(
 
 		const handleOnChange = React.useCallback(
 			(value) => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[prop],
 		);
@@ -495,7 +498,7 @@ export const CombinedFormGroupInputSlider = React.memo(
 		);
 
 		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
+			typographyStore.getState().set({ [prop]: null });
 		}, [prop]);
 
 		const handleOnReset = React.useCallback(() => {
@@ -566,25 +569,13 @@ export const CombinedFormGroupInputStepper = React.memo(
 
 		const handleOnChange = React.useCallback(
 			(value) => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[prop],
 		);
 
-		const handleOnIncrement = React.useCallback(() => {
-			typographyStore.setState((prev) => {
-				return { [prop]: add(prev[prop], 1).toString() };
-			});
-		}, [prop]);
-
-		const handleOnDecrement = React.useCallback(() => {
-			typographyStore.setState((prev) => {
-				return { [prop]: subtract(prev[prop], 1).toString() };
-			});
-		}, [prop]);
-
 		const handleOnRemove = React.useCallback(() => {
-			typographyStore.setState({ [prop]: null });
+			typographyStore.getState().set({ [prop]: null });
 		}, [prop]);
 
 		const handleOnReset = React.useCallback(() => {
@@ -613,23 +604,14 @@ export const CombinedFormGroupInputStepper = React.memo(
 					{label}
 				</ControlLabel>
 				<HStack>
-					<Grid gap={0}>
-						<Component
-							hideArrows
-							max={max}
-							min={min}
-							onChange={handleOnChange}
-							value={value}
-							{...otherProps}
-						/>
-						<Stepper
-							min={min}
-							onChange={handleOnChange}
-							onDecrement={handleOnDecrement}
-							onIncrement={handleOnIncrement}
-							value={value}
-						/>
-					</Grid>
+					<Component
+						arrows="stepper"
+						max={max}
+						min={min}
+						onChange={handleOnChange}
+						value={value}
+						{...otherProps}
+					/>
 					{showRemoveRight && (
 						<RemoveButton onClick={handleOnRemove} />
 					)}
@@ -657,7 +639,7 @@ const ColorPaletteControl = React.memo(({ prop }) => {
 	const handleOnClick = React.useCallback(
 		(value) => {
 			return () => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			};
 		},
 		[prop],
@@ -705,7 +687,7 @@ const ColorSetting = ({
 
 	const handleOnChange = React.useCallback(
 		(value) => {
-			typographyStore.setState({ [prop]: value });
+			typographyStore.getState().set({ [prop]: value });
 		},
 		[prop],
 	);
@@ -783,7 +765,7 @@ export const DimensionsOptions = React.memo(
 
 		const handleOnToggle = React.useCallback(
 			({ prop, value }) => () => {
-				typographyStore.setState({ [prop]: value });
+				typographyStore.getState().set({ [prop]: value });
 			},
 			[],
 		);
@@ -827,7 +809,7 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 
 	const handleOnToggle = React.useCallback(
 		({ prop, value }) => () => {
-			typographyStore.setState({ [prop]: value });
+			typographyStore.getState().set({ [prop]: value });
 		},
 		[],
 	);
@@ -883,8 +865,8 @@ export const DimensionsPanel = () => {
 			</ListGroupHeader>
 			<CombinedFormGroupInputSlider
 				Component={UnitInput}
+				arrows={false}
 				cssProp="height"
-				hideArrows
 				label="Height"
 				min={0}
 				prop="height"
@@ -923,5 +905,22 @@ export const PanelOverlay = React.memo(() => {
 			]}
 			onClick={off}
 		/>
+	);
+});
+
+export const PresetControl = React.memo(() => {
+	const [value, presets, applyPresets] = typographyStore(
+		(state) => [state.getCurrentPreset(), state.presets, state.applyPreset],
+		shallowCompare,
+	);
+
+	return (
+		<FormGroup label="Style">
+			<Select onChange={applyPresets} value={value}>
+				{presets.map((preset) => (
+					<option key={preset.value} {...preset} />
+				))}
+			</Select>
+		</FormGroup>
 	);
 });

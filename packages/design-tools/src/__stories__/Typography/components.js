@@ -40,6 +40,43 @@ export const typographyOptionKeys = {
 	},
 };
 
+export const typographyPresets = [
+	{
+		label: 'Small',
+		value: 'small',
+		settings: {
+			fontWeight: 'Bold',
+			fontSize: '11px',
+			letterSpacing: '1px',
+		},
+	},
+	{
+		label: 'Medium',
+		value: 'medium',
+		settings: {
+			fontWeight: 'Regular',
+			fontSize: '16px',
+			lineHeight: '1.6',
+			letterSpacing: '0px',
+		},
+	},
+	{
+		label: 'Large',
+		value: 'large',
+		settings: {
+			fontWeight: 'Bold',
+			fontSize: '32px',
+			lineHeight: '1.2',
+			letterSpacing: '-1px',
+		},
+	},
+	{
+		label: 'Custom',
+		value: 'custom',
+		settings: {},
+	},
+];
+
 const createStateFromOptions = (options) => {
 	return Object.entries(options).reduce((state, [k, v]) => {
 		return { ...state, [k]: v.value };
@@ -79,9 +116,42 @@ const initialState = {
 };
 
 export const typographyStore = createStore((set) => ({
+	// State
 	...initialState,
-	setState: (next) => set(next),
+	presets: typographyPresets,
+	currentPreset: 'custom',
+	hasCustomValues: true,
+
+	// Actions
+	set: (next) => set({ ...next, hasCustomValues: true }),
 	reset: (prop) => set({ [prop]: initialState[prop] }),
+	resetAll: () => set({ ...typographyState }),
+	applyPreset: (next) => {
+		const preset = typographyStore.getState().findPreset(next);
+		if (!preset) return;
+
+		const nextState = {
+			...preset.settings,
+			currentPreset: preset.value,
+			hasCustomValues: false,
+		};
+
+		set(nextState);
+	},
+
+	// Selectors
+	getCurrentPreset: () => {
+		const { currentPreset, hasCustomValues } = typographyStore.getState();
+
+		return hasCustomValues ? 'custom' : currentPreset;
+	},
+	findPreset: (value) => {
+		const preset = typographyStore
+			.getState()
+			.presets.find((item) => item.value === value);
+
+		return preset;
+	},
 }));
 
 export const colorPaletteStore = createStore(() => ({

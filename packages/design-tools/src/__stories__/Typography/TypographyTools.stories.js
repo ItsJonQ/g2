@@ -8,7 +8,6 @@ import {
 	ListGroups,
 	PresetInput,
 	Select,
-	Text,
 	UnitInput,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
@@ -29,6 +28,7 @@ import {
 	FontFamilyControl,
 	FontStyleControl,
 	PanelOverlay,
+	PresetControl,
 	TypographyOptions,
 } from './controls';
 
@@ -409,35 +409,26 @@ const ExampleSeven = () => {
 								showActiveOnly
 							/>
 						</ListGroupHeader>
-						<FormGroup label="Preset">
-							<Select>
-								<option>Small</option>
-								<option>Medium</option>
-								<option>Large</option>
-								<option value="custom">Custom</option>
-							</Select>
-						</FormGroup>
+						<PresetControl />
 						<CombinedFormGroup
 							format="text"
 							label="Font"
 							prop="fontFamily"
 							showRemove={false}
 						/>
-
 						<Grid>
 							<CombinedFormGroup
-								Component={PresetInput}
+								Component={UnitInput}
 								cssProp="fontSize"
 								label="Size"
 								min={0}
-								presets={presets}
 								prop="fontSize"
 								showRemove={false}
 								truncate={false}
 							/>
 							<CombinedFormGroup
 								Component={Select}
-								label="Weight"
+								label="Appearance"
 								prop="fontWeight"
 								showRemove={false}
 							>
@@ -468,9 +459,6 @@ const ExampleSeven = () => {
 								type="number"
 							/>
 						</Grid>
-						<Text isBlock variant="muted">
-							From: Template (Sidebar)
-						</Text>
 					</ListGroup>
 					<ColorPanel />
 				</ListGroups>

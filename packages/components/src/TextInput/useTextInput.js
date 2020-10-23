@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
+import { noop } from '@wp-g2/utils';
 import { useCallback, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -32,13 +33,13 @@ export function useTextInput(props) {
 	const {
 		__debugger = false,
 		align,
+		arrows,
 		className,
 		defaultValue = '',
 		disabled,
 		dragAxis,
 		format,
 		gap = 2.5,
-		hideArrows = false,
 		id: idProp,
 		isCommitOnBlurOrEnter = true,
 		isResizable = false,
@@ -47,6 +48,7 @@ export function useTextInput(props) {
 		max,
 		min,
 		multiline = false,
+		onValueChange = noop,
 		prefix,
 		shiftStep = 10,
 		size = 'medium',
@@ -74,6 +76,7 @@ export function useTextInput(props) {
 		isShiftStepEnabled,
 		max,
 		min,
+		onValueChange,
 		shiftStep,
 		step,
 		value: valueProp,
@@ -139,12 +142,12 @@ export function useTextInput(props) {
 		...baseFieldProps,
 		...rootEventHandlers,
 		__store: store,
+		arrows,
 		className: classes,
 		dragAxis,
 		decrement,
 		increment,
 		format,
-		hideArrows,
 		inputProps,
 		inputRef,
 		isTypeNumeric,

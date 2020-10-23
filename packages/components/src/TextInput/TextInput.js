@@ -5,14 +5,15 @@ import React from 'react';
 
 import { View } from '../View';
 import TextInputArrows from './TextInputArrows';
+import TextInputSteppers from './TextInputSteppers';
 import { useTextInput } from './useTextInput';
 
 function TextInput(props, forwardedRef) {
 	const {
 		__store,
+		arrows,
 		decrement,
 		disabled,
-		hideArrows = false,
 		increment,
 		inputProps,
 		inputRef,
@@ -22,7 +23,8 @@ function TextInput(props, forwardedRef) {
 		...otherProps
 	} = useTextInput(props);
 
-	const showTextInputArrows = !hideArrows && isTypeNumeric;
+	const showTextInputArrows = arrows === true && isTypeNumeric;
+	const showTextInputSteppers = arrows === 'stepper' && isTypeNumeric;
 
 	return (
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>
@@ -38,6 +40,13 @@ function TextInput(props, forwardedRef) {
 			{suffix}
 			{showTextInputArrows && (
 				<TextInputArrows
+					__store={__store}
+					decrement={decrement}
+					increment={increment}
+				/>
+			)}
+			{showTextInputSteppers && (
+				<TextInputSteppers
 					__store={__store}
 					decrement={decrement}
 					increment={increment}

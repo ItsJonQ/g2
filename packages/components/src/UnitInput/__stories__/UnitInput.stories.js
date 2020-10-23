@@ -66,12 +66,17 @@ const Example = () => {
 	const [value, setValue] = React.useState('13px');
 
 	return (
-		<UnitInput
-			__debugger={console.log}
-			cssProp="columnWidth"
-			onChange={setValue}
-			value={value}
-		/>
+		<>
+			<div>
+				<UnitInput cssProp="height" onChange={setValue} value={value} />
+			</div>
+			<br />
+			<br />
+			<br />
+			<div>
+				<UnitInput cssProp="height" onChange={setValue} value={value} />
+			</div>
+		</>
 	);
 };
 

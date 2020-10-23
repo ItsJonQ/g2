@@ -27,6 +27,19 @@ export const number = () => {
 	);
 };
 
+export const numberStepper = () => {
+	return (
+		<Container
+			css={`
+				margin-top: 20vh;
+			`}
+			width={480}
+		>
+			<TextInput arrows="stepper" type="number" value="1" />
+		</Container>
+	);
+};
+
 export const multiline = () => {
 	return <TextInput maxRows={6} minRows={3} multiline />;
 };

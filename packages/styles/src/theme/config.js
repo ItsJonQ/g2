@@ -78,6 +78,7 @@ const GRID_PROPS = {
 
 const CONTROL_PROPS = {
 	controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
+	controlBackgroundHoverColor: 'rgba(0, 0, 0, 0.05)',
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
 	controlBackgroundBrightColor: 'rgba(0, 0, 0, 0.03)',
 	controlBorderColor: 'transparent',

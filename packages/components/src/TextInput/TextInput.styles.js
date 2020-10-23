@@ -92,12 +92,13 @@ export const Spinner = css`
 `;
 
 export const SpinnerArrow = css`
+	background-color: transparent;
 	border-radius: ${ui.get('controlBorderRadius')};
 	color: ${ui.get('colorText')};
 	padding: 0 2px;
 
 	&:hover:active {
-		background-color: ${ui.get('controlBackgroundColor')};
+		background-color: ${ui.get('controlBackgroundHoverColor')};
 	}
 `;
 
@@ -109,6 +110,33 @@ export const SpinnerArrowUp = css`
 export const SpinnerArrowDown = css`
 	${SpinnerArrow};
 	margin-top: -1px;
+`;
+
+export const Steppers = css`
+	${Spinner};
+	margin: 0 -2px 0 0 !important;
+	opacity: 1;
+`;
+
+export const StepperButton = css`
+	${SpinnerArrow};
+	border: none;
+	cursor: pointer;
+	display: block;
+	outline: none;
+	padding: 4px;
+
+	&:focus {
+		background-color: ${ui.get('controlBackgroundHoverColor')};
+	}
+`;
+
+export const SteppersUp = css`
+	${StepperButton};
+`;
+
+export const SteppersDown = css`
+	${StepperButton};
 `;
 
 export const globalDraggableX = css`

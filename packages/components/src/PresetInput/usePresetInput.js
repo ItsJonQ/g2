@@ -116,7 +116,7 @@ const usePresetEventHandlers = ({ presetStore, store }) => {
 };
 
 export const usePresetInput = (props) => {
-	const { hideArrows = true, validate: validateProp, ...otherProps } = props;
+	const { arrows = false, validate: validateProp, ...otherProps } = props;
 	const presetStore = usePresetStore(otherProps);
 
 	const validate = () => true;
@@ -124,7 +124,7 @@ export const usePresetInput = (props) => {
 
 	const { __store: store, __unitStore, ...unitInput } = useUnitInput({
 		...props,
-		hideArrows,
+		arrows,
 		validate: mergedValidations,
 	});
 

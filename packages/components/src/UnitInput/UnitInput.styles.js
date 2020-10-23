@@ -3,30 +3,23 @@ import { css, ui } from '@wp-g2/styles';
 import * as textInputStyles from '../TextInput/TextInput.styles';
 
 export const UnitInputSelect = css`
-	${textInputStyles.Input};
-	left: 8px;
-	margin: 0 !important;
+	margin: 0 -2px 0 0 !important;
 	overflow: hidden;
-	position: absolute;
-	top: 0;
-`;
-
-export const UnitInputSelectValue = css`
-	${textInputStyles.inputFontSize};
-	opacity: 0;
-	pointer-events: none;
 `;
 
 export const UnitInputSelectUnit = css`
 	${textInputStyles.inputFontSize};
 	${ui.borderRadius.round};
 
-	color: ${ui.get('colorAdmin')};
+	border-radius: ${ui.get('controlBorderRadius')};
+	color: ${ui.get('colorTextMuted')};
 	cursor: pointer;
+	padding: 0 4px;
 	position: relative;
-	text-decoration-color: ${ui.get('colorAdmin')};
-	text-decoration-line: underline;
-	text-decoration-style: solid;
+
+	&:hover {
+		background-color: ${ui.get('controlBackgroundHoverColor')};
+	}
 `;
 
 export const UnitInputSelectElement = css`
@@ -39,4 +32,8 @@ export const UnitInputSelectElement = css`
 	position: absolute;
 	top: 0;
 	width: 100%;
+`;
+
+export const unitSelectFocused = css`
+	background-color: ${ui.get('controlBackgroundHoverColor')};
 `;

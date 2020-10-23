@@ -24,7 +24,7 @@ const isPotentialUnitValue = (value) => {
 };
 
 function useUnitInput(props) {
-	const { cssProp, hideArrows = true, onChange = noop, value } = props;
+	const { cssProp, arrows = false, onChange = noop, value } = props;
 	const [parsedValue, unit] = parseUnitValue(value);
 	const inputRef = React.useRef();
 
@@ -130,7 +130,7 @@ function useUnitInput(props) {
 	return {
 		...props,
 		unitStore,
-		hideArrows,
+		arrows,
 		validate: unitStore.getState().validate,
 		onChange: handleOnCommit,
 		onValueChange: handleOnChange,

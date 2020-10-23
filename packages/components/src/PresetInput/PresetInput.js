@@ -16,9 +16,9 @@ function PresetInput(props, forwardedRef) {
 		__presetStore,
 		__store,
 		__unitStore,
+		arrows = false,
 		decrement,
 		disabled,
-		hideArrows = true,
 		increment,
 		inputProps,
 		inputRef,
@@ -28,7 +28,7 @@ function PresetInput(props, forwardedRef) {
 		...otherProps
 	} = usePresetInput(props);
 
-	const showTextInputArrows = !hideArrows && isTypeNumeric;
+	const showTextInputArrows = !arrows && isTypeNumeric;
 
 	return (
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>
