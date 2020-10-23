@@ -104,6 +104,22 @@ const UpDownArrows = React.memo(
 			[onDecrement],
 		);
 
+		const handleOnIncrement = useCallback(
+			(event) => {
+				event.stopPropagation();
+				onIncrement(event);
+			},
+			[onIncrement],
+		);
+
+		const handleOnDecrement = useCallback(
+			(event) => {
+				event.stopPropagation();
+				onDecrement(event);
+			},
+			[onDecrement],
+		);
+
 		useEffect(() => {
 			return () => handleOnClearTimers();
 		}, [handleOnClearTimers]);
@@ -116,7 +132,7 @@ const UpDownArrows = React.memo(
 				<Icon
 					as="button"
 					className={styles.SteppersUp}
-					onClick={onIncrement}
+					onClick={handleOnIncrement}
 					onMouseDown={handleOnMouseDownIncrement}
 					onMouseLeave={handleOnClearTimers}
 					onMouseUp={handleOnClearTimers}
@@ -129,7 +145,7 @@ const UpDownArrows = React.memo(
 				<Icon
 					as="button"
 					className={styles.SteppersDown}
-					onClick={onDecrement}
+					onClick={handleOnDecrement}
 					onMouseDown={handleOnMouseDownDecrement}
 					onMouseLeave={handleOnClearTimers}
 					onMouseUp={handleOnClearTimers}

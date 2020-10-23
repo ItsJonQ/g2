@@ -291,7 +291,9 @@ export const Preview = React.memo(() => {
 						}}
 					>
 						<div
+							contentEditable
 							style={{
+								outline: 'none',
 								fontSize: fontSizeValue,
 								fontFamily: fontFamilyValue,
 								fontWeight,
