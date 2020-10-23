@@ -1,8 +1,6 @@
 import {
+	Accordion,
 	Button,
-	Collapsible,
-	CollapsibleContent,
-	CollapsibleTrigger,
 	ColorCircle,
 	ColorControl,
 	ColorPicker,
@@ -18,12 +16,14 @@ import {
 	ListGroup,
 	ListGroupHeader,
 	ListGroups,
+	Panel,
+	PanelBody,
+	PanelHeader,
 	Popover,
 	Select,
 	Separator,
 	Slider,
 	Spacer,
-	Stepper,
 	Surface,
 	Switch,
 	Text,
@@ -705,27 +705,12 @@ const ColorSetting = ({
 	}, []);
 
 	return (
-		<Collapsible
-			css={[ui.position.relative, ui.zIndex(visible ? 10 : 0)]}
-			onVisibleChange={handleOnVisibleChange}
-			visible={visible}
-		>
-			<Elevation offset={-8} value={showElevation && visible ? 4 : 0} />
-			<HStack
-				css={[
-					ui.hover(
-						ui.$('ColorAction').css({
-							opacity: 1,
-						}),
-					),
-				]}
-			>
-				<CollapsibleTrigger as={ColorControl} color={value}>
-					{label}
-				</CollapsibleTrigger>
-			</HStack>
-			<CollapsibleContent css={ui.margin.x(-3)}>
-				<View css={[ui.padding(3), ui.padding.bottom(5)]}>
+		<Panel css={[ui.margin.x(-3)]} isBorderless>
+			<PanelHeader as={ColorControl} color={value} hideArrow>
+				{label}
+			</PanelHeader>
+			<PanelBody>
+				<View css={[ui.padding.bottom(5)]}>
 					<ListGroups>
 						<ListGroup>
 							<ColorPaletteControl prop={prop} />
@@ -753,8 +738,8 @@ const ColorSetting = ({
 						</ListGroup>
 					</ListGroups>
 				</View>
-			</CollapsibleContent>
-		</Collapsible>
+			</PanelBody>
+		</Panel>
 	);
 };
 
@@ -850,8 +835,13 @@ export const ColorPanel = () => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>Color</ListGroupHeader>
-			<CombinedColorControl label="Background" prop="backgroundColor" />
-			<CombinedColorControl label="Text" prop="textColor" />
+			<Accordion>
+				<CombinedColorControl
+					label="Background"
+					prop="backgroundColor"
+				/>
+				<CombinedColorControl label="Text" prop="textColor" />
+			</Accordion>
 		</ListGroup>
 	);
 };
@@ -913,6 +903,7 @@ export const PresetControl = React.memo(() => {
 		(state) => [state.getCurrentPreset(), state.presets, state.applyPreset],
 		shallowCompare,
 	);
+	const isCustom = value === 'custom';
 
 	return (
 		<FormGroup label="Style">
@@ -920,6 +911,7 @@ export const PresetControl = React.memo(() => {
 				{presets.map((preset) => (
 					<option key={preset.value} {...preset} />
 				))}
+				{isCustom && <option label="Custom" value="custom" />}
 			</Select>
 		</FormGroup>
 	);

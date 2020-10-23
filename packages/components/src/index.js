@@ -3,6 +3,7 @@ export * from './BaseView';
 export * from './View';
 export * from './Animated';
 // Components
+export * from './Accordion';
 export * from './Alert';
 export * from './ArrowIndicator';
 export * from './AspectRatio';

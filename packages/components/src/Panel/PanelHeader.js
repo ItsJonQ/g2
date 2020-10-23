@@ -10,13 +10,17 @@ import { usePanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
 
 function PanelHeader(props, forwardedRef) {
-	const { children, className, title, ...otherProps } = useContextSystem(
-		props,
-		'PanelHeader',
-	);
+	const {
+		children,
+		className,
+		hideArrow = false,
+		title,
+		...otherProps
+	} = useContextSystem(props, 'PanelHeader');
 	const { disclosure } = useCollapsibleContext();
 	const { isSeamless } = usePanelContext();
 	const { visible } = disclosure;
+	const showArrow = !hideArrow;
 
 	const content = title ? <Text weight={500}>{title}</Text> : children;
 	const direction = visible ? 'down' : 'right';
@@ -34,9 +38,11 @@ function PanelHeader(props, forwardedRef) {
 			{...otherProps}
 			ref={forwardedRef}
 		>
-			<Text isBlock>
-				<ArrowIndicator direction={direction} size={5} width={5} />
-			</Text>
+			{showArrow && (
+				<Text isBlock>
+					<ArrowIndicator direction={direction} size={5} width={5} />
+				</Text>
+			)}
 			<FlexBlock>{content}</FlexBlock>
 		</CollapsibleTrigger>
 	);

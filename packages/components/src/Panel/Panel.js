@@ -13,6 +13,7 @@ function Panel(props, forwardedRef) {
 		baseId,
 		className,
 		id: idProp,
+		isBorderless = false,
 		isSeamless = false,
 		onVisibleChange = noop,
 		visible: visibleProp = false,
@@ -21,7 +22,11 @@ function Panel(props, forwardedRef) {
 	const { useAccordionState } = useAccordionContext();
 	const id = useUniqueId(Panel, 'Panel', baseId || idProp);
 
-	const classes = cx(styles.Panel, className);
+	const classes = cx(
+		styles.Panel,
+		isBorderless && styles.borderless,
+		className,
+	);
 
 	const [visible, setVisible] = useAccordionState({
 		id,

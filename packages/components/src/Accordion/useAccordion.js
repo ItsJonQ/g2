@@ -84,7 +84,7 @@ export function useAccordion(props) {
 					if (allowMultiple) {
 						accordionStore.getState().remove(id);
 					} else {
-						accordionStore.getState().clear();
+						// accordionStore.getState().clear();
 					}
 				}
 			},
@@ -119,7 +119,10 @@ export function useAccordion(props) {
 	// Commit current state to prop
 	useEffect(() => {
 		return accordionStore.subscribe(
-			onChange,
+			(next) => {
+				onChange(next);
+				console.log(next);
+			},
 			(state) => state.current,
 			shallowCompare,
 		);

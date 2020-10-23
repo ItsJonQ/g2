@@ -70,11 +70,6 @@ export const typographyPresets = [
 			letterSpacing: '-1px',
 		},
 	},
-	{
-		label: 'Custom',
-		value: 'custom',
-		settings: {},
-	},
 ];
 
 const createStateFromOptions = (options) => {

@@ -18,6 +18,12 @@ export const PanelHeader = css`
 	}
 `;
 
+export const borderless = css`
+	& + & {
+		border-top: none;
+	}
+`;
+
 export const seamless = css`
 	padding-left: 0;
 	padding-right: 0;

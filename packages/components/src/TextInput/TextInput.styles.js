@@ -126,6 +126,9 @@ export const StepperButton = css`
 	outline: none;
 	padding: 4px;
 
+	&:hover {
+		background-color: ${ui.get('controlBackgroundHoverColor')};
+	}
 	&:focus {
 		background-color: ${ui.get('controlBackgroundHoverColor')};
 	}
