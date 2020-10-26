@@ -160,7 +160,8 @@ export const subtle = css`
 
 export const control = css`
 	background-color: ${ui.get('controlBackgroundColor')};
-	border: 1px solid ${ui.get('controlBorderColor')};
+	border: 1px solid;
+	border-color: ${ui.get('controlBorderColor')};
 	color: ${ui.color.text};
 	font-family: ${ui.get('fontFamily')};
 	font-size: ${ui.get('fontSize')};

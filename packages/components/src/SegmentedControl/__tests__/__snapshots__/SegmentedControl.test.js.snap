@@ -4,7 +4,7 @@ exports[`props should render correctly 1`] = `
 <div
   aria-activedescendant="segmented-1"
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-16al81f"
+  class="wp-components-segmented-control css-14z170l"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="segmented"
@@ -19,7 +19,7 @@ exports[`props should render correctly 1`] = `
     tabindex="-1"
   />
   <div
-    class="css-k5346k"
+    class="css-80hbch"
     data-g2-component="SegmentedControlBackdrop"
     role="presentation"
     style="transform: translateX(NaNpx); transition: none; width: 0px;"

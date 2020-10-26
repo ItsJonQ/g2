@@ -229,7 +229,7 @@ exports[`props should render icon 1`] = `
 exports[`props should render isControl 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button css-ck853r"
+  class="wp-components-flex wp-components-base-button wp-components-button css-o2kcdb"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"

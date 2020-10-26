@@ -1,7 +1,8 @@
 import { createTheme } from '@wp-g2/styles';
 
-const theme = createTheme(({ get }) => {
+const theme = createTheme(({ get, theme }) => {
 	return {
+		...theme,
 		cardBorderRadius: '4px',
 		colorAdmin: get('blueberry'),
 		controlBackgroundColor: 'transparent',

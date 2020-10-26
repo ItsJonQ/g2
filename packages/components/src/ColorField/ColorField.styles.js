@@ -3,7 +3,8 @@ import { css, styled, ui } from '@wp-g2/styles';
 export const ColorPickerButtonView = styled.button`
 	appearance: none;
 	background-color: ${ui.get('controlBackgroundColor')};
-	border: 1px solid ${ui.get('controlBorderColor')};
+	border: 1px solid;
+	border-color: ${ui.get('controlBorderColor')};
 	border-radius: ${ui.get('controlBorderRadius')};
 	cursor: pointer;
 	display: block;

@@ -70,7 +70,8 @@ export const Slider = css`
 	&::-moz-range-thumb {
 		appearance: none;
 		background-color: ${ui.color.white};
-		border: 1px solid ${ui.get('controlBorderColor')};
+		border: 1px solid;
+		border-color: ${ui.get('controlBorderColor')};
 		border-radius: 50%;
 		box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),
 			${ui.get('controlSurfaceBoxShadow')};

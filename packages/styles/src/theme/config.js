@@ -78,7 +78,7 @@ const GRID_PROPS = {
 
 const CONTROL_PROPS = {
 	controlBackgroundColor: get('white'),
-	controlBackgroundHoverColor: get('white'),
+	controlBackgroundHoverColor: 'rgba(0, 0, 0, 0.05)',
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
 	controlBackgroundBrightColor: 'rgba(0, 0, 0, 0.03)',
 	controlBorderColor: '#757575',
@@ -86,6 +86,7 @@ const CONTROL_PROPS = {
 	controlBorderColorSubtle: 'transparent',
 	controlBorderRadius: '2px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
+	controlBoxShadow: `transparent`,
 	controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,
 	controlHeight: '30px',
 	controlHeightLarge: `calc(${get('controlHeight')} * 1.2)`,
@@ -138,8 +139,16 @@ const MENU_PROPS = {
 	menuItemActiveBoxShadow: get('controlBorderSubtleColor'),
 };
 
+const PANEL_PROPS = {
+	panelHeaderPadding: space(3),
+	panelBodyPadding: `${space(2)} ${space(3)} ${space(3)}`,
+};
+
 const SEGMENTED_CONTROL_PROPS = {
 	segmentedControlFontSize: '12px',
+	segmentedControlBackdropBackgroundColor: get('controlSurfaceColor'),
+	segmentedControlBackdropBorderColor: get('controlBorderColor'),
+	segmentedControlBackdropBoxShadow: 'transparent',
 };
 
 const SLIDER_PROPS = {
@@ -177,6 +186,7 @@ const BASE_THEME = {
 	...GRID_PROPS,
 	...LINK_PROPS,
 	...MENU_PROPS,
+	...PANEL_PROPS,
 	...SEGMENTED_CONTROL_PROPS,
 	...SLIDER_PROPS,
 	...SWITCH_PROPS,

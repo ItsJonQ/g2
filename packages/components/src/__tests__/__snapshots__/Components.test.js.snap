@@ -411,7 +411,7 @@ exports[`props should render BaseButton with css prop 2`] = `
 
 exports[`props should render BaseField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-1mdi3h3"
+  class="wp-components-flex wp-components-base-field css-1958ayt"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -420,7 +420,7 @@ exports[`props should render BaseField 1`] = `
 
 exports[`props should render BaseField with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-1mdi3h3"
+  class="wp-components-flex wp-components-base-field css-1958ayt"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -429,7 +429,7 @@ exports[`props should render BaseField with css prop 1`] = `
 
 exports[`props should render BaseField with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-pxwr24"
+  class="wp-components-flex wp-components-base-field css-1vdkqdl"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -950,7 +950,7 @@ exports[`props should render ColorCircle with css prop 2`] = `
 exports[`props should render ColorControl 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-90o1hp"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-13a8eb5"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -982,7 +982,7 @@ exports[`props should render ColorControl 1`] = `
 exports[`props should render ColorControl with css prop 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-90o1hp"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-13a8eb5"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1014,7 +1014,7 @@ exports[`props should render ColorControl with css prop 1`] = `
 exports[`props should render ColorControl with css prop 2`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-17yd0au"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-1ai1efg"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1126,7 +1126,7 @@ exports[`props should render ControlGroup with css prop 2`] = `
 
 exports[`props should render ControlGroupItem 1`] = `
 <div
-  class="wp-components-flex-item wp-components-control-group-item css-cfwkvo"
+  class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
   data-g2-c16t="true"
   data-g2-component="ControlGroupItem"
   id="ControlGroupItem"
@@ -1135,7 +1135,7 @@ exports[`props should render ControlGroupItem 1`] = `
 
 exports[`props should render ControlGroupItem with css prop 1`] = `
 <div
-  class="wp-components-flex-item wp-components-control-group-item css-cfwkvo"
+  class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
   data-g2-c16t="true"
   data-g2-component="ControlGroupItem"
   id="ControlGroupItem"
@@ -1144,7 +1144,7 @@ exports[`props should render ControlGroupItem with css prop 1`] = `
 
 exports[`props should render ControlGroupItem with css prop 2`] = `
 <div
-  class="wp-components-flex-item wp-components-control-group-item css-1pr0wul"
+  class="wp-components-flex-item wp-components-control-group-item css-lcnkeg"
   data-g2-c16t="true"
   data-g2-component="ControlGroupItem"
   id="ControlGroupItem"
@@ -2434,7 +2434,7 @@ exports[`props should render Scrollable with css prop 2`] = `
 
 exports[`props should render SearchInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -2554,7 +2554,7 @@ exports[`props should render SearchInput 1`] = `
 exports[`props should render SegmentedControl 1`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-16al81f"
+  class="wp-components-segmented-control css-14z170l"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="SegmentedControl"
@@ -2569,7 +2569,7 @@ exports[`props should render SegmentedControl 1`] = `
     tabindex="-1"
   />
   <div
-    class="css-k5346k"
+    class="css-80hbch"
     data-g2-component="SegmentedControlBackdrop"
     role="presentation"
     style="transform: translateX(0px); transition: none; width: 0px;"
@@ -2580,7 +2580,7 @@ exports[`props should render SegmentedControl 1`] = `
 exports[`props should render SegmentedControl with css prop 1`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-16al81f"
+  class="wp-components-segmented-control css-14z170l"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="SegmentedControl"
@@ -2595,7 +2595,7 @@ exports[`props should render SegmentedControl with css prop 1`] = `
     tabindex="-1"
   />
   <div
-    class="css-k5346k"
+    class="css-80hbch"
     data-g2-component="SegmentedControlBackdrop"
     role="presentation"
     style="transform: translateX(0px); transition: none; width: 0px;"
@@ -2606,7 +2606,7 @@ exports[`props should render SegmentedControl with css prop 1`] = `
 exports[`props should render SegmentedControl with css prop 2`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-1raidjg"
+  class="wp-components-segmented-control css-wqsckm"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="SegmentedControl"
@@ -2621,7 +2621,7 @@ exports[`props should render SegmentedControl with css prop 2`] = `
     tabindex="-1"
   />
   <div
-    class="css-k5346k"
+    class="css-80hbch"
     data-g2-component="SegmentedControlBackdrop"
     role="presentation"
     style="transform: translateX(0px); transition: none; width: 0px;"
@@ -2631,7 +2631,7 @@ exports[`props should render SegmentedControl with css prop 2`] = `
 
 exports[`props should render Select 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-select css-k256la"
+  class="wp-components-flex wp-components-base-field wp-components-select css-12upxzk"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
@@ -2713,7 +2713,7 @@ exports[`props should render Separator with css prop 2`] = `
 
 exports[`props should render Slider 1`] = `
 <input
-  class="wp-components-slider css-1equ9c3"
+  class="wp-components-slider css-1xes4jw"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -2727,7 +2727,7 @@ exports[`props should render Slider 1`] = `
 
 exports[`props should render Slider with css prop 1`] = `
 <input
-  class="wp-components-slider css-1equ9c3"
+  class="wp-components-slider css-1xes4jw"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -2741,7 +2741,7 @@ exports[`props should render Slider with css prop 1`] = `
 
 exports[`props should render Slider with css prop 2`] = `
 <input
-  class="wp-components-slider css-bnhdbm"
+  class="wp-components-slider css-1c68f3z"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -2962,13 +2962,13 @@ exports[`props should render Stepper 1`] = `
   id="Stepper"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
+    class="wp-components-flex-item wp-components-control-group-item css-11geyni"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1dete6n"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1fcxokd"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -3015,13 +3015,13 @@ exports[`props should render Stepper 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
+    class="wp-components-flex-item wp-components-control-group-item css-1mce53w"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-o7z2f8"
+      class="wp-components-flex wp-components-base-button wp-components-button css-10aj8g6"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -3084,13 +3084,13 @@ exports[`props should render Stepper with css prop 1`] = `
   id="Stepper"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
+    class="wp-components-flex-item wp-components-control-group-item css-11geyni"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1dete6n"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1fcxokd"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -3137,13 +3137,13 @@ exports[`props should render Stepper with css prop 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
+    class="wp-components-flex-item wp-components-control-group-item css-1mce53w"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-o7z2f8"
+      class="wp-components-flex wp-components-base-button wp-components-button css-10aj8g6"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -3206,13 +3206,13 @@ exports[`props should render Stepper with css prop 2`] = `
   id="Stepper"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
+    class="wp-components-flex-item wp-components-control-group-item css-11geyni"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1dete6n"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1fcxokd"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -3259,13 +3259,13 @@ exports[`props should render Stepper with css prop 2`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
+    class="wp-components-flex-item wp-components-control-group-item css-1mce53w"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-o7z2f8"
+      class="wp-components-flex wp-components-base-button wp-components-button css-10aj8g6"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -3606,7 +3606,7 @@ exports[`props should render Text with css prop 2`] = `
 
 exports[`props should render TextField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-1iozk7"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -3625,7 +3625,7 @@ exports[`props should render TextField 1`] = `
 
 exports[`props should render TextInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-1iozk7"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

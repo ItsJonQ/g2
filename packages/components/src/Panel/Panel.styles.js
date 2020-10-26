@@ -9,7 +9,7 @@ export const Panel = css`
 export const PanelHeader = css`
 	cursor: pointer;
 	outline: none;
-	padding: ${ui.space(3)};
+	padding: ${ui.get('panelHeaderPadding')};
 	position: relative;
 
 	&:focus {
@@ -30,5 +30,5 @@ export const seamless = css`
 `;
 
 export const PanelBodyView = styled.div`
-	padding: 8px 12px 12px;
+	padding: ${ui.get('panelBodyPadding')};
 `;

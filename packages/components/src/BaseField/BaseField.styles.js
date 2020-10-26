@@ -3,7 +3,9 @@ import { css, ui } from '@wp-g2/styles';
 export const BaseField = css`
 	${ui.background.control};
 	${ui.borderRadius.round};
-	border: 1px solid ${ui.get('controlBorderColor')};
+	border: 1px solid;
+	border-color: ${ui.get('controlBorderColor')};
+	box-shadow: ${ui.get('controlBoxShadow')};
 	display: flex;
 	flex: 1;
 	font-family: ${ui.get('fontFamily')};

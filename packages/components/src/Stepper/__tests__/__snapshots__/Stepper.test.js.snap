@@ -7,13 +7,13 @@ exports[`props should render correctly 1`] = `
   data-g2-component="Stepper"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
+    class="wp-components-flex-item wp-components-control-group-item css-11geyni"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1dete6n"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1fcxokd"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -60,13 +60,13 @@ exports[`props should render correctly 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
+    class="wp-components-flex-item wp-components-control-group-item css-1mce53w"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-o7z2f8"
+      class="wp-components-flex wp-components-base-button wp-components-button css-10aj8g6"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -128,13 +128,13 @@ exports[`props should render size 1`] = `
   data-g2-component="Stepper"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
+    class="wp-components-flex-item wp-components-control-group-item css-11geyni"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-3jrual"
+      class="wp-components-flex wp-components-base-button wp-components-button css-dlr8jb"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -181,13 +181,13 @@ exports[`props should render size 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-ucdtff"
+    class="wp-components-flex-item wp-components-control-group-item css-1mce53w"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-u57hmj"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1immx4w"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -249,13 +249,13 @@ exports[`props should render vertically 1`] = `
   data-g2-component="Stepper"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-zkdzda"
+    class="wp-components-flex-item wp-components-control-group-item css-11geyni"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-n9th1r"
+      class="wp-components-flex wp-components-base-button wp-components-button css-k6kacs"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -299,13 +299,13 @@ exports[`props should render vertically 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-98bc7i"
+    class="wp-components-flex-item wp-components-control-group-item css-1bp6z9a"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-7loukz"
+      class="wp-components-flex wp-components-base-button wp-components-button css-pi9ort"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"

@@ -1,6 +1,6 @@
 import { createTheme } from '@wp-g2/styles';
 
-const theme = createTheme(({ get, space }) => {
+const theme = createTheme(({ get, space, ...theme }) => {
 	const COLOR_PROPS = {
 		colorAdmin: get('blueberry'),
 		colorText: '#3a3b3c',
@@ -16,6 +16,7 @@ const theme = createTheme(({ get, space }) => {
 		controlBorderColorSubtle: 'transparent',
 		controlBorderRadius: '4px',
 		controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
+		controlBoxShadow: 'transparent',
 		controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,
 		controlHeight: '30px',
 		controlHeightLarge: '36px',
@@ -76,6 +77,7 @@ const theme = createTheme(({ get, space }) => {
 	};
 
 	return {
+		...theme,
 		...BUTTON_PROPS,
 		...CARD_PROPS,
 		...COLOR_PROPS,

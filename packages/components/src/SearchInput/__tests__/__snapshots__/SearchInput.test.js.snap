@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -121,7 +121,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isLoading 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -258,7 +258,7 @@ exports[`props should render isLoading 1`] = `
 
 exports[`props should render placeholder 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -377,7 +377,7 @@ exports[`props should render placeholder 1`] = `
 
 exports[`props should render prefix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -499,7 +499,7 @@ exports[`props should render prefix 1`] = `
 
 exports[`props should render suffix 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -621,7 +621,7 @@ exports[`props should render suffix 1`] = `
 
 exports[`props should render value 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-oyzsa5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

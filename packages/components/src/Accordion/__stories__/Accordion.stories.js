@@ -7,6 +7,7 @@ import {
 	Panel,
 	PanelBody,
 	PanelHeader,
+	Text,
 	VStack,
 } from '../../index';
 import { Accordion } from '../index';
@@ -25,16 +26,28 @@ const Example = () => {
 				<ListGroupHeader>Accordion</ListGroupHeader>
 				<Accordion current={current} onChange={setCurrent}>
 					<Panel id="one">
-						<PanelHeader>Panel 1</PanelHeader>
-						<PanelBody>Content</PanelBody>
+						<PanelHeader>
+							<Text>Panel 1</Text>
+						</PanelHeader>
+						<PanelBody>
+							<Text>Content</Text>
+						</PanelBody>
 					</Panel>
 					<Panel id="two">
-						<PanelHeader>Panel 2</PanelHeader>
-						<PanelBody>Content</PanelBody>
+						<PanelHeader>
+							<Text>Panel 2</Text>
+						</PanelHeader>
+						<PanelBody>
+							<Text>Content</Text>
+						</PanelBody>
 					</Panel>
 					<Panel id="three">
-						<PanelHeader>Panel 3</PanelHeader>
-						<PanelBody>Content</PanelBody>
+						<PanelHeader>
+							<Text>Panel 3</Text>
+						</PanelHeader>
+						<PanelBody>
+							<Text>Content</Text>
+						</PanelBody>
 					</Panel>
 				</Accordion>
 			</ListGroup>
@@ -42,16 +55,28 @@ const Example = () => {
 				<ListGroupHeader>Accordion (Another set)</ListGroupHeader>
 				<Accordion current={current} onChange={setCurrent}>
 					<Panel id="one">
-						<PanelHeader>Panel 1</PanelHeader>
-						<PanelBody>Content</PanelBody>
+						<PanelHeader>
+							<Text>Panel 1</Text>
+						</PanelHeader>
+						<PanelBody>
+							<Text>Content</Text>
+						</PanelBody>
 					</Panel>
 					<Panel id="two">
-						<PanelHeader>Panel 2</PanelHeader>
-						<PanelBody>Content</PanelBody>
+						<PanelHeader>
+							<Text>Panel 2</Text>
+						</PanelHeader>
+						<PanelBody>
+							<Text>Content</Text>
+						</PanelBody>
 					</Panel>
 					<Panel id="three">
-						<PanelHeader>Panel 3</PanelHeader>
-						<PanelBody>Content</PanelBody>
+						<PanelHeader>
+							<Text>Panel 3</Text>
+						</PanelHeader>
+						<PanelBody>
+							<Text>Content</Text>
+						</PanelBody>
 					</Panel>
 				</Accordion>
 			</ListGroup>

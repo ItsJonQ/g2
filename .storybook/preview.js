@@ -127,12 +127,20 @@ const Themer = React.memo(
 									</optgroup>
 									<optgroup label="Experimental">
 										<option
+											value="baseCompact"
+											label="Base (Compact)"
+										/>
+										<option
 											value="blueberry"
 											label="Blueberry"
 										/>
 										<option
 											value="blueberrySubtle"
 											label="Blueberry (Subtle)"
+										/>
+										<option
+											value="cupertino"
+											label="Cupertino"
 										/>
 									</optgroup>
 								</Select>

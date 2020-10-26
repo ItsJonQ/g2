@@ -2,7 +2,8 @@ import { css, styled, ui } from '@wp-g2/styles';
 
 export const SegmentedControl = css`
 	background: ${ui.get('controlBackgroundColor')};
-	border: 1px solid ${ui.get('controlBorderColor')};
+	border: 1px solid;
+	border-color: ${ui.get('controlBorderColor')};
 	border-radius: calc(${ui.get('controlBorderRadius')} + 1px);
 	display: inline-flex;
 	min-height: ${ui.get('controlHeight')};
@@ -10,6 +11,10 @@ export const SegmentedControl = css`
 	padding: 1px;
 	position: relative;
 	transition: all ${ui.get('transitionDurationFastest')} linear;
+
+	&:hover {
+		border-color: ${ui.get('controlBorderColorHover')};
+	}
 
 	&:focus {
 		border-color: ${ui.color.admin};
@@ -25,10 +30,10 @@ export const block = css`
 `;
 
 export const BackdropView = styled.div`
-	background: ${ui.get('controlSurfaceColor')};
-	border: 1px solid ${ui.get('controlBorderColor')};
+	background: ${ui.get('segmentedControlBackdropBackgroundColor')};
+	border: 1px solid ${ui.get('segmentedControlBackdropBorderColor')};
 	border-radius: ${ui.get('controlBorderRadius')};
-	box-shadow: ${ui.get('controlSurfaceBoxShadow')};
+	box-shadow: ${ui.get('segmentedControlBackdropBoxShadow')};
 	height: calc(${ui.get('controlHeight')} - 4px);
 	left: 0;
 	position: absolute;

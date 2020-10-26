@@ -7,7 +7,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-19kxsx5"
+    class="wp-components-flex-item wp-components-control-group-item css-1a60l5v"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -36,7 +36,7 @@ exports[`props should render correctly 1`] = `
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-cfwkvo"
+    class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
@@ -74,12 +74,12 @@ exports[`props should render mixed control types 1`] = `
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-19kxsx5"
+    class="wp-components-flex-item wp-components-control-group-item css-1a60l5v"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-select css-13cny3o"
+      class="wp-components-flex wp-components-base-field wp-components-select css-afjpq5"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
@@ -126,12 +126,12 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-cfwkvo"
+    class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-sika8k"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-1e4oyax"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
@@ -148,7 +148,7 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-cfwkvo"
+    class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
