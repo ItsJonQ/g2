@@ -423,7 +423,11 @@ function StoryDecorator(storyFn) {
 			<View css={{ padding: 16 }}>
 				{designTools && <ComponentDesignTool />}
 				{stats && <StatsGraph />}
-				<ComponentInspector visible={inspector}>
+				<ComponentInspector
+					visible={inspector}
+					tooltipOnly
+					tooltipElement={window}
+				>
 					{storyFn()}
 				</ComponentInspector>
 			</View>

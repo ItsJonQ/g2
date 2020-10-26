@@ -11,6 +11,8 @@ function ComponentInspector(props, forwardedRef) {
 	const {
 		children,
 		disabled = false,
+		tooltipElement,
+		tooltipOnly = false,
 		visible,
 		...otherProps
 	} = useContextSystem(props, 'ComponentInspector');
@@ -29,7 +31,7 @@ function ComponentInspector(props, forwardedRef) {
 	}, [isHidden]);
 
 	useEffect(() => {
-		const node = nodeRef.current;
+		const node = tooltipElement || nodeRef.current;
 		if (!node || disabled || isHidden) return;
 
 		const clear = () => {
@@ -63,14 +65,14 @@ function ComponentInspector(props, forwardedRef) {
 			node.removeEventListener('mouseenter', clear);
 			node.removeEventListener('mouseleave', clear);
 		};
-	}, [disabled, isHidden]);
+	}, [disabled, isHidden, tooltipElement]);
 
 	const { x, y } = position;
 	const showDebugger = label && !!x && !!y && !disabled;
 
 	return (
 		<ComponentInspectorView
-			disabled={disabled || isHidden}
+			disabled={tooltipOnly || disabled || isHidden}
 			ref={mergeRefs([forwardedRef, nodeRef])}
 			{...otherProps}
 		>
@@ -82,6 +84,7 @@ function ComponentInspector(props, forwardedRef) {
 						position: 'fixed',
 						top: y,
 						transform: `translate(-50%, calc(-100% + -10px)`,
+						zIndex: 99999999,
 					}}
 				>
 					{label}
