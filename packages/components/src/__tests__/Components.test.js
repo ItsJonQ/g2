@@ -31,7 +31,6 @@ const excludeList = [
 	'Panel',
 	'PanelBody',
 	'PanelHeader',
-	'PresetInput',
 	'Portal',
 	'SlotFill',
 	'Sortable',

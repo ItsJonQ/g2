@@ -1,12 +1,10 @@
 import {
 	Card,
 	CardBody,
-	FormGroup,
 	Grid,
 	ListGroup,
 	ListGroupHeader,
 	ListGroups,
-	PresetInput,
 	Select,
 	UnitInput,
 } from '@wp-g2/components';
@@ -15,7 +13,7 @@ import { FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
 import { createTheme, ThemeProvider, ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { fontFamilyPresets, presets, Wrapper } from './components';
+import { Wrapper } from './components';
 import {
 	ColorPanel,
 	CombinedFormGroup,
@@ -78,9 +76,8 @@ const ExampleTwo = () => {
 							<option value="Bolder">Bolder</option>
 						</CombinedFormGroup>
 						<CombinedFormGroup
-							Component={PresetInput}
+							Component={UnitInput}
 							label="Size"
-							presets={presets}
 							prop="fontSize"
 						/>
 						<CombinedFormGroup
@@ -242,10 +239,8 @@ const ExampleFive = ({ truncate = false }) => {
 							/>
 						</ListGroupHeader>
 						<CombinedFormGroup
-							Component={PresetInput}
 							format="text"
 							label="Font"
-							presets={fontFamilyPresets}
 							prop="fontFamily"
 							showRemove={false}
 							showRemoveRight
@@ -263,11 +258,10 @@ const ExampleFive = ({ truncate = false }) => {
 							<option value="Bolder">Bolder</option>
 						</CombinedFormGroup>
 						<CombinedFormGroup
-							Component={PresetInput}
+							Component={UnitInput}
 							cssProp="fontSize"
 							label="Size"
 							min={0}
-							presets={presets}
 							prop="fontSize"
 							showRemove={false}
 							showRemoveRight
@@ -325,10 +319,8 @@ const ExampleSix = () => {
 							/>
 						</ListGroupHeader>
 						<CombinedFormGroup
-							Component={PresetInput}
 							format="text"
 							label="Font"
-							presets={fontFamilyPresets}
 							prop="fontFamily"
 							showRemove={false}
 							showResetRight
@@ -346,11 +338,10 @@ const ExampleSix = () => {
 							<option value="Bolder">Bolder</option>
 						</CombinedFormGroup>
 						<CombinedFormGroup
-							Component={PresetInput}
+							Component={UnitInput}
 							cssProp="fontSize"
 							label="Size"
 							min={0}
-							presets={presets}
 							prop="fontSize"
 							showRemove={false}
 							showResetRight

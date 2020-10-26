@@ -11,6 +11,7 @@ function CloseButton(props, forwardedRef) {
 		<Button
 			icon={<FiX />}
 			iconSize={12}
+			isSubtle
 			variant="tertiary"
 			{...otherProps}
 			ref={forwardedRef}

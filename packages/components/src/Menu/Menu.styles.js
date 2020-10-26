@@ -9,12 +9,14 @@ export const MenuItem = css`
 	${ui.font.color.text};
 	${ui.font.size()};
 	border-color: transparent;
+	border-width: ${ui.get('menuItemBorderWidth')};
 	box-sizing: border-box;
 	cursor: pointer;
 	outline: none;
 	position: relative;
 	text-decoration: none;
-	transition: background ${ui.get('transitionDurationFastest')} linear;
+	transition: background ${ui.get('transitionDurationFastest')} linear,
+		border-color ${ui.get('transitionDurationFastest')} linear;
 	width: 100%;
 
 	a:hover > &,
@@ -25,14 +27,18 @@ export const MenuItem = css`
 	a:focus > &,
 	&:focus {
 		${ui.zIndex('ControlFocus')};
-		background: ${ui.get('controlBackgroundColor')};
-		border-color: ${ui.color.admin};
-		box-shadow: ${ui.get('controlBoxShadowFocus')};
+		background-color: ${ui.get('menuItemFocusBackgroundColor')};
+		border-color: ${ui.get('menuItemFocusBorderColor')};
+		box-shadow: ${ui.get('menuItemFocusBoxShadow')};
+		color: ${ui.get('menuItemFocusTextColor')};
 	}
 
 	a:active > &,
 	&:active {
-		background: ${ui.get('controlBackgroundColor')};
+		background: ${ui.get('menuItemActiveBackgroundColor')};
+		border-color: ${ui.get('menuItemActiveBorderColor')};
+		box-shadow: ${ui.get('menuItemActiveBoxShadow')};
+		color: ${ui.get('menuItemActiveTextColor')};
 	}
 
 	&.is-active,

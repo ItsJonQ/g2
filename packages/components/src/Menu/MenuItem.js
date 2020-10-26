@@ -64,13 +64,11 @@ function MenuItem(props, forwardedRef) {
 	const selectedContent = useMemo(
 		() =>
 			is.defined(isSelected) && (
-				<Text isBlock>
-					<Icon
-						icon={<FiCheck />}
-						size={16}
-						style={{ opacity: isSelected ? 1 : 0 }}
-					/>
-				</Text>
+				<Icon
+					icon={<FiCheck />}
+					size={16}
+					style={{ opacity: isSelected ? 1 : 0 }}
+				/>
 			),
 		[isSelected],
 	);

@@ -26,7 +26,7 @@ const ANIMATION_PROPS = {
 const COLOR_PROPS = {
 	...WORDPRESS_COLORS,
 	...BACKGROUND_COLOR_PROPS,
-	colorAdmin: get('blueberry'),
+	colorAdmin: get('wordpressBlue'),
 	colorBodyBackground: get('white'),
 	colorBodyBackgroundDark: '#18191A',
 	colorDestructive: get('pomegrade'),
@@ -35,7 +35,7 @@ const COLOR_PROPS = {
 	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
 	colorScrollbarThumbHover: 'rgba(0, 0, 0, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
-	colorText: '#3a3b3c',
+	colorText: '#1e1e1e',
 	colorTextInverted: get('white'),
 	colorTextHeading: '#050505',
 	colorTextMuted: '#8a8b8c',
@@ -77,25 +77,25 @@ const GRID_PROPS = {
 };
 
 const CONTROL_PROPS = {
-	controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
-	controlBackgroundHoverColor: 'rgba(0, 0, 0, 0.05)',
+	controlBackgroundColor: get('white'),
+	controlBackgroundHoverColor: get('white'),
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
 	controlBackgroundBrightColor: 'rgba(0, 0, 0, 0.03)',
-	controlBorderColor: 'transparent',
-	controlBorderColorHover: 'transparent',
+	controlBorderColor: '#757575',
+	controlBorderColorHover: get('controlBorderColor'),
 	controlBorderColorSubtle: 'transparent',
-	controlBorderRadius: '4px',
+	controlBorderRadius: '2px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,
 	controlHeight: '30px',
-	controlHeightLarge: '36px',
-	controlHeightSmall: '24px',
-	controlHeightXLarge: '44px',
-	controlHeightXSmall: '20px',
-	controlHeightXXSmall: '12px',
+	controlHeightLarge: `calc(${get('controlHeight')} * 1.2)`,
+	controlHeightSmall: `calc(${get('controlHeight')} * 0.8)`,
+	controlHeightXLarge: `calc(${get('controlHeight')} * 1.4)`,
+	controlHeightXSmall: `calc(${get('controlHeight')} * 0.67)`,
+	controlHeightXXSmall: `calc(${get('controlHeight')} * 0.4)`,
 	controlPaddingX: '8px',
-	controlPaddingXLarge: '16px',
-	controlPaddingXSmall: '4px',
+	controlPaddingXLarge: `calc(${get('controlPaddingX')} * 2)`,
+	controlPaddingXSmall: `calc(${get('controlPaddingX')} / 2)`,
 	controlPrimaryTextActiveColor: get('white'),
 	controlPrimaryTextColor: get('white'),
 	controlSurfaceBoxShadow:
@@ -111,7 +111,7 @@ const BUTTON_PROPS = {
 };
 
 const CARD_PROPS = {
-	cardBorderRadius: '8px',
+	cardBorderRadius: '2px',
 	cardPaddingX: space(3),
 	cardPaddingY: space(3),
 	cardPadding: `${get('cardPaddingX')} ${get('cardPaddingY')}`,
@@ -119,39 +119,64 @@ const CARD_PROPS = {
 	cardHeaderHeight: '44px',
 };
 
+const LINK_PROPS = {
+	linkColor: get('colorAdmin'),
+	linkColorHover: get('colorAdmin'),
+	linkColorActive: get('colorAdmin'),
+	linkColorFocus: get('colorAdmin'),
+};
+
+const MENU_PROPS = {
+	menuItemBorderWidth: '1px',
+	menuItemFocusBackgroundColor: 'transparent',
+	menuItemFocusBorderColor: get('colorAdmin'),
+	menuItemFocusTextColor: get('colorAdmin'),
+	menuItemFocusBoxShadow: get('controlBorderSubtleColor'),
+	menuItemActiveBackgroundColor: get('controlBackgroundColor'),
+	menuItemActiveBorderColor: get('colorAdmin'),
+	menuItemActiveTextColor: get('colorText'),
+	menuItemActiveBoxShadow: get('controlBorderSubtleColor'),
+};
+
 const SEGMENTED_CONTROL_PROPS = {
 	segmentedControlFontSize: '12px',
 };
 
 const SLIDER_PROPS = {
-	sliderThumbBackground: get('white'),
-	sliderThumbBorderColor: get('controlBorderColor'),
-	sliderThumbBoxShadow: `0 0 2px rgba(0, 0, 0, 0.2), ${get(
-		'controlSurfaceBoxShadow',
-	)}`,
+	sliderThumbBorderColor: 'transparent',
+	sliderThumbBoxShadow: 'none',
+	sliderThumbBackground: get('colorAdmin'),
 };
 
 const SWITCH_PROPS = {
-	switchToggleBackground: get('controlPrimaryTextColor'),
-	switchToggleBackgroundActive: get('controlPrimaryTextColor'),
-	switchToggleBorderColor: get('controlBorderColor'),
-	switchToggleBoxShadow: get('controlSurfaceBoxShadow'),
-	switchBackdropBackground: get('controlBackgroundColor'),
+	switchBackdropBackground: 'transparent',
 	switchBackdropBackgroundActive: get('colorAdmin'),
-	switchBackdropBorderColor: get('controlBorderColor'),
+	switchBackdropBorderColor: get('colorText'),
+	switchBackdropBorderColorActive: get('colorAdmin'),
+	switchBackdropBorderColorFocus: get('white'),
+	switchToggleBackground: get('colorText'),
+	switchToggleBackgroundActive: get('colorTextInverted'),
+	switchToggleBoxShadow: 'none',
+	switchPaddingOffset: '6px',
 };
 
 const BASE_THEME = {
+	// Colors
 	...G2_COLORS,
 	...COLOR_PROPS,
+	// Base
 	...CARD_PROPS,
 	...CONTROL_PROPS,
 	...ELEVATION_PROPS,
 	...FONT_PROPS,
 	...SURFACE_PROPS,
+	// Animations
 	...ANIMATION_PROPS,
+	// The Rest
 	...BUTTON_PROPS,
 	...GRID_PROPS,
+	...LINK_PROPS,
+	...MENU_PROPS,
 	...SEGMENTED_CONTROL_PROPS,
 	...SLIDER_PROPS,
 	...SWITCH_PROPS,

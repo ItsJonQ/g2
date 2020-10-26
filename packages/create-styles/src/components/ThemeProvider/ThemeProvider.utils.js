@@ -195,21 +195,22 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 		if (shallowEqual(themeRef.current, theme)) return;
 
 		themeRef.current = theme;
-		const rootNode = document.documentElement;
 
 		/**
 		 * This compiles the theme config (object) into CSS variables that
 		 * the Style system understands and can be retrieved using the get() function.
 		 */
+		const styleNode = getStyleNode();
 		const nextTheme = transformValuesToVariables(theme);
+		const nextThemeHtml = transformValuesToVariablesString(':root', theme);
 
 		if (isGlobal) {
 			/**
 			 * If isGlobal is preferred, we need to set the custom CSS variables onto
 			 * the root element.
 			 */
-			for (const [k, v] of Object.entries(nextTheme)) {
-				rootNode && rootNode.style.setProperty(k, v);
+			if (styleNode) {
+				styleNode.innerHTML = nextThemeHtml;
 			}
 		} else {
 			/**
@@ -221,4 +222,20 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 	}, [injectGlobal, isGlobal, setThemeStyles, theme]);
 
 	return themeStyles;
+}
+
+function getStyleNode() {
+	const id = 'StyleSystemThemeProviderStyleNode';
+	let node = document.getElementById(id);
+
+	if (node) return node;
+
+	node = document.createElement('style');
+	node.id = id;
+	node.setAttribute('data-g2-theme-provider', 'theme');
+
+	const headNode = document.querySelector('head');
+	headNode.appendChild(node);
+
+	return node;
 }

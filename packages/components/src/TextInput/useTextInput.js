@@ -33,7 +33,7 @@ export function useTextInput(props) {
 	const {
 		__debugger = false,
 		align,
-		arrows,
+		arrows = true,
 		className,
 		defaultValue = '',
 		disabled,

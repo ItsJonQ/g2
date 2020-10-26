@@ -90,7 +90,7 @@ export function transformValuesToVariablesString(
 
 	for (const [key, value] of Object.entries(variables)) {
 		const ref = value;
-		if (is.defined(ref)) {
+		if (is.defined(ref) && !is.boolean(ref)) {
 			next.push(`${key}: ${ref};`);
 		}
 	}

@@ -5,5 +5,9 @@ export const BaseLink = css`
 `;
 
 export const Link = css`
-	color: ${ui.color.admin};
+	color: ${ui.get('linkColor')};
+
+	&:hover {
+		color: ${ui.get('linkColorHover')};
+	}
 `;

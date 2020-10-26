@@ -54,7 +54,6 @@ export * from './Panel';
 export * from './Placeholder';
 export * from './Popover';
 export * from './Portal';
-export * from './PresetInput';
 export * from './Radio';
 export * from './RadioGroup';
 export * from './Scrollable';

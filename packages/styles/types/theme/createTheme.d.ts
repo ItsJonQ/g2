@@ -31,7 +31,7 @@ type CreateThemeProps = {
 	/**
 	 * The default thme configuration for the Style system.
 	 */
-	config: ThemeConfig;
+	theme: ThemeConfig;
 	/**
 	 * Calculates a value based on the grid system.
 	 */
@@ -52,7 +52,12 @@ type CreateThemeFunction = (props: CreateThemeProps) => CreateThemeConfig;
  * import { createTheme, ThemeProvider } from `@wp-g2/styles`;
  *
  * const customTheme = createTheme((props) => {
- *  const { get } = props
+ *  const {
+ * 	get, // Variable getter
+ * 	color, // Color utility
+ * 	theme, // Default theme config
+ * 	space // Space utility
+ * } = props
  *
  *  return {
  *    colorAdmin: get('blueberry')

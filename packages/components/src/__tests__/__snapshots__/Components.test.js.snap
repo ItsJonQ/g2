@@ -749,7 +749,7 @@ exports[`props should render CheckboxGroup 1`] = `null`;
 exports[`props should render CloseButton 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-ss55el"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-1pymlfd"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -806,7 +806,7 @@ exports[`props should render CloseButton 1`] = `
 exports[`props should render CloseButton with css prop 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-ss55el"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-1pymlfd"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -863,7 +863,7 @@ exports[`props should render CloseButton with css prop 1`] = `
 exports[`props should render CloseButton with css prop 2`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-11mkld3"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-18lpsq0"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1243,7 +1243,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
 exports[`props should render DropdownMenuItem 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-1lbx96r"
+  class="wp-components-flex wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-cfsf6e"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1264,7 +1264,7 @@ exports[`props should render DropdownMenuItem 1`] = `
 exports[`props should render DropdownMenuItem with css prop 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-1lbx96r"
+  class="wp-components-flex wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-cfsf6e"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1285,7 +1285,7 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
 exports[`props should render DropdownMenuItem with css prop 2`] = `
 <div
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-1nx2s0u"
+  class="wp-components-flex wp-components-base-button wp-components-menu-item wp-components-dropdown-menu-item css-1ykgfb1"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1759,7 +1759,7 @@ exports[`props should render Initials with css prop 2`] = `
 
 exports[`props should render Link 1`] = `
 <a
-  class="wp-components-truncate wp-components-text wp-components-link css-5wsb9y"
+  class="wp-components-truncate wp-components-text wp-components-link css-zvxhcg"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -1768,7 +1768,7 @@ exports[`props should render Link 1`] = `
 
 exports[`props should render Link with css prop 1`] = `
 <a
-  class="wp-components-truncate wp-components-text wp-components-link css-5wsb9y"
+  class="wp-components-truncate wp-components-text wp-components-link css-zvxhcg"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -1777,7 +1777,7 @@ exports[`props should render Link with css prop 1`] = `
 
 exports[`props should render Link with css prop 2`] = `
 <a
-  class="wp-components-truncate wp-components-text wp-components-link css-xlssx1"
+  class="wp-components-truncate wp-components-text wp-components-link css-p7blea"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -1976,7 +1976,7 @@ exports[`props should render Menu with css prop 2`] = `
 exports[`props should render MenuItem 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-menu-item css-1lbx96r"
+  class="wp-components-flex wp-components-base-button wp-components-menu-item css-cfsf6e"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -1997,7 +1997,7 @@ exports[`props should render MenuItem 1`] = `
 exports[`props should render MenuItem with css prop 1`] = `
 <div
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-menu-item css-1lbx96r"
+  class="wp-components-flex wp-components-base-button wp-components-menu-item css-cfsf6e"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -2018,7 +2018,7 @@ exports[`props should render MenuItem with css prop 1`] = `
 exports[`props should render MenuItem with css prop 2`] = `
 <div
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-menu-item css-1nx2s0u"
+  class="wp-components-flex wp-components-base-button wp-components-menu-item css-1ykgfb1"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -3376,7 +3376,7 @@ exports[`props should render Surface with css prop 2`] = `
 
 exports[`props should render Switch 1`] = `
 <label
-  class="wp-components-switch css-1qim1rt"
+  class="wp-components-switch css-80543k"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="Switch"
@@ -3391,12 +3391,12 @@ exports[`props should render Switch 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-l4d04r"
+    class="css-o60mpt"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-6fduh"
+    class="css-114hw1q"
     data-g2-component="SwitchToggle"
   />
   <span

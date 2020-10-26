@@ -10,7 +10,7 @@ export const Switch = css`
 	height: ${ui.get('controlHeight')};
 	margin: 0;
 	outline: none;
-	padding: 4px 0;
+	padding: ${ui.get('switchPaddingOffset')} 0;
 	position: relative;
 	user-select: none;
 	width: ${getSwitchWidth('controlHeight')};
@@ -43,19 +43,20 @@ export const Backdrop = css`
 
 	background: ${ui.get('switchBackdropBackground')};
 	border: 1px solid ${ui.get('switchBackdropBorderColor')};
-	bottom: 4px;
+	bottom: ${ui.get('switchPaddingOffset')};
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	display: block;
 	left: 0;
 	pointer-events: none;
 	pointer-events: none;
 	position: absolute;
-	top: 4px;
+	top: ${ui.get('switchPaddingOffset')};
 	transition: all ${ui.get('transitionDurationFast')} linear;
 	width: 100%;
 
 	input:checked ~ & {
 		background: ${ui.get('switchBackdropBackgroundActive')};
+		border-color: ${ui.get('switchBackdropBorderColorActive')};
 	}
 `;
 
@@ -64,6 +65,7 @@ export const focus = css`
 
 	input:checked ~ & {
 		${ui.border.control.default};
+		border-color: ${ui.get('switchBackdropBorderColorFocus')};
 	}
 `;
 
@@ -73,14 +75,13 @@ export const Toggle = css`
 	border-radius: ${getToggleHeight('controlHeight')};
 	box-shadow: ${ui.get('switchToggleBoxShadow')};
 	height: ${getToggleHeight('controlHeight')};
-	left: 2px;
 	pointer-events: none;
-	position: absolute;
 	right: initial;
-	top: 6px;
 	transform: translate(0, 0);
 	transition: all ${ui.get('transitionDurationFast')} linear;
 	width: ${getToggleHeight('controlHeight')};
+
+	${getTogglePosition()}
 
 	*:active > & {
 		width: ${getControlHeight('controlHeight')};
@@ -89,7 +90,7 @@ export const Toggle = css`
 	input:checked ~ & {
 		background: ${ui.get('switchToggleBackgroundActive')};
 		left: initial;
-		right: 2px;
+		right: ${getTogglePositionX()};
 	}
 `;
 
@@ -118,9 +119,32 @@ export const formGroup = css`
 `;
 
 function getControlHeight(height) {
-	return `calc(${ui.get(height)} - 8px)`;
+	return `calc(${ui.get(height)} - calc(${ui.get(
+		'switchPaddingOffset',
+	)} * 2))`;
 }
 
 function getToggleHeight(height) {
-	return `calc(${getControlHeight(height)} - 4px)`;
+	return `calc(${getControlHeight(height)} - ${ui.get(
+		'switchPaddingOffset',
+	)})`;
+}
+
+function getTogglePosition() {
+	const value = `calc(${ui.get('switchPaddingOffset')} * 2)`;
+	const top = `calc(${value} * 0.75)`;
+	const left = getTogglePositionX();
+
+	return css({
+		top,
+		left,
+		position: 'absolute',
+	});
+}
+
+function getTogglePositionX() {
+	const value = `calc(${ui.get('switchPaddingOffset')} * 2)`;
+	const x = `calc(${value} * 0.25)`;
+
+	return x;
 }

@@ -136,6 +136,7 @@ export const G2_COLORS = {
 	lightGrey: '#40464D',
 	lighterGrey: '#dddddd',
 	pomegrade: '#E26F56',
+	wordpressBlue: '#007cba',
 	white: '#ffffff',
 };
 

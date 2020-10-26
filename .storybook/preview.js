@@ -1,31 +1,26 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider, createTheme, ui } from '@wp-g2/styles';
+import { ThemeProvider, ui, config as stylesConfig } from '@wp-g2/styles';
 import {
 	Button,
 	Card,
 	CardBody,
-	Separator,
-	ListGroup,
-	ListGroupHeader,
-	ListGroups,
 	ControlLabel,
 	FormGroup as BaseFormGroup,
 	Flex,
 	Popover,
-	Spacer,
 	Surface,
 	Switch,
-	TextInput,
-	Subheading,
+	Select,
 	ComponentInspector,
 	ComponentDesignTool,
 	View,
-	VStack,
+	Text,
 } from '@wp-g2/components';
 import { Hint } from '@wp-g2/hint';
 import { useLocalState } from '@wp-g2/utils';
 import { StatsGraph } from '@helpscout/stats';
+import * as themes from './themes';
 
 const __EXPERIMENTAL_SHOW_HINT = true;
 
@@ -49,15 +44,15 @@ const ColorInput = ({ value, onChange, fallback = '' }) => {
 };
 
 const defaultThemeConfig = {
-	colorAdmin: '#3858E9',
-	surfaceColor: '#ffffff',
-	cardBorderRadius: '8px',
+	colorAdmin: stylesConfig.colorAdmin,
+	surfaceColor: stylesConfig.surfaceColor,
+	cardBorderRadius: stylesConfig.cardBorderRadius,
 	controlSurfaceColor: null,
 	colorText: null,
-	controlBorderRadius: '4px',
-	controlHeight: '30px',
+	controlBorderRadius: stylesConfig.controlBorderRadius,
+	controlHeight: stylesConfig.controlHeight,
 	fontFamily: '',
-	fontSize: '13px',
+	fontSize: stylesConfig.fontSize,
 };
 
 const Themer = React.memo(
@@ -69,9 +64,9 @@ const Themer = React.memo(
 		stats,
 		setStats,
 	}) => {
-		const [themeConfig, setThemeConfig] = useLocalState(
-			'g2/themeConfig',
-			defaultThemeConfig,
+		const [currentTheme, setCurrentTheme] = useLocalState(
+			'g2/currentTheme/v0.0.94',
+			'base',
 		);
 
 		const [isDark, setIsDark] = useLocalState('darkMode', false);
@@ -88,49 +83,8 @@ const Themer = React.memo(
 			false,
 		);
 
-		const prevIsDark = useRef(isDark);
-
-		useEffect(() => {
-			if (isDark !== prevIsDark.current) {
-				setThemeConfig((prev) => ({
-					...prev,
-					surfaceColor: isDark ? '#292929' : '#fff',
-				}));
-			}
-			prevIsDark.current = isDark;
-		}, [isDark]);
-
-		const update = (key) => (value) => {
-			setThemeConfig((prev) => ({ ...prev, [key]: value }));
-		};
-
-		const reset = () => {
-			setThemeConfig((prev) => ({ ...prev, ...defaultThemeConfig }));
-		};
-
-		const {
-			cardBorderRadius,
-			colorAdmin,
-			colorText,
-			controlBorderRadius,
-			controlHeight,
-			controlSurfaceColor,
-			fontFamily,
-			fontSize,
-			surfaceColor,
-		} = themeConfig;
-
-		const theme = createTheme(() => ({
-			cardBorderRadius,
-			colorAdmin,
-			colorText,
-			controlBorderRadius,
-			controlHeight,
-			controlSurfaceColor,
-			fontFamily,
-			fontSize,
-			surfaceColor,
-		}));
+		const theme = themes[currentTheme] || {};
+		console.log(theme);
 
 		return (
 			<View
@@ -156,152 +110,31 @@ const Themer = React.memo(
 					<Card css={{ display: 'inline-flex' }}>
 						<CardBody css={{ padding: 4 }}>
 							<Flex justify="left" gap={2}>
-								<Popover
-									placement="top-start"
-									maxWidth={240}
-									trigger={
-										<Button variant="primary">
-											Customize Theme
-										</Button>
-									}
-								>
-									<CardBody>
-										<ListGroups>
-											<ListGroup>
-												<ListGroupHeader>
-													Colors
-												</ListGroupHeader>
-												<FormGroup label="Admin">
-													<ColorInput
-														value={colorAdmin}
-														onChange={update(
-															'colorAdmin',
-														)}
-													/>
-												</FormGroup>
-												<FormGroup label="Text">
-													<ColorInput
-														value={colorText}
-														fallback="#000000"
-														onChange={update(
-															'colorText',
-														)}
-													/>
-												</FormGroup>
-												<FormGroup label="Surface">
-													<ColorInput
-														value={surfaceColor}
-														onChange={update(
-															'surfaceColor',
-														)}
-													/>
-												</FormGroup>
-												<FormGroup label="Control Surface">
-													<ColorInput
-														value={
-															controlSurfaceColor
-														}
-														fallback="#ffffff"
-														onChange={update(
-															'controlSurfaceColor',
-														)}
-													/>
-												</FormGroup>
-											</ListGroup>
-											<ListGroup>
-												<ListGroupHeader>
-													Controls
-												</ListGroupHeader>
-												<FormGroup label="Border Radius">
-													<TextInput
-														type="number"
-														min={0}
-														value={parseInt(
-															controlBorderRadius,
-															10,
-														)}
-														onChange={(value) =>
-															update(
-																'controlBorderRadius',
-															)(`${value}px`)
-														}
-													/>
-												</FormGroup>
-												<FormGroup label="Height">
-													<TextInput
-														type="number"
-														min={0}
-														value={parseInt(
-															controlHeight,
-															10,
-														)}
-														onChange={(value) =>
-															update(
-																'controlHeight',
-															)(`${value}px`)
-														}
-													/>
-												</FormGroup>
-											</ListGroup>
-											<ListGroup>
-												<ListGroupHeader>
-													Font
-												</ListGroupHeader>
-												<FormGroup label="Family">
-													<TextInput
-														value={fontFamily}
-														onChange={update(
-															'fontFamily',
-														)}
-													/>
-												</FormGroup>
-												<FormGroup label="Size">
-													<TextInput
-														type="number"
-														min={0}
-														value={parseInt(
-															fontSize,
-															10,
-														)}
-														onChange={(value) =>
-															update('fontSize')(
-																`${value}px`,
-															)
-														}
-													/>
-												</FormGroup>
-											</ListGroup>
-											<ListGroup>
-												<ListGroupHeader>
-													Card
-												</ListGroupHeader>
-												<FormGroup label="Border Radius">
-													<TextInput
-														type="number"
-														min={0}
-														value={parseInt(
-															cardBorderRadius,
-															10,
-														)}
-														onChange={(value) =>
-															update(
-																'cardBorderRadius',
-															)(`${value}px`)
-														}
-													/>
-												</FormGroup>
-											</ListGroup>
-										</ListGroups>
-										<Separator />
-										<Button
+								<Select
+									prefix={
+										<Text
+											variant="muted"
 											isBlock
-											onClick={reset}
-											variant="tertiary"
+											css={ui.padding.left(2)}
 										>
-											Reset
-										</Button>
-									</CardBody>
-								</Popover>
+											Theme:
+										</Text>
+									}
+									value={currentTheme}
+									onChange={setCurrentTheme}
+								>
+									<optgroup label="Gutenberg">
+										<option value="base" label="Base" />
+										<option value="next" label="Next" />
+									</optgroup>
+									<optgroup label="Experimental">
+										<option
+											value="blueberry"
+											label="Blueberry"
+										/>
+										<option value="subtle" label="Subtle" />
+									</optgroup>
+								</Select>
 								<Popover
 									maxWidth={200}
 									hideOnClickOutside={false}
