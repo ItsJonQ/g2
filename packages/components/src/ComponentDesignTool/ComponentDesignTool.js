@@ -34,7 +34,13 @@ function getPureBoxBounds(element) {
 	return nextBounds;
 }
 
-function useOutlines({ enabled = true, opacity = 0.75 }) {
+function useOutlines({
+	enabled = true,
+	opacity = 0.75,
+	showOnAltKeyOnly = true,
+}) {
+	const isHoldingAltRef = React.useRef(false);
+
 	const currentElementRef = React.useRef();
 	const currentElementOutlineRef = React.useRef(
 		document.createElement('div'),
@@ -53,6 +59,26 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 	const labelRightRef = React.useRef(document.createElement('div'));
 
 	const parentSizeLabelRef = React.useRef(document.createElement('div'));
+	const sizeLabelRef = React.useRef(document.createElement('div'));
+
+	React.useEffect(() => {
+		const handleOnKeyDown = (event) => {
+			if (event.altKey) {
+				isHoldingAltRef.current = true;
+			}
+		};
+		const handleOnKeyUp = () => {
+			isHoldingAltRef.current = false;
+		};
+
+		window.addEventListener('keydown', handleOnKeyDown);
+		window.addEventListener('keyup', handleOnKeyUp);
+
+		return () => {
+			window.removeEventListener('keydown', handleOnKeyDown);
+			window.removeEventListener('keyup', handleOnKeyUp);
+		};
+	}, []);
 
 	React.useEffect(() => {
 		const currentElementOutline = currentElementOutlineRef.current;
@@ -60,8 +86,12 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 			currentParentElementOutlineRef.current;
 
 		if (!enabled) {
-			document.body.removeChild(currentElementOutline);
-			document.body.removeChild(currentParentElementOutline);
+			if (document.body.contains(currentElementOutline)) {
+				document.body.removeChild(currentElementOutline);
+			}
+			if (document.body.contains(currentParentElementOutline)) {
+				document.body.removeChild(currentParentElementOutline);
+			}
 			return;
 		}
 
@@ -97,6 +127,9 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 		const parentSizeLabel = parentSizeLabelRef.current;
 		parentSizeLabel.classList.add(styles.ParentSizeLabel);
 
+		const sizeLabel = sizeLabelRef.current;
+		sizeLabel.classList.add(styles.SizeLabel);
+
 		currentParentElementOutline.appendChild(rulerTop);
 		currentParentElementOutline.appendChild(rulerBottom);
 		currentParentElementOutline.appendChild(rulerLeft);
@@ -108,6 +141,7 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 		currentParentElementOutline.appendChild(labelBottom);
 
 		currentParentElementOutline.appendChild(parentSizeLabel);
+		currentElementOutline.appendChild(sizeLabel);
 
 		currentElementOutline.style.opacity = opacity;
 		currentParentElementOutline.style.opacity = opacity;
@@ -116,16 +150,22 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 			document.body.removeChild(currentElementOutline);
 			document.body.removeChild(currentParentElementOutline);
 		};
-	}, [enabled, opacity]);
+	}, [enabled, opacity, showOnAltKeyOnly]);
 
 	React.useEffect(() => {
 		const handleOnMouseMove = (event) => {
 			const { target } = event;
+			const shouldEnableOnAlt = showOnAltKeyOnly
+				? isHoldingAltRef.current
+				: true;
 
 			/**
-			 * Disallow for <html /> and <body />.
+			 * Disallow for <html /> and <body /> or if holding alt is void.
 			 */
-			if ([document.body, document.documentElement].includes(target)) {
+			if (
+				[document.body, document.documentElement].includes(target) ||
+				!shouldEnableOnAlt
+			) {
 				currentElementOutlineRef.current.style.display = 'none';
 				currentParentElementOutlineRef.current.style.display = 'none';
 				return;
@@ -190,8 +230,17 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 			/**
 			 * Position the outlines.
 			 */
-			currentElementOutlineRef.current.style.display = 'block';
-			currentParentElementOutlineRef.current.style.display = 'block';
+			if (!bounds.width && !bounds.height) {
+				currentElementOutlineRef.current.style.display = 'none';
+			} else {
+				currentElementOutlineRef.current.style.display = 'block';
+			}
+
+			if (!parentBounds.width && !parentBounds.height) {
+				currentParentElementOutlineRef.current.style.display = 'none';
+			} else {
+				currentParentElementOutlineRef.current.style.display = 'block';
+			}
 
 			const currentElementOutline = currentElementOutlineRef.current;
 			currentElementOutline.style.top = ui.value.px(bounds.top);
@@ -270,17 +319,39 @@ function useOutlines({ enabled = true, opacity = 0.75 }) {
 			parentSizeLabel.innerHTML = `${Math.round(
 				parentBounds.width,
 			)} x ${Math.round(parentBounds.height)}`;
+
+			const sizeLabel = sizeLabelRef.current;
+			sizeLabel.innerHTML = `${Math.round(bounds.width)} x ${Math.round(
+				bounds.height,
+			)}`;
+		};
+
+		const handleOnMouseOut = () => {
+			currentElementOutlineRef.current.style.display = 'none';
+			currentParentElementOutlineRef.current.style.display = 'none';
 		};
 
 		window.addEventListener('mousemove', handleOnMouseMove);
+		document.addEventListener('mouseleave', handleOnMouseOut);
 
-		return () => window.removeEventListener('mousemove', handleOnMouseMove);
-	}, []);
+		return () => {
+			window.removeEventListener('mousemove', handleOnMouseMove);
+			document.removeEventListener('mouseleave', handleOnMouseOut);
+		};
+	}, [showOnAltKeyOnly]);
 }
 
 function ComponentDesignTool(props) {
-	const { enableOutlines = true, outlinesOpacity = 0.75 } = props;
-	useOutlines({ enabled: enableOutlines, opacity: outlinesOpacity });
+	const {
+		enableOutlines = true,
+		outlinesOpacity = 0.75,
+		showOnAltKeyOnly = true,
+	} = props;
+	useOutlines({
+		enabled: enableOutlines,
+		opacity: outlinesOpacity,
+		showOnAltKeyOnly,
+	});
 
 	return null;
 }

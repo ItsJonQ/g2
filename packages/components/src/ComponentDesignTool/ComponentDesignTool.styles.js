@@ -4,12 +4,13 @@ export const ElementOutline = css`
 	outline: 1px solid orangered;
 	pointer-events: none;
 	position: fixed;
-	z-index: 999999;
+	z-index: 9999999;
 `;
 
 export const ParentElementOutline = css`
 	${ElementOutline}
 	outline: 1px solid #7B62FF;
+	z-index: 999999;
 `;
 
 export const RulerX = css`
@@ -96,4 +97,15 @@ export const ParentSizeLabel = css`
 	bottom: 0;
 	right: 0;
 	transform: translateY(120%);
+	white-space: nowrap;
+`;
+
+export const SizeLabel = css`
+	${BaseLabel};
+	background: orangered;
+	left: 0;
+	top: 0;
+	transform: translate(0, -120%);
+	white-space: nowrap;
+	z-index: 2;
 `;

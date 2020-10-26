@@ -84,7 +84,6 @@ const Themer = React.memo(
 		);
 
 		const theme = themes[currentTheme] || {};
-		console.log(theme);
 
 		return (
 			<View
@@ -132,7 +131,10 @@ const Themer = React.memo(
 											value="blueberry"
 											label="Blueberry"
 										/>
-										<option value="subtle" label="Subtle" />
+										<option
+											value="blueberrySubtle"
+											label="Blueberry (Subtle)"
+										/>
 									</optgroup>
 								</Select>
 								<Popover
