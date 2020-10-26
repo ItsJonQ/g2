@@ -1,4 +1,3 @@
-import { StatsGraph } from '@helpscout/stats';
 import {
 	Card,
 	CardBody,
@@ -314,7 +313,6 @@ export const Preview = React.memo(() => {
 export const Wrapper = ({ children }) => {
 	return (
 		<View>
-			<StatsGraph />
 			<Surface
 				css={`
 					position: fixed;
