@@ -313,7 +313,7 @@ export const Preview = React.memo(() => {
 
 export const Wrapper = ({ children }) => {
 	return (
-		<>
+		<View>
 			<StatsGraph />
 			<Surface
 				css={`
@@ -339,9 +339,20 @@ export const Wrapper = ({ children }) => {
 							</CardBody>
 						</Card>
 					</View>
-					<View>{children}</View>
+					<View
+						css={`
+							max-height: 75vh;
+							height: 100%;
+
+							> * {
+								height: 100%;
+							}
+						`}
+					>
+						{children}
+					</View>
 				</Grid>
 			</Container>
-		</>
+		</View>
 	);
 };

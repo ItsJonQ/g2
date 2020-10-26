@@ -1,6 +1,7 @@
 import { css } from '@wp-g2/styles';
 
 export const ElementOutline = css`
+	display: none;
 	outline: 1px solid orangered;
 	pointer-events: none;
 	position: fixed;
@@ -9,7 +10,7 @@ export const ElementOutline = css`
 
 export const ParentElementOutline = css`
 	${ElementOutline}
-	outline: 1px solid #7B62FF;
+	outline: 1px solid #7b62ff;
 	z-index: 999999;
 `;
 

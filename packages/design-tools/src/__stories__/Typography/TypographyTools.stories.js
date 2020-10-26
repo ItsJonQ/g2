@@ -452,6 +452,7 @@ const ExampleSeven = () => {
 						</Grid>
 					</ListGroup>
 					<ColorPanel />
+					<DimensionsPanel />
 				</ListGroups>
 			</CardBody>
 		</Card>
@@ -525,6 +526,7 @@ const ExampleEight = () => {
 						</Grid>
 					</ListGroup>
 					<ColorPanel selectUI />
+					<DimensionsPanel />
 				</ListGroups>
 			</CardBody>
 		</Card>

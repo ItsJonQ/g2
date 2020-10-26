@@ -403,7 +403,6 @@ export const CombinedFormGroupSwitchLeft = React.memo(
 					<Switch
 						checked={!!value}
 						onChange={handleOnChange}
-						size="small"
 						{...otherProps}
 					/>
 					<Spacer />
@@ -449,7 +448,6 @@ export const CombinedFormGroupSwitchAlt = React.memo(
 					<Switch
 						checked={!!value}
 						onChange={handleOnChange}
-						size="small"
 						{...otherProps}
 						css={`
 							margin: 0;
@@ -600,7 +598,6 @@ export const CombinedFormGroupInputStepper = React.memo(
 						}
 					}
 				`}
-				gap={0}
 			>
 				<ControlLabel
 					title={truncate ? label : null}

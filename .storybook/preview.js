@@ -90,11 +90,10 @@ const Themer = React.memo(
 				css={[
 					{
 						position: 'fixed',
-						left: '50%',
+						left: 8,
 						bottom: 8,
 					},
 					ui.zIndex('PreviewThemer', 10),
-					ui.offset.x('-50%'),
 				]}
 			>
 				<ThemeProvider
