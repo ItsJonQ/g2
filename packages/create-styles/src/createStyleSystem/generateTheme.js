@@ -1,7 +1,10 @@
+import { repeat } from '@wp-g2/utils';
+
 import {
 	DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
 	DARK_MODE_ATTR,
 	HIGH_CONTRAST_MODE_MODE_ATTR,
+	MODE_SPECIFICITY_COMPOUND_LEVEL,
 } from './constants';
 import {
 	transformValuesToReferences,
@@ -47,17 +50,20 @@ export function generateTheme({
 	);
 
 	const darkModeCSSVariables = transformValuesToVariablesString(
-		DARK_MODE_ATTR,
+		repeat(DARK_MODE_ATTR, MODE_SPECIFICITY_COMPOUND_LEVEL),
 		darkModeConfig,
 	);
 
 	const highContrastModeCSSVariables = transformValuesToVariablesString(
-		HIGH_CONTRAST_MODE_MODE_ATTR,
+		repeat(HIGH_CONTRAST_MODE_MODE_ATTR, MODE_SPECIFICITY_COMPOUND_LEVEL),
 		highContrastModeConfig,
 	);
 
 	const darkHighContrastModeCSSVariables = transformValuesToVariablesString(
-		DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
+		repeat(
+			DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
+			MODE_SPECIFICITY_COMPOUND_LEVEL,
+		),
 		darkHighContrastModeConfig,
 	);
 

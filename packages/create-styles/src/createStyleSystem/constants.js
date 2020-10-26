@@ -12,3 +12,5 @@ export const REDUCED_MOTION_MODE_ATTR =
 	'[data-system-ui-reduced-motion-mode="true"]';
 
 export const DARK_HIGH_CONTRAST_MODE_MODE_ATTR = `${DARK_MODE_ATTR}${HIGH_CONTRAST_MODE_MODE_ATTR}`;
+
+export const MODE_SPECIFICITY_COMPOUND_LEVEL = 3;
