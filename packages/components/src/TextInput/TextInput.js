@@ -30,12 +30,12 @@ function TextInput(props, forwardedRef) {
 		<View {...otherProps} disabled={disabled} {...ui.$('TextInputWrapper')}>
 			{prefix}
 			<View
+				{...ui.$('TextInput')}
 				autoComplete="off"
 				spellCheck={false}
 				{...inputProps}
 				disabled={disabled}
 				ref={mergeRefs([inputRef, forwardedRef])}
-				{...ui.$('TextInput')}
 			/>
 			{suffix}
 			{showTextInputArrows && (

@@ -1,4 +1,4 @@
-import { cx } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import {} from '@wp-g2/utils';
 import React from 'react';
 
@@ -34,6 +34,7 @@ function UnitInputSelect({ onSelectChange, unit }) {
 			>
 				{unit}
 				<View
+					{...ui.$('UnitInputSelect')}
 					as="select"
 					autoFocus={false}
 					className={styles.UnitInputSelectElement}

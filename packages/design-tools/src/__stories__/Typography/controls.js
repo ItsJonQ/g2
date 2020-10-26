@@ -907,8 +907,8 @@ export const ColorNavigatorSelect = ({ prop = 'backgroundColor' }) => {
 				</Select>
 			</FormGroup>
 			<View css={[ui.position.relative, ui.margin.x(-2)]}>
-				{value === 'theme' && <ThemePalette />}
-				{value === 'core' && <CorePalette />}
+				{value === 'theme' && <ThemePalette prop={prop} />}
+				{value === 'core' && <CorePalette prop={prop} />}
 			</View>
 		</>
 	);

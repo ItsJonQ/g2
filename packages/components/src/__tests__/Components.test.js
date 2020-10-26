@@ -79,7 +79,13 @@ describe('props', () => {
 			 * Skipping these components since their css/classNames not used
 			 * on the targeted namespaced node.
 			 */
-			const skipComponents = ['Select', 'Switch', 'TextInput'];
+			const skipComponents = [
+				'SearchInput',
+				'UnitInput',
+				'Select',
+				'Switch',
+				'TextInput',
+			];
 			const shouldSkip = skipComponents.includes(name);
 
 			if (!shouldSkip && second) {

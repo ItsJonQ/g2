@@ -136,7 +136,7 @@ const UpDownArrows = React.memo(
 					onMouseDown={handleOnMouseDownIncrement}
 					onMouseLeave={handleOnClearTimers}
 					onMouseUp={handleOnClearTimers}
-					{...ui.$('TextInputArrowUp')}
+					{...ui.$('TextInputStepperUp')}
 					height={20}
 					icon={arrowUp}
 					size={12}
@@ -149,7 +149,7 @@ const UpDownArrows = React.memo(
 					onMouseDown={handleOnMouseDownDecrement}
 					onMouseLeave={handleOnClearTimers}
 					onMouseUp={handleOnClearTimers}
-					{...ui.$('TextInputArrowDown')}
+					{...ui.$('TextInputStepperDown')}
 					height={20}
 					icon={arrowDown}
 					size={12}
