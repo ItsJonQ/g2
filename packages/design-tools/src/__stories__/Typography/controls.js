@@ -627,10 +627,6 @@ export const CombinedFormGroupInputStepper = React.memo(
 	},
 );
 
-export const CombinedColorControl = React.memo(({ label, prop }) => {
-	return <ColorSetting label={label} prop={prop} />;
-});
-
 export const ColorPaletteControl = React.memo(
 	({ label = 'Theme palette', prop, store = colorPaletteStore }) => {
 		const currentColor = typographyStore(
@@ -674,7 +670,7 @@ export const ColorPaletteControl = React.memo(
 	},
 );
 
-const ColorSetting = ({ label, prop }) => {
+const ColorSetting = ({ label, prop, selectUI }) => {
 	const value = useGlobalStyles((state) => state[prop], shallowCompare);
 
 	const handleOnChange = React.useCallback(
@@ -692,7 +688,11 @@ const ColorSetting = ({ label, prop }) => {
 			<PanelBody>
 				<View css={[ui.padding.bottom(5)]}>
 					<VStack spacing={5}>
-						<ColorNavigator prop={prop} />
+						{selectUI ? (
+							<ColorNavigatorSelect prop={prop} />
+						) : (
+							<ColorNavigator prop={prop} />
+						)}
 						<Popover
 							maxWidth={265}
 							placement="bottom"
@@ -807,16 +807,21 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 	);
 });
 
-export const ColorPanel = () => {
+export const ColorPanel = ({ selectUI }) => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>Color</ListGroupHeader>
 			<Accordion>
-				<CombinedColorControl
+				<ColorSetting
 					label="Background"
 					prop="backgroundColor"
+					selectUI={selectUI}
 				/>
-				<CombinedColorControl label="Text" prop="textColor" />
+				<ColorSetting
+					label="Text"
+					prop="textColor"
+					selectUI={selectUI}
+				/>
 			</Accordion>
 		</ListGroup>
 	);
@@ -888,6 +893,24 @@ export const ColorNavigator = ({ prop = 'backgroundColor' }) => {
 				</NavigatorScreens>
 			</Navigator>
 		</View>
+	);
+};
+
+export const ColorNavigatorSelect = ({ prop = 'backgroundColor' }) => {
+	const [value, setValue] = React.useState('theme');
+	return (
+		<>
+			<FormGroup horizontal label="Palette">
+				<Select onChange={setValue} value={value}>
+					<option label="Theme" value="theme" />
+					<option label="Core" value="core" />
+				</Select>
+			</FormGroup>
+			<View css={[ui.position.relative, ui.margin.x(-2)]}>
+				{value === 'theme' && <ThemePalette />}
+				{value === 'core' && <CorePalette />}
+			</View>
+		</>
 	);
 };
 
