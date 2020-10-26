@@ -10,13 +10,8 @@ const theme = createTheme(({ get }) => {
 		controlBorderColorHover: get('surfaceBorderColor'),
 		sliderThumbBorderColor: 'transparent',
 		sliderThumbBoxShadow: 'none',
-		sliderThumbBackground: get('colorAdmin'),
-		switchBackdropBackground: 'transparent',
-		switchBackdropBackgroundActive: get('colorText'),
-		switchBackdropBorderColor: get('colorText'),
-		switchToggleBackground: get('colorText'),
-		switchToggleBackgroundActive: get('colorTextInverted'),
-		switchToggleBoxShadow: 'none',
+		sliderThumbBackgroundColor: get('colorAdmin'),
+		switchBackdropBackgroundColor: 'rgba(0, 0, 0, 0.05)',
 	};
 });
 

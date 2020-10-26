@@ -8,7 +8,7 @@ const theme = createTheme(({ get, space, ...theme }) => {
 
 	const CONTROL_PROPS = {
 		controlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
-		controlBackgroundHoverColor: 'rgba(0, 0, 0, 0.05)',
+		controlBackgroundColorHover: 'rgba(0, 0, 0, 0.05)',
 		controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
 		controlBackgroundBrightColor: 'rgba(0, 0, 0, 0.03)',
 		controlBorderColor: 'transparent',
@@ -27,7 +27,7 @@ const theme = createTheme(({ get, space, ...theme }) => {
 		controlPaddingX: '8px',
 		controlPaddingXLarge: '16px',
 		controlPaddingXSmall: '4px',
-		controlPrimaryTextActiveColor: get('white'),
+		controlPrimaryTextColorActive: get('white'),
 		controlPrimaryTextColor: get('white'),
 		controlSurfaceBoxShadow:
 			'0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2)',
@@ -39,6 +39,17 @@ const theme = createTheme(({ get, space, ...theme }) => {
 		buttonPrimaryColor: get('colorAdmin'),
 		buttonPrimaryTextColor: get('controlPrimaryTextColor'),
 		buttonPrimaryTextColorActive: get('controlPrimaryTextColor'),
+
+		buttonSecondaryColor: 'transparent',
+		buttonSecondaryColorHover: get('controlBackgroundColor'),
+		buttonSecondaryColorActive: get('controlBackgroundColor'),
+		buttonSecondaryColorFocus: get('controlBackgroundColor'),
+		buttonSecondaryBorderColor: get('buttonPrimaryColor'),
+		buttonSecondaryTextColor: get('buttonPrimaryColor'),
+		buttonSecondaryTextColorActive: get('buttonPrimaryColor'),
+		buttonSecondaryTextColorFocus: get('buttonPrimaryColor'),
+		buttonSecondaryBorderColorHover: get('buttonPrimaryColor'),
+		buttonSecondaryBorderColorActive: get('buttonPrimaryColor'),
 	};
 
 	const CARD_PROPS = {
@@ -52,10 +63,11 @@ const theme = createTheme(({ get, space, ...theme }) => {
 
 	const SEGMENTED_CONTROL_PROPS = {
 		segmentedControlFontSize: '12px',
+		segmentedControlBackdropBoxShadow: get('controlSurfaceBoxShadow'),
 	};
 
 	const SLIDER_PROPS = {
-		sliderThumbBackground: get('white'),
+		sliderThumbBackgroundColor: get('white'),
 		sliderThumbBorderColor: get('controlBorderColor'),
 		sliderThumbBoxShadow: `0 0 2px rgba(0, 0, 0, 0.2), ${get(
 			'controlSurfaceBoxShadow',
@@ -63,16 +75,16 @@ const theme = createTheme(({ get, space, ...theme }) => {
 	};
 
 	const SWITCH_PROPS = {
-		switchToggleBackground: get('controlPrimaryTextColor'),
-		switchToggleBackgroundActive: get('controlPrimaryTextColor'),
+		switchToggleBackgroundColor: get('controlPrimaryTextColor'),
+		switchToggleBackgroundColorActive: get('controlPrimaryTextColor'),
 		switchToggleBorderColor: get('controlBorderColor'),
 		switchToggleBoxShadow: get('controlSurfaceBoxShadow'),
-		switchBackdropBackground: get('controlBackgroundColor'),
-		switchBackdropBackgroundActive: get('colorAdmin'),
+		switchBackdropBackgroundColor: get('controlBackgroundColor'),
+		switchBackdropBackgroundColorActive: get('colorAdmin'),
 		switchBackdropBorderColor: get('controlBorderColor'),
 		switchBackdropBorderColorActive: get('colorAdmin'),
 		switchBackdropBorderColorFocus: get('colorText'),
-		switchToggleBackground: get('white'),
+		switchToggleBackgroundColor: get('white'),
 		switchPaddingOffset: '4px',
 	};
 

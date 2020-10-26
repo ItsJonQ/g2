@@ -28,7 +28,6 @@ const COLOR_PROPS = {
 	...BACKGROUND_COLOR_PROPS,
 	colorAdmin: get('wordpressBlue'),
 	colorBodyBackground: get('white'),
-	colorBodyBackgroundDark: '#18191A',
 	colorDestructive: get('pomegrade'),
 	colorDivider: 'rgba(0, 0, 0, 0.1)',
 	colorPositive: get('greens'),
@@ -78,7 +77,7 @@ const GRID_PROPS = {
 
 const CONTROL_PROPS = {
 	controlBackgroundColor: get('white'),
-	controlBackgroundHoverColor: 'rgba(0, 0, 0, 0.05)',
+	controlBackgroundColorHover: 'rgba(0, 0, 0, 0.05)',
 	controlBackgroundDimColor: 'rgba(0, 0, 0, 0.1)',
 	controlBackgroundBrightColor: 'rgba(0, 0, 0, 0.03)',
 	controlBorderColor: '#757575',
@@ -97,7 +96,7 @@ const CONTROL_PROPS = {
 	controlPaddingX: '8px',
 	controlPaddingXLarge: `calc(${get('controlPaddingX')} * 2)`,
 	controlPaddingXSmall: `calc(${get('controlPaddingX')} / 2)`,
-	controlPrimaryTextActiveColor: get('white'),
+	controlPrimaryTextColorActive: get('white'),
 	controlPrimaryTextColor: get('white'),
 	controlSurfaceBoxShadow:
 		'0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2)',
@@ -106,9 +105,28 @@ const CONTROL_PROPS = {
 };
 
 const BUTTON_PROPS = {
+	buttonTextColor: get('colorAdmin'),
+	buttonTextColorActive: get('buttonTextColor'),
+
 	buttonPrimaryColor: get('colorAdmin'),
+	buttonPrimaryColorHover: get('buttonPrimaryColor'),
+	buttonPrimaryColorActive: get('colorText'),
+	buttonPrimaryColorFocus: get('buttonPrimaryColor'),
+	buttonPrimaryBorderColorFocus: get('buttonPrimaryColor'),
 	buttonPrimaryTextColor: get('controlPrimaryTextColor'),
 	buttonPrimaryTextColorActive: get('controlPrimaryTextColor'),
+
+	buttonSecondaryColor: 'transparent',
+	buttonSecondaryColorHover: get('buttonSecondaryColor'),
+	buttonSecondaryColorActive: get('buttonSecondaryColor'),
+	buttonSecondaryColorFocus: get('buttonSecondaryColor'),
+	buttonSecondaryBorderColor: get('buttonPrimaryColor'),
+	buttonSecondaryTextColor: get('buttonPrimaryColor'),
+	buttonSecondaryTextColorFocus: get('buttonPrimaryColor'),
+	buttonSecondaryTextColorActive: get('buttonPrimaryColor'),
+	buttonSecondaryBorderColorHover: get('buttonPrimaryColor'),
+	buttonSecondaryBorderColorActive: get('buttonPrimaryColor'),
+	buttonSecondaryBorderColorFocus: get('buttonPrimaryColor'),
 };
 
 const CARD_PROPS = {
@@ -154,17 +172,17 @@ const SEGMENTED_CONTROL_PROPS = {
 const SLIDER_PROPS = {
 	sliderThumbBorderColor: 'transparent',
 	sliderThumbBoxShadow: 'none',
-	sliderThumbBackground: get('colorAdmin'),
+	sliderThumbBackgroundColor: get('colorAdmin'),
 };
 
 const SWITCH_PROPS = {
-	switchBackdropBackground: 'transparent',
-	switchBackdropBackgroundActive: get('colorAdmin'),
+	switchBackdropBackgroundColor: 'transparent',
+	switchBackdropBackgroundColorActive: get('colorAdmin'),
 	switchBackdropBorderColor: get('colorText'),
 	switchBackdropBorderColorActive: get('colorAdmin'),
 	switchBackdropBorderColorFocus: get('white'),
-	switchToggleBackground: get('colorText'),
-	switchToggleBackgroundActive: get('colorTextInverted'),
+	switchToggleBackgroundColor: get('colorText'),
+	switchToggleBackgroundColorActive: get('colorTextInverted'),
 	switchToggleBoxShadow: 'none',
 	switchPaddingOffset: '6px',
 };

@@ -4,7 +4,7 @@ exports[`props should render animatedDuration 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -32,7 +32,7 @@ exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -60,7 +60,7 @@ exports[`props should render gutter 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -88,7 +88,7 @@ exports[`props should render placement 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -116,7 +116,7 @@ exports[`props should render visible 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -144,7 +144,7 @@ exports[`props should render without animation 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -174,7 +174,7 @@ exports[`props should render without content 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -202,7 +202,7 @@ exports[`props should render without modal 1`] = `
 <button
   aria-busy="false"
   aria-describedby="tooltip"
-  class="wp-components-flex wp-components-base-button wp-components-button css-yr5p2u"
+  class="wp-components-flex wp-components-base-button wp-components-button css-wnd5p"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"

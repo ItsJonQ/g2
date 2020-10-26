@@ -98,7 +98,7 @@ export const SpinnerArrow = css`
 	padding: 0 2px;
 
 	&:hover:active {
-		background-color: ${ui.get('controlBackgroundHoverColor')};
+		background-color: ${ui.get('controlBackgroundColorHover')};
 	}
 `;
 
@@ -127,10 +127,10 @@ export const StepperButton = css`
 	padding: 3px;
 
 	&:hover {
-		background-color: ${ui.get('controlBackgroundHoverColor')};
+		background-color: ${ui.get('controlBackgroundColorHover')};
 	}
 	&:focus {
-		background-color: ${ui.get('controlBackgroundHoverColor')};
+		background-color: ${ui.get('controlBackgroundColorHover')};
 		border-color: ${ui.get('colorAdmin')};
 	}
 `;

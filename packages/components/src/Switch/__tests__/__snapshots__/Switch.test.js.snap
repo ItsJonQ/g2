@@ -18,12 +18,12 @@ exports[`props should render checked 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-114hw1q"
+    class="css-nowzpc"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -50,12 +50,12 @@ exports[`props should render correctly 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-114hw1q"
+    class="css-nowzpc"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -83,12 +83,12 @@ exports[`props should render defaultValue 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-114hw1q"
+    class="css-nowzpc"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -118,12 +118,12 @@ exports[`props should render disabled 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-114hw1q"
+    class="css-nowzpc"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -150,12 +150,12 @@ exports[`props should render label 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-114hw1q"
+    class="css-nowzpc"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -184,12 +184,12 @@ exports[`props should render size 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-r5kigl"
+    class="css-1huwqx7"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -217,12 +217,12 @@ exports[`props should render type 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-o60mpt"
+    class="css-26esqa"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-114hw1q"
+    class="css-nowzpc"
     data-g2-component="SwitchToggle"
   />
   <span

@@ -19,7 +19,7 @@ export const UnitInputSelectUnit = css`
 	position: relative;
 
 	&:hover {
-		background-color: ${ui.get('controlBackgroundHoverColor')};
+		background-color: ${ui.get('controlBackgroundColorHover')};
 	}
 `;
 
@@ -36,6 +36,6 @@ export const UnitInputSelectElement = css`
 `;
 
 export const unitSelectFocused = css`
-	background-color: ${ui.get('controlBackgroundHoverColor')};
+	background-color: ${ui.get('controlBackgroundColorHover')};
 	border-color: ${ui.get('colorAdmin')};
 `;

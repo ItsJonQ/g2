@@ -1,10 +1,12 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
-import { colorize } from '@wp-g2/utils';
+import { FiCheck } from '@wp-g2/icons';
+import { cx, ui } from '@wp-g2/styles';
+import { colorize, getOptimalTextColor } from '@wp-g2/utils';
 import React from 'react';
 
+import { Icon } from '../Icon';
 import * as styles from './ColorCircle.styles';
-const { ColorCircleView } = styles;
+const { CheckboxIconView, ColorCircleView } = styles;
 
 function ColorCircle(props, forwardedRef) {
 	const {
@@ -26,13 +28,20 @@ function ColorCircle(props, forwardedRef) {
 		isInteractive && styles.interactive,
 	);
 
+	const iconColor = getOptimalTextColor(backgroundColor);
+
 	return (
 		<ColorCircleView
+			data-active={isActive}
 			style={{ ...style, backgroundColor }}
 			{...otherProps}
 			cx={__css}
 			ref={forwardedRef}
-		/>
+		>
+			<CheckboxIconView {...ui.$('CheckboxIcon')} aria-hidden>
+				<Icon color={iconColor} icon={<FiCheck />} size={12} />
+			</CheckboxIconView>
+		</ColorCircleView>
 	);
 }
 

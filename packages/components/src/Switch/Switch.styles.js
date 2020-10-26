@@ -41,7 +41,7 @@ export const inputHidden = css`
 export const Backdrop = css`
 	${ui.borderRadius.circle};
 
-	background: ${ui.get('switchBackdropBackground')};
+	background: ${ui.get('switchBackdropBackgroundColor')};
 	border: 1px solid ${ui.get('switchBackdropBorderColor')};
 	bottom: ${ui.get('switchPaddingOffset')};
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -55,7 +55,7 @@ export const Backdrop = css`
 	width: 100%;
 
 	input:checked ~ & {
-		background: ${ui.get('switchBackdropBackgroundActive')};
+		background: ${ui.get('switchBackdropBackgroundColorActive')};
 		border-color: ${ui.get('switchBackdropBorderColorActive')};
 	}
 `;
@@ -70,7 +70,7 @@ export const focus = css`
 `;
 
 export const Toggle = css`
-	background: ${ui.get('switchToggleBackground')};
+	background: ${ui.get('switchToggleBackgroundColor')};
 	border: 1px solid ${ui.get('switchToggleBorderColor')};
 	border-radius: ${getToggleHeight('controlHeight')};
 	box-shadow: ${ui.get('switchToggleBoxShadow')};
@@ -88,7 +88,7 @@ export const Toggle = css`
 	}
 
 	input:checked ~ & {
-		background: ${ui.get('switchToggleBackgroundActive')};
+		background: ${ui.get('switchToggleBackgroundColorActive')};
 		left: initial;
 		right: ${getTogglePositionX()};
 	}

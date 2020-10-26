@@ -148,7 +148,7 @@ const ExampleThree = () => {
 						label="Line Height"
 						min={0}
 						prop="lineHeight"
-						step={0.5}
+						step={0.1}
 						truncate={false}
 						type="number"
 					/>
@@ -157,7 +157,7 @@ const ExampleThree = () => {
 						label="Letter Spacing"
 						min={-10}
 						prop="letterSpacing"
-						step={0.5}
+						step={0.1}
 						truncate={false}
 						type="number"
 					/>
@@ -212,7 +212,7 @@ const ExampleFour = () => {
 						label="Line Height"
 						min={0}
 						prop="lineHeight"
-						step={0.5}
+						step={0.1}
 						truncate={false}
 						type="number"
 					/>
@@ -221,7 +221,7 @@ const ExampleFour = () => {
 						label="Letter Spacing"
 						min={-10}
 						prop="letterSpacing"
-						step={0.5}
+						step={0.1}
 						truncate={false}
 						type="number"
 					/>
@@ -285,7 +285,7 @@ const ExampleFive = ({ truncate = false }) => {
 							prop="lineHeight"
 							showRemove={false}
 							showRemoveRight
-							step={0.5}
+							step={0.1}
 							truncate={truncate}
 							type="number"
 						/>
@@ -297,7 +297,7 @@ const ExampleFive = ({ truncate = false }) => {
 							prop="letterSpacing"
 							showRemove={false}
 							showRemoveRight
-							step={0.5}
+							step={0.1}
 							truncate={truncate}
 							type="number"
 						/>
@@ -365,7 +365,7 @@ const ExampleSix = () => {
 							prop="lineHeight"
 							showRemove={false}
 							showResetRight
-							step={0.5}
+							step={0.1}
 							truncate={false}
 							type="number"
 						/>
@@ -377,7 +377,7 @@ const ExampleSix = () => {
 							prop="letterSpacing"
 							showRemove={false}
 							showResetRight
-							step={0.5}
+							step={0.1}
 							truncate={false}
 							type="number"
 						/>
@@ -444,7 +444,7 @@ const ExampleSeven = () => {
 								min={0}
 								prop="lineHeight"
 								showRemove={false}
-								step={0.5}
+								step={0.1}
 								truncate={false}
 								type="number"
 							/>
@@ -455,7 +455,7 @@ const ExampleSeven = () => {
 								min={-10}
 								prop="letterSpacing"
 								showRemove={false}
-								step={0.5}
+								step={0.1}
 								truncate={false}
 								type="number"
 							/>
@@ -517,7 +517,7 @@ const ExampleEight = () => {
 								min={0}
 								prop="lineHeight"
 								showRemove={false}
-								step={0.5}
+								step={0.1}
 								truncate={false}
 								type="number"
 							/>
@@ -528,7 +528,7 @@ const ExampleEight = () => {
 								min={-10}
 								prop="letterSpacing"
 								showRemove={false}
-								step={0.5}
+								step={0.1}
 								truncate={false}
 								type="number"
 							/>
@@ -550,7 +550,7 @@ const ExampleNine = () => {
 					padding: 0;
 				`}
 			>
-				<Panel>
+				<Panel visible>
 					<PanelHeader>
 						<HStack>
 							<Heading size={5}>Typography</Heading>
@@ -606,7 +606,7 @@ const ExampleNine = () => {
 								min={0}
 								prop="lineHeight"
 								showRemove={false}
-								step={0.5}
+								step={0.1}
 								truncate={false}
 								type="number"
 							/>
@@ -617,7 +617,7 @@ const ExampleNine = () => {
 								min={-10}
 								prop="letterSpacing"
 								showRemove={false}
-								step={0.5}
+								step={0.1}
 								truncate={false}
 								type="number"
 							/>
@@ -689,12 +689,12 @@ const baseLineTheme = {
 	controlBorderColorHover: ui.get('surfaceBorderColor'),
 	sliderThumbBorderColor: 'transparent',
 	sliderThumbBoxShadow: 'none',
-	sliderThumbBackground: ui.get('colorAdmin'),
-	switchBackdropBackground: 'transparent',
-	switchBackdropBackgroundActive: ui.get('colorText'),
+	sliderThumbBackgroundColor: ui.get('colorAdmin'),
+	switchBackdropBackgroundColor: 'transparent',
+	switchBackdropBackgroundColorActive: ui.get('colorText'),
 	switchBackdropBorderColor: ui.get('colorText'),
-	switchToggleBackground: ui.get('colorText'),
-	switchToggleBackgroundActive: ui.get('colorTextInverted'),
+	switchToggleBackgroundColor: ui.get('colorText'),
+	switchToggleBackgroundColorActive: ui.get('colorTextInverted'),
 	switchToggleBoxShadow: 'none',
 };
 
@@ -708,12 +708,12 @@ const baseLineThemeNext = createTheme(() => ({
 	controlBorderRadius: '2px',
 	sliderThumbBorderColor: 'transparent',
 	sliderThumbBoxShadow: 'none',
-	sliderThumbBackground: ui.get('colorAdmin'),
-	switchBackdropBackground: 'transparent',
-	switchBackdropBackgroundActive: ui.get('colorText'),
+	sliderThumbBackgroundColor: ui.get('colorAdmin'),
+	switchBackdropBackgroundColor: 'transparent',
+	switchBackdropBackgroundColorActive: ui.get('colorText'),
 	switchBackdropBorderColor: ui.get('colorText'),
-	switchToggleBackground: ui.get('colorText'),
-	switchToggleBackgroundActive: ui.get('colorTextInverted'),
+	switchToggleBackgroundColor: ui.get('colorText'),
+	switchToggleBackgroundColorActive: ui.get('colorTextInverted'),
 	switchToggleBoxShadow: 'none',
 }));
 

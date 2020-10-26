@@ -110,3 +110,11 @@ export const SizeLabel = css`
 	white-space: nowrap;
 	z-index: 2;
 `;
+
+export const Resizer = css`
+	cursor: pointer;
+	outline: 1px solid #7b62ff;
+	pointer-events: none;
+	position: fixed;
+	z-index: 9999999;
+`;

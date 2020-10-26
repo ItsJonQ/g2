@@ -52,7 +52,7 @@ export const Slider = css`
 
 	&::-webkit-slider-thumb {
 		appearance: none;
-		background-color: ${ui.get('sliderThumbBackground')};
+		background-color: ${ui.get('sliderThumbBackgroundColor')};
 		border: 1px solid ${ui.get('sliderThumbBorderColor')};
 		border-radius: 50%;
 		box-shadow: ${ui.get('sliderThumbBoxShadow')};

@@ -139,6 +139,10 @@ const Themer = React.memo(
 											label="Blueberry (Subtle)"
 										/>
 										<option
+											value="calypso"
+											label="Calypso"
+										/>
+										<option
 											value="cupertino"
 											label="Cupertino"
 										/>

@@ -3,13 +3,13 @@ import { css, ui } from '@wp-g2/styles';
 import * as baseButtonStyles from '../BaseButton/BaseButton.styles';
 
 export const Button = css`
-	color: ${ui.color.admin};
+	color: ${ui.get('buttonTextColor')};
 	font-weight: 600;
 	padding-left: ${ui.get('controlPaddingXLarge')};
 	padding-right: ${ui.get('controlPaddingXLarge')};
 
 	&:active {
-		color: ${ui.color.text};
+		color: ${ui.get('buttonTextColorActive')};
 	}
 `;
 
@@ -84,19 +84,20 @@ export const primary = css`
 		color: ${ui.get('buttonPrimaryTextColorActive')};
 	}
 
-	&:hover,
-	&:focus,
-	&[data-focused='true'] {
-		background-color: ${ui.get('buttonPrimaryColor')};
+	&:hover {
+		background-color: ${ui.get('buttonPrimaryColorHover')};
+		border-color: ${ui.get('buttonPrimaryBorderColorHover')};
 	}
 
 	&:focus,
 	&[data-focused='true'] {
-		border-color: ${ui.get('buttonPrimaryColor')};
+		background-color: ${ui.get('buttonPrimaryColorFocus')};
+		border-color: ${ui.get('buttonPrimaryBorderColorFocus')};
 	}
 
 	&:active {
-		background-color: ${ui.color.text};
+		background-color: ${ui.get('buttonPrimaryColorActive')};
+		border-color: ${ui.get('buttonPrimaryBorderColorActive')};
 	}
 
 	&[data-destructive='true'] {
@@ -121,21 +122,26 @@ export const primary = css`
 `;
 
 export const secondary = css`
-	background-color: transparent;
-	border-color: ${ui.get('buttonPrimaryColor')};
-	color: ${ui.get('buttonPrimaryColor')};
+	background-color: ${ui.get('buttonSecondaryColor')};
+	border-color: ${ui.get('buttonSecondaryBorderColor')};
+	color: ${ui.get('buttonSecondaryTextColor')};
 
-	&:hover,
-	&:active,
+	&:hover {
+		background-color: ${ui.get('buttonSecondaryColorHover')};
+		border-color: ${ui.get('buttonSecondaryBorderColorHover')};
+	}
+
 	&:focus,
 	&[data-focused='true'] {
-		border-color: ${ui.get('buttonPrimaryColor')};
-		color: ${ui.get('buttonPrimaryColor')};
+		background-color: ${ui.get('buttonSecondaryColorFocus')};
+		border-color: ${ui.get('buttonSecondaryBorderColorFocus')};
+		color: ${ui.get('buttonSecondaryTextColorFocus')};
 	}
 
 	&:active {
-		border-color: ${ui.color.text};
-		color: ${ui.color.text};
+		background-color: ${ui.get('buttonSecondaryColorActive')};
+		border-color: ${ui.get('buttonSecondaryBorderColorActive')};
+		color: ${ui.get('buttonSecondaryTextColorActive')};
 	}
 
 	&[data-destructive='true'] {
@@ -172,7 +178,11 @@ export const tertiary = css`
 export const link = css`
 	background: none;
 	border-color: transparent;
-	color: ${ui.color.admin};
+	color: ${ui.get('linkColor')};
+
+	&:active {
+		color: ${ui.get('linkColorActive')};
+	}
 
 	&[data-destructive='true'] {
 		color: ${ui.color.destructive};
@@ -187,7 +197,7 @@ export const plainLink = css`
 	${ui.padding.x(0)};
 	background: none;
 	border-color: transparent;
-	color: ${ui.color.admin};
+	color: ${ui.get('linkColor')};
 
 	&:hover,
 	&:active,
@@ -195,6 +205,10 @@ export const plainLink = css`
 	&[data-focused='true'] {
 		background-color: transparent;
 		text-decoration: underline;
+	}
+
+	&:active {
+		color: ${ui.get('linkColorActive')};
 	}
 
 	&[data-destructive='true'] {

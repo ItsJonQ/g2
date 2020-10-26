@@ -11,6 +11,7 @@ const theme = createTheme(({ get, theme, space }) => {
 		controlBorderColor:
 			'rgba(0, 0, 0, 0.16) rgba(0, 0, 0, 0.16) rgba(0, 0, 0, 0.24)',
 		controlBorderColorHover: get('controlBorderColor'),
+		controlBackgroundDimColor: 'rgba(0, 123, 255, 0.2)',
 		controlBorderColorSubtle: 'transparent',
 		controlBoxShadow: '0 1px 1px rgba(0, 0, 0, 0.06)',
 		controlHeight: '24px',
@@ -21,22 +22,22 @@ const theme = createTheme(({ get, theme, space }) => {
 
 		segmentedControlBackdropBorderColor: get('surfaceBorderColor'),
 
-		sliderThumbBackground: get('white'),
+		sliderThumbBackgroundColor: get('white'),
 		sliderThumbBorderColor: get('controlBorderColor'),
 		sliderThumbBoxShadow: `0 0 2px rgba(0, 0, 0, 0.2), ${get(
 			'controlSurfaceBoxShadow',
 		)}`,
 
-		switchToggleBackground: get('controlPrimaryTextColor'),
-		switchToggleBackgroundActive: get('controlPrimaryTextColor'),
+		switchToggleBackgroundColor: get('controlPrimaryTextColor'),
+		switchToggleBackgroundColorActive: get('controlPrimaryTextColor'),
 		switchToggleBorderColor: 'transparent',
 		switchToggleBoxShadow: get('controlSurfaceBoxShadow'),
-		switchBackdropBackground: 'rgba(0, 0, 0, 0.05)',
-		switchBackdropBackgroundActive: get('colorAdmin'),
+		switchBackdropBackgroundColor: 'rgba(0, 0, 0, 0.05)',
+		switchBackdropBackgroundColorActive: get('colorAdmin'),
 		switchBackdropBorderColor: get('controlBorderColor'),
 		switchBackdropBorderColorActive: get('colorAdmin'),
 		switchBackdropBorderColorFocus: get('colorText'),
-		switchToggleBackground: get('white'),
+		switchToggleBackgroundColor: get('white'),
 		switchPaddingOffset: '4px',
 
 		surfaceBackgroundColor: '#f6f6f6',

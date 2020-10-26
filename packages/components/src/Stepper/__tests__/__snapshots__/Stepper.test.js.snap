@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1fcxokd"
+      class="wp-components-flex wp-components-base-button wp-components-button css-duc0b9"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -66,7 +66,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-10aj8g6"
+      class="wp-components-flex wp-components-base-button wp-components-button css-eidvad"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -134,7 +134,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-dlr8jb"
+      class="wp-components-flex wp-components-base-button wp-components-button css-6a5sf6"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -187,7 +187,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1immx4w"
+      class="wp-components-flex wp-components-base-button wp-components-button css-olh7o7"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -255,7 +255,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-k6kacs"
+      class="wp-components-flex wp-components-base-button wp-components-button css-1unljbh"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -305,7 +305,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-pi9ort"
+      class="wp-components-flex wp-components-base-button wp-components-button css-15jygke"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"

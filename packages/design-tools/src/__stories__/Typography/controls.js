@@ -1,3 +1,4 @@
+import { Composite, CompositeItem, useCompositeState } from '@wp-g2/a11y';
 import {
 	Accordion,
 	Button,
@@ -636,6 +637,7 @@ export const ColorPaletteControl = React.memo(
 			shallowCompare,
 		);
 		const colors = store((state) => Object.entries(state), shallowCompare);
+		const composite = useCompositeState({ loop: true });
 
 		const handleOnClick = React.useCallback(
 			(value) => {
@@ -656,17 +658,26 @@ export const ColorPaletteControl = React.memo(
 		return (
 			<VStack spacing={3}>
 				<Text>{label}</Text>
-				<Grid columns={7} gap={2}>
+				<Composite
+					as={Grid}
+					role="grid"
+					{...composite}
+					columns={7}
+					gap={2}
+				>
 					{colors.map(([k, v]) => (
-						<ColorCircle
+						<CompositeItem
+							{...composite}
+							as={ColorCircle}
 							color={v}
 							isActive={isColorActive(v)}
 							isInteractive
 							key={k}
 							onClick={handleOnClick(v)}
+							role="gridcell"
 						/>
 					))}
-				</Grid>
+				</Composite>
 			</VStack>
 		);
 	},

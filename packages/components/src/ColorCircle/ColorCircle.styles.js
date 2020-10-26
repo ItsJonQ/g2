@@ -22,7 +22,12 @@ export const small = css`
 	width: 20px;
 `;
 
-export const active = css`
+export const active = css``;
+
+export const interactive = css`
+	${ui.animation.default};
+	cursor: pointer;
+
 	&::before {
 		${ui.borderRadius.circle};
 		border: 2px solid ${ui.color.admin};
@@ -32,15 +37,17 @@ export const active = css`
 		position: absolute;
 		top: -4px;
 		width: calc(100% + 8px);
+		opacity: 0;
 	}
-`;
-
-export const interactive = css`
-	${ui.animation.default};
-	cursor: pointer;
 
 	&:active {
 		opacity: 0.6;
+	}
+
+	&:focus {
+		&::before {
+			opacity: 1;
+		}
 	}
 `;
 
@@ -52,5 +59,23 @@ export const pill = css`
 export const expand = css`
 	&[aria-expanded='true'] {
 		${active};
+	}
+`;
+
+export const CheckboxIconView = styled.div`
+	${ui.font.color.white};
+	${ui.alignment.content.center};
+	bottom: 0;
+
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity ${ui.get('transitionDurationFastest')} linear;
+
+	[data-active='true'] > & {
+		opacity: 1;
 	}
 `;

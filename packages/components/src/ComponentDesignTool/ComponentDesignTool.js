@@ -34,7 +34,7 @@ function getPureBoxBounds(element) {
 	return nextBounds;
 }
 
-function useOutlines({
+function useMeasurements({
 	enabled = true,
 	opacity = 0.75,
 	showOnAltKeyOnly = true,
@@ -147,8 +147,12 @@ function useOutlines({
 		currentParentElementOutline.style.opacity = opacity;
 
 		return () => {
-			document.body.removeChild(currentElementOutline);
-			document.body.removeChild(currentParentElementOutline);
+			if (document.body.contains(currentElementOutline)) {
+				document.body.removeChild(currentElementOutline);
+			}
+			if (document.body.contains(currentParentElementOutline)) {
+				document.body.removeChild(currentParentElementOutline);
+			}
 		};
 	}, [enabled, opacity, showOnAltKeyOnly]);
 
@@ -341,17 +345,93 @@ function useOutlines({
 	}, [showOnAltKeyOnly]);
 }
 
+function useOutline({ enabled }) {
+	const isHoldingAltRef = React.useRef(false);
+	const currentElementNodeRef = React.useRef();
+	const resizerElementNodeRef = React.useRef(document.createElement('div'));
+
+	React.useEffect(() => {
+		const resizerElementNode = resizerElementNodeRef.current;
+		resizerElementNode.classList.add(styles.Resizer);
+		resizerElementNode.id = 'ComponentDesignToolResizerElement';
+
+		document.body.prepend(resizerElementNode);
+
+		return () => {
+			if (document.body.contains(resizerElementNode)) {
+				document.body.removeChild(resizerElementNode);
+			}
+		};
+	});
+
+	React.useEffect(() => {
+		const handleOnKeyDown = (event) => {
+			if (event.altKey && !event.shiftKey) {
+				isHoldingAltRef.current = true;
+			}
+		};
+
+		const handleOnKeyUp = (event) => {
+			if (event.altKey && !event.shiftKey) return;
+			if (!event.altKey) {
+				isHoldingAltRef.current = false;
+			}
+		};
+
+		window.addEventListener('keydown', handleOnKeyDown);
+		window.addEventListener('keyup', handleOnKeyUp);
+
+		return () => {
+			window.removeEventListener('keydown', handleOnKeyDown);
+			window.removeEventListener('keyup', handleOnKeyUp);
+		};
+	}, []);
+
+	React.useEffect(() => {
+		const handleOnMouseMove = (event) => {
+			if (!isHoldingAltRef.current && !enabled) {
+				resizerElementNodeRef.current.style.display = 'none';
+				return;
+			}
+
+			if (currentElementNodeRef.current === event.target) return;
+
+			currentElementNodeRef.current = event.target;
+			const resizerElementNode = resizerElementNodeRef.current;
+
+			const targetNode = event.target;
+			const bounds = targetNode.getBoundingClientRect();
+
+			resizerElementNode.style.display = 'block';
+			resizerElementNode.style.top = ui.value.px(bounds.top);
+			resizerElementNode.style.left = ui.value.px(bounds.left);
+			resizerElementNode.style.height = ui.value.px(bounds.height);
+			resizerElementNode.style.width = ui.value.px(bounds.width);
+		};
+
+		window.addEventListener('mousemove', handleOnMouseMove);
+		return () => {
+			window.removeEventListener('mousemove', handleOnMouseMove);
+		};
+	}, [enabled]);
+}
+
 function ComponentDesignTool(props) {
 	const {
 		enableOutlines = true,
 		outlinesOpacity = 0.75,
 		showOnAltKeyOnly = true,
 	} = props;
-	useOutlines({
+
+	useMeasurements({
 		enabled: enableOutlines,
 		opacity: outlinesOpacity,
 		showOnAltKeyOnly,
 	});
+
+	// useOutline({
+	// 	enable: enableOutlines,
+	// });
 
 	return null;
 }

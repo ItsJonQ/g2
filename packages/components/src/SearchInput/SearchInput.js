@@ -91,7 +91,13 @@ const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
 
 	return (
 		<>
-			<View css={[ui.opacity(0.5), ui.margin.right(-1)]}>
+			<View
+				css={[
+					ui.alignment.content.center,
+					ui.opacity(0.5),
+					ui.margin.right(-1),
+				]}
+			>
 				{isLoading ? (
 					<Spinner size={16} />
 				) : (
