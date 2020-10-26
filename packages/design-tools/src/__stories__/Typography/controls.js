@@ -15,7 +15,7 @@ import {
 	ListGroup,
 	ListGroupHeader,
 	Navigator,
-	NavigatorLink,
+	NavigatorButton,
 	NavigatorScreen,
 	NavigatorScreens,
 	Panel,
@@ -847,11 +847,15 @@ const screens = [
 	{ component: CorePalette, path: 'Core' },
 ];
 
-const NavigatorButton = ({ icon, ...props }) => {
+const ColorNavigatorButton = ({ icon, ...props }) => {
 	return (
-		<NavigatorLink {...props}>
-			<Button icon={icon} isControl isSubtle size="small" />
-		</NavigatorLink>
+		<NavigatorButton
+			icon={icon}
+			isControl
+			isSubtle
+			size="small"
+			{...props}
+		/>
 	);
 };
 
@@ -866,12 +870,12 @@ export const ColorNavigator = ({ prop = 'backgroundColor' }) => {
 						ui.zIndex(10),
 					]}
 				>
-					<NavigatorButton
+					<ColorNavigatorButton
 						icon={<FiChevronLeft />}
 						isBack
 						to="Theme"
 					/>
-					<NavigatorButton icon={<FiChevronRight />} to="Core" />
+					<ColorNavigatorButton icon={<FiChevronRight />} to="Core" />
 				</HStack>
 				<NavigatorScreens>
 					{screens.map((screen) => (

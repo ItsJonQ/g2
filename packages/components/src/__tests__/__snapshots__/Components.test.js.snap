@@ -2233,6 +2233,66 @@ exports[`props should render ModalTrigger 1`] = `
 </button>
 `;
 
+exports[`props should render NavigatorButton 1`] = `
+<a
+  aria-busy="false"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-navigator-button css-yr5p2u"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="NavigatorButton"
+  data-icon="false"
+  href="#"
+  id="NavigatorButton"
+>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</a>
+`;
+
+exports[`props should render NavigatorButton with css prop 1`] = `
+<a
+  aria-busy="false"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-navigator-button css-yr5p2u"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="NavigatorButton"
+  data-icon="false"
+  href="#"
+  id="NavigatorButton"
+>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</a>
+`;
+
+exports[`props should render NavigatorButton with css prop 2`] = `
+<a
+  aria-busy="false"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-navigator-button css-jp6u4o"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="NavigatorButton"
+  data-icon="false"
+  href="#"
+  id="NavigatorButton"
+>
+  <span
+    class="wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</a>
+`;
+
 exports[`props should render Placeholder 1`] = `
 <div
   class="wp-components-placeholder css-1lmo8em"

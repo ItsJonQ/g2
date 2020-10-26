@@ -341,7 +341,6 @@ export const Wrapper = ({ children }) => {
 					</View>
 					<View>{children}</View>
 				</Grid>
-				);
 			</Container>
 		</>
 	);

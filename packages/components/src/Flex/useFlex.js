@@ -7,11 +7,13 @@ import * as styles from './Flex.styles';
 export function useFlex(props) {
 	const {
 		align = 'center',
+		alignItems,
 		className,
 		direction: directionProp = 'row',
 		expanded = true,
 		gap = 2,
 		justify = 'space-between',
+		justifyContent,
 		wrap = false,
 		...otherProps
 	} = useContextSystem(props, 'Flex');
@@ -34,10 +36,10 @@ export function useFlex(props) {
 				!isColumn && !isReverse ? ui.get('FlexGap') : 0,
 			[ui.createToken('FlexItemMarginLeft')]:
 				!isColumn && isReverse ? ui.get('FlexGap') : 0,
-			alignItems: isColumn ? 'normal' : align,
+			alignItems: alignItems || isColumn ? 'normal' : align,
 			flexDirection: direction,
 			flexWrap: wrap ? 'wrap' : null,
-			justifyContent: justify,
+			justifyContent: justifyContent || justify,
 			height: isColumn && expanded ? '100%' : null,
 			width: !isColumn && expanded ? '100%' : null,
 			/**
@@ -56,6 +58,7 @@ export function useFlex(props) {
 		return cx(styles.Flex, sx.Base, className);
 	}, [
 		align,
+		alignItems,
 		className,
 		direction,
 		expanded,
@@ -63,6 +66,7 @@ export function useFlex(props) {
 		isColumn,
 		isReverse,
 		justify,
+		justifyContent,
 		wrap,
 	]);
 

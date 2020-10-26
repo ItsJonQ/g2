@@ -13,17 +13,17 @@ const ALIGNMENTS = {
 };
 
 const V_ALIGNMENTS = {
-	bottom: { justify: 'flex-end', align: 'center' },
-	bottomLeft: { justify: 'flex-start', align: 'flex-end' },
-	bottomRight: { justify: 'flex-end', align: 'flex-end' },
-	center: { justify: 'center', align: 'center' },
-	edge: { justify: 'space-between', align: 'center' },
-	left: { justify: 'center', align: 'flex-start' },
-	right: { justify: 'center', align: 'flex-end' },
+	bottom: { justify: 'flex-end', alignItems: 'center' },
+	bottomLeft: { justify: 'flex-start', alignItems: 'flex-end' },
+	bottomRight: { justify: 'flex-end', alignItems: 'flex-end' },
+	center: { justify: 'center', alignItems: 'center' },
+	edge: { justify: 'space-between', alignItems: 'center' },
+	left: { justify: 'center', alignItems: 'flex-start' },
+	right: { justify: 'center', alignItems: 'flex-end' },
 	stretch: { justify: 'stretch' },
-	top: { justify: 'flex-start', align: 'center' },
-	topLeft: { justify: 'flex-start', align: 'flex-start' },
-	topRight: { justify: 'flex-start', align: 'flex-end' },
+	top: { justify: 'flex-start', alignItems: 'center' },
+	topLeft: { justify: 'flex-start', alignItems: 'flex-start' },
+	topRight: { justify: 'flex-start', alignItems: 'flex-end' },
 };
 
 export function getAlignmentProps(alignment, direction) {

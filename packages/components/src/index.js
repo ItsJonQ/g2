@@ -24,6 +24,7 @@ export * from './ColorControl';
 export * from './ColorField';
 export * from './ColorPicker';
 export * from './ColorSwatch';
+export * from './ComponentDesignTool';
 export * from './ComponentInspector';
 export * from './Container';
 export * from './ControlGroup';
