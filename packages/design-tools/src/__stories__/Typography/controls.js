@@ -114,7 +114,11 @@ export const TypographyOptions = React.memo(
 					onClick={(e) => e.stopPropagation()}
 					size="xSmall"
 				/>
-				<DropdownMenu maxWidth={160} minWidth={160}>
+				<DropdownMenu
+					maxWidth={160}
+					minWidth={160}
+					onClick={(e) => e.stopPropagation()}
+				>
 					{optionsEntries.map(([key, value]) => {
 						const isSelected = is.defined(settings[key]);
 
@@ -739,7 +743,11 @@ export const DimensionsOptions = React.memo(
 					onClick={(e) => e.stopPropagation()}
 					size="xSmall"
 				/>
-				<DropdownMenu maxWidth={160} minWidth={160}>
+				<DropdownMenu
+					maxWidth={160}
+					minWidth={160}
+					onClick={(e) => e.stopPropagation()}
+				>
 					{optionsEntries.map(([key, value]) => {
 						const isSelected = is.defined(settings[key]);
 
@@ -784,7 +792,11 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 				onClick={(e) => e.stopPropagation()}
 				size="xSmall"
 			/>
-			<DropdownMenu maxWidth={160} minWidth={160}>
+			<DropdownMenu
+				maxWidth={160}
+				minWidth={160}
+				onClick={(e) => e.stopPropagation()}
+			>
 				{optionsEntries.map(([key, value]) => {
 					const isSelected = is.defined(settings[key]);
 
