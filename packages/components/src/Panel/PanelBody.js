@@ -15,8 +15,10 @@ function PanelBody(props, forwardedRef) {
 	const __css = cx(isSeamless && styles.seamless);
 
 	return (
-		<CollapsibleContent {...otherProps} ref={forwardedRef}>
-			<PanelBodyView cx={__css}>{children}</PanelBodyView>
+		<CollapsibleContent ref={forwardedRef}>
+			<PanelBodyView {...otherProps} cx={__css}>
+				{children}
+			</PanelBodyView>
 		</CollapsibleContent>
 	);
 }

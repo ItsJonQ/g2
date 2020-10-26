@@ -11,6 +11,7 @@ export const UnitInputSelectUnit = css`
 	${textInputStyles.inputFontSize};
 	${ui.borderRadius.round};
 
+	border: 1px solid transparent;
 	border-radius: ${ui.get('controlBorderRadius')};
 	color: ${ui.get('colorTextMuted')};
 	cursor: pointer;
@@ -36,4 +37,5 @@ export const UnitInputSelectElement = css`
 
 export const unitSelectFocused = css`
 	background-color: ${ui.get('controlBackgroundHoverColor')};
+	border-color: ${ui.get('colorAdmin')};
 `;

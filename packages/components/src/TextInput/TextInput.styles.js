@@ -120,17 +120,18 @@ export const Steppers = css`
 
 export const StepperButton = css`
 	${SpinnerArrow};
-	border: none;
+	border: 1px solid transparent;
 	cursor: pointer;
 	display: block;
 	outline: none;
-	padding: 4px;
+	padding: 3px;
 
 	&:hover {
 		background-color: ${ui.get('controlBackgroundHoverColor')};
 	}
 	&:focus {
 		background-color: ${ui.get('controlBackgroundHoverColor')};
+		border-color: ${ui.get('colorAdmin')};
 	}
 `;
 

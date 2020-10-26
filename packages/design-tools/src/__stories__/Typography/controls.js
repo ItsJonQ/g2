@@ -111,6 +111,7 @@ export const TypographyOptions = React.memo(
 					icon={addIcon}
 					isControl
 					isSubtle
+					onClick={(e) => e.stopPropagation()}
 					size="xSmall"
 				/>
 				<DropdownMenu maxWidth={160} minWidth={160}>
@@ -735,6 +736,7 @@ export const DimensionsOptions = React.memo(
 					icon={addIcon}
 					isControl
 					isSubtle
+					onClick={(e) => e.stopPropagation()}
 					size="xSmall"
 				/>
 				<DropdownMenu maxWidth={160} minWidth={160}>
@@ -779,6 +781,7 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 				icon={addIcon}
 				isControl
 				isSubtle
+				onClick={(e) => e.stopPropagation()}
 				size="xSmall"
 			/>
 			<DropdownMenu maxWidth={160} minWidth={160}>
@@ -804,22 +807,24 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 	);
 });
 
+export const ColorPanelContent = ({ selectUI }) => {
+	return (
+		<Accordion>
+			<ColorSetting
+				label="Background"
+				prop="backgroundColor"
+				selectUI={selectUI}
+			/>
+			<ColorSetting label="Text" prop="textColor" selectUI={selectUI} />
+		</Accordion>
+	);
+};
+
 export const ColorPanel = ({ selectUI }) => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>Color</ListGroupHeader>
-			<Accordion>
-				<ColorSetting
-					label="Background"
-					prop="backgroundColor"
-					selectUI={selectUI}
-				/>
-				<ColorSetting
-					label="Text"
-					prop="textColor"
-					selectUI={selectUI}
-				/>
-			</Accordion>
+			<ColorPanelContent selectUI={selectUI} />
 		</ListGroup>
 	);
 };
@@ -911,13 +916,9 @@ export const ColorNavigatorSelect = ({ prop = 'backgroundColor' }) => {
 	);
 };
 
-export const DimensionsPanel = () => {
+export const DimensionsPanelContent = () => {
 	return (
-		<ListGroup>
-			<ListGroupHeader>
-				Dimensions
-				<DimensionsOptions addIcon={<FiPlus />} />
-			</ListGroupHeader>
+		<>
 			<CombinedFormGroupInputSlider
 				Component={UnitInput}
 				arrows={false}
@@ -939,6 +940,18 @@ export const DimensionsPanel = () => {
 				showRemove={false}
 				showRemoveRight
 			/>
+		</>
+	);
+};
+
+export const DimensionsPanel = () => {
+	return (
+		<ListGroup>
+			<ListGroupHeader>
+				Dimensions
+				<DimensionsOptions addIcon={<FiPlus />} />
+			</ListGroupHeader>
+			<DimensionsPanelContent />
 		</ListGroup>
 	);
 };

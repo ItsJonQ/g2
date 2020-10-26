@@ -2,11 +2,18 @@ import {
 	Card,
 	CardBody,
 	Grid,
+	Heading,
+	HStack,
 	ListGroup,
 	ListGroupHeader,
 	ListGroups,
+	Panel,
+	PanelBody,
+	PanelHeader,
 	Select,
+	Text,
 	UnitInput,
+	View,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
 import { FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
@@ -16,13 +23,16 @@ import React from 'react';
 import { Wrapper } from './components';
 import {
 	ColorPanel,
+	ColorPanelContent,
 	CombinedFormGroup,
 	CombinedFormGroupInputSlider,
 	CombinedFormGroupInputStepper,
 	CombinedFormGroupSwitch,
 	CombinedFormGroupSwitchAlt,
 	CombinedFormGroupSwitchLeft,
+	DimensionsOptions,
 	DimensionsPanel,
+	DimensionsPanelContent,
 	FontFamilyControl,
 	FontStyleControl,
 	PanelOverlay,
@@ -462,7 +472,6 @@ const ExampleSeven = () => {
 const ExampleEight = () => {
 	return (
 		<Card>
-			<PanelOverlay />
 			<CardBody>
 				<ListGroups>
 					<ListGroup>
@@ -528,6 +537,126 @@ const ExampleEight = () => {
 					<ColorPanel selectUI />
 					<DimensionsPanel />
 				</ListGroups>
+			</CardBody>
+		</Card>
+	);
+};
+
+const ExampleNine = () => {
+	return (
+		<Card>
+			<CardBody
+				css={`
+					padding: 0;
+				`}
+			>
+				<Panel>
+					<PanelHeader>
+						<HStack>
+							<Heading size={5}>Typography</Heading>
+							<View
+								css={`
+									margin: -8px 0;
+								`}
+							>
+								<TypographyOptions
+									addIcon={<FiMoreHorizontal />}
+									exclude={['dropCap']}
+									showActiveOnly
+								/>
+							</View>
+						</HStack>
+					</PanelHeader>
+					<PanelBody
+						css={`
+							padding-top: 0;
+						`}
+					>
+						<PresetControl />
+						<CombinedFormGroup
+							format="text"
+							label="Font"
+							prop="fontFamily"
+							showRemove={false}
+						/>
+						<Grid>
+							<CombinedFormGroup
+								Component={UnitInput}
+								cssProp="fontSize"
+								label="Size"
+								min={0}
+								prop="fontSize"
+								showRemove={false}
+								truncate={false}
+							/>
+							<CombinedFormGroup
+								Component={Select}
+								label="Appearance"
+								prop="fontWeight"
+								showRemove={false}
+							>
+								<option value="Lighter">Light</option>
+								<option value="Normal">Regular</option>
+								<option value="Bold">Bold</option>
+								<option value="Bolder">Bolder</option>
+							</CombinedFormGroup>
+							<CombinedFormGroupInputStepper
+								cssProp="lineHeight"
+								label="Line Height"
+								min={0}
+								prop="lineHeight"
+								showRemove={false}
+								step={0.5}
+								truncate={false}
+								type="number"
+							/>
+							<CombinedFormGroup
+								Component={UnitInput}
+								cssProp="letterSpacing"
+								label="Letter Spacing"
+								min={-10}
+								prop="letterSpacing"
+								showRemove={false}
+								step={0.5}
+								truncate={false}
+								type="number"
+							/>
+						</Grid>
+					</PanelBody>
+				</Panel>
+				<Panel>
+					<PanelHeader>
+						<Heading size={5}>Color</Heading>
+					</PanelHeader>
+					<PanelBody
+						css={`
+							padding-top: 0;
+						`}
+					>
+						<ColorPanelContent selectUI />
+					</PanelBody>
+				</Panel>
+				<Panel>
+					<PanelHeader>
+						<HStack>
+							<Heading size={5}>Dimensions</Heading>
+							<View
+								css={`
+									margin: -8px 0;
+								`}
+							>
+								<DimensionsOptions />
+							</View>
+						</HStack>
+					</PanelHeader>
+					<PanelBody
+						css={`
+							padding-top: 0;
+						`}
+					>
+						<DimensionsPanelContent />
+					</PanelBody>
+				</Panel>
 			</CardBody>
 		</Card>
 	);
@@ -712,6 +841,23 @@ export const _altThemeWithPaletteDropdown = () => {
 					}}
 				>
 					<ExampleEight truncate />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const _altThemeWithPanels = () => {
+	return (
+		<ThemeProvider isGlobal theme={baseLineThemeNext}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: false },
+					}}
+				>
+					<ExampleNine truncate />
 				</ContextSystemProvider>
 			</Wrapper>
 		</ThemeProvider>
