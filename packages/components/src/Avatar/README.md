@@ -119,5 +119,5 @@ The source of the `Image`.
 
 ## See Also
 
--   [Image](/components/image/)
--   [Initials](/components/initials/)
+-   [Image](../image/)
+-   [Initials](../initials/)

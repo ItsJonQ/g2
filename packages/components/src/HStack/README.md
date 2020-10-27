@@ -160,6 +160,6 @@ function Example() {
 
 ## See Also
 
--   [`VStack`](/components/vstack/)
--   [`Flex`](/components/flex/)
--   [`Spacer`](/components/spacer/)
+-   [`VStack`](../vstack/)
+-   [`Flex`](../flex/)
+-   [`Spacer`](../spacer/)

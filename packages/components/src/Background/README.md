@@ -86,9 +86,9 @@ Modifies the background color of `Surface`.
 <!-- /Automatically Generated -->
 <!-- /props -->
 
-`Background` uses `Surface` underneath, so we have access to all of `Surface`'s props. For a complete list of props, check out [`Surface`](/components/surface/#props).
+`Background` uses `Surface` underneath, so we have access to all of `Surface`'s props. For a complete list of props, check out [`Surface`](../surface/#props).
 
 ## See Also
 
--   [Surface](/components/surface/)
--   [View](/components/view/)
+-   [Surface](../surface/)
+-   [View](../view/)

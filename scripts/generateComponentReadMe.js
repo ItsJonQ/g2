@@ -63,8 +63,12 @@ function excludeFilesFilter(filePath) {
 }
 
 function prepareMarkdownContent({ content, relativeFilePath }) {
-	const [head, body] = content.split('<!-- props -->');
+	/**
+	 * Adjust links.
+	 */
+	const baseContent = content.replace(/\]\(\/components/g, '](..');
 
+	const [head, body] = baseContent.split('<!-- props -->');
 	const nextContent = [
 		head,
 		`## Table of contents`,

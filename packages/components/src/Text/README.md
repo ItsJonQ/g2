@@ -247,5 +247,5 @@ Adjusts font-weight of the text.
 
 ## See Also
 
--   [`Heading`](/components/heading/)
--   [`Subheading`](/components/subheading/)
+-   [`Heading`](../heading/)
+-   [`Subheading`](../subheading/)

@@ -105,6 +105,6 @@ Adjusts the CSS grid `template-rows`.
 
 ## See Also
 
--   [`Flex`](/components/flex/)
--   [`HStack`](/components/hstack/)
--   [`VStack`](/components/vstack/)
+-   [`Flex`](../flex/)
+-   [`HStack`](../hstack/)
+-   [`VStack`](../vstack/)

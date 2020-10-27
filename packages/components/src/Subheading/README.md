@@ -168,9 +168,9 @@ Adjusts font-weight of the text.
 <!-- /Automatically Generated -->
 <!-- /props -->
 
-`Subheading` uses `Text` underneath, so we have access to all of `Text`'s props. For a complete list of props, check out [`Text`](/components/text/#props).
+`Subheading` uses `Text` underneath, so we have access to all of `Text`'s props. For a complete list of props, check out [`Text`](../text/#props).
 
 ## See Also
 
--   [`Text`](/components/text/)
--   [`Heading`](/components/heading/)
+-   [`Text`](../text/)
+-   [`Heading`](../heading/)

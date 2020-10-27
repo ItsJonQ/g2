@@ -180,5 +180,5 @@ Determines if children should wrap.
 
 ## See Also
 
--   [Button](/components/button/)
--   [TextInput](/components/textinput/)
+-   [Button](../button/)
+-   [TextInput](../textinput/)

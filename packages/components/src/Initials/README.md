@@ -174,8 +174,8 @@ Adjusts font-weight of the text.
 <!-- /Automatically Generated -->
 <!-- /props -->
 
-`Initials` uses `Text` underneath, so we have access to all of `Text`'s props. For a complete list of props, check out [`Text`](/components/text/#props).
+`Initials` uses `Text` underneath, so we have access to all of `Text`'s props. For a complete list of props, check out [`Text`](../text/#props).
 
 ## See Also
 
--   [Text](/components/text/)
+-   [Text](../text/)

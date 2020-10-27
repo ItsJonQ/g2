@@ -168,7 +168,7 @@ function Example() {
 
 ## See Also
 
--   [`Grid`](/components/grid/)
--   [`HStack`](/components/hstack/)
--   [`VStack`](/components/vstack/)
--   [`Spacer`](/components/spacer/)
+-   [`Grid`](../grid/)
+-   [`HStack`](../hstack/)
+-   [`VStack`](../vstack/)
+-   [`Spacer`](../spacer/)

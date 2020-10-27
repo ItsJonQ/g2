@@ -101,4 +101,4 @@ function Example() {
 
 ## See Also
 
--   [Image](/components/image/)
+-   [Image](../image/)

@@ -189,4 +189,4 @@ Determines the `Button` variant to render.
 
 ## See Also
 
--   [TextInput](/components/textinput/)
+-   [TextInput](../textinput/)

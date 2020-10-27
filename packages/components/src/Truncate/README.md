@@ -96,6 +96,6 @@ function Example() {
 
 ## See Also
 
--   [`Text`](/components/text/)
--   [`Heading`](/components/heading/)
--   [`Subheading`](/components/subheading/)
+-   [`Text`](../text/)
+-   [`Heading`](../heading/)
+-   [`Subheading`](../subheading/)

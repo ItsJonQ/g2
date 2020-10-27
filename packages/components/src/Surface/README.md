@@ -93,5 +93,5 @@ Modifies the background color of `Surface`.
 
 ## See Also
 
--   [View](/components/view/)
--   [Background](/components/background/)
+-   [View](../view/)
+-   [Background](../background/)

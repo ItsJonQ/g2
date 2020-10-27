@@ -184,5 +184,5 @@ Determines if children should wrap.
 
 ## See Also
 
--   [Button](/components/button/)
--   [Select](/components/select/)
+-   [Button](../button/)
+-   [Select](../select/)

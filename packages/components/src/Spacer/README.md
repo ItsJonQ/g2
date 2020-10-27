@@ -141,6 +141,6 @@ Adjusts top and bottom padding.
 
 ## See Also
 
--   [`Flex`](/components/flex/)
--   [`HStack`](/components/hstack/)
--   [`VStack`](/components/vstack/)
+-   [`Flex`](../flex/)
+-   [`HStack`](../hstack/)
+-   [`VStack`](../vstack/)

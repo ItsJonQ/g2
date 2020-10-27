@@ -98,5 +98,5 @@ In the example below, `isInteractive` is activated to give a better sense of dep
 
 ## See Also
 
--   [Surface](/components/surface/)
--   [View](/components/view/)
+-   [Surface](../surface/)
+-   [View](../view/)

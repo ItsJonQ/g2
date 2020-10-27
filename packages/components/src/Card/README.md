@@ -84,5 +84,5 @@ Renders with rounded corners.
 
 ## See Also
 
--   [`HStack`](/components/hstack/)
--   [`VStack`](/components/vstack/)
+-   [`HStack`](../hstack/)
+-   [`VStack`](../vstack/)

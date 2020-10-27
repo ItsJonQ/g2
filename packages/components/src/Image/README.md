@@ -98,5 +98,5 @@ The image width.
 
 ## See Also
 
--   [Text](/components/text/)
--   [AspectRatio](/components/aspectratio/)
+-   [Text](../text/)
+-   [AspectRatio](../aspectratio/)
