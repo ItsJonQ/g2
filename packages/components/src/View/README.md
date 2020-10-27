@@ -47,52 +47,30 @@ function Example() {
 
 ## Props
 
+##### \_\_\_css
+
+**Type**: `InterpolatedCSS`
+
+Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop.
+Typically used "internally" to establish based styles for a `View`.
+
 ##### as
 
-**Type**: `React.ReactElement`
+**Type**: `string`,`E`
 
 Render the component as another React Component or HTML Element.
 
-```jsx live
-import { View } from '@wp-g2/components';
-
-function Example() {
-	return (
-		<View as="h1">
-			<span>Olaf</span>
-		</View>
-	);
-}
-```
-
 ##### css
 
-**Type**: `any`
+**Type**: `InterpolatedCSS`
 
 Render custom CSS using the style system.
-
-```jsx live
-import { View } from '@wp-g2/components';
-
-function Example() {
-	return (
-		<View
-			css={`
-				background: blue;
-			`}
-		>
-			<span>Olaf</span>
-		</View>
-	);
-}
-```
 
 ##### cx
 
 **Type**: `any`
 
-Render custom CSS using the style system. The `cx` prop combines custom styling with the `css` prop.
-Typically used "internally" to establish based styles for a `View`.
+Combines classNames as well as CSS style rules created with the `css` function.
 
 <!-- /Automatically Generated -->
 <!-- /props -->

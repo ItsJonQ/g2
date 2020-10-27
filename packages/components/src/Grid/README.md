@@ -58,6 +58,12 @@ function Example() {
 
 Adjusts the block alignment of children.
 
+##### alignment
+
+**Type**: `GridAlignment`
+
+Adjusts the horizontal and vertical alignment of children.
+
 ##### columns
 
 **Type**: `number`,`(number`,`null)[]`

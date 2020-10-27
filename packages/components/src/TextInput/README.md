@@ -46,11 +46,11 @@ Aligns children using CSS Flexbox `align-items`. Vertically aligns content if th
 
 In the example below, `flex-start` will align the children content to the top.
 
-##### autoWrap
+##### arrow
 
-**Type**: `boolean`
+**Type**: `boolean`,`"stepper"`
 
-Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements.
+Renders specified incrementer/decrementer arrows.
 
 ##### defaultValue
 
@@ -70,6 +70,12 @@ The direction flow of the children content can be adjusted with `direction`. `co
 
 Determines if element is disabled.
 
+##### expanded
+
+**Type**: `boolean`
+
+Expands to the maximum available width (if horizontal) or height (if vertical).
+
 ##### gap
 
 **Type**: `number`
@@ -81,6 +87,12 @@ The amount of space between each child element.
 **Type**: `boolean`
 
 Renders a `cursor: pointer` on hover.
+
+##### isCommitOnBlurOrEnter
+
+**Type**: `boolean`
+
+Fires the `onChange` callback after pressing `ENTER` or focusing away.
 
 ##### isFocused
 
@@ -148,12 +160,6 @@ Callback function when the height changes with a multiline `TextInput`.
 **Type**: `React.ReactElement`
 
 Renders prefix content within `TextInput`.
-
-##### rows
-
-**Type**: `number`
-
-Minimal number of rows to show for a multiline `TextInput`.
 
 ##### size
 

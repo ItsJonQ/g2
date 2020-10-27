@@ -55,12 +55,6 @@ Aligns children using CSS Flexbox `align-items`. Vertically aligns content if th
 
 In the example below, `flex-start` will align the children content to the top.
 
-##### autoWrap
-
-**Type**: `boolean`
-
-Automatically wraps children if they're not `FlexItem` or `FlexBlock` elements.
-
 ##### defaultValue
 
 **Type**: `boolean`
@@ -78,6 +72,12 @@ The direction flow of the children content can be adjusted with `direction`. `co
 **Type**: `boolean`
 
 Determines if element is disabled.
+
+##### expanded
+
+**Type**: `boolean`
+
+Expands to the maximum available width (if horizontal) or height (if vertical).
 
 ##### isSubtle
 

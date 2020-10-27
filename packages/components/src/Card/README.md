@@ -60,6 +60,42 @@ function Example() {
 
 ## Props
 
+##### backgroundSize
+
+**Type**: `number`
+
+Determines the grid size for "dotted" and "grid" variants.
+
+##### border
+
+**Type**: `boolean`
+
+Renders a border around the entire `Surface`.
+
+##### borderBottom
+
+**Type**: `boolean`
+
+Renders a bottom border.
+
+##### borderLeft
+
+**Type**: `boolean`
+
+Renders a left border.
+
+##### borderRight
+
+**Type**: `boolean`
+
+Renders a right border.
+
+##### borderTop
+
+**Type**: `boolean`
+
+Renders a top border.
+
 ##### elevation
 
 **Type**: `number`
@@ -79,8 +115,17 @@ Renders without a border.
 
 Renders with rounded corners.
 
-<!-- /Automatically Generated -->
-<!-- /props -->
+##### variant
+
+**Type**: `"grid"`,`"primary"`,`"secondary"`,`"tertiary"`,`"dotted"`
+
+Modifies the background color of `Surface`.
+
+-   `primary`: Used for almost all cases.
+-   `secondary`: Used as a secondary background for inner `Surface` components.
+-   `tertiary`: Used as the app/site wide background. Visible in **dark mode** only. Use case is rare.
+    <!-- /Automatically Generated -->
+    <!-- /props -->
 
 ## See Also
 

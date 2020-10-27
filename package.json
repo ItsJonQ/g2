@@ -15,7 +15,7 @@
     "lint:eslint": "eslint \"./packages/**/*.js\" --fix",
     "lint": "zero lint && npm run lint:eslint",
     "start": "npm run storybook",
-    "docs:generate": "node scripts/generateComponentReadMe.js",
+    "docs:generate": "yarn --cwd ./packages/website generate:props && node scripts/generateComponentReadMe.js",
     "dev": "zero test",
     "test": "zero test --coverage",
     "test:coverage": "zero test --coverage",

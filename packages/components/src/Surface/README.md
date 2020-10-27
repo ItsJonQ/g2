@@ -49,6 +49,12 @@ function Example() {
 
 ## Props
 
+##### backgroundSize
+
+**Type**: `number`
+
+Determines the grid size for "dotted" and "grid" variants.
+
 ##### border
 
 **Type**: `boolean`
@@ -81,7 +87,7 @@ Renders a top border.
 
 ##### variant
 
-**Type**: `"primary"`,`"secondary"`,`"tertiary"`
+**Type**: `"grid"`,`"primary"`,`"secondary"`,`"tertiary"`,`"dotted"`
 
 Modifies the background color of `Surface`.
 
