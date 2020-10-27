@@ -31,6 +31,8 @@ export function useUnitInput(props, ref) {
 				const [parsedValue, unit] = parseUnitValue(next);
 				const nextState = { parsedValue };
 
+				console.log(unit);
+
 				if (unit) {
 					nextState.unit = findUnitMatchExact({ value: unit });
 				}

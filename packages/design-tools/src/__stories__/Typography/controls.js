@@ -961,7 +961,7 @@ const PaddingInput = ({ icon, ...props }) => {
 };
 
 export const BoxControl = ({ cssProp, label, prop }) => {
-	const [showAll, setShowAll] = React.useState(true);
+	const [showAll, setShowAll] = React.useState(false);
 
 	const [value] = useGlobalStyles((state) => [state[prop]], shallowCompare);
 
@@ -972,10 +972,12 @@ export const BoxControl = ({ cssProp, label, prop }) => {
 		[prop],
 	);
 
+	if (value === null) return null;
+
 	return (
 		<FormGroup label={label}>
 			<HStack alignment="top" spacing={3}>
-				<Grid>
+				<Grid gap={1}>
 					{!showAll && (
 						<PaddingInput
 							cssProp={cssProp}

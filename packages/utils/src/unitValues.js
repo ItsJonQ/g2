@@ -108,6 +108,10 @@ export function hasUnits(units) {
  * @return {Array<number, string>} The extracted number and unit.
  */
 export function parseUnitValue(initialValue) {
+	if (!is.defined(initialValue)) {
+		return [undefined, undefined];
+	}
+
 	const value = String(initialValue).trim();
 
 	let num = parseFloat(value, 10);
@@ -115,7 +119,7 @@ export function parseUnitValue(initialValue) {
 
 	const unitMatch = value.match(/[\d.\-+]*\s*(.*)/)[1];
 
-	let unit = unitMatch !== undefined ? unitMatch : '';
+	let unit = is.defined(unitMatch) ? unitMatch : '';
 	unit = unit.toLowerCase();
 
 	return [num, unit];
