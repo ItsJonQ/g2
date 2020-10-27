@@ -9,7 +9,7 @@ export function createTheme(callback = noop) {
 
 	const props = {
 		get,
-		theme: config,
+		theme: Object.assign({}, config),
 		color: colorize,
 		space,
 	};
