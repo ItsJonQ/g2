@@ -88,7 +88,7 @@ export function useUnitInput(props, ref) {
 		(next) => {
 			let nextValue = next;
 
-			if (is.numeric(nextValue) && !is.numericZero(nextValue)) {
+			if (is.numeric(nextValue)) {
 				const currentUnit = unitStore.getState().unit;
 				nextValue = createUnitValue(next, currentUnit);
 			}

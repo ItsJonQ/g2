@@ -23,6 +23,7 @@ function BaseButton(props, forwardedRef) {
 		href,
 		icon,
 		iconSize = 16,
+		isActive = false,
 		isDestructive = false,
 		isFocused = false,
 		isLoading = false,
@@ -38,6 +39,7 @@ function BaseButton(props, forwardedRef) {
 		<ReakitButton
 			aria-busy={isLoading}
 			as={as}
+			data-active={isActive}
 			data-destructive={isDestructive}
 			data-focused={isFocused}
 			data-icon={!!icon}

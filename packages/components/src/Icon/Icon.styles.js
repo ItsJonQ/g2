@@ -13,3 +13,7 @@ export const inline = css`
 	display: inline-block;
 	vertical-align: middle;
 `;
+
+export const muted = css`
+	opacity: 0.48;
+`;

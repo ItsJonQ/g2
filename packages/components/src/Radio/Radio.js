@@ -16,7 +16,7 @@ function Radio(props, forwardedRef) {
 	if (!label) return <RadioElement {...otherProps} ref={forwardedRef} />;
 
 	return (
-		<FormGroup gap={gap} isInline templateColumns={templateColumns}>
+		<FormGroup gap={gap} horizontal templateColumns={templateColumns}>
 			<RadioElement {...props} ref={forwardedRef} />
 			<ControlLabel>{label}</ControlLabel>
 		</FormGroup>

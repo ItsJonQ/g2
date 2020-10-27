@@ -3,6 +3,7 @@ import { createTheme } from '@wp-g2/styles';
 const theme = createTheme(({ get, theme }) => {
 	return {
 		...theme,
+		buttonControlActiveStateColor: get('colorText'),
 		cardBorderRadius: '4px',
 		colorAdmin: get('blueberry'),
 		controlBackgroundColor: 'transparent',

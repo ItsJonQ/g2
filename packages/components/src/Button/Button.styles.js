@@ -222,5 +222,24 @@ export const plainLink = css`
 
 export const subtle = baseButtonStyles.subtle;
 export const control = baseButtonStyles.control;
-export const subtleControl = baseButtonStyles.subtleControl;
+
+export const subtleControl = css`
+	${baseButtonStyles.subtleControl};
+
+	&[data-active='true'] {
+		background: ${ui.get('buttonControlActiveStateColor')};
+		color: ${ui.get('buttonControlActiveStateTextColor')};
+
+		&:hover {
+			background: ${ui.get('buttonControlActiveStateColorHover')};
+		}
+		&:focus {
+			background: ${ui.get('buttonControlActiveStateColorFocus')};
+		}
+		&:active {
+			background: ${ui.get('buttonControlActiveStateColorActive')};
+		}
+	}
+`;
+
 export const currentColor = baseButtonStyles.currentColor;

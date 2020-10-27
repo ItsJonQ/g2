@@ -150,6 +150,7 @@ const Themer = React.memo(
 								</Select>
 								<Popover
 									maxWidth={200}
+									unstable_fixed
 									hideOnClickOutside={false}
 									placement="top-start"
 									trigger={

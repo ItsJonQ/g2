@@ -11,6 +11,7 @@ function Button(props, forwardedRef) {
 		className,
 		currentColor,
 		icon,
+		isActive = false,
 		isControl = false,
 		isSubtle = false,
 		size = 'medium',
@@ -36,6 +37,7 @@ function Button(props, forwardedRef) {
 		<BaseButton
 			className={classes}
 			icon={icon}
+			isActive={isActive}
 			ref={forwardedRef}
 			{...otherProps}
 		>

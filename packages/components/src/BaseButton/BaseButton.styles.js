@@ -187,6 +187,11 @@ export const subtleControl = css`
 	&:focus {
 		background-color: ${ui.get('controlBackgroundColor')};
 	}
+
+	&[data-active='true'] {
+		background: ${ui.get('colorText')};
+		color: ${ui.get('colorTextInverted')};
+	}
 `;
 
 export const narrow = css`

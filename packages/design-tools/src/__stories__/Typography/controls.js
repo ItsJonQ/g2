@@ -14,6 +14,7 @@ import {
 	FormGroup,
 	Grid,
 	HStack,
+	Icon,
 	ListGroup,
 	ListGroupHeader,
 	Navigator,
@@ -37,9 +38,14 @@ import {
 	VStack,
 } from '@wp-g2/components';
 import {
+	FiArrowDown,
+	FiArrowLeft,
+	FiArrowRight,
+	FiArrowUp,
 	FiChevronLeft,
 	FiChevronRight,
 	FiCornerUpLeft,
+	FiMaximize,
 	FiMinus,
 	FiMoreHorizontal,
 	FiPlus,
@@ -943,9 +949,84 @@ export const ColorNavigatorSelect = ({ prop = 'backgroundColor' }) => {
 	);
 };
 
+const PaddingInput = ({ icon, ...props }) => {
+	return (
+		<UnitInput
+			gap={1}
+			min={0}
+			{...props}
+			prefix={icon && <Icon icon={icon} size={12} variant="muted" />}
+		/>
+	);
+};
+
+export const BoxControl = ({ cssProp, label, prop }) => {
+	const [showAll, setShowAll] = React.useState(true);
+
+	const [value] = useGlobalStyles((state) => [state[prop]], shallowCompare);
+
+	const handleOnChange = React.useCallback(
+		(value) => {
+			typographyStore.getState().set({ [prop]: value });
+		},
+		[prop],
+	);
+
+	return (
+		<FormGroup label={label}>
+			<HStack alignment="top" spacing={3}>
+				<Grid>
+					{!showAll && (
+						<PaddingInput
+							cssProp={cssProp}
+							onChange={handleOnChange}
+							value={value}
+						/>
+					)}
+					{showAll && (
+						<>
+							<PaddingInput
+								cssProp={cssProp}
+								icon={<FiArrowUp />}
+								onChange={handleOnChange}
+								value={value}
+							/>
+							<PaddingInput
+								cssProp={cssProp}
+								icon={<FiArrowDown />}
+								onChange={handleOnChange}
+								value={value}
+							/>
+							<PaddingInput
+								cssProp={cssProp}
+								icon={<FiArrowLeft />}
+								onChange={handleOnChange}
+								value={value}
+							/>
+							<PaddingInput
+								cssProp={cssProp}
+								icon={<FiArrowRight />}
+								onChange={handleOnChange}
+								value={value}
+							/>
+						</>
+					)}
+				</Grid>
+				<Button
+					icon={<FiMaximize />}
+					isActive={showAll}
+					isControl
+					isSubtle
+					onClick={() => setShowAll((prev) => !prev)}
+				/>
+			</HStack>
+		</FormGroup>
+	);
+};
+
 export const DimensionsPanelContent = () => {
 	return (
-		<>
+		<ListGroup>
 			<CombinedFormGroupInputSlider
 				Component={UnitInput}
 				arrows={false}
@@ -958,14 +1039,8 @@ export const DimensionsPanelContent = () => {
 				truncate={false}
 				type="number"
 			/>
-			<CombinedFormGroup
-				Component={UnitInput}
-				cssProp="padding"
-				label="Padding"
-				prop="padding"
-				showRemove={false}
-			/>
-		</>
+			<BoxControl cssProp="padding" label="Padding" prop="padding" />
+		</ListGroup>
 	);
 };
 

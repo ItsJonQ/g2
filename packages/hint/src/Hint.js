@@ -137,6 +137,7 @@ export function Hint({
 							Hint
 						</Button>
 					}
+					unstable_fixed
 				>
 					{hasIssues && (
 						<CardHeader>
@@ -206,8 +207,9 @@ export function Hint({
 								))}
 						</Scrollable>
 					</View>
-					<CardFooter>
+					<CardFooter justify="space-between">
 						<FormGroup
+							horizontal
 							label="Auto-Analyze"
 							templateColumns="1fr 1fr"
 						>

@@ -14,6 +14,7 @@ function Icon(props, forwardedRef) {
 		icon,
 		inline,
 		size = 20,
+		variant,
 		width,
 		...otherProps
 	} = useContextSystem(props, 'Icon');
@@ -35,9 +36,10 @@ function Icon(props, forwardedRef) {
 			sx.color,
 			sx.size,
 			inline && styles.inline,
+			styles[variant],
 			className,
 		);
-	}, [className, color, height, inline, size, width]);
+	}, [className, color, height, inline, size, variant, width]);
 
 	if (!icon) return null;
 

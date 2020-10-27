@@ -37,7 +37,7 @@ const CSSEntry = React.memo(({ prop }) => {
 	};
 
 	return (
-		<FormGroup label={prop}>
+		<FormGroup horizontal label={prop}>
 			<UnitInput
 				cssProp={prop}
 				onChange={update}
@@ -54,7 +54,11 @@ const Everything = () => {
 	const { setState, ...state } = useValueStore();
 
 	return (
-		<ListGroup>
+		<ListGroup
+			css={`
+				padding-bottom: 20vh;
+			`}
+		>
 			{Object.entries(state).map(([key]) => {
 				return <CSSEntry key={key} prop={key} />;
 			})}

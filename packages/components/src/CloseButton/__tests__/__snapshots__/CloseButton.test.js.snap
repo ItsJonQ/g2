@@ -4,6 +4,7 @@ exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
   class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-b64iwo"
+  data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -60,6 +61,7 @@ exports[`props should render size 1`] = `
 <button
   aria-busy="false"
   class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-lomq2j"
+  data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
@@ -116,6 +118,7 @@ exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
   class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-19chzy"
+  data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"

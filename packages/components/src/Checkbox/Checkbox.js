@@ -16,7 +16,7 @@ function Checkbox(props, forwardedRef) {
 	if (!label) return <CheckboxElement {...otherProps} ref={forwardedRef} />;
 
 	return (
-		<FormGroup gap={gap} isInline templateColumns={templateColumns}>
+		<FormGroup gap={gap} horizontal templateColumns={templateColumns}>
 			<CheckboxElement {...otherProps} ref={forwardedRef} />
 			<ControlLabel>{label}</ControlLabel>
 		</FormGroup>

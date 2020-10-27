@@ -4,12 +4,14 @@ import { colorize, is, noop } from '@wp-g2/utils';
 import { space } from '../mixins/space';
 import { config } from './config';
 
+const baseTheme = Object.freeze(Object.assign({}, config));
+
 export function createTheme(callback = noop) {
 	if (!is.function(callback)) return {};
 
 	const props = {
 		get,
-		theme: Object.assign({}, config),
+		theme: baseTheme,
 		color: colorize,
 		space,
 	};

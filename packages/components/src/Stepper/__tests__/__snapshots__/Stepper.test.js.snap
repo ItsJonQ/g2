@@ -14,6 +14,7 @@ exports[`props should render correctly 1`] = `
     <button
       aria-busy="false"
       class="wp-components-flex wp-components-base-button wp-components-button css-duc0b9"
+      data-active="false"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -67,6 +68,7 @@ exports[`props should render correctly 1`] = `
     <button
       aria-busy="false"
       class="wp-components-flex wp-components-base-button wp-components-button css-eidvad"
+      data-active="false"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -135,6 +137,7 @@ exports[`props should render size 1`] = `
     <button
       aria-busy="false"
       class="wp-components-flex wp-components-base-button wp-components-button css-6a5sf6"
+      data-active="false"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -188,6 +191,7 @@ exports[`props should render size 1`] = `
     <button
       aria-busy="false"
       class="wp-components-flex wp-components-base-button wp-components-button css-olh7o7"
+      data-active="false"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -256,6 +260,7 @@ exports[`props should render vertically 1`] = `
     <button
       aria-busy="false"
       class="wp-components-flex wp-components-base-button wp-components-button css-1unljbh"
+      data-active="false"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"
@@ -306,6 +311,7 @@ exports[`props should render vertically 1`] = `
     <button
       aria-busy="false"
       class="wp-components-flex wp-components-base-button wp-components-button css-15jygke"
+      data-active="false"
       data-destructive="false"
       data-focused="false"
       data-g2-c16t="true"

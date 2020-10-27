@@ -127,6 +127,12 @@ const BUTTON_PROPS = {
 	buttonSecondaryBorderColorHover: get('buttonPrimaryColor'),
 	buttonSecondaryBorderColorActive: get('buttonPrimaryColor'),
 	buttonSecondaryBorderColorFocus: get('buttonPrimaryColor'),
+
+	buttonControlActiveStateColor: get('buttonPrimaryColor'),
+	buttonControlActiveStateColorHover: get('buttonControlActiveStateColor'),
+	buttonControlActiveStateColorActive: get('buttonControlActiveStateColor'),
+	buttonControlActiveStateColorFocus: get('buttonControlActiveStateColor'),
+	buttonControlActiveStateTextColor: get('buttonPrimaryTextColor'),
 };
 
 const CARD_PROPS = {

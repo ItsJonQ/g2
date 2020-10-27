@@ -328,7 +328,7 @@ export const Wrapper = ({ children }) => {
 					css={`
 						margin-top: 5vh;
 					`}
-					templateColumns="minmax(0, 1fr) 265px"
+					templateColumns="minmax(0, 1fr) 284px"
 				>
 					<View>
 						<Card>
