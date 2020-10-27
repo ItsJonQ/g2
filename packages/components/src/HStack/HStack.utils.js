@@ -26,7 +26,7 @@ const V_ALIGNMENTS = {
 	topRight: { justify: 'flex-start', alignItems: 'flex-end' },
 };
 
-export function getAlignmentProps(alignment, direction) {
+export function getAlignmentProps(alignment, direction = 'row') {
 	const isVertical = direction === 'column';
 	const props = isVertical ? V_ALIGNMENTS : ALIGNMENTS;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Placeholder } from '../../index';
+import { Placeholder, View } from '../../index';
 import { Grid } from '../index';
 
 export default {
@@ -10,9 +10,11 @@ export default {
 
 export const _default = () => {
 	return (
-		<Grid columns={[2, null, 4]}>
-			<Placeholder>Item</Placeholder>
-			<Placeholder>Item</Placeholder>
+		<Grid alignment="bottom" columns={[2, null, 4]}>
+			<Placeholder height={200}>Item</Placeholder>
+			<View>
+				<Placeholder>Item</Placeholder>
+			</View>
 		</Grid>
 	);
 };

@@ -2,9 +2,12 @@ import { useContextSystem } from '@wp-g2/context';
 import { css, cx, useResponsiveValue } from '@wp-g2/styles';
 import { useMemo } from 'react';
 
+import { getAlignmentProps } from './Grid.utils';
+
 export function useGrid(props) {
 	const {
 		align,
+		alignment,
 		className,
 		columnGap,
 		columns = 2,
@@ -26,6 +29,8 @@ export function useGrid(props) {
 	const gridTemplateRows = templateRows || (!!rows && `repeat(${row}, 1fr)`);
 
 	const classes = useMemo(() => {
+		const alignmentProps = getAlignmentProps(alignment);
+
 		const __css = css({
 			alignItems: align,
 			display: isInline ? 'inline-grid' : 'grid',
@@ -36,11 +41,13 @@ export function useGrid(props) {
 			gridColumnGap: columnGap,
 			justifyContent: justify,
 			verticalAlign: isInline ? 'middle' : null,
+			...alignmentProps,
 		});
 
 		return cx(__css, className);
 	}, [
 		align,
+		alignment,
 		className,
 		columnGap,
 		gap,

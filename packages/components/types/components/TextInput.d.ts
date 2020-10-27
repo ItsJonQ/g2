@@ -2,7 +2,13 @@ import * as React from 'react';
 import { PolymorphicComponent, SizeRangeReduced } from './_shared';
 import { BaseFieldProps } from './BaseField';
 
+type TextInputArrow = 'stepper' | boolean;
+
 export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
+	/**
+	 * Renders specified incrementer/decrementer arrows.
+	 */
+	arrow?: TextInputArrow;
 	/**
 	 * The amount of space between each child element.
 	 *

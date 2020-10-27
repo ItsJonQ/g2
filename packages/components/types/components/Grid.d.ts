@@ -1,5 +1,18 @@
 import { PolymorphicComponent, CSS, ResponsiveCSSValue } from './_shared';
 
+export declare type GridAlignment =
+	| 'bottom'
+	| 'bottomLeft'
+	| 'bottomRight'
+	| 'center'
+	| 'edge'
+	| 'left'
+	| 'right'
+	| 'stretch'
+	| 'top'
+	| 'topLeft'
+	| 'topRight';
+
 export declare type GridColumns = ResponsiveCSSValue<number>;
 
 export declare type GridRows = ResponsiveCSSValue<number>;
@@ -9,6 +22,10 @@ export declare type GridProps = {
 	 * Adjusts the block alignment of children.
 	 */
 	align?: CSS['alignItems'];
+	/**
+	 * Adjusts the horizontal and vertical alignment of children.
+	 */
+	alignment?: GridAlignment;
 	/**
 	 * Adjusts the number of columns of the `Grid`.
 	 *
