@@ -20,8 +20,8 @@ function Divider(props, forwardedRef) {
 		margin-bottom: ${ui.space(mb)};
 	`;
 	sx.m = css`
-		margin-bottom: ${ui.space(mb)};
-		margin-top: ${ui.space(mt)};
+		margin-bottom: ${ui.space(m)};
+		margin-top: ${ui.space(m)};
 	`;
 
 	const classes = cx(
