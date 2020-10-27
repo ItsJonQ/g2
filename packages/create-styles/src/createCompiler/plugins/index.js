@@ -10,9 +10,15 @@ const isProd = process.env.NODE_ENV === 'production';
  * A collection of custom Stylis plugins to enhance the way the compiler (Emotion)
  * generates selectors and CSS rules.
  */
-export const plugins = [
-	rtlPlugin,
-	cssVariablesPlugin({ skipSupportedBrowsers: isProd }),
-	specificityPlugin({ level: 7 }),
-	cssGridPlugin,
-];
+export function createPlugins({
+	specificityLevel = 7,
+	key = 'css',
+	skipSupportedBrowsers = isProd,
+}) {
+	return [
+		rtlPlugin,
+		cssVariablesPlugin({ skipSupportedBrowsers }),
+		specificityPlugin({ level: specificityLevel, key }),
+		cssGridPlugin,
+	];
+}

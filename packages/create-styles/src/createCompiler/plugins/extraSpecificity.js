@@ -3,6 +3,7 @@ import { clamp, repeat } from '@wp-g2/utils';
 const seen = new WeakSet();
 
 const defaultOptions = {
+	key: 'wp-css',
 	level: 7,
 };
 
@@ -16,16 +17,18 @@ const defaultOptions = {
  * @param {object} options Options to adjust the plugin
  */
 function stylisExtraSpecificityPlugin(options = defaultOptions) {
-	const { level } = { ...defaultOptions, ...options };
+	const { key, level } = { ...defaultOptions, ...options };
 	const repeatLevel = clamp(level, 0, 20);
 
 	return (context, content, selectors) => {
 		if (seen.has(selectors)) return;
 		seen.add(selectors);
 
+		const regex = new RegExp(`.${key}-[\\w|\\d]*`, 'g');
+
 		for (let i = 0; i < selectors.length; i++) {
 			let item = selectors[i];
-			const [match] = item.match(/.css-[\w|\d]*/g) || [];
+			const [match] = item.match(regex) || [];
 
 			if (match) {
 				item = item

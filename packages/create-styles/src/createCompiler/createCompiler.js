@@ -2,19 +2,27 @@ import createEmotion from 'create-emotion';
 import mitt from 'mitt';
 
 import { createCSS } from './createCSS';
-import { plugins } from './plugins';
+import { createPlugins } from './plugins';
 import { breakpoints } from './utils';
 
 const defaultOptions = {
-	stylisPlugins: plugins,
+	key: 'css',
+	specificityLevel: 7,
 };
 
 export function createCompiler(options = {}) {
-	const mergedOptions = { ...defaultOptions, ...options };
+	const mergedOptions = {
+		...defaultOptions,
+		...options,
+	};
+
+	const { key, specificityLevel } = mergedOptions;
+
+	mergedOptions.stylisPlugins = [createPlugins({ key, specificityLevel })];
 
 	if (options.stylisPlugins) {
 		mergedOptions.stylisPlugins = [
-			...defaultOptions.stylisPlugins,
+			...mergedOptions.stylisPlugins,
 			...options.stylisPlugins,
 		];
 	}
