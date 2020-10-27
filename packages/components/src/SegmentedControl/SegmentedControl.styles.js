@@ -1,9 +1,9 @@
 import { css, styled, ui } from '@wp-g2/styles';
 
 export const SegmentedControl = css`
-	background: ${ui.get('controlBackgroundColor')};
+	background: ${ui.get('segmentedControlBackgroundColor')};
 	border: 1px solid;
-	border-color: ${ui.get('controlBorderColor')};
+	border-color: ${ui.get('segmentedControlBorderColor')};
 	border-radius: calc(${ui.get('controlBorderRadius')} + 1px);
 	display: inline-flex;
 	min-height: ${ui.get('controlHeight')};
@@ -80,7 +80,7 @@ export const ButtonView = styled.button`
 	}
 
 	&:active {
-		background: ${ui.get('controlBackgroundColor')};
+		background: ${ui.get('segmentedControlButtonColorActive')};
 	}
 `;
 

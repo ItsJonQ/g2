@@ -5,6 +5,7 @@ import React, { useCallback } from 'react';
 
 import { Portal } from '../Portal';
 import { PopoverContext } from './Popover.Context';
+import { usePopoverResizeUpdater } from './Popover.utils';
 import PopoverContent from './PopoverContent';
 
 function Popover(props, forwardedRef) {
@@ -30,6 +31,10 @@ function Popover(props, forwardedRef) {
 		placement,
 		visible,
 		...otherProps,
+	});
+
+	const resizeListener = usePopoverResizeUpdater({
+		onResize: popover.unstable_update,
 	});
 
 	const uniqueId = `popover-${popover.baseId}`;
@@ -72,6 +77,7 @@ function Popover(props, forwardedRef) {
 					elevation={elevation}
 					maxWidth={maxWidth}
 				>
+					{resizeListener}
 					{children}
 				</PopoverContent>
 			</Portal>

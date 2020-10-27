@@ -164,9 +164,12 @@ const PANEL_PROPS = {
 
 const SEGMENTED_CONTROL_PROPS = {
 	segmentedControlFontSize: '12px',
+	segmentedControlBackgroundColor: get('controlBackgroundColor'),
+	segmentedControlBorderColor: get('controlBorderColor'),
 	segmentedControlBackdropBackgroundColor: get('controlSurfaceColor'),
 	segmentedControlBackdropBorderColor: get('controlBorderColor'),
 	segmentedControlBackdropBoxShadow: 'transparent',
+	segmentedControlButtonColorActive: get('controlBackgroundColor'),
 };
 
 const SLIDER_PROPS = {

@@ -159,7 +159,7 @@ const Themer = React.memo(
 									}
 								>
 									<CardBody>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												Dark Mode
 											</ControlLabel>
@@ -170,7 +170,7 @@ const Themer = React.memo(
 												/>
 											</Flex>
 										</FormGroup>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												High Contrast
 											</ControlLabel>
@@ -181,7 +181,7 @@ const Themer = React.memo(
 												/>
 											</Flex>
 										</FormGroup>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												Color Blind
 											</ControlLabel>
@@ -192,7 +192,7 @@ const Themer = React.memo(
 												/>
 											</Flex>
 										</FormGroup>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												Reduced Motion
 											</ControlLabel>
@@ -205,7 +205,7 @@ const Themer = React.memo(
 												/>
 											</Flex>
 										</FormGroup>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												Inspector
 											</ControlLabel>
@@ -216,7 +216,7 @@ const Themer = React.memo(
 												/>
 											</Flex>
 										</FormGroup>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												Design Tools
 											</ControlLabel>
@@ -227,7 +227,7 @@ const Themer = React.memo(
 												/>
 											</Flex>
 										</FormGroup>
-										<FormGroup>
+										<FormGroup horizontal>
 											<ControlLabel>
 												Stats (FPS)
 											</ControlLabel>

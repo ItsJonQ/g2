@@ -4,16 +4,24 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { useDropdownContext } from '../Dropdown';
+import { usePopoverResizeUpdater } from '../Popover/Popover.utils';
 import { View } from '../View';
 import { MenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
 
 function Menu(props, forwardedRef) {
-	const { children, className, ...otherProps } = useContextSystem(
-		props,
-		'Menu',
-	);
+	const {
+		children,
+		className,
+		menu: menuProp,
+		...otherProps
+	} = useContextSystem(props, 'Menu');
+
 	const { menu } = useDropdownContext();
+	const resizeListener = usePopoverResizeUpdater({
+		onResize: menu?.unstable_update,
+	});
+
 	const contextProps = {
 		menu,
 	};
@@ -31,6 +39,7 @@ function Menu(props, forwardedRef) {
 				className={classes}
 				ref={forwardedRef}
 			>
+				{resizeListener}
 				{children}
 			</Component>
 		</MenuContext.Provider>

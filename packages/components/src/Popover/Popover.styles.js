@@ -5,6 +5,7 @@ export const PopoverContent = css`
 	box-sizing: border-box;
 	opacity: 0;
 	outline: none;
+	position: relative;
 	transform-origin: center center;
 	transition: opacity ${ui.get('transitionDurationFastest')} linear;
 	width: 100%;

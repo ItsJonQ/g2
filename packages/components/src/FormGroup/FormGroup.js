@@ -12,7 +12,7 @@ function FormGroup(props, forwardedRef) {
 		alignLabel = 'left',
 		children,
 		helpText,
-		horizontal = true,
+		horizontal = false,
 		id: idProp,
 		label,
 		...otherProps

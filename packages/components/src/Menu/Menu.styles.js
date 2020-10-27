@@ -3,6 +3,7 @@ import { css, highContrastMode, ui } from '@wp-g2/styles';
 export const Menu = css`
 	outline: none;
 	padding: 0;
+	position: relative;
 `;
 
 export const MenuItem = css`
@@ -71,6 +72,16 @@ export const MenuItem = css`
 			border-color: ${ui.get('controlBorderColor')};
 		}
 	`}
+`;
+
+export const MenuHeader = css`
+	align-items: center;
+	display: flex;
+	min-height: ${ui.get('controlHeight')};
+	padding-bottom: ${ui.space(1)};
+	padding-left: ${ui.get('controlPaddingX')};
+	padding-right: ${ui.get('controlPaddingX')};
+	padding-top: ${ui.space(1)};
 `;
 
 export const offset = css`

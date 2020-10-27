@@ -20,7 +20,12 @@ const theme = createTheme(({ get, theme, space }) => {
 		fontSize: '12px',
 		panelHeaderPadding: `${space(1.5)} ${space(3)}`,
 
-		segmentedControlBackdropBorderColor: get('surfaceBorderColor'),
+		segmentedControlBackgroundColor: 'rgba(0, 0, 0, 0.05)',
+		segmentedControlBackdropBorderColor: 'transparent',
+		segmentedControlBackdropBoxShadow: get('controlSurfaceBoxShadow'),
+		segmentedControlButtonColorActive: get(
+			'segmentedControlBackgroundColor',
+		),
 
 		sliderThumbBackgroundColor: get('white'),
 		sliderThumbBorderColor: get('controlBorderColor'),

@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render margin 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider wp-components-separator css-ebhqbn"
+  class="wp-components-divider wp-components-separator css-1s3iucv"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"

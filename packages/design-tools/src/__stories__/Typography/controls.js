@@ -8,6 +8,7 @@ import {
 	ControlLabel,
 	Dropdown,
 	DropdownMenu,
+	DropdownMenuHeader,
 	DropdownMenuItem,
 	DropdownTrigger,
 	FormGroup,
@@ -45,7 +46,7 @@ import {
 } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
-import { add, is, noop, subtract } from '@wp-g2/utils';
+import { is } from '@wp-g2/utils';
 import React from 'react';
 import CSSUnit from 'units-css';
 
@@ -120,6 +121,7 @@ export const TypographyOptions = React.memo(
 					minWidth={160}
 					onClick={(e) => e.stopPropagation()}
 				>
+					<DropdownMenuHeader>More options</DropdownMenuHeader>
 					{optionsEntries.map(([key, value]) => {
 						const isSelected = is.defined(settings[key]);
 
@@ -137,9 +139,10 @@ export const TypographyOptions = React.memo(
 							</DropdownMenuItem>
 						);
 					})}
-					<Separator />
+					<Separator m={2} />
 					<DropdownMenuItem
 						closeOnClick
+						isSelected={false}
 						onClick={typographyStore.getState().resetAll}
 					>
 						Reset All
@@ -759,6 +762,7 @@ export const DimensionsOptions = React.memo(
 					minWidth={160}
 					onClick={(e) => e.stopPropagation()}
 				>
+					<DropdownMenuHeader>More options</DropdownMenuHeader>
 					{optionsEntries.map(([key, value]) => {
 						const isSelected = is.defined(settings[key]);
 
@@ -950,7 +954,6 @@ export const DimensionsPanelContent = () => {
 				min={0}
 				prop="height"
 				showRemove={false}
-				showRemoveRight
 				sliderMax={100}
 				truncate={false}
 				type="number"
@@ -961,18 +964,17 @@ export const DimensionsPanelContent = () => {
 				label="Padding"
 				prop="padding"
 				showRemove={false}
-				showRemoveRight
 			/>
 		</>
 	);
 };
 
-export const DimensionsPanel = () => {
+export const DimensionsPanel = ({ addIcon }) => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>
 				Dimensions
-				<DimensionsOptions addIcon={<FiPlus />} />
+				<DimensionsOptions addIcon={addIcon} />
 			</ListGroupHeader>
 			<DimensionsPanelContent />
 		</ListGroup>

@@ -1395,28 +1395,79 @@ exports[`props should render Dropdown 1`] = `null`;
 
 exports[`props should render DropdownMenu 1`] = `
 <div
-  class="wp-components-menu wp-components-dropdown-menu css-seiza0"
+  class="wp-components-menu wp-components-dropdown-menu css-kvsvnp"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
-/>
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+</div>
 `;
 
 exports[`props should render DropdownMenu with css prop 1`] = `
 <div
-  class="wp-components-menu wp-components-dropdown-menu css-seiza0"
+  class="wp-components-menu wp-components-dropdown-menu css-kvsvnp"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
-/>
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+</div>
 `;
 
 exports[`props should render DropdownMenu with css prop 2`] = `
 <div
-  class="wp-components-menu wp-components-dropdown-menu css-1m16cfw"
+  class="wp-components-menu wp-components-dropdown-menu css-h33em1"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+</div>
+`;
+
+exports[`props should render DropdownMenuHeader 1`] = `
+<div
+  class="wp-components-truncate wp-components-text wp-components-heading wp-components-menu-header wp-components-dropdown-menu-header css-1h6b0jy"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenuHeader"
+  id="DropdownMenuHeader"
+/>
+`;
+
+exports[`props should render DropdownMenuHeader with css prop 1`] = `
+<div
+  class="wp-components-truncate wp-components-text wp-components-heading wp-components-menu-header wp-components-dropdown-menu-header css-1h6b0jy"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenuHeader"
+  id="DropdownMenuHeader"
+/>
+`;
+
+exports[`props should render DropdownMenuHeader with css prop 2`] = `
+<div
+  class="wp-components-truncate wp-components-text wp-components-heading wp-components-menu-header wp-components-dropdown-menu-header css-1pky2c6"
+  data-g2-c16t="true"
+  data-g2-component="DropdownMenuHeader"
+  id="DropdownMenuHeader"
 />
 `;
 
@@ -1737,7 +1788,7 @@ exports[`props should render FlexItem with css prop 2`] = `
 
 exports[`props should render FormGroup 1`] = `
 <div
-  class="wp-components-grid wp-components-form-group css-13x1ydg"
+  class="wp-components-form-group css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 />
@@ -1745,7 +1796,7 @@ exports[`props should render FormGroup 1`] = `
 
 exports[`props should render FormGroup with css prop 1`] = `
 <div
-  class="wp-components-grid wp-components-form-group css-13x1ydg"
+  class="wp-components-form-group css-j1yu9m"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 />
@@ -1753,7 +1804,7 @@ exports[`props should render FormGroup with css prop 1`] = `
 
 exports[`props should render FormGroup with css prop 2`] = `
 <div
-  class="wp-components-grid wp-components-form-group css-1uayv47"
+  class="wp-components-form-group css-rnwhtm"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 />
@@ -2128,28 +2179,79 @@ exports[`props should render ListItem with css prop 2`] = `
 
 exports[`props should render Menu 1`] = `
 <div
-  class="wp-components-menu css-1bga1da"
+  class="wp-components-menu css-l1xzm4"
   data-g2-c16t="true"
   data-g2-component="Menu"
   id="Menu"
-/>
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+</div>
 `;
 
 exports[`props should render Menu with css prop 1`] = `
 <div
-  class="wp-components-menu css-1bga1da"
+  class="wp-components-menu css-l1xzm4"
   data-g2-c16t="true"
   data-g2-component="Menu"
   id="Menu"
-/>
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+</div>
 `;
 
 exports[`props should render Menu with css prop 2`] = `
 <div
-  class="wp-components-menu css-1iec4we"
+  class="wp-components-menu css-1rk128y"
   data-g2-c16t="true"
   data-g2-component="Menu"
   id="Menu"
+>
+  <iframe
+    aria-hidden="true"
+    frameborder="0"
+    src="about:blank"
+    style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+    tabindex="-1"
+  />
+</div>
+`;
+
+exports[`props should render MenuHeader 1`] = `
+<div
+  class="wp-components-truncate wp-components-text wp-components-heading wp-components-menu-header css-1h6b0jy"
+  data-g2-c16t="true"
+  data-g2-component="MenuHeader"
+  id="MenuHeader"
+/>
+`;
+
+exports[`props should render MenuHeader with css prop 1`] = `
+<div
+  class="wp-components-truncate wp-components-text wp-components-heading wp-components-menu-header css-1h6b0jy"
+  data-g2-c16t="true"
+  data-g2-component="MenuHeader"
+  id="MenuHeader"
+/>
+`;
+
+exports[`props should render MenuHeader with css prop 2`] = `
+<div
+  class="wp-components-truncate wp-components-text wp-components-heading wp-components-menu-header css-1pky2c6"
+  data-g2-c16t="true"
+  data-g2-component="MenuHeader"
+  id="MenuHeader"
 />
 `;
 
@@ -2734,7 +2836,7 @@ exports[`props should render SearchInput 1`] = `
 exports[`props should render SegmentedControl 1`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-14z170l"
+  class="wp-components-segmented-control css-k53so3"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="SegmentedControl"
@@ -2760,7 +2862,7 @@ exports[`props should render SegmentedControl 1`] = `
 exports[`props should render SegmentedControl with css prop 1`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-14z170l"
+  class="wp-components-segmented-control css-k53so3"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="SegmentedControl"
@@ -2786,7 +2888,7 @@ exports[`props should render SegmentedControl with css prop 1`] = `
 exports[`props should render SegmentedControl with css prop 2`] = `
 <div
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-wqsckm"
+  class="wp-components-segmented-control css-g4573t"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="SegmentedControl"

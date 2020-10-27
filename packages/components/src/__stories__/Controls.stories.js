@@ -1,3 +1,4 @@
+import { ContextSystemProvider } from '@wp-g2/context';
 import {
 	FiAlignCenter,
 	FiAlignLeft,
@@ -223,13 +224,15 @@ const ActionsControl = () => {
 
 export const Controls = () => {
 	return (
-		<Sidebar>
-			<Spacer />
-			<ResponsiveControls />
-			<Divider mb={0} mt={2} />
-			<LayoutControls />
-			<TypographyControls />
-			<ActionsControl />
-		</Sidebar>
+		<ContextSystemProvider value={{ FormGroup: { horizontal: true } }}>
+			<Sidebar>
+				<Spacer />
+				<ResponsiveControls />
+				<Divider mb={0} mt={2} />
+				<LayoutControls />
+				<TypographyControls />
+				<ActionsControl />
+			</Sidebar>
+		</ContextSystemProvider>
 	);
 };
