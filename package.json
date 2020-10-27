@@ -34,7 +34,7 @@
     "version": "npm run build",
     "precommit": "zero pre-commit",
     "storybook": "start-storybook -p 6006",
-    "prebuild-storybook": "npm run prestart && npm run build",
+    "prebuild-storybook": "npm run build",
     "build-storybook": "build-storybook -o dist/storybook",
     "remake:component": "remake component --output=packages/components/src",
     "remake": "npm run remake:component"
