@@ -8,7 +8,7 @@
     "postinstall": "npm run bootstrap && npm run bootstrap:tooling",
     "clean": "lerna run clean --ignore website --stream --parallel",
     "prestart": "zero prestart && npm run bootstrap",
-    "prebuild": "npm run clean && docs:generate",
+    "prebuild": "npm run clean && npm run docs:generate",
     "build": "lerna run build --ignore website --stream --parallel",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "bootstrap:tooling": "npm install --prefix tooling/vscode-snippets",
