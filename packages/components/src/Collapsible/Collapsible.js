@@ -38,7 +38,11 @@ function Collapsible(props, forwardedRef) {
 
 	return (
 		<CollapsibleContext.Provider value={contextProps}>
-			<View {...otherProps} ref={forwardedRef}>
+			<View
+				{...otherProps}
+				data-expanded={disclosure.visible}
+				ref={forwardedRef}
+			>
 				{children}
 			</View>
 		</CollapsibleContext.Provider>

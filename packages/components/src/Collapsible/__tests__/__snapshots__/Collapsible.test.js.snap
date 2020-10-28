@@ -3,6 +3,7 @@
 exports[`props should render correctly 1`] = `
 <div
   class="wp-components-collapsible css-j1yu9m"
+  data-expanded="false"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
 >
@@ -55,6 +56,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render visible 1`] = `
 <div
   class="wp-components-collapsible css-j1yu9m"
+  data-expanded="true"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
 >

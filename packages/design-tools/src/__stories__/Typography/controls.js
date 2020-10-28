@@ -692,7 +692,13 @@ export const ColorPaletteControl = React.memo(
 	},
 );
 
-const ColorSetting = ({ label, prop, selectUI }) => {
+const ColorSetting = ({
+	borderedExpanded,
+	label,
+	prop,
+	selectUI,
+	shadedExpanded,
+}) => {
 	const value = useGlobalStyles((state) => state[prop], shallowCompare);
 
 	const handleOnChange = React.useCallback(
@@ -703,7 +709,24 @@ const ColorSetting = ({ label, prop, selectUI }) => {
 	);
 
 	return (
-		<Panel css={[ui.margin.x(-3)]} isBorderless>
+		<Panel
+			css={[
+				ui.margin.x(-3),
+				shadedExpanded &&
+					ui.css`
+					&[data-expanded="true"] {
+						background: rgba(0, 0, 0, 0.02)
+					}
+				`,
+				borderedExpanded &&
+					ui.css`
+						&[data-expanded="true"] {
+							box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08), 0 1px 0 rgba(0, 0, 0, 0.08)
+						}
+					`,
+			]}
+			isBorderless
+		>
 			<PanelHeader as={ColorControl} color={value} hideArrow>
 				{label}
 			</PanelHeader>
@@ -840,24 +863,24 @@ export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
 	);
 });
 
-export const ColorPanelContent = ({ selectUI }) => {
+export const ColorPanelContent = (props) => {
 	return (
 		<Accordion>
 			<ColorSetting
 				label="Background"
 				prop="backgroundColor"
-				selectUI={selectUI}
+				{...props}
 			/>
-			<ColorSetting label="Text" prop="textColor" selectUI={selectUI} />
+			<ColorSetting label="Text" prop="textColor" {...props} />
 		</Accordion>
 	);
 };
 
-export const ColorPanel = ({ selectUI }) => {
+export const ColorPanel = (props) => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>Color</ListGroupHeader>
-			<ColorPanelContent selectUI={selectUI} />
+			<ColorPanelContent {...props} />
 		</ListGroup>
 	);
 };
@@ -893,7 +916,7 @@ const ColorNavigatorButton = ({ icon, ...props }) => {
 			icon={icon}
 			isControl
 			isSubtle
-			size="small"
+			size="xSmall"
 			{...props}
 		/>
 	);

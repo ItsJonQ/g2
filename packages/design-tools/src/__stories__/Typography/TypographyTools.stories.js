@@ -662,6 +662,79 @@ const ExampleNine = () => {
 	);
 };
 
+const ExampleTen = ({ colorPanelSettings = { shadedExpanded: true } }) => {
+	return (
+		<Card>
+			<CardBody>
+				<ListGroups>
+					<ListGroup>
+						<ListGroupHeader>
+							Typography
+							<TypographyOptions
+								addIcon={<FiMoreHorizontal />}
+								exclude={['dropCap']}
+								showActiveOnly
+							/>
+						</ListGroupHeader>
+						<PresetControl />
+						<CombinedFormGroup
+							format="text"
+							label="Font"
+							prop="fontFamily"
+							showRemove={false}
+						/>
+						<Grid>
+							<CombinedFormGroup
+								Component={UnitInput}
+								cssProp="fontSize"
+								label="Size"
+								min={0}
+								prop="fontSize"
+								showRemove={false}
+								truncate={false}
+							/>
+							<CombinedFormGroup
+								Component={Select}
+								label="Appearance"
+								prop="fontWeight"
+								showRemove={false}
+							>
+								<option value="Lighter">Light</option>
+								<option value="Normal">Regular</option>
+								<option value="Bold">Bold</option>
+								<option value="Bolder">Bolder</option>
+							</CombinedFormGroup>
+							<CombinedFormGroupInputStepper
+								cssProp="lineHeight"
+								label="Line Height"
+								min={0}
+								prop="lineHeight"
+								showRemove={false}
+								step={0.1}
+								truncate={false}
+								type="number"
+							/>
+							<CombinedFormGroup
+								Component={UnitInput}
+								cssProp="letterSpacing"
+								label="Letter Spacing"
+								min={-10}
+								prop="letterSpacing"
+								showRemove={false}
+								step={0.1}
+								truncate={false}
+								type="number"
+							/>
+						</Grid>
+					</ListGroup>
+					<ColorPanel {...colorPanelSettings} />
+					<DimensionsPanel />
+				</ListGroups>
+			</CardBody>
+		</Card>
+	);
+};
+
 export const _options = () => {
 	return (
 		<Wrapper>
@@ -858,6 +931,43 @@ export const _altThemeWithPanels = () => {
 					}}
 				>
 					<ExampleNine truncate />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const __shadedColorPanelExpand = () => {
+	return (
+		<ThemeProvider isGlobal theme={baseLineThemeNext}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: false },
+					}}
+				>
+					<ExampleTen truncate />
+				</ContextSystemProvider>
+			</Wrapper>
+		</ThemeProvider>
+	);
+};
+
+export const __borderedColorPanelExpand = () => {
+	return (
+		<ThemeProvider isGlobal theme={baseLineThemeNext}>
+			<Wrapper>
+				<ContextSystemProvider
+					value={{
+						ListGroups: { spacing: 8 },
+						FormGroup: { horizontal: false },
+					}}
+				>
+					<ExampleTen
+						colorPanelSettings={{ borderedExpanded: true }}
+						truncate
+					/>
 				</ContextSystemProvider>
 			</Wrapper>
 		</ThemeProvider>
