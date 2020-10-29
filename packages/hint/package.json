@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/hint",
-  "version": "0.0.96",
+  "version": "0.0.97",
   "description": "UI linter for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -15,10 +15,10 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/components": "^0.0.96",
-    "@wp-g2/icons": "^0.0.96",
-    "@wp-g2/styles": "^0.0.96",
-    "@wp-g2/utils": "^0.0.96"
+    "@wp-g2/components": "^0.0.97",
+    "@wp-g2/icons": "^0.0.97",
+    "@wp-g2/styles": "^0.0.97",
+    "@wp-g2/utils": "^0.0.97"
   },
   "peerDependencies": {
     "react": "^16.8.0",
