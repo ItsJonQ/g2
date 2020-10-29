@@ -5,7 +5,7 @@ const theme = createTheme(({ get, theme }) => {
 		...theme,
 		buttonControlActiveStateColor: get('colorText'),
 		cardBorderRadius: '4px',
-		colorAdmin: get('blueberry'),
+		colorAdmin: '#3858E9',
 		controlBackgroundColor: 'transparent',
 		controlBorderColor: get('colorText'),
 		controlBorderColorHover: get('colorText'),

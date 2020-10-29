@@ -1,7 +1,11 @@
 import { get } from '@wp-g2/create-styles';
 
 import { BACKGROUND_COLOR_PROPS, G2_COLORS, WORDPRESS_COLORS } from './tokens';
-import { colorize, space } from './utils';
+import {
+	generateColorAdminColors,
+	generateColorDestructiveColors,
+	space,
+} from './utils';
 
 export const SUPPORTED_COLORS = [
 	'blue',
@@ -26,9 +30,9 @@ const ANIMATION_PROPS = {
 const COLOR_PROPS = {
 	...WORDPRESS_COLORS,
 	...BACKGROUND_COLOR_PROPS,
-	colorAdmin: get('wordpressBlue'),
+	colorAdmin: '#007cba',
+	colorDestructive: '#E26F56',
 	colorBodyBackground: get('white'),
-	colorDestructive: get('pomegrade'),
 	colorDivider: 'rgba(0, 0, 0, 0.1)',
 	colorPositive: get('greens'),
 	colorScrollbarThumb: 'rgba(0, 0, 0, 0.2)',
@@ -38,6 +42,8 @@ const COLOR_PROPS = {
 	colorTextInverted: get('white'),
 	colorTextHeading: '#050505',
 	colorTextMuted: '#8a8b8c',
+	...generateColorAdminColors('#007cba'),
+	...generateColorDestructiveColors('#E26F56'),
 };
 
 const FONT_PROPS = {
@@ -184,6 +190,8 @@ const SEGMENTED_CONTROL_PROPS = {
 const SLIDER_PROPS = {
 	sliderThumbBorderColor: 'transparent',
 	sliderThumbBoxShadow: 'none',
+	sliderThumbBoxShadowSizeFocus: '3px',
+	sliderThumbBoxShadowColorFocus: get('colorAdminRgb30'),
 	sliderThumbBackgroundColor: get('colorAdmin'),
 };
 

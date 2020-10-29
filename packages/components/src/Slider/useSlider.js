@@ -12,6 +12,7 @@ export function useSlider(props) {
 		error,
 		onChange = noop,
 		id: idProp,
+		isFocused = false,
 		max = 100,
 		min = 0,
 		size = 'medium',
@@ -39,8 +40,16 @@ export function useSlider(props) {
 	};
 
 	const classes = useMemo(
-		() => cx(styles.Slider, error && styles.error, styles[size], className),
-		[className, error, size],
+		() =>
+			cx(
+				styles.Slider,
+				error && styles.error,
+				styles[size],
+				isFocused && styles.focused,
+				error && isFocused && styles.focusedError,
+				className,
+			),
+		[className, error, isFocused, size],
 	);
 
 	return {

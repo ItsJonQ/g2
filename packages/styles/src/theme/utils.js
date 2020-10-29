@@ -69,3 +69,27 @@ export function createRgbaColors(colors = {}, isDark = false) {
 
 	return colorSet;
 }
+
+export function generateRgbColors(key, color) {
+	const colors = {
+		[key]: color,
+	};
+
+	const ranges = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+	ranges.map((index) => {
+		colors[`${key}Rgb${index}`] = colorize(color)
+			.setAlpha(index / 100)
+			.toRgbString();
+	});
+
+	return colors;
+}
+
+export function generateColorAdminColors(color) {
+	return generateRgbColors('colorAdmin', color);
+}
+
+export function generateColorDestructiveColors(color) {
+	return generateRgbColors('colorDestructive', color);
+}

@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <input
-  class="wp-components-slider css-au1bgs"
+  class="wp-components-slider css-1d29dzv"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -16,7 +16,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render max 1`] = `
 <input
-  class="wp-components-slider css-au1bgs"
+  class="wp-components-slider css-1d29dzv"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -30,7 +30,7 @@ exports[`props should render max 1`] = `
 
 exports[`props should render min 1`] = `
 <input
-  class="wp-components-slider css-au1bgs"
+  class="wp-components-slider css-1d29dzv"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -44,7 +44,7 @@ exports[`props should render min 1`] = `
 
 exports[`props should render size 1`] = `
 <input
-  class="wp-components-slider css-d7cfbq"
+  class="wp-components-slider css-cc14jk"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -58,7 +58,7 @@ exports[`props should render size 1`] = `
 
 exports[`props should render value 1`] = `
 <input
-  class="wp-components-slider css-au1bgs"
+  class="wp-components-slider css-1d29dzv"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"

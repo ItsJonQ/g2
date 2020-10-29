@@ -28,7 +28,7 @@ export function isColor(value) {
 	return test.isValid();
 }
 
-function __getComputedColor(color) {
+function __getComputedBackgroundColor(color) {
 	if (!is.string(color)) return '';
 
 	if (isColor(color)) return color;
@@ -49,10 +49,33 @@ function __getComputedColor(color) {
 	return computedColor || '';
 }
 
+export const getComputedBackgroundColor = memoize(__getComputedBackgroundColor);
+
+function __getComputedColor(color) {
+	if (!is.string(color)) return '';
+
+	if (isColor(color)) return color;
+
+	if (!color.includes('var(')) return '';
+	if (typeof document === 'undefined') return '';
+
+	// Attempts to gracefully handle CSS variables color values.
+	const el = getColorComputationNode();
+	if (!el) return '';
+
+	el.style.color = color;
+	// Grab the style
+	const computedColor = window.getComputedStyle(el).color;
+	// Reset
+	el.style.color = null;
+
+	return computedColor || '';
+}
+
 export const getComputedColor = memoize(__getComputedColor);
 
 export function getOptimalTextColor(color) {
-	const background = getComputedColor(color);
+	const background = getComputedBackgroundColor(color);
 	const isReadableWithBlackText = colorize.isReadable(background, '#000000');
 
 	return isReadableWithBlackText ? '#000000' : '#ffffff';

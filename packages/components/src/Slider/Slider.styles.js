@@ -5,6 +5,7 @@ export const Slider = css`
 	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: ${ui.get('controlBorderRadius')};
+	cursor: pointer;
 	display: block;
 	height: ${ui.get('controlHeight')};
 	max-width: 100%;
@@ -13,7 +14,6 @@ export const Slider = css`
 	width: 100%;
 
 	&:focus {
-		border-color: ${ui.color.admin};
 		outline: none;
 	}
 
@@ -53,6 +53,7 @@ export const Slider = css`
 		margin-top: -5px;
 		opacity: 1;
 		width: 12px;
+		transition: box-shadow ease ${ui.get('transitionDurationFast')};
 		will-change: transform;
 
 		*:disabled& {
@@ -72,12 +73,21 @@ export const Slider = css`
 		margin-top: -5px;
 		opacity: 1;
 		width: 12px;
+		transition: box-shadow ease ${ui.get('transitionDurationFast')};
 		will-change: transform;
 
 		*:disabled& {
 			display: none;
 		}
 	}
+
+	&:focus {
+		${getFocusBoxShadow()}
+	}
+`;
+
+export const focused = css`
+	${getFocusBoxShadow()}
 `;
 
 export const large = css`
@@ -110,9 +120,33 @@ export const error = css`
 	}
 	&::-moz-range-thumb {
 		background-color: ${ui.get('controlDestructiveBorderColor')};
+		border: 1px solid ${ui.get('controlDestructiveBorderColor')};
 	}
 
 	&:focus {
-		border-color: ${ui.get('controlDestructiveBorderColor')};
+		${getFocusBoxShadow(ui.get('colorDestructiveRgb30'))};
 	}
 `;
+
+export const focusedError = css`
+	${getFocusBoxShadow(ui.get('colorDestructiveRgb30'))};
+`;
+
+function getFocusBoxShadow(color = ui.get('sliderThumbBoxShadowColorFocus')) {
+	const boxShadow = [
+		0,
+		0,
+		0,
+		ui.get('sliderThumbBoxShadowSizeFocus'),
+		color,
+	].join(' ');
+
+	return css`
+		&::-webkit-slider-thumb {
+			box-shadow: ${boxShadow};
+		}
+		&::-moz-range-thumb {
+			box-shadow: ${boxShadow};
+		}
+	`;
+}
