@@ -68,8 +68,8 @@ function useContextSystemBridge({ value }) {
 	const { context: parentContext } = parentStore();
 	const { setContext } = store();
 
-	const valueRef = useRef();
-	const parentContextRef = useRef();
+	const valueRef = useRef({});
+	const parentContextRef = useRef({});
 
 	useIsomorphicLayoutEffect(() => {
 		if (!deepEqual(value, valueRef.current)) {
@@ -78,7 +78,7 @@ function useContextSystemBridge({ value }) {
 		}
 
 		if (!deepEqual(parentContext, parentContextRef.current)) {
-			setContext(parentContext);
+			setContext(deepMerge(parentContext, valueRef.current));
 			parentContextRef.current = parentContext;
 		}
 	}, [value, setContext, parentContext]);
