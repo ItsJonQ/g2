@@ -174,7 +174,7 @@ exports[`props should render upperCase 1`] = `
 
 exports[`props should render variant 1`] = `
 <span
-  class="wp-components-truncate wp-components-text css-1wdvgvz"
+  class="wp-components-truncate wp-components-text css-lzynkp"
   data-g2-c16t="true"
   data-g2-component="Text"
 >

@@ -160,84 +160,62 @@ const Themer = React.memo(
 									}
 								>
 									<CardBody>
-										<FormGroup horizontal>
-											<ControlLabel>
-												Dark Mode
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!isDark}
-													onChange={setIsDark}
-												/>
-											</Flex>
+										<FormGroup horizontal label="Dark Mode">
+											<Switch
+												checked={!!isDark}
+												onChange={setIsDark}
+											/>
 										</FormGroup>
-										<FormGroup horizontal>
-											<ControlLabel>
-												High Contrast
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!isHighContrast}
-													onChange={setIsHighContast}
-												/>
-											</Flex>
+										<FormGroup
+											horizontal
+											label="High Contrast"
+										>
+											<Switch
+												checked={!!isHighContrast}
+												onChange={setIsHighContast}
+											/>
 										</FormGroup>
-										<FormGroup horizontal>
-											<ControlLabel>
-												Color Blind
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!isColorBlind}
-													onChange={setIsColorBlind}
-												/>
-											</Flex>
+										<FormGroup
+											horizontal
+											label="Color Blind"
+										>
+											<Switch
+												checked={!!isColorBlind}
+												onChange={setIsColorBlind}
+											/>
 										</FormGroup>
-										<FormGroup horizontal>
-											<ControlLabel>
-												Reduced Motion
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!isReducedMotion}
-													onChange={
-														setIsReducedMotion
-													}
-												/>
-											</Flex>
+										<FormGroup
+											horizontal
+											label="Reduced Motion"
+										>
+											<Switch
+												checked={!!isReducedMotion}
+												onChange={setIsReducedMotion}
+											/>
 										</FormGroup>
-										<FormGroup horizontal>
-											<ControlLabel>
-												Inspector
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!inspector}
-													onChange={setInspector}
-												/>
-											</Flex>
+										<FormGroup horizontal label="Inspector">
+											<Switch
+												checked={!!inspector}
+												onChange={setInspector}
+											/>
 										</FormGroup>
-										<FormGroup horizontal>
-											<ControlLabel>
-												Design Tools
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!designTools}
-													onChange={setDesignTools}
-												/>
-											</Flex>
+										<FormGroup
+											horizontal
+											label="Design Tools"
+										>
+											<Switch
+												checked={!!designTools}
+												onChange={setDesignTools}
+											/>
 										</FormGroup>
-										<FormGroup horizontal>
-											<ControlLabel>
-												Stats (FPS)
-											</ControlLabel>
-											<Flex justify="flex-end">
-												<Switch
-													checked={!!stats}
-													onChange={setStats}
-												/>
-											</Flex>
+										<FormGroup
+											horizontal
+											label="Stats (FPS)"
+										>
+											<Switch
+												checked={!!stats}
+												onChange={setStats}
+											/>
 										</FormGroup>
 									</CardBody>
 								</Popover>

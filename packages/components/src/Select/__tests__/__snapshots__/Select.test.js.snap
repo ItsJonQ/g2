@@ -28,7 +28,7 @@ exports[`props should render children 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -88,7 +88,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -150,7 +150,7 @@ exports[`props should render disabled 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -211,7 +211,7 @@ exports[`props should render readOnly 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -272,7 +272,7 @@ exports[`props should render required 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -332,7 +332,7 @@ exports[`props should render size 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >

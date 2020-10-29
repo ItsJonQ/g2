@@ -17,7 +17,7 @@ export const destructive = css`
 `;
 
 export const muted = css`
-	opacity: 0.48;
+	color: ${ui.get('colorTextMuted')};
 `;
 
 export const highlighterText = css`

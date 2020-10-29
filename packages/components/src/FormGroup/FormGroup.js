@@ -2,39 +2,33 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useUniqueId } from '@wp-g2/utils';
 import React from 'react';
 
-import { ControlLabel } from '../ControlLabel';
 import { Grid } from '../Grid';
 import { View } from '../View';
-import { FormGroupContext } from './FormGroup.Context';
+import FormGroupContent from './FormGroupContent';
 
 function FormGroup(props, forwardedRef) {
 	const {
 		alignLabel = 'left',
 		children,
-		helpText,
+		help,
 		horizontal = false,
 		id: idProp,
 		label,
+		labelHidden = false,
 		...otherProps
 	} = useContextSystem(props, 'FormGroup');
 
 	const id = useUniqueId(FormGroup, 'form-group', idProp);
 
-	const contextProps = React.useMemo(() => ({ id, horizontal }), [
+	const contentProps = {
+		alignLabel,
+		children,
+		help,
 		id,
 		horizontal,
-	]);
-
-	const labelMarkup = label ? (
-		<ControlLabel align={alignLabel}>{label}</ControlLabel>
-	) : null;
-
-	const contentMarkup = (
-		<FormGroupContext.Provider value={contextProps}>
-			{labelMarkup}
-			{children}
-		</FormGroupContext.Provider>
-	);
+		label,
+		labelHidden,
+	};
 
 	if (horizontal) {
 		return (
@@ -43,14 +37,14 @@ function FormGroup(props, forwardedRef) {
 				{...otherProps}
 				ref={forwardedRef}
 			>
-				{contentMarkup}
+				<FormGroupContent {...contentProps} />
 			</Grid>
 		);
 	}
 
 	return (
 		<View {...otherProps} ref={forwardedRef}>
-			{contentMarkup}
+			<FormGroupContent {...contentProps} />
 		</View>
 	);
 }

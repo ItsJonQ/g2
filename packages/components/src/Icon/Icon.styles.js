@@ -1,4 +1,4 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Wrapper = css`
 	display: block;
@@ -15,5 +15,5 @@ export const inline = css`
 `;
 
 export const muted = css`
-	opacity: 0.48;
+	color: ${ui.get('colorTextMuted')};
 `;

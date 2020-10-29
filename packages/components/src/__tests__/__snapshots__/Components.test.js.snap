@@ -2955,7 +2955,7 @@ exports[`props should render Select 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="wp-components-truncate wp-components-text css-12kpubv"
+      class="wp-components-truncate wp-components-text css-1fdlgmt"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -3636,7 +3636,7 @@ exports[`props should render Stepper with css prop 2`] = `
 
 exports[`props should render Subheading 1`] = `
 <div
-  class="wp-components-truncate wp-components-text wp-components-subheading css-4qaynu"
+  class="wp-components-truncate wp-components-text wp-components-subheading css-epbge3"
   data-g2-c16t="true"
   data-g2-component="Subheading"
   id="Subheading"
@@ -3645,7 +3645,7 @@ exports[`props should render Subheading 1`] = `
 
 exports[`props should render Subheading with css prop 1`] = `
 <div
-  class="wp-components-truncate wp-components-text wp-components-subheading css-4qaynu"
+  class="wp-components-truncate wp-components-text wp-components-subheading css-epbge3"
   data-g2-c16t="true"
   data-g2-component="Subheading"
   id="Subheading"
@@ -3654,7 +3654,7 @@ exports[`props should render Subheading with css prop 1`] = `
 
 exports[`props should render Subheading with css prop 2`] = `
 <div
-  class="wp-components-truncate wp-components-text wp-components-subheading css-127fkzr"
+  class="wp-components-truncate wp-components-text wp-components-subheading css-v4ngji"
   data-g2-c16t="true"
   data-g2-component="Subheading"
   id="Subheading"
