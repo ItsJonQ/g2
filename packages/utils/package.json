@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.97",
+    "version": "0.0.98",
     "description": "Utilities for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -19,7 +19,7 @@
         "@itsjonq/is": "^0.0.5",
         "@ngard/tiny-omit": "^1.0.0",
         "@ngard/tiny-pick": "^1.0.0",
-        "@wp-g2/substate": "^0.0.97",
+        "@wp-g2/substate": "^0.0.98",
         "array-move": "^3.0.0",
         "copy-to-clipboard": "^3.3.1",
         "deepmerge": "^4.2.2",

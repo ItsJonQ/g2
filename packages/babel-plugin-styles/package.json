@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/babel-plugin-styles",
-  "version": "0.0.97",
+  "version": "0.0.98",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -16,6 +16,6 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/styles": "^0.0.97"
+    "@wp-g2/styles": "^0.0.98"
   }
 }
