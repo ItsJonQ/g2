@@ -414,7 +414,7 @@ exports[`props should render BaseButton with css prop 2`] = `
 
 exports[`props should render BaseField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-1958ayt"
+  class="wp-components-flex wp-components-base-field css-1rfo86y"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -423,7 +423,7 @@ exports[`props should render BaseField 1`] = `
 
 exports[`props should render BaseField with css prop 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-1958ayt"
+  class="wp-components-flex wp-components-base-field css-1rfo86y"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -432,7 +432,7 @@ exports[`props should render BaseField with css prop 1`] = `
 
 exports[`props should render BaseField with css prop 2`] = `
 <div
-  class="wp-components-flex wp-components-base-field css-1vdkqdl"
+  class="wp-components-flex wp-components-base-field css-1rfoguq"
   data-g2-c16t="true"
   data-g2-component="BaseField"
   id="BaseField"
@@ -2605,31 +2605,28 @@ exports[`props should render NavigatorButton with css prop 2`] = `
 
 exports[`props should render Placeholder 1`] = `
 <div
-  class="wp-components-placeholder css-1lmo8em"
+  class="wp-components-placeholder css-178r7q7"
   data-g2-c16t="true"
   data-g2-component="Placeholder"
   id="Placeholder"
-  style="height: 36px;"
 />
 `;
 
 exports[`props should render Placeholder with css prop 1`] = `
 <div
-  class="wp-components-placeholder css-1lmo8em"
+  class="wp-components-placeholder css-178r7q7"
   data-g2-c16t="true"
   data-g2-component="Placeholder"
   id="Placeholder"
-  style="height: 36px;"
 />
 `;
 
 exports[`props should render Placeholder with css prop 2`] = `
 <div
-  class="wp-components-placeholder css-atn615"
+  class="wp-components-placeholder css-34792u"
   data-g2-c16t="true"
   data-g2-component="Placeholder"
   id="Placeholder"
-  style="height: 36px;"
 />
 `;
 
@@ -2744,7 +2741,7 @@ exports[`props should render Scrollable with css prop 2`] = `
 
 exports[`props should render SearchInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1ich1a5"
+  class="wp-components-flex wp-components-base-field wp-components-text-input wp-components-search-input css-1em45yz"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -2942,7 +2939,7 @@ exports[`props should render SegmentedControl with css prop 2`] = `
 
 exports[`props should render Select 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-select css-12upxzk"
+  class="wp-components-flex wp-components-base-field wp-components-select css-1nl6bkg"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
@@ -3923,7 +3920,7 @@ exports[`props should render Text with css prop 2`] = `
 
 exports[`props should render TextField 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -3942,7 +3939,7 @@ exports[`props should render TextField 1`] = `
 
 exports[`props should render TextInput 1`] = `
 <div
-  class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
+  class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >

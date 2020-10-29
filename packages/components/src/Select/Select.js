@@ -21,6 +21,7 @@ function Select(props, forwardedRef) {
 		className,
 		defaultValue,
 		disabled,
+		error = false,
 		id: idProp,
 		isSubtle,
 		onBlur = noop,
@@ -42,6 +43,7 @@ function Select(props, forwardedRef) {
 
 	const baseFieldProps = useBaseField({
 		disabled,
+		error,
 		gap: 0,
 		isClickable: true,
 		isFocused,

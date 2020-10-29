@@ -81,7 +81,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-select css-afjpq5"
+      class="wp-components-flex wp-components-base-field wp-components-select css-1nwhiq4"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
@@ -133,7 +133,7 @@ exports[`props should render mixed control types 1`] = `
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-1e4oyax"
+      class="wp-components-flex wp-components-base-field wp-components-text-input css-4alors"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >

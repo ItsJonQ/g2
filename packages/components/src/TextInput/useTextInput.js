@@ -38,6 +38,7 @@ export function useTextInput(props) {
 		defaultValue = '',
 		disabled,
 		dragAxis,
+		error = false,
 		format,
 		gap = 2.5,
 		id: idProp,
@@ -96,6 +97,7 @@ export function useTextInput(props) {
 	const baseFieldProps = useBaseField({
 		align,
 		disabled,
+		error,
 		gap,
 		isFocused,
 		justify,

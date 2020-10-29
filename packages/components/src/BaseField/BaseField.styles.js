@@ -11,8 +11,7 @@ export const BaseField = css`
 	font-family: ${ui.get('fontFamily')};
 	font-size: ${ui.get('fontSize')};
 	outline: none;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding: 0 8px;
 	position: relative;
 	transition: border-color ${ui.get('transitionDurationFastest')} ease,
 		box-shadow ${ui.get('transitionDurationFastest')} ease;
@@ -56,5 +55,16 @@ export const subtle = css`
 	&:focus,
 	&[data-focused='true'] {
 		${ui.background.control};
+	}
+`;
+
+export const error = css`
+	border-color: ${ui.get('colorDestructive')};
+
+	&:hover,
+	&:active,
+	&:focus,
+	&[data-focused='true'] {
+		border-color: ${ui.get('colorDestructive')};
 	}
 `;

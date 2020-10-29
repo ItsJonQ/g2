@@ -2,27 +2,24 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-placeholder css-1lmo8em"
+  class="wp-components-placeholder css-178r7q7"
   data-g2-c16t="true"
   data-g2-component="Placeholder"
-  style="height: 36px;"
 />
 `;
 
 exports[`props should render height 1`] = `
 <div
-  class="wp-components-placeholder css-1lmo8em"
+  class="wp-components-placeholder css-zvslnd"
   data-g2-c16t="true"
   data-g2-component="Placeholder"
-  style="height: 340px;"
 />
 `;
 
 exports[`props should render width 1`] = `
 <div
-  class="wp-components-placeholder css-1lmo8em"
+  class="wp-components-placeholder css-18zqu98"
   data-g2-c16t="true"
   data-g2-component="Placeholder"
-  style="height: 36px; width: 340px;"
 />
 `;

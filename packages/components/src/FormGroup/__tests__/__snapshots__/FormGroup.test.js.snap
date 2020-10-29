@@ -15,7 +15,7 @@ exports[`props should render alignLabel 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -48,7 +48,7 @@ exports[`props should render correctly 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -79,7 +79,7 @@ exports[`props should render label without prop correctly 1`] = `
     for="fname"
   />
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -112,7 +112,7 @@ exports[`props should render vertically 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-1maswmo"
+    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >

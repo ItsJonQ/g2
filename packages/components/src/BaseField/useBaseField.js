@@ -9,6 +9,7 @@ import * as styles from './BaseField.styles';
 export function useBaseField(props) {
 	const {
 		className,
+		error = false,
 		isClickable = false,
 		isFocused = false,
 		isSubtle = false,
@@ -25,9 +26,17 @@ export function useBaseField(props) {
 				isClickable && styles.clickable,
 				isFocused && styles.focus,
 				isSubtle && styles.subtle,
+				error && styles.error,
 				className,
 			),
-		[className, controlGroupStyles, isClickable, isFocused, isSubtle],
+		[
+			className,
+			controlGroupStyles,
+			error,
+			isClickable,
+			isFocused,
+			isSubtle,
+		],
 	);
 
 	const flexProps = useFlex({ ...otherProps, className: classes });

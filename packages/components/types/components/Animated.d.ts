@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { PolymorphicComponent } from './_shared';
+export { AnimatePresence as AnimatedContainer } from '@wp-g2/animations';
 
 export declare type AnimatedProps = {
 	/**
@@ -71,4 +71,3 @@ export declare const Animated: PolymorphicComponent<AnimatedProps>;
  * @see
  * https://www.framer.com/api/motion/animation/#shared-layout-animations
  */
-export declare const AnimatedContainer: React.FC;
