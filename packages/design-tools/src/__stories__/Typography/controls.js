@@ -988,6 +988,29 @@ export const BoxControl = ({ cssProp, label, prop }) => {
 
 	const [value] = useGlobalStyles((state) => [state[prop]], shallowCompare);
 
+	const handleOnSliderChange = React.useCallback(
+		(value) => {
+			typographyStore.setState((prev) => {
+				// Handles unit changes
+				const unit =
+					CSSUnit.parse(value).unit || CSSUnit.parse(prev[prop]).unit;
+
+				const { unit: nextUnit, value: nextValue } = CSSUnit.parse(
+					value,
+				);
+
+				let next = unit ? `${nextValue}${unit}` : value;
+
+				if (nextValue === 0 && nextUnit === value) {
+					next = value;
+				}
+
+				return { [prop]: next };
+			});
+		},
+		[prop],
+	);
+
 	const handleOnChange = React.useCallback(
 		(value) => {
 			typographyStore.getState().set({ [prop]: value });
@@ -996,17 +1019,24 @@ export const BoxControl = ({ cssProp, label, prop }) => {
 	);
 
 	if (value === null) return null;
+	const cssValue = CSSUnit.parse(value);
 
 	return (
 		<FormGroup label={label}>
 			<HStack alignment="top" spacing={3}>
 				<Grid gap={1}>
 					{!showAll && (
-						<PaddingInput
-							cssProp={cssProp}
-							onChange={handleOnChange}
-							value={value}
-						/>
+						<>
+							<PaddingInput
+								cssProp={cssProp}
+								onChange={handleOnChange}
+								value={value}
+							/>
+							<Slider
+								onChange={handleOnSliderChange}
+								value={cssValue.value}
+							/>
+						</>
 					)}
 					{showAll && (
 						<>
