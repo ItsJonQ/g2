@@ -227,7 +227,6 @@ const useKeyboardHandlers = ({ store }) => {
 		() => ({
 			Enter(event) {
 				if (event.isDefaultPrevented()) return;
-				event.preventDefault();
 
 				const { isCommitOnBlurOrEnter } = store.getState();
 
