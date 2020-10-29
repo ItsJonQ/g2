@@ -1,7 +1,7 @@
 import { get } from '@wp-g2/create-styles';
 
 import { BACKGROUND_COLOR_PROPS, G2_COLORS, WORDPRESS_COLORS } from './tokens';
-import { space } from './utils';
+import { colorize, space } from './utils';
 
 export const SUPPORTED_COLORS = [
 	'blue',
@@ -87,6 +87,9 @@ const CONTROL_PROPS = {
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlBoxShadow: `transparent`,
 	controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,
+	controlDestructiveBorderColor: get('colorDestructive'),
+	controlDestructiveBorderColorFocus: get('controlDestructiveBorderColor'),
+	controlDestructiveBoxShadowFocus: get('controlBoxShadowFocus'),
 	controlHeight: '30px',
 	controlHeightLarge: `calc(${get('controlHeight')} * 1.2)`,
 	controlHeightSmall: `calc(${get('controlHeight')} * 0.8)`,

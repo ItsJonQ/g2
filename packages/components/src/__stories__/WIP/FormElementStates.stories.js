@@ -2,9 +2,13 @@ import { ContextSystemProvider } from '@wp-g2/context';
 import React from 'react';
 
 import {
+	Button,
 	Container,
 	FormGroup,
 	Grid,
+	ListGroup,
+	ListGroupHeader,
+	ListGroups,
 	Select,
 	Slider,
 	TextInput,
@@ -17,6 +21,7 @@ export default {
 };
 
 const ControlCluster = ({
+	heading,
 	inputValue,
 	selectValue,
 	setInputValue,
@@ -24,8 +29,9 @@ const ControlCluster = ({
 	...otherProps
 }) => {
 	return (
-		<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
-			<Container width={480}>
+		<ListGroup>
+			<ListGroupHeader>{heading}</ListGroupHeader>
+			<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
 				<Grid>
 					<FormGroup label="Unit Input">
 						<UnitInput
@@ -68,9 +74,20 @@ const ControlCluster = ({
 							<option label="Three" value="three" />
 						</Select>
 					</FormGroup>
+					<FormGroup label=" Button">
+						<Button
+							disabled={otherProps.disabled}
+							isBlock
+							isDestructive={otherProps.error}
+							isFocused={otherProps.isFocused}
+							variant="primary"
+						>
+							Button
+						</Button>
+					</FormGroup>
 				</Grid>
-			</Container>
-		</ContextSystemProvider>
+			</ContextSystemProvider>
+		</ListGroup>
 	);
 };
 
@@ -86,10 +103,32 @@ const Example = () => {
 	};
 
 	return (
-		<VStack spacing={8}>
-			<ControlCluster {...clusterProps} />
-			<ControlCluster {...clusterProps} error />
-		</VStack>
+		<Container
+			css={`
+				margin-top: 10vh;
+				margin-bottom: 20vh;
+			`}
+			width={480}
+		>
+			<ListGroups separator spacing={12}>
+				<ControlCluster {...clusterProps} heading="Default" />
+				<ControlCluster {...clusterProps} heading="Focused" isFocused />
+				<ControlCluster {...clusterProps} disabled heading="Disabled" />
+				<ControlCluster {...clusterProps} error heading="Error" />
+				<ControlCluster
+					{...clusterProps}
+					error
+					heading="Error + Focused"
+					isFocused
+				/>
+				<ControlCluster
+					{...clusterProps}
+					disabled
+					error
+					heading="Error + Disabled"
+				/>
+			</ListGroups>
+		</Container>
 	);
 };
 

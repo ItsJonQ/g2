@@ -30,10 +30,6 @@ export const Slider = css`
 		border-radius: 2px;
 		height: 2px;
 		will-change: transform;
-
-		&:disabled {
-			background: ${ui.get('controlBackgroundDimColor')};
-		}
 	}
 	&::-moz-range-track {
 		background: linear-gradient(
@@ -44,10 +40,6 @@ export const Slider = css`
 		border-radius: 2px;
 		height: 2px;
 		will-change: transform;
-
-		&:disabled {
-			background: ${ui.get('controlBackgroundDimColor')};
-		}
 	}
 
 	&::-webkit-slider-thumb {
@@ -63,7 +55,7 @@ export const Slider = css`
 		width: 12px;
 		will-change: transform;
 
-		&:disabled {
+		*:disabled& {
 			display: none;
 		}
 	}
@@ -82,7 +74,7 @@ export const Slider = css`
 		width: 12px;
 		will-change: transform;
 
-		&:disabled {
+		*:disabled& {
 			display: none;
 		}
 	}
@@ -94,4 +86,33 @@ export const large = css`
 
 export const small = css`
 	height: ${ui.get('controlHeightSmall')};
+`;
+
+export const error = css`
+	&::-webkit-slider-runnable-track {
+		background: linear-gradient(
+			to right,
+			${ui.get('controlDestructiveBorderColor')} calc(var(--progress)),
+			${ui.get('controlBackgroundDimColor')} calc(var(--progress))
+		);
+	}
+	&::-moz-range-track {
+		background: linear-gradient(
+			to right,
+			${ui.get('controlDestructiveBorderColor')} calc(var(--progress)),
+			${ui.get('controlBackgroundDimColor')} calc(var(--progress))
+		);
+	}
+
+	&::-webkit-slider-thumb {
+		background-color: ${ui.get('controlDestructiveBorderColor')};
+		border: 1px solid ${ui.get('controlDestructiveBorderColor')};
+	}
+	&::-moz-range-thumb {
+		background-color: ${ui.get('controlDestructiveBorderColor')};
+	}
+
+	&:focus {
+		border-color: ${ui.get('controlDestructiveBorderColor')};
+	}
 `;

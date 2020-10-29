@@ -23,6 +23,7 @@ function Select(props, forwardedRef) {
 		disabled,
 		error = false,
 		id: idProp,
+		isFocused: isFocusedProp = false,
 		isSubtle,
 		onBlur = noop,
 		onChange = noop,
@@ -38,7 +39,7 @@ function Select(props, forwardedRef) {
 	const [value, setValue] = useControlledState(valueProp, {
 		initial: defaultValue,
 	});
-	const [isFocused, setIsFocused] = useState(false);
+	const [isFocused, setIsFocused] = useState(isFocusedProp);
 	const inputRef = useRef();
 
 	const baseFieldProps = useBaseField({

@@ -10,7 +10,7 @@ import * as styles from './TextInput.styles';
 import { useDragHandlers } from './useTextInputState.utils';
 
 function TextInputSteppers(props, forwardedRef) {
-	const { __store, decrement, increment } = props;
+	const { __store, decrement, disabled, increment } = props;
 	const store = useRef(__store).current;
 
 	const dragHandlers = useDragHandlers({
@@ -46,6 +46,7 @@ function TextInputSteppers(props, forwardedRef) {
 				ref={forwardedRef}
 			>
 				<UpDownArrows
+					disabled={disabled}
 					onDecrement={decrementValue}
 					onIncrement={incrementValue}
 				/>
@@ -55,7 +56,7 @@ function TextInputSteppers(props, forwardedRef) {
 }
 
 const UpDownArrows = React.memo(
-	({ onIncrement = noop, onDecrement = noop }) => {
+	({ disabled, onIncrement = noop, onDecrement = noop }) => {
 		const timeoutRef = useRef();
 		const timeoutDurationStart = 500;
 		const timeoutDurationEnd = 20;
@@ -132,6 +133,7 @@ const UpDownArrows = React.memo(
 				<Icon
 					as="button"
 					className={styles.SteppersUp}
+					disabled={disabled}
 					onClick={handleOnIncrement}
 					onMouseDown={handleOnMouseDownIncrement}
 					onMouseLeave={handleOnClearTimers}
@@ -145,6 +147,7 @@ const UpDownArrows = React.memo(
 				<Icon
 					as="button"
 					className={styles.SteppersDown}
+					disabled={disabled}
 					onClick={handleOnDecrement}
 					onMouseDown={handleOnMouseDownDecrement}
 					onMouseLeave={handleOnClearTimers}

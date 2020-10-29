@@ -9,6 +9,7 @@ import * as styles from './Slider.styles';
 export function useSlider(props) {
 	const {
 		className,
+		error,
 		onChange = noop,
 		id: idProp,
 		max = 100,
@@ -37,10 +38,10 @@ export function useSlider(props) {
 		'--progress': `${currentValue}%`,
 	};
 
-	const classes = useMemo(() => cx(styles.Slider, styles[size], className), [
-		className,
-		size,
-	]);
+	const classes = useMemo(
+		() => cx(styles.Slider, error && styles.error, styles[size], className),
+		[className, error, size],
+	);
 
 	return {
 		...otherProps,

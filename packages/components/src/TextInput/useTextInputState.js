@@ -77,6 +77,7 @@ const useTextInputStore = ({
 	format = 'text',
 	initialValue: initialValueProp,
 	isCommitOnBlurOrEnter = true,
+	isFocused: isFocusedInitial = false,
 	isShiftStepEnabled = true,
 	shiftStep = 10,
 	step = 1,
@@ -97,7 +98,7 @@ const useTextInputStore = ({
 		dragAxis,
 		inputRef,
 		isCommitOnBlurOrEnter,
-		isFocused: false,
+		isFocused: isFocusedInitial,
 		isShiftStepEnabled,
 		isTypeNumeric,
 		previousValue: initialValue,
@@ -360,6 +361,7 @@ const useEventHandlers = ({
 
 export const useTextInputState = (props = {}) => {
 	const {
+		isFocused = false,
 		onChange = noop,
 		onValueChange = noop,
 		min,
@@ -373,6 +375,7 @@ export const useTextInputState = (props = {}) => {
 
 	const { inputRef, store, ...inputState } = useTextInputStore({
 		initialValue,
+		isFocused,
 		isShiftStepEnabled,
 		shiftStep,
 		...otherProps,

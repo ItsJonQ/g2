@@ -6,7 +6,7 @@ import { VStack } from '../VStack';
 import { ListGroupContext } from './ListGroup.Context';
 
 function ListGroups(props, forwardedRef) {
-	const { inset = false, ...otherProps } = useContextSystem(
+	const { inset = false, spacing = 6, ...otherProps } = useContextSystem(
 		props,
 		'ListGroups',
 	);
@@ -22,7 +22,7 @@ function ListGroups(props, forwardedRef) {
 
 	return (
 		<ListGroupContext.Provider value={contextValue}>
-			<VStack spacing={6} {...otherProps} ref={forwardedRef} />
+			<VStack spacing={spacing} {...otherProps} ref={forwardedRef} />
 		</ListGroupContext.Provider>
 	);
 }

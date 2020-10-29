@@ -1,8 +1,8 @@
-import { PolymorphicComponent, CSS } from './_shared';
+import { PolymorphicComponent } from './_shared';
 import { HStackProps } from './HStack';
 import { VStackProps } from './VStack';
 
-export declare type ListGroupsProps = {
+export declare type ListGroupsProps = Pick<HStackProps, 'spacing'> & {
 	/**
 	 * Renders an "inset" style for inner `ListGroup` components.
 	 *

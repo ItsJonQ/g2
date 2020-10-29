@@ -59,12 +59,16 @@ export const subtle = css`
 `;
 
 export const error = css`
-	border-color: ${ui.get('colorDestructive')};
+	border-color: ${ui.get('controlDestructiveBorderColor')};
 
 	&:hover,
-	&:active,
+	&:active {
+		border-color: ${ui.get('controlDestructiveBorderColor')};
+	}
+
 	&:focus,
 	&[data-focused='true'] {
-		border-color: ${ui.get('colorDestructive')};
+		border-color: ${ui.get('controlDestructiveBorderColorFocus')};
+		box-shadow: ${ui.get('controlDestructiveBoxShadowFocus')};
 	}
 `;

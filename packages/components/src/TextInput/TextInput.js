@@ -42,6 +42,7 @@ function TextInput(props, forwardedRef) {
 				<TextInputArrows
 					__store={__store}
 					decrement={decrement}
+					disabled={disabled}
 					increment={increment}
 				/>
 			)}
@@ -49,6 +50,7 @@ function TextInput(props, forwardedRef) {
 				<TextInputSteppers
 					__store={__store}
 					decrement={decrement}
+					disabled={disabled}
 					increment={increment}
 				/>
 			)}
