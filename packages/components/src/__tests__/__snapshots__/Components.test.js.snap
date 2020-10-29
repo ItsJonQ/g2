@@ -2989,7 +2989,7 @@ exports[`props should render Select 1`] = `
 exports[`props should render Separator 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider wp-components-separator css-15oxbod"
+  class="wp-components-divider wp-components-separator css-4k25og"
   data-g2-c16t="true"
   data-g2-component="Separator"
   id="Separator"
@@ -3000,7 +3000,7 @@ exports[`props should render Separator 1`] = `
 exports[`props should render Separator with css prop 1`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider wp-components-separator css-15oxbod"
+  class="wp-components-divider wp-components-separator css-4k25og"
   data-g2-c16t="true"
   data-g2-component="Separator"
   id="Separator"
@@ -3011,7 +3011,7 @@ exports[`props should render Separator with css prop 1`] = `
 exports[`props should render Separator with css prop 2`] = `
 <hr
   aria-orientation="horizontal"
-  class="wp-components-divider wp-components-separator css-g79qe"
+  class="wp-components-divider wp-components-separator css-1jymndm"
   data-g2-c16t="true"
   data-g2-component="Separator"
   id="Separator"

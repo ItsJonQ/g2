@@ -502,7 +502,7 @@ const ExampleEight = () => {
 							/>
 							<CombinedFormGroup
 								Component={Select}
-								label="Appearance"
+								label="Weight"
 								prop="fontWeight"
 								showRemove={false}
 							>
@@ -572,7 +572,7 @@ const ExampleNine = () => {
 							padding-top: 0;
 						`}
 					>
-						<PresetControl />
+						<PresetControl label="Presets" />
 						<CombinedFormGroup
 							format="text"
 							label="Font"
@@ -591,7 +591,7 @@ const ExampleNine = () => {
 							/>
 							<CombinedFormGroup
 								Component={Select}
-								label="Appearance"
+								label="Weight"
 								prop="fontWeight"
 								showRemove={false}
 							>
@@ -676,7 +676,7 @@ const ExampleTen = ({ colorPanelSettings = { shadedExpanded: true } }) => {
 								showActiveOnly
 							/>
 						</ListGroupHeader>
-						<PresetControl />
+						<PresetControl label="Styles" />
 						<CombinedFormGroup
 							format="text"
 							label="Font"
@@ -695,7 +695,7 @@ const ExampleTen = ({ colorPanelSettings = { shadedExpanded: true } }) => {
 							/>
 							<CombinedFormGroup
 								Component={Select}
-								label="Appearance"
+								label="Weight"
 								prop="fontWeight"
 								showRemove={false}
 							>
@@ -888,88 +888,80 @@ export const _ellipsisWithColor = () => {
 
 export const _ellipsisWithColorAltTheme = () => {
 	return (
-		<ThemeProvider isGlobal theme={baseLineThemeNext}>
-			<Wrapper>
-				<ContextSystemProvider
-					value={{
-						ListGroups: { spacing: 8 },
-						FormGroup: { horizontal: false },
-					}}
-				>
-					<ExampleSeven truncate />
-				</ContextSystemProvider>
-			</Wrapper>
-		</ThemeProvider>
+		<Wrapper>
+			<ContextSystemProvider
+				value={{
+					ListGroups: { spacing: 8 },
+					FormGroup: { horizontal: false },
+				}}
+			>
+				<ExampleSeven truncate />
+			</ContextSystemProvider>
+		</Wrapper>
 	);
 };
 
 export const _altThemeWithPaletteDropdown = () => {
 	return (
-		<ThemeProvider isGlobal theme={baseLineThemeNext}>
-			<Wrapper>
-				<ContextSystemProvider
-					value={{
-						ListGroups: { spacing: 8 },
-						FormGroup: { horizontal: false },
-					}}
-				>
-					<ExampleEight truncate />
-				</ContextSystemProvider>
-			</Wrapper>
-		</ThemeProvider>
+		<Wrapper>
+			<ContextSystemProvider
+				value={{
+					ListGroups: { spacing: 8 },
+					FormGroup: { horizontal: false },
+				}}
+			>
+				<ExampleEight truncate />
+			</ContextSystemProvider>
+		</Wrapper>
 	);
 };
 
 export const _altThemeWithPanels = () => {
 	return (
-		<ThemeProvider isGlobal theme={baseLineThemeNext}>
-			<Wrapper>
-				<ContextSystemProvider
-					value={{
-						ListGroups: { spacing: 8 },
-						FormGroup: { horizontal: false },
-					}}
-				>
-					<ExampleNine truncate />
-				</ContextSystemProvider>
-			</Wrapper>
-		</ThemeProvider>
+		<Wrapper>
+			<ContextSystemProvider
+				value={{
+					ListGroups: { spacing: 8 },
+					FormGroup: { horizontal: false },
+				}}
+			>
+				<ExampleNine truncate />
+			</ContextSystemProvider>
+		</Wrapper>
 	);
 };
 
 export const __shadedColorPanelExpand = () => {
 	return (
-		<ThemeProvider isGlobal theme={baseLineThemeNext}>
-			<Wrapper>
-				<ContextSystemProvider
-					value={{
-						ListGroups: { spacing: 8 },
-						FormGroup: { horizontal: false },
-					}}
-				>
-					<ExampleTen truncate />
-				</ContextSystemProvider>
-			</Wrapper>
-		</ThemeProvider>
+		<Wrapper>
+			<ContextSystemProvider
+				value={{
+					ListGroups: { spacing: 8 },
+					ListGroup: { spacing: 1 },
+					FormGroup: { horizontal: false },
+				}}
+			>
+				<ExampleTen truncate />
+			</ContextSystemProvider>
+		</Wrapper>
 	);
 };
 
 export const __borderedColorPanelExpand = () => {
 	return (
-		<ThemeProvider isGlobal theme={baseLineThemeNext}>
-			<Wrapper>
-				<ContextSystemProvider
-					value={{
-						ListGroups: { spacing: 8 },
-						FormGroup: { horizontal: false },
-					}}
-				>
-					<ExampleTen
-						colorPanelSettings={{ borderedExpanded: true }}
-						truncate
-					/>
-				</ContextSystemProvider>
-			</Wrapper>
-		</ThemeProvider>
+		<Wrapper>
+			<ContextSystemProvider
+				value={{
+					ListGroups: { spacing: 8 },
+					ListGroup: { spacing: 1 },
+					FormGroup: { horizontal: false },
+				}}
+			>
+				<ExampleTen
+					colorPanelSettings={{ borderedExpanded: true }}
+					truncate
+				/>
+			</ContextSystemProvider>
+		</Wrapper>
 	);
 };

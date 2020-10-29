@@ -124,6 +124,10 @@ const Themer = React.memo(
 									<optgroup label="Gutenberg">
 										<option value="base" label="Base" />
 										<option value="next" label="Next" />
+										<option
+											value="nextLight"
+											label="Next (Light)"
+										/>
 									</optgroup>
 									<optgroup label="Experimental">
 										<option

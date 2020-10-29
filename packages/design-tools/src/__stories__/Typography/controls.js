@@ -127,7 +127,7 @@ export const TypographyOptions = React.memo(
 					minWidth={160}
 					onClick={(e) => e.stopPropagation()}
 				>
-					<DropdownMenuHeader>More options</DropdownMenuHeader>
+					<DropdownMenuHeader>Display options</DropdownMenuHeader>
 					{optionsEntries.map(([key, value]) => {
 						const isSelected = is.defined(settings[key]);
 
@@ -1101,7 +1101,7 @@ export const PanelOverlay = React.memo(() => {
 	);
 });
 
-export const PresetControl = React.memo(() => {
+export const PresetControl = React.memo(({ label = 'Presets' }) => {
 	const [value, presets, applyPresets] = typographyStore(
 		(state) => [state.getCurrentPreset(), state.presets, state.applyPreset],
 		shallowCompare,
@@ -1109,7 +1109,7 @@ export const PresetControl = React.memo(() => {
 	const isCustom = value === 'custom';
 
 	return (
-		<FormGroup label="Style">
+		<FormGroup label={label}>
 			<Select onChange={applyPresets} value={value}>
 				{presets.map((preset) => (
 					<option key={preset.value} {...preset} />

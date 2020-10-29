@@ -38,10 +38,10 @@ function ListGroup(props, forwardedRef) {
 	const {
 		children,
 		separator = false,
-		spacing,
+		spacing = 2,
 		...otherProps
 	} = useContextSystem(props, 'ListGroup');
-	const vStackProps = useVStack({ spacing: 2, ...otherProps });
+	const vStackProps = useVStack({ spacing, ...otherProps });
 
 	const validChildren = getValidChildren(children);
 	const separatorValue = useResponsiveValue(separator);

@@ -15,7 +15,7 @@ import React from 'react';
 export const typographyOptionKeys = {
 	fontFamily: {
 		label: 'Font Family',
-		value: 'Inter',
+		value: 'System',
 	},
 	fontSize: {
 		label: 'Font Size',

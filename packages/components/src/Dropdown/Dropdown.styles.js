@@ -19,5 +19,5 @@ export const Card = css`
 
 export const Scrollable = css`
 	max-height: 50vh;
-	padding: 4px;
+	padding: ${ui.space(1)};
 `;

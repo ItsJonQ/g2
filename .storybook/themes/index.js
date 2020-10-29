@@ -5,3 +5,4 @@ export { default as blueberrySubtle } from './blueberrySubtle';
 export { default as calypso } from './calypso';
 export { default as cupertino } from './cupertino';
 export { default as next } from './next';
+export { default as nextLight } from './nextLight';

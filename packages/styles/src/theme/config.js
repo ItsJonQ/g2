@@ -92,7 +92,7 @@ const CONTROL_PROPS = {
 	controlBorderRadius: '2px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlBoxShadow: `transparent`,
-	controlBoxShadowFocus: `0 0 0 2px ${get('controlBackgroundDimColor')}`,
+	controlBoxShadowFocus: `0 0 0 2px ${get('colorAdminRgb20')}`,
 	controlDestructiveBorderColor: get('colorDestructive'),
 	controlDestructiveBorderColorFocus: get('controlDestructiveBorderColor'),
 	controlDestructiveBoxShadowFocus: get('controlBoxShadowFocus'),
@@ -191,7 +191,7 @@ const SLIDER_PROPS = {
 	sliderThumbBorderColor: 'transparent',
 	sliderThumbBoxShadow: 'none',
 	sliderThumbBoxShadowSizeFocus: '3px',
-	sliderThumbBoxShadowColorFocus: get('colorAdminRgb30'),
+	sliderThumbBoxShadowColorFocus: get('colorAdminRgb20'),
 	sliderThumbBackgroundColor: get('colorAdmin'),
 };
 
