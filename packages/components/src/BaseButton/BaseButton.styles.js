@@ -138,7 +138,7 @@ export const PrefixSuffix = css`
 `;
 
 export const CaretWrapper = css`
-	margin-left: ${ui.space(-2)};
+	margin-left: 0 !important;
 	position: relative;
 	right: ${ui.space(-2)};
 `;

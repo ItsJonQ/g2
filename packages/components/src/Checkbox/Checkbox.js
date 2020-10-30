@@ -6,7 +6,6 @@ import CheckboxElement from './CheckboxElement';
 
 function Checkbox(props, forwardedRef) {
 	const { baseChoice, ...otherProps } = useBaseChoice(props, 'Checkbox');
-	console.log('OMGOMGOMG');
 
 	return (
 		<BaseChoice {...baseChoice}>

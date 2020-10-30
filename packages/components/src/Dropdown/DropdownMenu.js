@@ -21,11 +21,7 @@ function DropdownMenu(props, forwardedRef) {
 
 	const { label, menu } = useDropdownContext();
 
-	const classes = cx(
-		styles.DropdownMenu,
-		css({ maxWidth, minWidth }),
-		className,
-	);
+	const classes = cx(styles.DropdownMenu, className);
 
 	return (
 		<Menu
@@ -37,7 +33,11 @@ function DropdownMenu(props, forwardedRef) {
 			ref={forwardedRef}
 		>
 			{(menu?.visible || menu?.animating) && (
-				<DropdownMenuCard elevation={elevation}>
+				<DropdownMenuCard
+					elevation={elevation}
+					maxWidth={maxWidth}
+					minWidth={minWidth}
+				>
 					{children}
 				</DropdownMenuCard>
 			)}
@@ -45,12 +45,18 @@ function DropdownMenu(props, forwardedRef) {
 	);
 }
 
-const DropdownMenuCard = React.memo(({ children, elevation }) => {
-	return (
-		<Card className={styles.Card} elevation={elevation}>
-			<Scrollable className={styles.Scrollable}>{children}</Scrollable>
-		</Card>
-	);
-});
+const DropdownMenuCard = React.memo(
+	({ children, elevation, maxWidth, minWidth }) => {
+		const classes = cx(styles.Card, css({ maxWidth, minWidth }));
+
+		return (
+			<Card className={classes} elevation={elevation}>
+				<Scrollable className={styles.Scrollable}>
+					{children}
+				</Scrollable>
+			</Card>
+		);
+	},
+);
 
 export default contextConnect(DropdownMenu, 'DropdownMenu');

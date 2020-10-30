@@ -15,6 +15,7 @@ export const DropdownMenu = css`
 export const Card = css`
 	max-height: 50vh;
 	min-height: 24px;
+	position: absolute;
 `;
 
 export const Scrollable = css`
