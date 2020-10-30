@@ -1,6 +1,5 @@
-import { config } from '../../src/theme/config';
+import { DesignTokens } from '../core';
 
-type DesignTokens = keyof typeof config;
 type CSSVariable = string;
 
 /** Retrives a design token from the style configuration. */

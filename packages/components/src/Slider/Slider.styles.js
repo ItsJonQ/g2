@@ -124,12 +124,12 @@ export const error = css`
 	}
 
 	&:focus {
-		${getFocusBoxShadow(ui.get('colorDestructiveRgb30'))};
+		${getFocusBoxShadow(ui.get('colorDestructiveRgba20'))};
 	}
 `;
 
 export const focusedError = css`
-	${getFocusBoxShadow(ui.get('colorDestructiveRgb30'))};
+	${getFocusBoxShadow(ui.get('colorDestructiveRgba20'))};
 `;
 
 function getFocusBoxShadow(color = ui.get('sliderThumbBoxShadowColorFocus')) {
