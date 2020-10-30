@@ -1,12 +1,14 @@
 import { CheckboxProps as ReakitCheckboxProps } from '@wp-g2/a11y';
 import { PolymorphicComponent, FormElementProps } from './_shared';
+import { ControlLabelProps } from './ControlLabel';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';
 
 export declare type CheckboxProps = ReakitCheckboxProps &
 	FormElementProps &
-	Pick<FlexProps, 'gap'> &
-	Pick<GridProps, 'templateColumns'> & {
+	Pick<ControlLabelProps, 'truncate'> &
+	Pick<GridProps, 'templateColumns'> &
+	Pick<FlexProps, 'gap'> & {
 		/**
 		 * The checked state for `Checkbox`.
 		 */

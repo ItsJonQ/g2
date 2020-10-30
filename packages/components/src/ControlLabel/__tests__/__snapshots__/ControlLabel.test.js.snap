@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-w5ywbe"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-1c9rmj6"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
@@ -12,7 +12,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render htmlFor 1`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-w5ywbe"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-1c9rmj6"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   for="Field"
@@ -23,7 +23,7 @@ exports[`props should render htmlFor 1`] = `
 
 exports[`props should render no truncate 1`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-1hisi3s"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-c089lh"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
@@ -33,7 +33,7 @@ exports[`props should render no truncate 1`] = `
 
 exports[`props should render size 1`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-4q4xsv"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-1nkpyff"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >

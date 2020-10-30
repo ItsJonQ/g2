@@ -1,12 +1,15 @@
 import { css, styled, ui } from '@wp-g2/styles';
 
-export const CheckboxWrapperView = styled.div`
+export const CheckboxWrapper = css`
 	${ui.alignment.content.center};
-
 	display: inline-flex;
 	height: ${ui.get('controlHeight')};
 	position: relative;
 	vertical-align: middle;
+`;
+
+export const CheckboxWrapperView = styled.div`
+	${CheckboxWrapper};
 `;
 
 export const Checkbox = css`
@@ -14,13 +17,23 @@ export const Checkbox = css`
 	${ui.borderRadius.round};
 
 	appearance: none;
+	box-shadow: ${ui.get('checkboxBoxShadow')};
 	cursor: pointer;
-	height: 16px;
+	display: block;
+	height: ${ui.get('checkboxSize')};
+	line-height: 0;
 	margin: 0;
+	min-height: ${ui.get('checkboxSize')};
+	min-width: ${ui.get('checkboxSize')};
 	outline: none;
 	padding: 0;
 	transition: background ${ui.get('transitionDurationFastest')} linear;
-	width: 16px;
+	width: ${ui.get('checkboxSize')};
+
+	&::before,
+	&::after {
+		display: none;
+	}
 
 	&:focus {
 		${ui.border.control.focus};
@@ -32,15 +45,15 @@ export const Checkbox = css`
 	}
 
 	&:disabled {
-		opacity: 0.5;
+		${ui.opacity.muted};
 	}
 `;
 
-export const CheckboxIconView = styled.div`
+export const CheckboxIcon = css`
 	${ui.font.color.white};
 	${ui.alignment.content.center};
-	bottom: 0;
 
+	bottom: 0;
 	left: 0;
 	opacity: 0;
 	pointer-events: none;
@@ -52,4 +65,8 @@ export const CheckboxIconView = styled.div`
 	input:checked + & {
 		opacity: 1;
 	}
+`;
+
+export const CheckboxIconView = styled.div`
+	${CheckboxIcon};
 `;

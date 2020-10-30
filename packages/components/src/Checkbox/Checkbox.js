@@ -10,6 +10,7 @@ function Checkbox(props, forwardedRef) {
 		gap,
 		label,
 		templateColumns = 'auto 1fr',
+		truncate = true,
 		...otherProps
 	} = useContextSystem(props, 'Checkbox');
 
@@ -18,7 +19,7 @@ function Checkbox(props, forwardedRef) {
 	return (
 		<FormGroup gap={gap} horizontal templateColumns={templateColumns}>
 			<CheckboxElement {...otherProps} ref={forwardedRef} />
-			<ControlLabel>{label}</ControlLabel>
+			<ControlLabel truncate={truncate}>{label}</ControlLabel>
 		</FormGroup>
 	);
 }

@@ -15,6 +15,7 @@ const highDpiAdjust = getHighDpi(css`
 
 export const ControlLabel = css`
 	line-height: ${lineHeight};
+	max-width: 100%;
 	padding-bottom: ${getPadding('controlHeight')};
 	padding-top: ${getPadding('controlHeight')};
 

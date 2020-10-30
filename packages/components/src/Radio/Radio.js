@@ -10,6 +10,7 @@ function Radio(props, forwardedRef) {
 		gap,
 		label,
 		templateColumns = 'auto 1fr',
+		truncate = true,
 		...otherProps
 	} = useContextSystem(props, 'Radio');
 
@@ -18,7 +19,7 @@ function Radio(props, forwardedRef) {
 	return (
 		<FormGroup gap={gap} horizontal templateColumns={templateColumns}>
 			<RadioElement {...props} ref={forwardedRef} />
-			<ControlLabel>{label}</ControlLabel>
+			<ControlLabel truncate={truncate}>{label}</ControlLabel>
 		</FormGroup>
 	);
 }

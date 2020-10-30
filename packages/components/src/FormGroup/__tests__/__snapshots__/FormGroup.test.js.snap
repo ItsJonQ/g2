@@ -2,12 +2,12 @@
 
 exports[`props should render alignLabel 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-qu01nr"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-rwmx36"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -35,12 +35,12 @@ exports[`props should render alignLabel 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-1u4n509"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-15mblpp"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -68,12 +68,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render label without prop correctly 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-w5ywbe"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-1c9rmj6"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -99,12 +99,12 @@ exports[`props should render label without prop correctly 1`] = `
 
 exports[`props should render vertically 1`] = `
 <div
-  class="wp-components-form-group css-j1yu9m"
+  class="wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-1u4n509"
+    class="wp-components-truncate wp-components-text wp-components-control-label css-15mblpp"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"

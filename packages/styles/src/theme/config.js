@@ -155,6 +155,11 @@ const CARD_PROPS = {
 	cardHeaderHeight: '44px',
 };
 
+const CHECKBOX_PROPS = {
+	checkboxBoxShadow: 'none',
+	checkboxSize: '16px',
+};
+
 const LINK_PROPS = {
 	linkColor: get('colorAdmin'),
 	linkColorHover: get('colorAdmin'),
@@ -177,6 +182,12 @@ const MENU_PROPS = {
 const PANEL_PROPS = {
 	panelHeaderPadding: space(3),
 	panelBodyPadding: `${space(2)} ${space(3)} ${space(3)}`,
+};
+
+const RADIO_PROPS = {
+	radioBoxShadow: get('checkboxBoxShadow'),
+	radioSize: get('checkboxSize'),
+	radioDotSize: '10px',
 };
 
 const SEGMENTED_CONTROL_PROPS = {
@@ -223,10 +234,12 @@ const BASE_THEME = {
 	...ANIMATION_PROPS,
 	// The Rest
 	...BUTTON_PROPS,
+	...CHECKBOX_PROPS,
 	...GRID_PROPS,
 	...LINK_PROPS,
 	...MENU_PROPS,
 	...PANEL_PROPS,
+	...RADIO_PROPS,
 	...SEGMENTED_CONTROL_PROPS,
 	...SLIDER_PROPS,
 	...SWITCH_PROPS,

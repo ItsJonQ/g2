@@ -1,60 +1,35 @@
 import { css, styled, ui } from '@wp-g2/styles';
 
-export const RadioWrapperView = styled.div`
-	${ui.alignment.content.center};
+import * as checkboxStyles from '../Checkbox/Checkbox.styles';
 
-	display: inline-flex;
-	height: ${ui.get('controlHeight')};
-	position: relative;
-	vertical-align: middle;
+export const RadioWrapperView = styled.div`
+	${checkboxStyles.CheckboxWrapper};
 `;
 
 export const Radio = css`
-	${ui.border.control.subtle};
+	${checkboxStyles.Checkbox};
 	${ui.borderRadius.circle};
 
-	appearance: none;
-	cursor: pointer;
-	height: 16px;
-	margin: 0;
-	outline: none;
-	padding: 0;
-	width: 16px;
-
-	&:focus {
-		${ui.border.control.focus};
-	}
+	box-shadow: ${ui.get('radioBoxShadow')};
+	height: ${ui.get('radioSize')};
+	min-height: ${ui.get('radioSize')};
+	min-width: ${ui.get('radioSize')};
+	width: ${ui.get('radioSize')};
 
 	&:checked {
 		${ui.border.control.focus};
-	}
 
-	&:disabled {
-		${ui.opacity.muted};
+		background: transparent;
 	}
 `;
 
 export const RadioIconView = styled.div`
-	${ui.font.color.white};
-	${ui.alignment.content.center};
-
-	bottom: 0;
-	left: 0;
-	opacity: 0;
-	pointer-events: none;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: opacity ${ui.get('transitionDurationFastest')} linear;
-
-	input:checked + & {
-		opacity: 1;
-	}
+	${checkboxStyles.CheckboxIcon};
 `;
 
 export const RadioDotView = styled.div`
 	${ui.background.admin};
 	${ui.borderRadius.circle};
-	height: 10px;
-	width: 10px;
+	height: ${ui.get('radioDotSize')};
+	width: ${ui.get('radioDotSize')};
 `;
