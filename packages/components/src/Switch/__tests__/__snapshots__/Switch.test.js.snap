@@ -2,7 +2,7 @@
 
 exports[`props should render checked 1`] = `
 <label
-  class="wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch css-19rneaz"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -35,7 +35,7 @@ exports[`props should render checked 1`] = `
 
 exports[`props should render correctly 1`] = `
 <label
-  class="wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch css-19rneaz"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -67,7 +67,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render defaultValue 1`] = `
 <label
-  class="wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch css-19rneaz"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -100,7 +100,7 @@ exports[`props should render defaultValue 1`] = `
 
 exports[`props should render disabled 1`] = `
 <label
-  class="wp-components-switch css-11ab9hg"
+  class="components-switch wp-components-switch css-11ab9hg"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -135,7 +135,7 @@ exports[`props should render disabled 1`] = `
 
 exports[`props should render label 1`] = `
 <label
-  class="wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch css-19rneaz"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -169,7 +169,7 @@ exports[`props should render label 1`] = `
 
 exports[`props should render size 1`] = `
 <label
-  class="wp-components-switch css-1hjqzm9"
+  class="components-switch wp-components-switch css-1hjqzm9"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -201,7 +201,7 @@ exports[`props should render size 1`] = `
 
 exports[`props should render type 1`] = `
 <label
-  class="wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch css-19rneaz"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"

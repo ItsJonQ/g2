@@ -2,12 +2,12 @@
 
 exports[`props should render alignLabel 1`] = `
 <div
-  class="wp-components-form-group css-i9q2cc"
+  class="components-form-group wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-y9y9ic"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-y9y9ic"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -15,7 +15,7 @@ exports[`props should render alignLabel 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -35,12 +35,12 @@ exports[`props should render alignLabel 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-form-group css-i9q2cc"
+  class="components-form-group wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-116wlbg"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-116wlbg"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -48,7 +48,7 @@ exports[`props should render correctly 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -68,18 +68,18 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render label without prop correctly 1`] = `
 <div
-  class="wp-components-form-group css-i9q2cc"
+  class="components-form-group wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-1ppuusk"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ppuusk"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
   />
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
@@ -99,12 +99,12 @@ exports[`props should render label without prop correctly 1`] = `
 
 exports[`props should render vertically 1`] = `
 <div
-  class="wp-components-form-group css-i9q2cc"
+  class="components-form-group wp-components-form-group css-i9q2cc"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="wp-components-truncate wp-components-text wp-components-control-label css-116wlbg"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-116wlbg"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -112,7 +112,7 @@ exports[`props should render vertically 1`] = `
     First name
   </label>
   <div
-    class="wp-components-flex wp-components-base-field wp-components-text-input css-16rwfbj"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-16rwfbj"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >

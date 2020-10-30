@@ -2,7 +2,7 @@
 
 exports[`props should render CardInnerBody 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-11lo8b5"
+  class="components-surface wp-components-surface components-card wp-components-card css-11lo8b5"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -11,26 +11,26 @@ exports[`props should render CardInnerBody 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-okk3an"
+      class="components-flex wp-components-flex components-card-header wp-components-card-header css-okk3an"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
     />
     <div
-      class="wp-components-card-inner-body css-rlgt1m"
+      class="components-card-inner-body wp-components-card-inner-body css-rlgt1m"
       data-g2-c16t="true"
       data-g2-component="CardInnerBody"
     >
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-k5kjzk"
+      class="components-flex wp-components-flex components-card-footer wp-components-card-footer css-k5kjzk"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <button
         aria-busy="false"
-        class="wp-components-flex wp-components-base-button wp-components-button css-5ce41b"
+        class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-5ce41b"
         data-active="false"
         data-destructive="false"
         data-focused="false"
@@ -40,14 +40,14 @@ exports[`props should render CardInnerBody 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex-item css-19mrak6"
+          class="components-flex-item wp-components-flex-item css-19mrak6"
           data-g2-c16t="true"
           data-g2-component="ButtonContent"
         >
           Agree
         </span>
         <span
-          class="wp-components-elevation css-17x6dun"
+          class="components-elevation wp-components-elevation css-17x6dun"
           data-g2-c16t="true"
           data-g2-component="ButtonElevation"
         />
@@ -55,12 +55,12 @@ exports[`props should render CardInnerBody 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-elevation css-18hqkt0"
+    class="components-elevation wp-components-elevation css-18hqkt0"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-1873flw"
+    class="components-elevation wp-components-elevation css-1873flw"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -69,7 +69,7 @@ exports[`props should render CardInnerBody 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-11lo8b5"
+  class="components-surface wp-components-surface components-card wp-components-card css-11lo8b5"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -78,26 +78,26 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CardContent"
   >
     <div
-      class="wp-components-flex wp-components-card-header css-okk3an"
+      class="components-flex wp-components-flex components-card-header wp-components-card-header css-okk3an"
       data-g2-c16t="true"
       data-g2-component="CardHeader"
       title="Olaf"
     />
     <div
-      class="wp-components-scrollable wp-components-card-body css-1un9gzz"
+      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body css-1un9gzz"
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >
       Some people are worth melting for.
     </div>
     <div
-      class="wp-components-flex wp-components-card-footer css-k5kjzk"
+      class="components-flex wp-components-flex components-card-footer wp-components-card-footer css-k5kjzk"
       data-g2-c16t="true"
       data-g2-component="CardFooter"
     >
       <button
         aria-busy="false"
-        class="wp-components-flex wp-components-base-button wp-components-button css-5ce41b"
+        class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-5ce41b"
         data-active="false"
         data-destructive="false"
         data-focused="false"
@@ -107,14 +107,14 @@ exports[`props should render correctly 1`] = `
         type="button"
       >
         <span
-          class="wp-components-flex-item css-19mrak6"
+          class="components-flex-item wp-components-flex-item css-19mrak6"
           data-g2-c16t="true"
           data-g2-component="ButtonContent"
         >
           Agree
         </span>
         <span
-          class="wp-components-elevation css-17x6dun"
+          class="components-elevation wp-components-elevation css-17x6dun"
           data-g2-c16t="true"
           data-g2-component="ButtonElevation"
         />
@@ -122,12 +122,12 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-elevation css-18hqkt0"
+    class="components-elevation wp-components-elevation css-18hqkt0"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-1873flw"
+    class="components-elevation wp-components-elevation css-1873flw"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -136,7 +136,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render elevation 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-11lo8b5"
+  class="components-surface wp-components-surface components-card wp-components-card css-11lo8b5"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -145,12 +145,12 @@ exports[`props should render elevation 1`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-18hqkt0"
+    class="components-elevation wp-components-elevation css-18hqkt0"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-fmvmxl"
+    class="components-elevation wp-components-elevation css-fmvmxl"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -159,7 +159,7 @@ exports[`props should render elevation 1`] = `
 
 exports[`props should render no elevation 1`] = `
 <div
-  class="wp-components-surface wp-components-card css-11lo8b5"
+  class="components-surface wp-components-surface components-card wp-components-card css-11lo8b5"
   data-g2-c16t="true"
   data-g2-component="Card"
 >
@@ -168,12 +168,12 @@ exports[`props should render no elevation 1`] = `
     data-g2-component="CardContent"
   />
   <div
-    class="wp-components-elevation css-16j6c8z"
+    class="components-elevation wp-components-elevation css-16j6c8z"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="wp-components-elevation css-10dmg8u"
+    class="components-elevation wp-components-elevation css-10dmg8u"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />

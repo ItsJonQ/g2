@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-color-circle css-tjqn2a"
+  class="components-color-circle wp-components-color-circle css-tjqn2a"
   data-active="false"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
@@ -14,7 +14,7 @@ exports[`props should render correctly 1`] = `
     data-g2-component="CheckboxIcon"
   >
     <div
-      class="wp-components-icon css-1n9qbco"
+      class="components-icon wp-components-icon css-1n9qbco"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >

@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <img
-  class="wp-components-image css-1obj85a"
+  class="components-image wp-components-image css-1obj85a"
   data-g2-c16t="true"
   data-g2-component="Image"
   src="/olaf.png"
@@ -11,7 +11,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with custom aspectRatio 1`] = `
 <div
-  class="wp-components-aspect-ratio css-fvkpkj"
+  class="components-aspect-ratio wp-components-aspect-ratio css-fvkpkj"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >
@@ -30,7 +30,7 @@ exports[`props should render with custom aspectRatio 1`] = `
 
 exports[`props should render with custom dimensions 1`] = `
 <img
-  class="wp-components-image css-v2uj34"
+  class="components-image wp-components-image css-v2uj34"
   data-g2-c16t="true"
   data-g2-component="Image"
   height="275"
@@ -41,7 +41,7 @@ exports[`props should render with custom dimensions 1`] = `
 
 exports[`props should render with custom fit 1`] = `
 <div
-  class="wp-components-aspect-ratio css-fvkpkj"
+  class="components-aspect-ratio wp-components-aspect-ratio css-fvkpkj"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >

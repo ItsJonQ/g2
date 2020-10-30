@@ -2,12 +2,12 @@
 
 exports[`props should render color 1`] = `
 <div
-  class="wp-components-badge css-tvvhy6"
+  class="components-badge wp-components-badge css-tvvhy6"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -18,12 +18,12 @@ exports[`props should render color 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-badge css-1qf2rki"
+  class="components-badge wp-components-badge css-1qf2rki"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -34,12 +34,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render display 1`] = `
 <div
-  class="wp-components-badge css-1vvr3x3"
+  class="components-badge wp-components-badge css-1vvr3x3"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -50,12 +50,12 @@ exports[`props should render display 1`] = `
 
 exports[`props should render isBold 1`] = `
 <div
-  class="wp-components-badge css-rz98o1"
+  class="components-badge wp-components-badge css-rz98o1"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -66,12 +66,12 @@ exports[`props should render isBold 1`] = `
 
 exports[`props should render isRounded 1`] = `
 <div
-  class="wp-components-badge css-1llsgr5"
+  class="components-badge wp-components-badge css-1llsgr5"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -82,12 +82,12 @@ exports[`props should render isRounded 1`] = `
 
 exports[`props should render truncate 1`] = `
 <div
-  class="wp-components-badge css-1qf2rki"
+  class="components-badge wp-components-badge css-1qf2rki"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="wp-components-truncate wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
     data-g2-c16t="true"
     data-g2-component="Text"
   >

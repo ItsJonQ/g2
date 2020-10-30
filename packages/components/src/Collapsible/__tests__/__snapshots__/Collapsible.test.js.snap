@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-collapsible css-j1yu9m"
+  class="components-collapsible wp-components-collapsible css-j1yu9m"
   data-expanded="false"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
@@ -11,7 +11,7 @@ exports[`props should render correctly 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="false"
-    class="wp-components-flex wp-components-base-button wp-components-button wp-components-collapsible-trigger css-6nh0x3"
+    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-collapsible-trigger wp-components-collapsible-trigger css-6nh0x3"
     data-active="false"
     data-destructive="false"
     data-focused="false"
@@ -21,20 +21,20 @@ exports[`props should render correctly 1`] = `
     type="button"
   >
     <span
-      class="wp-components-flex-item css-19mrak6"
+      class="components-flex-item wp-components-flex-item css-19mrak6"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
       Show/Hide
     </span>
     <span
-      class="wp-components-elevation css-17x6dun"
+      class="components-elevation wp-components-elevation css-17x6dun"
       data-g2-c16t="true"
       data-g2-component="ButtonElevation"
     />
   </button>
   <div
-    class="css-li0a7z wp-components-collapsible-content"
+    class="css-li0a7z components-collapsible-content wp-components-collapsible-content"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     hidden=""
@@ -42,7 +42,7 @@ exports[`props should render correctly 1`] = `
     style="display: none;"
   >
     <div
-      class="wp-components-animated css-1qs21wj"
+      class="components-animated wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0; display: none;"
@@ -55,7 +55,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render visible 1`] = `
 <div
-  class="wp-components-collapsible css-j1yu9m"
+  class="components-collapsible wp-components-collapsible css-j1yu9m"
   data-expanded="true"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
@@ -64,7 +64,7 @@ exports[`props should render visible 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="true"
-    class="wp-components-flex wp-components-base-button wp-components-button wp-components-collapsible-trigger css-6nh0x3"
+    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-collapsible-trigger wp-components-collapsible-trigger css-6nh0x3"
     data-active="false"
     data-destructive="false"
     data-focused="false"
@@ -74,26 +74,26 @@ exports[`props should render visible 1`] = `
     type="button"
   >
     <span
-      class="wp-components-flex-item css-19mrak6"
+      class="components-flex-item wp-components-flex-item css-19mrak6"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
       Show/Hide
     </span>
     <span
-      class="wp-components-elevation css-17x6dun"
+      class="components-elevation wp-components-elevation css-17x6dun"
       data-g2-c16t="true"
       data-g2-component="ButtonElevation"
     />
   </button>
   <div
-    class="css-li0a7z wp-components-collapsible-content"
+    class="css-li0a7z components-collapsible-content wp-components-collapsible-content"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     id="collapsible"
   >
     <div
-      class="wp-components-animated css-1qs21wj"
+      class="components-animated wp-components-animated css-1qs21wj"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: auto; opacity: 1; display: block;"

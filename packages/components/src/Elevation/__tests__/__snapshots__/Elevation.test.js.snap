@@ -2,7 +2,7 @@
 
 exports[`props should render active 1`] = `
 <div
-  class="wp-components-elevation css-c2vmw"
+  class="components-elevation wp-components-elevation css-c2vmw"
   data-g2-c16t="true"
   data-g2-component="Elevation"
 />
@@ -10,7 +10,7 @@ exports[`props should render active 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-elevation css-1idto82"
+  class="components-elevation wp-components-elevation css-1idto82"
   data-g2-c16t="true"
   data-g2-component="Elevation"
 />
@@ -18,7 +18,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render hover 1`] = `
 <div
-  class="wp-components-elevation css-11uxqnt"
+  class="components-elevation wp-components-elevation css-11uxqnt"
   data-g2-c16t="true"
   data-g2-component="Elevation"
 />
@@ -26,7 +26,7 @@ exports[`props should render hover 1`] = `
 
 exports[`props should render isInteractive 1`] = `
 <div
-  class="wp-components-elevation css-5pt78s"
+  class="components-elevation wp-components-elevation css-5pt78s"
   data-g2-c16t="true"
   data-g2-component="Elevation"
 />
@@ -34,7 +34,7 @@ exports[`props should render isInteractive 1`] = `
 
 exports[`props should render offset 1`] = `
 <div
-  class="wp-components-elevation css-mvic3v"
+  class="components-elevation wp-components-elevation css-mvic3v"
   data-g2-c16t="true"
   data-g2-component="Elevation"
 />
@@ -42,7 +42,7 @@ exports[`props should render offset 1`] = `
 
 exports[`props should render value 1`] = `
 <div
-  class="wp-components-elevation css-1xohjxi"
+  class="components-elevation wp-components-elevation css-1xohjxi"
   data-g2-c16t="true"
   data-g2-component="Elevation"
 />
