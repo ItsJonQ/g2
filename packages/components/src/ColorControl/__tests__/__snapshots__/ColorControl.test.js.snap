@@ -3,7 +3,7 @@
 exports[`props should render correctly 1`] = `
 <button
   aria-busy="false"
-  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-nhthur"
+  class="wp-components-flex wp-components-base-button wp-components-button wp-components-color-control css-ymbgly"
   data-active="false"
   data-destructive="false"
   data-focused="false"

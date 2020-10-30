@@ -6,11 +6,14 @@ import { Button } from '../Button';
 import { useDropdownContext } from './Dropdown.Context';
 
 function DropdownTrigger(props, forwardedRef) {
-	const { ...otherProps } = useContextSystem(props, 'DropdownTrigger');
+	const { hasCaret = false, ...otherProps } = useContextSystem(
+		props,
+		'DropdownTrigger',
+	);
 	const { menu } = useDropdownContext();
 
 	const componentProps = {
-		hasCaret: true,
+		hasCaret,
 		...otherProps,
 		ref: forwardedRef,
 	};

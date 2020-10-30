@@ -45,6 +45,12 @@ export const Button = css`
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 
+	&[data-destructive='true'] {
+		&:focus {
+			box-shadow: ${ui.get('controlDestructiveBoxShadowFocus')};
+		}
+	}
+
 	&[data-icon='true'] {
 		min-width: ${ui.get('controlHeight')};
 	}
@@ -183,9 +189,12 @@ export const subtleControl = css`
 	background-color: transparent;
 
 	&:hover,
-	&:active,
 	&:focus {
 		background-color: ${ui.get('controlBackgroundColor')};
+	}
+
+	&:active {
+		background-color: ${ui.get('controlBackgroundColorActive')};
 	}
 
 	&[data-active='true'] {

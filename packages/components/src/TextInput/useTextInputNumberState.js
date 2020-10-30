@@ -64,10 +64,13 @@ export const useNumberKeyboardHandlers = ({
 	decrement,
 	increment,
 	stopIfEventDefaultPrevented = true,
+	store,
 }) => {
 	const keyboardHandlers = React.useMemo(
 		() => ({
 			ArrowUp(event) {
+				if (!store.getState().isTypeNumeric) return;
+
 				if (stopIfEventDefaultPrevented && event.isDefaultPrevented())
 					return;
 
@@ -76,6 +79,8 @@ export const useNumberKeyboardHandlers = ({
 				increment();
 			},
 			ArrowDown(event) {
+				if (!store.getState().isTypeNumeric) return;
+
 				if (stopIfEventDefaultPrevented && event.isDefaultPrevented())
 					return;
 
@@ -84,7 +89,7 @@ export const useNumberKeyboardHandlers = ({
 				decrement();
 			},
 		}),
-		[decrement, increment, stopIfEventDefaultPrevented],
+		[decrement, increment, stopIfEventDefaultPrevented, store],
 	);
 
 	const handleOnKeyDown = React.useCallback(

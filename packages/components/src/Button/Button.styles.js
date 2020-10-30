@@ -163,8 +163,27 @@ export const secondary = css`
 `;
 
 export const tertiary = css`
-	background-color: transparent;
-	border-color: ${ui.get('controlBorderColor')};
+	background-color: ${ui.get('buttonTertiaryColor')};
+	border-color: ${ui.get('buttonTertiaryBorderColor')};
+	color: ${ui.get('buttonTertiaryTextColor')};
+
+	&:hover {
+		background-color: ${ui.get('buttonTertiaryColorHover')};
+		border-color: ${ui.get('buttonTertiaryBorderColorHover')};
+	}
+
+	&:focus,
+	&[data-focused='true'] {
+		background-color: ${ui.get('buttonTertiaryColorFocus')};
+		border-color: ${ui.get('buttonTertiaryBorderColorFocus')};
+		color: ${ui.get('buttonTertiaryTextColorFocus')};
+	}
+
+	&:active {
+		background-color: ${ui.get('buttonTertiaryColorActive')};
+		border-color: ${ui.get('buttonTertiaryBorderColorActive')};
+		color: ${ui.get('buttonTertiaryTextColorActive')};
+	}
 
 	&[data-destructive='true'] {
 		color: ${ui.color.destructive};

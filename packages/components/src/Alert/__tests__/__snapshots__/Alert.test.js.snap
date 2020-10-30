@@ -34,7 +34,7 @@ exports[`props should render as dismissable 1`] = `
       >
         <button
           aria-busy="false"
-          class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-nv9ylb"
+          class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-mg3wti"
           data-active="false"
           data-destructive="false"
           data-focused="false"
@@ -165,7 +165,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-nv9ylb"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-mg3wti"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -255,7 +255,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-nv9ylb"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-mg3wti"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -345,7 +345,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-nv9ylb"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-mg3wti"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -435,7 +435,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-nv9ylb"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-mg3wti"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -525,7 +525,7 @@ exports[`props should render with status 1`] = `
         >
           <button
             aria-busy="false"
-            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-nv9ylb"
+            class="wp-components-flex wp-components-base-button wp-components-button wp-components-close-button css-mg3wti"
             data-active="false"
             data-destructive="false"
             data-focused="false"
