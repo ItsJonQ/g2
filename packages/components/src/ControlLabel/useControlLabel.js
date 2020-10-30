@@ -8,6 +8,7 @@ import * as styles from './ControlLabel.styles';
 export function useControlLabel(props) {
 	const {
 		htmlFor: htmlForProp,
+		isBlock = false,
 		size = 'medium',
 		truncate = true,
 		...otherProps
@@ -15,12 +16,17 @@ export function useControlLabel(props) {
 
 	const { className, ...textProps } = useText({
 		...otherProps,
-		isBlock: true,
+		isBlock,
 		truncate,
 	});
 
 	const htmlFor = useFormGroupContextId(htmlForProp);
-	const classes = cx(styles.ControlLabel, styles[size], className);
+	const classes = cx(
+		styles.ControlLabel,
+		styles[size],
+		className,
+		isBlock ? styles.block : styles.inline,
+	);
 
 	return {
 		...textProps,

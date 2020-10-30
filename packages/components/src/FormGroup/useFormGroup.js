@@ -14,6 +14,7 @@ export function useFormGroup(props) {
 		id: idProp,
 		label,
 		labelHidden = false,
+		truncate = false,
 		...otherProps
 	} = useContextSystem(props, 'FormGroup');
 
@@ -29,6 +30,7 @@ export function useFormGroup(props) {
 		horizontal,
 		label,
 		labelHidden,
+		truncate,
 	};
 
 	return {

@@ -14,7 +14,9 @@ const highDpiAdjust = getHighDpi(css`
 `);
 
 export const ControlLabel = css`
+	display: inline-block;
 	line-height: ${lineHeight};
+	margin: 0;
 	max-width: 100%;
 	padding-bottom: ${getPadding('controlHeight')};
 	padding-top: ${getPadding('controlHeight')};
@@ -34,4 +36,13 @@ export const large = css`
 export const small = css`
 	padding-bottom: ${getPadding('controlHeightSmall')};
 	padding-top: ${getPadding('controlHeightSmall')};
+`;
+
+export const inline = css`
+	display: inline-block;
+	vertical-align: middle;
+`;
+
+export const block = css`
+	display: block;
 `;

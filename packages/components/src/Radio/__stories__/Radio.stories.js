@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Text } from '../../index';
 import { Radio } from '../index';
 
 export default {
@@ -9,4 +10,8 @@ export default {
 
 export const _default = () => {
 	return <Radio label="Radio" />;
+};
+
+export const _help = () => {
+	return <Radio help={<Text>Help text</Text>} label="Radio" />;
 };

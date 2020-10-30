@@ -12,8 +12,11 @@ function FormGroupContent({
 	help,
 	horizontal,
 	id,
+	isLabelBlock = true,
 	label,
 	labelHidden,
+	spacing = 2,
+	truncate,
 }) {
 	const contextProps = React.useMemo(() => ({ id, horizontal }), [
 		id,
@@ -21,7 +24,11 @@ function FormGroupContent({
 	]);
 
 	const content = help ? (
-		<VStack expanded={false} {...ui.$('FormGroupContentContainer')}>
+		<VStack
+			expanded={false}
+			{...ui.$('FormGroupContentContainer')}
+			spacing={spacing}
+		>
 			{children}
 			<FormGroupHelp>{help}</FormGroupHelp>
 		</VStack>
@@ -34,7 +41,9 @@ function FormGroupContent({
 			<FormGroupLabel
 				align={alignLabel}
 				id={id}
+				isLabelBlock={isLabelBlock}
 				labelHidden={labelHidden}
+				truncate={truncate}
 			>
 				{label}
 			</FormGroupLabel>

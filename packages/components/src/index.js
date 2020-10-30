@@ -11,6 +11,7 @@ export * from './Avatar';
 export * from './Background';
 export * from './Badge';
 export * from './BaseButton';
+export * from './BaseChoice';
 export * from './BaseField';
 export * from './BaseModal';
 export * from './Button';

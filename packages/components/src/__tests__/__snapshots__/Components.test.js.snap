@@ -412,6 +412,8 @@ exports[`props should render BaseButton with css prop 2`] = `
 </button>
 `;
 
+exports[`props should render BaseChoice 1`] = `null`;
+
 exports[`props should render BaseField 1`] = `
 <div
   class="wp-components-flex wp-components-base-field css-1rfo86y"
@@ -1345,7 +1347,7 @@ exports[`props should render ControlGroupItem with css prop 2`] = `
 
 exports[`props should render ControlLabel 1`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-1c9rmj6"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-1ppuusk"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
@@ -1354,7 +1356,7 @@ exports[`props should render ControlLabel 1`] = `
 
 exports[`props should render ControlLabel with css prop 1`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-1c9rmj6"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-1ppuusk"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
@@ -1363,7 +1365,7 @@ exports[`props should render ControlLabel with css prop 1`] = `
 
 exports[`props should render ControlLabel with css prop 2`] = `
 <label
-  class="wp-components-truncate wp-components-text wp-components-control-label css-1m68urz"
+  class="wp-components-truncate wp-components-text wp-components-control-label css-1ova00m"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
