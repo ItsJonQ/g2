@@ -1409,7 +1409,7 @@ exports[`props should render Dropdown 1`] = `null`;
 
 exports[`props should render DropdownMenu 1`] = `
 <div
-  class="wp-components-menu wp-components-dropdown-menu css-1uym29"
+  class="wp-components-menu wp-components-dropdown-menu css-kvsvnp"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
@@ -1426,7 +1426,7 @@ exports[`props should render DropdownMenu 1`] = `
 
 exports[`props should render DropdownMenu with css prop 1`] = `
 <div
-  class="wp-components-menu wp-components-dropdown-menu css-1uym29"
+  class="wp-components-menu wp-components-dropdown-menu css-kvsvnp"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
@@ -1443,7 +1443,7 @@ exports[`props should render DropdownMenu with css prop 1`] = `
 
 exports[`props should render DropdownMenu with css prop 2`] = `
 <div
-  class="wp-components-menu wp-components-dropdown-menu css-xdedri"
+  class="wp-components-menu wp-components-dropdown-menu css-h33em1"
   data-g2-c16t="true"
   data-g2-component="DropdownMenu"
   id="DropdownMenu"
