@@ -95,7 +95,9 @@ const CONTROL_PROPS = {
 	controlBoxShadowFocus: `0 0 0 2px ${get('colorAdminRgba20')}`,
 	controlDestructiveBorderColor: get('colorDestructive'),
 	controlDestructiveBorderColorFocus: get('controlDestructiveBorderColor'),
-	controlDestructiveBoxShadowFocus: get('controlBoxShadowFocus'),
+	controlDestructiveBoxShadowFocus: `0 0 0 2px ${get(
+		'colorDestructiveRgba20',
+	)}`,
 	controlHeight: '30px',
 	controlHeightLarge: `calc(${get('controlHeight')} * 1.2)`,
 	controlHeightSmall: `calc(${get('controlHeight')} * 0.8)`,

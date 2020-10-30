@@ -30,6 +30,10 @@ export const Slider = css`
 		border-radius: 2px;
 		height: 2px;
 		will-change: transform;
+
+		*:disabled& {
+			background: ${ui.get('controlBackgroundDimColor')};
+		}
 	}
 	&::-moz-range-track {
 		background: linear-gradient(
@@ -40,6 +44,10 @@ export const Slider = css`
 		border-radius: 2px;
 		height: 2px;
 		will-change: transform;
+
+		*:disabled& {
+			background: ${ui.get('controlBackgroundDimColor')};
+		}
 	}
 
 	&::-webkit-slider-thumb {
@@ -57,17 +65,16 @@ export const Slider = css`
 		will-change: transform;
 
 		*:disabled& {
-			display: none;
+			background: ${ui.get('colorTextMuted')};
+			border-color: ${ui.get('colorTextMuted')};
 		}
 	}
 	&::-moz-range-thumb {
 		appearance: none;
-		background-color: ${ui.color.white};
-		border: 1px solid;
-		border-color: ${ui.get('controlBorderColor')};
+		background-color: ${ui.get('sliderThumbBackgroundColor')};
+		border: 1px solid ${ui.get('sliderThumbBorderColor')};
 		border-radius: 50%;
-		box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),
-			${ui.get('controlSurfaceBoxShadow')};
+		box-shadow: ${ui.get('sliderThumbBoxShadow')};
 		cursor: pointer;
 		height: 12px;
 		margin-top: -5px;
@@ -77,7 +84,8 @@ export const Slider = css`
 		will-change: transform;
 
 		*:disabled& {
-			display: none;
+			background: ${ui.get('colorTextMuted')};
+			border-color: ${ui.get('colorTextMuted')};
 		}
 	}
 

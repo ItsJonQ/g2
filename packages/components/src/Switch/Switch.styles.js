@@ -14,11 +14,11 @@ export const Switch = css`
 	position: relative;
 	user-select: none;
 	width: ${getSwitchWidth('controlHeight')};
+`;
 
-	&[disabled] {
-		opacity: 0.6;
-		pointer-events: none;
-	}
+export const disabled = css`
+	opacity: 0.6;
+	pointer-events: none;
 `;
 
 export const large = css`

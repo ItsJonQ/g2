@@ -27,6 +27,7 @@ export function useBaseField(props) {
 				isFocused && styles.focus,
 				isSubtle && styles.subtle,
 				error && styles.error,
+				error && isFocused && styles.errorFocus,
 				className,
 			),
 		[

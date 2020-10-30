@@ -17,7 +17,9 @@ export function useSwitch(props) {
 		checked: checkedProp,
 		className,
 		defaultValue,
+		disabled = false,
 		id: idProp,
+		isFocused: isFocusedProp = false,
 		onBlur = noop,
 		onChange = noop,
 		onFocus = noop,
@@ -27,7 +29,7 @@ export function useSwitch(props) {
 		...otherProps
 	} = useContextSystem(props, 'Switch');
 
-	const [isFocused, setIsFocused] = useState(false);
+	const [isFocused, setIsFocused] = useState(isFocusedProp);
 	const [checked, setChecked] = useControlledState(checkedProp, {
 		initial: defaultValue || false,
 	});
@@ -41,6 +43,7 @@ export function useSwitch(props) {
 	const classes = cx(
 		styles.Switch,
 		styles[size],
+		disabled && styles.disabled,
 		contextId && horizontal && styles.formGroup,
 		className,
 	);
@@ -76,6 +79,7 @@ export function useSwitch(props) {
 		className: classes,
 		Component,
 		id,
+		disabled,
 		isFocused,
 		label,
 		onBlur: handleOnBlur,

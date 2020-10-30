@@ -15,15 +15,15 @@ const theme = createTheme(({ get, theme }) => {
 		sliderThumbBackgroundColor: get('colorAdmin'),
 		sliderThumbBorderColor: 'transparent',
 		sliderThumbBoxShadow: 'none',
-		switchBackdropBackgroundColor: 'transparent',
-		switchBackdropBackgroundColorActive: get('colorText'),
-		switchBackdropBorderColor: get('colorText'),
-		switchBackdropBorderColorActive: get('colorText'),
-		switchBackdropBorderColorFocus: get('white'),
+		// switchBackdropBackgroundColor: 'transparent',
+		// switchBackdropBackgroundColorActive: get('colorText'),
+		// switchBackdropBorderColor: get('colorText'),
+		// switchBackdropBorderColorActive: get('colorText'),
+		// switchBackdropBorderColorFocus: get('white'),
 		switchPaddingOffset: '10px',
-		switchToggleBackgroundColor: get('colorText'),
-		switchToggleBackgroundColorActive: get('colorTextInverted'),
-		switchToggleBoxShadow: 'none',
+		// switchToggleBackgroundColor: get('colorText'),
+		// switchToggleBackgroundColorActive: get('colorTextInverted'),
+		// switchToggleBoxShadow: 'none',
 	};
 });
 

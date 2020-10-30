@@ -3021,7 +3021,7 @@ exports[`props should render Separator with css prop 2`] = `
 
 exports[`props should render Slider 1`] = `
 <input
-  class="wp-components-slider css-1d29dzv"
+  class="wp-components-slider css-1jmvop2"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -3035,7 +3035,7 @@ exports[`props should render Slider 1`] = `
 
 exports[`props should render Slider with css prop 1`] = `
 <input
-  class="wp-components-slider css-1d29dzv"
+  class="wp-components-slider css-1jmvop2"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -3049,7 +3049,7 @@ exports[`props should render Slider with css prop 1`] = `
 
 exports[`props should render Slider with css prop 2`] = `
 <input
-  class="wp-components-slider css-1rdcy6q"
+  class="wp-components-slider css-htdp0v"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="Slider"
@@ -3690,7 +3690,7 @@ exports[`props should render Surface with css prop 2`] = `
 
 exports[`props should render Switch 1`] = `
 <label
-  class="wp-components-switch css-80543k"
+  class="wp-components-switch css-19rneaz"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="Switch"

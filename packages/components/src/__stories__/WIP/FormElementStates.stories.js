@@ -11,6 +11,7 @@ import {
 	ListGroups,
 	Select,
 	Slider,
+	Switch,
 	TextInput,
 	UnitInput,
 	VStack,
@@ -26,13 +27,15 @@ const ControlCluster = ({
 	selectValue,
 	setInputValue,
 	setSelectValue,
+	setSwitchValue,
+	switchValue,
 	...otherProps
 }) => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>{heading}</ListGroupHeader>
 			<ContextSystemProvider value={{ FormGroup: { horizontal: false } }}>
-				<Grid>
+				<Grid columns={8}>
 					<FormGroup label="Unit Input">
 						<UnitInput
 							{...otherProps}
@@ -74,7 +77,7 @@ const ControlCluster = ({
 							<option label="Three" value="three" />
 						</Select>
 					</FormGroup>
-					<FormGroup label=" Button">
+					<FormGroup label="Button">
 						<Button
 							disabled={otherProps.disabled}
 							isBlock
@@ -85,6 +88,15 @@ const ControlCluster = ({
 							Button
 						</Button>
 					</FormGroup>
+					<FormGroup label="Switch">
+						<Switch
+							checked={switchValue}
+							disabled={otherProps.disabled}
+							isDestructive={otherProps.error}
+							isFocused={otherProps.isFocused}
+							onChange={setSwitchValue}
+						/>
+					</FormGroup>
 				</Grid>
 			</ContextSystemProvider>
 		</ListGroup>
@@ -94,12 +106,15 @@ const ControlCluster = ({
 const Example = () => {
 	const [inputValue, setInputValue] = React.useState(1);
 	const [selectValue, setSelectValue] = React.useState('one');
+	const [switchValue, setSwitchValue] = React.useState(false);
 
 	const clusterProps = {
 		inputValue,
 		setInputValue,
 		selectValue,
 		setSelectValue,
+		switchValue,
+		setSwitchValue,
 	};
 
 	return (
@@ -108,7 +123,6 @@ const Example = () => {
 				margin-top: 10vh;
 				margin-bottom: 20vh;
 			`}
-			width={480}
 		>
 			<ListGroups separator spacing={12}>
 				<ControlCluster {...clusterProps} heading="Default" />

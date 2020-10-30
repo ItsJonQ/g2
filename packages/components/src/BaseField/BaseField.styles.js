@@ -72,3 +72,12 @@ export const error = css`
 		box-shadow: ${ui.get('controlDestructiveBoxShadowFocus')};
 	}
 `;
+
+export const errorFocus = css`
+	border-color: ${ui.get('controlDestructiveBorderColorFocus')};
+	box-shadow: ${ui.get('controlDestructiveBoxShadowFocus')};
+
+	&:hover {
+		border-color: ${ui.get('controlDestructiveBorderColorFocus')};
+	}
+`;
