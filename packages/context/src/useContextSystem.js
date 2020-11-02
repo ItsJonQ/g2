@@ -114,7 +114,8 @@ export function useContextSystem(props, namespace) {
 function getStyledClassName(displayName) {
 	if (!displayName || !is.string(displayName)) return '';
 
-	return `wp-components-${kebabCase(displayName)}`;
+	const kebab = kebabCase(displayName);
+	return `components-${kebab} wp-components-${kebab}`;
 }
 
 /**

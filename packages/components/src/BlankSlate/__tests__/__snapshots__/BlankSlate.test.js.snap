@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate is-small css-11lo8b5"
+  data-g2-c16t="true"
+  data-g2-component="BlankSlate"
+>
+  <div
+    class="css-e1hgjj"
+    data-g2-component="CardContent"
+  >
+    <iframe
+      aria-hidden="true"
+      frameborder="0"
+      src="about:blank"
+      style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+      tabindex="-1"
+    />
+    <div
+      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body css-izy5zq"
+      data-g2-c16t="true"
+      data-g2-component="CardBody"
+    >
+      <div
+        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack css-111mesx"
+        data-g2-c16t="true"
+        data-g2-component="VStack"
+      >
+        <div
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1tp3mjk"
+          data-g2-c16t="true"
+          data-g2-component="Heading"
+        >
+          <div
+            class="components-icon wp-components-icon css-4eafms"
+            data-g2-c16t="true"
+            data-g2-component="Icon"
+          >
+            <svg
+              fill="none"
+              height="20"
+              size="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+              />
+              <polyline
+                points="7 10 12 15 17 10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="15"
+                y2="3"
+              />
+            </svg>
+          </div>
+          Twitter Embed
+        </div>
+        <span
+          class="components-truncate wp-components-truncate components-text wp-components-text css-1j5v64k"
+          data-g2-c16t="true"
+          data-g2-component="Text"
+        >
+          Input your twitter URL
+        </span>
+        <input
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="components-elevation wp-components-elevation css-18hqkt0"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="components-elevation wp-components-elevation css-1873flw"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
+
+exports[`props should render correctly without description and icon 1`] = `
+<div
+  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate is-small css-11lo8b5"
+  data-g2-c16t="true"
+  data-g2-component="BlankSlate"
+>
+  <div
+    class="css-e1hgjj"
+    data-g2-component="CardContent"
+  >
+    <iframe
+      aria-hidden="true"
+      frameborder="0"
+      src="about:blank"
+      style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+      tabindex="-1"
+    />
+    <div
+      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body css-izy5zq"
+      data-g2-c16t="true"
+      data-g2-component="CardBody"
+    >
+      <div
+        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack css-111mesx"
+        data-g2-c16t="true"
+        data-g2-component="VStack"
+      >
+        <div
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1tp3mjk"
+          data-g2-c16t="true"
+          data-g2-component="Heading"
+        >
+          Twitter Embed
+        </div>
+        <input
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="components-elevation wp-components-elevation css-18hqkt0"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="components-elevation wp-components-elevation css-1873flw"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;

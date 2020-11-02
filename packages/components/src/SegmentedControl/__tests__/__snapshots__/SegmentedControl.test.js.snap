@@ -4,7 +4,7 @@ exports[`props should render correctly 1`] = `
 <div
   aria-activedescendant="segmented-1"
   aria-label="SegmentControl"
-  class="wp-components-segmented-control css-k53so3"
+  class="components-segmented-control wp-components-segmented-control css-k53so3"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="segmented"

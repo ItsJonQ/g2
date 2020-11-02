@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-z-stack css-21shsf"
+  class="components-z-stack wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
@@ -29,7 +29,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render isLayered 1`] = `
 <div
-  class="wp-components-z-stack css-21shsf"
+  class="components-z-stack wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
@@ -56,7 +56,7 @@ exports[`props should render isLayered 1`] = `
 
 exports[`props should render isReversed 1`] = `
 <div
-  class="wp-components-z-stack css-21shsf"
+  class="components-z-stack wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
@@ -83,7 +83,7 @@ exports[`props should render isReversed 1`] = `
 
 exports[`props should render offset 1`] = `
 <div
-  class="wp-components-z-stack css-21shsf"
+  class="components-z-stack wp-components-z-stack css-21shsf"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >

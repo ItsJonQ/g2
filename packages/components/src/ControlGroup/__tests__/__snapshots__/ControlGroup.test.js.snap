@@ -2,18 +2,18 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-kzj1sz"
+  class="components-flex wp-components-flex components-control-group wp-components-control-group css-kzj1sz"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1a60l5v"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1a60l5v"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-5xcnys"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-5xcnys"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -23,27 +23,27 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex-item css-19mrak6"
+        class="components-flex-item wp-components-flex-item css-19mrak6"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
         Let It
       </span>
       <span
-        class="wp-components-elevation css-17x6dun"
+        class="components-elevation wp-components-elevation css-17x6dun"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
     </button>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1jutz7b"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1jmk8wq"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1jmk8wq"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -53,14 +53,14 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex-item css-19mrak6"
+        class="components-flex-item wp-components-flex-item css-19mrak6"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
         Go
       </span>
       <span
-        class="wp-components-elevation css-17x6dun"
+        class="components-elevation wp-components-elevation css-17x6dun"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -71,17 +71,17 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render mixed control types 1`] = `
 <div
-  class="wp-components-flex wp-components-control-group css-kzj1sz"
+  class="components-flex wp-components-flex components-control-group wp-components-control-group css-kzj1sz"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
 >
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1a60l5v"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1a60l5v"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-select css-1nwhiq4"
+      class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select css-1nwhiq4"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
@@ -92,17 +92,17 @@ exports[`props should render mixed control types 1`] = `
         id="salutations"
       />
       <div
-        class="wp-components-flex-item css-5yrsrk"
+        class="components-flex-item wp-components-flex-item css-5yrsrk"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
         <span
-          class="wp-components-truncate wp-components-text css-1fdlgmt"
+          class="components-truncate wp-components-truncate components-text wp-components-text css-1fdlgmt"
           data-g2-c16t="true"
           data-g2-component="Text"
         >
           <div
-            class="wp-components-icon css-1tw4gp0"
+            class="components-icon wp-components-icon css-1tw4gp0"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -128,12 +128,12 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1jutz7b"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="wp-components-flex wp-components-base-field wp-components-text-input css-4alors"
+      class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-4alors"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
@@ -150,13 +150,13 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="wp-components-flex-item wp-components-control-group-item css-1jutz7b"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1jutz7b"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="wp-components-flex wp-components-base-button wp-components-button css-1jmk8wq"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1jmk8wq"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -166,14 +166,14 @@ exports[`props should render mixed control types 1`] = `
       type="button"
     >
       <span
-        class="wp-components-flex-item css-19mrak6"
+        class="components-flex-item wp-components-flex-item css-19mrak6"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
         Let It
       </span>
       <span
-        class="wp-components-elevation css-17x6dun"
+        class="components-elevation wp-components-elevation css-17x6dun"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />

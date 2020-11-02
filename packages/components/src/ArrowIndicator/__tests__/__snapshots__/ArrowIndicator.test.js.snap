@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="wp-components-arrow-indicator css-tfxa88"
+  class="components-arrow-indicator wp-components-arrow-indicator css-tfxa88"
   data-g2-c16t="true"
   data-g2-component="ArrowIndicator"
 >
@@ -10,7 +10,7 @@ exports[`props should render correctly 1`] = `
     class="css-j1yu9m"
   >
     <div
-      class="wp-components-icon css-feyyos"
+      class="components-icon wp-components-icon css-feyyos"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -33,7 +33,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render with a custom size 1`] = `
 <div
-  class="wp-components-arrow-indicator css-1cj2h16"
+  class="components-arrow-indicator wp-components-arrow-indicator css-1cj2h16"
   data-g2-c16t="true"
   data-g2-component="ArrowIndicator"
 >
@@ -41,7 +41,7 @@ exports[`props should render with a custom size 1`] = `
     class="css-j1yu9m"
   >
     <div
-      class="wp-components-icon css-feyyos"
+      class="components-icon wp-components-icon css-feyyos"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
