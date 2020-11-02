@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { CSS, PolymorphicComponent } from './_shared';
 
 export declare type IconProps = {
@@ -15,7 +16,7 @@ export declare type IconProps = {
 	 * <Icon icon={<OlafIcon />} />
 	 * ```
 	 */
-	icon?: unknown;
+	icon?: ReactNode;
 	/**
 	 * Adjusts the display and alignment of `Icon` for use within Text based components.
 	 *
