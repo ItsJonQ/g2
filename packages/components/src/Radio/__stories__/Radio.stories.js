@@ -1,3 +1,4 @@
+import { ContextSystemProvider } from '@wp-g2/context';
 import React from 'react';
 
 import { Text } from '../../index';
@@ -13,5 +14,9 @@ export const _default = () => {
 };
 
 export const _help = () => {
-	return <Radio help={<Text>Help text</Text>} label="Radio" />;
+	return (
+		<ContextSystemProvider value={{ ControlLabel: { weight: 'bold' } }}>
+			<Radio help={<Text>Help Text</Text>} label="Radio" />
+		</ContextSystemProvider>
+	);
 };
