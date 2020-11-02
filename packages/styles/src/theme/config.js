@@ -150,9 +150,9 @@ const BUTTON_PROPS = {
 	buttonTertiaryTextColor: get('buttonPrimaryColor'),
 	buttonTertiaryTextColorFocus: get('buttonPrimaryColor'),
 	buttonTertiaryTextColorActive: get('buttonPrimaryColor'),
-	buttonTertiaryBorderColorHover: get('buttonTertiaryBorderColor'),
-	buttonTertiaryBorderColorActive: get('buttonTertiaryBorderColor'),
-	buttonTertiaryBorderColorFocus: get('buttonTertiaryBorderColor'),
+	buttonTertiaryBorderColorHover: get('buttonPrimaryColor'),
+	buttonTertiaryBorderColorActive: get('buttonPrimaryColor'),
+	buttonTertiaryBorderColorFocus: get('buttonPrimaryColor'),
 
 	buttonControlActiveStateColor: get('buttonPrimaryColor'),
 	buttonControlActiveStateColorHover: get('buttonControlActiveStateColor'),
