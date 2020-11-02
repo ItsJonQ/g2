@@ -17,4 +17,13 @@ describe('props', () => {
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
+
+	test('should render correctly without description and icon', () => {
+		const { container } = render(
+			<BlankSlate title="Twitter Embed">
+				<input type="text" />
+			</BlankSlate>,
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
 });

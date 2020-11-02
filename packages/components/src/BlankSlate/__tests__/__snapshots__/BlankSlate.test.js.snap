@@ -90,3 +90,56 @@ exports[`props should render correctly 1`] = `
   />
 </div>
 `;
+
+exports[`props should render correctly without description and icon 1`] = `
+<div
+  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate is-small css-11lo8b5"
+  data-g2-c16t="true"
+  data-g2-component="BlankSlate"
+>
+  <div
+    class="css-e1hgjj"
+    data-g2-component="CardContent"
+  >
+    <iframe
+      aria-hidden="true"
+      frameborder="0"
+      src="about:blank"
+      style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+      tabindex="-1"
+    />
+    <div
+      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body css-izy5zq"
+      data-g2-c16t="true"
+      data-g2-component="CardBody"
+    >
+      <div
+        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack css-111mesx"
+        data-g2-c16t="true"
+        data-g2-component="VStack"
+      >
+        <div
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1tp3mjk"
+          data-g2-c16t="true"
+          data-g2-component="Heading"
+        >
+          Twitter Embed
+        </div>
+        <input
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="components-elevation wp-components-elevation css-18hqkt0"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+  <div
+    class="components-elevation wp-components-elevation css-1873flw"
+    data-g2-c16t="true"
+    data-g2-component="CardElevation"
+  />
+</div>
+`;
