@@ -157,7 +157,12 @@ function createThemeStore(initialTheme = {}) {
  * Hook that sets the Style system's theme.
  * @param {UseThemeStyles} props Props for the hook.
  */
-export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
+export function useThemeStyles({
+	injectGlobal,
+	isGlobal = true,
+	theme = {},
+	selector = ':root',
+}) {
 	const store = useRef(createThemeStore()).current;
 	const { setTheme: setThemeStyles, theme: themeStyles } = store();
 
@@ -176,7 +181,7 @@ export function useThemeStyles({ injectGlobal, isGlobal = true, theme = {} }) {
 		if (is.function(injectGlobal)) {
 			try {
 				const globalStyles = transformValuesToVariablesString(
-					':root',
+					selector,
 					theme,
 				);
 				injectGlobal`${globalStyles}`;

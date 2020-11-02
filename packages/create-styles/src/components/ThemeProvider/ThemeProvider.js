@@ -1,5 +1,12 @@
+import { repeat } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 
+import {
+	DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
+	DARK_MODE_ATTR,
+	HIGH_CONTRAST_MODE_MODE_ATTR,
+	MODE_SPECIFICITY_COMPOUND_LEVEL,
+} from '../../createStyleSystem/constants';
 import { useHydrateGlobalStyles } from '../../hooks';
 import {
 	useColorBlindMode,
@@ -49,6 +56,9 @@ function ThemeProvider({
 	isReducedMotion,
 	isHighContrast,
 	theme = {},
+	darkTheme = {},
+	highContrastTheme = {},
+	darkHighContrastTheme = {},
 	...props
 }) {
 	/**
@@ -56,12 +66,38 @@ function ThemeProvider({
 	 * be a chance that <ThemeProvider /> renders before any other (styled)
 	 * component. Injecting global styles early in this manner allows for
 	 * the initial render of theme styles (which also uses injectGlobal)
-	 * to be sequences correctly.
+	 * to be sequenced correctly.
 	 */
 	useHydrateGlobalStyles({ injectGlobal, globalStyles });
 
 	const nodeRef = useRef();
-	const themeStyles = useThemeStyles({ injectGlobal, isGlobal, theme });
+	const themeStyles = {
+		...useThemeStyles({ injectGlobal, isGlobal, theme, selector: ':root' }),
+		...useThemeStyles({
+			injectGlobal,
+			isGlobal,
+			theme: darkTheme,
+			selector: repeat(DARK_MODE_ATTR, MODE_SPECIFICITY_COMPOUND_LEVEL),
+		}),
+		...useThemeStyles({
+			injectGlobal,
+			isGlobal,
+			theme: highContrastTheme,
+			selector: repeat(
+				HIGH_CONTRAST_MODE_MODE_ATTR,
+				MODE_SPECIFICITY_COMPOUND_LEVEL,
+			),
+		}),
+		...useThemeStyles({
+			injectGlobal,
+			isGlobal,
+			theme: darkHighContrastTheme,
+			selector: repeat(
+				DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
+				MODE_SPECIFICITY_COMPOUND_LEVEL,
+			),
+		}),
+	};
 
 	useColorBlindMode({ isColorBlind, isGlobal, ref: nodeRef });
 	useDarkMode({ isDark, isGlobal, ref: nodeRef });
