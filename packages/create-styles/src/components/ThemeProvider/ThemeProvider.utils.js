@@ -136,15 +136,19 @@ export function useReducedMotionMode({
 	}, [isGlobal, isReducedMotion, ref]);
 }
 
-function createThemeStore(initialTheme = {}) {
+function createThemeStore(initialTheme = '') {
 	return createStore((set) => ({
 		theme: initialTheme,
 		setTheme: (next) => {
 			set((prev) => {
-				return { theme: { ...prev.theme, ...next } };
+				return { theme: next };
 			});
 		},
 	}));
+}
+
+export function useThemeStylesStore() {
+	return useRef(createThemeStore());
 }
 
 /**
@@ -163,8 +167,8 @@ export function useThemeStyles({
 	theme = {},
 	selector = ':root',
 }) {
-	const store = useRef(createThemeStore()).current;
-	const { setTheme: setThemeStyles, theme: themeStyles } = store();
+	const store = useThemeStylesStore();
+	const { setTheme: setThemeStyles, theme: themeStyles } = store.current();
 
 	/**
 	 * Used to track/compare changes for theme prop changes.
@@ -183,6 +187,7 @@ export function useThemeStyles({
 				const globalStyles = transformValuesToVariablesString(
 					selector,
 					theme,
+					isGlobal,
 				);
 				injectGlobal`${globalStyles}`;
 			} catch (err) {
@@ -206,8 +211,11 @@ export function useThemeStyles({
 		 * the Style system understands and can be retrieved using the get() function.
 		 */
 		const styleNode = getStyleNode();
-		const nextTheme = transformValuesToVariables(theme);
-		const nextThemeHtml = transformValuesToVariablesString(':root', theme);
+		const nextThemeHtml = transformValuesToVariablesString(
+			selector,
+			theme,
+			isGlobal,
+		);
 
 		if (isGlobal) {
 			/**
@@ -222,7 +230,7 @@ export function useThemeStyles({
 			 * Otherwise, we can set it to the themeStyles state, which will be
 			 * rendered as custom properties on the ThemeProvider (HTMLDivElement).
 			 */
-			setThemeStyles(nextTheme);
+			setThemeStyles(nextThemeHtml);
 		}
 	}, [injectGlobal, isGlobal, setThemeStyles, theme]);
 

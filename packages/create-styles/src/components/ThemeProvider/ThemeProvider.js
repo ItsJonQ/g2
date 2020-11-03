@@ -1,4 +1,4 @@
-import { repeat } from '@wp-g2/utils';
+import { mergeRefs, repeat } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 
 import {
@@ -46,21 +46,26 @@ import {
  * @param {ThemeProviderProps} props Props for the ThemeProvider.
  * @returns {React.Component} Children content wrapped with the <ThemeProvider />.
  */
-function ThemeProvider({
-	children,
-	injectGlobal,
-	isGlobal = false,
-	globalStyles,
-	isDark,
-	isColorBlind,
-	isReducedMotion,
-	isHighContrast,
-	theme = {},
-	darkTheme = {},
-	highContrastTheme = {},
-	darkHighContrastTheme = {},
-	...props
-}) {
+function ThemeProvider(
+	{
+		children,
+		compiler,
+		className,
+		isGlobal = false,
+		globalStyles,
+		isDark,
+		isColorBlind,
+		isReducedMotion,
+		isHighContrast,
+		theme = {},
+		darkTheme = {},
+		highContrastTheme = {},
+		darkHighContrastTheme = {},
+		...props
+	},
+	forwardedRef,
+) {
+	const { css, cx, injectGlobal } = compiler;
 	/**
 	 * Hydrates global styles (via injectGlobal). This is necessary as there may
 	 * be a chance that <ThemeProvider /> renders before any other (styled)
@@ -71,49 +76,62 @@ function ThemeProvider({
 	useHydrateGlobalStyles({ injectGlobal, globalStyles });
 
 	const nodeRef = useRef();
-	const themeStyles = {
-		...useThemeStyles({ injectGlobal, isGlobal, theme, selector: ':root' }),
-		...useThemeStyles({
-			injectGlobal,
-			isGlobal,
-			theme: darkTheme,
-			selector: repeat(DARK_MODE_ATTR, MODE_SPECIFICITY_COMPOUND_LEVEL),
-		}),
-		...useThemeStyles({
-			injectGlobal,
-			isGlobal,
-			theme: highContrastTheme,
-			selector: repeat(
-				HIGH_CONTRAST_MODE_MODE_ATTR,
-				MODE_SPECIFICITY_COMPOUND_LEVEL,
-			),
-		}),
-		...useThemeStyles({
-			injectGlobal,
-			isGlobal,
-			theme: darkHighContrastTheme,
-			selector: repeat(
-				DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
-				MODE_SPECIFICITY_COMPOUND_LEVEL,
-			),
-		}),
-	};
+	const defaultStyles = useThemeStyles({
+		injectGlobal,
+		isGlobal,
+		theme,
+		selector: ':root',
+	});
+	const darkStyles = useThemeStyles({
+		injectGlobal,
+		isGlobal,
+		theme: darkTheme,
+		selector: repeat(DARK_MODE_ATTR, MODE_SPECIFICITY_COMPOUND_LEVEL),
+	});
+	const highContrastStyles = useThemeStyles({
+		injectGlobal,
+		isGlobal,
+		theme: highContrastTheme,
+		selector: repeat(
+			HIGH_CONTRAST_MODE_MODE_ATTR,
+			MODE_SPECIFICITY_COMPOUND_LEVEL,
+		),
+	});
+	const darkHighContrastStyles = useThemeStyles({
+		injectGlobal,
+		isGlobal,
+		theme: darkHighContrastTheme,
+		selector: repeat(
+			DARK_HIGH_CONTRAST_MODE_MODE_ATTR,
+			MODE_SPECIFICITY_COMPOUND_LEVEL,
+		),
+	});
 
 	useColorBlindMode({ isColorBlind, isGlobal, ref: nodeRef });
 	useDarkMode({ isDark, isGlobal, ref: nodeRef });
 	useHighContrastMode({ isGlobal, isHighContrast, ref: nodeRef });
 	useReducedMotionMode({ isGlobal, isReducedMotion, ref: nodeRef });
 
+	const classes = cx(
+		className,
+		css`
+		${defaultStyles}
+		${darkStyles}
+		${highContrastStyles}
+		${darkHighContrastStyles}
+	`,
+	);
+
 	return (
 		<div
 			{...props}
+			className={classes}
 			data-system-theme-provider
-			ref={nodeRef}
-			style={themeStyles}
+			ref={mergeRefs([forwardedRef, nodeRef])}
 		>
 			{children}
 		</div>
 	);
 }
 
-export default React.memo(ThemeProvider);
+export default React.memo(React.forwardRef(ThemeProvider));

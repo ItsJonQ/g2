@@ -84,9 +84,22 @@ export function transformValuesToVariables(values = {}) {
 export function transformValuesToVariablesString(
 	selector = ':root',
 	values = {},
+	isGlobal = true,
 ) {
 	const variables = transformValuesToVariables(values);
-	const next = [`${selector} {`];
+
+	const next = [];
+	let needsTerminator = false;
+
+	if (isGlobal) {
+		next.push(`${selector} {`);
+		needsTerminator = true;
+	} else {
+		if (selector !== ':root') {
+			next.push(`&${selector} {`);
+			needsTerminator = true;
+		}
+	}
 
 	for (const [key, value] of Object.entries(variables)) {
 		const ref = value;
@@ -95,7 +108,9 @@ export function transformValuesToVariablesString(
 		}
 	}
 
-	next.push('}');
+	if (needsTerminator) {
+		next.push('}');
+	}
 
 	return next.join('');
 }
