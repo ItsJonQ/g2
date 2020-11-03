@@ -117,12 +117,24 @@
               "title": "Button"
             },
             {
+              "link": "/components/formgroup/",
+              "title": "FormGroup"
+            },
+            {
               "link": "/components/select/",
               "title": "Select"
             },
             {
+              "link": "/components/switch/",
+              "title": "Switch"
+            },
+            {
               "link": "/components/textinput/",
               "title": "TextInput"
+            },
+            {
+              "link": "/components/unitinput/",
+              "title": "UnitInput"
             }
           ]
         }

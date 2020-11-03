@@ -65,16 +65,18 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
             <CardHeader size="small">
               <Text variant="muted">{file}</Text>
               {__enableDebugger && (
-                <HStack>
-                  {debug && <Text variant="muted">Mouseover below.</Text>}
-                  <Button
-                    onClick={() => setDebug(!debug)}
-                    size="xSmall"
-                    variant="tertiary"
-                  >
-                    {debug ? "Hide Inspector" : "Show Inspector"}
-                  </Button>
-                </HStack>
+                <View>
+                  <HStack>
+                    {debug && <Text variant="muted">Mouseover below.</Text>}
+                    <Button
+                      onClick={() => setDebug(!debug)}
+                      size="xSmall"
+                      variant="tertiary"
+                    >
+                      {debug ? "Hide Inspector" : "Show Inspector"}
+                    </Button>
+                  </HStack>
+                </View>
               )}
             </CardHeader>
             <CardBody css={{ padding: 20 }}>
@@ -93,7 +95,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
             <LiveEditor
               className="LiveEditorEditor"
               style={{
-                borderRadius: 6,
+                borderRadius: ui.get("cardBorderRadius"),
                 display: "block",
                 fontSize: "0.85rem",
                 lineHeight: 1.5,

@@ -36,7 +36,6 @@ function UnitInputSelect({ onSelectChange, unit }) {
 				<View
 					{...ui.$('UnitInputSelect')}
 					as="select"
-					autoFocus={false}
 					className={styles.UnitInputSelectElement}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}

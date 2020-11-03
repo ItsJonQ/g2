@@ -1,4 +1,4 @@
-import { HStack, Link, Spacer, Text } from "@wp-g2/components"
+import { HStack, Link, Spacer, Text, View } from "@wp-g2/components"
 import { ui } from "@wp-g2/styles"
 import React from "react"
 
@@ -21,11 +21,13 @@ export function SiteFooter() {
         <Text className="SiteFooterText" variant="muted">
           © {new Date().getFullYear()}. <strong>G2 Components</strong>.
         </Text>
-        <HStack as="nav">
-          <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
-          <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
-          <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
-        </HStack>
+        <View>
+          <HStack as="nav">
+            <NavLink href="https://g2components.wordpress.com/">Blog</NavLink>
+            <NavLink href="https://github.com/itsjonq/g2">Github</NavLink>
+            <NavLink href="https://g2-components.xyz/">Storybook</NavLink>
+          </HStack>
+        </View>
       </HStack>
     </Spacer>
   )
