@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-1xgp14x"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-5jp2hk"
   data-g2-c16t="true"
   data-g2-component="Initials"
 >

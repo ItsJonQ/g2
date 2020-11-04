@@ -2,6 +2,7 @@ import { css, ui } from '@wp-g2/styles';
 
 export const Text = css`
 	color: ${ui.color.text};
+	line-height: ${ui.get('fontLineHeightBase')};
 `;
 
 export const block = css`

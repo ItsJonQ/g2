@@ -16,6 +16,12 @@ export declare type BaseFieldProps = FlexProps &
 		 */
 		isFocused?: boolean;
 		/**
+		 * Renders as an inline element (layout).
+		 *
+		 * @default false
+		 */
+		isInline?: boolean;
+		/**
 		 * Renders a subtle variant.
 		 *
 		 * @default false

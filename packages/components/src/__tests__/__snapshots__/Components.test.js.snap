@@ -312,7 +312,7 @@ exports[`props should render Badge 1`] = `
   id="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
     data-g2-c16t="true"
     data-g2-component="Text"
   />
@@ -327,7 +327,7 @@ exports[`props should render Badge with css prop 1`] = `
   id="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
     data-g2-c16t="true"
     data-g2-component="Text"
   />
@@ -342,7 +342,7 @@ exports[`props should render Badge with css prop 2`] = `
   id="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-qnyxla"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
     data-g2-c16t="true"
     data-g2-component="Text"
   />
@@ -1347,7 +1347,7 @@ exports[`props should render ControlGroupItem with css prop 2`] = `
 
 exports[`props should render ControlLabel 1`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ppuusk"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1kug32t"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
@@ -1356,7 +1356,7 @@ exports[`props should render ControlLabel 1`] = `
 
 exports[`props should render ControlLabel with css prop 1`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ppuusk"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1kug32t"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
@@ -1365,7 +1365,7 @@ exports[`props should render ControlLabel with css prop 1`] = `
 
 exports[`props should render ControlLabel with css prop 2`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ova00m"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-rbj5cn"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   id="ControlLabel"
@@ -1460,7 +1460,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
 
 exports[`props should render DropdownMenuHeader 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header components-dropdown-menu-header wp-components-dropdown-menu-header css-1h6b0jy"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header components-dropdown-menu-header wp-components-dropdown-menu-header css-um0ugh"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuHeader"
   id="DropdownMenuHeader"
@@ -1469,7 +1469,7 @@ exports[`props should render DropdownMenuHeader 1`] = `
 
 exports[`props should render DropdownMenuHeader with css prop 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header components-dropdown-menu-header wp-components-dropdown-menu-header css-1h6b0jy"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header components-dropdown-menu-header wp-components-dropdown-menu-header css-um0ugh"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuHeader"
   id="DropdownMenuHeader"
@@ -1478,7 +1478,7 @@ exports[`props should render DropdownMenuHeader with css prop 1`] = `
 
 exports[`props should render DropdownMenuHeader with css prop 2`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header components-dropdown-menu-header wp-components-dropdown-menu-header css-1pky2c6"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header components-dropdown-menu-header wp-components-dropdown-menu-header css-v19f1h"
   data-g2-c16t="true"
   data-g2-component="DropdownMenuHeader"
   id="DropdownMenuHeader"
@@ -1802,7 +1802,7 @@ exports[`props should render HStack with css prop 2`] = `
 
 exports[`props should render Heading 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-ohvggs"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-3uc59p"
   data-g2-c16t="true"
   data-g2-component="Heading"
   id="Heading"
@@ -1811,7 +1811,7 @@ exports[`props should render Heading 1`] = `
 
 exports[`props should render Heading with css prop 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-ohvggs"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-3uc59p"
   data-g2-c16t="true"
   data-g2-component="Heading"
   id="Heading"
@@ -1820,7 +1820,7 @@ exports[`props should render Heading with css prop 1`] = `
 
 exports[`props should render Heading with css prop 2`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-19phb5y"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1udew8m"
   data-g2-c16t="true"
   data-g2-component="Heading"
   id="Heading"
@@ -1899,7 +1899,7 @@ exports[`props should render Image with css prop 2`] = `
 
 exports[`props should render Initials 1`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-1xgp14x"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-5jp2hk"
   data-g2-c16t="true"
   data-g2-component="Initials"
   id="Initials"
@@ -1908,7 +1908,7 @@ exports[`props should render Initials 1`] = `
 
 exports[`props should render Initials with css prop 1`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-1xgp14x"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-5jp2hk"
   data-g2-c16t="true"
   data-g2-component="Initials"
   id="Initials"
@@ -1917,7 +1917,7 @@ exports[`props should render Initials with css prop 1`] = `
 
 exports[`props should render Initials with css prop 2`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-19jm77f"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials css-1ri25et"
   data-g2-c16t="true"
   data-g2-component="Initials"
   id="Initials"
@@ -1926,7 +1926,7 @@ exports[`props should render Initials with css prop 2`] = `
 
 exports[`props should render Link 1`] = `
 <a
-  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link css-zvxhcg"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link css-yf2kff"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -1935,7 +1935,7 @@ exports[`props should render Link 1`] = `
 
 exports[`props should render Link with css prop 1`] = `
 <a
-  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link css-zvxhcg"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link css-yf2kff"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -1944,7 +1944,7 @@ exports[`props should render Link with css prop 1`] = `
 
 exports[`props should render Link with css prop 2`] = `
 <a
-  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link css-p7blea"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link css-1sx13rm"
   data-g2-c16t="true"
   data-g2-component="Link"
   id="Link"
@@ -2166,7 +2166,7 @@ exports[`props should render Menu with css prop 2`] = `
 
 exports[`props should render MenuHeader 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header css-1h6b0jy"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header css-um0ugh"
   data-g2-c16t="true"
   data-g2-component="MenuHeader"
   id="MenuHeader"
@@ -2175,7 +2175,7 @@ exports[`props should render MenuHeader 1`] = `
 
 exports[`props should render MenuHeader with css prop 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header css-1h6b0jy"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header css-um0ugh"
   data-g2-c16t="true"
   data-g2-component="MenuHeader"
   id="MenuHeader"
@@ -2184,7 +2184,7 @@ exports[`props should render MenuHeader with css prop 1`] = `
 
 exports[`props should render MenuHeader with css prop 2`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header css-1pky2c6"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading components-menu-header wp-components-menu-header css-v19f1h"
   data-g2-c16t="true"
   data-g2-component="MenuHeader"
   id="MenuHeader"
@@ -2667,7 +2667,7 @@ exports[`props should render SearchInput 1`] = `
     class="css-tn92r9"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text css-1j5v64k"
+      class="components-truncate wp-components-truncate components-text wp-components-text css-fd3l03"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -2873,7 +2873,7 @@ exports[`props should render Select 1`] = `
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text css-1fdlgmt"
+      class="components-truncate wp-components-truncate components-text wp-components-text css-duu1p5"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
@@ -3554,7 +3554,7 @@ exports[`props should render Stepper with css prop 2`] = `
 
 exports[`props should render Subheading 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading css-epbge3"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading css-8r4buc"
   data-g2-c16t="true"
   data-g2-component="Subheading"
   id="Subheading"
@@ -3563,7 +3563,7 @@ exports[`props should render Subheading 1`] = `
 
 exports[`props should render Subheading with css prop 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading css-epbge3"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading css-8r4buc"
   data-g2-c16t="true"
   data-g2-component="Subheading"
   id="Subheading"
@@ -3572,7 +3572,7 @@ exports[`props should render Subheading with css prop 1`] = `
 
 exports[`props should render Subheading with css prop 2`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading css-v4ngji"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading css-1q81lw9"
   data-g2-c16t="true"
   data-g2-component="Subheading"
   id="Subheading"
@@ -3772,7 +3772,7 @@ exports[`props should render Tag 1`] = `
   id="Tag"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1ejcfnr"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-spr0sd"
     data-g2-c16t="true"
     data-g2-component="Text"
   />
@@ -3787,7 +3787,7 @@ exports[`props should render Tag with css prop 1`] = `
   id="Tag"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1ejcfnr"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-spr0sd"
     data-g2-c16t="true"
     data-g2-component="Text"
   />
@@ -3802,7 +3802,7 @@ exports[`props should render Tag with css prop 2`] = `
   id="Tag"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1ejcfnr"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-spr0sd"
     data-g2-c16t="true"
     data-g2-component="Text"
   />
@@ -3811,7 +3811,7 @@ exports[`props should render Tag with css prop 2`] = `
 
 exports[`props should render Text 1`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text css-1j5v64k"
+  class="components-truncate wp-components-truncate components-text wp-components-text css-fd3l03"
   data-g2-c16t="true"
   data-g2-component="Text"
   id="Text"
@@ -3820,7 +3820,7 @@ exports[`props should render Text 1`] = `
 
 exports[`props should render Text with css prop 1`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text css-1j5v64k"
+  class="components-truncate wp-components-truncate components-text wp-components-text css-fd3l03"
   data-g2-c16t="true"
   data-g2-component="Text"
   id="Text"
@@ -3829,7 +3829,7 @@ exports[`props should render Text with css prop 1`] = `
 
 exports[`props should render Text with css prop 2`] = `
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text css-1ihycc6"
+  class="components-truncate wp-components-truncate components-text wp-components-text css-1kyj85n"
   data-g2-c16t="true"
   data-g2-component="Text"
   id="Text"

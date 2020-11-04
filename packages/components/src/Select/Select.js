@@ -23,6 +23,7 @@ function Select(props, forwardedRef) {
 		disabled,
 		error = false,
 		id: idProp,
+		isInline = false,
 		isFocused: isFocusedProp = false,
 		isSubtle,
 		onBlur = noop,
@@ -48,6 +49,7 @@ function Select(props, forwardedRef) {
 		gap: 0,
 		isClickable: true,
 		isFocused,
+		isInline,
 		isSubtle,
 	});
 
