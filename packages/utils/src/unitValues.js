@@ -24,13 +24,15 @@ export const isValidCSSValueForProp = (prop, value) => {
 
 	if (is.undefined(computedStyleMap[prop])) return true;
 
-	// Reset
+	// 1. Reset current style value.
 	computedStyleMap[prop] = '';
-
+	// 2. Cache current style value for validation (may not be an empty string).
+	const current = computedStyleMap[prop];
+	// 3. Apply next value.
 	const next = getCSSValue(value);
 	computedStyleMap[prop] = next;
-
-	return computedStyleMap[prop].includes(value);
+	// 4. Check to see if next value was correctly applied.
+	return current !== computedStyleMap[prop];
 };
 
 export const isValidNumericUnitValue = (value) => {
