@@ -1,6 +1,6 @@
 import { createTheme } from '@wp-g2/styles';
 
-const theme = createTheme(({ get, space, ...theme }) => {
+const theme = createTheme(({ get, space, theme }) => {
 	const COLOR_PROPS = {
 		colorAdmin: '#3858E9',
 		colorText: '#3a3b3c',
