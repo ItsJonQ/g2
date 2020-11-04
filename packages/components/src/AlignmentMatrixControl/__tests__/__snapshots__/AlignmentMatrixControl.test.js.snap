@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-1fz2bun"
+  data-g2-c16t="true"
+  data-g2-component="AlignmentMatrixControl"
+>
+  <div
+    class="css-1be4w71"
+    id="id-dknk4u"
+    role="row"
+  >
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-top-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top left
+      </span>
+      <span
+        aria-describedby="id-3jkjii"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-top-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top center
+      </span>
+      <span
+        aria-describedby="id-s2fbu8"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-top-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top right
+      </span>
+      <span
+        aria-describedby="id-ip6r5l"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+  </div>
+  <div
+    class="css-1be4w71"
+    id="id-fam9g6"
+    role="row"
+  >
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-center-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center left
+      </span>
+      <span
+        aria-describedby="id-cbl867"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-center-center"
+      role="gridcell"
+      tabindex="0"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center center
+      </span>
+      <span
+        aria-describedby="id-qd2rj5"
+        class="css-1gtjncg"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-center-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center right
+      </span>
+      <span
+        aria-describedby="id-n61rs4"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+  </div>
+  <div
+    class="css-1be4w71"
+    id="id-sa30a4"
+    role="row"
+  >
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-bottom-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom left
+      </span>
+      <span
+        aria-describedby="id-q1p565"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-bottom-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom center
+      </span>
+      <span
+        aria-describedby="id-irbqai"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+    <span
+      class="css-1fgs703"
+      id="alignment-matrix-control-bottom-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom right
+      </span>
+      <span
+        aria-describedby="id-doco8k"
+        class="css-obgt6p"
+        role="presentation"
+        tabindex="0"
+      />
+    </span>
+  </div>
+</div>
+`;
