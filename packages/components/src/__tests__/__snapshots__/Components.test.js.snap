@@ -688,7 +688,7 @@ exports[`props should render CardInnerBody with css prop 2`] = `
 
 exports[`props should render Checkbox 1`] = `
 <div
-  class="css-1hj2yve"
+  class="css-1uxg9ba"
   data-g2-component="CheckboxWrapper"
 >
   <input
@@ -701,7 +701,7 @@ exports[`props should render Checkbox 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-1x9mdjz"
+    class="css-p8y27a"
     data-g2-component="CheckboxIcon"
   >
     <div
@@ -930,7 +930,7 @@ exports[`props should render CloseButton with css prop 2`] = `
 
 exports[`props should render ColorCircle 1`] = `
 <div
-  class="components-color-circle wp-components-color-circle css-tjqn2a"
+  class="components-color-circle wp-components-color-circle css-5q60c4"
   data-active="false"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
@@ -939,7 +939,7 @@ exports[`props should render ColorCircle 1`] = `
 >
   <div
     aria-hidden="true"
-    class="css-1vwzxs1"
+    class="css-1oqliz4"
     data-g2-component="CheckboxIcon"
   >
     <div
@@ -970,7 +970,7 @@ exports[`props should render ColorCircle 1`] = `
 
 exports[`props should render ColorCircle with css prop 1`] = `
 <div
-  class="components-color-circle wp-components-color-circle css-tjqn2a"
+  class="components-color-circle wp-components-color-circle css-5q60c4"
   data-active="false"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
@@ -979,7 +979,7 @@ exports[`props should render ColorCircle with css prop 1`] = `
 >
   <div
     aria-hidden="true"
-    class="css-1vwzxs1"
+    class="css-1oqliz4"
     data-g2-component="CheckboxIcon"
   >
     <div
@@ -1010,7 +1010,7 @@ exports[`props should render ColorCircle with css prop 1`] = `
 
 exports[`props should render ColorCircle with css prop 2`] = `
 <div
-  class="components-color-circle wp-components-color-circle css-vaahey"
+  class="components-color-circle wp-components-color-circle css-z6vib1"
   data-active="false"
   data-g2-c16t="true"
   data-g2-component="ColorCircle"
@@ -1019,7 +1019,7 @@ exports[`props should render ColorCircle with css prop 2`] = `
 >
   <div
     aria-hidden="true"
-    class="css-1vwzxs1"
+    class="css-1oqliz4"
     data-g2-component="CheckboxIcon"
   >
     <div
@@ -1067,7 +1067,7 @@ exports[`props should render ColorControl 1`] = `
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="components-color-circle wp-components-color-circle css-1ec7z16"
+      class="components-color-circle wp-components-color-circle css-pdhdr6"
       data-active="false"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
@@ -1075,7 +1075,7 @@ exports[`props should render ColorControl 1`] = `
     >
       <div
         aria-hidden="true"
-        class="css-1vwzxs1"
+        class="css-1oqliz4"
         data-g2-component="CheckboxIcon"
       >
         <div
@@ -1130,7 +1130,7 @@ exports[`props should render ColorControl with css prop 1`] = `
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="components-color-circle wp-components-color-circle css-1ec7z16"
+      class="components-color-circle wp-components-color-circle css-pdhdr6"
       data-active="false"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
@@ -1138,7 +1138,7 @@ exports[`props should render ColorControl with css prop 1`] = `
     >
       <div
         aria-hidden="true"
-        class="css-1vwzxs1"
+        class="css-1oqliz4"
         data-g2-component="CheckboxIcon"
       >
         <div
@@ -1193,7 +1193,7 @@ exports[`props should render ColorControl with css prop 2`] = `
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="components-color-circle wp-components-color-circle css-1ec7z16"
+      class="components-color-circle wp-components-color-circle css-pdhdr6"
       data-active="false"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
@@ -1201,7 +1201,7 @@ exports[`props should render ColorControl with css prop 2`] = `
     >
       <div
         aria-hidden="true"
-        class="css-1vwzxs1"
+        class="css-1oqliz4"
         data-g2-component="CheckboxIcon"
       >
         <div
@@ -2552,7 +2552,7 @@ exports[`props should render Popover 1`] = `null`;
 
 exports[`props should render Radio 1`] = `
 <div
-  class="css-1hj2yve"
+  class="css-1uxg9ba"
   data-g2-component="RadioWrapper"
 >
   <input
@@ -2566,11 +2566,11 @@ exports[`props should render Radio 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-1x9mdjz"
+    class="css-p8y27a"
     data-g2-component="RadioIcon"
   >
     <div
-      class="css-6vzhrw"
+      class="css-zjnrt3"
     />
   </div>
 </div>
