@@ -6,6 +6,7 @@ import { useCallback, useRef, useState } from 'react';
 
 import { useBaseField } from '../BaseField';
 import { useFormGroupContextId } from '../FormGroup';
+import * as ScrollableStyles from '../Scrollable/Scrollable.styles';
 import * as TextInputStyles from '../TextInput/TextInput.styles';
 import * as styles from './Select.styles';
 import { renderContent } from './Select.utils';
@@ -23,6 +24,7 @@ export function useSelect(props) {
 		isInline = false,
 		isFocused: isFocusedProp = false,
 		isSubtle,
+		multiple,
 		onBlur = noop,
 		onChange = noop,
 		onFocus = noop,
@@ -36,7 +38,7 @@ export function useSelect(props) {
 	} = useContextSystem(props, 'Select');
 
 	const [value, setValue] = useControlledState(valueProp, {
-		initial: defaultValue,
+		initial: multiple ? [] : defaultValue,
 	});
 	const [isFocused, setIsFocused] = useState(isFocusedProp);
 	const inputRef = useRef();
@@ -75,11 +77,20 @@ export function useSelect(props) {
 
 	const handleOnChange = useCallback(
 		(event) => {
-			const next = event.target.value;
+			let next;
+
+			if (multiple) {
+				next = Array.from(event.target.options)
+					.filter(({ selected }) => selected)
+					.map(({ value }) => value);
+			} else {
+				next = event.target.value;
+			}
+
 			setValue(next);
-			onChange(event.target.value, { event });
+			onChange(next, { event });
 		},
-		[onChange, setValue],
+		[onChange, setValue, multiple],
 	);
 
 	const shouldRenderPlaceholder =
@@ -91,6 +102,7 @@ export function useSelect(props) {
 		TextInputStyles.Input,
 		styles.select,
 		shouldRenderPlaceholder && styles.placeholder,
+		multiple && ScrollableStyles.scrollableScrollbar,
 		TextInputStyles[size],
 	);
 
@@ -115,6 +127,7 @@ export function useSelect(props) {
 		onChange: handleOnChange,
 		onBlur: handleOnBlur,
 		onFocus: handleOnFocus,
+		multiple,
 		value,
 		...ui.$('Select'),
 		...otherProps,
@@ -126,6 +139,7 @@ export function useSelect(props) {
 		className: classes,
 		onClick: handleOnRootClick,
 		inputProps,
+		multiple,
 		prefix,
 		inputRef,
 		suffix,

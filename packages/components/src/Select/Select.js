@@ -9,9 +9,14 @@ import SelectArrow from './SelectArrow';
 import { useSelect } from './useSelect';
 
 function Select(props, forwardedRef) {
-	const { inputProps, inputRef, prefix, suffix, ...otherProps } = useSelect(
-		props,
-	);
+	const {
+		inputProps,
+		inputRef,
+		multiple,
+		prefix,
+		suffix,
+		...otherProps
+	} = useSelect(props);
 
 	return (
 		<View {...otherProps}>
@@ -22,7 +27,7 @@ function Select(props, forwardedRef) {
 				ref={mergeRefs([forwardedRef, inputRef])}
 			/>
 			{suffix && <FlexItem {...ui.$('SelectSuffix')}>{suffix}</FlexItem>}
-			<SelectArrow />
+			{!multiple && <SelectArrow />}
 		</View>
 	);
 }

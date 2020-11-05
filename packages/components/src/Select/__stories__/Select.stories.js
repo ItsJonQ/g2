@@ -18,7 +18,7 @@ export const _default = () => {
 };
 
 export const _groups = () => {
-	const [value, setValue] = React.useState(null);
+	const [value, setValue] = React.useState('');
 
 	const options = [
 		{
@@ -66,5 +66,19 @@ export const _groups = () => {
 				value={value}
 			/>
 		</>
+	);
+};
+
+export const _multiple = () => {
+	const [value, setValue] = React.useState([]);
+
+	const options = [
+		{ label: 'Today', value: 'today' },
+		{ label: 'Yesterday', value: 'yesterday' },
+		{ label: 'Last 7 days', value: 'lastWeek' },
+	];
+
+	return (
+		<Select multiple onChange={setValue} options={options} value={value} />
 	);
 };
