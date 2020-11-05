@@ -71,10 +71,14 @@ exports[`props should render correctly 1`] = `
     data-g2-component="Select"
     id="select"
   >
-    <option>
+    <option
+      value="olaf"
+    >
       Olaf
     </option>
-    <option>
+    <option
+      value="samantha"
+    >
       Samantha
     </option>
   </select>
@@ -129,10 +133,14 @@ exports[`props should render disabled 1`] = `
     disabled=""
     id="select"
   >
-    <option>
+    <option
+      value="olaf"
+    >
       Olaf
     </option>
-    <option>
+    <option
+      value="samantha"
+    >
       Samantha
     </option>
   </select>
@@ -186,10 +194,14 @@ exports[`props should render readOnly 1`] = `
     id="select"
     readonly=""
   >
-    <option>
+    <option
+      value="olaf"
+    >
       Olaf
     </option>
-    <option>
+    <option
+      value="samantha"
+    >
       Samantha
     </option>
   </select>
@@ -243,10 +255,14 @@ exports[`props should render required 1`] = `
     id="select"
     required=""
   >
-    <option>
+    <option
+      value="olaf"
+    >
       Olaf
     </option>
-    <option>
+    <option
+      value="samantha"
+    >
       Samantha
     </option>
   </select>
@@ -299,10 +315,14 @@ exports[`props should render size 1`] = `
     data-g2-component="Select"
     id="select"
   >
-    <option>
+    <option
+      value="olaf"
+    >
       Olaf
     </option>
-    <option>
+    <option
+      value="samantha"
+    >
       Samantha
     </option>
   </select>

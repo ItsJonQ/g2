@@ -10,7 +10,7 @@ const renderOption = (option = {}, index) => {
 	const key = id || value || index;
 
 	return (
-		<option disabled={disabled} key={key}>
+		<option disabled={disabled} key={key} value={value}>
 			{label}
 		</option>
 	);
