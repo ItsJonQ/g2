@@ -2,7 +2,7 @@
 
 exports[`props should render correctly 1`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ppuusk"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1kug32t"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
@@ -12,7 +12,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render htmlFor 1`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ppuusk"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1kug32t"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
   for="Field"
@@ -23,7 +23,7 @@ exports[`props should render htmlFor 1`] = `
 
 exports[`props should render no truncate 1`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1538vg2"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1clb0kw"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >
@@ -33,7 +33,7 @@ exports[`props should render no truncate 1`] = `
 
 exports[`props should render size 1`] = `
 <label
-  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-176x1s9"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1gsin9e"
   data-g2-c16t="true"
   data-g2-component="ControlLabel"
 >

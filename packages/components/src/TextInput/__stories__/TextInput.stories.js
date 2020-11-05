@@ -1,8 +1,9 @@
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 import NumberFormat from 'react-number-format';
 
 import { Container } from '../../Container';
-import { Text, VStack } from '../../index';
+import { Select, Text, View, VStack } from '../../index';
 import { TextInput } from '../index';
 
 export default {
@@ -55,6 +56,21 @@ export const custom = () => {
 				prefix={'$'}
 				thousandSeparator={true}
 			/>
+		</VStack>
+	);
+};
+
+export const inlineRendering = () => {
+	return (
+		<VStack
+			css={`
+				margin: auto;
+				width: 320px;
+			`}
+		>
+			<Text adjustLineHeightForInnerControls>
+				My site name is <TextInput isInline />
+			</Text>
 		</VStack>
 	);
 };

@@ -28,7 +28,7 @@ exports[`props should render correctly 1`] = `
         data-g2-component="VStack"
       >
         <div
-          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1tp3mjk"
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-7vv3ms"
           data-g2-c16t="true"
           data-g2-component="Heading"
         >
@@ -66,7 +66,7 @@ exports[`props should render correctly 1`] = `
           Twitter Embed
         </div>
         <span
-          class="components-truncate wp-components-truncate components-text wp-components-text css-1j5v64k"
+          class="components-truncate wp-components-truncate components-text wp-components-text css-fd3l03"
           data-g2-c16t="true"
           data-g2-component="Text"
         >
@@ -119,7 +119,7 @@ exports[`props should render correctly without description and icon 1`] = `
         data-g2-component="VStack"
       >
         <div
-          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1tp3mjk"
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-7vv3ms"
           data-g2-c16t="true"
           data-g2-component="Heading"
         >

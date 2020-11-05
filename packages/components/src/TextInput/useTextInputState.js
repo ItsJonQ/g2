@@ -264,12 +264,9 @@ const useFocusHandlers = ({ store }) => {
 		}
 	}, [store]);
 
-	const handleOnFocus = React.useCallback(
-		(event) => {
-			store.setState({ isFocused: true });
-		},
-		[store],
-	);
+	const handleOnFocus = React.useCallback(() => {
+		store.setState({ isFocused: true });
+	}, [store]);
 
 	return {
 		onBlur: handleOnBlur,

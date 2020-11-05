@@ -4,6 +4,7 @@ import { AlignmentInterface } from './alignments';
 import { AnimationInterface } from './animations';
 import { BackgroundInterface } from './backgrounds';
 import { BorderInterface, BorderRadiusInterface } from './borders';
+import { BrowsersInterface } from './browsers';
 import { ColorInterface } from './colors';
 import { CSSInterface } from './css';
 import { FrameInterface } from './dimensions';
@@ -64,6 +65,8 @@ export declare interface SystemInterface {
 	borderRadius: BorderRadiusInterface;
 	/** Modify border styles based on system presets. */
 	border: BorderInterface;
+	/** Render styles for specific browsers. */
+	browsers: BrowsersInterface;
 	/**
 	 * Get a color value.
 	 * @alias ui.values.color

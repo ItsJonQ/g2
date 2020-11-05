@@ -1,5 +1,6 @@
 export * from './backgrounds';
 export * from './breakpoints';
+export * from './browsers';
 export * from './colorBlindMode';
 export * from './darkMode';
 export * from './device';

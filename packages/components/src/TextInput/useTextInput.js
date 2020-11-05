@@ -42,6 +42,7 @@ export function useTextInput(props) {
 		format,
 		gap = 2.5,
 		id: idProp,
+		isInline = false,
 		isFocused: isFocusedProp,
 		isCommitOnBlurOrEnter = true,
 		isResizable = false,
@@ -102,6 +103,7 @@ export function useTextInput(props) {
 		error,
 		gap,
 		isFocused,
+		isInline,
 		justify,
 	});
 
