@@ -8,9 +8,9 @@ import { BaseFieldProps } from './BaseField';
 
 type SelectOption = {
 	id?: string;
-	value?: string;
+	value: string;
 	disabled?: boolean;
-	label?: string;
+	label: string;
 };
 
 type SelectOptionGroup = {
@@ -35,6 +35,10 @@ export declare type SelectProps = Omit<
 		 * ```
 		 */
 		isSubtle?: boolean;
+		/**
+		 * Enables selection of multiple values.
+		 */
+		multiple?: boolean;
 		/**
 		 * Options to render within `Select`.
 		 *
@@ -85,7 +89,7 @@ export declare type SelectProps = Omit<
 		 * }
 		 * ```
 		 */
-		options?: Array<SelectOption> | SelectOptionGroup;
+		options?: Array<SelectOption | SelectOptionGroup>;
 		/**
 		 * Example text to display as placeholder.
 		 */
@@ -131,6 +135,11 @@ export declare type SelectProps = Omit<
 		 * ```
 		 */
 		suffix?: React.ReactElement;
+		/**
+		 * Value for the select element.
+		 * An array of values is required for `multiple`.
+		 */
+		value?: string | Array<string>;
 	};
 
 /**
