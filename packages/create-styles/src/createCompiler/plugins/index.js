@@ -1,6 +1,6 @@
 import cssGridPlugin from 'styled-griddie';
-import cssVariablesPlugin from 'stylis-plugin-css-variables';
 
+import cssVariablesPlugin from './cssVariables';
 import specificityPlugin from './extraSpecificity';
 import rtlPlugin from './rtl';
 

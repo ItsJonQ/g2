@@ -6,6 +6,7 @@ import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
 import { createStyledComponents } from './createStyledComponents';
 import { generateTheme } from './generateTheme';
+import { store } from './store';
 import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
@@ -65,6 +66,9 @@ export function createStyleSystem(options = defaultOptions) {
 		darkModeConfig,
 		highContrastModeConfig,
 	});
+
+	// TODO: REFACTOR THIS PLEASE!
+	store.setState(globalStyles.globalVariables);
 
 	/**
 	 * Compiler (Custom Emotion instance).
