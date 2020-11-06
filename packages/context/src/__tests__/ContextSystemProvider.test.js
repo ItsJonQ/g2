@@ -44,7 +44,7 @@ describe('props', () => {
 
 		const contextValue = {
 			Olaf: {
-				css: [{ background: 'white' }, `padding: 20px`],
+				css: [{ background: 'white' }, `padding: 20px;`],
 			},
 		};
 

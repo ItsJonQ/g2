@@ -4,11 +4,12 @@
  */
 
 import cssjanus from 'cssjanus';
+import rtlcss from 'rtlcss';
 
-let isRtl = false;
-if (typeof window !== 'undefined') {
-	isRtl = window?.document?.documentElement?.dir === 'rtl';
-}
+let isRtl = true;
+// if (typeof window !== 'undefined') {
+// 	isRtl = window?.document?.documentElement?.dir === 'rtl';
+// }
 
 // https://github.com/thysultan/stylis.js#plugins
 const STYLIS_CONTEXTS = {
@@ -36,7 +37,7 @@ export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
  */
 function stylisRTLPlugin(context, content) {
 	if (context === STYLIS_PROPERTY_CONTEXT) {
-		return isRtl ? cssjanus.transform(content) : undefined;
+		return isRtl ? rtlcss.process(content) : undefined;
 	}
 }
 

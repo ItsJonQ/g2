@@ -38,7 +38,7 @@ exports[`props should render css props + provided css 1`] = `
 
 exports[`props should render css props 1`] = `
 <div
-  class="components-olaf wp-components-olaf olaf css-dsibsb"
+  class="components-olaf wp-components-olaf olaf css-1rj523o"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 />
