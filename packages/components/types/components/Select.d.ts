@@ -15,8 +15,8 @@ type SelectOption = {
 
 type SelectOptionGroup = {
 	id?: string;
-	label?: string;
-	options?: Array<SelectOption>;
+	label: string;
+	options: Array<SelectOption>;
 };
 
 export declare type SelectProps = Omit<
