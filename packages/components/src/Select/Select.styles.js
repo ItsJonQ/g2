@@ -1,4 +1,4 @@
-import { css, styled } from '@wp-g2/styles';
+import { css, styled, ui } from '@wp-g2/styles';
 
 import { FlexItem } from '../Flex';
 
@@ -21,4 +21,8 @@ export const ArrowWrapperView = styled(FlexItem)`
 	position: absolute;
 	right: 0;
 	top: 0;
+`;
+
+export const placeholder = css`
+	color: ${ui.get('colorTextMuted')};
 `;

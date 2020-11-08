@@ -12,7 +12,7 @@ export default {
 };
 
 export const _default = () => {
-	return <TextInput />;
+	return <TextInput placeholder="Into The Unknown" />;
 };
 
 export const number = () => {
