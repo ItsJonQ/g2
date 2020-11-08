@@ -1,6 +1,5 @@
-import { store } from '../../../createStyleSystem/store';
-import { memoizedTransformContent } from './transform';
-import { hasVariable, isCustomProperty } from './utils';
+import { transformContent } from '../../../cssCustomProperties/transformContent';
+import { hasVariable } from '../../../cssCustomProperties/utils';
 
 // Detects native CSS varialble support
 // https://github.com/jhildenbiddle/css-vars-ponyfill/blob/master/src/index.js
@@ -28,7 +27,10 @@ export function stylisPluginCssVariables(
 	/* istanbul ignore next */
 	options = {},
 ) {
-	const { skipSupportedBrowsers } = { ...defaultOptions, ...options };
+	const { rootVariables, skipSupportedBrowsers } = {
+		...defaultOptions,
+		...options,
+	};
 
 	const seen = new WeakSet();
 
@@ -43,7 +45,7 @@ export function stylisPluginCssVariables(
 		type,
 	) => {
 		// Skip generating CSS variable fallbacks for supported browsers
-		// if (skipSupportedBrowsers && isNativeSupport) return;
+		if (skipSupportedBrowsers && isNativeSupport) return;
 
 		// Borrowed guard implementation from:
 		// https://github.com/Andarist/stylis-plugin-extra-scope/blob/master/src/index.js#L15
@@ -58,8 +60,7 @@ export function stylisPluginCssVariables(
 		seen.add(selectors);
 
 		// We'll parse the content to match variables to their custom properties (if possible).
-		const nextContent = memoizedTransformContent(content);
-		console.log(selectors[0], nextContent);
+		const nextContent = transformContent(content, rootVariables);
 
 		// Lastly, we'll provide stylis with our enhanced CSS variable supported content.
 		return nextContent;
