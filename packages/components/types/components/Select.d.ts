@@ -6,6 +6,19 @@ import {
 } from './_shared';
 import { BaseFieldProps } from './BaseField';
 
+type SelectOption = {
+	id?: string;
+	value: string;
+	disabled?: boolean;
+	label: string;
+};
+
+type SelectOptionGroup = {
+	id?: string;
+	label: string;
+	options: Array<SelectOption>;
+};
+
 export declare type SelectProps = Omit<
 	BaseFieldProps,
 	'gap' | 'isClickable' | 'isFocused'
@@ -23,6 +36,10 @@ export declare type SelectProps = Omit<
 		 */
 		isSubtle?: boolean;
 		/**
+		 * Enables selection of multiple values.
+		 */
+		multiple?: boolean;
+		/**
 		 * Options to render within `Select`.
 		 *
 		 * @example
@@ -30,16 +47,53 @@ export declare type SelectProps = Omit<
 		 * import { Select } from `@wp-g2/components`
 		 *
 		 * function Example() {
-		 *	const options = [
-		 *  	{ id: 'elsa', value: 'elsa', label: 'Elsa' },
-		 *  	{ id: 'ana', value: 'ana', label: 'Ana' },
+		 * 	const options = [
+		 * 		{ id: 'elsa', value: 'elsa', label: 'Elsa' },
+		 * 		{ id: 'ana', value: 'ana', label: 'Ana' },
 		 * 	]
 		 *
 		 * 	return <Select options={options} />
 		 * }
 		 * ```
+		 *
+		 * To render options in groups (`optgroup`), provide a collection of objects
+		 * with `label` and `options` properties.
+		 *
+		 * @example
+		 * ```jsx
+		 * import { Select } from `@wp-g2/components`
+		 *
+		 * function Example() {
+		 * 	const options = [
+		 * 		{
+		 * 			label: 'Frozen',
+		 * 			options: [
+		 * 				{
+		 * 					label: 'Into The Unknown',
+		 * 					value: 'into-the-unknown',
+		 * 				},
+		 * 			],
+		 * 		},
+		 * 		{
+		 * 			label: 'Frozen 2',
+		 * 			options: [
+		 * 				{
+		 * 					label: 'Into The Unknown',
+		 * 					value: 'into-the-unknown',
+		 * 				},
+		 * 			],
+		 * 		},
+		 * 	];
+		 *
+		 * 	return <Select options={options} />
+		 * }
+		 * ```
 		 */
-		options?: Array<unknown>;
+		options?: Array<SelectOption | SelectOptionGroup>;
+		/**
+		 * Example text to display as placeholder.
+		 */
+		placeholder?: string;
 		/**
 		 * Renders prefix content within `Select`.
 		 *
@@ -81,6 +135,11 @@ export declare type SelectProps = Omit<
 		 * ```
 		 */
 		suffix?: React.ReactElement;
+		/**
+		 * Value for the select element.
+		 * An array of values is required for `multiple`.
+		 */
+		value?: string | Array<string>;
 	};
 
 /**
