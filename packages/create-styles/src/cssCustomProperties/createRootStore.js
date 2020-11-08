@@ -1,5 +1,5 @@
 import { getPropValue } from './getPropValue';
-import { hasVariable } from './utils';
+import { hasVariable, isCustomProperty } from './utils';
 
 /**
  * Stores CSS config variables that are expected to be added to :root.

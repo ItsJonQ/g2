@@ -1,5 +1,6 @@
-import { transformContent } from '../../../cssCustomProperties/transformContent';
-import { hasVariable } from '../../../cssCustomProperties/utils';
+import { transformContent } from '../../cssCustomProperties/transformContent';
+import { hasVariable } from '../../cssCustomProperties/utils';
+import { STYLIS_CONTEXTS } from './utils';
 
 // Detects native CSS varialble support
 // https://github.com/jhildenbiddle/css-vars-ponyfill/blob/master/src/index.js
@@ -32,8 +33,6 @@ function stylisPluginCssVariables(
 		...options,
 	};
 
-	const seen = new WeakSet();
-
 	const plugin = (
 		context,
 		content,
@@ -49,15 +48,13 @@ function stylisPluginCssVariables(
 
 		// Borrowed guard implementation from:
 		// https://github.com/Andarist/stylis-plugin-extra-scope/blob/master/src/index.js#L15
-
 		/* istanbul ignore next */
-		if (context !== 2 || type === 107 || seen.has(selectors)) return;
+		if (context !== STYLIS_CONTEXTS.SELECTOR_BLOCK || type === 107) {
+			return;
+		}
 
 		// We only need to process the content if a CSS var() is used.
 		if (!hasVariable(content)) return;
-
-		// Add to our seen cache, as implemented in stylis-plugin-extra-scope
-		seen.add(selectors);
 
 		// We'll parse the content to match variables to their custom properties (if possible).
 		const nextContent = transformContent(content, rootStore);
