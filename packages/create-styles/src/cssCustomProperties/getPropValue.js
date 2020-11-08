@@ -4,10 +4,10 @@ import { sanitizeParens, VAR_REG_EXP } from './utils';
  * Interprets and retrieves the CSS property and value of a declaration rule.
  *
  * @param {string} declaration A CSS declaration rule to parse.
- * @param {object} rootVariables A collection of fallback :root CSS variables.
+ * @param {object} rootStore A store for CSS root variables.
  * @returns {Array<string, ?string>} [prop, value] parsed from the declaration.
  */
-export function getPropValue(declaration, rootVariables) {
+export function getPropValue(declaration, rootStore) {
 	let hasFallbackValue = false;
 	// Start be separating (and preparing) the prop and value from the declaration.
 	let [prop, value] = declaration.split(/:/);
@@ -39,9 +39,9 @@ export function getPropValue(declaration, rootVariables) {
 			const [customProp, ...fallbacks] = parsedValue.split(',');
 			const customFallback = fallbacks.join(',');
 
-			// Attempt to get the CSS variable from rootVariables. Otherwise, use the provided fallback.
+			// Attempt to get the CSS variable from rootStore. Otherwise, use the provided fallback.
 			const fallback =
-				(rootVariables && rootVariables[customProp]) || customFallback;
+				(rootStore && rootStore.get(customProp)) || customFallback;
 
 			if (fallback) {
 				hasFallbackValue = true;

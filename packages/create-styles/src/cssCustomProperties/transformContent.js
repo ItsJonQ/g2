@@ -7,14 +7,14 @@ import { hasVariable, isCustomProperty } from './utils';
  * Interprets and retrieves the CSS fallback value of a declaration rule.
  *
  * @param {string} declaration A CSS declaration rule to parse.
- * @param {object} rootVariables A collection of fallback :root CSS variables.
+ * @param {object} rootStore A store for CSS root variables.
  * @returns {?string} A CSS declaration rule with a fallback (if applicable).
  */
-export function getFallbackDeclaration(declaration, rootVariables) {
+export function getFallbackDeclaration(declaration, rootStore) {
 	if (!hasVariable(declaration) && !isCustomProperty(declaration))
 		return undefined;
 
-	const [prop, value] = getPropValue(declaration, rootVariables);
+	const [prop, value] = getPropValue(declaration, rootStore);
 
 	return value ? [prop, value].join(':') : undefined;
 }
@@ -24,9 +24,10 @@ export function getFallbackDeclaration(declaration, rootVariables) {
  * variables.
  *
  * @param {string} content Stylis content to parse.
+ * @param {object} rootStore A store for CSS root variables.
  * @return {string} The transformed content with CSS variable fallbacks.
  */
-export function baseTransformContent(content, rootVariables) {
+export function baseTransformContent(content, rootStore) {
 	/*
 	 * Attempts to deconstruct the content to retrieve prop/value
 	 * CSS declaration pairs.
@@ -50,7 +51,7 @@ export function baseTransformContent(content, rootVariables) {
 			return [...styles, declaration];
 		}
 		// Retrieve the fallback a CSS variable is used in this declaration.
-		const fallback = getFallbackDeclaration(declaration, rootVariables);
+		const fallback = getFallbackDeclaration(declaration, rootStore);
 		/*
 		 * Prepend the fallback in our styles set.
 		 *

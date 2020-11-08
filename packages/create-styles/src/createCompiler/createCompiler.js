@@ -8,7 +8,7 @@ import { breakpoints } from './utils';
 const defaultOptions = {
 	key: 'css',
 	specificityLevel: 7,
-	rootVariables: {},
+	rootStore: {},
 };
 
 export function createCompiler(options = {}) {
@@ -17,10 +17,10 @@ export function createCompiler(options = {}) {
 		...options,
 	};
 
-	const { key, rootVariables, specificityLevel } = mergedOptions;
+	const { key, rootStore, specificityLevel } = mergedOptions;
 
 	mergedOptions.stylisPlugins = [
-		createPlugins({ key, specificityLevel, rootVariables }),
+		createPlugins({ key, specificityLevel, rootStore }),
 	];
 
 	if (options.stylisPlugins) {

@@ -62,7 +62,7 @@ class RootStore {
 		);
 
 		for (const [k, v] of entries) {
-			const [, value] = getPropValue(`resolve: ${v}`, this.getState());
+			const [, value] = getPropValue(`resolve: ${v}`, this);
 			/**
 			 * Set the value for the next state, if available.
 			 */

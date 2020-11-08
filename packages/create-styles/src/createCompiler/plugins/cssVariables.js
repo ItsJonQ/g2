@@ -23,11 +23,11 @@ const defaultOptions = {
  * function. If one is not provided, it will attempt to use the matching
  * variable declared at the :root scope.
  */
-export function stylisPluginCssVariables(
+function stylisPluginCssVariables(
 	/* istanbul ignore next */
 	options = {},
 ) {
-	const { rootVariables, skipSupportedBrowsers } = {
+	const { rootStore, skipSupportedBrowsers } = {
 		...defaultOptions,
 		...options,
 	};
@@ -60,7 +60,7 @@ export function stylisPluginCssVariables(
 		seen.add(selectors);
 
 		// We'll parse the content to match variables to their custom properties (if possible).
-		const nextContent = transformContent(content, rootVariables);
+		const nextContent = transformContent(content, rootStore);
 
 		// Lastly, we'll provide stylis with our enhanced CSS variable supported content.
 		return nextContent;
@@ -68,3 +68,5 @@ export function stylisPluginCssVariables(
 
 	return plugin;
 }
+
+export default stylisPluginCssVariables;

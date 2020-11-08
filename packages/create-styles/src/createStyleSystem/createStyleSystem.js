@@ -75,7 +75,7 @@ export function createStyleSystem(options = defaultOptions) {
 	 */
 	const compiler = createCompiler({
 		...compilerOptions,
-		rootVariables: rootStore.getState(),
+		rootStore,
 	});
 	const { css, cx } = compiler;
 

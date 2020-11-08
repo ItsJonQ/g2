@@ -13,12 +13,12 @@ const isProd = process.env.NODE_ENV === 'production';
 export function createPlugins({
 	specificityLevel = 7,
 	key = 'css',
-	rootVariables,
+	rootStore,
 	skipSupportedBrowsers = isProd,
 }) {
 	return [
 		rtlPlugin,
-		cssVariablesPlugin({ skipSupportedBrowsers, rootVariables }),
+		cssVariablesPlugin({ skipSupportedBrowsers, rootStore }),
 		specificityPlugin({ level: specificityLevel, key }),
 		cssGridPlugin,
 	];
