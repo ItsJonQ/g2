@@ -140,19 +140,9 @@ export function getDisplayName(Component) {
  * @returns {string} Compiled CSS style rules.
  */
 export function compileInterpolatedStyles(interpolatedStyles, props) {
-	const resolvedInterpolatedStyles = interpolatedStyles.map((a) =>
+	const compiledStyles = interpolatedStyles.map((a) =>
 		is.function(a) ? a(props) : a,
 	);
-
-	const [cssChunk, ...interpolatedCSSRule] = resolvedInterpolatedStyles;
-
-	const rules = [...cssChunk].slice(0, -1);
-	const end = [...cssChunk].slice(-1);
-
-	const compiledStyles = rules
-		.map((rule, index) => rule + interpolatedCSSRule[index])
-		.join('')
-		.concat(end);
 
 	return compiledStyles;
 }

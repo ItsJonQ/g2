@@ -76,7 +76,7 @@ export function createStyledComponents({ compiler, core }) {
 				);
 
 				const classes = cx(
-					css(interpolatedStyles),
+					css(...interpolatedStyles),
 					__css && css(__css),
 					cxProp && css(cxProp),
 					className,
