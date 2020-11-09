@@ -29,11 +29,12 @@ function Button(props, forwardedRef) {
 
 	const classes = cx(
 		styles.Button,
-		isButtonGroupActive ? styles.primary : styles[variant],
+		styles[variant],
 		styles[size],
 		isControl && styles.control,
 		isSubtle && styles.subtle,
 		isSubtle && isControl && styles.subtleControl,
+		isButtonGroupActive && styles.subtleControlActive,
 		isIconOnly && styles.icon,
 		currentColor && styles.currentColor,
 		className,

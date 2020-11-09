@@ -6,4 +6,10 @@ export const ButtonGroupView = styled.div`
 
 export const expanded = css`
 	display: flex;
+	width: 100%;
+`;
+
+export const segmented = css`
+	display: inline-flex;
+	width: auto;
 `;

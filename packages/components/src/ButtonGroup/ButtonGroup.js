@@ -8,6 +8,7 @@ import { cx } from '@wp-g2/styles';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
 
+import { ControlGroup } from '../ControlGroup';
 import { ButtonGroupContext } from './ButtonGroup.Context';
 import { ButtonGroupView } from './ButtonGroup.styles';
 import * as styles from './ButtonGroup.styles';
@@ -18,6 +19,7 @@ function ButtonGroup(props, forwardedRef) {
 		className,
 		children,
 		expanded = false,
+		segmented = false,
 		id,
 		label = 'ButtonGroup',
 		value,
@@ -48,25 +50,37 @@ function ButtonGroup(props, forwardedRef) {
 
 	const contextSystemProps = React.useMemo(() => {
 		return {
-			Button: { isBlock: expanded, isSubtle: true, isControl: true },
+			Button: {
+				isBlock: expanded,
+				isSubtle: !segmented,
+				isControl: true,
+			},
+			ControlGroup: {
+				isItemBlock: expanded,
+			},
 		};
-	}, [expanded]);
+	}, [expanded, segmented]);
 
-	const classes = cx(expanded && styles.expanded, className);
+	const classes = cx(
+		segmented && styles.segmented,
+		expanded && styles.expanded,
+		className,
+	);
+	const BaseComponent = segmented ? ControlGroup : ButtonGroupView;
 
 	return (
 		<ButtonGroupContext.Provider value={contextProps}>
-			<RadioGroup
-				aria-label={label}
-				as={ButtonGroupView}
-				{...otherProps}
-				className={classes}
-				ref={forwardedRef}
-			>
-				<ContextSystemProvider value={contextSystemProps}>
+			<ContextSystemProvider value={contextSystemProps}>
+				<RadioGroup
+					aria-label={label}
+					as={BaseComponent}
+					{...otherProps}
+					className={classes}
+					ref={forwardedRef}
+				>
 					{children}
-				</ContextSystemProvider>
-			</RadioGroup>
+				</RadioGroup>
+			</ContextSystemProvider>
 		</ButtonGroupContext.Provider>
 	);
 }

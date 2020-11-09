@@ -78,6 +78,7 @@ export const icon = css`
 
 export const primary = css`
 	background-color: ${ui.get('buttonPrimaryColor')};
+	border-color: ${ui.get('buttonPrimaryBorderColor')};
 	color: ${ui.get('buttonPrimaryTextColor')};
 
 	&:active {
@@ -87,12 +88,14 @@ export const primary = css`
 	&:hover {
 		background-color: ${ui.get('buttonPrimaryColorHover')};
 		border-color: ${ui.get('buttonPrimaryBorderColorHover')};
+		color: ${ui.get('buttonPrimaryTextColorHover')};
 	}
 
 	&:focus,
 	&[data-focused='true'] {
 		background-color: ${ui.get('buttonPrimaryColorFocus')};
 		border-color: ${ui.get('buttonPrimaryBorderColorFocus')};
+		color: ${ui.get('buttonPrimaryTextColorFocus')};
 	}
 
 	&:active {
@@ -242,11 +245,21 @@ export const plainLink = css`
 export const subtle = baseButtonStyles.subtle;
 export const control = baseButtonStyles.control;
 
-export const subtleControl = css`
-	${baseButtonStyles.subtleControl};
+const subtleControlActiveTransition = css({
+	transition: [
+		'all',
+		ui.get('transitionDuration'),
+		ui.get('transitionTimingFunctionControl'),
+	].join(' '),
+});
 
+export const subtleControlActive = css`
 	&[data-active='true'] {
+		${subtleControlActiveTransition};
+		${ui.zIndex('ControlFocus')};
+
 		background: ${ui.get('buttonControlActiveStateColor')};
+		border-color: ${ui.get('buttonControlActiveStateColor')};
 		color: ${ui.get('buttonControlActiveStateTextColor')};
 
 		&:hover {
@@ -259,6 +272,11 @@ export const subtleControl = css`
 			background: ${ui.get('buttonControlActiveStateColorActive')};
 		}
 	}
+`;
+
+export const subtleControl = css`
+	${baseButtonStyles.subtleControl};
+	${subtleControlActive};
 `;
 
 export const currentColor = baseButtonStyles.currentColor;

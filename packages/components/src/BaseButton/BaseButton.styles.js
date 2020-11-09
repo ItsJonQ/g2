@@ -179,9 +179,9 @@ export const control = css`
 	}
 
 	&:focus {
+		${ui.zIndex('ControlFocus')};
 		border-color: ${ui.color.admin};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
-		z-index: 1;
 	}
 `;
 
