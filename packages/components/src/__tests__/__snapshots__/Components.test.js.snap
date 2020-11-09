@@ -506,6 +506,36 @@ exports[`props should render Button with css prop 2`] = `
 </button>
 `;
 
+exports[`props should render ButtonGroup 1`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-djg9lv"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render ButtonGroup with css prop 1`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-djg9lv"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render ButtonGroup with css prop 2`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-jjjtbc"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+/>
+`;
+
 exports[`props should render Card 1`] = `
 <div
   class="components-surface wp-components-surface components-card wp-components-card css-11lo8b5"

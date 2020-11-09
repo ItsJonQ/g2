@@ -3,6 +3,7 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { BaseButton } from '../BaseButton';
+import { useButtonGroupContext } from '../ButtonGroup';
 import * as styles from './Button.styles';
 
 function Button(props, forwardedRef) {
@@ -11,7 +12,7 @@ function Button(props, forwardedRef) {
 		className,
 		currentColor,
 		icon,
-		isActive = false,
+		isActive: isActiveProp = false,
 		isControl = false,
 		isSubtle = false,
 		size = 'medium',
@@ -19,11 +20,16 @@ function Button(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'Button');
 
+	const { buttonGroup } = useButtonGroupContext();
+	const isButtonGroupActive =
+		buttonGroup?.state && buttonGroup?.state === otherProps.value;
+
+	const isActive = isActiveProp || isButtonGroupActive;
 	const isIconOnly = !!icon && !children;
 
 	const classes = cx(
 		styles.Button,
-		styles[variant],
+		isButtonGroupActive ? styles.primary : styles[variant],
 		styles[size],
 		isControl && styles.control,
 		isSubtle && styles.subtle,

@@ -1,9 +1,11 @@
 import { Button as ReakitButton } from '@wp-g2/a11y';
+import { Radio as ReakitRadio } from '@wp-g2/a11y';
 import { contextConnect } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
+import { useButtonGroupContext } from '../ButtonGroup';
 import { Elevation } from '../Elevation';
 import { FlexItem } from '../Flex';
 import { Icon } from '../Icon';
@@ -32,11 +34,14 @@ function BaseButton(props, forwardedRef) {
 		suffix,
 		...otherProps
 	} = useBaseButton(props);
+	const { buttonGroup } = useButtonGroupContext();
+	const buttonGroupState = buttonGroup || {};
 
+	const BaseComponent = buttonGroup ? ReakitRadio : ReakitButton;
 	const as = href ? 'a' : 'button';
 
 	return (
-		<ReakitButton
+		<BaseComponent
 			aria-busy={isLoading}
 			as={as}
 			data-active={isActive}
@@ -45,6 +50,7 @@ function BaseButton(props, forwardedRef) {
 			data-icon={!!icon}
 			disabled={disabled || isLoading}
 			href={href}
+			{...buttonGroupState}
 			{...otherProps}
 			ref={forwardedRef}
 		>
@@ -120,7 +126,7 @@ function BaseButton(props, forwardedRef) {
 				value={elevation}
 				{...ui.$('ButtonElevation')}
 			/>
-		</ReakitButton>
+		</BaseComponent>
 	);
 }
 
