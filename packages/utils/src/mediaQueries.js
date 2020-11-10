@@ -6,11 +6,19 @@
 import { is } from './is';
 import { camel2hyphen } from './strings';
 
+/**
+ * @param {string} feature
+ * @return {boolean}
+ */
 function isDimension(feature) {
 	const re = /[height|width]$/;
 	return re.test(feature);
 }
 
+/**
+ * @param {Record<string, boolean | string | number>} obj
+ * @return {string}
+ */
 function obj2mq(obj = {}) {
 	let mq = '';
 	let features = Object.keys(obj);
@@ -38,6 +46,10 @@ function obj2mq(obj = {}) {
 	return mq;
 }
 
+/**
+ *
+ * @param {string | object} query
+ */
 export function json2mq(query) {
 	let mq = '';
 	if (is.string(query)) {

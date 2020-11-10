@@ -2,6 +2,7 @@ import {
 	isArray,
 	isBoolean,
 	isDate,
+	isEmpty,
 	isFunction,
 	isMap,
 	isNaN,
@@ -21,14 +22,9 @@ import {
 } from 'lodash';
 
 /**
- * Returns the object type of the given payload
+ * @param {any} o
+ * @return {boolean}
  */
-function isType(type) {
-	return (o) => {
-		return {}.toString.call(o).slice(8, -1) === type;
-	};
-}
-
 const numeric = (o) => {
 	const obj = typeof o === 'string' ? o.replace(/,/g, '') : o;
 	return (
@@ -39,19 +35,25 @@ const numeric = (o) => {
 	);
 };
 
+/**
+ * @param {any} o
+ * @return {boolean}
+ */
 const numericZero = (o) => {
 	return o === 0 || o === '0';
 };
 
-const empty = (o = {}) => {
-	return Object.keys(o).length === 0;
-};
-
 export const is = {
-	blob: isType('Blob'),
+	/** @type {(o: any) => o is Blob} */
+	blob: (o) => o instanceof Blob,
+	/**
+	 * @template T
+	 * @param {T} o
+	 * @return {T is Exclude<T, undefined | null>}
+	 */
 	defined: (o) => !isNil(o),
-	empty,
-	file: isType('File'),
+	/** @type {(o: any) => o is File} */
+	file: (o) => o instanceof File,
 	numeric,
 	numericZero,
 
@@ -61,6 +63,7 @@ export const is = {
 	array: isArray,
 	boolean: isBoolean,
 	date: isDate,
+	empty: isEmpty,
 	function: isFunction,
 	map: isMap,
 	nan: isNaN,

@@ -1,13 +1,4 @@
 import { is } from './is';
-/**
- * Determines if a value is null or undefined.
- *
- * @param {any} value The value to check.
- * @return {boolean} Whether value is null or undefined.
- */
-export function isValueDefined(value) {
-	return is.defined(value);
-}
 
 /**
  * Determines if a value is empty, null, or undefined.
@@ -18,7 +9,7 @@ export function isValueDefined(value) {
 export function isValueEmpty(value) {
 	const isEmptyString = value === '';
 
-	return !isValueDefined(value) || isEmptyString;
+	return is.undefined(value) || isEmptyString;
 }
 
 /**
@@ -29,5 +20,5 @@ export function isValueEmpty(value) {
  * @return {any} A defined value or the fallback value.
  */
 export function getDefinedValue(values = [], fallbackValue) {
-	return values.find(isValueDefined) ?? fallbackValue;
+	return values.find(is.defined) ?? fallbackValue;
 }

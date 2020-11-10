@@ -2,8 +2,16 @@ import React from 'react';
 
 import { is } from './is';
 
+/**
+ * @template TEvent
+ * @param {(event: TEvent) => void} handler
+ * @param {(event: TEvent) => void} otherHandler
+ */
 export function mergeEvent(handler, otherHandler) {
-	return (event) => {
+	return (
+		/** @type {TEvent} */
+		event,
+	) => {
 		if (is.function(handler)) {
 			handler(event);
 		}
@@ -13,6 +21,11 @@ export function mergeEvent(handler, otherHandler) {
 	};
 }
 
+/**
+ * @template TEvent
+ * @param {Record<string, (event: TEvent) => void>} handlers
+ * @param {Record<string, (event: TEvent) => void>} extraHandlers
+ */
 export function mergeEventHandlers(handlers = {}, extraHandlers = {}) {
 	const mergedHandlers = { ...handlers };
 
@@ -25,6 +38,11 @@ export function mergeEventHandlers(handlers = {}, extraHandlers = {}) {
 	return mergedHandlers;
 }
 
+/**
+ * @template TEvent
+ * @param {(event: TEvent) => void} handler
+ * @param {(event: TEvent) => void} htmlHandler
+ */
 export function useMergeEventCallback(handler, htmlHandler) {
 	return React.useCallback(mergeEvent(handler, htmlHandler), [
 		handler,

@@ -10,6 +10,10 @@ const getComputedStyledMap = () => {
 	return __styleTestNode.style;
 };
 
+/**
+ * @param {string} initialValue
+ * @return {number | string | undefined}
+ */
 export const getCSSValue = (initialValue) => {
 	const [value, unit] = parseUnitValue(initialValue);
 	const next = !unit ? value : `${value}${unit}`;
@@ -17,6 +21,12 @@ export const getCSSValue = (initialValue) => {
 	return next;
 };
 
+/**
+ *
+ * @param {string} prop
+ * @param {string} value
+ * @return {boolean}
+ */
 export const isValidCSSValueForProp = (prop, value) => {
 	if (!is.string(prop)) return true;
 
@@ -35,6 +45,10 @@ export const isValidCSSValueForProp = (prop, value) => {
 	return current !== computedStyleMap[prop];
 };
 
+/**
+ * @param {string} value
+ * @return {boolean}
+ */
 export const isValidNumericUnitValue = (value) => {
 	// Disallow values that contains spaces
 	if (/ /g.test(value)) {
@@ -84,13 +98,12 @@ export const isValidNumericUnitValue = (value) => {
  *
  * @param {number|string} value Value
  * @param {string} unit Unit value
- * @param {Array<Object>} units Units to derive from.
- * @return {Array<number, string>} The extracted number and unit.
+ * @return {ReturnType<parseUnitValue>} The extracted number and unit.
  */
-export function getParsedValue(value, unit, units) {
+export function getParsedValue(value, unit) {
 	const initialValue = unit ? `${value}${unit}` : value;
 
-	return parseUnitValue(initialValue, units);
+	return parseUnitValue(initialValue);
 }
 
 /**
@@ -106,8 +119,8 @@ export function hasUnits(units) {
 /**
  * Parses a number and unit from a value.
  *
- * @param {string} initialValue Value to parse
- * @return {Array<number, string>} The extracted number and unit.
+ * @param {string | number} initialValue Value to parse
+ * @return {[number | string | undefined, string | undefined]} The extracted number and unit.
  */
 export function parseUnitValue(initialValue) {
 	if (!is.defined(initialValue)) {
@@ -116,10 +129,15 @@ export function parseUnitValue(initialValue) {
 
 	const value = String(initialValue).trim();
 
-	let num = parseFloat(value, 10);
-	num = isNaN(num) ? '' : num;
+	/** @type {string | number} */
+	let num = parseFloat(value);
+	num = is.nan(num) ? '' : num;
 
-	const unitMatch = value.match(/[\d.\-+]*\s*(.*)/)[1];
+	const matched = value.match(/[\d.\-+]*\s*(.*)/);
+	if (!matched) {
+		return [undefined, undefined];
+	}
+	const [unitMatch] = matched;
 
 	let unit = is.defined(unitMatch) ? unitMatch : '';
 	unit = unit.toLowerCase();
@@ -127,8 +145,16 @@ export function parseUnitValue(initialValue) {
 	return [num, unit];
 }
 
+/**
+ *
+ * @param {string | number} value
+ * @param {string} unit
+ * @return {string}
+ */
 export function createUnitValue(value, unit) {
-	if (!unit || !is.string(unit) || !is.numeric(value)) return value;
+	if (!unit || !is.string(unit) || !is.numeric(value)) {
+		return value.toString();
+	}
 
 	return `${value}${unit}`;
 }

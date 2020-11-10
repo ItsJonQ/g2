@@ -5,12 +5,25 @@ import { clamp } from './clamp';
  * https://github.com/react-spring/react-spring/blob/master/src/animated/createInterpolator.ts
  */
 
+/**
+ * @param {number} input
+ * @param {number[]} inputRange
+ * @return {number}
+ */
 export function findRange(input, inputRange) {
 	for (var i = 1; i < inputRange.length - 1; ++i)
 		if (inputRange[i] >= input) break;
 	return i - 1;
 }
 
+/**
+ *
+ * @param {number} [input=0]
+ * @param {number} [inputMin=0]
+ * @param {number} [inputMax=1]
+ * @param {number} [outputMin=0]
+ * @param {number} [outputMax=1]
+ */
 export function baseInterpolate(
 	input = 0,
 	inputMin = 0,
@@ -44,6 +57,11 @@ export function baseInterpolate(
 	return clamp(result, clampMin, clampMax);
 }
 
+/**
+ * @param {number} [input=0]
+ * @param {[number, number]} [inputRange=[0,1]]
+ * @param {[number, number]} [outputRange=[0,1]]
+ */
 export function interpolate(
 	input = 0,
 	inputRange = [0, 1],
