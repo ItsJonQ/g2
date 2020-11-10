@@ -12,8 +12,6 @@ import createStore from 'zustand';
  */
 
 /**
- * bla
- *
  * @template {State} TState
  * @param {StateCreator<TState> | StoreApi<TState>} state
  *
