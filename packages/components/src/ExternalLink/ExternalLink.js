@@ -3,20 +3,16 @@ import { FiExternalLink } from '@wp-g2/icons';
 import React from 'react';
 
 import { Icon } from '../Icon';
+import { Link } from '../Link';
 import { VisuallyHidden } from '../VisuallyHidden';
 import * as styles from './ExternalLink.styles';
 
 function ExternalLink(props, forwardedRef) {
-	const { children, href, rel, ...otherProps } = useContextSystem(
-		props,
-		'ExternalLink',
-	);
+	const { children, ...otherProps } = useContextSystem(props, 'ExternalLink');
 
 	return (
-		<a
-			href={href}
+		<Link
 			ref={forwardedRef}
-			rel={rel}
 			// eslint-disable-next-line react/jsx-no-target-blank
 			target="_blank"
 			{...otherProps}
@@ -25,11 +21,12 @@ function ExternalLink(props, forwardedRef) {
 			{children}
 			<Icon
 				className={styles.Icon}
+				color="currentColor"
 				icon={<FiExternalLink />}
 				inline
 				size="15"
 			/>
-		</a>
+		</Link>
 	);
 }
 

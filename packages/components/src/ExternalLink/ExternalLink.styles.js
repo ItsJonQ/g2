@@ -1,6 +1,6 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const Icon = css`
-	fill: currentColor;
-	margin-left: 0.1em;
+	margin-left: ${ui.space(1)};
+	margin-top: ${ui.space(-1)};
 `;
