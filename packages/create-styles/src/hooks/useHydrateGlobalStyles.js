@@ -2,10 +2,20 @@ const __INTERNAL_STATE__ = {
 	didInjectGlobal: false,
 };
 
+/** @typedef {import('../components/ThemeProvider/ThemeProvider').StyleConfiguration} StyleConfiguration */
+
+/**
+ * @typedef GlobalStyles
+ * @property {StyleConfiguration} [darkHighContrastModeCSSVariables]
+ * @property {StyleConfiguration} [darkModeCSSVariables]
+ * @property {StyleConfiguration} [globalCSSVariables]
+ * @property {StyleConfiguration} [highContrastModeCSSVariables]
+ */
+
 /**
  * @typedef UseHydrateGlobalStylesProps
- * @property {object} injectGlobal injectGlobal function from the compiler (Emotion).
- * @property {object} globalStyles Global style values to be injected.
+ * @property {import('create-emotion').Emotion['injectGlobal']} injectGlobal injectGlobal function from the compiler (Emotion).
+ * @property {GlobalStyles} globalStyles Global style values to be injected.
  */
 
 /**

@@ -12,8 +12,8 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
 /**
  * @typedef CreateCoreElementOptions
- * @property {object} baseStyles The baseStyles from the Style system.
- * @property {function} injectGlobal The injectGlobal from the Style system's compiler.
+ * @property {Parameters<import('create-emotion').Emotion['css']>} baseStyles The baseStyles from the Style system.
+ * @property {import('../createCompiler').Compiler} compiler The injectGlobal from the Style system's compiler.
  * @property {object} globalStyles The globalStyles from the Style system.
  */
 
@@ -37,11 +37,11 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  *
  * @param {string|React.Component} tagName The HTMLElement/React.Component to connect with the Style system.
  * @param {CreateCoreElementOptions} options Options to custom coreElement styles.
- * @returns {React.Component} The Style system wrapped HTMLElement/React.Component.
+ * @returns {import('react').ForwardRefExoticComponent<Pick<any, string | number | symbol> & import('react').RefAttributes<any>>} The Style system wrapped HTMLElement/React.Component.
  */
 export const createCoreElement = (
 	tagName = 'div',
-	options = defaultOptions,
+	options,
 ) => {
 	const { baseStyles, compiler, globalStyles } = {
 		...defaultOptions,
@@ -71,6 +71,10 @@ export const createCoreElement = (
 
 	const compiledBaseStyles = css(baseStyles);
 
+	/**
+	 * @param {any} props 
+	 * @param {import('react').Ref<any>} ref 
+	 */
 	const render = (
 		{
 			// Internal props
@@ -125,6 +129,7 @@ export const createCoreElement = (
 		 */
 		const shouldFilterProps = is.string(element);
 
+		/** @type {Record<string, any>} */
 		let newProps = {};
 
 		for (let key in props) {

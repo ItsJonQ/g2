@@ -1,13 +1,23 @@
 import { hoistNonReactStatics, is } from '@wp-g2/utils';
+import { create } from 'lodash';
 import React from 'react';
 
 import { tags } from './tags';
 import { getDisplayName } from './utils';
 
 /**
+ * @typedef {(interpolations: any[]) => import('react').FunctionComponent} CreateStyledComponent
+ */
+
+/**
+ * @typedef {((tagName: import('react').ElementType, options: any) => CreateStyledComponent) & Record<string, CreateStyledComponent>} CreateStyled
+ * @property {() => CreateStyled} bind
+ */
+
+/**
  * @typedef CreateStyledComponentsProps
- * @property {object} compiler The (custom) Emotion instance.
- * @property {object} core The collection of coreElements.
+ * @property {import('../createCompiler').Compiler} compiler The (custom) Emotion instance.
+ * @property {import('./createcoreElements').CoreElements} core The collection of coreElements.
  */
 
 /**
@@ -36,12 +46,7 @@ export function createStyledComponents({ compiler, core }) {
 	 */
 	const Box = core.div;
 
-	/**
-	 * Creates a styled component based on an HTML tagName.
-	 *
-	 * @param {string} tagName The HTML tagName to create a styled component from.
-	 * @param {object} options Options to adjust the rendered styled component.
-	 */
+	/** @type {CreateStyled} */
 	function createStyled(tagName, options = {}) {
 		const {
 			/**
@@ -50,7 +55,11 @@ export function createStyledComponents({ compiler, core }) {
 			props: extraProps,
 		} = options;
 
-		return (...interpolatedProps) => {
+		return (/**@type {any[]} */...interpolatedProps) => {
+			/**
+			 * @param {any} props 
+			 * @param {import('react').Ref<any>} ref 
+			 */
 			const render = (
 				{
 					/**
@@ -81,16 +90,17 @@ export function createStyledComponents({ compiler, core }) {
 				);
 			};
 
+			/** @type {React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<any>> & { withComponent?: ReturnType<createStyled> }} */
 			const StyledComponent = React.forwardRef(render);
 
-			/*
+			/**
 			 * Enhancing the displayName.
 			 */
 			StyledComponent.displayName = is.defined(tagName?.displayName)
 				? tagName.displayName
 				: `Styled(${getDisplayName(tagName)})`;
 
-			/*
+			/**
 			 * Enhancing .withComponent()
 			 * https://github.com/emotion-js/emotion/blob/master/packages/styled-base/src/index.js#L210
 			 *
@@ -107,7 +117,7 @@ export function createStyledComponents({ compiler, core }) {
 			};
 
 			if (!is.string(tagName)) {
-				/*
+				/**
 				 * Hoisting statics one last time, if the tagName is a Component,
 				 * rather than an HTML tag, like `div`.
 				 */
@@ -120,11 +130,12 @@ export function createStyledComponents({ compiler, core }) {
 
 	// Bind it to avoid mutating the original function. Just like @emotion/styled:
 	// https://github.com/emotion-js/emotion/blob/master/packages/styled/src/index.js
-	const styled = createStyled.bind();
+	const styled = createStyled.bind(undefined);
 
 	// Generating the core collection of styled[tagName], with our enhanced
 	// version of styled.
 	tags.forEach((tagName) => {
+		// @ts-ignore
 		styled[tagName] = createStyled(tagName);
 	});
 

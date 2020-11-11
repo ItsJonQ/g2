@@ -10,6 +10,22 @@ const defaultOptions = {
 	specificityLevel: 7,
 };
 
+/** @typedef {import('create-emotion').Emotion} Emotion */
+
+/**
+ * @typedef Compiler
+ * @property {Emotion['css']} css
+ * @property {Emotion['cx']} cx
+ * @property {Emotion['sheet']} sheet
+ * @property {Emotion['injectGlobal']} injectGlobal
+ * @property {typeof breakpoints} breakpoints
+ * @property {import('mitt').Emitter} __events
+ */
+
+/**
+ * @param {any} options 
+ * @return {Compiler}
+ */
 export function createCompiler(options = {}) {
 	const mergedOptions = {
 		...defaultOptions,
@@ -33,12 +49,20 @@ export function createCompiler(options = {}) {
 	 *
 	 * We're also able to provide createEmotion with our custom Stylis plugins.
 	 */
-	const customEmotionInstance = createEmotion(mergedOptions);
-
-	/**
-	 * Exposing the breakpoints used in the internal Style system.
-	 */
-	customEmotionInstance.breakpoints = breakpoints;
+	/** @type {Compiler} */
+	const customEmotionInstance = {
+		...createEmotion(mergedOptions),
+		/**
+		 * Exposing the breakpoints used in the internal Style system.
+		 */
+		breakpoints,
+		/**
+		 * An internal custom event emitter (pub/sub) for Emotion.
+		 * This is currently used in <StyleFrameProvider /> from `@wp-g2/styled`
+		 * to subscribe to and sync style injection.
+		 */
+		__events: mitt(),
+	};
 
 	/**
 	 * Enhance the base css function from Emotion to add features like responsive
@@ -46,13 +70,6 @@ export function createCompiler(options = {}) {
 	 */
 	const { css } = customEmotionInstance;
 	customEmotionInstance.css = createCSS(css);
-
-	/**
-	 * An internal custom event emitter (pub/sub) for Emotion.
-	 * This is currently used in <StyleFrameProvider /> from `@wp-g2/styled`
-	 * to subscribe to and sync style injection.
-	 */
-	customEmotionInstance.__events = mitt();
 
 	/**
 	 * Modify the sheet.insert method to emit a `sheet.insert` event

@@ -10,26 +10,28 @@ import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
+/** @typedef {Record<string, string>} StyleConfiguration */
+
 /**
  * @typedef CreateStyleSystemOptions
- * @property {object} baseStyles Base styles for the Style system.
- * @property {object} config Default variables for the Style system.
- * @property {object} darkModeConfig Dark mode variables for the Style system.
- * @property {object} highContrastModeConfig High contrast mode variables for the Style system.
- * @property {object} darkHighContrastModeConfig Dark high contrast variables for the Style system.
- * @property {object} compilerOptions Options for the compiler (Emotion).
+ * @property {any} [baseStyles] Base styles for the Style system.
+ * @property {StyleConfiguration} config Default variables for the Style system.
+ * @property {StyleConfiguration} darkModeConfig Dark mode variables for the Style system.
+ * @property {StyleConfiguration} highContrastModeConfig High contrast mode variables for the Style system.
+ * @property {StyleConfiguration} darkHighContrastModeConfig Dark high contrast variables for the Style system.
+ * @property {object} [compilerOptions] Options for the compiler (Emotion).
  */
 
 /**
  * @typedef CreateStyleSystemObjects
- * @property {object} core A set of coreElements.
- * @property {object} compiler The Style system compiler (a custom Emotion instance).
- * @property {function} createCoreElement A function to create a coreElement (with settings from the Style system).
- * @property {function} css A function to compile CSS styles.
- * @property {function} cx A function to resolve + combine classNames.
- * @property {function} createToken A function to generate a design token (CSS variable) used by the system.
- * @property {function} get The primary function to retrieve Style system variables.
- * @property {object} styled A set of styled components.
+ * @property {import('./createCoreElements').CoreElements} core A set of coreElements.
+ * @property {import('../createCompiler').Compiler} compiler The Style system compiler (a custom Emotion instance).
+ * @property {typeof import('./createCoreElement').createCoreElement} createCoreElement A function to create a coreElement (with settings from the Style system).
+ * @property {import('create-emotion').Emotion['css']} css A function to compile CSS styles.
+ * @property {import('create-emotion').Emotion['cx']} cx A function to resolve + combine classNames.
+ * @property {(tokenName: string) => string} createToken A function to generate a design token (CSS variable) used by the system.
+ * @property {(value: string) => string} get The primary function to retrieve Style system variables.
+ * @property {import('@emotion/styled').CreateStyled} styled A set of styled components.
  * @property {React.Component} View The base <View /> component.
  * @property {React.Component} ThemeProvider The component (Provider) used to adjust design tokens.
  */
@@ -98,7 +100,7 @@ export function createStyleSystem(options = defaultOptions) {
 	/**
 	 * Export prebound createCoreElement factory.
 	 */
-	const _createCoreElement = (tagName) =>
+	const _createCoreElement = (/** @type {string|React.Component} */ tagName) =>
 		createCoreElement(tagName, { baseStyles, compiler, globalStyles });
 
 	const View = core.div;
@@ -106,7 +108,7 @@ export function createStyleSystem(options = defaultOptions) {
 	/**
 	 * An enhanced (base) ThemeProvider with injectGlobal from the custom Emotion instance.
 	 */
-	const ThemeProvider = (props) => (
+	const ThemeProvider = (/** @type {import('react').ComponentProps<BaseThemeProvider>} */ props) => (
 		<BaseThemeProvider
 			{...props}
 			compiler={compiler}

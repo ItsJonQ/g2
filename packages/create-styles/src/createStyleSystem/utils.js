@@ -36,14 +36,17 @@ export function get(key) {
 	return `var(${createToken(key)})`;
 }
 
+/** @typedef {import('../components/ThemeProvider/ThemeProvider').StyleConfiguration} StyleConfiguration */
+
 /**
  * Transforms a series of config values into set of namespaced CSS
  * references for the Style system.
  *
- * @param {object} values Style config values to transform into CSS variables.
- * @returns {object} The set of CSS variables, transformed from config values.
+ * @param {StyleConfiguration} values Style config values to transform into CSS variables.
+ * @returns {StyleConfiguration} The set of CSS variables, transformed from config values.
  */
 export function transformValuesToReferences(values = {}) {
+	/** @type {StyleConfiguration} */
 	const next = {};
 	for (const [key, value] of Object.entries(values)) {
 		const ref = `var(${createToken(key)}, ${value})`;
@@ -57,10 +60,11 @@ export function transformValuesToReferences(values = {}) {
  * variables for the Style system. These values can then be safely and predictable
  * retrieved using the get() function.
  *
- * @param {object} values Style config values to transform into CSS variables.
- * @returns {object} The set of CSS variables, transformed from config values.
+ * @param {StyleConfiguration} values Style config values to transform into CSS variables.
+ * @returns {StyleConfiguration} The set of CSS variables, transformed from config values.
  */
 export function transformValuesToVariables(values = {}) {
+	/** @type {StyleConfiguration} */
 	const next = {};
 
 	for (const [key, value] of Object.entries(values)) {
@@ -78,7 +82,7 @@ export function transformValuesToVariables(values = {}) {
  * <style> tag.
  *
  * @param {string} selector The selector to attach the config values to.
- * @param {object} values Style config values to transform into CSS variables.
+ * @param {StyleConfiguration} values Style config values to transform into CSS variables.
  * @returns {string} Compiled innerHTML styles to be injected into a <style /> tag.
  */
 export function transformValuesToVariablesString(
@@ -117,7 +121,7 @@ export function transformValuesToVariablesString(
 
 /**
  * Retrieves the displayName of a component.
- * @param {any} Component The component to retrieve the tagName from.
+ * @param {import('react').ComponentType} Component The component to retrieve the tagName from.
  * @returns Either the component's displayName or a fallback of "Component".
  */
 export function getDisplayName(Component) {

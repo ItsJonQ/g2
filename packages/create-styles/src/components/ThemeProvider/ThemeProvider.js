@@ -16,16 +16,23 @@ import {
 	useThemeStyles,
 } from './ThemeProvider.utils';
 
+/** @typedef {Record<string, string>} StyleConfiguration */
+
 /**
  * @typedef ThemeProviderProps
- * @property {any} children Children to render.
- * @property {function} injectGlobal Globally injects styles on initial render (provided by an Emotion instance).
+ * @property {import('react').ReactNode} children Children to render.
+ * @property {import('../../createCompiler').Compiler} compiler The style compiler.
+ * @property {string} [className] Optional className to render on the provider.
+ * @property {object} globalStyles
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
  * @property {boolean} isDark Determines if dark-mode styles should be rendered.
  * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
  * @property {boolean} isReducedMotion Determines if reduced-motion-mode styles should be rendered.
  * @property {boolean} isHighContrast Determines if high-contrast-mode styles should be rendered.
- * @property {object} theme Custom theme properties.
+ * @property {StyleConfiguration} theme Custom theme properties.
+ * @property {StyleConfiguration} darkTheme Custom theme properties.
+ * @property {StyleConfiguration} highContrastTheme Custom theme properties.
+ * @property {StyleConfiguration} darkHighContrastTheme Custom theme properties.
  */
 
 /**
@@ -44,7 +51,8 @@ import {
  * ```
  *
  * @param {ThemeProviderProps} props Props for the ThemeProvider.
- * @returns {React.Component} Children content wrapped with the <ThemeProvider />.
+ * @param {import('react').Ref<HTMLDivElement>} forwardedRef
+ * @returns {JSX.Element} Children content wrapped with the <ThemeProvider />.
  */
 function ThemeProvider(
 	{
@@ -75,6 +83,7 @@ function ThemeProvider(
 	 */
 	useHydrateGlobalStyles({ injectGlobal, globalStyles });
 
+	/** @type {import('react').RefObject<HTMLDivElement | undefined>} */
 	const nodeRef = useRef();
 	const defaultStyles = useThemeStyles({
 		injectGlobal,
