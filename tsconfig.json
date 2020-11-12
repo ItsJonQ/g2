@@ -1,35 +1,12 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"allowSyntheticDefaultImports": true,
-		"baseUrl": ".",
-		"declaration": true,
-		"esModuleInterop": true,
-		"emitDeclarationOnly": true,
-		"jsx": "react",
-		"lib": ["dom"],
-		"module": "esnext",
-		"moduleResolution": "node",
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitAny": false,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"resolveJsonModule": true,
-		"strict": true,
-		"strictFunctionTypes": false,
-		"stripInternal": true,
-		"target": "esnext"
-	},
-	"include": ["packages/*/types/**/*"],
-	"exclude": [
-		"dist",
-		"src",
-		"node_modules",
-		".remake",
-		".github",
-		".storybook",
-		"packages/website",
-		"packages/**/dist"
-	]
+	"references": [
+		{ "path": "packages/a11y" },
+		{ "path": "packages/animations" },
+		{ "path": "packages/atomic" },
+		{ "path": "packages/gestures" },
+		{ "path": "packages/icons" },
+		{ "path": "packages/substate" },
+		{ "path": "packages/utils" }
+	],
+	"files": []
 }
