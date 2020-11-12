@@ -1,5 +1,5 @@
 import { hasNamespace, useContextSystem } from '@wp-g2/context';
-import { css, cx, get, getFontSize } from '@wp-g2/styles';
+import { css, cx, getFontSize, ui } from '@wp-g2/styles';
 import { getOptimalTextShade, is } from '@wp-g2/utils';
 import React, { useMemo } from 'react';
 
@@ -9,6 +9,7 @@ import { createHighlighterText } from './Text.utils';
 
 export function useText(props) {
 	const {
+		adjustLineHeightForInnerControls,
 		align,
 		children,
 		className,
@@ -21,7 +22,7 @@ export function useText(props) {
 		highlightWords = [],
 		highlightSanitize,
 		isBlock = false,
-		lineHeight = 1.2,
+		lineHeight: lineHeightProp,
 		optimizeReadabilityFor,
 		size,
 		truncate = false,
@@ -48,6 +49,11 @@ export function useText(props) {
 	const classes = useMemo(() => {
 		const sx = {};
 
+		const lineHeight = getLineHeight({
+			lineHeight: lineHeightProp,
+			adjustLineHeightForInnerControls,
+		});
+
 		sx.Base = css({
 			color,
 			display,
@@ -66,8 +72,8 @@ export function useText(props) {
 				getOptimalTextShade(optimizeReadabilityFor) === 'dark';
 
 			sx.optimalTextColor = isOptimalTextColorDark
-				? css({ color: get('black') })
-				: css({ color: get('white') });
+				? css({ color: ui.get('black') })
+				: css({ color: ui.get('white') });
 		}
 
 		return cx(
@@ -83,6 +89,7 @@ export function useText(props) {
 			className,
 		);
 	}, [
+		adjustLineHeightForInnerControls,
 		align,
 		className,
 		color,
@@ -91,7 +98,7 @@ export function useText(props) {
 		isCaption,
 		isDestructive,
 		isHighlighter,
-		lineHeight,
+		lineHeightProp,
 		optimizeReadabilityFor,
 		size,
 		upperCase,
@@ -138,4 +145,28 @@ export function useText(props) {
 		...truncateProps,
 		children: truncate ? truncateProps.children : content,
 	};
+}
+
+function getLineHeight({ adjustLineHeightForInnerControls, lineHeight }) {
+	if (is.defined(lineHeight)) return lineHeight;
+
+	if (!adjustLineHeightForInnerControls) return;
+
+	let value = `calc(${ui.get('controlHeight')} + ${ui.space(2)})`;
+
+	switch (adjustLineHeightForInnerControls) {
+		case 'large':
+			value = `calc(${ui.get('controlHeightLarge')} + ${ui.space(2)})`;
+			break;
+		case 'small':
+			value = `calc(${ui.get('controlHeightSmall')} + ${ui.space(2)})`;
+			break;
+		case 'xSmall':
+			value = `calc(${ui.get('controlHeightXSmall')} + ${ui.space(2)})`;
+			break;
+		default:
+			break;
+	}
+
+	return value;
 }

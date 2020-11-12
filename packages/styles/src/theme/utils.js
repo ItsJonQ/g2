@@ -77,7 +77,7 @@ export function generateRgbColors(key, color) {
 
 	const ranges = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
-	ranges.map((index) => {
+	ranges.forEach((index) => {
 		colorSet[`${key}Rgba${index}`] = colorize(color)
 			.setAlpha(index / 100)
 			.toRgbString();

@@ -2,7 +2,7 @@ import { hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
 import { tags } from './tags';
-import { getDisplayName } from './utils';
+import { compileInterpolatedStyles, getDisplayName } from './utils';
 
 /**
  * @typedef CreateStyledComponentsProps
@@ -69,8 +69,14 @@ export function createStyledComponents({ compiler, core }) {
 
 				const baseTag = asProp || tagName;
 
+				// Resolves prop interpolation.
+				const interpolatedStyles = compileInterpolatedStyles(
+					interpolatedProps,
+					props,
+				);
+
 				const classes = cx(
-					css(...interpolatedProps),
+					css(...interpolatedStyles),
 					__css && css(__css),
 					cxProp && css(cxProp),
 					className,

@@ -81,3 +81,13 @@ export const errorFocus = css`
 		border-color: ${ui.get('controlDestructiveBorderColorFocus')};
 	}
 `;
+
+export const inline = css`
+	display: inline-flex;
+	vertical-align: baseline;
+	width: auto;
+
+	${ui.browsers.safari(`
+			vertical-align: middle;
+	`)}
+`;

@@ -8,6 +8,7 @@ import {
 	ModalHeader,
 	ModalTrigger,
 	useModalContext,
+	useModalState,
 } from '../index';
 
 export default {
@@ -50,5 +51,21 @@ export const _default = () => {
 				</Modal>
 			</ModalBody>
 		</Modal>
+	);
+};
+
+export const Controlled = () => {
+	const dialog = useModalState();
+
+	return (
+		<>
+			<Button onClick={dialog.toggle}>Secondary toggle</Button>
+			<Modal state={dialog} trigger={<ModalTrigger>Open</ModalTrigger>}>
+				<ModalHeader title={'Modal Title'} />
+				<ModalBody>
+					<h2>Controlled Modal</h2>
+				</ModalBody>
+			</Modal>
+		</>
 	);
 };

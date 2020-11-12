@@ -8,6 +8,8 @@ keywords: ['textinput', 'form control', 'input', 'field', 'textarea']
 
 # TextInput
 
+`TextInput` is a form component that users can enter content into.
+
 ## Table of contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -37,6 +39,12 @@ function Example() {
 ```
 
 ## Props
+
+##### \_\_\_debugger
+
+**Type**: `Function`
+
+For development only. Callback when a reducer action is dispatched.
 
 ##### align
 
@@ -70,17 +78,29 @@ The direction flow of the children content can be adjusted with `direction`. `co
 
 Determines if element is disabled.
 
+##### error
+
+**Type**: `boolean`
+
+Renders an error state.
+
 ##### expanded
 
 **Type**: `boolean`
 
 Expands to the maximum available width (if horizontal) or height (if vertical).
 
+##### format
+
+**Type**: `"number"`,`"type"`
+
+Modifies how `value` can be adjusted.
+
 ##### gap
 
 **Type**: `number`
 
-The amount of space between each child element.
+Spacing in between each child can be adjusted by using `gap`. The value of `gap` works as a multiplier to the library's grid system (base of `4px`).
 
 ##### isClickable
 
@@ -100,6 +120,12 @@ Fires the `onChange` callback after pressing `ENTER` or focusing away.
 
 Renders focus styles.
 
+##### isInline
+
+**Type**: `boolean`
+
+Renders as an inline element (layout).
+
 ##### isResizable
 
 **Type**: `boolean`
@@ -112,11 +138,17 @@ Allows for the a multiline `TextInput` to tbe resizable by dragging.
 
 Renders with rounded corners.
 
+##### isShiftStepEnabled
+
+**Type**: `boolean`
+
+Enables larger `step` increment/decrement values when holding down `Shift`.
+
 ##### isSubtle
 
 **Type**: `boolean`
 
-Renders a subtle variant.
+Renders a subtle `TextInput`.
 
 ##### justify
 
@@ -149,11 +181,23 @@ Alias for `rows`.
 
 Renders `TextInput` to allow for multiline lines (`textarea`).
 
+##### onChange
+
+**Type**: `Function`
+
+Callback function when the `value` is committed.
+
 ##### onHeightChange
 
 **Type**: `Function`
 
 Callback function when the height changes with a multiline `TextInput`.
+
+##### onValueChange
+
+**Type**: `Function`
+
+Callback function when the `value` changes.
 
 ##### prefix
 
@@ -172,6 +216,12 @@ Determines the size of `TextInput`.
 **Type**: `React.ReactElement`
 
 Renders prefix content within `TextInput`.
+
+##### validate
+
+**Type**: `Function`
+
+Determines if the next `value` should be committed.
 
 ##### value
 
@@ -192,3 +242,4 @@ Determines if children should wrap.
 
 -   [Button](../button/)
 -   [Select](../select/)
+-   [UnitInput](../unitinput/)

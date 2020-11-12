@@ -84,9 +84,22 @@ export function transformValuesToVariables(values = {}) {
 export function transformValuesToVariablesString(
 	selector = ':root',
 	values = {},
+	isGlobal = true,
 ) {
 	const variables = transformValuesToVariables(values);
-	const next = [`${selector} {`];
+
+	const next = [];
+	let needsTerminator = false;
+
+	if (isGlobal) {
+		next.push(`${selector} {`);
+		needsTerminator = true;
+	} else {
+		if (selector !== ':root') {
+			next.push(`&${selector} {`);
+			needsTerminator = true;
+		}
+	}
 
 	for (const [key, value] of Object.entries(variables)) {
 		const ref = value;
@@ -95,7 +108,9 @@ export function transformValuesToVariablesString(
 		}
 	}
 
-	next.push('}');
+	if (needsTerminator) {
+		next.push('}');
+	}
 
 	return next.join('');
 }
@@ -111,4 +126,23 @@ export function getDisplayName(Component) {
 		: Component?.displayName || Component?.name || 'Component';
 
 	return displayName;
+}
+
+/**
+ * Resolves and compiles interpolated CSS styles for styled-components.
+ * Allows for prop (function) interpolation within the style rules.
+ *
+ * For more information on tagged template literals, check out:
+ * https://mxstbr.blog/2016/11/styled-components-magic-explained/
+ *
+ * @param {Array<string,function>} interpolatedStyles The interpolated styles from a Styled component.
+ * @param {Object} props Incoming component props.
+ * @returns {string} Compiled CSS style rules.
+ */
+export function compileInterpolatedStyles(interpolatedStyles, props) {
+	const compiledStyles = interpolatedStyles.map((a) =>
+		is.function(a) ? a(props) : a,
+	);
+
+	return compiledStyles;
 }

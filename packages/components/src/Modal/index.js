@@ -5,3 +5,4 @@ export { default as ModalHeader } from './ModalHeader';
 export { default as ModalTitle } from './ModalTitle';
 export { default as ModalTrigger } from './ModalTrigger';
 export * from './Modal.Context';
+export { useModalState } from './useModalState';

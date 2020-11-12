@@ -79,6 +79,12 @@ Determines if element is disabled.
 
 Expands to the maximum available width (if horizontal) or height (if vertical).
 
+##### isInline
+
+**Type**: `boolean`
+
+Renders as an inline element (layout).
+
 ##### isSubtle
 
 **Type**: `boolean`
@@ -98,9 +104,15 @@ In the example below, `flex-start` will align the children content to the left.
 
 Label for the form element.
 
+##### multiple
+
+**Type**: `boolean`
+
+Enables selection of multiple values.
+
 ##### options
 
-**Type**: `unknown[]`
+**Type**: `(SelectOption`,`SelectOptionGroup)[]`
 
 Options to render within `Select`.
 
@@ -109,13 +121,35 @@ import { Select } from '@wp-g2/components';
 
 function Example() {
 	const options = [
-		{ id: 'elsa', value: 'elsa', label: 'Elsa' },
-		{ id: 'ana', value: 'ana', label: 'Ana' },
+		{
+			label: 'Frozen',
+			options: [
+				{
+					label: 'Into The Unknown',
+					value: 'into-the-unknown',
+				},
+			],
+		},
+		{
+			label: 'Frozen 2',
+			options: [
+				{
+					label: 'Into The Unknown',
+					value: 'into-the-unknown',
+				},
+			],
+		},
 	];
 
 	return <Select options={options} />;
 }
 ```
+
+##### placeholder
+
+**Type**: `string`
+
+Example text to display as placeholder.
 
 ##### prefix
 

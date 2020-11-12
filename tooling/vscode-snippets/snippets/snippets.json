@@ -85,6 +85,15 @@
 		],
 		"prefix": "g2-flex"
 	},
+	"g2-components-formgroup": {
+		"body": [
+			"<FormGroup label=\"First name\">",
+			"    <TextInput />",
+			"  </FormGroup>",
+			");"
+		],
+		"prefix": "g2-formgroup"
+	},
 	"g2-components-grid": {
 		"body": [
 			"<Grid columns={3}>",
@@ -185,6 +194,14 @@
 		],
 		"prefix": "g2-surface"
 	},
+	"g2-components-switch": {
+		"body": [
+			"const [on, setOn] = React.useState(true);",
+			"",
+			"<Switch checked={on} onChange={setOn} />"
+		],
+		"prefix": "g2-switch"
+	},
 	"g2-components-text": {
 		"body": ["<Text>Where the north wind meets the sea</Text>;"],
 		"prefix": "g2-text"
@@ -204,6 +221,10 @@
 			");"
 		],
 		"prefix": "g2-truncate"
+	},
+	"g2-components-unitinput": {
+		"body": ["<UnitInput value=\"50%\" min={0} max={100} />;"],
+		"prefix": "g2-unitinput"
 	},
 	"g2-components-view": {
 		"body": [

@@ -27,6 +27,24 @@ function Example() {
 
 ## Props
 
+##### adjustLineHeightForInnerControls
+
+**Type**: `boolean`,`"large"`,`"medium"`,`"small"`,`"xSmall"`
+
+Automatically calculate the appropriate line-height value for contents that render text and Control elements (e.g. `TextInput`).
+
+```jsx live
+import { Text, TextInput } from "@wp-g2/components"
+
+function Example() {
+  return (
+    <Text adjustLineHeightForInnerControls>
+      Where the north wind meets the <TextInput value="sea..." />
+    </Text>
+  )
+}
+```
+
 ##### align
 
 **Type**: `CSS['textAlign']`

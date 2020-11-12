@@ -1,6 +1,13 @@
 import { PolymorphicComponent, CSS } from './_shared';
 import { TruncateProps } from './Truncate';
 
+export declare type TextAdjustLineHeightForInnerControls =
+	| boolean
+	| 'large'
+	| 'medium'
+	| 'small'
+	| 'xSmall';
+
 export declare type TextSize =
 	| 'body'
 	| 'caption'
@@ -40,6 +47,23 @@ export declare type TextProps = TruncateProps & {
 	 *```
 	 */
 	align?: CSS['textAlign'];
+	/**
+	 * Automatically calculate the appropriate line-height value for contents that render text and Control elements (e.g. `TextInput`).
+	 *
+	 * @example
+	 * ```jsx
+	 * import { Text, TextInput } from `@wp-g2/components`
+	 *
+	 * function Example() {
+	 * 	return (
+	 * 		<Text adjustLineHeightForInnerControls>
+	 * 			Where the north wind meets the <TextInput value="sea..." />
+	 * 		</Text>
+	 * 	)
+	 * }
+	 *```
+	 */
+	adjustLineHeightForInnerControls?: TextAdjustLineHeightForInnerControls;
 	/**
 	 * Adjusts the text color.
 	 */

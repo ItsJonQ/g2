@@ -7,7 +7,7 @@ exports[`props should render alignLabel 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-y9y9ic"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-tlx71c"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -40,7 +40,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-116wlbg"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-337b03"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -73,7 +73,7 @@ exports[`props should render label without prop correctly 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1ppuusk"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-1kug32t"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -104,7 +104,7 @@ exports[`props should render vertically 1`] = `
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-116wlbg"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label css-337b03"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"

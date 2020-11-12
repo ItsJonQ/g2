@@ -23,7 +23,7 @@ function NavLink(props) {
   return (
     <Link
       as={GLink}
-      css={[ui.padding.y(5), ui.padding.x(2)]}
+      css={[ui.padding.y(2), ui.padding.x(2)]}
       weight="bold"
       {...props}
     />
@@ -47,29 +47,33 @@ export function SiteHeader() {
     >
       <View css={[ui.frame.width(1280), ui.alignment.center]}>
         <HStack>
-          <Grid as="nav" templateColumns="100px minmax(0, 1fr)">
-            <GLink aria-label="G2 Components" role="banner" to="/">
-              <Icon icon={<Logo />} size={32} />
-            </GLink>
-            <HStack spacing={3}>
-              <NavLink to="/styles/">Styles</NavLink>
-              <NavLink to="/components/">Components</NavLink>
-              <NavLink to="/context/">Context</NavLink>
-            </HStack>
-          </Grid>
+          <View>
+            <Grid as="nav" templateColumns="100px minmax(0, 1fr)">
+              <GLink aria-label="G2 Components" role="banner" to="/">
+                <Icon icon={<Logo />} size={32} />
+              </GLink>
+              <HStack spacing={3}>
+                <NavLink to="/styles/">Styles</NavLink>
+                <NavLink to="/components/">Components</NavLink>
+                <NavLink to="/context/">Context</NavLink>
+              </HStack>
+            </Grid>
+          </View>
           <Spacer />
-          <HStack>
-            <FormGroup label="Inspect" templateColumns="1fr 1fr">
-              <Tooltip
-                content="See how this site was built with G2!"
-                gutter={16}
-                placement="bottom"
-              >
-                <Switch checked={inspect} onChange={toggleInspect} />
-              </Tooltip>
-            </FormGroup>
-            <SiteSearch />
-          </HStack>
+          <View>
+            <HStack>
+              <FormGroup horizontal label="Inspect" templateColumns="1fr 1fr">
+                <Tooltip
+                  content="See how this site was built with G2!"
+                  gutter={16}
+                  placement="bottom"
+                >
+                  <Switch checked={inspect} onChange={toggleInspect} />
+                </Tooltip>
+              </FormGroup>
+              <SiteSearch />
+            </HStack>
+          </View>
         </HStack>
       </View>
       <Elevation value={2} />

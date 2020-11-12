@@ -28,9 +28,9 @@ export const ColorPickerSelect = React.memo(() => {
 	return (
 		<Grid templateColumns={templateColumns}>
 			<Select onChange={handleOnChange} value={value}>
-				<option label="Hex" value="hex" />
-				<option label="RGB" value="rgb" />
-				<option label="HSL" value="hsl" />
+				<option value="hex">Hex</option>
+				<option value="rgb">RGB</option>
+				<option value="hsl">HSL</option>
 			</Select>
 			{showPreview && <ColorPickerPreview />}
 		</Grid>

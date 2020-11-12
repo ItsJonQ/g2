@@ -3,12 +3,34 @@ import { PolymorphicComponent, SizeRangeReduced } from './_shared';
 import { BaseFieldProps } from './BaseField';
 
 type TextInputArrow = 'stepper' | boolean;
+type TextInputFormat = 'number' | 'type';
 
-export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
+export declare type TextInputProps = Omit<
+	BaseFieldProps,
+	'isClickable' | 'isSubtle'
+> & {
+	/**
+	 * For development only. Callback when a reducer action is dispatched.
+	 */
+	__debugger?: (action: any, nextValue: string, state: any) => void;
 	/**
 	 * Renders specified incrementer/decrementer arrows.
+	 *
+	 * @default true
 	 */
 	arrow?: TextInputArrow;
+	/**
+	 * Renders an error state.
+	 *
+	 * @default false
+	 */
+	error?: boolean;
+	/**
+	 * Modifies how `value` can be adjusted.
+	 *
+	 * @default 'text'
+	 */
+	format?: TextInputFormat;
 	/**
 	 * The amount of space between each child element.
 	 *
@@ -33,6 +55,12 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	 * @default false
 	 */
 	isRounded?: boolean;
+	/**
+	 * Enables larger `step` increment/decrement values when holding down `Shift`.
+	 *
+	 * @default true
+	 */
+	isShiftStepEnabled?: boolean;
 	/**
 	 * Allows for the a multiline `TextInput` to tbe resizable by dragging.
 	 *
@@ -60,9 +88,17 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	 */
 	multiline?: boolean;
 	/**
+	 * Callback function when the `value` is committed.
+	 */
+	onChange?: (value: string) => void;
+	/**
 	 * Callback function when the height changes with a multiline `TextInput`.
 	 */
 	onHeightChange?: (height: number) => void;
+	/**
+	 * Callback function when the `value` changes.
+	 */
+	onValueChange?: (value: string) => void;
 	/**
 	 * Renders prefix content within `TextInput`.
 	 */
@@ -75,6 +111,10 @@ export declare type TextInputProps = Omit<BaseFieldProps, 'gap'> & {
 	 * Renders prefix content within `TextInput`.
 	 */
 	suffix?: React.ReactElement;
+	/**
+	 * Determines if the next `value` should be committed.
+	 */
+	validate?: (currentValue: string) => boolean;
 };
 
 /**

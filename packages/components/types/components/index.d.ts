@@ -61,6 +61,7 @@ export * from './Text';
 export * from './TextField';
 export * from './TextInput';
 export * from './Tooltip';
+export * from './UnitInput';
 export * from './View';
 export * from './Viewport';
 export * from './VisuallyHidden';

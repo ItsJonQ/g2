@@ -12,6 +12,7 @@ export function useBaseField(props) {
 		error = false,
 		isClickable = false,
 		isFocused = false,
+		isInline = false,
 		isSubtle = false,
 		...otherProps
 	} = useContextSystem(props, 'BaseField');
@@ -28,12 +29,14 @@ export function useBaseField(props) {
 				isSubtle && styles.subtle,
 				error && styles.error,
 				error && isFocused && styles.errorFocus,
+				isInline && styles.inline,
 				className,
 			),
 		[
 			className,
 			controlGroupStyles,
 			error,
+			isInline,
 			isClickable,
 			isFocused,
 			isSubtle,

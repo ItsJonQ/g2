@@ -109,8 +109,8 @@ export function createStyleSystem(options = defaultOptions) {
 	const ThemeProvider = (props) => (
 		<BaseThemeProvider
 			{...props}
+			compiler={compiler}
 			globalStyles={globalStyles}
-			injectGlobal={compiler.injectGlobal}
 		/>
 	);
 

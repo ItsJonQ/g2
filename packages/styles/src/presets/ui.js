@@ -2,6 +2,7 @@ import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
 import { border, borderRadius } from './borders';
+import { browsers } from './browsers';
 import { color } from './colors';
 import { css } from './css';
 import { frame } from './dimensions';
@@ -26,6 +27,7 @@ export const ui = {
 	background,
 	border,
 	borderRadius,
+	browsers,
 	color,
 	createToken,
 	css,

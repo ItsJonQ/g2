@@ -61,6 +61,7 @@ const FONT_PROPS = {
 	fontSizeMobile: '15px',
 	fontSizeSmall: `calc(0.92 * ${get('fontSize')})`,
 	fontSizeXSmall: `calc(0.75 * ${get('fontSize')})`,
+	fontLineHeightBase: '1.2',
 };
 
 const SURFACE_PROPS = {

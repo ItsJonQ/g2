@@ -17,7 +17,7 @@ exports[`props should render as another HTML tag 1`] = `
   data-g2-component="Animated"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1j5v64k"
+    class="components-truncate wp-components-truncate components-text wp-components-text css-fd3l03"
     data-g2-c16t="true"
     data-g2-component="Text"
   >

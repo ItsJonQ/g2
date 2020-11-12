@@ -2,7 +2,7 @@
 
 exports[`props should render as another element 1`] = `
 <h3
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-ypbzir"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1eywi6"
   data-g2-c16t="true"
   data-g2-component="Heading"
 >
@@ -12,7 +12,7 @@ exports[`props should render as another element 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-ohvggs"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-3uc59p"
   data-g2-c16t="true"
   data-g2-component="Heading"
 >
@@ -22,7 +22,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render size 1`] = `
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-ypbzir"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading css-1eywi6"
   data-g2-c16t="true"
   data-g2-component="Heading"
 >

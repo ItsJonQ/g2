@@ -13,10 +13,10 @@ function BaseModal(props, forwardedRef) {
 		backdropTransitionDuration = 250,
 		children,
 		className,
-		dialog: dialogProp,
 		label = 'Modal',
 		/* Deprecate in favour of `trigger`*/
 		renderTrigger = null,
+		state,
 		transitionTimingFunction = 'ease-in-out',
 		trigger = null,
 		visible = false,
@@ -25,7 +25,7 @@ function BaseModal(props, forwardedRef) {
 	} = useContextSystem(props, 'BaseModal');
 
 	const _dialog = useDialogState({ animated: true, visible });
-	const dialog = dialogProp || _dialog;
+	const dialog = state || _dialog;
 
 	const { isUnderLayer } = useModalState(dialog);
 

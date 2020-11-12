@@ -26,9 +26,15 @@ export declare type FormGroupProps = GridProps & {
  *
  * @example
  * ```jsx
- * <FormGroup label="First name">
- * 	<TextInput />
- * </FormGroup>
+ * import { FormGroup, TextInput } from `@wp-g2/components`
+ *
+ * function Example() {
+ * 	return (
+ * 		<FormGroup label="First name">
+ * 			<TextInput />
+ * 		</FormGroup>
+ * 	)
+ * }
  * ```
  */
 export declare const FormGroup: PolymorphicComponent<FormGroupProps>;
