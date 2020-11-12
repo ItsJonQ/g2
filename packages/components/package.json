@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@humanmade/react-slot-fill": "^0.0.4",
+    "@wordpress/i18n": "^3.16.0",
     "@wp-g2/a11y": "^0.0.104",
     "@wp-g2/animations": "^0.0.104",
     "@wp-g2/context": "^0.0.104",
