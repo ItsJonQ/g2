@@ -21,8 +21,9 @@ function Button(props, forwardedRef) {
 	} = useContextSystem(props, 'Button');
 
 	const { buttonGroup } = useButtonGroupContext();
+	const isWithinButtonGroup = !!buttonGroup;
 	const isButtonGroupActive =
-		buttonGroup?.state && buttonGroup?.state === otherProps.value;
+		isWithinButtonGroup && buttonGroup?.state === otherProps.value;
 
 	const isActive = isActiveProp || isButtonGroupActive;
 	const isIconOnly = !!icon && !children;
