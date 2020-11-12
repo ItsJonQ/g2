@@ -120,6 +120,12 @@ Fires the `onChange` callback after pressing `ENTER` or focusing away.
 
 Renders focus styles.
 
+##### isInline
+
+**Type**: `boolean`
+
+Renders as an inline element (layout).
+
 ##### isResizable
 
 **Type**: `boolean`
