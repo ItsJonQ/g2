@@ -127,3 +127,22 @@ export function getDisplayName(Component) {
 
 	return displayName;
 }
+
+/**
+ * Resolves and compiles interpolated CSS styles for styled-components.
+ * Allows for prop (function) interpolation within the style rules.
+ *
+ * For more information on tagged template literals, check out:
+ * https://mxstbr.blog/2016/11/styled-components-magic-explained/
+ *
+ * @param {Array<string,function>} interpolatedStyles The interpolated styles from a Styled component.
+ * @param {Object} props Incoming component props.
+ * @returns {string} Compiled CSS style rules.
+ */
+export function compileInterpolatedStyles(interpolatedStyles, props) {
+	const compiledStyles = interpolatedStyles.map((a) =>
+		is.function(a) ? a(props) : a,
+	);
+
+	return compiledStyles;
+}
