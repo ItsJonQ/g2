@@ -1,5 +1,5 @@
 import { getPropValue } from './getPropValue';
-import { hasVariable, isCustomProperty } from './utils';
+import { hasVariable } from './utils';
 
 /**
  * Stores CSS config variables that are expected to be added to :root.
@@ -47,13 +47,9 @@ class RootStore {
 
 	/**
 	 * Resolves potential CSS variables that may exist within the state's values.
-	 * This function cycles a maximum of 3 times to (hopefully) resolve chaining variable references.
-	 *
-	 * @param {number} pass The current pass (cycle) number.
 	 */
-	_resolveVariablesInStateValue = (pass = 0) => {
+	_resolveVariablesInStateValue = () => {
 		const next = {};
-
 		/**
 		 * Filter out entries so that we only target values with CSS variables.
 		 */
@@ -74,10 +70,10 @@ class RootStore {
 		this._updateState(next);
 
 		/**
-		 * Run this function again, for a total of 3 passes.
+		 * Run this function again if there are any unresolved values.
 		 */
-		if (pass < 3) {
-			this._resolveVariablesInStateValue(pass + 1);
+		if (entries.length) {
+			this._resolveVariablesInStateValue();
 		}
 	};
 }
