@@ -13,6 +13,7 @@ function Tooltip(props, forwardedRef) {
 		baseId,
 		children,
 		content,
+		focusable = true,
 		gutter = 4,
 		id,
 		modal = true,
@@ -48,9 +49,12 @@ function Tooltip(props, forwardedRef) {
 			{content && <TooltipContent>{content}</TooltipContent>}
 			{children && (
 				<TooltipReference {...tooltip} {...children.props} ref={refs}>
-					{(referenceProps) =>
-						React.cloneElement(children, referenceProps)
-					}
+					{(referenceProps) => {
+						if (!focusable) {
+							referenceProps.tabIndex = undefined;
+						}
+						return React.cloneElement(children, referenceProps);
+					}}
 				</TooltipReference>
 			)}
 		</TooltipContext.Provider>

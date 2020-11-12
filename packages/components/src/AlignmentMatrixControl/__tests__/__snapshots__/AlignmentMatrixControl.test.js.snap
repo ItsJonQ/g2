@@ -2,17 +2,20 @@
 
 exports[`props should render correctly 1`] = `
 <div
-  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-1fz2bun"
+  aria-label="Alignment Matrix Control"
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-100cxb0"
   data-g2-c16t="true"
   data-g2-component="AlignmentMatrixControl"
+  id="alignment-matrix-control"
+  role="grid"
 >
   <div
-    class="css-1be4w71"
-    id="id-dknk4u"
+    class="css-dob59y"
+    id="alignment-matrix-control-1"
     role="row"
   >
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-top-left"
       role="gridcell"
       tabindex="-1"
@@ -23,14 +26,13 @@ exports[`props should render correctly 1`] = `
         top left
       </span>
       <span
-        aria-describedby="id-3jkjii"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-top-left"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-top-center"
       role="gridcell"
       tabindex="-1"
@@ -41,14 +43,13 @@ exports[`props should render correctly 1`] = `
         top center
       </span>
       <span
-        aria-describedby="id-s2fbu8"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-top-center"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-top-right"
       role="gridcell"
       tabindex="-1"
@@ -59,20 +60,19 @@ exports[`props should render correctly 1`] = `
         top right
       </span>
       <span
-        aria-describedby="id-ip6r5l"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-top-right"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
   </div>
   <div
-    class="css-1be4w71"
-    id="id-fam9g6"
+    class="css-dob59y"
+    id="alignment-matrix-control-5"
     role="row"
   >
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-center-left"
       role="gridcell"
       tabindex="-1"
@@ -83,14 +83,13 @@ exports[`props should render correctly 1`] = `
         center left
       </span>
       <span
-        aria-describedby="id-cbl867"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-center-left"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-center-center"
       role="gridcell"
       tabindex="0"
@@ -101,14 +100,13 @@ exports[`props should render correctly 1`] = `
         center center
       </span>
       <span
-        aria-describedby="id-qd2rj5"
-        class="css-1gtjncg"
+        aria-describedby="alignment-matrix-control-center-center"
+        class="css-1c17wt5"
         role="presentation"
-        tabindex="0"
       />
     </span>
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-center-right"
       role="gridcell"
       tabindex="-1"
@@ -119,20 +117,19 @@ exports[`props should render correctly 1`] = `
         center right
       </span>
       <span
-        aria-describedby="id-n61rs4"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-center-right"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
   </div>
   <div
-    class="css-1be4w71"
-    id="id-sa30a4"
+    class="css-dob59y"
+    id="alignment-matrix-control-9"
     role="row"
   >
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-bottom-left"
       role="gridcell"
       tabindex="-1"
@@ -143,14 +140,13 @@ exports[`props should render correctly 1`] = `
         bottom left
       </span>
       <span
-        aria-describedby="id-q1p565"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-bottom-left"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-bottom-center"
       role="gridcell"
       tabindex="-1"
@@ -161,14 +157,13 @@ exports[`props should render correctly 1`] = `
         bottom center
       </span>
       <span
-        aria-describedby="id-irbqai"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-bottom-center"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
     <span
-      class="css-1fgs703"
+      class="css-5iieq1"
       id="alignment-matrix-control-bottom-right"
       role="gridcell"
       tabindex="-1"
@@ -179,10 +174,9 @@ exports[`props should render correctly 1`] = `
         bottom right
       </span>
       <span
-        aria-describedby="id-doco8k"
-        class="css-obgt6p"
+        aria-describedby="alignment-matrix-control-bottom-right"
+        class="css-n4lhbe"
         role="presentation"
-        tabindex="0"
       />
     </span>
   </div>
