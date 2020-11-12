@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "postinstall": "npm run bootstrap",
-    "clean": "lerna run clean --ignore website --stream --parallel",
+    "clean": "lerna run clean --ignore website --stream --parallel; tsc --build --clean",
     "prestart": "zero prestart && npm run bootstrap",
     "prebuild": "npm run clean",
-    "build": "lerna run build --ignore website --stream --parallel",
+    "build": "lerna run build --ignore website --stream --parallel && tsc --build",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "bootstrap:tooling": "npm install --prefix tooling/vscode-snippets",
     "lint:eslint": "eslint \"./packages/**/*.js\" --fix",
