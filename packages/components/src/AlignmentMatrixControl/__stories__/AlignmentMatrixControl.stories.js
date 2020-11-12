@@ -8,12 +8,19 @@ export default {
 	title: 'Components/AlignmentMatrixControl',
 };
 
-const Example = () => {
+export const _default = () => {
 	const [value, setValue] = useState('center center');
 
 	return <AlignmentMatrixControl onChange={setValue} value={value} />;
 };
 
-export const _default = () => {
-	return <Example />;
+export const _controlled = () => {
+	const [value, setValue] = useState('center center');
+
+	return (
+		<>
+			<AlignmentMatrixControl onChange={setValue} value={value} />
+			<AlignmentMatrixControl onChange={setValue} value={value} />
+		</>
+	);
 };

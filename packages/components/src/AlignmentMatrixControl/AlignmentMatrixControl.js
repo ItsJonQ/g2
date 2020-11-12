@@ -1,8 +1,9 @@
 import { Composite, CompositeGroup, useCompositeState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useRTL } from '@wp-g2/styles';
+import { useUpdateEffect } from '@wp-g2/utils';
 import { noop } from 'lodash';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import {
 	AlignmentMatrixControlView,
@@ -33,10 +34,17 @@ function AlignmentMatrixControl(props, forwardedRef) {
 		rtl: isRTL,
 	});
 
-	const handleOnChange = (nextValue) => {
-		onChange(nextValue);
-		composite.setCurrentId(getItemId(baseId, nextValue));
-	};
+	const handleOnChange = useCallback(
+		(nextValue) => () => {
+			onChange(nextValue);
+			composite.setCurrentId(getItemId(baseId, nextValue));
+		},
+		[baseId, composite, onChange],
+	);
+
+	useUpdateEffect(() => {
+		composite.setCurrentId(getItemId(baseId, value));
+	}, [value]);
 
 	return (
 		<Composite
@@ -64,7 +72,7 @@ function AlignmentMatrixControl(props, forwardedRef) {
 								id={cellId}
 								isActive={isActive}
 								key={cell}
-								onFocus={() => handleOnChange(cell)}
+								onFocus={handleOnChange(cell)}
 								value={cell}
 							/>
 						);
