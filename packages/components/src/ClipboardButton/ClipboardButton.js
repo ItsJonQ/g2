@@ -1,16 +1,14 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useClipboard } from '@wp-g2/utils';
 import { noop } from 'lodash';
-import React from 'react';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 
 import { Button } from '../Button';
 
 function ClipboardButton(props, forwardedRef) {
 	const {
 		text,
-		onClick: onClickProp = noop,
+		onClick = noop,
 		onCopy: onCopyProp = noop,
 		onFinishCopy = noop,
 		...otherProps
@@ -32,10 +30,13 @@ function ClipboardButton(props, forwardedRef) {
 		lastHasCopied.current = hasCopied;
 	}, [hasCopied, onCopyProp, onFinishCopy]);
 
-	const handleOnClick = (event) => {
-		onClickProp(event);
-		onCopy();
-	};
+	const handleOnClick = useCallback(
+		(event) => {
+			onClick(event);
+			onCopy();
+		},
+		[onClick, onCopy],
+	);
 
 	return (
 		<Button {...otherProps} onClick={handleOnClick} ref={forwardedRef} />
