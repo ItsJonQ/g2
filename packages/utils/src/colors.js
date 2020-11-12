@@ -4,8 +4,12 @@ import { is } from './is';
 import { memoize } from './memoize';
 export { default as colorize } from 'tinycolor2';
 
+/** @type {HTMLDivElement} */
 let __colorComputationNode;
 
+/**
+ * @return {HTMLDivElement | undefined}
+ */
 function getColorComputationNode() {
 	if (typeof document === 'undefined') return;
 
@@ -21,6 +25,10 @@ function getColorComputationNode() {
 	return __colorComputationNode;
 }
 
+/**
+ * @param {string | unknown} value
+ * @return {boolean}
+ */
 export function isColor(value) {
 	if (!is.string(value)) return false;
 	const test = colorize(value);
@@ -28,6 +36,10 @@ export function isColor(value) {
 	return test.isValid();
 }
 
+/**
+ * @param {string | unknown} color
+ * @return {string}
+ */
 function __getComputedBackgroundColor(color) {
 	if (!is.string(color)) return '';
 
@@ -44,6 +56,8 @@ function __getComputedBackgroundColor(color) {
 	// Grab the style
 	const computedColor = window.getComputedStyle(el).background;
 	// Reset
+	// @todo(saramarcondes) should this be assigning `''` rather than `null` to reset?
+	// @ts-ignore
 	el.style.background = null;
 
 	return computedColor || '';
@@ -51,6 +65,10 @@ function __getComputedBackgroundColor(color) {
 
 export const getComputedBackgroundColor = memoize(__getComputedBackgroundColor);
 
+/**
+ * @param {string | unknown} color
+ * @return {string}
+ */
 function __getComputedColor(color) {
 	if (!is.string(color)) return '';
 
@@ -67,6 +85,8 @@ function __getComputedColor(color) {
 	// Grab the style
 	const computedColor = window.getComputedStyle(el).color;
 	// Reset
+	// @todo(saramarcondes) ditto...
+	// @ts-ignore
 	el.style.color = null;
 
 	return computedColor || '';
@@ -74,6 +94,10 @@ function __getComputedColor(color) {
 
 export const getComputedColor = memoize(__getComputedColor);
 
+/**
+ * @param {string | unknown} color
+ * @return {string}
+ */
 export function getOptimalTextColor(color) {
 	const background = getComputedBackgroundColor(color);
 	const isReadableWithBlackText = colorize.isReadable(background, '#000000');
@@ -81,6 +105,10 @@ export function getOptimalTextColor(color) {
 	return isReadableWithBlackText ? '#000000' : '#ffffff';
 }
 
+/**
+ * @param {string | unknown} color
+ * @return {string}
+ */
 export function getOptimalTextShade(color) {
 	const result = getOptimalTextColor(color);
 

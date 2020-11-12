@@ -1,11 +1,15 @@
 import { useMemo } from 'react';
 
+/**
+ * @type {WeakMap<any, number>}
+ */
 const uniqueIdMap = new WeakMap();
 
 /**
  * Creates a new id for a given object.
  *
- * @param {Object} object Object reference to create an id for.
+ * @param {unknown} object Object reference to create an id for.
+ * @return {number}
  */
 function createId(object) {
 	const instances = uniqueIdMap.get(object) || 0;
@@ -17,8 +21,10 @@ function createId(object) {
 /**
  * Provides a unique instance ID.
  *
- * @param {Object} object Object reference to create an id for.
+ * @param {unknown} object Object reference to create an id for.
  * @param {string} prefix Prefix for the unique id.
+ * @param {string} preferredId Default ID to use.
+ * @return {string | number}
  */
 export function useUniqueId(object, prefix, preferredId) {
 	return useMemo(() => {

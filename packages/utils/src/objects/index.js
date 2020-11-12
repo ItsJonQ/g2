@@ -1,2 +1,4 @@
-export * from './omit';
-export * from './pick';
+import _ from 'lodash';
+
+export const omit = _.omit;
+export const pick = _.pick;

@@ -1,1 +1,3 @@
-export { default as uniq } from 'lodash.uniq';
+import _ from 'lodash';
+
+export const uniq = _.uniq;

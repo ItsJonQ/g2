@@ -1,1 +1,3 @@
-export { default as chunk } from 'lodash.chunk';
+import _ from 'lodash';
+
+export const chunk = _.chunk;

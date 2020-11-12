@@ -20,6 +20,10 @@ function mockMatchMedia() {
 /**
  * Source:
  * https://github.com/jaredpalmer/the-platform
+ *
+ * @param {string | object} query
+ * @param {boolean} defaultMatches
+ * @return {boolean}
  */
 export function useMediaQuery(query, defaultMatches = true) {
 	const [matches, setMatches] = useState(defaultMatches);
