@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-djg9lv"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+>
+  <button
+    aria-busy="false"
+    aria-checked="false"
+    aria-selected="true"
+    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1ha5jkf"
+    data-active="false"
+    data-destructive="false"
+    data-focused="false"
+    data-g2-c16t="true"
+    data-g2-component="Button"
+    data-icon="false"
+    id="ButtonGroup-1"
+    role="radio"
+    tabindex="-1"
+  >
+    <span
+      class="components-flex-item wp-components-flex-item css-19mrak6"
+      data-g2-c16t="true"
+      data-g2-component="ButtonContent"
+    >
+      Olaf
+    </span>
+    <span
+      class="components-elevation wp-components-elevation css-17x6dun"
+      data-g2-c16t="true"
+      data-g2-component="ButtonElevation"
+    />
+  </button>
+  <button
+    aria-busy="false"
+    aria-checked="false"
+    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1ha5jkf"
+    data-active="false"
+    data-destructive="false"
+    data-focused="false"
+    data-g2-c16t="true"
+    data-g2-component="Button"
+    data-icon="false"
+    id="ButtonGroup-2"
+    role="radio"
+    tabindex="-1"
+  >
+    <span
+      class="components-flex-item wp-components-flex-item css-19mrak6"
+      data-g2-c16t="true"
+      data-g2-component="ButtonContent"
+    >
+      Elsa
+    </span>
+    <span
+      class="components-elevation wp-components-elevation css-17x6dun"
+      data-g2-c16t="true"
+      data-g2-component="ButtonElevation"
+    />
+  </button>
+  <button
+    aria-busy="false"
+    aria-checked="false"
+    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1ha5jkf"
+    data-active="false"
+    data-destructive="false"
+    data-focused="false"
+    data-g2-c16t="true"
+    data-g2-component="Button"
+    data-icon="false"
+    id="ButtonGroup-3"
+    role="radio"
+    tabindex="-1"
+  >
+    <span
+      class="components-flex-item wp-components-flex-item css-19mrak6"
+      data-g2-c16t="true"
+      data-g2-component="ButtonContent"
+    >
+      Ana
+    </span>
+    <span
+      class="components-elevation wp-components-elevation css-17x6dun"
+      data-g2-c16t="true"
+      data-g2-component="ButtonElevation"
+    />
+  </button>
+</div>
+`;

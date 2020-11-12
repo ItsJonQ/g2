@@ -10,6 +10,7 @@ export * from './BaseField';
 export * from './BaseModal';
 export * from './BaseView';
 export * from './Button';
+export * from './ButtonGroup';
 export * from './Card';
 export * from './Checkbox';
 export * from './CheckboxGroup';

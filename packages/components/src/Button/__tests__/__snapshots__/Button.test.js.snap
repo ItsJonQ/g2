@@ -236,7 +236,7 @@ exports[`props should render icon 1`] = `
 exports[`props should render isControl 1`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-5687n5"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1760kf0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -562,7 +562,7 @@ exports[`props should render suffix 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-5ce41b"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-16ex9o0"
   data-active="false"
   data-destructive="false"
   data-focused="false"

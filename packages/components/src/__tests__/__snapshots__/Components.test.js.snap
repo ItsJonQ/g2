@@ -506,6 +506,36 @@ exports[`props should render Button with css prop 2`] = `
 </button>
 `;
 
+exports[`props should render ButtonGroup 1`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-djg9lv"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render ButtonGroup with css prop 1`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-djg9lv"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+/>
+`;
+
+exports[`props should render ButtonGroup with css prop 2`] = `
+<div
+  aria-label="ButtonGroup"
+  class="components-button-group wp-components-button-group css-jjjtbc"
+  data-g2-c16t="true"
+  data-g2-component="ButtonGroup"
+  role="radiogroup"
+/>
+`;
+
 exports[`props should render Card 1`] = `
 <div
   class="components-surface wp-components-surface components-card wp-components-card css-11lo8b5"
@@ -1051,7 +1081,7 @@ exports[`props should render ColorCircle with css prop 2`] = `
 exports[`props should render ColorControl 1`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control css-ymbgly"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control css-1gigdb4"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1114,7 +1144,7 @@ exports[`props should render ColorControl 1`] = `
 exports[`props should render ColorControl with css prop 1`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control css-ymbgly"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control css-1gigdb4"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1177,7 +1207,7 @@ exports[`props should render ColorControl with css prop 1`] = `
 exports[`props should render ColorControl with css prop 2`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control css-1uangiy"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control css-cusyrf"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -3194,7 +3224,7 @@ exports[`props should render Stepper 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-ku7k4i"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-hnrzfk"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3248,7 +3278,7 @@ exports[`props should render Stepper 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1551rfj"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-3nxkd3"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3318,7 +3348,7 @@ exports[`props should render Stepper with css prop 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-ku7k4i"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-hnrzfk"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3372,7 +3402,7 @@ exports[`props should render Stepper with css prop 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1551rfj"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-3nxkd3"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3442,7 +3472,7 @@ exports[`props should render Stepper with css prop 2`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-ku7k4i"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-hnrzfk"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3496,7 +3526,7 @@ exports[`props should render Stepper with css prop 2`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1551rfj"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-3nxkd3"
       data-active="false"
       data-destructive="false"
       data-focused="false"

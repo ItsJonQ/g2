@@ -13,7 +13,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-ku7k4i"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-hnrzfk"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -67,7 +67,7 @@ exports[`props should render correctly 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1551rfj"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-3nxkd3"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -136,7 +136,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-18pb1mh"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1peroyj"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -190,7 +190,7 @@ exports[`props should render size 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-5z4qb2"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-xq16lt"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -259,7 +259,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1x43qob"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-mkskzj"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -310,7 +310,7 @@ exports[`props should render vertically 1`] = `
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1revpo4"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-f8wig3"
       data-active="false"
       data-destructive="false"
       data-focused="false"
