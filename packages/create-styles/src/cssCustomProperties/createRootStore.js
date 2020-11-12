@@ -42,7 +42,7 @@ class RootStore {
 	 * @param {object} next The next state to merge into the current state.
 	 */
 	_updateState = (next = {}) => {
-		this.state = { ...this.state, ...next };
+		this.state = Object.freeze({ ...this.state, ...next });
 	};
 
 	/**
