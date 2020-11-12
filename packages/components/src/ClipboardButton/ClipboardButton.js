@@ -10,6 +10,7 @@ import { Button } from '../Button';
 function ClipboardButton(props, forwardedRef) {
 	const {
 		text,
+		onClick: onClickProp = noop,
 		onCopy: onCopyProp = noop,
 		onFinishCopy = noop,
 		...otherProps
@@ -31,7 +32,14 @@ function ClipboardButton(props, forwardedRef) {
 		lastHasCopied.current = hasCopied;
 	}, [hasCopied, onCopyProp, onFinishCopy]);
 
-	return <Button {...otherProps} onClick={onCopy} ref={forwardedRef} />;
+	const handleOnClick = (event) => {
+		onClickProp(event);
+		onCopy();
+	};
+
+	return (
+		<Button {...otherProps} onClick={handleOnClick} ref={forwardedRef} />
+	);
 }
 
 export default contextConnect(ClipboardButton, 'ClipboardButton');
