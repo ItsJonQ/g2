@@ -9,9 +9,9 @@ import {
 	AlignmentMatrixControlView,
 	RowView,
 } from './AlignmentMatrixControl.styles';
+import { getItemId } from './AlignmentMatrixControl.utils';
 import Cell from './AlignmentMatrixControlCell';
 import { GRID } from './constants';
-import { getItemId } from './utils';
 
 function AlignmentMatrixControl(props, forwardedRef) {
 	const {

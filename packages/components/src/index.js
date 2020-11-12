@@ -6,6 +6,7 @@ export * from './Animated';
 // Components
 export * from './Accordion';
 export * from './Alert';
+export * from './AlignmentMatrixControl';
 export * from './ArrowIndicator';
 export * from './AspectRatio';
 export * from './Avatar';

@@ -6,7 +6,7 @@
  *
  * @return {string} The item id.
  */
-export function getItemId(prefixId, value) {
+export function getItemId(prefixId = '', value = '') {
 	const valueId = value.replace(' ', '-');
 
 	return `${prefixId}-${valueId}`;

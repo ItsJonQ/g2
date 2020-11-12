@@ -85,6 +85,555 @@ exports[`props should render Alert with css prop 2`] = `
 </div>
 `;
 
+exports[`props should render AlignmentMatrixControl 1`] = `
+<div
+  aria-label="Alignment Matrix Control"
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-4fz09t"
+  data-g2-c16t="true"
+  data-g2-component="AlignmentMatrixControl"
+  id="AlignmentMatrixControl"
+  role="grid"
+>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-1"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-5"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-9"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`props should render AlignmentMatrixControl with css prop 1`] = `
+<div
+  aria-label="Alignment Matrix Control"
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-4fz09t"
+  data-g2-c16t="true"
+  data-g2-component="AlignmentMatrixControl"
+  id="AlignmentMatrixControl"
+  role="grid"
+>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-1"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-5"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-9"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`props should render AlignmentMatrixControl with css prop 2`] = `
+<div
+  aria-label="Alignment Matrix Control"
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-1j2kcc5"
+  data-g2-c16t="true"
+  data-g2-component="AlignmentMatrixControl"
+  id="AlignmentMatrixControl"
+  role="grid"
+>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-1"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-top-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        top right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-top-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-5"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-center-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        center right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-center-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+  <div
+    class="css-dob59y"
+    id="alignment-matrix-control-9"
+    role="row"
+  >
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-left"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom left
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-left"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-center"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom center
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-center"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+    <span
+      class="css-5iieq1"
+      id="alignment-matrix-control-bottom-right"
+      role="gridcell"
+      tabindex="-1"
+    >
+      <span
+        style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+      >
+        bottom right
+      </span>
+      <span
+        aria-describedby="alignment-matrix-control-bottom-right"
+        class="css-n4lhbe"
+        role="presentation"
+      />
+    </span>
+  </div>
+</div>
+`;
+
 exports[`props should render Animated 1`] = `
 <div
   class="components-animated wp-components-animated css-j1yu9m"
