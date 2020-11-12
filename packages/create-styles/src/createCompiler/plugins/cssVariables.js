@@ -1,6 +1,6 @@
 import { transformContent } from '../../cssCustomProperties/transformContent';
 import { hasVariable } from '../../cssCustomProperties/utils';
-import { STYLIS_CONTEXTS } from './utils';
+import { STYLIS_CONTEXTS, STYLIS_TOKENS } from './utils';
 
 // Detects native CSS varialble support
 // https://github.com/jhildenbiddle/css-vars-ponyfill/blob/master/src/index.js
@@ -49,7 +49,10 @@ function stylisPluginCssVariables(
 		// Borrowed guard implementation from:
 		// https://github.com/Andarist/stylis-plugin-extra-scope/blob/master/src/index.js#L15
 		/* istanbul ignore next */
-		if (context !== STYLIS_CONTEXTS.SELECTOR_BLOCK || type === 107) {
+		if (
+			context !== STYLIS_CONTEXTS.SELECTOR_BLOCK ||
+			type === STYLIS_TOKENS.KEYFRAME
+		) {
 			return;
 		}
 
