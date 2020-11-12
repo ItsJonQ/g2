@@ -23,7 +23,7 @@ class RootStore {
 	 * Retrieves the current state.
 	 * @returns {object} The state.
 	 */
-	getState = () => ({ ...this.state });
+	getState = () => this.state;
 
 	/**
 	 * Sets the state.
