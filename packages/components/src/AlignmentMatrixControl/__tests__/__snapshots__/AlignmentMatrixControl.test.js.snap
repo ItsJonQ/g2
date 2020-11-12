@@ -3,7 +3,7 @@
 exports[`props should render correctly 1`] = `
 <div
   aria-label="Alignment Matrix Control"
-  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-100cxb0"
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control css-4fz09t"
   data-g2-c16t="true"
   data-g2-component="AlignmentMatrixControl"
   id="alignment-matrix-control"

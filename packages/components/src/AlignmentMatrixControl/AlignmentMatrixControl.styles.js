@@ -1,25 +1,14 @@
 import { css, styled, ui } from '@wp-g2/styles';
 
-const rootBase = css`
-	border-radius: ${ui.get('controlBorderRadius')};
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	outline: none;
-`;
-
-const rootSize = css`
-	grid-template-rows: repeat(3, calc(92px / 3));
-	width: 92px;
-`;
-
 export const AlignmentMatrixControlView = styled.div`
-	${rootBase};
-
 	border: 1px solid transparent;
+	border-radius: ${ui.get('controlBorderRadius')};
 	cursor: pointer;
+	display: grid;
 	grid-template-columns: auto;
-
-	${rootSize};
+	grid-template-rows: repeat(3, calc(92px / 3));
+	outline: none;
+	width: 92px;
 `;
 
 export const RowView = styled.div`
