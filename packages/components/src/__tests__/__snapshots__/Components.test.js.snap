@@ -1671,6 +1671,147 @@ exports[`props should render Elevation with css prop 2`] = `
 />
 `;
 
+exports[`props should render ExternalLink 1`] = `
+<a
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link components-external-link wp-components-external-link css-yf2kff"
+  data-g2-c16t="true"
+  data-g2-component="ExternalLink"
+  id="ExternalLink"
+  target="_blank"
+>
+  <span
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  >
+    (opens in a new tab)
+  </span>
+  <div
+    class="components-icon wp-components-icon css-142kzph"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      fill="none"
+      height="15"
+      size="15"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="15"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+      />
+      <polyline
+        points="15 3 21 3 21 9"
+      />
+      <line
+        x1="10"
+        x2="21"
+        y1="14"
+        y2="3"
+      />
+    </svg>
+  </div>
+</a>
+`;
+
+exports[`props should render ExternalLink with css prop 1`] = `
+<a
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link components-external-link wp-components-external-link css-yf2kff"
+  data-g2-c16t="true"
+  data-g2-component="ExternalLink"
+  id="ExternalLink"
+  target="_blank"
+>
+  <span
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  >
+    (opens in a new tab)
+  </span>
+  <div
+    class="components-icon wp-components-icon css-142kzph"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      fill="none"
+      height="15"
+      size="15"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="15"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+      />
+      <polyline
+        points="15 3 21 3 21 9"
+      />
+      <line
+        x1="10"
+        x2="21"
+        y1="14"
+        y2="3"
+      />
+    </svg>
+  </div>
+</a>
+`;
+
+exports[`props should render ExternalLink with css prop 2`] = `
+<a
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link components-external-link wp-components-external-link css-1sx13rm"
+  data-g2-c16t="true"
+  data-g2-component="ExternalLink"
+  id="ExternalLink"
+  target="_blank"
+>
+  <span
+    style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  >
+    (opens in a new tab)
+  </span>
+  <div
+    class="components-icon wp-components-icon css-142kzph"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      fill="none"
+      height="15"
+      size="15"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="15"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+      />
+      <polyline
+        points="15 3 21 3 21 9"
+      />
+      <line
+        x1="10"
+        x2="21"
+        y1="14"
+        y2="3"
+      />
+    </svg>
+  </div>
+</a>
+`;
+
 exports[`props should render Flex 1`] = `
 <div
   class="components-flex wp-components-flex css-1syc9i3"

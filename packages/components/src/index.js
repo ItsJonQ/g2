@@ -36,6 +36,7 @@ export * from './Debugger';
 export * from './Divider';
 export * from './Dropdown';
 export * from './Elevation';
+export * from './ExternalLink';
 export * from './Flex';
 export * from './FormGroup';
 export * from './Grid';
