@@ -14375,13 +14375,6 @@ jimp@^0.14.0:
     "@jimp/types" "^0.14.0"
     regenerator-runtime "^0.13.3"
 
-jotai@^0.7.1:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/jotai/-/jotai-0.7.4.tgz#17b3c1da448cbc080fd48211c8bbd5e88bd184ac"
-  integrity sha512-OXXpXWwrm+7Sd5ImRMrYsT3S51p6Vngt27sJV583mcaKSF9K9FiF/wN6XSqVxtpXj5ltxF9OQFarvKCemTyDig==
-  dependencies:
-    use-context-selector "^1.1.4"
-
 jpeg-js@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.2.tgz#8b345b1ae4abde64c2da2fe67ea216a114ac279d"
@@ -23140,11 +23133,6 @@ use-composed-ref@^1.0.0:
   integrity sha512-RVqY3NFNjZa0xrmK3bIMWNmQ01QjKPDc7DeWR3xa/N8aliVppuutOE5bZzPkQfvL+5NRWMMp0DJ99Trd974FIw==
   dependencies:
     ts-essentials "^2.0.3"
-
-use-context-selector@^1.1.4:
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/use-context-selector/-/use-context-selector-1.2.10.tgz#47230099cd381119ae1c0f4a44737f336932aec0"
-  integrity sha512-gSKcvwl2I683GY5JG/ixsVDeVsIdEdLJz3ccl7y1KaKJqXitX2PjC0Z1F0LEtni1pc7u1J3cy5dHT8+MI69naA==
 
 use-enhanced-state@^0.0.12:
   version "0.0.12"
