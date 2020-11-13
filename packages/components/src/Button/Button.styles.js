@@ -105,13 +105,9 @@ export const primary = css`
 
 	&[data-destructive='true'] {
 		background-color: ${ui.color.destructive};
+		border-color: ${ui.color.destructive};
 
 		&:hover,
-		&:focus,
-		&[data-focused='true'] {
-			background-color: ${ui.color.destructive};
-		}
-
 		&:focus,
 		&[data-focused='true'] {
 			background-color: ${ui.color.destructive};

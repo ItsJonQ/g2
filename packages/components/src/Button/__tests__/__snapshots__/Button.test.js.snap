@@ -562,7 +562,7 @@ exports[`props should render suffix 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-16ex9o0"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-f610zs"
   data-active="false"
   data-destructive="false"
   data-focused="false"

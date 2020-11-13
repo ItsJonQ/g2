@@ -18,6 +18,7 @@ function ButtonGroup(props, forwardedRef) {
 		baseId,
 		className,
 		children,
+		enableSelectNone = false,
 		expanded = false,
 		segmented = false,
 		id,
@@ -44,8 +45,9 @@ function ButtonGroup(props, forwardedRef) {
 	const contextProps = React.useMemo(
 		() => ({
 			buttonGroup: radio,
+			enableSelectNone,
 		}),
-		[radio],
+		[enableSelectNone, radio],
 	);
 
 	const contextSystemProps = React.useMemo(() => {
