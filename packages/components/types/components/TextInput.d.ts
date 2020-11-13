@@ -18,7 +18,7 @@ export declare type TextInputProps = Omit<
 	 *
 	 * @default true
 	 */
-	arrow?: TextInputArrow;
+	arrows?: TextInputArrow;
 	/**
 	 * Renders an error state.
 	 *

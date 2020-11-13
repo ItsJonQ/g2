@@ -13,6 +13,10 @@ export declare type ButtonGroupProps = ReakitRadioGroupProps & {
 	 */
 	disabled?: boolean;
 	/**
+	 * Allows for value to reset if clicking the current active item.
+	 */
+	enableSelectNone?: boolean;
+	/**
 	 * Renders inner `Button` with a full-width expanded UI.
 	 */
 	expanded?: boolean;
