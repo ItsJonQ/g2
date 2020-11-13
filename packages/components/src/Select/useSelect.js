@@ -1,6 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
-import { cx, ui } from '@wp-g2/styles';
-import { is, noop, useControlledState } from '@wp-g2/utils';
+import { css, cx, ui } from '@wp-g2/styles';
+import { is, noop, useControlledState, useResizeAware } from '@wp-g2/utils';
 import React from 'react';
 import { useCallback, useRef, useState } from 'react';
 
@@ -41,6 +41,7 @@ export function useSelect(props) {
 		initial: multiple ? [] : defaultValue,
 	});
 	const [isFocused, setIsFocused] = useState(isFocusedProp);
+	const [resizer, sizes] = useResizeAware();
 	const inputRef = useRef();
 
 	const baseFieldProps = useBaseField({
@@ -98,12 +99,18 @@ export function useSelect(props) {
 
 	const classes = cx(baseFieldProps.className, styles.base, className);
 
+	const hasArrow = !multiple;
+	const paddingRight = hasArrow ? styles.ARROW_WRAPPER_WIDTH : 0;
+
 	const inputClasses = cx(
 		TextInputStyles.Input,
 		styles.select,
 		shouldRenderPlaceholder && styles.placeholder,
 		multiple && ScrollableStyles.scrollableScrollbar,
 		TextInputStyles[size],
+		css({
+			paddingRight: sizes.width || 0 + paddingRight,
+		}),
 	);
 
 	let content = renderContent({ children, options });
@@ -133,6 +140,12 @@ export function useSelect(props) {
 		...otherProps,
 	};
 
+	const suffixClasses = cx(styles.Suffix, hasArrow && styles.arrowPadding);
+
+	const suffixProps = {
+		className: suffixClasses,
+	};
+
 	return {
 		...baseFieldProps,
 		...ui.$('SelectWrapper'),
@@ -142,6 +155,9 @@ export function useSelect(props) {
 		multiple,
 		prefix,
 		inputRef,
+		resizer,
+		suffixProps,
+		sizes,
 		suffix,
 	};
 }
