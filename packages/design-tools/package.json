@@ -24,6 +24,7 @@
     "@wp-g2/styles": "^0.0.106",
     "@wp-g2/substate": "^0.0.106",
     "@wp-g2/utils": "^0.0.106",
+    "react-icons": "^3.10.0",
     "units-css": "^0.4.0"
   },
   "devDependencies": {
