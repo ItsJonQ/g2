@@ -31,7 +31,7 @@ function CollapsibleContent(props, forwardedRef) {
 	);
 	const { disclosure } = useCollapsibleContext();
 
-	const isVisible = disclosure.visible;
+	const isVisible = disclosure?.visible;
 	const classes = cx(styles.CollapsibleContent, className);
 
 	return (
