@@ -101,7 +101,7 @@ exports[`props should render removeButtonText 1`] = `
     <button
       aria-busy="false"
       aria-label="Remove"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button css-1wrb2r1"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button css-13co2zy"
       data-active="false"
       data-destructive="false"
       data-focused="false"

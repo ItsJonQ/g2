@@ -63,7 +63,7 @@ exports[`props should render correctly 1`] = `
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-12ca9ho"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1hamh0q"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -201,7 +201,7 @@ exports[`props should render isLoading 1`] = `
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-12ca9ho"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1hamh0q"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -321,7 +321,7 @@ exports[`props should render placeholder 1`] = `
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-12ca9ho"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1hamh0q"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -444,7 +444,7 @@ exports[`props should render prefix 1`] = `
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-12ca9ho"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1hamh0q"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -567,7 +567,7 @@ exports[`props should render suffix 1`] = `
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-12ca9ho"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1hamh0q"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -687,7 +687,7 @@ exports[`props should render value 1`] = `
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-12ca9ho"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1hamh0q"
       data-active="false"
       data-destructive="false"
       data-focused="false"

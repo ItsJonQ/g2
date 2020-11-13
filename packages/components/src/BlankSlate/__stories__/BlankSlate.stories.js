@@ -1,6 +1,7 @@
 import { FiDownload } from '@wp-g2/icons';
 import React from 'react';
 
+import { TextInput } from '../../index';
 import { BlankSlate } from '../index';
 
 export default {
@@ -15,7 +16,7 @@ export const _default = () => {
 			icon={<FiDownload />}
 			title="Twitter Embed"
 		>
-			<input type="text" />
+			<TextInput type="text" />
 		</BlankSlate>
 	);
 };

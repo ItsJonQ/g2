@@ -5,8 +5,8 @@ import * as baseButtonStyles from '../BaseButton/BaseButton.styles';
 export const Button = css`
 	color: ${ui.get('buttonTextColor')};
 	font-weight: 600;
-	padding-left: ${ui.get('controlPaddingXLarge')};
-	padding-right: ${ui.get('controlPaddingXLarge')};
+	padding-left: ${ui.get('buttonPaddingX')};
+	padding-right: ${ui.get('buttonPaddingX')};
 
 	&:active {
 		color: ${ui.get('buttonTextColorActive')};
@@ -186,6 +186,11 @@ export const tertiary = css`
 
 	&[data-destructive='true'] {
 		color: ${ui.color.destructive};
+
+		&:hover,
+		&:focus {
+			border-color: ${ui.color.destructive};
+		}
 
 		&:active {
 			color: ${ui.color.text};

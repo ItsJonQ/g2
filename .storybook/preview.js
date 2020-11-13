@@ -65,8 +65,8 @@ const Themer = React.memo(
 		setStats,
 	}) => {
 		const [currentTheme, setCurrentTheme] = useLocalState(
-			'g2/currentTheme/v0.0.94',
-			'base',
+			'g2/currentTheme/v0.0.106',
+			'next',
 		);
 
 		const [isDark, setIsDark] = useLocalState('darkMode', false);

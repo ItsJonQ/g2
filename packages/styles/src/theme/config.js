@@ -136,9 +136,9 @@ const CONTROL_PROPS = {
 	controlHeightXLarge: `calc(${get('controlHeight')} * 1.4)`,
 	controlHeightXSmall: `calc(${get('controlHeight')} * 0.67)`,
 	controlHeightXXSmall: `calc(${get('controlHeight')} * 0.4)`,
-	controlPaddingX: '8px',
-	controlPaddingXLarge: `calc(${get('controlPaddingX')} * 2)`,
-	controlPaddingXSmall: `calc(${get('controlPaddingX')} / 2)`,
+	controlPaddingX: '12px',
+	controlPaddingXLarge: `calc(${get('controlPaddingX')} * 1.3334)`,
+	controlPaddingXSmall: `calc(${get('controlPaddingX')} / 1.3334)`,
 	controlPrimaryTextColorActive: get('white'),
 	controlPrimaryTextColor: get('white'),
 	controlSurfaceBoxShadow:
@@ -149,6 +149,11 @@ const CONTROL_PROPS = {
 };
 
 const BUTTON_PROPS = {
+	buttonPaddingXRatio: 'calc(4/3)',
+	buttonPaddingX: `calc(${get('controlPaddingX')} * ${get(
+		'buttonPaddingXRatio',
+	)})`,
+
 	buttonTextColor: get('colorAdmin'),
 	buttonTextColorActive: get('buttonTextColor'),
 

@@ -8,7 +8,7 @@ export const Button = css`
 	border-radius: ${ui.get('controlBorderRadius')};
 	border-style: solid;
 	border-width: 1px;
-	box-shadow: 0 0 0 2px transparent;
+	box-shadow: 0 0 0 ${ui.get('controlBoxShadowFocusSize')} transparent;
 	box-sizing: border-box;
 	color: ${ui.color.text};
 	cursor: pointer;
@@ -162,6 +162,10 @@ export const subtle = css`
 		border-color: ${ui.get('controlBorderColorSubtle')};
 		color: ${ui.color.text};
 	}
+
+	&:focus {
+		border-color: ${ui.get('buttonPrimaryBorderColorFocus')};
+	}
 `;
 
 export const control = css`
@@ -180,7 +184,7 @@ export const control = css`
 
 	&:focus {
 		${ui.zIndex('ControlFocus')};
-		border-color: ${ui.color.admin};
+		border-color: ${ui.get('buttonPrimaryBorderColorFocus')};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 `;
@@ -191,6 +195,10 @@ export const subtleControl = css`
 	&:hover,
 	&:focus {
 		background-color: ${ui.get('controlBackgroundColor')};
+	}
+
+	&:focus {
+		border-color: ${ui.get('buttonPrimaryBorderColorFocus')};
 	}
 
 	&:active {

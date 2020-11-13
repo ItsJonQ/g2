@@ -30,7 +30,7 @@ exports[`props should render CardInnerBody 1`] = `
     >
       <button
         aria-busy="false"
-        class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-f610zs"
+        class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-hytjz0"
         data-active="false"
         data-destructive="false"
         data-focused="false"
@@ -97,7 +97,7 @@ exports[`props should render correctly 1`] = `
     >
       <button
         aria-busy="false"
-        class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-f610zs"
+        class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-hytjz0"
         data-active="false"
         data-destructive="false"
         data-focused="false"
