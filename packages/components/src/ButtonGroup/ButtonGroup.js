@@ -30,7 +30,6 @@ function ButtonGroup(props, forwardedRef) {
 
 	const radio = useRadioState({
 		baseId: baseId || id,
-		unstable_virtual: true,
 		state: value,
 	});
 
