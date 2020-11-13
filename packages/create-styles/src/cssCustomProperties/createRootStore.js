@@ -12,8 +12,8 @@ export class RootStore {
 	state = {};
 
 	/**
-	 * 
-	 * @param {Record<string, string>} initialState 
+	 *
+	 * @param {Record<string, string>} initialState
 	 */
 	constructor(initialState = {}) {
 		this.setState(initialState);
@@ -61,7 +61,7 @@ export class RootStore {
 		/**
 		 * Filter out entries so that we only target values with CSS variables.
 		 */
-		const entries = Object.entries(this.state).filter(([k, v]) =>
+		const entries = Object.entries(this.state).filter(([_, v]) =>
 			hasVariable(v),
 		);
 
