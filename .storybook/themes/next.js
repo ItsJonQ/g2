@@ -1,17 +1,17 @@
 import { createTheme } from '@wp-g2/styles';
 
-const theme = createTheme(({ get, theme }) => {
+const theme = createTheme(({ get, theme, space }) => {
 	return {
 		...theme,
 		buttonControlActiveStateColor: get('colorText'),
 		cardBorderRadius: '4px',
 		colorAdmin: '#3858E9',
-		controlBackgroundColor: 'transparent',
+		// controlBackgroundColor: 'transparent',
 		controlBorderColor: get('colorText'),
 		controlBorderColorHover: get('colorText'),
 		controlBorderColorSubtle: 'transparent',
 		controlBorderRadius: '2px',
-		controlHeight: '40px',
+		controlHeight: '36px',
 		sliderThumbBackgroundColor: get('colorAdmin'),
 		sliderThumbBorderColor: 'transparent',
 		sliderThumbBoxShadow: 'none',
@@ -20,7 +20,7 @@ const theme = createTheme(({ get, theme }) => {
 		// switchBackdropBorderColor: get('colorText'),
 		// switchBackdropBorderColorActive: get('colorText'),
 		// switchBackdropBorderColorFocus: get('white'),
-		switchPaddingOffset: '10px',
+		switchPaddingOffset: '8px',
 		// switchToggleBackgroundColor: get('colorText'),
 		// switchToggleBackgroundColorActive: get('colorTextInverted'),
 		// switchToggleBoxShadow: 'none',
