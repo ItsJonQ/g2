@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"emitDeclarationOnly": true,
+		"isolatedModules": true,
+		"jsx": "react",
+		"module": "esnext",
+		"target": "esnext",
+		"moduleResolution": "node",
+		"composite": true,
+
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+
+		"types": ["webpack-env"]
+	},
+	"exclude": [
+		"**/dist/",
+		"**/node_modules/",
+		".remake/",
+		".github/",
+		".storybook/",
+		"**/__stories__/"
+	]
+}

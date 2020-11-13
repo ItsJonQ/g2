@@ -1,34 +1,9 @@
-import {
-	isArray,
-	isBoolean,
-	isDate,
-	isFunction,
-	isMap,
-	isNaN,
-	isNil,
-	isNull,
-	isNumber,
-	isObject,
-	isObjectLike,
-	isPlainObject,
-	isRegExp,
-	isSet,
-	isString,
-	isSymbol,
-	isUndefined,
-	isWeakMap,
-	isWeakSet,
-} from 'lodash';
+import _ from 'lodash';
 
 /**
- * Returns the object type of the given payload
+ * @param {any} o
+ * @return {boolean}
  */
-function isType(type) {
-	return (o) => {
-		return {}.toString.call(o).slice(8, -1) === type;
-	};
-}
-
 const numeric = (o) => {
 	const obj = typeof o === 'string' ? o.replace(/,/g, '') : o;
 	return (
@@ -39,44 +14,53 @@ const numeric = (o) => {
 	);
 };
 
+/**
+ * @param {any} o
+ * @return {boolean}
+ */
 const numericZero = (o) => {
 	return o === 0 || o === '0';
 };
 
-const empty = (o = {}) => {
-	return Object.keys(o).length === 0;
-};
+/**
+ * @template T
+ * @param {T} o
+ * @return {T is Exclude<T, undefined | null>}
+ */
+const defined = (o) => !_.isNil(o);
 
 export const is = {
-	blob: isType('Blob'),
-	defined: (o) => !isNil(o),
-	empty,
-	file: isType('File'),
+	/** @type {(o: any) => o is Blob} */
+	blob: (o) => o instanceof Blob,
+	defined,
+	/** @type {(o: any) => o is File} */
+	file: (o) => o instanceof File,
 	numeric,
 	numericZero,
 
 	/**
 	 * Re-exports from lodash
 	 */
-	array: isArray,
-	boolean: isBoolean,
-	date: isDate,
-	function: isFunction,
-	map: isMap,
-	nan: isNaN,
-	nil: isNil,
-	number: isNumber,
-	null: isNull,
-	object: isObject,
-	objectLike: isObjectLike,
-	plainObject: isPlainObject,
-	regExp: isRegExp,
-	set: isSet,
-	string: isString,
-	symbol: isSymbol,
-	undefined: isUndefined,
-	weakSet: isWeakSet,
-	weakMap: isWeakMap,
+	array: _.isArray,
+	boolean: _.isBoolean,
+	date: _.isDate,
+	empty: _.isEmpty,
+	function: _.isFunction,
+	map: _.isMap,
+	nan: _.isNaN,
+	nil: _.isNil,
+	number: _.isNumber,
+	null: _.isNull,
+	object: _.isObject,
+	objectLike: _.isObjectLike,
+	plainObject: _.isPlainObject,
+	regExp: _.isRegExp,
+	set: _.isSet,
+	string: _.isString,
+	symbol: _.isSymbol,
+	undefined: _.isUndefined,
+	weakSet: _.isWeakSet,
+	weakMap: _.isWeakMap,
 };
 
 export default is;

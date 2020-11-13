@@ -10,6 +10,15 @@ coverage
 build
 dist
 
+# Ignore tsc-generated type declarations
+/packages/*/types
+# Some packages include manual declarations
+!/packages/context/types/
+!/packages/styles/types/
+!/packages/components/types/
+!/packages/gatsby-plugin-styles/types/
+!/packages/protokit/types/
+
 # misc
 .DS_Store
 .cache
@@ -23,3 +32,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log
+*.tsbuildinfo

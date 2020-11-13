@@ -1,3 +1,7 @@
+/**
+ * @param {import('react').KeyboardEvent} event
+ * @return {string}
+ */
 export function normalizeArrowKey(event) {
 	const { key, keyCode } = event;
 	/* istanbul ignore next (ie) */

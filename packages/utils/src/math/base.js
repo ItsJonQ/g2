@@ -1,7 +1,7 @@
 /**
  * Parses and retrieves a number value.
  *
- * @param {any} value The incoming value.
+ * @param {unknown} value The incoming value.
  *
  * @return {number} The parsed number value.
  */
@@ -14,25 +14,30 @@ export function getNumber(value) {
 /**
  * Safely adds 2 values.
  *
- * @param {number|string} args Values to add together.
+ * @param {Array<number|string>} args Values to add together.
  *
  * @return {number} The sum of values.
  */
 export function add(...args) {
-	return args.reduce((sum, arg) => sum + getNumber(arg), 0);
+	return args.reduce(
+		/** @type {(sum:number, arg: string | number) => number} */
+		(sum, arg) => sum + getNumber(arg),
+		0,
+	);
 }
 
 /**
  * Safely subtracts 2 values.
  *
- * @param {number|string} args Values to subtract together.
+ * @param {Array<number|string>} args Values to subtract together.
  *
  * @return {number} The difference of the 2 values.
  */
 export function subtract(...args) {
-	return args.reduce((diff, arg, index) => {
+	return /** @type {number[]} */ (args).reduce((diff, arg, index) => {
+		/** @type {number} */
 		const value = getNumber(arg);
-		return index === 0 ? value : diff - value;
+		return index === 0 ? value : /** @type {number} */ (diff) - value;
 	});
 }
 

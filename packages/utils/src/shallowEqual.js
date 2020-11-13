@@ -1,6 +1,10 @@
 /**
  * Compares two objects.
  *
+ * @param {Record<any, any>} objA
+ * @param {Record<any, any>} objB
+ * @return {boolean}
+ *
  * @example
  * import { shallowEqual } from "reakit-utils";
  *
