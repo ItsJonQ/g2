@@ -10,6 +10,46 @@ const shouldForwardProp = isPropValid;
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
+/** @typedef {import('create-emotion').Emotion} Emotion */
+/** @typedef {Emotion['cx'] | Emotion['css'] | string} InterpolatedCSS */
+
+/**
+ * @template {keyof JSX.IntrinsicElements | import('react').JSXElementConstructor<any>} E
+ * @typedef {JSX.LibraryManagedAttributes<E, import('react').ComponentPropsWithRef<E>>} PropsOf
+ */
+
+/**
+ * @template {import('react').ElementType} E
+ * @typedef ViewOwnProps
+ * @property {E | string} [as]
+ * @property {InterpolatedCSS} [css]
+ * @property {InterpolatedCSS} [__css]
+ * @property {Emotion['cx']} [cx]
+ */
+
+/**
+ * @template {import('react').ElementType} E
+ * @typedef {ViewOwnProps<E> & Omit<PropsOf<E>, keyof ViewOwnProps<import('react').ElementType<any>>>} ViewProps
+ */
+
+/**
+ * @template {import('react').ElementType} E
+ * @template P
+ * @typedef {P & ViewProps<E>} PolymorphicComponentProps
+ */
+
+/**
+ * @template P
+ * @template {import('react').ElementType} D
+ * @typedef {(props: PolymorphicComponentProps<D, P>) => JSX.Element} PolymorphicComponent
+ */
+
+/**
+ * @template P
+ * @template {import('react').ElementType} D
+ * @typedef {(styles: any) => (props: PolymorphicComponentProps<D, P>) => JSX.Element} CreatePolymorphicComponent
+ */
+
 /**
  * @typedef CreateCoreElementOptions
  * @property {Parameters<import('create-emotion').Emotion['css']>} baseStyles The baseStyles from the Style system.
@@ -35,11 +75,12 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * const alwaysBlueDiv = createCoreElement('div', { baseStyles: { background: 'blue' }})
  * ```
  *
- * @param {string | import('react').ComponentType} tagName The HTMLElement/React.Component to connect with the Style system.
+ * @template {keyof JSX.IntrinsicElements} TTagName
+ * @param {TTagName} tagName The HTMLElement/React.Component to connect with the Style system.
  * @param {CreateCoreElementOptions} options Options to custom coreElement styles.
- * @returns {import('react').ForwardRefExoticComponent<Pick<any, string | number | symbol> & import('react').RefAttributes<any>>} The Style system wrapped HTMLElement/React.Component.
+ * @returns {PolymorphicComponent<{}, TTagName>} The Style system wrapped HTMLElement/React.Component.
  */
-export const createCoreElement = (tagName = 'div', options) => {
+export const createCoreElement = (tagName, options) => {
 	const { baseStyles, compiler, globalStyles } = {
 		...defaultOptions,
 		...options,
@@ -163,5 +204,6 @@ export const createCoreElement = (tagName = 'div', options) => {
 		SystemComponent.displayName = displayName;
 	}
 
+	// @ts-ignore
 	return SystemComponent;
 };

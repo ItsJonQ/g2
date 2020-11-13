@@ -22,7 +22,7 @@ export function createCoreElements({ baseStyles, compiler, globalStyles }) {
 	const core = {};
 
 	const _createStyledElement = (
-		/** @type {string | import('react').ComponentType} */ tagName,
+		/** @type {keyof JSX.IntrinsicElements} */ tagName,
 	) => createCoreElement(tagName, { baseStyles, compiler, globalStyles });
 
 	for (const tagName of tags) {

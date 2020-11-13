@@ -20,7 +20,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {ReturnType<createCompiler>['cx']} cx A function to resolve + combine classNames.
  * @property {(tokenName: string) => string} createToken A function to generate a design token (CSS variable) used by the system.
  * @property {(value: string) => string} get The primary function to retrieve Style system variables.
- * @property {import('@emotion/styled').CreateStyled} styled A set of styled components.
+ * @property {import('./createStyledComponents').CreateStyled} styled A set of styled components.
  * @property {import('react').ComponentType} View The base <View /> component.
  * @property {import('react').ComponentType<import('react').ComponentProps<BaseThemeProvider>>} ThemeProvider The component (Provider) used to adjust design tokens.
  * @property {import('../cssCustomProperties').RootStore} rootStore
