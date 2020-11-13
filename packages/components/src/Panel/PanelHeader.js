@@ -5,12 +5,15 @@ import React from 'react';
 import { ArrowIndicator } from '../ArrowIndicator';
 import { CollapsibleTrigger, useCollapsibleContext } from '../Collapsible';
 import { Flex, FlexBlock } from '../Flex';
+import { Heading } from '../Heading';
+import { HStack } from '../HStack';
 import { Text } from '../Text';
 import { usePanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
 
 function PanelHeader(props, forwardedRef) {
 	const {
+		actions,
 		children,
 		className,
 		hideArrow = false,
@@ -18,18 +21,36 @@ function PanelHeader(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'PanelHeader');
 	const { disclosure } = useCollapsibleContext();
-	const { isSeamless } = usePanelContext();
-	const { visible } = disclosure;
+	const { collapsible, seamless } = usePanelContext();
+	const { visible } = disclosure || {};
 	const showArrow = !hideArrow;
-
-	const content = title ? <Text weight={500}>{title}</Text> : children;
 	const direction = visible ? 'down' : 'right';
+
+	let content = title ? <Heading size={5}>{title}</Heading> : children;
+	if (actions) {
+		content = (
+			<HStack>
+				{content}
+				{actions}
+			</HStack>
+		);
+	}
 
 	const classes = cx(
 		styles.PanelHeader,
-		isSeamless && styles.seamless,
+		seamless && styles.seamless,
+		collapsible && styles.collapsibleHeader,
+		!collapsible && styles.nonCollapsibleHeader,
 		className,
 	);
+
+	if (!collapsible) {
+		return (
+			<Flex className={classes} {...otherProps} ref={forwardedRef}>
+				<FlexBlock>{content}</FlexBlock>
+			</Flex>
+		);
+	}
 
 	return (
 		<CollapsibleTrigger

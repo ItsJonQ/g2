@@ -10,9 +10,20 @@ const { PanelBodyView } = styles;
 
 function PanelBody(props, forwardedRef) {
 	const { children, ...otherProps } = useContextSystem(props, 'PanelBody');
-	const { isSeamless } = usePanelContext();
+	const { collapsible, seamless } = usePanelContext();
 
-	const __css = cx(isSeamless && styles.seamless);
+	const __css = cx(
+		seamless && styles.seamless,
+		!collapsible && styles.nonCollapsibleBody,
+	);
+
+	if (!collapsible) {
+		return (
+			<PanelBodyView {...otherProps} cx={__css} ref={forwardedRef}>
+				{children}
+			</PanelBodyView>
+		);
+	}
 
 	return (
 		<CollapsibleContent ref={forwardedRef}>

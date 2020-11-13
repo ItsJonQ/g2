@@ -12,9 +12,11 @@ function Panel(props, forwardedRef) {
 	const {
 		baseId,
 		className,
+		children,
+		collapsible = true,
 		id: idProp,
 		isBorderless = false,
-		isSeamless = false,
+		seamless = false,
 		onVisibleChange = noop,
 		visible: visibleProp = false,
 		...otherProps
@@ -41,8 +43,13 @@ function Panel(props, forwardedRef) {
 		[onVisibleChange, setVisible],
 	);
 
+	const contextProps = React.useMemo(() => ({ collapsible, seamless }), [
+		collapsible,
+		seamless,
+	]);
+
 	return (
-		<PanelContext.Provider value={{ isSeamless }}>
+		<PanelContext.Provider value={contextProps}>
 			<Collapsible
 				baseId={id}
 				visible={visible}
@@ -50,7 +57,9 @@ function Panel(props, forwardedRef) {
 				className={classes}
 				onVisibleChange={handleOnVisibleChange}
 				ref={forwardedRef}
-			/>
+			>
+				{children}
+			</Collapsible>
 		</PanelContext.Provider>
 	);
 }

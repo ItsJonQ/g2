@@ -7,7 +7,6 @@ export const Panel = css`
 `;
 
 export const PanelHeader = css`
-	cursor: pointer;
 	outline: none;
 	padding: ${ui.get('panelHeaderPadding')};
 	position: relative;
@@ -16,6 +15,15 @@ export const PanelHeader = css`
 		${ui.zIndex('ControlFocus')};
 		box-shadow: 0 0 0 1px ${ui.color.admin} inset;
 	}
+`;
+
+export const collapsibleHeader = css`
+	cursor: pointer;
+`;
+
+export const nonCollapsibleHeader = css`
+	padding-bottom: 0;
+	padding-top: ${ui.space(3)};
 `;
 
 export const borderless = css`
@@ -31,4 +39,8 @@ export const seamless = css`
 
 export const PanelBodyView = styled.div`
 	padding: ${ui.get('panelBodyPadding')};
+`;
+
+export const nonCollapsibleBody = css`
+	padding-bottom: ${ui.space(5)};
 `;
