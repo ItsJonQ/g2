@@ -118,6 +118,19 @@ export const formGroup = css`
 	margin-left: auto;
 `;
 
+export const backdropError = css`
+	border-color: ${ui.get('controlDestructiveBorderColor')};
+
+	input:checked ~ & {
+		background: ${ui.get('controlDestructiveBorderColor')};
+		border-color: ${ui.get('controlDestructiveBorderColor')};
+	}
+`;
+
+export const backdropErrorFocus = css`
+	box-shadow: ${ui.get('controlDestructiveBoxShadowFocus')};
+`;
+
 function getControlHeight(height) {
 	return `calc(${ui.get(height)} - calc(${ui.get(
 		'switchPaddingOffset',

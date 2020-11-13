@@ -4,8 +4,13 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Switch.styles';
 
-function SwitchBackdrop({ isFocused = false, ...props }) {
-	const __css = cx(styles.Backdrop, isFocused && styles.focus);
+function SwitchBackdrop({ error, isFocused = false, ...props }) {
+	const __css = cx(
+		styles.Backdrop,
+		isFocused && styles.focus,
+		error && styles.backdropError,
+		error && isFocused && styles.backdropErrorFocus,
+	);
 
 	return (
 		<View

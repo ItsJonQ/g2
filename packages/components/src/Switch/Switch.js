@@ -15,6 +15,7 @@ function Switch(props, forwardedRef) {
 		checked,
 		className,
 		disabled,
+		error,
 		id,
 		isFocused,
 		label,
@@ -40,7 +41,7 @@ function Switch(props, forwardedRef) {
 				ref={forwardedRef}
 				{...ui.$('SwitchInput')}
 			/>
-			<Backdrop isFocused={isFocused} size={size} />
+			<Backdrop error={error} isFocused={isFocused} size={size} />
 			<Toggle size={size} />
 			<VisuallyHidden {...ui.$('SwitchLabel')}>{label}</VisuallyHidden>
 		</View>
