@@ -1,7 +1,12 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import { interpolate, noop, useControlledState } from '@wp-g2/utils';
-import { useCallback, useMemo } from 'react';
+import {
+	interpolate,
+	noop,
+	parseUnitValue,
+	useControlledState,
+} from '@wp-g2/utils';
+import { useCallback, useMemo, useState } from 'react';
 
 import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './Slider.styles';
@@ -9,10 +14,13 @@ import * as styles from './Slider.styles';
 export function useSlider(props) {
 	const {
 		className,
+		defaultValue,
 		error,
+		onBlur = noop,
 		onChange = noop,
+		onFocus = noop,
 		id: idProp,
-		isFocused = false,
+		isFocused: isFocusedProp = false,
 		max = 100,
 		min = 0,
 		size = 'medium',
@@ -20,9 +28,20 @@ export function useSlider(props) {
 		value: valueProp,
 		...otherProps
 	} = useContextSystem(props, 'Slider');
-
-	const [value, setValue] = useControlledState(valueProp, { initial: 50 });
+	const [initialValue] = parseUnitValue(valueProp);
+	const [value, setValue] = useControlledState(initialValue, {
+		initial: defaultValue || 50,
+	});
 	const id = useFormGroupContextId(idProp);
+	const [isFocused, setIsFocused] = useState(isFocusedProp);
+
+	const handleOnBlur = useCallback(
+		(event) => {
+			onBlur(event);
+			setIsFocused(false);
+		},
+		[onBlur],
+	);
 
 	const handleOnChange = useCallback(
 		(event) => {
@@ -31,6 +50,14 @@ export function useSlider(props) {
 			onChange(next, { event });
 		},
 		[onChange, setValue],
+	);
+
+	const handleOnFocus = useCallback(
+		(event) => {
+			onFocus(event);
+			setIsFocused(true);
+		},
+		[onFocus],
 	);
 
 	const currentValue = interpolate(value, [min, max], [0, 100]);
@@ -58,7 +85,9 @@ export function useSlider(props) {
 		id,
 		max,
 		min,
+		onBlur: handleOnBlur,
 		onChange: handleOnChange,
+		onFocus: handleOnFocus,
 		style: componentStyles,
 		type: 'range',
 		value,
