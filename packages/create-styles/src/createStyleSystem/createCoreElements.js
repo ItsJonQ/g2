@@ -1,7 +1,7 @@
 import { createCoreElement } from './createCoreElement';
 import { tags } from './tags';
 
-/** @typedef {Record<keyof JSX.IntrinsicElements, ReturnType<createCoreElement>>} CoreElements */
+/** @typedef {Record<keyof JSX.IntrinsicElements, import('./createCoreElement').PolymorphicComponent<{}, any>>} CoreElements */
 
 /**
  * @typedef CreateCoreElementProps
