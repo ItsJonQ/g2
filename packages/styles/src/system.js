@@ -154,11 +154,8 @@ const systemConfig = {
 		margin: 0,
 	},
 	config,
-	// @ts-ignore
 	darkModeConfig,
-	// @ts-ignore
 	highContrastModeConfig,
-	// @ts-ignore
 	darkHighContrastModeConfig,
 };
 
