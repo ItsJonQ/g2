@@ -75,26 +75,26 @@ function MenuItem(props, forwardedRef) {
 
 	const prefixContent = useMemo(() => {
 		return (
-			(selectedContent || prevArrow || prefix) && (
+			(prevArrow || prefix) && (
 				<Flex>
-					{selectedContent}
 					{prevArrow}
 					{prefix}
 				</Flex>
 			)
 		);
-	}, [prefix, prevArrow, selectedContent]);
+	}, [prefix, prevArrow]);
 
 	const suffixContent = useMemo(() => {
 		return (
-			(nextArrow || suffix) && (
+			(selectedContent || nextArrow || suffix) && (
 				<Flex>
+					{selectedContent}
 					{suffix}
 					{nextArrow}
 				</Flex>
 			)
 		);
-	}, [nextArrow, suffix]);
+	}, [nextArrow, selectedContent, suffix]);
 
 	const handleOnClick = useCallback(
 		(event) => {
