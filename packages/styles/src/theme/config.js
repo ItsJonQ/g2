@@ -179,6 +179,11 @@ const CHECKBOX_PROPS = {
 	checkboxSize: '16px',
 };
 
+const FLEX_PROPS = {
+	flexGap: space(2),
+	flexItemMarginRight: get('flexGap'),
+};
+
 const LINK_PROPS = {
 	linkColor: get('colorAdmin'),
 	linkColorHover: get('colorAdmin'),
@@ -247,6 +252,7 @@ const BASE_THEME = {
 	...CARD_PROPS,
 	...CONTROL_PROPS,
 	...ELEVATION_PROPS,
+	...FLEX_PROPS,
 	...FONT_PROPS,
 	...SURFACE_PROPS,
 	// Animations

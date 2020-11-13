@@ -1,6 +1,6 @@
 import cssGridPlugin from 'styled-griddie';
-import cssVariablesPlugin from 'stylis-plugin-css-variables';
 
+import cssVariablesPlugin from './cssVariables';
 import specificityPlugin from './extraSpecificity';
 import rtlPlugin from './rtl';
 
@@ -13,11 +13,12 @@ const isProd = process.env.NODE_ENV === 'production';
 export function createPlugins({
 	specificityLevel = 7,
 	key = 'css',
+	rootStore,
 	skipSupportedBrowsers = isProd,
 }) {
 	return [
 		rtlPlugin,
-		cssVariablesPlugin({ skipSupportedBrowsers }),
+		cssVariablesPlugin({ skipSupportedBrowsers, rootStore }),
 		specificityPlugin({ level: specificityLevel, key }),
 		cssGridPlugin,
 	];

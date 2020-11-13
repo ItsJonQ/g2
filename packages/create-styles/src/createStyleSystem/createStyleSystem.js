@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ThemeProvider as BaseThemeProvider } from '../components/ThemeProvider';
 import { createCompiler } from '../createCompiler';
+import { createRootStore } from '../cssCustomProperties';
 import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
 import { createStyledComponents } from './createStyledComponents';
@@ -66,11 +67,16 @@ export function createStyleSystem(options = defaultOptions) {
 		highContrastModeConfig,
 	});
 
+	const rootStore = createRootStore(globalStyles.globalVariables);
+	rootStore.setState(globalStyles.globalVariables);
+
 	/**
 	 * Compiler (Custom Emotion instance).
 	 */
-
-	const compiler = createCompiler(compilerOptions);
+	const compiler = createCompiler({
+		...compilerOptions,
+		rootStore,
+	});
 	const { css, cx } = compiler;
 
 	/**
@@ -125,6 +131,7 @@ export function createStyleSystem(options = defaultOptions) {
 		styled,
 		View,
 		ThemeProvider,
+		rootStore,
 	};
 
 	return styleSystem;
