@@ -204,8 +204,8 @@ const MENU_PROPS = {
 };
 
 const PANEL_PROPS = {
-	panelHeaderPadding: space(3),
-	panelBodyPadding: `${space(2)} ${space(3)} ${space(3)}`,
+	panelHeaderPadding: `${space(3)} ${space(4)}`,
+	panelBodyPadding: `${space(2)} ${space(4)} ${space(3)}`,
 };
 
 const RADIO_PROPS = {
