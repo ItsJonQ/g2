@@ -25,7 +25,7 @@ const numericZero = (o) => {
 /**
  * @template T
  * @param {T} o
- * @return {T is Exclude<T, undefined | null>}
+ * @return {o is Exclude<T, undefined | null>}
  */
 const defined = (o) => !_.isNil(o);
 
