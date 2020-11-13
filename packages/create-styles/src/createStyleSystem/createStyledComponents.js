@@ -1,9 +1,13 @@
-import { hoistNonReactStatics, is } from '@wp-g2/utils';
+import { getDisplayName, hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
 import { tags } from './tags';
-import { compileInterpolatedStyles, getDisplayName } from './utils';
+import { compileInterpolatedStyles } from './utils';
 
+/**
+ * @typedef CreateStyled
+ *
+ */
 /**
  * @typedef CreateStyledComponentsProps
  * @property {object} compiler The (custom) Emotion instance.

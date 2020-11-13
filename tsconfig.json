@@ -1,5 +1,6 @@
 {
 	"references": [
+		{ "path": "packages/create-styles" },
 		{ "path": "packages/icons" },
 		{ "path": "packages/substate" },
 		{ "path": "packages/utils" }

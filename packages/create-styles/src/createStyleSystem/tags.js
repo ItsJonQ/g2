@@ -1,6 +1,7 @@
 /**
  * A collection of React HTMLElements.
  */
+/** @type {(keyof JSX.IntrinsicElements)[]} */
 export const tags = [
 	'a',
 	'abbr',
@@ -66,6 +67,8 @@ export const tags = [
 	'main',
 	'map',
 	'mark',
+	// @todo Marquee is obsolete, should it really be here anyway? https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee
+	// @ts-ignore
 	'marquee',
 	'menu',
 	'menuitem',

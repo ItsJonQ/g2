@@ -2,6 +2,11 @@ import { is } from '@wp-g2/utils';
 
 import { breakpoints } from './utils';
 
+/**
+ *
+ * @param {CSS} compile
+ * @return {CSS}
+ */
 export function createCSS(compile) {
 	/**
 	 * An enhanced version of the compiler's (Emotion) CSS function.
@@ -18,13 +23,15 @@ export function createCSS(compile) {
 	 * 		width: [100, 200, 500]
 	 * })
 	 * ```
-	 * @param {string|object|Array<string|object>} args
-	 * @returns {string} The compiled CSS className associated with the styles.
+	 * @param {Parameters<CSS>} args
+	 * @returns {ReturnType<CSS>} The compiled CSS className associated with the styles.
 	 */
-	return function css(...args) {
+	function css(...args) {
 		const [arg, ...rest] = args;
 
 		if (is.plainObject(arg)) {
+			// @todo
+			// @ts-ignore
 			return compile(responsive(arg));
 		}
 
@@ -32,6 +39,8 @@ export function createCSS(compile) {
 			for (let i = 0, len = arg.length; i < len; i++) {
 				const n = arg[i];
 				if (is.plainObject(n)) {
+					// @todo
+					// @ts-ignore
 					arg[i] = responsive(n);
 				}
 			}
@@ -39,17 +48,21 @@ export function createCSS(compile) {
 		}
 
 		return compile(...args);
-	};
+	}
+
+	// @ts-ignore
+	return css;
 }
 
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224
 /**
  * A utility function that generates responsive styles if the value is an array.
  *
- * @param {object} styles A styles object
- * @returns {object} An adjusted styles object with responsive styles (if applicable).
+ * @param {import('@emotion/serialize').ObjectInterpolation<any>} styles A styles object
+ * @returns {import('@emotion/serialize').ObjectInterpolation<any>} An adjusted styles object with responsive styles (if applicable).
  */
 export const responsive = (styles = {}) => {
+	/** @type {Record<any, any>} */
 	const next = {};
 	const mediaQueries = [
 		null,
@@ -81,3 +94,5 @@ export const responsive = (styles = {}) => {
 
 	return next;
 };
+
+/** @typedef {import('create-emotion').Emotion['css']} CSS */

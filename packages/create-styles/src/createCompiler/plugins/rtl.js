@@ -25,11 +25,16 @@ export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
  * The LTR/RTL detection happens only once on render.
  *
  * This is something that can be improved in future.
+ *
+ * @param {number} context
+ * @param {string} content
+ * @return {string | undefined}
  */
 function stylisRTLPlugin(context, content) {
 	if (context === STYLIS_PROPERTY_CONTEXT) {
 		return isRtl ? cssjanus.transform(content) : undefined;
 	}
+	return undefined;
 }
 
 export default stylisRTLPlugin;

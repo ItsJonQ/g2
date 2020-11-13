@@ -3,9 +3,9 @@ import { tags } from './tags';
 
 /**
  * @typedef CreateCoreElementProps
- * @property {object} baseStyles Base styles for the coreElements.
- * @property {function} injectGlobal The injectGlobal from the Style system's compiler.
- * @property {object} globalStyles Global styles for the coreElements.
+ * @property {Parameters<import('create-emotion').Emotion['css']>} baseStyles Base styles for the coreElements.
+ * @property {import('../createCompiler').Compiler} compiler The injectGlobal from the Style system's compiler.
+ * @property {import('./generateTheme').GenerateThemeResults} globalStyles Global styles for the coreElements.
  */
 
 /**
@@ -17,8 +17,9 @@ import { tags } from './tags';
 export function createCoreElements({ baseStyles, compiler, globalStyles }) {
 	const core = {};
 
-	const _createStyledElement = (tagName) =>
-		createCoreElement(tagName, { baseStyles, compiler, globalStyles });
+	const _createStyledElement = (
+		/** @type {string | import('react').ComponentType} */ tagName,
+	) => createCoreElement(tagName, { baseStyles, compiler, globalStyles });
 
 	for (const tagName of tags) {
 		core[tagName] = _createStyledElement(tagName);

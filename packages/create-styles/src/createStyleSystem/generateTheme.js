@@ -14,16 +14,16 @@ import {
 
 /**
  * @typedef GenerateThemeProps
- * @property {object} config Default theme config.
- * @property {object} darkModeConfig Dark mode theme config.
- * @property {object} highContrastModeConfig High contrast mode theme config.
- * @property {object} darkHighContrastModeConfig Dark high contrast mode theme config.
+ * @property {Record<string, string>} config Default theme config.
+ * @property {Record<string, string>} darkModeConfig Dark mode theme config.
+ * @property {Record<string, string>} highContrastModeConfig High contrast mode theme config.
+ * @property {Record<string, string>} darkHighContrastModeConfig Dark high contrast mode theme config.
  */
 
 /**
  * @typedef GenerateThemeResults
- * @property {object} theme A set of theme style references.
- * @property {object} globalVariables A set of global variables.
+ * @property {Record<string, string>} theme A set of theme style references.
+ * @property {Record<string, string>} globalVariables A set of global variables.
  * @property {string} globalCSSVariables The compiled CSS string for global variables.
  * @property {string} darkModeCSSVariables The compiled CSS string for global dark variables.
  * @property {string} highContrastModeCSSVariables The compiled CSS string for global high contrast variables.
