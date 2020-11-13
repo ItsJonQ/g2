@@ -137,7 +137,7 @@ export function parseUnitValue(initialValue) {
 	if (!matched) {
 		return [undefined, undefined];
 	}
-	const [unitMatch] = matched;
+	const [, unitMatch] = matched;
 
 	let unit = is.defined(unitMatch) ? unitMatch : '';
 	unit = unit.toLowerCase();
