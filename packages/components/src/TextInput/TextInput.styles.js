@@ -121,6 +121,7 @@ export const Steppers = css`
 export const StepperButton = css`
 	${SpinnerArrow};
 	border: 1px solid transparent;
+	color: ${ui.get('controlInnerControltextColor')};
 	cursor: pointer;
 	display: block;
 	outline: none;

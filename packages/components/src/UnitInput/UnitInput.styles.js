@@ -13,7 +13,7 @@ export const UnitInputSelectUnit = css`
 
 	border: 1px solid transparent;
 	border-radius: ${ui.get('controlBorderRadius')};
-	color: ${ui.get('colorTextMuted')};
+	color: ${ui.get('controlInnerControltextColor')};
 	cursor: pointer;
 	padding: 0 4px;
 	position: relative;

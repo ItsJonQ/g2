@@ -145,6 +145,7 @@ const CONTROL_PROPS = {
 		'0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2)',
 	controlSurfaceColor: get('white'),
 	controlTextActiveColor: get('colorAdmin'),
+	controlInnerControltextColor: get('colorAdmin'),
 };
 
 const BUTTON_PROPS = {
