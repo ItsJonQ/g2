@@ -43,7 +43,8 @@ export function createToken(key) {
  * @template {Record<string, string | number>} TDarkConfig
  * @template {Record<string, string | number>} THCConfig
  * @template {Record<string, string | number>} TDarkHCConfig
- * @param {keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig)} key The config variable to retrieve.
+ * @template {string} TGeneratedTokens
+ * @param {keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig) | TGeneratedTokens} key The config variable to retrieve.
  * @returns {string} The compiled CSS variable associated with the config key.
  */
 export function get(key) {
