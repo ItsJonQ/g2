@@ -116,25 +116,6 @@ exports[`props should render isRounded 1`] = `
 </div>
 `;
 
-exports[`props should render isSeamless 1`] = `
-<div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-16rwfbj"
-  data-g2-c16t="true"
-  data-g2-component="TextInputWrapper"
->
-  <input
-    autocomplete="off"
-    class="css-zn43e4"
-    data-g2-c16t="true"
-    data-g2-component="TextInput"
-    id="text-input"
-    spellcheck="false"
-    type="text"
-    value=""
-  />
-</div>
-`;
-
 exports[`props should render justify 1`] = `
 <div
   class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-15dw221"
@@ -187,6 +168,26 @@ exports[`props should render prefix 1`] = `
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
+    spellcheck="false"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`props should render seamless 1`] = `
+<div
+  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-16rwfbj"
+  data-g2-c16t="true"
+  data-g2-component="TextInputWrapper"
+>
+  <input
+    autocomplete="off"
+    class="css-zn43e4"
+    data-g2-c16t="true"
+    data-g2-component="TextInput"
+    id="text-input"
+    seamless=""
     spellcheck="false"
     type="text"
     value=""

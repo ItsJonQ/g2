@@ -3645,7 +3645,7 @@ exports[`props should render Select 1`] = `
   data-g2-component="SelectWrapper"
 >
   <select
-    class="css-pjq1vj"
+    class="css-fz31bs"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="Select"

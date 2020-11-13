@@ -117,7 +117,7 @@ exports[`props should render size 1`] = `
 exports[`props should render variant 1`] = `
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button css-dugk8n"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button css-4kdnmi"
   data-active="false"
   data-destructive="false"
   data-focused="false"

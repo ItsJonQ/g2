@@ -38,8 +38,8 @@ describe('props', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	test('should render isSeamless', () => {
-		const { container } = render(<TextInput id="text-input" isSeamless />);
+	test('should render seamless', () => {
+		const { container } = render(<TextInput id="text-input" seamless />);
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
