@@ -61,12 +61,7 @@ export const Backdrop = css`
 `;
 
 export const focus = css`
-	${ui.border.control.focus};
-
-	input:checked ~ & {
-		${ui.border.control.default};
-		border-color: ${ui.get('switchBackdropBorderColorFocus')};
-	}
+	box-shadow: ${ui.get('controlPseudoBoxShadowFocus')};
 `;
 
 export const Toggle = css`
@@ -128,7 +123,8 @@ export const backdropError = css`
 `;
 
 export const backdropErrorFocus = css`
-	box-shadow: ${ui.get('controlDestructiveBoxShadowFocus')};
+	border-color: transparent;
+	box-shadow: ${ui.get('controlDestructivePseudoBoxShadowFocus')};
 `;
 
 function getControlHeight(height) {

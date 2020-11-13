@@ -31,7 +31,7 @@ const COLOR_PROPS = {
 	...WORDPRESS_COLORS,
 	...BACKGROUND_COLOR_PROPS,
 	colorAdmin: '#007cba',
-	colorDestructive: '#E26F56',
+	colorDestructive: '#D94F4F',
 	colorBodyBackground: get('white'),
 	colorDivider: 'rgba(0, 0, 0, 0.1)',
 	colorPositive: get('greens'),
@@ -43,7 +43,7 @@ const COLOR_PROPS = {
 	colorTextHeading: '#050505',
 	colorTextMuted: '#8a8b8c',
 	...generateColorAdminColors('#007cba'),
-	...generateColorDestructiveColors('#E26F56'),
+	...generateColorDestructiveColors('#D94F4F'),
 };
 
 const FONT_PROPS = {
@@ -93,13 +93,43 @@ const CONTROL_PROPS = {
 	controlBorderColorSubtle: 'transparent',
 	controlBorderRadius: '2px',
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
+	controlBoxShadowFocusSize: '0.5px',
 	controlBoxShadow: `transparent`,
-	controlBoxShadowFocus: `0 0 0 2px ${get('colorAdminRgba20')}`,
+	controlBoxShadowFocus: `0 0 0 ${get('controlBoxShadowFocusSize')} ${get(
+		'colorAdmin',
+	)}`,
+	controlPseudoBoxShadowFocusWidth: '2px',
+	controlPseudoBoxShadowFocusRingSize: `calc(${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} + 1px + ${get('controlBoxShadowFocusSize')})`,
+	controlPseudoBoxShadowFocusRingSizeSmall: `calc(${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} + 1px)`,
+	controlPseudoBoxShadowFocus: `0 0 0 ${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
+		'controlPseudoBoxShadowFocusRingSize',
+	)} ${get('colorAdmin')}`,
+	controlPseudoBoxShadowFocusSmall: `0 0 0 ${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
+		'controlPseudoBoxShadowFocusRingSizeSmall',
+	)} ${get('colorAdmin')}`,
+	controlDestructivePseudoBoxShadowFocus: `0 0 0 ${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
+		'controlPseudoBoxShadowFocusRingSize',
+	)} ${get('colorDestructive')}`,
+	controlDestructivePseudoBoxShadowFocusSmall: `0 0 0 ${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
+		'controlPseudoBoxShadowFocusRingSizeSmall',
+	)} ${get('colorDestructive')}`,
 	controlDestructiveBorderColor: get('colorDestructive'),
 	controlDestructiveBorderColorFocus: get('controlDestructiveBorderColor'),
-	controlDestructiveBoxShadowFocus: `0 0 0 2px ${get(
-		'colorDestructiveRgba20',
-	)}`,
+	controlDestructiveBoxShadowFocus: `0 0 0 ${get(
+		'controlBoxShadowFocusSize',
+	)} ${get('colorDestructive')}`,
 	controlHeight: '30px',
 	controlHeightLarge: `calc(${get('controlHeight')} * 1.2)`,
 	controlHeightSmall: `calc(${get('controlHeight')} * 0.8)`,
@@ -233,12 +263,12 @@ const SLIDER_PROPS = {
 };
 
 const SWITCH_PROPS = {
-	switchBackdropBackgroundColor: 'transparent',
+	switchBackdropBackgroundColor: get('lightGray900'),
 	switchBackdropBackgroundColorActive: get('colorAdmin'),
-	switchBackdropBorderColor: get('colorText'),
+	switchBackdropBorderColor: get('lightGray900'),
 	switchBackdropBorderColorActive: get('colorAdmin'),
 	switchBackdropBorderColorFocus: get('white'),
-	switchToggleBackgroundColor: get('colorText'),
+	switchToggleBackgroundColor: get('colorTextInverted'),
 	switchToggleBackgroundColorActive: get('colorTextInverted'),
 	switchToggleBoxShadow: 'none',
 	switchPaddingOffset: '6px',

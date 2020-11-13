@@ -132,29 +132,23 @@ export const error = css`
 	}
 
 	&:focus {
-		${getFocusBoxShadow(ui.get('colorDestructiveRgba20'))};
+		${getFocusBoxShadow(
+			ui.get('controlDestructivePseudoBoxShadowFocusSmall'),
+		)};
 	}
 `;
 
 export const focusedError = css`
-	${getFocusBoxShadow(ui.get('colorDestructiveRgba20'))};
+	${getFocusBoxShadow(ui.get('controlDestructivePseudoBoxShadowFocusSmall'))};
 `;
 
-function getFocusBoxShadow(color = ui.get('sliderThumbBoxShadowColorFocus')) {
-	const boxShadow = [
-		0,
-		0,
-		0,
-		ui.get('sliderThumbBoxShadowSizeFocus'),
-		color,
-	].join(' ');
-
+function getFocusBoxShadow(color = ui.get('controlPseudoBoxShadowFocusSmall')) {
 	return css`
 		&::-webkit-slider-thumb {
-			box-shadow: ${boxShadow};
+			box-shadow: ${color};
 		}
 		&::-moz-range-thumb {
-			box-shadow: ${boxShadow};
+			box-shadow: ${color};
 		}
 	`;
 }
