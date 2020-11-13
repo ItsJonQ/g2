@@ -7,6 +7,7 @@ import {
 	highContrastModeConfig,
 } from './theme';
 
+/** @type {import('@wp-g2/create-styles').CreateStyleSystemOptions<typeof config, typeof darkModeConfig, typeof highContrastModeConfig, typeof darkHighContrastModeConfig>} */
 const systemConfig = {
 	baseStyles: {
 		MozOsxFontSmoothing: 'grayscale',
@@ -16,8 +17,11 @@ const systemConfig = {
 		margin: 0,
 	},
 	config,
+	// @ts-ignore
 	darkModeConfig,
+	// @ts-ignore
 	highContrastModeConfig,
+	// @ts-ignore
 	darkHighContrastModeConfig,
 };
 

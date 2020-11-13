@@ -5,7 +5,7 @@ import { tags } from './tags';
 
 /**
  * @typedef CreateCoreElementProps
- * @property {Parameters<import('create-emotion').Emotion['css']>} baseStyles Base styles for the coreElements.
+ * @property {import('create-emotion').ObjectInterpolation<any>} baseStyles Base styles for the coreElements.
  * @property {import('../createCompiler').Compiler} compiler The injectGlobal from the Style system's compiler.
  * @property {import('./generateTheme').GenerateThemeResults} globalStyles Global styles for the coreElements.
  */
@@ -22,7 +22,8 @@ export function createCoreElements({ baseStyles, compiler, globalStyles }) {
 	const core = {};
 
 	const _createStyledElement = (
-		/** @type {keyof JSX.IntrinsicElements} */ tagName,
+		/** @type {string} */ tagName,
+		// @ts-ignore
 	) => createCoreElement(tagName, { baseStyles, compiler, globalStyles });
 
 	for (const tagName of tags) {

@@ -16,13 +16,10 @@ const defaultOptions = {
 /** @typedef {import('create-emotion').Emotion} Emotion */
 
 /**
- * @typedef Compiler
- * @property {Emotion['css']} css
- * @property {Emotion['cx']} cx
- * @property {Emotion['sheet']} sheet
- * @property {Emotion['injectGlobal']} injectGlobal
- * @property {typeof breakpoints} breakpoints
- * @property {import('mitt').Emitter} __events
+ * @typedef {Emotion & {
+	breakpoints: typeof breakpoints,
+	__events: import('mitt').Emitter,
+	}} Compiler
  */
 
 /**
@@ -96,7 +93,9 @@ export function createCompiler(options) {
 	 * within the internal custom event emitter.
 	 */
 	const __insert = customEmotionInstance.sheet.insert;
-	customEmotionInstance.sheet.insert = (/** @type {[rule: string]} */...args) => {
+	customEmotionInstance.sheet.insert = (
+		/** @type {[rule: string]} */ ...args
+	) => {
 		__insert.apply(customEmotionInstance.sheet, [...args]);
 		customEmotionInstance.__events.emit('sheet.insert', ...args);
 	};

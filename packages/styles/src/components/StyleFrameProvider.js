@@ -56,6 +56,7 @@ function useEmotionInitialTagSync({ ref }) {
 			 * Account for compiler (Emotion) isSpeedy rendering, which occurs
 			 * for production builds.
 			 */
+			// @ts-ignore isSpeedy is an unexposed property
 			if (cache.sheet.isSpeedy) {
 				let speedyTag = cache.sheet.tags[0];
 				/**
@@ -80,6 +81,7 @@ function useEmotionInitialTagSync({ ref }) {
 					 * Clone the speed style tag, and append it into the target (frame)
 					 * document head.
 					 */
+					// @ts-ignore cloneNode type is weak
 					speedyTag = speedyTag.cloneNode(true);
 					speedyTag.innerHTML = initialStyles;
 

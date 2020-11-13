@@ -12,6 +12,10 @@ import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
 /**
+ * @template {Record<string, string | number>} TConfig
+ * @template {Record<string, string | number>} TDarkConfig
+ * @template {Record<string, string | number>} THCConfig
+ * @template {Record<string, string | number>} TDarkHCConfig
  * @typedef CreateStyleSystemObjects
  * @property {ReturnType<createCoreElements>} core A set of coreElements.
  * @property {ReturnType<createCompiler>} compiler The Style system compiler (a custom Emotion instance).
@@ -19,11 +23,26 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {ReturnType<createCompiler>['css']} css A function to compile CSS styles.
  * @property {ReturnType<createCompiler>['cx']} cx A function to resolve + combine classNames.
  * @property {(tokenName: string) => string} createToken A function to generate a design token (CSS variable) used by the system.
- * @property {(value: string) => string} get The primary function to retrieve Style system variables.
+ * @property {(value: keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig)) => string} get The primary function to retrieve Style system variables.
  * @property {import('./createStyledComponents').CreateStyled} styled A set of styled components.
  * @property {import('react').ComponentType} View The base <View /> component.
  * @property {import('react').ComponentType<import('react').ComponentProps<BaseThemeProvider>>} ThemeProvider The component (Provider) used to adjust design tokens.
  * @property {import('../cssCustomProperties').RootStore} rootStore
+ */
+
+/**
+ * @template {Record<string, string | number>} TConfig
+ * @template {Record<string, string | number>} TDarkConfig
+ * @template {Record<string, string | number>} THCConfig
+ * @template {Record<string, string | number>} TDarkHCConfig
+ * @typedef CreateStyleSystemOptions
+ * @property {import('create-emotion').ObjectInterpolation<any>} baseStyles
+ * @property {TConfig} config
+ * @property {Record<keyof TConfig, string | number>} darkModeConfig
+ * @property {Record<keyof TConfig, string | number>} highContrastModeConfig
+ * @property {Record<keyof TConfig, string | number>} darkHighContrastModeConfig
+ * @property {import('../createCompiler').CreateCompilerOptions} [compilerOptions]
+
  */
 
 /**
@@ -35,8 +54,12 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * const blueStyleSystem = createStyleSystem({ baseStyles });
  * ```
  *
- * @param {import('./utils').StyleSystemOptions} options Options to create a Style system with.
- * @returns {CreateStyleSystemObjects} A collection of functions and elements from the generated Style system.
+ * @template {Record<string, string | number>} TConfig
+ * @template {Record<string, string | number>} TDarkConfig
+ * @template {Record<string, string | number>} THCConfig
+ * @template {Record<string, string | number>} TDarkHCConfig
+ * @param {CreateStyleSystemOptions<TConfig, TDarkConfig, THCConfig, TDarkHCConfig>} options Options to create a Style system with.
+ * @returns {CreateStyleSystemObjects<TConfig, TDarkConfig, THCConfig, TDarkHCConfig>} A collection of functions and elements from the generated Style system.
  */
 export function createStyleSystem(options = defaultOptions) {
 	const {
@@ -127,6 +150,7 @@ export function createStyleSystem(options = defaultOptions) {
 		rootStore,
 	};
 
+	// @ts-ignore
 	return styleSystem;
 }
 

@@ -1,3 +1,4 @@
+import { is } from '@wp-g2/utils';
 import { useEffect, useState } from 'react';
 
 import { breakpoints } from '../style-system';
@@ -9,6 +10,10 @@ if (typeof window !== 'undefined') {
 }
 const { addEventListener, matchMedia, removeEventListener } = __window;
 
+/**
+ * @param {object} [options]
+ * @param {number} [options.defaultIndex=0]
+ */
 export const useBreakpointIndex = (options = {}) => {
 	const { defaultIndex = 0 } = options;
 
@@ -52,6 +57,10 @@ export function useResponsiveValue(values, options = {}) {
 
 	if (!Array.isArray(values)) return values;
 
-	const array = typeof values === 'function' ? values() : values;
+	let array = values;
+	if (is.function(values)) {
+		array = values();
+	}
+
 	return array[index >= array.length ? array.length - 1 : index];
 }

@@ -1,3 +1,10 @@
 {
-	"extends": "../../tsconfig.legacy.base.json"
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "src",
+		"declarationDir": "types",
+		"noImplicitAny": false
+	},
+	"include": ["src/**/*"],
+	"references": [{ "path": "../create-styles" }, { "path": "../utils" }]
 }

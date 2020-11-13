@@ -64,6 +64,7 @@
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "10.4.9",
     "@types/styled-components": "^5.1.4",
+    "@types/tinycolor2": "^1.4.2",
     "among": "2.0.0",
     "babel-loader": "^8.1.0",
     "eslint-config-prettier": "6.11.0",
