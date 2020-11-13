@@ -1333,6 +1333,69 @@ exports[`props should render Checkbox with css prop 2`] = `
 
 exports[`props should render CheckboxGroup 1`] = `null`;
 
+exports[`props should render ClipboardButton 1`] = `
+<button
+  aria-busy="false"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-clipboard-button wp-components-clipboard-button css-3mp8cw"
+  data-active="false"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="ClipboardButton"
+  data-icon="false"
+  id="ClipboardButton"
+  type="button"
+>
+  <span
+    class="components-elevation wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ClipboardButton with css prop 1`] = `
+<button
+  aria-busy="false"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-clipboard-button wp-components-clipboard-button css-3mp8cw"
+  data-active="false"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="ClipboardButton"
+  data-icon="false"
+  id="ClipboardButton"
+  type="button"
+>
+  <span
+    class="components-elevation wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
+exports[`props should render ClipboardButton with css prop 2`] = `
+<button
+  aria-busy="false"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-clipboard-button wp-components-clipboard-button css-135lg3k"
+  data-active="false"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="ClipboardButton"
+  data-icon="false"
+  id="ClipboardButton"
+  type="button"
+>
+  <span
+    class="components-elevation wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;
+
 exports[`props should render CloseButton 1`] = `
 <button
   aria-busy="false"

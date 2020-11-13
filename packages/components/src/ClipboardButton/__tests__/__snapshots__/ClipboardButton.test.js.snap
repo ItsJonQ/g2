@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`props should render correctly 1`] = `
+<button
+  aria-busy="false"
+  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-clipboard-button wp-components-clipboard-button css-3mp8cw"
+  data-active="false"
+  data-destructive="false"
+  data-focused="false"
+  data-g2-c16t="true"
+  data-g2-component="ClipboardButton"
+  data-icon="false"
+  type="button"
+>
+  <span
+    class="components-flex-item wp-components-flex-item css-19mrak6"
+    data-g2-c16t="true"
+    data-g2-component="ButtonContent"
+  >
+    I like warm hugs
+  </span>
+  <span
+    class="components-elevation wp-components-elevation css-17x6dun"
+    data-g2-c16t="true"
+    data-g2-component="ButtonElevation"
+  />
+</button>
+`;

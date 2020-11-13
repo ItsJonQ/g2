@@ -21,6 +21,7 @@ export * from './ButtonGroup';
 export * from './Card';
 export * from './Checkbox';
 export * from './CheckboxGroup';
+export * from './ClipboardButton';
 export * from './CloseButton';
 export * from './Collapsible';
 export * from './ColorCircle';
