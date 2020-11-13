@@ -5,7 +5,7 @@
   "sideEffects": false,
   "private": true,
   "scripts": {
-    "postinstall": "npm run bootstrap && npm run bootstrap:tooling",
+    "postinstall": "npm run bootstrap",
     "clean": "lerna run clean --ignore website --stream --parallel",
     "prestart": "zero prestart && npm run bootstrap",
     "prebuild": "npm run clean && npm run docs:generate",
@@ -22,7 +22,6 @@
     "format": "zero format",
     "validate": "zero validate",
     "publish": "lerna publish",
-    "postpublish": "npm run snippets:publish",
     "snippets:publish": "npm run release --prefix tooling/vscode-snippets",
     "website": "yarn website:start",
     "website:start": "yarn --cwd ./packages/website start",
