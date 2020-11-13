@@ -1,6 +1,8 @@
 import { createCoreElement } from './createCoreElement';
 import { tags } from './tags';
 
+/** @typedef {Record<keyof JSX.IntrinsicElements, ReturnType<createCoreElement>>} CoreElements */
+
 /**
  * @typedef CreateCoreElementProps
  * @property {Parameters<import('create-emotion').Emotion['css']>} baseStyles Base styles for the coreElements.
@@ -12,9 +14,11 @@ import { tags } from './tags';
  * Generates a set of coreElements based on React supported HTML tags.
  *
  * @param {CreateCoreElementProps} props Properties to create coreElements with.
- * @returns {object} A set of coreElements.
+ * @returns {CoreElements} A set of coreElements.
  */
 export function createCoreElements({ baseStyles, compiler, globalStyles }) {
+	/** @type {CoreElements} */
+	// @ts-ignore
 	const core = {};
 
 	const _createStyledElement = (

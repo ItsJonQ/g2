@@ -5,13 +5,12 @@ import { tags } from './tags';
 import { compileInterpolatedStyles } from './utils';
 
 /**
- * @typedef CreateStyled
- *
+ * @typedef {import('@emotion/styled').CreateStyled} CreateStyled
  */
 /**
  * @typedef CreateStyledComponentsProps
- * @property {object} compiler The (custom) Emotion instance.
- * @property {object} core The collection of coreElements.
+ * @property {import('../createCompiler').Compiler} compiler The (custom) Emotion instance.
+ * @property {import('./createCoreElements').CoreElements} core The collection of coreElements.
  */
 
 /**
@@ -25,14 +24,9 @@ import { compileInterpolatedStyles } from './utils';
  * This is thanks to how the Style system compiles and coordinates style values.
  *
  * @param {CreateStyledComponentsProps} props Props to create styled components with.
- * @returns {object} A set of styled components.
+ * @returns {CreateStyled} A set of styled components.
  */
 export function createStyledComponents({ compiler, core }) {
-	/**
-	 * A compiler (Emotion) and core (coreElements) are required.
-	 */
-	if (!core || !compiler) return {};
-
 	const { css, cx } = compiler;
 
 	/**
@@ -40,12 +34,6 @@ export function createStyledComponents({ compiler, core }) {
 	 */
 	const Box = core.div;
 
-	/**
-	 * Creates a styled component based on an HTML tagName.
-	 *
-	 * @param {string} tagName The HTML tagName to create a styled component from.
-	 * @param {object} options Options to adjust the rendered styled component.
-	 */
 	function createStyled(tagName, options = {}) {
 		const {
 			/**
@@ -91,12 +79,15 @@ export function createStyledComponents({ compiler, core }) {
 				);
 			};
 
+			/** @type {React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<any>> & { withComponent?: ReturnType<createStyled> }} */
 			const StyledComponent = React.forwardRef(render);
 
 			/*
 			 * Enhancing the displayName.
 			 */
-			StyledComponent.displayName = is.defined(tagName?.displayName)
+			StyledComponent.displayName = is.string(tagName)
+				? `Styled(${getDisplayName(tagName)})`
+				: is.defined(tagName?.displayName)
 				? tagName.displayName
 				: `Styled(${getDisplayName(tagName)})`;
 
@@ -130,7 +121,7 @@ export function createStyledComponents({ compiler, core }) {
 
 	// Bind it to avoid mutating the original function. Just like @emotion/styled:
 	// https://github.com/emotion-js/emotion/blob/master/packages/styled/src/index.js
-	const styled = createStyled.bind();
+	const styled = createStyled.bind(undefined);
 
 	// Generating the core collection of styled[tagName], with our enhanced
 	// version of styled.
@@ -138,5 +129,6 @@ export function createStyledComponents({ compiler, core }) {
 		styled[tagName] = createStyled(tagName);
 	});
 
+	// @ts-ignore
 	return styled;
 }

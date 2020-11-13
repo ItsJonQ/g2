@@ -39,7 +39,7 @@ export function assignRef(ref, value) {
 }
 
 /**
- * @param {React.ComponentType} tagName
+ * @param {string | React.ComponentType} tagName
  * @return {string}
  */
 export function getDisplayName(tagName) {
