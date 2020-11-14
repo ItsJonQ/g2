@@ -6,4 +6,5 @@ module.exports = {
 	...baseConfig,
 	displayName: pkg.name,
 	testMatch: [join(__dirname, 'src/**/*.test.{js,ts,tsx}')],
+	snapshotSerializers: ['@emotion/jest/serializer'],
 };
