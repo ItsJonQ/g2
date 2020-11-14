@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+}
+
 <hr
   aria-orientation="horizontal"
-  class="css-q6ydzw components-divider wp-components-divider"
+  class="emotion-0 components-divider wp-components-divider"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"
@@ -11,9 +20,22 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render margin 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-bottom: calc(4px * 7);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 7);
+  margin-top: calc(4px * 7);
+  margin-top: calc(var(--wp-g2-grid-base) * 7);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider css-h9ycj5"
+  class="components-divider wp-components-divider emotion-0"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"
@@ -21,9 +43,20 @@ exports[`props should render margin 1`] = `
 `;
 
 exports[`props should render marginBottom 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-bottom: calc(4px * 5);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 5);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider css-1ue3z9p"
+  class="components-divider wp-components-divider emotion-0"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"
@@ -31,9 +64,20 @@ exports[`props should render marginBottom 1`] = `
 `;
 
 exports[`props should render marginTop 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-top: calc(4px * 5);
+  margin-top: calc(var(--wp-g2-grid-base) * 5);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider css-1d0u8mq"
+  class="components-divider wp-components-divider emotion-0"
   data-g2-c16t="true"
   data-g2-component="Divider"
   role="separator"

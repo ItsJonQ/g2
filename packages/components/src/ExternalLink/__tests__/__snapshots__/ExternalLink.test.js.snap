@@ -1,8 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  font-size: calc(1 * 13px);
+  font-size: calc(1 * var(--wp-g2-font-size));
+  font-weight: 400;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #007cba;
+  color: var(--wp-g2-link-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+  color: #007cba;
+  color: var(--wp-g2-link-color-hover);
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: currentColor;
+  height: 15;
+  width: 15;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: calc(4px * 1);
+  margin-left: calc(var(--wp-g2-grid-base) * 1);
+  margin-top: calc(4px * -1);
+  margin-top: calc(var(--wp-g2-grid-base) * -1);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
+  display: block;
+}
+
 <a
-  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link components-external-link wp-components-external-link css-yf2kff"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link components-external-link wp-components-external-link emotion-0"
   data-g2-c16t="true"
   data-g2-component="ExternalLink"
   href="https://wordpress.org"
@@ -15,7 +95,7 @@ exports[`props should render correctly 1`] = `
   </span>
   WordPress
   <div
-    class="components-icon wp-components-icon css-142kzph"
+    class="components-icon wp-components-icon emotion-1"
     data-g2-c16t="true"
     data-g2-component="Icon"
   >

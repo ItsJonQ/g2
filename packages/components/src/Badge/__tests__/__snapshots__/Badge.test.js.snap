@@ -1,13 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render color 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 120px;
+  background: rgba(220, 50, 50, 0.2);
+  background: var(--wp-g2-red-rgba-20);
+  color: #841e1e;
+  color: var(--wp-g2-color-background-red-text);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+[data-system-ui-color-blind-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  background-image: linear-gradient(45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1), linear-gradient(-45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1)));
+  background-image: linear-gradient(45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10)),linear-gradient(-45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10));
+  background-size: 10px 10px;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  color: currentColor;
+  font-size: calc(0.7692307692307693 * 13px);
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-badge wp-components-badge css-tvvhy6"
+  class="components-badge wp-components-badge emotion-0"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
+    class="components-truncate wp-components-truncate components-text wp-components-text emotion-1"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -17,13 +106,96 @@ exports[`props should render color 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 120px;
+  background: rgba(134, 144, 155, 0.2);
+  background: var(--wp-g2-dark-gray-rgba-20);
+  color: #191E23;
+  color: var(--wp-g2-color-background-dark-gray-text);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  color: currentColor;
+  font-size: calc(0.7692307692307693 * 13px);
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-badge wp-components-badge css-1qf2rki"
+  class="components-badge wp-components-badge emotion-0"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
+    class="components-truncate wp-components-truncate components-text wp-components-text emotion-1"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -33,13 +205,93 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render display 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  display: block;
+  max-width: 120px;
+  background: rgba(134, 144, 155, 0.2);
+  background: var(--wp-g2-dark-gray-rgba-20);
+  color: #191E23;
+  color: var(--wp-g2-color-background-dark-gray-text);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  color: currentColor;
+  font-size: calc(0.7692307692307693 * 13px);
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-badge wp-components-badge css-1vvr3x3"
+  class="components-badge wp-components-badge emotion-0"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
+    class="components-truncate wp-components-truncate components-text wp-components-text emotion-1"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -49,13 +301,96 @@ exports[`props should render display 1`] = `
 `;
 
 exports[`props should render isBold 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 120px;
+  background: rgba(134, 144, 155, 0.7);
+  background: var(--wp-g2-dark-gray-rgba-70);
+  color: #ffffff;
+  color: var(--wp-g2-white);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  color: currentColor;
+  font-size: calc(0.7692307692307693 * 13px);
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-badge wp-components-badge css-rz98o1"
+  class="components-badge wp-components-badge emotion-0"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
+    class="components-truncate wp-components-truncate components-text wp-components-text emotion-1"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -65,13 +400,102 @@ exports[`props should render isBold 1`] = `
 `;
 
 exports[`props should render isRounded 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 120px;
+  background: rgba(134, 144, 155, 0.2);
+  background: var(--wp-g2-dark-gray-rgba-20);
+  color: #191E23;
+  color: var(--wp-g2-color-background-dark-gray-text);
+  border-radius: 99999px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 18px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  color: currentColor;
+  font-size: calc(0.7692307692307693 * 13px);
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-badge wp-components-badge css-1llsgr5"
+  class="components-badge wp-components-badge emotion-0"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
+    class="components-truncate wp-components-truncate components-text wp-components-text emotion-1"
     data-g2-c16t="true"
     data-g2-component="Text"
   >
@@ -81,13 +505,96 @@ exports[`props should render isRounded 1`] = `
 `;
 
 exports[`props should render truncate 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 120px;
+  background: rgba(134, 144, 155, 0.2);
+  background: var(--wp-g2-dark-gray-rgba-20);
+  color: #191E23;
+  color: var(--wp-g2-color-background-dark-gray-text);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  color: currentColor;
+  font-size: calc(0.7692307692307693 * 13px);
+  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  text-transform: uppercase;
+  padding: 4px 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-badge wp-components-badge css-1qf2rki"
+  class="components-badge wp-components-badge emotion-0"
   data-g2-c16t="true"
   data-g2-component="Badge"
 >
   <span
-    class="components-truncate wp-components-truncate components-text wp-components-text css-1djx5to"
+    class="components-truncate wp-components-truncate components-text wp-components-text emotion-1"
     data-g2-c16t="true"
     data-g2-component="Text"
   >

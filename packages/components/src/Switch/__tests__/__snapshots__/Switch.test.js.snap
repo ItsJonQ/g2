@@ -1,8 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render checked 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
 <label
-  class="components-switch wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -10,7 +169,7 @@ exports[`props should render checked 1`] = `
   <input
     aria-checked="true"
     checked=""
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     id="switch"
@@ -18,12 +177,12 @@ exports[`props should render checked 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-nowzpc"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -34,15 +193,174 @@ exports[`props should render checked 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
 <label
-  class="components-switch wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <input
     aria-checked="false"
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     id="switch"
@@ -50,12 +368,12 @@ exports[`props should render correctly 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-nowzpc"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -66,8 +384,167 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render defaultValue 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
 <label
-  class="components-switch wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -75,7 +552,7 @@ exports[`props should render defaultValue 1`] = `
   <input
     aria-checked="true"
     checked=""
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     id="switch"
@@ -83,12 +560,12 @@ exports[`props should render defaultValue 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-nowzpc"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -99,8 +576,169 @@ exports[`props should render defaultValue 1`] = `
 `;
 
 exports[`props should render disabled 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
 <label
-  class="components-switch wp-components-switch css-11ab9hg"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -108,7 +746,7 @@ exports[`props should render disabled 1`] = `
   <input
     aria-checked="false"
     aria-disabled="true"
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     disabled=""
@@ -118,12 +756,12 @@ exports[`props should render disabled 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-nowzpc"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -134,15 +772,174 @@ exports[`props should render disabled 1`] = `
 `;
 
 exports[`props should render label 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
 <label
-  class="components-switch wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <input
     aria-checked="false"
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     id="switch"
@@ -150,12 +947,12 @@ exports[`props should render label 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-nowzpc"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -168,15 +965,189 @@ exports[`props should render label 1`] = `
 `;
 
 exports[`props should render size 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+  height: calc(30px * 0.8);
+  height: var(--wp-g2-control-height-small);
+  width: calc(calc(calc(30px * 0.8) - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height-small) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+  border-radius: calc(calc(calc(30px * 0.8) - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height-small) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  height: calc(calc(calc(30px * 0.8) - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height-small) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  width: calc(calc(calc(30px * 0.8) - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height-small) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(calc(30px * 0.8) - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height-small) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
 <label
-  class="components-switch wp-components-switch css-1hjqzm9"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <input
     aria-checked="false"
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     id="switch"
@@ -184,12 +1155,12 @@ exports[`props should render size 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-1huwqx7"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -200,15 +1171,174 @@ exports[`props should render size 1`] = `
 `;
 
 exports[`props should render type 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  margin: 0;
+  outline: none;
+  padding: 6px 0;
+  padding: var(--wp-g2-switch-padding-offset) 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: calc(calc(30px - calc(6px * 2)) * 1.85);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) * 1.85);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  border-radius: 99999px;
+  background: #a2aab2;
+  background: var(--wp-g2-switch-backdrop-background-color);
+  border: 1px solid #a2aab2;
+  border: 1px solid var(--wp-g2-switch-backdrop-border-color);
+  bottom: 6px;
+  bottom: var(--wp-g2-switch-padding-offset);
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  display: block;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  top: 6px;
+  top: var(--wp-g2-switch-padding-offset);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  background: #007cba;
+  background: var(--wp-g2-switch-backdrop-background-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-switch-backdrop-border-color-active);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color);
+  border: 1px solid var(--wp-g2-switch-toggle-border-color);
+  border-radius: calc(calc(30px - calc(6px * 2)) - 6px);
+  border-radius: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  box-shadow: none;
+  box-shadow: var(--wp-g2-switch-toggle-box-shadow);
+  height: calc(calc(30px - calc(6px * 2)) - 6px);
+  height: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  pointer-events: none;
+  right: initial;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: all 160ms linear;
+  -webkit-transition: all var(--wp-g2-transition-duration-fast) linear;
+  transition: all 160ms linear;
+  transition: all var(--wp-g2-transition-duration-fast) linear;
+  width: calc(calc(30px - calc(6px * 2)) - 6px);
+  width: calc(calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2)) - var(--wp-g2-switch-padding-offset));
+  top: calc(calc(6px * 2) * 0.75);
+  top: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.75);
+  left: calc(calc(6px * 2) * 0.25);
+  left: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+  position: absolute;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  width: calc(30px - calc(6px * 2));
+  width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
+}
+
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  background: #ffffff;
+  background: var(--wp-g2-switch-toggle-background-color-active);
+  left: initial;
+  right: calc(calc(6px * 2) * 0.25);
+  right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
+}
+
 <label
-  class="components-switch wp-components-switch css-19rneaz"
+  class="components-switch wp-components-switch emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
 >
   <input
     aria-checked="false"
-    class="css-175q9tm"
+    class="emotion-1"
     data-g2-c16t="true"
     data-g2-component="SwitchInput"
     id="switch"
@@ -217,12 +1347,12 @@ exports[`props should render type 1`] = `
   />
   <div
     aria-hidden="true"
-    class="css-26esqa"
+    class="emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="css-nowzpc"
+    class="emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
