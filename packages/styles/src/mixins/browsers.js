@@ -1,5 +1,9 @@
 import { css } from '../style-system';
 
+/**
+ * @param {TemplateStringsArray} strings
+ * @param  {import('create-emotion').Interpolation[]} interpolations
+ */
 export function ieOnly(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);
 
@@ -11,6 +15,10 @@ export function ieOnly(strings, ...interpolations) {
 	`;
 }
 
+/**
+ * @param {TemplateStringsArray} strings
+ * @param  {import('create-emotion').Interpolation[]} interpolations
+ */
 export function firefoxOnly(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);
 
@@ -21,6 +29,10 @@ export function firefoxOnly(strings, ...interpolations) {
 	`;
 }
 
+/**
+ * @param {TemplateStringsArray} strings
+ * @param  {import('create-emotion').Interpolation[]} interpolations
+ */
 export function safariOnly(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);
 

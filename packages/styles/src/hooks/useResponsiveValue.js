@@ -52,6 +52,11 @@ export const useBreakpointIndex = (options = {}) => {
 	return value;
 };
 
+/**
+ *
+ * @param {(() => string[]) | string[]} values
+ * @param {Parameters<useBreakpointIndex>[0]} options
+ */
 export function useResponsiveValue(values, options = {}) {
 	const index = useBreakpointIndex(options);
 

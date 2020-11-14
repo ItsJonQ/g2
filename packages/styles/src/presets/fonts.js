@@ -2,13 +2,17 @@ import { get } from '../core';
 import { getFontSize } from '../mixins';
 import { css, cx } from '../style-system';
 
+/**
+ *
+ * @param {import('create-emotion').ObjectInterpolation['color']} color
+ */
 function getFontColor(color) {
 	return css({ color });
 }
 
 getFontColor.black = getFontColor(get('black'));
 getFontColor.white = getFontColor(get('white'));
-getFontColor.admin = getFontColor(get('admin'));
+getFontColor.admin = getFontColor(get('colorAdmin'));
 getFontColor.purple = getFontColor(get('purple500'));
 getFontColor.green = getFontColor(get('green500'));
 getFontColor.yellow = getFontColor(get('yellow500'));
@@ -55,7 +59,8 @@ const fontSizes = {
 
 const fontMixins = {
 	color: getFontColor,
-	size: (size) => css({ fontSize: getFontSize(size) }),
+	size: (/** @type {Parameters<getFontSize>[0]} */ size) =>
+		css({ fontSize: getFontSize(size) }),
 };
 
 export const font = {

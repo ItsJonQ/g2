@@ -7,7 +7,7 @@ const isProdEnv = process.env.NODE_ENV === 'production';
 
 /**
  * @typedef StyleFrameProviderProps
- * @property {any} children Children elements to render.
+ * @property {import('react').ReactNode} children Children elements to render.
  */
 
 /**
@@ -43,6 +43,8 @@ export function StyleFrameProvider({ children }) {
 /**
  * Initially syncs existing Emotion tags (from cache) into the Frame head by
  * cloning and injecting the tags into the DOM.
+ * @param {object} options
+ * @param {import('react').RefObject<Node>} options.ref
  */
 function useEmotionInitialTagSync({ ref }) {
 	useEffect(() => {
@@ -85,7 +87,9 @@ function useEmotionInitialTagSync({ ref }) {
 					speedyTag = speedyTag.cloneNode(true);
 					speedyTag.innerHTML = initialStyles;
 
-					head.appendChild(speedyTag);
+					if (head) {
+						head.appendChild(speedyTag);
+					}
 				}
 			} else {
 				/**
@@ -94,7 +98,9 @@ function useEmotionInitialTagSync({ ref }) {
 				 */
 				if (cache.sheet.tags) {
 					cache.sheet.tags.forEach((tag) => {
-						head.appendChild(tag.cloneNode(true));
+						if (head) {
+							head.appendChild(tag.cloneNode(true));
+						}
 					});
 				}
 			}

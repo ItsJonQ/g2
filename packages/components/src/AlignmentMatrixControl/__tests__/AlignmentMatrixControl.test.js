@@ -6,7 +6,7 @@ import { AlignmentMatrixControl } from '../index';
 describe('props', () => {
 	test('should render correctly', () => {
 		const { container } = render(
-			<AlignmentMatrixControl value="center center" />
+			<AlignmentMatrixControl value="center center" />,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});

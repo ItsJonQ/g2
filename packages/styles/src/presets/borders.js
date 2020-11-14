@@ -21,6 +21,10 @@ export const border = {
 	top: css({ borderTop: `1px solid ${get('surfaceBorderColor')}` }),
 };
 
+/**
+ *
+ * @param {import('create-emotion').ObjectInterpolation['borderRadius']} value
+ */
 export function borderRadius(value) {
 	return css({ borderRadius: value });
 }

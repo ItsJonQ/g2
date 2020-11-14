@@ -1,5 +1,11 @@
+import { is } from '@wp-g2/utils';
+
+/**
+ * @param {string | number} value
+ * @return {string | number}
+ */
 export function toPx(value) {
-	if (!isNaN(Number(value)) && value !== null) {
+	if (is.numeric(value)) {
 		return `${value}px`;
 	}
 

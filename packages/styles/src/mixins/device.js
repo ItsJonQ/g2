@@ -1,5 +1,9 @@
 import { css } from '../style-system';
 
+/**
+ * @param {TemplateStringsArray} strings
+ * @param  {import('create-emotion').Interpolation[]} interpolations
+ */
 export function getHighDpi(strings, ...interpolations) {
 	const interpolatedStyles = css(strings, ...interpolations);
 
