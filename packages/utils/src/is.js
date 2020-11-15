@@ -37,6 +37,8 @@ export const is = {
 	file: (o) => o instanceof File,
 	numeric,
 	numericZero,
+	/** @type {(o: any) => o is import('create-emotion').ObjectInterpolation} */
+	objectInterpolation: (o) => _.isPlainObject(o),
 
 	/**
 	 * Re-exports from lodash

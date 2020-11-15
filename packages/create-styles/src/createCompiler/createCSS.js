@@ -3,7 +3,6 @@ import { is } from '@wp-g2/utils';
 import { breakpoints } from './utils';
 
 /**
- *
  * @param {CSS} compile
  * @return {CSS}
  */

@@ -83,10 +83,11 @@ export function getScaleStyles(styles = {}) {
 /**
  * A utility function that generates responsive styles if the value is an array.
  *
- * @param {object} styles A styles object
- * @returns {object} An adjusted styles object with responsive styles (if applicable).
+ * @param {import('create-emotion').ObjectInterpolation} styles A styles object
+ * @returns {import('create-emotion').ObjectInterpolation} An adjusted styles object with responsive styles (if applicable).
  */
 export const responsive = (styles = {}) => {
+	/** @type {import('create-emotion').ObjectInterpolation} */
 	const next = {};
 	const mediaQueries = [
 		null,
@@ -112,6 +113,7 @@ export const responsive = (styles = {}) => {
 			}
 			next[media] = next[media] || {};
 			if (value[i] === null) continue;
+			// @ts-ignore We ensure `[media]` exists two lines prior.
 			next[media][key] = getScaleValue(key, value[i]);
 		}
 	}
@@ -123,25 +125,25 @@ export const responsive = (styles = {}) => {
  * Enhances the (create-system enhanced) CSS function to account for
  * scale functions within the Style system.
  *
- * @param {any} args The styles to compile.
- * @returns {string} The compiled styles.
+ * @param {TemplateStringsArray | import('create-emotion').Interpolation<undefined>} template
+ * @param {import('create-emotion').Interpolation<undefined>[]} args The styles to compile.
+ * @returns {ReturnType<compile>} The compiled styles.
  */
-export function css(...args) {
-	const [arg, ...rest] = args;
-
-	if (is.plainObject(arg)) {
-		return compile(getScaleStyles(responsive(arg)));
+export function css(template, ...args) {
+	if (is.objectInterpolation(template)) {
+		return compile(getScaleStyles(responsive(template)));
 	}
 
-	if (is.array(arg)) {
-		for (let i = 0, len = arg.length; i < len; i++) {
-			const n = arg[i];
-			if (is.plainObject(n)) {
-				arg[i] = getScaleStyles(responsive(n));
+	if (is.array(template)) {
+		for (let i = 0, len = template.length; i < len; i++) {
+			const n = template[i];
+			if (is.objectInterpolation(n)) {
+				template[i] = getScaleStyles(responsive(n));
 			}
 		}
-		return compile(...[arg, ...rest]);
+		return compile(template, ...args);
 	}
 
-	return compile(...args);
+	// @ts-ignore
+	return compile(template, ...args);
 }

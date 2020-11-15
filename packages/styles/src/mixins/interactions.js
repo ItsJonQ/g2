@@ -1,7 +1,7 @@
 import { css } from '../style-system';
 
 /**
- * @param  {import('create-emotion').Interpolation[]} interpolatedStyles
+ * @param  {Parameters<css>} interpolatedStyles
  */
 export function hover(...interpolatedStyles) {
 	return css({
@@ -10,7 +10,7 @@ export function hover(...interpolatedStyles) {
 }
 
 /**
- * @param  {import('create-emotion').Interpolation[]} interpolatedStyles
+ * @param  {Parameters<css>} interpolatedStyles
  */
 export function active(...interpolatedStyles) {
 	return css({
@@ -19,7 +19,7 @@ export function active(...interpolatedStyles) {
 }
 
 /**
- * @param  {import('create-emotion').Interpolation[]} interpolatedStyles
+ * @param  {Parameters<css>} interpolatedStyles
  */
 export function focus(...interpolatedStyles) {
 	return css({
