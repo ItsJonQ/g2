@@ -1,8 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render borderBottom 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--wp-g2-surface-border-color);
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-i80rlg"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -11,8 +43,40 @@ exports[`props should render borderBottom 1`] = `
 `;
 
 exports[`props should render borderLeft 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid var(--wp-g2-surface-border-color);
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-1o7gfmm"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -21,8 +85,40 @@ exports[`props should render borderLeft 1`] = `
 `;
 
 exports[`props should render borderRight 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid var(--wp-g2-surface-border-color);
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-f4vuds"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -31,8 +127,40 @@ exports[`props should render borderRight 1`] = `
 `;
 
 exports[`props should render borderTop 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--wp-g2-surface-border-color);
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-16wskog"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -41,8 +169,40 @@ exports[`props should render borderTop 1`] = `
 `;
 
 exports[`props should render borders 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--wp-g2-surface-border-color);
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-6bpd8y"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -51,8 +211,38 @@ exports[`props should render borders 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-9yqr3x"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -61,8 +251,40 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render variants 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background-color: #ffffff;
+  background-color: var(--wp-g2-surface-color);
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  position: relative;
+  background: #F5F5F5;
+  background: var(--wp-g2-surface-background-tint-color);
+  --wp-g2-surface-background-size: 16px;
+  --wp-g2-surface-background-size-dotted: 15px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-surface wp-components-surface css-13i0m8g"
+  class="components-surface wp-components-surface emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >

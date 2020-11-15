@@ -1,8 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-animated wp-components-animated css-j1yu9m"
+  class="components-animated wp-components-animated emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
 >

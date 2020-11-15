@@ -1,19 +1,573 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 0);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+  margin-left: calc(4px * 0);
+  margin-left: calc(var(--wp-g2-grid-base) * 0);
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover {
+  z-index: 1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 0 0 0.5px transparent;
+  box-shadow: 0 0 0 var(--wp-g2-control-box-shadow-focus-size) transparent;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  line-height: 1;
+  min-height: 30px;
+  min-height: var(--wp-g2-control-height);
+  outline: none;
+  padding-bottom: calc(4px * 1);
+  padding-bottom: calc(var(--wp-g2-grid-base) * 1);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
+  padding-top: calc(4px * 1);
+  padding-top: calc(var(--wp-g2-grid-base) * 1);
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  text-align: center;
+  color: #007cba;
+  color: var(--wp-g2-button-text-color);
+  font-weight: 600;
+  padding-left: calc(12px * calc(4/3));
+  padding-left: var(--wp-g2-button-padding-x);
+  padding-right: calc(12px * calc(4/3));
+  padding-right: var(--wp-g2-button-padding-x);
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+* {
+  margin-left: calc(4px * 2);
+  margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:active,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
+  -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
+  -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
+  transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
+  transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[disabled]:not([aria-busy='true']),
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[aria-disabled='true']:not([aria-busy='true']) {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
+  z-index: 1;
+  box-shadow: 0 0 0 0.5px #007cba;
+  box-shadow: var(--wp-g2-control-box-shadow-focus);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true']:focus {
+  box-shadow: 0 0 0 0.5px #D94F4F;
+  box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-icon='true'] {
+  min-width: 30px;
+  min-width: var(--wp-g2-control-height);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 svg {
+  display: block;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:active {
+  color: #007cba;
+  color: var(--wp-g2-button-text-color-active);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover {
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color-hover);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-hover);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-focused='true'] {
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color-focus);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-focus);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color-focus);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--wp-g2-button-secondary-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-active);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color-active);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true'] {
+  border-color: #D94F4F;
+  border-color: var(--wp-g2-color-destructive);
+  color: #D94F4F;
+  color: var(--wp-g2-color-destructive);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true']:hover,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true']:active,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true']:focus,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true'][data-focused='true'] {
+  border-color: #D94F4F;
+  border-color: var(--wp-g2-color-destructive);
+  color: #D94F4F;
+  color: var(--wp-g2-color-destructive);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-destructive='true']:active {
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  opacity: 1;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: transparent;
+  display: block;
+  margin: 0!important;
+  pointer-events: none;
+  position: absolute;
+  will-change: box-shadow;
+  border-radius: inherit;
+  bottom: -1px;
+  box-shadow: 0 0px 0px 0 rgba(0 ,0,0,0);
+  opacity: 1;
+  opacity: var(--wp-g2-elevation-intensity);
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+  -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
+  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+  transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+  margin-left: -1px!important;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover {
+  z-index: 1;
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 0 0 0.5px transparent;
+  box-shadow: 0 0 0 var(--wp-g2-control-box-shadow-focus-size) transparent;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  line-height: 1;
+  min-height: 30px;
+  min-height: var(--wp-g2-control-height);
+  outline: none;
+  padding-bottom: calc(4px * 1);
+  padding-bottom: calc(var(--wp-g2-grid-base) * 1);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
+  padding-top: calc(4px * 1);
+  padding-top: calc(var(--wp-g2-grid-base) * 1);
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  text-align: center;
+  color: #007cba;
+  color: var(--wp-g2-button-text-color);
+  font-weight: 600;
+  padding-left: calc(12px * calc(4/3));
+  padding-left: var(--wp-g2-button-padding-x);
+  padding-right: calc(12px * calc(4/3));
+  padding-right: var(--wp-g2-button-padding-x);
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+* {
+  margin-left: calc(4px * 2);
+  margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+  -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
+  -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
+  transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
+  transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+  z-index: 1;
+  box-shadow: 0 0 0 0.5px #007cba;
+  box-shadow: var(--wp-g2-control-box-shadow-focus);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+  box-shadow: 0 0 0 0.5px #D94F4F;
+  box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+  min-width: 30px;
+  min-width: var(--wp-g2-control-height);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+  display: block;
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+  color: #007cba;
+  color: var(--wp-g2-button-text-color-active);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color-hover);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-hover);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color-focus);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-focus);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color-focus);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--wp-g2-button-secondary-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-active);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color-active);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+  border-color: #D94F4F;
+  border-color: var(--wp-g2-color-destructive);
+  color: #D94F4F;
+  color: var(--wp-g2-color-destructive);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active,
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus,
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'][data-focused='true'] {
+  border-color: #D94F4F;
+  border-color: var(--wp-g2-color-destructive);
+  color: #D94F4F;
+  color: var(--wp-g2-color-destructive);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+}
+
 <div
-  class="components-flex wp-components-flex components-control-group wp-components-control-group css-kzj1sz"
+  class="components-flex wp-components-flex components-control-group wp-components-control-group emotion-0"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
 >
   <div
-    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1a60l5v"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item emotion-1"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-tic4d6"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-2"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -23,27 +577,27 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item css-19mrak6"
+        class="components-flex-item wp-components-flex-item emotion-3"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
         Let It
       </span>
       <span
-        class="components-elevation wp-components-elevation css-17x6dun"
+        class="components-elevation wp-components-elevation emotion-4"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
     </button>
   </div>
   <div
-    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1jutz7b"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item emotion-5"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1pcfndj"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-6"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -53,14 +607,14 @@ exports[`props should render correctly 1`] = `
       type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item css-19mrak6"
+        class="components-flex-item wp-components-flex-item emotion-3"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
         Go
       </span>
       <span
-        class="components-elevation wp-components-elevation css-17x6dun"
+        class="components-elevation wp-components-elevation emotion-4"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -70,39 +624,883 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render mixed control types 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 0);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+  margin-left: calc(4px * 0);
+  margin-left: calc(var(--wp-g2-grid-base) * 0);
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover {
+  z-index: 1;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 0);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  background: #ffffff;
+  background: var(--wp-g2-control-background-color);
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  border: 1px solid;
+  border-color: #757575;
+  border-color: var(--wp-g2-control-border-color);
+  box-shadow: transparent;
+  box-shadow: var(--wp-g2-control-box-shadow);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  outline: none;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease,box-shadow 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  width: 100%;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+* {
+  margin-left: calc(4px * 0);
+  margin-left: calc(var(--wp-g2-grid-base) * 0);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[disabled] {
+  opacity: 0.6;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover {
+  border-color: #757575;
+  border-color: var(--wp-g2-control-border-color-hover);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus,
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[data-focused='true'] {
+  border-color: #007cba;
+  border-color: var(--wp-g2-color-admin);
+  box-shadow: 0 0 0 0.5px #007cba;
+  box-shadow: var(--wp-g2-control-box-shadow-focus);
+  z-index: 1;
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  display: block;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 18px;
+  min-height: calc(30px - 2px);
+  min-height: calc(var(--wp-g2-control-height) - 2px);
+  outline: none;
+  padding: 0;
+  padding-bottom: calc((30px - 2px - 18px) / 2);
+  padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
+  padding-top: calc((30px - 2px - 18px) / 2);
+  padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
+  resize: none;
+  width: 100%;
+  font-size: 16px;
+  font-size: var(--wp-g2-font-size-input-mobile);
+  padding-left: 8px;
+  padding-right: 30px;
+  padding-right: 24px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+@media (min-width:36em) {
+  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+    font-size: 13px;
+    font-size: var(--wp-g2-font-size);
+  }
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3::-webkit-outer-spin-button,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 5px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  line-height: 1.2;
+  line-height: var(--wp-g2-font-line-height-base);
+  font-size: calc(1 * 13px);
+  font-size: calc(1 * var(--wp-g2-font-size));
+  font-weight: 400;
+  display: block;
+  color: #8a8b8c;
+  color: var(--wp-g2-color-text-muted);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 14px;
+  width: 14px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+  display: block;
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+  margin-left: -1px!important;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover {
+  z-index: 1;
+}
+
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2.5);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  background: #ffffff;
+  background: var(--wp-g2-control-background-color);
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  border: 1px solid;
+  border-color: #757575;
+  border-color: var(--wp-g2-control-border-color);
+  box-shadow: transparent;
+  box-shadow: var(--wp-g2-control-box-shadow);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  outline: none;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease,box-shadow 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  width: 100%;
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8>*+* {
+  margin-left: calc(4px * 2.5);
+  margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8[disabled] {
+  opacity: 0.6;
+}
+
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8:hover {
+  border-color: #757575;
+  border-color: var(--wp-g2-control-border-color-hover);
+}
+
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8:focus,
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8[data-focused='true'] {
+  border-color: #007cba;
+  border-color: var(--wp-g2-color-admin);
+  box-shadow: 0 0 0 0.5px #007cba;
+  box-shadow: var(--wp-g2-control-box-shadow-focus);
+  z-index: 1;
+}
+
+.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  display: block;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 18px;
+  min-height: calc(30px - 2px);
+  min-height: calc(var(--wp-g2-control-height) - 2px);
+  outline: none;
+  padding: 0;
+  padding-bottom: calc((30px - 2px - 18px) / 2);
+  padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
+  padding-top: calc((30px - 2px - 18px) / 2);
+  padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
+  resize: none;
+  width: 100%;
+  font-size: 16px;
+  font-size: var(--wp-g2-font-size-input-mobile);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+@media (min-width:36em) {
+  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+    font-size: 13px;
+    font-size: var(--wp-g2-font-size);
+  }
+}
+
+.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9::-webkit-outer-spin-button,
+.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 0 0 0.5px transparent;
+  box-shadow: 0 0 0 var(--wp-g2-control-box-shadow-focus-size) transparent;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  line-height: 1;
+  min-height: 30px;
+  min-height: var(--wp-g2-control-height);
+  outline: none;
+  padding-bottom: calc(4px * 1);
+  padding-bottom: calc(var(--wp-g2-grid-base) * 1);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
+  padding-top: calc(4px * 1);
+  padding-top: calc(var(--wp-g2-grid-base) * 1);
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  text-align: center;
+  color: #007cba;
+  color: var(--wp-g2-button-text-color);
+  font-weight: 600;
+  padding-left: calc(12px * calc(4/3));
+  padding-left: var(--wp-g2-button-padding-x);
+  padding-right: calc(12px * calc(4/3));
+  padding-right: var(--wp-g2-button-padding-x);
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11>*+* {
+  margin-left: calc(4px * 2);
+  margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:hover,
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:active,
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:focus {
+  -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
+  -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
+  transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
+  transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[disabled]:not([aria-busy='true']),
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[aria-disabled='true']:not([aria-busy='true']) {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:focus {
+  z-index: 1;
+  box-shadow: 0 0 0 0.5px #007cba;
+  box-shadow: var(--wp-g2-control-box-shadow-focus);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true']:focus {
+  box-shadow: 0 0 0 0.5px #D94F4F;
+  box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-icon='true'] {
+  min-width: 30px;
+  min-width: var(--wp-g2-control-height);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11 svg {
+  display: block;
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:active {
+  color: #007cba;
+  color: var(--wp-g2-button-text-color-active);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:hover {
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color-hover);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-hover);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:focus,
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-focused='true'] {
+  background-color: transparent;
+  background-color: var(--wp-g2-button-secondary-color-focus);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-focus);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color-focus);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--wp-g2-button-secondary-color-active);
+  border-color: #007cba;
+  border-color: var(--wp-g2-button-secondary-border-color-active);
+  color: #007cba;
+  color: var(--wp-g2-button-secondary-text-color-active);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true'] {
+  border-color: #D94F4F;
+  border-color: var(--wp-g2-color-destructive);
+  color: #D94F4F;
+  color: var(--wp-g2-color-destructive);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true']:hover,
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true']:active,
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true']:focus,
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true'][data-focused='true'] {
+  border-color: #D94F4F;
+  border-color: var(--wp-g2-color-destructive);
+  color: #D94F4F;
+  color: var(--wp-g2-color-destructive);
+}
+
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11[data-destructive='true']:active {
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+}
+
+.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: var(--wp-g2-flex-item-display);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  opacity: 1;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  background: transparent;
+  display: block;
+  margin: 0!important;
+  pointer-events: none;
+  position: absolute;
+  will-change: box-shadow;
+  border-radius: inherit;
+  bottom: -1px;
+  box-shadow: 0 0px 0px 0 rgba(0 ,0,0,0);
+  opacity: 1;
+  opacity: var(--wp-g2-elevation-intensity);
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+  -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
+  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+  transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 <div
-  class="components-flex wp-components-flex components-control-group wp-components-control-group css-kzj1sz"
+  class="components-flex wp-components-flex components-control-group wp-components-control-group emotion-0"
   data-g2-c16t="true"
   data-g2-component="ControlGroup"
 >
   <div
-    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1a60l5v"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item emotion-1"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select css-1nwhiq4"
+      class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-2"
       data-g2-c16t="true"
       data-g2-component="SelectWrapper"
     >
       <select
-        class="css-fz31bs"
+        class="emotion-3"
         data-g2-c16t="true"
         data-g2-component="Select"
         id="salutations"
       />
       <div
-        class="components-flex-item wp-components-flex-item css-5yrsrk"
+        class="components-flex-item wp-components-flex-item emotion-4"
         data-g2-c16t="true"
         data-g2-component="FlexItem"
       >
         <span
-          class="components-truncate wp-components-truncate components-text wp-components-text css-duu1p5"
+          class="components-truncate wp-components-truncate components-text wp-components-text emotion-5"
           data-g2-c16t="true"
           data-g2-component="Text"
         >
           <div
-            class="components-icon wp-components-icon css-1tw4gp0"
+            class="components-icon wp-components-icon emotion-6"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -128,18 +1526,18 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1jutz7b"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item emotion-7"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <div
-      class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input css-4alors"
+      class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-8"
       data-g2-c16t="true"
       data-g2-component="TextInputWrapper"
     >
       <input
         autocomplete="off"
-        class="css-zn43e4"
+        class="emotion-9"
         data-g2-c16t="true"
         data-g2-component="TextInput"
         id="fname"
@@ -150,13 +1548,13 @@ exports[`props should render mixed control types 1`] = `
     </div>
   </div>
   <div
-    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item css-1jutz7b"
+    class="components-flex-item wp-components-flex-item components-control-group-item wp-components-control-group-item emotion-7"
     data-g2-c16t="true"
     data-g2-component="ControlGroupItem"
   >
     <button
       aria-busy="false"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button css-1pcfndj"
+      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-11"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -166,14 +1564,14 @@ exports[`props should render mixed control types 1`] = `
       type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item css-19mrak6"
+        class="components-flex-item wp-components-flex-item emotion-12"
         data-g2-c16t="true"
         data-g2-component="ButtonContent"
       >
         Let It
       </span>
       <span
-        class="components-elevation wp-components-elevation css-17x6dun"
+        class="components-elevation wp-components-elevation emotion-13"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />

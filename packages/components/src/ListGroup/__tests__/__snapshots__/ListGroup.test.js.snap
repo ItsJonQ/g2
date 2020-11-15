@@ -1,8 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-display: block;
+  --wp-g2-flex-item-margin-bottom: calc(4px * 2);
+  --wp-g2-flex-item-margin-bottom: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  --wp-g2-h-stack-spacing: calc(4px * 2);
+  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+  margin-top: calc(4px * 2);
+  margin-top: calc(var(--wp-g2-grid-base) * 2);
+}
+
 <div
-  class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack components-list-group wp-components-list-group css-111mesx"
+  class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack components-list-group wp-components-list-group emotion-0"
   data-g2-c16t="true"
   data-g2-component="ListGroup"
 >

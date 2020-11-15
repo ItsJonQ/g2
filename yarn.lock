@@ -1298,6 +1298,14 @@
     "@emotion/sheet" "0.9.4"
     "@emotion/utils" "0.11.3"
 
+"@emotion/css-prettifier@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@emotion/css-prettifier/-/css-prettifier-1.0.0.tgz#3ed4240d93c9798c001cedf27dd0aa960bdddd1a"
+  integrity sha512-efxSrRTiTqHTQVKW15Gz5H4pNAw8OqcG8NaiwkJIkqIdNXTD4Qr1zC1Ou6r2acd1oJJ2s56nb1ClnXMiWoj6gQ==
+  dependencies:
+    "@emotion/memoize" "^0.7.4"
+    stylis "^4.0.3"
+
 "@emotion/css@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/css/-/css-10.0.27.tgz#3a7458198fbbebb53b01b2b87f64e5e21241e14c"
@@ -1319,7 +1327,18 @@
   dependencies:
     "@emotion/memoize" "0.7.4"
 
-"@emotion/memoize@0.7.4":
+"@emotion/jest@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@emotion/jest/-/jest-11.0.0.tgz#5fee440b3d74d6f862ee0793639e46b1cbafc4c5"
+  integrity sha512-C92K/pJ/fN4WOX3VIGdYKKKYWQcsHxcF7v602TD7O5hk75hGwYNexPpNKgSjW3uA5gCsyBu9uEYGv4bj7oaYug==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    "@emotion/css-prettifier" "^1.0.0"
+    chalk "^4.1.0"
+    specificity "^0.4.1"
+    stylis "^4.0.3"
+
+"@emotion/memoize@0.7.4", "@emotion/memoize@^0.7.4":
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
   integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
@@ -21201,6 +21220,11 @@ spdy@^4.0.2:
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
 
+specificity@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.4.1.tgz#aab5e645012db08ba182e151165738d00887b019"
+  integrity sha512-1klA3Gi5PD1Wv9Q0wUoOQN1IWAuPu0D1U03ThXTr0cJ20+/iq2tHSDnK7Kk/0LXJ1ztUB2/1Os0wKmfyNgUQfg==
+
 split-on-first@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
@@ -21766,6 +21790,11 @@ stylis-plugin-rtl@^1.0.0:
   integrity sha512-FPoSxP+gbBLJRUXDRDFNBhqy/eToquDLn7ZrjIVBRfXaZ9bunwNnDtDm2qW1EoU0c93krm1Dy+8iVmJpjRGsKw==
   dependencies:
     cssjanus "^1.3.0"
+
+stylis@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.3.tgz#0d714765f3f694a685550f0c45411ebf90a9bded"
+  integrity sha512-iAxdFyR9cHKp4H5M2dJlDnvcb/3TvPprzlKjvYVbH7Sh+y8hjY/mUu/ssdcvVz6Z4lKI3vsoS0jAkMYmX7ozfA==
 
 subscriptions-transport-ws@^0.9.16:
   version "0.9.18"

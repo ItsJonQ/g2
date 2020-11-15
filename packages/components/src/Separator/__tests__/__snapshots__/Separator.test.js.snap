@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-bottom: calc(4px * 3);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 3);
+  margin-top: calc(4px * 3);
+  margin-top: calc(var(--wp-g2-grid-base) * 3);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator css-4k25og"
+  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
@@ -11,9 +24,22 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render margin 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-bottom: calc(4px * 7);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 7);
+  margin-top: calc(4px * 7);
+  margin-top: calc(var(--wp-g2-grid-base) * 7);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator css-h9ycj5"
+  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
@@ -21,9 +47,22 @@ exports[`props should render margin 1`] = `
 `;
 
 exports[`props should render marginBottom 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-bottom: calc(4px * 5);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 5);
+  margin-top: calc(4px * 3);
+  margin-top: calc(var(--wp-g2-grid-base) * 3);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator css-1iogq64"
+  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
@@ -31,9 +70,22 @@ exports[`props should render marginBottom 1`] = `
 `;
 
 exports[`props should render marginTop 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--wp-g2-color-divider);
+  border-width: 0 0 1px 0;
+  height: 0;
+  margin: 0;
+  width: auto;
+  margin-bottom: calc(4px * 3);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 3);
+  margin-top: calc(4px * 5);
+  margin-top: calc(var(--wp-g2-grid-base) * 5);
+}
+
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator css-phtam2"
+  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
