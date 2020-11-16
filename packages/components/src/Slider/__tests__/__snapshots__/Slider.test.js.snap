@@ -630,6 +630,163 @@ exports[`props should render size 1`] = `
 />
 `;
 
+exports[`props should render unit value 1`] = `
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  border-radius: var(--wp-g2-control-border-radius);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  height: var(--wp-g2-control-height);
+  max-width: 100%;
+  min-width: 0;
+  padding: calc(4px * 1);
+  padding: calc(var(--wp-g2-grid-base) * 1);
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+  background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
+  background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
+  border-radius: 2px;
+  height: 2px;
+  will-change: transform;
+}
+
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+  background: rgba(0, 0, 0, 0.1);
+  background: var(--wp-g2-control-background-dim-color);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+  background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
+  background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
+  border-radius: 2px;
+  height: 2px;
+  will-change: transform;
+}
+
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+  background: rgba(0, 0, 0, 0.1);
+  background: var(--wp-g2-control-background-dim-color);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #007cba;
+  background-color: var(--wp-g2-slider-thumb-background-color);
+  border: 1px solid transparent;
+  border: 1px solid var(--wp-g2-slider-thumb-border-color);
+  border-radius: 50%;
+  box-shadow: none;
+  box-shadow: var(--wp-g2-slider-thumb-box-shadow);
+  cursor: pointer;
+  height: 12px;
+  margin-top: -5px;
+  opacity: 1;
+  width: 12px;
+  -webkit-transition: box-shadow ease 160ms;
+  -webkit-transition: box-shadow ease var(--wp-g2-transition-duration-fast);
+  transition: box-shadow ease 160ms;
+  transition: box-shadow ease var(--wp-g2-transition-duration-fast);
+  will-change: transform;
+}
+
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+  background: #8a8b8c;
+  background: var(--wp-g2-color-text-muted);
+  border-color: #8a8b8c;
+  border-color: var(--wp-g2-color-text-muted);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #007cba;
+  background-color: var(--wp-g2-slider-thumb-background-color);
+  border: 1px solid transparent;
+  border: 1px solid var(--wp-g2-slider-thumb-border-color);
+  border-radius: 50%;
+  box-shadow: none;
+  box-shadow: var(--wp-g2-slider-thumb-box-shadow);
+  cursor: pointer;
+  height: 12px;
+  margin-top: -5px;
+  opacity: 1;
+  width: 12px;
+  -webkit-transition: box-shadow ease 160ms;
+  -webkit-transition: box-shadow ease var(--wp-g2-transition-duration-fast);
+  transition: box-shadow ease 160ms;
+  transition: box-shadow ease var(--wp-g2-transition-duration-fast);
+  will-change: transform;
+}
+
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+  background: #8a8b8c;
+  background: var(--wp-g2-color-text-muted);
+  border-color: #8a8b8c;
+  border-color: var(--wp-g2-color-text-muted);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
+}
+
+<input
+  class="components-slider wp-components-slider emotion-0"
+  data-g2-c16t="true"
+  data-g2-component="Slider"
+  id="slider"
+  max="100"
+  min="0"
+  style="--progress: 40%;"
+  type="range"
+  value="40"
+/>
+`;
+
 exports[`props should render value 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   box-sizing: border-box;
@@ -781,8 +938,8 @@ exports[`props should render value 1`] = `
   id="slider"
   max="100"
   min="0"
-  style="--progress: 50%;"
+  style="--progress: 40%;"
   type="range"
-  value="50"
+  value="40"
 />
 `;

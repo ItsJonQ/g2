@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormGroup } from '../../index';
+import { FormGroup, Text, VStack } from '../../index';
 import { Slider } from '../index';
 
 export default {
@@ -9,9 +9,17 @@ export default {
 };
 
 export const _default = () => {
+	const [value, setValue] = React.useState('50px');
+
 	return (
-		<FormGroup label="Slider">
-			<Slider />
-		</FormGroup>
+		<VStack>
+			<Text>Value: {value}</Text>
+			<FormGroup label="Slider">
+				<Slider onChange={setValue} value={value} />
+			</FormGroup>
+			<FormGroup label="Slider">
+				<Slider onChange={setValue} value={value} />
+			</FormGroup>
+		</VStack>
 	);
 };

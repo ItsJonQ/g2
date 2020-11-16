@@ -1,7 +1,9 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import {
+	createUnitValue,
 	interpolate,
+	is,
 	noop,
 	parseUnitValue,
 	useControlledState,
@@ -28,7 +30,7 @@ export function useSlider(props) {
 		value: valueProp,
 		...otherProps
 	} = useContextSystem(props, 'Slider');
-	const [initialValue] = parseUnitValue(valueProp);
+	const [initialValue, initialUnit] = parseUnitValue(valueProp);
 	const [value, setValue] = useControlledState(initialValue, {
 		initial: defaultValue || 50,
 	});
@@ -45,11 +47,19 @@ export function useSlider(props) {
 
 	const handleOnChange = useCallback(
 		(event) => {
-			const next = parseFloat(event.target.value);
-			setValue(next);
+			const nextValue = parseFloat(event.target.value);
+			if (!is.numeric(nextValue)) return;
+
+			let next = nextValue;
+
+			if (initialUnit) {
+				next = createUnitValue(nextValue, initialUnit);
+			}
+
+			setValue(nextValue);
 			onChange(next, { event });
 		},
-		[onChange, setValue],
+		[onChange, setValue, initialUnit],
 	);
 
 	const handleOnFocus = useCallback(
