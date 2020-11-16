@@ -41,7 +41,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 /**
  * @template P
  * @template {import('react').ElementType} D
- * @typedef {(props: PolymorphicComponentProps<D, P>) => JSX.Element} PolymorphicComponent
+ * @typedef {(props: PolymorphicComponentProps<D, P>) => JSX.Element | null} PolymorphicComponent
  */
 
 /**
@@ -204,6 +204,5 @@ export const createCoreElement = (tagName, options) => {
 		SystemComponent.displayName = displayName;
 	}
 
-	// @ts-ignore
 	return SystemComponent;
 };

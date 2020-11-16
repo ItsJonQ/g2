@@ -19,7 +19,7 @@ export function getValidChildren(children) {
 
 /**
  * @template T
- * @param {import('react').Ref<T>} ref
+ * @param {import('react').MutableRefObject<T>} ref
  * @param {T} value
  */
 export function assignRef(ref, value) {
@@ -31,7 +31,6 @@ export function assignRef(ref, value) {
 	}
 
 	try {
-		//@ts-ignore
 		ref.current = value;
 	} catch (error) {
 		throw new Error(`Cannot assign value '${value}' to ref '${ref}'`);

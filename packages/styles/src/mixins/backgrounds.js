@@ -24,7 +24,7 @@ export function getBackgroundColor(color, options = {}) {
 	let colorBlindColor;
 
 	const baseColor = css({
-		// @ts-ignore
+		// @ts-ignore Generated string passed to `get`
 		background: get(baseBackground),
 	});
 
@@ -39,23 +39,23 @@ export function getBackgroundColor(color, options = {}) {
 	if (color === 'red') {
 		colorBlindColor = css({
 			backgroundImage: `linear-gradient(45deg, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`red${colorBlindShade}`)
 			} 25%, transparent 25%, transparent 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`red${colorBlindShade}`)
 			} 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`red${colorBlindShade}`)
 			}),
             linear-gradient(-45deg, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`red${colorBlindShade}`)
 			} 25%, transparent 25%, transparent 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`red${colorBlindShade}`)
 			} 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`red${colorBlindShade}`)
 			})`,
 			backgroundSize: '10px 10px',
@@ -65,23 +65,23 @@ export function getBackgroundColor(color, options = {}) {
 	if (color === 'yellow') {
 		colorBlindColor = css({
 			backgroundImage: `linear-gradient(45deg, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`yellow${colorBlindShade}`)
 			} 25%, transparent 25%, transparent 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`yellow${colorBlindShade}`)
 			} 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`yellow${colorBlindShade}`)
 			}),
             linear-gradient(-45deg, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`yellow${colorBlindShade}`)
 			} 25%, transparent 25%, transparent 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`yellow${colorBlindShade}`)
 			} 75%, ${
-				// @ts-ignore
+				// @ts-ignore Generated string passed to `get`
 				get(`yellow${colorBlindShade}`)
 			})`,
 			backgroundSize: '10px 10px',
@@ -100,7 +100,7 @@ export function getBackgroundColorText(color, options = {}) {
 
 	const value = isBold
 		? get('white')
-		: // @ts-ignore
+		: // @ts-ignore Generated string passed to `get`
 		  get(`colorBackground${upperFirst(color)}Text`);
 
 	return css`

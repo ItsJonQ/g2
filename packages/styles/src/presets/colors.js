@@ -143,7 +143,7 @@ import { G2_COLORS } from '../theme/tokens';
  */
 
 /** @type {ColorInstance} */
-// @ts-ignore
+// @ts-ignore We add the missing properties below.
 const color = (value) => {
 	return colorize(value);
 };
@@ -162,10 +162,10 @@ SUPPORTED_COLORS.forEach((value) => {
 	const shades = [null, 100, 300, 500, 700, 900];
 	shades.forEach((shade) => {
 		if (!shade) {
-			// @ts-ignore
+			// @ts-ignore Generated string passed to `get`
 			color[value] = get(`${value}500`);
 		} else {
-			// @ts-ignore
+			// @ts-ignore Generated string passed to `get`
 			color[`${value}${shade}`] = get(`${value}${shade}`);
 		}
 	});
@@ -175,7 +175,7 @@ SUPPORTED_COLORS.forEach((value) => {
  * Add G2 colors to the color() method
  */
 Object.keys(G2_COLORS).forEach((value) => {
-	// @ts-ignore
+	// @ts-ignore Generated string passed to `get`
 	color[value] = get(value);
 });
 

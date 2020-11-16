@@ -97,13 +97,12 @@ export function css(template, ...args) {
 		for (let i = 0, len = template.length; i < len; i++) {
 			const n = template[i];
 			if (is.objectInterpolation(n)) {
-				// @ts-ignore TemplateStringsArray is readonly but we're ignoring that here
 				template[i] = getScaleStyles(responsive(n, getScaleValue));
 			}
 		}
 		return compile(template, ...args);
 	}
 
-	// @ts-ignore
+	// @ts-ignore Emotion says `css` doesn't take `TemplateStringsArray` but it does!
 	return compile(template, ...args);
 }

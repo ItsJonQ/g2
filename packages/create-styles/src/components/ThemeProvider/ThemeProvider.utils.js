@@ -133,6 +133,10 @@ export function useReducedMotionMode({
 	}, [isGlobal, isReducedMotion, ref]);
 }
 
+/**
+ * @param {string} initialTheme
+ * @returns {import('zustand').UseStore<{ theme: string, setTheme: (next: string) => void }>}
+ */
 function createThemeStore(initialTheme = '') {
 	return createStore((set) => ({
 		theme: initialTheme,
@@ -173,7 +177,7 @@ export function useThemeStyles({
 	/**
 	 * Used to track/compare changes for theme prop changes.
 	 */
-	/** @type {import('react').RefObject<object | undefined>} */
+	/** @type {import('react').MutableRefObject<object | undefined>} */
 	const themeRef = useRef();
 
 	/**
@@ -203,10 +207,8 @@ export function useThemeStyles({
 		 * We only want to update + set the theme if there's a change.
 		 * Since themes (potentially) be nested, we need to do a shallowEqual check.
 		 */
-		// @ts-ignore
 		if (shallowEqual(themeRef.current, theme)) return;
 
-		// @ts-ignore
 		themeRef.current = theme;
 
 		/**
@@ -233,12 +235,10 @@ export function useThemeStyles({
 			 * Otherwise, we can set it to the themeStyles state, which will be
 			 * rendered as custom properties on the ThemeProvider (HTMLDivElement).
 			 */
-			// @ts-ignore
 			setThemeStyles(nextThemeHtml);
 		}
 	}, [injectGlobal, isGlobal, setThemeStyles, theme]);
 
-	// @ts-ignore
 	return themeStyles;
 }
 

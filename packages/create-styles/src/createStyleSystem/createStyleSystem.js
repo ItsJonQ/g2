@@ -153,7 +153,7 @@ export function createStyleSystem(options = defaultOptions) {
 		rootStore,
 	};
 
-	// @ts-ignore
+	// @ts-ignore `get` is problematic and difficult to get right here... maybe warrants an @todo
 	return styleSystem;
 }
 

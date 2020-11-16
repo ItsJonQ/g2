@@ -18,12 +18,11 @@ import { tags } from './tags';
  */
 export function createCoreElements({ baseStyles, compiler, globalStyles }) {
 	/** @type {CoreElements} */
-	// @ts-ignore
+	// @ts-ignore We fill in the missing properties in the loop below
 	const core = {};
 
 	const _createStyledElement = (
-		/** @type {string} */ tagName,
-		// @ts-ignore
+		/** @type {keyof JSX.IntrinsicElements} */ tagName,
 	) => createCoreElement(tagName, { baseStyles, compiler, globalStyles });
 
 	for (const tagName of tags) {

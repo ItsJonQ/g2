@@ -267,6 +267,6 @@ export function createStyledComponents({ compiler, core }) {
 		styled[tagName] = createStyled(tagName);
 	});
 
-	// @ts-ignore
+	// @ts-ignore We cannot convince TypeScript that we've taken care of everything here, we're doing too many JavaScript magics for this to work without an ignore
 	return styled;
 }
