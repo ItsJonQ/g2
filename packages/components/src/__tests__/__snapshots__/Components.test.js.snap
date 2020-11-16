@@ -3364,10 +3364,10 @@ exports[`props should render BaseField 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -3469,10 +3469,10 @@ exports[`props should render BaseField with css prop 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -3574,10 +3574,10 @@ exports[`props should render BaseField with css prop 2`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   background: red;
   padding: 27px;
@@ -11163,7 +11163,7 @@ exports[`props should render DropdownMenuHeader 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 30px;
-  min-height: var(--wp-g2-control-height);
+  min-height: var(--wp-g2-menu-item-height);
   padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
   padding-left: 12px;
@@ -11223,7 +11223,7 @@ exports[`props should render DropdownMenuHeader with css prop 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 30px;
-  min-height: var(--wp-g2-control-height);
+  min-height: var(--wp-g2-menu-item-height);
   padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
   padding-left: 12px;
@@ -11283,7 +11283,7 @@ exports[`props should render DropdownMenuHeader with css prop 2`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 30px;
-  min-height: var(--wp-g2-control-height);
+  min-height: var(--wp-g2-menu-item-height);
   padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
   padding-left: 12px;
@@ -11404,6 +11404,8 @@ exports[`props should render DropdownMenuItem 1`] = `
   border-width: var(--wp-g2-menu-item-border-width);
   box-sizing: border-box;
   cursor: pointer;
+  min-height: 30px;
+  min-height: var(--wp-g2-menu-item-height);
   outline: none;
   position: relative;
   -webkit-text-decoration: none;
@@ -11694,6 +11696,8 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   border-width: var(--wp-g2-menu-item-border-width);
   box-sizing: border-box;
   cursor: pointer;
+  min-height: 30px;
+  min-height: var(--wp-g2-menu-item-height);
   outline: none;
   position: relative;
   -webkit-text-decoration: none;
@@ -11984,6 +11988,8 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   border-width: var(--wp-g2-menu-item-border-width);
   box-sizing: border-box;
   cursor: pointer;
+  min-height: 30px;
+  min-height: var(--wp-g2-menu-item-height);
   outline: none;
   position: relative;
   -webkit-text-decoration: none;
@@ -16010,7 +16016,7 @@ exports[`props should render MenuHeader 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 30px;
-  min-height: var(--wp-g2-control-height);
+  min-height: var(--wp-g2-menu-item-height);
   padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
   padding-left: 12px;
@@ -16070,7 +16076,7 @@ exports[`props should render MenuHeader with css prop 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 30px;
-  min-height: var(--wp-g2-control-height);
+  min-height: var(--wp-g2-menu-item-height);
   padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
   padding-left: 12px;
@@ -16130,7 +16136,7 @@ exports[`props should render MenuHeader with css prop 2`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 30px;
-  min-height: var(--wp-g2-control-height);
+  min-height: var(--wp-g2-menu-item-height);
   padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
   padding-left: 12px;
@@ -16251,6 +16257,8 @@ exports[`props should render MenuItem 1`] = `
   border-width: var(--wp-g2-menu-item-border-width);
   box-sizing: border-box;
   cursor: pointer;
+  min-height: 30px;
+  min-height: var(--wp-g2-menu-item-height);
   outline: none;
   position: relative;
   -webkit-text-decoration: none;
@@ -16541,6 +16549,8 @@ exports[`props should render MenuItem with css prop 1`] = `
   border-width: var(--wp-g2-menu-item-border-width);
   box-sizing: border-box;
   cursor: pointer;
+  min-height: 30px;
+  min-height: var(--wp-g2-menu-item-height);
   outline: none;
   position: relative;
   -webkit-text-decoration: none;
@@ -16831,6 +16841,8 @@ exports[`props should render MenuItem with css prop 2`] = `
   border-width: var(--wp-g2-menu-item-border-width);
   box-sizing: border-box;
   cursor: pointer;
+  min-height: 30px;
+  min-height: var(--wp-g2-menu-item-height);
   outline: none;
   position: relative;
   -webkit-text-decoration: none;
@@ -20532,10 +20544,10 @@ exports[`props should render SearchInput 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -21642,10 +21654,10 @@ exports[`props should render Select 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
   padding: 0;
@@ -27261,10 +27273,10 @@ exports[`props should render TextField 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -27444,10 +27456,10 @@ exports[`props should render TextInput 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
