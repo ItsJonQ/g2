@@ -268,6 +268,8 @@ export const subtleControlActive = css`
 		}
 		&:focus {
 			background: ${ui.get('buttonControlActiveStateColorFocus')};
+			box-shadow: ${ui.get('buttonControlActiveStateBoxShadowFocus')};
+			border-color: ${ui.get('buttonControlActiveStateBorderColorFocus')};
 		}
 		&:active {
 			background: ${ui.get('buttonControlActiveStateColorActive')};
