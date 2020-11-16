@@ -8,23 +8,30 @@ import UnitInputSelect from './UnitInputSelect';
 import { useUnitInput } from './useUnitInput';
 
 export function UnitInput(props, ref) {
-	const { onSelectChange, unitStore, ...unitInputProps } = useUnitInput(
-		props,
-		ref,
-	);
+	const {
+		disabled,
+		onSelectChange,
+		unitStore,
+		...unitInputProps
+	} = useUnitInput(props, ref);
 	const [value, unit] = unitStore(
 		(state) => [state.parsedValue, state.unit],
 		shallowCompare,
 	);
 
 	const suffix = (
-		<UnitInputSelect onSelectChange={onSelectChange} unit={unit} />
+		<UnitInputSelect
+			disabled={disabled}
+			onSelectChange={onSelectChange}
+			unit={unit}
+		/>
 	);
 
 	return (
 		<TextInput
 			{...unitInputProps}
 			{...ui.$('UnitInput')}
+			disabled={disabled}
 			format="number"
 			suffix={suffix}
 			type="text"

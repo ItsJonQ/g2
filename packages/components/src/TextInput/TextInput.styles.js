@@ -84,7 +84,6 @@ export const SpinnerWrapper = css`
 `;
 
 export const Spinner = css`
-	cursor: pointer;
 	height: 24px;
 	margin: 0 -6px 0 0 !important;
 	opacity: 0.6;
@@ -95,6 +94,7 @@ export const SpinnerArrow = css`
 	background-color: transparent;
 	border-radius: ${ui.get('controlBorderRadius')};
 	color: ${ui.get('colorText')};
+	cursor: pointer;
 	padding: 0 2px;
 
 	&:hover:active {
@@ -130,9 +130,14 @@ export const StepperButton = css`
 	&:hover {
 		background-color: ${ui.get('controlBackgroundColorHover')};
 	}
+
 	&:focus {
 		background-color: ${ui.get('controlBackgroundColorHover')};
 		border-color: ${ui.get('colorAdmin')};
+	}
+
+	&[disabled] {
+		pointer-events: none;
 	}
 `;
 
