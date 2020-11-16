@@ -48,7 +48,7 @@ export function useFlex(props) {
 			 * Trade-off:
 			 * Far less DOM less. However, UI rendering is not as reliable.
 			 */
-			'> * + *': {
+			'> * + *:not(marquee)': {
 				marginTop: isColumn ? ui.space(gap) : null,
 				marginRight: !isColumn && isReverse ? ui.space(gap) : null,
 				marginLeft: !isColumn && !isReverse ? ui.space(gap) : null,

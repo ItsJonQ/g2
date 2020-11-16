@@ -118,7 +118,7 @@ exports[`props should render CardInnerBody 1`] = `
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+* {
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -221,7 +221,7 @@ exports[`props should render CardInnerBody 1`] = `
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>*+* {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -325,7 +325,7 @@ exports[`props should render CardInnerBody 1`] = `
   color: var(--wp-g2-button-primary-text-color);
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+* {
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -769,7 +769,7 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+* {
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -919,7 +919,7 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>*+* {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -1023,7 +1023,7 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-button-primary-text-color);
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+* {
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
