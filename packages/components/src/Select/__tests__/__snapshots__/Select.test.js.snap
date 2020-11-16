@@ -76,7 +76,7 @@ exports[`props should render children 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -438,7 +438,7 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -801,7 +801,7 @@ exports[`props should render disabled 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -1166,7 +1166,7 @@ exports[`props should render readOnly 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -1530,7 +1530,7 @@ exports[`props should render required 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -1894,7 +1894,7 @@ exports[`props should render size 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }

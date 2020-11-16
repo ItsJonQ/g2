@@ -46,7 +46,7 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -171,7 +171,7 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-button-secondary-text-color);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+* {
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -462,7 +462,7 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-button-secondary-text-color);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+* {
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
@@ -669,7 +669,7 @@ exports[`props should render mixed control types 1`] = `
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -784,7 +784,7 @@ exports[`props should render mixed control types 1`] = `
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+* {
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -1120,7 +1120,7 @@ exports[`props should render mixed control types 1`] = `
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8>*+* {
+.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
@@ -1298,7 +1298,7 @@ exports[`props should render mixed control types 1`] = `
   color: var(--wp-g2-button-secondary-text-color);
 }
 
-.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11>*+* {
+.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
