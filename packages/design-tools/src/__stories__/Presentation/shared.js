@@ -26,7 +26,6 @@ import { ui } from '@wp-g2/styles';
 import { createStore, shallowCompare } from '@wp-g2/substate';
 import { is } from '@wp-g2/utils';
 import React from 'react';
-import CSSUnit from 'units-css';
 
 export const Wrapper = ({ children, title }) => {
 	return (
@@ -277,23 +276,8 @@ export const CombinedFormGroupInputSlider = React.memo(
 		const value = useTypography((state) => state[prop], shallowCompare);
 
 		const handleOnChange = React.useCallback(
-			(value) => {
-				typographyStore.setState((prev) => {
-					// Handles unit changes
-					const unit =
-						CSSUnit.parse(value).unit ||
-						CSSUnit.parse(prev[prop]).unit;
-
-					const { unit: nextUnit, value: nextValue } = CSSUnit.parse(
-						value,
-					);
-
-					let next = unit ? `${nextValue}${unit}` : value;
-
-					if (nextValue === 0 && nextUnit === value) {
-						next = value;
-					}
-
+			(next) => {
+				typographyStore.setState(() => {
 					return { [prop]: next, hasCustomValues: true };
 				});
 			},
@@ -301,7 +285,6 @@ export const CombinedFormGroupInputSlider = React.memo(
 		);
 
 		if (value === null) return null;
-		const cssValue = CSSUnit.parse(value);
 
 		return (
 			<FormGroup
@@ -333,7 +316,7 @@ export const CombinedFormGroupInputSlider = React.memo(
 						max={sliderMax || 20}
 						min={min}
 						onChange={handleOnChange}
-						value={cssValue.value}
+						value={value}
 					/>
 				</Grid>
 			</FormGroup>
