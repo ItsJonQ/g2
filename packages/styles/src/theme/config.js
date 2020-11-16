@@ -243,6 +243,12 @@ const MENU_PROPS = {
 	menuItemActiveBorderColor: get('colorAdmin'),
 	menuItemActiveTextColor: get('colorText'),
 	menuItemActiveBoxShadow: get('controlBorderSubtleColor'),
+	menuItemHeight: '30px',
+	menuItemHeightLarge: `calc(${get('menuItemHeight')} * 1.2)`,
+	menuItemHeightSmall: `calc(${get('menuItemHeight')} * 0.8)`,
+	menuItemHeightXLarge: `calc(${get('menuItemHeight')} * 1.4)`,
+	menuItemHeightXSmall: `calc(${get('menuItemHeight')} * 0.67)`,
+	menuItemHeightXXSmall: `calc(${get('menuItemHeight')} * 0.4)`,
 };
 
 const PANEL_PROPS = {

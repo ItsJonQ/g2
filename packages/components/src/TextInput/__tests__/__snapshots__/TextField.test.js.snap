@@ -55,10 +55,10 @@ exports[`props should render align 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -238,10 +238,10 @@ exports[`props should render correctly 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -421,10 +421,10 @@ exports[`props should render defaultValue 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -604,10 +604,10 @@ exports[`props should render disabled 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -789,10 +789,10 @@ exports[`props should render gap 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -972,10 +972,10 @@ exports[`props should render isRounded 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -1155,10 +1155,10 @@ exports[`props should render justify 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -1338,10 +1338,10 @@ exports[`props should render multiline 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
@@ -1555,10 +1555,10 @@ exports[`props should render prefix 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -1741,10 +1741,10 @@ exports[`props should render seamless 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -1925,10 +1925,10 @@ exports[`props should render size 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -2114,10 +2114,10 @@ exports[`props should render suffix 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 
@@ -2300,10 +2300,10 @@ exports[`props should render value 1`] = `
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease,box-shadow 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease,box-shadow 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease,box-shadow var(--wp-g2-transition-duration-fastest) ease;
+  -webkit-transition: border-color 100ms ease;
+  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
+  transition: border-color 100ms ease;
+  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
 }
 

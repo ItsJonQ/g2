@@ -24,6 +24,7 @@ function MenuItem(props, forwardedRef) {
 		onClick = noop,
 		prefix,
 		showArrow = false,
+		size,
 		suffix,
 		...otherProps
 	} = useContextSystem(props, 'MenuItem');
@@ -33,6 +34,7 @@ function MenuItem(props, forwardedRef) {
 
 	const classes = cx(
 		styles.MenuItem,
+		styles[size],
 		shouldShowArrow && styles.showArrow,
 		isBack && styles.showBackArrow,
 		isOffset && styles.offset,
@@ -116,6 +118,7 @@ function MenuItem(props, forwardedRef) {
 			onClick={handleOnClick}
 			prefix={prefixContent}
 			ref={forwardedRef}
+			size={size}
 			suffix={suffixContent}
 			textAlign="left"
 		>

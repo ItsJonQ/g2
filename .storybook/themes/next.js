@@ -12,6 +12,7 @@ const theme = createTheme(({ get, theme, space }) => {
 		controlBorderColorSubtle: 'transparent',
 		controlBorderRadius: '2px',
 		controlHeight: '36px',
+		menuItemHeight: '32px',
 		sliderThumbBackgroundColor: get('colorAdmin'),
 		sliderThumbBorderColor: 'transparent',
 		sliderThumbBoxShadow: 'none',
