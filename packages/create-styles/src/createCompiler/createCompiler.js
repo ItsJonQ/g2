@@ -59,6 +59,8 @@ export function createCompiler(options) {
 		} else {
 			mergedOptions.stylisPlugins = defaultPlugins;
 		}
+	} else {
+		mergedOptions.stylisPlugins = defaultPlugins;
 	}
 
 	/**
