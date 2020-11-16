@@ -1469,7 +1469,7 @@ exports[`props should render elevation 1`] = `
   will-change: box-shadow;
   border-radius: inherit;
   bottom: 0;
-  box-shadow: 0 truepx 2px 0 rgba(0 ,0,0,0.05);
+  box-shadow: 0 true 2px 0 rgba(0 ,0,0,0.05);
   opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
@@ -1637,7 +1637,7 @@ exports[`props should render no elevation 1`] = `
   will-change: box-shadow;
   border-radius: inherit;
   bottom: 0;
-  box-shadow: 0 falsepx 0px 0 rgba(0 ,0,0,0);
+  box-shadow: 0 false 0px 0 rgba(0 ,0,0,0);
   opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
