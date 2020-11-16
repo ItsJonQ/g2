@@ -194,11 +194,17 @@ const BUTTON_PROPS = {
 	buttonTertiaryBorderColorActive: get('buttonPrimaryColor'),
 	buttonTertiaryBorderColorFocus: get('buttonPrimaryColor'),
 
-	buttonControlActiveStateColor: get('buttonPrimaryColor'),
+	buttonControlActiveStateColor: get('colorText'),
 	buttonControlActiveStateColorHover: get('buttonControlActiveStateColor'),
 	buttonControlActiveStateColorActive: get('buttonControlActiveStateColor'),
 	buttonControlActiveStateColorFocus: get('buttonControlActiveStateColor'),
 	buttonControlActiveStateTextColor: get('buttonPrimaryTextColor'),
+	buttonControlActiveStateBorderColorFocus: get('buttonPrimaryColor'),
+	buttonControlActiveStateBoxShadowFocus: `0 0 0 ${get(
+		'controlBoxShadowFocusSize',
+	)} ${get('buttonPrimaryColor')}, 0 0 0 ${get(
+		'controlPseudoBoxShadowFocusWidth',
+	)} ${get('buttonControlActiveStateTextColor')} inset`,
 };
 
 const CARD_PROPS = {

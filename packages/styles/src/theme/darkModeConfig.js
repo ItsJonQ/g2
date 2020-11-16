@@ -6,6 +6,7 @@ const DARK_MODE_PROPS = {
 	...DARK_MODE_COLORS,
 	...DARK_MODE_RGBA_COLORS,
 	buttonPrimaryTextColorActive: get('controlPrimaryTextColorActive'),
+	buttonControlActiveStateTextColor: get('colorTextInverted'),
 	colorBodyBackground: '#18191A',
 	colorDivider: 'rgba(255, 255, 255, 0.1)',
 	colorScrollbarThumb: 'rgba(255, 255, 255, 0.2)',
