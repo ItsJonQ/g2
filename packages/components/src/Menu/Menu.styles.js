@@ -13,6 +13,7 @@ export const MenuItem = css`
 	border-width: ${ui.get('menuItemBorderWidth')};
 	box-sizing: border-box;
 	cursor: pointer;
+	min-height: ${ui.get('menuItemHeight')};
 	outline: none;
 	position: relative;
 	text-decoration: none;
@@ -74,10 +75,26 @@ export const MenuItem = css`
 	`}
 `;
 
+export const large = css`
+	min-height: ${ui.get('menuItemHeightLarge')};
+`;
+
+export const small = css`
+	min-height: ${ui.get('menuItemHeightSmall')};
+`;
+
+export const xSmall = css`
+	min-height: ${ui.get('menuItemHeightXSmall')};
+`;
+
+export const xxSmall = css`
+	min-height: ${ui.get('menuItemHeightXXSmall')};
+`;
+
 export const MenuHeader = css`
 	align-items: center;
 	display: flex;
-	min-height: ${ui.get('controlHeight')};
+	min-height: ${ui.get('menuItemHeight')};
 	padding-bottom: ${ui.space(1)};
 	padding-left: ${ui.get('controlPaddingX')};
 	padding-right: ${ui.get('controlPaddingX')};
@@ -88,7 +105,7 @@ export const offset = css`
 	${ui.margin.x(-2)};
 	${ui.margin.y(-1)};
 	${ui.padding.y(2)};
-	min-height: calc(${ui.get('controlHeight')} + ${ui.space(1)});
+	min-height: calc(${ui.get('menuItemHeight')} + ${ui.space(1)});
 	width: calc(100% + ${ui.space(4)});
 `;
 
