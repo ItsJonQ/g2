@@ -6,8 +6,9 @@ import { View } from '../View';
 import * as styles from './UnitInput.styles';
 import { UNITS } from './UnitInput.utils';
 
-function UnitInputSelect({ onSelectChange, unit }) {
+function UnitInputSelect({ disabled, onSelectChange, unit }) {
 	const [isFocused, setFocused] = React.useState(false);
+
 	const handleOnChange = React.useCallback(
 		(event) => {
 			onSelectChange(event.target.value);
@@ -30,6 +31,7 @@ function UnitInputSelect({ onSelectChange, unit }) {
 				className={cx([
 					styles.UnitInputSelectUnit,
 					isFocused && styles.unitSelectFocused,
+					disabled && styles.disabled,
 				])}
 			>
 				{unit}
@@ -37,6 +39,7 @@ function UnitInputSelect({ onSelectChange, unit }) {
 					{...ui.$('UnitInputSelect')}
 					as="select"
 					className={styles.UnitInputSelectElement}
+					disabled={disabled}
 					onBlur={handleOnBlur}
 					onChange={handleOnChange}
 					onClick={handleOnStopPropagation}

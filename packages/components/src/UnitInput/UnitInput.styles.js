@@ -23,6 +23,10 @@ export const UnitInputSelectUnit = css`
 	}
 `;
 
+export const disabled = css`
+	pointer-events: none;
+`;
+
 export const UnitInputSelectElement = css`
 	appearance: none;
 	border: none;
