@@ -37,7 +37,10 @@ export const is = {
 	file: (o) => o instanceof File,
 	numeric,
 	numericZero,
-	/** @type {(o: any) => o is import('create-emotion').ObjectInterpolation} */
+	// This is safe because we only accept Interpolation rather than any
+	// _.isPlainObject(TemplateStringsArray) -> false
+	// _.isPlainObject is also `false` for the rest of the values that `Interpolation` covers except for `ObjectInterpolation` :)
+	/** @type {(o: TemplateStringsArray | import('create-emotion').Interpolation) => o is import('create-emotion').ObjectInterpolation} */
 	objectInterpolation: (o) => _.isPlainObject(o),
 
 	/**

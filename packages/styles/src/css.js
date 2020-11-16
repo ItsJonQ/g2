@@ -1,8 +1,9 @@
+import { responsive } from '@wp-g2/create-styles';
 import { is } from '@wp-g2/utils';
 
 import { space } from './mixins/space';
 import { compiler } from './system';
-const { breakpoints, css: compile } = compiler;
+const { css: compile } = compiler;
 
 // Inspired by:
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts
@@ -79,48 +80,6 @@ export function getScaleStyles(styles = {}) {
 	return next;
 }
 
-// https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224
-/**
- * A utility function that generates responsive styles if the value is an array.
- *
- * @param {import('create-emotion').ObjectInterpolation} styles A styles object
- * @returns {import('create-emotion').ObjectInterpolation} An adjusted styles object with responsive styles (if applicable).
- */
-export const responsive = (styles = {}) => {
-	/** @type {import('create-emotion').ObjectInterpolation} */
-	const next = {};
-	const mediaQueries = [
-		null,
-		...breakpoints.map((n) => `@media screen and (min-width: ${n})`),
-	];
-
-	for (const k in styles) {
-		const key = k;
-		let value = styles[key];
-
-		if (value === null) continue;
-
-		if (!is.array(value)) {
-			next[key] = value;
-			continue;
-		}
-
-		for (let i = 0; i < value.slice(0, mediaQueries.length).length; i++) {
-			const media = mediaQueries[i];
-			if (!media) {
-				next[key] = getScaleValue(key, value[i]);
-				continue;
-			}
-			next[media] = next[media] || {};
-			if (value[i] === null) continue;
-			// @ts-ignore We ensure `[media]` exists two lines prior.
-			next[media][key] = getScaleValue(key, value[i]);
-		}
-	}
-
-	return next;
-};
-
 /**
  * Enhances the (create-system enhanced) CSS function to account for
  * scale functions within the Style system.
@@ -131,14 +90,15 @@ export const responsive = (styles = {}) => {
  */
 export function css(template, ...args) {
 	if (is.objectInterpolation(template)) {
-		return compile(getScaleStyles(responsive(template)));
+		return compile(getScaleStyles(responsive(template, getScaleValue)));
 	}
 
 	if (is.array(template)) {
 		for (let i = 0, len = template.length; i < len; i++) {
 			const n = template[i];
 			if (is.objectInterpolation(n)) {
-				template[i] = getScaleStyles(responsive(n));
+				// @ts-ignore TemplateStringsArray is readonly but we're ignoring that here
+				template[i] = getScaleStyles(responsive(n, getScaleValue));
 			}
 		}
 		return compile(template, ...args);

@@ -28,18 +28,14 @@ export function createCSS(compile) {
 	function css(...args) {
 		const [arg, ...rest] = args;
 
-		if (is.plainObject(arg)) {
-			// @todo
-			// @ts-ignore
+		if (is.objectInterpolation(arg)) {
 			return compile(responsive(arg));
 		}
 
 		if (is.array(arg)) {
 			for (let i = 0, len = arg.length; i < len; i++) {
 				const n = arg[i];
-				if (is.plainObject(n)) {
-					// @todo
-					// @ts-ignore
+				if (is.objectInterpolation(n)) {
 					arg[i] = responsive(n);
 				}
 			}
@@ -49,7 +45,7 @@ export function createCSS(compile) {
 		return compile(...args);
 	}
 
-	// @ts-ignore
+	// @ts-ignore No amount of zhuzhing will convince TypeScript that a function with the parameters and return type for CSS is in fact the same type
 	return css;
 }
 
@@ -58,10 +54,14 @@ export function createCSS(compile) {
  * A utility function that generates responsive styles if the value is an array.
  *
  * @param {import('@emotion/serialize').ObjectInterpolation<any>} styles A styles object
+ * @param {(key: string, value: any) => any} [getScaleValue]
  * @returns {import('@emotion/serialize').ObjectInterpolation<any>} An adjusted styles object with responsive styles (if applicable).
  */
-export const responsive = (styles = {}) => {
-	/** @type {Record<any, any>} */
+export const responsive = (
+	styles = {},
+	getScaleValue = (_, value) => value,
+) => {
+	/** @type {import('@emotion/serialize').ObjectInterpolation<any>} */
 	const next = {};
 	const mediaQueries = [
 		null,
@@ -82,12 +82,13 @@ export const responsive = (styles = {}) => {
 		for (let i = 0; i < value.slice(0, mediaQueries.length).length; i++) {
 			const media = mediaQueries[i];
 			if (!media) {
-				next[key] = value[i];
+				next[key] = getScaleValue(key, value[i]);
 				continue;
 			}
 			next[media] = next[media] || {};
 			if (value[i] === null) continue;
-			next[media][key] = value[i];
+			// @ts-ignore One line above we ensure that it is not null
+			next[media][key] = getScaleValue(key, value[i]);
 		}
 	}
 
