@@ -40,30 +40,6 @@ export function connect(Component, namespace, options = {}) {
 			forwardedRef,
 		);
 
-		/**
-		 * TODO: Revisit shallow.
-		 *
-		 * If "shallow" prop rendering is preferred, then we must "reset" the
-		 * the prop values so that it is no longer passed down.
-		 */
-		// if (shallowProp) {
-		// 	const nextContextProps = { ...contextProps };
-
-		// 	if (is.array(key)) {
-		// 		for (const k of key) {
-		// 			nextContextProps[k] = {};
-		// 		}
-		// 	} else {
-		// 		nextContextProps[key] = {};
-		// 	}
-
-		// 	return (
-		// 		<ContextSystemProvider shallow value={nextContextProps}>
-		// 			<Component {...finalComponentProps} />
-		// 		</ContextSystemProvider>
-		// 	);
-		// }
-
 		return <Component {...finalComponentProps} />;
 	};
 
