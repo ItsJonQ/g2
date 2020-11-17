@@ -57,7 +57,6 @@ export * from './Switch';
 export * from './Tabs';
 export * from './Tag';
 export * from './Text';
-export * from './TextField';
 export * from './TextInput';
 export * from './Tooltip';
 export * from './UnitInput';
