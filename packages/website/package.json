@@ -20,6 +20,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
+    "@wordpress/icons": "^2.8.0",
     "@wp-g2/components": "^0.0.107",
     "@wp-g2/gatsby-plugin-styles": "^0.0.107",
     "@wp-g2/styles": "^0.0.107",

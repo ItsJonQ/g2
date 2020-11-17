@@ -1,4 +1,4 @@
-import { FiMinus, FiPlus } from '@wp-g2/icons';
+import { minus, plus } from '@wordpress/icons';
 import { ui } from '@wp-g2/styles';
 import { clamp, noop } from '@wp-g2/utils';
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
@@ -125,9 +125,6 @@ const UpDownArrows = React.memo(
 			return () => handleOnClearTimers();
 		}, [handleOnClearTimers]);
 
-		const arrowUp = useMemo(() => <FiPlus />, []);
-		const arrowDown = useMemo(() => <FiMinus />, []);
-
 		return (
 			<>
 				<Icon
@@ -140,7 +137,7 @@ const UpDownArrows = React.memo(
 					onMouseUp={handleOnClearTimers}
 					{...ui.$('TextInputStepperUp')}
 					height={`calc(100% - 4px)`}
-					icon={arrowUp}
+					icon={plus}
 					size={12}
 					width={20}
 				/>
@@ -154,7 +151,7 @@ const UpDownArrows = React.memo(
 					onMouseUp={handleOnClearTimers}
 					{...ui.$('TextInputStepperDown')}
 					height={`calc(100% - 4px)`}
-					icon={arrowDown}
+					icon={minus}
 					size={12}
 					width={20}
 				/>

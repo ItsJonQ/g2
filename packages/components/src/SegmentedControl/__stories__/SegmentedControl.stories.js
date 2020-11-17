@@ -1,9 +1,9 @@
 import {
-	FiAlignCenter,
-	FiAlignJustify,
-	FiAlignLeft,
-	FiAlignRight,
-} from '@wp-g2/icons';
+	alignCenter,
+	alignJustify,
+	alignLeft,
+	alignRight,
+} from '@wordpress/icons';
 import React from 'react';
 
 import { Icon, Spacer, View } from '../../index';
@@ -17,19 +17,19 @@ export default {
 export const _default = () => {
 	const align = [
 		{
-			label: <Icon icon={<FiAlignLeft />} size={14} />,
+			label: <Icon icon={alignLeft} size={14} />,
 			value: 'left',
 		},
 		{
-			label: <Icon icon={<FiAlignCenter />} size={14} />,
+			label: <Icon icon={alignCenter} size={14} />,
 			value: 'center',
 		},
 		{
-			label: <Icon icon={<FiAlignRight />} size={14} />,
+			label: <Icon icon={alignRight} size={14} />,
 			value: 'right',
 		},
 		{
-			label: <Icon icon={<FiAlignJustify />} size={14} />,
+			label: <Icon icon={alignJustify} size={14} />,
 			value: 'justify',
 		},
 	];

@@ -1,5 +1,5 @@
+import { help as helpIcon } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiHelpCircle } from '@wp-g2/icons';
 import { css, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -16,8 +16,6 @@ function HelpTip(props, forwardedRef) {
 	const handleOnClick = React.useCallback((event) => {
 		event.preventDefault();
 	}, []);
-
-	const helpIcon = React.memo(() => <FiHelpCircle />, []);
 
 	return (
 		<Tooltip {...otherProps} content={children} ref={forwardedRef}>

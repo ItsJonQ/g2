@@ -16,6 +16,7 @@ exports[`props should render color 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: red;
+  fill: red;
   height: 20px;
   width: 20px;
 }

@@ -1,4 +1,11 @@
 import {
+	arrowDown,
+	arrowLeft,
+	arrowRight,
+	arrowUp,
+	fullscreen,
+} from '@wordpress/icons';
+import {
 	Button,
 	Container,
 	FormGroup,
@@ -8,13 +15,6 @@ import {
 	Surface,
 	UnitInput,
 } from '@wp-g2/components';
-import {
-	FiArrowDown,
-	FiArrowLeft,
-	FiArrowRight,
-	FiArrowUp,
-	FiMaximize,
-} from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -44,27 +44,24 @@ const Example = () => {
 							{!showAll && <PaddingInput value="24px" />}
 							{showAll && (
 								<>
+									<PaddingInput icon={arrowUp} value="24px" />
 									<PaddingInput
-										icon={<FiArrowUp />}
+										icon={arrowDown}
 										value="24px"
 									/>
 									<PaddingInput
-										icon={<FiArrowDown />}
+										icon={arrowLeft}
 										value="24px"
 									/>
 									<PaddingInput
-										icon={<FiArrowLeft />}
-										value="24px"
-									/>
-									<PaddingInput
-										icon={<FiArrowRight />}
+										icon={arrowRight}
 										value="24px"
 									/>
 								</>
 							)}
 						</Grid>
 						<Button
-							icon={<FiMaximize />}
+							icon={fullscreen}
 							isActive={showAll}
 							isControl
 							isSubtle

@@ -1,4 +1,4 @@
-import { FiDownload } from '@wp-g2/icons';
+import { download } from '@wordpress/icons';
 import React from 'react';
 
 import { TextInput } from '../../index';
@@ -13,7 +13,7 @@ export const _default = () => {
 	return (
 		<BlankSlate
 			description="Input your twitter URL"
-			icon={<FiDownload />}
+			icon={download}
 			title="Twitter Embed"
 		>
 			<TextInput type="text" />

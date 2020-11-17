@@ -10,6 +10,7 @@ function Icon(props, forwardedRef) {
 		children,
 		className,
 		color,
+		fill = color,
 		height,
 		icon,
 		inline,
@@ -24,6 +25,7 @@ function Icon(props, forwardedRef) {
 
 		sx.color = css({
 			color,
+			fill,
 		});
 
 		sx.size = css({
@@ -39,7 +41,7 @@ function Icon(props, forwardedRef) {
 			styles[variant],
 			className,
 		);
-	}, [className, color, height, inline, size, variant, width]);
+	}, [className, color, fill, height, inline, size, variant, width]);
 
 	if (!icon) return null;
 

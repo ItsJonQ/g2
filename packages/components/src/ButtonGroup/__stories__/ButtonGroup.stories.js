@@ -1,4 +1,4 @@
-import { FiBold, FiItalic, FiUnderline } from '@wp-g2/icons';
+import { formatBold, formatItalic, formatUnderline } from '@wordpress/icons';
 import React from 'react';
 
 import {
@@ -24,9 +24,9 @@ export const _default = () => {
 				<ListGroupHeader>Default</ListGroupHeader>
 				<FormGroup>
 					<ButtonGroup onChange={setValue} value={value}>
-						<Button icon={<FiBold />} value="bold" />
-						<Button icon={<FiItalic />} value="italic" />
-						<Button icon={<FiUnderline />} value="underline" />
+						<Button icon={formatBold} value="bold" />
+						<Button icon={formatItalic} value="italic" />
+						<Button icon={formatUnderline} value="underline" />
 					</ButtonGroup>
 				</FormGroup>
 			</ListGroup>
@@ -34,9 +34,9 @@ export const _default = () => {
 				<ListGroupHeader>Segmented</ListGroupHeader>
 				<FormGroup>
 					<ButtonGroup onChange={setValue} segmented value={value}>
-						<Button icon={<FiBold />} value="bold" />
-						<Button icon={<FiItalic />} value="italic" />
-						<Button icon={<FiUnderline />} value="underline" />
+						<Button icon={formatBold} value="bold" />
+						<Button icon={formatItalic} value="italic" />
+						<Button icon={formatUnderline} value="underline" />
 					</ButtonGroup>
 				</FormGroup>
 			</ListGroup>
@@ -44,9 +44,9 @@ export const _default = () => {
 				<ListGroupHeader>Expanded</ListGroupHeader>
 				<FormGroup>
 					<ButtonGroup expanded onChange={setValue} value={value}>
-						<Button icon={<FiBold />} value="bold" />
-						<Button icon={<FiItalic />} value="italic" />
-						<Button icon={<FiUnderline />} value="underline" />
+						<Button icon={formatBold} value="bold" />
+						<Button icon={formatItalic} value="italic" />
+						<Button icon={formatUnderline} value="underline" />
 					</ButtonGroup>
 				</FormGroup>
 			</ListGroup>
@@ -59,9 +59,9 @@ export const _default = () => {
 						segmented
 						value={value}
 					>
-						<Button icon={<FiBold />} value="bold" />
-						<Button icon={<FiItalic />} value="italic" />
-						<Button icon={<FiUnderline />} value="underline" />
+						<Button icon={formatBold} value="bold" />
+						<Button icon={formatItalic} value="italic" />
+						<Button icon={formatUnderline} value="underline" />
 					</ButtonGroup>
 				</FormGroup>
 			</ListGroup>
@@ -75,9 +75,9 @@ export const _expanded = () => {
 	return (
 		<>
 			<ButtonGroup expanded onChange={setValue} value={value}>
-				<Button icon={<FiBold />} value="bold" />
-				<Button icon={<FiItalic />} value="italic" />
-				<Button icon={<FiUnderline />} value="underline" />
+				<Button icon={formatBold} value="bold" />
+				<Button icon={formatItalic} value="italic" />
+				<Button icon={formatUnderline} value="underline" />
 			</ButtonGroup>
 		</>
 	);
@@ -89,9 +89,9 @@ export const _segmented = () => {
 	return (
 		<>
 			<ButtonGroup onChange={setValue} segmented value={value}>
-				<Button icon={<FiBold />} value="bold" />
-				<Button icon={<FiItalic />} value="italic" />
-				<Button icon={<FiUnderline />} value="underline" />
+				<Button icon={formatBold} value="bold" />
+				<Button icon={formatItalic} value="italic" />
+				<Button icon={formatUnderline} value="underline" />
 			</ButtonGroup>
 		</>
 	);

@@ -245,6 +245,8 @@ exports[`props should render as dismissable 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -290,9 +292,12 @@ exports[`props should render as dismissable 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   color: currentColor;
+  fill: currentColor;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -389,6 +394,8 @@ exports[`props should render as dismissable 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
@@ -399,6 +406,7 @@ exports[`props should render as dismissable 1`] = `
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
   color: currentColor;
+  fill: currentColor;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
@@ -568,28 +576,17 @@ exports[`props should render as dismissable 1`] = `
               data-g2-component="Icon"
             >
               <svg
-                fill="none"
+                aria-hidden="true"
+                focusable="false"
                 height="16"
+                role="img"
                 size="16"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
                 viewBox="0 0 24 24"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <line
-                  x1="18"
-                  x2="6"
-                  y1="6"
-                  y2="18"
-                />
-                <line
-                  x1="6"
-                  x2="18"
-                  y1="6"
-                  y2="18"
+                <path
+                  d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
                 />
               </svg>
             </div>
@@ -1023,6 +1020,8 @@ exports[`props should render with status 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1068,9 +1067,12 @@ exports[`props should render with status 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   color: currentColor;
+  fill: currentColor;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
@@ -1167,6 +1169,8 @@ exports[`props should render with status 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -1177,6 +1181,7 @@ exports[`props should render with status 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: currentColor;
+  fill: currentColor;
 }
 
 .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
@@ -1611,28 +1616,17 @@ exports[`props should render with status 1`] = `
                 data-g2-component="Icon"
               >
                 <svg
-                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
                   height="16"
+                  role="img"
                   size="16"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   viewBox="0 0 24 24"
                   width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <line
-                    x1="18"
-                    x2="6"
-                    y1="6"
-                    y2="18"
-                  />
-                  <line
-                    x1="6"
-                    x2="18"
-                    y1="6"
-                    y2="18"
+                  <path
+                    d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
                   />
                 </svg>
               </div>
@@ -1701,28 +1695,17 @@ exports[`props should render with status 1`] = `
                 data-g2-component="Icon"
               >
                 <svg
-                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
                   height="16"
+                  role="img"
                   size="16"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   viewBox="0 0 24 24"
                   width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <line
-                    x1="18"
-                    x2="6"
-                    y1="6"
-                    y2="18"
-                  />
-                  <line
-                    x1="6"
-                    x2="18"
-                    y1="6"
-                    y2="18"
+                  <path
+                    d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
                   />
                 </svg>
               </div>
@@ -1791,28 +1774,17 @@ exports[`props should render with status 1`] = `
                 data-g2-component="Icon"
               >
                 <svg
-                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
                   height="16"
+                  role="img"
                   size="16"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   viewBox="0 0 24 24"
                   width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <line
-                    x1="18"
-                    x2="6"
-                    y1="6"
-                    y2="18"
-                  />
-                  <line
-                    x1="6"
-                    x2="18"
-                    y1="6"
-                    y2="18"
+                  <path
+                    d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
                   />
                 </svg>
               </div>
@@ -1881,28 +1853,17 @@ exports[`props should render with status 1`] = `
                 data-g2-component="Icon"
               >
                 <svg
-                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
                   height="16"
+                  role="img"
                   size="16"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   viewBox="0 0 24 24"
                   width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <line
-                    x1="18"
-                    x2="6"
-                    y1="6"
-                    y2="18"
-                  />
-                  <line
-                    x1="6"
-                    x2="18"
-                    y1="6"
-                    y2="18"
+                  <path
+                    d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
                   />
                 </svg>
               </div>
@@ -1971,28 +1932,17 @@ exports[`props should render with status 1`] = `
                 data-g2-component="Icon"
               >
                 <svg
-                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
                   height="16"
+                  role="img"
                   size="16"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   viewBox="0 0 24 24"
                   width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <line
-                    x1="18"
-                    x2="6"
-                    y1="6"
-                    y2="18"
-                  />
-                  <line
-                    x1="6"
-                    x2="18"
-                    y1="6"
-                    y2="18"
+                  <path
+                    d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
                   />
                 </svg>
               </div>

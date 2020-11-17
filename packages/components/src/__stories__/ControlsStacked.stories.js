@@ -1,3 +1,12 @@
+import {
+	alignCenter,
+	alignLeft,
+	alignRight,
+	desktop,
+	fullscreen,
+	mobile,
+	tablet,
+} from '@wordpress/icons';
 import { ContextSystemProvider } from '@wp-g2/context';
 import {
 	FiAlignCenter,
@@ -56,15 +65,15 @@ const ResponsiveControls = () => {
 				<SegmentedControl
 					options={[
 						{
-							label: <Icon icon={<FiSmartphone />} />,
+							label: <Icon icon={mobile} />,
 							value: 'phone',
 						},
 						{
-							label: <Icon icon={<FiTablet />} />,
+							label: <Icon icon={tablet} />,
 							value: 'tablet',
 						},
 						{
-							label: <Icon icon={<FiMonitor />} />,
+							label: <Icon icon={desktop} />,
 							value: 'desktop',
 						},
 					]}
@@ -94,15 +103,15 @@ const LayoutControls = () => {
 							isBlock
 							options={[
 								{
-									label: <Icon icon={<FiAlignLeft />} />,
+									label: <Icon icon={alignLeft} />,
 									value: 'left',
 								},
 								{
-									label: <Icon icon={<FiAlignCenter />} />,
+									label: <Icon icon={alignCenter} />,
 									value: 'center',
 								},
 								{
-									label: <Icon icon={<FiAlignRight />} />,
+									label: <Icon icon={alignRight} />,
 									value: 'right',
 								},
 							]}
@@ -136,11 +145,11 @@ const LayoutControls = () => {
 								isBlock
 								options={[
 									{
-										label: <Icon icon={<FiSquare />} />,
+										label: <Icon icon={<FiSquare />} />, // @todo this is missing a suitable wp/icons replacement
 										value: 'all',
 									},
 									{
-										label: <Icon icon={<FiMaximize />} />,
+										label: <Icon icon={fullscreen} />,
 										value: 'sides',
 									},
 								]}

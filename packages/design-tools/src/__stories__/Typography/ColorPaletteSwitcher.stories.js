@@ -1,3 +1,4 @@
+import { chevronLeft, chevronRight } from '@wordpress/icons';
 import {
 	Animated,
 	Button,
@@ -10,7 +11,6 @@ import {
 	Surface,
 	View,
 } from '@wp-g2/components';
-import { FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -66,12 +66,8 @@ const Example = () => {
 							ui.zIndex(10),
 						]}
 					>
-						<NavigatorButton
-							icon={<FiChevronLeft />}
-							isBack
-							to="Theme"
-						/>
-						<NavigatorButton icon={<FiChevronRight />} to="Core" />
+						<NavigatorButton icon={chevronLeft} isBack to="Theme" />
+						<NavigatorButton icon={chevronRight} to="Core" />
 					</HStack>
 
 					<Animated layout>

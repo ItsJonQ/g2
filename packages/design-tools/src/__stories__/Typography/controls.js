@@ -1,4 +1,16 @@
 import {
+	arrowDown,
+	arrowLeft,
+	arrowRight,
+	arrowUp,
+	chevronLeft,
+	chevronRight,
+	fullscreen,
+	minus,
+	moreHorizontal,
+	plus,
+} from '@wordpress/icons';
+import {
 	Accordion,
 	Button,
 	ColorCircle,
@@ -36,19 +48,7 @@ import {
 	View,
 	VStack,
 } from '@wp-g2/components';
-import {
-	FiArrowDown,
-	FiArrowLeft,
-	FiArrowRight,
-	FiArrowUp,
-	FiChevronLeft,
-	FiChevronRight,
-	FiCornerUpLeft,
-	FiMaximize,
-	FiMinus,
-	FiMoreHorizontal,
-	FiPlus,
-} from '@wp-g2/icons';
+import { FiCornerUpLeft } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
 import { is } from '@wp-g2/utils';
@@ -83,7 +83,7 @@ const RemoveButton = (props) => {
 					pointer-events: initial;
 				}
 			`}
-			icon={<FiMinus />}
+			icon={minus}
 			isControl
 			isSubtle
 			size="xSmall"
@@ -98,7 +98,7 @@ const ResetButton = (props) => (
 );
 
 export const TypographyOptions = React.memo(
-	({ addIcon = <FiMoreHorizontal />, exclude = [] }) => {
+	({ addIcon = moreHorizontal, exclude = [] }) => {
 		const { setState, ...settings } = useGlobalStyles();
 
 		const optionsEntries = Object.entries(typographyOptionKeys).filter(
@@ -764,58 +764,56 @@ const ColorSetting = ({
 	);
 };
 
-export const DimensionsOptions = React.memo(
-	({ addIcon = <FiMoreHorizontal /> }) => {
-		const { setState, ...settings } = useGlobalStyles();
-		const optionsEntries = Object.entries(dimensionsOptionKeys);
+export const DimensionsOptions = React.memo(({ addIcon = moreHorizontal }) => {
+	const { setState, ...settings } = useGlobalStyles();
+	const optionsEntries = Object.entries(dimensionsOptionKeys);
 
-		const handleOnToggle = React.useCallback(
-			({ prop, value }) => () => {
-				typographyStore.getState().set({ [prop]: value });
-			},
-			[],
-		);
+	const handleOnToggle = React.useCallback(
+		({ prop, value }) => () => {
+			typographyStore.getState().set({ [prop]: value });
+		},
+		[],
+	);
 
-		return (
-			<Dropdown placement="bottom-end">
-				<DropdownTrigger
-					hasCaret={false}
-					icon={addIcon}
-					isControl
-					isSubtle
-					onClick={(e) => e.stopPropagation()}
-					size="xSmall"
-				/>
-				<DropdownMenu
-					maxWidth={160}
-					minWidth={160}
-					onClick={(e) => e.stopPropagation()}
-				>
-					<DropdownMenuHeader>More options</DropdownMenuHeader>
-					{optionsEntries.map(([key, value]) => {
-						const isSelected = is.defined(settings[key]);
+	return (
+		<Dropdown placement="bottom-end">
+			<DropdownTrigger
+				hasCaret={false}
+				icon={addIcon}
+				isControl
+				isSubtle
+				onClick={(e) => e.stopPropagation()}
+				size="xSmall"
+			/>
+			<DropdownMenu
+				maxWidth={160}
+				minWidth={160}
+				onClick={(e) => e.stopPropagation()}
+			>
+				<DropdownMenuHeader>More options</DropdownMenuHeader>
+				{optionsEntries.map(([key, value]) => {
+					const isSelected = is.defined(settings[key]);
 
-						return (
-							<DropdownMenuItem
-								isSelected={isSelected}
-								key={key}
-								onClick={handleOnToggle({
-									prop: key,
-									value: isSelected ? null : value.value,
-								})}
-								value={key}
-							>
-								{value.label}
-							</DropdownMenuItem>
-						);
-					})}
-				</DropdownMenu>
-			</Dropdown>
-		);
-	},
-);
+					return (
+						<DropdownMenuItem
+							isSelected={isSelected}
+							key={key}
+							onClick={handleOnToggle({
+								prop: key,
+								value: isSelected ? null : value.value,
+							})}
+							value={key}
+						>
+							{value.label}
+						</DropdownMenuItem>
+					);
+				})}
+			</DropdownMenu>
+		</Dropdown>
+	);
+});
 
-export const ColorOptions = React.memo(({ addIcon = <FiMoreHorizontal /> }) => {
+export const ColorOptions = React.memo(({ addIcon = moreHorizontal }) => {
 	const { setState, ...settings } = useGlobalStyles();
 	const optionsEntries = Object.entries(colorOptionKeys);
 
@@ -934,11 +932,11 @@ export const ColorNavigator = ({ prop = 'backgroundColor' }) => {
 					]}
 				>
 					<ColorNavigatorButton
-						icon={<FiChevronLeft />}
+						icon={chevronLeft}
 						isBack
 						to="Theme"
 					/>
-					<ColorNavigatorButton icon={<FiChevronRight />} to="Core" />
+					<ColorNavigatorButton icon={chevronRight} to="Core" />
 				</HStack>
 				<NavigatorScreens>
 					{screens.map((screen) => (
@@ -1042,25 +1040,25 @@ export const BoxControl = ({ cssProp, label, prop }) => {
 						<>
 							<PaddingInput
 								cssProp={cssProp}
-								icon={<FiArrowUp />}
+								icon={arrowUp}
 								onChange={handleOnChange}
 								value={value}
 							/>
 							<PaddingInput
 								cssProp={cssProp}
-								icon={<FiArrowDown />}
+								icon={arrowDown}
 								onChange={handleOnChange}
 								value={value}
 							/>
 							<PaddingInput
 								cssProp={cssProp}
-								icon={<FiArrowLeft />}
+								icon={arrowLeft}
 								onChange={handleOnChange}
 								value={value}
 							/>
 							<PaddingInput
 								cssProp={cssProp}
-								icon={<FiArrowRight />}
+								icon={arrowRight}
 								onChange={handleOnChange}
 								value={value}
 							/>
@@ -1068,7 +1066,7 @@ export const BoxControl = ({ cssProp, label, prop }) => {
 					)}
 				</Grid>
 				<Button
-					icon={<FiMaximize />}
+					icon={fullscreen}
 					isActive={showAll}
 					isControl
 					isSubtle

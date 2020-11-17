@@ -55,10 +55,12 @@ exports[`props should render correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: currentColor;
+  fill: currentColor;
   height: 15;
   width: 15;
   display: inline-block;
   vertical-align: middle;
+  color: currentColor;
   margin-left: calc(4px * 1);
   margin-left: calc(var(--wp-g2-grid-base) * 1);
   margin-top: calc(4px * -1);
@@ -100,28 +102,17 @@ exports[`props should render correctly 1`] = `
     data-g2-component="Icon"
   >
     <svg
-      fill="none"
+      aria-hidden="true"
+      focusable="false"
       height="15"
+      role="img"
       size="15"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
       viewBox="0 0 24 24"
       width="15"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-      />
-      <polyline
-        points="15 3 21 3 21 9"
-      />
-      <line
-        x1="10"
-        x2="21"
-        y1="14"
-        y2="3"
+        d="M18.2 17c0 .7-.6 1.2-1.2 1.2H7c-.7 0-1.2-.6-1.2-1.2V7c0-.7.6-1.2 1.2-1.2h3.2V4.2H7C5.5 4.2 4.2 5.5 4.2 7v10c0 1.5 1.2 2.8 2.8 2.8h10c1.5 0 2.8-1.2 2.8-2.8v-3.6h-1.5V17zM14.9 3v1.5h3.7l-6.4 6.4 1.1 1.1 6.4-6.4v3.7h1.5V3h-6.3z"
       />
     </svg>
   </div>

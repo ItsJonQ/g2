@@ -1,3 +1,4 @@
+import { image } from '@wordpress/icons';
 import { FiBold, FiBox, FiImage, FiType } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
 import { useListState } from '@wp-g2/utils';
@@ -149,7 +150,7 @@ const ExampleBlock = ({ content, type }) => {
 		return (
 			<View css={{ marginBottom: '1.5em' }}>
 				<Placeholder height={200}>
-					<Icon icon={<FiImage />} />
+					<Icon icon={image} />
 				</Placeholder>
 			</View>
 		);

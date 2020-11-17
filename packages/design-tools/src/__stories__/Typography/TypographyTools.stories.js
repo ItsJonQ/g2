@@ -1,3 +1,4 @@
+import { moreHorizontal, plus } from '@wordpress/icons';
 import {
 	Card,
 	CardBody,
@@ -16,7 +17,6 @@ import {
 	View,
 } from '@wp-g2/components';
 import { ContextSystemProvider } from '@wp-g2/context';
-import { FiMoreHorizontal, FiPlus } from '@wp-g2/icons';
 import { createTheme, ThemeProvider, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -68,10 +68,7 @@ const ExampleTwo = () => {
 				<ListGroup>
 					<ListGroupHeader>
 						Typography
-						<TypographyOptions
-							addIcon={<FiPlus />}
-							showActiveOnly
-						/>
+						<TypographyOptions addIcon={plus} showActiveOnly />
 					</ListGroupHeader>
 					<Grid>
 						<CombinedFormGroup label="Family" prop="fontFamily" />
@@ -116,7 +113,7 @@ const ExampleThree = () => {
 					<ListGroupHeader>
 						Typography
 						<TypographyOptions
-							addIcon={<FiMoreHorizontal />}
+							addIcon={moreHorizontal}
 							showActiveOnly
 						/>
 					</ListGroupHeader>
@@ -180,7 +177,7 @@ const ExampleFour = () => {
 					<ListGroupHeader>
 						Typography
 						<TypographyOptions
-							addIcon={<FiMoreHorizontal />}
+							addIcon={moreHorizontal}
 							showActiveOnly
 						/>
 					</ListGroupHeader>
@@ -243,10 +240,7 @@ const ExampleFive = ({ truncate = false }) => {
 					<ListGroup>
 						<ListGroupHeader>
 							Typography
-							<TypographyOptions
-								addIcon={<FiPlus />}
-								showActiveOnly
-							/>
+							<TypographyOptions addIcon={plus} showActiveOnly />
 						</ListGroupHeader>
 						<CombinedFormGroup
 							format="text"
@@ -323,10 +317,7 @@ const ExampleSix = () => {
 					<ListGroup>
 						<ListGroupHeader>
 							Typography
-							<TypographyOptions
-								addIcon={<FiPlus />}
-								showActiveOnly
-							/>
+							<TypographyOptions addIcon={plus} showActiveOnly />
 						</ListGroupHeader>
 						<CombinedFormGroup
 							format="text"
@@ -405,7 +396,7 @@ const ExampleSeven = () => {
 						<ListGroupHeader>
 							Typography
 							<TypographyOptions
-								addIcon={<FiMoreHorizontal />}
+								addIcon={moreHorizontal}
 								exclude={['dropCap']}
 								showActiveOnly
 							/>
@@ -478,7 +469,7 @@ const ExampleEight = () => {
 						<ListGroupHeader>
 							Typography
 							<TypographyOptions
-								addIcon={<FiMoreHorizontal />}
+								addIcon={moreHorizontal}
 								exclude={['dropCap']}
 								showActiveOnly
 							/>
@@ -560,7 +551,7 @@ const ExampleNine = () => {
 								`}
 							>
 								<TypographyOptions
-									addIcon={<FiMoreHorizontal />}
+									addIcon={moreHorizontal}
 									exclude={['dropCap']}
 									showActiveOnly
 								/>
@@ -671,7 +662,7 @@ const ExampleTen = ({ colorPanelSettings = { shadedExpanded: true } }) => {
 						<ListGroupHeader>
 							Typography
 							<TypographyOptions
-								addIcon={<FiMoreHorizontal />}
+								addIcon={moreHorizontal}
 								exclude={['dropCap']}
 								showActiveOnly
 							/>
