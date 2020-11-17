@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { __ } from '@wordpress/i18n';
-=======
 import { external } from '@wordpress/icons';
->>>>>>> Replace wp-g2/icons with wordpress/icons when possible
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
