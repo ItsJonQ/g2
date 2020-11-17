@@ -88,6 +88,8 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 5px;
   width: 5px;
 }
@@ -226,6 +228,8 @@ exports[`props should render with a custom size 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 5px;
   width: 5px;
 }

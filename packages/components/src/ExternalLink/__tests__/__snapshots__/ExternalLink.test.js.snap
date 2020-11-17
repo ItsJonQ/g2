@@ -54,6 +54,7 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;

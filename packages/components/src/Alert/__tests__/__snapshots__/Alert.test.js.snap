@@ -245,8 +245,6 @@ exports[`props should render as dismissable 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -292,12 +290,9 @@ exports[`props should render as dismissable 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   color: currentColor;
-  fill: currentColor;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -394,8 +389,6 @@ exports[`props should render as dismissable 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
@@ -406,7 +399,6 @@ exports[`props should render as dismissable 1`] = `
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
   color: currentColor;
-  fill: currentColor;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
@@ -461,6 +453,8 @@ exports[`props should render as dismissable 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 16px;
   width: 16px;
 }
@@ -1020,8 +1014,6 @@ exports[`props should render with status 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1067,12 +1059,9 @@ exports[`props should render with status 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   color: currentColor;
-  fill: currentColor;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
@@ -1169,8 +1158,6 @@ exports[`props should render with status 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -1181,7 +1168,6 @@ exports[`props should render with status 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: currentColor;
-  fill: currentColor;
 }
 
 .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
@@ -1236,6 +1222,8 @@ exports[`props should render with status 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 16px;
   width: 16px;
 }
