@@ -16,7 +16,6 @@ module.exports = Object.assign(jestConfig, {
 		'^@wp-g2/animations': '<rootDir>/packages/animations/src/',
 		'^@wp-g2/context': '<rootDir>/packages/context/src/',
 		'^@wp-g2/create-styles': '<rootDir>/packages/create-styles/src/',
-		'^@wp-g2/gestures': '<rootDir>/packages/gestures/src/',
 		'^@wp-g2/hint': '<rootDir>/packages/hint/src/',
 		'^@wp-g2/icons': '<rootDir>/packages/icons/src/',
 		'^@wp-g2/styles': '<rootDir>/packages/styles/src/',
