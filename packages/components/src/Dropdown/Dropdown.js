@@ -1,6 +1,6 @@
-import { useMenuState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React, { useMemo } from 'react';
+import { useMenuState } from 'reakit';
 
 import { DropdownContext } from './Dropdown.Context';
 

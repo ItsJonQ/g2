@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TooltipState } from '@wp-g2/a11y';
+import { TooltipState } from 'reakit';
 import { PolymorphicComponent, PopperProps } from './_shared';
 
 export declare type TooltipProps = TooltipState &

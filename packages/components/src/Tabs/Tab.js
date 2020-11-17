@@ -1,7 +1,7 @@
-import { Tab as ReakitTab } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
+import { Tab as ReakitTab } from 'reakit';
 
 import { useTabsContext } from './Tabs.Context';
 import * as styles from './Tabs.styles';

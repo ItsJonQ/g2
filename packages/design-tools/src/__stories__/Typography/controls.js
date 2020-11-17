@@ -1,4 +1,3 @@
-import { Composite, CompositeItem, useCompositeState } from '@wp-g2/a11y';
 import {
 	Accordion,
 	Button,
@@ -54,6 +53,7 @@ import { ui } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
 import { is } from '@wp-g2/utils';
 import React from 'react';
+import { Composite, CompositeItem, useCompositeState } from 'reakit';
 import CSSUnit from 'units-css';
 
 import {

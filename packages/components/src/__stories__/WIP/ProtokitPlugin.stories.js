@@ -1,4 +1,3 @@
-import { useDialogState } from '@wp-g2/a11y';
 import {
 	faker,
 	mockRequest,
@@ -8,6 +7,7 @@ import {
 } from '@wp-g2/protokit';
 import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
+import { useDialogState } from 'reakit';
 
 import {
 	Alert,

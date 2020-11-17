@@ -1,5 +1,5 @@
-import { Tab, TabList } from '@wp-g2/a11y';
 import React from 'react';
+import { Tab, TabList } from 'reakit';
 
 import { VisuallyHidden } from '../VisuallyHidden';
 import { useNavigationStackContext } from './NavigationStack.Context';
