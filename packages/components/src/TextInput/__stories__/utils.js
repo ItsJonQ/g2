@@ -1,7 +1,7 @@
-import { useDrag } from '@wp-g2/gestures';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
 import { is, noop } from '@wp-g2/utils';
 import React from 'react';
+import { useDrag } from 'react-use-gesture';
 
 import * as styles from '../TextInput.styles';
 

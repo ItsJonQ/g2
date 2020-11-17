@@ -19,7 +19,6 @@
     "@humanmade/react-slot-fill": "^0.0.4",
     "@wordpress/i18n": "^3.16.0",
     "@wp-g2/context": "^0.0.106",
-    "@wp-g2/gestures": "^0.0.106",
     "@wp-g2/icons": "^0.0.106",
     "@wp-g2/styles": "^0.0.106",
     "@wp-g2/substate": "^0.0.106",
@@ -32,6 +31,7 @@
     "react-colorful": "4.1.1",
     "react-sortable-hoc": "^1.11.0",
     "react-textarea-autosize": "^8.2.0",
+    "react-use-gesture": "^7.0.16",
     "reakit": "next"
   },
   "devDependencies": {
