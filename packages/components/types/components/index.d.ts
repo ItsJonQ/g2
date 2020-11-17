@@ -35,7 +35,6 @@ export * from './Initials';
 export * from './Link';
 export * from './List';
 export * from './ListGroup';
-export * from './Lozenge';
 export * from './Menu';
 export * from './Modal';
 export * from './Placeholder';
