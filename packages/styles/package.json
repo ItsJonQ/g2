@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/styles",
-    "version": "0.0.106",
+    "version": "0.0.107",
     "description": "Style system for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -16,8 +16,8 @@
     "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
     "license": "MIT",
     "dependencies": {
-        "@wp-g2/create-styles": "^0.0.106",
-        "@wp-g2/utils": "^0.0.106"
+        "@wp-g2/create-styles": "^0.0.107",
+        "@wp-g2/utils": "^0.0.107"
     },
     "peerDependencies": {
         "react": "^16.8.0",
