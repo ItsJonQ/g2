@@ -13,7 +13,6 @@ module.exports = Object.assign(jestConfig, {
 	testPathIgnorePatterns: ['<rootDir>/.remake/'],
 	testEnvironment: 'jest-environment-jsdom-sixteen',
 	moduleNameMapper: {
-		'^@wp-g2/animations': '<rootDir>/packages/animations/src/',
 		'^@wp-g2/context': '<rootDir>/packages/context/src/',
 		'^@wp-g2/create-styles': '<rootDir>/packages/create-styles/src/',
 		'^@wp-g2/hint': '<rootDir>/packages/hint/src/',

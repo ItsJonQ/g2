@@ -1,4 +1,3 @@
-import { useMotionValue } from '@wp-g2/animations';
 import {
 	Animated,
 	Badge,
@@ -27,6 +26,7 @@ import {
 import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { Schema } from '@wp-g2/protokit';
 import { css, styled, ui } from '@wp-g2/styles';
+import { useMotionValue } from 'framer-motion';
 import isEqual from 'lodash/isEqual';
 import React from 'react';
 import * as yup from 'yup';

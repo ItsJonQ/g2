@@ -1,6 +1,6 @@
-import { useSystemReducedMotion } from '@wp-g2/animations';
 import { useContextSystem } from '@wp-g2/context';
 import { useReducedMotion } from '@wp-g2/styles';
+import { useReducedMotion as useSystemReducedMotion } from 'framer-motion';
 
 export function useAnimated(props) {
 	const { as = 'div', auto = false, ...otherProps } = useContextSystem(

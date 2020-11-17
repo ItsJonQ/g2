@@ -1,4 +1,4 @@
-import { AnimatePresence } from '@wp-g2/animations';
+import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 
 function AnimatedContainer(props) {

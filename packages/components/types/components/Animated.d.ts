@@ -1,5 +1,5 @@
 import { PolymorphicComponent } from './_shared';
-export { AnimatePresence as AnimatedContainer } from '@wp-g2/animations';
+export { AnimatePresence as AnimatedContainer } from 'framer-motion';
 
 export declare type AnimatedProps = {
 	/**
