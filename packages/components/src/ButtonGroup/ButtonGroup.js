@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import {
 	contextConnect,
 	ContextSystemProvider,
@@ -22,7 +23,7 @@ function ButtonGroup(props, forwardedRef) {
 		expanded = false,
 		segmented = false,
 		id,
-		label = 'ButtonGroup',
+		label = __('ButtonGroup'),
 		value,
 		onChange = noop,
 		...otherProps

@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
@@ -11,7 +12,7 @@ function ModalHeader(props, forwardedRef) {
 	const {
 		children,
 		className,
-		closeLabel = 'Close',
+		closeLabel = __('Close'),
 		showCloseLabel = true,
 		title,
 		...otherProps

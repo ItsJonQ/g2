@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
@@ -7,7 +8,7 @@ import { ModalCloseButtonView } from './Modal.styles';
 
 function ModalCloseButton(props, forwardedRef) {
 	const {
-		closeLabel = 'Close',
+		closeLabel = __('Close'),
 		showCloseLabel,
 		...otherProps
 	} = useContextSystem(props, 'ModalCloseButton');

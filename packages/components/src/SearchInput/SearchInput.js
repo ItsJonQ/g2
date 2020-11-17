@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiSearch } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
@@ -17,7 +18,7 @@ function SearchInput(props, forwardedRef) {
 		className,
 		defaultValue = '',
 		isLoading = false,
-		placeholder = 'Search...',
+		placeholder = __('Search...'),
 		prefix,
 		onChange = noop,
 		onClear = noop,

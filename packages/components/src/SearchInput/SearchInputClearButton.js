@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { FiX } from '@wp-g2/icons';
 import { isValueEmpty, noop } from '@wp-g2/utils';
 import React from 'react';
@@ -21,7 +22,7 @@ function SearchInputClearButton({ onClick = noop, value, ...otherProps }) {
 			}}
 		>
 			<Button
-				aria-label="Clear"
+				aria-label={__('Clear')}
 				icon={<FiX />}
 				iconSize={10}
 				isRounded

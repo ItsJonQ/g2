@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
@@ -9,7 +10,7 @@ import * as styles from './Tabs.styles';
 const { TabListView } = styles;
 
 function TabList(props, forwardedRef) {
-	const { children, label = 'Tabs', ...otherProps } = useContextSystem(
+	const { children, label = __('Tabs'), ...otherProps } = useContextSystem(
 		props,
 		'TabList',
 	);

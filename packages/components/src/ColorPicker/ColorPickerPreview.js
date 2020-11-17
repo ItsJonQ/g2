@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { shallowCompare } from '@wp-g2/substate';
 import { useClipboard } from '@wp-g2/utils';
 import React from 'react';
@@ -20,7 +21,7 @@ export const ColorPickerPreview = React.memo(() => {
 
 	if (!showPreview) return null;
 
-	const tooltipContent = hasCopied ? 'Copied' : 'Copy';
+	const tooltipContent = hasCopied ? __('Copied') : __('Copy');
 
 	return (
 		<VStack alignment="center">

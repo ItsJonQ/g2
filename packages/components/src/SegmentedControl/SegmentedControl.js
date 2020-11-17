@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import { mergeRefs, useResizeAware } from '@wp-g2/utils';
@@ -15,7 +16,7 @@ function SegmentControl(props, forwardedRef) {
 		isAdaptiveWidth = false,
 		isBlock = false,
 		id,
-		label = 'SegmentControl',
+		label = __('SegmentControl'),
 		options = [],
 		onChange,
 		size = 'medium',

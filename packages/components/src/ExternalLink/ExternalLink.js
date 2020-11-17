@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiExternalLink } from '@wp-g2/icons';
 import React from 'react';
@@ -17,7 +18,7 @@ function ExternalLink(props, forwardedRef) {
 			target="_blank"
 			{...otherProps}
 		>
-			<VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+			<VisuallyHidden>{__('(opens in a new tab)')}</VisuallyHidden>
 			{children}
 			<Icon
 				className={styles.Icon}

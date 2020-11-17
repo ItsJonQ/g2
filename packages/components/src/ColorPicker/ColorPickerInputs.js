@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { shallowCompare } from '@wp-g2/substate';
 import { interpolate, is, roundClamp } from '@wp-g2/utils';
 import React from 'react';
@@ -13,7 +14,7 @@ import * as styles from './ColorPicker.styles';
 import { ColorInputHex } from './ColorPickerInputHex';
 
 export const ColorInputSliderAlpha = React.memo(
-	({ label = 'Alpha', type = 'rgb', ...otherProps }) => {
+	({ label = __('Alpha'), type = 'rgb', ...otherProps }) => {
 		const parse = React.useCallback((next) => {
 			return interpolate(next, [0, 1], [0, 100]);
 		}, []);

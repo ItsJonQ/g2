@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, getZIndex, reducedMotion, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
@@ -13,7 +14,7 @@ function BaseModal(props, forwardedRef) {
 		backdropTransitionDuration = 250,
 		children,
 		className,
-		label = 'Modal',
+		label = __('Modal'),
 		/* Deprecate in favour of `trigger`*/
 		renderTrigger = null,
 		state,
