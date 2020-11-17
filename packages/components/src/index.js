@@ -26,7 +26,6 @@ export * from './Collapsible';
 export * from './ColorCircle';
 export * from './ColorControl';
 export * from './ColorPicker';
-export * from './ColorSwatch';
 export * from './ComponentDesignTool';
 export * from './ComponentInspector';
 export * from './Container';
