@@ -1,3 +1,7 @@
+import * as IconSet from '@wp-g2/icons';
+import { styled, ui } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
+import React from 'react';
 import {
 	Menu,
 	MenuButton,
@@ -7,11 +11,7 @@ import {
 	ToolbarItem as ReakitToolbarItem,
 	useMenuState,
 	useToolbarState,
-} from '@wp-g2/a11y';
-import * as IconSet from '@wp-g2/icons';
-import { styled, ui } from '@wp-g2/styles';
-import { is } from '@wp-g2/utils';
-import React from 'react';
+} from 'reakit';
 
 import { Icon, Tooltip } from '../../index';
 

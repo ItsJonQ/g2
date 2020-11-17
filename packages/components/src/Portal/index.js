@@ -1,1 +1,1 @@
-export { Portal } from '@wp-g2/a11y';
+export { Portal } from 'reakit';

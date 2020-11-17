@@ -1,5 +1,5 @@
 import { PolymorphicComponent } from './_shared';
-import { TabState, TabListProps, TabProps, TabPanelProps } from '@wp-g2/a11y';
+import { TabState, TabListProps, TabProps, TabPanelProps } from 'reakit';
 
 export declare type TabsProps = TabState;
 

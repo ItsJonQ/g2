@@ -1,7 +1,7 @@
-import { useDisclosureState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
+import { useDisclosureState } from 'reakit';
 
 import { View } from '../View';
 import { CollapsibleContext } from './Collapsible.Context';

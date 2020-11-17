@@ -1,4 +1,4 @@
-import { DisclosureProps, DisclosureContentProps } from '@wp-g2/a11y';
+import { DisclosureProps, DisclosureContentProps } from 'reakit';
 import { PolymorphicComponent } from './_shared';
 
 export declare type CollapsibleProps = {

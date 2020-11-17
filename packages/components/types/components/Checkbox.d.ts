@@ -1,4 +1,4 @@
-import { CheckboxProps as ReakitCheckboxProps } from '@wp-g2/a11y';
+import { CheckboxProps as ReakitCheckboxProps } from 'reakit';
 import { PolymorphicComponent, FormElementProps } from './_shared';
 import { ControlLabelProps } from './ControlLabel';
 import { FlexProps } from './Flex';

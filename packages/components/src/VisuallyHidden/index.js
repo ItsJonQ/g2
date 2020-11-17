@@ -1,1 +1,1 @@
-export { VisuallyHidden } from '@wp-g2/a11y';
+export { VisuallyHidden } from 'reakit';

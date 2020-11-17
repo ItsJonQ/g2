@@ -1,9 +1,9 @@
-import { Button as ReakitButton } from '@wp-g2/a11y';
-import { Radio as ReakitRadio } from '@wp-g2/a11y';
 import { contextConnect } from '@wp-g2/context';
 import { FiChevronDown } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
+import { Button as ReakitButton } from 'reakit';
+import { Radio as ReakitRadio } from 'reakit';
 
 import { useButtonGroupContext } from '../ButtonGroup';
 import { Elevation } from '../Elevation';

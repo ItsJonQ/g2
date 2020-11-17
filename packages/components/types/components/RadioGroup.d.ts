@@ -1,4 +1,4 @@
-import { RadioGroupProps as ReakitRadioGroupProps } from '@wp-g2/a11y';
+import { RadioGroupProps as ReakitRadioGroupProps } from 'reakit';
 import { PolymorphicComponent } from './_shared';
 import { FlexProps } from './Flex';
 import { GridProps } from './Grid';

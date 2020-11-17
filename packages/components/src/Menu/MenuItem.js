@@ -1,9 +1,9 @@
-import { MenuItem as ReakitMenuItem } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { FiCheck, FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
 import { is, noop } from '@wp-g2/utils';
 import React, { useCallback, useMemo } from 'react';
+import { MenuItem as ReakitMenuItem } from 'reakit';
 
 import { BaseButton } from '../BaseButton';
 import { Flex } from '../Flex';

@@ -1,4 +1,4 @@
-import { RadioProps as ReakitRadioProps } from '@wp-g2/a11y';
+import { RadioProps as ReakitRadioProps } from 'reakit';
 import { PolymorphicComponent, FormElementProps } from './_shared';
 import { ControlLabelProps } from './ControlLabel';
 import { FlexProps } from './Flex';

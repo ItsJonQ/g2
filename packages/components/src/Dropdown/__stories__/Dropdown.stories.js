@@ -1,5 +1,5 @@
-import { useDialogState } from '@wp-g2/a11y';
 import React from 'react';
+import { useDialogState } from 'reakit';
 
 import {
 	Button,

@@ -1,6 +1,5 @@
 {
 	"references": [
-		{ "path": "packages/a11y" },
 		{ "path": "packages/animations" },
 		{ "path": "packages/gestures" },
 		{ "path": "packages/icons" },

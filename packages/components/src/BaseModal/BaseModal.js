@@ -1,8 +1,8 @@
-import { Dialog, DialogBackdrop, useDialogState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, getZIndex, reducedMotion, space } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
+import { Dialog, DialogBackdrop, useDialogState } from 'reakit';
 
 import { Portal } from '../Portal';
 import { View } from '../View';

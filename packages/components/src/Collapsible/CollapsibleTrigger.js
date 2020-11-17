@@ -1,7 +1,7 @@
-import { Disclosure } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
+import { Disclosure } from 'reakit';
 
 import { useCollapsibleContext } from './Collapsible.Context';
 import * as styles from './Collapsible.styles';
