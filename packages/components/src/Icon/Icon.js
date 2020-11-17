@@ -9,7 +9,7 @@ function Icon(props, forwardedRef) {
 	const {
 		children,
 		className,
-		fill, // https://github.com/ItsJonQ/g2/pull/133#discussion_r525538497
+		fill = 'currentColor', // https://github.com/ItsJonQ/g2/pull/133#discussion_r525538497
 		height,
 		icon,
 		inline,
@@ -22,8 +22,10 @@ function Icon(props, forwardedRef) {
 	const classes = useMemo(() => {
 		const sx = {};
 
+		// https://github.com/ItsJonQ/g2/issues/136
 		sx.fill = css({
-			fill,
+			color: fill,
+			fill: 'currentColor',
 		});
 
 		sx.size = css({
