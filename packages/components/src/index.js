@@ -1,6 +1,5 @@
 // Base
 export * from './ContextSystem';
-export * from './BaseView';
 export * from './View';
 export * from './Animated';
 // Components
