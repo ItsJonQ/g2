@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 import { RadioGroup as ReakitRadioGroup, useRadioState } from 'reakit';
@@ -10,7 +11,7 @@ function RadioGroup(props, forwardedRef) {
 		baseId,
 		children,
 		id,
-		label = 'RadioGroup',
+		label = __('RadioGroup'),
 		value,
 		...otherProps
 	} = useContextSystem(props, 'RadioGroup');

@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { FiChevronDown } from '@wp-g2/icons';
 import { shallowCompare } from '@wp-g2/substate';
 import React from 'react';
@@ -44,7 +45,7 @@ function PresetInputSelect({ presetStore, store }) {
 				onClick={(e) => e.stopPropagation()}
 				onFocus={() => setIsFocused(true)}
 				ref={selectRef}
-				title="Change preset"
+				title={__('Change preset')}
 			>
 				{presets.map((preset) => (
 					<option key={preset.key} value={preset.key}>

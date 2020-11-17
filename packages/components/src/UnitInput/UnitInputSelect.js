@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { cx, ui } from '@wp-g2/styles';
 import {} from '@wp-g2/utils';
 import React from 'react';
@@ -45,7 +46,7 @@ function UnitInputSelect({ disabled, onSelectChange, unit }) {
 					onClick={handleOnStopPropagation}
 					onFocus={handleOnFocused}
 					onMouseDown={handleOnStopPropagation}
-					title="Change unit"
+					title={__('Change unit')}
 					value={unit}
 				>
 					{UNITS.map((i) => (

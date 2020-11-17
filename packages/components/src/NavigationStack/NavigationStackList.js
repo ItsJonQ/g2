@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import React from 'react';
 import { Tab, TabList } from 'reakit';
 
@@ -13,7 +14,7 @@ function NavigationStackList() {
 			<TabList
 				{...tab}
 				aria-hidden="true"
-				aria-label="Navigation TabList"
+				aria-label={__('Navigation TabList')}
 			>
 				{panels.map((panel) => (
 					<Tab {...tab} key={panel.id} />

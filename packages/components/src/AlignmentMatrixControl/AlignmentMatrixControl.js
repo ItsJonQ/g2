@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useRTL } from '@wp-g2/styles';
 import { useUpdateEffect } from '@wp-g2/utils';
@@ -18,7 +19,7 @@ function AlignmentMatrixControl(props, forwardedRef) {
 		baseId = 'alignment-matrix-control',
 		defaultValue,
 		onChange = noop,
-		label = 'Alignment Matrix Control',
+		label = __('Alignment Matrix Control'),
 		value,
 		...otherProps
 	} = useContextSystem(props, 'AlignmentMatrixControl');
