@@ -1,5 +1,5 @@
+import { help as helpIcon } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiHelpCircle } from '@wp-g2/icons';
 import { css, ui } from '@wp-g2/styles';
 import React from 'react';
 
@@ -17,8 +17,6 @@ function HelpTip(props, forwardedRef) {
 		event.preventDefault();
 	}, []);
 
-	const helpIcon = React.memo(() => <FiHelpCircle />, []);
-
 	return (
 		<Tooltip {...otherProps} content={children} ref={forwardedRef}>
 			<View
@@ -32,7 +30,6 @@ function HelpTip(props, forwardedRef) {
 				onClick={handleOnClick}
 			>
 				<Icon
-					color={ui.get('colorText')}
 					css={css`
 						display: inline-flex;
 						opacity: 0.5;
@@ -41,6 +38,7 @@ function HelpTip(props, forwardedRef) {
 							fill: none;
 						}
 					`}
+					fill={ui.get('colorText')}
 					icon={helpIcon}
 					size={iconSize}
 				/>

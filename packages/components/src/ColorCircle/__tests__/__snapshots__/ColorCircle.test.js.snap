@@ -96,7 +96,7 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -135,19 +135,17 @@ exports[`props should render correctly 1`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polyline
-          points="20 6 9 17 4 12"
+        <path
+          d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
         />
       </svg>
     </div>

@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
+import { external } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiExternalLink } from '@wp-g2/icons';
 import React from 'react';
 
 import { Icon } from '../Icon';
@@ -22,8 +22,8 @@ function ExternalLink(props, forwardedRef) {
 			{children}
 			<Icon
 				className={styles.Icon}
-				color="currentColor"
-				icon={<FiExternalLink />}
+				fill="currentColor"
+				icon={external}
 				inline
 				size="15"
 			/>

@@ -1,4 +1,4 @@
-import { FiChevronDown } from '@wp-g2/icons';
+import { chevronDown } from '@wordpress/icons';
 import React from 'react';
 
 import { Icon } from '../Icon';
@@ -11,7 +11,7 @@ const SelectArrow = () => {
 	return (
 		<ArrowWrapperView>
 			<Text isBlock variant="muted">
-				<Icon icon={<FiChevronDown />} size={14} />
+				<Icon icon={chevronDown} size={14} />
 			</Text>
 		</ArrowWrapperView>
 	);

@@ -1,5 +1,5 @@
+import { chevronDown, chevronUp, minus, plus } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiChevronDown, FiChevronUp, FiMinus, FiPlus } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
@@ -23,8 +23,8 @@ function Stepper(props, forwardedRef) {
 
 	const classes = cx(!isVertical && styles.Stepper, className);
 
-	const AddIcon = isVertical ? <FiChevronUp /> : <FiPlus />;
-	const MinusIcon = isVertical ? <FiChevronDown /> : <FiMinus />;
+	const AddIcon = isVertical ? chevronUp : plus;
+	const MinusIcon = isVertical ? chevronDown : minus;
 
 	const buttons = isVertical
 		? [

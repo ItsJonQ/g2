@@ -1,3 +1,4 @@
+import { search } from "@wordpress/icons"
 import {
   Badge,
   Button,
@@ -7,7 +8,6 @@ import {
   ModalTrigger,
   useModalContext,
 } from "@wp-g2/components"
-import { FiSearch } from "@wp-g2/icons"
 import { ui } from "@wp-g2/styles"
 import React, { useEffect } from "react"
 
@@ -20,12 +20,7 @@ export function SiteSearch() {
   return (
     <Modal
       trigger={
-        <ModalTrigger
-          aria-label="Search"
-          as={Button}
-          icon={<FiSearch />}
-          isRounded
-        />
+        <ModalTrigger aria-label="Search" as={Button} icon={search} isRounded />
       }
       visible={visible}
     >

@@ -1,5 +1,5 @@
+import { check, chevronLeft, chevronRight } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiCheck, FiChevronLeft, FiChevronRight } from '@wp-g2/icons';
 import { cx } from '@wp-g2/styles';
 import { is, noop } from '@wp-g2/utils';
 import React, { useCallback, useMemo } from 'react';
@@ -47,7 +47,7 @@ function MenuItem(props, forwardedRef) {
 		() =>
 			isBack && (
 				<Text isBlock variant="muted">
-					<Icon icon={<FiChevronLeft />} size={16} />
+					<Icon icon={chevronLeft} size={16} />
 				</Text>
 			),
 		[isBack],
@@ -57,7 +57,7 @@ function MenuItem(props, forwardedRef) {
 		() =>
 			shouldShowArrow && (
 				<Text isBlock variant="muted">
-					<Icon icon={<FiChevronRight />} size={16} />
+					<Icon icon={chevronRight} size={16} />
 				</Text>
 			),
 		[shouldShowArrow],
@@ -67,7 +67,7 @@ function MenuItem(props, forwardedRef) {
 		() =>
 			is.defined(isSelected) && (
 				<Icon
-					icon={<FiCheck />}
+					icon={check}
 					size={16}
 					style={{ opacity: isSelected ? 1 : 0 }}
 				/>

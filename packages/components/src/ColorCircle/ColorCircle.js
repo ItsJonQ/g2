@@ -1,5 +1,5 @@
+import { check } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiCheck } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { colorize, getOptimalTextColor } from '@wp-g2/utils';
 import React from 'react';
@@ -39,7 +39,7 @@ function ColorCircle(props, forwardedRef) {
 			ref={forwardedRef}
 		>
 			<CheckboxIconView {...ui.$('CheckboxIcon')} aria-hidden>
-				<Icon color={iconColor} icon={<FiCheck />} size={12} />
+				<Icon fill={iconColor} icon={check} size={12} />
 			</CheckboxIconView>
 		</ColorCircleView>
 	);

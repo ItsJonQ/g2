@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
+import { search } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiSearch } from '@wp-g2/icons';
 import { cx, ui } from '@wp-g2/styles';
 import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
 import React, { useCallback, useRef } from 'react';
@@ -88,8 +88,6 @@ const SearchSuffix = React.memo(({ onClick, suffix, value }) => {
 });
 
 const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
-	const SearchIcon = React.useMemo(() => <FiSearch />, []);
-
 	return (
 		<>
 			<View
@@ -103,7 +101,7 @@ const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
 					<Spinner size={16} />
 				) : (
 					<Text>
-						<Icon icon={SearchIcon} size={12} />
+						<Icon icon={search} size={12} />
 					</Text>
 				)}
 			</View>

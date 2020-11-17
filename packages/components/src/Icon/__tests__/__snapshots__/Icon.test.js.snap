@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`props should render color 1`] = `
+exports[`props should render correctly 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -15,7 +15,6 @@ exports[`props should render color 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: red;
   height: 20px;
   width: 20px;
 }
@@ -45,7 +44,7 @@ exports[`props should render color 1`] = `
 </div>
 `;
 
-exports[`props should render correctly 1`] = `
+exports[`props should render fill 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -60,6 +59,7 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  fill: red;
   height: 20px;
   width: 20px;
 }

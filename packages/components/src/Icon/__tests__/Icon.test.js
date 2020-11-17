@@ -11,8 +11,8 @@ describe('props', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	test('should render color', () => {
-		const { container } = render(<Icon color="red" icon={<MockIcon />} />);
+	test('should render fill', () => {
+		const { container } = render(<Icon fill="red" icon={<MockIcon />} />);
 		expect(container.firstChild).toMatchSnapshot();
 	});
 

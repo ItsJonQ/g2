@@ -30,89 +30,11 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #1e1e1e;
-  color: var(--wp-g2-color-text);
-  height: 14px;
-  width: 14px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  opacity: 0.5;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
-  display: block;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 path {
-  fill: none;
-}
-
 <span
   aria-describedby="help-tip"
   class="emotion-0"
   tabindex="0"
->
-  <div
-    class="components-icon wp-components-icon emotion-1"
-    data-g2-c16t="true"
-    data-g2-component="Icon"
-  >
-    <svg
-      fill="none"
-      height="1em"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="10"
-      />
-      <path
-        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
-      />
-      <line
-        x1="12"
-        x2="12"
-        y1="17"
-        y2="17"
-      />
-    </svg>
-  </div>
-</span>
+/>
 `;
 
 exports[`props should render iconSize 1`] = `
@@ -145,87 +67,9 @@ exports[`props should render iconSize 1`] = `
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #1e1e1e;
-  color: var(--wp-g2-color-text);
-  height: 13px;
-  width: 13px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  opacity: 0.5;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
-  display: block;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 path {
-  fill: none;
-}
-
 <span
   aria-describedby="help-tip"
   class="emotion-0"
   tabindex="0"
->
-  <div
-    class="components-icon wp-components-icon emotion-1"
-    data-g2-c16t="true"
-    data-g2-component="Icon"
-  >
-    <svg
-      fill="none"
-      height="1em"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="10"
-      />
-      <path
-        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
-      />
-      <line
-        x1="12"
-        x2="12"
-        y1="17"
-        y2="17"
-      />
-    </svg>
-  </div>
-</span>
+/>
 `;

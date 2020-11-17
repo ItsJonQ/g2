@@ -2830,6 +2830,8 @@ exports[`props should render BaseButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3004,6 +3006,8 @@ exports[`props should render BaseButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3178,6 +3182,8 @@ exports[`props should render BaseButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3675,6 +3681,8 @@ exports[`props should render Button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3915,6 +3923,8 @@ exports[`props should render Button with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -4155,6 +4165,8 @@ exports[`props should render Button with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6058,19 +6070,17 @@ input:checked+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polyline
-          points="20 6 9 17 4 12"
+        <path
+          d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
         />
       </svg>
     </div>
@@ -6261,6 +6271,8 @@ exports[`props should render ClipboardButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6501,6 +6513,8 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6741,6 +6755,8 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6983,6 +6999,8 @@ exports[`props should render CloseButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -7028,6 +7046,8 @@ exports[`props should render CloseButton 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -7126,6 +7146,8 @@ exports[`props should render CloseButton 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -7269,28 +7291,17 @@ exports[`props should render CloseButton 1`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <line
-          x1="18"
-          x2="6"
-          y1="6"
-          y2="18"
-        />
-        <line
-          x1="6"
-          x2="18"
-          y1="6"
-          y2="18"
+        <path
+          d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
         />
       </svg>
     </div>
@@ -7350,6 +7361,8 @@ exports[`props should render CloseButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -7395,6 +7408,8 @@ exports[`props should render CloseButton with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -7493,6 +7508,8 @@ exports[`props should render CloseButton with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -7636,28 +7653,17 @@ exports[`props should render CloseButton with css prop 1`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <line
-          x1="18"
-          x2="6"
-          y1="6"
-          y2="18"
-        />
-        <line
-          x1="6"
-          x2="18"
-          y1="6"
-          y2="18"
+        <path
+          d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
         />
       </svg>
     </div>
@@ -7717,6 +7723,8 @@ exports[`props should render CloseButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -7762,6 +7770,8 @@ exports[`props should render CloseButton with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   background: red;
@@ -7862,6 +7872,8 @@ exports[`props should render CloseButton with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -8005,28 +8017,17 @@ exports[`props should render CloseButton with css prop 2`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <line
-          x1="18"
-          x2="6"
-          y1="6"
-          y2="18"
-        />
-        <line
-          x1="6"
-          x2="18"
-          y1="6"
-          y2="18"
+        <path
+          d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"
         />
       </svg>
     </div>
@@ -8135,7 +8136,7 @@ exports[`props should render ColorCircle 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -8175,19 +8176,17 @@ exports[`props should render ColorCircle 1`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polyline
-          points="20 6 9 17 4 12"
+        <path
+          d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
         />
       </svg>
     </div>
@@ -8291,7 +8290,7 @@ exports[`props should render ColorCircle with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -8331,19 +8330,17 @@ exports[`props should render ColorCircle with css prop 1`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polyline
-          points="20 6 9 17 4 12"
+        <path
+          d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
         />
       </svg>
     </div>
@@ -8449,7 +8446,7 @@ exports[`props should render ColorCircle with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -8489,19 +8486,17 @@ exports[`props should render ColorCircle with css prop 2`] = `
       data-g2-component="Icon"
     >
       <svg
-        fill="none"
+        aria-hidden="true"
+        focusable="false"
         height="12"
+        role="img"
         size="12"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
         viewBox="0 0 24 24"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <polyline
-          points="20 6 9 17 4 12"
+        <path
+          d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
         />
       </svg>
     </div>
@@ -8556,6 +8551,8 @@ exports[`props should render ColorControl 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -8613,6 +8610,8 @@ exports[`props should render ColorControl 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   background-color: transparent;
   font-weight: normal;
   padding-left: calc(4px * 1);
@@ -8713,6 +8712,8 @@ exports[`props should render ColorControl 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -8730,6 +8731,8 @@ exports[`props should render ColorControl 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -8758,6 +8761,8 @@ exports[`props should render ColorControl 1`] = `
   background: var(--wp-g2-color-text);
   color: #ffffff;
   color: var(--wp-g2-color-text-inverted);
+  fill: #ffffff;
+  fill: var(--wp-g2-color-text-inverted);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-active='true'] {
@@ -8926,7 +8931,7 @@ exports[`props should render ColorControl 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -9023,19 +9028,17 @@ exports[`props should render ColorControl 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="12"
+            role="img"
             size="12"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="12"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <polyline
-              points="20 6 9 17 4 12"
+            <path
+              d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
             />
           </svg>
         </div>
@@ -9097,6 +9100,8 @@ exports[`props should render ColorControl with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -9154,6 +9159,8 @@ exports[`props should render ColorControl with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   background-color: transparent;
   font-weight: normal;
   padding-left: calc(4px * 1);
@@ -9254,6 +9261,8 @@ exports[`props should render ColorControl with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9271,6 +9280,8 @@ exports[`props should render ColorControl with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9299,6 +9310,8 @@ exports[`props should render ColorControl with css prop 1`] = `
   background: var(--wp-g2-color-text);
   color: #ffffff;
   color: var(--wp-g2-color-text-inverted);
+  fill: #ffffff;
+  fill: var(--wp-g2-color-text-inverted);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-active='true'] {
@@ -9467,7 +9480,7 @@ exports[`props should render ColorControl with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -9564,19 +9577,17 @@ exports[`props should render ColorControl with css prop 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="12"
+            role="img"
             size="12"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="12"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <polyline
-              points="20 6 9 17 4 12"
+            <path
+              d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
             />
           </svg>
         </div>
@@ -9638,6 +9649,8 @@ exports[`props should render ColorControl with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -9695,6 +9708,8 @@ exports[`props should render ColorControl with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   background-color: transparent;
   font-weight: normal;
   padding-left: calc(4px * 1);
@@ -9797,6 +9812,8 @@ exports[`props should render ColorControl with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9814,6 +9831,8 @@ exports[`props should render ColorControl with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9842,6 +9861,8 @@ exports[`props should render ColorControl with css prop 2`] = `
   background: var(--wp-g2-color-text);
   color: #ffffff;
   color: var(--wp-g2-color-text-inverted);
+  fill: #ffffff;
+  fill: var(--wp-g2-color-text-inverted);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-active='true'] {
@@ -10010,7 +10031,7 @@ exports[`props should render ColorControl with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
+  fill: #ffffff;
   height: 12px;
   width: 12px;
 }
@@ -10107,19 +10128,17 @@ exports[`props should render ColorControl with css prop 2`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="12"
+            role="img"
             size="12"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="12"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <polyline
-              points="20 6 9 17 4 12"
+            <path
+              d="M18.3 5.6L9.9 16.9l-4.6-3.4-.9 1.2 5.8 4.3 9.3-12.6z"
             />
           </svg>
         </div>
@@ -11383,6 +11402,8 @@ exports[`props should render DropdownMenuItem 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -11675,6 +11696,8 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -11967,6 +11990,8 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -12253,6 +12278,8 @@ exports[`props should render DropdownTrigger 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -12493,6 +12520,8 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -12733,6 +12762,8 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -13134,11 +13165,12 @@ exports[`props should render ExternalLink 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: currentColor;
+  fill: currentColor;
   height: 15;
   width: 15;
   display: inline-block;
   vertical-align: middle;
+  color: currentColor;
   margin-left: calc(4px * 1);
   margin-left: calc(var(--wp-g2-grid-base) * 1);
   margin-top: calc(4px * -1);
@@ -13179,28 +13211,17 @@ exports[`props should render ExternalLink 1`] = `
     data-g2-component="Icon"
   >
     <svg
-      fill="none"
+      aria-hidden="true"
+      focusable="false"
       height="15"
+      role="img"
       size="15"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
       viewBox="0 0 24 24"
       width="15"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-      />
-      <polyline
-        points="15 3 21 3 21 9"
-      />
-      <line
-        x1="10"
-        x2="21"
-        y1="14"
-        y2="3"
+        d="M18.2 17c0 .7-.6 1.2-1.2 1.2H7c-.7 0-1.2-.6-1.2-1.2V7c0-.7.6-1.2 1.2-1.2h3.2V4.2H7C5.5 4.2 4.2 5.5 4.2 7v10c0 1.5 1.2 2.8 2.8 2.8h10c1.5 0 2.8-1.2 2.8-2.8v-3.6h-1.5V17zM14.9 3v1.5h3.7l-6.4 6.4 1.1 1.1 6.4-6.4v3.7h1.5V3h-6.3z"
       />
     </svg>
   </div>
@@ -13261,11 +13282,12 @@ exports[`props should render ExternalLink with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: currentColor;
+  fill: currentColor;
   height: 15;
   width: 15;
   display: inline-block;
   vertical-align: middle;
+  color: currentColor;
   margin-left: calc(4px * 1);
   margin-left: calc(var(--wp-g2-grid-base) * 1);
   margin-top: calc(4px * -1);
@@ -13306,28 +13328,17 @@ exports[`props should render ExternalLink with css prop 1`] = `
     data-g2-component="Icon"
   >
     <svg
-      fill="none"
+      aria-hidden="true"
+      focusable="false"
       height="15"
+      role="img"
       size="15"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
       viewBox="0 0 24 24"
       width="15"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-      />
-      <polyline
-        points="15 3 21 3 21 9"
-      />
-      <line
-        x1="10"
-        x2="21"
-        y1="14"
-        y2="3"
+        d="M18.2 17c0 .7-.6 1.2-1.2 1.2H7c-.7 0-1.2-.6-1.2-1.2V7c0-.7.6-1.2 1.2-1.2h3.2V4.2H7C5.5 4.2 4.2 5.5 4.2 7v10c0 1.5 1.2 2.8 2.8 2.8h10c1.5 0 2.8-1.2 2.8-2.8v-3.6h-1.5V17zM14.9 3v1.5h3.7l-6.4 6.4 1.1 1.1 6.4-6.4v3.7h1.5V3h-6.3z"
       />
     </svg>
   </div>
@@ -13390,11 +13401,12 @@ exports[`props should render ExternalLink with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: currentColor;
+  fill: currentColor;
   height: 15;
   width: 15;
   display: inline-block;
   vertical-align: middle;
+  color: currentColor;
   margin-left: calc(4px * 1);
   margin-left: calc(var(--wp-g2-grid-base) * 1);
   margin-top: calc(4px * -1);
@@ -13435,28 +13447,17 @@ exports[`props should render ExternalLink with css prop 2`] = `
     data-g2-component="Icon"
   >
     <svg
-      fill="none"
+      aria-hidden="true"
+      focusable="false"
       height="15"
+      role="img"
       size="15"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
       viewBox="0 0 24 24"
       width="15"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-      />
-      <polyline
-        points="15 3 21 3 21 9"
-      />
-      <line
-        x1="10"
-        x2="21"
-        y1="14"
-        y2="3"
+        d="M18.2 17c0 .7-.6 1.2-1.2 1.2H7c-.7 0-1.2-.6-1.2-1.2V7c0-.7.6-1.2 1.2-1.2h3.2V4.2H7C5.5 4.2 4.2 5.5 4.2 7v10c0 1.5 1.2 2.8 2.8 2.8h10c1.5 0 2.8-1.2 2.8-2.8v-3.6h-1.5V17zM14.9 3v1.5h3.7l-6.4 6.4 1.1 1.1 6.4-6.4v3.7h1.5V3h-6.3z"
       />
     </svg>
   </div>
@@ -14440,89 +14441,11 @@ exports[`props should render HelpTip 1`] = `
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #1e1e1e;
-  color: var(--wp-g2-color-text);
-  height: 14px;
-  width: 14px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  opacity: 0.5;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
-  display: block;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 path {
-  fill: none;
-}
-
 <span
   aria-describedby="HelpTip"
   class="emotion-0"
   tabindex="0"
->
-  <div
-    class="components-icon wp-components-icon emotion-1"
-    data-g2-c16t="true"
-    data-g2-component="Icon"
-  >
-    <svg
-      fill="none"
-      height="1em"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="10"
-      />
-      <path
-        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
-      />
-      <line
-        x1="12"
-        x2="12"
-        y1="17"
-        y2="17"
-      />
-    </svg>
-  </div>
-</span>
+/>
 `;
 
 exports[`props should render Icon 1`] = `null`;
@@ -16236,6 +16159,8 @@ exports[`props should render MenuItem 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -16528,6 +16453,8 @@ exports[`props should render MenuItem with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -16820,6 +16747,8 @@ exports[`props should render MenuItem with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -17724,6 +17653,8 @@ exports[`props should render ModalHeader 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18096,6 +18027,8 @@ exports[`props should render ModalHeader with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18470,6 +18403,8 @@ exports[`props should render ModalHeader with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18736,6 +18671,8 @@ exports[`props should render ModalTrigger 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18978,6 +18915,8 @@ exports[`props should render NavigatorButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -19218,6 +19157,8 @@ exports[`props should render NavigatorButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -19458,6 +19399,8 @@ exports[`props should render NavigatorButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -20858,6 +20801,8 @@ exports[`props should render SearchInput 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -21140,27 +21085,17 @@ exports[`props should render SearchInput 1`] = `
         data-g2-component="Icon"
       >
         <svg
-          fill="none"
+          aria-hidden="true"
+          focusable="false"
           height="12"
+          role="img"
           size="12"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
           viewBox="0 0 24 24"
           width="12"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
+          <path
+            d="M13.5 6C10.5 6 8 8.5 8 11.5c0 1.1.3 2.1.9 3l-3.4 3 1 1.1 3.4-2.9c1 .9 2.2 1.4 3.6 1.4 3 0 5.5-2.5 5.5-5.5C19 8.5 16.5 6 13.5 6zm0 9.5c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
           />
         </svg>
       </div>
@@ -21942,19 +21877,17 @@ exports[`props should render Select 1`] = `
         data-g2-component="Icon"
       >
         <svg
-          fill="none"
+          aria-hidden="true"
+          focusable="false"
           height="14"
+          role="img"
           size="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
           viewBox="0 0 24 24"
           width="14"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polyline
-            points="6 9 12 15 18 9"
+          <path
+            d="M17.5 11.6L12 16l-5.5-4.4.9-1.2L12 14l4.5-3.6 1 1.2z"
           />
         </svg>
       </div>
@@ -23550,6 +23483,8 @@ exports[`props should render Stepper 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -23711,6 +23646,8 @@ exports[`props should render Stepper 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -23917,6 +23854,8 @@ exports[`props should render Stepper 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -24078,6 +24017,8 @@ exports[`props should render Stepper 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -24121,22 +24062,17 @@ exports[`props should render Stepper 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="14"
+            role="img"
             size="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
+            viewBox="-2 -2 24 24"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
+            <path
+              d="M4 9h12v2H4V9z"
             />
           </svg>
         </div>
@@ -24175,28 +24111,17 @@ exports[`props should render Stepper 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="14"
+            role="img"
             size="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="12"
-              x2="12"
-              y1="5"
-              y2="19"
-            />
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
+            <path
+              d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
             />
           </svg>
         </div>
@@ -24350,6 +24275,8 @@ exports[`props should render Stepper with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -24511,6 +24438,8 @@ exports[`props should render Stepper with css prop 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -24717,6 +24646,8 @@ exports[`props should render Stepper with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -24878,6 +24809,8 @@ exports[`props should render Stepper with css prop 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -24921,22 +24854,17 @@ exports[`props should render Stepper with css prop 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="14"
+            role="img"
             size="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
+            viewBox="-2 -2 24 24"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
+            <path
+              d="M4 9h12v2H4V9z"
             />
           </svg>
         </div>
@@ -24975,28 +24903,17 @@ exports[`props should render Stepper with css prop 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="14"
+            role="img"
             size="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="12"
-              x2="12"
-              y1="5"
-              y2="19"
-            />
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
+            <path
+              d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
             />
           </svg>
         </div>
@@ -25152,6 +25069,8 @@ exports[`props should render Stepper with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -25313,6 +25232,8 @@ exports[`props should render Stepper with css prop 2`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -25519,6 +25440,8 @@ exports[`props should render Stepper with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -25680,6 +25603,8 @@ exports[`props should render Stepper with css prop 2`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+  fill: #1e1e1e;
+  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -25723,22 +25648,17 @@ exports[`props should render Stepper with css prop 2`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="14"
+            role="img"
             size="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
+            viewBox="-2 -2 24 24"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
+            <path
+              d="M4 9h12v2H4V9z"
             />
           </svg>
         </div>
@@ -25777,28 +25697,17 @@ exports[`props should render Stepper with css prop 2`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="14"
+            role="img"
             size="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="12"
-              x2="12"
-              y1="5"
-              y2="19"
-            />
-            <line
-              x1="5"
-              x2="19"
-              y1="12"
-              y2="12"
+            <path
+              d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
             />
           </svg>
         </div>

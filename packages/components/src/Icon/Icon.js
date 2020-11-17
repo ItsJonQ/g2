@@ -9,7 +9,7 @@ function Icon(props, forwardedRef) {
 	const {
 		children,
 		className,
-		color,
+		fill, // https://github.com/ItsJonQ/g2/pull/133#discussion_r525538497
 		height,
 		icon,
 		inline,
@@ -22,8 +22,8 @@ function Icon(props, forwardedRef) {
 	const classes = useMemo(() => {
 		const sx = {};
 
-		sx.color = css({
-			color,
+		sx.fill = css({
+			fill,
 		});
 
 		sx.size = css({
@@ -33,13 +33,13 @@ function Icon(props, forwardedRef) {
 
 		return cx(
 			styles.Wrapper,
-			sx.color,
+			sx.fill,
 			sx.size,
 			inline && styles.inline,
 			styles[variant],
 			className,
 		);
-	}, [className, color, height, inline, size, variant, width]);
+	}, [className, fill, height, inline, size, variant, width]);
 
 	if (!icon) return null;
 

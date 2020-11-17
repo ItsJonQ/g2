@@ -1,3 +1,4 @@
+import { arrowDown, arrowUp } from '@wordpress/icons';
 import { ui } from '@wp-g2/styles';
 import { clamp, noop } from '@wp-g2/utils';
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
@@ -107,9 +108,6 @@ const UpDownArrows = React.memo(
 			return () => handleOnClearTimers();
 		}, [handleOnClearTimers]);
 
-		const arrowUp = useMemo(() => <ArrowUp />, []);
-		const arrowDown = useMemo(() => <ArrowDown />, []);
-
 		return (
 			<>
 				<Icon
@@ -139,28 +137,6 @@ const UpDownArrows = React.memo(
 			</>
 		);
 	},
-);
-
-const ArrowUp = () => (
-	<svg
-		aria-hidden="true"
-		fill="currentColor"
-		focusable="false"
-		viewBox="0 0 20 20"
-	>
-		<path d="M15 12l-5-5-5 5h10z"></path>
-	</svg>
-);
-
-const ArrowDown = () => (
-	<svg
-		aria-hidden="true"
-		fill="currentColor"
-		focusable="false"
-		viewBox="0 0 20 20"
-	>
-		<path d="M5 8l5 5 5-5H5z"></path>
-	</svg>
 );
 
 export default React.memo(React.forwardRef(TextInputArrows));

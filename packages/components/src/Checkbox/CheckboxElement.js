@@ -1,5 +1,5 @@
+import { check } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { FiCheck } from '@wp-g2/icons';
 import { css, cx, ui } from '@wp-g2/styles';
 import { is, noop, useControlledState } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
@@ -56,7 +56,7 @@ function CheckboxElement(props, forwardedRef) {
 				ref={forwardedRef}
 			/>
 			<CheckboxIconView {...ui.$('CheckboxIcon')} aria-hidden>
-				<Icon icon={<FiCheck />} size={12} />
+				<Icon icon={check} size={12} />
 			</CheckboxIconView>
 		</CheckboxWrapperView>
 	);

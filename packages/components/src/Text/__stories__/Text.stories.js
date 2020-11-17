@@ -59,8 +59,10 @@ export const textLinkIcon = () => {
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
 			<Link>Link</Link>
 			<Icon icon={<FiScissors />} inline />.{' '}
+			{/* There is no WordPress/icons alternative for this */}
 			<Link>
-				Link <Icon icon={<FiScissors />} inline />
+				Link <Icon icon={<FiScissors />} inline />{' '}
+				{/* There is no WordPress/icons alternative for this */}
 			</Link>
 		</Text>
 	);

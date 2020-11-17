@@ -1,3 +1,4 @@
+import { minus, plus } from '@wordpress/icons';
 import {
 	Animated,
 	Badge,
@@ -23,7 +24,6 @@ import {
 	View,
 	VStack,
 } from '@wp-g2/components';
-import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { Schema } from '@wp-g2/protokit';
 import { css, styled, ui } from '@wp-g2/styles';
 import { useMotionValue } from 'framer-motion';
@@ -398,7 +398,7 @@ const ShadowEntry = React.memo(({ color, id, x, y, z }) => {
 							initialState={{ color, x, y, z }}
 						/>
 						<Button
-							icon={<FiMinus />}
+							icon={minus}
 							isControl
 							isSubtle
 							onClick={() => removeShadow(id)}
@@ -488,7 +488,7 @@ const BoxShadowControl = () => {
 			<ListGroupHeader>
 				Shadows{' '}
 				<Button
-					icon={<FiPlus />}
+					icon={plus}
 					isControl
 					isSubtle
 					onClick={addShadow}

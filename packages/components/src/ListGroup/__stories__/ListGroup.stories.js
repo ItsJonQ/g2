@@ -1,11 +1,11 @@
 import {
-	FiAlignCenter,
-	FiAlignLeft,
-	FiAlignRight,
-	FiBold,
-	FiGrid,
-	FiType,
-} from '@wp-g2/icons';
+	alignCenter,
+	alignLeft,
+	alignRight,
+	formatBold,
+	grid,
+	typography,
+} from '@wordpress/icons';
 import { ui } from '@wp-g2/styles';
 import React, { useState } from 'react';
 
@@ -58,15 +58,15 @@ const Example = () => {
 
 	const align = [
 		{
-			label: <Icon icon={<FiAlignLeft />} size={14} />,
+			label: <Icon icon={alignLeft} size={14} />,
 			value: 'left',
 		},
 		{
-			label: <Icon icon={<FiAlignCenter />} size={14} />,
+			label: <Icon icon={alignCenter} size={14} />,
 			value: 'center',
 		},
 		{
-			label: <Icon icon={<FiAlignRight />} size={14} />,
+			label: <Icon icon={alignRight} size={14} />,
 			value: 'right',
 		},
 	];
@@ -113,7 +113,7 @@ const Example = () => {
 								<ListGroupHeader>
 									Typography
 									<Button
-										icon={<FiGrid />}
+										icon={grid}
 										size="small"
 										variant="tertiary"
 									/>
@@ -140,7 +140,7 @@ const Example = () => {
 														}}
 													>
 														<Icon
-															icon={<FiBold />}
+															icon={formatBold}
 															size={16}
 														/>
 													</View>
@@ -162,7 +162,7 @@ const Example = () => {
 														}}
 													>
 														<Icon
-															icon={<FiType />}
+															icon={typography}
 															size={16}
 														/>
 													</View>
