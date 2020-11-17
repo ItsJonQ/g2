@@ -1,4 +1,4 @@
-import { useDialogState } from '@wp-g2/a11y';
+import { useDialogState } from 'reakit';
 
 export const useModalState = (args) =>
 	useDialogState({ ...args, animated: true });

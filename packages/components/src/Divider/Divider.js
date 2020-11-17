@@ -1,8 +1,8 @@
-import { Separator } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React, { useMemo } from 'react';
+import { Separator } from 'reakit';
 
 import { useDropdownContext } from '../Dropdown';
 import * as styles from './Divider.styles';

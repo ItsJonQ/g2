@@ -1,9 +1,9 @@
-import { Composite, CompositeGroup, useCompositeState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { useRTL } from '@wp-g2/styles';
 import { useUpdateEffect } from '@wp-g2/utils';
 import { noop } from 'lodash';
 import React, { useCallback, useState } from 'react';
+import { Composite, CompositeGroup, useCompositeState } from 'reakit';
 
 import {
 	AlignmentMatrixControlView,

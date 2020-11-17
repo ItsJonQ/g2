@@ -1,7 +1,7 @@
-import { TabList as ReakitTabList } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
+import { TabList as ReakitTabList } from 'reakit';
 
 import TabIndicator from './TabIndicator';
 import { useTabsContext } from './Tabs.Context';

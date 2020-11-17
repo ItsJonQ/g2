@@ -1,7 +1,7 @@
-import { PopoverDisclosure, usePopoverState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
+import { PopoverDisclosure, usePopoverState } from 'reakit';
 
 import { Portal } from '../Portal';
 import { PopoverContext } from './Popover.Context';

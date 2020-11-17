@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PopoverState } from '@wp-g2/a11y';
+import { PopoverState } from 'reakit';
 import { CSS, PolymorphicComponent, PopperProps } from './_shared';
 
 export declare type PopoverProps = PopoverState &

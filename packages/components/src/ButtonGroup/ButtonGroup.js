@@ -1,4 +1,3 @@
-import { RadioGroup, useRadioState } from '@wp-g2/a11y';
 import {
 	contextConnect,
 	ContextSystemProvider,
@@ -7,6 +6,7 @@ import {
 import { cx } from '@wp-g2/styles';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
+import { RadioGroup, useRadioState } from 'reakit';
 
 import { ControlGroup } from '../ControlGroup';
 import { ButtonGroupContext } from './ButtonGroup.Context';

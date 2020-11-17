@@ -1,4 +1,4 @@
-import { SeparatorProps } from '@wp-g2/a11y';
+import { SeparatorProps } from 'reakit';
 import { PolymorphicComponent } from './_shared';
 
 export declare type DividerProps = SeparatorProps & {

@@ -1,4 +1,3 @@
-import { MenuItem as ReakitMenuItem, useMenuState } from "@wp-g2/a11y"
 import {
   Heading,
   MenuItem,
@@ -17,6 +16,7 @@ import { uniqBy } from "lodash"
 import pluralize from "pluralize"
 import queryString from "query-string"
 import React, { useEffect, useRef, useState } from "react"
+import { MenuItem as ReakitMenuItem, useMenuState } from "reakit"
 
 export function DocsSearch({ visible }) {
   const options = {

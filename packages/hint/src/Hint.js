@@ -1,4 +1,3 @@
-import { MenuItem as ReakitMenuItem, useMenuState } from '@wp-g2/a11y';
 import {
 	Animated,
 	Badge,
@@ -23,6 +22,7 @@ import { FiAperture } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { MenuItem as ReakitMenuItem, useMenuState } from 'reakit';
 
 import { process } from './processor';
 import { isBrowser } from './utils';

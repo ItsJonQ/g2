@@ -1,7 +1,7 @@
-import { Tooltip as ReakitTooltip } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
+import { Tooltip as ReakitTooltip } from 'reakit';
 
 import { View } from '../View';
 import { useTooltipContext } from './Tooltip.Context';

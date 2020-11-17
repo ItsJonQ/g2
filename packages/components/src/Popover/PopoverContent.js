@@ -1,7 +1,7 @@
-import { Popover as ReakitPopover } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
+import { Popover as ReakitPopover } from 'reakit';
 
 import { Card } from '../Card';
 import { View } from '../View';

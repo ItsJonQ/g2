@@ -1,7 +1,7 @@
-import { TooltipReference, useTooltipState } from '@wp-g2/a11y';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { mergeRefs } from '@wp-g2/utils';
 import React from 'react';
+import { TooltipReference, useTooltipState } from 'reakit';
 
 import { TooltipContext } from './Tooltip.Context';
 import TooltipContent from './TooltipContent';

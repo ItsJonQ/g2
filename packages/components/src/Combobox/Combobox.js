@@ -1,13 +1,13 @@
+import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
+import { useResizeAware } from '@wp-g2/utils';
+import React, { useRef } from 'react';
 import {
 	unstable_Combobox as ReakitCombobox,
 	unstable_ComboboxOption as ReakitComboboxOption,
 	unstable_ComboboxPopover as ReakitComboboxPopover,
 	unstable_useComboboxState as useComboboxState,
-} from '@wp-g2/a11y';
-import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { ui } from '@wp-g2/styles';
-import { useResizeAware } from '@wp-g2/utils';
-import React, { useRef } from 'react';
+} from 'reakit';
 
 import { DropdownMenu, DropdownMenuItem } from '../Dropdown';
 import { TextInput } from '../TextInput';
