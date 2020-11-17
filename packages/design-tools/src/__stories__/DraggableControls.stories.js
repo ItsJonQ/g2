@@ -17,10 +17,10 @@ import {
 	View,
 	VStack,
 } from '@wp-g2/components';
-import { useDrag } from '@wp-g2/gestures';
 import { css, ui } from '@wp-g2/styles';
 import { useUpdateEffect } from '@wp-g2/utils';
 import React from 'react';
+import { useDrag } from 'react-use-gesture';
 
 export default {
 	title: 'DesignTools/DraggableControls',
