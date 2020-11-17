@@ -29,7 +29,6 @@
     "history": "^4.9.0",
     "path-to-regexp": "^1.7.0",
     "react-colorful": "4.1.1",
-    "react-sortable-hoc": "^1.11.0",
     "react-textarea-autosize": "^8.2.0",
     "react-use-gesture": "^7.0.16",
     "reakit": "next"
