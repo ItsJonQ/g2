@@ -1,4 +1,3 @@
-import { useMotionValue } from '@wp-g2/animations';
 import {
 	Animated,
 	Card,
@@ -20,6 +19,7 @@ import {
 import { useDrag } from '@wp-g2/gestures';
 import { css, ui } from '@wp-g2/styles';
 import { useUpdateEffect } from '@wp-g2/utils';
+import { useMotionValue } from 'framer-motion';
 import React from 'react';
 
 export default {
