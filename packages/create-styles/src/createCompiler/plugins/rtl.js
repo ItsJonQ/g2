@@ -2,14 +2,12 @@
  * Fork of:
  * https://github.com/styled-components/stylis-plugin-rtl
  */
-
-import cssjanus from 'cssjanus';
 import rtlcss from 'rtlcss';
 
-let isRtl = true;
-// if (typeof window !== 'undefined') {
-// 	isRtl = window?.document?.documentElement?.dir === 'rtl';
-// }
+let isRtl = false;
+if (typeof window !== 'undefined') {
+	isRtl = window?.document?.documentElement?.dir === 'rtl';
+}
 
 // https://github.com/thysultan/stylis.js#plugins
 const STYLIS_CONTEXTS = {
