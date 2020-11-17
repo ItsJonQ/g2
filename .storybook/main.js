@@ -6,6 +6,5 @@ module.exports = {
 		'../packages/protokit/src/**/*.stories.js',
 		'../packages/design-tools/src/**/*.stories.js',
 		'../packages/context/src/**/*.stories.js',
-		'../packages/animations/src/**/*.stories.js',
 	],
 };
