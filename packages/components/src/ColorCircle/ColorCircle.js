@@ -39,7 +39,7 @@ function ColorCircle(props, forwardedRef) {
 			ref={forwardedRef}
 		>
 			<CheckboxIconView {...ui.$('CheckboxIcon')} aria-hidden>
-				<Icon color={iconColor} icon={check} size={12} />
+				<Icon fill={iconColor} icon={check} size={12} />
 			</CheckboxIconView>
 		</ColorCircleView>
 	);

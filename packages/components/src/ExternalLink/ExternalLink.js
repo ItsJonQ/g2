@@ -25,7 +25,7 @@ function ExternalLink(props, forwardedRef) {
 			{children}
 			<Icon
 				className={styles.Icon}
-				color="currentColor"
+				fill="currentColor"
 				icon={external}
 				inline
 				size="15"

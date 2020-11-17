@@ -30,7 +30,6 @@ function HelpTip(props, forwardedRef) {
 				onClick={handleOnClick}
 			>
 				<Icon
-					color={ui.get('colorText')}
 					css={css`
 						display: inline-flex;
 						opacity: 0.5;
@@ -39,6 +38,7 @@ function HelpTip(props, forwardedRef) {
 							fill: none;
 						}
 					`}
+					fill={ui.get('colorText')}
 					icon={helpIcon}
 					size={iconSize}
 				/>

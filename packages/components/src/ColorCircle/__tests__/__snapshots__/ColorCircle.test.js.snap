@@ -96,7 +96,6 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;

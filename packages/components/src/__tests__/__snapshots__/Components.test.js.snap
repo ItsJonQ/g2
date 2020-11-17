@@ -8136,7 +8136,6 @@ exports[`props should render ColorCircle 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;
@@ -8291,7 +8290,6 @@ exports[`props should render ColorCircle with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;
@@ -8448,7 +8446,6 @@ exports[`props should render ColorCircle with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;
@@ -8934,7 +8931,6 @@ exports[`props should render ColorControl 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;
@@ -9484,7 +9480,6 @@ exports[`props should render ColorControl with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;
@@ -10036,7 +10031,6 @@ exports[`props should render ColorControl with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #ffffff;
   fill: #ffffff;
   height: 12px;
   width: 12px;
@@ -13171,7 +13165,6 @@ exports[`props should render ExternalLink 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;
@@ -13289,7 +13282,6 @@ exports[`props should render ExternalLink with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;
@@ -13409,7 +13401,6 @@ exports[`props should render ExternalLink with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;
