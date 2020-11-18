@@ -4638,11 +4638,6 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@ungap/weakset@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@ungap/weakset/-/weakset-0.2.1.tgz#4c7632241d1783b37ab07ac0866e8a9ee726a964"
-  integrity sha512-0tu3cD+yO4d5lGMC1DTAhIi29RZnP+tSfWc+T6WMvrMeNExO76iZ5eCciuiyUUIyBxqGDF4iNaeIXpYyJP+vcA==
-
 "@urql/core@^1.12.3":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@urql/core/-/core-1.13.0.tgz#811154b5951b4282dd698a8c9dff4ff3825ca215"
@@ -8237,11 +8232,6 @@ cssfilter@0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/cssfilter/-/cssfilter-0.0.10.tgz#c6d2672632a2e5c83e013e6864a42ce8defd20ae"
   integrity sha1-xtJnJjKi5cg+AT5oZKQs6N79IK4=
-
-cssjanus@^1.3.0, cssjanus@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/cssjanus/-/cssjanus-1.3.2.tgz#7c23d39be92f63e1557a75c015f61d95009bd6b3"
-  integrity sha512-5pM/C1MIfoqhXa7k9PqSnrjj1SSZDakfyB1DZhdYyJoDUH+evGbsUg6/bpQapTJeSnYaj0rdzPUMeM33CvB0vw==
 
 cssnano-preset-default@^4.0.7:
   version "4.0.7"
@@ -21865,21 +21855,6 @@ stylehacks@^4.0.0:
     browserslist "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
-
-stylis-plugin-css-variables@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/stylis-plugin-css-variables/-/stylis-plugin-css-variables-1.0.6.tgz#35dcf5988b59a0c61287c3114111a033d747e2c3"
-  integrity "sha1-Ndz1mItZoMYSh8MRQRGgM9dH4sM= sha512-t67bxS1LlYdfYeg7Nv1XFTUIDlcQNA4y2Q9aVPMy96997e6X+piGhUrwgVpHJhUNhsP9YxxYFXYVyb81qJSq1A=="
-  dependencies:
-    "@ungap/weakset" "^0.2.1"
-    memize "^1.1.0"
-
-stylis-plugin-rtl@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/stylis-plugin-rtl/-/stylis-plugin-rtl-1.1.0.tgz#028d72419ccc47eeaaec684f3e192534f2c57ece"
-  integrity sha512-FPoSxP+gbBLJRUXDRDFNBhqy/eToquDLn7ZrjIVBRfXaZ9bunwNnDtDm2qW1EoU0c93krm1Dy+8iVmJpjRGsKw==
-  dependencies:
-    cssjanus "^1.3.0"
 
 stylis@^4.0.3:
   version "4.0.3"
