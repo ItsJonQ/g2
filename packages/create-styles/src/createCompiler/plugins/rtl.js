@@ -2,8 +2,7 @@
  * Fork of:
  * https://github.com/styled-components/stylis-plugin-rtl
  */
-
-import cssjanus from 'cssjanus';
+import rtlcss from 'rtlcss';
 
 import { STYLIS_CONTEXTS } from './utils';
 
@@ -28,7 +27,7 @@ export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
  */
 function stylisRTLPlugin(context, content) {
 	if (context === STYLIS_PROPERTY_CONTEXT) {
-		return isRtl ? cssjanus.transform(content) : undefined;
+		return isRtl ? rtlcss.process(content) : undefined;
 	}
 }
 
