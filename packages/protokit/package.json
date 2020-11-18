@@ -18,6 +18,7 @@
   "dependencies": {
     "@types/faker": "^5.1.2",
     "@wp-g2/utils": "^0.0.107",
+    "use-enhanced-state": "^0.0.12",
     "faker": "^4.1.0",
     "faker-schema": "^1.0.2",
     "fuse.js": "^6.4.1"

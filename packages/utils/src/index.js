@@ -2,10 +2,10 @@ export * from './arrays';
 export * from './browser';
 export * from './clipboard';
 export * from './colors';
-export * from './deepEqual';
-export * from './deepMerge';
+export * from './deep-equal';
+export * from './deep-merge';
 export * from './env';
-export * from './eventHandlers';
+export * from './event-handlers';
 export * from './hooks';
 export * from './is';
 export * from './keyboard';
@@ -15,13 +15,13 @@ export * from './objects';
 export * from './other';
 export * from './react';
 export * from './selection';
-export * from './simpleEqual';
-export * from './shallowEqual';
+export * from './simple-equal';
+export * from './shallow-equal';
 export * from './strings';
-export * from './unitValues';
+export * from './unit-values';
 export * from './validation';
 export * from './values';
 export * from './warning';
 
-// Deprecated. use @wp-g2/substate
-export * from './createStore';
+// @todo Deprecated. Use @wp-g2/substate
+export * from './create-store';

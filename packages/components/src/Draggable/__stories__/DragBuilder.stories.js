@@ -1,7 +1,7 @@
 import { image } from '@wordpress/icons';
 import { FiBold, FiBox, FiImage, FiType } from '@wp-g2/icons';
+import { useListState } from '@wp-g2/protokit';
 import { ui } from '@wp-g2/styles';
-import { useListState } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useEffect, useState } from 'react';

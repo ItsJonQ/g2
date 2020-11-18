@@ -1,4 +1,4 @@
-import { useListState } from '@wp-g2/utils';
+import { useListState } from '@wp-g2/protokit';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { createRef } from 'react';

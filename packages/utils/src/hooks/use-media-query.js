@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { is } from '../is';
-import { json2mq } from '../mediaQueries';
+import { json2mq } from '../media-queries';
 import { noop } from '../other';
 
 // For SSR
