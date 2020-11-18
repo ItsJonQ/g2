@@ -3702,9 +3702,9 @@ exports[`props should render Button 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -3941,9 +3941,9 @@ exports[`props should render Button with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -4180,9 +4180,9 @@ exports[`props should render Button with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -6285,9 +6285,9 @@ exports[`props should render ClipboardButton 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -6524,9 +6524,9 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -6763,9 +6763,9 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -7008,9 +7008,9 @@ exports[`props should render CloseButton 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
@@ -7365,9 +7365,9 @@ exports[`props should render CloseButton with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
@@ -7722,9 +7722,9 @@ exports[`props should render CloseButton with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
@@ -8549,9 +8549,9 @@ exports[`props should render ColorControl 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
@@ -9087,9 +9087,9 @@ exports[`props should render ColorControl with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
@@ -9625,9 +9625,9 @@ exports[`props should render ColorControl with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
@@ -12229,9 +12229,9 @@ exports[`props should render DropdownTrigger 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -12468,9 +12468,9 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -12707,9 +12707,9 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -17656,9 +17656,9 @@ exports[`props should render ModalHeader 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background: none;
   border-color: transparent;
@@ -18027,9 +18027,9 @@ exports[`props should render ModalHeader with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background: none;
   border-color: transparent;
@@ -18400,9 +18400,9 @@ exports[`props should render ModalHeader with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background: none;
   border-color: transparent;
@@ -18661,9 +18661,9 @@ exports[`props should render ModalTrigger 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -18902,9 +18902,9 @@ exports[`props should render NavigatorButton 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -19141,9 +19141,9 @@ exports[`props should render NavigatorButton with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -19380,9 +19380,9 @@ exports[`props should render NavigatorButton with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -20785,9 +20785,9 @@ exports[`props should render SearchInput 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -22055,12 +22055,12 @@ exports[`props should render Slider 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -22210,12 +22210,12 @@ exports[`props should render Slider with css prop 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -22367,12 +22367,12 @@ exports[`props should render Slider with css prop 2`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -23467,9 +23467,9 @@ exports[`props should render Stepper 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -23834,9 +23834,9 @@ exports[`props should render Stepper 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -24249,9 +24249,9 @@ exports[`props should render Stepper with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -24616,9 +24616,9 @@ exports[`props should render Stepper with css prop 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -25033,9 +25033,9 @@ exports[`props should render Stepper with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
@@ -25400,9 +25400,9 @@ exports[`props should render Stepper with css prop 2`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);

@@ -79,9 +79,9 @@ exports[`props should render correctly 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
+  padding-left: calc( 12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
+  padding-right: calc( 12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color);
