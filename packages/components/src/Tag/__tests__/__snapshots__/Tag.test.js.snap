@@ -729,7 +729,6 @@ exports[`props should render removeButtonText 1`] = `
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }

@@ -109,7 +109,6 @@ exports[`props should render (Flex) gap 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -393,7 +392,6 @@ exports[`props should render as link (href) 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -677,7 +675,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -961,7 +958,6 @@ exports[`props should render disabled 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -1248,7 +1244,6 @@ exports[`props should render elevation 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -1532,7 +1527,6 @@ exports[`props should render hasCaret 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -1909,7 +1903,6 @@ exports[`props should render icon 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -2289,7 +2282,6 @@ exports[`props should render isControl 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -2371,7 +2363,6 @@ exports[`props should render isControl 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   border-color: #007cba;
   border-color: var(--wp-g2-button-primary-border-color-focus);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -2594,7 +2585,6 @@ exports[`props should render isDestructive 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -2878,7 +2868,6 @@ exports[`props should render isLoading 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -3495,7 +3484,6 @@ exports[`props should render isNarrow 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -3780,7 +3768,6 @@ exports[`props should render isRounded 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -4070,7 +4057,6 @@ exports[`props should render isSubtle 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -4370,7 +4356,6 @@ exports[`props should render prefix 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -4707,7 +4692,6 @@ exports[`props should render size 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -4996,7 +4980,6 @@ exports[`props should render suffix 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -5327,7 +5310,6 @@ exports[`props should render variant 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }

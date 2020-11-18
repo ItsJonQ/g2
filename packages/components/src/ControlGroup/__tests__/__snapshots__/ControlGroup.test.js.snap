@@ -80,7 +80,7 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:focus-within {
   z-index: 1;
 }
 
@@ -194,7 +194,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -373,7 +372,7 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover {
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:focus-within {
   z-index: 1;
 }
 
@@ -487,7 +486,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -707,7 +705,7 @@ exports[`props should render mixed control types 1`] = `
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:focus-within {
   z-index: 1;
 }
 
@@ -808,7 +806,6 @@ exports[`props should render mixed control types 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
@@ -1046,7 +1043,7 @@ exports[`props should render mixed control types 1`] = `
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover {
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus-within {
   z-index: 1;
 }
 
@@ -1144,7 +1141,6 @@ exports[`props should render mixed control types 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
@@ -1325,7 +1321,6 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11.emotion-11:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }

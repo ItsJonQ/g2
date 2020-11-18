@@ -96,7 +96,6 @@ exports[`props should render children 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -456,7 +455,6 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -817,7 +815,6 @@ exports[`props should render disabled 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1180,7 +1177,6 @@ exports[`props should render readOnly 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1542,7 +1538,6 @@ exports[`props should render required 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1904,7 +1899,6 @@ exports[`props should render size 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {

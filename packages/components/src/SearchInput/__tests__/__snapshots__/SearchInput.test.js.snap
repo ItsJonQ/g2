@@ -94,7 +94,6 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
@@ -432,7 +431,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -825,7 +823,6 @@ exports[`props should render isLoading 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
@@ -1306,7 +1303,6 @@ exports[`props should render isLoading 1`] = `
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -1727,7 +1723,6 @@ exports[`props should render placeholder 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
@@ -2065,7 +2060,6 @@ exports[`props should render placeholder 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -2458,7 +2452,6 @@ exports[`props should render prefix 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
@@ -2796,7 +2789,6 @@ exports[`props should render prefix 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -3192,7 +3184,6 @@ exports[`props should render suffix 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
@@ -3530,7 +3521,6 @@ exports[`props should render suffix 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -3926,7 +3916,6 @@ exports[`props should render value 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
@@ -4264,7 +4253,6 @@ exports[`props should render value 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }

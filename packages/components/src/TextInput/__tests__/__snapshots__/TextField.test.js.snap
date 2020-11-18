@@ -94,7 +94,6 @@ exports[`props should render align 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -277,7 +276,6 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -460,7 +458,6 @@ exports[`props should render defaultValue 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -643,7 +640,6 @@ exports[`props should render disabled 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -828,7 +824,6 @@ exports[`props should render gap 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1011,7 +1006,6 @@ exports[`props should render isRounded 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1194,7 +1188,6 @@ exports[`props should render justify 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1379,7 +1372,6 @@ exports[`props should render multiline 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1594,7 +1586,6 @@ exports[`props should render prefix 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1780,7 +1771,6 @@ exports[`props should render seamless 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -1964,7 +1954,6 @@ exports[`props should render size 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -2153,7 +2142,6 @@ exports[`props should render suffix 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
@@ -2339,7 +2327,6 @@ exports[`props should render value 1`] = `
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
-  z-index: 1;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
