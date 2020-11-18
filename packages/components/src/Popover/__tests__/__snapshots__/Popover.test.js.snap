@@ -47,8 +47,6 @@ exports[`props should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -334,8 +332,6 @@ exports[`props should render gutter 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -621,8 +617,6 @@ exports[`props should render label 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -908,8 +902,6 @@ exports[`props should render maxWidth 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1195,8 +1187,6 @@ exports[`props should render placement 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1482,8 +1472,6 @@ exports[`props should render visible 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1769,8 +1757,6 @@ exports[`props should render without animation 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -2056,8 +2042,6 @@ exports[`props should render without content 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -2343,8 +2327,6 @@ exports[`props should render without modal 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;

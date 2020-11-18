@@ -1670,6 +1670,8 @@ exports[`props should render ArrowIndicator 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 5px;
   width: 5px;
 }
@@ -1809,6 +1811,8 @@ exports[`props should render ArrowIndicator with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 5px;
   width: 5px;
 }
@@ -1950,6 +1954,8 @@ exports[`props should render ArrowIndicator with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 5px;
   width: 5px;
 }
@@ -2830,8 +2836,6 @@ exports[`props should render BaseButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3006,8 +3010,6 @@ exports[`props should render BaseButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3182,8 +3184,6 @@ exports[`props should render BaseButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3681,8 +3681,6 @@ exports[`props should render Button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3923,8 +3921,6 @@ exports[`props should render Button with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -4165,8 +4161,6 @@ exports[`props should render Button with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6027,6 +6021,8 @@ input:checked+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -6271,8 +6267,6 @@ exports[`props should render ClipboardButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6513,8 +6507,6 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6755,8 +6747,6 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -6999,8 +6989,6 @@ exports[`props should render CloseButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -7046,8 +7034,6 @@ exports[`props should render CloseButton 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -7146,8 +7132,6 @@ exports[`props should render CloseButton 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -7207,6 +7191,8 @@ exports[`props should render CloseButton 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -7361,8 +7347,6 @@ exports[`props should render CloseButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -7408,8 +7392,6 @@ exports[`props should render CloseButton with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
 }
@@ -7508,8 +7490,6 @@ exports[`props should render CloseButton with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -7569,6 +7549,8 @@ exports[`props should render CloseButton with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -7723,8 +7705,6 @@ exports[`props should render CloseButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -7770,8 +7750,6 @@ exports[`props should render CloseButton with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   background: red;
@@ -7872,8 +7850,6 @@ exports[`props should render CloseButton with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -7933,6 +7909,8 @@ exports[`props should render CloseButton with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -8136,7 +8114,8 @@ exports[`props should render ColorCircle 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  fill: #ffffff;
+  color: #ffffff;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -8290,7 +8269,8 @@ exports[`props should render ColorCircle with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  fill: #ffffff;
+  color: #ffffff;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -8446,7 +8426,8 @@ exports[`props should render ColorCircle with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  fill: #ffffff;
+  color: #ffffff;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -8551,8 +8532,6 @@ exports[`props should render ColorControl 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -8610,8 +8589,6 @@ exports[`props should render ColorControl 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   background-color: transparent;
   font-weight: normal;
   padding-left: calc(4px * 1);
@@ -8712,8 +8689,6 @@ exports[`props should render ColorControl 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -8731,8 +8706,6 @@ exports[`props should render ColorControl 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -8761,8 +8734,6 @@ exports[`props should render ColorControl 1`] = `
   background: var(--wp-g2-color-text);
   color: #ffffff;
   color: var(--wp-g2-color-text-inverted);
-  fill: #ffffff;
-  fill: var(--wp-g2-color-text-inverted);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-active='true'] {
@@ -8931,7 +8902,8 @@ exports[`props should render ColorControl 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  fill: #ffffff;
+  color: #ffffff;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -9100,8 +9072,6 @@ exports[`props should render ColorControl with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -9159,8 +9129,6 @@ exports[`props should render ColorControl with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   background-color: transparent;
   font-weight: normal;
   padding-left: calc(4px * 1);
@@ -9261,8 +9229,6 @@ exports[`props should render ColorControl with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9280,8 +9246,6 @@ exports[`props should render ColorControl with css prop 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9310,8 +9274,6 @@ exports[`props should render ColorControl with css prop 1`] = `
   background: var(--wp-g2-color-text);
   color: #ffffff;
   color: var(--wp-g2-color-text-inverted);
-  fill: #ffffff;
-  fill: var(--wp-g2-color-text-inverted);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-active='true'] {
@@ -9480,7 +9442,8 @@ exports[`props should render ColorControl with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  fill: #ffffff;
+  color: #ffffff;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -9649,8 +9612,6 @@ exports[`props should render ColorControl with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -9708,8 +9669,6 @@ exports[`props should render ColorControl with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   background-color: transparent;
   font-weight: normal;
   padding-left: calc(4px * 1);
@@ -9812,8 +9771,6 @@ exports[`props should render ColorControl with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9831,8 +9788,6 @@ exports[`props should render ColorControl with css prop 2`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9861,8 +9816,6 @@ exports[`props should render ColorControl with css prop 2`] = `
   background: var(--wp-g2-color-text);
   color: #ffffff;
   color: var(--wp-g2-color-text-inverted);
-  fill: #ffffff;
-  fill: var(--wp-g2-color-text-inverted);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-active='true'] {
@@ -10031,7 +9984,8 @@ exports[`props should render ColorControl with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  fill: #ffffff;
+  color: #ffffff;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -11402,8 +11356,6 @@ exports[`props should render DropdownMenuItem 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -11696,8 +11648,6 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -11990,8 +11940,6 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -12278,8 +12226,6 @@ exports[`props should render DropdownTrigger 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -12520,8 +12466,6 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -12762,8 +12706,6 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -13165,6 +13107,7 @@ exports[`props should render ExternalLink 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;
@@ -13282,6 +13225,7 @@ exports[`props should render ExternalLink with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;
@@ -13401,6 +13345,7 @@ exports[`props should render ExternalLink with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
   fill: currentColor;
   height: 15;
   width: 15;
@@ -14441,11 +14386,74 @@ exports[`props should render HelpTip 1`] = `
   transition: none!important;
 }
 
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
+  display: block;
+}
+
 <span
   aria-describedby="HelpTip"
   class="emotion-0"
   tabindex="0"
-/>
+>
+  <div
+    class="components-icon wp-components-icon emotion-1"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      height="14"
+      role="img"
+      size="14"
+      viewBox="0 0 24 24"
+      width="14"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 4.75a7.25 7.25 0 100 14.5 7.25 7.25 0 000-14.5zM3.25 12a8.75 8.75 0 1117.5 0 8.75 8.75 0 01-17.5 0zM12 8.75a1.5 1.5 0 01.167 2.99c-.465.052-.917.44-.917 1.01V14h1.5v-.845A3 3 0 109 10.25h1.5a1.5 1.5 0 011.5-1.5zM11.25 15v1.5h1.5V15h-1.5z"
+      />
+    </svg>
+  </div>
+</span>
 `;
 
 exports[`props should render Icon 1`] = `null`;
@@ -16159,8 +16167,6 @@ exports[`props should render MenuItem 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -16453,8 +16459,6 @@ exports[`props should render MenuItem with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -16747,8 +16751,6 @@ exports[`props should render MenuItem with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -17653,8 +17655,6 @@ exports[`props should render ModalHeader 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18027,8 +18027,6 @@ exports[`props should render ModalHeader with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18403,8 +18401,6 @@ exports[`props should render ModalHeader with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18671,8 +18667,6 @@ exports[`props should render ModalTrigger 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -18915,8 +18909,6 @@ exports[`props should render NavigatorButton 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -19157,8 +19149,6 @@ exports[`props should render NavigatorButton with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -19399,8 +19389,6 @@ exports[`props should render NavigatorButton with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -20642,6 +20630,8 @@ exports[`props should render SearchInput 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 12px;
   width: 12px;
 }
@@ -20801,8 +20791,6 @@ exports[`props should render SearchInput 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -21005,6 +20993,8 @@ exports[`props should render SearchInput 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 10px;
   width: 10px;
 }
@@ -21830,6 +21820,8 @@ exports[`props should render Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -23483,8 +23475,6 @@ exports[`props should render Stepper 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -23646,8 +23636,6 @@ exports[`props should render Stepper 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -23710,6 +23698,8 @@ exports[`props should render Stepper 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -23854,8 +23844,6 @@ exports[`props should render Stepper 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -24017,8 +24005,6 @@ exports[`props should render Stepper 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -24275,8 +24261,6 @@ exports[`props should render Stepper with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -24438,8 +24422,6 @@ exports[`props should render Stepper with css prop 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -24502,6 +24484,8 @@ exports[`props should render Stepper with css prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -24646,8 +24630,6 @@ exports[`props should render Stepper with css prop 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -24809,8 +24791,6 @@ exports[`props should render Stepper with css prop 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -25069,8 +25049,6 @@ exports[`props should render Stepper with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -25232,8 +25210,6 @@ exports[`props should render Stepper with css prop 2`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -25296,6 +25272,8 @@ exports[`props should render Stepper with css prop 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -25440,8 +25418,6 @@ exports[`props should render Stepper with css prop 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -25603,8 +25579,6 @@ exports[`props should render Stepper with css prop 2`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {

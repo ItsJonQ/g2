@@ -47,8 +47,6 @@ exports[`props should render (Flex) gap 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -331,8 +329,6 @@ exports[`props should render as link (href) 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -615,8 +611,6 @@ exports[`props should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -899,8 +893,6 @@ exports[`props should render disabled 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1186,8 +1178,6 @@ exports[`props should render elevation 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1470,8 +1460,6 @@ exports[`props should render hasCaret 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1687,6 +1675,8 @@ exports[`props should render hasCaret 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 16px;
   width: 16px;
 }
@@ -1847,8 +1837,6 @@ exports[`props should render icon 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -2033,6 +2021,8 @@ exports[`props should render icon 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 16px;
   width: 16px;
 }
@@ -2216,8 +2206,6 @@ exports[`props should render isControl 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -2366,8 +2354,6 @@ exports[`props should render isControl 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -2528,8 +2514,6 @@ exports[`props should render isDestructive 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -2555,8 +2539,6 @@ exports[`props should render isDestructive 1`] = `
   width: auto;
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
-  fill: #D94F4F;
-  fill: var(--wp-g2-color-destructive);
   text-align: center;
   color: #007cba;
   color: var(--wp-g2-button-text-color);
@@ -2816,8 +2798,6 @@ exports[`props should render isLoading 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3429,8 +3409,6 @@ exports[`props should render isNarrow 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -3717,8 +3695,6 @@ exports[`props should render isRounded 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -4002,8 +3978,6 @@ exports[`props should render isSubtle 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -4045,8 +4019,6 @@ exports[`props should render isSubtle 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -4149,8 +4121,6 @@ exports[`props should render isSubtle 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -4308,8 +4278,6 @@ exports[`props should render prefix 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -4639,8 +4607,6 @@ exports[`props should render size 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -4934,8 +4900,6 @@ exports[`props should render suffix 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -5265,8 +5229,6 @@ exports[`props should render variant 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;

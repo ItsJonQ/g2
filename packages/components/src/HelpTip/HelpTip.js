@@ -1,4 +1,4 @@
-import { help as helpIcon } from '@wordpress/i18n';
+import { help as helpIcon } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, ui } from '@wp-g2/styles';
 import React from 'react';
@@ -33,10 +33,6 @@ function HelpTip(props, forwardedRef) {
 					css={css`
 						display: inline-flex;
 						opacity: 0.5;
-
-						path {
-							fill: none;
-						}
 					`}
 					fill={ui.get('colorText')}
 					icon={helpIcon}

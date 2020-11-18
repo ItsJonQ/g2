@@ -139,8 +139,6 @@ exports[`props should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -302,8 +300,6 @@ exports[`props should render correctly 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -366,6 +362,8 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -510,8 +508,6 @@ exports[`props should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -673,8 +669,6 @@ exports[`props should render correctly 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -930,8 +924,6 @@ exports[`props should render size 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1104,8 +1096,6 @@ exports[`props should render size 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -1168,6 +1158,8 @@ exports[`props should render size 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -1312,8 +1304,6 @@ exports[`props should render size 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1486,8 +1476,6 @@ exports[`props should render size 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -1738,8 +1726,6 @@ exports[`props should render vertically 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -1908,8 +1894,6 @@ exports[`props should render vertically 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:focus {
@@ -1972,6 +1956,8 @@ exports[`props should render vertically 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -2116,8 +2102,6 @@ exports[`props should render vertically 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   line-height: 1;
@@ -2286,8 +2270,6 @@ exports[`props should render vertically 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  fill: #1e1e1e;
-  fill: var(--wp-g2-color-text);
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {

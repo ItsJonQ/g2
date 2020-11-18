@@ -30,11 +30,74 @@ exports[`props should render correctly 1`] = `
   transition: none!important;
 }
 
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
+  display: block;
+}
+
 <span
   aria-describedby="help-tip"
   class="emotion-0"
   tabindex="0"
-/>
+>
+  <div
+    class="components-icon wp-components-icon emotion-1"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      height="14"
+      role="img"
+      size="14"
+      viewBox="0 0 24 24"
+      width="14"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 4.75a7.25 7.25 0 100 14.5 7.25 7.25 0 000-14.5zM3.25 12a8.75 8.75 0 1117.5 0 8.75 8.75 0 01-17.5 0zM12 8.75a1.5 1.5 0 01.167 2.99c-.465.052-.917.44-.917 1.01V14h1.5v-.845A3 3 0 109 10.25h1.5a1.5 1.5 0 011.5-1.5zM11.25 15v1.5h1.5V15h-1.5z"
+      />
+    </svg>
+  </div>
+</span>
 `;
 
 exports[`props should render iconSize 1`] = `
@@ -67,9 +130,72 @@ exports[`props should render iconSize 1`] = `
   transition: none!important;
 }
 
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  margin: 0;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #1e1e1e;
+  color: var(--wp-g2-color-text);
+  fill: currentColor;
+  height: 13px;
+  width: 13px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
+  display: block;
+}
+
 <span
   aria-describedby="help-tip"
   class="emotion-0"
   tabindex="0"
-/>
+>
+  <div
+    class="components-icon wp-components-icon emotion-1"
+    data-g2-c16t="true"
+    data-g2-component="Icon"
+  >
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      height="13"
+      role="img"
+      size="13"
+      viewBox="0 0 24 24"
+      width="13"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 4.75a7.25 7.25 0 100 14.5 7.25 7.25 0 000-14.5zM3.25 12a8.75 8.75 0 1117.5 0 8.75 8.75 0 01-17.5 0zM12 8.75a1.5 1.5 0 01.167 2.99c-.465.052-.917.44-.917 1.01V14h1.5v-.845A3 3 0 109 10.25h1.5a1.5 1.5 0 011.5-1.5zM11.25 15v1.5h1.5V15h-1.5z"
+      />
+    </svg>
+  </div>
+</span>
 `;

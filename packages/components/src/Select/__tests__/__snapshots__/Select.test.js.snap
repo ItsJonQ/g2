@@ -284,6 +284,8 @@ exports[`props should render children 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -644,6 +646,8 @@ exports[`props should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -1005,6 +1009,8 @@ exports[`props should render disabled 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -1368,6 +1374,8 @@ exports[`props should render readOnly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -1730,6 +1738,8 @@ exports[`props should render required 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }
@@ -2098,6 +2108,8 @@ exports[`props should render size 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: currentColor;
+  fill: currentColor;
   height: 14px;
   width: 14px;
 }

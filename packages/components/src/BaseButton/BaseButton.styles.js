@@ -13,7 +13,6 @@ export const Button = css`
 	color: ${ui.color.text};
 	cursor: pointer;
 	display: inline-flex;
-	fill: ${ui.color.text};
 	font-size: ${ui.get('fontSize')};
 	line-height: 1;
 	min-height: ${ui.get('controlHeight')};
@@ -63,7 +62,6 @@ export const Button = css`
 
 export const destructive = css`
 	color: ${ui.color.destructive};
-	fill: ${ui.color.destructive};
 `;
 
 export const block = css`
@@ -157,14 +155,12 @@ export const LoadingOverlay = css`
 export const subtle = css`
 	border-color: ${ui.get('controlBorderColorSubtle')};
 	color: ${ui.color.text};
-	fill: ${ui.color.text};
 
 	&:hover,
 	&:active,
 	&:focus {
 		border-color: ${ui.get('controlBorderColorSubtle')};
 		color: ${ui.color.text};
-		fill: ${ui.color.text};
 	}
 
 	&:focus {
@@ -184,7 +180,6 @@ export const control = css`
 	&:active,
 	&:focus {
 		color: ${ui.color.text};
-		fill: ${ui.color.text};
 	}
 
 	&:focus {
@@ -213,7 +208,6 @@ export const subtleControl = css`
 	&[data-active='true'] {
 		background: ${ui.get('colorText')};
 		color: ${ui.get('colorTextInverted')};
-		fill: ${ui.get('colorTextInverted')};
 	}
 `;
 
@@ -224,12 +218,10 @@ export const narrow = css`
 
 export const currentColor = css`
 	color: currentColor;
-	fill: currentColor;
 
 	&:hover,
 	&:focus {
 		color: currentColor;
-		fill: currentColor;
 	}
 `;
 
