@@ -1,5 +1,6 @@
 import { get } from '@wp-g2/create-styles';
 
+import { calc, flow } from '../mixins/functions';
 import { BACKGROUND_COLOR_PROPS, G2_COLORS, WORDPRESS_COLORS } from './tokens';
 import {
 	generateColorAdminColors,
@@ -95,41 +96,76 @@ const CONTROL_PROPS = {
 	controlBorderSubtleColor: 'rgba(0, 0, 0, 0.2)',
 	controlBoxShadowFocusSize: '0.5px',
 	controlBoxShadow: `transparent`,
-	controlBoxShadowFocus: `0 0 0 ${get('controlBoxShadowFocusSize')} ${get(
-		'colorAdmin',
-	)}`,
+	controlBoxShadowFocus: flow(
+		'0 0 0',
+		get('controlBoxShadowFocusSize'),
+		get('colorAdmin'),
+	),
 	controlPseudoBoxShadowFocusWidth: '2px',
-	controlPseudoBoxShadowFocusRingSize: `calc(${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} + 1px + ${get('controlBoxShadowFocusSize')})`,
-	controlPseudoBoxShadowFocusRingSizeSmall: `calc(${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} + 1px)`,
-	controlPseudoBoxShadowFocus: `0 0 0 ${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
-		'controlPseudoBoxShadowFocusRingSize',
-	)} ${get('colorAdmin')}`,
-	controlPseudoBoxShadowFocusSmall: `0 0 0 ${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
-		'controlPseudoBoxShadowFocusRingSizeSmall',
-	)} ${get('colorAdmin')}`,
-	controlDestructivePseudoBoxShadowFocus: `0 0 0 ${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
-		'controlPseudoBoxShadowFocusRingSize',
-	)} ${get('colorDestructive')}`,
-	controlDestructivePseudoBoxShadowFocusSmall: `0 0 0 ${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} ${get('surfaceBackgroundColor')}, 0 0 0 ${get(
-		'controlPseudoBoxShadowFocusRingSizeSmall',
-	)} ${get('colorDestructive')}`,
+	controlPseudoBoxShadowFocusRingSize: calc(
+		get('controlPseudoBoxShadowFocusWidth'),
+		'+ 1px +',
+		get('controlBoxShadowFocusSize'),
+	),
+	controlPseudoBoxShadowFocusRingSizeSmall: calc(
+		get('controlPseudoBoxShadowFocusWidth'),
+		'+ 1px',
+	),
+	controlPseudoBoxShadowFocus: flow(
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusWidth'),
+			get('surfaceBackgroundColor'),
+		],
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusRingSize'),
+			get('colorAdmin'),
+		],
+	),
+	controlPseudoBoxShadowFocusSmall: flow(
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusWidth'),
+			get('surfaceBackgroundColor'),
+		],
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusRingSizeSmall'),
+			get('colorAdmin'),
+		],
+	),
+	controlDestructivePseudoBoxShadowFocus: flow(
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusWidth'),
+			get('surfaceBackgroundColor'),
+		],
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusRingSize'),
+			get('colorDestructive'),
+		],
+	),
+	controlDestructivePseudoBoxShadowFocusSmall: flow(
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusWidth'),
+			get('surfaceBackgroundColor'),
+		],
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusRingSizeSmall'),
+			get('colorDestructive'),
+		],
+	),
 	controlDestructiveBorderColor: get('colorDestructive'),
 	controlDestructiveBorderColorFocus: get('controlDestructiveBorderColor'),
-	controlDestructiveBoxShadowFocus: `0 0 0 ${get(
-		'controlBoxShadowFocusSize',
-	)} ${get('colorDestructive')}`,
+	controlDestructiveBoxShadowFocus: flow(
+		'0 0 0',
+		get('controlBoxShadowFocusSize'),
+		get('colorDestructive'),
+	),
 	controlHeight: '30px',
 	controlHeightLarge: `calc(${get('controlHeight')} * 1.2)`,
 	controlHeightSmall: `calc(${get('controlHeight')} * 0.8)`,
@@ -141,8 +177,10 @@ const CONTROL_PROPS = {
 	controlPaddingXSmall: `calc(${get('controlPaddingX')} / 1.3334)`,
 	controlPrimaryTextColorActive: get('white'),
 	controlPrimaryTextColor: get('white'),
-	controlSurfaceBoxShadow:
-		'0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2)',
+	controlSurfaceBoxShadow: flow(
+		'0 1px 1px rgba(0, 0, 0, 0.2)',
+		'0 1px 2px rgba(0, 0, 0, 0.2)',
+	),
 	controlSurfaceColor: get('white'),
 	controlTextActiveColor: get('colorAdmin'),
 	controlInnerControltextColor: get('colorAdmin'),
@@ -150,9 +188,11 @@ const CONTROL_PROPS = {
 
 const BUTTON_PROPS = {
 	buttonPaddingXRatio: 'calc(4/3)',
-	buttonPaddingX: `calc(${get('controlPaddingX')} * ${get(
-		'buttonPaddingXRatio',
-	)})`,
+	buttonPaddingX: calc(
+		get('controlPaddingX'),
+		'*',
+		get('buttonPaddingXRatio'),
+	),
 
 	buttonTextColor: get('colorAdmin'),
 	buttonTextColorActive: get('buttonTextColor'),
@@ -200,18 +240,22 @@ const BUTTON_PROPS = {
 	buttonControlActiveStateColorFocus: get('buttonControlActiveStateColor'),
 	buttonControlActiveStateTextColor: get('buttonPrimaryTextColor'),
 	buttonControlActiveStateBorderColorFocus: get('buttonPrimaryColor'),
-	buttonControlActiveStateBoxShadowFocus: `0 0 0 ${get(
-		'controlBoxShadowFocusSize',
-	)} ${get('buttonPrimaryColor')}, 0 0 0 ${get(
-		'controlPseudoBoxShadowFocusWidth',
-	)} ${get('buttonControlActiveStateTextColor')} inset`,
+	buttonControlActiveStateBoxShadowFocus: flow(
+		['0 0 0', get('controlBoxShadowFocusSize'), get('colorAdmin')],
+		[
+			'0 0 0',
+			get('controlPseudoBoxShadowFocusWidth'),
+			get('buttonControlActiveStateTextColor'),
+			'inset',
+		],
+	),
 };
 
 const CARD_PROPS = {
 	cardBorderRadius: '2px',
 	cardPaddingX: space(3),
 	cardPaddingY: space(3),
-	cardPadding: `${get('cardPaddingX')} ${get('cardPaddingY')}`,
+	cardPadding: flow(get('cardPaddingX'), get('cardPaddingY')),
 	cardHeaderFooterPaddingY: space(1),
 	cardHeaderHeight: '44px',
 };

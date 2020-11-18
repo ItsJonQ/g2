@@ -7,6 +7,7 @@ import { color } from './colors';
 import { css } from './css';
 import { frame } from './dimensions';
 import { font } from './fonts';
+import * as functions from './functions';
 import { createToken, get, getTokenValue } from './get';
 import { active, focus, hover } from './interactions';
 import { mode } from './modes';
@@ -20,6 +21,7 @@ import { value } from './values';
 import { zIndex } from './zIndex';
 
 export const ui = {
+	...functions,
 	$,
 	active,
 	alignment,
