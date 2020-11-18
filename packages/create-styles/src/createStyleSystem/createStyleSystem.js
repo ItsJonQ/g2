@@ -7,7 +7,7 @@ import { createCoreElement } from './createCoreElement';
 import { createCoreElements } from './createCoreElements';
 import { createStyledComponents } from './createStyledComponents';
 import { generateTheme } from './generateTheme';
-import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS, get } from './utils';
+import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
@@ -146,14 +146,15 @@ export function createStyleSystem(options = defaultOptions) {
 		createToken,
 		css,
 		cx,
-		get,
+		get: (
+			/** @type {keyof TConfig | keyof TDarkConfig | keyof THCConfig | keyof TDarkHCConfig | TGeneratedTokens} */ key,
+		) => `var(${createToken(key.toString())})`,
 		styled,
 		View,
 		ThemeProvider,
 		rootStore,
 	};
 
-	// @ts-ignore `get` is problematic and difficult to get right here... maybe warrants an @todo
 	return styleSystem;
 }
 
