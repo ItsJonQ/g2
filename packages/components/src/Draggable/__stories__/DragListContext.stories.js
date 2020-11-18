@@ -1,5 +1,5 @@
+import { useListState } from '@wp-g2/protokit';
 import { ui } from '@wp-g2/styles';
-import { useListState } from '@wp-g2/utils';
 import faker from 'faker';
 import { Schema } from 'faker-schema';
 import React, { useState } from 'react';

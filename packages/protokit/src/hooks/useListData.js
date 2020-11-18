@@ -1,6 +1,6 @@
-import { useListState } from '@wp-g2/utils';
 import Fuse from 'fuse.js';
 import { useEffect, useRef, useState } from 'react';
+import { useListState } from 'use-enhanced-state';
 
 import { faker, Schema } from '../mockers';
 
