@@ -29,7 +29,6 @@ export const Slider = css`
 		);
 		border-radius: 2px;
 		height: 2px;
-		will-change: transform;
 
 		*:disabled& {
 			background: ${ui.get('controlBackgroundDimColor')};
@@ -62,7 +61,6 @@ export const Slider = css`
 		opacity: 1;
 		width: 12px;
 		transition: box-shadow ease ${ui.get('transitionDurationFast')};
-		will-change: transform;
 
 		*:disabled& {
 			background: ${ui.get('colorTextMuted')};

@@ -133,7 +133,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
@@ -207,7 +206,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
-  z-index: 1;
   border-color: #007cba;
   border-color: var(--wp-g2-button-primary-border-color-focus);
   box-shadow: 0 0 0 0.5px #007cba;
