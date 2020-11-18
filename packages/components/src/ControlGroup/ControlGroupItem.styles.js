@@ -1,7 +1,7 @@
 import { css } from '@wp-g2/styles';
 
 export const ControlGroupItem = css`
-	&:hover {
+	&:focus-within {
 		z-index: 1;
 	}
 `;

@@ -42,7 +42,6 @@ export const Button = css`
 	}
 
 	&:focus {
-		${ui.zIndex('ControlFocus')};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}
 
@@ -188,7 +187,6 @@ export const control = css`
 	}
 
 	&:focus {
-		${ui.zIndex('ControlFocus')};
 		border-color: ${ui.get('buttonPrimaryBorderColorFocus')};
 		box-shadow: ${ui.get('controlBoxShadowFocus')};
 	}

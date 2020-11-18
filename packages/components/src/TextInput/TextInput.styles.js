@@ -4,7 +4,6 @@ export { scrollableScrollbar } from '../Scrollable/Scrollable.styles';
 
 export const focus = css`
 	border-color: ${ui.color.admin};
-	z-index: 1;
 `;
 
 export const multiline = css`
