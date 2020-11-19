@@ -113,6 +113,11 @@ exports[`props should render as dismissable 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -298,6 +303,11 @@ exports[`props should render as dismissable 1`] = `
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
@@ -702,6 +712,11 @@ exports[`props should render correctly 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -879,6 +894,11 @@ exports[`props should render with status 1`] = `
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
@@ -1066,6 +1086,11 @@ exports[`props should render with status 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
@@ -2050,6 +2075,11 @@ exports[`props should render with title 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {

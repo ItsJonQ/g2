@@ -57,6 +57,11 @@ exports[`props should render correctly 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -205,6 +210,11 @@ exports[`props should render correctly 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -572,6 +582,11 @@ exports[`props should render correctly 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
@@ -838,6 +853,11 @@ exports[`props should render size 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -992,6 +1012,11 @@ exports[`props should render size 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -1372,6 +1397,11 @@ exports[`props should render size 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active,
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
@@ -1636,6 +1666,11 @@ exports[`props should render vertically 1`] = `
   margin-top: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -1786,6 +1821,11 @@ exports[`props should render vertically 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -2160,6 +2200,11 @@ exports[`props should render vertically 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,

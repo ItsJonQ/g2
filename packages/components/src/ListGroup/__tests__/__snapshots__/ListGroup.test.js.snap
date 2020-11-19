@@ -53,6 +53,11 @@ exports[`props should render correctly 1`] = `
   margin-top: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack components-list-group wp-components-list-group emotion-0"
   data-g2-c16t="true"

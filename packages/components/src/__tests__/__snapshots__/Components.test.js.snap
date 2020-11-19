@@ -106,6 +106,11 @@ exports[`props should render Alert 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -251,6 +256,11 @@ exports[`props should render Alert with css prop 1`] = `
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
@@ -416,6 +426,11 @@ exports[`props should render Alert with css prop 2`] = `
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
@@ -2867,6 +2882,11 @@ exports[`props should render BaseButton 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -3038,6 +3058,11 @@ exports[`props should render BaseButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -3213,6 +3238,11 @@ exports[`props should render BaseButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -3391,6 +3421,11 @@ exports[`props should render BaseField 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -3493,6 +3528,11 @@ exports[`props should render BaseField with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -3599,6 +3639,11 @@ exports[`props should render BaseField with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -3717,6 +3762,11 @@ exports[`props should render Button 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -3958,6 +4008,11 @@ exports[`props should render Button with css prop 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -4197,6 +4252,11 @@ exports[`props should render Button with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -5283,6 +5343,11 @@ exports[`props should render CardFooter 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -5366,6 +5431,11 @@ exports[`props should render CardFooter with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5455,6 +5525,11 @@ exports[`props should render CardFooter with css prop 2`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -5539,6 +5614,11 @@ exports[`props should render CardHeader 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5627,6 +5707,11 @@ exports[`props should render CardHeader with css prop 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -5713,6 +5798,11 @@ exports[`props should render CardHeader with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -6302,6 +6392,11 @@ exports[`props should render ClipboardButton 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -6539,6 +6634,11 @@ exports[`props should render ClipboardButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -6780,6 +6880,11 @@ exports[`props should render ClipboardButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -7029,6 +7134,11 @@ exports[`props should render CloseButton 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -7388,6 +7498,11 @@ exports[`props should render CloseButton with css prop 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -7745,6 +7860,11 @@ exports[`props should render CloseButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -8587,6 +8707,11 @@ exports[`props should render ColorControl 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -9123,6 +9248,11 @@ exports[`props should render ColorControl with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -9663,6 +9793,11 @@ exports[`props should render ColorControl with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -10393,6 +10528,11 @@ exports[`props should render ControlGroup 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-control-group wp-components-control-group emotion-0"
   data-g2-c16t="true"
@@ -10450,6 +10590,11 @@ exports[`props should render ControlGroup with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -10511,6 +10656,11 @@ exports[`props should render ControlGroup with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -11398,6 +11548,11 @@ exports[`props should render DropdownMenuItem 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -11687,6 +11842,11 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -11982,6 +12142,11 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -12246,6 +12411,11 @@ exports[`props should render DropdownTrigger 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -12483,6 +12653,11 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -12724,6 +12899,11 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -13433,6 +13613,11 @@ exports[`props should render Flex 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex emotion-0"
   data-g2-c16t="true"
@@ -13490,6 +13675,11 @@ exports[`props should render Flex with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -13551,6 +13741,11 @@ exports[`props should render Flex with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -14069,6 +14264,11 @@ exports[`props should render HStack 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack emotion-0"
   data-g2-c16t="true"
@@ -14128,6 +14328,11 @@ exports[`props should render HStack with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -14191,6 +14396,11 @@ exports[`props should render HStack with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -14966,6 +15176,11 @@ exports[`props should render ListGroup 1`] = `
   margin-top: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack components-list-group wp-components-list-group emotion-0"
   data-g2-c16t="true"
@@ -15025,6 +15240,11 @@ exports[`props should render ListGroup with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-top: calc(4px * 2);
   margin-top: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -15090,6 +15310,11 @@ exports[`props should render ListGroup with css prop 2`] = `
   margin-top: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack components-list-group wp-components-list-group emotion-0"
   data-g2-c16t="true"
@@ -15151,6 +15376,11 @@ exports[`props should render ListGroupFooter 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-list-group-footer wp-components-list-group-footer emotion-0"
   data-g2-c16t="true"
@@ -15210,6 +15440,11 @@ exports[`props should render ListGroupFooter with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -15275,6 +15510,11 @@ exports[`props should render ListGroupFooter with css prop 2`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-list-group-footer wp-components-list-group-footer emotion-0"
   data-g2-c16t="true"
@@ -15336,6 +15576,11 @@ exports[`props should render ListGroupHeader 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-list-group-header wp-components-list-group-header emotion-0"
   data-g2-c16t="true"
@@ -15395,6 +15640,11 @@ exports[`props should render ListGroupHeader with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -15460,6 +15710,11 @@ exports[`props should render ListGroupHeader with css prop 2`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-list-group-header wp-components-list-group-header emotion-0"
   data-g2-c16t="true"
@@ -15519,6 +15774,11 @@ exports[`props should render ListGroups 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-top: calc(4px * 6);
   margin-top: calc(var(--wp-g2-grid-base) * 6);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -15582,6 +15842,11 @@ exports[`props should render ListGroups with css prop 1`] = `
   margin-top: calc(var(--wp-g2-grid-base) * 6);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack components-list-groups wp-components-list-groups emotion-0"
   data-g2-c16t="true"
@@ -15643,6 +15908,11 @@ exports[`props should render ListGroups with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-top: calc(4px * 6);
   margin-top: calc(var(--wp-g2-grid-base) * 6);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -16203,6 +16473,11 @@ exports[`props should render MenuItem 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -16492,6 +16767,11 @@ exports[`props should render MenuItem with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -16785,6 +17065,11 @@ exports[`props should render MenuItem with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -17276,6 +17561,11 @@ exports[`props should render ModalFooter 1`] = `
   margin-right: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -17359,6 +17649,11 @@ exports[`props should render ModalFooter with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-right: calc(4px * 2);
   margin-right: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -17448,6 +17743,11 @@ exports[`props should render ModalFooter with css prop 2`] = `
   margin-right: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -17533,6 +17833,11 @@ exports[`props should render ModalHeader 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -17669,6 +17974,11 @@ exports[`props should render ModalHeader 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -17906,6 +18216,11 @@ exports[`props should render ModalHeader with css prop 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -18040,6 +18355,11 @@ exports[`props should render ModalHeader with css prop 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -18279,6 +18599,11 @@ exports[`props should render ModalHeader with css prop 2`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -18413,6 +18738,11 @@ exports[`props should render ModalHeader with css prop 2`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -18678,6 +19008,11 @@ exports[`props should render ModalTrigger 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -18919,6 +19254,11 @@ exports[`props should render NavigatorButton 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -19156,6 +19496,11 @@ exports[`props should render NavigatorButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -19397,6 +19742,11 @@ exports[`props should render NavigatorButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -20474,6 +20824,11 @@ exports[`props should render SearchInput 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -20808,6 +21163,11 @@ exports[`props should render SearchInput 1`] = `
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
@@ -21576,6 +21936,11 @@ exports[`props should render Select 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -23347,6 +23712,11 @@ exports[`props should render Stepper 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -23495,6 +23865,11 @@ exports[`props should render Stepper 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -23862,6 +24237,11 @@ exports[`props should render Stepper 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
@@ -24129,6 +24509,11 @@ exports[`props should render Stepper with css prop 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -24277,6 +24662,11 @@ exports[`props should render Stepper with css prop 1`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -24644,6 +25034,11 @@ exports[`props should render Stepper with css prop 1`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
@@ -24913,6 +25308,11 @@ exports[`props should render Stepper with css prop 2`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -25061,6 +25461,11 @@ exports[`props should render Stepper with css prop 2`] = `
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -25428,6 +25833,11 @@ exports[`props should render Stepper with css prop 2`] = `
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
@@ -27134,6 +27544,11 @@ exports[`props should render TextInput 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -27402,6 +27817,11 @@ exports[`props should render VStack 1`] = `
   margin-top: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 <div
   class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack emotion-0"
   data-g2-c16t="true"
@@ -27461,6 +27881,11 @@ exports[`props should render VStack with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-top: calc(4px * 2);
   margin-top: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
@@ -27524,6 +27949,11 @@ exports[`props should render VStack with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-top: calc(4px * 2);
   margin-top: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 <div
