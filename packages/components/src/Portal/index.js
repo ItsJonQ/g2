@@ -1,1 +1,1 @@
-export { Portal } from 'reakit';
+export { default as Portal } from './Portal';
