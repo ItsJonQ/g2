@@ -1,4 +1,4 @@
-import { mergeRefs, repeat } from '@wp-g2/utils';
+import { is, mergeRefs, repeat } from '@wp-g2/utils';
 import React, { useRef } from 'react';
 
 import {
@@ -8,6 +8,11 @@ import {
 	MODE_SPECIFICITY_COMPOUND_LEVEL,
 } from '../../createStyleSystem/constants';
 import { useHydrateGlobalStyles } from '../../hooks';
+import {
+	ThemeProviderContext,
+	useThemeProviderContextBridge,
+	useThemeProviderModeHtmlAttributes,
+} from './ThemeProvider.Context';
 import {
 	useColorBlindMode,
 	useDarkMode,
@@ -112,24 +117,36 @@ function ThemeProvider(
 	useHighContrastMode({ isGlobal, isHighContrast, ref: nodeRef });
 	useReducedMotionMode({ isGlobal, isReducedMotion, ref: nodeRef });
 
+	const contextState = useThemeProviderContextBridge({
+		isDark,
+		isReducedMotion,
+		isColorBlind,
+		isHighContrast,
+	});
+
+	const modeHtmlAttrs = useThemeProviderModeHtmlAttributes(contextState);
+
 	const classes = cx(
 		className,
 		css`
-		${defaultStyles}
-		${darkStyles}
-		${highContrastStyles}
-		${darkHighContrastStyles}
-	`,
+			${defaultStyles}
+			${darkStyles}
+			${highContrastStyles}
+			${darkHighContrastStyles}
+		`,
 	);
 
 	return (
 		<div
 			{...props}
+			{...modeHtmlAttrs}
 			className={classes}
 			data-system-theme-provider
 			ref={mergeRefs([forwardedRef, nodeRef])}
 		>
-			{children}
+			<ThemeProviderContext.Provider value={contextState}>
+				{children}
+			</ThemeProviderContext.Provider>
 		</div>
 	);
 }
