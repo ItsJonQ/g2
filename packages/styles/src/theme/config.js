@@ -178,8 +178,8 @@ const CONTROL_PROPS = {
 	controlPrimaryTextColorActive: get('white'),
 	controlPrimaryTextColor: get('white'),
 	controlSurfaceBoxShadow: flow(
-		'0 1px 1px rgba(0, 0, 0, 0.2)',
-		'0 1px 2px rgba(0, 0, 0, 0.2)',
+		['0 1px 1px rgba(0, 0, 0, 0.2)'],
+		['0 1px 2px rgba(0, 0, 0, 0.2)'],
 	),
 	controlSurfaceColor: get('white'),
 	controlTextActiveColor: get('colorAdmin'),
