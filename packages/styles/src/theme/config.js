@@ -1,6 +1,6 @@
 import { get } from '@wp-g2/create-styles';
 
-import { calc, flow } from '../mixins/functions';
+import { flow } from '../presets/flow';
 import { BACKGROUND_COLOR_PROPS, G2_COLORS, WORDPRESS_COLORS } from './tokens';
 import {
 	generateColorAdminColors,
@@ -102,12 +102,12 @@ const CONTROL_PROPS = {
 		get('colorAdmin'),
 	),
 	controlPseudoBoxShadowFocusWidth: '2px',
-	controlPseudoBoxShadowFocusRingSize: calc(
+	controlPseudoBoxShadowFocusRingSize: flow.calc(
 		get('controlPseudoBoxShadowFocusWidth'),
 		'+ 1px +',
 		get('controlBoxShadowFocusSize'),
 	),
-	controlPseudoBoxShadowFocusRingSizeSmall: calc(
+	controlPseudoBoxShadowFocusRingSizeSmall: flow.calc(
 		get('controlPseudoBoxShadowFocusWidth'),
 		'+ 1px',
 	),
@@ -188,7 +188,7 @@ const CONTROL_PROPS = {
 
 const BUTTON_PROPS = {
 	buttonPaddingXRatio: 'calc(4/3)',
-	buttonPaddingX: calc(
+	buttonPaddingX: flow.calc(
 		get('controlPaddingX'),
 		'*',
 		get('buttonPaddingXRatio'),

@@ -39,55 +39,16 @@ import { is } from '@wp-g2/utils';
  * @returns {string} The combined CSS string value.
  */
 export function flow(...args) {
-	const hasArrays = !!args.find(is.array);
-
-	if (!hasArrays) {
-		return args.join(' ');
-	}
-
 	const results = [];
 
 	for (const arg of args) {
+		if (is.number(arg) || is.string(arg)) {
+			results.push(arg);
+		}
 		if (is.array(arg)) {
-			results.push(arg.join(' '));
+			results.push(flow(...arg), ',');
 		}
 	}
 
-	return results.join(',');
-}
-
-export function flowComma(...args) {
-	return args.join(',');
-}
-
-export function calc(...args) {
-	return flow('calc(', ...args, ')');
-}
-
-export function cubicBezier(...args) {
-	return flowComma('cubic-bezier(', ...args, ')');
-}
-
-export function hsl(...args) {
-	return flowComma('hsl(', ...args, ')');
-}
-
-export function hsla(...args) {
-	return flowComma('hsla(', ...args, ')');
-}
-
-export function linearGradient(...args) {
-	return flowComma('linear-gradient(', ...args, ')');
-}
-
-export function radialGradient(...args) {
-	return flowComma('radial-gradient(', ...args, ')');
-}
-
-export function rgb(...args) {
-	return flowComma('rgb(', ...args, ')');
-}
-
-export function rgba(...args) {
-	return flowComma('rgba(', ...args, ')');
+	return results.join(' ').trim().replace(/,$/, '');
 }

@@ -5,6 +5,7 @@ export * from './colorBlindMode';
 export * from './darkMode';
 export * from './device';
 export * from './fonts';
+export * from './flow';
 export * from './highContrastMode';
 export * from './interactions';
 export * from './motion';
