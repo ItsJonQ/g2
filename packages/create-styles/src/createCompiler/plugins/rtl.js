@@ -31,7 +31,10 @@ export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
  */
 function stylisRTLPlugin(context, content) {
 	if (context === STYLIS_PROPERTY_CONTEXT) {
-		return isRtl ? rtlcss.process(content) : undefined;
+		// pass four undefineds to let TS know which overload we're using
+		return isRtl
+			? rtlcss.process(content, undefined, undefined, undefined)
+			: undefined;
 	}
 	return undefined;
 }

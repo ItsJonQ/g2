@@ -63,6 +63,7 @@
     "@storybook/react": "^6.0.12",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "10.4.9",
+    "@types/rtlcss": "^2.4.1",
     "@types/styled-components": "^5.1.4",
     "@types/tinycolor2": "^1.4.2",
     "among": "2.0.0",
