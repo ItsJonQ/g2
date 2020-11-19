@@ -79,6 +79,11 @@ exports[`props should render align 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -259,6 +264,11 @@ exports[`props should render correctly 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -443,6 +453,11 @@ exports[`props should render defaultValue 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -623,6 +638,11 @@ exports[`props should render disabled 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -809,6 +829,11 @@ exports[`props should render gap 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 4);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -989,6 +1014,11 @@ exports[`props should render isRounded 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1173,6 +1203,11 @@ exports[`props should render justify 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -1355,6 +1390,11 @@ exports[`props should render multiline 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1571,6 +1611,11 @@ exports[`props should render prefix 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -1756,6 +1801,11 @@ exports[`props should render seamless 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -1937,6 +1987,11 @@ exports[`props should render size 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -2127,6 +2182,11 @@ exports[`props should render suffix 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
@@ -2310,6 +2370,11 @@ exports[`props should render value 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {

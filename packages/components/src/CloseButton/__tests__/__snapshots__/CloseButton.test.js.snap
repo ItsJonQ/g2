@@ -101,6 +101,11 @@ exports[`props should render correctly 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:active,
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
@@ -457,6 +462,11 @@ exports[`props should render size 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -818,6 +828,11 @@ exports[`props should render variant 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
