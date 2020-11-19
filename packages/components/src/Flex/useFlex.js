@@ -45,6 +45,7 @@ export function useFlex(props) {
 			/**
 			 * Workaround to optimize DOM rendering.
 			 * We'll enhance alignment with naive parent flex assumptions.
+			 *
 			 * Trade-off:
 			 * Far less DOM less. However, UI rendering is not as reliable.
 			 */
@@ -53,6 +54,10 @@ export function useFlex(props) {
 				marginRight: !isColumn && isReverse ? ui.space(gap) : null,
 				marginLeft: !isColumn && !isReverse ? ui.space(gap) : null,
 			},
+			/**
+			 * Improves stability of width/height rendering.
+			 * https://github.com/ItsJonQ/g2/pull/149
+			 */
 			'> *': {
 				minWidth: 0,
 				minHeight: 0,
