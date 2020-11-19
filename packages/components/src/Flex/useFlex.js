@@ -53,6 +53,10 @@ export function useFlex(props) {
 				marginRight: !isColumn && isReverse ? ui.space(gap) : null,
 				marginLeft: !isColumn && !isReverse ? ui.space(gap) : null,
 			},
+			'> *': {
+				minWidth: 0,
+				minHeight: 0,
+			},
 		});
 
 		return cx(styles.Flex, sx.Base, className);
