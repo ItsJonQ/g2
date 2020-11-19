@@ -1,3 +1,4 @@
+import { CONNECTED_NAMESPACE } from './constants';
 export { ns } from '@wp-g2/styles';
 
 /**
@@ -12,5 +13,5 @@ export { ns } from '@wp-g2/styles';
  * @returns {object} A props object with the namespaced HTML attribute.
  */
 export function cns() {
-	return { 'data-g2-c16t': true };
+	return { [CONNECTED_NAMESPACE]: true };
 }
