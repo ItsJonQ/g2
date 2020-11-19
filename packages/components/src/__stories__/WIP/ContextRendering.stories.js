@@ -1,11 +1,6 @@
 import { ContextSystemProvider } from '@wp-g2/context';
-import {
-	cache,
-	compiler,
-	StyleFrameProvider,
-	ThemeProvider,
-} from '@wp-g2/styles';
-import React, { useEffect, useRef, useState } from 'react';
+import { StyleFrameProvider, ThemeProvider } from '@wp-g2/styles';
+import React, { useEffect, useState } from 'react';
 import Frame from 'react-frame-component';
 
 import {
@@ -21,7 +16,7 @@ import {
 	Subheading,
 	Surface,
 	Text,
-	TextField,
+	TextInput,
 	View,
 	VStack,
 } from '../../index';
@@ -36,7 +31,7 @@ const Cluster = () => {
 			<Card>
 				<CardBody>
 					<FormGroup label="First Name">
-						<TextField value="Elsa" />
+						<TextInput value="Elsa" />
 					</FormGroup>
 				</CardBody>
 			</Card>
