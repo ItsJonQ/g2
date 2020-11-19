@@ -25,7 +25,7 @@ const numericZero = (o) => {
 /**
  * @template T
  * @param {T} o
- * @return {T is Exclude<T, undefined | null>}
+ * @return {o is Exclude<T, undefined | null>}
  */
 const defined = (o) => !_.isNil(o);
 
@@ -37,6 +37,11 @@ export const is = {
 	file: (o) => o instanceof File,
 	numeric,
 	numericZero,
+	// This is safe because we only accept Interpolation rather than any
+	// _.isPlainObject(TemplateStringsArray) -> false
+	// _.isPlainObject is also `false` for the rest of the values that `Interpolation` covers except for `ObjectInterpolation` :)
+	/** @type {(o: TemplateStringsArray | import('create-emotion').Interpolation) => o is import('create-emotion').ObjectInterpolation} */
+	objectInterpolation: (o) => _.isPlainObject(o),
 
 	/**
 	 * Re-exports from lodash

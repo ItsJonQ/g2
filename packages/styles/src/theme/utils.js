@@ -3,6 +3,11 @@ import { REDUCED_MOTION_MODE_ATTR } from '@wp-g2/create-styles';
 import { colorize } from '@wp-g2/utils';
 import { is } from '@wp-g2/utils';
 
+/**
+ * @template T
+ * @param {T | number} value
+ * @return {T | string}
+ */
 export function space(value) {
 	return is.number(value) ? `calc(${get('gridBase')} * ${value})` : value;
 }
@@ -11,7 +16,12 @@ export function getIsReducedMotion() {
 	return !!document.querySelector(REDUCED_MOTION_MODE_ATTR);
 }
 
-export function createTextColors(colors = {}) {
+/**
+ * @param {Record<string, import('tinycolor2').ColorInput>} colors
+ * @return {Record<string, import('tinycolor2').ColorInput>}
+ */
+export function createTextColors(colors) {
+	/** @type {Record<string, string>} */
 	const colorSet = {};
 	const entries = Object.entries(colors);
 	const light = entries[0][1];
@@ -28,7 +38,14 @@ export function createTextColors(colors = {}) {
 	return colorSet;
 }
 
-export function createRgbaColors(colors = {}, isDark = false) {
+/**
+ *
+ * @param {Record<string, import('tinycolor2').ColorInput>} colors
+ * @param {boolean} [isDark=false]
+ * @return {Record<string, import('tinycolor2').ColorInput>}
+ */
+export function createRgbaColors(colors, isDark = false) {
+	/** @type {Record<string, import('tinycolor2').ColorInput>} */
 	const colorSet = {};
 	const entries = Object.entries(colors);
 	const [baseColorName, baseColorValue] = entries[2];
@@ -40,8 +57,7 @@ export function createRgbaColors(colors = {}, isDark = false) {
 	const readabilityTextBase = isDark ? '#fff' : '#000';
 	const adjustMethod = isDark ? 'darken' : 'lighten';
 
-	ranges.forEach((entry, index) => {
-		const range = ranges[index];
+	ranges.forEach((range, index) => {
 		let enhancedColorValue = baseColorValue;
 
 		enhancedColorValue = colorize(enhancedColorValue)
@@ -70,7 +86,13 @@ export function createRgbaColors(colors = {}, isDark = false) {
 	return colorSet;
 }
 
+/**
+ * @param {string} key
+ * @param {import('tinycolor2').ColorInput} color
+ * @return {Record<string, import('tinycolor2').ColorInput>}
+ */
 export function generateRgbColors(key, color) {
+	/** @type {Record<string, import('tinycolor2').ColorInput>} */
 	const colorSet = {
 		[key]: color,
 	};
@@ -86,10 +108,16 @@ export function generateRgbColors(key, color) {
 	return colorSet;
 }
 
+/**
+ * @param {import('tinycolor2').ColorInput} color
+ */
 export function generateColorAdminColors(color) {
 	return generateRgbColors('colorAdmin', color);
 }
 
+/**
+ * @param {import('tinycolor2').ColorInput} color
+ */
 export function generateColorDestructiveColors(color) {
 	return generateRgbColors('colorDestructive', color);
 }

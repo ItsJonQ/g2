@@ -1,5 +1,5 @@
 import { get } from '@wp-g2/create-styles';
-import { colorize, getComputedColor, is, noop } from '@wp-g2/utils';
+import { colorize, getComputedColor, is } from '@wp-g2/utils';
 
 import { space } from '../mixins/space';
 import { config } from './config';
@@ -7,7 +7,11 @@ import { generateColorAdminColors } from './utils';
 
 const baseTheme = Object.freeze(Object.assign({}, config));
 
-export function createTheme(callback = noop) {
+/**
+ * @param {(props: { get: typeof get, theme: typeof baseTheme, color: typeof colorize, space: typeof space }) => Record<string, string>} callback
+ * @return {Record<string, string>}
+ */
+export function createTheme(callback) {
 	if (!is.function(callback)) return {};
 
 	const props = {

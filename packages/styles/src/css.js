@@ -1,8 +1,9 @@
+import { responsive } from '@wp-g2/create-styles';
 import { is } from '@wp-g2/utils';
 
 import { space } from './mixins/space';
 import { compiler } from './system';
-const { breakpoints, css: compile } = compiler;
+const { css: compile } = compiler;
 
 // Inspired by:
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts
@@ -79,69 +80,29 @@ export function getScaleStyles(styles = {}) {
 	return next;
 }
 
-// https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224
-/**
- * A utility function that generates responsive styles if the value is an array.
- *
- * @param {object} styles A styles object
- * @returns {object} An adjusted styles object with responsive styles (if applicable).
- */
-export const responsive = (styles = {}) => {
-	const next = {};
-	const mediaQueries = [
-		null,
-		...breakpoints.map((n) => `@media screen and (min-width: ${n})`),
-	];
-
-	for (const k in styles) {
-		const key = k;
-		let value = styles[key];
-
-		if (value === null) continue;
-
-		if (!is.array(value)) {
-			next[key] = value;
-			continue;
-		}
-
-		for (let i = 0; i < value.slice(0, mediaQueries.length).length; i++) {
-			const media = mediaQueries[i];
-			if (!media) {
-				next[key] = getScaleValue(key, value[i]);
-				continue;
-			}
-			next[media] = next[media] || {};
-			if (value[i] === null) continue;
-			next[media][key] = getScaleValue(key, value[i]);
-		}
-	}
-
-	return next;
-};
-
 /**
  * Enhances the (create-system enhanced) CSS function to account for
  * scale functions within the Style system.
  *
- * @param {any} args The styles to compile.
- * @returns {string} The compiled styles.
+ * @param {TemplateStringsArray | import('create-emotion').Interpolation<undefined>} template
+ * @param {import('create-emotion').Interpolation<undefined>[]} args The styles to compile.
+ * @returns {ReturnType<compile>} The compiled styles.
  */
-export function css(...args) {
-	const [arg, ...rest] = args;
-
-	if (is.plainObject(arg)) {
-		return compile(getScaleStyles(responsive(arg)));
+export function css(template, ...args) {
+	if (is.objectInterpolation(template)) {
+		return compile(getScaleStyles(responsive(template, getScaleValue)));
 	}
 
-	if (is.array(arg)) {
-		for (let i = 0, len = arg.length; i < len; i++) {
-			const n = arg[i];
-			if (is.plainObject(n)) {
-				arg[i] = getScaleStyles(responsive(n));
+	if (is.array(template)) {
+		for (let i = 0, len = template.length; i < len; i++) {
+			const n = template[i];
+			if (is.objectInterpolation(n)) {
+				template[i] = getScaleStyles(responsive(n, getScaleValue));
 			}
 		}
-		return compile(...[arg, ...rest]);
+		return compile(template, ...args);
 	}
 
-	return compile(...args);
+	// @ts-ignore Emotion says `css` doesn't take `TemplateStringsArray` but it does!
+	return compile(template, ...args);
 }

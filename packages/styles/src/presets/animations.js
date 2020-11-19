@@ -7,6 +7,10 @@ const animationProps = {
 	transitionTimingFunction: 'ease-in-out',
 };
 
+/**
+ * @param {import('create-emotion').ObjectInterpolation['transition']} transition
+ * @return {string}
+ */
 export const animation = (transition) => {
 	return css({ transition: transition });
 };

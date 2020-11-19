@@ -2,8 +2,18 @@ import { is, kebabCase } from '@wp-g2/utils';
 
 import { NAMESPACE } from './constants';
 
+/**
+ * @type {{
+	baseStyles: any;
+	config: any;
+	darkModeConfig: any;
+	highContrastModeConfig: any;
+	darkHighContrastModeConfig: any;
+	compilerOptions: any;
+	}}
+ */
 export const DEFAULT_STYLE_SYSTEM_OPTIONS = {
-	baseStyles: undefined,
+	baseStyles: {},
 	config: {},
 	darkModeConfig: {},
 	highContrastModeConfig: {},
@@ -29,21 +39,30 @@ export function createToken(key) {
  * ```js
  * get('colorAdmin'); // var(--wp-g2-color-admin, 'blue');
  * ```
- * @param {string} key The config variable to retrieve.
+ * @template {Record<string, string | number>} TConfig
+ * @template {Record<string, string | number>} TDarkConfig
+ * @template {Record<string, string | number>} THCConfig
+ * @template {Record<string, string | number>} TDarkHCConfig
+ * @template {string} TGeneratedTokens
+ * @param {keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig) | TGeneratedTokens} key The config variable to retrieve.
  * @returns {string} The compiled CSS variable associated with the config key.
  */
 export function get(key) {
-	return `var(${createToken(key)})`;
+	return `var(${createToken(key.toString())})`;
 }
+
+/** @typedef {Record<string, string | number>} StyleConfigValues */
+/** @typedef {Record<string, string>} StyleConfig */
 
 /**
  * Transforms a series of config values into set of namespaced CSS
  * references for the Style system.
  *
- * @param {object} values Style config values to transform into CSS variables.
- * @returns {object} The set of CSS variables, transformed from config values.
+ * @param {StyleConfigValues} values Style config values to transform into CSS variables.
+ * @returns {StyleConfig} The set of CSS variables, transformed from config values.
  */
 export function transformValuesToReferences(values = {}) {
+	/** @type {StyleConfig} */
 	const next = {};
 	for (const [key, value] of Object.entries(values)) {
 		const ref = `var(${createToken(key)}, ${value})`;
@@ -57,15 +76,16 @@ export function transformValuesToReferences(values = {}) {
  * variables for the Style system. These values can then be safely and predictable
  * retrieved using the get() function.
  *
- * @param {object} values Style config values to transform into CSS variables.
- * @returns {object} The set of CSS variables, transformed from config values.
+ * @param {StyleConfigValues} values Style config values to transform into CSS variables.
+ * @returns {StyleConfig} The set of CSS variables, transformed from config values.
  */
 export function transformValuesToVariables(values = {}) {
+	/** @type {StyleConfig} */
 	const next = {};
 
 	for (const [key, value] of Object.entries(values)) {
 		const ref = value;
-		next[`${createToken(key)}`] = ref;
+		next[`${createToken(key)}`] = ref.toString();
 	}
 
 	return next;
@@ -77,8 +97,8 @@ export function transformValuesToVariables(values = {}) {
  * a CSS style value (`string`) that can be injected into the DOM, within a
  * <style> tag.
  *
- * @param {string} selector The selector to attach the config values to.
- * @param {object} values Style config values to transform into CSS variables.
+ * @param {string} [selector=':root'] The selector to attach the config values to.
+ * @param {StyleConfigValues} values Style config values to transform into CSS variables.
  * @returns {string} Compiled innerHTML styles to be injected into a <style /> tag.
  */
 export function transformValuesToVariablesString(
@@ -116,28 +136,16 @@ export function transformValuesToVariablesString(
 }
 
 /**
- * Retrieves the displayName of a component.
- * @param {any} Component The component to retrieve the tagName from.
- * @returns Either the component's displayName or a fallback of "Component".
- */
-export function getDisplayName(Component) {
-	let displayName = is.string(Component)
-		? Component
-		: Component?.displayName || Component?.name || 'Component';
-
-	return displayName;
-}
-
-/**
  * Resolves and compiles interpolated CSS styles for styled-components.
  * Allows for prop (function) interpolation within the style rules.
  *
  * For more information on tagged template literals, check out:
  * https://mxstbr.blog/2016/11/styled-components-magic-explained/
  *
- * @param {Array<string,function>} interpolatedStyles The interpolated styles from a Styled component.
- * @param {Object} props Incoming component props.
- * @returns {string} Compiled CSS style rules.
+ * @template TProps
+ * @param {(string | ((props: TProps) => string))[]} interpolatedStyles The interpolated styles from a Styled component.
+ * @param {TProps} props Incoming component props.
+ * @returns {string[]} Compiled CSS style rules.
  */
 export function compileInterpolatedStyles(interpolatedStyles, props) {
 	const compiledStyles = interpolatedStyles.map((a) =>

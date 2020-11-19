@@ -1,7 +1,11 @@
 import { is } from '@wp-g2/utils';
 
-import { breakpoints } from './utils';
+import { responsive } from './responsive';
 
+/**
+ * @param {CSS} compile
+ * @return {CSS}
+ */
 export function createCSS(compile) {
 	/**
 	 * An enhanced version of the compiler's (Emotion) CSS function.
@@ -18,20 +22,20 @@ export function createCSS(compile) {
 	 * 		width: [100, 200, 500]
 	 * })
 	 * ```
-	 * @param {string|object|Array<string|object>} args
-	 * @returns {string} The compiled CSS className associated with the styles.
+	 * @param {Parameters<CSS>} args
+	 * @returns {ReturnType<CSS>} The compiled CSS className associated with the styles.
 	 */
-	return function css(...args) {
+	function css(...args) {
 		const [arg, ...rest] = args;
 
-		if (is.plainObject(arg)) {
+		if (is.objectInterpolation(arg)) {
 			return compile(responsive(arg));
 		}
 
 		if (is.array(arg)) {
 			for (let i = 0, len = arg.length; i < len; i++) {
 				const n = arg[i];
-				if (is.plainObject(n)) {
+				if (is.objectInterpolation(n)) {
 					arg[i] = responsive(n);
 				}
 			}
@@ -39,45 +43,10 @@ export function createCSS(compile) {
 		}
 
 		return compile(...args);
-	};
-}
-
-// https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224
-/**
- * A utility function that generates responsive styles if the value is an array.
- *
- * @param {object} styles A styles object
- * @returns {object} An adjusted styles object with responsive styles (if applicable).
- */
-export const responsive = (styles = {}) => {
-	const next = {};
-	const mediaQueries = [
-		null,
-		...breakpoints.map((n) => `@media screen and (min-width: ${n})`),
-	];
-
-	for (const k in styles) {
-		const key = k;
-		let value = styles[key];
-
-		if (value === null) continue;
-
-		if (!is.array(value)) {
-			next[key] = value;
-			continue;
-		}
-
-		for (let i = 0; i < value.slice(0, mediaQueries.length).length; i++) {
-			const media = mediaQueries[i];
-			if (!media) {
-				next[key] = value[i];
-				continue;
-			}
-			next[media] = next[media] || {};
-			if (value[i] === null) continue;
-			next[media][key] = value[i];
-		}
 	}
 
-	return next;
-};
+	// @ts-ignore No amount of zhuzhing will convince TypeScript that a function with the parameters and return type for CSS is in fact the same type
+	return css;
+}
+
+/** @typedef {import('create-emotion').Emotion['css']} CSS */

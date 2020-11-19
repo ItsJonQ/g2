@@ -1,6 +1,8 @@
+import { is } from '@wp-g2/utils';
 import createEmotion from 'create-emotion';
 import mitt from 'mitt';
 
+import { RootStore } from '../cssCustomProperties';
 import { createCSS } from './createCSS';
 import { createPlugins } from './plugins';
 import { breakpoints } from './utils';
@@ -8,10 +10,31 @@ import { breakpoints } from './utils';
 const defaultOptions = {
 	key: 'css',
 	specificityLevel: 7,
-	rootStore: {},
+	rootStore: new RootStore(),
 };
 
-export function createCompiler(options = {}) {
+/** @typedef {import('create-emotion').Emotion} Emotion */
+
+/**
+ * @typedef {Emotion & {
+	breakpoints: typeof breakpoints,
+	__events: import('mitt').Emitter,
+	}} Compiler
+ */
+
+/**
+ * @typedef {import('create-emotion').Options & {
+	key?: string,
+	specificityLevel?: number,
+	rootStore: import('../cssCustomProperties').RootStore
+}} CreateCompilerOptions
+ */
+
+/**
+ * @param {CreateCompilerOptions} options
+ * @return {Compiler}
+ */
+export function createCompiler(options) {
 	const mergedOptions = {
 		...defaultOptions,
 		...options,
@@ -19,15 +42,25 @@ export function createCompiler(options = {}) {
 
 	const { key, rootStore, specificityLevel } = mergedOptions;
 
-	mergedOptions.stylisPlugins = [
-		createPlugins({ key, specificityLevel, rootStore }),
-	];
+	const defaultPlugins = createPlugins({ key, specificityLevel, rootStore });
 
 	if (options.stylisPlugins) {
-		mergedOptions.stylisPlugins = [
-			...mergedOptions.stylisPlugins,
-			...options.stylisPlugins,
-		];
+		if (is.array(options.stylisPlugins)) {
+			mergedOptions.stylisPlugins = [
+				...defaultPlugins,
+				...options.stylisPlugins,
+			];
+		} else if (is.defined(options.stylisPlugins)) {
+			// just a single plugin was passed in, as is allowed by emotion
+			mergedOptions.stylisPlugins = [
+				...defaultPlugins,
+				options.stylisPlugins,
+			];
+		} else {
+			mergedOptions.stylisPlugins = defaultPlugins;
+		}
+	} else {
+		mergedOptions.stylisPlugins = defaultPlugins;
 	}
 
 	/**
@@ -36,12 +69,19 @@ export function createCompiler(options = {}) {
 	 *
 	 * We're also able to provide createEmotion with our custom Stylis plugins.
 	 */
-	const customEmotionInstance = createEmotion(mergedOptions);
-
-	/**
-	 * Exposing the breakpoints used in the internal Style system.
-	 */
-	customEmotionInstance.breakpoints = breakpoints;
+	const customEmotionInstance = {
+		...createEmotion(mergedOptions),
+		/**
+		 * Exposing the breakpoints used in the internal Style system.
+		 */
+		breakpoints,
+		/**
+		 * An internal custom event emitter (pub/sub) for Emotion.
+		 * This is currently used in <StyleFrameProvider /> from `@wp-g2/styled`
+		 * to subscribe to and sync style injection.
+		 */
+		__events: mitt(),
+	};
 
 	/**
 	 * Enhance the base css function from Emotion to add features like responsive
@@ -51,18 +91,13 @@ export function createCompiler(options = {}) {
 	customEmotionInstance.css = createCSS(css);
 
 	/**
-	 * An internal custom event emitter (pub/sub) for Emotion.
-	 * This is currently used in <StyleFrameProvider /> from `@wp-g2/styled`
-	 * to subscribe to and sync style injection.
-	 */
-	customEmotionInstance.__events = mitt();
-
-	/**
 	 * Modify the sheet.insert method to emit a `sheet.insert` event
 	 * within the internal custom event emitter.
 	 */
 	const __insert = customEmotionInstance.sheet.insert;
-	customEmotionInstance.sheet.insert = (...args) => {
+	customEmotionInstance.sheet.insert = (
+		/** @type {[rule: string]} */ ...args
+	) => {
 		__insert.apply(customEmotionInstance.sheet, [...args]);
 		customEmotionInstance.__events.emit('sheet.insert', ...args);
 	};

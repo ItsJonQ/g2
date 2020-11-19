@@ -26,10 +26,17 @@ class StyleQuery {
 	}
 }
 
+/**
+ * @return {string}
+ */
 StyleQuery.prototype.getSelector = function () {
 	return `[${COMPONENT_NAMESPACE}="${this[COMPONENT_NAMESPACE]}"]`;
 };
 
+/**
+ * @param {Parameters<css>} args
+ * @return {string}
+ */
 StyleQuery.prototype.css = function (...args) {
 	const compiledStyles = css(...args);
 

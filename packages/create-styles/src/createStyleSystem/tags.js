@@ -1,6 +1,7 @@
 /**
  * A collection of React HTMLElements.
  */
+/** @type {(keyof JSX.IntrinsicElements)[]} */
 export const tags = [
 	'a',
 	'abbr',
@@ -66,7 +67,6 @@ export const tags = [
 	'main',
 	'map',
 	'mark',
-	'marquee',
 	'menu',
 	'menuitem',
 	'meta',

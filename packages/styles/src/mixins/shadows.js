@@ -3,6 +3,10 @@ import { colorize, is } from '@wp-g2/utils';
 import { css } from '../style-system';
 import { toPx } from './units';
 
+/**
+ * @param {number} value
+ * @return {string}
+ */
 export function getBoxShadow(value) {
 	const boxShadowColor = `rgba(0 ,0, 0, ${value / 20})`;
 	const boxShadow = `0 ${toPx(value)} ${toPx(value * 2)} 0
@@ -11,6 +15,10 @@ export function getBoxShadow(value) {
 	return boxShadow;
 }
 
+/**
+ * @param {number | { color: string, radius: number, x: number, y: number }} value
+ * @return {string}
+ */
 export function getShadow(value) {
 	if (is.number(value)) {
 		return css({ boxShadow: getBoxShadow(value) });

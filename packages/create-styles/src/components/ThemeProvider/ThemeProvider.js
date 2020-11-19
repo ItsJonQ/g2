@@ -18,14 +18,19 @@ import {
 
 /**
  * @typedef ThemeProviderProps
- * @property {any} children Children to render.
- * @property {function} injectGlobal Globally injects styles on initial render (provided by an Emotion instance).
+ * @property {import('react').ReactNode} children Children to render.
+ * @property {import('../../createCompiler').Compiler} compiler The style compiler.
+ * @property {string} className Optional className to render on the provider.
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {import('../../createStyleSystem/generateTheme').GenerateThemeResults} globalStyles Styles to apply globally.
  * @property {boolean} isDark Determines if dark-mode styles should be rendered.
  * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
  * @property {boolean} isReducedMotion Determines if reduced-motion-mode styles should be rendered.
  * @property {boolean} isHighContrast Determines if high-contrast-mode styles should be rendered.
- * @property {object} theme Custom theme properties.
+ * @property {Record<string, string>} theme Custom theme properties.
+ * @property {Record<string, string>} darkTheme Custom dark theme properties.
+ * @property {Record<string, string>} highContrastTheme Custom high contrast theme properties.
+ * @property {Record<string, string>} darkHighContrastTheme Custom dark & high contrast theme properties.
  */
 
 /**
@@ -44,7 +49,7 @@ import {
  * ```
  *
  * @param {ThemeProviderProps} props Props for the ThemeProvider.
- * @returns {React.Component} Children content wrapped with the <ThemeProvider />.
+ * @returns {JSX.Element} Children content wrapped with the <ThemeProvider />.
  */
 function ThemeProvider(
 	{

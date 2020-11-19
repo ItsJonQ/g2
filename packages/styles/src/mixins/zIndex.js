@@ -9,6 +9,13 @@ const Z_INDEX_REGISTRY = {
 	ControlFocus: 1,
 };
 
+/** @typedef {keyof Z_INDEX_REGISTRY} ZIndexNamespace */
+
+/**
+ *
+ * @param {ZIndexNamespace} namespace
+ * @param {number} fallback
+ */
 export function getZIndex(namespace, fallback) {
 	// Accounts for direct z-index value (number) usage.
 	if (is.number(namespace)) {

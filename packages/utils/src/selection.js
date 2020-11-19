@@ -15,10 +15,9 @@ export function clearSelection() {
 			// Firefox
 			selection.removeAllRanges();
 		}
-		// @ts-ignore
+		// @ts-ignore IE specific property
 	} else if (document.selection) {
-		// IE?
-		// @ts-ignore
+		// @ts-ignore IE specific property
 		document.selection.empty();
 	}
 }

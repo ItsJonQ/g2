@@ -56,9 +56,7 @@ function __getComputedBackgroundColor(color) {
 	// Grab the style
 	const computedColor = window.getComputedStyle(el).background;
 	// Reset
-	// @todo(saramarcondes) should this be assigning `''` rather than `null` to reset?
-	// @ts-ignore
-	el.style.background = null;
+	el.style.background = '';
 
 	return computedColor || '';
 }
@@ -85,9 +83,7 @@ function __getComputedColor(color) {
 	// Grab the style
 	const computedColor = window.getComputedStyle(el).color;
 	// Reset
-	// @todo(saramarcondes) ditto...
-	// @ts-ignore
-	el.style.color = null;
+	el.style.color = '';
 
 	return computedColor || '';
 }

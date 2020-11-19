@@ -1,4 +1,4 @@
-import { getScaleStyles, responsive } from '../css';
+import { getScaleStyles } from '../css';
 import { space } from '../mixins/space';
 
 describe('scales', () => {
@@ -14,9 +14,13 @@ describe('scales', () => {
 
 		for (const key in numberValues) {
 			const value = numberValues[key];
-			expect(getScaleStyles({ [key]: value })).toEqual({
-				[key]: space(value),
-			});
+			const assert = {};
+			const result = {};
+
+			assert[key] = value;
+			result[key] = space(value);
+
+			expect(getScaleStyles(assert)).toEqual(result);
 		}
 
 		const stringValues = {
@@ -30,37 +34,13 @@ describe('scales', () => {
 
 		for (const key in stringValues) {
 			const value = stringValues[key];
-			expect(getScaleStyles({ [key]: value })).toEqual({
-				[key]: '6px',
-			});
+			const assert = {};
+			const result = {};
+
+			assert[key] = value;
+			result[key] = space(value);
+
+			expect(getScaleStyles(assert)).toEqual(result);
 		}
-	});
-
-	test('should transform responsive space values', () => {
-		const styles = {
-			gap: [5, null, 10],
-		};
-
-		expect(responsive(styles)).toEqual({
-			'@media screen and (min-width: 40em)': {},
-			'@media screen and (min-width: 52em)': {
-				gap: space(10),
-			},
-			gap: space(5),
-		});
-	});
-
-	test('should transform responsive space string values', () => {
-		const styles = {
-			gap: ['5px', null, '10em'],
-		};
-
-		expect(responsive(styles)).toEqual({
-			'@media screen and (min-width: 40em)': {},
-			'@media screen and (min-width: 52em)': {
-				gap: '10em',
-			},
-			gap: '5px',
-		});
 	});
 });
