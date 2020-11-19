@@ -1,5 +1,7 @@
 import { is } from '@wp-g2/utils';
 
+/** @typedef {number | string} FlowValue */
+
 /**
  * Combines CSS values. Useful for complex shorthand values,
  * functions (e.g. calc()), and mixed string/JS values.
@@ -35,11 +37,11 @@ import { is } from '@wp-g2/utils';
  * )
  * ```
  *
- * @param {(string|string[])[]} args CSS values to combine.
+ * @param {(FlowValue | FlowValue[])[]} args CSS values to combine.
  * @returns {string} The combined CSS string value.
  */
 export function flow(...args) {
-	/** @type {string[]} */
+	/** @type {(string | number)[]} */
 	const results = [];
 
 	for (const arg of args) {
