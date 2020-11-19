@@ -17,6 +17,11 @@ export const ThemeProviderContext = createContext({
 
 export const useThemeProviderContext = () => useContext(ThemeProviderContext);
 
+/**
+ * Combines parent ThemeProvider context values with the current ThemeProvider
+ * context values. This mechanism allows for "mode" settings to cascade
+ * throughout the React component render tree.
+ */
 export function useThemeProviderContextBridge(currentContextState = {}) {
 	const parentThemeProviderContextState = useThemeProviderContext();
 	const nextContextState = useRef({
@@ -32,6 +37,9 @@ export function useThemeProviderContextBridge(currentContextState = {}) {
 	return nextContextState;
 }
 
+/**
+ * Creates HTML attributes corresponding to ThemeProvider modes.
+ */
 export function useThemeProviderModeHtmlAttributes(currentContextState = {}) {
 	const {
 		isColorBlind,
