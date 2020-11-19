@@ -39,6 +39,7 @@ import { is } from '@wp-g2/utils';
  * @returns {string} The combined CSS string value.
  */
 export function flow(...args) {
+	/** @type {string[]} */
 	const results = [];
 
 	for (const arg of args) {
