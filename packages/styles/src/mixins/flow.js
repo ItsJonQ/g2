@@ -35,7 +35,7 @@ import { is } from '@wp-g2/utils';
  * )
  * ```
  *
- * @param {...string|Array<string>} args CSS values to combine.
+ * @param {(string|string[])[]} args CSS values to combine.
  * @returns {string} The combined CSS string value.
  */
 export function flow(...args) {
