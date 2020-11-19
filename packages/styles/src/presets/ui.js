@@ -6,6 +6,7 @@ import { browsers } from './browsers';
 import { color } from './colors';
 import { css } from './css';
 import { frame } from './dimensions';
+import { flow } from './flow';
 import { font } from './fonts';
 import { createToken, get, getTokenValue } from './get';
 import { active, focus, hover } from './interactions';
@@ -31,6 +32,7 @@ export const ui = {
 	color,
 	createToken,
 	css,
+	flow,
 	focus,
 	font,
 	frame,
