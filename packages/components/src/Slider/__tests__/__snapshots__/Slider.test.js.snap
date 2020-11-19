@@ -133,12 +133,12 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -288,12 +288,12 @@ exports[`props should render max 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -443,12 +443,12 @@ exports[`props should render min 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -600,12 +600,12 @@ exports[`props should render size 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -755,12 +755,12 @@ exports[`props should render unit value 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
@@ -910,12 +910,12 @@ exports[`props should render value 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc( 2px + 1px ) #007cba;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
