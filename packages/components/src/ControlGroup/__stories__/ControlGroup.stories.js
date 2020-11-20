@@ -1,7 +1,15 @@
 import React from 'react';
 
-import { Button, Select, TextInput } from '../../index';
-import { ControlGroup, ControlGroupItem } from '../index';
+import {
+	Button,
+	Container,
+	ListGroup,
+	ListGroupHeader,
+	ListGroups,
+	Select,
+	TextInput,
+} from '../../index';
+import { ControlGroup } from '../index';
 
 export default {
 	component: ControlGroup,
@@ -10,20 +18,27 @@ export default {
 
 export const _default = () => {
 	return (
-		<ControlGroup templateColumns="1fr 100px">
-			<ControlGroupItem>
-				<Select options={[{ label: 'Ms.', value: 'ms' }]} />
-			</ControlGroupItem>
-			<ControlGroupItem isBlock>
-				<TextInput placeholder="First name" />
-			</ControlGroupItem>
-			<ControlGroupItem isBlock>
-				<TextInput placeholder="Last name" />
-			</ControlGroupItem>
-
-			<ControlGroupItem>
-				<Button variant="primary">Submit</Button>
-			</ControlGroupItem>
-		</ControlGroup>
+		<Container>
+			<ListGroups spacing={20}>
+				<ListGroup>
+					<ListGroupHeader>Grid</ListGroupHeader>
+					<ControlGroup templateColumns="auto 1fr 1fr auto">
+						<Select options={[{ label: 'Ms.', value: 'ms' }]} />
+						<TextInput placeholder="First name" />
+						<TextInput placeholder="Last name" />
+						<Button variant="primary">Submit</Button>
+					</ControlGroup>
+				</ListGroup>
+				<ListGroup>
+					<ListGroupHeader>Flex</ListGroupHeader>
+					<ControlGroup>
+						<Select options={[{ label: 'Ms.', value: 'ms' }]} />
+						<TextInput placeholder="First name" />
+						<TextInput placeholder="Last name" />
+						<Button variant="primary">Submit</Button>
+					</ControlGroup>
+				</ListGroup>
+			</ListGroups>
+		</Container>
 	);
 };

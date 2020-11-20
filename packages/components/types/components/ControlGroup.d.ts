@@ -1,13 +1,27 @@
-import { PolymorphicComponent } from './_shared';
-import { FlexProps, FlexItemProps } from './Flex';
+import { PolymorphicComponent, CSS } from './_shared';
+import { FlexProps } from './Flex';
 
-export declare type ControlGroupProps = FlexProps & {
+export declare type ControlGroupProps = Pick<FlexProps, 'direction'> & {
 	/**
-	 * Renders inner control elements as (CSS) block elements.
+	 * Adjust the layout (width) of content using CSS grid (`grid-template-columns`).
 	 *
-	 * @default false
+	 * @example
+	 * ```jsx
+	 * import { Button, ControlGroup, Select, TextInput } from `@wp-g2/components`
+	 * import { ui } from `@wp-g2/styles`
+	 *
+	 * function Example() {
+	 *   return (
+	 *     <ControlGroup templateColumns="auto 1fr auto">
+	 *       <Select />
+	 *       <TextInput placeholder="First name" />
+	 *       <Button variant="primary" />
+	 *     </ControlGroup>
+	 *   );
+	 * }
+	 * ```
 	 */
-	isItemBlock?: boolean;
+	templateColumns?: CSS['gridTemplateColumns'];
 };
 
 /**
@@ -15,28 +29,17 @@ export declare type ControlGroupProps = FlexProps & {
  *
  * @example
  * ```jsx
- * <ControlGroup>
- * 	<TextInput />
- * 	<Select />
- * 	<Button variant="primary" />
- * </ControlGroup>
+ * import { Button, ControlGroup, TextInput } from `@wp-g2/components`
+ * import { ui } from `@wp-g2/styles`
+ *
+ * function Example() {
+ *   return (
+ *     <ControlGroup>
+ *       <TextInput placeholder="First name" />
+ *       <Button variant="primary" />
+ *     </ControlGroup>
+ *   );
+ * }
  * ```
  */
 export declare const ControlGroup: PolymorphicComponent<ControlGroupProps>;
-
-export declare type ControlGroupItemProps = FlexItemProps & {};
-
-/**
- * `ControlGroupItem` is a layout component that wraps control elements (e.g. `TextInput` or `Select`) used within `ControlGroup`.
- *
- * @example
- * ```jsx
- * <ControlGroup>
- * 	<ControlGroupItem>
- * 		<Text>...</Text>
- * 	</ControlGroupItem>
- * 	<Select />
- * </ControlGroup>
- * ```
- */
-export declare const ControlGroupItem: PolymorphicComponent<ControlGroupItemProps>;

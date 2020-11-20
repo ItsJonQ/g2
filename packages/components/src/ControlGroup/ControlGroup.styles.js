@@ -23,3 +23,18 @@ export const lastRow = css`
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 `;
+
+export const itemFocus = css`
+	> * {
+		&:focus-within {
+			z-index: 1;
+		}
+	}
+`;
+
+export const itemGrid = css`
+	> * + *:not(marquee) {
+		margin-left: -1px;
+		width: calc(100% + 1px);
+	}
+`;
