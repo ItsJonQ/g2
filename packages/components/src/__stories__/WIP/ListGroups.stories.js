@@ -1,4 +1,4 @@
-import { connect, ContextSystemProvider, ns } from '@wp-g2/context';
+import { contextConnect, ContextSystemProvider, ns } from '@wp-g2/context';
 import { FiChrome, FiCompass } from '@wp-g2/icons';
 import { styled, ThemeProvider, ui } from '@wp-g2/styles';
 import { useLocalState } from '@wp-g2/utils';
@@ -129,7 +129,7 @@ const BaseGridItem = ({ children, ...props }) => {
 	);
 };
 
-const GridItem = connect(BaseGridItem, 'GridItem');
+const GridItem = contextConnect(BaseGridItem, 'GridItem');
 
 const ExampleCluster = ({ horizontal = true }) => {
 	return (

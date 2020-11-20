@@ -7,9 +7,10 @@ import { createStore } from '@wp-g2/utils';
  *
  * Ideally, you would interface with this store using the useReducedMotion hook.
  */
+/** @type {import('zustand').UseStore<{ isReducedMotion: boolean, setIsReducedMotion: (next: boolean) => void }>} */
 export const useReducedMotionState = createStore((setState) => ({
 	isReducedMotion: false,
-	setIsReducedMotion: (next) => {
+	setIsReducedMotion: (/** @type {boolean} */ next) => {
 		setState(() => ({ isReducedMotion: next }));
 	},
 }));
@@ -18,7 +19,7 @@ export const useReducedMotionState = createStore((setState) => ({
  * A hook that can subscribe to and set preferences for reducedMotion within
  * the entire Style system.
  *
- * @returns [boolean, function] The state and setState for reduced motion.
+ * @returns {[boolean, (reducedMotion: boolean) => void]} The state and setState for reduced motion.
  */
 export function useReducedMotion() {
 	const state = useReducedMotionState((state) => state.isReducedMotion);

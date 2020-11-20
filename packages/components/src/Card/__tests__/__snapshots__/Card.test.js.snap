@@ -123,6 +123,11 @@ exports[`props should render CardInnerBody 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -224,6 +229,11 @@ exports[`props should render CardInnerBody 1`] = `
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4:first-of-type {
@@ -328,6 +338,11 @@ exports[`props should render CardInnerBody 1`] = `
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -773,6 +788,11 @@ exports[`props should render correctly 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -923,6 +943,11 @@ exports[`props should render correctly 1`] = `
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>* {
+  min-width: 0;
+  min-height: 0;
+}
+
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4:first-of-type {
   border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
@@ -1025,6 +1050,11 @@ exports[`props should render correctly 1`] = `
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
+  min-width: 0;
+  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -1467,7 +1497,7 @@ exports[`props should render elevation 1`] = `
   will-change: box-shadow;
   border-radius: inherit;
   bottom: 0;
-  box-shadow: 0 truepx 2px 0 rgba(0 ,0,0,0.05);
+  box-shadow: 0 true 2px 0 rgba(0 ,0,0,0.05);
   opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
@@ -1635,7 +1665,7 @@ exports[`props should render no elevation 1`] = `
   will-change: box-shadow;
   border-radius: inherit;
   bottom: 0;
-  box-shadow: 0 falsepx 0px 0 rgba(0 ,0,0,0);
+  box-shadow: 0 false 0px 0 rgba(0 ,0,0,0);
   opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;

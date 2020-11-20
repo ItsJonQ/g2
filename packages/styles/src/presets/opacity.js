@@ -1,5 +1,8 @@
 import { css } from '../style-system';
 
+/**
+ * @param {import('create-emotion').ObjectInterpolation['opacity']} opacity
+ */
 export function opacity(opacity) {
 	return css({ opacity });
 }

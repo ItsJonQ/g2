@@ -5,9 +5,16 @@ import { hasVariable } from './utils';
  * Stores CSS config variables that are expected to be added to :root.
  * This is used for CSS variable fallback handling for IE 11.
  */
-class RootStore {
+export class RootStore {
+	/**
+	 * @type {Record<string, string>}
+	 */
 	state = {};
 
+	/**
+	 *
+	 * @param {Record<string, string>} initialState
+	 */
 	constructor(initialState = {}) {
 		this.setState(initialState);
 	}
@@ -21,14 +28,14 @@ class RootStore {
 
 	/**
 	 * Retrieves the current state.
-	 * @returns {object} The state.
+	 * @returns {Record<string, string>} The state.
 	 */
 	getState = () => this.state;
 
 	/**
 	 * Sets the state.
-	 * @param {object} next The next state to merge into the current state.
-	 * @returns {object} The state.
+	 * @param {Record<string, string>} next The next state to merge into the current state.
+	 * @returns {Record<string, string>} The state.
 	 */
 	setState = (next = {}) => {
 		this._updateState(next);
@@ -39,7 +46,7 @@ class RootStore {
 
 	/**
 	 * Updates the state.
-	 * @param {object} next The next state to merge into the current state.
+	 * @param {Record<string, string>} next The next state to merge into the current state.
 	 */
 	_updateState = (next = {}) => {
 		this.state = Object.freeze({ ...this.state, ...next });
@@ -49,11 +56,12 @@ class RootStore {
 	 * Resolves potential CSS variables that may exist within the state's values.
 	 */
 	_resolveVariablesInStateValue = () => {
+		/** @type {Record<string, string>} */
 		const next = {};
 		/**
 		 * Filter out entries so that we only target values with CSS variables.
 		 */
-		const entries = Object.entries(this.state).filter(([k, v]) =>
+		const entries = Object.entries(this.state).filter(([_, v]) =>
 			hasVariable(v),
 		);
 
@@ -83,8 +91,8 @@ class RootStore {
  * This store contains a collection of CSS variables that is expected to
  * be added to the :root {} node.
  *
- * @param {object} initialState The initial config.
- * @returns {object} The RootStore instance.
+ * @param {Record<string, string>} initialState The initial config.
+ * @returns {RootStore} The RootStore instance.
  */
 export function createRootStore(initialState = {}) {
 	const store = new RootStore(initialState);

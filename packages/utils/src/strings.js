@@ -1,17 +1,14 @@
-export { default as kebabCase } from 'lodash.kebabcase';
-export { default as capitalize } from 'lodash.capitalize';
-export { default as upperFirst } from 'lodash.upperfirst';
+import _ from 'lodash';
+
+export const kebabCase = _.kebabCase;
+export const capitalize = _.capitalize;
+export const upperFirst = _.upperFirst;
+export const repeat = _.repeat;
 
 /**
- * Repeats a character x amount of times.
- * @param {string} char Character to repeat.
- * @param {number} n Number of times to repeat.
- * @return {string} String with repeated characters
+ * @param {string} str
+ * @return {string}
  */
-export function repeat(char, n, a) {
-	return (a = []).join((a[n - 1] = char));
-}
-
 export function camel2hyphen(str) {
 	return str
 		.replace(/[A-Z]/g, function (match) {

@@ -5,12 +5,16 @@ import { sanitizeParens, VAR_REG_EXP } from './utils';
  *
  * @param {string} declaration A CSS declaration rule to parse.
  * @param {object} rootStore A store for CSS root variables.
- * @returns {Array<string, string | undefined>} [prop, value] parsed from the declaration.
+ * @returns {[string, string | undefined]} [prop, value] parsed from the declaration.
  */
 export function getPropValue(declaration, rootStore) {
 	let hasFallbackValue = false;
 	// Start be separating (and preparing) the prop and value from the declaration.
-	let [prop, value] = declaration.split(/:/);
+	/** @type {string} */
+	let prop;
+	/** @type {string | undefined} */
+	let value;
+	[prop, value] = declaration.split(/:/);
 	prop = prop.trim();
 
 	// Searching for uses of var().

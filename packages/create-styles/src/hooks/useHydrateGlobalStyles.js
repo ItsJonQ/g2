@@ -4,8 +4,8 @@ const __INTERNAL_STATE__ = {
 
 /**
  * @typedef UseHydrateGlobalStylesProps
- * @property {object} injectGlobal injectGlobal function from the compiler (Emotion).
- * @property {object} globalStyles Global style values to be injected.
+ * @property {import('create-emotion').Emotion['injectGlobal']} injectGlobal injectGlobal function from the compiler (Emotion).
+ * @property {import('../createStyleSystem/generateTheme').GenerateThemeResults} globalStyles Global style values to be injected.
  */
 
 /**
@@ -20,7 +20,7 @@ const __INTERNAL_STATE__ = {
  *
  * @param {UseHydrateGlobalStylesProps} props Props for the hook.
  */
-export function useHydrateGlobalStyles({ injectGlobal, globalStyles = {} }) {
+export function useHydrateGlobalStyles({ globalStyles, injectGlobal }) {
 	if (__INTERNAL_STATE__.didInjectGlobal) return;
 
 	const {

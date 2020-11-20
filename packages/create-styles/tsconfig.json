@@ -6,5 +6,5 @@
 		"noImplicitAny": false
 	},
 	"include": ["src/**/*"],
-	"references": [{ "path": "../create-styles" }, { "path": "../utils" }]
+	"references": [{ "path": "../utils" }]
 }

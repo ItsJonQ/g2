@@ -1,7 +1,4 @@
-export * from './ContextSystemProvider';
-export * from './connect';
-export * from './useContextSystem';
+export * from './context-system-provider';
+export * from './context-connect';
+export * from './use-context-system';
 export * from './utils';
-
-// Deprecated. use ContextSystemProvider instead.
-export * from './ComponentsProvider';

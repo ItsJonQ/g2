@@ -41,7 +41,7 @@ const TestableComponents = Object.entries(Components).filter(([key, value]) => {
 	// A quick test to see if the value is a React component.
 	return (
 		value.$$typeof &&
-		value.__styleSystemContextKey__ &&
+		value.__contextSystemKey__ &&
 		!key.includes('Context') &&
 		!excludeList.includes(key)
 	);

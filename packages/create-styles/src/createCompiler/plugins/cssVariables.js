@@ -1,3 +1,4 @@
+import { createRootStore } from '../../cssCustomProperties';
 import { transformContent } from '../../cssCustomProperties/transformContent';
 import { hasVariable } from '../../cssCustomProperties/utils';
 import { STYLIS_CONTEXTS, STYLIS_TOKENS } from './utils';
@@ -15,6 +16,7 @@ let isNativeSupport =
  */
 
 const defaultOptions = {
+	rootStore: createRootStore(),
 	skipSupportedBrowsers: true,
 };
 
@@ -34,14 +36,14 @@ function stylisPluginCssVariables(
 	};
 
 	const plugin = (
-		context,
-		content,
-		selectors,
-		parents,
-		line,
-		column,
-		length,
-		type,
+		/** @type {number} */ context,
+		/** @type {string} */ content,
+		/** @type {unknown} */ _,
+		/** @type {unknown} */ __,
+		/** @type {unknown} */ ___,
+		/** @type {unknown} */ ____,
+		/** @type {unknown} */ _____,
+		/** @type {number} */ type,
 	) => {
 		// Skip generating CSS variable fallbacks for supported browsers
 		if (skipSupportedBrowsers && isNativeSupport) return;

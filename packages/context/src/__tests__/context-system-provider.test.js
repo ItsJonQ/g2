@@ -2,13 +2,16 @@ import { render } from '@testing-library/react';
 import { View } from '@wp-g2/styles';
 import React from 'react';
 
-import { connect } from '../connect';
-import { ContextSystemProvider } from '../ContextSystemProvider';
+import { contextConnect } from '../context-connect';
+import { ContextSystemProvider } from '../context-system-provider';
+import { useContextSystem } from '../use-context-system';
 
 describe('props', () => {
 	test('should render correctly', () => {
-		const Olaf = (props) => <View {...props} />;
-		const ConnectedOlaf = connect(Olaf, 'Olaf');
+		const Olaf = (props, ref) => (
+			<View {...useContextSystem(props, 'Olaf')} ref={ref} />
+		);
+		const ConnectedOlaf = contextConnect(Olaf, 'Olaf');
 		const { container } = render(
 			<ContextSystemProvider>
 				<ConnectedOlaf />
@@ -19,8 +22,16 @@ describe('props', () => {
 	});
 
 	test('should render context props', () => {
-		const Olaf = ({ quote, ...props }) => <View {...props}>{quote}</View>;
-		const ConnectedOlaf = connect(Olaf, 'Olaf');
+		const Olaf = (props, ref) => {
+			const { quote, ...otherProps } = useContextSystem(props, 'Olaf');
+			return (
+				<View {...otherProps} ref={ref}>
+					{quote}
+				</View>
+			);
+		};
+
+		const ConnectedOlaf = contextConnect(Olaf, 'Olaf');
 
 		const contextValue = {
 			Olaf: {
@@ -39,8 +50,16 @@ describe('props', () => {
 	});
 
 	test('should render css props', () => {
-		const Olaf = ({ quote, ...props }) => <View {...props}>{quote}</View>;
-		const ConnectedOlaf = connect(Olaf, 'Olaf');
+		const Olaf = (props, ref) => {
+			const { quote, ...otherProps } = useContextSystem(props, 'Olaf');
+			return (
+				<View {...otherProps} ref={ref}>
+					{quote}
+				</View>
+			);
+		};
+
+		const ConnectedOlaf = contextConnect(Olaf, 'Olaf');
 
 		const contextValue = {
 			Olaf: {
@@ -67,8 +86,16 @@ describe('props', () => {
 	});
 
 	test('should render css props + provided css', () => {
-		const Olaf = ({ quote, ...props }) => <View {...props}>{quote}</View>;
-		const ConnectedOlaf = connect(Olaf, 'Olaf');
+		const Olaf = (props, ref) => {
+			const { quote, ...otherProps } = useContextSystem(props, 'Olaf');
+			return (
+				<View {...otherProps} ref={ref}>
+					{quote}
+				</View>
+			);
+		};
+
+		const ConnectedOlaf = contextConnect(Olaf, 'Olaf');
 
 		const contextValue = {
 			Olaf: {
@@ -98,8 +125,16 @@ describe('props', () => {
 	});
 
 	test('should render _override props', () => {
-		const Olaf = ({ quote, ...props }) => <View {...props}>{quote}</View>;
-		const ConnectedOlaf = connect(Olaf, 'Olaf');
+		const Olaf = (props, ref) => {
+			const { quote, ...otherProps } = useContextSystem(props, 'Olaf');
+			return (
+				<View {...otherProps} ref={ref}>
+					{quote}
+				</View>
+			);
+		};
+
+		const ConnectedOlaf = contextConnect(Olaf, 'Olaf');
 
 		const contextValue = {
 			Olaf: {

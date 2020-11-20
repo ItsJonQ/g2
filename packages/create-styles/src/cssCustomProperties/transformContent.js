@@ -8,7 +8,7 @@ import { hasVariable, isCustomProperty } from './utils';
  *
  * @param {string} declaration A CSS declaration rule to parse.
  * @param {object} rootStore A store for CSS root variables.
- * @returns {?string} A CSS declaration rule with a fallback (if applicable).
+ * @returns {string | undefined} A CSS declaration rule with a fallback (if applicable).
  */
 export function getFallbackDeclaration(declaration, rootStore) {
 	if (!hasVariable(declaration) && !isCustomProperty(declaration))
@@ -25,7 +25,7 @@ export function getFallbackDeclaration(declaration, rootStore) {
  *
  * @param {string} content Stylis content to parse.
  * @param {object} rootStore A store for CSS root variables.
- * @return {string} The transformed content with CSS variable fallbacks.
+ * @return {string | undefined} The transformed content with CSS variable fallbacks.
  */
 export function baseTransformContent(content, rootStore) {
 	/*
@@ -45,7 +45,10 @@ export function baseTransformContent(content, rootStore) {
 	 * With the declaration collection, we'll iterate over every declaration
 	 * to provide fallbacks (if applicable.)
 	 */
-	const parsed = declarations.reduce((styles, declaration) => {
+	const parsed = declarations.reduce((
+		/** @type {string[]} */ styles,
+		/** @type {string} */ declaration,
+	) => {
 		// If no CSS variable is used, we return the declaration untouched.
 		if (!hasVariable(declaration)) {
 			return [...styles, declaration];

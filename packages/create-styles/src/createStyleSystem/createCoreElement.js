@@ -10,11 +10,51 @@ const shouldForwardProp = isPropValid;
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
+/** @typedef {import('create-emotion').Emotion} Emotion */
+/** @typedef {Emotion['cx'] | Emotion['css'] | string} InterpolatedCSS */
+
+/**
+ * @template {keyof JSX.IntrinsicElements | import('react').JSXElementConstructor<any>} E
+ * @typedef {JSX.LibraryManagedAttributes<E, import('react').ComponentPropsWithRef<E>>} PropsOf
+ */
+
+/**
+ * @template {import('react').ElementType} E
+ * @typedef ViewOwnProps
+ * @property {E | string} [as]
+ * @property {InterpolatedCSS} [css]
+ * @property {InterpolatedCSS} [__css]
+ * @property {Emotion['cx']} [cx]
+ */
+
+/**
+ * @template {import('react').ElementType} E
+ * @typedef {ViewOwnProps<E> & Omit<PropsOf<E>, keyof ViewOwnProps<import('react').ElementType<any>>>} ViewProps
+ */
+
+/**
+ * @template {import('react').ElementType} E
+ * @template P
+ * @typedef {P & ViewProps<E>} PolymorphicComponentProps
+ */
+
+/**
+ * @template P
+ * @template {import('react').ElementType} D
+ * @typedef {(props: PolymorphicComponentProps<D, P>) => JSX.Element | null} PolymorphicComponent
+ */
+
+/**
+ * @template P
+ * @template {import('react').ElementType} D
+ * @typedef {(styles: any) => (props: PolymorphicComponentProps<D, P>) => JSX.Element} CreatePolymorphicComponent
+ */
+
 /**
  * @typedef CreateCoreElementOptions
- * @property {object} baseStyles The baseStyles from the Style system.
- * @property {function} injectGlobal The injectGlobal from the Style system's compiler.
- * @property {object} globalStyles The globalStyles from the Style system.
+ * @property {import('create-emotion').ObjectInterpolation<any>} baseStyles The baseStyles from the Style system.
+ * @property {import('../createCompiler').Compiler} compiler The injectGlobal from the Style system's compiler.
+ * @property {import('./generateTheme').GenerateThemeResults} globalStyles The globalStyles from the Style system.
  */
 
 /**
@@ -35,14 +75,12 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * const alwaysBlueDiv = createCoreElement('div', { baseStyles: { background: 'blue' }})
  * ```
  *
- * @param {string|React.Component} tagName The HTMLElement/React.Component to connect with the Style system.
+ * @template {keyof JSX.IntrinsicElements} TTagName
+ * @param {TTagName} tagName The HTMLElement/React.Component to connect with the Style system.
  * @param {CreateCoreElementOptions} options Options to custom coreElement styles.
- * @returns {React.Component} The Style system wrapped HTMLElement/React.Component.
+ * @returns {PolymorphicComponent<{}, TTagName>} The Style system wrapped HTMLElement/React.Component.
  */
-export const createCoreElement = (
-	tagName = 'div',
-	options = defaultOptions,
-) => {
+export const createCoreElement = (tagName, options) => {
 	const { baseStyles, compiler, globalStyles } = {
 		...defaultOptions,
 		...options,
@@ -71,6 +109,10 @@ export const createCoreElement = (
 
 	const compiledBaseStyles = css(baseStyles);
 
+	/**
+	 * @param {any} props
+	 * @param {import('react').Ref<any>} ref
+	 */
 	const render = (
 		{
 			// Internal props
@@ -125,6 +167,7 @@ export const createCoreElement = (
 		 */
 		const shouldFilterProps = is.string(element);
 
+		/** @type {Record<string, any>} */
 		let newProps = {};
 
 		for (let key in props) {

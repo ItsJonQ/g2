@@ -19,7 +19,7 @@ export function isCustomProperty(declaration) {
  * @returns {boolean} Result of whether declaration contains a CSS variable.
  */
 export function hasVariable(declaration) {
-	return declaration && declaration?.includes?.('var(');
+	return declaration?.includes?.('var(');
 }
 
 /**

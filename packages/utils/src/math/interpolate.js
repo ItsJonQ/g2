@@ -23,6 +23,7 @@ export function findRange(input, inputRange) {
  * @param {number} [inputMax=1]
  * @param {number} [outputMin=0]
  * @param {number} [outputMax=1]
+ * @return {number}
  */
 export function baseInterpolate(
 	input = 0,
@@ -74,7 +75,7 @@ export function interpolate(
 	if (isColor(outputRange1) && isColor(outputRange2)) {
 		const mixAmount = interpolate(input, inputRange, [0, 100]);
 		return colorize
-			.mix(outputRange1, outputRange2, mixAmount)
+			.mix(outputRange1.toString(), outputRange2.toString(), mixAmount)
 			.toRgbString();
 	}
 

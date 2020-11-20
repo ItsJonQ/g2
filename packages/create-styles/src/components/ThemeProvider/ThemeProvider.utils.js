@@ -9,7 +9,7 @@ import { useReducedMotion } from '../../hooks';
  * @typedef UseColorBlindModeProps
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
  * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
- * @property {RefObject} ref React ref.
+ * @property {import('react').RefObject<HTMLElement | undefined>} ref React ref.
  */
 
 /**
@@ -38,7 +38,7 @@ export function useColorBlindMode({ isColorBlind, isGlobal = true, ref }) {
  * @typedef UseDarkModeProps
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
  * @property {boolean} isDark Determines if dark-mode styles should be rendered.
- * @property {RefObject} ref React ref.
+ * @property {import('react').RefObject<HTMLElement | undefined>} ref React ref.
  */
 
 /**
@@ -67,7 +67,7 @@ export function useDarkMode({ isDark, isGlobal = true, ref }) {
  * @typedef UseHighContrastMode
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
  * @property {boolean} isHighContrast Determines if high-contrast styles should be rendered.
- * @property {RefObject} ref React ref.
+ * @property {import('react').RefObject<HTMLElement | undefined>} ref React ref.
  */
 
 /**
@@ -96,7 +96,7 @@ export function useHighContrastMode({ isGlobal = true, isHighContrast, ref }) {
  * @typedef UseReducedMotionProps
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
  * @property {boolean} isReducedMotion Determines if reduced-motion styles should be rendered.
- * @property {RefObject} ref React ref.
+ * @property {import('react').RefObject<HTMLElement | undefined>} ref React ref.
  */
 
 /**
@@ -108,7 +108,7 @@ export function useReducedMotionMode({
 	isReducedMotion,
 	ref,
 }) {
-	const [, setIsReducedMotion] = useReducedMotion(isReducedMotion);
+	const [, setIsReducedMotion] = useReducedMotion();
 
 	useEffect(() => {
 		if (isGlobal) {
@@ -133,11 +133,15 @@ export function useReducedMotionMode({
 	}, [isGlobal, isReducedMotion, ref]);
 }
 
+/**
+ * @param {string} initialTheme
+ * @returns {import('zustand').UseStore<{ theme: string, setTheme: (next: string) => void }>}
+ */
 function createThemeStore(initialTheme = '') {
 	return createStore((set) => ({
 		theme: initialTheme,
-		setTheme: (next) => {
-			set((prev) => {
+		setTheme: (/** @type {string} */ next) => {
+			set(() => {
 				return { theme: next };
 			});
 		},
@@ -150,13 +154,16 @@ export function useThemeStylesStore() {
 
 /**
  * @typedef UseThemeStyles
+ * @property {import('create-emotion').Emotion['injectGlobal']} injectGlobal
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
- * @property {object} theme Custom theme values.
+ * @property {Record<string, string>} theme Custom theme values.
+ * @property {string} selector
  */
 
 /**
  * Hook that sets the Style system's theme.
  * @param {UseThemeStyles} props Props for the hook.
+ * @return {string}
  */
 export function useThemeStyles({
 	injectGlobal,
@@ -170,6 +177,7 @@ export function useThemeStyles({
 	/**
 	 * Used to track/compare changes for theme prop changes.
 	 */
+	/** @type {import('react').MutableRefObject<object | undefined>} */
 	const themeRef = useRef();
 
 	/**
@@ -245,7 +253,9 @@ function getStyleNode() {
 	node.setAttribute('data-g2-theme-provider', 'theme');
 
 	const headNode = document.querySelector('head');
-	headNode.appendChild(node);
+	if (headNode) {
+		headNode.appendChild(node);
+	}
 
 	return node;
 }

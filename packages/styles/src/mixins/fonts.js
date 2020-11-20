@@ -13,6 +13,11 @@ const PRESET_FONT_SIZES = {
 	title: 20,
 };
 
+/**
+ *
+ * @param {number | 'body' | 'caption' | 'footnote' | 'largeTitle' | 'subheadline' | 'title'} size
+ * @return {string}
+ */
 export function getFontSize(size = BASE_FONT_SIZE) {
 	if (PRESET_FONT_SIZES[size]) {
 		return getFontSize(PRESET_FONT_SIZES[size]);
