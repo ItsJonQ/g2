@@ -1,69 +1,41 @@
-import { contextConnect, hasNamespace, useContextSystem } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
-import { getValidChildren } from '@wp-g2/utils';
+import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
 import { Flex } from '../Flex';
-import { ControlGroupContext } from './ControlGroup.Context';
-import * as styles from './ControlGroup.styles';
-import ControlGroupItem from './ControlGroupItem';
+import { Grid } from '../Grid';
+import { useControlGroup } from './useControlGroup';
 
 function ControlGroup(props, forwardedRef) {
 	const {
 		children,
 		direction = 'row',
-		isItemBlock = false,
+		templateColumns,
 		...otherProps
-	} = useContextSystem(props, 'ControlGroup');
+	} = useControlGroup(props);
 
-	const validChildren = getValidChildren(children);
-	const isVertical = direction === 'column';
+	const isGrid = !!templateColumns;
 
-	const clonedChildren = validChildren.map((child, index) => {
-		const isFirst = index === 0;
-		const isLast = index + 1 === validChildren.length;
-		const isOnly = isFirst && isLast;
-		const isMiddle = !isFirst && !isLast;
-
-		const _key = child.key || index;
-
-		const contextStyles = cx(
-			isFirst ? (isVertical ? styles.firstRow : styles.first) : undefined,
-			isMiddle && styles.middle,
-			isLast ? (isVertical ? styles.lastRow : styles.last) : undefined,
-		);
-
-		const contextProps = {
-			isFirst,
-			isLast,
-			isMiddle,
-			isOnly,
-			isVertical,
-			styles: contextStyles,
-		};
-
-		const _isSubComponent = hasNamespace(child, [
-			'ControlGroupItem',
-			'FlexItem',
-			'FlexBlock',
-		]);
-
-		const _child = _isSubComponent ? (
-			child
-		) : (
-			<ControlGroupItem isBlock={isItemBlock}>{child}</ControlGroupItem>
-		);
-
+	if (isGrid) {
 		return (
-			<ControlGroupContext.Provider key={_key} value={contextProps}>
-				{_child}
-			</ControlGroupContext.Provider>
+			<Grid
+				gap={0}
+				templateColumns={templateColumns}
+				{...otherProps}
+				ref={forwardedRef}
+			>
+				{children}
+			</Grid>
 		);
-	});
+	}
 
 	return (
-		<Flex direction={direction} gap={0} {...otherProps} ref={forwardedRef}>
-			{clonedChildren}
+		<Flex
+			direction={direction}
+			gap={`-1px`}
+			{...otherProps}
+			ref={forwardedRef}
+		>
+			{children}
 		</Flex>
 	);
 }
