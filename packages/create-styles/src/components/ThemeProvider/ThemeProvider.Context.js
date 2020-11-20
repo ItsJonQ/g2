@@ -54,7 +54,7 @@ export function useThemeProviderModeHtmlAttributes(currentContextState = {}) {
 		htmlAttrs[DARK_MODE_ATTR_PROP] = 'dark';
 	}
 	if (isHighContrast) {
-		htmlAttrs[HIGH_CONTRAST_MODE_MODE_ATTR_PROP] = true;
+		htmlAttrs[HIGH_CONTRAST_MODE_ATTR_PROP] = true;
 	}
 	if (isColorBlind) {
 		htmlAttrs[COLOR_BLIND_MODE_ATTR_PROP] = true;
