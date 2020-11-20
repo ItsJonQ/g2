@@ -4,7 +4,7 @@ import { createContext, useContext, useRef } from 'react';
 import {
 	COLOR_BLIND_MODE_ATTR_PROP,
 	DARK_MODE_ATTR_PROP,
-	HIGH_CONTRAST_MODE_MODE_ATTR_PROP,
+	HIGH_CONTRAST_MODE_ATTR_PROP,
 	REDUCED_MOTION_MODE_ATTR_PROP,
 } from '../../createStyleSystem/constants';
 
