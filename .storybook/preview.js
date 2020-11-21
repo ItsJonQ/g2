@@ -135,6 +135,10 @@ const Themer = React.memo(
 											label="Base (Compact)"
 										/>
 										<option
+											value="bigSur"
+											label="Big Sur"
+										/>
+										<option
 											value="blueberry"
 											label="Blueberry"
 										/>
