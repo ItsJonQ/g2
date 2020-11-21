@@ -37,7 +37,7 @@ exports[`props should render checked 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -87,12 +87,12 @@ exports[`props should render checked 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -142,17 +142,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;
@@ -229,7 +229,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -279,12 +279,12 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -334,17 +334,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;
@@ -420,7 +420,7 @@ exports[`props should render defaultValue 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -470,12 +470,12 @@ exports[`props should render defaultValue 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -525,17 +525,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;
@@ -614,7 +614,7 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -664,12 +664,12 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -719,17 +719,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;
@@ -808,7 +808,7 @@ exports[`props should render label 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -858,12 +858,12 @@ exports[`props should render label 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -913,17 +913,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;
@@ -1005,7 +1005,7 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1055,12 +1055,12 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -1116,17 +1116,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;
@@ -1134,7 +1134,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   right: calc(calc(var(--wp-g2-switch-padding-offset) * 2) * 0.25);
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(calc(30px * 0.8) - calc(6px * 2));
   width: calc(var(--wp-g2-control-height-small) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
@@ -1207,7 +1207,7 @@ exports[`props should render type 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1257,12 +1257,12 @@ exports[`props should render type 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   background: #007cba;
   background: var(--wp-g2-switch-backdrop-background-color-active);
   border-color: #007cba;
@@ -1312,17 +1312,17 @@ input:checked~.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emoti
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+*:active>.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   width: calc(30px - calc(6px * 2));
   width: calc(var(--wp-g2-control-height) - calc(var(--wp-g2-switch-padding-offset) * 2));
 }
 
-input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   background: #ffffff;
   background: var(--wp-g2-switch-toggle-background-color-active);
   left: initial;

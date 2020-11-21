@@ -35,32 +35,32 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   outline: none;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
   border: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
   height: 2px;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
@@ -68,12 +68,12 @@ exports[`props should render correctly 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -95,14 +95,14 @@ exports[`props should render correctly 1`] = `
   transition: box-shadow ease var(--wp-g2-transition-duration-fast);
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -125,19 +125,19 @@ exports[`props should render correctly 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
@@ -190,32 +190,32 @@ exports[`props should render max 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   outline: none;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
   border: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
   height: 2px;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
@@ -223,12 +223,12 @@ exports[`props should render max 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -250,14 +250,14 @@ exports[`props should render max 1`] = `
   transition: box-shadow ease var(--wp-g2-transition-duration-fast);
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -280,19 +280,19 @@ exports[`props should render max 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
@@ -345,32 +345,32 @@ exports[`props should render min 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   outline: none;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
   border: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
   height: 2px;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
@@ -378,12 +378,12 @@ exports[`props should render min 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -405,14 +405,14 @@ exports[`props should render min 1`] = `
   transition: box-shadow ease var(--wp-g2-transition-duration-fast);
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -435,19 +435,19 @@ exports[`props should render min 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
@@ -502,32 +502,32 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   outline: none;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
   border: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
   height: 2px;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
@@ -535,12 +535,12 @@ exports[`props should render size 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -562,14 +562,14 @@ exports[`props should render size 1`] = `
   transition: box-shadow ease var(--wp-g2-transition-duration-fast);
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -592,19 +592,19 @@ exports[`props should render size 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
@@ -657,32 +657,32 @@ exports[`props should render unit value 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   outline: none;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
   border: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
   height: 2px;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
@@ -690,12 +690,12 @@ exports[`props should render unit value 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -717,14 +717,14 @@ exports[`props should render unit value 1`] = `
   transition: box-shadow ease var(--wp-g2-transition-duration-fast);
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -747,19 +747,19 @@ exports[`props should render unit value 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
@@ -812,32 +812,32 @@ exports[`props should render value 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus {
   outline: none;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-focus-outer {
   border: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
   height: 2px;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-runnable-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: linear-gradient( to right, #007cba calc(var(--progress)), rgba(0, 0, 0, 0.1) calc(var(--progress)) );
   background: linear-gradient( to right, var(--wp-g2-color-admin) calc(var(--progress)), var(--wp-g2-control-background-dim-color) calc(var(--progress)) );
   border-radius: 2px;
@@ -845,12 +845,12 @@ exports[`props should render value 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-track {
   background: rgba(0, 0, 0, 0.1);
   background: var(--wp-g2-control-background-dim-color);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -872,14 +872,14 @@ exports[`props should render value 1`] = `
   transition: box-shadow ease var(--wp-g2-transition-duration-fast);
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -902,19 +902,19 @@ exports[`props should render value 1`] = `
   will-change: transform;
 }
 
-*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
+*:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
   background: #8a8b8c;
   background: var(--wp-g2-color-text-muted);
   border-color: #8a8b8c;
   border-color: var(--wp-g2-color-text-muted);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus::-moz-range-thumb {
   box-shadow: 0 0 0 2px #ffffff,0 0 0 calc(2px + 1px) #007cba;
   box-shadow: var(--wp-g2-control-pseudo-box-shadow-focus-small);
 }

@@ -40,12 +40,12 @@ exports[`props should render color 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-[data-system-ui-color-blind-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-color-blind-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   background-image: linear-gradient(45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1), linear-gradient(-45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1)));
   background-image: linear-gradient(45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10)),linear-gradient(-45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10));
   background-size: 10px 10px;
@@ -84,7 +84,7 @@ exports[`props should render color 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -144,7 +144,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -182,7 +182,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -239,7 +239,7 @@ exports[`props should render display 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -277,7 +277,7 @@ exports[`props should render display 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -337,7 +337,7 @@ exports[`props should render href 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -375,7 +375,7 @@ exports[`props should render href 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -436,7 +436,7 @@ exports[`props should render onRemove 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -474,7 +474,7 @@ exports[`props should render onRemove 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -534,7 +534,7 @@ exports[`props should render removeButtonText 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -572,7 +572,7 @@ exports[`props should render removeButtonText 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -596,7 +596,7 @@ exports[`props should render removeButtonText 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -703,64 +703,64 @@ exports[`props should render removeButtonText 1`] = `
   color: currentColor;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>*+*:not(marquee) {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>* {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[disabled]:not([aria-busy='true']),
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[disabled]:not([aria-busy='true']),
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-icon='true'] {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
   display: block;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-tertiary-border-color-hover);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-focused='true'] {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color-focus);
   border-color: #007cba;
@@ -769,7 +769,7 @@ exports[`props should render removeButtonText 1`] = `
   color: var(--wp-g2-button-tertiary-text-color-focus);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-tertiary-color-active);
   border-color: #007cba;
@@ -778,43 +778,43 @@ exports[`props should render removeButtonText 1`] = `
   color: var(--wp-g2-button-tertiary-text-color-active);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true'] {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true'] {
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:hover,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:hover,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:focus {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:active {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-icon='true'] {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3[data-icon='true'] {
   min-width: calc(30px * 0.67);
   min-width: var(--wp-g2-control-height-x-small);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:active,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
   border-color: transparent;
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
   border-color: #007cba;
   border-color: var(--wp-g2-button-primary-border-color-focus);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,
+.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:focus {
   color: currentColor;
 }
 
@@ -843,12 +843,12 @@ exports[`props should render removeButtonText 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -883,12 +883,12 @@ exports[`props should render removeButtonText 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 svg {
+.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 svg {
   display: block;
 }
 
@@ -928,7 +928,7 @@ exports[`props should render removeButtonText 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
