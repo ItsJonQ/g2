@@ -3,7 +3,7 @@ import { upperFirst } from '@wp-g2/utils';
 import { get } from '../core';
 import { css } from '../style-system';
 import { SUPPORTED_COLORS } from '../theme';
-import { colorBlindMode } from './colorBlindMode';
+import { colorBlindMode } from './color-blind-mode';
 
 /**
  *
