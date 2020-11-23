@@ -25,6 +25,7 @@
     "@wp-g2/substate": "^0.0.107",
     "@wp-g2/utils": "^0.0.107",
     "csstype": "^3.0.3",
+    "downshift": "^5.4.0",
     "framer-motion": "^2.1.0",
     "highlight-words-core": "^1.2.2",
     "history": "^4.9.0",

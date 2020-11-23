@@ -14,11 +14,16 @@ function PopoverContent(props, forwardedRef) {
 		className,
 		elevation = 5,
 		maxWidth = 360,
+		unstable_removeFromDOMOnHide = true,
 		...otherProps
 	} = useContextSystem(props, 'PopoverContent');
 
 	const { label, popover } = usePopoverContext();
 	const classes = cx(styles.PopoverContent, css({ maxWidth }), className);
+
+	const showContent = unstable_removeFromDOMOnHide
+		? popover.visible || popover.animating
+		: true;
 
 	return (
 		<ReakitPopover
@@ -28,7 +33,7 @@ function PopoverContent(props, forwardedRef) {
 			{...otherProps}
 			{...popover}
 		>
-			{(popover.visible || popover.animating) && (
+			{showContent && (
 				<Card elevation={elevation} ref={forwardedRef}>
 					{children}
 				</Card>
