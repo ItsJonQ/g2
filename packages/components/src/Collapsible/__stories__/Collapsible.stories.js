@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '../../Button';
+import { Button } from '../../button';
 import { Placeholder } from '../../Placeholder';
 import { Surface } from '../../Surface';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../index';

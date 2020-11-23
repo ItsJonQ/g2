@@ -4,7 +4,7 @@ import { cx, ui } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 import { ControlGroup } from '../ControlGroup';
 import * as styles from './Stepper.styles';
 

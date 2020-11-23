@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Flex } from '../Flex';
 import { Spinner } from '../Spinner';
-import * as styles from './Button.styles';
+import * as styles from './button-styles';
 
 export function LoadingOverlay({ isLoading = false }) {
 	if (!isLoading) return null;

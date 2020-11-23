@@ -1,5 +1,5 @@
 import { CSS, PolymorphicComponent, PopperProps } from './_shared';
-import { ButtonProps } from './Button';
+import { ButtonProps } from './button';
 import { MenuProps, MenuItemProps } from './Menu';
 
 export declare type DropdownProps = PopperProps & {

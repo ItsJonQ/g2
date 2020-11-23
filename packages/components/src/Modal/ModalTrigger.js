@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 import { DialogDisclosure } from 'reakit';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 import { useModalContext } from './Modal.Context';
 
 function ModalTrigger(props, forwardedRef) {

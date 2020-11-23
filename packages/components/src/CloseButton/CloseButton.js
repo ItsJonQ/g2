@@ -2,7 +2,7 @@ import { close } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 
 function CloseButton(props, forwardedRef) {
 	const { ...otherProps } = useContextSystem(props, 'CloseButton');

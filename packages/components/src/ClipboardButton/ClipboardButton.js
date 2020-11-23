@@ -3,7 +3,7 @@ import { useClipboard } from '@wp-g2/utils';
 import { noop } from 'lodash';
 import React, { useCallback, useEffect, useRef } from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 
 function ClipboardButton(props, forwardedRef) {
 	const {

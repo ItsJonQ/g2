@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 import { MenuButton } from 'reakit';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 import { useDropdownContext } from './Dropdown.Context';
 
 function DropdownTrigger(props, forwardedRef) {

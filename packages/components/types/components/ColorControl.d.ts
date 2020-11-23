@@ -1,5 +1,5 @@
 import { PolymorphicComponent } from './_shared';
-import { ButtonProps } from './Button';
+import { ButtonProps } from './button';
 import { ColorCircleProps } from './ColorCircle';
 
 export declare type ColorControlProps = ButtonProps &

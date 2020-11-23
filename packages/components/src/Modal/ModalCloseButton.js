@@ -2,7 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 import { useModalContext } from './Modal.Context';
 import { ModalCloseButtonView } from './Modal.styles';
 

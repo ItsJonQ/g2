@@ -3,7 +3,7 @@ import { FiX } from '@wp-g2/icons';
 import { isValueEmpty, noop } from '@wp-g2/utils';
 import React from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 import { View } from '../View';
 
 function SearchInputClearButton({ onClick = noop, value, ...otherProps }) {

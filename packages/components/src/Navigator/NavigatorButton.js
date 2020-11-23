@@ -1,7 +1,7 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { Button } from '../Button';
+import { Button } from '../button';
 import { useHistory } from './Router';
 
 function NavigatorButton(props, forwardedRef) {
