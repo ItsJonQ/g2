@@ -4,12 +4,13 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Switch.styles';
 
-function SwitchBackdrop({ error, isFocused = false, ...props }) {
-	const __css = cx(
+function SwitchBackdrop({ className, error, isFocused = false, ...props }) {
+	const classes = cx(
 		styles.Backdrop,
 		isFocused && styles.focus,
 		error && styles.backdropError,
 		error && isFocused && styles.backdropErrorFocus,
+		className,
 	);
 
 	return (
@@ -17,7 +18,7 @@ function SwitchBackdrop({ error, isFocused = false, ...props }) {
 			aria-hidden={true}
 			{...ui.$('SwitchBackdrop')}
 			{...props}
-			cx={__css}
+			className={classes}
 		/>
 	);
 }

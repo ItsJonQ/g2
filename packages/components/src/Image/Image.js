@@ -6,10 +6,14 @@ import { AspectRatio } from '../AspectRatio';
 import { ImageView } from './Image.styles';
 
 function Image(props, forwardedRef) {
-	const { aspectRatio, fit, height, width, ...otherProps } = useContextSystem(
-		props,
-		'Image',
-	);
+	const {
+		aspectRatio,
+		className,
+		fit,
+		height,
+		width,
+		...otherProps
+	} = useContextSystem(props, 'Image');
 	const sx = {};
 	const aspectFit = aspectRatio && !fit ? 'cover' : fit;
 	const preferredFit = aspectRatio ? aspectFit : fit;
@@ -25,15 +29,17 @@ function Image(props, forwardedRef) {
 
 	sx.fitSize = css({ height: '100%', width: '100%' });
 
-	const __css = cx(sx.base, sx.fit, fit && sx.fitSize);
+	const classes = cx(sx.base, sx.fit, fit && sx.fitSize, className);
 
 	const imageProps = {
 		...otherProps,
-		__css,
+		className: classes,
 		height,
 		width,
 		ref: forwardedRef,
 	};
+
+	console.table(imageProps);
 
 	if (aspectRatio) {
 		return (

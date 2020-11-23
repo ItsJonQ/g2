@@ -6,17 +6,22 @@ import * as styles from './List.styles';
 const { ListView } = styles;
 
 function List(props, forwardedRef) {
-	const { type = 'unordered', ...otherProps } = useContextSystem(
+	const { className, type = 'unordered', ...otherProps } = useContextSystem(
 		props,
 		'List',
 	);
 	const isNumber = type === 'ordered';
 	const asProp = isNumber ? 'ol' : 'ul';
 
-	const __css = cx(isNumber && styles.ordered);
+	const classes = cx(isNumber && styles.ordered, className);
 
 	return (
-		<ListView as={asProp} {...otherProps} cx={__css} ref={forwardedRef} />
+		<ListView
+			as={asProp}
+			{...otherProps}
+			className={classes}
+			ref={forwardedRef}
+		/>
 	);
 }
 

@@ -181,19 +181,7 @@ export function createStyledComponents({ compiler, core }) {
 		} = options;
 
 		return (...interpolatedProps) => {
-			const render = (
-				{
-					/**
-					 * Supporting the ability to render a styled component as anything else.
-					 */
-					__css,
-					as: asProp,
-					className,
-					cx: cxProp, // Deprecated. Use __css instead.
-					...props
-				},
-				ref,
-			) => {
+			const render = ({ as: asProp, className, ...props }, ref) => {
 				// Combine all of te props together.
 				const mergedProps = { ...extraProps, ...props, ref };
 
@@ -205,12 +193,7 @@ export function createStyledComponents({ compiler, core }) {
 					props,
 				);
 
-				const classes = cx(
-					css(...interpolatedStyles),
-					__css && css(__css),
-					cxProp && css(cxProp),
-					className,
-				);
+				const classes = cx(css(...interpolatedStyles), className);
 
 				return (
 					<Box as={baseTag} {...mergedProps} className={classes} />

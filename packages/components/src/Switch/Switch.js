@@ -13,7 +13,6 @@ function Switch(props, forwardedRef) {
 	const {
 		Component,
 		checked,
-		className,
 		disabled,
 		error,
 		id,
@@ -28,7 +27,7 @@ function Switch(props, forwardedRef) {
 	} = useSwitch(props);
 
 	return (
-		<View as="label" {...otherProps} cx={className} htmlFor={id}>
+		<View as="label" {...otherProps} htmlFor={id}>
 			<Component
 				{...otherProps}
 				checked={checked}

@@ -65,9 +65,6 @@ export function useContextSystem(props, namespace) {
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider
 		contextCSS && css(contextCSS),
-		// Resolve custom CSS from props
-		initialMergedProps.cx,
-		initialMergedProps.__css && css(initialMergedProps.__css),
 		initialMergedProps.css && css(initialMergedProps.css),
 		memoizedGetStyledClassNameFromKey(key),
 		props.className,
@@ -80,9 +77,9 @@ export function useContextSystem(props, namespace) {
 
 	for (const k in initialMergedProps) {
 		/**
-		 * Omitting CSS props.
+		 * Omitting CSS prop.
 		 */
-		if (!['cx', 'css', '__css'].includes(k)) {
+		if (k !== 'css') {
 			finalComponentProps[k] = initialMergedProps[k];
 		}
 	}

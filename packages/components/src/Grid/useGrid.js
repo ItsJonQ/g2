@@ -31,7 +31,7 @@ export function useGrid(props) {
 	const classes = useMemo(() => {
 		const alignmentProps = getAlignmentProps(alignment);
 
-		const __css = css({
+		const classes = css({
 			alignItems: align,
 			display: isInline ? 'inline-grid' : 'grid',
 			gap,
@@ -44,7 +44,7 @@ export function useGrid(props) {
 			...alignmentProps,
 		});
 
-		return cx(__css, className);
+		return cx(classes, className);
 	}, [
 		align,
 		alignment,

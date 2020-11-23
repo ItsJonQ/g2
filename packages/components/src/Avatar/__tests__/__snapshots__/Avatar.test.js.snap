@@ -266,12 +266,25 @@ exports[`props should render with a border 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: cover;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
+  border-radius: 999999px;
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
+  opacity: 0;
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-duration: var(--wp-g2-transition-duration);
+  transition-duration: 200ms;
+  transition-duration: var(--wp-g2-transition-duration);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 @media (prefers-reduced-motion) {
@@ -335,7 +348,7 @@ exports[`props should render with a border 1`] = `
   >
     <img
       alt="Elsa Oldenburg"
-      class="emotion-4"
+      class="components-image wp-components-image emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
@@ -490,12 +503,25 @@ exports[`props should render with a custom color 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: cover;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
+  border-radius: 999999px;
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
+  opacity: 0;
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-duration: var(--wp-g2-transition-duration);
+  transition-duration: 200ms;
+  transition-duration: var(--wp-g2-transition-duration);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 @media (prefers-reduced-motion) {
@@ -559,7 +585,7 @@ exports[`props should render with a custom color 1`] = `
   >
     <img
       alt="Elsa Oldenburg"
-      class="emotion-4"
+      class="components-image wp-components-image emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
@@ -1089,12 +1115,25 @@ exports[`props should render with an alternate shape 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: cover;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
+  opacity: 0;
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-duration: var(--wp-g2-transition-duration);
+  transition-duration: 200ms;
+  transition-duration: var(--wp-g2-transition-duration);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 @media (prefers-reduced-motion) {
@@ -1158,7 +1197,7 @@ exports[`props should render with an alternate shape 1`] = `
   >
     <img
       alt="Elsa Oldenburg"
-      class="emotion-4"
+      class="components-image wp-components-image emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
@@ -1437,12 +1476,25 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: cover;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
+  border-radius: 999999px;
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
+  opacity: 1;
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-duration: var(--wp-g2-transition-duration);
+  transition-duration: 200ms;
+  transition-duration: var(--wp-g2-transition-duration);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 @media (prefers-reduced-motion) {
@@ -1506,7 +1558,7 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   >
     <img
       alt="Elsa Oldenburg"
-      class="emotion-4"
+      class="components-image wp-components-image emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
@@ -1660,12 +1712,25 @@ exports[`props should render with image src 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: cover;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
+  border-radius: 999999px;
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
+  opacity: 0;
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-duration: var(--wp-g2-transition-duration);
+  transition-duration: 200ms;
+  transition-duration: var(--wp-g2-transition-duration);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 @media (prefers-reduced-motion) {
@@ -1729,7 +1794,7 @@ exports[`props should render with image src 1`] = `
   >
     <img
       alt="Elsa Oldenburg"
-      class="emotion-4"
+      class="components-image wp-components-image emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"

@@ -11,6 +11,7 @@ const { BadgeView } = styles;
 function Badge(props, forwardedRef) {
 	const {
 		children,
+		className,
 		color: colorProp = 'standard',
 		display = 'inline-flex',
 		isBold = false,
@@ -26,16 +27,17 @@ function Badge(props, forwardedRef) {
 		display,
 	});
 
-	const __css = cx(
+	const classes = cx(
 		sx.base,
 		truncate && styles.truncate,
 		styles.getBackground({ color: badgeColor, isBold }),
 		styles.getBackgroundText({ color: badgeColor, isBold }),
 		isRounded && styles.rounded,
+		className,
 	);
 
 	return (
-		<BadgeView {...otherProps} cx={__css} ref={forwardedRef}>
+		<BadgeView {...otherProps} className={classes} ref={forwardedRef}>
 			<Text
 				className={styles.text}
 				color="currentColor"

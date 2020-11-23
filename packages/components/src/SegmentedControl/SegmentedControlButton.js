@@ -13,6 +13,7 @@ const {
 } = styles;
 
 function SegmentedControlButton({
+	className,
 	forwardedRef,
 	isBlock = false,
 	label,
@@ -22,16 +23,19 @@ function SegmentedControlButton({
 }) {
 	const isActive = props.state === value;
 
+	const labelViewClasses = cx(isBlock && styles.labelBlock);
+	const classes = cx(isActive && styles.buttonActive, className);
+
 	return (
 		<LabelView
-			cx={[isBlock && styles.labelBlock]}
+			className={labelViewClasses}
 			data-active={isActive}
 			{...ui.$('SegmentedControlButtonLabel')}
 		>
 			<Radio
 				{...props}
 				as={ButtonView}
-				cx={[isActive && styles.buttonActive]}
+				className={classes}
 				data-value={value}
 				ref={forwardedRef}
 				value={value}
@@ -52,12 +56,12 @@ function SegmentedControlButton({
 }
 
 const SegmentedControlSeparator = React.memo(({ isActive }) => {
-	const __css = cx(isActive && styles.separatorActive);
+	const classes = cx(isActive && styles.separatorActive);
 
 	return (
 		<SeparatorView
 			aria-hidden
-			cx={__css}
+			className={classes}
 			{...ui.$('SegmentedControlButtonSeparator')}
 		/>
 	);

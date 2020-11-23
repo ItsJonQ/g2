@@ -19,6 +19,7 @@ function Avatar(props, forwardedRef) {
 		shape = 'circle',
 		size: sizeProp = 'medium',
 		src,
+		className,
 		...otherProps
 	} = useContextSystem(props, 'Avatar');
 
@@ -44,10 +45,15 @@ function Avatar(props, forwardedRef) {
 		borderRadius,
 	});
 
-	const __css = cx(sx.base, sx.borderRadius, border && styles.border);
+	const classes = cx(
+		sx.base,
+		sx.borderRadius,
+		border && styles.border,
+		className,
+	);
 
 	return (
-		<AvatarView {...otherProps} cx={__css} ref={forwardedRef}>
+		<AvatarView {...otherProps} className={classes} ref={forwardedRef}>
 			{shouldRenderInitials && (
 				<View css={css([ui.position.absolute, ui.alignment.center])}>
 					<Initials

@@ -13,25 +13,24 @@ const { AlertView } = styles;
 function Alert(props, forwardedRef) {
 	const {
 		children,
+		className,
 		isDismissable: isDismissableProp = false,
 		onDismiss,
 		status = 'default',
 		title,
 		...otherProps
 	} = useContextSystem(props, 'Alert');
-	const __css = cx(styles[status]);
 	const isDismissable = isDismissableProp || !!onDismiss;
+	const classes = cx(styles[status], className);
+	const viewClasses = cx([isDismissable && styles.contentWithDismiss]);
 
 	return (
 		<Animated auto>
-			<AlertView {...otherProps} cx={__css} ref={forwardedRef}>
+			<AlertView {...otherProps} className={classes} ref={forwardedRef}>
 				<Flex align="flex-start">
 					<FlexBlock>
 						<AlertTitle title={title} />
-						<View
-							{...ui.$('AlertContent')}
-							cx={[isDismissable && styles.contentWithDismiss]}
-						>
+						<View {...ui.$('AlertContent')} className={viewClasses}>
 							{children}
 						</View>
 					</FlexBlock>
