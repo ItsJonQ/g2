@@ -3,7 +3,7 @@ import { css, cx } from '@wp-g2/styles';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { useFlex } from '../Flex';
-import * as styles from './BaseButton.styles';
+import * as styles from './base-button-styles';
 
 export function useBaseButton(props) {
 	const {

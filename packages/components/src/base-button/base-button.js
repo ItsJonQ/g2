@@ -9,9 +9,9 @@ import { useButtonGroupContext } from '../ButtonGroup';
 import { Elevation } from '../Elevation';
 import { FlexItem } from '../Flex';
 import { Icon } from '../Icon';
-import * as styles from './BaseButton.styles';
-import LoadingOverlay from './BaseButtonLoadingOverlay';
-import { useBaseButton } from './useBaseButton';
+import LoadingOverlay from './base-button-loading-overlay';
+import * as styles from './base-button-styles';
+import { useBaseButton } from './use-base-button';
 
 function BaseButton(props, forwardedRef) {
 	const {

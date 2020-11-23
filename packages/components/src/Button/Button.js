@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
-import { BaseButton } from '../BaseButton';
+import { BaseButton } from '../base-button';
 import { useButtonGroupContext } from '../ButtonGroup';
 import * as styles from './Button.styles';
 

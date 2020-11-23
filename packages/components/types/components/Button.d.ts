@@ -1,5 +1,5 @@
 import { PolymorphicComponent } from './_shared';
-import { BaseButtonProps } from './BaseButton';
+import { BaseButtonProps } from './base-button';
 
 export declare type ButtonVariant =
 	| 'primary'

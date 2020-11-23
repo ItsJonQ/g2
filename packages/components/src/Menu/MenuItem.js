@@ -5,7 +5,7 @@ import { is, noop } from '@wp-g2/utils';
 import React, { useCallback, useMemo } from 'react';
 import { MenuItem as ReakitMenuItem } from 'reakit';
 
-import { BaseButton } from '../BaseButton';
+import { BaseButton } from '../base-button';
 import { Flex } from '../Flex';
 import { Icon } from '../Icon';
 import { Text } from '../Text';

@@ -1,6 +1,6 @@
 import { css, ui } from '@wp-g2/styles';
 
-import * as baseButtonStyles from '../BaseButton/BaseButton.styles';
+import * as baseButtonStyles from '../base-button/base-button-styles';
 
 export const Button = css`
 	color: ${ui.get('buttonTextColor')};

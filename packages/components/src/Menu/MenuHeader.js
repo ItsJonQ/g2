@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { pick } from '@wp-g2/utils';
 import React from 'react';
 
-import * as baseButtonStyles from '../BaseButton/BaseButton.styles';
+import * as baseButtonStyles from '../base-button/base-button-styles';
 import { Heading } from '../Heading';
 import * as styles from './Menu.styles';
 
