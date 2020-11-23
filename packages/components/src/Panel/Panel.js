@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { noop, useUniqueId } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
-import { useAccordionContext } from '../Accordion';
+import { useAccordionContext } from '../accordion';
 import { Collapsible } from '../Collapsible';
 import { PanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';

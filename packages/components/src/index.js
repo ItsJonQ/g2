@@ -3,7 +3,7 @@ export * from './ContextSystem';
 export * from './View';
 export * from './Animated';
 // Components
-export * from './Accordion';
+export * from './accordion';
 export * from './Alert';
 export * from './AlignmentMatrixControl';
 export * from './ArrowIndicator';

@@ -1,9 +1,9 @@
 import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { AccordionContext } from './Accordion.Context';
-import { AccordionView } from './Accordion.styles';
-import { useAccordion } from './useAccordion';
+import { AccordionContext } from './accordion-context';
+import { AccordionView } from './accordion-styles';
+import { useAccordion } from './use-accordion';
 
 function Accordion(props, forwardedRef) {
 	const { children, contextValue, ...otherProps } = useAccordion(props);

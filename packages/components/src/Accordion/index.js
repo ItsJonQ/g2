@@ -1,2 +1,2 @@
-export { default as Accordion } from './Accordion';
-export * from './Accordion.Context';
+export { default as Accordion } from './accordion';
+export * from './accordion-context';
