@@ -8,7 +8,7 @@ import { Heading } from '../Heading';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { VStack } from '../VStack';
-import * as styles from './BlankSlate.styles';
+import * as styles from './blank-slate-styles';
 
 function BlankSlate(props, forwardedRef) {
 	const {
