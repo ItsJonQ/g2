@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 
 import { useControlGroupContext } from '../ControlGroup';
 import { useFlex } from '../Flex';
-import * as styles from './BaseField.styles';
+import * as styles from './base-field-styles';
 
 export function useBaseField(props) {
 	const {

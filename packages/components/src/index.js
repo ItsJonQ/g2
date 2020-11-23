@@ -13,7 +13,7 @@ export * from './background';
 export * from './badge';
 export * from './base-button';
 export * from './base-choice';
-export * from './BaseField';
+export * from './base-field';
 export * from './BaseModal';
 export * from './Button';
 export * from './ButtonGroup';

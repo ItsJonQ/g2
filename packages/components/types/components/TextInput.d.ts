@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { PolymorphicComponent, SizeRangeReduced } from './_shared';
-import { BaseFieldProps } from './BaseField';
+import { BaseFieldProps } from './base-field';
 
 type TextInputArrow = 'stepper' | boolean;
 type TextInputFormat = 'number' | 'type';

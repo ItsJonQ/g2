@@ -4,7 +4,7 @@ import {
 	FormElementProps,
 	SizeRangeReduced,
 } from './_shared';
-import { BaseFieldProps } from './BaseField';
+import { BaseFieldProps } from './base-field';
 
 type SelectOption = {
 	id?: string;

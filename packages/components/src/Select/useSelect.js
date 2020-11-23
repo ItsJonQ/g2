@@ -4,7 +4,7 @@ import { is, noop, useControlledState, useResizeAware } from '@wp-g2/utils';
 import React from 'react';
 import { useCallback, useRef, useState } from 'react';
 
-import { useBaseField } from '../BaseField';
+import { useBaseField } from '../base-field';
 import { useFormGroupContextId } from '../FormGroup';
 import * as ScrollableStyles from '../Scrollable/Scrollable.styles';
 import * as TextInputStyles from '../TextInput/TextInput.styles';

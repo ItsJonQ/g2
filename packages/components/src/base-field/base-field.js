@@ -1,5 +1,5 @@
 import { createComponent } from '../utils';
-import { useBaseField } from './useBaseField';
+import { useBaseField } from './use-base-field';
 
 export default createComponent({
 	useHook: useBaseField,

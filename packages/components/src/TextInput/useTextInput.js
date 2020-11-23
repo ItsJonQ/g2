@@ -4,7 +4,7 @@ import { noop } from '@wp-g2/utils';
 import { useCallback, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { useBaseField } from '../BaseField';
+import { useBaseField } from '../base-field';
 import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
 import { useTextInputState } from './useTextInputState';
