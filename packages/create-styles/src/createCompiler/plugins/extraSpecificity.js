@@ -1,6 +1,7 @@
 import { clamp, repeat } from '@wp-g2/utils';
 
 const seen = new WeakSet();
+const seenMatch = new Set();
 
 const defaultOptions = {
 	key: 'wp-css',
@@ -41,6 +42,9 @@ function stylisExtraSpecificityPlugin(options = defaultOptions) {
 			const [match] = item.match(regex) || [];
 
 			if (match) {
+				if (seenMatch.has(match)) return;
+				seenMatch.add(match);
+
 				item = item
 					.replace(new RegExp(match, 'g'), match)
 					.replace(match, repeat(match, repeatLevel));
