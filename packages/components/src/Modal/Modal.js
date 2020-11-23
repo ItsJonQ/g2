@@ -3,7 +3,7 @@ import { css, cx, getBreakpoint, ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { BaseModal } from '../base-modal';
-import { Card } from '../Card';
+import { Card } from '../card';
 
 export { useModalContext } from './Modal.Context';
 

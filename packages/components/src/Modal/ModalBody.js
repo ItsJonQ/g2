@@ -1,7 +1,7 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { CardBody } from '../Card';
+import { CardBody } from '../card';
 
 const ModalBody = (props, forwardedRef) => {
 	const otherProps = useContextSystem(props, 'ModalBody');

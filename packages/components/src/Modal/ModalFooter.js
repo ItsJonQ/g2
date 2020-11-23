@@ -1,7 +1,7 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { CardFooter } from '../Card';
+import { CardFooter } from '../card';
 
 function ModalFooter(props, forwardedRef) {
 	const {

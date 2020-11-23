@@ -1,7 +1,7 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import React from 'react';
 
-import { Card, CardBody } from '../Card';
+import { Card, CardBody } from '../card';
 import { VStack } from '../VStack';
 import { useListGroupContext } from './ListGroup.Context';
 

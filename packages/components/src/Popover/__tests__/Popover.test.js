@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 
 import { Button } from '../../button';
-import { CardBody } from '../../Card';
+import { CardBody } from '../../card';
 import { Popover } from '../index';
 
 describe('props', () => {

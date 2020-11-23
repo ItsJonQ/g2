@@ -1,5 +1,5 @@
 import { PolymorphicComponent } from './_shared';
-import { CardBodyProps } from './Card';
+import { CardBodyProps } from './card';
 import { IconProps } from './Icon';
 import { ReactNode } from 'react';
 

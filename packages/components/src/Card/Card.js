@@ -4,8 +4,8 @@ import React, { useMemo } from 'react';
 
 import { Elevation } from '../Elevation';
 import { View } from '../View';
-import * as styles from './Card.styles';
-import { useCard } from './useCard';
+import * as styles from './card-styles';
+import { useCard } from './use-card';
 
 function Card(props, forwardedRef) {
 	const { children, elevation, isRounded, ...otherProps } = useCard(props);

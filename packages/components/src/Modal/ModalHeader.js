@@ -3,7 +3,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
-import { CardHeader } from '../Card';
+import { CardHeader } from '../card';
 import * as styles from './Modal.styles';
 import ModalCloseButton from './ModalCloseButton';
 import ModalTitle from './ModalTitle';

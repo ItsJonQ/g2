@@ -1,7 +1,7 @@
-export { default as Card } from './Card';
-export { default as CardBody } from './CardBody';
-export { default as CardFooter } from './CardFooter';
-export { default as CardHeader } from './CardHeader';
-export { default as CardInnerBody } from './CardInnerBody';
+export { default as Card } from './card';
+export { default as CardBody } from './card-body';
+export { default as CardFooter } from './card-footer';
+export { default as CardHeader } from './card-header';
+export { default as CardInnerBody } from './card-inner-body';
 
-export * from './useCard';
+export * from './use-card';

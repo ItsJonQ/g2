@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { useMemo } from 'react';
 
 import { useSurface } from '../Surface';
-import * as styles from './Card.styles';
+import * as styles from './card-styles';
 
 export function useCard(props) {
 	const {

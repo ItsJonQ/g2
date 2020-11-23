@@ -5,7 +5,7 @@ import React, { useMemo } from 'react';
 import { usePopoverContext } from '../Popover';
 import { Scrollable } from '../Scrollable';
 import { View } from '../View';
-import * as styles from './Card.styles';
+import * as styles from './card-styles';
 
 function CardBody(props, forwardedRef) {
 	const { className, scrollable = true, ...otherProps } = useContextSystem(

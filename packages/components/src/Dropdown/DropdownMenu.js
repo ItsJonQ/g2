@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
-import { Card } from '../Card';
+import { Card } from '../card';
 import { Menu } from '../Menu';
 import { Scrollable } from '../Scrollable';
 import { useDropdownContext } from './Dropdown.Context';

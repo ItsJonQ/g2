@@ -1,7 +1,7 @@
 import { PolymorphicComponent, SizeRangeReduced } from './_shared';
 import { BaseModalProps } from './base-modal';
 import { ButtonProps } from './button';
-import { CardHeaderProps, CardBodyProps, CardFooterProps } from './Card';
+import { CardHeaderProps, CardBodyProps, CardFooterProps } from './card';
 
 export declare type ModalProps = BaseModalProps & {
 	/**

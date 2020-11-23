@@ -11,7 +11,7 @@ export * from './base-modal';
 export * from './blank-slate';
 export * from './button';
 export * from './button-group';
-export * from './Card';
+export * from './card';
 export * from './Checkbox';
 export * from './CheckboxGroup';
 export * from './CloseButton';

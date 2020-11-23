@@ -3,7 +3,7 @@ import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 import { Popover as ReakitPopover } from 'reakit';
 
-import { Card } from '../Card';
+import { Card } from '../card';
 import { View } from '../View';
 import { usePopoverContext } from './Popover.Context';
 import * as styles from './Popover.styles';

@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { useResizeAware } from '@wp-g2/utils';
 import React from 'react';
 
-import { Card, CardBody } from '../Card';
+import { Card, CardBody } from '../card';
 import { Heading } from '../Heading';
 import { Icon } from '../Icon';
 import { Text } from '../Text';

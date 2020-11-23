@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import React, { useMemo } from 'react';
 
 import { Flex } from '../Flex';
-import * as styles from './Card.styles';
+import * as styles from './card-styles';
 
 function CardFooter(props, forwardedRef) {
 	const {

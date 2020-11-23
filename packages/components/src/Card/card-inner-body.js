@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { View } from '../View';
-import * as styles from './Card.styles';
+import * as styles from './card-styles';
 
 function CardInnerBody(props, forwardedRef) {
 	const otherProps = useContextSystem(props, 'CardInnerBody');
