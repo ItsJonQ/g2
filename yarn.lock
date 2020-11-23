@@ -4869,6 +4869,13 @@
   dependencies:
     "@babel/runtime" "^7.8.3"
 
+"@wordpress/is-shallow-equal@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/is-shallow-equal/-/is-shallow-equal-2.3.0.tgz#226a1490e050d20281518114bb83c9c1a360407a"
+  integrity sha512-BUVCYZNDoT5fRJGoam/nI2Sn8QELu5z/pFe7UL+szFqQqNnMibdWqN/KoW/YO7WLJqqqTRhAs/Fa51g4oXRyHQ==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+
 "@wordpress/primitives@^1.10.0":
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/@wordpress/primitives/-/primitives-1.10.0.tgz#8f1e74c98dfa497074450b3fc2e5a0e2b134cd73"

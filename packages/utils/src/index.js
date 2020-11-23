@@ -16,7 +16,6 @@ export * from './other';
 export * from './react';
 export * from './selection';
 export * from './simple-equal';
-export * from './shallow-equal';
 export * from './strings';
 export * from './unit-values';
 export * from './validation';
