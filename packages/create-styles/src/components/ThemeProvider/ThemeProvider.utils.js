@@ -1,5 +1,6 @@
+import { isShallowEqualObjects } from '@wordpress/is-shallow-equal';
 import { createStore } from '@wp-g2/substate';
-import { is, shallowEqual, useIsomorphicLayoutEffect } from '@wp-g2/utils';
+import { is, useIsomorphicLayoutEffect } from '@wp-g2/utils';
 import { useEffect, useRef } from 'react';
 
 import { transformValuesToVariablesString } from '../../createStyleSystem/utils';
@@ -207,7 +208,12 @@ export function useThemeStyles({
 		 * We only want to update + set the theme if there's a change.
 		 * Since themes (potentially) be nested, we need to do a shallowEqual check.
 		 */
-		if (shallowEqual(themeRef.current, theme)) return;
+		if (
+			themeRef.current &&
+			theme &&
+			isShallowEqualObjects(themeRef.current, theme)
+		)
+			return;
 
 		themeRef.current = theme;
 
