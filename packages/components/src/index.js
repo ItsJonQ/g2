@@ -9,7 +9,7 @@ export * from './alignment-matrix-control';
 export * from './arrow-indicator';
 export * from './aspect-ratio';
 export * from './avatar';
-export * from './Background';
+export * from './background';
 export * from './Badge';
 export * from './BaseButton';
 export * from './BaseChoice';

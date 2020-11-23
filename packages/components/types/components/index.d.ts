@@ -3,7 +3,7 @@ export * from './animated';
 export * from './arrow-indicator';
 export * from './aspect-ratio';
 export * from './avatar';
-export * from './Background';
+export * from './background';
 export * from './Badge';
 export * from './BaseButton';
 export * from './BaseField';

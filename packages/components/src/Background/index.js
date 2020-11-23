@@ -1,2 +1,2 @@
-export { default as Background } from './Background';
-export * from './useBackground';
+export { default as Background } from './background';
+export * from './use-background';

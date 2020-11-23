@@ -1,5 +1,5 @@
 import { createComponent } from '../utils';
-import { useBackground } from './useBackground';
+import { useBackground } from './use-background';
 
 export default createComponent({
 	useHook: useBackground,

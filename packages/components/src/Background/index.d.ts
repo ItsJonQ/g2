@@ -1,1 +1,1 @@
-export * from '../../types/components/Background';
+export * from '../../types/components/background';
