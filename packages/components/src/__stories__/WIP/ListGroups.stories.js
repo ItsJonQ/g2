@@ -116,13 +116,14 @@ const SpacingVisualizer = ({ children, visualize }) => {
 	return <SpacingVisualizerView>{children}</SpacingVisualizerView>;
 };
 
-const BaseGridItem = ({ children, ...props }) => {
+const BaseGridItem = ({ children, ...props }, forwardedRef) => {
 	return (
 		<Surface
 			border
 			css={[ui.frame.height('100%'), ui.padding(4)]}
 			variant="tertiary"
 			{...props}
+			ref={forwardedRef}
 		>
 			<Container width={300}>{children}</Container>
 		</Surface>

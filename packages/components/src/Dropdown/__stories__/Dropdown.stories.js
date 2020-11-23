@@ -68,3 +68,24 @@ export const _default = () => {
 		</Dropdown>
 	);
 };
+
+export const _renderFunction = () => {
+	return (
+		<Dropdown visible>
+			{({ onClose }) => {
+				return (
+					<>
+						<DropdownTrigger>Dropdown</DropdownTrigger>
+						<DropdownMenu>
+							<DropdownMenuItem onClick={onClose}>
+								One
+							</DropdownMenuItem>
+							<DropdownMenuItem>Two</DropdownMenuItem>
+							<DropdownMenuItem>Three</DropdownMenuItem>
+						</DropdownMenu>
+					</>
+				);
+			}}
+		</Dropdown>
+	);
+};
