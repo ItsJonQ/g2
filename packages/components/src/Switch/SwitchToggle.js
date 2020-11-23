@@ -4,11 +4,12 @@ import React from 'react';
 import { View } from '../View';
 import * as styles from './Switch.styles';
 
-function SwitchToggle({ size = 'medium', ...props }) {
-	const __css = cx(
+function SwitchToggle({ className, size = 'medium', ...props }) {
+	const classes = cx(
 		styles.Toggle,
 		size === 'large' && styles.toggleLarge,
 		size === 'small' && styles.toggleSmall,
+		className,
 	);
 
 	return (
@@ -16,7 +17,7 @@ function SwitchToggle({ size = 'medium', ...props }) {
 			aria-hidden={true}
 			{...ui.$('SwitchToggle')}
 			{...props}
-			cx={__css}
+			className={classes}
 		/>
 	);
 }

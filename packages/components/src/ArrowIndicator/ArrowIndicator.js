@@ -9,6 +9,7 @@ const { ArrowIndicatorView } = styles;
 
 function ArrowIndicator(props, forwardedRef) {
 	const {
+		className,
 		direction = 'right',
 		height,
 		iconSize = 5,
@@ -25,14 +26,19 @@ function ArrowIndicator(props, forwardedRef) {
 	};
 	const rotate = rotations[direction] || rotations.right;
 
-	const __css = cx(
+	const classes = cx(
 		css({ height: height || size, width: width || size }),
 		ui.rotate(rotate),
 		ui.animation.default,
+		className,
 	);
 
 	return (
-		<ArrowIndicatorView {...otherProps} cx={__css} ref={forwardedRef}>
+		<ArrowIndicatorView
+			{...otherProps}
+			className={classes}
+			ref={forwardedRef}
+		>
 			<View animate={{ rotate }}>
 				<Icon
 					icon={

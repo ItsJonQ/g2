@@ -17,6 +17,7 @@ function Tag(props, forwardedRef) {
 		href,
 		onRemove = noop,
 		removeButtonText,
+		className,
 		...otherProps
 	} = useContextSystem(props, 'Tag');
 	const tagColor = TAG_COLORS[color] || TAG_COLORS.standard;
@@ -26,10 +27,11 @@ function Tag(props, forwardedRef) {
 		display,
 	});
 
-	const __css = cx(
+	const classes = cx(
 		sx.base,
 		styles.getBackground({ color: tagColor }),
 		styles.getBackgroundText({ color: tagColor }),
+		className,
 	);
 
 	const asProp = href ? 'a' : 'span';
@@ -38,7 +40,7 @@ function Tag(props, forwardedRef) {
 		<TagView
 			{...otherProps}
 			as={asProp}
-			cx={__css}
+			className={classes}
 			href={href}
 			ref={forwardedRef}
 		>

@@ -10,6 +10,7 @@ const { ZStackView } = styles;
 function ZStack(props, forwardedRef) {
 	const {
 		children,
+		className,
 		isLayered = true,
 		isReversed = false,
 		offset = 0,
@@ -22,17 +23,17 @@ function ZStack(props, forwardedRef) {
 	const clonedChildren = validChildren.map((child, index) => {
 		const zIndex = isReversed ? childrenCount - index : index;
 
+		const classes = cx(
+			isLayered ? styles.positionAbsolute : styles.positionRelative,
+			css({
+				marginLeft: !isLayered && offset * -1,
+			}),
+		);
+
 		return (
 			<View
 				{...ui.$('ZStackItem')}
-				cx={[
-					isLayered
-						? styles.positionAbsolute
-						: styles.positionRelative,
-					css({
-						marginLeft: !isLayered && offset * -1,
-					}),
-				]}
+				className={classes}
 				key={child.key}
 				style={{
 					zIndex,
@@ -43,14 +44,15 @@ function ZStack(props, forwardedRef) {
 		);
 	});
 
-	const __css = cx(
+	const classes = cx(
 		css({
 			paddingLeft: !isLayered ? offset : null,
 		}),
+		className,
 	);
 
 	return (
-		<ZStackView {...otherProps} cx={__css} ref={forwardedRef}>
+		<ZStackView {...otherProps} className={classes} ref={forwardedRef}>
 			{clonedChildren}
 		</ZStackView>
 	);

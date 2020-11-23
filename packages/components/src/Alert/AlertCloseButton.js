@@ -1,4 +1,4 @@
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
 
@@ -7,6 +7,7 @@ import * as styles from './Alert.styles';
 const { CloseButtonWrapper } = styles;
 
 function AlertCloseButton({
+	className,
 	isDismissable,
 	onDismiss = noop,
 	status,
@@ -14,11 +15,10 @@ function AlertCloseButton({
 }) {
 	if (!isDismissable) return null;
 
+	const classes = cx(css({ color: styles.getTextColor(status) }), className);
+
 	return (
-		<CloseButtonWrapper
-			{...props}
-			cx={css({ color: styles.getTextColor(status) })}
-		>
+		<CloseButtonWrapper {...props} className={classes}>
 			<CloseButton
 				currentColor
 				iconSize={16}

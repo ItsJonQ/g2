@@ -12,6 +12,7 @@ import Button from './SegmentedControlButton';
 
 function SegmentControl(props, forwardedRef) {
 	const {
+		className,
 		baseId,
 		isAdaptiveWidth = false,
 		isBlock = false,
@@ -37,10 +38,11 @@ function SegmentControl(props, forwardedRef) {
 		state: value || reakitRadio.state || options[0]?.value,
 	};
 
-	const __css = cx(
+	const classes = cx(
 		styles.SegmentedControl,
 		isBlock && styles.block,
 		styles[size],
+		className,
 	);
 
 	return (
@@ -48,7 +50,7 @@ function SegmentControl(props, forwardedRef) {
 			{...radio}
 			aria-label={label}
 			as={View}
-			cx={__css}
+			className={classes}
 			{...otherProps}
 			ref={mergeRefs([containerRef, forwardedRef])}
 		>

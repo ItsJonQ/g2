@@ -72,12 +72,12 @@ exports[`props should render with custom aspectRatio 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: cover;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+  object-fit: cover;
 }
 
 @media (prefers-reduced-motion) {
@@ -124,7 +124,7 @@ exports[`props should render with custom aspectRatio 1`] = `
   data-g2-component="AspectRatio"
 >
   <img
-    class="emotion-1"
+    class="components-image wp-components-image emotion-1"
     data-g2-c16t="true"
     data-g2-component="Image"
     src="/olaf.png"
@@ -215,13 +215,13 @@ exports[`props should render with custom fit 1`] = `
   margin: 0;
   height: auto;
   max-width: 100%;
-  object-fit: fill;
-  height: 100%;
-  width: 100%;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
   width: 100%;
 }
 
@@ -269,7 +269,7 @@ exports[`props should render with custom fit 1`] = `
   data-g2-component="AspectRatio"
 >
   <img
-    class="emotion-1"
+    class="components-image wp-components-image emotion-1"
     data-g2-c16t="true"
     data-g2-component="Image"
     src="/olaf.png"

@@ -16,16 +16,18 @@ function ColorCircle(props, forwardedRef) {
 		isInteractive = false,
 		variant = 'default',
 		style = {},
+		className,
 		...otherProps
 	} = useContextSystem(props, 'ColorCircle');
 
 	const backgroundColor = colorize(colorProp).toRgbString();
-	const __css = cx(
+	const classes = cx(
 		styles[size],
 		styles[variant],
 		styles.expand,
 		isActive && styles.active,
 		isInteractive && styles.interactive,
+		className,
 	);
 
 	const iconColor = getOptimalTextColor(backgroundColor);
@@ -35,7 +37,7 @@ function ColorCircle(props, forwardedRef) {
 			data-active={isActive}
 			style={{ ...style, backgroundColor }}
 			{...otherProps}
-			cx={__css}
+			className={classes}
 			ref={forwardedRef}
 		>
 			<CheckboxIconView {...ui.$('CheckboxIcon')} aria-hidden>

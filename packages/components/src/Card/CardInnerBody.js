@@ -6,11 +6,14 @@ import { View } from '../View';
 import * as styles from './Card.styles';
 
 function CardInnerBody(props, forwardedRef) {
-	const otherProps = useContextSystem(props, 'CardInnerBody');
+	const { className, ...otherProps } = useContextSystem(
+		props,
+		'CardInnerBody',
+	);
 
-	const __css = cx(styles.InnerBody);
+	const classes = cx(styles.InnerBody, className);
 
-	return <View {...otherProps} cx={__css} ref={forwardedRef} />;
+	return <View {...otherProps} className={classes} ref={forwardedRef} />;
 }
 
 export default contextConnect(CardInnerBody, 'CardInnerBody');

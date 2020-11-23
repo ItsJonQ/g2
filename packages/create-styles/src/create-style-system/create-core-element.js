@@ -23,8 +23,6 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @typedef ViewOwnProps
  * @property {E | string} [as]
  * @property {InterpolatedCSS} [css]
- * @property {InterpolatedCSS} [__css]
- * @property {Emotion['cx']} [cx]
  */
 
 /**
@@ -116,9 +114,7 @@ export const createCoreElement = (tagName, options) => {
 	const render = (
 		{
 			// Internal props
-			__css,
 			css: cssProp,
-			cx: cxProp,
 			// External props
 			// eslint-disable-next-line
 			as,
@@ -155,8 +151,6 @@ export const createCoreElement = (tagName, options) => {
 			styles.Base,
 			styles.reduceMotion,
 			compiledBaseStyles,
-			cxProp,
-			__css && css(__css),
 			className,
 			cssProp && css(cssProp),
 		);

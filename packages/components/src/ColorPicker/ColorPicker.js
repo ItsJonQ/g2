@@ -1,5 +1,5 @@
 import { contextConnect } from '@wp-g2/context';
-import { css } from '@wp-g2/styles';
+import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { VStack } from '../VStack';
@@ -17,9 +17,15 @@ function ColorPicker(props, forwardedRef) {
 
 	const contextProps = React.useMemo(() => ({ store }), [store]);
 
+	const vStackClasses = cx(css({ width }));
+
 	return (
 		<ColorPickerContext.Provider value={contextProps}>
-			<VStack alignment="top" cx={css({ width })} isExpanded={false}>
+			<VStack
+				alignment="top"
+				className={vStackClasses}
+				isExpanded={false}
+			>
 				<ColorPickerView {...otherProps} ref={forwardedRef}>
 					<ColorPickerElement onChange={onChange} width={width} />
 				</ColorPickerView>
