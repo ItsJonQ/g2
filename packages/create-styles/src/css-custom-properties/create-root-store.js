@@ -1,4 +1,4 @@
-import { getPropValue } from './getPropValue';
+import { getPropValue } from './get-prop-value';
 import { hasVariable } from './utils';
 
 /**

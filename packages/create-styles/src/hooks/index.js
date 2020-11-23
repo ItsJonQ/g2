@@ -1,3 +1,3 @@
-export * from './useHydrateGlobalStyles';
-export * from './useReducedMotion';
-export * from './useTheme';
+export * from './use-hydrate-global-styles';
+export * from './use-reduced-motion';
+export * from './use-theme';

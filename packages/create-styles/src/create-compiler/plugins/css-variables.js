@@ -1,6 +1,6 @@
-import { createRootStore } from '../../cssCustomProperties';
-import { transformContent } from '../../cssCustomProperties/transformContent';
-import { hasVariable } from '../../cssCustomProperties/utils';
+import { createRootStore } from '../../css-custom-properties';
+import { transformContent } from '../../css-custom-properties/transform-content';
+import { hasVariable } from '../../css-custom-properties/utils';
 import { STYLIS_CONTEXTS, STYLIS_TOKENS } from './utils';
 
 // Detects native CSS varialble support

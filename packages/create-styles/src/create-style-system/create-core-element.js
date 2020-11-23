@@ -53,8 +53,8 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 /**
  * @typedef CreateCoreElementOptions
  * @property {import('create-emotion').ObjectInterpolation<any>} baseStyles The baseStyles from the Style system.
- * @property {import('../createCompiler').Compiler} compiler The injectGlobal from the Style system's compiler.
- * @property {import('./generateTheme').GenerateThemeResults} globalStyles The globalStyles from the Style system.
+ * @property {import('../create-compiler').Compiler} compiler The injectGlobal from the Style system's compiler.
+ * @property {import('./generate-theme').GenerateThemeResults} globalStyles The globalStyles from the Style system.
  */
 
 /**

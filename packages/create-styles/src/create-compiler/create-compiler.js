@@ -2,8 +2,8 @@ import { is } from '@wp-g2/utils';
 import createEmotion from 'create-emotion';
 import mitt from 'mitt';
 
-import { RootStore } from '../cssCustomProperties';
-import { createCSS } from './createCSS';
+import { RootStore } from '../css-custom-properties';
+import { createCSS } from './create-css';
 import { createPlugins } from './plugins';
 import { breakpoints } from './utils';
 
@@ -26,7 +26,7 @@ const defaultOptions = {
  * @typedef {import('create-emotion').Options & {
 	key?: string,
 	specificityLevel?: number,
-	rootStore: import('../cssCustomProperties').RootStore
+	rootStore: import('../css-custom-properties').RootStore
 }} CreateCompilerOptions
  */
 

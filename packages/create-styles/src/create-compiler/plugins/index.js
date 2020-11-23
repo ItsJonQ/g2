@@ -1,7 +1,7 @@
 import cssGridPlugin from 'styled-griddie';
 
-import cssVariablesPlugin from './cssVariables';
-import specificityPlugin from './extraSpecificity';
+import cssVariablesPlugin from './css-variables';
+import specificityPlugin from './extra-specificity';
 import rtlPlugin from './rtl';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -14,7 +14,7 @@ const isProd = process.env.NODE_ENV === 'production';
  * @param {number} [options.specificityLevel=7]
  * @param {string} [options.key='css']
  * @param {boolean} [options.skipSupportedBrowsers]
- * @param {import('../../cssCustomProperties').RootStore} [options.rootStore]
+ * @param {import('../../css-custom-properties').RootStore} [options.rootStore]
  * @return {import('@emotion/stylis').Plugin[]}
  */
 export function createPlugins({
