@@ -1,7 +1,7 @@
 import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { BaseChoice, useBaseChoice } from '../BaseChoice';
+import { BaseChoice, useBaseChoice } from '../base-choice';
 import CheckboxElement from './CheckboxElement';
 
 function Checkbox(props, forwardedRef) {
