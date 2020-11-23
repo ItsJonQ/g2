@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, getBreakpoint, ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { BaseModal } from '../BaseModal';
+import { BaseModal } from '../base-modal';
 import { Card } from '../Card';
 
 export { useModalContext } from './Modal.Context';

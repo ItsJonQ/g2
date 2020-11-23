@@ -7,7 +7,7 @@ import { Dialog, DialogBackdrop, useDialogState } from 'reakit';
 
 import { Portal } from '../Portal';
 import { View } from '../View';
-import { ModalContext, useModalState } from './BaseModal.Context';
+import { ModalContext, useModalState } from './base-modal-context';
 
 function BaseModal(props, forwardedRef) {
 	const {

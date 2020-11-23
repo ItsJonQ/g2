@@ -1,5 +1,5 @@
 import { PolymorphicComponent, SizeRangeReduced } from './_shared';
-import { BaseModalProps } from './BaseModal';
+import { BaseModalProps } from './base-modal';
 import { ButtonProps } from './Button';
 import { CardHeaderProps, CardBodyProps, CardFooterProps } from './Card';
 

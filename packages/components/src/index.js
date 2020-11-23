@@ -14,7 +14,7 @@ export * from './badge';
 export * from './base-button';
 export * from './base-choice';
 export * from './base-field';
-export * from './BaseModal';
+export * from './base-modal';
 export * from './Button';
 export * from './ButtonGroup';
 export * from './Card';

@@ -1,1 +1,1 @@
-export * from '../BaseModal/BaseModal.Context';
+export * from '../base-modal/base-modal-context';
