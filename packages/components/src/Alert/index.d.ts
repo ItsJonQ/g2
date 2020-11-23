@@ -1,1 +1,1 @@
-export * from '../../types/components/Alert';
+export * from '../../types/components/alert';

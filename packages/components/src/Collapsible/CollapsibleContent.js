@@ -3,7 +3,7 @@ import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 import { DisclosureContent } from 'reakit';
 
-import { Animated } from '../Animated';
+import { Animated } from '../animated';
 import { useCollapsibleContext } from './Collapsible.Context';
 import * as styles from './Collapsible.styles';
 

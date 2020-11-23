@@ -6,12 +6,12 @@ import { noop } from 'lodash';
 import React, { useCallback, useState } from 'react';
 import { Composite, CompositeGroup, useCompositeState } from 'reakit';
 
+import Cell from './alignment-matrix-control-cell';
 import {
 	AlignmentMatrixControlView,
 	RowView,
-} from './AlignmentMatrixControl.styles';
-import { getItemId } from './AlignmentMatrixControl.utils';
-import Cell from './AlignmentMatrixControlCell';
+} from './alignment-matrix-control-styles';
+import { getItemId } from './alignment-matrix-control-utils';
 import { GRID } from './constants';
 
 function AlignmentMatrixControl(props, forwardedRef) {

@@ -2,12 +2,12 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { Animated } from '../Animated';
+import { Animated } from '../animated';
 import { Flex, FlexBlock } from '../Flex';
 import { View } from '../View';
-import * as styles from './Alert.styles';
-import AlertCloseButton from './AlertCloseButton';
-import AlertTitle from './AlertTitle';
+import AlertCloseButton from './alert-close-button';
+import * as styles from './alert-styles';
+import AlertTitle from './alert-title';
 const { AlertView } = styles;
 
 function Alert(props, forwardedRef) {

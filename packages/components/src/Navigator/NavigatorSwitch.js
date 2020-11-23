@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AnimatedContainer } from '../Animated';
+import { AnimatedContainer } from '../animated';
 import { Route, Switch } from './Router';
 
 function NavigatorSwitch({ children }) {

@@ -1,12 +1,12 @@
 // Base
 export * from './ContextSystem';
 export * from './View';
-export * from './Animated';
+export * from './animated';
 // Components
 export * from './accordion';
-export * from './Alert';
-export * from './AlignmentMatrixControl';
-export * from './ArrowIndicator';
+export * from './alert';
+export * from './alignment-matrix-control';
+export * from './arrow-indicator';
 export * from './AspectRatio';
 export * from './Avatar';
 export * from './Background';

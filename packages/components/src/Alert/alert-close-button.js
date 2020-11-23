@@ -3,7 +3,7 @@ import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { CloseButton } from '../CloseButton';
-import * as styles from './Alert.styles';
+import * as styles from './alert-styles';
 const { CloseButtonWrapper } = styles;
 
 function AlertCloseButton({

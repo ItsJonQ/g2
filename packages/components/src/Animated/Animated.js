@@ -2,8 +2,8 @@ import { contextConnect } from '@wp-g2/context';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 
-import { createAnimated } from './Animated.utils';
-import { useAnimated } from './useAnimated';
+import { createAnimated } from './animated-utils';
+import { useAnimated } from './use-animated';
 
 function Animated(props, forwardedRef) {
 	const { as, children, ...otherProps } = useAnimated(props);

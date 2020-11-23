@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
 
-import { ArrowIndicator } from '../ArrowIndicator';
+import { ArrowIndicator } from '../arrow-indicator';
 import { CollapsibleTrigger, useCollapsibleContext } from '../Collapsible';
 import { Flex, FlexBlock } from '../Flex';
 import { Heading } from '../Heading';

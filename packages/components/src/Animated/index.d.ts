@@ -1,1 +1,1 @@
-export * from '../../types/components/Animated';
+export * from '../../types/components/animated';

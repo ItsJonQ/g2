@@ -1,2 +1,2 @@
-export { default as Animated } from './Animated';
-export { default as AnimatedContainer } from './AnimatedContainer';
+export { default as Animated } from './animated';
+export { default as AnimatedContainer } from './animated-container';

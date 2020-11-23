@@ -4,7 +4,7 @@ import { CompositeItem } from 'reakit';
 
 import { Tooltip } from '../Tooltip';
 import { VisuallyHidden } from '../VisuallyHidden';
-import * as styles from './AlignmentMatrixControl.styles';
+import * as styles from './alignment-matrix-control-styles';
 import { ALIGNMENT_LABEL } from './constants';
 
 const { CellView, PointView } = styles;

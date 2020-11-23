@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { AnimatedContainer } from '../Animated';
+import { AnimatedContainer } from '../animated';
 import { View } from '../View';
 
 function Alerts(props, forwardedRef) {

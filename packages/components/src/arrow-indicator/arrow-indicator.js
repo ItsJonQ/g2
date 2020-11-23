@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Icon } from '../Icon';
 import { View } from '../View';
-import * as styles from './ArrowIndicator.styles';
+import * as styles from './arrow-indicator-styles';
 const { ArrowIndicatorView } = styles;
 
 function ArrowIndicator(props, forwardedRef) {
