@@ -2,7 +2,7 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
-import { AspectRatio } from '../AspectRatio';
+import { AspectRatio } from '../aspect-ratio';
 import { ImageView } from './Image.styles';
 
 function Image(props, forwardedRef) {

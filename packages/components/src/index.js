@@ -7,7 +7,7 @@ export * from './accordion';
 export * from './alert';
 export * from './alignment-matrix-control';
 export * from './arrow-indicator';
-export * from './AspectRatio';
+export * from './aspect-ratio';
 export * from './Avatar';
 export * from './Background';
 export * from './Badge';

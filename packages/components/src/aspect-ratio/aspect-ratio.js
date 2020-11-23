@@ -3,8 +3,8 @@ import { css, cx } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
 import React from 'react';
 
-import { AspectRatioResizer, AspectRatioView } from './AspectRatio.styles';
-import * as styles from './AspectRatio.styles';
+import { AspectRatioResizer, AspectRatioView } from './aspect-ratio-styles';
+import * as styles from './aspect-ratio-styles';
 
 function AspectRatio(props, forwardedRef) {
 	const { children, ratio = 1, width, ...otherProps } = useContextSystem(
