@@ -15,10 +15,10 @@ import { opacity } from './opacity';
 import { position } from './positions';
 import { shadow } from './shadows';
 import { margin, padding, space } from './spacing';
-import { $ } from './styleQuery';
+import { $ } from './style-query';
 import { offset, rotate, scale, scaleX, scaleY } from './transforms';
 import { value } from './values';
-import { zIndex } from './zIndex';
+import { zIndex } from './z-index';
 
 export const ui = {
 	$,
