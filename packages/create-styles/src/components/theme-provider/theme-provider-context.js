@@ -6,7 +6,7 @@ import {
 	DARK_MODE_ATTR_PROP,
 	HIGH_CONTRAST_MODE_ATTR_PROP,
 	REDUCED_MOTION_MODE_ATTR_PROP,
-} from '../../createStyleSystem/constants';
+} from '../../create-style-system/constants';
 
 export const ThemeProviderContext = createContext({
 	isDark: null,

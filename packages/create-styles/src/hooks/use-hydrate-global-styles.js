@@ -5,7 +5,7 @@ const __INTERNAL_STATE__ = {
 /**
  * @typedef UseHydrateGlobalStylesProps
  * @property {import('create-emotion').Emotion['injectGlobal']} injectGlobal injectGlobal function from the compiler (Emotion).
- * @property {import('../createStyleSystem/generateTheme').GenerateThemeResults} globalStyles Global style values to be injected.
+ * @property {import('../create-style-system/generate-theme').GenerateThemeResults} globalStyles Global style values to be injected.
  */
 
 /**

@@ -6,28 +6,28 @@ import {
 	DARK_MODE_ATTR,
 	HIGH_CONTRAST_MODE_MODE_ATTR,
 	MODE_SPECIFICITY_COMPOUND_LEVEL,
-} from '../../createStyleSystem/constants';
+} from '../../create-style-system/constants';
 import { useHydrateGlobalStyles } from '../../hooks';
 import {
 	ThemeProviderContext,
 	useThemeProviderContextBridge,
 	useThemeProviderModeHtmlAttributes,
-} from './ThemeProvider.Context';
+} from './theme-provider-context';
 import {
 	useColorBlindMode,
 	useDarkMode,
 	useHighContrastMode,
 	useReducedMotionMode,
 	useThemeStyles,
-} from './ThemeProvider.utils';
+} from './utils';
 
 /**
  * @typedef ThemeProviderProps
  * @property {import('react').ReactNode} children Children to render.
- * @property {import('../../createCompiler').Compiler} compiler The style compiler.
+ * @property {import('../../create-compiler').Compiler} compiler The style compiler.
  * @property {string} className Optional className to render on the provider.
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
- * @property {import('../../createStyleSystem/generateTheme').GenerateThemeResults} globalStyles Styles to apply globally.
+ * @property {import('../../create-style-system/generate-theme').GenerateThemeResults} globalStyles Styles to apply globally.
  * @property {boolean} isDark Determines if dark-mode styles should be rendered.
  * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
  * @property {boolean} isReducedMotion Determines if reduced-motion-mode styles should be rendered.

@@ -1,6 +1,6 @@
 import { memoize } from '@wp-g2/utils';
 
-import { getPropValue } from './getPropValue';
+import { getPropValue } from './get-prop-value';
 import { hasVariable, isCustomProperty } from './utils';
 
 /**

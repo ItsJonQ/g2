@@ -3,7 +3,7 @@ import { createStore } from '@wp-g2/substate';
 import { is, useIsomorphicLayoutEffect } from '@wp-g2/utils';
 import { useEffect, useRef } from 'react';
 
-import { transformValuesToVariablesString } from '../../createStyleSystem/utils';
+import { transformValuesToVariablesString } from '../../create-style-system/utils';
 import { useReducedMotion } from '../../hooks';
 
 /**

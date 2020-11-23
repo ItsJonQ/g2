@@ -1,5 +1,5 @@
 export * from './constants';
 export * from './utils';
 
-export * from './createStyleSystem';
+export * from './create-style-system';
 export * from './tags';

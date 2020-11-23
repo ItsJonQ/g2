@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { ThemeProvider as BaseThemeProvider } from '../components/ThemeProvider';
-import { createCompiler } from '../createCompiler';
-import { createRootStore } from '../cssCustomProperties';
-import { createCoreElement } from './createCoreElement';
-import { createCoreElements } from './createCoreElements';
-import { createStyledComponents } from './createStyledComponents';
-import { generateTheme } from './generateTheme';
+import { ThemeProvider as BaseThemeProvider } from '../components/theme-provider';
+import { createCompiler } from '../create-compiler';
+import { createRootStore } from '../css-custom-properties';
+import { createCoreElement } from './create-core-element';
+import { createCoreElements } from './create-core-elements';
+import { createStyledComponents } from './create-styled-components';
+import { generateTheme } from './generate-theme';
 import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
@@ -25,10 +25,10 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {ReturnType<createCompiler>['cx']} cx A function to resolve + combine classNames.
  * @property {(tokenName: string) => string} createToken A function to generate a design token (CSS variable) used by the system.
  * @property {(value: keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig) | TGeneratedTokens) => string} get The primary function to retrieve Style system variables.
- * @property {import('./createStyledComponents').CreateStyled} styled A set of styled components.
+ * @property {import('./create-styled-components').CreateStyled} styled A set of styled components.
  * @property {import('react').ComponentType} View The base <View /> component.
  * @property {import('react').ComponentType<import('react').ComponentProps<BaseThemeProvider>>} ThemeProvider The component (Provider) used to adjust design tokens.
- * @property {import('../cssCustomProperties').RootStore} rootStore
+ * @property {import('../css-custom-properties').RootStore} rootStore
  */
 
 /**
@@ -43,7 +43,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {TDarkConfig} darkModeConfig
  * @property {THCConfig} highContrastModeConfig
  * @property {TDarkHCConfig} darkHighContrastModeConfig
- * @property {import('../createCompiler').CreateCompilerOptions} [compilerOptions]
+ * @property {import('../create-compiler').CreateCompilerOptions} [compilerOptions]
 
  */
 
