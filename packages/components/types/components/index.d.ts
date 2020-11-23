@@ -2,7 +2,7 @@ export * from './alert';
 export * from './animated';
 export * from './arrow-indicator';
 export * from './aspect-ratio';
-export * from './Avatar';
+export * from './avatar';
 export * from './Background';
 export * from './Badge';
 export * from './BaseButton';

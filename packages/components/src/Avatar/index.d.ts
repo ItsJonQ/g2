@@ -1,1 +1,1 @@
-export * from '../../types/components/Avatar';
+export * from '../../types/components/avatar';

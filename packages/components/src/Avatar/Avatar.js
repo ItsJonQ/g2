@@ -6,9 +6,9 @@ import React, { useState } from 'react';
 import { Image } from '../Image';
 import { Initials } from '../Initials';
 import { View } from '../View';
-import { AvatarView } from './Avatar.styles';
-import * as styles from './Avatar.styles';
-import { getBorderRadius, getInitialsTextSize, getSize } from './Avatar.utils';
+import { AvatarView } from './avatar-styles';
+import * as styles from './avatar-styles';
+import { getBorderRadius, getInitialsTextSize, getSize } from './avatar-utils';
 
 function Avatar(props, forwardedRef) {
 	const {
