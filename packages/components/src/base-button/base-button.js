@@ -5,7 +5,7 @@ import React from 'react';
 import { Button as ReakitButton } from 'reakit';
 import { Radio as ReakitRadio } from 'reakit';
 
-import { useButtonGroupContext } from '../ButtonGroup';
+import { useButtonGroupContext } from '../button-group';
 import { Elevation } from '../Elevation';
 import { FlexItem } from '../Flex';
 import { Icon } from '../Icon';

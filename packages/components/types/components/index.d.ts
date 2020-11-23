@@ -10,7 +10,7 @@ export * from './base-field';
 export * from './base-modal';
 export * from './blank-slate';
 export * from './button';
-export * from './ButtonGroup';
+export * from './button-group';
 export * from './Card';
 export * from './Checkbox';
 export * from './CheckboxGroup';

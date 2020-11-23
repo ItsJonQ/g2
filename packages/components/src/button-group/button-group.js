@@ -10,9 +10,9 @@ import React from 'react';
 import { RadioGroup, useRadioState } from 'reakit';
 
 import { ControlGroup } from '../ControlGroup';
-import { ButtonGroupContext } from './ButtonGroup.Context';
-import { ButtonGroupView } from './ButtonGroup.styles';
-import * as styles from './ButtonGroup.styles';
+import { ButtonGroupContext } from './button-group-context';
+import { ButtonGroupView } from './button-group-styles';
+import * as styles from './button-group-styles';
 
 function ButtonGroup(props, forwardedRef) {
 	const {

@@ -4,7 +4,7 @@ import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { BaseButton } from '../base-button';
-import { useButtonGroupContext } from '../ButtonGroup';
+import { useButtonGroupContext } from '../button-group';
 import * as styles from './button-styles';
 
 function Button(props, forwardedRef) {
