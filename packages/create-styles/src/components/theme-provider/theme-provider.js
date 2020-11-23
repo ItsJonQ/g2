@@ -12,7 +12,7 @@ import {
 	ThemeProviderContext,
 	useThemeProviderContextBridge,
 	useThemeProviderModeHtmlAttributes,
-} from './ThemeProvider.Context';
+} from './theme-provider-context';
 import {
 	useColorBlindMode,
 	useDarkMode,
