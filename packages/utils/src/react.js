@@ -48,3 +48,16 @@ export function getDisplayName(tagName) {
 
 	return displayName;
 }
+
+export function isRenderProp(children) {
+	return is.function(children);
+}
+
+export function renderChildren(children, props = {}) {
+	if (isRenderProp(children)) {
+		const { children: _, ...rest } = props;
+		return children(rest);
+	}
+
+	return children;
+}
