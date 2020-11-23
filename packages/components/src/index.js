@@ -10,7 +10,7 @@ export * from './arrow-indicator';
 export * from './aspect-ratio';
 export * from './avatar';
 export * from './background';
-export * from './Badge';
+export * from './badge';
 export * from './BaseButton';
 export * from './BaseChoice';
 export * from './BaseField';

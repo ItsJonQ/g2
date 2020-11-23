@@ -3,8 +3,8 @@ import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Text } from '../Text';
-import * as styles from './Badge.styles';
-import { BADGE_COLORS } from './Badge.utils';
+import * as styles from './badge-styles';
+import { BADGE_COLORS } from './badge-utils';
 
 const { BadgeView } = styles;
 

@@ -1,5 +1,5 @@
 import { PolymorphicComponent } from './_shared';
-import { BadgeProps } from './Badge';
+import { BadgeProps } from './badge';
 
 export declare type TagProps = Pick<BadgeProps, 'color' | 'display'> & {
 	/**
