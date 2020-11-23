@@ -25,7 +25,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -73,12 +73,12 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-[data-active='true']>.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-active='true']>.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   opacity: 1;
 }
 
@@ -109,12 +109,12 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 svg {
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 svg {
   display: block;
 }
 

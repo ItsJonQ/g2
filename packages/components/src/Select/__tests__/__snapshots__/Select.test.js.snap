@@ -71,32 +71,32 @@ exports[`props should render children 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -152,7 +152,7 @@ exports[`props should render children 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -164,13 +164,13 @@ exports[`props should render children 1`] = `
   }
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -224,7 +224,7 @@ exports[`props should render children 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -236,7 +236,7 @@ exports[`props should render children 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -269,7 +269,7 @@ exports[`props should render children 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -301,12 +301,12 @@ exports[`props should render children 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
 }
 
@@ -437,32 +437,32 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -518,7 +518,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -530,13 +530,13 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -590,7 +590,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -602,7 +602,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -635,7 +635,7 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -667,12 +667,12 @@ exports[`props should render correctly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
 }
 
@@ -804,32 +804,32 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -885,7 +885,7 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -897,13 +897,13 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -957,7 +957,7 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -969,7 +969,7 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1002,7 +1002,7 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1034,12 +1034,12 @@ exports[`props should render disabled 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
 }
 
@@ -1173,32 +1173,32 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -1254,7 +1254,7 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1266,13 +1266,13 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -1326,7 +1326,7 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1338,7 +1338,7 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1371,7 +1371,7 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1403,12 +1403,12 @@ exports[`props should render readOnly 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
 }
 
@@ -1541,32 +1541,32 @@ exports[`props should render required 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -1622,7 +1622,7 @@ exports[`props should render required 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1634,13 +1634,13 @@ exports[`props should render required 1`] = `
   }
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -1694,7 +1694,7 @@ exports[`props should render required 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1706,7 +1706,7 @@ exports[`props should render required 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1739,7 +1739,7 @@ exports[`props should render required 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1771,12 +1771,12 @@ exports[`props should render required 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
 }
 
@@ -1909,32 +1909,32 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
   min-height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
@@ -1996,7 +1996,7 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -2008,13 +2008,13 @@ exports[`props should render size 1`] = `
   }
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
+.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -2068,7 +2068,7 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -2080,7 +2080,7 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -2113,7 +2113,7 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -2145,12 +2145,12 @@ exports[`props should render size 1`] = `
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
+.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
   display: block;
 }
 
