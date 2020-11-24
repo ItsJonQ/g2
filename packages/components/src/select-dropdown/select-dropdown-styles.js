@@ -1,16 +1,17 @@
 import { css } from '@wp-g2/styles';
 
-export const SelectDropdown = css`
-	display: inline-block;
-	position: relative;
-`;
+import * as baseFieldStyles from '../BaseField/BaseField.styles';
 
-export const block = css`
-	display: block;
-	min-width: 0;
-	width: 100%;
+export const SelectDropdown = css`
+	position: relative;
 `;
 
 export const MenuWrapper = css`
 	outline: none;
 `;
+
+export const DropdownMenu = css`
+	width: 100%;
+`;
+
+export const inline = baseFieldStyles.inline;

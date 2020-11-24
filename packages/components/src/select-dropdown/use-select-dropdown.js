@@ -1,6 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
-import { mergeRefs } from '@wp-g2/utils';
+import { mergeRefs, useResizeAware } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 import React from 'react';
 
@@ -8,16 +8,20 @@ import { usePositioner } from '../positioner';
 import * as styles from './select-dropdown-styles';
 import { itemToString, stateReducer } from './select-dropdown-utils';
 
+const CONTROL_BORDER_WIDTH = -1;
+const OFFSET = [CONTROL_BORDER_WIDTH, 4];
+
 export function useSelectDropdown(props) {
 	const {
 		className,
 		hideLabelFromVision,
+		isInline,
 		isBlock = false,
 		isControl = true,
 		isDestructive,
 		isSubtle,
 		label,
-		maxWidth = 320,
+		maxWidth: maxWidthProp = 280,
 		minWidth = 200,
 		onChange,
 		options: items = [],
@@ -32,7 +36,11 @@ export function useSelectDropdown(props) {
 		...otherProps
 	} = useContextSystem(props, 'SelectDropdown');
 
-	const { popoverRef, referenceRef } = usePositioner(otherProps);
+	const [resizer, sizes] = useResizeAware();
+	const { popoverRef, popper, referenceRef } = usePositioner({
+		...otherProps,
+		unstable_offset: OFFSET,
+	});
 
 	const handleOnChange = React.useCallback(onChange, [onChange]);
 
@@ -57,6 +65,10 @@ export function useSelectDropdown(props) {
 		...ui.$('SelectDropdownPopover'),
 		className: styles.MenuWrapper,
 		'aria-hidden': !isOpen,
+		style: {
+			maxWidth: isInline ? maxWidthProp : sizes.width,
+			width: isInline ? null : '100%',
+		},
 	});
 	// We need this here, because the null active descendant is not
 	// fully ARIA compliant.
@@ -115,20 +127,34 @@ export function useSelectDropdown(props) {
 
 	const classes = cx(
 		styles.SelectDropdown,
-		isBlock && styles.block,
+		isInline && styles.inline,
 		className,
 	);
 
 	const dropdownMenuProps = {
 		...ui.$('SelectDropdownMenu'),
-		className: cx(css({ minWidth, maxWidth })),
+		className: cx(styles.DropdownMenu, css({ minWidth })),
 	};
+
+	// Ensure that the popover will be correctly positioned with an additional
+	// update.
+	// https://github.com/reakit/reakit/blob/master/packages/reakit/src/Popover/PopoverState.ts
+	React.useEffect(() => {
+		if (!isOpen) return undefined;
+		const id = window.requestAnimationFrame(() => {
+			popper.current.forceUpdate();
+		});
+		return () => {
+			window.cancelAnimationFrame(id);
+		};
+	}, [isOpen, popper]);
 
 	return {
 		className: classes,
 		dropdownMenuProps,
 		labelProps,
 		popoverProps,
+		resizer,
 		referenceProps,
 		items: enhancedItems,
 		isOpen,

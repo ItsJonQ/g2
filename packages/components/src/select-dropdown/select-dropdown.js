@@ -1,8 +1,9 @@
 import { contextConnect } from '@wp-g2/context';
 import React from 'react';
 
-import { Button } from '../Button';
 import { DropdownMenuCard } from '../Dropdown';
+import { Portal } from '../Portal';
+import { SelectElement } from '../Select';
 import { View } from '../View';
 import SelectDropdownItem from './select-dropdown-item';
 import SelectDropdownLabel from './select-dropdown-label';
@@ -21,23 +22,27 @@ function SelectDropdown(props, forwardedRef) {
 		popoverRef,
 		referenceProps,
 		referenceRef,
+		resizer,
 		...otherProps
 	} = useSelectDropdown(props);
 
 	return (
 		<View {...otherProps} ref={forwardedRef}>
-			<Button hasCaret {...referenceProps} />
-			<View {...popoverProps}>
-				<SelectDropdownLabel {...labelProps} />
-				{isOpen && (
-					<DropdownMenuCard {...dropdownMenuProps}>
-						{items.map((item) => (
-							// eslint-disable-next-line react/jsx-key
-							<SelectDropdownItem {...item} />
-						))}
-					</DropdownMenuCard>
-				)}
-			</View>
+			{resizer}
+			<SelectElement as="button" {...referenceProps} />
+			<Portal>
+				<View {...popoverProps}>
+					<SelectDropdownLabel {...labelProps} />
+					{isOpen && (
+						<DropdownMenuCard {...dropdownMenuProps}>
+							{items.map((item) => (
+								// eslint-disable-next-line react/jsx-key
+								<SelectDropdownItem {...item} />
+							))}
+						</DropdownMenuCard>
+					)}
+				</View>
+			</Portal>
 		</View>
 	);
 }

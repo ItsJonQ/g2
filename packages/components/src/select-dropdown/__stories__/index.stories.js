@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Grid } from '../../Grid';
+import { Text } from '../../Text';
 import { SelectDropdown } from '../index';
 
 export default {
@@ -29,14 +31,65 @@ export const _default = () => {
 	}, []);
 
 	return (
-		<div style={{ padding: '20vh', height: '300vh' }}>
-			<SelectDropdown
-				onChange={handleOnChange}
-				options={options}
-				placeholder="Element"
-				renderItem={renderItem}
-				value={value}
-			/>
+		<div>
+			<Grid>
+				<SelectDropdown
+					onChange={handleOnChange}
+					options={options}
+					placeholder="Element"
+					renderItem={renderItem}
+					value={value}
+				/>
+				<SelectDropdown
+					onChange={handleOnChange}
+					options={options}
+					placeholder="Element"
+					renderItem={renderItem}
+					value={value}
+				/>
+			</Grid>
+		</div>
+	);
+};
+
+export const _inlineRendering = () => {
+	const [value, setValue] = React.useState(options[1]);
+	const handleOnChange = (next) => setValue(next.selectedItem);
+	const renderItem = React.useCallback(({ name, size }) => {
+		return (
+			<div
+				style={{
+					fontSize: size,
+				}}
+			>
+				{name}
+			</div>
+		);
+	}, []);
+
+	return (
+		<div>
+			<Text adjustLineHeightForInnerControls size={value.size}>
+				A vacation is when you take a trip to some{' '}
+				<SelectDropdown
+					isInline
+					onChange={handleOnChange}
+					options={options}
+					placeholder="Element"
+					renderItem={renderItem}
+					value={value}
+				/>{' '}
+				place with your. A vacation is when you take a trip to some{' '}
+				<SelectDropdown
+					isInline
+					onChange={handleOnChange}
+					options={options}
+					placeholder="Element"
+					renderItem={renderItem}
+					value={value}
+				/>{' '}
+				place with your.
+			</Text>
 		</div>
 	);
 };

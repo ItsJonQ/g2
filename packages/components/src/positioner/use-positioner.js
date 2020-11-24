@@ -34,7 +34,7 @@ export function usePositioner(props) {
 							// https://popper.js.org/docs/v2/modifiers/offset/
 							name: 'offset',
 							options: {
-								offset: offset,
+								offset,
 							},
 						},
 					],
