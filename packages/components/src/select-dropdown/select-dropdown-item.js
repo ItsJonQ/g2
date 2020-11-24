@@ -1,4 +1,5 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
+import { ui } from '@wp-g2/styles';
 import { renderChildren } from '@wp-g2/utils';
 import React from 'react';
 
@@ -31,6 +32,7 @@ function SelectDropdownItem(props, forwardedRef) {
 
 	return (
 		<MenuItem
+			{...ui.$('SelectDropdownItem')}
 			{...otherProps}
 			className={className}
 			isSelected={isSelected}

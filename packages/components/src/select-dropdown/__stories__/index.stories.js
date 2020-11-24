@@ -7,51 +7,26 @@ export default {
 	title: 'Components/SelectDropdown',
 };
 
-const items = [
-	'Neptunium',
-	'Plutonium',
-	'Americium',
-	'Curium',
-	'Berkelium',
-	'Californium',
-	'Einsteinium',
-	'Fermium',
-	'Mendelevium',
-	'Nobelium',
-	'Lawrencium',
-	'Rutherfordium',
-	'Dubnium',
-	'Seaborgium',
-	'Bohrium',
-	'Hassium',
-	'Meitnerium',
-	'Darmstadtium',
-	'Roentgenium',
-	'Copernicium',
-	'Nihonium',
-	'Flerovium',
-	'Moscovium',
-	'Livermorium',
-	'Tennessine',
-	'Oganesson',
+const options = [
+	{ name: 'Small', value: 'small', size: 11 },
+	{ name: 'Medium', value: 'medium', size: 15 },
+	{ name: 'Large', value: 'large', size: 21 },
 ];
-const options = items.map((item) => ({ name: item, key: item, value: item }));
 
 export const _default = () => {
-	const [value, setValue] = React.useState(options[3]);
+	const [value, setValue] = React.useState(options[1]);
 	const handleOnChange = (next) => setValue(next.selectedItem);
-	const renderItem = ({ index, name }) => {
+	const renderItem = React.useCallback(({ name, size }) => {
 		return (
 			<div
 				style={{
-					fontSize: index * 1.5,
-					color: `hsl(${index * 10}, 100%, 50%)`,
+					fontSize: size,
 				}}
 			>
 				{name}
 			</div>
 		);
-	};
+	}, []);
 
 	return (
 		<div style={{ padding: '20vh', height: '300vh' }}>
