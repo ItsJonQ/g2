@@ -38,4 +38,4 @@ export declare type AspectRatioProps = {
  * }
  * ```
  */
-export declare const AspectRatio: PolymorphicComponent<AspectRatioProps>;
+export declare const AspectRatio: PolymorphicComponent<'div', AspectRatioProps>;

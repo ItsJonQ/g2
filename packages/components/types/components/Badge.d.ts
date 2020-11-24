@@ -51,4 +51,4 @@ export declare type BadgeProps = {
  * <Badge color="red">11</Badge>
  * ```
  */
-export declare const Badge: PolymorphicComponent<BadgeProps>;
+export declare const Badge: PolymorphicComponent<'div', BadgeProps>;

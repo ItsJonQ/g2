@@ -28,4 +28,4 @@ export declare type DividerProps = SeparatorProps & {
  * </ListGroup>
  * ```
  */
-export declare const Divider: PolymorphicComponent<DividerProps, 'hr'>;
+export declare const Divider: PolymorphicComponent<'hr', DividerProps>;

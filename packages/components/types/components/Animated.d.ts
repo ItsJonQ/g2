@@ -53,7 +53,7 @@ export declare type AnimatedProps = {
  * @see
  * https://www.framer.com/api/motion/
  */
-export declare const Animated: PolymorphicComponent<AnimatedProps>;
+export declare const Animated: PolymorphicComponent<'div', AnimatedProps>;
 
 /**
  * `AnimatedContainer` manages and synchronizes inner `Animated` components. `AnimatedContainer` is necessary for handling unmount/exit animations.

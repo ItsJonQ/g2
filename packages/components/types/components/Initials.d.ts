@@ -20,4 +20,4 @@ export declare type InitialsProps = TextProps & {
  * }
  * ```
  */
-export declare const Initials: PolymorphicComponent<InitialsProps>;
+export declare const Initials: PolymorphicComponent<'div', InitialsProps>;

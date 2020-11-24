@@ -23,6 +23,6 @@ export declare type CloseButtonProps = ButtonProps & {
  * ```
  */
 export declare const CloseButtonProps: PolymorphicComponent<
-	CloseButtonProps,
-	'button'
+	'button',
+	CloseButtonProps
 >;

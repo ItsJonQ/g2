@@ -8,7 +8,7 @@ const animationProps = {
 };
 
 /**
- * @param {import('create-emotion').ObjectInterpolation['transition']} transition
+ * @param {import('create-emotion').ObjectInterpolation<any>['transition']} transition
  * @return {string}
  */
 export const animation = (transition) => {

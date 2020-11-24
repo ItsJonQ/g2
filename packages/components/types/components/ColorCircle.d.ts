@@ -23,4 +23,4 @@ export declare type ColorCircleProps = {
  * <ColorCircle color="blue" />
  * ```
  */
-export declare const ColorCircle: PolymorphicComponent<ColorCircleProps>;
+export declare const ColorCircle: PolymorphicComponent<'div', ColorCircleProps>;

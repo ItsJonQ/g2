@@ -84,4 +84,4 @@ export declare type GridProps = {
  * }
  * ```
  */
-export declare const Grid: PolymorphicComponent<GridProps>;
+export declare const Grid: PolymorphicComponent<'div', GridProps>;

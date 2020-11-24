@@ -30,7 +30,7 @@ export declare type ModalProps = BaseModalProps & {
  * </Modal>
  * ```
  */
-export declare const Modal: PolymorphicComponent<ModalProps>;
+export declare const Modal: PolymorphicComponent<'div', ModalProps>;
 
 export declare type ModalTriggerProps = ButtonProps & {
 	/**
@@ -53,8 +53,8 @@ export declare type ModalTriggerProps = ButtonProps & {
  * ```
  */
 export declare const ModalTrigger: PolymorphicComponent<
-	ModalTriggerProps,
-	'button'
+	'button',
+	ModalTriggerProps
 >;
 
 export declare type ModalHeaderProps = CardHeaderProps & {
@@ -87,7 +87,7 @@ export declare type ModalHeaderProps = CardHeaderProps & {
  * </Modal>
  * ```
  */
-export declare const ModalHeader: PolymorphicComponent<ModalHeaderProps>;
+export declare const ModalHeader: PolymorphicComponent<'div', ModalHeaderProps>;
 
 export declare type ModalBodyProps = CardBodyProps & {};
 /**
@@ -103,7 +103,7 @@ export declare type ModalBodyProps = CardBodyProps & {};
  * ```
  */
 
-export declare const ModalBody: PolymorphicComponent<ModalBodyProps>;
+export declare const ModalBody: PolymorphicComponent<'div', ModalBodyProps>;
 
 export declare type ModalFooterProps = CardFooterProps & {};
 
@@ -120,4 +120,4 @@ export declare type ModalFooterProps = CardFooterProps & {};
  * </Modal>
  * ```
  */
-export declare const ModalFooter: PolymorphicComponent<ModalFooterProps>;
+export declare const ModalFooter: PolymorphicComponent<'div', ModalFooterProps>;

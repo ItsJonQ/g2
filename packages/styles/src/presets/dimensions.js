@@ -2,10 +2,8 @@ import { is } from '@wp-g2/utils';
 
 import { css } from '../style-system';
 
-/** @typedef {import('create-emotion').ObjectInterpolation} */
-
 /**
- * @param {{ height: import('create-emotion').ObjectInterpolation['height'], width: import('create-emotion').ObjectInterpolation['width'] }} options
+ * @param {{ height: import('create-emotion').ObjectInterpolation<any>['height'], width: import('create-emotion').ObjectInterpolation<any>['width'] }} options
  */
 export const frame = ({ height, width }) => {
 	const styles = [];
@@ -20,8 +18,8 @@ export const frame = ({ height, width }) => {
 };
 
 frame.width = (
-	/** @type {import('create-emotion').ObjectInterpolation['width']} */ width,
+	/** @type {import('create-emotion').ObjectInterpolation<any>['width']} */ width,
 ) => css({ maxWidth: '100%', width });
 frame.height = (
-	/** @type {import('create-emotion').ObjectInterpolation['height']} */ height,
+	/** @type {import('create-emotion').ObjectInterpolation<any>['height']} */ height,
 ) => css({ height, maxHeight: '100%' });

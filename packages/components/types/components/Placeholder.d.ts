@@ -21,4 +21,4 @@ export declare type PlaceholderProps = {
  * <Placeholder height={50} width={200} />
  * ```
  */
-export declare const Placeholder: PolymorphicComponent<PlaceholderProps>;
+export declare const Placeholder: PolymorphicComponent<'div', PlaceholderProps>;

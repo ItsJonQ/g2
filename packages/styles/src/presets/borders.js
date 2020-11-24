@@ -23,7 +23,7 @@ export const border = {
 
 /**
  *
- * @param {import('create-emotion').ObjectInterpolation['borderRadius']} value
+ * @param {import('create-emotion').ObjectInterpolation<any>['borderRadius']} value
  */
 export function borderRadius(value) {
 	return css({ borderRadius: value });

@@ -1,8 +1,6 @@
 import { createCoreElement } from './create-core-element';
 import { tags } from './tags';
 
-/** @typedef {Record<keyof JSX.IntrinsicElements, import('./create-core-element').PolymorphicComponent<{}, any>>} CoreElements */
-
 /**
  * @typedef CreateCoreElementProps
  * @property {import('create-emotion').ObjectInterpolation<any>} baseStyles Base styles for the coreElements.
@@ -14,10 +12,10 @@ import { tags } from './tags';
  * Generates a set of coreElements based on React supported HTML tags.
  *
  * @param {CreateCoreElementProps} props Properties to create coreElements with.
- * @returns {CoreElements} A set of coreElements.
+ * @returns {import('./polymorphic-component').CoreElements} A set of coreElements.
  */
 export function createCoreElements({ baseStyles, compiler, globalStyles }) {
-	/** @type {CoreElements} */
+	/** @type {import('./polymorphic-component').CoreElements} */
 	// @ts-ignore We fill in the missing properties in the loop below
 	const core = {};
 

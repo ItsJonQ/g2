@@ -29,7 +29,7 @@ export declare type TabsProps = TabState;
  * @see
  * https://reakit.io/docs/tab/
  */
-export declare const Tabs: PolymorphicComponent<TabsProps>;
+export declare const Tabs: PolymorphicComponent<'div', TabsProps>;
 
 /**
  * `Tab` is a layout component that renders a selectable item within a `TabList`.
@@ -54,7 +54,7 @@ export declare const Tabs: PolymorphicComponent<TabsProps>;
  * @see
  * https://reakit.io/docs/tab/#tab
  */
-export declare const Tab: PolymorphicComponent<TabProps>;
+export declare const Tab: PolymorphicComponent<'div', TabProps>;
 
 /**
  * `TabList` is a layout component that renders a selectable `Tab` items within `Tabs`.
@@ -79,7 +79,7 @@ export declare const Tab: PolymorphicComponent<TabProps>;
  * @see
  * https://reakit.io/docs/tab/#tab
  */
-export declare const TabList: PolymorphicComponent<TabListProps>;
+export declare const TabList: PolymorphicComponent<'div', TabListProps>;
 
 /**
  * `TabPanel` is a layout component that renders content that matches a `Tab` within `Tabs`.
@@ -107,4 +107,4 @@ export declare const TabList: PolymorphicComponent<TabListProps>;
  * @see
  * https://reakit.io/docs/tab/#tab
  */
-export declare const TabPanel: PolymorphicComponent<TabPanelProps>;
+export declare const TabPanel: PolymorphicComponent<'div', TabPanelProps>;

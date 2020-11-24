@@ -61,6 +61,6 @@ export declare type SegmentedControlProps = Omit<
  * ```
  */
 export declare const SegmentedControl: PolymorphicComponent<
-	SegmentedControlProps,
-	'input'
+	'input',
+	SegmentedControlProps
 >;

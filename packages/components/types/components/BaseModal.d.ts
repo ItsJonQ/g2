@@ -48,4 +48,4 @@ export declare type BaseModalProps = {
 /**
  * `BaseModal` is a primitive component used to create modal dialog elements.
  */
-export declare const BaseModal: PolymorphicComponent<BaseModalProps>;
+export declare const BaseModal: PolymorphicComponent<'div', BaseModalProps>;

@@ -25,4 +25,7 @@ export declare type ControlLabelProps = TextProps & {
  * <ControlLabel htmlFor="firstName">Name</ControlLabel>
  * ```
  */
-export declare const ControlLabel: PolymorphicComponent<ControlLabelProps>;
+export declare const ControlLabel: PolymorphicComponent<
+	'div',
+	ControlLabelProps
+>;

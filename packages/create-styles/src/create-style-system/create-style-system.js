@@ -18,14 +18,14 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @template {Record<string, string | number>} TDarkHCConfig
  * @template {string} TGeneratedTokens
  * @typedef CreateStyleSystemObjects
- * @property {ReturnType<createCoreElements>} core A set of coreElements.
- * @property {ReturnType<createCompiler>} compiler The Style system compiler (a custom Emotion instance).
+ * @property {import('./polymorphic-component').CoreElements} core A set of coreElements.
+ * @property {import('../create-compiler').Compiler} compiler The Style system compiler (a custom Emotion instance).
  * @property {(tagName: import('react').ComponentType) => ReturnType<createCoreElement>} createCoreElement A function to create a coreElement (with settings from the Style system).
- * @property {ReturnType<createCompiler>['css']} css A function to compile CSS styles.
- * @property {ReturnType<createCompiler>['cx']} cx A function to resolve + combine classNames.
+ * @property {import('../create-compiler').Compiler['css']} css A function to compile CSS styles.
+ * @property {import('../create-compiler').Compiler['cx']} cx A function to resolve + combine classNames.
  * @property {(tokenName: string) => string} createToken A function to generate a design token (CSS variable) used by the system.
  * @property {(value: keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig) | TGeneratedTokens) => string} get The primary function to retrieve Style system variables.
- * @property {import('./create-styled-components').CreateStyled} styled A set of styled components.
+ * @property {import('./polymorphic-component').CreateStyled} styled A set of styled components.
  * @property {import('react').ComponentType} View The base <View /> component.
  * @property {import('react').ComponentType<import('react').ComponentProps<BaseThemeProvider>>} ThemeProvider The component (Provider) used to adjust design tokens.
  * @property {import('../css-custom-properties').RootStore} rootStore

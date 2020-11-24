@@ -4,7 +4,7 @@ import { css, cx } from '../style-system';
 
 /**
  *
- * @param {import('create-emotion').ObjectInterpolation['color']} color
+ * @param {import('create-emotion').ObjectInterpolation<any>['color']} color
  */
 function getFontColor(color) {
 	return css({ color });

@@ -121,4 +121,4 @@ export declare type AvatarProps = {
  * }
  * ```
  */
-export declare const Avatar: PolymorphicComponent<AvatarProps>;
+export declare const Avatar: PolymorphicComponent<'div', AvatarProps>;

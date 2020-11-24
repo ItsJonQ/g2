@@ -26,4 +26,4 @@ export declare type UnitInputProps = TextInputProps & {
  * }
  * ```
  */
-export declare const UnitInput: PolymorphicComponent<UnitInputProps, 'input'>;
+export declare const UnitInput: PolymorphicComponent<'input', UnitInputProps>;

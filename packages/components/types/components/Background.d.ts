@@ -30,4 +30,4 @@ export declare type BackgroundProps = Omit<SurfaceProps, 'variant'> & {
  * }
  * ```
  */
-export declare const Background: PolymorphicComponent<BackgroundProps>;
+export declare const Background: PolymorphicComponent<'div', BackgroundProps>;

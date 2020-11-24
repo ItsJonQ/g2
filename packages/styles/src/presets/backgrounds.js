@@ -3,7 +3,7 @@ import { getBackgroundColor } from '../mixins/backgrounds';
 import { css } from '../style-system';
 
 /**
- * @param {import('create-emotion').ObjectInterpolation['background']} color
+ * @param {import('create-emotion').ObjectInterpolation<any>['background']} color
  */
 export function background(color) {
 	return css({ background: color });

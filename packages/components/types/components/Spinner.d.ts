@@ -21,4 +21,4 @@ export declare type SpinnerProps = {
  * <Spinner />
  * ```
  */
-export declare const Spinner: PolymorphicComponent<SpinnerProps>;
+export declare const Spinner: PolymorphicComponent<'div', SpinnerProps>;

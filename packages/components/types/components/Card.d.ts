@@ -69,7 +69,7 @@ export declare type CardProps = SurfaceProps & {
  * }
  * ```
  */
-export declare const Card: PolymorphicComponent<CardProps>;
+export declare const Card: PolymorphicComponent<'div', CardProps>;
 
 export declare type CardBodyProps = {
 	/**
@@ -93,7 +93,7 @@ export declare type CardBodyProps = {
  * </Card>
  * ```
  */
-export declare const CardBody: PolymorphicComponent<CardBodyProps>;
+export declare const CardBody: PolymorphicComponent<'div', CardBodyProps>;
 
 export declare type CardHeaderSize = 'medium' | 'small' | 'xSmall';
 
@@ -117,7 +117,7 @@ export declare type CardHeaderProps = {
  * </Card>
  * ```
  */
-export declare const CardHeader: PolymorphicComponent<CardHeaderProps>;
+export declare const CardHeader: PolymorphicComponent<'div', CardHeaderProps>;
 
 export declare type CardFooterProps = CardHeaderProps & {};
 
@@ -132,4 +132,4 @@ export declare type CardFooterProps = CardHeaderProps & {};
  * </Card>
  * ```
  */
-export declare const CardFooter: PolymorphicComponent<CardFooterProps>;
+export declare const CardFooter: PolymorphicComponent<'div', CardFooterProps>;

@@ -13,21 +13,19 @@ const defaultOptions = {
 	rootStore: new RootStore(),
 };
 
-/** @typedef {import('create-emotion').Emotion} Emotion */
-
 /**
- * @typedef {Emotion & {
-	breakpoints: typeof breakpoints,
-	__events: import('mitt').Emitter,
-	}} Compiler
+ * @typedef {import('create-emotion').Emotion & {
+ *	breakpoints: typeof breakpoints,
+ *	__events: import('mitt').Emitter,
+ * }} Compiler
  */
 
 /**
  * @typedef {import('create-emotion').Options & {
-	key?: string,
-	specificityLevel?: number,
-	rootStore: import('../css-custom-properties').RootStore
-}} CreateCompilerOptions
+ *	key?: string,
+ *	specificityLevel?: number,
+ *	rootStore: import('../css-custom-properties').RootStore
+ * }} CreateCompilerOptions
  */
 
 /**

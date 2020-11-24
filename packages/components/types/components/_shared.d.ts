@@ -1,6 +1,6 @@
 import { PropertiesFallback } from 'csstype';
 
-export { PolymorphicComponent } from '@wp-g2/styles';
+export { PolymorphicComponent } from '@wp-g2/create-styles';
 
 export type CSS = PropertiesFallback<number | string>;
 export type ResponsiveCSSValue<T> = Array<T | null> | T;

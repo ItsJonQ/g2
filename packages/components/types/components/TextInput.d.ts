@@ -129,4 +129,4 @@ export declare type TextInputProps = Omit<
  * }
  * ```
  */
-export declare const TextInput: PolymorphicComponent<TextInputProps, 'input'>;
+export declare const TextInput: PolymorphicComponent<'input', TextInputProps>;

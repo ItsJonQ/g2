@@ -30,4 +30,4 @@ export declare type ZStackProps = {
  * </ZStack>
  * ```
  */
-export declare const ZStack: PolymorphicComponent<ZStackProps>;
+export declare const ZStack: PolymorphicComponent<'div', ZStackProps>;

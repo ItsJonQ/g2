@@ -12,4 +12,7 @@ type VisuallyHiddenProps = {};
  * </VisuallyHidden>
  * ```
  */
-export declare const VisuallyHidden: PolymorphicComponent<VisuallyHiddenProps>;
+export declare const VisuallyHidden: PolymorphicComponent<
+	'div',
+	VisuallyHiddenProps
+>;

@@ -25,4 +25,4 @@ export declare type ScrollableProps = {
  * <Scrollable><View>...</View></Scrollable>
  * ```
  */
-export declare const Scrollable: PolymorphicComponent<ScrollableProps>;
+export declare const Scrollable: PolymorphicComponent<'div', ScrollableProps>;

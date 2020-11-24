@@ -6,12 +6,18 @@ import { useContextStoreContext } from './context-system-provider';
 import { ns } from './utils';
 
 /**
+ * @template TProps
+ * @typedef {TProps & { [CONNECTED_NAMESPACE]: boolean; className: string; children?: import('react').ReactNode }} ConnectedProps
+ */
+
+/**
  * Custom hook that derives registered props from the Context system.
  * These derived props are then consolidated with incoming component props.
  *
- * @param {Object} props Incoming props from the component.
- * @param {Array<string>|string} namespace The namespace to register and to derive context props from.
- * @param {function} forwardedRef React.forwardRef reference object.
+ * @template {{ className?: string }} P
+ * @param {P} props Incoming props from the component.
+ * @param {string} namespace The namespace to register and to derive context props from.
+ * @return {ConnectedProps<P>}
  */
 export function useContextSystem(props, namespace) {
 	const { store } = useContextStoreContext();
@@ -19,8 +25,9 @@ export function useContextSystem(props, namespace) {
 	let contextProps;
 
 	const displayName = is.array(namespace) ? namespace[0] : namespace;
-	const key = namespace;
 
+	/** @type {ConnectedProps<P>} */
+	// @ts-ignore We fill in the missing properties below
 	const finalComponentProps = {
 		[CONNECTED_NAMESPACE]: true,
 	};
@@ -32,29 +39,10 @@ export function useContextSystem(props, namespace) {
 		}
 	}
 
-	/**
-	 * It's possible to connect (register) a component under multiple namespaces.
-	 * This is done when passing the namespace as an array (Array<string>).
-	 *
-	 * To properly retrieve props from the Context system, we must accomodate
-	 * both singular and multi connections.
-	 */
-	if (is.array(key)) {
-		contextProps = key.reduce((acc, k) => {
-			const v = context[k];
-			if (is.plainObject(v)) {
-				for (const vk in v) {
-					acc[vk] = v[vk];
-				}
-			}
-			return acc;
-		}, {});
-	} else {
-		contextProps =
-			context[key] ||
-			// Fallback
-			{};
-	}
+	contextProps =
+		context[displayName] ||
+		// Fallback
+		{};
 
 	const otherContextProps = omit(contextProps, ['_overrides', 'css']);
 	const contextCSS = contextProps.css;
@@ -66,7 +54,7 @@ export function useContextSystem(props, namespace) {
 		// Resolve custom CSS from ContextSystemProvider
 		contextCSS && css(contextCSS),
 		initialMergedProps.css && css(initialMergedProps.css),
-		memoizedGetStyledClassNameFromKey(key),
+		memoizedGetStyledClassNameFromKey(displayName),
 		props.className,
 	);
 
@@ -110,7 +98,7 @@ function getStyledClassName(displayName) {
 /**
  * Generates the connected component CSS className based on the namespace.
  *
- * @param {string} displayName The name of the connected component.
+ * @param {string} key The name of the connected component.
  * @returns {string} The generated CSS className.
  */
 function getStyledClassNameFromKey(key) {

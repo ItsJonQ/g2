@@ -27,4 +27,4 @@ export declare type ContainerProps = {
  * </Container>
  * ```
  */
-export declare const Container: PolymorphicComponent<ContainerProps>;
+export declare const Container: PolymorphicComponent<'div', ContainerProps>;

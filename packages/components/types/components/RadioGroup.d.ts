@@ -50,4 +50,4 @@ export declare type RadioGroupProps = ReakitRadioGroupProps &
  * </RadioGroup>
  * ```
  */
-export declare const RadioGroup: PolymorphicComponent<RadioGroupProps>;
+export declare const RadioGroup: PolymorphicComponent<'div', RadioGroupProps>;

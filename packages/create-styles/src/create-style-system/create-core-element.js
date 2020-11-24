@@ -10,44 +10,6 @@ const shouldForwardProp = isPropValid;
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
-/** @typedef {import('create-emotion').Emotion} Emotion */
-/** @typedef {Emotion['cx'] | Emotion['css'] | string} InterpolatedCSS */
-
-/**
- * @template {keyof JSX.IntrinsicElements | import('react').JSXElementConstructor<any>} E
- * @typedef {JSX.LibraryManagedAttributes<E, import('react').ComponentPropsWithRef<E>>} PropsOf
- */
-
-/**
- * @template {import('react').ElementType} E
- * @typedef ViewOwnProps
- * @property {E | string} [as]
- * @property {InterpolatedCSS} [css]
- */
-
-/**
- * @template {import('react').ElementType} E
- * @typedef {ViewOwnProps<E> & Omit<PropsOf<E>, keyof ViewOwnProps<import('react').ElementType<any>>>} ViewProps
- */
-
-/**
- * @template {import('react').ElementType} E
- * @template P
- * @typedef {P & ViewProps<E>} PolymorphicComponentProps
- */
-
-/**
- * @template P
- * @template {import('react').ElementType} D
- * @typedef {(props: PolymorphicComponentProps<D, P>) => JSX.Element | null} PolymorphicComponent
- */
-
-/**
- * @template P
- * @template {import('react').ElementType} D
- * @typedef {(styles: any) => (props: PolymorphicComponentProps<D, P>) => JSX.Element} CreatePolymorphicComponent
- */
-
 /**
  * @typedef CreateCoreElementOptions
  * @property {import('create-emotion').ObjectInterpolation<any>} baseStyles The baseStyles from the Style system.
@@ -76,7 +38,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @template {keyof JSX.IntrinsicElements} TTagName
  * @param {TTagName} tagName The HTMLElement/React.Component to connect with the Style system.
  * @param {CreateCoreElementOptions} options Options to custom coreElement styles.
- * @returns {PolymorphicComponent<{}, TTagName>} The Style system wrapped HTMLElement/React.Component.
+ * @returns {import('./polymorphic-component').PolymorphicComponent<TTagName, {}>} The Style system wrapped HTMLElement/React.Component.
  */
 export const createCoreElement = (tagName, options) => {
 	const { baseStyles, compiler, globalStyles } = {

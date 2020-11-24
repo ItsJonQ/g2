@@ -131,6 +131,6 @@ export declare type BaseButtonProps = {
  * `BaseButton` is a primitive component used to create actionable components (e.g. `Button`).
  */
 export declare const BaseButton: PolymorphicComponent<
-	BaseButtonProps,
-	'button'
+	'button',
+	BaseButtonProps
 >;

@@ -29,6 +29,6 @@ export declare type SearchInputProps = TextInputProps & {
  * ```
  */
 export declare const SearchInput: PolymorphicComponent<
-	SearchInputProps,
-	'input'
+	'input',
+	SearchInputProps
 >;

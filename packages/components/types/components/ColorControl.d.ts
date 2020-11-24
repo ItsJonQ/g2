@@ -14,6 +14,6 @@ export declare type ColorControlProps = ButtonProps &
  * ```
  */
 export declare const ColorControl: PolymorphicComponent<
-	ColorControlProps,
-	'button'
+	'button',
+	ColorControlProps
 >;

@@ -40,4 +40,4 @@ export declare type SwitchProps = FormElementProps & {
  * }
  * ```
  */
-export declare const Switch: PolymorphicComponent<SwitchProps, 'input'>;
+export declare const Switch: PolymorphicComponent<'input', SwitchProps>;
