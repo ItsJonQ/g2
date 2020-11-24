@@ -5,13 +5,9 @@ import React from 'react';
 export function usePositioner(props) {
 	const {
 		gutter = 4,
-		placement: sealedPlacement = 'bottom-start',
+		placement = 'bottom-start',
 		unstable_fixed: fixed = false,
-		unstable_flip: flip = true,
 		unstable_offset: sealedOffset,
-		unstable_preventOverflow: preventOverflow = true,
-		visible,
-		...sealed
 	} = useSealedState(props);
 
 	const popper = React.useRef(null);
@@ -27,7 +23,7 @@ export function usePositioner(props) {
 				popoverRef.current,
 				{
 					// https://popper.js.org/docs/v2/constructors/#options
-					placement: sealedPlacement,
+					placement,
 					strategy: fixed ? 'fixed' : 'absolute',
 					modifiers: [
 						{
@@ -48,7 +44,7 @@ export function usePositioner(props) {
 				popper.current = null;
 			}
 		};
-	}, [sealedPlacement, fixed, sealed.visible, flip, offset, preventOverflow]);
+	}, [placement, fixed, offset]);
 
 	return {
 		popoverRef,

@@ -14,16 +14,13 @@ function PopoverContent(props, forwardedRef) {
 		className,
 		elevation = 5,
 		maxWidth = 360,
-		unstable_removeFromDOMOnHide = true,
 		...otherProps
 	} = useContextSystem(props, 'PopoverContent');
 
 	const { label, popover } = usePopoverContext();
 	const classes = cx(styles.PopoverContent, css({ maxWidth }), className);
 
-	const showContent = unstable_removeFromDOMOnHide
-		? popover.visible || popover.animating
-		: true;
+	const showContent = popover.visible || popover.animating;
 
 	return (
 		<ReakitPopover
