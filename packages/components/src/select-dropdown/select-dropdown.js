@@ -1,17 +1,21 @@
-import { check } from '@wordpress/icons';
+import { createPopper } from '@popperjs/core';
+import { isShallowEqualObjects } from '@wordpress/is-shallow-equal';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { cx } from '@wp-g2/styles';
-import { useUpdateEffect } from '@wp-g2/utils';
+import { css, cx } from '@wp-g2/styles';
+import {
+	mergeRefs,
+	useIsomorphicLayoutEffect,
+	useSealedState,
+} from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 import React from 'react';
-import { usePopoverState } from 'reakit';
 
 import { Button } from '../Button';
-import { Card } from '../Card';
-import { Icon } from '../Icon';
-import { Popover } from '../Popover';
+import { DropdownMenuCard } from '../Dropdown';
 import { View } from '../View';
 import { VisuallyHidden } from '../VisuallyHidden';
+import SelectDropdownItem from './select-dropdown-item';
+import * as styles from './select-dropdown-styles';
 
 const itemToString = (item) => item && item.name;
 // This is needed so that in Windows, where
@@ -53,27 +57,93 @@ const stateReducer = (
 	}
 };
 
+function applyStyles(styles) {
+	return (prevStyles) => {
+		if (styles && !isShallowEqualObjects(prevStyles, styles)) {
+			return styles;
+		}
+		return prevStyles;
+	};
+}
+
 function SelectDropdown(props, forwardedRef) {
 	const {
 		className,
-		elevation = 3,
 		hideLabelFromVision,
 		label,
-		onChange: onSelectedItemChange,
+		onChange,
+		renderItem,
+		maxWidth = 320,
+		minWidth = 200,
 		placeholder,
 		options: items = [],
-		visible = true,
-		unstable_fixed = true,
-		value: _selectedItem,
+		offset: offsetProp,
+		visible,
+		value,
 		...otherProps
 	} = useContextSystem(props, 'SelectDropdown');
 
-	const popover = usePopoverState({
-		placement: 'bottom-start',
-		animated: 80,
-		unstable_fixed,
-		visible,
-	});
+	const {
+		gutter = 12,
+		modal = false,
+		placement: sealedPlacement = 'bottom-start',
+		unstable_fixed: fixed = false,
+		unstable_flip: flip = true,
+		unstable_offset: sealedOffset,
+		unstable_preventOverflow: preventOverflow = true,
+		...sealed
+	} = useSealedState({ offset: offsetProp, visible });
+
+	const popper = React.useRef(null);
+	const referenceRef = React.useRef(null);
+	const popoverRef = React.useRef(null);
+	const popperCreated = React.useRef(false);
+	const [originalPlacement, place] = React.useState(sealedPlacement);
+	const [offset] = React.useState(sealedOffset || [0, gutter]);
+
+	useIsomorphicLayoutEffect(() => {
+		if (referenceRef.current && popoverRef.current) {
+			popper.current = createPopper(
+				referenceRef.current,
+				popoverRef.current,
+				{
+					// https://popper.js.org/docs/v2/constructors/#options
+					placement: originalPlacement,
+					strategy: fixed ? 'fixed' : 'absolute',
+					modifiers: [
+						{
+							// https://popper.js.org/docs/v2/modifiers/offset/
+							name: 'offset',
+							options: {
+								offset: [0, 4],
+							},
+						},
+					],
+				},
+			);
+			popperCreated.current = true;
+		}
+		return () => {
+			if (popper.current) {
+				popper.current.destroy();
+				popper.current = null;
+			}
+		};
+	}, [
+		originalPlacement,
+		fixed,
+		sealed.visible,
+		flip,
+		offset,
+		preventOverflow,
+	]);
+
+	const handleOnChange = React.useCallback(
+		(selectedProps) => {
+			onChange(selectedProps);
+		},
+		[onChange],
+	);
 
 	const {
 		getItemProps,
@@ -87,54 +157,66 @@ function SelectDropdown(props, forwardedRef) {
 		initialSelectedItem: items[0],
 		items,
 		itemToString,
-		onSelectedItemChange,
-		selectedItem: _selectedItem,
+		onSelectedItemChange: handleOnChange,
+		selectedItem: value,
 		stateReducer,
 	});
 
-	const menuProps = getMenuProps({
-		className: 'components-custom-select-control__menu',
+	const popoverProps = getMenuProps({
+		className: styles.MenuWrapper,
 		'aria-hidden': !isOpen,
 	});
 	// We need this here, because the null active descendant is not
 	// fully ARIA compliant.
 	if (
-		menuProps['aria-activedescendant'] &&
-		menuProps['aria-activedescendant'].slice(0, 'downshift-null'.length) ===
-			'downshift-null'
+		popoverProps['aria-activedescendant'] &&
+		popoverProps['aria-activedescendant'].slice(
+			0,
+			'downshift-null'.length,
+		) === 'downshift-null'
 	) {
-		delete menuProps['aria-activedescendant'];
+		delete popoverProps['aria-activedescendant'];
 	}
 
-	useUpdateEffect(() => {
-		if (!isOpen) {
-			// popover.hide();
-		}
-	}, [isOpen]);
+	// Ensure that the popover will be correctly positioned with an additional
+	// update.
+	React.useEffect(() => {
+		// const id = window.requestAnimationFrame(() => {
+		// 	popper.current?.forceUpdate && popper.current.forceUpdate();
+		// });
+		// return () => {
+		// 	window.cancelAnimationFrame(id);
+		// };
+	}, []);
+
+	const dropdownMenuCardClasses = cx(css({ minWidth, maxWidth }));
+
+	const referenceProps = getToggleButtonProps({
+		// This is needed because some speech recognition software don't support `aria-labelledby`.
+		'aria-label': label,
+		'aria-labelledby': undefined,
+		className: 'components-custom-select-control__button',
+	});
 
 	return (
-		<div
-			className={cx('components-custom-select-control', className)}
+		<View
+			className={cx(
+				'components-custom-select-control',
+				styles.SelectDropdown,
+				className,
+			)}
 			ref={forwardedRef}
 		>
-			<Popover
-				{...menuProps}
-				state={popover}
-				trigger={
-					<Button
-						hasCaret
-						{...getToggleButtonProps({
-							// This is needed because some speech recognition software don't support `aria-labelledby`.
-							'aria-label': label,
-							'aria-labelledby': undefined,
-							className:
-								'components-custom-select-control__button',
-						})}
-					>
-						{itemToString(selectedItem) || placeholder}
-					</Button>
-				}
-				unstable_removeFromDOMOnHide={false}
+			<Button
+				hasCaret
+				{...referenceProps}
+				ref={mergeRefs([referenceRef, referenceProps.ref])}
+			>
+				{itemToString(selectedItem) || placeholder}
+			</Button>
+			<div
+				{...popoverProps}
+				ref={mergeRefs([popoverRef, popoverProps.ref])}
 			>
 				{hideLabelFromVision ? (
 					<VisuallyHidden as="label" {...getLabelProps()}>
@@ -151,35 +233,28 @@ function SelectDropdown(props, forwardedRef) {
 						{label}
 					</label>
 				)}
-				{items.map((item, index) => (
-					// eslint-disable-next-line react/jsx-key
-					<View
-						{...getItemProps({
-							item,
-							index,
-							key: item.key,
-							className: cx(
-								item.className,
-								'components-custom-select-control__item',
-								{
-									'is-highlighted':
-										index === highlightedIndex,
-								},
-							),
-							style: item.style,
-						})}
-					>
-						{item.name}
-						{item === selectedItem && (
-							<Icon
-								className="components-custom-select-control__item-icon"
-								icon={check}
+				{isOpen && (
+					<DropdownMenuCard className={dropdownMenuCardClasses}>
+						{items.map((item, index) => (
+							// eslint-disable-next-line react/jsx-key
+							<SelectDropdownItem
+								{...item}
+								index={index}
+								renderItem={renderItem}
+								{...getItemProps({
+									item,
+									index,
+									key: item.key,
+									style: item.style,
+									isHighlighted: index === highlightedIndex,
+									isSelected: item === selectedItem,
+								})}
 							/>
-						)}
-					</View>
-				))}
-			</Popover>
-		</div>
+						))}
+					</DropdownMenuCard>
+				)}
+			</div>
+		</View>
 	);
 }
 

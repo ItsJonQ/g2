@@ -1,4 +1,9 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
-export const Menu = css``;
-export const MenuItem = css``;
+export const SelectDropdown = css`
+	position: relative;
+`;
+
+export const MenuWrapper = css`
+	outline: none;
+`;

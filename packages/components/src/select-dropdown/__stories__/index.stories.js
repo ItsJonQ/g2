@@ -38,12 +38,29 @@ const items = [
 const options = items.map((item) => ({ name: item, key: item, value: item }));
 
 export const _default = () => {
+	const [value, setValue] = React.useState(options[3]);
+	const handleOnChange = (next) => setValue(next.selectedItem);
+	const renderItem = ({ index, name }) => {
+		return (
+			<div
+				style={{
+					fontSize: index * 1.5,
+					color: `hsl(${index * 10}, 100%, 50%)`,
+				}}
+			>
+				{name}
+			</div>
+		);
+	};
+
 	return (
 		<div style={{ padding: '20vh', height: '300vh' }}>
 			<SelectDropdown
+				onChange={handleOnChange}
 				options={options}
 				placeholder="Element"
-				value="Oganesson"
+				renderItem={renderItem}
+				value={value}
 			/>
 		</div>
 	);

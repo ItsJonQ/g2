@@ -2,11 +2,10 @@ import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
 import React from 'react';
 
-import { Card } from '../Card';
 import { Menu } from '../Menu';
-import { Scrollable } from '../Scrollable';
 import { useDropdownContext } from './Dropdown.Context';
 import * as styles from './Dropdown.styles';
+import DropdownMenuCard from './DropdownMenuCard';
 
 function DropdownMenu(props, forwardedRef) {
 	const {
@@ -44,13 +43,5 @@ function DropdownMenu(props, forwardedRef) {
 		</Menu>
 	);
 }
-
-const DropdownMenuCard = React.memo(({ children, elevation }) => {
-	return (
-		<Card className={styles.Card} elevation={elevation}>
-			<Scrollable className={styles.Scrollable}>{children}</Scrollable>
-		</Card>
-	);
-});
 
 export default contextConnect(DropdownMenu, 'DropdownMenu');
