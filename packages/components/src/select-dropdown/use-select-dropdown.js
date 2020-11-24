@@ -14,12 +14,11 @@ const OFFSET = [CONTROL_BORDER_WIDTH, 4];
 export function useSelectDropdown(props) {
 	const {
 		className,
+		error,
 		hideLabelFromVision,
 		isInline,
-		isBlock = false,
-		isControl = true,
-		isDestructive,
 		isSubtle,
+		isOpen: isOpenProp,
 		label,
 		maxWidth: maxWidthProp = 280,
 		minWidth = 200,
@@ -55,6 +54,7 @@ export function useSelectDropdown(props) {
 	} = useSelect({
 		initialSelectedItem: items[0],
 		items,
+		isOpen: isOpenProp,
 		itemToString,
 		onSelectedItemChange: handleOnChange,
 		selectedItem: value,
@@ -97,9 +97,7 @@ export function useSelectDropdown(props) {
 		...ui.$('SelectDropdownReference'),
 		..._referenceProps,
 		children: itemToString(selectedItem) || placeholder,
-		isBlock,
-		isControl,
-		isDestructive,
+		error,
 		isSubtle,
 		prefix,
 		suffix,
@@ -159,5 +157,6 @@ export function useSelectDropdown(props) {
 		items: enhancedItems,
 		isOpen,
 		hideLabelFromVision,
+		...otherProps,
 	};
 }
