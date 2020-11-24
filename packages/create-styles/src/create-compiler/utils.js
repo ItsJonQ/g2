@@ -1,4 +1,7 @@
 /**
  * Breakpoint values used for responsive style rendering.
  */
-export const breakpoints = [40, 52, 64].map((n) => n + 'em');
+/**
+ * @type {['40em', '52em', '64em']}
+ */
+export const breakpoints = ['40em', '52em', '64em'];
