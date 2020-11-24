@@ -43,4 +43,4 @@ export declare type HeadingProps = TextProps & {
  * }
  * ```
  */
-export declare const Heading: PolymorphicComponent<HeadingProps, 'div'>;
+export declare const Heading: PolymorphicComponent<'div', HeadingProps>;

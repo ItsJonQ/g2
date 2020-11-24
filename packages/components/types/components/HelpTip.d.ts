@@ -21,4 +21,4 @@ export declare type HelpTipProps = TooltipProps & {
  * </HelpTip>
  * ```
  */
-export declare const HelpTip: PolymorphicComponent<HelpTipProps>;
+export declare const HelpTip: PolymorphicComponent<'div', HelpTipProps>;

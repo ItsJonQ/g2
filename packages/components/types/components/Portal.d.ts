@@ -19,4 +19,4 @@ export declare type PortalProps = {
  * <Portal><View>...</View></Portal>
  * ```
  */
-export declare const Portal: PolymorphicComponent<PortalProps>;
+export declare const Portal: PolymorphicComponent<'div', PortalProps>;

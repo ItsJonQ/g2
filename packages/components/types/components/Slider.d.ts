@@ -36,4 +36,4 @@ export declare type SliderProps = FormElementProps & {
  * }
  * ```
  */
-export declare const Slider: PolymorphicComponent<SliderProps, 'input'>;
+export declare const Slider: PolymorphicComponent<'input', SliderProps>;

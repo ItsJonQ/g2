@@ -114,4 +114,4 @@ export declare type HStackProps = Omit<FlexProps, 'align' | 'gap'> & {
  * }
  * ```
  */
-export declare const HStack: PolymorphicComponent<HStackProps>;
+export declare const HStack: PolymorphicComponent<'div', HStackProps>;

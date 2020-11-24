@@ -39,4 +39,7 @@ export declare type ArrowIndicatorProps = {
  * <ArrowIndicator direction="down" />
  * ```
  */
-export declare const ArrowIndicator: PolymorphicComponent<ArrowIndicatorProps>;
+export declare const ArrowIndicator: PolymorphicComponent<
+	'div',
+	ArrowIndicatorProps
+>;

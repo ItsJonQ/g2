@@ -10,6 +10,17 @@ import { Text } from '../Text';
 import { VStack } from '../VStack';
 import * as styles from './BlankSlate.styles';
 
+/**
+ * @typedef Props
+ * @property {import('react').ReactNode} [description]
+ * @property {import('react').ReactNode} title
+ * @property {import('react').ReactNode} [icon]
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function BlankSlate(props, forwardedRef) {
 	const {
 		children,
@@ -54,4 +65,7 @@ function BlankSlate(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(BlankSlate, 'BlankSlate');
+/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', Props>} */
+const ConnectedBlankSlate = contextConnect(BlankSlate, 'BlankSlate');
+
+export default ConnectedBlankSlate;

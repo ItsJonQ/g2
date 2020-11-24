@@ -17,7 +17,7 @@ export declare type MenuProps = {};
  *
  * @see https://reakit.io/docs/menu/#menu
  */
-export declare const Menu: PolymorphicComponent<MenuProps>;
+export declare const Menu: PolymorphicComponent<'div', MenuProps>;
 
 export declare type MenuItemProps = BaseButtonProps & {
 	/**
@@ -52,4 +52,4 @@ export declare type MenuItemProps = BaseButtonProps & {
  *
  * @see https://reakit.io/docs/menu/#menuitem
  */
-export declare const MenuItem: PolymorphicComponent<MenuItemProps, 'button'>;
+export declare const MenuItem: PolymorphicComponent<'button', MenuItemProps>;

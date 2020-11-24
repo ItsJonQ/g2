@@ -42,4 +42,7 @@ export declare type ControlGroupProps = Pick<FlexProps, 'direction'> & {
  * }
  * ```
  */
-export declare const ControlGroup: PolymorphicComponent<ControlGroupProps>;
+export declare const ControlGroup: PolymorphicComponent<
+	'div',
+	ControlGroupProps
+>;

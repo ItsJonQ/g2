@@ -11,4 +11,4 @@ export declare type LinkProps = TextProps & {};
  * <Link href="...">See Documentation</Link>
  * ```
  */
-export declare const Link: PolymorphicComponent<LinkProps>;
+export declare const Link: PolymorphicComponent<'a', LinkProps>;

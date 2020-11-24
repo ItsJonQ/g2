@@ -29,7 +29,7 @@ export declare type CollapsibleProps = {
  * </Collapsible>
  * ```
  */
-export declare const Collapsible: PolymorphicComponent<CollapsibleProps>;
+export declare const Collapsible: PolymorphicComponent<'div', CollapsibleProps>;
 
 export declare type CollapsibleTriggerProps = DisclosureProps & {
 	/**
@@ -55,7 +55,10 @@ export declare type CollapsibleTriggerProps = DisclosureProps & {
  * </Collapsible>
  * ```
  */
-export declare const CollapsibleTrigger: PolymorphicComponent<CollapsibleTriggerProps>;
+export declare const CollapsibleTrigger: PolymorphicComponent<
+	'div',
+	CollapsibleTriggerProps
+>;
 
 export declare type CollapsibleContentProps = DisclosureContentProps;
 
@@ -70,4 +73,7 @@ export declare type CollapsibleContentProps = DisclosureContentProps;
  * </Collapsible>
  * ```
  */
-export declare const CollapsibleContent: PolymorphicComponent<CollapsibleContentProps>;
+export declare const CollapsibleContent: PolymorphicComponent<
+	'div',
+	CollapsibleContentProps
+>;

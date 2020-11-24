@@ -23,7 +23,7 @@ export declare type ListProps = {
  * </List>
  * ```
  */
-export declare const List: PolymorphicComponent<ListProps, 'ul'>;
+export declare const List: PolymorphicComponent<'ul', ListProps>;
 
 export declare type ListItemProps = {};
 
@@ -40,4 +40,4 @@ export declare type ListItemProps = {};
  * </List>
  * ```
  */
-export declare const ListItem: PolymorphicComponent<ListItemProps, 'li'>;
+export declare const ListItem: PolymorphicComponent<'li', ListItemProps>;

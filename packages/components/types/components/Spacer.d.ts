@@ -87,4 +87,4 @@ export declare type SpacerProps = {
  * }
  * ```
  */
-export declare const Spacer: PolymorphicComponent<SpacerProps>;
+export declare const Spacer: PolymorphicComponent<'div', SpacerProps>;

@@ -41,7 +41,7 @@ export declare type AlertProps = {
  * </Alert>
  * ```
  */
-export declare const Alert: PolymorphicComponent<AlertProps>;
+export declare const Alert: PolymorphicComponent<'div', AlertProps>;
 
 /**
  * `Alerts` is a container that manages the mounting/unmount animations for child `Alert` components.

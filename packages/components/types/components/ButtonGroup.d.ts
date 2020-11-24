@@ -63,4 +63,4 @@ export declare type ButtonGroupProps = ReakitRadioGroupProps & {
  * }
  * ```
  */
-export declare const ButtonGroup: PolymorphicComponent<ButtonGroupProps>;
+export declare const ButtonGroup: PolymorphicComponent<'div', ButtonGroupProps>;

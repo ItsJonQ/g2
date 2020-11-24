@@ -29,4 +29,4 @@ export declare type ButtonProps = BaseButtonProps & {
  * }
  * ```
  */
-export declare const Button: PolymorphicComponent<ButtonProps, 'button'>;
+export declare const Button: PolymorphicComponent<'button', ButtonProps>;

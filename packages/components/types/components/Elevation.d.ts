@@ -72,4 +72,4 @@ export declare type ElevationProps = {
  * }
  * ```
  */
-export declare const Elevation: PolymorphicComponent<ElevationProps>;
+export declare const Elevation: PolymorphicComponent<'div', ElevationProps>;

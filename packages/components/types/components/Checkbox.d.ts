@@ -45,4 +45,4 @@ export declare type CheckboxProps = ReakitCheckboxProps &
  * <Checkbox label="Olaf" value="olaf" checked={true} />
  * ```
  */
-export declare const Checkbox: PolymorphicComponent<CheckboxProps, 'input'>;
+export declare const Checkbox: PolymorphicComponent<'input', CheckboxProps>;

@@ -30,4 +30,7 @@ export declare type AlignmentMatrixControlProps = {
 	onChange?: (value: Value) => void;
 };
 
-export declare const AlignmentMatrixControl: PolymorphicComponent<AlignmentMatrixControlProps>;
+export declare const AlignmentMatrixControl: PolymorphicComponent<
+	'div',
+	AlignmentMatrixControlProps
+>;

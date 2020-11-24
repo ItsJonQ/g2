@@ -86,4 +86,4 @@ export declare type SurfaceProps = {
  * }
  * ```
  */
-export declare const Surface: PolymorphicComponent<SurfaceProps>;
+export declare const Surface: PolymorphicComponent<'div', SurfaceProps>;

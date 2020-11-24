@@ -161,4 +161,4 @@ export declare type SelectProps = Omit<
  * }
  * ```
  */
-export declare const Select: PolymorphicComponent<SelectProps, 'select'>;
+export declare const Select: PolymorphicComponent<'select', SelectProps>;

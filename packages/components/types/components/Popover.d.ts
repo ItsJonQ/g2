@@ -69,4 +69,4 @@ export declare type PopoverProps = PopoverState &
  * </Popover>
  * ```
  */
-export declare const Popover: PolymorphicComponent<PopoverProps>;
+export declare const Popover: PolymorphicComponent<'div', PopoverProps>;

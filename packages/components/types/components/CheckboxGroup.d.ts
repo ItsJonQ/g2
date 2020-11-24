@@ -22,4 +22,7 @@ export declare type CheckboxGroupProps = {
  * </CheckboxGroup>
  * ```
  */
-export declare const CheckboxGroup: PolymorphicComponent<CheckboxGroupProps>;
+export declare const CheckboxGroup: PolymorphicComponent<
+	'div',
+	CheckboxGroupProps
+>;

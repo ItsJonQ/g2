@@ -60,4 +60,4 @@ export declare type TooltipProps = TooltipState &
  * </Tooltip>
  * ```
  */
-export declare const Tooltip: PolymorphicComponent<TooltipProps>;
+export declare const Tooltip: PolymorphicComponent<'div', TooltipProps>;

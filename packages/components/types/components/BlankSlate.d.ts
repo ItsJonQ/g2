@@ -39,4 +39,4 @@ interface OwnProps {
 
 export type BlankSlateProps = OwnProps & CardBodyProps;
 
-export declare const BlankSlate: PolymorphicComponent<BlankSlateProps>;
+export declare const BlankSlate: PolymorphicComponent<'div', BlankSlateProps>;

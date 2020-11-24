@@ -80,4 +80,4 @@ export declare type VStackProps = HStackProps & {
  * }
  * ```
  */
-export declare const VStack: PolymorphicComponent<VStackProps>;
+export declare const VStack: PolymorphicComponent<'div', VStackProps>;

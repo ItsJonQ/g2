@@ -208,7 +208,7 @@ export declare type FlexProps = {
  * }
  * ```
  */
-export declare const Flex: PolymorphicComponent<FlexProps>;
+export declare const Flex: PolymorphicComponent<'div', FlexProps>;
 
 export declare type FlexItemProps = {
 	/**
@@ -233,7 +233,7 @@ export declare type FlexItemProps = {
  * </Flex>
  * ```
  */
-export declare const FlexItem: PolymorphicComponent<FlexItemProps>;
+export declare const FlexItem: PolymorphicComponent<'div', FlexItemProps>;
 
 /**
  * `FlexBlock` is a primitive layout component that adaptively resizes content within layout containers like `Flex`.
@@ -245,7 +245,7 @@ export declare const FlexItem: PolymorphicComponent<FlexItemProps>;
  * </Flex>
  * ```
  */
-export declare const FlexBlock: PolymorphicComponent<Omit<
-	FlexItemProps,
-	'isBlock'
->>;
+export declare const FlexBlock: PolymorphicComponent<
+	'div',
+	Omit<FlexItemProps, 'isBlock'>
+>;

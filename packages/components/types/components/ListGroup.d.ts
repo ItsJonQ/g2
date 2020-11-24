@@ -23,7 +23,7 @@ export declare type ListGroupsProps = Pick<HStackProps, 'spacing'> & {
  * </ListGroups>
  * ```
  */
-export declare const ListGroups: PolymorphicComponent<ListGroupsProps>;
+export declare const ListGroups: PolymorphicComponent<'div', ListGroupsProps>;
 
 export declare type ListGroupProps = {
 	/**
@@ -51,7 +51,7 @@ export declare type ListGroupProps = {
  * </ListGroup>
  * ```
  */
-export declare const ListGroup: PolymorphicComponent<ListGroupProps>;
+export declare const ListGroup: PolymorphicComponent<'div', ListGroupProps>;
 
 export declare type ListGroupHeaderProps = HStackProps & {};
 
@@ -79,7 +79,10 @@ export declare type ListGroupHeaderProps = HStackProps & {};
  * </ListGroup>
  * ```
  */
-export declare const ListGroupHeader: PolymorphicComponent<ListGroupHeaderProps>;
+export declare const ListGroupHeader: PolymorphicComponent<
+	'div',
+	ListGroupHeaderProps
+>;
 
 export declare type ListGroupFooterProps = HStackProps & {};
 
@@ -96,4 +99,7 @@ export declare type ListGroupFooterProps = HStackProps & {};
  * </ListGroup>
  * ```
  */
-export declare const ListGroupFooter: PolymorphicComponent<ListGroupFooterProps>;
+export declare const ListGroupFooter: PolymorphicComponent<
+	'div',
+	ListGroupFooterProps
+>;

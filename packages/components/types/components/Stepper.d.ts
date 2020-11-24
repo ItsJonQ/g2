@@ -40,4 +40,4 @@ export declare type StepperProps = ControlGroupProps & {
  * <Stepper onIncrement={up} onDecrement={down} />
  * ```
  */
-export declare const Stepper: PolymorphicComponent<StepperProps>;
+export declare const Stepper: PolymorphicComponent<'div', StepperProps>;

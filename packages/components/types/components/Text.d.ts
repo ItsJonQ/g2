@@ -211,4 +211,4 @@ export declare type TextProps = TruncateProps & {
  * }
  * ```
  */
-export declare const Text: PolymorphicComponent<TextProps, 'span'>;
+export declare const Text: PolymorphicComponent<'span', TextProps>;

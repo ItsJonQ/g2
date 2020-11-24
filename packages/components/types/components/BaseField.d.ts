@@ -32,4 +32,4 @@ export declare type BaseFieldProps = FlexProps &
 /**
  * `BaseField` is a primitive component used to create form element components (e.g. `TextInput`).
  */
-export declare const BaseField: PolymorphicComponent<BaseFieldProps>;
+export declare const BaseField: PolymorphicComponent<'div', BaseFieldProps>;

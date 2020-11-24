@@ -13,6 +13,6 @@ export {
 	SUPPORTED_COLORS,
 } from './theme';
 
-export * from './presets';
+export * from './presets/ui';
 
 export * from './components';

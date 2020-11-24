@@ -72,7 +72,7 @@ export declare type DropdownProps = PopperProps & {
  * </Dropdown>
  * ```
  */
-export declare const Dropdown: PolymorphicComponent<DropdownProps>;
+export declare const Dropdown: PolymorphicComponent<'div', DropdownProps>;
 
 export declare type DropdownTriggerProps = ButtonProps & {};
 
@@ -89,7 +89,10 @@ export declare type DropdownTriggerProps = ButtonProps & {};
  * </Dropdown>
  * ```
  */
-export declare const DropdownTrigger: PolymorphicComponent<DropdownTriggerProps>;
+export declare const DropdownTrigger: PolymorphicComponent<
+	'div',
+	DropdownTriggerProps
+>;
 
 export declare type DropdownMenuProps = MenuProps & {
 	/**
@@ -139,7 +142,10 @@ export declare type DropdownMenuProps = MenuProps & {
  *
  * @see https://reakit.io/docs/menu/#menu
  */
-export declare const DropdownMenu: PolymorphicComponent<DropdownMenuProps>;
+export declare const DropdownMenu: PolymorphicComponent<
+	'div',
+	DropdownMenuProps
+>;
 
 export declare type DropdownMenuItemProps = MenuItemProps & {
 	/**
@@ -169,6 +175,6 @@ export declare type DropdownMenuItemProps = MenuItemProps & {
  * @see https://reakit.io/docs/menu/#menuitem
  */
 export declare const DropdownMenuItem: PolymorphicComponent<
-	DropdownMenuItemProps,
-	'button'
+	'button',
+	DropdownMenuItemProps
 >;

@@ -90,15 +90,8 @@ exports[`props should render Spacer 1`] = `
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
   margin: 0;
-  display: block;
-  max-height: 100%;
-  max-width: 100%;
-  min-height: 0;
-  min-width: 0;
-  display: var(--wp-g2-flex-item-display);
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  margin-bottom: calc(4px * 2);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -122,7 +115,7 @@ exports[`props should render Spacer 1`] = `
     class="emotion-1"
   />
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-spacer wp-components-spacer emotion-2"
     data-g2-c16t="true"
     data-g2-component="Spacer"
   />

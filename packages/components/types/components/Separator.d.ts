@@ -24,4 +24,4 @@ export declare type SeparatorProps = DividerProps & {
  * </VStack>
  * ```
  */
-export declare const Separator: PolymorphicComponent<SeparatorProps, 'hr'>;
+export declare const Separator: PolymorphicComponent<'hr', SeparatorProps>;

@@ -1,17 +1,32 @@
 import { createStore } from '@wp-g2/substate';
-import { deepEqual, deepMerge, useIsomorphicLayoutEffect } from '@wp-g2/utils';
+import {
+	deepEqual,
+	deepMerge,
+	is,
+	useIsomorphicLayoutEffect,
+} from '@wp-g2/utils';
 import React, { createContext, useContext, useRef } from 'react';
 
 export const ComponentsContext = createContext({});
 export const useComponentsContext = () => useContext(ComponentsContext);
 
 /**
+ * @template T
+ * @typedef {import('zustand').UseStore<T>} State
+ */
+
+/**
  * Creates an instance of a Context System store.
  */
-export const createContextSystemStore = (initialState = {}) => {
+/**
+ * @template T
+ * @param {T} initialState
+ */
+export const createContextSystemStore = (initialState) => {
+	/** @type {import('zustand').UseStore<{ context: T, setContext: (next: T) => void }>} */
 	const contextSystemStore = createStore((set) => ({
 		context: initialState,
-		setContext: (next = {}) => {
+		setContext: (next) => {
 			set((prev) => {
 				return {
 					context: deepMerge(prev.context, next),
@@ -23,7 +38,10 @@ export const createContextSystemStore = (initialState = {}) => {
 	return contextSystemStore;
 };
 
-const rootContextSystemStore = createContextSystemStore();
+/** @type {any} */
+const rootContext = {};
+
+const rootContextSystemStore = createContextSystemStore(rootContext);
 export const useContextSystemStore = (store = rootContextSystemStore) =>
 	store();
 
@@ -43,11 +61,14 @@ export const useContextStoreContext = () => useContext(ContextStoreContext);
  * </ContextSystemProvider>
  * ```
  *
- * @param {any} children Children to render.
- * @param {object} value Props to render into connected components.
- * @returns {React.Component} A Provider wrapped component.
+ * @template {Record<string, any>} T
+ * @param {object} options
+ * @param {import('react').ReactNode} options.children Children to render.
+ * @param {T} options.value Props to render into connected components.
+ * @returns {JSX.Element} A Provider wrapped component.
  */
-export const ContextSystemProvider = React.memo(({ children, value }) => {
+const _ContextSystemProvider = ({ children, value }) => {
+	/** @type {import('zustand').UseStore<{ context: T; setContext: (next: T) => void; }>} */
 	const store = useContextSystemBridge({ value });
 	const contextValue = React.useMemo(() => ({ store }), [store]);
 
@@ -56,10 +77,16 @@ export const ContextSystemProvider = React.memo(({ children, value }) => {
 			{children}
 		</ContextStoreContext.Provider>
 	);
-});
+};
+
+export const ContextSystemProvider = React.memo(_ContextSystemProvider);
 
 function useContextSystemBridge({ value }) {
 	const { store: parentStore } = useContextStoreContext();
+	if (is.nil(value)) {
+		// @ts-ignore
+		value = {};
+	}
 	const store = React.useRef(createContextSystemStore(value)).current;
 
 	const { context: parentContext } = parentStore();

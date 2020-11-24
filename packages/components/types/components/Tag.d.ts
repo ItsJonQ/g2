@@ -28,4 +28,4 @@ export declare type TagProps = Pick<BadgeProps, 'color' | 'display'> & {
  * </Flex>
  * ```
  */
-export declare const Tag: PolymorphicComponent<TagProps>;
+export declare const Tag: PolymorphicComponent<'div', TagProps>;

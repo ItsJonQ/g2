@@ -83,4 +83,4 @@ export declare type TruncateProps = {
  * }
  * ```
  */
-export declare const Truncate: PolymorphicComponent<TruncateProps>;
+export declare const Truncate: PolymorphicComponent<'div', TruncateProps>;

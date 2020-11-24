@@ -44,4 +44,4 @@ export declare type IconProps = {
  * <Icon icon={<FrozenIcon />} />
  * ```
  */
-export declare const Icon: PolymorphicComponent<IconProps>;
+export declare const Icon: PolymorphicComponent<'div', IconProps>;

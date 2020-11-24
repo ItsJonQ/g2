@@ -15,4 +15,4 @@ export declare type SubheadingProps = TextProps & {};
  * }
  * ```
  */
-export declare const Subheading: PolymorphicComponent<SubheadingProps, 'div'>;
+export declare const Subheading: PolymorphicComponent<'div', SubheadingProps>;

@@ -79,4 +79,4 @@ export declare type ImageProps = {
  * }
  * ```
  */
-export declare const Image: PolymorphicComponent<ImageProps, 'img'>;
+export declare const Image: PolymorphicComponent<'img', ImageProps>;

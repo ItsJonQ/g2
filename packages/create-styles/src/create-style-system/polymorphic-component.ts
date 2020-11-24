@@ -6,7 +6,7 @@ import { Interpolation, ObjectInterpolation } from 'create-emotion';
  * Based on https://github.com/reakit/reakit/blob/master/packages/reakit-utils/src/types.ts
  */
 export type ViewOwnProps<P, T extends As> = P &
-	Omit<React.ComponentPropsWithRef<T>, 'as' | 'state' | keyof P> & {
+	Omit<React.ComponentPropsWithRef<T>, 'as' | 'css' | keyof P> & {
 		as?: T;
 		children?: React.ReactNode | RenderProp<ExtractHTMLAttributes<any>>;
 		css?: ObjectInterpolation<undefined> | string;

@@ -13,7 +13,6 @@ dist
 # Ignore tsc-generated type declarations
 /packages/*/types
 # Some packages include manual declarations
-!/packages/context/types/
 !/packages/components/types/
 !/packages/gatsby-plugin-styles/types/
 !/packages/protokit/types/

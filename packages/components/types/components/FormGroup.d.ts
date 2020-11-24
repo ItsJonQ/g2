@@ -37,4 +37,4 @@ export declare type FormGroupProps = GridProps & {
  * }
  * ```
  */
-export declare const FormGroup: PolymorphicComponent<FormGroupProps>;
+export declare const FormGroup: PolymorphicComponent<'div', FormGroupProps>;
