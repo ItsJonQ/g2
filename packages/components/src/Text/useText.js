@@ -132,14 +132,8 @@ export function useText(props) {
 	 */
 	if (!truncate && is.array(children)) {
 		content = React.Children.map(children, (child) => {
-			// Thiis is... unfortunate. Would we rather throw a `ts-ignore` here than increase the complexity of this loop?
-			if (
-				is.nil(child) ||
-				is.string(child) ||
-				is.number(child) ||
-				is.boolean(child) ||
-				!('props' in child)
-			) {
+			// @ts-ignore
+			if (!is.plainObject(child) || !('props' in child)) {
 				return child;
 			}
 
