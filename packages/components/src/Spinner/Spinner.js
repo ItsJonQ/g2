@@ -5,6 +5,17 @@ import React from 'react';
 import { BarsView, BarsWrapperView, ContainerView } from './Spinner.styles';
 import { BASE_SIZE, WRAPPER_SIZE } from './Spinner.utils';
 
+/**
+ * @typedef Props
+ * @property {import('react').CSSProperties['color']} [color] Color of `Spinner`.
+ * @property {number} [size=16] Size of `Spinner`.
+ */
+
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function Spinner(props, forwardedRef) {
 	const {
 		color = get('colorText'),
@@ -44,4 +55,7 @@ function Spinner(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(Spinner, 'Spinner');
+/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', Props>} */
+const ConnectedSpinner = contextConnect(Spinner, 'Spinner');
+
+export default ConnectedSpinner;

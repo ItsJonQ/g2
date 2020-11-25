@@ -49,7 +49,6 @@ export * from './Select';
 export * from './Separator';
 export * from './Slider';
 export * from './Spacer';
-export * from './Spinner';
 export * from './Stepper';
 export * from './Subheading';
 export * from './Surface';
