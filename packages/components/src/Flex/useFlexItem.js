@@ -3,6 +3,15 @@ import { css, cx, ui } from '@wp-g2/styles';
 
 import * as styles from './Flex.styles';
 
+/**
+ * @typedef FlexItemProps
+ * @property {import('react').CSSProperties['display']} display
+ * @property {boolean} [isBlock=false]
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<FlexItemProps, 'div'>} props
+ */
 export function useFlexItem(props) {
 	const {
 		className,
