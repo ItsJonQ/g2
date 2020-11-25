@@ -1,8 +1,10 @@
-import { noop } from '@wp-g2/utils';
 import { createContext, useContext } from 'react';
 
+/**
+ * @type {import('react').Context<{ useAccordionState: (options: { visible: boolean, id?: string }) => import('./useAccordion').AccordionState }>}
+ */
 export const AccordionContext = createContext({
-	useAccordionState: ({ visible }) => [visible, noop],
+	useAccordionState: ({ visible }) => [visible, (_) => {}],
 });
 
 export const useAccordionContext = () => useContext(AccordionContext);
