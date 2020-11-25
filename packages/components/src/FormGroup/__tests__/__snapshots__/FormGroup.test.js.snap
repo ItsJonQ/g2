@@ -215,6 +215,7 @@ exports[`props should render alignLabel 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -496,6 +497,7 @@ exports[`props should render correctly 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -780,6 +782,7 @@ exports[`props should render label without prop correctly 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -1059,6 +1062,7 @@ exports[`props should render vertically 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);

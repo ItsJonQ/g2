@@ -62,6 +62,7 @@ export * from './Scrollable';
 export * from './SearchInput';
 export * from './SegmentedControl';
 export * from './Select';
+export * from './select-dropdown';
 export * from './Separator';
 export * from './Slider';
 export * from './SlotFill';

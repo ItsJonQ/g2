@@ -41,6 +41,7 @@ export const Input = css`
 	padding-bottom: calc((${ui.get('controlHeight')} - 2px - 18px) / 2);
 	padding-top: calc((${ui.get('controlHeight')} - 2px - 18px) / 2);
 	resize: none;
+	text-align: left;
 	width: 100%;
 
 	${inputFontSize};

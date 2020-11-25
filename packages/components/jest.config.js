@@ -5,6 +5,6 @@ const pkg = require('./package.json');
 module.exports = {
 	...baseConfig,
 	displayName: pkg.name,
-	testMatch: [join(__dirname, 'src/**/*.test.{js,ts,tsx}')],
+	testMatch: [join(__dirname, 'src/**/__tests__/*.{js,ts,tsx}')],
 	snapshotSerializers: ['@emotion/jest/serializer'],
 };

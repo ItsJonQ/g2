@@ -20,18 +20,21 @@ function Popover(props, forwardedRef) {
 		maxWidth = 360,
 		onVisibleChange = noop,
 		placement,
+		state,
 		trigger,
 		visible,
 		...otherProps
 	} = useContextSystem(props, 'Popover');
 
-	const popover = usePopoverState({
+	const _popover = usePopoverState({
 		animated: animated ? animationDuration : undefined,
 		baseId: baseId || id,
 		placement,
 		visible,
 		...otherProps,
 	});
+
+	const popover = state || _popover;
 
 	const resizeListener = usePopoverResizeUpdater({
 		onResize: popover.unstable_update,

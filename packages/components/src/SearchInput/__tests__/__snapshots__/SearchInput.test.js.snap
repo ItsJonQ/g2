@@ -258,6 +258,7 @@ exports[`props should render correctly 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -1140,6 +1141,7 @@ exports[`props should render isLoading 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -1909,6 +1911,7 @@ exports[`props should render placeholder 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -2650,6 +2653,7 @@ exports[`props should render prefix 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -3394,6 +3398,7 @@ exports[`props should render suffix 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
@@ -4138,6 +4143,7 @@ exports[`props should render value 1`] = `
   padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
+  text-align: left;
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);

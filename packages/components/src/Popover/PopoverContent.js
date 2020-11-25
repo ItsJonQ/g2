@@ -20,6 +20,8 @@ function PopoverContent(props, forwardedRef) {
 	const { label, popover } = usePopoverContext();
 	const classes = cx(styles.PopoverContent, css({ maxWidth }), className);
 
+	const showContent = popover.visible || popover.animating;
+
 	return (
 		<ReakitPopover
 			aria-label={label}
@@ -28,7 +30,7 @@ function PopoverContent(props, forwardedRef) {
 			{...otherProps}
 			{...popover}
 		>
-			{(popover.visible || popover.animating) && (
+			{showContent && (
 				<Card elevation={elevation} ref={forwardedRef}>
 					{children}
 				</Card>
