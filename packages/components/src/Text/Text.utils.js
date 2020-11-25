@@ -8,6 +8,28 @@ import { createElement } from 'react';
  * https://github.com/bvaughn/react-highlight-words/blob/master/src/Highlighter.js
  */
 
+/**
+ * @typedef Options
+ * @property {string} [activeClassName]
+ * @property {number} [activeIndex]
+ * @property {import('react').AllHTMLAttributes['style']} [activeStyle]
+ * @property {boolean} [autoEscape]
+ * @property {boolean} [caseSensitive=false]
+ * @property {import('react').ReactNode} children
+ * @property {import('highlight-words-core').FindAllArgs['findChunks']} [findChunks]
+ * @property {string | object} [highlightClassName]
+ * @property {import('react').AllHTMLAttributes['style']} [highlightStyle]
+ * @property {string} [highlightTag]
+ * @property {import('highlight-words-core').FindAllArgs['sanitize']} [sanitize]
+ * @property {string[]} [searchWords]
+ * @property {string} [unhighlightClassName]
+ * @property {import('react').AllHTMLAttributes['style']} [unhighlightStyle]
+ */
+
+/**
+ *
+ * @param {Options} options
+ */
 export function createHighlighterText({
 	activeClassName = '',
 	activeIndex = -1,

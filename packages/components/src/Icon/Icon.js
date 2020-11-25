@@ -5,6 +5,21 @@ import React, { useMemo } from 'react';
 import { View } from '../View';
 import * as styles from './Icon.styles';
 
+/**
+ * @typedef Props
+ * @property {import('react').CSSProperties['fill']} [fill='currentColor']
+ * @property {number} [height]
+ * @property {import('react').ReactElement} icon
+ * @property {boolean} [inline]
+ * @property {number | string} [size=20]
+ * @property {keyof styles} [variant]
+ * @property {number} [width]
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function Icon(props, forwardedRef) {
 	const {
 		children,
@@ -38,7 +53,7 @@ function Icon(props, forwardedRef) {
 			sx.fill,
 			sx.size,
 			inline && styles.inline,
-			styles[variant],
+			variant && styles[variant],
 			className,
 		);
 	}, [className, fill, height, inline, size, variant, width]);

@@ -15,7 +15,7 @@ const PRESET_FONT_SIZES = {
 
 /**
  *
- * @param {number | 'body' | 'caption' | 'footnote' | 'largeTitle' | 'subheadline' | 'title'} size
+ * @param {import('react').CSSProperties['fontSize'] | 'body' | 'caption' | 'footnote' | 'largeTitle' | 'subheadline' | 'title'} size
  * @return {string}
  */
 export function getFontSize(size = BASE_FONT_SIZE) {

@@ -7,6 +7,9 @@ import { useTruncate } from '../Truncate';
 import * as styles from './Text.styles';
 import { createHighlighterText } from './Text.utils';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'span'>} props
+ */
 export function useText(props) {
 	const {
 		adjustLineHeightForInnerControls,
@@ -81,10 +84,10 @@ export function useText(props) {
 			sx.Base,
 			sx.optimalTextColor,
 			isDestructive && styles.destructive,
-			isHighlighter && styles.highlighterText,
-			styles[isBlock && 'block'],
+			!!isHighlighter && styles.highlighterText,
+			isBlock && styles.block,
 			isCaption && styles.muted,
-			styles[variant],
+			variant && styles[variant],
 			upperCase && sx.upperCase,
 			className,
 		);
@@ -106,7 +109,8 @@ export function useText(props) {
 		weight,
 	]);
 
-	let finalEllipsizeMode = 'undefined';
+	/** @type {undefined | 'auto' | 'none'} */
+	let finalEllipsizeMode = undefined;
 	if (truncate === true) {
 		finalEllipsizeMode = 'auto';
 	}
@@ -128,7 +132,10 @@ export function useText(props) {
 	 */
 	if (!truncate && is.array(children)) {
 		content = React.Children.map(children, (child) => {
-			if (!is.plainObject(child)) return child;
+			// @ts-ignore
+			if (!is.plainObject(child) || !('props' in child)) {
+				return child;
+			}
 
 			const isLink = hasNamespace(child, ['Link']);
 			if (isLink) {

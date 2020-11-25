@@ -29,7 +29,6 @@ export * from './Grid';
 export * from './Heading';
 export * from './HelpTip';
 export * from './HStack';
-export * from './Icon';
 export * from './Image';
 export * from './Initials';
 export * from './Link';
