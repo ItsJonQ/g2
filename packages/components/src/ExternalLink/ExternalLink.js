@@ -8,6 +8,15 @@ import { Link } from '../Link';
 import { VisuallyHidden } from '../VisuallyHidden';
 import * as styles from './ExternalLink.styles';
 
+/**
+ * @typedef {import('../Link').Props} Props
+ */
+
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'a'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function ExternalLink(props, forwardedRef) {
 	const { children, ...otherProps } = useContextSystem(props, 'ExternalLink');
 
@@ -31,4 +40,7 @@ function ExternalLink(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(ExternalLink, 'ExternalLink');
+/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'a', Props>} */
+const ConnectedExternalLink = contextConnect(ExternalLink, 'ExternalLink');
+
+export default ConnectedExternalLink;
