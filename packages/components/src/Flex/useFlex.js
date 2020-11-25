@@ -9,12 +9,12 @@ import * as styles from './Flex.styles';
  * @typedef FlexProps
  * @property {import('react').CSSProperties['alignItems']} [align='center']
  * @property {import('react').CSSProperties['alignItems']} [alignItems]
- * @property {import('../utils/types').ResponsiveCSSValue<import('react').CSSProperties['flexDirection']>} direction='row'
+ * @property {import('../utils/types').ResponsiveCSSValue<import('react').CSSProperties['flexDirection']>} [direction='row']
  * @property {boolean} [expanded]
- * @property {number} [gap]
+ * @property {number | string} [gap]
  * @property {import('react').CSSProperties['justifyContent']} [justify]
  * @property {import('react').CSSProperties['justifyContent']} [justifyContent]
- * @property {boolean} wrap
+ * @property {boolean} [wrap=false]
  */
 
 /**

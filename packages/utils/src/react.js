@@ -6,8 +6,8 @@ export { default as mergeRefs } from 'react-merge-refs';
 export { default as hoistNonReactStatics } from 'hoist-non-react-statics';
 
 /**
- * @param {Parameters<React.ReactChildren['toArray']>} children
- * @return {ReturnType<React.ReactChildren['toArray']>}
+ * @param {import('react').ReactNode} children
+ * @return {import('react').ReactNodeArray}
  */
 export function getValidChildren(children) {
 	if (is.string(children)) return [children];
