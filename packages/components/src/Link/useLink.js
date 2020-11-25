@@ -9,7 +9,7 @@ import * as styles from './Link.styles';
  * @property {boolean} [isPlain]
  */
 
-/** @typedef {OwnProps} Props */
+/** @typedef {OwnProps & import('../Text/types').Props} Props */
 
 /**
  *

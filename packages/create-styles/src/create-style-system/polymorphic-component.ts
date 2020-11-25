@@ -7,7 +7,7 @@ import { Interpolation, ObjectInterpolation } from 'create-emotion';
  */
 export type ViewOwnProps<P, T extends As> = P &
 	Omit<React.ComponentPropsWithRef<T>, 'as' | 'css' | keyof P> & {
-		as?: T;
+		as?: T | keyof JSX.IntrinsicElements;
 		children?: React.ReactNode | RenderProp<ExtractHTMLAttributes<any>>;
 		css?: ObjectInterpolation<undefined> | string;
 	};
