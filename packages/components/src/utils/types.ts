@@ -6,7 +6,7 @@ export type PropsFromViewOwnProps<P> = P extends ViewOwnProps<infer PP, any>
 	: never;
 
 export type Options<T extends As, P extends ViewOwnProps<{}, T>> = {
-	as: T;
+	as?: T;
 	name: string;
 	useHook: (props: P) => any;
 	memo?: boolean;

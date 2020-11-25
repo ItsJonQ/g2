@@ -56,7 +56,7 @@ export function contextConnect(Component, namespace, options = {}) {
 /**
  * Attempts to retrieve the connected namespace from a component.
  *
- * @param {import('react').ReactElement} Component The component to retrieve a namespace from.
+ * @param {import('react').ReactChild | undefined | {}} Component The component to retrieve a namespace from.
  * @returns {Array<string>} The connected namespaces.
  */
 export function getConnectNamespace(Component) {
@@ -66,7 +66,7 @@ export function getConnectNamespace(Component) {
 /**
  * Checks to see if a component is connected within the Context system.
  *
- * @param {import('react').ReactElement} Component The component to retrieve a namespace from.
+ * @param {import('react').ReactNode} Component The component to retrieve a namespace from.
  * @param {Array<string>|string} match The namespace to check.
  * @returns {boolean} The result.
  */

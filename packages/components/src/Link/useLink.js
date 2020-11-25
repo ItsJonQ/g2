@@ -4,11 +4,23 @@ import { cx } from '@wp-g2/styles';
 import { useText } from '../Text';
 import * as styles from './Link.styles';
 
+/**
+ * @typedef OwnProps
+ * @property {boolean} [isPlain]
+ */
+
+/** @typedef {OwnProps} Props */
+
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'a'>} props
+ */
 export function useLink(props) {
 	const { className, isPlain, ...otherProps } = useContextSystem(
 		props,
 		'Link',
 	);
+
 	const textProps = useText(otherProps);
 
 	const classes = cx(

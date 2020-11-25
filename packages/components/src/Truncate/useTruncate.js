@@ -1,5 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
 import { useMemo } from 'react';
 
 import * as styles from './Truncate.styles';
@@ -9,6 +10,17 @@ import {
 	truncateContent,
 } from './Truncate.utils';
 
+/**
+ * @typedef Props
+ * @property {string} [ellipsis='...']
+ * @property {'auto' | 'head' | 'tail' | 'middle' | 'none'} [ellipsizeMode='auto']
+ * @property {number} [limit=0]
+ * @property {number} [numberOfLines=0]
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'span'>} props
+ */
 export function useTruncate(props) {
 	const {
 		className,
@@ -20,11 +32,14 @@ export function useTruncate(props) {
 		...otherProps
 	} = useContextSystem(props, 'Truncate');
 
-	const truncatedContent = truncateContent(children, {
-		ellipsis,
-		ellipsizeMode,
-		limit,
-	});
+	const truncatedContent = truncateContent(
+		is.string(children) ? children : '',
+		{
+			ellipsis,
+			ellipsizeMode,
+			limit,
+		},
+	);
 
 	const shouldTruncate =
 		ellipsizeMode === TRUNCATE_TYPE.auto &&
@@ -42,7 +57,7 @@ export function useTruncate(props) {
 
 		return cx(
 			shouldTruncate && !numberOfLines && styles.Truncate,
-			shouldTruncate && numberOfLines && sx.numberOfLines,
+			shouldTruncate && !!numberOfLines && sx.numberOfLines,
 			className,
 		);
 	}, [className, numberOfLines, shouldTruncate]);

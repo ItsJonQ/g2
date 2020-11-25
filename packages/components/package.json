@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@humanmade/react-slot-fill": "^0.0.4",
+    "@popperjs/core": "^2.5.4",
     "@wordpress/i18n": "^3.16.0",
     "@wordpress/icons": "^2.8.0",
     "@wp-g2/context": "^0.0.107",
@@ -24,7 +25,6 @@
     "@wp-g2/styles": "^0.0.107",
     "@wp-g2/substate": "^0.0.107",
     "@wp-g2/utils": "^0.0.107",
-    "@popperjs/core": "^2.5.4",
     "csstype": "^3.0.3",
     "downshift": "^5.4.0",
     "framer-motion": "^2.1.0",
@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@emotion/jest": "^11.0.0",
+    "@types/highlight-words-core": "^1.2.0",
     "@types/react": "^16.9.46",
     "@wp-g2/protokit": "^0.0.107",
     "react-beautiful-dnd": "^13.0.0",
