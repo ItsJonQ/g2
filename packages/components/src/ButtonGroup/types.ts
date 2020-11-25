@@ -1,7 +1,9 @@
-import { RadioGroupProps as ReakitRadioGroupProps } from 'reakit';
-import { PolymorphicComponent } from './_shared';
+import {
+	RadioStateReturn,
+	RadioGroupProps as ReakitRadioGroupProps,
+} from 'reakit';
 
-export declare type ButtonGroupProps = ReakitRadioGroupProps & {
+export type Props = ReakitRadioGroupProps & {
 	/**
 	 * ID that will serve as a base for all the items IDs.
 	 *
@@ -44,23 +46,7 @@ export declare type ButtonGroupProps = ReakitRadioGroupProps & {
 	value?: string | number;
 };
 
-/**
- * `ButtonGroup` is a form component contains and coordinates the checked state of multiple `Button` components.
- *
- * @example
- * ```jsx
- * import { ButtonGroup, Button } from `@wp-g2/components`;
- *
- * function Example() {
- *  return (
- *    <ButtonGroup value="ana">
- *      <Button value="ana">Ana</Button>
- *      <Button value="elsa">Elsa</Button>
- *      <Button value="kristoff">Kristoff</Button>
- *      <Button value="olaf">Olaf</Button>
- *    </ButtonGroup>
- *  );
- * }
- * ```
- */
-export declare const ButtonGroup: PolymorphicComponent<'div', ButtonGroupProps>;
+export type ButtonGroupContext = {
+	buttonGroup?: RadioStateReturn;
+	enableSelectNone?: Props['enableSelectNone'];
+};

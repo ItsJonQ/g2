@@ -14,6 +14,28 @@ import { ButtonGroupContext } from './ButtonGroup.Context';
 import { ButtonGroupView } from './ButtonGroup.styles';
 import * as styles from './ButtonGroup.styles';
 
+/**
+ * `ButtonGroup` is a form component contains and coordinates the checked state of multiple `Button` components.
+ *
+ * @example
+ * ```jsx
+ * import { ButtonGroup, Button } from `@wp-g2/components`;
+ *
+ * function Example() {
+ *  return (
+ *    <ButtonGroup value="ana">
+ *      <Button value="ana">Ana</Button>
+ *      <Button value="elsa">Elsa</Button>
+ *      <Button value="kristoff">Kristoff</Button>
+ *      <Button value="olaf">Olaf</Button>
+ *    </ButtonGroup>
+ *  );
+ * }
+ * ```
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function ButtonGroup(props, forwardedRef) {
 	const {
 		baseId,
