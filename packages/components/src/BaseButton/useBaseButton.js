@@ -5,6 +5,9 @@ import { useControlGroupContext } from '../ControlGroup';
 import { useFlex } from '../Flex';
 import * as styles from './BaseButton.styles';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'button'>} props
+ */
 export function useBaseButton(props) {
 	const {
 		children,
@@ -35,7 +38,6 @@ export function useBaseButton(props) {
 		size = 'medium',
 		suffix,
 		textAlign = 'center',
-		variant,
 		...otherProps
 	} = useContextSystem(props, 'BaseButton');
 
@@ -53,7 +55,6 @@ export function useBaseButton(props) {
 		styles.Button,
 		isBlock && styles.block,
 		isDestructive && styles.destructive,
-		styles[variant],
 		styles[size],
 		isIconOnly && styles.icon,
 		isSubtle && styles.subtle,

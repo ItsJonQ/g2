@@ -13,3 +13,10 @@ export type Options<T extends As, P extends ViewOwnProps<{}, T>> = {
 };
 
 export type ResponsiveCSSValue<T> = Array<T | undefined> | T;
+
+export type SizeRangeDefault =
+	| 'xLarge'
+	| 'large'
+	| 'medium'
+	| 'small'
+	| 'xSmall';

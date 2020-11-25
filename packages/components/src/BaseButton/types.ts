@@ -1,8 +1,13 @@
-import { PolymorphicComponent, CSS, SizeRangeDefault } from './_shared';
+import { CSSProperties } from 'react';
+import { SizeRangeDefault } from '../utils/types';
 
-export declare type BaseButtonSize = SizeRangeDefault;
+type BaseButtonSize = SizeRangeDefault;
 
-export declare type BaseButtonProps = {
+export type Props = {
+	/**
+	 * @default false
+	 */
+	currentColor?: boolean;
 	/**
 	 * Renders `Button` in a disabled state.
 	 *
@@ -52,6 +57,10 @@ export declare type BaseButtonProps = {
 	 */
 	iconSize?: number;
 	/**
+	 * Passed to `data-active`.
+	 */
+	isActive?: boolean;
+	/**
 	 * Determines if `Button` should render as a block element, rather than inline.
 	 *
 	 * @default false
@@ -69,6 +78,10 @@ export declare type BaseButtonProps = {
 	 * @default false
 	 */
 	isDestructive?: boolean;
+	/**
+	 * Passed to `data-focused`.
+	 */
+	isFocused?: boolean;
 	/**
 	 * Renders loading, disabling `Button` and renders a `Spinner`.
 	 *
@@ -88,6 +101,10 @@ export declare type BaseButtonProps = {
 	 */
 	isRounded?: boolean;
 	/**
+	 * @default false
+	 */
+	isSplit?: boolean;
+	/**
 	 * Renders a subtle `Button`.
 	 *
 	 * @default false
@@ -98,7 +115,7 @@ export declare type BaseButtonProps = {
 	 *
 	 * @default 'center'
 	 */
-	justify?: CSS['justifyContent'];
+	justify?: CSSProperties['justifyContent'];
 	/**
 	 * Determines if inner content should be wrapped.
 	 *
@@ -124,13 +141,5 @@ export declare type BaseButtonProps = {
 	 *
 	 * @default 'center'
 	 */
-	textAlign?: CSS['textAlign'];
+	textAlign?: CSSProperties['textAlign'];
 };
-
-/**
- * `BaseButton` is a primitive component used to create actionable components (e.g. `Button`).
- */
-export declare const BaseButton: PolymorphicComponent<
-	'button',
-	BaseButtonProps
->;

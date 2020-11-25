@@ -13,8 +13,13 @@ import * as styles from './BaseButton.styles';
 import LoadingOverlay from './BaseButtonLoadingOverlay';
 import { useBaseButton } from './useBaseButton';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'button'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function BaseButton(props, forwardedRef) {
 	const {
+		as: asProp,
 		children,
 		disabled = false,
 		elevation = 0,
@@ -38,9 +43,10 @@ function BaseButton(props, forwardedRef) {
 	const buttonGroupState = buttonGroup || {};
 
 	const BaseComponent = buttonGroup ? ReakitRadio : ReakitButton;
-	const as = href ? 'a' : 'button';
+	const as = asProp || (href ? 'a' : 'button');
 
 	return (
+		// @ts-ignore No idea why TS is confused about this but ReakitRadio and ReakitButton are definitely renderable
 		<BaseComponent
 			aria-busy={isLoading}
 			as={as}
@@ -130,4 +136,11 @@ function BaseButton(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(BaseButton, 'BaseButton');
+/**
+ * `BaseButton` is a primitive component used to create actionable components (e.g. `Button`).
+ *
+ * @type {import('@wp-g2/create-styles').PolymorphicComponent<'button', import('./types').Props>}
+ */
+const ConnectedBaseButton = contextConnect(BaseButton, 'BaseButton');
+
+export default ConnectedBaseButton;

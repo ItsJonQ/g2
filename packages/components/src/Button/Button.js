@@ -7,6 +7,23 @@ import { BaseButton } from '../BaseButton';
 import { useButtonGroupContext } from '../ButtonGroup';
 import * as styles from './Button.styles';
 
+/**
+ * @typedef {'primary' | 'secondary' | 'tertiary' | 'plain' | 'link'} ButtonVariant
+ */
+
+/**
+ * @typedef OwnProps
+ * @property {ButtonVariant} [variant='secondary'] Determinds the `Button` variant to render.
+ */
+
+/**
+ * @typedef {import('../BaseButton/types').Props & OwnProps} Props
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'button'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function Button(props, forwardedRef) {
 	const {
 		children,
@@ -35,11 +52,12 @@ function Button(props, forwardedRef) {
 			if (
 				isWithinButtonGroup &&
 				enableSelectNone &&
-				isButtonGroupActive
+				isButtonGroupActive &&
+				buttonGroup
 			) {
 				event.preventDefault();
 				event.stopPropagation();
-				buttonGroup.setState(null);
+				buttonGroup.setState(undefined);
 			}
 		},
 		[
@@ -85,4 +103,20 @@ function Button(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(Button, 'Button');
+/**
+ * `Button` is a component used to trigger an action or event, such as submitting a Form, opening a Dialog, canceling an action, or performing a delete operation.
+ *
+ * @example
+ * ```jsx
+ * import { Button } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <Button variant="secondary">Let It Go</Button>;
+ * }
+ * ```
+ *
+ * @type {import('@wp-g2/create-styles').PolymorphicComponent<'button', Props>}
+ */
+const ConnectedButton = contextConnect(Button, 'Button');
+
+export default ConnectedButton;
