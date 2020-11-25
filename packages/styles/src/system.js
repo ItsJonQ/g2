@@ -141,7 +141,11 @@ import {
  | 'blueRgba70'
  | 'blueRgba80'
  | 'blueRgba90'
-	} GeneratedDesignTokens
+
+ // Theme tokens that pop up throughout the codebase
+ | 'FlexGap'
+ | 'FlexItemDisplay'
+} GeneratedDesignTokens
  */
 
 /** @type {import('@wp-g2/create-styles').CreateStyleSystemOptions<typeof config, typeof darkModeConfig, typeof highContrastModeConfig, typeof darkHighContrastModeConfig, GeneratedDesignTokens>} */

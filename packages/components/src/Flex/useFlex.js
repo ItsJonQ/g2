@@ -1,9 +1,25 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui, useResponsiveValue } from '@wp-g2/styles';
+import { is } from '@wp-g2/utils';
 import { useMemo } from 'react';
 
 import * as styles from './Flex.styles';
 
+/**
+ * @typedef FlexProps
+ * @property {import('react').CSSProperties['alignItems']} [align='center']
+ * @property {import('react').CSSProperties['alignItems']} [alignItems]
+ * @property {import('../utils/types').ResponsiveCSSValue<import('react').CSSProperties['flexDirection']>} direction='row'
+ * @property {boolean} [expanded]
+ * @property {number} [gap]
+ * @property {import('react').CSSProperties['justifyContent']} [justify]
+ * @property {import('react').CSSProperties['justifyContent']} [justifyContent]
+ * @property {boolean} wrap
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<FlexProps, 'div'>} props
+ */
 export function useFlex(props) {
 	const {
 		align = 'center',
@@ -20,8 +36,8 @@ export function useFlex(props) {
 
 	const direction = useResponsiveValue(directionProp);
 
-	const isColumn = !!direction?.includes('column');
-	const isReverse = direction?.includes('reverse');
+	const isColumn = is.string(direction) && !!direction.includes('column');
+	const isReverse = is.string(direction) && direction.includes('reverse');
 
 	const classes = useMemo(() => {
 		const sx = {};
@@ -38,10 +54,10 @@ export function useFlex(props) {
 				!isColumn && isReverse ? ui.get('FlexGap') : 0,
 			alignItems: alignItems || isColumn ? 'normal' : align,
 			flexDirection: direction,
-			flexWrap: wrap ? 'wrap' : null,
+			flexWrap: wrap ? 'wrap' : undefined,
 			justifyContent: justifyContent || justify,
-			height: isColumn && expanded ? '100%' : null,
-			width: !isColumn && expanded ? '100%' : null,
+			height: isColumn && expanded ? '100%' : undefined,
+			width: !isColumn && expanded ? '100%' : undefined,
 			/**
 			 * Workaround to optimize DOM rendering.
 			 * We'll enhance alignment with naive parent flex assumptions.
@@ -50,9 +66,9 @@ export function useFlex(props) {
 			 * Far less DOM less. However, UI rendering is not as reliable.
 			 */
 			'> * + *:not(marquee)': {
-				marginTop: isColumn ? ui.space(gap) : null,
-				marginRight: !isColumn && isReverse ? ui.space(gap) : null,
-				marginLeft: !isColumn && !isReverse ? ui.space(gap) : null,
+				marginTop: isColumn ? ui.space(gap) : undefined,
+				marginRight: !isColumn && isReverse ? ui.space(gap) : undefined,
+				marginLeft: !isColumn && !isReverse ? ui.space(gap) : undefined,
 			},
 			/**
 			 * Improves stability of width/height rendering.

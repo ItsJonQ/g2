@@ -27,7 +27,7 @@ export type CreatePolymorphicComponent<T extends As, P> = (
 
 export type ForwardedRef<TElement extends HTMLElement> =
 	| ((instance: TElement | null) => void)
-	| import('react').MutableRefObject<TElement | null>
+	| React.MutableRefObject<TElement | null>
 	| null;
 
 export type CoreElements = {
