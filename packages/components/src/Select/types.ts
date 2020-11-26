@@ -15,7 +15,7 @@ export type SelectOptionGroup = {
 	options: SelectOption[];
 };
 
-type MultipleProps = {
+type MultipleProps = FormElementProps<string[]> & {
 	/**
 	 * Enables selection of multiple values.
 	 */
@@ -31,7 +31,7 @@ type MultipleProps = {
 	) => void;
 };
 
-type SingluarProps = {
+type SingluarProps = FormElementProps<string> & {
 	/**
 	 * Enables selection of multiple values.
 	 */

@@ -38,7 +38,6 @@ export * from './Scrollable';
 export * from './SearchInput';
 export * from './SegmentedControl';
 export * from './Separator';
-export * from './Slider';
 export * from './Spacer';
 export * from './Stepper';
 export * from './Subheading';
