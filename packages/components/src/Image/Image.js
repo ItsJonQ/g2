@@ -39,8 +39,6 @@ function Image(props, forwardedRef) {
 		ref: forwardedRef,
 	};
 
-	console.table(imageProps);
-
 	if (aspectRatio) {
 		return (
 			<AspectRatio ratio={aspectRatio} width={width}>

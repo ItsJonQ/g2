@@ -14,12 +14,13 @@ exports[`props should render as another element 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.95 * 13px);
   font-size: var(--wp-g2-font-size-h-2);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -57,12 +58,13 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -100,12 +102,13 @@ exports[`props should render size 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.95 * 13px);
   font-size: var(--wp-g2-font-size-h-2);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {

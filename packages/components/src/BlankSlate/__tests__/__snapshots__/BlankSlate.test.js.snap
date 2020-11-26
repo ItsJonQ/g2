@@ -206,12 +206,13 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(2.44 * 13px);
   font-size: var(--wp-g2-font-size-h-1);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -283,7 +284,8 @@ exports[`props should render correctly 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -680,12 +682,13 @@ exports[`props should render correctly without description and icon 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(2.44 * 13px);
   font-size: var(--wp-g2-font-size-h-1);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
