@@ -2399,7 +2399,7 @@ exports[`props should render Background 1`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
 }
@@ -2440,7 +2440,7 @@ exports[`props should render Background with css prop 1`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
 }
@@ -2481,7 +2481,7 @@ exports[`props should render Background with css prop 2`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
   background: red;
@@ -10706,7 +10706,8 @@ exports[`props should render ControlLabel 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -10774,7 +10775,8 @@ exports[`props should render ControlLabel with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -10842,7 +10844,8 @@ exports[`props should render ControlLabel with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   background: red;
   padding: 27px;
   display: inline-block;
@@ -11841,12 +11844,13 @@ exports[`props should render DropdownMenuHeader 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -11901,12 +11905,13 @@ exports[`props should render DropdownMenuHeader with css prop 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -11961,12 +11966,13 @@ exports[`props should render DropdownMenuHeader with css prop 2`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -13801,7 +13807,8 @@ exports[`props should render ExternalLink 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -13919,7 +13926,8 @@ exports[`props should render ExternalLink with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -14037,7 +14045,8 @@ exports[`props should render ExternalLink with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -15004,12 +15013,13 @@ exports[`props should render Heading 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -15046,12 +15056,13 @@ exports[`props should render Heading with css prop 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -15088,12 +15099,13 @@ exports[`props should render Heading with css prop 2`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   background: red;
   padding: 27px;
 }
@@ -15459,7 +15471,8 @@ exports[`props should render Link 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -15507,7 +15520,8 @@ exports[`props should render Link with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -15555,7 +15569,8 @@ exports[`props should render Link with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -16766,12 +16781,13 @@ exports[`props should render MenuHeader 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16826,12 +16842,13 @@ exports[`props should render MenuHeader with css prop 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16886,12 +16903,13 @@ exports[`props should render MenuHeader with css prop 2`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -21497,7 +21515,8 @@ exports[`props should render SearchInput 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -22694,7 +22713,8 @@ exports[`props should render Select 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23075,7 +23095,8 @@ exports[`props should render SelectDropdown 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23472,7 +23493,8 @@ exports[`props should render SelectDropdown with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23871,7 +23893,8 @@ exports[`props should render SelectDropdown with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -28643,7 +28666,8 @@ exports[`props should render Tag 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -28740,7 +28764,8 @@ exports[`props should render Tag with css prop 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -28839,7 +28864,8 @@ exports[`props should render Tag with css prop 2`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -28887,7 +28913,8 @@ exports[`props should render Text 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -28926,7 +28953,8 @@ exports[`props should render Text with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -28965,7 +28993,8 @@ exports[`props should render Text with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   background: red;
   padding: 27px;
 }

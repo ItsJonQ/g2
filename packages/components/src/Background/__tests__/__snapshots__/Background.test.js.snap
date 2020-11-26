@@ -16,7 +16,7 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
 }

@@ -29,7 +29,8 @@ exports[`props should render correctly 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -98,7 +99,8 @@ exports[`props should render htmlFor 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -164,7 +166,8 @@ exports[`props should render no truncate 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -237,7 +240,8 @@ exports[`props should render size 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }

@@ -173,7 +173,8 @@ exports[`props should render correctly 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -1826,7 +1827,8 @@ exports[`props should render placeholder 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -2568,7 +2570,8 @@ exports[`props should render prefix 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -3313,7 +3316,8 @@ exports[`props should render suffix 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -4058,7 +4062,8 @@ exports[`props should render value 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {

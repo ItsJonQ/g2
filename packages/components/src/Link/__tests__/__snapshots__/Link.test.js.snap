@@ -16,7 +16,8 @@ exports[`props should render correctly 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -66,7 +67,8 @@ exports[`props should render isPlain 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
 }

@@ -71,7 +71,8 @@ exports[`props should render color 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -169,7 +170,8 @@ exports[`props should render correctly 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -264,7 +266,8 @@ exports[`props should render display 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -362,7 +365,8 @@ exports[`props should render href 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -461,7 +465,8 @@ exports[`props should render onRemove 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -559,7 +564,8 @@ exports[`props should render removeButtonText 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;

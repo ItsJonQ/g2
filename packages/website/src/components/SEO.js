@@ -17,6 +17,7 @@ export function SEO({ description, lang = "en", meta = [], title }) {
     `
   )
 
+  const metaTitle = title || site?.siteMetadata?.title
   const metaDescription = description || site?.siteMetadata?.description
 
   const metaData = [
@@ -25,7 +26,7 @@ export function SEO({ description, lang = "en", meta = [], title }) {
       name: `description`,
     },
     {
-      content: title,
+      content: metaTitle,
       property: `og:title`,
     },
     {
@@ -45,7 +46,7 @@ export function SEO({ description, lang = "en", meta = [], title }) {
       name: `twitter:creator`,
     },
     {
-      content: title,
+      content: metaTitle,
       name: `twitter:title`,
     },
     {
@@ -62,8 +63,8 @@ export function SEO({ description, lang = "en", meta = [], title }) {
         lang,
       }}
       meta={metaData}
-      title={title}
-      titleTemplate={`%s | ${site?.siteMetadata?.title}`}
+      title={metaTitle}
+      titleTemplate={title ? `%s | ${site?.siteMetadata?.title}` : ""}
     />
   )
 }

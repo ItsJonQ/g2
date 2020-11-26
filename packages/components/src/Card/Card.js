@@ -8,7 +8,9 @@ import * as styles from './Card.styles';
 import { useCard } from './useCard';
 
 function Card(props, forwardedRef) {
-	const { children, elevation, isRounded, ...otherProps } = useCard(props);
+	const { children, elevation, isRounded = true, ...otherProps } = useCard(
+		props,
+	);
 	const elevationBorderRadius = isRounded ? ui.get('cardBorderRadius') : 0;
 
 	const elevationClassName = useMemo(

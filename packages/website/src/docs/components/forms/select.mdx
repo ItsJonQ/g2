@@ -32,25 +32,11 @@ function Example() {
 
 ## Props
 
-##### align
-
-**Type**: `CSS['alignItems']`
-
-Aligns children using CSS Flexbox `align-items`. Vertically aligns content if the `direction` is `row`, or horizontally aligns content if the `direction` is `column`.
-
-In the example below, `flex-start` will align the children content to the top.
-
 ##### defaultValue
 
-**Type**: `boolean`
+**Type**: `string`,`number`,`boolean`,`readonly string[]`
 
 The default (initial) state to use if `value` is undefined.
-
-##### direction
-
-**Type**: `FlexDirection`
-
-The direction flow of the children content can be adjusted with `direction`. `column` will align children vertically and `row` will align children horizontally.
 
 ##### disabled
 
@@ -58,30 +44,21 @@ The direction flow of the children content can be adjusted with `direction`. `co
 
 Determines if element is disabled.
 
-##### expanded
-
-**Type**: `boolean`
-
-Expands to the maximum available width (if horizontal) or height (if vertical).
-
-##### isInline
-
-**Type**: `boolean`
-
-Renders as an inline element (layout).
-
 ##### isSubtle
 
 **Type**: `boolean`
 
-Renders a subtle variant.
+```jsx live
+import { Select, Text } from "@wp-g2/components"
 
-##### justify
-
-**Type**: `CSS['justifyContent']`
-
-Horizontally aligns content if the `direction` is `row`, or vertically aligns content if the `direction` is `column`.
-In the example below, `flex-start` will align the children content to the left.
+function Example() {
+  return (
+    <Select size="small">
+      <option>Ana</option>
+    </Select>
+  )
+}
+```
 
 ##### label
 
@@ -187,12 +164,6 @@ function Example() {
 **Type**: `any`
 
 Value for the form element.
-
-##### wrap
-
-**Type**: `boolean`
-
-Determines if children should wrap.
 
 <!-- /Automatically Generated -->
 <!-- /props -->

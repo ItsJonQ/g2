@@ -1,6 +1,6 @@
 export * from './core';
 export { compiler } from './system';
-export { cache, css, cx } from './style-system';
+export { cache, css, cx, injectGlobal, keyframes } from './style-system';
 
 export * from './styled';
 export * from './hooks';
