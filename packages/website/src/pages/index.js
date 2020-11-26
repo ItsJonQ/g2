@@ -18,13 +18,7 @@ import {
   VStack,
   ZStack,
 } from "@wp-g2/components"
-import {
-  createTheme,
-  getBreakpoint,
-  injectGlobal,
-  ThemeProvider,
-  ui,
-} from "@wp-g2/styles"
+import { createTheme, getBreakpoint, ThemeProvider, ui } from "@wp-g2/styles"
 import React from "react"
 
 import { Logo, SEO } from "../components"
@@ -45,6 +39,7 @@ let themeData
 const theme = createTheme(({ get, theme }) => {
   themeData = theme
   return {
+    ...theme,
     buttonControlActiveStateColor: get("colorText"),
     cardBorderRadius: "12px",
     controlBorderRadius: "8px",
@@ -63,15 +58,6 @@ const theme = createTheme(({ get, theme }) => {
     switchPaddingOffset: "8px",
   }
 })
-
-injectGlobal`
-  html body {
-    ${ui.createToken("fontSize")}: 15px;
-    ${getBreakpoint("md")`
-      ${ui.createToken("fontSize")}: 20px;
-    `}
-  }
-`
 
 const IntroSection = () => {
   return (
@@ -572,13 +558,25 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO />
-      <ThemeProvider isGlobal theme={theme} />
-      <IntroSection />
-      <SystemsSection />
-      <ModularSection />
-      <AccessiblitySection />
-      <ThemableSection />
-      <ComingSoonSection />
+      <ThemeProvider theme={theme}>
+        <View
+          css={[
+            `
+            ${ui.createToken("fontSize")}: 15px;
+          `,
+            `${getBreakpoint("md")`
+              ${ui.createToken("fontSize")}: 20px;
+            `}`,
+          ]}
+        >
+          <IntroSection />
+          <SystemsSection />
+          <ModularSection />
+          <AccessiblitySection />
+          <ThemableSection />
+          <ComingSoonSection />
+        </View>
+      </ThemeProvider>
     </Layout>
   )
 }
