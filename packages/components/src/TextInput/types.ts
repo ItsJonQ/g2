@@ -1,14 +1,11 @@
 import * as React from 'react';
-import { PolymorphicComponent, SizeRangeReduced } from './_shared';
-import { BaseFieldProps } from './BaseField';
+import { SizeRangeReduced } from '../utils/types';
+import { Props as BaseFieldProps } from '../BaseField/useBaseField';
 
 type TextInputArrow = 'stepper' | boolean;
 type TextInputFormat = 'number' | 'type';
 
-export declare type TextInputProps = Omit<
-	BaseFieldProps,
-	'isClickable' | 'isSubtle'
-> & {
+export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> & {
 	/**
 	 * For development only. Callback when a reducer action is dispatched.
 	 */
@@ -19,6 +16,10 @@ export declare type TextInputProps = Omit<
 	 * @default true
 	 */
 	arrows?: TextInputArrow;
+	/**
+	 * The axis along which to drag a number input's value.
+	 */
+	dragAxis?: 'x' | 'y';
 	/**
 	 * Renders an error state.
 	 *
@@ -104,6 +105,12 @@ export declare type TextInputProps = Omit<
 	 */
 	prefix?: React.ReactElement;
 	/**
+	 * Step size when holding shift.
+	 *
+	 * @default 10
+	 */
+	shiftStep?: number;
+	/**
 	 * Determines the size of `TextInput`.
 	 */
 	size?: SizeRangeReduced;
@@ -116,17 +123,3 @@ export declare type TextInputProps = Omit<
 	 */
 	validate?: (currentValue: string) => boolean;
 };
-
-/**
- * `TextInput` is a form component that users can enter content into.
- *
- * @example
- * ```jsx
- * import { TextInput } from `@wp-g2/components`
- *
- * function Example() {
- *   return <TextInput placeholder="First name" />
- * }
- * ```
- */
-export declare const TextInput: PolymorphicComponent<'input', TextInputProps>;

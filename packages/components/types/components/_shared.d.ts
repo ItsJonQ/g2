@@ -9,7 +9,7 @@ export type FormElementProps = {
 	/**
 	 * The default (initial) state to use if `value` is undefined.
 	 */
-	defaultValue?: boolean;
+	defaultValue?: string | number | readonly string[] | undefined | boolean;
 	/**
 	 * Determines if element is disabled.
 	 */

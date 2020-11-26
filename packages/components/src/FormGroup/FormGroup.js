@@ -6,6 +6,10 @@ import { View } from '../View';
 import FormGroupContent from './FormGroupContent';
 import { useFormGroup } from './useFormGroup';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./useFormGroup').Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function FormGroup(props, forwardedRef) {
 	const { contentProps, horizontal, ...otherProps } = useFormGroup(props);
 
@@ -28,4 +32,24 @@ function FormGroup(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(FormGroup, 'FormGroup');
+/**
+ * `FormGroup` is a form component that groups a label with a form element (e.g. `Switch` or `TextInput`).
+ *
+ * @example
+ * ```jsx
+ * import { FormGroup, TextInput } from `@wp-g2/components`
+ *
+ * function Example() {
+ * 	return (
+ * 		<FormGroup label="First name">
+ * 			<TextInput />
+ * 		</FormGroup>
+ * 	)
+ * }
+ * ```
+ *
+ * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./useFormGroup').Props>}
+ */
+const ConnectedFormGroup = contextConnect(FormGroup, 'FormGroup');
+
+export default ConnectedFormGroup;

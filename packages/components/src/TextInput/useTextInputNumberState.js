@@ -7,11 +7,17 @@ import {
 } from '@wp-g2/utils';
 import React from 'react';
 
-import { useDragHandlers } from './useTextInputState.utils';
-
+/**
+ *
+ * @param {object} options
+ * @param {number} options.max
+ * @param {number} options.min
+ * @param {import('./useTextInputstate.utils').ShiftStepState} options.shiftStepStore
+ * @param {import('./useTextInputState').TextInputState} options.store
+ */
 export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	const increment = React.useCallback(
-		(jumpStep = 0) => {
+		(/** @type {number} */ jumpStep = 0) => {
 			const { increment, value } = store.getState();
 
 			if (!is.numeric(value)) return;
@@ -33,7 +39,7 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	);
 
 	const decrement = React.useCallback(
-		(jumpStep = 0) => {
+		(/** @type {number} */ jumpStep = 0) => {
 			const { decrement, value } = store.getState();
 
 			if (!is.numeric(value)) return;
@@ -104,19 +110,5 @@ export const useNumberKeyboardHandlers = ({
 
 	return {
 		onKeyDown: handleOnKeyDown,
-	};
-};
-
-export const useNumberEventHandlers = ({ decrement, increment, store }) => {
-	const dragHandlers = useDragHandlers({ store, decrement, increment });
-
-	const keyboardHandlers = useNumberKeyboardHandlers({
-		decrement,
-		increment,
-	});
-
-	return {
-		...dragHandlers,
-		...keyboardHandlers,
 	};
 };
