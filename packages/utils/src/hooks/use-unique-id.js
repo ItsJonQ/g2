@@ -26,7 +26,7 @@ function createId(object) {
  * @param {string} preferredId Default ID to use.
  * @return {string | number}
  */
-export function useUniqueId(object, prefix, preferredId) {
+export function useUniqueId(object, prefix, preferredId = '') {
 	return useMemo(() => {
 		if (preferredId) return preferredId;
 		const id = createId(object);

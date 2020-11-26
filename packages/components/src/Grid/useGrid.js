@@ -4,6 +4,9 @@ import { useMemo } from 'react';
 
 import { getAlignmentProps } from './Grid.utils';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'div'>} props
+ */
 export function useGrid(props) {
 	const {
 		align,

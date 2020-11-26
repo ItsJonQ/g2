@@ -6,9 +6,25 @@ import { useControlGroupContext } from '../ControlGroup';
 import { useFlex } from '../Flex';
 import * as styles from './BaseField.styles';
 
+/**
+ * @typedef OwnProps
+ * @property {boolean} [error=false] Renders an error.
+ * @property {boolean} [disabled] Whether the field is disabled.
+ * @property {boolean} [isClickable=false] Renders a `cursor: pointer` on hover.
+ * @property {boolean} [isFocused=false] Renders focus styles.
+ * @property {boolean} [isInline=false] Renders as an inline element (layout).
+ * @property {boolean} [isSubtle=false] Renders a subtle variant.
+ */
+
+/** @typedef {import('../Flex/useFlex').FlexProps & import('../utils/types').FormElementProps & OwnProps} Props */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ */
 export function useBaseField(props) {
 	const {
 		className,
+		defaultValue, // extract this because useFlex doesn't accept it
 		error = false,
 		isClickable = false,
 		isFocused = false,

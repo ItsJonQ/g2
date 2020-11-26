@@ -8,6 +8,11 @@ import TextInputArrows from './TextInputArrows';
 import TextInputSteppers from './TextInputSteppers';
 import { useTextInput } from './useTextInput';
 
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'input'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function TextInput(props, forwardedRef) {
 	const {
 		__store,
@@ -42,7 +47,6 @@ function TextInput(props, forwardedRef) {
 				<TextInputArrows
 					__store={__store}
 					decrement={decrement}
-					disabled={disabled}
 					increment={increment}
 				/>
 			)}
@@ -50,7 +54,7 @@ function TextInput(props, forwardedRef) {
 				<TextInputSteppers
 					__store={__store}
 					decrement={decrement}
-					disabled={disabled}
+					disabled={!!disabled}
 					increment={increment}
 				/>
 			)}
@@ -58,4 +62,20 @@ function TextInput(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(TextInput, 'TextInput');
+/**
+ * `TextInput` is a form component that users can enter content into.
+ *
+ * @example
+ * ```jsx
+ * import { TextInput } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <TextInput placeholder="First name" />
+ * }
+ * ```
+ *
+ * @type {import('@wp-g2/create-styles').PolymorphicComponent<'input', import('./types').Props>}
+ */
+const ConnectedTextInput = contextConnect(TextInput, 'TextInput');
+
+export default ConnectedTextInput;
