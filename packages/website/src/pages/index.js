@@ -1,5 +1,3 @@
-import "../styles/index.css"
-
 import {
   Button,
   Card,
@@ -23,7 +21,7 @@ import {
 import { createTheme, ThemeProvider, ui } from "@wp-g2/styles"
 import React from "react"
 
-import { Logo } from "../components"
+import { Logo, SEO } from "../components"
 import {
   CopyText,
   FadeIn,
@@ -33,7 +31,6 @@ import {
   Heading3,
   Section,
 } from "../components/pages"
-import blueberryTheme from "../components/pages/blueberry"
 import CodeMap from "../images/g2-code-map"
 import Layout from "../layouts/Base"
 
@@ -44,11 +41,11 @@ const theme = createTheme(({ get, theme }) => {
   return {
     buttonControlActiveStateColor: get("colorText"),
     cardBorderRadius: "12px",
+    controlBorderRadius: "8px",
     colorAdmin: "#3858E9",
     controlBorderColor: get("colorText"),
     controlBorderColorHover: get("colorText"),
     controlBorderColorSubtle: "transparent",
-    controlBorderRadius: "2px",
     controlHeight: "36px",
     fontLineHeightBase: 1.6,
     fontSize: "20px",
@@ -64,24 +61,49 @@ const theme = createTheme(({ get, theme }) => {
 
 const IntroSection = () => {
   return (
-    <Section css={[ui.font.alignment.center]} pb={50} py={40}>
+    <Section css={[ui.font.alignment.center]} pb={50} py={10}>
       <FadeIn>
         <Spacer mb={12}>
           <HStack alignment="center">
             <Logo size={120} />
           </HStack>
         </Spacer>
-        <Heading size={2}>WordPress Components</Heading>
+        <Heading size={3}>WordPress Components</Heading>
         <Heading1>
           <GradientText>Reimagined.</GradientText>
         </Heading1>
-        <CopyText>
-          <Text variant="muted">
-            A from-scratch reimagining of Gutenberg's user interface. Designed
-            to accommodate the ever-growing and ever-expressive needs of the
-            Editor and the Platform.
-          </Text>
-        </CopyText>
+        <Spacer mb={6}>
+          <CopyText>
+            <Text>
+              A from-scratch reimagining of Gutenberg's user interface. Designed
+              to accommodate the ever-growing and ever-expressive needs of the
+              Editor and the Platform.
+            </Text>
+          </CopyText>
+        </Spacer>
+
+        <Spacer mb={12}>
+          <Button as="span" disabled isControl isRounded>
+            Coming Soon
+          </Button>
+        </Spacer>
+
+        <HStack alignment="center">
+          <View>
+            <Button href="/components/" size="large">
+              Documentation
+            </Button>
+          </View>
+          <View>
+            <Button
+              href="https://g2components.wordpress.com/"
+              size="large"
+              variant="primary"
+            >
+              Learn More
+            </Button>
+          </View>
+        </HStack>
       </FadeIn>
     </Section>
   )
@@ -109,7 +131,7 @@ const SystemsSection = () => {
             </Heading3>
 
             <Spacer mb={10}>
-              <Text variant="muted">
+              <Text>
                 Composed of a series of specialized systems. Systems designed to
                 handle accessibility, context-awareness, styling, theming,
                 animations, gestures, state management, and more. All working in
@@ -163,20 +185,27 @@ const ModularSection = () => {
       py={40}
     >
       <Heading3>
-        Modular.
+        Modular
         <br />
-        By design.
+        by design.
       </Heading3>
       <Grid columns={[1, 1, 2]} gap={8}>
         <View>
           <VStack spacing={6}>
-            <Text variant="muted">
+            <Text>
               An extensive collection of modular components. Create richer
               experiences by combining components together.
             </Text>
-            <Text variant="muted">
-              G2 is powered by a custom Style System. Designed to work
-              out-of-the-box, in any React environment. No setup necessary.
+            <Text>
+              G2 is powered by a custom{" "}
+              <Link
+                href="https://g2components.wordpress.com/2020/08/31/creating-a-style-system/"
+                target="_blank"
+              >
+                Style System
+              </Link>
+              . Designed to work out-of-the-box, in any React environment. No
+              setup necessary.
             </Text>
           </VStack>
         </View>
@@ -249,7 +278,7 @@ const AccessiblitySection = () => {
         by default.
       </Heading3>
       <Spacer mb={10}>
-        <Text variant="muted">
+        <Text>
           Built on top of{" "}
           <Link href="https://reakit.io/" target="_blank">
             Reakit
@@ -292,6 +321,7 @@ const AccessiblitySection = () => {
                 aria-hidden
                 css={[
                   ui.scale(1.2),
+                  { display: "inline-block" },
                   { transformOrigin: "top left", pointerEvents: "none" },
                 ]}
                 disabled
@@ -345,7 +375,7 @@ const AccessiblitySection = () => {
   )
 }
 
-const ExampleCard = ({ elevation, ...props }) => {
+const ExampleCard = ({ elevation = 5, ...props }) => {
   return (
     <View {...props}>
       <ThemeProvider theme={{ cardPadding: ui.space(4), fontSize: "13px" }}>
@@ -358,9 +388,7 @@ const ExampleCard = ({ elevation, ...props }) => {
         >
           <CardBody>
             <VStack>
-              <Heading size={5} variant="muted">
-                Card
-              </Heading>
+              <Heading size={5}>Card</Heading>
               <FormGroup label="Text Input">
                 <TextInput placeholder="Placeholder" tabIndex={-1} />
               </FormGroup>
@@ -385,6 +413,20 @@ const ThemableSection = () => {
       <Heading3>
         <GradientText>Themable.</GradientText>
       </Heading3>
+      <Spacer mb={10}>
+        <Text>
+          G2's versatile built-in theming system allows you to easily customize
+          the UI.
+          <br />A series of{" "}
+          <Link
+            href="https://g2components.wordpress.com/2020/10/23/creating-a-variable-system/"
+            target="_blank"
+          >
+            Design Tokens
+          </Link>{" "}
+          can be refined, creating styles that ripple across the entire system.
+        </Text>
+      </Spacer>
       <View
         aria-hidden
         css={[
@@ -441,11 +483,12 @@ const ThemableSection = () => {
 
             <ThemeProvider
               theme={{
-                buttonPrimaryColor: "#5D6AC4",
-                buttonPrimaryBorderColor: "#5D6AC4",
+                buttonPrimaryColor: "#EA4C89",
+                buttonPrimaryBorderColor: "#EA4C89",
                 controlBorderRadius: "4px",
                 controlBorderColor: "#eee",
-                surfaceColor: "#FCF7ED",
+                surfaceColor: "#F9F8FD",
+                colorText: "#6E6D7A",
               }}
             >
               <ExampleCard
@@ -464,7 +507,7 @@ const ThemableSection = () => {
                 buttonPrimaryBorderColor: "#20B954",
               }}
             >
-              <ExampleCard css={[ui.scale(1.1)]} elevation={5} />
+              <ExampleCard css={[ui.scale(1.1)]} elevation={8} />
             </ThemeProvider>
           </ZStack>
         </HStack>
@@ -473,11 +516,35 @@ const ThemableSection = () => {
   )
 }
 
-const SuperFastSection = () => {
+const ComingSoonSection = () => {
   return (
-    <Section>
-      <Heading3>Super fast.</Heading3>
-      <Text variant="muted">Hello</Text>
+    <Section css={[ui.font.alignment.center]} pb={80} py={50}>
+      <Heading3>Coming soon.</Heading3>
+      <Spacer mb={10}>
+        <CopyText>
+          <Text>
+            G2 is currently in a proposal stage. The core systems have been
+            architected and the code has been prepped to be integrated into
+            Gutenberg.
+          </Text>
+        </CopyText>
+      </Spacer>
+      <HStack alignment="center">
+        <Link
+          href="https://g2components.wordpress.com/2020/11/25/project-maps-and-progress/"
+          target="_blank"
+        >
+          Road Map and Progress
+        </Link>
+        <Button
+          href="https://github.com/itsjonq/g2#start-prototyping"
+          isRounded
+          size="large"
+          target="_blank"
+        >
+          Try It Out
+        </Button>
+      </HStack>
     </Section>
   )
 }
@@ -485,14 +552,14 @@ const SuperFastSection = () => {
 export default function IndexPage() {
   return (
     <Layout>
-      <ThemeProvider isGlobal theme={theme}>
-        <IntroSection />
-        <SystemsSection />
-        <ModularSection />
-        <AccessiblitySection />
-        <ThemableSection />
-        <SuperFastSection />
-      </ThemeProvider>
+      <SEO />
+      <ThemeProvider isGlobal theme={theme} />
+      <IntroSection />
+      <SystemsSection />
+      <ModularSection />
+      <AccessiblitySection />
+      <ThemableSection />
+      <ComingSoonSection />
     </Layout>
   )
 }
