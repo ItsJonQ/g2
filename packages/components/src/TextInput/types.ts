@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SizeRangeReduced } from '../utils/types';
 import { Props as BaseFieldProps } from '../BaseField/useBaseField';
 
-type TextInputArrow = 'stepper' | boolean;
+export type TextInputArrow = 'stepper' | boolean;
 type TextInputFormat = 'number' | 'type';
 
 export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> & {

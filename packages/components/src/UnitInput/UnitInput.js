@@ -7,6 +7,10 @@ import { TextInput } from '../TextInput';
 import UnitInputSelect from './UnitInputSelect';
 import { useUnitInput } from './useUnitInput';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./useUnitInput').Props, 'input'>} props
+ * @param {import('react').Ref<any>} ref
+ */
 export function UnitInput(props, ref) {
 	const {
 		disabled,
@@ -40,4 +44,20 @@ export function UnitInput(props, ref) {
 	);
 }
 
-export default contextConnect(UnitInput, 'UnitInput');
+/**
+ * `UnitInput` is a form component that users can enter (CSS) unit values into.
+ *
+ * @example
+ * ```jsx
+ * import { UnitInput } from `@wp-g2/components`
+ *
+ * function Example() {
+ *   return <UnitInput value="50%" min={0} max={100} />
+ * }
+ * ```
+ *
+ * @type {import('@wp-g2/create-styles').PolymorphicComponent<'input', import('./useUnitInput').Props>}
+ */
+const ConnectedUnitInput = contextConnect(UnitInput, 'UnitInput');
+
+export default ConnectedUnitInput;
