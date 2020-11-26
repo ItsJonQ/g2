@@ -13,6 +13,8 @@ const PRESET_FONT_SIZES = {
 	title: 20,
 };
 
+const HEADING_FONT_SIZES = [1, 2, 3, 4, 5, 6];
+
 /**
  *
  * @param {import('react').CSSProperties['fontSize'] | 'body' | 'caption' | 'footnote' | 'largeTitle' | 'subheadline' | 'title'} size
@@ -27,4 +29,14 @@ export function getFontSize(size = BASE_FONT_SIZE) {
 
 	const ratio = size / BASE_FONT_SIZE;
 	return `calc(${ratio} * ${get('fontSize')})`;
+}
+
+export function getHeadingFontSize(size = 3) {
+	if (!HEADING_FONT_SIZES.includes(size)) {
+		return getFontSize(size);
+	}
+
+	const headingSize = `fontSizeH${size}`;
+	/* @ts-ignore */
+	return get(headingSize);
 }

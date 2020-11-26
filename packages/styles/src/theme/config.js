@@ -63,6 +63,8 @@ const FONT_PROPS = {
 	fontSizeSmall: `calc(0.92 * ${get('fontSize')})`,
 	fontSizeXSmall: `calc(0.75 * ${get('fontSize')})`,
 	fontLineHeightBase: '1.2',
+	fontWeight: 'normal',
+	fontWeightHeading: '600',
 };
 
 const SURFACE_PROPS = {
@@ -72,6 +74,7 @@ const SURFACE_PROPS = {
 	surfaceBorderColor: 'rgba(0, 0, 0, 0.1)',
 	surfaceBorderBoldColor: 'rgba(0, 0, 0, 0.15)',
 	surfaceBorderSubtleColor: 'rgba(0, 0, 0, 0.05)',
+	surfaceBackgroundTertiaryColor: '#ffffff',
 	surfaceColor: get('white'),
 };
 
