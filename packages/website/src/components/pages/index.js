@@ -24,15 +24,17 @@ export const Heading1 = props => (
     <Heading
       letterSpacing="-0.015em"
       lineHeight={1}
-      size="5em"
+      size={["3em", "4.5em"]}
       weight={700}
       {...props}
     />
   </Spacer>
 )
-export const Heading2 = props => <Heading1 size="4.5em" {...props} />
-export const Heading3 = props => <Heading1 size="3.75em" {...props} />
-export const Heading4 = props => <Heading1 size="3em" {...props} />
+export const Heading2 = props => <Heading1 size={["2.5em", "4em"]} {...props} />
+export const Heading3 = props => <Heading1 size={["2em", "3.5em"]} {...props} />
+export const Heading4 = props => (
+  <Heading1 size={["1.75em", "3em"]} {...props} />
+)
 
 export const GlassCard = ({
   css,

@@ -18,7 +18,13 @@ import {
   VStack,
   ZStack,
 } from "@wp-g2/components"
-import { createTheme, ThemeProvider, ui } from "@wp-g2/styles"
+import {
+  createTheme,
+  getBreakpoint,
+  injectGlobal,
+  ThemeProvider,
+  ui,
+} from "@wp-g2/styles"
 import React from "react"
 
 import { Logo, SEO } from "../components"
@@ -48,7 +54,6 @@ const theme = createTheme(({ get, theme }) => {
     controlBorderColorSubtle: "transparent",
     controlHeight: "36px",
     fontLineHeightBase: 1.6,
-    fontSize: "20px",
     fontWeight: 500,
     fontWeightHeading: 600,
     menuItemHeight: "32px",
@@ -58,6 +63,15 @@ const theme = createTheme(({ get, theme }) => {
     switchPaddingOffset: "8px",
   }
 })
+
+injectGlobal`
+  html body {
+    ${ui.createToken("fontSize")}: 15px;
+    ${getBreakpoint("md")`
+      ${ui.createToken("fontSize")}: 20px;
+    `}
+  }
+`
 
 const IntroSection = () => {
   return (
@@ -209,13 +223,15 @@ const ModularSection = () => {
             </Text>
           </VStack>
         </View>
-        <View css={[ui.offset.y(-40)]}>
+        <View css={[ui.offset.y(-40), ui.padding(10), { overflow: "hidden" }]}>
           <View
             aria-hidden
             className="Visual"
             css={`
               perspective: 5000px;
               perspective-origin: left bottom;
+              user-select: none;
+              pointer-events: none;
 
               > * {
                 transform: rotateY(40deg) rotateX(30deg);
@@ -289,7 +305,9 @@ const AccessiblitySection = () => {
         </Text>
       </Spacer>
       <ThemeProvider isDark={dark} isHighContrast={highContrast}>
-        <Surface css={[ui.padding(10), { borderRadius: 20 }]}>
+        <Surface
+          css={[ui.padding(10), { borderRadius: 20, overflow: "hidden" }]}
+        >
           <View aria-hidden css={[ui.position.relative, ui.padding.bottom(20)]}>
             <View
               css={[
@@ -529,21 +547,22 @@ const ComingSoonSection = () => {
           </Text>
         </CopyText>
       </Spacer>
-      <HStack alignment="center">
+      <HStack alignment="center" spacing={6}>
         <Link
           href="https://g2components.wordpress.com/2020/11/25/project-maps-and-progress/"
           target="_blank"
         >
           Road Map and Progress
         </Link>
-        <Button
-          href="https://github.com/itsjonq/g2#start-prototyping"
-          isRounded
-          size="large"
-          target="_blank"
-        >
-          Try It Out
-        </Button>
+        <View>
+          <Button
+            href="https://github.com/itsjonq/g2#start-prototyping"
+            size="large"
+            target="_blank"
+          >
+            Try It Out
+          </Button>
+        </View>
       </HStack>
     </Section>
   )
