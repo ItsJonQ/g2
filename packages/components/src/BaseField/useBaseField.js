@@ -16,7 +16,7 @@ import * as styles from './BaseField.styles';
  * @property {boolean} [isSubtle=false] Renders a subtle variant.
  */
 
-/** @typedef {import('../Flex/useFlex').FlexProps & import('../utils/types').FormElementProps & OwnProps} Props */
+/** @typedef {import('../Flex/useFlex').FlexProps & OwnProps} Props */
 
 /**
  * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props

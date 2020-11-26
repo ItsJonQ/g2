@@ -13,6 +13,16 @@ import { useCallback, useMemo, useState } from 'react';
 import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './Slider.styles';
 
+/**
+ * @typedef OwnProps
+ * @property {import('../utils/types').SizeRangeReduced} [size='medium'] Determines the size of `Slider`.
+ */
+
+/** @typedef {import('../BaseField/useBaseField').Props & import('../utils/types').FormElementProps<number> & OwnProps} Props */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'input'>} props
+ */
 export function useSlider(props) {
 	const {
 		className,

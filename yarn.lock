@@ -20288,10 +20288,10 @@ react-remove-scroll@^2.3.0:
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
 
-react-resize-aware@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-resize-aware/-/react-resize-aware-3.0.1.tgz#39d6f264ad3b85dec461a5e04d9760860d14f44c"
-  integrity sha512-HdPzwdcAv+BMFQEgyacFB40G4IxNMO7tSqaMjbnAouot8LXi5/Rx3/Fv+LU2cQekqiivE1LF4sGnwQ7SnoHrpg==
+react-resize-aware@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-resize-aware/-/react-resize-aware-3.1.0.tgz#fa1da751d1d72f90c3b79969d05c2c577dfabd92"
+  integrity sha512-bIhHlxVTX7xKUz14ksXMEHjzCZPTpQZKZISY3nbTD273pDKPABGFNFBP6Tr42KECxzC5YQiKpMchjTVJCqaxpA==
 
 react-router-dom@^5.2.0:
   version "5.2.0"
