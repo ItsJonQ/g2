@@ -1,7 +1,7 @@
-import { arrowDown, arrowUp } from '@wordpress/icons';
+import { chevronDown, chevronUp } from '@wordpress/icons';
 import { ui } from '@wp-g2/styles';
 import { clamp, noop } from '@wp-g2/utils';
-import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 
 import { Icon } from '../Icon';
 import { View } from '../View';
@@ -118,7 +118,7 @@ const UpDownArrows = React.memo(
 					onMouseUp={handleOnClearTimers}
 					tabIndex={-1}
 					{...ui.$('TextInputArrowUp')}
-					icon={arrowUp}
+					icon={chevronUp}
 					size={12}
 					width={16}
 				/>
@@ -130,7 +130,7 @@ const UpDownArrows = React.memo(
 					onMouseUp={handleOnClearTimers}
 					tabIndex={-1}
 					{...ui.$('TextInputArrowDown')}
-					icon={arrowDown}
+					icon={chevronDown}
 					size={12}
 					width={16}
 				/>

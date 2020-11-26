@@ -4,6 +4,7 @@ import { mergeRefs, useResizeAware } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 import React from 'react';
 
+import { useFormGroupContextId } from '../FormGroup';
 import { usePositioner } from '../positioner';
 import * as styles from './select-dropdown-styles';
 import { itemToString, stateReducer } from './select-dropdown-utils';
@@ -16,6 +17,7 @@ export function useSelectDropdown(props) {
 		className,
 		error,
 		hideLabelFromVision,
+		id: idProp,
 		isInline,
 		isSubtle,
 		isOpen: isOpenProp,
@@ -36,10 +38,13 @@ export function useSelectDropdown(props) {
 	} = useContextSystem(props, 'SelectDropdown');
 
 	const [resizer, sizes] = useResizeAware();
+
 	const { popoverRef, popper, referenceRef } = usePositioner({
 		...otherProps,
 		unstable_offset: OFFSET,
 	});
+
+	const id = useFormGroupContextId(idProp);
 
 	const handleOnChange = React.useCallback(onChange, [onChange]);
 
@@ -98,6 +103,7 @@ export function useSelectDropdown(props) {
 		..._referenceProps,
 		children: itemToString(selectedItem) || placeholder,
 		error,
+		id,
 		isSubtle,
 		prefix,
 		suffix,
