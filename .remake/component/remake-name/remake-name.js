@@ -5,8 +5,8 @@ import { <%= name %>View } from './<%= name %>.styles';
 import * as styles from './<%= name %>.styles';
 
 /**
- * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'div'>}
- * @param {import('react').Ref<any>}
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
  */
 function <%= name %> (props, forwardedRef) {
 	const {...otherProps} = useContextSystem(props, '<%= name %>')
