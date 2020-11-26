@@ -70,7 +70,7 @@ StyleQuery.prototype.css = function (...args) {
  * ```
  *
  * @param {string} ComponentName The namespace of the component
- * @returns {Object} The StyleQuery instance.
+ * @returns {StyleQuery} The StyleQuery instance.
  */
 const createStyleQuery = (ComponentName) => new StyleQuery(ComponentName);
 

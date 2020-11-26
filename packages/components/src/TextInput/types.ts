@@ -122,4 +122,5 @@ export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> & {
 	 * Determines if the next `value` should be committed.
 	 */
 	validate?: (currentValue: string) => boolean;
+	value?: string;
 };

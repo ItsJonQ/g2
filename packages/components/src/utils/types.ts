@@ -36,8 +36,4 @@ export type FormElementProps = {
 	 * Label for the form element.
 	 */
 	label?: string;
-	/**
-	 * Value for the form element.
-	 */
-	value?: any;
 };

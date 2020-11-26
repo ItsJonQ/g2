@@ -13,6 +13,9 @@ import { renderContent } from './Select.utils';
 
 const PLACEHOLDER_VALUE = '';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'select'>} props
+ */
 export function useSelect(props) {
 	const {
 		children,
@@ -42,6 +45,7 @@ export function useSelect(props) {
 	});
 	const [isFocused, setIsFocused] = useState(isFocusedProp);
 	const [resizer, sizes] = useResizeAware();
+	/** @type {import('react').Ref<HTMLSelectElement | undefined>} */
 	const inputRef = useRef();
 
 	const baseFieldProps = useBaseField({
@@ -57,11 +61,15 @@ export function useSelect(props) {
 	const id = useFormGroupContextId(idProp);
 
 	const handleOnRootClick = useCallback(() => {
-		inputRef.current.focus();
+		if (inputRef.current) {
+			inputRef.current.focus();
+		}
 	}, []);
 
 	const handleOnBlur = useCallback(
-		(event) => {
+		(
+			/** @type {import('react').FocusEvent<HTMLSelectElement>} */ event,
+		) => {
 			onBlur(event);
 			setIsFocused(false);
 		},
@@ -69,7 +77,9 @@ export function useSelect(props) {
 	);
 
 	const handleOnFocus = useCallback(
-		(event) => {
+		(
+			/** @type {import('react').FocusEvent<HTMLSelectElement>} */ event,
+		) => {
 			onFocus(event);
 			setIsFocused(true);
 		},
@@ -77,7 +87,9 @@ export function useSelect(props) {
 	);
 
 	const handleOnChange = useCallback(
-		(event) => {
+		(
+			/** @type {import('react').ChangeEvent<HTMLSelectElement>} */ event,
+		) => {
 			let next;
 
 			if (multiple) {
@@ -91,7 +103,7 @@ export function useSelect(props) {
 			setValue(next);
 			onChange(next, { event });
 		},
-		[onChange, setValue, multiple],
+		[multiple, setValue, onChange],
 	);
 
 	const shouldRenderPlaceholder =
