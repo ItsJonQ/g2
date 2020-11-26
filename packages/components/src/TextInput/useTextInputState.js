@@ -17,6 +17,20 @@ import {
 	useShiftStepState,
 } from './useTextInputState.utils';
 
+/**
+ * @type {{
+	sync: "SYNC_VALUE",
+	change: "CHANGE_VALUE",
+	increment: "INCREMENT_VALUE",
+	decrement: "DECREMENT_VALUE",
+	commit: "COMMIT_START",
+	commitRevert: "COMMIT_REVERT",
+	commitComplete: "COMMIT_COMPLETE",
+	validateStart: "VALIDATE_START",
+	validateSuccess: "VALIDATE_SUCCESS",
+	validateFailed: "VALIDATE_FAILED",
+}}
+ */
 const actionTypes = {
 	sync: 'SYNC_VALUE',
 	change: 'CHANGE_VALUE',
@@ -30,29 +44,62 @@ const actionTypes = {
 	validateFailed: 'VALIDATE_FAILED',
 };
 
-const reducer = (state, action) => {
-	const { payload, type } = action;
+/** @typedef {{ value: string | undefined }} Payload */
 
-	switch (type) {
+/** @typedef {{ type: 'SYNC_VALUE', payload: Payload }} SyncAction */
+/** @typedef {{ type: 'CHANGE_VALUE', payload: Payload }} ChangeAction */
+/** @typedef {{ type: 'INCREMENT_VALUE', payload: Payload }} IncrementAction */
+/** @typedef {{ type: 'DECREMENT_VALUE', payload: Payload }} DecrementAction */
+/** @typedef {{ type: 'COMMIT_START' }} CommitStartAction */
+/** @typedef {{ type: 'COMMIT_REVERT' }} CommitRevertAction */
+/** @typedef {{ type: 'COMMIT_COMPLETE' }} CommitCompleteAction */
+/** @typedef {{ type: 'VALIDATE_START', payload: Payload }} ValidateStartAction */
+/** @typedef {{ type: 'VALIDATE_SUCCESS', payload: Payload }} ValidateSuccessAction */
+/** @typedef {{ type: 'VALIDATE_FAILED', payload: Payload }} ValidateFailedAction */
+
+/**
+ * @typedef {
+	| SyncAction
+	| ChangeAction
+	| IncrementAction
+	| DecrementAction
+	| CommitStartAction
+	| CommitRevertAction
+	| CommitCompleteAction
+	| ValidateStartAction
+	| ValidateSuccessAction
+	| ValidateFailedAction
+} Action 
+ */
+
+/** @typedef {{ value?: string, previousValue?: string, commitValue?: string }} State */
+
+/**
+ * @param {State} state
+ * @param {Action} action
+ * @return {State}
+ */
+const reducer = (state, action) => {
+	switch (action.type) {
 		case actionTypes.sync:
 			return {
-				previousValue: payload.value,
-				value: payload.value,
+				previousValue: action.payload.value,
+				value: action.payload.value,
 			};
 
 		case actionTypes.change:
 			return {
-				value: payload.value,
+				value: action.payload.value,
 			};
 
 		case actionTypes.increment:
 			return {
-				value: payload.value,
+				value: action.payload.value,
 			};
 
 		case actionTypes.decrement:
 			return {
-				value: payload.value,
+				value: action.payload.value,
 			};
 
 		case actionTypes.commitRevert:
@@ -67,10 +114,59 @@ const reducer = (state, action) => {
 			};
 
 		default:
-			return;
+			return {};
 	}
 };
 
+/**
+ * @typedef TextInputStore
+ * @property {typeof actionTypes} actionTypes
+ * @property {string} commitValue
+ * @property {'x' | 'y' | undefined} dragAxis
+ * @property {import('react').Ref<HTMLInputElement | undefined>} inputRef
+ * @property {boolean} isCommitOnBlurOrEnter
+ * @property {boolean} isFocused
+ * @property {boolean} isShiftStepEnabled
+ * @property {boolean} isTypeNumeric
+ * @property {string | undefined} previousValue
+ * @property {number} shiftStep
+ * @property {number} step
+ * @property {string | undefined} value
+ *
+ * @property {(action: Action) => void} dispatch
+ * @property {(next: string) => void} changeSync
+ * @property {(next: string) => void} change
+ * @property {() => void} commit
+ * @property {() => void} commitRevert
+ * @property {() => void} commitComplete
+ * @property {(next: string) => void} increment
+ * @property {(next: string) => void} decrement
+ *
+ * @property {() => boolean} getIsReverted
+ */
+
+/** @typedef {import('zustand').UseStore<TextInputStore>} TextInputState */
+
+/**
+ * @typedef Options
+ * @property {(...args: any[]) => void} [__debugger]
+ * @property {'x' | 'y'} [dragAxis='y']
+ * @property {string} [format='text']
+ * @property {string} [initialValue]
+ * @property {boolean} [isCommitOnBlurOrEnter=true]
+ * @property {boolean} [isFocused=false]
+ * @property {boolean} [isShiftStepEnabled=true]
+ * @property {number} [step=1]
+ * @property {number} [shiftStep=10]
+ * @property {string} [type='text']
+ * @property {(value: string | undefined, current: TextInputStore) => boolean} [validate]
+ * @property {string} [value]
+ */
+
+/**
+ *
+ * @param {Options} options
+ */
 const useTextInputStore = ({
 	__debugger,
 	dragAxis = 'y',
@@ -91,6 +187,7 @@ const useTextInputStore = ({
 		? incomingValue
 		: initialValueProp;
 
+	/** @type {TextInputState} */
 	const store = useSubState((set) => ({
 		// State
 		actionTypes,
@@ -146,6 +243,7 @@ const useTextInputStore = ({
 					type: actionTypes.validateStart,
 					payload: { value: current.value },
 				});
+				// @ts-ignore We checked `validate` above for `hasValidation`
 				isValid = validate(current.value, current) !== false;
 			}
 
@@ -211,22 +309,14 @@ const useTextInputStore = ({
 	return { inputRef, value, store };
 };
 
-export function useInputRef({ store }) {
-	const inputRef = React.useRef();
-
-	React.useEffect(() => {
-		if (inputRef.current) {
-			store.setState({ inputRef: inputRef.current });
-		}
-	}, [store]);
-
-	return inputRef;
-}
-
+/**
+ * @param {object} options
+ * @param {TextInputState} options.store
+ */
 const useKeyboardHandlers = ({ store }) => {
 	const keyboardHandlers = React.useMemo(
 		() => ({
-			Enter(event) {
+			Enter(/** @type {import('react').KeyboardEvent} */ event) {
 				if (event.isDefaultPrevented()) return;
 
 				const { isCommitOnBlurOrEnter } = store.getState();
@@ -240,7 +330,7 @@ const useKeyboardHandlers = ({ store }) => {
 	);
 
 	const handleOnKeyDown = React.useCallback(
-		(event) => {
+		(/** @type {import('react').KeyboardEvent}} */ event) => {
 			const key = normalizeArrowKey(event);
 			if (key && keyboardHandlers[key]) {
 				keyboardHandlers[key](event);
@@ -274,6 +364,12 @@ const useFocusHandlers = ({ store }) => {
 	};
 };
 
+/**
+ * @param {object} options
+ * @param {(value: string) => void} [options.onChange]
+ * @param {(value: string) => void} [options.onValueChange]
+ * @param {TextInputState} options.store
+ */
 const useChangeHandlers = ({
 	onChange = noop,
 	onValueChange = noop,
@@ -317,14 +413,21 @@ const useChangeHandlers = ({
 		onChange: handleOnChange,
 	};
 };
-
+/**
+ * @param {object} options
+ * @param {() => void} [options.decrement]
+ * @param {() => void} [options.increment]
+ * @param {(value: string) => void} [options.onChange]
+ * @param {(value: string) => void} [options.onValueChange]
+ * @param {TextInputState} options.store
+ */
 const useEventHandlers = ({
 	decrement = noop,
 	increment = noop,
 	onChange = noop,
 	onValueChange = noop,
 	store,
-	...props
+	...otherProps
 }) => {
 	const changeHandlers = useChangeHandlers({
 		onChange,
@@ -345,14 +448,13 @@ const useEventHandlers = ({
 		numberKeyboardEventHandlers,
 	);
 
-	const { onChange: onChangeProp, ...otherProps } = props;
-
 	const mergedHandlers = {
 		...changeHandlers,
 		...focusHandlers,
 		...mergedKeyboardEventHandlers,
 	};
 
+	// @ts-ignore otherProps could be anything
 	return mergeEventHandlers(mergedHandlers, otherProps);
 };
 

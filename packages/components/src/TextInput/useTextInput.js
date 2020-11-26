@@ -28,6 +28,10 @@ const useRootEventHandlers = ({ decrement, increment, inputRef, store }) => {
 	};
 };
 
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'input'>} props
+ */
 export function useTextInput(props) {
 	const combinedProps = useContextSystem(props, 'TextInput');
 	const {
@@ -159,5 +163,6 @@ export function useTextInput(props) {
 		isTypeNumeric,
 		prefix,
 		suffix,
+		disabled,
 	};
 }

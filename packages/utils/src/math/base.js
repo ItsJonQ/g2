@@ -14,13 +14,13 @@ export function getNumber(value) {
 /**
  * Safely adds 2 values.
  *
- * @param {Array<number|string>} args Values to add together.
+ * @param {Array<number|string|undefined>} args Values to add together.
  *
  * @return {number} The sum of values.
  */
 export function add(...args) {
 	return args.reduce(
-		/** @type {(sum:number, arg: string | number) => number} */
+		/** @type {(sum:number, arg: string | number | undefined) => number} */
 		(sum, arg) => sum + getNumber(arg),
 		0,
 	);
@@ -29,7 +29,7 @@ export function add(...args) {
 /**
  * Safely subtracts 2 values.
  *
- * @param {Array<number|string>} args Values to subtract together.
+ * @param {Array<number|string|undefined>} args Values to subtract together.
  *
  * @return {number} The difference of the 2 values.
  */

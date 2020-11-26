@@ -5,9 +5,22 @@ import { useDrag } from 'react-use-gesture';
 
 import * as styles from './TextInput.styles';
 
+/** @typedef {import('zustand').UseStore<{
+	isShiftKey: boolean;
+	step: number;
+	shiftStep: number;
+	getShiftValue: () => number;
+}>} ShiftStepState */
+
+/**
+ * @param {object} options
+ * @param {number} [options.shiftStep=10]
+ * @param {number} [options.step=1]
+ */
 export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
+	/** @type {ShiftStepState} */
 	const shiftStepStore = useSubState(() => ({
-		isShiftKey: false,
+		isShiftKey: /** @type {boolean} */ (false),
 		step,
 		shiftStep,
 
@@ -64,13 +77,15 @@ export function useControlledValue({ store, value: incomingValue }) {
 export function useBaseDragHandlers({
 	decrement,
 	dragAxis,
-	enableTouchGestures = false,
 	increment,
 	isTypeNumeric = true,
 }) {
-	const [dragState, setDragState] = React.useState(false);
+	const [dragState, setDragState] = React.useState(
+		/** @type {undefined | 'x' | 'y'} */ (undefined),
+	);
 
-	const dragRaf = React.useRef();
+	/** @type {import('react').MutableRefObject<number | undefined>} */
+	const dragRef = React.useRef();
 	const threshold = 10;
 
 	React.useEffect(() => {
@@ -96,14 +111,16 @@ export function useBaseDragHandlers({
 
 	React.useEffect(() => {
 		return () => {
-			cancelAnimationFrame(dragRaf.current);
+			if (!dragRef.current) return;
+
+			cancelAnimationFrame(dragRef.current);
 		};
 	}, []);
 
 	const dragGestures = useDrag(
 		(state) => {
 			const [x, y] = state.delta;
-			setDragState(state.dragging ? state.axis : false);
+			setDragState(state.dragging ? state.axis : undefined);
 
 			const isMovementY = state.axis === 'y';
 			let movement = isMovementY ? y * -1 : x;
@@ -116,11 +133,11 @@ export function useBaseDragHandlers({
 			boost = shouldIncrement ? boost : boost * -1;
 			boost = boost - 1;
 
-			if (dragRaf.current) {
-				cancelAnimationFrame(dragRaf.current);
+			if (dragRef.current) {
+				cancelAnimationFrame(dragRef.current);
 			}
 
-			dragRaf.current = requestAnimationFrame(() => {
+			dragRef.current = requestAnimationFrame(() => {
 				if (shouldIncrement) {
 					increment(boost);
 				} else {
@@ -135,23 +152,13 @@ export function useBaseDragHandlers({
 		? dragGestures()
 		: { onMouseDown: noop, onTouchStart: noop };
 
-	if (!enableTouchGestures) {
-		gestures.onTouchStart = noop;
-	}
-
 	return gestures;
 }
 
-export function useDragHandlers({
-	decrement,
-	enableTouchGestures,
-	increment,
-	store,
-}) {
+export function useDragHandlers({ decrement, increment, store }) {
 	const { dragAxis, isTypeNumeric } = store.getState();
 
 	return useBaseDragHandlers({
-		enableTouchGestures,
 		dragAxis,
 		isTypeNumeric,
 		increment,

@@ -4,6 +4,21 @@ import { useUniqueId } from '@wp-g2/utils';
 
 import * as styles from './FormGroup.styles';
 
+/**
+ * @typedef OwnProps
+ * @property {Pick<import('../Text/types').Props, 'align'>} [alignLabel='left']
+ * @property {boolean} [horizontal=true]
+ * @property {string} [label]
+ * @property {string} [help]
+ * @property {boolean} [labelHidden=false]
+ * @property {boolean} [truncate=false]
+ */
+
+/** @typedef {import('../Grid/types').Props & OwnProps} Props */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ */
 export function useFormGroup(props) {
 	const {
 		alignLabel = 'left',
