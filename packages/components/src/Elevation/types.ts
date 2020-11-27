@@ -1,6 +1,4 @@
-import { PolymorphicComponent } from './_shared';
-
-export declare type ElevationProps = {
+export type Props = {
 	/**
 	 * Renders the active (interaction) shadow value.
 	 */
@@ -48,28 +46,3 @@ export declare type ElevationProps = {
 	 */
 	value?: number;
 };
-
-/**
- * `Elevation` is a core component that renders shadow, using the library's shadow system.
- *
- * @remarks
- * The shadow effect is generated using the `value` prop.
- *
- * @example
- * ```jsx
- * import { Elevation, Surface, Text, View } from `@wp-g2/components`
- * import { ui } from `@wp-g2/styles`
- *
- * function Example() {
- *   return (
- *     <View css={[ui.padding(5)]}>
- *       <Surface css={[ui.padding(5)]}>
- *         <Text>Into The Unknown</Text>
- *         <Elevation value={5} />
- *       </Surface>
- *     </View>
- *   );
- * }
- * ```
- */
-export declare const Elevation: PolymorphicComponent<'div', ElevationProps>;

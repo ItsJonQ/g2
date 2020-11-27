@@ -5,6 +5,9 @@ import { useMemo } from 'react';
 
 import * as styles from './Elevation.styles';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'div'>} props
+ */
 export function useElevation(props) {
 	const {
 		active,
