@@ -55,7 +55,4 @@ function Spinner(props, forwardedRef) {
 	);
 }
 
-/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', Props>} */
-const ConnectedSpinner = contextConnect(Spinner, 'Spinner');
-
-export default ConnectedSpinner;
+export default contextConnect(Spinner, 'Spinner');

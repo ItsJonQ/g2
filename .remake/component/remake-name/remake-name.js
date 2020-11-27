@@ -27,8 +27,6 @@ function <%= name %> (props, forwardedRef) {
  *   );
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./types').Props>}
  */
 const Connected<%= name %> = contextConnect(<%= name %>, '<%= name %>');
 

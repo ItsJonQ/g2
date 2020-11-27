@@ -1,9 +1,5 @@
 import { As } from 'reakit-utils/types';
-import { ViewOwnProps } from '@wp-g2/create-styles';
-
-export type PropsFromViewOwnProps<P> = P extends ViewOwnProps<infer PP, any>
-	? PP
-	: never;
+import { ViewOwnProps, PropsFromViewOwnProps } from '@wp-g2/create-styles';
 
 export type Options<T extends As, P extends ViewOwnProps<{}, T>> = {
 	as: T;
@@ -38,7 +34,7 @@ export type FormElementProps<V> = {
 	label?: string;
 };
 
-type PopperPlacement =
+export type PopperPlacement =
 	| 'auto'
 	| 'auto-start'
 	| 'auto-end'

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ViewOwnProps } from '@wp-g2/create-styles';
 
 type ForwardedRefComponent<
 	T extends React.ElementType,
@@ -14,10 +13,3 @@ export type MaybeMemoizedForwardedRefComponent<
 > =
 	| React.MemoExoticComponent<ForwardedRefComponent<T, P>>
 	| ForwardedRefComponent<T, P>;
-
-export type ElementTypeFromViewOwnProps<P> = P extends ViewOwnProps<
-	unknown,
-	infer T
->
-	? T
-	: never;

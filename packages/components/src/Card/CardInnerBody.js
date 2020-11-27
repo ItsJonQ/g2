@@ -20,9 +20,4 @@ function CardInnerBody(props, forwardedRef) {
 	return <View {...otherProps} className={classes} ref={forwardedRef} />;
 }
 
-/**
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', {}>
- */
-const ConnectedCardInnerBody = contextConnect(CardInnerBody, 'CardInnerBody');
-
-export default ConnectedCardInnerBody;
+export default contextConnect(CardInnerBody, 'CardInnerBody');

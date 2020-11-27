@@ -48,8 +48,6 @@ function CardFooter(props, forwardedRef) {
  * 	<CardFooter>...</CardFooter>
  * </Card>
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./types').CardFooterProps>}
  */
 const ConnectedCardFooter = contextConnect(CardFooter, 'CardFooter');
 

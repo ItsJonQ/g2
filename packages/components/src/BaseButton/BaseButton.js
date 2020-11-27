@@ -138,8 +138,6 @@ function BaseButton(props, forwardedRef) {
 
 /**
  * `BaseButton` is a primitive component used to create actionable components (e.g. `Button`).
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'button', import('./types').Props>}
  */
 const ConnectedBaseButton = contextConnect(BaseButton, 'BaseButton');
 

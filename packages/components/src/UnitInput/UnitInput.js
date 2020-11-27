@@ -55,8 +55,6 @@ export function UnitInput(props, ref) {
  *   return <UnitInput value="50%" min={0} max={100} />
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'input', import('./useUnitInput').Props>}
  */
 const ConnectedUnitInput = contextConnect(UnitInput, 'UnitInput');
 

@@ -8,7 +8,7 @@ import { View } from '../View';
  * @template {import('reakit-utils/types').As} T
  * @template {import('@wp-g2/create-styles').ViewOwnProps<{}, T>} P
  * @param {import('./types').Options<T, P>} options
- * @return {import('@wp-g2/create-styles').PolymorphicComponent<T, import('./types').PropsFromViewOwnProps<P>>}
+ * @return {import('@wp-g2/create-styles').PolymorphicComponent<T, import('@wp-g2/create-styles').PropsFromViewOwnProps<P>>}
  */
 export const createComponent = ({
 	as,

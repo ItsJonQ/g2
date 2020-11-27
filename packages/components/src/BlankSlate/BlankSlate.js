@@ -65,7 +65,4 @@ function BlankSlate(props, forwardedRef) {
 	);
 }
 
-/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', Props>} */
-const ConnectedBlankSlate = contextConnect(BlankSlate, 'BlankSlate');
-
-export default ConnectedBlankSlate;
+export default contextConnect(BlankSlate, 'BlankSlate');

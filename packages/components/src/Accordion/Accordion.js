@@ -6,7 +6,6 @@ import { AccordionView } from './Accordion.styles';
 import { useAccordion } from './useAccordion';
 
 /**
- *
  * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./useAccordion').Props, 'div'>} props
  * @param {import('react').Ref<any>} forwardedRef
  */
@@ -22,7 +21,4 @@ function Accordion(props, forwardedRef) {
 	);
 }
 
-/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./useAccordion').Props>} */
-const ConnectedAccordion = contextConnect(Accordion, 'Accordion');
-
-export default ConnectedAccordion;
+export default contextConnect(Accordion, 'Accordion');

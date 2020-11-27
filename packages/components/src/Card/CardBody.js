@@ -55,8 +55,6 @@ function CardBody(props, forwardedRef) {
  * 	</CardBody>
  * </Card>
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./types').CardBodyProps>}
  */
 const ConnectedCardBody = contextConnect(CardBody, 'CardBody');
 

@@ -63,8 +63,6 @@ function Select(props, forwardedRef) {
  *   );
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'select', import('./types').Props>}
  */
 const ConnectedSelect = contextConnect(Select, 'Select');
 
