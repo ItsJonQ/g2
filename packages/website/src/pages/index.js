@@ -558,25 +558,24 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO />
-      <ThemeProvider theme={theme}>
-        <View
-          css={[
-            `
+      <ThemeProvider isGlobal theme={theme} />
+      <View
+        css={[
+          `
             ${ui.createToken("fontSize")}: 15px;
           `,
-            `${getBreakpoint("md")`
+          `${getBreakpoint("md")`
               ${ui.createToken("fontSize")}: 20px;
             `}`,
-          ]}
-        >
-          <IntroSection />
-          <SystemsSection />
-          <ModularSection />
-          <AccessiblitySection />
-          <ThemableSection />
-          <ComingSoonSection />
-        </View>
-      </ThemeProvider>
+        ]}
+      >
+        <IntroSection />
+        <SystemsSection />
+        <ModularSection />
+        <AccessiblitySection />
+        <ThemableSection />
+        <ComingSoonSection />
+      </View>
     </Layout>
   )
 }
