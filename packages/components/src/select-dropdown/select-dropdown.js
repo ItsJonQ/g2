@@ -4,6 +4,7 @@ import React from 'react';
 import { DropdownMenuCard } from '../Dropdown';
 import { Portal } from '../Portal';
 import { Select } from '../Select';
+import { Truncate } from '../Truncate';
 import { View } from '../View';
 import SelectDropdownItem from './select-dropdown-item';
 import SelectDropdownLabel from './select-dropdown-label';
@@ -29,7 +30,9 @@ function SelectDropdown(props, forwardedRef) {
 	return (
 		<View {...otherProps} ref={forwardedRef}>
 			{resizer}
-			<Select as="button" {...referenceProps} />
+			<Select as="button" {...referenceProps}>
+				<Truncate>{referenceProps.children}</Truncate>
+			</Select>
 			<Portal>
 				<View {...popoverProps}>
 					<SelectDropdownLabel {...labelProps} />
