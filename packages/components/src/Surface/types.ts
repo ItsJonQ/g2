@@ -1,13 +1,11 @@
-import { PolymorphicComponent } from './_shared';
-
-export declare type SurfaceVariant =
+export type SurfaceVariant =
 	| 'primary'
 	| 'secondary'
 	| 'tertiary'
 	| 'dotted'
 	| 'grid';
 
-export declare type SurfaceProps = {
+export type Props = {
 	/**
 	 * Determines the grid size for "dotted" and "grid" variants.
 	 */
@@ -63,27 +61,3 @@ export declare type SurfaceProps = {
 	 */
 	variant?: SurfaceVariant;
 };
-
-/**
- * `Surface` is a core component that renders a primary background color.
- *
- * @remarks
- * In the example below, notice how the `Surface` renders in white (or dark gray if in dark mode).
- *
- * @example
- * ```jsx
- * import { Background, Surface, Text } from `@wp-g2/components`
- * import { ui } from `@wp-g2/styles`
- *
- * function Example() {
- *   return (
- *     <Background css={[ui.padding(5)]}>
- *       <Surface css={[ui.padding(5)]}>
- *         <Text>Into The Unknown</Text>
- *       </Surface>
- *     </Background>
- *   );
- * }
- * ```
- */
-export declare const Surface: PolymorphicComponent<'div', SurfaceProps>;

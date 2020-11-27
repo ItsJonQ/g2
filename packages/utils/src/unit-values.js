@@ -148,7 +148,7 @@ export function parseUnitValue(initialValue) {
 /**
  *
  * @param {string | number} value
- * @param {string} unit
+ * @param {string} [unit]
  * @return {string}
  */
 export function createUnitValue(value, unit) {

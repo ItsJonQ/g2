@@ -5,6 +5,9 @@ import { useMemo } from 'react';
 import { useSurface } from '../Surface';
 import * as styles from './Card.styles';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').CardProps, 'div'>} props
+ */
 export function useCard(props) {
 	const {
 		className,

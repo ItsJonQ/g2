@@ -33,7 +33,7 @@ export const secondary = css`
 `;
 
 export const tertiary = css`
-	background: ${ui.get('surfaceBackgroundColor')};
+	background: ${ui.get('surfaceBackgroundTertiaryColor')};
 `;
 
 export const dotted = css`

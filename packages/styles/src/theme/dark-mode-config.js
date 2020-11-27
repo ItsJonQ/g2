@@ -27,6 +27,7 @@ const DARK_MODE_PROPS = {
 	surfaceBackgroundColor: get('colorBodyBackground'),
 	surfaceBackgroundSubtleColor: '#151515',
 	surfaceBackgroundTintColor: '#252525',
+	surfaceBackgroundTertiaryColor: '#000',
 	surfaceBorderColor: 'rgba(255, 255, 255, 0.1)',
 	surfaceBorderBoldColor: 'rgba(255, 255, 255, 0.15)',
 	surfaceBorderSubtleColor: 'rgba(255, 255, 255, 0.05)',

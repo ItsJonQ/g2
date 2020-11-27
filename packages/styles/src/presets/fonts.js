@@ -63,9 +63,18 @@ const fontMixins = {
 		css({ fontSize: getFontSize(size) }),
 };
 
+const fontAlignments = {
+	alignment: {
+		left: css({ textAlign: 'left' }),
+		center: css({ textAlign: 'center' }),
+		right: css({ textAlign: 'right' }),
+	},
+};
+
 export const font = {
 	...fontFamily,
 	...fontSizes,
 	...fontStyles,
 	...fontMixins,
+	...fontAlignments,
 };

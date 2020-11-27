@@ -2399,7 +2399,7 @@ exports[`props should render Background 1`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
 }
@@ -2440,7 +2440,7 @@ exports[`props should render Background with css prop 1`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
 }
@@ -2481,7 +2481,7 @@ exports[`props should render Background with css prop 2`] = `
   color: var(--wp-g2-color-text);
   position: relative;
   background: #ffffff;
-  background: var(--wp-g2-surface-background-color);
+  background: var(--wp-g2-surface-background-tertiary-color);
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
   background: red;
@@ -10706,7 +10706,8 @@ exports[`props should render ControlLabel 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -10774,7 +10775,8 @@ exports[`props should render ControlLabel with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: inline-block;
   vertical-align: middle;
 }
@@ -10842,7 +10844,8 @@ exports[`props should render ControlLabel with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   background: red;
   padding: 27px;
   display: inline-block;
@@ -11841,12 +11844,13 @@ exports[`props should render DropdownMenuHeader 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -11901,12 +11905,13 @@ exports[`props should render DropdownMenuHeader with css prop 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -11961,12 +11966,13 @@ exports[`props should render DropdownMenuHeader with css prop 2`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -13801,7 +13807,8 @@ exports[`props should render ExternalLink 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -13919,7 +13926,8 @@ exports[`props should render ExternalLink with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -14037,7 +14045,8 @@ exports[`props should render ExternalLink with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -15004,12 +15013,13 @@ exports[`props should render Heading 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -15046,12 +15056,13 @@ exports[`props should render Heading with css prop 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
 }
 
 @media (prefers-reduced-motion) {
@@ -15088,12 +15099,13 @@ exports[`props should render Heading with css prop 2`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   background: red;
   padding: 27px;
 }
@@ -15459,7 +15471,8 @@ exports[`props should render Link 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -15507,7 +15520,8 @@ exports[`props should render Link with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -15555,7 +15569,8 @@ exports[`props should render Link with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007cba;
@@ -16766,12 +16781,13 @@ exports[`props should render MenuHeader 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16826,12 +16842,13 @@ exports[`props should render MenuHeader with css prop 1`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16886,12 +16903,13 @@ exports[`props should render MenuHeader with css prop 2`] = `
   color: var(--wp-g2-color-text);
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
+  color: #050505;
+  color: var(--wp-g2-color-text-heading);
   font-size: calc(1 * 13px);
   font-size: var(--wp-g2-font-size-h-5);
   font-weight: 600;
+  font-weight: var(--wp-g2-font-weight-heading);
   display: block;
-  color: #050505;
-  color: var(--wp-g2-color-text-heading);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -21497,7 +21515,8 @@ exports[`props should render SearchInput 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -22694,7 +22713,8 @@ exports[`props should render Select 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23075,7 +23095,8 @@ exports[`props should render SelectDropdown 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23472,7 +23493,8 @@ exports[`props should render SelectDropdown with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23871,7 +23893,8 @@ exports[`props should render SelectDropdown with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
@@ -23983,363 +24006,6 @@ exports[`props should render SelectDropdown with css prop 2`] = `
         </div>
       </span>
     </div>
-  </div>
-</div>
-`;
-
-exports[`props should render SelectElement 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
-  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
-  --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
-  background: #ffffff;
-  background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
-  border-radius: var(--wp-g2-control-border-radius);
-  border: 1px solid;
-  border-color: #757575;
-  border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
-  box-shadow: var(--wp-g2-control-box-shadow);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  outline: none;
-  padding: 0 8px;
-  position: relative;
-  -webkit-transition: border-color 100ms ease;
-  -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
-  transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  width: 100%;
-  cursor: pointer;
-  padding: 0;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
-  margin-left: calc(var(--wp-g2-grid-base) * 0);
-}
-
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
-  min-height: 0;
-}
-
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
-  opacity: 0.6;
-}
-
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
-  border-color: #757575;
-  border-color: var(--wp-g2-control-border-color-hover);
-}
-
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
-  border-color: #007cba;
-  border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
-  box-shadow: var(--wp-g2-control-box-shadow-focus);
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: none;
-  border-radius: 2px;
-  border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #1e1e1e;
-  color: var(--wp-g2-color-text);
-  display: block;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  line-height: 18px;
-  min-height: calc(30px - 2px);
-  min-height: calc(var(--wp-g2-control-height) - 2px);
-  outline: none;
-  padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
-  padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
-  padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  resize: none;
-  text-align: left;
-  width: 100%;
-  font-size: 16px;
-  font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
-  padding-right: 24px;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-@media (min-width:36em) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-    font-size: 13px;
-    font-size: var(--wp-g2-font-size);
-  }
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-outer-spin-button,
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[type='number'] {
-  -moz-appearance: textfield;
-}
-
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  display: block;
-  max-height: 100%;
-  max-width: 100%;
-  min-height: 0;
-  min-width: 0;
-  display: var(--wp-g2-flex-item-display);
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 5px;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  color: #1e1e1e;
-  color: var(--wp-g2-color-text);
-  line-height: 1.2;
-  line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
-  display: block;
-  color: #8a8b8c;
-  color: var(--wp-g2-color-text-muted);
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-family: var(--wp-g2-font-family);
-  font-size: 13px;
-  font-size: var(--wp-g2-font-size);
-  margin: 0;
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: currentColor;
-  fill: currentColor;
-  height: 14px;
-  width: 14px;
-}
-
-@media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
-    -webkit-transition: none!important;
-    transition: none!important;
-  }
-}
-
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
-  -webkit-transition: none!important;
-  transition: none!important;
-}
-
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 svg {
-  display: block;
-}
-
-<div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
-  data-g2-c16t="true"
-  data-g2-component="SelectWrapper"
->
-  <select
-    class="emotion-1"
-    data-g2-c16t="true"
-    data-g2-component="Select"
-    id="SelectElement"
-  />
-  <div
-    class="components-flex-item wp-components-flex-item emotion-2"
-    data-g2-c16t="true"
-    data-g2-component="FlexItem"
-  >
-    <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
-      data-g2-c16t="true"
-      data-g2-component="Text"
-    >
-      <div
-        class="components-icon wp-components-icon emotion-4"
-        data-g2-c16t="true"
-        data-g2-component="Icon"
-      >
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          height="14"
-          role="img"
-          size="14"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M17.5 11.6L12 16l-5.5-4.4.9-1.2L12 14l4.5-3.6 1 1.2z"
-          />
-        </svg>
-      </div>
-    </span>
   </div>
 </div>
 `;
@@ -29000,7 +28666,8 @@ exports[`props should render Tag 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -29097,7 +28764,8 @@ exports[`props should render Tag with css prop 1`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -29196,7 +28864,8 @@ exports[`props should render Tag with css prop 2`] = `
   color: currentColor;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1;
   display: block;
   padding: 3px 0;
@@ -29244,7 +28913,8 @@ exports[`props should render Text 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -29283,7 +28953,8 @@ exports[`props should render Text with css prop 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -29322,7 +28993,8 @@ exports[`props should render Text with css prop 2`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   background: red;
   padding: 27px;
 }

@@ -5,6 +5,10 @@ import React, { useMemo } from 'react';
 import { Flex } from '../Flex';
 import * as styles from './Card.styles';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').CardFooterProps, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function CardFooter(props, forwardedRef) {
 	const {
 		className,
@@ -34,4 +38,19 @@ function CardFooter(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(CardFooter, 'CardFooter');
+/**
+ * `CardFooter` is a layout component, rendering the footer content of a `Card`.
+ *
+ * @example
+ * ```jsx
+ * <Card>
+ * 	<CardBody>...</CardBody>
+ * 	<CardFooter>...</CardFooter>
+ * </Card>
+ * ```
+ *
+ * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./types').CardFooterProps>}
+ */
+const ConnectedCardFooter = contextConnect(CardFooter, 'CardFooter');
+
+export default ConnectedCardFooter;

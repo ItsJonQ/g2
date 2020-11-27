@@ -25,13 +25,14 @@ export function useText(props) {
 		highlightWords = [],
 		highlightSanitize,
 		isBlock = false,
+		letterSpacing,
 		lineHeight: lineHeightProp,
 		optimizeReadabilityFor,
 		size,
 		truncate = false,
 		upperCase = false,
 		variant,
-		weight = 400,
+		weight = ui.get('fontWeight'),
 		...otherProps
 	} = useContextSystem(props, 'Text');
 
@@ -63,6 +64,7 @@ export function useText(props) {
 			fontSize: getFontSize(size),
 			fontWeight: weight,
 			lineHeight,
+			letterSpacing,
 			textAlign: align,
 		});
 
@@ -101,6 +103,7 @@ export function useText(props) {
 		isCaption,
 		isDestructive,
 		isHighlighter,
+		letterSpacing,
 		lineHeightProp,
 		optimizeReadabilityFor,
 		size,

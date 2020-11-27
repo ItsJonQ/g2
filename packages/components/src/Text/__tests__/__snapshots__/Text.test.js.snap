@@ -16,7 +16,8 @@ exports[`props should render align 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   text-align: center;
 }
 
@@ -57,7 +58,8 @@ exports[`props should render as another element 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -98,7 +100,8 @@ exports[`props should render color 1`] = `
   color: orange;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -138,7 +141,8 @@ exports[`props should render correctly 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -178,7 +182,8 @@ exports[`props should render custom size 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1.1538461538461537 * 13px);
   font-size: calc(1.1538461538461537 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -222,7 +227,8 @@ exports[`props should render display 1`] = `
   display: inline-flex;
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -262,7 +268,8 @@ exports[`props should render highlighted words 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -326,7 +333,8 @@ exports[`props should render highlighted words with highlightCaseSensitive 1`] =
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -378,7 +386,8 @@ exports[`props should render highlighted words with undefined passed 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -418,7 +427,8 @@ exports[`props should render isBlock 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   display: block;
 }
 
@@ -459,7 +469,8 @@ exports[`props should render lineHeight 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   line-height: 1.5;
 }
 
@@ -500,7 +511,8 @@ exports[`props should render optimizeReadabilityFor 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   color: #ffffff;
   color: var(--wp-g2-white);
 }
@@ -542,7 +554,8 @@ exports[`props should render size 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1.5384615384615385 * 13px);
   font-size: calc(1.5384615384615385 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -586,7 +599,8 @@ exports[`props should render truncate 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
 }
 
 @media (prefers-reduced-motion) {
@@ -626,7 +640,8 @@ exports[`props should render upperCase 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   text-transform: uppercase;
 }
 
@@ -667,7 +682,8 @@ exports[`props should render variant 1`] = `
   line-height: var(--wp-g2-font-line-height-base);
   font-size: calc(1 * 13px);
   font-size: calc(1 * var(--wp-g2-font-size));
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   color: #8a8b8c;
   color: var(--wp-g2-color-text-muted);
 }

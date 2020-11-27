@@ -1,29 +1,54 @@
 import * as React from 'react';
-import {
-	PolymorphicComponent,
-	FormElementProps,
-	SizeRangeReduced,
-} from './_shared';
-import { BaseFieldProps } from './BaseField';
+import { Props as BaseFieldProps } from '../BaseField/useBaseField';
+import { FormElementProps, SizeRangeReduced } from '../utils/types';
 
-type SelectOption = {
+export type SelectOption = {
 	id?: string;
 	value: string;
 	disabled?: boolean;
 	label: string;
 };
 
-type SelectOptionGroup = {
+export type SelectOptionGroup = {
 	id?: string;
 	label: string;
-	options: Array<SelectOption>;
+	options: SelectOption[];
 };
 
-export declare type SelectProps = Omit<
-	BaseFieldProps,
-	'gap' | 'isClickable' | 'isFocused'
-> &
-	FormElementProps & {
+type MultipleProps = FormElementProps<string[]> & {
+	/**
+	 * Enables selection of multiple values.
+	 */
+	multiple: true;
+	/**
+	 * Value for the select element.
+	 * An array of values is required for `multiple`.
+	 */
+	value: string[];
+	onChange: (
+		value: string[],
+		extra?: { event: React.ChangeEvent<HTMLSelectElement> },
+	) => void;
+};
+
+type SingluarProps = FormElementProps<string> & {
+	/**
+	 * Enables selection of multiple values.
+	 */
+	multiple: false | undefined;
+	/**
+	 * Value for the select element.
+	 * An array of values is required for `multiple`.
+	 */
+	value: string;
+	onChange: (
+		value: string,
+		extra?: { event: React.ChangeEvent<HTMLSelectElement> },
+	) => void;
+};
+
+export type Props = Omit<BaseFieldProps, 'gap' | 'isClickable'> &
+	(MultipleProps | SingluarProps) & {
 		/**
 		 * @example
 		 * ```jsx
@@ -35,10 +60,6 @@ export declare type SelectProps = Omit<
 		 * ```
 		 */
 		isSubtle?: boolean;
-		/**
-		 * Enables selection of multiple values.
-		 */
-		multiple?: boolean;
 		/**
 		 * Options to render within `Select`.
 		 *
@@ -89,7 +110,7 @@ export declare type SelectProps = Omit<
 		 * }
 		 * ```
 		 */
-		options?: Array<SelectOption | SelectOptionGroup>;
+		options?: (SelectOption | SelectOptionGroup)[];
 		/**
 		 * Example text to display as placeholder.
 		 */
@@ -106,7 +127,7 @@ export declare type SelectProps = Omit<
 		 * }
 		 * ```
 		 */
-		prefix?: React.ReactElement;
+		prefix?: React.ReactNode;
 		/**
 		 * Determines the size of `Select`.
 		 *
@@ -134,31 +155,5 @@ export declare type SelectProps = Omit<
 		 * }
 		 * ```
 		 */
-		suffix?: React.ReactElement;
-		/**
-		 * Value for the select element.
-		 * An array of values is required for `multiple`.
-		 */
-		value?: string | Array<string>;
+		suffix?: React.ReactNode;
 	};
-
-/**
- * `Select` is a form component lets users choose options from an options menu.
- *
- * @example
- * ```jsx
- * import { Select } from `@wp-g2/components`
- *
- * function Example() {
- *   return (
- *     <Select>
- *       <option>Ana</option>
- *       <option>Elsa</option>
- *       <option>Kristoff</option>
- *       <option>Olaf</option>
- *     </Select>
- *   );
- * }
- * ```
- */
-export declare const Select: PolymorphicComponent<'select', SelectProps>;

@@ -1,14 +1,14 @@
 import React from "react"
 
-export function Logo() {
+export function Logo({ size = 32 }) {
   return (
     <svg
       aria-label="G2 Components Logo"
       enableBackground="new 0 0 48 48"
-      height="32"
+      height={size}
       role="img"
       viewBox="0 0 48 48"
-      width="32"
+      width={size}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="m37.2 2h-26.4c-4.86 0-8.8 3.94-8.8 8.8v26.4c0 4.86 3.94 8.8 8.8 8.8h26.4c4.86 0 8.8-3.94 8.8-8.8v-26.4c0-4.86-3.94-8.8-8.8-8.8z" />

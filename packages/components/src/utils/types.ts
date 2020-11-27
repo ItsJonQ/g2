@@ -23,11 +23,11 @@ export type SizeRangeDefault =
 
 export type SizeRangeReduced = 'large' | 'medium' | 'small';
 
-export type FormElementProps = {
+export type FormElementProps<V> = {
 	/**
 	 * The default (initial) state to use if `value` is undefined.
 	 */
-	defaultValue?: string | number | readonly string[] | undefined | boolean;
+	defaultValue?: V;
 	/**
 	 * Determines if element is disabled.
 	 */
@@ -36,8 +36,4 @@ export type FormElementProps = {
 	 * Label for the form element.
 	 */
 	label?: string;
-	/**
-	 * Value for the form element.
-	 */
-	value?: any;
 };
