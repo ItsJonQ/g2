@@ -8,7 +8,7 @@ type TextAdjustLineHeightForInnerControls =
 	| 'small'
 	| 'xSmall';
 
-type TextSize =
+export type TextSize =
 	| 'body'
 	| 'caption'
 	| 'footnote'
