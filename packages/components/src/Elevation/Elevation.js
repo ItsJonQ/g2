@@ -37,8 +37,6 @@ function Elevation(props, forwardedRef) {
  *   );
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./types').Props>}
  */
 const ConnectedElevation = contextConnect(Elevation, 'Elevation');
 

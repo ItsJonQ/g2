@@ -40,7 +40,4 @@ function ExternalLink(props, forwardedRef) {
 	);
 }
 
-/** @type {import('@wp-g2/create-styles').PolymorphicComponent<'a', Props>} */
-const ConnectedExternalLink = contextConnect(ExternalLink, 'ExternalLink');
-
-export default ConnectedExternalLink;
+export default contextConnect(ExternalLink, 'ExternalLink');

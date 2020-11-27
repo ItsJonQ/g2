@@ -73,8 +73,6 @@ function TextInput(props, forwardedRef) {
  *   return <TextInput placeholder="First name" />
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'input', import('./types').Props>}
  */
 const ConnectedTextInput = contextConnect(TextInput, 'TextInput');
 

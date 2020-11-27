@@ -1,10 +1,9 @@
-import { PolymorphicComponent } from './_shared';
-import { TextProps, TextSize } from './Text';
-import { CSS } from './_shared';
+import { CSSProperties } from 'react';
+import { Props as TextProps, TextSize } from '../Text/types';
 
-export declare type HeadingSize = 1 | 2 | 3 | 4 | 5 | 6;
+export type HeadingSize = 1 | 2 | 3 | 4 | 5 | 6;
 
-export declare type HeadingProps = TextProps & {
+export type Props = TextProps & {
 	/**
 	 * `Heading` will typically render the sizes `1`, `2`, `3`, `4`, `5`, or `6`, which map to `h1`-`h6`. However, it can render any size, including non `px` values.
 	 *
@@ -28,19 +27,5 @@ export declare type HeadingProps = TextProps & {
 	 * }
 	 * ```
 	 */
-	size: HeadingSize | TextSize | CSS['fontSize'];
+	size: HeadingSize | TextSize | CSSProperties['fontSize'];
 };
-
-/**
- * `Heading` renders headings and titles using the library's typography system.
- *
- * @example
- * ```jsx
- * import { Heading } from `@wp-g2/components`
- *
- * function Example() {
- *   return <Heading>Into The Unknown</Heading>;
- * }
- * ```
- */
-export declare const Heading: PolymorphicComponent<'div', HeadingProps>;

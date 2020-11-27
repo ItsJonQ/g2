@@ -5,6 +5,10 @@ import { Card } from '../Card';
 import { Scrollable } from '../Scrollable';
 import * as styles from './Dropdown.styles';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('../Card/types').CardProps, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function DropdownMenuCard(props, forwardedRef) {
 	const { children, elevation = 3, ...otherProps } = useContextSystem(
 		props,

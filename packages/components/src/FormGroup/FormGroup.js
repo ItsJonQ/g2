@@ -47,8 +47,6 @@ function FormGroup(props, forwardedRef) {
  * 	)
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./useFormGroup').Props>}
  */
 const ConnectedFormGroup = contextConnect(FormGroup, 'FormGroup');
 

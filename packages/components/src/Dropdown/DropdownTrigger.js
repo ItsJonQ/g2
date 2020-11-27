@@ -5,6 +5,10 @@ import { MenuButton } from 'reakit';
 import { Button } from '../Button';
 import { useDropdownContext } from './Dropdown.Context';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('../Button/Button').Props, 'button'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function DropdownTrigger(props, forwardedRef) {
 	const { hasCaret = false, ...otherProps } = useContextSystem(
 		props,
@@ -25,4 +29,22 @@ function DropdownTrigger(props, forwardedRef) {
 	return <MenuButton as={Button} {...componentProps} {...menu} />;
 }
 
-export default contextConnect(DropdownTrigger, 'DropdownTrigger');
+/**
+ * `DropdownTrigger` is an actionable component that toggles the visibility of a `Dropdown`.
+ *
+ * @example
+ * ```jsx
+ * <Dropdown>
+ *  <DropdownTrigger>Edit</DropdownTrigger>
+ *  <DropdownMenu>
+ *    ...
+ *  </DropdownMenu>
+ * </Dropdown>
+ * ```
+ */
+const ConnectedDropdownTrigger = contextConnect(
+	DropdownTrigger,
+	'DropdownTrigger',
+);
+
+export default ConnectedDropdownTrigger;

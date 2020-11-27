@@ -1,9 +1,5 @@
 import { As } from 'reakit-utils/types';
-import { ViewOwnProps } from '@wp-g2/create-styles';
-
-export type PropsFromViewOwnProps<P> = P extends ViewOwnProps<infer PP, any>
-	? PP
-	: never;
+import { ViewOwnProps, PropsFromViewOwnProps } from '@wp-g2/create-styles';
 
 export type Options<T extends As, P extends ViewOwnProps<{}, T>> = {
 	as: T;
@@ -36,4 +32,32 @@ export type FormElementProps<V> = {
 	 * Label for the form element.
 	 */
 	label?: string;
+};
+
+export type PopperPlacement =
+	| 'auto'
+	| 'auto-start'
+	| 'auto-end'
+	| 'top'
+	| 'top-start'
+	| 'top-end'
+	| 'right'
+	| 'right-start'
+	| 'right-end'
+	| 'bottom'
+	| 'bottom-start'
+	| 'bottom-end'
+	| 'left'
+	| 'left-start'
+	| 'left-end';
+
+export type PopperProps = {
+	/**
+	 * Position of the popover element.
+	 *
+	 * @default 'auto'
+	 *
+	 * @see https://popper.js.org/docs/v1/#popperplacements--codeenumcode
+	 */
+	placement?: PopperPlacement;
 };

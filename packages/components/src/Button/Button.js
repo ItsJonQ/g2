@@ -114,8 +114,6 @@ function Button(props, forwardedRef) {
  *   return <Button variant="secondary">Let It Go</Button>;
  * }
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'button', Props>}
  */
 const ConnectedButton = contextConnect(Button, 'Button');
 

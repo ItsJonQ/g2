@@ -40,8 +40,6 @@ function CardHeader(props, forwardedRef) {
  * 	<CardBody>...</CardBody>
  * </Card>
  * ```
- *
- * @type {import('@wp-g2/create-styles').PolymorphicComponent<'div', import('./types').CardHeaderProps>}
  */
 const ConnectedCardHeader = contextConnect(CardHeader, 'CardHeader');
 

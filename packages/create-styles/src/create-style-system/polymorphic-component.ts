@@ -12,6 +12,17 @@ export type ViewOwnProps<P, T extends As> = P &
 		css?: ObjectInterpolation<undefined> | string;
 	};
 
+export type ElementTypeFromViewOwnProps<P> = P extends ViewOwnProps<
+	unknown,
+	infer T
+>
+	? T
+	: never;
+
+export type PropsFromViewOwnProps<P> = P extends ViewOwnProps<infer PP, any>
+	? PP
+	: never;
+
 export type PolymorphicComponent<T extends As, O> = {
 	<TT extends As>(
 		props: ViewOwnProps<O, TT> & { as: TT },

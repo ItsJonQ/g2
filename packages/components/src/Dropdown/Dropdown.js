@@ -5,6 +5,10 @@ import { useMenuState } from 'reakit';
 
 import { DropdownContext } from './Dropdown.Context';
 
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function Dropdown(props, forwardedRef) {
 	const {
 		animated = true,
@@ -64,4 +68,21 @@ function mapMenuStateToProps(state) {
 	return { ...state, isOpen: visible, onToggle: toggle, onClose: hide };
 }
 
-export default contextConnect(Dropdown, 'Dropdown');
+/**
+ * `Dropdown` is an actionable component renders a list of actions or selectable options for a given context.
+ *
+ * @example
+ * ```jsx
+ * <Dropdown>
+ *  <DropdownTrigger>Edit</DropdownTrigger>
+ *  <DropdownMenu>
+ *    <DropdownMenuItem>...</DropdownMenuItem>
+ *    <DropdownMenuItem>...</DropdownMenuItem>
+ *    <DropdownMenuItem>...</DropdownMenuItem>
+ *  </DropdownMenu>
+ * </Dropdown>
+ * ```
+ */
+const ConnectedDropdown = contextConnect(Dropdown, 'Dropdown');
+
+export default ConnectedDropdown;

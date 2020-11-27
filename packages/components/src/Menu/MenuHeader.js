@@ -9,6 +9,20 @@ import * as styles from './Menu.styles';
 
 const sizeStyles = pick(baseButtonStyles, ['large', 'small', 'xSmall']);
 
+/**
+ * @typedef OwnProps
+ * @property {keyof sizeStyles} size
+ */
+
+/**
+ * @typedef {import('../Heading/types').Props & OwnProps} Props
+ */
+
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function MenuHeader(props, forwardedRef) {
 	const { children, className, size, ...otherProps } = useContextSystem(
 		props,

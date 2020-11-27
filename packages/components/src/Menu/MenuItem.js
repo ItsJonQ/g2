@@ -13,6 +13,11 @@ import { View } from '../View';
 import { useMenuContext } from './Menu.Context';
 import * as styles from './Menu.styles';
 
+/**
+ *
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').MenuItemProps, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function MenuItem(props, forwardedRef) {
 	const {
 		children,
@@ -127,4 +132,20 @@ function MenuItem(props, forwardedRef) {
 	);
 }
 
-export default contextConnect(MenuItem, 'MenuItem');
+/**
+ * `MenuItem` is an actionable component that renders within a `Menu`.
+ *
+ * @example
+ * ```jsx
+ * <Menu>
+ *  <MenuItem onClick={...}>Ana</MenuItem>
+ *  <MenuItem onClick={...}>Elsa</MenuItem>
+ *  <MenuItem onClick={...}>Olaf</MenuItem>
+ * </Menu>
+ * ```
+ *
+ * @see https://reakit.io/docs/menu/#menuitem
+ */
+const ConnectedMenuItem = contextConnect(MenuItem, 'MenuItem');
+
+export default ConnectedMenuItem;
