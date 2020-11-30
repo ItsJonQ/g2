@@ -29,7 +29,6 @@ const fontSizes = [
 export const _default = () => {
 	const [value, setValue] = React.useState(fontSizes[1].size);
 	const handleOnChange = (next) => {
-		console.log(next);
 		setValue(next);
 	};
 	const renderItem = React.useCallback(({ name, size }) => {
@@ -47,14 +46,6 @@ export const _default = () => {
 	return (
 		<div>
 			<Grid templateColumns="260px 260px 1fr">
-				<FontSizeControl
-					fontSizes={fontSizes}
-					onChange={handleOnChange}
-					placeholder="Element"
-					renderItem={renderItem}
-					value={value}
-					withSlider
-				/>
 				<FontSizeControl
 					fontSizes={fontSizes}
 					onChange={handleOnChange}

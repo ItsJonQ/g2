@@ -19,6 +19,7 @@ function FontSizeControl(props, forwardedRef) {
 		min,
 		options,
 		inputValue,
+		isDefaultValue,
 		value,
 		onChange,
 		onReset,
@@ -40,6 +41,7 @@ function FontSizeControl(props, forwardedRef) {
 					customLabel={customLabel}
 					disabled={disabled}
 					inputValue={inputValue}
+					isDefaultValue={isDefaultValue}
 					label={label}
 					max={max}
 					min={min}

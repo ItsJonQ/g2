@@ -69,7 +69,7 @@ const actionTypes = {
 	| ValidateStartAction
 	| ValidateSuccessAction
 	| ValidateFailedAction
-} Action 
+} Action
  */
 
 /** @typedef {{ value?: string, previousValue?: string, commitValue?: string }} State */
@@ -126,6 +126,7 @@ const reducer = (state, action) => {
  * @property {import('react').Ref<HTMLInputElement | undefined>} inputRef
  * @property {boolean} isCommitOnBlurOrEnter
  * @property {boolean} isFocused
+ * @property {boolean} isInputTypeNumeric
  * @property {boolean} isShiftStepEnabled
  * @property {boolean} isTypeNumeric
  * @property {string | undefined} previousValue
@@ -182,7 +183,8 @@ const useTextInputStore = ({
 	value: incomingValue,
 } = {}) => {
 	const inputRef = React.useRef();
-	const isTypeNumeric = format === 'number' || type === 'number';
+	const isInputTypeNumeric = type === 'number';
+	const isTypeNumeric = format === 'number' || isInputTypeNumeric;
 	const initialValue = is.defined(incomingValue)
 		? incomingValue
 		: initialValueProp;
@@ -197,6 +199,7 @@ const useTextInputStore = ({
 		isCommitOnBlurOrEnter,
 		isFocused: isFocusedInitial,
 		isShiftStepEnabled,
+		isInputTypeNumeric,
 		isTypeNumeric,
 		previousValue: initialValue,
 		shiftStep,

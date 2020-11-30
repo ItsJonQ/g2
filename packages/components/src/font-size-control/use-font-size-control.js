@@ -78,6 +78,8 @@ export function useFontSizeControl(props) {
 		(option) => option.key === selectedFontSizeSlug,
 	);
 
+	const isDefaultValue = !is.defined(value);
+
 	const classes = cx(styles.FontSizeControl, className);
 
 	const withSelect = fontSizes.length > 0;
@@ -89,6 +91,7 @@ export function useFontSizeControl(props) {
 		customLabel,
 		disabled,
 		inputValue,
+		isDefaultValue,
 		label,
 		max,
 		min,

@@ -14,18 +14,19 @@ function FontSizeControlSelect(props, forwardedRef) {
 	const {
 		customLabel,
 		disabled,
+		inputValue,
+		isDefaultValue,
+		label,
+		max,
+		min,
 		onChange = noop,
 		onInputChange = noop,
-		label,
 		onReset = noop,
-		min,
-		max,
 		options = [],
 		size,
 		value,
-		inputValue,
-		withSelect,
 		withNumberInput,
+		withSelect,
 		...otherProps
 	} = useContextSystem(props, 'FontSizeControlSelect');
 
@@ -74,11 +75,7 @@ function FontSizeControlSelect(props, forwardedRef) {
 					</FormGroup>
 				)}
 				<View>
-					<Button
-						disabled={value === undefined}
-						isBlock
-						onClick={onReset}
-					>
+					<Button disabled={isDefaultValue} isBlock onClick={onReset}>
 						{__('Reset')}
 					</Button>
 				</View>
