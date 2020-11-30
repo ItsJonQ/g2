@@ -910,8 +910,8 @@ exports[`props should render mixed control types 1`] = `
   user-select: none;
   color: currentColor;
   fill: currentColor;
-  height: 14px;
-  width: 14px;
+  height: 16px;
+  width: 16px;
 }
 
 @media (prefers-reduced-motion) {
@@ -1395,11 +1395,11 @@ exports[`props should render mixed control types 1`] = `
           <svg
             aria-hidden="true"
             focusable="false"
-            height="14"
+            height="16"
             role="img"
-            size="14"
+            size="16"
             viewBox="0 0 24 24"
-            width="14"
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
