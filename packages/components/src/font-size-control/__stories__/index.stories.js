@@ -15,7 +15,7 @@ const fontSizes = [
 		size: 12,
 	},
 	{
-		name: 'Normalllllllllllllllllllllllll',
+		name: 'Normallllllllllllllllllllllll Normalllllllllllllllllll',
 		slug: 'normal',
 		size: 16,
 	},
