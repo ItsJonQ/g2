@@ -39,7 +39,6 @@ const CSSEntry = React.memo(({ prop }) => {
 	return (
 		<FormGroup horizontal label={prop}>
 			<UnitInput
-				altStep={0.1}
 				cssProp={prop}
 				onChange={update}
 				validate={(next) => {

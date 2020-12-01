@@ -37,7 +37,6 @@ export function useTextInput(props) {
 	const {
 		__debugger = false,
 		align,
-		altStep: altStepProp,
 		arrows = true,
 		className,
 		defaultValue = '',
@@ -78,7 +77,6 @@ export function useTextInput(props) {
 	} = useTextInputState({
 		...otherProps,
 		__debugger,
-		altStep: altStepProp,
 		format,
 		initialValue: defaultValue,
 		isCommitOnBlurOrEnter,
