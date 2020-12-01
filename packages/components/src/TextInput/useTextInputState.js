@@ -416,6 +416,27 @@ const useChangeHandlers = ({
 		onChange: handleOnChange,
 	};
 };
+
+const useScrollHandlers = ({ decrement, increment, store }) => {
+	const handleOnWheel = React.useCallback(
+		(event) => {
+			if (store.getState().isTypeNumeric) {
+				const isScrollUp = event?.nativeEvent?.wheelDelta > 0;
+				if (isScrollUp) {
+					increment();
+				} else {
+					decrement();
+				}
+			}
+		},
+		[decrement, increment, store],
+	);
+
+	return {
+		onWheel: handleOnWheel,
+	};
+};
+
 /**
  * @param {object} options
  * @param {() => void} [options.decrement]
@@ -451,10 +472,13 @@ const useEventHandlers = ({
 		numberKeyboardEventHandlers,
 	);
 
+	const scrollHandlers = useScrollHandlers({ store, decrement, increment });
+
 	const mergedHandlers = {
 		...changeHandlers,
 		...focusHandlers,
 		...mergedKeyboardEventHandlers,
+		...scrollHandlers,
 	};
 
 	// @ts-ignore otherProps could be anything

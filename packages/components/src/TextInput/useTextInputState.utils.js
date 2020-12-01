@@ -7,8 +7,8 @@ import * as styles from './TextInput.styles';
 
 /** @typedef {import('zustand').UseStore<{
 	isShiftKey: boolean;
-	step: number;
 	shiftStep: number;
+	step: number;
 	getShiftValue: () => number;
 }>} ShiftStepState */
 
@@ -19,21 +19,27 @@ import * as styles from './TextInput.styles';
  */
 export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 	/** @type {ShiftStepState} */
-	const shiftStepStore = useSubState(() => ({
+	const shiftStepStore = useSubState((set, get) => ({
 		isShiftKey: /** @type {boolean} */ (false),
 		step,
 		shiftStep,
 
 		// Selectors
 		getShiftValue: () => {
-			const isShiftKey = shiftStepStore.getState().isShiftKey;
-			return isShiftKey ? shiftStep * step : step;
+			const { isShiftKey } = get();
+
+			if (isShiftKey) {
+				return shiftStep * step;
+			}
+
+			return step;
 		},
 	}));
 
 	React.useEffect(() => {
 		const handleOnKeyPress = (event) => {
 			const { shiftKey } = event;
+
 			if (shiftStepStore.getState().isShiftKey !== shiftKey) {
 				shiftStepStore.setState({
 					isShiftKey: shiftKey,
@@ -51,7 +57,7 @@ export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 	}, [shiftStepStore]);
 
 	const isShiftKey = shiftStepStore(
-		(state) => state.isShiftKey,
+		({ isShiftKey }) => isShiftKey,
 		shallowCompare,
 	);
 
