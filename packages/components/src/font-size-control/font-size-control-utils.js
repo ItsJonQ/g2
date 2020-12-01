@@ -12,22 +12,25 @@ export function hasUnit(value) {
 	return !!unit;
 }
 
-function isCustomValue(values = [], value) {
+function getFontSize(values = [], value) {
 	const item = values.find((item) => item.size === value);
+	return item;
+}
+
+function isCustomValue(values = [], value) {
+	const item = getFontSize(values, value);
 	return !!item;
 }
 
 export function getSelectValueFromFontSize(fontSizes, value) {
 	if (!value) return DEFAULT_FONT_SIZE;
 
-	const fontSizeValue = fontSizes.find((font) => font.size === value);
-	return fontSizeValue ? fontSizeValue.slug : CUSTOM_FONT_SIZE;
+	const fontSize = getFontSize(fontSizes, value);
+	return fontSize ? fontSize.slug : CUSTOM_FONT_SIZE;
 }
 
 export function getSelectOptions({ disableCustomFontSizes, options, value }) {
-	if (disableCustomFontSizes && !options.length) {
-		return null;
-	}
+	if (disableCustomFontSizes && !options.length) return null;
 
 	options = [
 		{ slug: DEFAULT_FONT_SIZE, name: __('Default'), size: undefined },
