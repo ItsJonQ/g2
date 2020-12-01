@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { is, noop } from '@wp-g2/utils';
+import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { Button } from '../Button';
@@ -9,6 +9,7 @@ import { Grid } from '../Grid';
 import { SelectDropdown } from '../select-dropdown';
 import { TextInput } from '../TextInput';
 import { View } from '../View';
+import { getSelectTemplateColumns } from './font-size-control-utils';
 
 function FontSizeControlSelect(props, forwardedRef) {
 	const {
@@ -30,10 +31,7 @@ function FontSizeControlSelect(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'FontSizeControlSelect');
 
-	const templateColumns = withNumberInput
-		? 'minmax(0, 1fr) 1fr'
-		: 'minmax(0, 2fr) 1fr';
-
+	const templateColumns = getSelectTemplateColumns(withNumberInput);
 	const subControlsTemplateColumns = withNumberInput ? '1fr 1fr' : '1fr';
 
 	const renderItem = React.useCallback(
@@ -47,6 +45,7 @@ function FontSizeControlSelect(props, forwardedRef) {
 				<FormGroup label={label}>
 					<SelectDropdown
 						disabled={disabled}
+						max={260}
 						onChange={onChange}
 						options={options}
 						ref={forwardedRef}

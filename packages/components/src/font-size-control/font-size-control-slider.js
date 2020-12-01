@@ -7,6 +7,7 @@ import { Grid } from '../Grid';
 import { Slider } from '../Slider';
 import { TextInput } from '../TextInput';
 import { VStack } from '../VStack';
+import { getSliderTemplateColumns } from './font-size-control-utils';
 
 function FontSizeControlSlider(props) {
 	const {
@@ -22,27 +23,23 @@ function FontSizeControlSlider(props) {
 
 	if (!withSlider) return null;
 
+	const templateColumns = getSliderTemplateColumns();
+
+	const controlProps = {
+		disabled,
+		min,
+		max,
+		onChange,
+		size,
+		value,
+	};
+
 	return (
 		<VStack spacing={0}>
 			<ControlLabel>{label}</ControlLabel>
-			<Grid templateColumns="2fr 1fr">
-				<Slider
-					disabled={disabled}
-					max={max}
-					min={min}
-					onChange={onChange}
-					size={size}
-					value={value}
-				/>
-				<TextInput
-					disabled={disabled}
-					max={max}
-					min={min}
-					onChange={onChange}
-					size={size}
-					type="number"
-					value={value}
-				/>
+			<Grid templateColumns={templateColumns}>
+				<Slider {...controlProps} />
+				<TextInput {...controlProps} type="number" />
 			</Grid>
 		</VStack>
 	);

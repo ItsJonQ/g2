@@ -52,6 +52,14 @@ export const _default = () => {
 					placeholder="Element"
 					renderItem={renderItem}
 					value={value}
+					withSlider
+				/>
+				<FontSizeControl
+					fontSizes={fontSizes}
+					onChange={handleOnChange}
+					placeholder="Element"
+					renderItem={renderItem}
+					value={value}
 				/>
 			</Grid>
 		</div>
