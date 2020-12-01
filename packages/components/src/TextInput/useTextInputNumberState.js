@@ -18,9 +18,15 @@ import React from 'react';
 export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 	const increment = React.useCallback(
 		(/** @type {number} */ jumpStep = 0) => {
-			const { increment, value } = store.getState();
+			const {
+				increment,
+				isInputTypeNumeric,
+				value: _value,
+			} = store.getState();
 
-			if (!is.numeric(value)) return;
+			if (!isInputTypeNumeric && !is.numeric(_value)) return;
+
+			const value = _value || 0;
 
 			const { getShiftValue, step } = shiftStepStore.getState();
 			const shiftStep = getShiftValue();
@@ -40,9 +46,15 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 
 	const decrement = React.useCallback(
 		(/** @type {number} */ jumpStep = 0) => {
-			const { decrement, value } = store.getState();
+			const {
+				decrement,
+				isInputTypeNumeric,
+				value: _value,
+			} = store.getState();
 
-			if (!is.numeric(value)) return;
+			if (!isInputTypeNumeric && !is.numeric(_value)) return;
+
+			const value = _value || 0;
 
 			const { getShiftValue, step } = shiftStepStore.getState();
 			const shiftStep = getShiftValue();

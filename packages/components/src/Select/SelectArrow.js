@@ -11,7 +11,7 @@ const SelectArrow = () => {
 	return (
 		<ArrowWrapperView>
 			<Text isBlock variant="muted">
-				<Icon icon={chevronDown} size={14} />
+				<Icon icon={chevronDown} size={16} />
 			</Text>
 		</ArrowWrapperView>
 	);

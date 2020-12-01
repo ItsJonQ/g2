@@ -37,6 +37,7 @@ export * from './Dropdown';
 export * from './Elevation';
 export * from './ExternalLink';
 export * from './Flex';
+export * from './font-size-control';
 export * from './FormGroup';
 export * from './Grid';
 export * from './Heading';
