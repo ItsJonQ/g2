@@ -170,6 +170,7 @@ const reducer = (state, action) => {
  */
 const useTextInputStore = ({
 	__debugger,
+	altStep,
 	dragAxis = 'y',
 	format = 'text',
 	initialValue: initialValueProp,
@@ -193,6 +194,7 @@ const useTextInputStore = ({
 	const store = useSubState((set) => ({
 		// State
 		actionTypes,
+		altStep,
 		commitValue: '',
 		dragAxis,
 		inputRef,
@@ -383,6 +385,8 @@ const useChangeHandlers = ({
 			const next = event.target.value;
 			store.getState().change(next);
 
+			console.log(event.nativeEvent, { ...event });
+
 			const { isCommitOnBlurOrEnter } = store.getState();
 
 			if (!isCommitOnBlurOrEnter) {
@@ -416,6 +420,27 @@ const useChangeHandlers = ({
 		onChange: handleOnChange,
 	};
 };
+
+const useScrollHandlers = ({ decrement, increment }) => {
+	const handleOnWheel = React.useCallback(
+		(event) => {
+			if (event.shiftKey || event.altKey) {
+				const isScrollUp = event?.nativeEvent?.wheelDelta > 0;
+				if (isScrollUp) {
+					increment();
+				} else {
+					decrement();
+				}
+			}
+		},
+		[decrement, increment],
+	);
+
+	return {
+		onWheel: handleOnWheel,
+	};
+};
+
 /**
  * @param {object} options
  * @param {() => void} [options.decrement]
@@ -451,10 +476,13 @@ const useEventHandlers = ({
 		numberKeyboardEventHandlers,
 	);
 
+	const scrollHandlers = useScrollHandlers({ store, decrement, increment });
+
 	const mergedHandlers = {
 		...changeHandlers,
 		...focusHandlers,
 		...mergedKeyboardEventHandlers,
+		...scrollHandlers,
 	};
 
 	// @ts-ignore otherProps could be anything
@@ -484,6 +512,7 @@ export const useTextInputState = (props = {}) => {
 	});
 
 	const { shiftStepStore } = useShiftStepState({
+		altStep: store.getState().altStep,
 		step: store.getState().step,
 		shiftStep: store.getState().shiftStep,
 	});

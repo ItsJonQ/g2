@@ -23,7 +23,7 @@ export const number = () => {
 			`}
 			width={480}
 		>
-			<TextInput type="number" />
+			<TextInput altStep={0.1} type="number" />
 		</Container>
 	);
 };

@@ -37,6 +37,7 @@ export function useTextInput(props) {
 	const {
 		__debugger = false,
 		align,
+		altStep: altStepProp,
 		arrows = true,
 		className,
 		defaultValue = '',
@@ -59,7 +60,7 @@ export function useTextInput(props) {
 		prefix,
 		shiftStep = 10,
 		size = 'medium',
-		step,
+		step: stepProp,
 		suffix,
 		type = 'text',
 		validate,
@@ -77,6 +78,7 @@ export function useTextInput(props) {
 	} = useTextInputState({
 		...otherProps,
 		__debugger,
+		altStep: altStepProp,
 		format,
 		initialValue: defaultValue,
 		isCommitOnBlurOrEnter,
@@ -86,13 +88,20 @@ export function useTextInput(props) {
 		min,
 		onValueChange,
 		shiftStep,
-		step,
+		step: stepProp,
 		value: valueProp,
 		validate,
 		type,
 	});
 
-	const { inputRef, isFocused, isTypeNumeric, value } = store();
+	const {
+		altStep,
+		inputRef,
+		isFocused,
+		isTypeNumeric,
+		step,
+		value,
+	} = store();
 
 	const rootEventHandlers = useRootEventHandlers({
 		inputRef,
@@ -135,6 +144,8 @@ export function useTextInput(props) {
 		[isResizable, multiline, size],
 	);
 
+	const inputStep = altStep || step;
+
 	const inputProps = {
 		as: InputComponent,
 		...otherProps,
@@ -143,7 +154,7 @@ export function useTextInput(props) {
 		id,
 		min,
 		max,
-		step,
+		step: inputStep,
 		type,
 		value,
 	};

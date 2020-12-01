@@ -6,34 +6,54 @@ import { useDrag } from 'react-use-gesture';
 import * as styles from './TextInput.styles';
 
 /** @typedef {import('zustand').UseStore<{
+	altStep?: number;
+	isAltKey: boolean;
 	isShiftKey: boolean;
-	step: number;
 	shiftStep: number;
+	step: number;
 	getShiftValue: () => number;
 }>} ShiftStepState */
 
 /**
  * @param {object} options
+ * @param {number} [options.altStep]
  * @param {number} [options.shiftStep=10]
  * @param {number} [options.step=1]
  */
-export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
+export const useShiftStepState = ({ altStep, shiftStep = 10, step = 1 }) => {
 	/** @type {ShiftStepState} */
-	const shiftStepStore = useSubState(() => ({
+	const shiftStepStore = useSubState((set, get) => ({
+		altStep,
 		isShiftKey: /** @type {boolean} */ (false),
+		isAltKey: /** @type {boolean} */ (false),
 		step,
 		shiftStep,
 
 		// Selectors
 		getShiftValue: () => {
-			const isShiftKey = shiftStepStore.getState().isShiftKey;
-			return isShiftKey ? shiftStep * step : step;
+			const { isAltKey, isShiftKey } = get();
+
+			if (altStep && isShiftKey && isAltKey) {
+				return altStep * step;
+			}
+			if (isShiftKey) {
+				return shiftStep * step;
+			}
+
+			return step;
 		},
 	}));
 
 	React.useEffect(() => {
 		const handleOnKeyPress = (event) => {
-			const { shiftKey } = event;
+			const { altKey, shiftKey } = event;
+
+			if (shiftStepStore.getState().isAltKey !== altKey) {
+				shiftStepStore.setState({
+					isAltKey: altKey,
+				});
+			}
+
 			if (shiftStepStore.getState().isShiftKey !== shiftKey) {
 				shiftStepStore.setState({
 					isShiftKey: shiftKey,
@@ -50,13 +70,14 @@ export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 		};
 	}, [shiftStepStore]);
 
-	const isShiftKey = shiftStepStore(
-		(state) => state.isShiftKey,
+	const { isAltKey, isShiftKey } = shiftStepStore(
+		({ isAltKey, isShiftKey }) => ({ isAltKey, isShiftKey }),
 		shallowCompare,
 	);
 
 	return {
 		shiftStepStore,
+		isAltKey,
 		isShiftKey,
 	};
 };
