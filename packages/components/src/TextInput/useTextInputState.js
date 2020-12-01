@@ -170,7 +170,6 @@ const reducer = (state, action) => {
  */
 const useTextInputStore = ({
 	__debugger,
-	altStep,
 	dragAxis = 'y',
 	format = 'text',
 	initialValue: initialValueProp,
@@ -194,7 +193,6 @@ const useTextInputStore = ({
 	const store = useSubState((set) => ({
 		// State
 		actionTypes,
-		altStep,
 		commitValue: '',
 		dragAxis,
 		inputRef,
@@ -385,8 +383,6 @@ const useChangeHandlers = ({
 			const next = event.target.value;
 			store.getState().change(next);
 
-			console.log(event.nativeEvent, { ...event });
-
 			const { isCommitOnBlurOrEnter } = store.getState();
 
 			if (!isCommitOnBlurOrEnter) {
@@ -421,10 +417,10 @@ const useChangeHandlers = ({
 	};
 };
 
-const useScrollHandlers = ({ decrement, increment }) => {
+const useScrollHandlers = ({ decrement, increment, store }) => {
 	const handleOnWheel = React.useCallback(
 		(event) => {
-			if (event.shiftKey || event.altKey) {
+			if (store.getState().isTypeNumeric) {
 				const isScrollUp = event?.nativeEvent?.wheelDelta > 0;
 				if (isScrollUp) {
 					increment();
@@ -433,7 +429,7 @@ const useScrollHandlers = ({ decrement, increment }) => {
 				}
 			}
 		},
-		[decrement, increment],
+		[decrement, increment, store],
 	);
 
 	return {
@@ -512,7 +508,6 @@ export const useTextInputState = (props = {}) => {
 	});
 
 	const { shiftStepStore } = useShiftStepState({
-		altStep: store.getState().altStep,
 		step: store.getState().step,
 		shiftStep: store.getState().shiftStep,
 	});

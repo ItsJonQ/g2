@@ -60,7 +60,7 @@ export function useTextInput(props) {
 		prefix,
 		shiftStep = 10,
 		size = 'medium',
-		step: stepProp,
+		step,
 		suffix,
 		type = 'text',
 		validate,
@@ -88,20 +88,13 @@ export function useTextInput(props) {
 		min,
 		onValueChange,
 		shiftStep,
-		step: stepProp,
+		step,
 		value: valueProp,
 		validate,
 		type,
 	});
 
-	const {
-		altStep,
-		inputRef,
-		isFocused,
-		isTypeNumeric,
-		step,
-		value,
-	} = store();
+	const { inputRef, isFocused, isTypeNumeric, value } = store();
 
 	const rootEventHandlers = useRootEventHandlers({
 		inputRef,
@@ -144,8 +137,6 @@ export function useTextInput(props) {
 		[isResizable, multiline, size],
 	);
 
-	const inputStep = altStep || step;
-
 	const inputProps = {
 		as: InputComponent,
 		...otherProps,
@@ -154,7 +145,7 @@ export function useTextInput(props) {
 		id,
 		min,
 		max,
-		step: inputStep,
+		step,
 		type,
 		value,
 	};

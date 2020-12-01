@@ -6,8 +6,6 @@ import { useDrag } from 'react-use-gesture';
 import * as styles from './TextInput.styles';
 
 /** @typedef {import('zustand').UseStore<{
-	altStep?: number;
-	isAltKey: boolean;
 	isShiftKey: boolean;
 	shiftStep: number;
 	step: number;
@@ -16,26 +14,20 @@ import * as styles from './TextInput.styles';
 
 /**
  * @param {object} options
- * @param {number} [options.altStep]
  * @param {number} [options.shiftStep=10]
  * @param {number} [options.step=1]
  */
-export const useShiftStepState = ({ altStep, shiftStep = 10, step = 1 }) => {
+export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
 	/** @type {ShiftStepState} */
 	const shiftStepStore = useSubState((set, get) => ({
-		altStep,
 		isShiftKey: /** @type {boolean} */ (false),
-		isAltKey: /** @type {boolean} */ (false),
 		step,
 		shiftStep,
 
 		// Selectors
 		getShiftValue: () => {
-			const { isAltKey, isShiftKey } = get();
+			const { isShiftKey } = get();
 
-			if (altStep && isShiftKey && isAltKey) {
-				return altStep * step;
-			}
 			if (isShiftKey) {
 				return shiftStep * step;
 			}
@@ -46,13 +38,7 @@ export const useShiftStepState = ({ altStep, shiftStep = 10, step = 1 }) => {
 
 	React.useEffect(() => {
 		const handleOnKeyPress = (event) => {
-			const { altKey, shiftKey } = event;
-
-			if (shiftStepStore.getState().isAltKey !== altKey) {
-				shiftStepStore.setState({
-					isAltKey: altKey,
-				});
-			}
+			const { shiftKey } = event;
 
 			if (shiftStepStore.getState().isShiftKey !== shiftKey) {
 				shiftStepStore.setState({
@@ -70,14 +56,13 @@ export const useShiftStepState = ({ altStep, shiftStep = 10, step = 1 }) => {
 		};
 	}, [shiftStepStore]);
 
-	const { isAltKey, isShiftKey } = shiftStepStore(
-		({ isAltKey, isShiftKey }) => ({ isAltKey, isShiftKey }),
+	const isShiftKey = shiftStepStore(
+		({ isShiftKey }) => isShiftKey,
 		shallowCompare,
 	);
 
 	return {
 		shiftStepStore,
-		isAltKey,
 		isShiftKey,
 	};
 };
