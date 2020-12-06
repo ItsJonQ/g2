@@ -135,7 +135,7 @@ For more details, check out the [Gatsby G2 starter](https://github.com/ItsJonQ/g
 To get started with a Next.js experience, run the following code in your Terminal:
 
 ```
-npx create-next-app my-site --use-npm --example "https://github.com/itsjonq/next-g2-starter/"
+npx create-next-app my-site --use-npm --example "https://github.com/itsjonq/next-g2-starter"
 ```
 
 For more details, check out the [Next.js G2 starter](https://github.com/ItsJonQ/next-g2-starter).
