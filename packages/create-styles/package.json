@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/create-styles",
-  "version": "0.0.107",
+  "version": "0.0.108",
   "description": "Style system creator for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -19,7 +19,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/is-prop-valid": "^0.8.8",
     "@wordpress/is-shallow-equal": "^2.3.0",
-    "@wp-g2/utils": "^0.0.107",
+    "@wp-g2/utils": "^0.0.108",
     "create-emotion": "^10.0.27",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
