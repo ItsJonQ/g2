@@ -367,6 +367,7 @@ exports[`props should render correctly 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -1250,6 +1251,7 @@ exports[`props should render isLoading 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -2021,6 +2023,7 @@ exports[`props should render placeholder 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -2764,6 +2767,7 @@ exports[`props should render prefix 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3510,6 +3514,7 @@ exports[`props should render suffix 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -4256,6 +4261,7 @@ exports[`props should render value 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);

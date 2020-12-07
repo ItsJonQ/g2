@@ -22,6 +22,10 @@ function isCustomValue(values = [], value) {
 	return !!item;
 }
 
+export function isCustomSelectedItem(selectedItem) {
+	return selectedItem?.key === CUSTOM_FONT_SIZE;
+}
+
 export function getSelectValueFromFontSize(fontSizes, value) {
 	if (!value) return DEFAULT_FONT_SIZE;
 
