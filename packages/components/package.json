@@ -16,7 +16,6 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@humanmade/react-slot-fill": "^0.0.4",
     "@popperjs/core": "^2.5.4",
     "@wordpress/i18n": "^3.16.0",
     "@wordpress/icons": "^2.8.0",

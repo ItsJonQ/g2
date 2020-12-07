@@ -66,7 +66,6 @@ export * from './Select';
 export * from './select-dropdown';
 export * from './Separator';
 export * from './Slider';
-export * from './SlotFill';
 export * from './Spacer';
 export * from './Spinner';
 export * from './Stepper';
