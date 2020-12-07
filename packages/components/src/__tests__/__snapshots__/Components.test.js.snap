@@ -2853,6 +2853,7 @@ exports[`props should render BaseButton 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3031,6 +3032,7 @@ exports[`props should render BaseButton with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3209,6 +3211,7 @@ exports[`props should render BaseButton with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3722,6 +3725,7 @@ exports[`props should render Button 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3966,6 +3970,7 @@ exports[`props should render Button with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -4210,6 +4215,7 @@ exports[`props should render Button with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -6350,6 +6356,7 @@ exports[`props should render ClipboardButton 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -6594,6 +6601,7 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -6838,6 +6846,7 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -7084,6 +7093,7 @@ exports[`props should render CloseButton 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -7446,6 +7456,7 @@ exports[`props should render CloseButton with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -7808,6 +7819,7 @@ exports[`props should render CloseButton with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -8639,6 +8651,7 @@ exports[`props should render ColorControl 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -9182,6 +9195,7 @@ exports[`props should render ColorControl with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -9725,6 +9739,7 @@ exports[`props should render ColorControl with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -12072,6 +12087,7 @@ exports[`props should render DropdownMenuItem 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -12368,6 +12384,7 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -12664,6 +12681,7 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -12954,6 +12972,7 @@ exports[`props should render DropdownTrigger 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -13198,6 +13217,7 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -13442,6 +13462,7 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -15268,6 +15289,7 @@ exports[`props should render FontSizeControl 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -18054,6 +18076,7 @@ exports[`props should render MenuItem 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -18350,6 +18373,7 @@ exports[`props should render MenuItem with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -18646,6 +18670,7 @@ exports[`props should render MenuItem with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -19574,6 +19599,7 @@ exports[`props should render ModalHeader 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -19955,6 +19981,7 @@ exports[`props should render ModalHeader with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -20338,6 +20365,7 @@ exports[`props should render ModalHeader with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -20608,6 +20636,7 @@ exports[`props should render ModalTrigger 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -20854,6 +20883,7 @@ exports[`props should render NavigatorButton 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -21098,6 +21128,7 @@ exports[`props should render NavigatorButton with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -21342,6 +21373,7 @@ exports[`props should render NavigatorButton with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -22754,6 +22786,7 @@ exports[`props should render SearchInput 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -26705,6 +26738,7 @@ exports[`props should render Stepper 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -27040,6 +27074,7 @@ exports[`props should render Stepper 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -27419,6 +27454,7 @@ exports[`props should render Stepper with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -27754,6 +27790,7 @@ exports[`props should render Stepper with css prop 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -28135,6 +28172,7 @@ exports[`props should render Stepper with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -28470,6 +28508,7 @@ exports[`props should render Stepper with css prop 2`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);

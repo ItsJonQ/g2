@@ -49,6 +49,7 @@ exports[`props should render (Flex) gap 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -335,6 +336,7 @@ exports[`props should render as link (href) 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -621,6 +623,7 @@ exports[`props should render correctly 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -907,6 +910,7 @@ exports[`props should render disabled 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -1196,6 +1200,7 @@ exports[`props should render elevation 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -1482,6 +1487,7 @@ exports[`props should render hasCaret 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -1863,6 +1869,7 @@ exports[`props should render icon 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -2236,6 +2243,7 @@ exports[`props should render isControl 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -2547,6 +2555,7 @@ exports[`props should render isDestructive 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -2835,6 +2844,7 @@ exports[`props should render isLoading 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3455,6 +3465,7 @@ exports[`props should render isNarrow 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -3745,6 +3756,7 @@ exports[`props should render isRounded 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -4032,6 +4044,7 @@ exports[`props should render isSubtle 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -4336,6 +4349,7 @@ exports[`props should render prefix 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -4669,6 +4683,7 @@ exports[`props should render size 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -4966,6 +4981,7 @@ exports[`props should render suffix 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -5299,6 +5315,7 @@ exports[`props should render variant 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);

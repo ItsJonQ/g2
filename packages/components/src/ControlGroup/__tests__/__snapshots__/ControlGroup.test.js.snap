@@ -106,6 +106,7 @@ exports[`props should render correctly 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -367,6 +368,7 @@ exports[`props should render correctly 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
@@ -1148,6 +1150,7 @@ exports[`props should render mixed control types 1`] = `
   display: inline-flex;
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  height: auto;
   line-height: 1;
   min-height: 30px;
   min-height: var(--wp-g2-control-height);
