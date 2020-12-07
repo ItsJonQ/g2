@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/components",
-  "version": "0.0.109-alpha.0",
+  "version": "0.0.109",
   "description": "React components for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
