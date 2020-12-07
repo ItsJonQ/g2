@@ -10,6 +10,7 @@ import {
 	getSelectOptions,
 	getSelectValueFromFontSize,
 	hasUnit,
+	isCustomSelectedItem,
 } from './font-size-control-utils';
 
 export function useFontSizeControl(props) {
@@ -43,6 +44,8 @@ export function useFontSizeControl(props) {
 
 	const handleOnChange = React.useCallback(
 		({ selectedItem }) => {
+			if (isCustomSelectedItem(selectedItem)) return;
+
 			if (hasUnits) {
 				onChange(selectedItem.size);
 			} else {

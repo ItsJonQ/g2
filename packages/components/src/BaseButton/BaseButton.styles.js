@@ -14,6 +14,7 @@ export const Button = css`
 	cursor: pointer;
 	display: inline-flex;
 	font-size: ${ui.get('fontSize')};
+	height: auto;
 	line-height: 1;
 	min-height: ${ui.get('controlHeight')};
 	outline: none;
