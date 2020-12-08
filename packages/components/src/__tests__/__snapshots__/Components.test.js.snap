@@ -14710,8 +14710,8 @@ exports[`props should render FontSizeControl 1`] = `
   display: grid;
   gap: calc(4px * 3);
   gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: minmax(0,1fr) minmax(auto,150px);
-  grid-template-columns: minmax(0,1fr) minmax(auto,150px);
+  -ms-grid-columns: minmax(0,1fr) minmax(auto,140px);
+  grid-template-columns: minmax(0,1fr) minmax(auto,140px);
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;

@@ -5,7 +5,7 @@ import { createUnitValue, is, parseUnitValue } from '@wp-g2/utils';
 const DEFAULT_FONT_SIZE = 'default';
 const CUSTOM_FONT_SIZE = 'custom';
 const MAX_FONT_SIZE_DISPLAY = '25px';
-const ASIDE_CONTROL_WIDTH = 75;
+const ASIDE_CONTROL_WIDTH = 70;
 
 export function hasUnit(value) {
 	const [, unit] = parseUnitValue(value);
