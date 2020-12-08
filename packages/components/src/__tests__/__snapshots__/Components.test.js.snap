@@ -22624,8 +22624,8 @@ exports[`props should render SearchInput 1`] = `
   user-select: none;
   color: currentColor;
   fill: currentColor;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
 }
 
 @media (prefers-reduced-motion) {
@@ -23075,11 +23075,11 @@ exports[`props should render SearchInput 1`] = `
         <svg
           aria-hidden="true"
           focusable="false"
-          height="12"
+          height="16"
           role="img"
-          size="12"
+          size="16"
           viewBox="0 0 24 24"
-          width="12"
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -23127,28 +23127,17 @@ exports[`props should render SearchInput 1`] = `
           data-g2-component="Icon"
         >
           <svg
-            fill="none"
+            aria-hidden="true"
+            focusable="false"
             height="10"
+            role="img"
             size="10"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             viewBox="0 0 24 24"
             width="10"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
+            <path
+              d="M13 11.9l3.3-3.4-1.1-1-3.2 3.3-3.2-3.3-1.1 1 3.3 3.4-3.5 3.6 1 1L12 13l3.5 3.5 1-1z"
             />
           </svg>
         </div>

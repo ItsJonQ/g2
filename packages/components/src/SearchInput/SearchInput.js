@@ -101,7 +101,7 @@ const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
 					<Spinner size={16} />
 				) : (
 					<Text>
-						<Icon icon={search} size={12} />
+						<Icon icon={search} size={16} />
 					</Text>
 				)}
 			</View>
