@@ -57,7 +57,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -181,7 +180,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -517,7 +515,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -772,7 +769,6 @@ exports[`props should render size 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -902,7 +898,6 @@ exports[`props should render size 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -1249,7 +1244,6 @@ exports[`props should render size 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -1503,7 +1497,6 @@ exports[`props should render vertically 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -1630,7 +1623,6 @@ exports[`props should render vertically 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -1973,7 +1965,6 @@ exports[`props should render vertically 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,

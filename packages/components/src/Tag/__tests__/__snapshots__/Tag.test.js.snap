@@ -717,7 +717,6 @@ exports[`props should render removeButtonText 1`] = `
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3:hover,

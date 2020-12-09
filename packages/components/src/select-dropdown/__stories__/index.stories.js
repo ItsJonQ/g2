@@ -19,7 +19,12 @@ const options = [
 
 export const _default = () => {
 	const [value, setValue] = React.useState(options[1]);
-	const handleOnChange = (next) => setValue(next.selectedItem);
+
+	const handleOnChange = (next) => {
+		console.log(next);
+		setValue(next.selectedItem);
+	};
+
 	const renderItem = React.useCallback(({ name, size }) => {
 		return (
 			<div

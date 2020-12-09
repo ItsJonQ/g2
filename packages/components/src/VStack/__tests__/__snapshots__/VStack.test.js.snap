@@ -54,7 +54,6 @@ exports[`props should render Spacer 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -179,7 +178,6 @@ exports[`props should render alignment 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -274,7 +272,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -369,7 +366,6 @@ exports[`props should render spacing 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 

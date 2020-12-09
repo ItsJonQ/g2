@@ -115,7 +115,6 @@ exports[`props should render as dismissable 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
@@ -308,7 +307,6 @@ exports[`props should render as dismissable 1`] = `
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
@@ -715,7 +713,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
@@ -899,7 +896,6 @@ exports[`props should render with status 1`] = `
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
@@ -1092,7 +1088,6 @@ exports[`props should render with status 1`] = `
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
@@ -2081,7 +2076,6 @@ exports[`props should render with title 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
