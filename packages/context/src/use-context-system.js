@@ -1,5 +1,6 @@
 import { css, cx } from '@wp-g2/styles';
-import { is, kebabCase, memoize, omit, uniq } from '@wp-g2/utils';
+import { is, memoize } from '@wp-g2/utils';
+import { kebabCase, omit, uniq } from 'lodash';
 
 import { CONNECTED_NAMESPACE } from './constants';
 import { useContextStoreContext } from './context-system-provider';

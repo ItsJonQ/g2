@@ -50,6 +50,8 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
+    "@wordpress/i18n": "^3.16.0",
+    "@wordpress/icons": "^2.8.0",
     "@babel/core": "^7.10.3",
     "@helpscout/stats": "^0.0.5",
     "@itsjonq/controls": "0.0.9",

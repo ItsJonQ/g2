@@ -17,7 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "@wp-g2/styles": "^0.0.113",
-    "@wp-g2/utils": "^0.0.113"
+    "@wp-g2/utils": "^0.0.113",
+    "lodash": "^4.17.19"
   },
   "peerDependencies": {
     "react": "^16.8.0",

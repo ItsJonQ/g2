@@ -1,4 +1,4 @@
-import { repeat } from '@wp-g2/utils';
+import { repeat } from 'lodash';
 
 export const VAR_REG_EXP = new RegExp(/var\(.*?\)[ ) ]*/, 'g');
 

@@ -19,10 +19,12 @@
     "@emotion/core": "^10.0.28",
     "@emotion/is-prop-valid": "^0.8.8",
     "@wordpress/is-shallow-equal": "^2.3.0",
+    "@wp-g2/substate": "^0.0.113",
     "@wp-g2/utils": "^0.0.113",
     "create-emotion": "^10.0.27",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
+    "lodash": "^4.17.19",
     "mitt": "^2.1.0",
     "rtlcss": "^2.6.1",
     "styled-griddie": "^0.1.3"

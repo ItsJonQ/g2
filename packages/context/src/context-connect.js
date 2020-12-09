@@ -1,4 +1,5 @@
-import { is, uniq } from '@wp-g2/utils';
+import { is } from '@wp-g2/utils';
+import { uniq } from 'lodash';
 import React, { forwardRef } from 'react';
 
 import { CONNECT_STATIC_NAMESPACE } from './constants';
