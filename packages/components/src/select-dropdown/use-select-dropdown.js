@@ -1,16 +1,102 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
-import { mergeRefs, useResizeAware } from '@wp-g2/utils';
+import { shallowCompare, useSubState } from '@wp-g2/substate';
+import { mergeRefs, noop, useResizeAware, useUpdateEffect } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
-import React from 'react';
+import { useCallback, useEffect } from 'react';
 
 import { useFormGroupContextId } from '../FormGroup';
 import { usePositioner } from '../positioner';
 import * as styles from './select-dropdown-styles';
-import { itemToString, stateReducer } from './select-dropdown-utils';
+import {
+	getSelectedItem,
+	itemToString,
+	stateReducer,
+} from './select-dropdown-utils';
 
 const CONTROL_BORDER_WIDTH = -1;
 const OFFSET = [CONTROL_BORDER_WIDTH, 4];
+
+function useSelectDropdownPositioner({
+	unstable_offset = OFFSET,
+	isOpen = false,
+	...otherProps
+}) {
+	const [resizer, sizes] = useResizeAware();
+	const { popoverRef, popper, referenceRef } = usePositioner({
+		...otherProps,
+		unstable_offset: OFFSET,
+	});
+
+	// Ensure that the popover will be correctly positioned with an additional
+	// update.
+	// https://github.com/reakit/reakit/blob/master/packages/reakit/src/Popover/PopoverState.ts
+	useEffect(() => {
+		if (!isOpen) return undefined;
+		const id = window.requestAnimationFrame(() => {
+			popper.current.forceUpdate();
+		});
+		return () => {
+			window.cancelAnimationFrame(id);
+		};
+	}, [isOpen, popper]);
+
+	return {
+		resizer,
+		sizes,
+		popoverRef,
+		popper,
+		referenceRef,
+	};
+}
+
+function useSelectDropdownStore({ onChange, value }) {
+	const store = useSubState((set, get) => ({
+		// State
+		isOpen: false,
+		value,
+		commitValue: value,
+
+		// Actions
+		resetValue: () => {
+			set({ value: get().commitValue });
+		},
+		setValue: (next) => {
+			if (next) {
+				set({ value: next });
+			}
+		},
+		setCommitValue: (next) => set({ commitValue: next }),
+		setOpen: (isOpen) => set({ isOpen }),
+	}));
+
+	// Propogate (preview) value
+	useEffect(() => {
+		return store.subscribe(
+			(value) => onChange({ selectedItem: value }),
+			(state) => state.value,
+			shallowCompare,
+		);
+	}, [onChange, store]);
+
+	// Propogate (selected/commit) value
+	useEffect(() => {
+		return store.subscribe(
+			(value) => onChange({ selectedItem: value }),
+			(state) => state.commitValue,
+			shallowCompare,
+		);
+	}, [onChange, store]);
+
+	// Sync incoming value.
+	useUpdateEffect(() => {
+		if (!store.getState().isOpen) {
+			store.getState().setCommitValue(value);
+		}
+	}, [value, store]);
+
+	return store;
+}
 
 export function useSelectDropdown(props) {
 	const {
@@ -18,13 +104,16 @@ export function useSelectDropdown(props) {
 		error,
 		hideLabelFromVision,
 		id: idProp,
+		isPreviewable = false,
 		isInline,
 		isSubtle,
 		isOpen: isOpenProp,
 		label,
 		maxWidth: maxWidthProp = 280,
 		minWidth = 200,
-		onChange,
+		onOpen = noop,
+		onClose = noop,
+		onChange = noop,
 		options: items = [],
 		placeholder,
 		prefix,
@@ -37,17 +126,38 @@ export function useSelectDropdown(props) {
 		...otherProps
 	} = useContextSystem(props, 'SelectDropdown');
 
-	const [resizer, sizes] = useResizeAware();
+	/**
+	 * Sets up internal store.
+	 *
+	 * This is used as a "bridge" between the incoming props and the Downshift
+	 * state reducer.
+	 */
+	const store = useSelectDropdownStore({ value, onChange });
+	const { commitValue } = store(
+		(state) => ({ commitValue: state.commitValue }),
+		shallowCompare,
+	);
+	const currentItem = getSelectedItem(items, commitValue);
 
-	const { popoverRef, popper, referenceRef } = usePositioner({
-		...otherProps,
-		unstable_offset: OFFSET,
-	});
+	const handleOnChange = useCallback(
+		(next) => {
+			store.getState().setCommitValue(next.selectedItem);
+		},
+		[store],
+	);
 
-	const id = useFormGroupContextId(idProp);
+	const handleOnHighlightChange = useCallback(
+		({ highlightedIndex }) => {
+			if (!isPreviewable) return;
+			const item = items[highlightedIndex];
+			store.getState().setValue(item);
+		},
+		[isPreviewable, items, store],
+	);
 
-	const handleOnChange = React.useCallback(onChange, [onChange]);
-
+	/**
+	 * Sets up Downshift, the library used for the SelectDropdown component.
+	 */
 	const {
 		getItemProps,
 		getLabelProps,
@@ -61,10 +171,38 @@ export function useSelectDropdown(props) {
 		items,
 		isOpen: isOpenProp,
 		itemToString,
+		onHighlightedIndexChange: handleOnHighlightChange,
 		onSelectedItemChange: handleOnChange,
-		selectedItem: value,
+		selectedItem: currentItem,
 		stateReducer,
 	});
+
+	/**
+	 * Sets up DOM render effects.
+	 */
+	const {
+		popoverRef,
+		referenceRef,
+		resizer,
+		sizes,
+	} = useSelectDropdownPositioner({
+		...otherProps,
+		unstable_offset: OFFSET,
+		isOpen,
+	});
+
+	const id = useFormGroupContextId(idProp);
+
+	const handleOnOpen = useCallback(() => {
+		store.getState().setOpen(true);
+		onOpen();
+	}, [onOpen, store]);
+
+	const handleOnClose = useCallback(() => {
+		store.getState().setOpen(false);
+		store.getState().resetValue();
+		onClose();
+	}, [onClose, store]);
 
 	const _popoverProps = getMenuProps({
 		...ui.$('SelectDropdownPopover'),
@@ -122,7 +260,7 @@ export function useSelectDropdown(props) {
 		...getItemProps({
 			item,
 			index,
-			key: item.key,
+			key: item.id || item.value || index,
 			style: item.style,
 			isHighlighted: index === highlightedIndex,
 			isSelected: item === selectedItem,
@@ -140,18 +278,16 @@ export function useSelectDropdown(props) {
 		className: cx(styles.DropdownMenu, css({ minWidth })),
 	};
 
-	// Ensure that the popover will be correctly positioned with an additional
-	// update.
-	// https://github.com/reakit/reakit/blob/master/packages/reakit/src/Popover/PopoverState.ts
-	React.useEffect(() => {
-		if (!isOpen) return undefined;
-		const id = window.requestAnimationFrame(() => {
-			popper.current.forceUpdate();
-		});
-		return () => {
-			window.cancelAnimationFrame(id);
-		};
-	}, [isOpen, popper]);
+	/**
+	 * Syncs isOpen state (Downshift) with the internal store.
+	 */
+	useUpdateEffect(() => {
+		if (isOpen) {
+			handleOnOpen();
+		} else {
+			handleOnClose();
+		}
+	}, [isOpen]);
 
 	return {
 		className: classes,

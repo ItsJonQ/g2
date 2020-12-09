@@ -1,3 +1,4 @@
+import { is, memoize } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 
 export const itemToString = (item) => item?.name || item?.label;
@@ -40,3 +41,26 @@ export const stateReducer = (
 			return changes;
 	}
 };
+
+/**
+ * Retreives the current selected item from a collection of items.
+ * This is useful to ensure the correct item is passed into Downshift for
+ * it's internal equality checks.
+ *
+ * @param {Array<*>} items A collection of items
+ * @param {*} value The current value
+ *
+ * @returns {*} The selected item.
+ */
+function _getSelectedItem(items = [], value) {
+	if (is.plainObject(value)) {
+		const selectedItem = items.find(
+			(item) => item === value || item?.value === value?.value,
+		);
+		return selectedItem || value;
+	}
+
+	return value;
+}
+
+export const getSelectedItem = memoize(_getSelectedItem);

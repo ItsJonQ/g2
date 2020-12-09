@@ -28,9 +28,11 @@ const fontSizes = [
 
 export const _default = () => {
 	const [value, setValue] = React.useState(fontSizes[1].size);
+
 	const handleOnChange = (next) => {
 		setValue(next);
 	};
+
 	const renderItem = React.useCallback(({ name, size }) => {
 		return (
 			<div

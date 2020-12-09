@@ -1,7 +1,9 @@
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
 import { Grid } from '../../Grid';
 import { Text } from '../../Text';
+import { View } from '../../View';
 import { SelectDropdown } from '../index';
 
 export default {
@@ -34,6 +36,7 @@ export const _default = () => {
 		<div>
 			<Grid>
 				<SelectDropdown
+					isPreviewable
 					onChange={handleOnChange}
 					options={options}
 					placeholder="Element"
@@ -91,5 +94,58 @@ export const _inlineRendering = () => {
 				place with your.
 			</Text>
 		</div>
+	);
+};
+
+const presets = [
+	{ name: '0px', value: '0px', size: 0 },
+	{ name: '4px', value: '4px', size: 4 },
+	{ name: '8px', value: '8px', size: 8 },
+	{ name: '12px', value: '12px', size: 12 },
+	{ name: '16px', value: '16px', size: 16 },
+	{ name: '20px', value: '20px', size: 20 },
+];
+
+export const _preview = () => {
+	const [value, setValue] = React.useState(presets[2]);
+
+	const handleOnChange = (next) => {
+		setValue(next.selectedItem);
+	};
+
+	return (
+		<Grid>
+			<SelectDropdown
+				isPreviewable
+				onChange={handleOnChange}
+				options={presets}
+				placeholder="Element"
+				value={value}
+			/>
+			<View>
+				<View
+					css={{
+						background: 'rgba(0, 0, 255, 0.1)',
+						border: '2px solid rgba(0, 0, 255, 0.1)',
+						display: 'inline-block',
+					}}
+					style={{ padding: value?.size }}
+				>
+					<View
+						css={[
+							{
+								background: 'blue',
+								color: 'white',
+								width: 50,
+								height: 50,
+							},
+							ui.alignment.content.center,
+						]}
+					>
+						{value.value}
+					</View>
+				</View>
+			</View>
+		</Grid>
 	);
 };
