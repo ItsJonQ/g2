@@ -1,6 +1,6 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import { pick } from '@wp-g2/utils';
+import { pick } from 'lodash';
 import React from 'react';
 
 import * as baseButtonStyles from '../BaseButton/BaseButton.styles';

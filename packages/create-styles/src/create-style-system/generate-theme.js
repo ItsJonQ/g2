@@ -1,4 +1,4 @@
-import { repeat } from '@wp-g2/utils';
+import { repeat } from 'lodash';
 
 import {
 	DARK_HIGH_CONTRAST_MODE_MODE_ATTR,

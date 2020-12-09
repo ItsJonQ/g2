@@ -1,8 +1,6 @@
-import _ from 'lodash';
+import { clamp } from 'lodash';
 
 import { getNumber, getPrecision } from './base';
-
-export const clamp = _.clamp;
 
 /**
  * Clamps a value based on a min/max range with rounding
@@ -36,6 +34,7 @@ export function roundClamp(
  * Returns a string.
  *
  * @param {Parameters<roundClamp>} args Arguments for roundClamp(). *
+ *
  * @return {string} The rounded and clamped value.
  */
 export function roundClampString(...args) {

@@ -3,12 +3,28 @@
  * https://github.com/akiran/json2mq
  */
 
+/**
+ * Internal dependencies
+ */
 import { is } from './is';
-import { camel2hyphen } from './strings';
+
+/**
+ * @param {string} str
+ *
+ * @return {string} The hyphenated string.
+ */
+function camel2hyphen(str) {
+	return str
+		.replace(/[A-Z]/g, function (match) {
+			return '-' + match.toLowerCase();
+		})
+		.toLowerCase();
+}
 
 /**
  * @param {string} feature
- * @return {boolean}
+ *
+ * @return {boolean} If the value is either width or height.
  */
 function isDimension(feature) {
 	const re = /[height|width]$/;
@@ -17,11 +33,12 @@ function isDimension(feature) {
 
 /**
  * @param {Record<string, boolean | string | number>} obj
- * @return {string}
+ *
+ * @return {string} The media query.
  */
 function obj2mq(obj = {}) {
 	let mq = '';
-	let features = Object.keys(obj);
+	const features = Object.keys(obj);
 
 	features.forEach((feature, index) => {
 		let value = obj[feature];
@@ -47,8 +64,11 @@ function obj2mq(obj = {}) {
 }
 
 /**
+ * Generate media query string from JSON or javascript object.
  *
- * @param {string | object} query
+ * @param {string | Object} query
+ *
+ * @return {string} The media query.
  */
 export function json2mq(query) {
 	let mq = '';

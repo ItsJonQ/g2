@@ -1,4 +1,4 @@
-import { clamp, repeat } from '@wp-g2/utils';
+import { clamp, repeat } from 'lodash';
 
 const seen = new WeakSet();
 const seenMatch = new Set();

@@ -1,4 +1,4 @@
-import { upperFirst } from '@wp-g2/utils';
+import { upperFirst } from 'lodash';
 
 import { get } from '../core';
 import { css } from '../style-system';

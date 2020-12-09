@@ -2,13 +2,20 @@ import colorize from 'tinycolor2';
 
 import { is } from './is';
 import { memoize } from './memoize';
+
+/**
+ * A library for color manipulation and conversion.
+ *
+ * See:
+ * https://github.com/bgrins/TinyColor
+ */
 export { default as colorize } from 'tinycolor2';
 
 /** @type {HTMLDivElement} */
 let __colorComputationNode;
 
 /**
- * @return {HTMLDivElement | undefined}
+ * @return {HTMLDivElement | undefined} The HTML element for color computation.
  */
 function getColorComputationNode() {
 	if (typeof document === 'undefined') return;
@@ -27,7 +34,8 @@ function getColorComputationNode() {
 
 /**
  * @param {string | unknown} value
- * @return {boolean}
+ *
+ * @return {boolean} Whether the value is a valid color.
  */
 export function isColor(value) {
 	if (!is.string(value)) return false;
@@ -37,8 +45,12 @@ export function isColor(value) {
 }
 
 /**
- * @param {string | unknown} color
- * @return {string}
+ * Retrieves the computed background color. This is useful for getting the
+ * value of a CSS variable color.
+ *
+ * @param {string | unknown} color The background color to compute.
+ *
+ * @return {string} The computed background color.
  */
 function __getComputedBackgroundColor(color) {
 	if (!is.string(color)) return '';
@@ -54,18 +66,30 @@ function __getComputedBackgroundColor(color) {
 
 	el.style.background = color;
 	// Grab the style
-	const computedColor = window.getComputedStyle(el).background;
+	const computedColor = window?.getComputedStyle(el).background;
 	// Reset
 	el.style.background = '';
 
 	return computedColor || '';
 }
 
+/**
+ * Retrieves the computed background color. This is useful for getting the
+ * value of a CSS variable color.
+ *
+ * @param {string | unknown} color The background color to compute.
+ *
+ * @return {string} The computed background color.
+ */
 export const getComputedBackgroundColor = memoize(__getComputedBackgroundColor);
 
 /**
+ * Retrieves the computed text color. This is useful for getting the
+ * value of a CSS variable color.
+ *
  * @param {string | unknown} color
- * @return {string}
+ *
+ * @return {string} The computed text color.
  */
 function __getComputedColor(color) {
 	if (!is.string(color)) return '';
@@ -81,18 +105,29 @@ function __getComputedColor(color) {
 
 	el.style.color = color;
 	// Grab the style
-	const computedColor = window.getComputedStyle(el).color;
+	const computedColor = window?.getComputedStyle(el).color;
 	// Reset
 	el.style.color = '';
 
 	return computedColor || '';
 }
 
+/**
+ * Retrieves the computed text color. This is useful for getting the
+ * value of a CSS variable color.
+ *
+ * @param {string | unknown} color
+ *
+ * @return {string} The computed text color.
+ */
 export const getComputedColor = memoize(__getComputedColor);
 
 /**
- * @param {string | unknown} color
- * @return {string}
+ * Get the text shade optimized for readability, based on a background color.
+ *
+ * @param {string | unknown} color  The background color.
+ *
+ * @return {string} The optimized text color (black or white).
  */
 export function getOptimalTextColor(color) {
 	const background = getComputedBackgroundColor(color);
@@ -102,8 +137,11 @@ export function getOptimalTextColor(color) {
 }
 
 /**
- * @param {string | unknown} color
- * @return {string}
+ * Get the text shade optimized for readability, based on a background color.
+ *
+ * @param {string | unknown} color The background color.
+ *
+ * @return {string} The optimized text shade (dark or light).
  */
 export function getOptimalTextShade(color) {
 	const result = getOptimalTextColor(color);

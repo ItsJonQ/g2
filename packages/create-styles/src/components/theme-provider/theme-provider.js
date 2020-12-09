@@ -1,4 +1,5 @@
-import { mergeRefs, repeat } from '@wp-g2/utils';
+import { mergeRefs } from '@wp-g2/utils';
+import { repeat } from 'lodash';
 import React, { useRef } from 'react';
 
 import {

@@ -1,4 +1,4 @@
-import { createStore } from '@wp-g2/utils';
+import { createStore } from '@wp-g2/substate';
 
 /**
  * The internal store for non-device reduced-motion preferences. Creating

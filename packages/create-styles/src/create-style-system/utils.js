@@ -1,4 +1,5 @@
-import { is, kebabCase } from '@wp-g2/utils';
+import { is } from '@wp-g2/utils';
+import { kebabCase } from 'lodash';
 
 import { NAMESPACE } from './constants';
 
