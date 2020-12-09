@@ -1,5 +1,5 @@
 import { contextConnect } from '@wp-g2/context';
-import _ from 'lodash';
+import { identity } from 'lodash';
 import React from 'react';
 
 import { View } from '../View';
@@ -13,7 +13,7 @@ import { View } from '../View';
 export const createComponent = ({
 	as,
 	name = 'Component',
-	useHook = _.identity,
+	useHook = identity,
 	memo = true,
 }) => {
 	/**
