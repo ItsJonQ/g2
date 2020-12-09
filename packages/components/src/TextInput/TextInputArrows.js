@@ -1,6 +1,7 @@
 import { chevronDown, chevronUp } from '@wordpress/icons';
 import { ui } from '@wp-g2/styles';
-import { clamp, noop } from '@wp-g2/utils';
+import { noop } from '@wp-g2/utils';
+import { clamp } from 'lodash';
 import React, { useCallback, useEffect, useRef } from 'react';
 
 import { Icon } from '../Icon';
