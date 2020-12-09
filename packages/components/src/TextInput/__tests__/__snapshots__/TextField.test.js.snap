@@ -81,7 +81,6 @@ exports[`props should render align 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -269,7 +268,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -457,7 +455,6 @@ exports[`props should render defaultValue 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -645,7 +642,6 @@ exports[`props should render disabled 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -835,7 +831,6 @@ exports[`props should render gap 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1023,7 +1018,6 @@ exports[`props should render isRounded 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1211,7 +1205,6 @@ exports[`props should render justify 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1401,7 +1394,6 @@ exports[`props should render multiline 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1621,7 +1613,6 @@ exports[`props should render prefix 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -1812,7 +1803,6 @@ exports[`props should render seamless 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -2001,7 +1991,6 @@ exports[`props should render size 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -2195,7 +2184,6 @@ exports[`props should render suffix 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -2386,7 +2374,6 @@ exports[`props should render value 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {

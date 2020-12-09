@@ -117,7 +117,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -490,7 +489,6 @@ exports[`props should render visible 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,

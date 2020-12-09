@@ -108,7 +108,6 @@ exports[`props should render Alert 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
@@ -260,7 +259,6 @@ exports[`props should render Alert with css prop 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
@@ -430,7 +428,6 @@ exports[`props should render Alert with css prop 2`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
@@ -2885,7 +2882,6 @@ exports[`props should render BaseButton 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -3064,7 +3060,6 @@ exports[`props should render BaseButton with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -3245,7 +3240,6 @@ exports[`props should render BaseButton with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -3426,7 +3420,6 @@ exports[`props should render BaseField 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -3535,7 +3528,6 @@ exports[`props should render BaseField with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -3646,7 +3638,6 @@ exports[`props should render BaseField with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -3770,7 +3761,6 @@ exports[`props should render Button 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -4015,7 +4005,6 @@ exports[`props should render Button with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -4262,7 +4251,6 @@ exports[`props should render Button with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -5351,7 +5339,6 @@ exports[`props should render CardFooter 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5441,7 +5428,6 @@ exports[`props should render CardFooter with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5533,7 +5519,6 @@ exports[`props should render CardFooter with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5624,7 +5609,6 @@ exports[`props should render CardHeader 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5715,7 +5699,6 @@ exports[`props should render CardHeader with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -5808,7 +5791,6 @@ exports[`props should render CardHeader with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -6401,7 +6383,6 @@ exports[`props should render ClipboardButton 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -6646,7 +6627,6 @@ exports[`props should render ClipboardButton with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -6893,7 +6873,6 @@ exports[`props should render ClipboardButton with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -7148,7 +7127,6 @@ exports[`props should render CloseButton 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -7511,7 +7489,6 @@ exports[`props should render CloseButton with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -7876,7 +7853,6 @@ exports[`props should render CloseButton with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -8722,7 +8698,6 @@ exports[`props should render ColorControl 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -9266,7 +9241,6 @@ exports[`props should render ColorControl with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -9812,7 +9786,6 @@ exports[`props should render ColorControl with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -10543,7 +10516,6 @@ exports[`props should render ControlGroup 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -10609,7 +10581,6 @@ exports[`props should render ControlGroup with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -10677,7 +10648,6 @@ exports[`props should render ControlGroup with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -12151,7 +12121,6 @@ exports[`props should render DropdownMenuItem 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -12448,7 +12417,6 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -12747,7 +12715,6 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -13017,7 +12984,6 @@ exports[`props should render DropdownTrigger 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -13262,7 +13228,6 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -13509,7 +13474,6 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -14224,7 +14188,6 @@ exports[`props should render Flex 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -14288,7 +14251,6 @@ exports[`props should render Flex with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -14354,7 +14316,6 @@ exports[`props should render Flex with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -14689,7 +14650,6 @@ exports[`props should render FontSizeControl 1`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -14928,7 +14888,6 @@ exports[`props should render FontSizeControl 1`] = `
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled] {
@@ -15116,7 +15075,6 @@ exports[`props should render FontSizeControl 1`] = `
 }
 
 .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -15339,7 +15297,6 @@ exports[`props should render FontSizeControl 1`] = `
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13:hover,
@@ -15921,7 +15878,6 @@ exports[`props should render HStack 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -15987,7 +15943,6 @@ exports[`props should render HStack with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -16055,7 +16010,6 @@ exports[`props should render HStack with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -16838,7 +16792,6 @@ exports[`props should render ListGroup 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -16904,7 +16857,6 @@ exports[`props should render ListGroup with css prop 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -16972,7 +16924,6 @@ exports[`props should render ListGroup with css prop 2`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -17039,7 +16990,6 @@ exports[`props should render ListGroupFooter 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -17105,7 +17055,6 @@ exports[`props should render ListGroupFooter with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -17173,7 +17122,6 @@ exports[`props should render ListGroupFooter with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -17239,7 +17187,6 @@ exports[`props should render ListGroupHeader 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -17305,7 +17252,6 @@ exports[`props should render ListGroupHeader with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -17373,7 +17319,6 @@ exports[`props should render ListGroupHeader with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 <div
@@ -17438,7 +17383,6 @@ exports[`props should render ListGroups 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -17504,7 +17448,6 @@ exports[`props should render ListGroups with css prop 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -17572,7 +17515,6 @@ exports[`props should render ListGroups with css prop 2`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -18140,7 +18082,6 @@ exports[`props should render MenuItem 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -18437,7 +18378,6 @@ exports[`props should render MenuItem with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -18736,7 +18676,6 @@ exports[`props should render MenuItem with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -19230,7 +19169,6 @@ exports[`props should render ModalFooter 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -19320,7 +19258,6 @@ exports[`props should render ModalFooter with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -19412,7 +19349,6 @@ exports[`props should render ModalFooter with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -19504,7 +19440,6 @@ exports[`props should render ModalHeader 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -19646,7 +19581,6 @@ exports[`props should render ModalHeader 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -19886,7 +19820,6 @@ exports[`props should render ModalHeader with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -20028,7 +19961,6 @@ exports[`props should render ModalHeader with css prop 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -20270,7 +20202,6 @@ exports[`props should render ModalHeader with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:first-of-type {
@@ -20412,7 +20343,6 @@ exports[`props should render ModalHeader with css prop 2`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:hover,
@@ -20681,7 +20611,6 @@ exports[`props should render ModalTrigger 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -20928,7 +20857,6 @@ exports[`props should render NavigatorButton 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -21173,7 +21101,6 @@ exports[`props should render NavigatorButton with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -21420,7 +21347,6 @@ exports[`props should render NavigatorButton with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -22500,7 +22426,6 @@ exports[`props should render SearchInput 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -22844,7 +22769,6 @@ exports[`props should render SearchInput 1`] = `
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
@@ -23606,7 +23530,6 @@ exports[`props should render Select 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -23988,7 +23911,6 @@ exports[`props should render SelectDropdown 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[disabled] {
@@ -24418,7 +24340,6 @@ exports[`props should render SelectDropdown with css prop 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[disabled] {
@@ -24850,7 +24771,6 @@ exports[`props should render SelectDropdown with css prop 2`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[disabled] {
@@ -26672,7 +26592,6 @@ exports[`props should render Stepper 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -26796,7 +26715,6 @@ exports[`props should render Stepper 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -27132,7 +27050,6 @@ exports[`props should render Stepper 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -27388,7 +27305,6 @@ exports[`props should render Stepper with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -27512,7 +27428,6 @@ exports[`props should render Stepper with css prop 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -27848,7 +27763,6 @@ exports[`props should render Stepper with css prop 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -28106,7 +28020,6 @@ exports[`props should render Stepper with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -28230,7 +28143,6 @@ exports[`props should render Stepper with css prop 2`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -28566,7 +28478,6 @@ exports[`props should render Stepper with css prop 2`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -30269,7 +30180,6 @@ exports[`props should render TextInput 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
@@ -30542,7 +30452,6 @@ exports[`props should render VStack 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -30608,7 +30517,6 @@ exports[`props should render VStack with css prop 1`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 
@@ -30676,7 +30584,6 @@ exports[`props should render VStack with css prop 2`] = `
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
-  min-width: 0;
   min-height: 0;
 }
 

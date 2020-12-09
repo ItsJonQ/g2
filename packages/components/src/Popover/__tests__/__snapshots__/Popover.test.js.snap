@@ -94,7 +94,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -384,7 +383,6 @@ exports[`props should render gutter 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -674,7 +672,6 @@ exports[`props should render label 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -964,7 +961,6 @@ exports[`props should render maxWidth 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -1254,7 +1250,6 @@ exports[`props should render placement 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -1544,7 +1539,6 @@ exports[`props should render visible 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -1834,7 +1828,6 @@ exports[`props should render without animation 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -2124,7 +2117,6 @@ exports[`props should render without content 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,
@@ -2414,7 +2406,6 @@ exports[`props should render without modal 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover,

@@ -162,7 +162,6 @@ exports[`props should render alignLabel 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[disabled] {
@@ -445,7 +444,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[disabled] {
@@ -731,7 +729,6 @@ exports[`props should render label without prop correctly 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[disabled] {
@@ -1012,7 +1009,6 @@ exports[`props should render vertically 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2[disabled] {

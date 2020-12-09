@@ -125,7 +125,6 @@ exports[`props should render CardInnerBody 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:first-of-type {
@@ -233,7 +232,6 @@ exports[`props should render CardInnerBody 1`] = `
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4:first-of-type {
@@ -343,7 +341,6 @@ exports[`props should render CardInnerBody 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,
@@ -791,7 +788,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2:first-of-type {
@@ -946,7 +942,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4:first-of-type {
@@ -1056,7 +1051,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5:hover,

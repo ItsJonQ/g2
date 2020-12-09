@@ -51,7 +51,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -153,7 +152,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1:hover,
@@ -415,7 +413,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4:hover,
@@ -612,7 +609,6 @@ exports[`props should render mixed control types 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*:focus-within {
@@ -703,7 +699,6 @@ exports[`props should render mixed control types 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1[disabled] {
@@ -1013,7 +1008,6 @@ exports[`props should render mixed control types 1`] = `
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled] {
@@ -1197,7 +1191,6 @@ exports[`props should render mixed control types 1`] = `
 
 .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8>* {
   min-width: 0;
-  min-height: 0;
 }
 
 .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8:hover,
