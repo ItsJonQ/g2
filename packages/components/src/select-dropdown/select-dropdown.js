@@ -39,7 +39,6 @@ function SelectDropdown(props, forwardedRef) {
 					{isOpen && (
 						<DropdownMenuCard {...dropdownMenuProps}>
 							{items.map((item) => (
-								// eslint-disable-next-line react/jsx-key
 								<SelectDropdownItem {...item} />
 							))}
 						</DropdownMenuCard>
