@@ -1,7 +1,6 @@
-/**
- * External dependencies
- */
-import {
+import * as _ from 'lodash';
+
+const {
 	isArray,
 	isBoolean,
 	isDate,
@@ -22,7 +21,7 @@ import {
 	isUndefined,
 	isWeakMap,
 	isWeakSet,
-} from 'lodash';
+} = _;
 
 const { Blob, File } = window;
 
