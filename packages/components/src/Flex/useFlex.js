@@ -75,8 +75,8 @@ export function useFlex(props) {
 			 * https://github.com/ItsJonQ/g2/pull/149
 			 */
 			'> *': {
-				minWidth: 0,
-				minHeight: 0,
+				minWidth: !isColumn ? 0 : null,
+				minHeight: isColumn ? 0 : null,
 			},
 		});
 
