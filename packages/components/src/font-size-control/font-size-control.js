@@ -24,6 +24,7 @@ function FontSizeControl(props, forwardedRef) {
 		onChange,
 		onReset,
 		onInputChange,
+		selectDropdownProps,
 		size,
 		withSlider,
 		withNumberInput,
@@ -38,6 +39,7 @@ function FontSizeControl(props, forwardedRef) {
 			<VisuallyHidden as="legend">{label}</VisuallyHidden>
 			<VStack spacing={3}>
 				<FontSizeControlSelect
+					{...selectDropdownProps}
 					customLabel={customLabel}
 					disabled={disabled}
 					inputValue={inputValue}

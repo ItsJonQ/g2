@@ -50,6 +50,7 @@ export const _default = () => {
 			<Grid templateColumns="260px 260px 1fr">
 				<FontSizeControl
 					fontSizes={fontSizes}
+					isPreviewable
 					onChange={handleOnChange}
 					placeholder="Element"
 					renderItem={renderItem}

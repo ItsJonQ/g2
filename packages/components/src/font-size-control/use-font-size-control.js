@@ -20,10 +20,17 @@ export function useFontSizeControl(props) {
 		disableCustomFontSizes,
 		disabled = false,
 		fontSizes = [],
+		isPreviewable,
 		label = __('Font size'),
 		max = 100,
+		maxWidth,
 		min = 1,
+		minWidth,
 		onChange = noop,
+		onClose,
+		onOpen,
+		placeholder,
+		renderItem,
 		size,
 		value,
 		withSlider = false,
@@ -88,6 +95,16 @@ export function useFontSizeControl(props) {
 	const withSelect = fontSizes.length > 0;
 	const withNumberInput = !withSlider && !disableCustomFontSizes;
 
+	const selectDropdownProps = {
+		isPreviewable,
+		maxWidth,
+		minWidth,
+		onClose,
+		onOpen,
+		placeholder,
+		renderItem,
+	};
+
 	return {
 		...otherProps,
 		className: classes,
@@ -102,10 +119,11 @@ export function useFontSizeControl(props) {
 		onInputChange: handleOnInputChange,
 		onReset: handleOnReset,
 		options,
+		selectDropdownProps,
 		size,
 		value: currentValue,
-		withSlider,
-		withSelect,
 		withNumberInput,
+		withSelect,
+		withSlider,
 	};
 }
