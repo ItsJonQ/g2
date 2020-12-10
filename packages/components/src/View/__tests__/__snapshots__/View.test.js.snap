@@ -9,6 +9,8 @@ exports[`props should render as another element 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -42,6 +44,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -75,6 +79,8 @@ exports[`props should render with custom styles (Array) 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: pink;
   font-weight: bold;
@@ -110,6 +116,8 @@ exports[`props should render with custom styles (object) 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: pink;
 }
@@ -144,6 +152,8 @@ exports[`props should render with custom styles (string) 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: pink;
 }

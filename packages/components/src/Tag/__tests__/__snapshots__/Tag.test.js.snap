@@ -9,6 +9,8 @@ exports[`props should render color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
@@ -59,6 +61,8 @@ exports[`props should render color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -114,6 +118,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
@@ -158,6 +164,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -213,6 +221,8 @@ exports[`props should render display 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
@@ -254,6 +264,8 @@ exports[`props should render display 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -309,6 +321,8 @@ exports[`props should render href 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
@@ -353,6 +367,8 @@ exports[`props should render href 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -409,6 +425,8 @@ exports[`props should render onRemove 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
@@ -453,6 +471,8 @@ exports[`props should render onRemove 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -508,6 +528,8 @@ exports[`props should render removeButtonText 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
@@ -552,6 +574,8 @@ exports[`props should render removeButtonText 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -591,6 +615,8 @@ exports[`props should render removeButtonText 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: -4px;
 }
@@ -832,6 +858,8 @@ exports[`props should render removeButtonText 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -870,6 +898,8 @@ exports[`props should render removeButtonText 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   -webkit-user-select: none;
@@ -906,6 +936,8 @@ exports[`props should render removeButtonText 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
   display: block;

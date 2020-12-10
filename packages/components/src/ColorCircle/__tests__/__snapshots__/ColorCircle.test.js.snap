@@ -9,6 +9,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   border-radius: 99999px;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.1) inset;
@@ -38,6 +40,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #ffffff;
   color: var(--wp-g2-white);
@@ -90,6 +94,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   -webkit-user-select: none;

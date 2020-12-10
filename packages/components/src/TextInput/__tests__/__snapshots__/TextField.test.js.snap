@@ -9,6 +9,8 @@ exports[`props should render align 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -108,6 +110,8 @@ exports[`props should render align 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -196,6 +200,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -295,6 +301,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -383,6 +391,8 @@ exports[`props should render defaultValue 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -482,6 +492,8 @@ exports[`props should render defaultValue 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -570,6 +582,8 @@ exports[`props should render disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -669,6 +683,8 @@ exports[`props should render disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -759,6 +775,8 @@ exports[`props should render gap 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -858,6 +876,8 @@ exports[`props should render gap 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -946,6 +966,8 @@ exports[`props should render isRounded 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1045,6 +1067,8 @@ exports[`props should render isRounded 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1133,6 +1157,8 @@ exports[`props should render justify 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1232,6 +1258,8 @@ exports[`props should render justify 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1320,6 +1348,8 @@ exports[`props should render multiline 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1421,6 +1451,8 @@ exports[`props should render multiline 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1541,6 +1573,8 @@ exports[`props should render prefix 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1640,6 +1674,8 @@ exports[`props should render prefix 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1731,6 +1767,8 @@ exports[`props should render seamless 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1830,6 +1868,8 @@ exports[`props should render seamless 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1919,6 +1959,8 @@ exports[`props should render size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2018,6 +2060,8 @@ exports[`props should render size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2112,6 +2156,8 @@ exports[`props should render suffix 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2211,6 +2257,8 @@ exports[`props should render suffix 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2302,6 +2350,8 @@ exports[`props should render value 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2401,6 +2451,8 @@ exports[`props should render value 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;

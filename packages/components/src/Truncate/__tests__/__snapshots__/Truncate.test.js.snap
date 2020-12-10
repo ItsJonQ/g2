@@ -9,6 +9,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -46,6 +48,8 @@ exports[`props should render custom ellipsis 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -83,6 +87,8 @@ exports[`props should render custom ellipsizeMode 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -116,6 +122,8 @@ exports[`props should render limit 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
@@ -153,6 +161,8 @@ exports[`props should render numberOfLines 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;

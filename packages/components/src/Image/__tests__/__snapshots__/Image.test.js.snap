@@ -9,6 +9,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -43,6 +45,8 @@ exports[`props should render with custom aspectRatio 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -69,6 +73,8 @@ exports[`props should render with custom aspectRatio 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -100,6 +106,8 @@ exports[`props should render with custom aspectRatio 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;
@@ -145,6 +153,8 @@ exports[`props should render with custom dimensions 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -186,6 +196,8 @@ exports[`props should render with custom fit 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -212,6 +224,8 @@ exports[`props should render with custom fit 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -245,6 +259,8 @@ exports[`props should render with custom fit 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;

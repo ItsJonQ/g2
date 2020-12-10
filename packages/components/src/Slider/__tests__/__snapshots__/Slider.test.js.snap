@@ -9,6 +9,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -164,6 +166,8 @@ exports[`props should render max 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -319,6 +323,8 @@ exports[`props should render min 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -474,6 +480,8 @@ exports[`props should render size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -631,6 +639,8 @@ exports[`props should render unit value 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -786,6 +796,8 @@ exports[`props should render value 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
