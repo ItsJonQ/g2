@@ -20,6 +20,10 @@ jobs:
               with:
                   node-version: 12
 
+            - name: Set up NPM
+              run: |
+                  echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
+
             - name: Yarn cache directory
               id: yarn-cache-dir
               run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -40,4 +44,4 @@ jobs:
             #   run: yarn test
 
             - name: Release
-              run: yarn run publish --canary --yes
+              run: yarn run publish --yes
