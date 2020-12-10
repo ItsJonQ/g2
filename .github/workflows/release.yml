@@ -8,9 +8,6 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
-        env:
-            NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
         steps:
             - name: Checkout repository
               uses: actions/checkout@v2
@@ -19,10 +16,8 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: 12
-
-            - name: Set up NPM
-              run: |
-                  echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
+                  registry-url: 'https://registry.npmjs.org'
+                  scope: '@wp-g2'
 
             - name: Yarn cache directory
               id: yarn-cache-dir
@@ -45,3 +40,5 @@ jobs:
 
             - name: Release
               run: yarn run publish $(awk '/version/{gsub(/("|",)/,"",$2);print $2};' lerna.json) --yes --no-git-tag-version --no-push --force-publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
