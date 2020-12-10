@@ -1,0 +1,40 @@
+name: release
+
+on:
+    push:
+        branches: [release]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        env:
+            NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+
+            - name: Yarn cache directory
+              id: yarn-cache-dir
+              run: echo "::set-output name=dir::$(yarn cache dir)"
+
+            - name: Yarn cache
+              uses: actions/cache@v2
+              id: yarn-cache
+              with:
+                  path: ${{ steps.yarn-cache-dir.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Release
+              run: yarn run publish --yes
