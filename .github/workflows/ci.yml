@@ -3,6 +3,7 @@ name: ci
 on:
     push:
         branches: [master, next, v*]
+        branches-ignore: [release]
     pull_request:
 
 jobs:
