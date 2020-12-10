@@ -5657,7 +5657,7 @@
   dependencies:
     "@babel/runtime" "^7.11.2"
 
-"@wordpress/i18n@^3.16.0":
+"@wordpress/i18n@^3.16.0", "@wordpress/i18n@latest":
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/@wordpress/i18n/-/i18n-3.16.0.tgz#8543f22adee3378903d9a241a7f012e90a628245"
   integrity sha512-ZyRWplETgD90caVaBuGBFcnYVpcogji1g9Ctbb5AO2bGFeHpmPpjvWm0NE64iQTtLFEJoaCiq6oqUvAOPIQJpw==
@@ -5669,7 +5669,7 @@
     sprintf-js "^1.1.1"
     tannin "^1.2.0"
 
-"@wordpress/icons@^2.8.0":
+"@wordpress/icons@^2.8.0", "@wordpress/icons@latest":
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@wordpress/icons/-/icons-2.8.0.tgz#cab47c3c6c17089c68e308b60658e8fbb59e070d"
   integrity sha512-ZhQXXzNqcDh0JRY/Ro7iePjTDD8FnZ5W8ze8NKg9da9I24QwL5mWCJezt8ZhBo0wxnD+Lk3kKKMYA6P+lh6qWg==
