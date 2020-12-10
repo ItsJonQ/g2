@@ -36,7 +36,8 @@
     "prebuild-storybook": "npm run build",
     "build-storybook": "build-storybook -o dist/storybook",
     "remake:component": "remake component --output=packages/components/src",
-    "remake": "npm run remake:component"
+    "remake": "npm run remake:component",
+    "bump": "lerna version"
   },
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "repository": {
