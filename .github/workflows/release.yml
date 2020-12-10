@@ -44,4 +44,4 @@ jobs:
             #   run: yarn test
 
             - name: Release
-              run: yarn run publish --yes
+              run: yarn run publish $(awk '/version/{gsub(/("|",)/,"",$2);print $2};' lerna.json) --yes
