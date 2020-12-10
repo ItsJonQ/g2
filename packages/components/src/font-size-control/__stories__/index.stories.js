@@ -27,7 +27,7 @@ const fontSizes = [
 ];
 
 export const _default = () => {
-	const [value, setValue] = React.useState(fontSizes[1].size);
+	const [value, setValue] = React.useState(undefined);
 
 	const handleOnChange = (next) => {
 		setValue(next);

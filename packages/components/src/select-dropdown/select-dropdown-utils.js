@@ -1,5 +1,4 @@
-import { shallowCompare } from '@wp-g2/substate';
-import { is, memoize } from '@wp-g2/utils';
+import { is, memoize, simpleEqual } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 
 export const itemToString = (item) => item?.name || item?.label;
@@ -55,7 +54,7 @@ export const stateReducer = (
  */
 function _getSelectedItem(items = [], value) {
 	if (is.plainObject(value)) {
-		const selectedItem = items.find(shallowCompare);
+		const selectedItem = items.find((i) => simpleEqual(i, value));
 		return selectedItem || value;
 	}
 
