@@ -23,8 +23,6 @@ const {
 	isWeakSet,
 } = _;
 
-const { Blob, File } = window;
-
 /**
  * Checks to see if a value is a numeric value (`number` or `string`).
  *
