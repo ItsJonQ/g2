@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/create-styles",
-  "version": "0.0.119",
+  "version": "0.0.120",
   "description": "Style system creator for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -19,8 +19,8 @@
     "@emotion/core": "^10.0.28",
     "@emotion/is-prop-valid": "^0.8.8",
     "@wordpress/is-shallow-equal": "^2.3.0",
-    "@wp-g2/substate": "^0.0.119",
-    "@wp-g2/utils": "^0.0.119",
+    "@wp-g2/substate": "^0.0.120",
+    "@wp-g2/utils": "^0.0.120",
     "create-emotion": "^10.0.27",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
@@ -35,5 +35,6 @@
   },
   "devDependencies": {
     "reakit-utils": "^0.15.0"
-  }
+  },
+  "gitHead": "9536f69d764f89429aa66f4368914ea7936ca4c7"
 }

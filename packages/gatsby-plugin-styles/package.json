@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/gatsby-plugin-styles",
-  "version": "0.0.119",
+  "version": "0.0.120",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -21,5 +21,6 @@
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "16.x"
-  }
+  },
+  "gitHead": "9536f69d764f89429aa66f4368914ea7936ca4c7"
 }
