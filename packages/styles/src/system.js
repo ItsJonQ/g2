@@ -155,6 +155,8 @@ const systemConfig = {
 		WebkitFontSmoothing: 'antialiased',
 		fontFamily: getConfig('fontFamily'),
 		fontSize: getConfig('fontSize'),
+		// @ts-ignore
+		fontWeight: getConfig('fontWeight'),
 		margin: 0,
 	},
 	config,
