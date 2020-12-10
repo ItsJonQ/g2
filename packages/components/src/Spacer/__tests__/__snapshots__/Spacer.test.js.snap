@@ -9,6 +9,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -42,6 +44,8 @@ exports[`props should render margin 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -77,6 +81,8 @@ exports[`props should render marginBottom 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 5);
   margin-bottom: calc(var(--wp-g2-grid-base) * 5);
@@ -110,6 +116,8 @@ exports[`props should render marginLeft 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -145,6 +153,8 @@ exports[`props should render marginRight 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -180,6 +190,8 @@ exports[`props should render marginTop 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-top: calc(4px * 5);
   margin-top: calc(var(--wp-g2-grid-base) * 5);
@@ -215,6 +227,8 @@ exports[`props should render marginX 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -252,6 +266,8 @@ exports[`props should render marginY 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -289,6 +305,8 @@ exports[`props should render padding 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -324,6 +342,8 @@ exports[`props should render paddingBottom 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -359,6 +379,8 @@ exports[`props should render paddingLeft 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -394,6 +416,8 @@ exports[`props should render paddingRight 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -429,6 +453,8 @@ exports[`props should render paddingTop 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -464,6 +490,8 @@ exports[`props should render paddingX 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
@@ -501,6 +529,8 @@ exports[`props should render paddingY 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);

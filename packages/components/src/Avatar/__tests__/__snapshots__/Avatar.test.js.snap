@@ -9,6 +9,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -53,6 +55,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -78,6 +82,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -132,6 +138,8 @@ exports[`props should render with a border 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -178,6 +186,8 @@ exports[`props should render with a border 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -203,6 +213,8 @@ exports[`props should render with a border 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -237,6 +249,8 @@ exports[`props should render with a border 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -263,6 +277,8 @@ exports[`props should render with a border 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -307,6 +323,8 @@ exports[`props should render with a border 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;
@@ -370,6 +388,8 @@ exports[`props should render with a custom color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -415,6 +435,8 @@ exports[`props should render with a custom color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -440,6 +462,8 @@ exports[`props should render with a custom color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -474,6 +498,8 @@ exports[`props should render with a custom color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -500,6 +526,8 @@ exports[`props should render with a custom color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -544,6 +572,8 @@ exports[`props should render with a custom color 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;
@@ -607,6 +637,8 @@ exports[`props should render with a custom size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -653,6 +685,8 @@ exports[`props should render with a custom size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -678,6 +712,8 @@ exports[`props should render with a custom size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -732,6 +768,8 @@ exports[`props should render with a custom small size + square 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -778,6 +816,8 @@ exports[`props should render with a custom small size + square 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -803,6 +843,8 @@ exports[`props should render with a custom small size + square 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -857,6 +899,8 @@ exports[`props should render with a custom xSmall size + square 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -903,6 +947,8 @@ exports[`props should render with a custom xSmall size + square 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -928,6 +974,8 @@ exports[`props should render with a custom xSmall size + square 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -982,6 +1030,8 @@ exports[`props should render with an alternate shape 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1027,6 +1077,8 @@ exports[`props should render with an alternate shape 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -1052,6 +1104,8 @@ exports[`props should render with an alternate shape 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -1086,6 +1140,8 @@ exports[`props should render with an alternate shape 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -1112,6 +1168,8 @@ exports[`props should render with an alternate shape 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -1156,6 +1214,8 @@ exports[`props should render with an alternate shape 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;
@@ -1219,6 +1279,8 @@ exports[`props should render with an alternate size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1265,6 +1327,8 @@ exports[`props should render with an alternate size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -1290,6 +1354,8 @@ exports[`props should render with an alternate size 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -1344,6 +1410,8 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1388,6 +1456,8 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -1413,6 +1483,8 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -1447,6 +1519,8 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -1473,6 +1547,8 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -1517,6 +1593,8 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;
@@ -1580,6 +1658,8 @@ exports[`props should render with image src 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1624,6 +1704,8 @@ exports[`props should render with image src 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   position: absolute;
   margin: auto;
@@ -1649,6 +1731,8 @@ exports[`props should render with image src 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
@@ -1683,6 +1767,8 @@ exports[`props should render with image src 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   max-width: 100%;
   position: relative;
@@ -1709,6 +1795,8 @@ exports[`props should render with image src 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: auto;
   max-width: 100%;
@@ -1753,6 +1841,8 @@ exports[`props should render with image src 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 0;
   pointer-events: none;

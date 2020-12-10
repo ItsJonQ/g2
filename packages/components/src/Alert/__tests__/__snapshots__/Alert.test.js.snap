@@ -9,6 +9,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -32,6 +34,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -71,6 +75,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -125,6 +131,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -157,6 +165,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   padding-top: calc(4px * 1.25);
   padding-top: calc(var(--wp-g2-grid-base) * 1.25);
@@ -182,6 +192,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: calc(4px * -1);
   margin-right: calc(var(--wp-g2-grid-base) * -1);
@@ -417,6 +429,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -455,6 +469,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   -webkit-user-select: none;
@@ -491,6 +507,8 @@ exports[`props should render as dismissable 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
   display: block;
@@ -614,6 +632,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -637,6 +657,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -669,6 +691,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -723,6 +747,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -789,6 +815,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -812,6 +840,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -852,6 +882,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -906,6 +938,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -938,6 +972,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   padding-top: calc(4px * 1.25);
   padding-top: calc(var(--wp-g2-grid-base) * 1.25);
@@ -963,6 +999,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: calc(4px * -1);
   margin-right: calc(var(--wp-g2-grid-base) * -1);
@@ -1198,6 +1236,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -1236,6 +1276,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   -webkit-user-select: none;
@@ -1272,6 +1314,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
   display: block;
@@ -1313,6 +1357,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -1352,6 +1398,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: calc(4px * -1);
   margin-right: calc(var(--wp-g2-grid-base) * -1);
@@ -1381,6 +1429,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -1421,6 +1471,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: calc(4px * -1);
   margin-right: calc(var(--wp-g2-grid-base) * -1);
@@ -1450,6 +1502,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -1484,6 +1538,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: calc(4px * -1);
   margin-right: calc(var(--wp-g2-grid-base) * -1);
@@ -1513,6 +1569,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -1545,6 +1603,8 @@ exports[`props should render with status 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-right: calc(4px * -1);
   margin-right: calc(var(--wp-g2-grid-base) * -1);
@@ -1977,6 +2037,8 @@ exports[`props should render with title 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
 
@@ -2000,6 +2062,8 @@ exports[`props should render with title 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: #ffffff;
   background: var(--wp-g2-control-background-color);
@@ -2032,6 +2096,8 @@ exports[`props should render with title 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2086,6 +2152,8 @@ exports[`props should render with title 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   max-height: 100%;
@@ -2118,6 +2186,8 @@ exports[`props should render with title 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin-bottom: calc(4px * 0.5);
   margin-bottom: calc(var(--wp-g2-grid-base) * 0.5);
@@ -2143,6 +2213,8 @@ exports[`props should render with title 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   color: #1e1e1e;
   color: var(--wp-g2-color-text);

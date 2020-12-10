@@ -2,7 +2,7 @@
 
 exports[`props should render _override props 1`] = `
 <div
-  class="components-olaf wp-components-olaf olaf css-j1yu9m"
+  class="components-olaf wp-components-olaf olaf css-1nqjm19"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 >
@@ -12,7 +12,7 @@ exports[`props should render _override props 1`] = `
 
 exports[`props should render context props 1`] = `
 <div
-  class="components-olaf wp-components-olaf css-j1yu9m"
+  class="components-olaf wp-components-olaf css-1nqjm19"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 >
@@ -22,7 +22,7 @@ exports[`props should render context props 1`] = `
 
 exports[`props should render correctly 1`] = `
 <div
-  class="components-olaf wp-components-olaf css-j1yu9m"
+  class="components-olaf wp-components-olaf css-1nqjm19"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 />
@@ -30,7 +30,7 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render css props + provided css 1`] = `
 <div
-  class="components-olaf wp-components-olaf olaf css-bu21rl"
+  class="components-olaf wp-components-olaf olaf css-y278hy"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 />
@@ -38,7 +38,7 @@ exports[`props should render css props + provided css 1`] = `
 
 exports[`props should render css props 1`] = `
 <div
-  class="components-olaf wp-components-olaf olaf css-1rj523o"
+  class="components-olaf wp-components-olaf olaf css-er5ts4"
   data-g2-c16t="true"
   data-g2-component="Olaf"
 />

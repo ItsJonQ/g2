@@ -9,6 +9,8 @@ exports[`props should render borderBottom 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
@@ -51,6 +53,8 @@ exports[`props should render borderLeft 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
@@ -93,6 +97,8 @@ exports[`props should render borderRight 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
@@ -135,6 +141,8 @@ exports[`props should render borderTop 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
@@ -177,6 +185,8 @@ exports[`props should render borders 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
@@ -219,6 +229,8 @@ exports[`props should render correctly 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
@@ -259,6 +271,8 @@ exports[`props should render variants 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
