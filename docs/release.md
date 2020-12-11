@@ -42,7 +42,7 @@ lerna info Looking for changed packages since v0.0.121
   Custom Version
 ```
 
-Select the version you would like to release. This can be done with the <kbd>Up</kbd> and </kbd>Down</kbd> keyboard arrow keys.
+Select the version you would like to release. This can be done with the <kbd>Up</kbd> and <kbd>Down</kbd> keyboard arrow keys.
 
 Press <kbd>Enter</kbd> when you're happy with the version.
 
