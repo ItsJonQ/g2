@@ -86,7 +86,7 @@ export function transformValuesToVariables(values = {}) {
 
 	for (const [key, value] of Object.entries(values)) {
 		const ref = value;
-		next[`${createToken(key)}`] = ref.toString();
+		next[`${createToken(key)}`] = ref?.toString();
 	}
 
 	return next;
