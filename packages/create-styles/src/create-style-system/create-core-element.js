@@ -82,7 +82,6 @@ export const createCoreElement = (tagName, options) => {
 			as,
 			children,
 			className: classNameProp,
-			forwardedRef,
 			...props
 		},
 		ref,
@@ -136,16 +135,11 @@ export const createCoreElement = (tagName, options) => {
 			}
 		}
 
-		// eslint-disable-next-line
-		const refs = React.useMemo(() => {
-			return mergeRefs([forwardedRef, ref]);
-		}, [forwardedRef, ref]);
-
 		return React.createElement(
 			element,
 			{
 				className: classes,
-				ref: refs,
+				ref,
 				...newProps,
 			},
 			children,
