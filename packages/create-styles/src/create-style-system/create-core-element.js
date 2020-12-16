@@ -138,7 +138,7 @@ export const createCoreElement = (tagName, options) => {
 
 		// eslint-disable-next-line
 		const refs = React.useMemo(() => {
-			return mergeRefs([forwardedRef, ref]);
+			return forwardedRef ? mergeRefs([forwardedRef, ref]) : ref;
 		}, [forwardedRef, ref]);
 
 		return React.createElement(
