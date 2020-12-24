@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 
+import { useNavigatorHistory } from './Navigator.hooks';
 import { MemoryRouter } from './Router';
 
 function NavigatorRouter({ children, initialPath }) {
-	const { location } = navigator;
+	const history = useNavigatorHistory();
+	// Would only exist if nested within another <Navigator />
+	const location = history?.location;
+
 	// Redirect on load
 	useEffect(() => {});
 

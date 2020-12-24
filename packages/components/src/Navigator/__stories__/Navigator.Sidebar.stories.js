@@ -1,7 +1,8 @@
 import { wordpress } from '@wordpress/icons';
 import { faker, Schema } from '@wp-g2/protokit';
 import { styled, ThemeProvider, ui } from '@wp-g2/styles';
-import { chunk, useLocalState } from '@wp-g2/utils';
+import { useLocalState } from '@wp-g2/utils';
+import { chunk } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import {
 	MemoryRouter as Router,
