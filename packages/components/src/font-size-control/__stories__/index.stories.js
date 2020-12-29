@@ -53,7 +53,6 @@ export const _default = () => {
 					isPreviewable
 					onChange={handleOnChange}
 					placeholder="Element"
-					renderItem={renderItem}
 					value={value}
 					withSlider
 				/>
@@ -61,7 +60,6 @@ export const _default = () => {
 					fontSizes={fontSizes}
 					onChange={handleOnChange}
 					placeholder="Element"
-					renderItem={renderItem}
 					value={value}
 				/>
 			</Grid>
