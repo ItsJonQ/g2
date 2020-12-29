@@ -17,7 +17,7 @@ function getFontSize(values = [], value) {
 	return item;
 }
 
-function isCustomValue(values = [], value) {
+export function isCustomValue(values = [], value) {
 	const item = getFontSize(values, value);
 	return !!item;
 }
@@ -33,7 +33,11 @@ export function getSelectValueFromFontSize(fontSizes, value) {
 	return fontSize ? fontSize.slug : CUSTOM_FONT_SIZE;
 }
 
-export function getSelectOptions({ disableCustomFontSizes, options, value }) {
+export function getSelectOptions({
+	disableCustomFontSizes,
+	hasCustomValue,
+	options,
+}) {
 	if (disableCustomFontSizes && !options.length) return null;
 
 	options = [
@@ -41,7 +45,7 @@ export function getSelectOptions({ disableCustomFontSizes, options, value }) {
 		...options,
 	];
 
-	if (!isCustomValue(options, value) && !disableCustomFontSizes) {
+	if (!hasCustomValue && !disableCustomFontSizes) {
 		options.push({ slug: CUSTOM_FONT_SIZE, name: __('Custom') });
 	}
 
