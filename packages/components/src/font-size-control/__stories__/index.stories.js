@@ -33,18 +33,6 @@ export const _default = () => {
 		setValue(next);
 	};
 
-	const renderItem = React.useCallback(({ name, size }) => {
-		return (
-			<div
-				style={{
-					fontSize: size,
-				}}
-			>
-				{name}
-			</div>
-		);
-	}, []);
-
 	return (
 		<div>
 			<Grid templateColumns="260px 260px 1fr">
