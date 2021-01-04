@@ -6156,11 +6156,6 @@ array-map@~0.0.0:
   resolved "https://registry.yarnpkg.com/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
   integrity sha1-iKK6tz0c97zVwbEYoAP2b2ZfpmI=
 
-array-move@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/array-move/-/array-move-3.0.1.tgz#179645cc0987b65953a4fc06b6df9045e4ba9618"
-  integrity sha512-H3Of6NIn2nNU1gsVDqDnYKY/LCdWvCMMOWifNGhKcVQgiZ6nOek39aESOvro6zmueP07exSl93YLvkN4fZOkSg==
-
 array-reduce@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/array-reduce/-/array-reduce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
@@ -24254,13 +24249,12 @@ use-composed-ref@^1.0.0:
   dependencies:
     ts-essentials "^2.0.3"
 
-use-enhanced-state@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.12.tgz#a7ac51529be618168aef6caa50e99efd0ee5e9ee"
-  integrity sha512-ll0LP+G/v/S35N9kzQ7PNLr5CFgdIwEv2N+UbOO/j7a/jUXd4TnB3eX532y7YNgJAQjqAfTWcOyMTx5DyapK8Q==
+use-enhanced-state@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/use-enhanced-state/-/use-enhanced-state-0.0.13.tgz#cf65297a6122547cd639515264454da9dc149314"
+  integrity sha512-RCtUQdhfUXu/0GAQqLnKPetUt3BheYFpOTogppHe9x1XGwluiu6DQLKVNnc3yMfj0HM3IOVBgw5nVJJuZS5TWQ==
   dependencies:
     "@itsjonq/is" "0.0.2"
-    array-move "^3.0.0"
     tiny-warning "^1.0.3"
 
 use-isomorphic-layout-effect@^1.0.0:

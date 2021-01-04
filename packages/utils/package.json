@@ -28,7 +28,7 @@
         "react-resize-aware": "^3.0.1",
         "reakit-warning": "^0.5.5",
         "tinycolor2": "^1.4.1",
-        "use-enhanced-state": "^0.0.12",
+        "use-enhanced-state": "^0.0.13",
         "use-isomorphic-layout-effect": "^1.0.0"
     },
     "peerDependencies": {
