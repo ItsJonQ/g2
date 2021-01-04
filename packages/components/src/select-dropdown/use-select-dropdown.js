@@ -3,7 +3,7 @@ import { css, cx, ui } from '@wp-g2/styles';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
 import { mergeRefs, noop, useResizeAware, useUpdateEffect } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import { useFormGroupContextId } from '../FormGroup';
 import { usePositioner } from '../positioner';
@@ -140,6 +140,8 @@ export function useSelectDropdown(props) {
 	);
 	const currentItem = getSelectedItem(items, commitValue);
 
+	const selectRef = useRef();
+
 	const handleOnChange = useCallback(
 		(next) => {
 			store.getState().setCommitValue(next.selectedItem);
@@ -194,16 +196,25 @@ export function useSelectDropdown(props) {
 
 	const id = useFormGroupContextId(idProp);
 
+	const focusSelectButton = useCallback(() => {
+		if (selectRef.current) {
+			selectRef.current.focus();
+		}
+	}, []);
+
 	const handleOnOpen = useCallback(() => {
 		store.getState().setOpen(true);
+
 		onOpen();
 	}, [onOpen, store]);
 
 	const handleOnClose = useCallback(() => {
 		store.getState().setOpen(false);
 		store.getState().resetValue();
+
+		focusSelectButton();
 		onClose();
-	}, [onClose, store]);
+	}, [focusSelectButton, onClose, store]);
 
 	const _popoverProps = getMenuProps({
 		...ui.$('SelectDropdownPopover'),
@@ -246,7 +257,7 @@ export function useSelectDropdown(props) {
 		isSubtle,
 		prefix,
 		suffix,
-		ref: mergeRefs([_referenceProps.ref, referenceRef]),
+		ref: mergeRefs([_referenceProps.ref, referenceRef, selectRef]),
 		size,
 		textAlign,
 		variant,
