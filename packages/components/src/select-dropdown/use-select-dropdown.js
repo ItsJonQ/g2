@@ -50,7 +50,7 @@ function useSelectDropdownPositioner({
 	};
 }
 
-function useSelectDropdownStore({ onChange, value }) {
+function useSelectDropdownStore({ isPreviewable, onChange, value }) {
 	const store = useSubState((set, get) => ({
 		// State
 		isOpen: false,
@@ -72,12 +72,13 @@ function useSelectDropdownStore({ onChange, value }) {
 
 	// Propogate (preview) value
 	useEffect(() => {
+		if (!isPreviewable) return;
 		return store.subscribe(
 			(value) => onChange({ selectedItem: value }),
 			(state) => state.value,
 			shallowCompare,
 		);
-	}, [onChange, store]);
+	}, [onChange, store, isPreviewable]);
 
 	// Propogate (selected/commit) value
 	useEffect(() => {
@@ -132,7 +133,7 @@ export function useSelectDropdown(props) {
 	 * This is used as a "bridge" between the incoming props and the Downshift
 	 * state reducer.
 	 */
-	const store = useSelectDropdownStore({ value, onChange });
+	const store = useSelectDropdownStore({ isPreviewable, value, onChange });
 	const { commitValue } = store(
 		(state) => ({ commitValue: state.commitValue }),
 		shallowCompare,
