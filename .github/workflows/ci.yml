@@ -2,8 +2,7 @@ name: ci
 
 on:
     push:
-        branches: [master, next, v*]
-        branches-ignore: [release]
+        branches: [master, next, v*, '!release']
     pull_request:
 
 jobs:
