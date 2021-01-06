@@ -55,9 +55,8 @@ export function getSelectOptions({
 			: option.size;
 
 		return {
+			...option,
 			key: option.slug,
-			name: option.name,
-			size: option.size,
 			style: {
 				fontSize: `min( ${fontSize}, ${MAX_FONT_SIZE_DISPLAY} )`,
 			},
