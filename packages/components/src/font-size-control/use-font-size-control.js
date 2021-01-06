@@ -30,7 +30,6 @@ export function useFontSizeControl(props) {
 		onClose,
 		onOpen,
 		placeholder,
-		renderItem,
 		size,
 		value,
 		withSlider = false,
@@ -102,7 +101,6 @@ export function useFontSizeControl(props) {
 		onClose,
 		onOpen,
 		placeholder,
-		renderItem,
 	};
 
 	return {
