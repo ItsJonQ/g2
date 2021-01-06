@@ -84,6 +84,7 @@ const reducer = (state, action) => {
 		case actionTypes.sync:
 			return {
 				previousValue: action.payload.value,
+				commitValue: action.payload.value,
 				value: action.payload.value,
 			};
 

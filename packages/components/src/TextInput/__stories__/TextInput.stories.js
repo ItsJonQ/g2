@@ -1,9 +1,8 @@
-import { ui } from '@wp-g2/styles';
 import React from 'react';
 import NumberFormat from 'react-number-format';
 
 import { Container } from '../../Container';
-import { Select, Text, View, VStack } from '../../index';
+import { Text, VStack } from '../../index';
 import { TextInput } from '../index';
 
 export default {
@@ -25,6 +24,17 @@ export const number = () => {
 		>
 			<TextInput type="number" />
 		</Container>
+	);
+};
+
+export const numberWithExternalChange = () => {
+	const [value, setValue] = React.useState();
+	return (
+		<div>
+			<div>Value: {value}</div>
+			<button onClick={() => setValue(10)}>Make ten</button>
+			<TextInput onChange={setValue} type="number" value={value} />
+		</div>
 	);
 };
 
