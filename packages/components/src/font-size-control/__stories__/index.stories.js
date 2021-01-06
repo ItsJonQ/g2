@@ -54,3 +54,46 @@ export const _default = () => {
 		</div>
 	);
 };
+
+export const _periodicRerender = () => {
+	const [timer, setTimer] = React.useState(0);
+	const [value, setValue] = React.useState(undefined);
+
+	const handleOnChange = (next) => {
+		console.log('handleOnChange', next, value);
+		setValue(next);
+	};
+
+	React.useEffect(() => {
+		const timeout = setTimeout(() => {
+			setTimer(timer + 1);
+		}, 1000);
+		return () => clearTimeout(timeout);
+	}, [timer]);
+
+	const renderItem = React.useCallback(({ name, size }) => {
+		return (
+			<div
+				style={{
+					fontSize: size,
+				}}
+			>
+				{name}
+			</div>
+		);
+	}, []);
+
+	return (
+		<div>
+			{timer}
+			<Grid templateColumns="260px 260px 1fr">
+				<FontSizeControl
+					fontSizes={fontSizes}
+					onChange={handleOnChange}
+					renderItem={renderItem}
+					value={value}
+				/>
+			</Grid>
+		</div>
+	);
+};
