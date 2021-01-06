@@ -1,7 +1,13 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { mergeRefs, noop, useResizeAware, useUpdateEffect } from '@wp-g2/utils';
+import {
+	mergeRefs,
+	noop,
+	simpleEqual,
+	useResizeAware,
+	useUpdateEffect,
+} from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 import { useCallback, useEffect, useRef } from 'react';
 
@@ -91,7 +97,10 @@ function useSelectDropdownStore({ isPreviewable, onChange, value }) {
 
 	// Sync incoming value.
 	useUpdateEffect(() => {
-		if (!store.getState().isOpen) {
+		if (
+			!store.getState().isOpen &&
+			!simpleEqual(store.getState().commitValue, value)
+		) {
 			store.getState().setCommitValue(value);
 		}
 	}, [value, store]);
