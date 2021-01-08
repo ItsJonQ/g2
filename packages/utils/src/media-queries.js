@@ -72,7 +72,7 @@ function obj2mq(obj = {}) {
  */
 export function json2mq(query) {
 	let mq = '';
-	if (is.string(query)) {
+	if (typeof query === 'string') {
 		return query;
 	}
 	// Handling array of media queries

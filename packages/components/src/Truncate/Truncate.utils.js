@@ -19,7 +19,7 @@ export const TRUNCATE_DEFAULT_PROPS = {
 // Source
 // https://github.com/kahwee/truncate-middle
 export function truncateMiddle(word, headLength, tailLength, ellipsis) {
-	if (!is.string(word)) {
+	if (typeof word !== 'string') {
 		return '';
 	}
 	const wordLength = word.length;

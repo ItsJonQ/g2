@@ -1,5 +1,5 @@
 import { ui } from '@wp-g2/styles';
-import { is, memoize } from '@wp-g2/utils';
+import { memoize } from '@wp-g2/utils';
 import { findAll } from 'highlight-words-core';
 import { createElement } from 'react';
 
@@ -47,7 +47,7 @@ export function createHighlighterText({
 	unhighlightStyle,
 }) {
 	if (!children) return null;
-	if (!is.string(children)) return children;
+	if (typeof children !== 'string') return children;
 
 	const textToHighlight = children;
 

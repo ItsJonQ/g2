@@ -22,7 +22,7 @@ export function getZIndex(namespace, fallback) {
 		return namespace;
 	}
 	// Quick return for invalid namespaces
-	if (!is.string(namespace)) {
+	if (typeof namespace !== 'string') {
 		return fallback;
 	}
 

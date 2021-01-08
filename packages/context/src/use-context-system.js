@@ -1,5 +1,5 @@
 import { css, cx } from '@wp-g2/styles';
-import { is, memoize } from '@wp-g2/utils';
+import { memoize } from '@wp-g2/utils';
 import { kebabCase, omit, uniq } from 'lodash';
 
 import { CONNECTED_NAMESPACE } from './constants';
@@ -35,7 +35,7 @@ export function useContextSystem(props, namespace) {
 
 	const nextNs = ns(displayName);
 	for (const k in nextNs) {
-		if (is.string(nextNs[k])) {
+		if (typeof nextNs[k] === 'string') {
 			finalComponentProps[k] = nextNs[k];
 		}
 	}
@@ -91,7 +91,7 @@ export function useContextSystem(props, namespace) {
  * @returns {string} The generated CSS className.
  */
 function getStyledClassName(displayName) {
-	if (!displayName || !is.string(displayName)) return '';
+	if (!displayName || typeof displayName !== 'string') return '';
 
 	const kebab = kebabCase(displayName);
 	return `components-${kebab} wp-components-${kebab}`;
@@ -109,7 +109,7 @@ function getStyledClassNameFromKey(key) {
 	if (Array.isArray(key)) {
 		return cx(uniq(key).map(getStyledClassName));
 	}
-	if (is.string(key)) {
+	if (typeof key === 'string') {
 		return getStyledClassName(key);
 	}
 

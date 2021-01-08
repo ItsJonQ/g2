@@ -1,7 +1,6 @@
 import { noop } from 'lodash';
 import { useEffect, useState } from 'react';
 
-import { is } from '../is';
 import { json2mq } from '../media-queries';
 
 // For SSR
@@ -34,7 +33,7 @@ export function useMediaQuery(query, defaultMatches = true) {
 
 	useEffect(() => {
 		const mediaQueryList = matchMedia(
-			is.string(query) ? query : json2mq(query),
+			typeof query === 'string' ? query : json2mq(query),
 		);
 		let active = true;
 

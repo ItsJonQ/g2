@@ -1,7 +1,5 @@
 import { Children, isValidElement } from 'react';
 
-import { is } from './is';
-
 /**
  * Merges React `ref` together.
  */
@@ -21,7 +19,7 @@ export { default as hoistNonReactStatics } from 'hoist-non-react-statics';
  * @return {import('react').ReactNodeArray} An array of available children.
  */
 export function getValidChildren(children) {
-	if (is.string(children)) return [children];
+	if (typeof children === 'string') return [children];
 
 	return Children.toArray(children).filter((child) => isValidElement(child));
 }
@@ -34,9 +32,10 @@ export function getValidChildren(children) {
  * @return {string} The display name of the Component / tagName.
  */
 export function getDisplayName(tagName) {
-	const displayName = is.string(tagName)
-		? tagName
-		: tagName.displayName || tagName.name || 'Component';
+	const displayName =
+		typeof tagName === 'string'
+			? tagName
+			: tagName.displayName || tagName.name || 'Component';
 
 	return displayName;
 }

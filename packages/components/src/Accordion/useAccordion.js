@@ -1,6 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { is, noop, simpleEqual, useUpdateEffect } from '@wp-g2/utils';
+import { noop, simpleEqual, useUpdateEffect } from '@wp-g2/utils';
 import { uniq } from 'lodash';
 import { useCallback, useEffect, useMemo } from 'react';
 
@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo } from 'react';
  * @returns {curent is any[] | string}
  */
 const isCurrentValid = (current) =>
-	Array.isArray(current) || is.string(current);
+	Array.isArray(current) || typeof current === 'string';
 
 /**
  * @param {string[]} next

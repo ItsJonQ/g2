@@ -45,7 +45,7 @@ export function flow(...args) {
 	const results = [];
 
 	for (const arg of args) {
-		if (is.number(arg) || is.string(arg)) {
+		if (is.number(arg) || typeof arg === 'string') {
 			results.push(arg);
 		}
 		if (Array.isArray(arg)) {

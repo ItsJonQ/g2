@@ -65,11 +65,12 @@ export function createStyledComponents({ compiler, core }) {
 			/*
 			 * Enhancing the displayName.
 			 */
-			StyledComponent.displayName = is.string(tagName)
-				? `Styled(${getDisplayName(tagName)})`
-				: is.defined(tagName?.displayName)
-				? tagName.displayName
-				: `Styled(${getDisplayName(tagName)})`;
+			StyledComponent.displayName =
+				typeof tagName === 'string'
+					? `Styled(${getDisplayName(tagName)})`
+					: is.defined(tagName?.displayName)
+					? tagName.displayName
+					: `Styled(${getDisplayName(tagName)})`;
 
 			/*
 			 * Enhancing .withComponent()
@@ -87,7 +88,7 @@ export function createStyledComponents({ compiler, core }) {
 				)(...interpolatedProps);
 			};
 
-			if (!is.string(tagName)) {
+			if (typeof tagName !== 'string') {
 				/*
 				 * Hoisting statics one last time, if the tagName is a Component,
 				 * rather than an HTML tag, like `div`.

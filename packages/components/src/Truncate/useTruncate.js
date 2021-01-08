@@ -1,6 +1,5 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx } from '@wp-g2/styles';
-import { is } from '@wp-g2/utils';
 import { useMemo } from 'react';
 
 import * as styles from './Truncate.styles';
@@ -33,7 +32,7 @@ export function useTruncate(props) {
 	} = useContextSystem(props, 'Truncate');
 
 	const truncatedContent = truncateContent(
-		is.string(children) ? children : '',
+		typeof children === 'string' ? children : '',
 		{
 			ellipsis,
 			ellipsizeMode,

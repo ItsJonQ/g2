@@ -235,7 +235,7 @@ function iconStringToToolbarComponents(icons) {
 }
 
 const templateToIconString = (item) => {
-	if (is.string(item)) {
+	if (typeof item === 'string') {
 		const next = item.replace(/ /g, '');
 		return `Fi${next}`;
 	}
@@ -247,7 +247,7 @@ const templateToIconString = (item) => {
 };
 
 function generateToolbarComponentsFromTemplate(template, icons) {
-	if (!is.string(template)) return null;
+	if (typeof template !== 'string') return null;
 
 	const items = template
 		.split('|')

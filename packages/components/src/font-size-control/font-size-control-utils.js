@@ -72,7 +72,7 @@ export function getInputValue(fontSizes = [], value) {
 	}
 
 	const isPixelValue =
-		is.number(value) || (is.string(value) && value.endsWith('px'));
+		is.number(value) || (typeof value === 'string' && value.endsWith('px'));
 
 	const inputValue = (isPixelValue && noUnitsValue) || '';
 

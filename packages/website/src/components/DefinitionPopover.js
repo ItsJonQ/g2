@@ -10,7 +10,6 @@ import {
   Text,
 } from "@wp-g2/components"
 import { styled, ui } from "@wp-g2/styles"
-import { is } from "@wp-g2/utils"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
 
@@ -46,7 +45,7 @@ export function DefinitionPopover({ children }) {
 
   const isCurrentPage = currentPage && currentPage.includes(data?.fields?.slug)
 
-  if (!data || !is.string(children) || isCurrentPage || !canRender) {
+  if (!data || typeof children !== "string" || isCurrentPage || !canRender) {
     return <code ref={nodeRef}>{children}</code>
   }
 

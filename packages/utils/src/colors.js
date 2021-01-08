@@ -1,6 +1,5 @@
 import colorize from 'tinycolor2';
 
-import { is } from './is';
 import { memoize } from './memoize';
 
 /**
@@ -38,7 +37,7 @@ function getColorComputationNode() {
  * @return {boolean} Whether the value is a valid color.
  */
 export function isColor(value) {
-	if (!is.string(value)) return false;
+	if (typeof value !== 'string') return false;
 	const test = colorize(value);
 
 	return test.isValid();
@@ -53,7 +52,7 @@ export function isColor(value) {
  * @return {string} The computed background color.
  */
 function __getComputedBackgroundColor(color) {
-	if (!is.string(color)) return '';
+	if (typeof color !== 'string') return '';
 
 	if (isColor(color)) return color;
 
@@ -92,7 +91,7 @@ export const getComputedBackgroundColor = memoize(__getComputedBackgroundColor);
  * @return {string} The computed text color.
  */
 function __getComputedColor(color) {
-	if (!is.string(color)) return '';
+	if (typeof color !== 'string') return '';
 
 	if (isColor(color)) return color;
 

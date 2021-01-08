@@ -1,4 +1,3 @@
-import { is } from '@wp-g2/utils';
 import { uniq } from 'lodash';
 import React, { forwardRef } from 'react';
 
@@ -42,7 +41,7 @@ export function contextConnect(Component, namespace, options = {}) {
 	if (Array.isArray(namespace)) {
 		mergedNamespace = [...mergedNamespace, ...namespace];
 	}
-	if (is.string(namespace)) {
+	if (typeof namespace === 'string') {
 		mergedNamespace = [...mergedNamespace, namespace];
 	}
 
@@ -73,7 +72,7 @@ export function getConnectNamespace(Component) {
 export function hasConnectNamespace(Component, match) {
 	if (!Component) return false;
 
-	if (is.string(match)) {
+	if (typeof match === 'string') {
 		return getConnectNamespace(Component).includes(match);
 	}
 	if (Array.isArray(match)) {

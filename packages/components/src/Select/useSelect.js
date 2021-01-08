@@ -107,7 +107,8 @@ export function useSelect(props) {
 	);
 
 	const shouldRenderPlaceholder =
-		(!is.defined(value) || is.empty(value)) && is.string(placeholderProp);
+		(!is.defined(value) || is.empty(value)) &&
+		typeof placeholderProp === 'string';
 
 	const classes = cx(baseFieldProps.className, styles.base, className);
 

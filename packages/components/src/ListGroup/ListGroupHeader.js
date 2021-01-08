@@ -4,7 +4,6 @@ import {
 	useContextSystem,
 } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import { is } from '@wp-g2/utils';
 import React from 'react';
 
 import { FlexItem } from '../Flex';
@@ -26,7 +25,7 @@ function ListGroupHeader(props, forwardedRef) {
 
 	const clonedChildren = validChildren.map((child, index) => {
 		const _key = child.key || index;
-		const isTitle = is.string(child);
+		const isTitle = typeof child === 'string';
 
 		return isTitle ? (
 			<FlexItem isBlock key={_key}>
