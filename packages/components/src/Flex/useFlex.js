@@ -1,6 +1,5 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui, useResponsiveValue } from '@wp-g2/styles';
-import { is } from '@wp-g2/utils';
 import { useMemo } from 'react';
 
 import * as styles from './Flex.styles';
@@ -36,8 +35,10 @@ export function useFlex(props) {
 
 	const direction = useResponsiveValue(directionProp);
 
-	const isColumn = is.string(direction) && !!direction.includes('column');
-	const isReverse = is.string(direction) && direction.includes('reverse');
+	const isColumn =
+		typeof direction === 'string' && !!direction.includes('column');
+	const isReverse =
+		typeof direction === 'string' && direction.includes('reverse');
 
 	const classes = useMemo(() => {
 		const sx = {};

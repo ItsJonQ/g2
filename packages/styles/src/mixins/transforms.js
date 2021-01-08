@@ -8,7 +8,7 @@ import { toPx } from './units';
  * @return {value is string | number}
  */
 function isValidOffset(value) {
-	return is.number(value) || is.string(value);
+	return is.number(value) || typeof value === 'string';
 }
 
 /**

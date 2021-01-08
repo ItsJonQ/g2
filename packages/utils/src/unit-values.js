@@ -36,7 +36,7 @@ export const getParsedCSSValue = (initialValue) => {
  * @return {boolean} Whether the value is a valid CSS value.
  */
 export const isValidCSSValueForProp = (prop, value) => {
-	if (!is.string(prop)) return true;
+	if (typeof prop !== 'string') return true;
 
 	const computedStyleMap = getComputedStyledMap();
 
@@ -171,7 +171,7 @@ export function parseUnitValue(initialValue) {
  * @return {string} The unit value.
  */
 export function createUnitValue(value, unit) {
-	if (!unit || !is.string(unit) || !is.numeric(value)) {
+	if (!unit || typeof unit !== 'string' || !is.numeric(value)) {
 		return value.toString();
 	}
 

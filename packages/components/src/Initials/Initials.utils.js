@@ -1,7 +1,5 @@
-import { is } from '@wp-g2/utils';
-
 export function getInitials(name = '') {
-	if (!is.string(name)) return '';
+	if (typeof name !== 'string') return '';
 
 	const names = name
 		.split(' ')

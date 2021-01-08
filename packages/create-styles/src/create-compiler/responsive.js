@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 import { breakpoints } from './utils';
 
 // https://github.com/system-ui/theme-ui/blob/master/packages/css/src/index.ts#L224
@@ -27,7 +25,7 @@ export const responsive = (
 
 		if (value === null) continue;
 
-		if (!is.array(value)) {
+		if (!Array.isArray(value)) {
 			next[key] = value;
 			continue;
 		}

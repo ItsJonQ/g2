@@ -32,7 +32,7 @@ export function createCSS(compile) {
 			return compile(responsive(arg));
 		}
 
-		if (is.array(arg)) {
+		if (Array.isArray(arg)) {
 			for (let i = 0, len = arg.length; i < len; i++) {
 				const n = arg[i];
 				if (is.objectInterpolation(n)) {

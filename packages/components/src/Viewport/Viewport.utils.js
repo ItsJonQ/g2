@@ -16,7 +16,7 @@ export function getBreakpointValue(breakpoint) {
 	if (is.number(breakpoint)) {
 		return { minWidth: breakpoint };
 	}
-	if (is.string(breakpoint)) {
+	if (typeof breakpoint === 'string') {
 		const value = BREAKPOINTS[breakpoint];
 		return value ? { minWidth: value } : breakpoint;
 	}

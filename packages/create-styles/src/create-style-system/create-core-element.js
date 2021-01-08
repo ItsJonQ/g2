@@ -1,5 +1,5 @@
 import isPropValid from '@emotion/is-prop-valid';
-import { is, mergeRefs } from '@wp-g2/utils';
+import { mergeRefs } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
 import { useHydrateGlobalStyles } from '../hooks';
@@ -101,9 +101,10 @@ export const createCoreElement = (tagName, options) => {
 		useHydrateGlobalStyles({ globalStyles, injectGlobal });
 
 		const element = as || tagName;
-		const className = !is.string(classNameProp)
-			? cx(classNameProp)
-			: classNameProp;
+		const className =
+			typeof classNameProp !== 'string'
+				? cx(classNameProp)
+				: classNameProp;
 
 		/**
 		 * Compiles all of the custom styles into classNames before binding it
@@ -121,7 +122,7 @@ export const createCoreElement = (tagName, options) => {
 		 * A conventient feature to (attempt to) filter out non HTML-friendly
 		 * props for HTMLElements.
 		 */
-		const shouldFilterProps = is.string(element);
+		const shouldFilterProps = typeof element === 'string';
 
 		/** @type {Record<string, any>} */
 		let newProps = {};
@@ -155,7 +156,7 @@ export const createCoreElement = (tagName, options) => {
 	const SystemComponent = forwardRef(render);
 
 	if (process.env.NODE_ENV === 'development') {
-		const displayName = is.string(tagName) ? tagName : 'Component';
+		const displayName = typeof tagName === 'string' ? tagName : 'Component';
 
 		SystemComponent.displayName = displayName;
 	}

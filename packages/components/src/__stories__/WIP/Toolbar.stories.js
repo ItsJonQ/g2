@@ -220,7 +220,7 @@ const MoreItems = React.forwardRef((props, ref) => {
 
 function iconStringToToolbarComponents(icons) {
 	return (items, mapIndex) => {
-		if (!is.array(items)) return null;
+		if (!Array.isArray(items)) return null;
 
 		return (
 			<ToolbarGroup key={mapIndex}>
@@ -235,18 +235,19 @@ function iconStringToToolbarComponents(icons) {
 }
 
 const templateToIconString = (item) => {
-	if (is.string(item)) {
+	if (typeof item === 'string') {
 		const next = item.replace(/ /g, '');
 		return `Fi${next}`;
 	}
 
-	if (is.array(item)) return item.map(templateToIconString).filter(Boolean);
+	if (Array.isArray(item))
+		return item.map(templateToIconString).filter(Boolean);
 
 	return undefined;
 };
 
 function generateToolbarComponentsFromTemplate(template, icons) {
-	if (!is.string(template)) return null;
+	if (typeof template !== 'string') return null;
 
 	const items = template
 		.split('|')

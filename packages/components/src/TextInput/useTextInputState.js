@@ -211,7 +211,7 @@ const useTextInputStore = ({
 		dispatch: (args) =>
 			set((state) => {
 				const next = reducer(state, args);
-				if (is.function(__debugger)) {
+				if (typeof __debugger === 'function') {
 					__debugger(args, next, state);
 				}
 				return next;
@@ -235,7 +235,7 @@ const useTextInputStore = ({
 		},
 		commit: () => {
 			let isValid = true;
-			const hasValidation = is.function(validate);
+			const hasValidation = typeof validate === 'function';
 			const current = store.getState();
 
 			current.dispatch({

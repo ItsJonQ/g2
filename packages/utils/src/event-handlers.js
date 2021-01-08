@@ -1,9 +1,4 @@
 /**
- * Internal dependencies
- */
-import { is } from './is';
-
-/**
  * Merges event handlers together.
  *
  * @template TEvent
@@ -15,10 +10,10 @@ export function mergeEvent(handler, otherHandler) {
 		/** @type {TEvent} */
 		event,
 	) => {
-		if (is.function(handler)) {
+		if (typeof handler === 'function') {
 			handler(event);
 		}
-		if (is.function(otherHandler)) {
+		if (typeof otherHandler === 'function') {
 			otherHandler(event);
 		}
 	};
@@ -35,7 +30,7 @@ export function mergeEventHandlers(handlers = {}, extraHandlers = {}) {
 	const mergedHandlers = { ...handlers };
 
 	for (const [key, handler] of Object.entries(mergedHandlers)) {
-		if (is.function(extraHandlers[key])) {
+		if (typeof extraHandlers[key] === 'function') {
 			mergedHandlers[key] = mergeEvent(handler, extraHandlers[key]);
 		}
 	}
