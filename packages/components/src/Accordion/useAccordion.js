@@ -8,7 +8,8 @@ import { useCallback, useEffect, useMemo } from 'react';
  * @param {any} current
  * @returns {curent is any[] | string}
  */
-const isCurrentValid = (current) => is.array(current) || is.string(current);
+const isCurrentValid = (current) =>
+	Array.isArray(current) || is.string(current);
 
 /**
  * @param {string[]} next
@@ -21,7 +22,9 @@ const sanitizeState = (next) => uniq(next.filter(Boolean));
  */
 const setCurrentState = (prev = [], next) => {
 	if (!isCurrentValid(next)) return prev;
-	const nextState = is.array(next) ? [...prev, ...next] : [...prev, next];
+	const nextState = Array.isArray(next)
+		? [...prev, ...next]
+		: [...prev, next];
 
 	return sanitizeState(nextState);
 };
@@ -102,7 +105,7 @@ export function useAccordion(props) {
 				return accordionStore.getState().add(next);
 			}
 			set(() => {
-				const nextState = is.array(next) ? [next[0]] : [next];
+				const nextState = Array.isArray(next) ? [next[0]] : [next];
 				return { current: sanitizeState(nextState) };
 			});
 		},

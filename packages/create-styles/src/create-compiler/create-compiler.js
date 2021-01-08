@@ -43,7 +43,7 @@ export function createCompiler(options) {
 	const defaultPlugins = createPlugins({ key, specificityLevel, rootStore });
 
 	if (options.stylisPlugins) {
-		if (is.array(options.stylisPlugins)) {
+		if (Array.isArray(options.stylisPlugins)) {
 			mergedOptions.stylisPlugins = [
 				...defaultPlugins,
 				...options.stylisPlugins,

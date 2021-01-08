@@ -25,7 +25,7 @@ export function useContextSystem(props, namespace) {
 	const { context } = store();
 	let contextProps;
 
-	const displayName = is.array(namespace) ? namespace[0] : namespace;
+	const displayName = Array.isArray(namespace) ? namespace[0] : namespace;
 
 	/** @type {ConnectedProps<P>} */
 	// @ts-ignore We fill in the missing properties below
@@ -106,7 +106,7 @@ function getStyledClassName(displayName) {
 function getStyledClassNameFromKey(key) {
 	if (!key) return '';
 
-	if (is.array(key)) {
+	if (Array.isArray(key)) {
 		return cx(uniq(key).map(getStyledClassName));
 	}
 	if (is.string(key)) {

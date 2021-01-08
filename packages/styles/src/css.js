@@ -93,7 +93,7 @@ export function css(template, ...args) {
 		return compile(getScaleStyles(responsive(template, getScaleValue)));
 	}
 
-	if (is.array(template)) {
+	if (Array.isArray(template)) {
 		for (let i = 0, len = template.length; i < len; i++) {
 			const n = template[i];
 			if (is.objectInterpolation(n)) {

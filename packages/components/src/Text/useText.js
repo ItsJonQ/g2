@@ -37,7 +37,8 @@ export function useText(props) {
 	} = useContextSystem(props, 'Text');
 
 	let content = children;
-	const isHighlighter = is.array(highlightWords) && highlightWords.length;
+	const isHighlighter =
+		Array.isArray(highlightWords) && highlightWords.length;
 	const isCaption = size === 'caption';
 
 	if (isHighlighter) {
@@ -133,7 +134,7 @@ export function useText(props) {
 	/**
 	 * Enhance child `<Link />` components to inherit font size.
 	 */
-	if (!truncate && is.array(children)) {
+	if (!truncate && Array.isArray(children)) {
 		content = React.Children.map(children, (child) => {
 			// @ts-ignore
 			if (!is.plainObject(child) || !('props' in child)) {

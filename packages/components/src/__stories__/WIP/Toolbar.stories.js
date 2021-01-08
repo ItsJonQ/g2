@@ -220,7 +220,7 @@ const MoreItems = React.forwardRef((props, ref) => {
 
 function iconStringToToolbarComponents(icons) {
 	return (items, mapIndex) => {
-		if (!is.array(items)) return null;
+		if (!Array.isArray(items)) return null;
 
 		return (
 			<ToolbarGroup key={mapIndex}>
@@ -240,7 +240,8 @@ const templateToIconString = (item) => {
 		return `Fi${next}`;
 	}
 
-	if (is.array(item)) return item.map(templateToIconString).filter(Boolean);
+	if (Array.isArray(item))
+		return item.map(templateToIconString).filter(Boolean);
 
 	return undefined;
 };

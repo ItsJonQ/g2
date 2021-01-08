@@ -28,7 +28,7 @@ export function contextConnect(Component, namespace, options = {}) {
 		WrappedComponent = React.memo(WrappedComponent);
 	}
 
-	const displayName = is.array(namespace)
+	const displayName = Array.isArray(namespace)
 		? namespace[0]
 		: namespace || WrappedComponent.name;
 
@@ -39,7 +39,7 @@ export function contextConnect(Component, namespace, options = {}) {
 	/**
 	 * Consolidate (merge) namespaces before attaching it to the WrappedComponent.
 	 */
-	if (is.array(namespace)) {
+	if (Array.isArray(namespace)) {
 		mergedNamespace = [...mergedNamespace, ...namespace];
 	}
 	if (is.string(namespace)) {
@@ -76,7 +76,7 @@ export function hasConnectNamespace(Component, match) {
 	if (is.string(match)) {
 		return getConnectNamespace(Component).includes(match);
 	}
-	if (is.array(match)) {
+	if (Array.isArray(match)) {
 		return match.some((result) =>
 			getConnectNamespace(Component).includes(result),
 		);

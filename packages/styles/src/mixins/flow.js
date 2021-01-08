@@ -48,7 +48,7 @@ export function flow(...args) {
 		if (is.number(arg) || is.string(arg)) {
 			results.push(arg);
 		}
-		if (is.array(arg)) {
+		if (Array.isArray(arg)) {
 			results.push(flow(...arg), ',');
 		}
 	}
