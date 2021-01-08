@@ -55,17 +55,17 @@ export const useBreakpointIndex = (options = {}) => {
 /**
  *
  * @template T
- * @param {(() => (T | undefined)[]) | (T | undefined)[] | T | undefined} values
+ * @param {(() => (T | undefined)[]) | (T | undefined)[]} values
  * @param {Parameters<useBreakpointIndex>[0]} options
  * @return {T | undefined}
  */
 export function useResponsiveValue(values, options = {}) {
 	const index = useBreakpointIndex(options);
 
-	if (!is.array(values) && !is.function(values)) return values;
+	if (!is.array(values) && typeof values !== 'function') return values;
 
 	let array = values || [];
-	if (is.function(values)) {
+	if (typeof values === 'function') {
 		array = values();
 	}
 

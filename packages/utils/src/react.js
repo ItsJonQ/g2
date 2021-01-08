@@ -49,7 +49,7 @@ export function getDisplayName(tagName) {
  * @return {boolean} True, if children is a render function prop.
  */
 export function isRenderProp(children) {
-	return is.function(children);
+	return typeof children === 'function';
 }
 
 /**

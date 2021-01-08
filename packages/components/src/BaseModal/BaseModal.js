@@ -1,7 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { css, cx, getZIndex, reducedMotion, space } from '@wp-g2/styles';
-import { is } from '@wp-g2/utils';
 import React from 'react';
 import { Dialog, DialogBackdrop, useDialogState } from 'reakit';
 
@@ -83,7 +82,7 @@ function BaseModal(props, forwardedRef) {
 
 	return (
 		<ModalContext.Provider value={contextProps}>
-			{is.function(triggerProp)
+			{typeof triggerProp === 'function'
 				? triggerProp(dialog)
 				: triggerProp
 				? triggerProp

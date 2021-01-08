@@ -71,7 +71,7 @@ export const ColorInputSlider = React.memo(
 		const handleOnChange = React.useCallback(
 			(next) => {
 				let changeValue = next;
-				if (is.function(serialize)) {
+				if (typeof serialize === 'function') {
 					changeValue = serialize(changeValue);
 				}
 				setValue({ [prop]: changeValue });
@@ -81,7 +81,7 @@ export const ColorInputSlider = React.memo(
 
 		let parsedValue = value;
 
-		if (is.function(parse)) {
+		if (typeof parse === 'function') {
 			parsedValue = parse(value);
 		}
 

@@ -12,7 +12,7 @@ const baseTheme = Object.freeze(Object.assign({}, config));
  * @return {Record<string, string>}
  */
 export function createTheme(callback) {
-	if (!is.function(callback)) return {};
+	if (typeof callback !== 'function') return {};
 
 	const props = {
 		get,

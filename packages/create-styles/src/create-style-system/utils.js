@@ -150,7 +150,7 @@ export function transformValuesToVariablesString(
  */
 export function compileInterpolatedStyles(interpolatedStyles, props) {
 	const compiledStyles = interpolatedStyles.map((a) =>
-		is.function(a) ? a(props) : a,
+		typeof a === 'function' ? a(props) : a,
 	);
 
 	return compiledStyles;

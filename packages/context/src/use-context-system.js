@@ -60,9 +60,10 @@ export function useContextSystem(props, namespace) {
 	);
 
 	// Provides the ability to customize the render of the component.
-	const rendered = is.function(initialMergedProps.renderChildren)
-		? initialMergedProps.renderChildren(initialMergedProps)
-		: initialMergedProps.children;
+	const rendered =
+		typeof initialMergedProps.renderChildren === 'function'
+			? initialMergedProps.renderChildren(initialMergedProps)
+			: initialMergedProps.children;
 
 	for (const k in initialMergedProps) {
 		/**

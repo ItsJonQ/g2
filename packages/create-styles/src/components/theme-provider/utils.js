@@ -188,7 +188,7 @@ export function useThemeStyles({
 	const didInjectGlobalStyles = useRef(false);
 
 	if (!didInjectGlobalStyles.current && isGlobal && theme) {
-		if (is.function(injectGlobal)) {
+		if (typeof injectGlobal === 'function') {
 			try {
 				const globalStyles = transformValuesToVariablesString(
 					selector,

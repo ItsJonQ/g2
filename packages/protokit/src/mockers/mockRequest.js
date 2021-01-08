@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 const defaultMockRequestOptions = {
 	timeout: 500,
 	status: 200,
@@ -15,14 +13,14 @@ export async function mockRequest(options = defaultMockRequestOptions) {
 		setTimeout(() => {
 			if (status === 200) {
 				try {
-					if (is.function(action)) {
+					if (typeof action === 'function') {
 						action();
 					}
 				} catch (err) {
 					reject({ status: 400, message: err });
 				}
 
-				const response = is.function(data) ? data() : data;
+				const response = typeof data === 'function' ? data() : data;
 				return resolve(response, { status: 200, message });
 			} else {
 				return reject({ status, message });

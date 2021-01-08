@@ -62,7 +62,7 @@ export function process({ onReport } = { onReport: noop }) {
 	for (const node of nodes) {
 		for (const rule of rules) {
 			const [name, fns] = rule;
-			if (is.function(fns.create)) {
+			if (typeof fns.create === 'function') {
 				context.report = handleOnReport(name, node);
 				fns.create(context)(node, {
 					getComponentName,
