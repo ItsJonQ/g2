@@ -13,6 +13,7 @@ export const DropdownMenu = css`
 `;
 
 export const Card = css`
+	${ui.zIndex('Dropdown')};
 	max-height: 50vh;
 	min-height: 24px;
 	outline: none;

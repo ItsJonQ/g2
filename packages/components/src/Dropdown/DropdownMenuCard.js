@@ -1,4 +1,8 @@
-import { contextConnect, useContextSystem } from '@wp-g2/context';
+import {
+	contextConnect,
+	ContextSystemProvider,
+	useContextSystem,
+} from '@wp-g2/context';
 import React from 'react';
 
 import { Card } from '../Card';
@@ -22,7 +26,13 @@ function DropdownMenuCard(props, forwardedRef) {
 			{...otherProps}
 			ref={forwardedRef}
 		>
-			<Scrollable className={styles.Scrollable}>{children}</Scrollable>
+			<Scrollable className={styles.Scrollable}>
+				<ContextSystemProvider
+					value={{ MenuItem: { isOffset: false } }}
+				>
+					{children}
+				</ContextSystemProvider>
+			</Scrollable>
 		</Card>
 	);
 }
