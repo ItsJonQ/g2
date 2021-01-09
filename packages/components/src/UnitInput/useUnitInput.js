@@ -102,8 +102,6 @@ export function useUnitInput(props, ref) {
 
 			let validationValue = next;
 
-			if (!unit) return false;
-
 			if (isPotentialUnitValue(validationValue)) {
 				validationValue = createUnitValue(validationValue, unit);
 			}
