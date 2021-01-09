@@ -10,7 +10,11 @@ import {
 } from '@wp-g2/utils';
 import React from 'react';
 
-import { findUnitMatchExact, isPotentialUnitValue } from './UnitInput.utils';
+import {
+	findUnitMatchExact,
+	getInitialParsedUnitValue,
+	isPotentialUnitValue,
+} from './UnitInput.utils';
 
 /**
  * @typedef UnitStore
@@ -47,7 +51,7 @@ import { findUnitMatchExact, isPotentialUnitValue } from './UnitInput.utils';
  */
 export function useUnitInput(props, ref) {
 	const { cssProp, arrows = false, onChange = noop, value } = props;
-	const [parsedValue, unit] = parseUnitValue(value);
+	const [parsedValue, unit] = getInitialParsedUnitValue({ cssProp, value });
 	const inputRef = React.useRef();
 
 	/** @type {UnitInputState} */
