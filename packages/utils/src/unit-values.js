@@ -6,6 +6,9 @@ import { is } from './is';
 let __styleTestNode = null;
 
 const getComputedStyledMap = () => {
+	// For SSR
+	if (typeof window === 'undefined') return {};
+
 	if (!__styleTestNode) {
 		__styleTestNode = document.createElement('div');
 	}
@@ -36,6 +39,8 @@ export const getParsedCSSValue = (initialValue) => {
  * @return {boolean} Whether the value is a valid CSS value.
  */
 export const isValidCSSValueForProp = (prop, value) => {
+	// For SSR
+	if (typeof window === 'undefined') return true;
 	if (typeof prop !== 'string') return true;
 
 	const computedStyleMap = getComputedStyledMap();
