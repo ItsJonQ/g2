@@ -20,13 +20,20 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 		(/** @type {number} */ jumpStep = 0) => {
 			const {
 				increment,
+				incrementFromNonNumericValue,
 				isInputTypeNumeric,
 				value: _value,
 			} = store.getState();
 
-			if (!isInputTypeNumeric && !is.numeric(_value)) return;
+			if (
+				!isInputTypeNumeric &&
+				!is.numeric(_value) &&
+				!incrementFromNonNumericValue
+			) {
+				return;
+			}
 
-			const value = _value || 0;
+			const value = is.numeric(_value) ? _value : 0;
 
 			const { getShiftValue, step } = shiftStepStore.getState();
 			const shiftStep = getShiftValue();
@@ -48,13 +55,20 @@ export const useNumberActions = ({ max, min, shiftStepStore, store }) => {
 		(/** @type {number} */ jumpStep = 0) => {
 			const {
 				decrement,
+				incrementFromNonNumericValue,
 				isInputTypeNumeric,
 				value: _value,
 			} = store.getState();
 
-			if (!isInputTypeNumeric && !is.numeric(_value)) return;
+			if (
+				!isInputTypeNumeric &&
+				!is.numeric(_value) &&
+				!incrementFromNonNumericValue
+			) {
+				return;
+			}
 
-			const value = _value || 0;
+			const value = is.numeric(_value) ? _value : 0;
 
 			const { getShiftValue, step } = shiftStepStore.getState();
 			const shiftStep = getShiftValue();

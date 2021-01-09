@@ -155,6 +155,7 @@ const reducer = (state, action) => {
  * @property {'x' | 'y'} [dragAxis='y']
  * @property {string} [format='text']
  * @property {string} [initialValue]
+ * @property {boolean} [incrementFromNonNumericValue]
  * @property {boolean} [isCommitOnBlurOrEnter=true]
  * @property {boolean} [isFocused=false]
  * @property {boolean} [isShiftStepEnabled=true]
@@ -173,6 +174,7 @@ const useTextInputStore = ({
 	__debugger,
 	dragAxis = 'y',
 	format = 'text',
+	incrementFromNonNumericValue,
 	initialValue: initialValueProp,
 	isCommitOnBlurOrEnter = true,
 	isFocused: isFocusedInitial = false,
@@ -197,6 +199,7 @@ const useTextInputStore = ({
 		commitValue: '',
 		dragAxis,
 		inputRef,
+		incrementFromNonNumericValue,
 		isCommitOnBlurOrEnter,
 		isFocused: isFocusedInitial,
 		isShiftStepEnabled,
