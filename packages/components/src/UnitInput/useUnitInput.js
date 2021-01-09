@@ -37,7 +37,10 @@ import {
 /**
  * @typedef OwnProps
  * @property {import('../TextInput/types').TextInputArrow} [arrows] Renders specified incrementer/decrementer arrows.
+ * @property {boolean} [allowEmptyValue] Allow for values to be an empty string.
  * @property {string} [cssProp] A CSS property name used to validate the (unit) value.
+ * @property {string} [fallbackUnit] Unit to use if `incrementFromNonNumericValue` is enabled.
+ * @property {boolean} [incrementFromNonNumericValue] Enables incrementing/decrementing from non-numeric values, such as `auto`.
  * @property {string} value The unit value.
  * @property {(value: string) => void} [onChange]
  */
@@ -50,7 +53,15 @@ import {
  * @param {import('react').Ref<any>} ref
  */
 export function useUnitInput(props, ref) {
-	const { cssProp, arrows = false, onChange = noop, value } = props;
+	const {
+		arrows = false,
+		allowEmptyValue = false,
+		cssProp,
+		fallbackUnit = 'px',
+		incrementFromNonNumericValue = true,
+		onChange = noop,
+		value,
+	} = props;
 	const [parsedValue, unit] = getInitialParsedUnitValue({ cssProp, value });
 	const inputRef = React.useRef();
 
@@ -68,6 +79,15 @@ export function useUnitInput(props, ref) {
 				const { getIsValidCSSValue } = prev;
 				const [parsedValue, unit] = parseUnitValue(next);
 				const nextState = { parsedValue };
+
+				/**
+				 * Handle cases that allow for empty values.
+				 */
+				if (allowEmptyValue && is.empty(next)) {
+					return {
+						parsedValue: '',
+					};
+				}
 
 				if (unit) {
 					nextState.unit = findUnitMatchExact({ value: unit });
@@ -100,6 +120,12 @@ export function useUnitInput(props, ref) {
 
 		validate: (next) => {
 			if (next === get().value) return false;
+			/**
+			 * Handle cases that allow for empty values.
+			 */
+			if (allowEmptyValue && is.empty(next)) {
+				return true;
+			}
 
 			const { cssProp, getIsValidCSSValue, unit } = get();
 			if (!cssProp) return true;
@@ -107,7 +133,14 @@ export function useUnitInput(props, ref) {
 			let validationValue = next;
 
 			if (isPotentialUnitValue(validationValue)) {
-				validationValue = createUnitValue(validationValue, unit);
+				if (!unit && incrementFromNonNumericValue) {
+					validationValue = createUnitValue(
+						validationValue,
+						fallbackUnit,
+					);
+				} else {
+					validationValue = createUnitValue(validationValue, unit);
+				}
 			}
 
 			return getIsValidCSSValue(validationValue);
@@ -127,14 +160,14 @@ export function useUnitInput(props, ref) {
 			let nextValue = next;
 
 			if (is.numeric(nextValue)) {
-				const currentUnit = unitStore.getState().unit;
+				const currentUnit = unitStore.getState().unit || fallbackUnit;
 				nextValue = createUnitValue(next, currentUnit);
 			}
 
 			unitStore.getState().commit(nextValue);
 			onChange(nextValue);
 		},
-		[onChange, unitStore],
+		[fallbackUnit, onChange, unitStore],
 	);
 
 	const handleOnChange = React.useCallback(
@@ -166,6 +199,7 @@ export function useUnitInput(props, ref) {
 		...props,
 		unitStore,
 		arrows,
+		incrementFromNonNumericValue,
 		validate: unitStore.getState().validate,
 		onChange: handleOnCommit,
 		onValueChange: handleOnChange,

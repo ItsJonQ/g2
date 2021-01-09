@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { SizeRangeReduced, FormElementProps } from '../utils/types';
+
 import { Props as BaseFieldProps } from '../BaseField/useBaseField';
+import { FormElementProps, SizeRangeReduced } from '../utils/types';
 
 export type TextInputArrow = 'stepper' | boolean;
 type TextInputFormat = 'number' | 'type';
@@ -39,6 +40,12 @@ export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> &
 		 * @default 2.5
 		 */
 		gap?: number;
+		/**
+		 * Enables incrementing/decrementing from non-numeric values, such as `auto`.
+		 *
+		 * @default false
+		 */
+		incrementFromNonNumericValue?: boolean;
 		/**
 		 * Renders a `cursor: pointer` on hover.
 		 *

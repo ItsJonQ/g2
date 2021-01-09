@@ -78,7 +78,12 @@ const Example = () => {
 			<br />
 			<br />
 			<div>
-				<UnitInput cssProp="height" onChange={setValue} value={value} />
+				<UnitInput
+					arrows
+					cssProp="height"
+					onChange={setValue}
+					value={value}
+				/>
 			</div>
 		</>
 	);
