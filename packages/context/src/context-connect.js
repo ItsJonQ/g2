@@ -69,6 +69,7 @@ export function getConnectNamespace(Component) {
 
 	// @ts-ignore
 	if (Component.type && Component.type[CONNECT_STATIC_NAMESPACE]) {
+		// @ts-ignore
 		namespaces = Component.type[CONNECT_STATIC_NAMESPACE];
 	}
 
