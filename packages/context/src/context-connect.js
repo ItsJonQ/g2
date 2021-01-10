@@ -59,7 +59,20 @@ export function contextConnect(Component, namespace, options = {}) {
  * @returns {Array<string>} The connected namespaces.
  */
 export function getConnectNamespace(Component) {
-	return (Component && Component[CONNECT_STATIC_NAMESPACE]) || [];
+	if (!Component) return [];
+
+	let namespaces = [];
+
+	if (Component[CONNECT_STATIC_NAMESPACE]) {
+		namespaces = Component[CONNECT_STATIC_NAMESPACE];
+	}
+
+	// @ts-ignore
+	if (Component.type && Component.type[CONNECT_STATIC_NAMESPACE]) {
+		namespaces = Component.type[CONNECT_STATIC_NAMESPACE];
+	}
+
+	return namespaces;
 }
 
 /**
