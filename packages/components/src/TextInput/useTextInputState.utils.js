@@ -5,7 +5,7 @@ import { useDrag } from 'react-use-gesture';
 
 import * as styles from './TextInput.styles';
 
-/** @typedef {import('zustand').UseStore<{
+/** @typedef {import('@wp-g2/substate').UseStore<{
 	isShiftKey: boolean;
 	shiftStep: number;
 	step: number;

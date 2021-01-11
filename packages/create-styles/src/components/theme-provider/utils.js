@@ -136,7 +136,7 @@ export function useReducedMotionMode({
 
 /**
  * @param {string} initialTheme
- * @returns {import('zustand').UseStore<{ theme: string, setTheme: (next: string) => void }>}
+ * @returns {import('@wp-g2/substate').UseStore<{ theme: string, setTheme: (next: string) => void }>}
  */
 function createThemeStore(initialTheme = '') {
 	return createStore((set) => ({

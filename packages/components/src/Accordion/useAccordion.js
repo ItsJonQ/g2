@@ -69,9 +69,9 @@ export function useAccordion(props) {
 		...otherProps
 	} = useContextSystem(props, 'Accordion');
 
-	/** @type {import('zustand').UseStore<AccordionStore>} */
+	/** @type {import('@wp-g2/substate').UseStore<AccordionStore>} */
 	const accordionStore = useSubState((
-		/** @type {import('zustand').SetState<AccordionStore>} */ set,
+		/** @type {import('@wp-g2/substate').SetState<AccordionStore>} */ set,
 	) => ({
 		// State
 		current: setCurrentState([], current),
@@ -123,7 +123,7 @@ export function useAccordion(props) {
 			!!accordionStore.getState().has(id),
 	}));
 
-	/** @type {import('zustand').UseStore<Store>} */
+	/** @type {import('@wp-g2/substate').UseStore<Store>} */
 	const store = useSubState(() => ({
 		// Actions
 		update: ({ id, visible = false }) => {

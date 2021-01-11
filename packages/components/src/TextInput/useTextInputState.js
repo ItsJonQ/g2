@@ -147,7 +147,7 @@ const reducer = (state, action) => {
  * @property {() => boolean} getIsReverted
  */
 
-/** @typedef {import('zustand').UseStore<TextInputStore>} TextInputState */
+/** @typedef {import('@wp-g2/substate').UseStore<TextInputStore>} TextInputState */
 
 /**
  * @typedef Options
