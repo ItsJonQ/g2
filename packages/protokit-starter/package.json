@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/cra-template-protokit",
-  "version": "0.0.131",
+  "version": "0.0.132",
   "description": "Prototype Starter Kit for G2 Components.",
   "sideEffects": false,
   "main": "template.json",
