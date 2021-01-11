@@ -20,9 +20,8 @@ export const isPotentialUnitValue = (value) => {
 
 export function getInitialParsedUnitValue({ cssProp, value }) {
 	const [parsedValue, unit] = parseUnitValue(value);
-	const isUndefinedParsedValue =
-		!is.defined(parsedValue) || is.empty(parsedValue);
 
+	const isUndefinedParsedValue = is.valueEmpty(parsedValue);
 	const evalutedValue = isUndefinedParsedValue ? value : parsedValue;
 
 	// Validation without cssProp
