@@ -12,7 +12,7 @@ export const useComponentsContext = () => useContext(ComponentsContext);
 
 /**
  * @template T
- * @typedef {import('zustand').UseStore<T>} State
+ * @typedef {import('@wp-g2/substate').UseStore<T>} State
  */
 
 /**
@@ -23,7 +23,7 @@ export const useComponentsContext = () => useContext(ComponentsContext);
  * @param {T} initialState
  */
 export const createContextSystemStore = (initialState) => {
-	/** @type {import('zustand').UseStore<{ context: T, setContext: (next: T) => void }>} */
+	/** @type {import('@wp-g2/substate').UseStore<{ context: T, setContext: (next: T) => void }>} */
 	const contextSystemStore = createStore((set) => ({
 		context: initialState,
 		setContext: (next) => {
@@ -68,7 +68,7 @@ export const useContextStoreContext = () => useContext(ContextStoreContext);
  * @returns {JSX.Element} A Provider wrapped component.
  */
 const _ContextSystemProvider = ({ children, value }) => {
-	/** @type {import('zustand').UseStore<{ context: T; setContext: (next: T) => void; }>} */
+	/** @type {import('@wp-g2/substate').UseStore<{ context: T; setContext: (next: T) => void; }>} */
 	const store = useContextSystemBridge({ value });
 	const contextValue = React.useMemo(() => ({ store }), [store]);
 

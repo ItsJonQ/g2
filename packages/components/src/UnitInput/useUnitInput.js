@@ -32,7 +32,7 @@ import {
  * @property {(value: string) => boolean} getIsValidCSSValue
  */
 
-/** @typedef {import('zustand').UseStore<UnitStore>} UnitInputState */
+/** @typedef {import('@wp-g2/substate').UseStore<UnitStore>} UnitInputState */
 
 /**
  * @typedef OwnProps
