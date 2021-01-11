@@ -116,6 +116,7 @@ function MenuItem(props, forwardedRef) {
 	return (
 		<BaseButton
 			as={Component}
+			isBlock
 			noWrap={false}
 			{...otherProps}
 			{...menu}
