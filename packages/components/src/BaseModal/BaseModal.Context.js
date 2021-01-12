@@ -1,58 +1,34 @@
-import { createStore } from '@wp-g2/substate';
-import { createContext, useContext, useEffect, useRef } from 'react';
+import { useDispatch, useSelect } from '@wordpress/data';
+import { createContext, useContext, useEffect } from 'react';
+
+import MODAL_STORE from './store';
 
 export const ModalContext = createContext({ dialog: {} });
 export const useModalContext = () => useContext(ModalContext);
 
-const useBaseModalStore = createStore((setState, getState) => ({
-	getIsUnderLayer: (ref) => {
-		const { isStacked, modals } = getState();
-		const latestRef = modals[modals.length - 1];
-
-		if (!isStacked) return false;
-
-		return latestRef !== ref;
-	},
-	getState,
-	isStacked: false,
-	modals: [],
-	mount: (ref) => {
-		setState((state) => {
-			const modals = [...state.modals, ref];
-			const isStacked = modals.length > 1;
-
-			return { isStacked, modals };
-		});
-	},
-	unmount: (ref) => {
-		setState((state) => {
-			const modals = state.modals.filter((m) => m !== ref);
-			const isStacked = modals.length > 1;
-
-			return { isStacked, modals };
-		});
-	},
-}));
-
-export const useModalStore = () => useRef(useBaseModalStore()).current;
-
+/**
+ * @param {{ baseId: string, visible: boolean }} dialog
+ * @return {{ isUnderLayer: boolean }}
+ */
 export const useModalState = (dialog) => {
-	const modalStore = useModalStore();
-	const { getIsUnderLayer } = modalStore;
+	const { mount, unmount } = useDispatch(MODAL_STORE);
 	const { baseId, visible } = dialog;
 
 	useEffect(() => {
 		if (visible) {
-			modalStore.mount(baseId);
+			mount(baseId);
 		} else {
-			modalStore.unmount(baseId);
+			unmount(baseId);
 		}
 		return () => {
-			modalStore.unmount(baseId);
+			unmount(baseId);
 		};
-	}, [baseId, modalStore, visible]);
+	}, [baseId, visible, mount, unmount]);
 
-	const isUnderLayer = getIsUnderLayer(baseId);
+	const isUnderLayer = useSelect((select) =>
+		select(MODAL_STORE).getIsUnderLayer(baseId),
+	);
 
+	console.log(dialog, isUnderLayer);
 	return { isUnderLayer };
 };
