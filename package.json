@@ -52,8 +52,6 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@wordpress/i18n": "^3.16.0",
-    "@wordpress/icons": "^2.8.0",
     "@babel/core": "^7.10.3",
     "@helpscout/stats": "^0.0.5",
     "@itsjonq/controls": "0.0.9",
@@ -70,6 +68,9 @@
     "@types/rtlcss": "^2.4.1",
     "@types/styled-components": "^5.1.4",
     "@types/tinycolor2": "^1.4.2",
+    "@types/wordpress__data": "^4.6.9",
+    "@wordpress/i18n": "^3.16.0",
+    "@wordpress/icons": "^2.8.0",
     "among": "2.0.0",
     "babel-loader": "^8.1.0",
     "eslint-config-prettier": "6.11.0",

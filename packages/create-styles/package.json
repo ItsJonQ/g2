@@ -18,6 +18,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/is-prop-valid": "^0.8.8",
+    "@wordpress/data": "^4.26.1",
     "@wordpress/is-shallow-equal": "^2.3.0",
     "@wp-g2/substate": "^0.0.132",
     "@wp-g2/utils": "^0.0.132",
