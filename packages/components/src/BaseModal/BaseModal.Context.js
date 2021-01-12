@@ -29,6 +29,5 @@ export const useModalState = (dialog) => {
 		select(MODAL_STORE).getIsUnderLayer(baseId),
 	);
 
-	console.log(dialog, isUnderLayer);
 	return { isUnderLayer };
 };
