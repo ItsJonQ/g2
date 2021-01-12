@@ -3,7 +3,7 @@ import { cx } from '@wp-g2/styles';
 import { noop, useUniqueId } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
-import { useAccordionContext } from '../Accordion';
+import { useAccordion } from '../Accordion';
 import { Collapsible } from '../Collapsible';
 import { PanelContext } from './Panel.Context';
 import * as styles from './Panel.styles';
@@ -21,7 +21,6 @@ function Panel(props, forwardedRef) {
 		visible: visibleProp = false,
 		...otherProps
 	} = useContextSystem(props, 'Panel');
-	const { useAccordionState } = useAccordionContext();
 	const id = useUniqueId(Panel, 'Panel', baseId || idProp);
 
 	const classes = cx(
@@ -30,7 +29,7 @@ function Panel(props, forwardedRef) {
 		className,
 	);
 
-	const [visible, setVisible] = useAccordionState({
+	const [visible, setVisible] = useAccordion({
 		id,
 		visible: visibleProp,
 	});

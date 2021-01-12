@@ -3,14 +3,14 @@ import React from 'react';
 
 import { AccordionContext } from './Accordion.Context';
 import { AccordionView } from './Accordion.styles';
-import { useAccordion } from './useAccordion';
+import { useAccordionProps } from './useAccordion';
 
 /**
  * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./useAccordion').Props, 'div'>} props
  * @param {import('react').Ref<any>} forwardedRef
  */
 function Accordion(props, forwardedRef) {
-	const { children, contextValue, ...otherProps } = useAccordion(props);
+	const { children, contextValue, ...otherProps } = useAccordionProps(props);
 
 	return (
 		<AccordionContext.Provider value={contextValue}>
