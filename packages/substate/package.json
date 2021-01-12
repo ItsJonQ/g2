@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/substate",
-  "version": "0.0.132",
+  "version": "0.0.134",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -17,8 +17,8 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "peerDependencies": {
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "gitHead": "9536f69d764f89429aa66f4368914ea7936ca4c7"
 }
