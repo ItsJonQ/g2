@@ -3,15 +3,15 @@ import { registerStore } from '@wordpress/data';
 const MODAL_STORE = 'g2/modal';
 
 /**
- * @type {{ isStacked: boolean, modals: import('react').RefObject<unknown>[]}}
+ * @type {{ isStacked: boolean, modals: string[]}}
  */
 const DEFAULT_STATE = {
 	isStacked: false,
 	modals: [],
 };
 
-/** @typedef {{ type: 'MOUNT', ref: import('react').RefObject<unknown>}} MountAction */
-/** @typedef {{ type: 'UNMOUNT', ref: import('react').RefObject<unknown>}} UnmountAction */
+/** @typedef {{ type: 'MOUNT', ref: string}} MountAction */
+/** @typedef {{ type: 'UNMOUNT', ref: string}} UnmountAction */
 
 /**
  * @type {import('@wordpress/data').Store<typeof DEFAULT_STATE>}
@@ -43,7 +43,7 @@ const DEFAULT_STATE = {
 
 	actions: {
 		/**
-		 * @param {import('react').RefObject<unknown>} ref
+		 * @param {string} ref
 		 * @return {MountAction}
 		 */
 		mount: (ref) => ({
@@ -51,7 +51,7 @@ const DEFAULT_STATE = {
 			ref,
 		}),
 		/**
-		 * @param {import('react').RefObject<unknown>} ref
+		 * @param {string} ref
 		 * @return {UnmountAction}
 		 */
 		unmount: (ref) => ({
@@ -63,7 +63,7 @@ const DEFAULT_STATE = {
 	selectors: {
 		/**
 		 * @param {typeof DEFAULT_STATE} state
-		 * @param {import('react').RefObject<unknown>} ref
+		 * @param {string} ref
 		 */
 		getIsUnderLayer(state, ref) {
 			const { isStacked, modals } = state;
