@@ -1,10 +1,10 @@
 import { isShallowEqualObjects } from '@wordpress/is-shallow-equal';
-import { createStore } from '@wp-g2/substate';
 import { is, useIsomorphicLayoutEffect } from '@wp-g2/utils';
 import { useEffect, useRef } from 'react';
 
 import { transformValuesToVariablesString } from '../../create-style-system/utils';
 import { useReducedMotion } from '../../hooks';
+import useThemeStylesStore, { setTheme } from './use-theme-styles-store';
 
 /**
  * @typedef UseColorBlindModeProps
@@ -135,25 +135,6 @@ export function useReducedMotionMode({
 }
 
 /**
- * @param {string} initialTheme
- * @returns {import('@wp-g2/substate').UseStore<{ theme: string, setTheme: (next: string) => void }>}
- */
-function createThemeStore(initialTheme = '') {
-	return createStore((set) => ({
-		theme: initialTheme,
-		setTheme: (/** @type {string} */ next) => {
-			set(() => {
-				return { theme: next };
-			});
-		},
-	}));
-}
-
-export function useThemeStylesStore() {
-	return useRef(createThemeStore());
-}
-
-/**
  * @typedef UseThemeStyles
  * @property {import('create-emotion').Emotion['injectGlobal']} injectGlobal
  * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
@@ -172,8 +153,7 @@ export function useThemeStyles({
 	theme = {},
 	selector = ':root',
 }) {
-	const store = useThemeStylesStore();
-	const { setTheme: setThemeStyles, theme: themeStyles } = store.current();
+	const [{ theme: themeStyles }, dispatch] = useThemeStylesStore();
 
 	/**
 	 * Used to track/compare changes for theme prop changes.
@@ -241,9 +221,9 @@ export function useThemeStyles({
 			 * Otherwise, we can set it to the themeStyles state, which will be
 			 * rendered as custom properties on the ThemeProvider (HTMLDivElement).
 			 */
-			setThemeStyles(nextThemeHtml);
+			dispatch(setTheme(nextThemeHtml));
 		}
-	}, [injectGlobal, isGlobal, setThemeStyles, theme]);
+	}, [injectGlobal, isGlobal, dispatch, theme]);
 
 	return themeStyles;
 }
