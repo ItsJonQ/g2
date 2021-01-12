@@ -19,8 +19,8 @@
         "react-icons": "^3.10.0"
     },
     "peerDependencies": {
-        "react": "^16.8.0",
-        "react-dom": "^16.8.0"
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
     },
     "gitHead": "9536f69d764f89429aa66f4368914ea7936ca4c7"
 }
