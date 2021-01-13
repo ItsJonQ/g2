@@ -27,12 +27,12 @@ const Example = () => {
 						onChange={handleOnChange}
 						width={300}
 					/>
-				</Grid>
-				{/* <ColorPicker
+					<ColorPicker
 						color={color}
 						onChange={setColor}
 						width={300}
 					/>
+				</Grid>
 				<Grid gap={8}>
 					<ColorPicker
 						color={color}
@@ -48,7 +48,7 @@ const Example = () => {
 						onChange={setColor}
 						width={300}
 					/>
-				</Grid> */}
+				</Grid>
 			</VStack>
 		</Container>
 	);

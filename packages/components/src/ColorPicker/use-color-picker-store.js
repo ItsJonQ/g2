@@ -32,7 +32,6 @@ export function useInitialState({
 	inputType,
 	showPreview,
 }) {
-	console.log('useInitialState');
 	return {
 		colorForElementPreviousValue: '',
 		colorForElement,
@@ -114,7 +113,9 @@ const getColorValue = (state) => {
  * @return {State}
  */
 const commit = (state, nextColor) => {
-	if (isEqualColor(state.colorForElementPreviousValue, nextColor)) return;
+	if (isEqualColor(state.colorForElementPreviousValue, nextColor)) {
+		return state;
+	}
 
 	const hasAlpha = ui.color(nextColor).getAlpha() !== 1;
 

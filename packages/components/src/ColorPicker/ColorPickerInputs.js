@@ -192,7 +192,6 @@ export const ColorPickerInputs = React.memo(() => {
 		store: { inputType },
 	} = useColorPickerContext();
 
-	console.log(inputType);
 	switch (inputType) {
 		case 'hex':
 			return <ColorPickerHexInputs />;

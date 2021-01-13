@@ -1,5 +1,4 @@
 import { ui } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
 
@@ -80,7 +79,7 @@ export function useColorPickerState(props) {
 		[disableAlpha, handleOnCommit, store],
 	);
 
-	React.useEffect(() => {
+	useUpdateEffect(() => {
 		handleOnCommit(store.color);
 	}, [handleOnCommit, store.color]);
 
