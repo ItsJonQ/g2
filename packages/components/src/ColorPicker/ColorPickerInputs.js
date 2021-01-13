@@ -59,14 +59,9 @@ export const ColorInputSlider = React.memo(
 		...otherProps
 	}) => {
 		const { store } = useColorPickerContext();
-		const [value, setValue, disableAlpha] = store(
-			(state) => [
-				state[type]()[prop],
-				state.change[type],
-				state.disableAlpha,
-			],
-			shallowCompare,
-		);
+		const value = store[type]()[prop];
+		const setValue = store.change[type];
+		const disableAlpha = store.disableAlpha;
 
 		const handleOnChange = React.useCallback(
 			(next) => {
@@ -193,9 +188,11 @@ export const ColorPickerHexInputs = React.memo(() => {
 });
 
 export const ColorPickerInputs = React.memo(() => {
-	const { store } = useColorPickerContext();
-	const inputType = store((state) => state.inputType, shallowCompare);
+	const {
+		store: { inputType },
+	} = useColorPickerContext();
 
+	console.log(inputType);
 	switch (inputType) {
 		case 'hex':
 			return <ColorPickerHexInputs />;

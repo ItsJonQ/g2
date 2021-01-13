@@ -9,14 +9,11 @@ import { ColorPickerPreview } from './ColorPickerPreview';
 
 export const ColorPickerSelect = React.memo(() => {
 	const { store } = useColorPickerContext();
-	const [value, showPreview] = store(
-		(state) => [state.inputType, state.showPreview],
-		shallowCompare,
-	);
+	const { inputType: value, showPreview } = store;
 
 	const handleOnChange = React.useCallback(
 		(next) => {
-			store.setState({ inputType: next });
+			store.setInputType(next);
 		},
 		[store],
 	);

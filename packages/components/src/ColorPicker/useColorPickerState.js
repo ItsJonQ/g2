@@ -1,7 +1,14 @@
 import { ui } from '@wp-g2/styles';
-import { shallowCompare, useSubState } from '@wp-g2/substate';
+import { shallowCompare } from '@wp-g2/substate';
 import { noop, useUpdateEffect } from '@wp-g2/utils';
 import React, { useCallback } from 'react';
+
+import {
+	getColor,
+	isEqualColor,
+	useColorPickerStore,
+	useInitialState,
+} from './use-color-picker-store';
 
 export function useColorPickerState(props) {
 	const {
@@ -14,136 +21,25 @@ export function useColorPickerState(props) {
 	} = props;
 	const initialColor = getColor(colorProp, disableAlpha);
 
-	const store = useSubState((set) => ({
-		// State
-		colorForElementPreviousValue: '',
-		colorForElement: initialColor,
-		color: getColor(colorProp, disableAlpha),
+	const initialState = useInitialState({
+		color: initialColor,
 		changeFormat,
+		colorForElement: initialColor,
 		inputType,
 		disableAlpha,
 		showPreview,
-
-		// Selectors
-		hsl: () => ui.color(store.getState().color).toHsl(),
-		hex: () => ui.color(store.getState().color).toHex(),
-		rgb: () => ui.color(store.getState().color).toRgb(),
-		getColorValue: () => {
-			const { color, inputType } = store.getState();
-			let colorValue = color;
-
-			switch (inputType) {
-				case 'hex':
-					colorValue = ui.color(color).toHexString();
-					break;
-				case 'rgb':
-					colorValue = ui.color(color).toRgbString();
-					break;
-				case 'hsl':
-					colorValue = ui.color(color).toHslString();
-					break;
-				default:
-					break;
-			}
-
-			return colorValue;
-		},
-
-		// Actions
-		increment: () => {
-			const { b, g, r } = store.getState().rgb();
-			const next = { r, g, b };
-
-			switch (true) {
-				case b < 255:
-					next.b = b + 1;
-					break;
-				case g < 255:
-					next.g = g + 1;
-					break;
-				case r < 255:
-					next.r = r + 1;
-					break;
-				default:
-					break;
-			}
-			store.getState().change.rgb(next);
-		},
-		decrement: () => {
-			const { b, g, r } = store.getState().rgb();
-			const next = { r, g, b };
-
-			switch (true) {
-				case b > 0:
-					next.b = b - 1;
-					break;
-				case g > 0:
-					next.g = g - 1;
-					break;
-				case r > 0:
-					next.r = r - 1;
-					break;
-				default:
-					break;
-			}
-			store.getState().change.rgb(next);
-		},
-
-		commit: (next) => {
-			set((prev) => {
-				if (isEqualColor(prev.colorForElementPreviousValue, next))
-					return;
-
-				const hasAlpha = ui.color(next).getAlpha() !== 1;
-
-				const nextState = {
-					colorForElementPreviousValue: prev.colorForElement,
-					colorForElement: getColor(next, prev.disableAlpha),
-					color: next,
-				};
-
-				if (prev.disableAlpha && hasAlpha) {
-					nextState.disableAlpha = false;
-				}
-
-				return nextState;
-			});
-		},
-
-		change: {
-			rgb: (nextValues) => {
-				set((prev) => {
-					let next = { ...prev.rgb(), ...nextValues };
-					next = getColor(next, prev.disableAlpha);
-					prev.commit(next);
-				});
-			},
-			hsl: (nextValues) => {
-				set((prev) => {
-					let next = { ...prev.hsl(), ...nextValues };
-					next = getColor(next, prev.disableAlpha);
-					prev.commit(next);
-				});
-			},
-			hex: (nextValues) => {
-				set((prev) => {
-					let next = nextValues;
-					next = getColor(next, prev.disableAlpha);
-					prev.commit(next);
-				});
-			},
-		},
-	}));
+	});
+	const store = useColorPickerStore(initialState);
 
 	// Work-around for controlling internal/external state for react-colorful
 	const didIncomingChange = React.useRef(false);
 	const currentColor = React.useRef(initialColor);
 
-	const { color: internalColor } = store();
+	const { color: internalColor } = store;
 
 	const handleOnCommit = useCallback(
 		(next) => {
-			const { changeFormat } = store.getState();
+			const { changeFormat } = store;
 			let changeValue = next;
 			let data = ui.color(next).toRgb();
 
@@ -179,18 +75,14 @@ export function useColorPickerState(props) {
 			handleOnCommit(nextColor);
 			currentColor.current = getColor(next, disableAlpha);
 
-			store.getState().commit(nextColor);
+			store.commit(nextColor);
 		},
 		[disableAlpha, handleOnCommit, store],
 	);
 
 	React.useEffect(() => {
-		return store.subscribe(
-			handleOnCommit,
-			(state) => state.color,
-			shallowCompare,
-		);
-	}, [handleOnCommit, store]);
+		handleOnCommit(store.color);
+	}, [handleOnCommit, store.color]);
 
 	useUpdateEffect(() => {
 		if (isEqualColor(colorProp, currentColor.current)) return;
@@ -199,8 +91,8 @@ export function useColorPickerState(props) {
 
 		didIncomingChange.current = true;
 
-		store.getState().commit(next);
-		store.setState({ colorForElement: getColor(colorProp) });
+		store.commit(next);
+		store.setColorForElement(getColor(colorProp));
 
 		currentColor.current = getColor(colorProp);
 	}, [colorProp, disableAlpha]);
@@ -210,7 +102,7 @@ export function useColorPickerState(props) {
 
 		const next = getColor(internalColor, disableAlpha);
 
-		store.setState({ colorForElement: next });
+		store.setColorForElement(next);
 
 		currentColor.current = next;
 	}, [internalColor]);
@@ -219,12 +111,4 @@ export function useColorPickerState(props) {
 		store,
 		onChange: handleOnChange,
 	};
-}
-
-function getColor(color) {
-	return ui.color(color).toRgbString();
-}
-
-function isEqualColor(first, second) {
-	return ui.color(first).toRgbString() === ui.color(second).toRgbString();
 }

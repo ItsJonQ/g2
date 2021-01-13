@@ -11,11 +11,8 @@ import * as styles from './ColorPicker.styles';
 
 export const ColorPickerPreview = React.memo(() => {
 	const { store } = useColorPickerContext();
-
-	const [color, showPreview] = store(
-		(state) => [state.getColorValue(), state.showPreview],
-		shallowCompare,
-	);
+	const color = store.getColorValue();
+	const showPreview = store.showPreview;
 
 	const { hasCopied, onCopy } = useClipboard(color);
 

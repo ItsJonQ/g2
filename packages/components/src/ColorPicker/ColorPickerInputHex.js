@@ -13,15 +13,12 @@ import { useColorPickerContext } from './ColorPicker.Context';
 export const ColorInputHex = React.memo(
 	({ label = __('Hex'), ...otherProps }) => {
 		const { store } = useColorPickerContext();
-		const [value, setValue, increment, decrement] = store(
-			(state) => [
-				state.hex(),
-				state.change.hex,
-				state.increment,
-				state.decrement,
-			],
-			shallowCompare,
-		);
+		const [value, setValue, increment, decrement] = [
+			store.hex(),
+			store.change.hex,
+			store.increment,
+			store.decrement,
+		];
 
 		const dragHandlers = useBaseDragHandlers({
 			increment,
