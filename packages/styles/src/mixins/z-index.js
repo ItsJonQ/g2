@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 // Z-Index System
 const Z_INDEX_REGISTRY = {
 	Tooltip: 999999,
@@ -18,7 +16,7 @@ const Z_INDEX_REGISTRY = {
  */
 export function getZIndex(namespace, fallback) {
 	// Accounts for direct z-index value (number) usage.
-	if (is.number(namespace)) {
+	if (typeof namespace === 'number') {
 		return namespace;
 	}
 	// Quick return for invalid namespaces
@@ -26,7 +24,7 @@ export function getZIndex(namespace, fallback) {
 		return fallback;
 	}
 
-	if (!Z_INDEX_REGISTRY[namespace] && is.number(fallback)) {
+	if (!Z_INDEX_REGISTRY[namespace] && typeof fallback === 'number') {
 		Z_INDEX_REGISTRY[namespace] = fallback;
 	}
 

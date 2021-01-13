@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 import { get } from '../core';
 
 /**
@@ -7,5 +5,7 @@ import { get } from '../core';
  * @return {string}
  */
 export function space(value) {
-	return is.number(value) ? `calc(${get('gridBase')} * ${value})` : value;
+	return typeof value === 'number'
+		? `calc(${get('gridBase')} * ${value})`
+		: value;
 }

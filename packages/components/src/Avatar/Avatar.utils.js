@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 export const AVATAR_SHAPES = {
 	circle: 999999,
 	square: 8,
@@ -20,7 +18,7 @@ export function getSize(size) {
 		return AVATAR_SIZES[size];
 	}
 
-	return is.number(size) ? size : defaultSize;
+	return typeof size === 'number' ? size : defaultSize;
 }
 
 export function getBorderRadius(shape, size = AVATAR_SIZES.medium) {

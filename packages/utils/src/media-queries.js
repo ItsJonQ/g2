@@ -4,11 +4,6 @@
  */
 
 /**
- * Internal dependencies
- */
-import { is } from './is';
-
-/**
  * @param {string} str
  *
  * @return {string} The hyphenated string.
@@ -44,7 +39,7 @@ function obj2mq(obj = {}) {
 		let value = obj[feature];
 		feature = camel2hyphen(feature);
 		// Add px to dimension features
-		if (isDimension(feature) && is.number(value)) {
+		if (isDimension(feature) && typeof value === 'number') {
 			value = value + 'px';
 		}
 
