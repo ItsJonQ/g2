@@ -1,4 +1,5 @@
 import { css, cx } from '@wp-g2/styles';
+import { shallowCompare } from '@wp-g2/substate';
 import { memoize } from '@wp-g2/utils';
 import { kebabCase, omit, uniq } from 'lodash';
 
@@ -21,11 +22,13 @@ import { ns } from './utils';
  * @return {ConnectedProps<P>}
  */
 export function useContextSystem(props, namespace) {
-	const { store } = useContextStoreContext();
-	const { context } = store();
-	let contextProps;
-
+	const { store: useStore } = useContextStoreContext();
 	const displayName = Array.isArray(namespace) ? namespace[0] : namespace;
+
+	const contextProps = useStore(
+		(state) => state?.context?.[displayName] || {},
+		shallowCompare,
+	);
 
 	/** @type {ConnectedProps<P>} */
 	// @ts-ignore We fill in the missing properties below
@@ -39,11 +42,6 @@ export function useContextSystem(props, namespace) {
 			finalComponentProps[k] = nextNs[k];
 		}
 	}
-
-	contextProps =
-		context[displayName] ||
-		// Fallback
-		{};
 
 	const otherContextProps = omit(contextProps, ['_overrides', 'css']);
 	const contextCSS = contextProps.css;
