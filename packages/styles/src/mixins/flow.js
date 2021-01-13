@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 /** @typedef {number | string} FlowValue */
 
 /**
@@ -45,7 +43,7 @@ export function flow(...args) {
 	const results = [];
 
 	for (const arg of args) {
-		if (is.number(arg) || typeof arg === 'string') {
+		if (typeof arg === 'number' || typeof arg === 'string') {
 			results.push(arg);
 		}
 		if (Array.isArray(arg)) {

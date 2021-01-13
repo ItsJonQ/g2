@@ -1,7 +1,6 @@
 import { get } from '@wp-g2/create-styles';
 import { REDUCED_MOTION_MODE_ATTR } from '@wp-g2/create-styles';
 import { colorize } from '@wp-g2/utils';
-import { is } from '@wp-g2/utils';
 
 /**
  * @template T
@@ -9,7 +8,9 @@ import { is } from '@wp-g2/utils';
  * @return {T | string}
  */
 export function space(value) {
-	return is.number(value) ? `calc(${get('gridBase')} * ${value})` : value;
+	return typeof value === 'number'
+		? `calc(${get('gridBase')} * ${value})`
+		: value;
 }
 
 export function getIsReducedMotion() {

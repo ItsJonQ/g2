@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 /**
  * Breakpoint values based on Bootstrap
  * https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints
@@ -13,7 +11,7 @@ export const BREAKPOINTS = {
 };
 
 export function getBreakpointValue(breakpoint) {
-	if (is.number(breakpoint)) {
+	if (typeof breakpoint === 'number') {
 		return { minWidth: breakpoint };
 	}
 	if (typeof breakpoint === 'string') {
