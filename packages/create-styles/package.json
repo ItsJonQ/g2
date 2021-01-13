@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/create-styles",
-  "version": "0.0.134",
+  "version": "0.0.135-alpha.0",
   "description": "Style system creator for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
