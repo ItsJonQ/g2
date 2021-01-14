@@ -24,10 +24,9 @@ function DropdownMenu(props, forwardedRef) {
 
 	const { label, menu } = useDropdownContext();
 
-	const classes = cx(
-		styles.DropdownMenu,
-		css({ maxWidth, minWidth }),
-		className,
+	const classes = React.useMemo(
+		() => cx(styles.DropdownMenu, css({ maxWidth, minWidth }), className),
+		[maxWidth, minWidth, className],
 	);
 
 	return (

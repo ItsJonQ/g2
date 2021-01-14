@@ -20,7 +20,7 @@ export function getBoxShadow(value) {
  * @return {string}
  */
 export function getShadow(value) {
-	if (is.number(value)) {
+	if (typeof value === 'number') {
 		return css({ boxShadow: getBoxShadow(value) });
 	}
 	if (!is.plainObject(value)) {

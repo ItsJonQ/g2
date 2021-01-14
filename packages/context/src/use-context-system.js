@@ -1,6 +1,7 @@
 import { css, cx } from '@wp-g2/styles';
+import { shallowCompare } from '@wp-g2/substate';
 import { memoize } from '@wp-g2/utils';
-import { kebabCase, omit, uniq } from 'lodash';
+import { kebabCase, uniq } from 'lodash';
 
 import { CONNECTED_NAMESPACE } from './constants';
 import { useContextStoreContext } from './context-system-provider';
@@ -21,11 +22,13 @@ import { ns } from './utils';
  * @return {ConnectedProps<P>}
  */
 export function useContextSystem(props, namespace) {
-	const { store } = useContextStoreContext();
-	const { context } = store();
-	let contextProps;
-
+	const { store: useStore } = useContextStoreContext();
 	const displayName = Array.isArray(namespace) ? namespace[0] : namespace;
+
+	const contextProps = useStore(
+		(state) => state?.context?.[displayName] || {},
+		shallowCompare,
+	);
 
 	/** @type {ConnectedProps<P>} */
 	// @ts-ignore We fill in the missing properties below
@@ -40,16 +43,15 @@ export function useContextSystem(props, namespace) {
 		}
 	}
 
-	contextProps =
-		context[displayName] ||
-		// Fallback
-		{};
+	const {
+		_overrides: overrideProps,
+		css: contextCSS,
+		...otherContextProps
+	} = contextProps;
 
-	const otherContextProps = omit(contextProps, ['_overrides', 'css']);
-	const contextCSS = contextProps.css;
-	const overrideProps = contextProps._overrides || {};
-
-	const initialMergedProps = Object.assign({}, otherContextProps, props);
+	const initialMergedProps = Object.entries(otherContextProps).length
+		? Object.assign({}, otherContextProps, props)
+		: props;
 
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider

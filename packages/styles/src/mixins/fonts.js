@@ -1,5 +1,3 @@
-import { is } from '@wp-g2/utils';
-
 import { get } from '../core';
 
 export const BASE_FONT_SIZE = 13;
@@ -25,9 +23,9 @@ export function getFontSize(size = BASE_FONT_SIZE) {
 		return getFontSize(PRESET_FONT_SIZES[size]);
 	}
 
-	if (!is.number(size)) return size;
+	if (typeof size !== 'number') return size;
 
-	const ratio = size / BASE_FONT_SIZE;
+	const ratio = /** @type {number} */ (size) / BASE_FONT_SIZE;
 	return `calc(${ratio} * ${get('fontSize')})`;
 }
 

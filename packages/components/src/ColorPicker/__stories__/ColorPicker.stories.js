@@ -1,6 +1,7 @@
+import { ui } from '@wp-g2/styles';
 import React from 'react';
 
-import { Container, Grid, VStack } from '../../index';
+import { Container, Grid, Heading, VStack } from '../../index';
 import { ColorPicker } from '../index';
 
 export default {
@@ -56,4 +57,31 @@ const Example = () => {
 
 export const _default = () => {
 	return <Example />;
+};
+
+export const HTMLPickerTest = () => {
+	const [color, setColor] = React.useState('#ff0000');
+
+	return (
+		<VStack>
+			<VStack>
+				<VStack>
+					<VStack>
+						<VStack>
+							<Heading size={1}>
+								<span aria-label="wave" role="img">
+									👋
+								</span>{' '}
+								{color}
+							</Heading>
+							<input
+								onChange={(e) => setColor(e.target.value)}
+								type="color"
+							/>
+						</VStack>
+					</VStack>
+				</VStack>
+			</VStack>
+		</VStack>
+	);
 };

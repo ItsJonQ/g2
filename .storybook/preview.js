@@ -22,7 +22,7 @@ import { useLocalState } from '@wp-g2/utils';
 import { StatsGraph } from '@helpscout/stats';
 import * as themes from './themes';
 
-const __EXPERIMENTAL_SHOW_HINT = true;
+const __EXPERIMENTAL_SHOW_HINT = false;
 
 const FormGroup = ({ children, ...props }) => {
 	return (
