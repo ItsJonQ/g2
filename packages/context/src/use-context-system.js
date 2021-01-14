@@ -1,7 +1,7 @@
 import { css, cx } from '@wp-g2/styles';
 import { shallowCompare } from '@wp-g2/substate';
 import { memoize } from '@wp-g2/utils';
-import { kebabCase, omit, uniq } from 'lodash';
+import { kebabCase, uniq } from 'lodash';
 
 import { CONNECTED_NAMESPACE } from './constants';
 import { useContextStoreContext } from './context-system-provider';
@@ -43,11 +43,15 @@ export function useContextSystem(props, namespace) {
 		}
 	}
 
-	const otherContextProps = omit(contextProps, ['_overrides', 'css']);
-	const contextCSS = contextProps.css;
-	const overrideProps = contextProps._overrides || {};
+	const {
+		_overrides: overrideProps,
+		css: contextCSS,
+		...otherContextProps
+	} = contextProps;
 
-	const initialMergedProps = Object.assign({}, otherContextProps, props);
+	const initialMergedProps = Object.entries(otherContextProps).length
+		? Object.assign({}, otherContextProps, props)
+		: props;
 
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider
