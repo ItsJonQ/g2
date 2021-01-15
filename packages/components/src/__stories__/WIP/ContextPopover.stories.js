@@ -1,7 +1,7 @@
 import { FiMinus, FiPlus } from '@wp-g2/icons';
 import { faker, Schema } from '@wp-g2/protokit';
 import { ui } from '@wp-g2/styles';
-import { chunk } from '@wp-g2/utils';
+import { chunk } from 'lodash';
 import React, { useState } from 'react';
 
 import {

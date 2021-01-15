@@ -66,8 +66,8 @@ function Popover(props, forwardedRef) {
 		<PopoverContext.Provider value={contextProps}>
 			{trigger && (
 				<PopoverDisclosure
-					{...popover}
 					ref={trigger.ref}
+					{...popover}
 					{...trigger.props}
 				>
 					{triggerContent}

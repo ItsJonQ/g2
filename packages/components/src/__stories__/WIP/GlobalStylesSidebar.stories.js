@@ -1,12 +1,18 @@
-import { ContextSystemProvider } from '@wp-g2/context';
 import { FiChevronLeft, FiDroplet, FiGrid, FiPlus, FiType } from '@wp-g2/icons';
 import { styled, ui } from '@wp-g2/styles';
+import { createStore, shallowCompare } from '@wp-g2/substate';
+import _ from 'lodash';
 import React from 'react';
 
 import {
+	Animated,
+	AnimatedContainer,
 	Button,
+	Card,
 	CardBody,
+	CardHeader,
 	ColorControl,
+	ContextSystemProvider,
 	Divider,
 	FormGroup,
 	Grid,
@@ -23,13 +29,16 @@ import {
 	Panel,
 	PanelBody,
 	PanelHeader,
+	Popover,
 	SegmentedControl,
 	Select,
+	SelectDropdown,
 	Slider,
 	Spacer,
 	Surface,
 	Text,
 	TextInput,
+	UnitInput,
 	useNavigatorHistory,
 	useNavigatorLocation,
 	View,
@@ -37,6 +46,117 @@ import {
 
 export default {
 	title: 'Examples/WIP/GlobalStylesSidebar',
+};
+
+const globalStylesStore = createStore((set, get) => ({
+	global: {
+		typography: {
+			fontFamily: 'system-ui',
+			fontSize: '16px',
+			fontWeight: '400',
+			appearance: 'normal',
+			letterSpacing: '0px',
+			lineHeight: 1,
+		},
+	},
+	setAttribute: (prop) => (value) => {
+		if (prop) {
+			set((prev) => {
+				const next = _.set(prev, prop, value);
+				return { ...prev, ...next };
+			});
+		}
+	},
+	getBoundProps: (scope, prop) => {
+		return {
+			value: _.get(get(), scope)?.[prop],
+			onChange: get()?.setAttribute(`${scope}.${prop}`),
+		};
+	},
+}));
+
+const useGlobalStylesStore = globalStylesStore;
+
+const TypographyTools = ({ scope = 'global' }) => {
+	const [getBoundProps, setAttribute] = useGlobalStylesStore(
+		(state) => [state.getBoundProps, state.setAttribute],
+		shallowCompare,
+	);
+
+	const fontWeights = [
+		{ value: '100', label: '100' },
+		{ value: '200', label: '200' },
+		{ value: '300', label: '300' },
+		{ value: '400', label: '400' },
+		{ value: '500', label: '500' },
+		{ value: '600', label: '600' },
+		{ value: '700', label: '700' },
+		{ value: '800', label: '800' },
+		{ value: '900', label: '900' },
+	];
+	const fontWeight = fontWeights.find(
+		(item) =>
+			item.value ===
+			getBoundProps('global.typography', 'fontWeight').value,
+	);
+
+	console.log(getBoundProps('global.typography', 'lineHeight'));
+
+	return (
+		<CardBody>
+			<ListGroup>
+				<FormGroup label="Font">
+					<TextInput
+						{...getBoundProps('global.typography', 'fontFamily')}
+					/>
+				</FormGroup>
+				<Grid>
+					<FormGroup label="Size">
+						<UnitInput
+							cssProp="fontSize"
+							{...getBoundProps('global.typography', 'fontSize')}
+						/>
+					</FormGroup>
+					<FormGroup label="Weight">
+						<SelectDropdown
+							isPreviewable
+							minWidth={80}
+							onChange={(next) =>
+								setAttribute('global.typography.fontWeight')(
+									next.selectedItem.value,
+								)
+							}
+							options={fontWeights}
+							placement="bottom-end"
+							unstable_fixed
+							value={fontWeight}
+						/>
+					</FormGroup>
+				</Grid>
+				<Grid>
+					<FormGroup label="Line Height">
+						<TextInput
+							min={0}
+							type="number"
+							{...getBoundProps(
+								'global.typography',
+								'lineHeight',
+							)}
+						/>
+					</FormGroup>
+					<FormGroup label="Letter Spacing">
+						<UnitInput
+							cssProp="letterSpacing"
+							{...getBoundProps(
+								'global.typography',
+								'letterSpacing',
+							)}
+						/>
+					</FormGroup>
+				</Grid>
+			</ListGroup>
+		</CardBody>
+	);
 };
 
 const Screen = styled(Surface, { props: { variant: 'tertiary' } })`
@@ -139,7 +259,56 @@ const ColorsScreen = () => {
 	);
 };
 
+const TypographyPreview = () => {
+	const attributes = useGlobalStylesStore((state) =>
+		Object.entries(state.global.typography),
+	);
+	const style = Object.fromEntries(attributes);
+
+	return (
+		<View
+			css={{
+				position: 'fixed',
+				right: 290,
+				top: 50,
+				width: 280,
+				zIndex: 999,
+			}}
+		>
+			<Animated
+				animate={{ opacity: 1, x: 0 }}
+				exit={{ opacity: 0, x: 10 }}
+				initial={{ opacity: 0, x: 10 }}
+				key="typographyPreview"
+				transition={{ ease: 'linear', duration: 0.1 }}
+			>
+				<Card>
+					<CardHeader size="small">
+						<Heading size={6}>Preview</Heading>
+					</CardHeader>
+					<Surface backgroundSize={8} variant="dotted">
+						<CardBody
+							css={[
+								ui.alignment.content.center,
+								{ height: 160, overflow: 'hidden' },
+							]}
+						>
+							<div
+								contentEditable
+								style={{ ...style, outline: 'none' }}
+							>
+								Aa
+							</div>
+						</CardBody>
+					</Surface>
+				</Card>
+			</Animated>
+		</View>
+	);
+};
+
 const TypographyScreen = () => {
+	const [showPreview, setShowPreview] = React.useState(false);
 	const headings = [
 		{
 			label: <Text>H1</Text>,
@@ -172,6 +341,25 @@ const TypographyScreen = () => {
 				padding-top: 60px;
 			`}
 		>
+			<View>
+				<AnimatedContainer>
+					{showPreview && <TypographyPreview />}
+				</AnimatedContainer>
+				<PanelHeader>
+					<HStack>
+						<Heading size={5}>Heading</Heading>
+						<Button
+							isControl
+							isSubtle
+							onClick={() => setShowPreview((prev) => !prev)}
+							size="small"
+						>
+							Preview
+						</Button>
+					</HStack>
+				</PanelHeader>
+				<TypographyTools />
+			</View>
 			<Panel visible>
 				<PanelHeader title="Heading" />
 				<PanelBody>
@@ -284,9 +472,6 @@ const ButtonsScreen = () => {
 						<ColorControl color="#05f">Background</ColorControl>
 					</ListGroup>
 				</PanelBody>
-			</Panel>
-			<Panel>
-				<PanelHeader title="Behaviour" />
 			</Panel>
 			<Panel>
 				<PanelHeader title="Advanced" />
@@ -405,8 +590,8 @@ const Sidebar = ({ children }) => {
 };
 
 const Example = (props) => {
-	const initialPath = 'GlobalStyles';
-	// const initialPath = 'Typography';
+	// const initialPath = 'GlobalStyles';
+	const initialPath = 'Typography';
 	return (
 		<Navigator initialPath={initialPath}>
 			<GlobalStylesHeader />
