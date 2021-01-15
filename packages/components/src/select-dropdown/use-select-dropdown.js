@@ -3,12 +3,11 @@ import { css, cx, ui } from '@wp-g2/styles';
 import {
 	mergeRefs,
 	noop,
-	simpleEqual,
 	useResizeAware,
 	useUpdateEffect,
 } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
-import { useReducer } from 'react';
+import { useState } from 'react';
 import { useCallback, useEffect, useRef } from 'react';
 
 import { useFormGroupContextId } from '../FormGroup';
@@ -56,123 +55,6 @@ function useSelectDropdownPositioner({
 	};
 }
 
-/**
- * @typedef State
- * @property {boolean} isOpen
- * @property {unknown} value
- * @property {unknown} commitValue
- */
-
-/** @typedef {{ type: 'SET_VALUE', next: unknown }} SetValueAction */
-/** @typedef {{ type: 'RESET_VALUE' }} ResetValueAction */
-/** @typedef {{ type: 'SET_COMMIT_VALUE', next: unknown }} SetCommitValueAction */
-/** @typedef {{ type: 'SET_OPEN', next: boolean }} SetOpenAction */
-/** @typedef {
-	| SetValueAction
-	| ResetValueAction
-	| SetCommitValueAction
-	| SetOpenAction
-} Action
- */
-
-/**
- *
- * @param {State} state
- * @param {Action} action
- */
-const reducer = (state, action) => {
-	switch (action.type) {
-		case 'SET_VALUE': {
-			return {
-				...state,
-				value: action.next,
-			};
-		}
-		case 'RESET_VALUE': {
-			return {
-				...state,
-				value: state.commitValue,
-			};
-		}
-		case 'SET_COMMIT_VALUE': {
-			return {
-				...state,
-				commitValue: action.next,
-			};
-		}
-		case 'SET_OPEN': {
-			return {
-				...state,
-				isOpen: action.next,
-			};
-		}
-		default:
-			return state;
-	}
-};
-
-/**
- * @param {unknown} value
- * @return {State}
- */
-function useInitialState(value) {
-	return {
-		isOpen: false,
-		value,
-		commitValue: value,
-	};
-}
-
-function useSelectDropdownStore({ isPreviewable, onChange, value }) {
-	const initialState = useInitialState(value);
-	const [state, dispatch] = useReducer(reducer, initialState);
-
-	const resetValue = useCallback(() => dispatch({ type: 'RESET_VALUE' }), [
-		dispatch,
-	]);
-	const setValue = useCallback(
-		(/** @type {unknown} */ next) => dispatch({ type: 'SET_VALUE', next }),
-		[dispatch],
-	);
-	const setCommitValue = useCallback(
-		(/** @type {unknown} */ next) =>
-			dispatch({ type: 'SET_COMMIT_VALUE', next }),
-		[dispatch],
-	);
-	const setOpen = useCallback(
-		(/** @type {boolean} */ next) => dispatch({ type: 'SET_OPEN', next }),
-		[dispatch],
-	);
-
-	const store = {
-		...state,
-		resetValue,
-		setValue,
-		setCommitValue,
-		setOpen,
-	};
-
-	// Propogate (preview) value
-	useUpdateEffect(() => {
-		if (!isPreviewable) return;
-		onChange({ selectedItem: state.value });
-	}, [onChange, state.value, isPreviewable]);
-
-	// Propogate (selected/commit) value
-	useUpdateEffect(() => {
-		onChange({ selectedItem: state.commitValue });
-	}, [onChange, state.commitValue]);
-
-	// Sync incoming value.
-	useEffect(() => {
-		if (!store.isOpen && !simpleEqual(store.commitValue, value)) {
-			store.setCommitValue(value);
-		}
-	}, [value, store]);
-
-	return store;
-}
-
 export function useSelectDropdown(props) {
 	const {
 		className,
@@ -196,38 +78,32 @@ export function useSelectDropdown(props) {
 		size,
 		suffix,
 		textAlign,
-		value,
+		value: initialValue,
 		variant,
 		...otherProps
 	} = useContextSystem(props, 'SelectDropdown');
 
-	/**
-	 * Sets up internal store.
-	 *
-	 * This is used as a "bridge" between the incoming props and the Downshift
-	 * state reducer.
-	 */
-	const store = useSelectDropdownStore({ isPreviewable, value, onChange });
-	const { commitValue, setCommitValue, setValue } = store;
-	const currentItem = getSelectedItem(items, commitValue);
+	const [actualValue, setActualValue] = useState(initialValue);
+
+	const currentItem = getSelectedItem(items, actualValue);
 
 	/** @type {import('react').MutableRefObject<HTMLSelectElement>} */
 	const selectRef = useRef();
 
 	const handleOnChange = useCallback(
 		(next) => {
-			setCommitValue(next.selectedItem);
+			onChange(next);
 		},
-		[setCommitValue],
+		[onChange],
 	);
 
 	const handleOnHighlightChange = useCallback(
 		({ highlightedIndex }) => {
 			if (!isPreviewable) return;
 			const item = items[highlightedIndex];
-			setValue(item);
+			if (item) onChange({ selectedItem: item });
 		},
-		[isPreviewable, items, setValue],
+		[isPreviewable, items, onChange],
 	);
 
 	/**
@@ -252,6 +128,11 @@ export function useSelectDropdown(props) {
 		stateReducer,
 	});
 
+	useEffect(() => {
+		if (isPreviewable && isOpen) return;
+		setActualValue(initialValue);
+	}, [initialValue, isOpen, isPreviewable]);
+
 	/**
 	 * Sets up DOM render effects.
 	 */
@@ -275,18 +156,13 @@ export function useSelectDropdown(props) {
 	}, []);
 
 	const handleOnOpen = useCallback(() => {
-		store.setOpen(true);
-
 		onOpen();
-	}, [onOpen, store]);
+	}, [onOpen]);
 
 	const handleOnClose = useCallback(() => {
-		store.setOpen(false);
-		store.resetValue();
-
 		focusSelectButton();
 		onClose();
-	}, [focusSelectButton, onClose, store]);
+	}, [focusSelectButton, onClose]);
 
 	const _popoverProps = getMenuProps({
 		...ui.$('SelectDropdownPopover'),
