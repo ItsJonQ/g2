@@ -17,6 +17,7 @@ function Dropdown(props, forwardedRef) {
 		baseId,
 		children,
 		gutter = 4,
+		hideOnClickItem = false,
 		id,
 		label,
 		modal = true,
@@ -46,8 +47,15 @@ function Dropdown(props, forwardedRef) {
 			animationTimingFunction,
 			label: label || uniqueId,
 			menu,
+			hideOnClickItem,
 		};
-	}, [animationDuration, animationTimingFunction, label, menu]);
+	}, [
+		animationDuration,
+		animationTimingFunction,
+		hideOnClickItem,
+		label,
+		menu,
+	]);
 
 	return (
 		<DropdownContext.Provider ref={forwardedRef} value={contextProps}>

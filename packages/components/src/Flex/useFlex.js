@@ -27,6 +27,7 @@ export function useFlex(props) {
 		direction: directionProp = 'row',
 		expanded = true,
 		gap = 2,
+		isInline = false,
 		justify = 'space-between',
 		justifyContent,
 		wrap = false,
@@ -54,11 +55,12 @@ export function useFlex(props) {
 			[ui.createToken('FlexItemMarginLeft')]:
 				!isColumn && isReverse ? ui.get('FlexGap') : 0,
 			alignItems: alignItems || isColumn ? 'normal' : align,
+			display: isInline ? 'inline-flex' : 'flex',
 			flexDirection: direction,
 			flexWrap: wrap ? 'wrap' : undefined,
 			justifyContent: justifyContent || justify,
 			height: isColumn && expanded ? '100%' : undefined,
-			width: !isColumn && expanded ? '100%' : undefined,
+			width: !isColumn && expanded && !isInline ? '100%' : undefined,
 			/**
 			 * Workaround to optimize DOM rendering.
 			 * We'll enhance alignment with naive parent flex assumptions.
@@ -90,6 +92,7 @@ export function useFlex(props) {
 		expanded,
 		gap,
 		isColumn,
+		isInline,
 		isReverse,
 		justify,
 		justifyContent,

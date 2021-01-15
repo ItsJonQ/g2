@@ -29,10 +29,15 @@ function Panel(props, forwardedRef) {
 		className,
 	);
 
-	const [visible, setVisible] = useAccordion({
+	const [accordionVisible, setVisible] = useAccordion({
 		id,
 		visible: visibleProp,
 	});
+
+	const visible =
+		typeof accordionVisible === 'undefined'
+			? visibleProp
+			: accordionVisible;
 
 	const handleOnVisibleChange = useCallback(
 		(next, disclosure) => {
