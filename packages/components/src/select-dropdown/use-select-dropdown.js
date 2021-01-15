@@ -222,8 +222,6 @@ export function useSelectDropdown(props) {
 			index,
 			key: item.id || item.value || index,
 			style: item.style,
-			// @ts-ignore Unsupported property @todo(itsjonq) is this a real option?
-			isHighlighted: index === highlightedIndex,
 			isSelected: item === selectedItem,
 		}),
 	}));
