@@ -83,10 +83,21 @@ const BreadcrumbItem = ({ children, isCurrent, ...props }) => (
 const globalStylesStore = createStore((set, get) => ({
 	showPreview: false,
 	searchQuery: '',
+	previewScope: 'global',
 	global: {
 		typography: {
 			fontFamily: 'system-ui',
 			fontSize: '16px',
+			fontWeight: '400',
+			appearance: 'normal',
+			letterSpacing: '0px',
+			lineHeight: 1.5,
+		},
+	},
+	code: {
+		typography: {
+			fontFamily: 'courier new',
+			fontSize: '11px',
 			fontWeight: '400',
 			appearance: 'normal',
 			letterSpacing: '0px',
@@ -120,9 +131,11 @@ const globalStylesStore = createStore((set, get) => ({
 		};
 	},
 	setSearchQuery: (next) => set((prev) => ({ ...prev, searchQuery: next })),
+	setPreviewScope: (next) => set((prev) => ({ ...prev, previewScope: next })),
 	clearSearchQuery: (next) => set((prev) => ({ ...prev, searchQuery: '' })),
 	togglePreview: () =>
 		set((prev) => ({ ...prev, showPreview: !prev.showPreview })),
+	enableShowPreview: () => set((prev) => ({ ...prev, showPreview: true })),
 }));
 
 const useGlobalStylesStore = globalStylesStore;
@@ -132,7 +145,13 @@ const TypographyTools = ({ scope = 'global' }) => {
 		(state) => [state.getBoundProps, state.setAttribute],
 		shallowCompare,
 	);
-	const togglePreview = useGlobalStylesStore((state) => state.togglePreview);
+	const [
+		setPreviewScope,
+		enableShowPreview,
+	] = useGlobalStylesStore(({ enableShowPreview, setPreviewScope }) => [
+		setPreviewScope,
+		enableShowPreview,
+	]);
 
 	const fontWeights = [
 		{ value: '100', label: '100' },
@@ -172,7 +191,12 @@ const TypographyTools = ({ scope = 'global' }) => {
 							minWidth={100}
 							preventBodyScroll={false}
 						>
-							<DropdownMenuItem onClick={togglePreview}>
+							<DropdownMenuItem
+								onClick={() => {
+									enableShowPreview();
+									setPreviewScope(scope);
+								}}
+							>
 								Preview
 							</DropdownMenuItem>
 							<Separator />
@@ -296,7 +320,7 @@ const GlobalStylesScreen = () => {
 							title="Typography"
 							to="SiteTypography"
 						/>
-						<SettingLink meta="Core" title="Code" to="Paragraph" />
+						<SettingLink meta="Core" title="Code" to="Code" />
 						<SettingLink
 							meta="Core"
 							title="Columns"
@@ -331,9 +355,9 @@ const GlobalStylesScreen = () => {
 				<ListGroupHeader>Blocks</ListGroupHeader>
 				<Spacer mb={3} />
 				<ListGroup>
-					<SettingLink title="Code" to="Paragraph" />
-					<SettingLink title="Columns" to="Paragraph" />
-					<SettingLink title="Group" to="Paragraph" />
+					<SettingLink title="Code" to="Code" />
+					<SettingLink title="Columns" to="Columns" />
+					<SettingLink title="Group" to="Group" />
 					<SettingLink title="Paragraph" to="Paragraph" />
 				</ListGroup>
 			</CardBody>
@@ -434,8 +458,9 @@ const PreviewModal = React.memo(({ children }) => {
 });
 
 const TypographyPreview = () => {
+	const previewScope = useGlobalStylesStore((state) => state.previewScope);
 	const attributes = useGlobalStylesStore((state) =>
-		Object.entries(state.global.typography),
+		Object.entries(state[previewScope].typography),
 	);
 	const style = Object.fromEntries(attributes);
 
@@ -542,7 +567,7 @@ const OmniHeader = () => {
 
 const SiteTypographyScreen = () => (
 	<Screen>
-		<TypographyTools scope="global" visible />
+		<TypographyTools scope="global" />
 	</Screen>
 );
 
@@ -552,9 +577,15 @@ const SiteColorsScreen = () => (
 	</Screen>
 );
 
+const CodeScreen = () => (
+	<Screen>
+		<TypographyTools scope="code" />
+	</Screen>
+);
+
 const ParagraphScreen = () => (
 	<Screen>
-		<TypographyTools scope="paragraph" visible />
+		<TypographyTools scope="paragraph" />
 	</Screen>
 );
 
@@ -576,6 +607,24 @@ const screens = [
 		path: 'SiteColors',
 		title: 'Colors',
 		category: 'Site',
+	},
+	{
+		component: CodeScreen,
+		path: 'Code',
+		title: 'Code',
+		category: 'Core',
+	},
+	{
+		component: ParagraphScreen,
+		path: 'Columns',
+		title: 'Columns',
+		category: 'Core',
+	},
+	{
+		component: ParagraphScreen,
+		path: 'Group',
+		title: 'Group',
+		category: 'Core',
 	},
 	{
 		component: ParagraphScreen,
