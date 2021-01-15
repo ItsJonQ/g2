@@ -405,7 +405,6 @@ const PreviewModal = React.memo(({ children }) => {
 					<Surface
 						backgroundSize={8}
 						css={{ position: 'relative', paddingBottom: 16 }}
-						variant="dotted"
 					>
 						<View
 							css={{
