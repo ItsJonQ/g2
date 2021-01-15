@@ -83,7 +83,7 @@ export function useFlex(props) {
 			},
 		});
 
-		return cx(styles.Flex, sx.Base, className);
+		return cx(sx.Base, className);
 	}, [
 		align,
 		alignItems,

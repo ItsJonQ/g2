@@ -500,7 +500,7 @@ const OmniHeader = () => {
 	);
 
 	const currentScreen = useNavigatorCurrentScreen();
-	const { category, path, title } = currentScreen;
+	const { category, description, path, title } = currentScreen;
 	const isHome = path === 'GlobalStyles';
 
 	return (
@@ -547,7 +547,7 @@ const OmniHeader = () => {
 						</DropdownMenu>
 					</Dropdown>
 				</HStack>
-				<HStack css={{ minHeight: 30 }}>
+				<HStack css={{ minHeight: ui.get('controlHeight') }}>
 					{isHome ? (
 						<SearchInput
 							onChange={setSearchQuery}
@@ -556,7 +556,9 @@ const OmniHeader = () => {
 							value={searchQuery}
 						/>
 					) : (
-						<Heading size={4}>{title}</Heading>
+						<VStack>
+							<Heading size={4}>{title}</Heading>
+						</VStack>
 					)}
 				</HStack>
 			</VStack>
@@ -600,6 +602,7 @@ const screens = [
 		path: 'SiteTypography',
 		title: 'Typography',
 		category: 'Site',
+		description: 'Adjusts the typography for your entire site',
 	},
 	{
 		component: SiteColorsScreen,
