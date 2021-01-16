@@ -18,6 +18,7 @@ import React from 'react';
 import {
 	Animated,
 	AnimatedContainer,
+	Badge,
 	Button,
 	Card,
 	CardBody,
@@ -145,13 +146,6 @@ const TypographyTools = ({ scope = 'global' }) => {
 		(state) => [state.getBoundProps, state.setAttribute],
 		shallowCompare,
 	);
-	const [
-		setPreviewScope,
-		enableShowPreview,
-	] = useGlobalStylesStore(({ enableShowPreview, setPreviewScope }) => [
-		setPreviewScope,
-		enableShowPreview,
-	]);
 
 	const fontWeights = [
 		{ value: '100', label: '100' },
@@ -191,15 +185,6 @@ const TypographyTools = ({ scope = 'global' }) => {
 							minWidth={100}
 							preventBodyScroll={false}
 						>
-							<DropdownMenuItem
-								onClick={() => {
-									enableShowPreview();
-									setPreviewScope(scope);
-								}}
-							>
-								Preview
-							</DropdownMenuItem>
-							<Separator />
 							<DropdownMenuItem>Font</DropdownMenuItem>
 							<DropdownMenuItem>Spacing</DropdownMenuItem>
 							<DropdownMenuItem>Align</DropdownMenuItem>
@@ -499,8 +484,16 @@ const OmniHeader = () => {
 		shallowCompare,
 	);
 
+	const [
+		setPreviewScope,
+		enableShowPreview,
+	] = useGlobalStylesStore(({ enableShowPreview, setPreviewScope }) => [
+		setPreviewScope,
+		enableShowPreview,
+	]);
+
 	const currentScreen = useNavigatorCurrentScreen();
-	const { category, description, path, title } = currentScreen;
+	const { category, path, scope, title } = currentScreen;
 	const isHome = path === 'GlobalStyles';
 
 	return (
@@ -556,9 +549,21 @@ const OmniHeader = () => {
 							value={searchQuery}
 						/>
 					) : (
-						<VStack>
+						<HStack>
 							<Heading size={4}>{title}</Heading>
-						</VStack>
+							<Spacer />
+							<Button
+								isLink
+								onClick={() => {
+									setPreviewScope(scope);
+									enableShowPreview();
+								}}
+								size="xSmall"
+								variant="tertiary"
+							>
+								Preview
+							</Button>
+						</HStack>
 					)}
 				</HStack>
 			</VStack>
@@ -602,6 +607,7 @@ const screens = [
 		path: 'SiteTypography',
 		title: 'Typography',
 		category: 'Site',
+		scope: 'global',
 		description: 'Adjusts the typography for your entire site',
 	},
 	{
@@ -609,30 +615,35 @@ const screens = [
 		path: 'SiteColors',
 		title: 'Colors',
 		category: 'Site',
+		scope: 'global',
 	},
 	{
 		component: CodeScreen,
 		path: 'Code',
 		title: 'Code',
 		category: 'Core',
+		scope: 'code',
 	},
 	{
 		component: ParagraphScreen,
 		path: 'Columns',
 		title: 'Columns',
 		category: 'Core',
+		scope: 'paragraph',
 	},
 	{
 		component: ParagraphScreen,
 		path: 'Group',
 		title: 'Group',
 		category: 'Core',
+		scope: 'paragraph',
 	},
 	{
 		component: ParagraphScreen,
 		path: 'Paragraph',
 		title: 'Paragraph',
 		category: 'Core',
+		scope: 'paragraph',
 	},
 ];
 
