@@ -12,10 +12,10 @@ import { useColorPickerContext } from './ColorPicker.Context';
 
 export const ColorInputHex = React.memo(
 	({ label = __('Hex'), ...otherProps }) => {
-		const { store } = useColorPickerContext();
+		const store = useColorPickerContext();
 		const [value, setValue, increment, decrement] = [
-			store.hex(),
-			store.change.hex,
+			store.colorValues.hex(),
+			store.changeValues.hex,
 			store.increment,
 			store.decrement,
 		];

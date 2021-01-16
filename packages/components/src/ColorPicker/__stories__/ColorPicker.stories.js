@@ -1,5 +1,6 @@
 import { ui } from '@wp-g2/styles';
 import React from 'react';
+import tinyColor from 'tinycolor2';
 
 import { Container, Grid, Heading, VStack } from '../../index';
 import { ColorPicker } from '../index';
@@ -21,34 +22,25 @@ const Example = () => {
 			<p>
 				<strong>{color}</strong>
 			</p>
+
 			<VStack spacing={10}>
-				<Grid gap={8}>
-					<ColorPicker
-						color={color}
-						onChange={handleOnChange}
-						width={300}
-					/>
-					<ColorPicker
-						color={color}
-						onChange={setColor}
-						width={300}
-					/>
-				</Grid>
 				<Grid gap={8}>
 					<ColorPicker
 						color={color}
 						disableAlpha={false}
 						inputType="rgb"
-						onChange={setColor}
+						onChange={handleOnChange}
 						width={300}
 					/>
-					<ColorPicker
-						color={color}
-						disableAlpha={false}
-						inputType="hsl"
-						onChange={setColor}
-						width={300}
-					/>
+					<div>
+						<button
+							onClick={() =>
+								setColor(tinyColor.random().toRgbString())
+							}
+						>
+							Set Random Color
+						</button>
+					</div>
 				</Grid>
 			</VStack>
 		</Container>

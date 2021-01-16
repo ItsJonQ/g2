@@ -3,9 +3,8 @@ import { RgbaStringColorPicker } from 'react-colorful';
 
 import { useColorPickerContext } from './ColorPicker.Context';
 
-export const ColorPickerElement = React.memo(({ onChange, width }) => {
-	const { store } = useColorPickerContext();
-	const color = store.colorForElement;
+export const ColorPickerElement = React.memo(({ width }) => {
+	const { color, onChange } = useColorPickerContext();
 
 	return (
 		<RgbaStringColorPicker

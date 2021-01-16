@@ -1,6 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
-import { is, noop, useControlledState, useResizeAware } from '@wp-g2/utils';
+import { is, noop, useResizeAware } from '@wp-g2/utils';
 import React from 'react';
 import { useCallback, useRef, useState } from 'react';
 
@@ -40,9 +40,7 @@ export function useSelect(props) {
 		...otherProps
 	} = useContextSystem(props, 'Select');
 
-	const [value, setValue] = useControlledState(valueProp, {
-		initial: multiple ? [] : defaultValue,
-	});
+	const value = valueProp || (multiple ? [] : defaultValue);
 	const [isFocused, setIsFocused] = useState(isFocusedProp);
 	const [resizer, sizes] = useResizeAware();
 	/** @type {import('react').Ref<HTMLSelectElement | undefined>} */
@@ -100,10 +98,9 @@ export function useSelect(props) {
 				next = event.target.value;
 			}
 
-			setValue(next);
 			onChange(next, { event });
 		},
-		[multiple, setValue, onChange],
+		[multiple, onChange],
 	);
 
 	const shouldRenderPlaceholder =

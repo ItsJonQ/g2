@@ -13,10 +13,8 @@ import { useColorPicker } from './useColorPicker';
 const { ColorPickerView } = styles;
 
 function ColorPicker(props, forwardedRef) {
-	const { onChange, store, width, ...otherProps } = useColorPicker(props);
-
-	const contextProps = React.useMemo(() => ({ store }), [store]);
-
+	const { store, width, ...otherProps } = useColorPicker(props);
+	const contextProps = store;
 	const vStackClasses = cx(css({ width }));
 
 	return (
@@ -27,7 +25,7 @@ function ColorPicker(props, forwardedRef) {
 				isExpanded={false}
 			>
 				<ColorPickerView {...otherProps} ref={forwardedRef}>
-					<ColorPickerElement onChange={onChange} width={width} />
+					<ColorPickerElement width={width} />
 				</ColorPickerView>
 				<VStack alignment="top" isExpanded={false}>
 					<ColorPickerSelect />

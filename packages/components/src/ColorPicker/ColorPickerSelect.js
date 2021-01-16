@@ -1,5 +1,4 @@
 import { ui } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
 import { Grid } from '../Grid';
@@ -8,14 +7,17 @@ import { useColorPickerContext } from './ColorPicker.Context';
 import { ColorPickerPreview } from './ColorPickerPreview';
 
 export const ColorPickerSelect = React.memo(() => {
-	const { store } = useColorPickerContext();
-	const { inputType: value, showPreview } = store;
+	const {
+		inputType: value,
+		setInputType,
+		showPreview,
+	} = useColorPickerContext();
 
 	const handleOnChange = React.useCallback(
 		(next) => {
-			store.setInputType(next);
+			setInputType(next);
 		},
-		[store],
+		[setInputType],
 	);
 
 	const templateColumns = showPreview
