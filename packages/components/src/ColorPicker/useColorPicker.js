@@ -50,22 +50,25 @@ export function useColorPicker(props) {
 	const handleOnChange = useCallback(
 		(next) => {
 			let result = ui.color(next).toHexString();
+			let data = result;
 
 			switch (format) {
 				case 'rgb':
 					result = ui.color(next).toRgbString();
-					break;
-				case 'hex':
-					result = ui.color(next).toHexString();
+					data = ui.color(next).toRgb();
 					break;
 				case 'hsl':
 					result = ui.color(next).toHslString();
+					data = ui.color(next).toHsl();
+					break;
+				case 'hex':
+					result = ui.color(next).toHexString();
 					break;
 				default:
 					break;
 			}
 
-			onChange(result);
+			onChange(result, data);
 		},
 		[format, onChange],
 	);
