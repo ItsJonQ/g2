@@ -1,14 +1,13 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
-import { shallowCompare, useSubState } from '@wp-g2/substate';
 import {
 	mergeRefs,
 	noop,
-	simpleEqual,
 	useResizeAware,
 	useUpdateEffect,
 } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
+import { useState } from 'react';
 import { useCallback, useEffect, useRef } from 'react';
 
 import { useFormGroupContextId } from '../FormGroup';
@@ -56,58 +55,6 @@ function useSelectDropdownPositioner({
 	};
 }
 
-function useSelectDropdownStore({ isPreviewable, onChange, value }) {
-	const store = useSubState((set, get) => ({
-		// State
-		isOpen: false,
-		value,
-		commitValue: value,
-
-		// Actions
-		resetValue: () => {
-			set({ value: get().commitValue });
-		},
-		setValue: (next) => {
-			if (next) {
-				set({ value: next });
-			}
-		},
-		setCommitValue: (next) => set({ commitValue: next }),
-		setOpen: (isOpen) => set({ isOpen }),
-	}));
-
-	// Propogate (preview) value
-	useEffect(() => {
-		if (!isPreviewable) return;
-		return store.subscribe(
-			(value) => onChange({ selectedItem: value }),
-			(state) => state.value,
-			shallowCompare,
-		);
-	}, [onChange, store, isPreviewable]);
-
-	// Propogate (selected/commit) value
-	useEffect(() => {
-		return store.subscribe(
-			(value) => onChange({ selectedItem: value }),
-			(state) => state.commitValue,
-			shallowCompare,
-		);
-	}, [onChange, store]);
-
-	// Sync incoming value.
-	useUpdateEffect(() => {
-		if (
-			!store.getState().isOpen &&
-			!simpleEqual(store.getState().commitValue, value)
-		) {
-			store.getState().setCommitValue(value);
-		}
-	}, [value, store]);
-
-	return store;
-}
-
 export function useSelectDropdown(props) {
 	const {
 		className,
@@ -131,40 +78,32 @@ export function useSelectDropdown(props) {
 		size,
 		suffix,
 		textAlign,
-		value,
+		value: initialValue,
 		variant,
 		...otherProps
 	} = useContextSystem(props, 'SelectDropdown');
 
-	/**
-	 * Sets up internal store.
-	 *
-	 * This is used as a "bridge" between the incoming props and the Downshift
-	 * state reducer.
-	 */
-	const store = useSelectDropdownStore({ isPreviewable, value, onChange });
-	const { commitValue } = store(
-		(state) => ({ commitValue: state.commitValue }),
-		shallowCompare,
-	);
-	const currentItem = getSelectedItem(items, commitValue);
+	const [actualValue, setActualValue] = useState(initialValue);
 
+	const currentItem = getSelectedItem(items, actualValue);
+
+	/** @type {import('react').MutableRefObject<HTMLSelectElement>} */
 	const selectRef = useRef();
 
 	const handleOnChange = useCallback(
 		(next) => {
-			store.getState().setCommitValue(next.selectedItem);
+			onChange(next);
 		},
-		[store],
+		[onChange],
 	);
 
 	const handleOnHighlightChange = useCallback(
 		({ highlightedIndex }) => {
 			if (!isPreviewable) return;
 			const item = items[highlightedIndex];
-			store.getState().setValue(item);
+			if (item) onChange({ selectedItem: item });
 		},
-		[isPreviewable, items, store],
+		[isPreviewable, items, onChange],
 	);
 
 	/**
@@ -189,6 +128,11 @@ export function useSelectDropdown(props) {
 		stateReducer,
 	});
 
+	useEffect(() => {
+		if (isPreviewable && isOpen) return;
+		setActualValue(initialValue);
+	}, [initialValue, isOpen, isPreviewable]);
+
 	/**
 	 * Sets up DOM render effects.
 	 */
@@ -212,18 +156,13 @@ export function useSelectDropdown(props) {
 	}, []);
 
 	const handleOnOpen = useCallback(() => {
-		store.getState().setOpen(true);
-
 		onOpen();
-	}, [onOpen, store]);
+	}, [onOpen]);
 
 	const handleOnClose = useCallback(() => {
-		store.getState().setOpen(false);
-		store.getState().resetValue();
-
 		focusSelectButton();
 		onClose();
-	}, [focusSelectButton, onClose, store]);
+	}, [focusSelectButton, onClose]);
 
 	const _popoverProps = getMenuProps({
 		...ui.$('SelectDropdownPopover'),
@@ -283,7 +222,6 @@ export function useSelectDropdown(props) {
 			index,
 			key: item.id || item.value || index,
 			style: item.style,
-			isHighlighted: index === highlightedIndex,
 			isSelected: item === selectedItem,
 		}),
 	}));

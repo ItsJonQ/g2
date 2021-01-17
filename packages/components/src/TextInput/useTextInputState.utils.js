@@ -1,84 +1,9 @@
-import { shallowCompare, useSubState } from '@wp-g2/substate';
-import { clearSelection, noop, useUpdateEffect } from '@wp-g2/utils';
+import { clearSelection } from '@wp-g2/utils';
+import { noop } from 'lodash';
 import React from 'react';
 import { useDrag } from 'react-use-gesture';
 
 import * as styles from './TextInput.styles';
-
-/** @typedef {import('@wp-g2/substate').UseStore<{
-	isShiftKey: boolean;
-	shiftStep: number;
-	step: number;
-	getShiftValue: () => number;
-}>} ShiftStepState */
-
-/**
- * @param {object} options
- * @param {number} [options.shiftStep=10]
- * @param {number} [options.step=1]
- */
-export const useShiftStepState = ({ shiftStep = 10, step = 1 }) => {
-	/** @type {ShiftStepState} */
-	const shiftStepStore = useSubState((set, get) => ({
-		isShiftKey: /** @type {boolean} */ (false),
-		step,
-		shiftStep,
-
-		// Selectors
-		getShiftValue: () => {
-			const { isShiftKey } = get();
-
-			if (isShiftKey) {
-				return shiftStep * step;
-			}
-
-			return step;
-		},
-	}));
-
-	React.useEffect(() => {
-		const handleOnKeyPress = (event) => {
-			const { shiftKey } = event;
-
-			if (shiftStepStore.getState().isShiftKey !== shiftKey) {
-				shiftStepStore.setState({
-					isShiftKey: shiftKey,
-				});
-			}
-		};
-
-		window.addEventListener('keydown', handleOnKeyPress);
-		window.addEventListener('keyup', handleOnKeyPress);
-
-		return () => {
-			window.removeEventListener('keydown', handleOnKeyPress);
-			window.removeEventListener('keyup', handleOnKeyPress);
-		};
-	}, [shiftStepStore]);
-
-	const isShiftKey = shiftStepStore(
-		({ isShiftKey }) => isShiftKey,
-		shallowCompare,
-	);
-
-	return {
-		shiftStepStore,
-		isShiftKey,
-	};
-};
-
-export function useControlledValue({ store, value: incomingValue }) {
-	useUpdateEffect(() => {
-		if (incomingValue === store.getState().value) return;
-		store.getState().changeSync(incomingValue);
-	}, [incomingValue, store]);
-
-	const value = store((state) => state.value, shallowCompare);
-
-	return {
-		value,
-	};
-}
 
 export function useBaseDragHandlers({
 	decrement,

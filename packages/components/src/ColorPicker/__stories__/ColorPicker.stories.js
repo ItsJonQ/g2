@@ -51,6 +51,36 @@ export const _default = () => {
 	return <Example />;
 };
 
+export const BasicTest = () => {
+	const [color, setColor] = React.useState('red');
+
+	const handleOnChange = (next, data) => {
+		setColor(next);
+	};
+
+	return (
+		<Container>
+			<p>
+				<strong>{color}</strong>
+			</p>
+			<VStack spacing={10}>
+				<Grid gap={8}>
+					<ColorPicker
+						color={color}
+						onChange={handleOnChange}
+						width={300}
+					/>
+					<input
+						onChange={(e) => setColor(e.target.value)}
+						type="color"
+						value={ui.color(color).toHexString()}
+					/>
+				</Grid>
+			</VStack>
+		</Container>
+	);
+};
+
 export const HTMLPickerTest = () => {
 	const [color, setColor] = React.useState('#ff0000');
 

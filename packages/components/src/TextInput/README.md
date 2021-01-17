@@ -15,9 +15,10 @@ keywords: ['textinput', 'form control', 'input', 'field', 'textarea']
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
--   [Usage](#usage)
--   [Props](#props)
--   [See Also](#see-also)
+
+- [Usage](#usage)
+- [Props](#props)
+- [See Also](#see-also)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -192,12 +193,6 @@ Callback function when the `value` is committed.
 **Type**: `Function`
 
 Callback function when the height changes with a multiline `TextInput`.
-
-##### onValueChange
-
-**Type**: `Function`
-
-Callback function when the `value` changes.
 
 ##### prefix
 

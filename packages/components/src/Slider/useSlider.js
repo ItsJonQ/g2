@@ -6,6 +6,7 @@ import {
 	is,
 	noop,
 	parseUnitValue,
+	useControlledValue,
 } from '@wp-g2/utils';
 import { useCallback, useMemo, useState } from 'react';
 
@@ -28,7 +29,7 @@ export function useSlider(props) {
 		defaultValue,
 		error,
 		onBlur = noop,
-		onChange = noop,
+		onChange: onChangeProp = noop,
 		onFocus = noop,
 		id: idProp,
 		isFocused: isFocusedProp = false,
@@ -39,8 +40,14 @@ export function useSlider(props) {
 		value: valueProp,
 		...otherProps
 	} = useContextSystem(props, 'Slider');
-	const [initialValue, initialUnit] = parseUnitValue(valueProp);
-	const value = initialValue || defaultValue || 50;
+
+	const [_value, onChange] = useControlledValue({
+		value: valueProp,
+		onChange: onChangeProp,
+		defaultValue: defaultValue || 50,
+	});
+	const [value, initialUnit] = parseUnitValue(_value);
+
 	const id = useFormGroupContextId(idProp);
 	const [isFocused, setIsFocused] = useState(isFocusedProp);
 

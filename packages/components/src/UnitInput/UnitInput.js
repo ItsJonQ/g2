@@ -1,6 +1,5 @@
 import { contextConnect } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
 import { TextInput } from '../TextInput';
@@ -9,21 +8,18 @@ import { useUnitInput } from './useUnitInput';
 
 /**
  * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./useUnitInput').Props, 'input'>} props
- * @param {import('react').Ref<any>} ref
+ * @param {import('react').Ref<any>} forwardedRef
  */
-export function UnitInput(props, ref) {
+export function UnitInput(props, forwardedRef) {
 	const {
 		disabled,
 		onSelectChange,
-		unitStore,
-		...unitInputProps
-	} = useUnitInput(props, ref);
-	const [value, unit] = unitStore(
-		(state) => [state.parsedValue, state.unit],
-		shallowCompare,
-	);
+		unit,
+		value,
+		...otherProps
+	} = useUnitInput(props);
 
-	const suffix = (
+	const suffix = unit && (
 		<UnitInputSelect
 			disabled={disabled}
 			onSelectChange={onSelectChange}
@@ -33,10 +29,11 @@ export function UnitInput(props, ref) {
 
 	return (
 		<TextInput
-			{...unitInputProps}
+			{...otherProps}
 			{...ui.$('UnitInput')}
 			disabled={disabled}
 			format="number"
+			ref={forwardedRef}
 			suffix={suffix}
 			type="text"
 			value={value}
