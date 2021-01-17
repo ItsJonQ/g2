@@ -1,7 +1,6 @@
 import { css, styled, ui } from '@wp-g2/styles';
 
-const alphaPatternSvg =
-	'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><rect x="8" width="8" height="8"/><rect y="8" width="8" height="8"/></svg>';
+const alphaPatternSvg = `url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><path d="M8 0h8v8H8zM0 8h8v8H0z"/></svg>')`;
 
 /**
  * Styles absorbed from:
@@ -67,7 +66,7 @@ export const ColorPickerView = styled.div`
 	}
 
 	.react-colorful__last-control {
-		border-radius: 0 0 8px 8px;
+		border-radius: 0 0 3px 3px;
 	}
 
 	.react-colorful__interactive {
@@ -103,7 +102,7 @@ export const ColorPickerView = styled.div`
 	.react-colorful__alpha,
 	.react-colorful__alpha-pointer {
 		background-color: #fff;
-		background-image: url(${alphaPatternSvg});
+		background-image: ${alphaPatternSvg};
 	}
 
 	/* Display the saturation pointer over the hue one */
@@ -122,6 +121,10 @@ export const ColorPickerView = styled.div`
 
 	.react-colorful__saturation {
 		order: 1;
+	}
+
+	.react-colorful__alpha {
+		order: 2;
 	}
 `;
 
