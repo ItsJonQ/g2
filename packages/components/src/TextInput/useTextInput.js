@@ -1,6 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { useBaseField } from '../BaseField';
@@ -8,7 +8,23 @@ import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
 import { useTextInputState } from './useTextInputState';
 
-const useRootEventHandlers = ({ dragHandlers, inputRef }) => {
+const useRootEventHandlers = ({
+	dragHandlers,
+	inputRef,
+	isFocused,
+	isTypeNumeric,
+}) => {
+	const canScroll = isTypeNumeric && isFocused;
+
+	useEffect(() => {
+		const handleOnWheel = () => {
+			if (!canScroll) return;
+		};
+		inputRef.current.addEventListener('wheel', handleOnWheel, {
+			passive: false,
+		});
+	}, [inputRef, canScroll]);
+
 	const handleOnClick = useCallback(() => {
 		inputRef.current.focus();
 	}, [inputRef]);
@@ -71,6 +87,7 @@ export function useTextInput(props) {
 		isFocused,
 		isInputTypeNumeric,
 		isTypeNumeric,
+		scrollHandlers,
 		value,
 		...textInputState
 	} = useTextInputState({
@@ -92,6 +109,8 @@ export function useTextInput(props) {
 	const rootEventHandlers = useRootEventHandlers({
 		inputRef,
 		dragHandlers,
+		isTypeNumeric,
+		isFocused,
 	});
 
 	const baseFieldProps = useBaseField({

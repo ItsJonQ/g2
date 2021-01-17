@@ -225,20 +225,29 @@ function useNumberKeyboardHandlers({
 	};
 }
 
-const useScrollHandlers = ({ decrement, increment, isTypeNumeric }) => {
+const useScrollHandlers = ({
+	decrement,
+	increment,
+	isFocused,
+	isTypeNumeric,
+}) => {
 	const handleOnWheel = React.useCallback(
 		(event) => {
 			if (!isTypeNumeric) return;
+			if (!isFocused) return;
 			if (event?.deltaY === 0) return;
 
 			const isScrollUp = event?.deltaY < 0;
+
 			if (isScrollUp) {
 				increment();
 			} else {
 				decrement();
 			}
+
+			return false;
 		},
-		[decrement, increment, isTypeNumeric],
+		[decrement, increment, isFocused, isTypeNumeric],
 	);
 
 	return {
@@ -348,8 +357,9 @@ export function useTextInputState(props) {
 	);
 
 	const scrollHandlers = useScrollHandlers({
-		increment,
 		decrement,
+		increment,
+		isFocused,
 		isTypeNumeric,
 	});
 
