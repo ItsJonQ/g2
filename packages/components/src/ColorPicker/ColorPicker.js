@@ -13,8 +13,11 @@ import { useColorPicker } from './useColorPicker';
 const { ColorPickerView } = styles;
 
 function ColorPicker(props, forwardedRef) {
-	const { store, width, ...otherProps } = useColorPicker(props);
+	const { className, store, width, ...otherProps } = useColorPicker(props);
 	const contextProps = store;
+	const { disableAlpha } = store;
+
+	const classes = cx(disableAlpha && styles.disableAlpha, className);
 	const vStackClasses = cx(css({ width }));
 
 	return (
@@ -24,7 +27,11 @@ function ColorPicker(props, forwardedRef) {
 				className={vStackClasses}
 				isExpanded={false}
 			>
-				<ColorPickerView {...otherProps} ref={forwardedRef}>
+				<ColorPickerView
+					{...otherProps}
+					className={classes}
+					ref={forwardedRef}
+				>
 					<ColorPickerElement width={width} />
 				</ColorPickerView>
 				<VStack alignment="top" isExpanded={false}>

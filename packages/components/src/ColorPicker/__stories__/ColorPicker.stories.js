@@ -27,7 +27,6 @@ const Example = () => {
 				<Grid gap={8}>
 					<ColorPicker
 						color={color}
-						disableAlpha={false}
 						inputType="rgb"
 						onChange={handleOnChange}
 						width={300}
