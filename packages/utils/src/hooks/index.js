@@ -4,6 +4,7 @@ export * from './use-controlled-value';
 export * from './use-isomorphic-layout-effect';
 export * from './use-local-state';
 export * from './use-media-query';
+export * from './use-prop-ref';
 export * from './use-resize-aware';
 export * from './use-sealed-state';
 export * from './use-unique-id';

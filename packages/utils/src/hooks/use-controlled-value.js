@@ -1,5 +1,5 @@
 import { isNil } from 'lodash';
-import React from 'react';
+import { useState } from 'react';
 
 /**
  * Simplified and improved implementation of useControlledState.
@@ -17,7 +17,7 @@ export function useControlledValue({
 	const hasValue = !isNil(valueProp);
 	const initialValue = hasValue ? valueProp : defaultValue;
 
-	const [state, setState] = React.useState(initialValue);
+	const [state, setState] = useState(initialValue);
 
 	const value = hasValue ? valueProp : state;
 	const setValue = hasValue && !isNil(onChange) ? onChange : setState;

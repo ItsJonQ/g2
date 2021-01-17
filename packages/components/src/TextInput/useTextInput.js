@@ -20,9 +20,11 @@ const useRootEventHandlers = ({
 		const handleOnWheel = () => {
 			if (!canScroll) return;
 		};
-		inputRef.current.addEventListener('wheel', handleOnWheel, {
-			passive: false,
-		});
+		if (inputRef.current.addEventListener) {
+			inputRef.current.addEventListener('wheel', handleOnWheel, {
+				passive: false,
+			});
+		}
 	}, [inputRef, canScroll]);
 
 	const handleOnClick = useCallback(() => {
@@ -45,7 +47,6 @@ const useRootEventHandlers = ({
  * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'input'>} props
  */
 export function useTextInput(props) {
-	const combinedProps = useContextSystem(props, 'TextInput');
 	const {
 		align,
 		arrows = true,
@@ -57,6 +58,7 @@ export function useTextInput(props) {
 		format,
 		gap = 2.5,
 		id: idProp,
+		incrementFromNonNumericValue = false,
 		isCommitOnBlurOrEnter = true,
 		isFocused: isFocusedProp,
 		isInline = false,
@@ -75,7 +77,7 @@ export function useTextInput(props) {
 		validate,
 		value: valueProp,
 		...otherProps
-	} = combinedProps;
+	} = useContextSystem(props, 'TextInput');
 
 	const id = useFormGroupContextId(idProp);
 
@@ -94,6 +96,7 @@ export function useTextInput(props) {
 		...otherProps,
 		format,
 		defaultValue,
+		incrementFromNonNumericValue,
 		isCommitOnBlurOrEnter,
 		isFocused: isFocusedProp,
 		isShiftStepEnabled,
