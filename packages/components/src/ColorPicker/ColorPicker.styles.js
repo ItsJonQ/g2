@@ -31,6 +31,7 @@ export const ColorPickerView = styled.div`
 	}
 
 	.react-colorful__saturation {
+		border-radius: 0;
 		order: 2;
 	}
 

@@ -37,6 +37,7 @@ export function useColorPicker(props) {
 		alpha,
 		color,
 		disableAlpha = true,
+		format = 'rgb',
 		inputType: initialInputType = 'hex',
 		onChange = noop,
 		showPreview = true,
@@ -48,9 +49,25 @@ export function useColorPicker(props) {
 
 	const handleOnChange = useCallback(
 		(next) => {
-			onChange(next);
+			let result = ui.color(next).toHexString();
+
+			switch (format) {
+				case 'rgb':
+					result = ui.color(next).toRgbString();
+					break;
+				case 'hex':
+					result = ui.color(next).toHexString();
+					break;
+				case 'hsl':
+					result = ui.color(next).toHslString();
+					break;
+				default:
+					break;
+			}
+
+			onChange(result);
 		},
-		[onChange],
+		[format, onChange],
 	);
 
 	const colorValues = {
@@ -121,6 +138,7 @@ export function useColorPicker(props) {
 		width,
 		store: {
 			color: getColor(color),
+			colorRgb: ui.color(color).toRgb(),
 			colorValue: getColorValue(color, inputType),
 			disableAlpha,
 			inputType,
