@@ -1,6 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { shallowCompare } from '@wp-g2/substate';
-import { interpolate, is, noop, roundClamp } from '@wp-g2/utils';
+import { interpolate, is, roundClamp } from '@wp-g2/utils';
 import React from 'react';
 
 import { FormGroup } from '../FormGroup';
