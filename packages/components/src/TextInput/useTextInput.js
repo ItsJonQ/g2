@@ -9,12 +9,13 @@ import * as styles from './TextInput.styles';
 import { useTextInputState } from './useTextInputState';
 
 const useRootEventHandlers = ({
-	dragHandlers,
+	dragHandlersRef,
 	inputRef,
 	isFocused,
 	isTypeNumeric,
 }) => {
 	const canScroll = isTypeNumeric && isFocused;
+	const dragHandlers = dragHandlersRef.current;
 
 	useEffect(() => {
 		const handleOnWheel = () => {
@@ -83,7 +84,7 @@ export function useTextInput(props) {
 
 	const {
 		decrement,
-		dragHandlers,
+		dragHandlersRef,
 		increment,
 		inputRef,
 		isFocused,
@@ -111,7 +112,7 @@ export function useTextInput(props) {
 
 	const rootEventHandlers = useRootEventHandlers({
 		inputRef,
-		dragHandlers,
+		dragHandlersRef,
 		isTypeNumeric,
 		isFocused,
 	});
@@ -171,7 +172,7 @@ export function useTextInput(props) {
 		decrement,
 		disabled,
 		dragAxis,
-		dragHandlers,
+		dragHandlersRef,
 		format,
 		increment,
 		inputProps,

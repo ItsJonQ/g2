@@ -21,7 +21,8 @@ import * as styles from './TextInput.styles';
  * @param {import('react').Ref<any>} forwardedRef
  */
 function TextInputArrows(props, forwardedRef) {
-	const { decrement, dragHandlers, increment } = props;
+	const { decrement, dragHandlersRef, increment } = props;
+	const dragHandlers = dragHandlersRef.current;
 
 	return (
 		<View className={styles.SpinnerWrapper}>

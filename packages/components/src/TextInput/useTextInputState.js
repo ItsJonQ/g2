@@ -357,6 +357,8 @@ export function useTextInputState(props) {
 		dragAxis,
 	});
 
+	const dragHandlersRef = usePropRef(dragHandlers);
+
 	const baseKeyboardHandlers = useKeyboardHandlers({
 		onChange: isCommitOnBlurOrEnter ? handleOnCommit : noop,
 	});
@@ -391,7 +393,7 @@ export function useTextInputState(props) {
 		...handlers,
 		...otherProps,
 		decrement,
-		dragHandlers,
+		dragHandlersRef,
 		increment,
 		inputRef,
 		isFocused,

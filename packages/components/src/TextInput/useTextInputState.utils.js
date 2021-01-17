@@ -85,14 +85,3 @@ export function useBaseDragHandlers({
 
 	return gestures;
 }
-
-export function useDragHandlers({ decrement, increment, store }) {
-	const { dragAxis, isTypeNumeric } = store.getState();
-
-	return useBaseDragHandlers({
-		dragAxis,
-		isTypeNumeric,
-		increment,
-		decrement,
-	});
-}
