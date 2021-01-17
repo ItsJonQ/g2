@@ -2,7 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { search } from '@wordpress/icons';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
-import { mergeRefs, noop, useControlledState } from '@wp-g2/utils';
+import { mergeRefs, noop, useControlledValue } from '@wp-g2/utils';
 import React, { useCallback, useRef } from 'react';
 
 import { Icon } from '../Icon';
@@ -20,30 +20,30 @@ function SearchInput(props, forwardedRef) {
 		isLoading = false,
 		placeholder = __('Search...'),
 		prefix,
-		onChange = noop,
+		onChange: onChangeProp = noop,
 		onClear = noop,
 		suffix,
-		value,
+		value: valueProp,
 		...otherProps
 	} = useContextSystem(props, 'SearchInput');
 
-	const [state, setState] = useControlledState(value, {
-		initial: defaultValue,
+	const [value, onChange] = useControlledValue({
+		value: valueProp,
+		onChange: onChangeProp,
+		defaultValue,
 	});
 	const textInputRef = useRef();
 
 	const handleOnChange = useCallback(
 		(next, changeProps) => {
 			onChange(next, changeProps);
-			setState(next);
 		},
-		[onChange, setState],
+		[onChange],
 	);
 
 	const handleOnClearClick = useCallback(
 		(event) => {
 			const clearValue = '';
-			setState(clearValue);
 			onChange(clearValue, { event });
 			onClear(event);
 
@@ -51,7 +51,7 @@ function SearchInput(props, forwardedRef) {
 				textInputRef.current.focus();
 			}
 		},
-		[onChange, onClear, setState],
+		[onChange, onClear],
 	);
 
 	const classes = cx(styles.SearchInput, className);
@@ -68,11 +68,11 @@ function SearchInput(props, forwardedRef) {
 				<SearchSuffix
 					onClick={handleOnClearClick}
 					suffix={suffix}
-					value={!!state}
+					value={!!value}
 				/>
 			}
 			type="search"
-			value={state}
+			value={value}
 			{...otherProps}
 		/>
 	);

@@ -1,14 +1,12 @@
 import { minus, plus } from '@wordpress/icons';
 import { ui } from '@wp-g2/styles';
-import { noop } from '@wp-g2/utils';
-import { clamp } from 'lodash';
+import { clamp, noop } from 'lodash';
 import React, { useCallback, useEffect, useRef } from 'react';
 
 import { HStack } from '../HStack';
 import { Icon } from '../Icon';
 import { View } from '../View';
 import * as styles from './TextInput.styles';
-import { useDragHandlers } from './useTextInputState.utils';
 
 /**
  * @typedef Props
@@ -24,30 +22,7 @@ import { useDragHandlers } from './useTextInputState.utils';
  * @param {import('react').Ref<any>} forwardedRef
  */
 function TextInputSteppers(props, forwardedRef) {
-	const { __store, decrement, disabled, increment } = props;
-	const store = useRef(__store).current;
-
-	const dragHandlers = useDragHandlers({
-		increment,
-		decrement,
-		store: __store,
-	});
-
-	const incrementValue = useCallback(
-		(boost) => {
-			increment(boost);
-			store.getState().commit();
-		},
-		[increment, store],
-	);
-
-	const decrementValue = useCallback(
-		(boost) => {
-			decrement(boost);
-			store.getState().commit();
-		},
-		[decrement, store],
-	);
+	const { decrement, disabled, dragHandlers, increment } = props;
 
 	return (
 		<View className={styles.SpinnerWrapper}>
@@ -61,8 +36,8 @@ function TextInputSteppers(props, forwardedRef) {
 			>
 				<UpDownArrows
 					disabled={disabled}
-					onDecrement={decrementValue}
-					onIncrement={incrementValue}
+					onDecrement={decrement}
+					onIncrement={increment}
 				/>
 			</HStack>
 		</View>
@@ -133,7 +108,7 @@ const _UpDownArrows = ({
 	const handleOnIncrement = useCallback(
 		(event) => {
 			event.stopPropagation();
-			onIncrement(event);
+			onIncrement();
 		},
 		[onIncrement],
 	);
@@ -141,7 +116,7 @@ const _UpDownArrows = ({
 	const handleOnDecrement = useCallback(
 		(event) => {
 			event.stopPropagation();
-			onDecrement(event);
+			onDecrement();
 		},
 		[onDecrement],
 	);

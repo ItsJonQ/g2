@@ -1,20 +1,7 @@
-import { useSubState } from '@wp-g2/substate';
-import {
-	createUnitValue,
-	is,
-	isValidCSSValueForProp,
-	mergeRefs,
-	noop,
-	parseUnitValue,
-	useUpdateEffect,
-} from '@wp-g2/utils';
-import React from 'react';
+import { useContextSystem } from '@wp-g2/context';
+import { noop } from 'lodash';
 
-import {
-	findUnitMatchExact,
-	getInitialParsedUnitValue,
-	isPotentialUnitValue,
-} from './UnitInput.utils';
+import { useUnitInputState } from './useUnitInputState';
 
 /**
  * @typedef UnitStore
@@ -52,7 +39,7 @@ import {
  * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'input'>} props
  * @param {import('react').Ref<any>} ref
  */
-export function useUnitInput(props, ref) {
+export function useUnitInput(props) {
 	const {
 		arrows = false,
 		allowEmptyValue = false,
@@ -61,149 +48,21 @@ export function useUnitInput(props, ref) {
 		incrementFromNonNumericValue = true,
 		onChange = noop,
 		value,
-	} = props;
-	const [parsedValue, unit] = getInitialParsedUnitValue({ cssProp, value });
-	const inputRef = React.useRef();
+		...otherProps
+	} = useContextSystem(props, 'UnitInput');
 
-	/** @type {UnitInputState} */
-	const unitStore = useSubState((set, get) => ({
+	const unitState = useUnitInputState({
+		allowEmptyValue,
 		cssProp,
+		fallbackUnit,
+		incrementFromNonNumericValue,
+		onChange,
 		value,
-		parsedValue,
-		unit,
-		inputRef,
-
-		// Actions
-		commit: (next = get().value) => {
-			set((prev) => {
-				const { getIsValidCSSValue } = prev;
-				const [parsedValue, unit] = parseUnitValue(next);
-				const nextState = { parsedValue };
-
-				/**
-				 * Handle cases that allow for empty values.
-				 */
-				if (allowEmptyValue && is.empty(next)) {
-					return {
-						parsedValue: '',
-					};
-				}
-
-				if (unit) {
-					nextState.unit = findUnitMatchExact({ value: unit });
-				}
-
-				/**
-				 * Accounts for text values. e.g. `auto`.
-				 */
-				if (is.empty(parsedValue)) {
-					nextState.parsedValue = getIsValidCSSValue(next)
-						? is.numeric(parsedValue)
-							? parsedValue
-							: next
-						: parsedValue;
-				}
-
-				return nextState;
-			});
-		},
-
-		changeUnit: (nextUnit) => {
-			const unit = findUnitMatchExact({ value: nextUnit });
-			if (!unit) return;
-
-			set({ unit });
-			get().commit();
-		},
-
-		sync: (next) => set({ value: next }),
-
-		validate: (next) => {
-			if (next === get().value) return false;
-			/**
-			 * Handle cases that allow for empty values.
-			 */
-			if (allowEmptyValue && is.empty(next)) {
-				return true;
-			}
-
-			const { cssProp, getIsValidCSSValue, unit } = get();
-			if (!cssProp) return true;
-
-			let validationValue = next;
-
-			if (isPotentialUnitValue(validationValue)) {
-				if (!unit && incrementFromNonNumericValue) {
-					validationValue = createUnitValue(
-						validationValue,
-						fallbackUnit,
-					);
-				} else {
-					validationValue = createUnitValue(validationValue, unit);
-				}
-			}
-
-			return getIsValidCSSValue(validationValue);
-		},
-
-		// Selectors
-		getIsValidCSSValue: (next) => {
-			const { cssProp } = get();
-			if (!cssProp) return true;
-
-			return isValidCSSValueForProp(cssProp, next);
-		},
-	}));
-
-	const handleOnCommit = React.useCallback(
-		(next) => {
-			let nextValue = next;
-
-			if (is.numeric(nextValue)) {
-				const currentUnit = unitStore.getState().unit || fallbackUnit;
-				nextValue = createUnitValue(next, currentUnit);
-			}
-
-			unitStore.getState().commit(nextValue);
-			onChange(nextValue);
-		},
-		[fallbackUnit, onChange, unitStore],
-	);
-
-	const handleOnChange = React.useCallback(
-		(next) => {
-			unitStore.setState({ parsedValue: next });
-		},
-		[unitStore],
-	);
-
-	const handleOnSelectChange = React.useCallback(
-		(next) => {
-			const { parsedValue } = unitStore.getState();
-
-			if (!parsedValue) return;
-
-			const final = createUnitValue(parsedValue, next);
-
-			handleOnCommit(final);
-		},
-		[handleOnCommit, unitStore],
-	);
-
-	useUpdateEffect(() => {
-		unitStore.getState().commit(value);
-		unitStore.getState().sync(value);
-	}, [value]);
+	});
 
 	return {
-		...props,
-		unitStore,
+		...otherProps,
+		...unitState,
 		arrows,
-		incrementFromNonNumericValue,
-		validate: unitStore.getState().validate,
-		onChange: handleOnCommit,
-		onValueChange: handleOnChange,
-		onSelectChange: handleOnSelectChange,
-		ref: mergeRefs([inputRef, ref]),
 	};
 }

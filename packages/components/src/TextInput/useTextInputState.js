@@ -1,339 +1,101 @@
-import { shallowCompare, useSubState } from '@wp-g2/substate';
 import {
+	add,
 	is,
 	mergeEventHandlers,
-	mergeRefs,
-	noop,
 	normalizeArrowKey,
+	roundClampString,
+	subtract,
+	useControlledValue,
 } from '@wp-g2/utils';
+import { isNil, noop } from 'lodash';
 import React from 'react';
 
-import {
-	useNumberActions,
-	useNumberKeyboardHandlers,
-} from './useTextInputNumberState';
-import {
-	useControlledValue,
-	useShiftStepState,
-} from './useTextInputState.utils';
+import { useBaseDragHandlers } from './useTextInputState.utils';
 
-/**
- * @type {{
-	sync: "SYNC_VALUE",
-	change: "CHANGE_VALUE",
-	increment: "INCREMENT_VALUE",
-	decrement: "DECREMENT_VALUE",
-	commit: "COMMIT_START",
-	commitRevert: "COMMIT_REVERT",
-	commitComplete: "COMMIT_COMPLETE",
-	validateStart: "VALIDATE_START",
-	validateSuccess: "VALIDATE_SUCCESS",
-	validateFailed: "VALIDATE_FAILED",
-}}
- */
-const actionTypes = {
-	sync: 'SYNC_VALUE',
-	change: 'CHANGE_VALUE',
-	increment: 'INCREMENT_VALUE',
-	decrement: 'DECREMENT_VALUE',
-	commit: 'COMMIT_START',
-	commitRevert: 'COMMIT_REVERT',
-	commitComplete: 'COMMIT_COMPLETE',
-	validateStart: 'VALIDATE_START',
-	validateSuccess: 'VALIDATE_SUCCESS',
-	validateFailed: 'VALIDATE_FAILED',
-};
+function useCommitValue({ value }) {
+	const [commitValue, setCommitValue] = React.useState(null);
+	const resetCommitValue = React.useCallback(() => setCommitValue(null), []);
 
-/** @typedef {{ value: string | undefined }} Payload */
+	React.useEffect(resetCommitValue, [value]);
 
-/** @typedef {{ type: 'SYNC_VALUE', payload: Payload }} SyncAction */
-/** @typedef {{ type: 'CHANGE_VALUE', payload: Payload }} ChangeAction */
-/** @typedef {{ type: 'INCREMENT_VALUE', payload: Payload }} IncrementAction */
-/** @typedef {{ type: 'DECREMENT_VALUE', payload: Payload }} DecrementAction */
-/** @typedef {{ type: 'COMMIT_START' }} CommitStartAction */
-/** @typedef {{ type: 'COMMIT_REVERT' }} CommitRevertAction */
-/** @typedef {{ type: 'COMMIT_COMPLETE' }} CommitCompleteAction */
-/** @typedef {{ type: 'VALIDATE_START', payload: Payload }} ValidateStartAction */
-/** @typedef {{ type: 'VALIDATE_SUCCESS', payload: Payload }} ValidateSuccessAction */
-/** @typedef {{ type: 'VALIDATE_FAILED', payload: Payload }} ValidateFailedAction */
+	return [commitValue, setCommitValue, resetCommitValue];
+}
 
-/**
- * @typedef {
-	| SyncAction
-	| ChangeAction
-	| IncrementAction
-	| DecrementAction
-	| CommitStartAction
-	| CommitRevertAction
-	| CommitCompleteAction
-	| ValidateStartAction
-	| ValidateSuccessAction
-	| ValidateFailedAction
-} Action
- */
+function useShiftStep({ isShiftStepEnabled = true, shiftStep = 10 }) {
+	const [on, setOn] = React.useState(false);
+	React.useEffect(() => {
+		const handleOnKeyDown = (event) => {
+			if (!isShiftStepEnabled) return;
+			if (event.shiftKey) setOn(true);
+		};
+		const handleOnKeyUp = (event) => {
+			if (!isShiftStepEnabled) return;
+			if (!event.shiftKey) setOn(false);
+		};
 
-/** @typedef {{ value?: string, previousValue?: string, commitValue?: string }} State */
+		window.addEventListener('keydown', handleOnKeyDown);
+		window.addEventListener('keyup', handleOnKeyUp);
 
-/**
- * @param {State} state
- * @param {Action} action
- * @return {State}
- */
-const reducer = (state, action) => {
-	switch (action.type) {
-		case actionTypes.sync:
-			return {
-				previousValue: action.payload.value,
-				commitValue: action.payload.value,
-				value: action.payload.value,
-			};
+		return () => {
+			window.removeEventListener('keydown', handleOnKeyDown);
+			window.removeEventListener('keyup', handleOnKeyUp);
+		};
+	}, [isShiftStepEnabled]);
 
-		case actionTypes.change:
-			return {
-				value: action.payload.value,
-			};
+	return isShiftStepEnabled && on ? shiftStep : 1;
+}
 
-		case actionTypes.increment:
-			return {
-				value: action.payload.value,
-			};
+function useFocusedState({ isFocused: isFocusedProp = false }) {
+	const [isFocused, setFocused] = React.useState(isFocusedProp);
 
-		case actionTypes.decrement:
-			return {
-				value: action.payload.value,
-			};
+	React.useEffect(() => {
+		setFocused(isFocusedProp);
+	}, [isFocusedProp]);
 
-		case actionTypes.commitRevert:
-			return {
-				value: state.previousValue,
-			};
+	return [isFocused, setFocused];
+}
 
-		case actionTypes.commitComplete:
-			return {
-				previousValue: state.value,
-				commitValue: state.value,
-			};
-
-		default:
-			return {};
-	}
-};
-
-/**
- * @typedef TextInputStore
- * @property {typeof actionTypes} actionTypes
- * @property {string} commitValue
- * @property {'x' | 'y' | undefined} dragAxis
- * @property {import('react').Ref<HTMLInputElement | undefined>} inputRef
- * @property {boolean} isCommitOnBlurOrEnter
- * @property {boolean} isFocused
- * @property {boolean} isInputTypeNumeric
- * @property {boolean} isShiftStepEnabled
- * @property {boolean} isTypeNumeric
- * @property {string | undefined} previousValue
- * @property {number} shiftStep
- * @property {number} step
- * @property {string | undefined} value
- *
- * @property {(action: Action) => void} dispatch
- * @property {(next: string) => void} changeSync
- * @property {(next: string) => void} change
- * @property {() => void} commit
- * @property {() => void} commitRevert
- * @property {() => void} commitComplete
- * @property {(next: string) => void} increment
- * @property {(next: string) => void} decrement
- *
- * @property {() => boolean} getIsReverted
- */
-
-/** @typedef {import('@wp-g2/substate').UseStore<TextInputStore>} TextInputState */
-
-/**
- * @typedef Options
- * @property {(...args: any[]) => void} [__debugger]
- * @property {'x' | 'y'} [dragAxis='y']
- * @property {string} [format='text']
- * @property {string} [initialValue]
- * @property {boolean} [incrementFromNonNumericValue]
- * @property {boolean} [isCommitOnBlurOrEnter=true]
- * @property {boolean} [isFocused=false]
- * @property {boolean} [isShiftStepEnabled=true]
- * @property {number} [step=1]
- * @property {number} [shiftStep=10]
- * @property {string} [type='text']
- * @property {(value: string | undefined, current: TextInputStore) => boolean} [validate]
- * @property {string} [value]
- */
-
-/**
- *
- * @param {Options} options
- */
-const useTextInputStore = ({
-	__debugger,
-	dragAxis = 'y',
-	format = 'text',
-	incrementFromNonNumericValue,
-	initialValue: initialValueProp,
-	isCommitOnBlurOrEnter = true,
-	isFocused: isFocusedInitial = false,
-	isShiftStepEnabled = true,
-	shiftStep = 10,
-	step = 1,
-	type = 'text',
-	validate,
-	value: incomingValue,
-} = {}) => {
-	const inputRef = React.useRef();
-	const isInputTypeNumeric = type === 'number';
-	const isTypeNumeric = format === 'number' || isInputTypeNumeric;
-	const initialValue = is.defined(incomingValue)
-		? incomingValue
-		: initialValueProp;
-
-	/** @type {TextInputState} */
-	const store = useSubState((set) => ({
-		// State
-		actionTypes,
-		commitValue: '',
-		dragAxis,
-		inputRef,
-		incrementFromNonNumericValue,
-		isCommitOnBlurOrEnter,
-		isFocused: isFocusedInitial,
-		isShiftStepEnabled,
-		isInputTypeNumeric,
-		isTypeNumeric,
-		previousValue: initialValue,
-		shiftStep,
-		step,
-		value: initialValue,
-
-		// Actions
-		dispatch: (args) =>
-			set((state) => {
-				const next = reducer(state, args);
-				if (typeof __debugger === 'function') {
-					__debugger(args, next, state);
-				}
-				return next;
-			}),
-
-		changeSync: (next) => {
-			const current = store.getState();
-			current.dispatch({
-				type: actionTypes.sync,
-				payload: { value: next },
-			});
+function useChangeHandlers({ onChange }) {
+	const handleOnChange = React.useCallback(
+		(event) => {
+			onChange(event.target.value);
 		},
-		change: (next) => {
-			const current = store.getState();
-			if (next === current.value) return;
+		[onChange],
+	);
 
-			current.dispatch({
-				type: actionTypes.change,
-				payload: { value: next },
-			});
+	return {
+		onChange: handleOnChange,
+	};
+}
+
+function useFocusHandlers({ onChange, setFocused }) {
+	const handleOnBlur = React.useCallback(
+		(event) => {
+			onChange(event.target.value);
+			setFocused(false);
 		},
-		commit: () => {
-			let isValid = true;
-			const hasValidation = typeof validate === 'function';
-			const current = store.getState();
+		[onChange, setFocused],
+	);
 
-			current.dispatch({
-				type: actionTypes.commit,
-			});
+	const handleOnFocus = React.useCallback(() => {
+		setFocused(true);
+	}, [setFocused]);
 
-			if (hasValidation) {
-				current.dispatch({
-					type: actionTypes.validateStart,
-					payload: { value: current.value },
-				});
-				// @ts-ignore We checked `validate` above for `hasValidation`
-				isValid = validate(current.value, current) !== false;
-			}
+	return {
+		onBlur: handleOnBlur,
+		onFocus: handleOnFocus,
+	};
+}
 
-			if (isValid) {
-				if (hasValidation) {
-					current.dispatch({
-						type: actionTypes.validateSuccess,
-						payload: { value: current.value },
-					});
-				}
-				current.commitComplete();
-			} else {
-				if (hasValidation) {
-					current.dispatch({
-						type: actionTypes.validateFailed,
-						payload: { value: current.value },
-					});
-				}
-				current.commitRevert();
-			}
-		},
-		commitRevert: () => {
-			const current = store.getState();
-			current.dispatch({ type: actionTypes.commitRevert });
-		},
-		commitComplete: () => {
-			const current = store.getState();
-			current.dispatch({ type: actionTypes.commitComplete });
-		},
-		increment: (next) => {
-			if (!isTypeNumeric) return;
-
-			const current = store.getState();
-			if (next === current.value) return;
-
-			current.dispatch({
-				type: actionTypes.increment,
-				payload: { value: next },
-			});
-			current.commit();
-		},
-		decrement: (next) => {
-			if (!isTypeNumeric) return;
-
-			const current = store.getState();
-			if (next === current.value) return;
-
-			current.dispatch({
-				type: actionTypes.decrement,
-				payload: { value: next },
-			});
-			current.commit();
-		},
-		// Selectors
-		getIsReverted: () => {
-			const { previousValue, value } = store.getState();
-			return previousValue === value;
-		},
-	}));
-
-	const { value } = useControlledValue({ store, value: incomingValue });
-
-	return { inputRef, value, store };
-};
-
-/**
- * @param {object} options
- * @param {TextInputState} options.store
- */
-const useKeyboardHandlers = ({ store }) => {
+function useKeyboardHandlers({ onChange }) {
 	const keyboardHandlers = React.useMemo(
 		() => ({
 			Enter(/** @type {import('react').KeyboardEvent} */ event) {
 				if (event.isDefaultPrevented()) return;
-
-				const { isCommitOnBlurOrEnter } = store.getState();
-
-				if (isCommitOnBlurOrEnter) {
-					store.getState().commit();
-				}
+				onChange(event.target.value);
 			},
 		}),
-		[store],
+		[onChange],
 	);
 
 	const handleOnKeyDown = React.useCallback(
@@ -349,91 +111,134 @@ const useKeyboardHandlers = ({ store }) => {
 	return {
 		onKeyDown: handleOnKeyDown,
 	};
-};
+}
 
-const useFocusHandlers = ({ store }) => {
-	const handleOnBlur = React.useCallback(() => {
-		const { getIsReverted, isCommitOnBlurOrEnter } = store.getState();
-		store.setState({ isFocused: false });
+function useNumberActions({
+	incrementFromNonNumericValue,
+	isShiftStepEnabled,
+	max,
+	min,
+	onChange,
+	shiftStep: shiftStepProp = 10,
+	step = 1,
+	type,
+	value,
+}) {
+	const stepMultiplier =
+		useShiftStep({
+			isShiftStepEnabled,
+			shiftStep: shiftStepProp,
+		}) || step;
+	const shiftStep = stepMultiplier * step;
 
-		if (isCommitOnBlurOrEnter && !getIsReverted()) {
-			store.getState().commit();
-		}
-	}, [store]);
+	const isInputTypeNumeric = type === 'number';
+	const isValueNumeric = is.numeric(value);
 
-	const handleOnFocus = React.useCallback(() => {
-		store.setState({ isFocused: true });
-	}, [store]);
+	const skipAction =
+		!isInputTypeNumeric && !isValueNumeric && !incrementFromNonNumericValue;
 
-	return {
-		onBlur: handleOnBlur,
-		onFocus: handleOnFocus,
-	};
-};
+	const increment = React.useCallback(
+		(/** @type {number} */ jumpStep = 0) => {
+			if (skipAction) return;
 
-/**
- * @param {object} options
- * @param {(value: string) => void} [options.onChange]
- * @param {(value: string) => void} [options.onValueChange]
- * @param {TextInputState} options.store
- */
-const useChangeHandlers = ({
-	onChange = noop,
-	onValueChange = noop,
-	store,
-}) => {
-	const handleOnChange = React.useCallback(
-		(event) => {
-			const next = event.target.value;
-			store.getState().change(next);
+			const baseValue = is.numeric(value) ? value : 0;
+			const nextValue = add(jumpStep * step, shiftStep);
 
-			const { isCommitOnBlurOrEnter } = store.getState();
+			const next = roundClampString(
+				add(baseValue, nextValue),
+				min,
+				max,
+				shiftStep,
+			);
 
-			if (!isCommitOnBlurOrEnter) {
-				store.getState().commit();
-			}
+			onChange(next);
 		},
-		[store],
+		[skipAction, value, step, shiftStep, min, max, onChange],
 	);
 
-	React.useEffect(() => {
-		return store.subscribe(
-			(value) => {
-				onValueChange(value);
+	const decrement = React.useCallback(
+		(/** @type {number} */ jumpStep = 0) => {
+			if (skipAction) return;
+
+			const baseValue = is.numeric(value) ? value : 0;
+			const nextValue = add(jumpStep * step, shiftStep);
+
+			const next = roundClampString(
+				subtract(baseValue, nextValue),
+				min,
+				max,
+				shiftStep,
+			);
+
+			onChange(next);
+		},
+		[skipAction, value, step, shiftStep, min, max, onChange],
+	);
+
+	return { increment, decrement };
+}
+
+function useNumberKeyboardHandlers({
+	decrement,
+	increment,
+	isTypeNumeric,
+	stopIfEventDefaultPrevented = true,
+}) {
+	const keyboardHandlers = React.useMemo(
+		() => ({
+			ArrowUp(event) {
+				if (!isTypeNumeric) return;
+
+				if (stopIfEventDefaultPrevented && event.isDefaultPrevented())
+					return;
+
+				event.preventDefault();
+
+				increment();
 			},
-			(state) => state.value,
-			shallowCompare,
-		);
-	}, [onValueChange, store]);
+			ArrowDown(event) {
+				if (!isTypeNumeric) return;
 
-	React.useEffect(() => {
-		return store.subscribe(
-			(value) => {
-				onChange(value);
+				if (stopIfEventDefaultPrevented && event.isDefaultPrevented())
+					return;
+
+				event.preventDefault();
+
+				decrement();
 			},
-			(state) => state.commitValue,
-			shallowCompare,
-		);
-	}, [onChange, store]);
+		}),
+		[decrement, increment, isTypeNumeric, stopIfEventDefaultPrevented],
+	);
 
-	return {
-		onChange: handleOnChange,
-	};
-};
-
-const useScrollHandlers = ({ decrement, increment, store }) => {
-	const handleOnWheel = React.useCallback(
+	const handleOnKeyDown = React.useCallback(
 		(event) => {
-			if (store.getState().isTypeNumeric) {
-				const isScrollUp = event?.nativeEvent?.wheelDelta > 0;
-				if (isScrollUp) {
-					increment();
-				} else {
-					decrement();
-				}
+			const key = normalizeArrowKey(event);
+			if (key && keyboardHandlers[key]) {
+				keyboardHandlers[key](event);
 			}
 		},
-		[decrement, increment, store],
+		[keyboardHandlers],
+	);
+
+	return {
+		onKeyDown: handleOnKeyDown,
+	};
+}
+
+const useScrollHandlers = ({ decrement, increment, isTypeNumeric }) => {
+	const handleOnWheel = React.useCallback(
+		(event) => {
+			if (!isTypeNumeric) return;
+			if (event?.deltaY === 0) return;
+
+			const isScrollUp = event?.deltaY < 0;
+			if (isScrollUp) {
+				increment();
+			} else {
+				decrement();
+			}
+		},
+		[decrement, increment, isTypeNumeric],
 	);
 
 	return {
@@ -441,105 +246,135 @@ const useScrollHandlers = ({ decrement, increment, store }) => {
 	};
 };
 
-/**
- * @param {object} options
- * @param {() => void} [options.decrement]
- * @param {() => void} [options.increment]
- * @param {(value: string) => void} [options.onChange]
- * @param {(value: string) => void} [options.onValueChange]
- * @param {TextInputState} options.store
- */
-const useEventHandlers = ({
-	decrement = noop,
-	increment = noop,
-	onChange = noop,
-	onValueChange = noop,
-	store,
-	...otherProps
-}) => {
-	const changeHandlers = useChangeHandlers({
-		onChange,
-		onValueChange,
-		store,
-	});
-	const focusHandlers = useFocusHandlers({ store });
-	const keyboardHandlers = useKeyboardHandlers({ store });
-
-	const numberKeyboardEventHandlers = useNumberKeyboardHandlers({
-		store,
-		decrement,
-		increment,
-	});
-
-	const mergedKeyboardEventHandlers = mergeEventHandlers(
-		keyboardHandlers,
-		numberKeyboardEventHandlers,
-	);
-
-	const scrollHandlers = useScrollHandlers({ store, decrement, increment });
-
-	const mergedHandlers = {
-		...changeHandlers,
-		...focusHandlers,
-		...mergedKeyboardEventHandlers,
-		...scrollHandlers,
-	};
-
-	// @ts-ignore otherProps could be anything
-	return mergeEventHandlers(mergedHandlers, otherProps);
-};
-
-export const useTextInputState = (props = {}) => {
+export function useTextInputState(props) {
 	const {
-		isFocused = false,
-		onChange = noop,
-		onValueChange = noop,
+		defaultValue,
+		dragAxis = 'y',
+		incrementFromNonNumericValue = false,
+		isCommitOnBlurOrEnter = true,
+		isFocused: isFocusedProp = false,
+		onChange: onChangeProp = noop,
+		value: valueProp,
 		min,
 		max,
-		ref,
-		isShiftStepEnabled,
-		initialValue,
-		shiftStep,
+		step = 1,
+		validate,
+		isShiftStepEnabled = true,
+		shiftStep = 10,
+		type,
+		format,
 		...otherProps
 	} = props;
 
-	const { inputRef, store, ...inputState } = useTextInputStore({
-		initialValue,
-		isFocused,
-		isShiftStepEnabled,
-		shiftStep,
-		...otherProps,
+	const inputRef = React.useRef();
+
+	const [value, onChange] = useControlledValue({
+		value: valueProp,
+		onChange: onChangeProp,
+		defaultValue,
 	});
 
-	const { shiftStepStore } = useShiftStepState({
-		step: store.getState().step,
-		shiftStep: store.getState().shiftStep,
+	const isInputTypeNumeric = type === 'number';
+	const isTypeNumeric = format === 'number' || isInputTypeNumeric;
+
+	const [commitValue, setCommitValue, resetCommitValue] = useCommitValue({
+		value,
 	});
+	const inputValue = isNil(commitValue) ? value : commitValue;
+
+	const [isFocused, setFocused] = useFocusedState({ value: isFocusedProp });
+
+	const handleOnCommit = React.useCallback(
+		(next) => {
+			let isValid = true;
+			const hasValidation = typeof validate === 'function';
+
+			if (hasValidation) {
+				// @ts-ignore We checked `validate` above for `hasValidation`
+				isValid = validate(next, value) !== false;
+			}
+
+			if (isValid) {
+				onChange(next);
+				resetCommitValue();
+			} else {
+				resetCommitValue();
+			}
+		},
+		[onChange, resetCommitValue, validate, value],
+	);
 
 	const { decrement, increment } = useNumberActions({
+		incrementFromNonNumericValue,
+		isShiftStepEnabled,
 		max,
 		min,
-		shiftStepStore,
-		store,
+		onChange,
+		shiftStep,
+		step,
+		type,
+		value,
 	});
 
-	const eventHandlers = useEventHandlers({
-		decrement,
-		increment,
-		onChange,
-		onValueChange,
-		store,
-		...otherProps,
+	const changeHandlers = useChangeHandlers({
+		onChange: isCommitOnBlurOrEnter ? setCommitValue : onChange,
 	});
+
+	const focusHandlers = useFocusHandlers({
+		onChange: isCommitOnBlurOrEnter ? handleOnCommit : noop,
+		setFocused,
+	});
+
+	const dragHandlers = useBaseDragHandlers({
+		increment,
+		decrement,
+		isTypeNumeric,
+		dragAxis,
+	});
+
+	const baseKeyboardHandlers = useKeyboardHandlers({
+		onChange: isCommitOnBlurOrEnter ? handleOnCommit : noop,
+	});
+
+	const numberKeyboardHandlers = useNumberKeyboardHandlers({
+		increment,
+		decrement,
+		isTypeNumeric,
+	});
+
+	const keyboardHandlers = mergeEventHandlers(
+		baseKeyboardHandlers,
+		numberKeyboardHandlers,
+	);
+
+	const scrollHandlers = useScrollHandlers({
+		increment,
+		decrement,
+		isTypeNumeric,
+	});
+
+	const handlers = {
+		...changeHandlers,
+		...dragHandlers,
+		...focusHandlers,
+		...keyboardHandlers,
+		...scrollHandlers,
+	};
 
 	return {
-		store,
-		...inputState,
-		...eventHandlers,
+		...handlers,
+		...otherProps,
 		decrement,
+		dragHandlers,
 		increment,
+		inputRef,
+		isFocused,
+		isInputTypeNumeric,
+		isTypeNumeric,
 		max,
 		min,
-		ref: mergeRefs([inputRef, ref]),
+		step,
+		type,
+		value: inputValue,
 	};
-};
+}

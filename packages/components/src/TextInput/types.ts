@@ -9,10 +9,6 @@ type TextInputFormat = 'number' | 'type';
 export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> &
 	FormElementProps<string> & {
 		/**
-		 * For development only. Callback when a reducer action is dispatched.
-		 */
-		__debugger?: (action: any, nextValue: string, state: any) => void;
-		/**
 		 * Renders specified incrementer/decrementer arrows.
 		 *
 		 * @default true
@@ -104,10 +100,6 @@ export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> &
 		 * Callback function when the height changes with a multiline `TextInput`.
 		 */
 		onHeightChange?: (height: number) => void;
-		/**
-		 * Callback function when the `value` changes.
-		 */
-		onValueChange?: (value: string) => void;
 		/**
 		 * Renders prefix content within `TextInput`.
 		 */
