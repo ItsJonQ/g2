@@ -43,7 +43,6 @@ export function useBaseDragHandlers({
 	React.useEffect(() => {
 		return () => {
 			if (!dragRef.current) return;
-
 			cancelAnimationFrame(dragRef.current);
 		};
 	}, []);
@@ -83,5 +82,7 @@ export function useBaseDragHandlers({
 		? dragGestures()
 		: { onMouseDown: noop, onTouchStart: noop };
 
-	return gestures;
+	const gestureRef = React.useRef(gestures);
+
+	return gestureRef.current;
 }

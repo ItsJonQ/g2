@@ -21,12 +21,11 @@ export function useUnitInputState({
 	onChange: onChangeProp,
 	value: valueProp,
 }) {
-	const [controlledValue, onChange] = useControlledValue({
+	const [value, onChange] = useControlledValue({
 		value: valueProp,
 		onChange: onChangeProp,
 	});
 
-	const value = controlledValue;
 	const [parsedValue, parsedUnit] = getInitialParsedUnitValue({
 		cssProp,
 		value,

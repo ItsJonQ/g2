@@ -369,10 +369,9 @@ export function useTextInputState(props) {
 		isTypeNumeric,
 	});
 
-	const keyboardHandlers = mergeEventHandlers(
-		baseKeyboardHandlers,
-		numberKeyboardHandlers,
-	);
+	const keyboardHandlers = usePropRef(
+		mergeEventHandlers(baseKeyboardHandlers, numberKeyboardHandlers),
+	).current;
 
 	const scrollHandlers = useScrollHandlers({
 		decrement,
