@@ -19,7 +19,7 @@ function TextInput(props, forwardedRef) {
 		arrows,
 		decrement,
 		disabled,
-		dragHandlers,
+		dragHandlersRef,
 		increment,
 		inputProps,
 		inputRef,
@@ -47,7 +47,7 @@ function TextInput(props, forwardedRef) {
 			{showTextInputArrows && (
 				<TextInputArrows
 					decrement={decrement}
-					dragHandlers={dragHandlers}
+					dragHandlersRef={dragHandlersRef}
 					increment={increment}
 				/>
 			)}
@@ -55,7 +55,7 @@ function TextInput(props, forwardedRef) {
 				<TextInputSteppers
 					decrement={decrement}
 					disabled={!!disabled}
-					dragHandlers={dragHandlers}
+					dragHandlersRef={dragHandlersRef}
 					increment={increment}
 				/>
 			)}

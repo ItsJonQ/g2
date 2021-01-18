@@ -1,5 +1,10 @@
 import { useControlledValue } from '@wp-g2/utils';
-import { createUnitValue, is, isValidCSSValueForProp } from '@wp-g2/utils';
+import {
+	createUnitValue,
+	is,
+	isValidCSSValueForProp,
+	usePropRef,
+} from '@wp-g2/utils';
 import React from 'react';
 
 import {
@@ -16,28 +21,48 @@ export function useUnitInputState({
 	onChange: onChangeProp,
 	value: valueProp,
 }) {
-	const [controlledValue, onChange] = useControlledValue({
+	const [value, onChange] = useControlledValue({
 		value: valueProp,
 		onChange: onChangeProp,
 	});
 
-	const value = controlledValue;
 	const [parsedValue, parsedUnit] = getInitialParsedUnitValue({
 		cssProp,
 		value,
 	});
 	const unit = findUnitMatchExact({ value: parsedUnit }) || null;
 
+	const propRefs = usePropRef({
+		allowEmptyValue,
+		fallbackUnit,
+		cssProp,
+		incrementFromNonNumericValue,
+		value,
+		parsedValue,
+		unit,
+	});
+
 	const getIsValidCSSValue = React.useCallback(
 		(next) => {
+			const { cssProp } = propRefs.current;
 			if (!cssProp) return true;
+
 			return isValidCSSValueForProp(cssProp, next);
 		},
-		[cssProp],
+		[propRefs],
 	);
 
 	const validate = React.useCallback(
 		(next) => {
+			const {
+				allowEmptyValue,
+				cssProp,
+				fallbackUnit,
+				incrementFromNonNumericValue,
+				unit,
+				value,
+			} = propRefs.current;
+
 			if (next === value) return false;
 			if (!cssProp) return true;
 
@@ -63,19 +88,12 @@ export function useUnitInputState({
 
 			return getIsValidCSSValue(validationValue);
 		},
-		[
-			allowEmptyValue,
-			cssProp,
-			fallbackUnit,
-			getIsValidCSSValue,
-			incrementFromNonNumericValue,
-			unit,
-			value,
-		],
+		[getIsValidCSSValue, propRefs],
 	);
 
 	const handleOnChange = React.useCallback(
 		(next) => {
+			const { allowEmptyValue, fallbackUnit, unit } = propRefs.current;
 			let nextValue = next;
 
 			if (is.numeric(nextValue)) {
@@ -91,20 +109,23 @@ export function useUnitInputState({
 
 			onChange(nextValue);
 		},
-		[allowEmptyValue, fallbackUnit, onChange, unit, validate],
+		[onChange, propRefs, validate],
 	);
 
 	const handleOnSelectChange = React.useCallback(
 		(next) => {
+			const { parsedValue } = propRefs.current;
 			if (!parsedValue) return;
+
 			const final = createUnitValue(parsedValue, next);
 
 			handleOnChange(final);
 		},
-		[handleOnChange, parsedValue],
+		[handleOnChange, propRefs],
 	);
 
 	return {
+		incrementFromNonNumericValue,
 		value: parsedValue,
 		onChange: handleOnChange,
 		onSelectChange: handleOnSelectChange,

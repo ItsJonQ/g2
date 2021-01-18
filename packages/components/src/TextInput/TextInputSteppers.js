@@ -22,7 +22,8 @@ import * as styles from './TextInput.styles';
  * @param {import('react').Ref<any>} forwardedRef
  */
 function TextInputSteppers(props, forwardedRef) {
-	const { decrement, disabled, dragHandlers, increment } = props;
+	const { decrement, disabled, dragHandlersRef, increment } = props;
+	const dragHandlers = dragHandlersRef.current;
 
 	return (
 		<View className={styles.SpinnerWrapper}>

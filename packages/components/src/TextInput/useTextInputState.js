@@ -6,6 +6,7 @@ import {
 	roundClampString,
 	subtract,
 	useControlledValue,
+	usePropRef,
 } from '@wp-g2/utils';
 import { isNil, noop } from 'lodash';
 import React from 'react';
@@ -137,9 +138,24 @@ function useNumberActions({
 	const skipAction =
 		!isInputTypeNumeric && !isValueNumeric && !incrementFromNonNumericValue;
 
+	/**
+	 * Create (synced) references to avoid recreating increment and decrement
+	 * callbacks.
+	 */
+
+	const propRefs = usePropRef({
+		min,
+		max,
+		value,
+		shiftStep,
+		onChange,
+	});
+
 	const increment = React.useCallback(
 		(/** @type {number} */ jumpStep = 0) => {
 			if (skipAction) return;
+
+			const { max, min, onChange, shiftStep, value } = propRefs.current;
 
 			const baseValue = is.numeric(value) ? value : 0;
 			const nextValue = add(jumpStep * step, shiftStep);
@@ -153,12 +169,14 @@ function useNumberActions({
 
 			onChange(next);
 		},
-		[skipAction, value, step, shiftStep, min, max, onChange],
+		[skipAction, propRefs, step],
 	);
 
 	const decrement = React.useCallback(
 		(/** @type {number} */ jumpStep = 0) => {
 			if (skipAction) return;
+
+			const { max, min, onChange, shiftStep, value } = propRefs.current;
 
 			const baseValue = is.numeric(value) ? value : 0;
 			const nextValue = add(jumpStep * step, shiftStep);
@@ -172,7 +190,7 @@ function useNumberActions({
 
 			onChange(next);
 		},
-		[skipAction, value, step, shiftStep, min, max, onChange],
+		[skipAction, propRefs, step],
 	);
 
 	return { increment, decrement };
@@ -305,10 +323,8 @@ export function useTextInputState(props) {
 
 			if (isValid) {
 				onChange(next);
-				resetCommitValue();
-			} else {
-				resetCommitValue();
 			}
+			resetCommitValue();
 		},
 		[onChange, resetCommitValue, validate, value],
 	);
@@ -341,6 +357,8 @@ export function useTextInputState(props) {
 		dragAxis,
 	});
 
+	const dragHandlersRef = usePropRef(dragHandlers);
+
 	const baseKeyboardHandlers = useKeyboardHandlers({
 		onChange: isCommitOnBlurOrEnter ? handleOnCommit : noop,
 	});
@@ -351,10 +369,9 @@ export function useTextInputState(props) {
 		isTypeNumeric,
 	});
 
-	const keyboardHandlers = mergeEventHandlers(
-		baseKeyboardHandlers,
-		numberKeyboardHandlers,
-	);
+	const keyboardHandlers = usePropRef(
+		mergeEventHandlers(baseKeyboardHandlers, numberKeyboardHandlers),
+	).current;
 
 	const scrollHandlers = useScrollHandlers({
 		decrement,
@@ -375,7 +392,7 @@ export function useTextInputState(props) {
 		...handlers,
 		...otherProps,
 		decrement,
-		dragHandlers,
+		dragHandlersRef,
 		increment,
 		inputRef,
 		isFocused,

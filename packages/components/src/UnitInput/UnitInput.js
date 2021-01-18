@@ -19,13 +19,18 @@ export function UnitInput(props, forwardedRef) {
 		...otherProps
 	} = useUnitInput(props);
 
-	const suffix = unit && (
-		<UnitInputSelect
-			disabled={disabled}
-			onSelectChange={onSelectChange}
-			unit={unit}
-		/>
+	const unitSelect = React.useMemo(
+		() => (
+			<UnitInputSelect
+				disabled={disabled}
+				onSelectChange={onSelectChange}
+				unit={unit}
+			/>
+		),
+		[disabled, onSelectChange, unit],
 	);
+
+	const suffix = unit ? unitSelect : null;
 
 	return (
 		<TextInput
