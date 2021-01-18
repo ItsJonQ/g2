@@ -24,7 +24,7 @@
     "@wp-g2/utils": "^0.0.135",
     "framer-motion": "^2.1.0",
     "react-icons": "^3.10.0",
-    "react-use-gesture": "^7.0.16",
+    "react-use-gesture": "^9.0.0",
     "units-css": "^0.4.0"
   },
   "devDependencies": {
