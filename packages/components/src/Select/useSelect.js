@@ -103,7 +103,6 @@ export function useSelect(props) {
 				next = event.target.value;
 			}
 
-			console.log(next);
 			onChange(next, { event });
 		},
 		[multiple, onChange],
