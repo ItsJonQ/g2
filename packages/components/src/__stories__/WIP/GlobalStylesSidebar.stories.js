@@ -142,9 +142,8 @@ const globalStylesStore = createStore((set, get) => ({
 const useGlobalStylesStore = globalStylesStore;
 
 const TypographyTools = ({ scope = 'global' }) => {
-	const [getBoundProps, setAttribute] = useGlobalStylesStore(
-		(state) => [state.getBoundProps, state.setAttribute],
-		shallowCompare,
+	const { getBoundProps, setAttribute } = useGlobalStylesStore(
+		(state) => state,
 	);
 
 	const fontWeights = [
