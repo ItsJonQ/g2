@@ -19,7 +19,6 @@ import ListGroupContent from './ListGroupContent';
 const listGroupContextProps = {
 	MenuItem: {
 		isOffset: true,
-		_shallow: true,
 	},
 };
 
@@ -30,7 +29,6 @@ const listGroupGridContextProps = {
 	Grid: {
 		gap: 3,
 		rowGap: 2,
-		_shallow: true,
 	},
 };
 
