@@ -199,12 +199,6 @@ Callback function when the `value` is committed.
 
 Callback function when the height changes with a multiline `TextInput`.
 
-##### onValueChange
-
-**Type**: `Function`
-
-Callback function when the `value` changes.
-
 ##### prefix
 
 **Type**: `React.ReactElement`
