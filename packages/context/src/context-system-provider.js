@@ -5,6 +5,13 @@ import React, { createContext, useContext, useRef } from 'react';
 export const ComponentsContext = createContext({});
 export const useComponentsContext = () => useContext(ComponentsContext);
 
+/**
+ * Consolidates incoming ContextSystem values with a (potential) parent ContextSystem value.
+ *
+ * @param {object} props
+ * @param {object} props.value
+ * @return {object}
+ */
 function useContextSystemBridge({ value }) {
 	if (isNil(value)) {
 		// @ts-ignore
@@ -45,7 +52,7 @@ function useContextSystemBridge({ value }) {
  * @param {T} options.value Props to render into connected components.
  * @returns {JSX.Element} A Provider wrapped component.
  */
-const _ContextSystemProvider = ({ children, value }) => {
+const BaseContextSystemProvider = ({ children, value }) => {
 	const contextValue = useContextSystemBridge({ value });
 
 	return (
@@ -55,4 +62,4 @@ const _ContextSystemProvider = ({ children, value }) => {
 	);
 };
 
-export const ContextSystemProvider = React.memo(_ContextSystemProvider);
+export const ContextSystemProvider = React.memo(BaseContextSystemProvider);
