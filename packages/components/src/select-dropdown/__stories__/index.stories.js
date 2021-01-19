@@ -21,7 +21,7 @@ export const _default = () => {
 	const [value, setValue] = React.useState(options[1]);
 
 	const handleOnChange = (next) => {
-		console.log(next);
+		console.log(next.selectedItem);
 		setValue(next.selectedItem);
 	};
 

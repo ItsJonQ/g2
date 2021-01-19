@@ -1,17 +1,32 @@
 import { useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
-import { noop } from '@wp-g2/utils';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 import { useBaseField } from '../BaseField';
 import { useFormGroupContextId } from '../FormGroup';
 import * as styles from './TextInput.styles';
 import { useTextInputState } from './useTextInputState';
-import { useDragHandlers } from './useTextInputState.utils';
 
-const useRootEventHandlers = ({ decrement, increment, inputRef, store }) => {
-	const dragHandlers = useDragHandlers({ store, increment, decrement });
+const useRootEventHandlers = ({
+	dragHandlersRef,
+	inputRef,
+	isFocused,
+	isTypeNumeric,
+}) => {
+	const canScroll = isTypeNumeric && isFocused;
+	const dragHandlers = dragHandlersRef.current;
+
+	useEffect(() => {
+		const handleOnWheel = () => {
+			if (!canScroll) return;
+		};
+		if (inputRef.current.addEventListener) {
+			inputRef.current.addEventListener('wheel', handleOnWheel, {
+				passive: false,
+			});
+		}
+	}, [inputRef, canScroll]);
 
 	const handleOnClick = useCallback(() => {
 		inputRef.current.focus();
@@ -33,9 +48,7 @@ const useRootEventHandlers = ({ decrement, increment, inputRef, store }) => {
  * @param {import('@wp-g2/create-styles').ViewOwnProps<import('./types').Props, 'input'>} props
  */
 export function useTextInput(props) {
-	const combinedProps = useContextSystem(props, 'TextInput');
 	const {
-		__debugger = false,
 		align,
 		arrows = true,
 		className,
@@ -46,16 +59,16 @@ export function useTextInput(props) {
 		format,
 		gap = 2.5,
 		id: idProp,
-		isInline = false,
-		isFocused: isFocusedProp,
+		incrementFromNonNumericValue = false,
 		isCommitOnBlurOrEnter = true,
+		isFocused: isFocusedProp,
+		isInline = false,
 		isResizable = false,
 		isShiftStepEnabled = true,
 		justify,
 		max,
 		min,
 		multiline = false,
-		onValueChange = noop,
 		prefix,
 		shiftStep = 10,
 		size = 'medium',
@@ -65,26 +78,31 @@ export function useTextInput(props) {
 		validate,
 		value: valueProp,
 		...otherProps
-	} = combinedProps;
+	} = useContextSystem(props, 'TextInput');
 
 	const id = useFormGroupContextId(idProp);
 
 	const {
 		decrement,
+		dragHandlersRef,
 		increment,
-		store,
+		inputRef,
+		isFocused,
+		isInputTypeNumeric,
+		isTypeNumeric,
+		scrollHandlers,
+		value,
 		...textInputState
 	} = useTextInputState({
 		...otherProps,
-		__debugger,
 		format,
-		initialValue: defaultValue,
+		defaultValue,
+		incrementFromNonNumericValue,
 		isCommitOnBlurOrEnter,
 		isFocused: isFocusedProp,
 		isShiftStepEnabled,
 		max,
 		min,
-		onValueChange,
 		shiftStep,
 		step,
 		value: valueProp,
@@ -92,13 +110,11 @@ export function useTextInput(props) {
 		type,
 	});
 
-	const { inputRef, isFocused, isTypeNumeric, value } = store();
-
 	const rootEventHandlers = useRootEventHandlers({
 		inputRef,
-		decrement,
-		increment,
-		store,
+		dragHandlersRef,
+		isTypeNumeric,
+		isFocused,
 	});
 
 	const baseFieldProps = useBaseField({
@@ -151,18 +167,18 @@ export function useTextInput(props) {
 	return {
 		...baseFieldProps,
 		...rootEventHandlers,
-		__store: store,
 		arrows,
 		className: classes,
-		dragAxis,
 		decrement,
-		increment,
+		disabled,
+		dragAxis,
+		dragHandlersRef,
 		format,
+		increment,
 		inputProps,
 		inputRef,
 		isTypeNumeric,
 		prefix,
 		suffix,
-		disabled,
 	};
 }

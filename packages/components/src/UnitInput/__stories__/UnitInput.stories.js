@@ -67,7 +67,7 @@ const Everything = () => {
 };
 
 const Example = () => {
-	const [value, setValue] = React.useState('0px');
+	const [value, setValue] = React.useState('auto');
 
 	return (
 		<>
