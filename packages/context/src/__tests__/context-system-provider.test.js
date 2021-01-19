@@ -78,10 +78,17 @@ describe('props', () => {
 
 		const [first, second] = [...container.querySelectorAll('.olaf')];
 
-		expect(container.firstChild).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 
 		const firstCSS = first.classList.toString();
 		const secondCSS = second.classList.toString();
+
+		expect(first).toHaveStyle(`background: white`);
+		expect(first).toHaveStyle(`padding: 20px`);
+
+		expect(second).not.toHaveStyle(`background: white`);
+		expect(second).not.toHaveStyle(`padding: 20px`);
+
 		expect(firstCSS).not.toEqual(secondCSS);
 	});
 
@@ -116,10 +123,11 @@ describe('props', () => {
 			</>,
 		);
 
-		expect(container.firstChild).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 
 		const el = container.querySelector('.olaf');
 
+		expect(el).toHaveStyle(`border: 2px solid blue`);
 		expect(el).toHaveStyle(`background: white`);
 		expect(el).toHaveStyle(`font-weight: bold`);
 	});

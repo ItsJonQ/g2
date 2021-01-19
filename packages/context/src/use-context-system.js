@@ -1,10 +1,9 @@
 import { css, cx } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
 import { memoize } from '@wp-g2/utils';
 import { kebabCase, uniq } from 'lodash';
 
 import { CONNECTED_NAMESPACE } from './constants';
-import { useContextStoreContext } from './context-system-provider';
+import { useComponentsContext } from './context-system-provider';
 import { ns } from './utils';
 
 /**
@@ -22,13 +21,10 @@ import { ns } from './utils';
  * @return {ConnectedProps<P>}
  */
 export function useContextSystem(props, namespace) {
-	const { store: useStore } = useContextStoreContext();
+	const contextSystemProps = useComponentsContext();
 	const displayName = Array.isArray(namespace) ? namespace[0] : namespace;
 
-	const contextProps = useStore(
-		(state) => state?.context?.[displayName] || {},
-		shallowCompare,
-	);
+	const contextProps = contextSystemProps?.[displayName] || {};
 
 	/** @type {ConnectedProps<P>} */
 	// @ts-ignore We fill in the missing properties below
