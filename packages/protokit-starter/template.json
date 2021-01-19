@@ -1,15 +1,16 @@
 {
 	"package": {
 		"dependencies": {
+			"@wordpress/data": "latest",
+			"@wordpress/i18n": "latest",
+			"@wordpress/icons": "latest",
+			"@wordpress/is-shallow-equal": "latest",
 			"@wp-g2/context": "latest",
 			"@wp-g2/components": "latest",
 			"@wp-g2/hint": "latest",
-			"@wp-g2/icons": "latest",
 			"@wp-g2/protokit": "latest",
 			"@wp-g2/styles": "latest",
-			"@wp-g2/utils": "latest",
-			"framer-motion": "^2.1.0",
-			"reakit": "next"
+			"@wp-g2/utils": "latest"
 		}
 	}
 }

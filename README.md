@@ -19,6 +19,8 @@ These components (and their sub-systems) have been uniquely developed to meet th
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 -   [Getting Started](#getting-started)
+    -   [Using `@wp-g2/components`](#using-wp-g2components)
+    -   [Development](#development)
 -   [Goals](#goals)
     -   [Design + Developer Experience (DX)](#design--developer-experience-dx)
     -   [Native support and considerations for a11y](#native-support-and-considerations-for-a11y)
@@ -35,6 +37,16 @@ These components (and their sub-systems) have been uniquely developed to meet th
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Getting Started
+
+### Using `@wp-g2/components`
+
+Run the following command to add `@wp-g2/components` to your project:
+
+```
+npm install @wp-g2/components @wordpress/i18n @wordpress/data @wordpress/icons @wordpress/is-shallow-equal
+```
+
+### Development
 
 Install all the dependencies by running:
 
