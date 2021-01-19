@@ -5,7 +5,7 @@ import {
 	isValidCSSValueForProp,
 	usePropRef,
 } from '@wp-g2/utils';
-import React from 'react';
+import { useCallback } from 'react';
 
 import {
 	findUnitMatchExact,
@@ -42,7 +42,7 @@ export function useUnitInputState({
 		unit,
 	});
 
-	const getIsValidCSSValue = React.useCallback(
+	const getIsValidCSSValue = useCallback(
 		(next) => {
 			const { cssProp } = propRefs.current;
 			if (!cssProp) return true;
@@ -52,7 +52,7 @@ export function useUnitInputState({
 		[propRefs],
 	);
 
-	const validate = React.useCallback(
+	const validate = useCallback(
 		(next) => {
 			const {
 				allowEmptyValue,
@@ -91,7 +91,7 @@ export function useUnitInputState({
 		[getIsValidCSSValue, propRefs],
 	);
 
-	const handleOnChange = React.useCallback(
+	const handleOnChange = useCallback(
 		(next) => {
 			const { allowEmptyValue, fallbackUnit, unit } = propRefs.current;
 			let nextValue = next;
@@ -112,7 +112,7 @@ export function useUnitInputState({
 		[onChange, propRefs, validate],
 	);
 
-	const handleOnSelectChange = React.useCallback(
+	const handleOnSelectChange = useCallback(
 		(next) => {
 			const { parsedValue } = propRefs.current;
 			if (!parsedValue) return;
