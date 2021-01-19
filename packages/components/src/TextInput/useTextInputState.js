@@ -9,22 +9,22 @@ import {
 	usePropRef,
 } from '@wp-g2/utils';
 import { isNil, noop } from 'lodash';
-import React from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { useBaseDragHandlers } from './useTextInputState.utils';
 
 function useCommitValue({ value }) {
-	const [commitValue, setCommitValue] = React.useState(null);
-	const resetCommitValue = React.useCallback(() => setCommitValue(null), []);
+	const [commitValue, setCommitValue] = useState(null);
+	const resetCommitValue = useCallback(() => setCommitValue(null), []);
 
-	React.useEffect(resetCommitValue, [value]);
+	useEffect(resetCommitValue, [value]);
 
 	return [commitValue, setCommitValue, resetCommitValue];
 }
 
 function useShiftStep({ isShiftStepEnabled = true, shiftStep = 10 }) {
-	const [on, setOn] = React.useState(false);
-	React.useEffect(() => {
+	const [on, setOn] = useState(false);
+	useEffect(() => {
 		const handleOnKeyDown = (event) => {
 			if (!isShiftStepEnabled) return;
 			if (event.shiftKey) setOn(true);
@@ -47,9 +47,9 @@ function useShiftStep({ isShiftStepEnabled = true, shiftStep = 10 }) {
 }
 
 function useFocusedState({ isFocused: isFocusedProp = false }) {
-	const [isFocused, setFocused] = React.useState(isFocusedProp);
+	const [isFocused, setFocused] = useState(isFocusedProp);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setFocused(isFocusedProp);
 	}, [isFocusedProp]);
 
@@ -57,7 +57,7 @@ function useFocusedState({ isFocused: isFocusedProp = false }) {
 }
 
 function useChangeHandlers({ onChange }) {
-	const handleOnChange = React.useCallback(
+	const handleOnChange = useCallback(
 		(event) => {
 			onChange(event.target.value);
 		},
@@ -70,7 +70,7 @@ function useChangeHandlers({ onChange }) {
 }
 
 function useFocusHandlers({ onChange, setFocused }) {
-	const handleOnBlur = React.useCallback(
+	const handleOnBlur = useCallback(
 		(event) => {
 			onChange(event.target.value);
 			setFocused(false);
@@ -78,7 +78,7 @@ function useFocusHandlers({ onChange, setFocused }) {
 		[onChange, setFocused],
 	);
 
-	const handleOnFocus = React.useCallback(() => {
+	const handleOnFocus = useCallback(() => {
 		setFocused(true);
 	}, [setFocused]);
 
@@ -89,7 +89,7 @@ function useFocusHandlers({ onChange, setFocused }) {
 }
 
 function useKeyboardHandlers({ onChange }) {
-	const keyboardHandlers = React.useMemo(
+	const keyboardHandlers = useMemo(
 		() => ({
 			Enter(/** @type {import('react').KeyboardEvent} */ event) {
 				if (event.isDefaultPrevented()) return;
@@ -99,7 +99,7 @@ function useKeyboardHandlers({ onChange }) {
 		[onChange],
 	);
 
-	const handleOnKeyDown = React.useCallback(
+	const handleOnKeyDown = useCallback(
 		(/** @type {import('react').KeyboardEvent}} */ event) => {
 			const key = normalizeArrowKey(event);
 			if (key && keyboardHandlers[key]) {
@@ -151,7 +151,7 @@ function useNumberActions({
 		onChange,
 	});
 
-	const increment = React.useCallback(
+	const increment = useCallback(
 		(/** @type {number} */ jumpStep = 0) => {
 			if (skipAction) return;
 
@@ -172,7 +172,7 @@ function useNumberActions({
 		[skipAction, propRefs, step],
 	);
 
-	const decrement = React.useCallback(
+	const decrement = useCallback(
 		(/** @type {number} */ jumpStep = 0) => {
 			if (skipAction) return;
 
@@ -202,7 +202,7 @@ function useNumberKeyboardHandlers({
 	isTypeNumeric,
 	stopIfEventDefaultPrevented = true,
 }) {
-	const keyboardHandlers = React.useMemo(
+	const keyboardHandlers = useMemo(
 		() => ({
 			ArrowUp(event) {
 				if (!isTypeNumeric) return;
@@ -228,7 +228,7 @@ function useNumberKeyboardHandlers({
 		[decrement, increment, isTypeNumeric, stopIfEventDefaultPrevented],
 	);
 
-	const handleOnKeyDown = React.useCallback(
+	const handleOnKeyDown = useCallback(
 		(event) => {
 			const key = normalizeArrowKey(event);
 			if (key && keyboardHandlers[key]) {
@@ -249,7 +249,7 @@ const useScrollHandlers = ({
 	isFocused,
 	isTypeNumeric,
 }) => {
-	const handleOnWheel = React.useCallback(
+	const handleOnWheel = useCallback(
 		(event) => {
 			if (!isTypeNumeric) return;
 			if (!isFocused) return;
@@ -293,7 +293,7 @@ export function useTextInputState(props) {
 		...otherProps
 	} = props;
 
-	const inputRef = React.useRef();
+	const inputRef = useRef();
 
 	const [value, onChange] = useControlledValue({
 		value: valueProp,
@@ -311,7 +311,7 @@ export function useTextInputState(props) {
 
 	const [isFocused, setFocused] = useFocusedState({ value: isFocusedProp });
 
-	const handleOnCommit = React.useCallback(
+	const handleOnCommit = useCallback(
 		(next) => {
 			let isValid = true;
 			const hasValidation = typeof validate === 'function';

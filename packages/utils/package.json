@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.135",
+    "version": "0.0.136",
     "description": "Utilities for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
@@ -25,9 +25,9 @@
         "lodash": "^4.17.19",
         "memize": "^1.1.0",
         "react-merge-refs": "^1.1.0",
-        "react-resize-aware": "^3.0.1",
+        "react-resize-aware": "^3.1.0",
         "reakit-warning": "^0.5.5",
-        "tinycolor2": "^1.4.1",
+        "tinycolor2": "^1.4.2",
         "use-enhanced-state": "^0.0.13",
         "use-isomorphic-layout-effect": "^1.0.0"
     },

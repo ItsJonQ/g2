@@ -9,7 +9,7 @@ import { useEffect, useRef } from 'react';
  * // Referencing a simple prop, used in a useCallback function.
  * const valueRef = usePropRef(value)
  *
- * const increment = React.useCallback(() => {
+ * const increment = useCallback(() => {
  *   const value = valueRef.current
  *   onChange(value + 1)
  * }, [onChange, valueRef])
@@ -23,11 +23,15 @@ import { useEffect, useRef } from 'react';
  * ```js
  * const propRefs = usePropRef({ value, step })
  *
- * const increment = React.useCallback(() => {
+ * const increment = useCallback(() => {
  *   const { value, step } = propRefs.current
  *   onChange(value + step)
  * }, [onChange, propRefs])
  * ```
+ *
+ * @template T
+ * @param {T} prop
+ * @return {{current: T|undefined}}
  */
 export function usePropRef(prop) {
 	const propRef = useRef(prop);

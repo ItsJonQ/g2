@@ -1,6 +1,6 @@
 import { clearSelection } from '@wp-g2/utils';
 import { noop } from 'lodash';
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDrag } from 'react-use-gesture';
 
 import * as styles from './TextInput.styles';
@@ -11,15 +11,15 @@ export function useBaseDragHandlers({
 	increment,
 	isTypeNumeric = true,
 }) {
-	const [dragState, setDragState] = React.useState(
+	const [dragState, setDragState] = useState(
 		/** @type {undefined | 'x' | 'y'} */ (undefined),
 	);
 
 	/** @type {import('react').MutableRefObject<number | undefined>} */
-	const dragRef = React.useRef();
+	const dragRef = useRef();
 	const threshold = 10;
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (dragState) {
 			clearSelection();
 
@@ -40,7 +40,7 @@ export function useBaseDragHandlers({
 		}
 	}, [dragState]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		return () => {
 			if (!dragRef.current) return;
 			cancelAnimationFrame(dragRef.current);
@@ -82,7 +82,7 @@ export function useBaseDragHandlers({
 		? dragGestures()
 		: { onMouseDown: noop, onTouchStart: noop };
 
-	const gestureRef = React.useRef(gestures);
+	const gestureRef = useRef(gestures);
 
 	return gestureRef.current;
 }
