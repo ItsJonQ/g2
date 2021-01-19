@@ -28,6 +28,10 @@ import { useEffect, useRef } from 'react';
  *   onChange(value + step)
  * }, [onChange, propRefs])
  * ```
+ *
+ * @template T
+ * @param {T} prop
+ * @return {{current: T|undefined}}
  */
 export function usePropRef(prop) {
 	const propRef = useRef(prop);

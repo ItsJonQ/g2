@@ -9,7 +9,7 @@ import { useState } from 'react';
  * @param {T} [props.defaultValue]
  * @param {T} [props.value]
  * @param {(value: T) => void} [props.onChange]
- * @return {[T, (value: T) => void]}
+ * @return {[T|undefined, (value: T) => void]}
  */
 export function useControlledValue({
 	defaultValue,
