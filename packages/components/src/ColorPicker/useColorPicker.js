@@ -3,13 +3,54 @@ import { ui } from '@wp-g2/styles';
 import { noop } from 'lodash';
 import { useCallback, useState } from 'react';
 
-export function getColor(color) {
+/**
+ * @typedef {('hex'|'rgb'|'hsl')} InputType
+ */
+
+/**
+ * @typedef ColorValues
+ * @property {string} hex
+ * @property {string} hsl
+ * @property {string} rgb
+ */
+
+/**
+ * @typedef ChangeValues
+ * @property {(color: string) => void} hex
+ * @property {(color: string) => void} hsl
+ * @property {(color: string) => void} rgb
+ */
+
+/**
+ * @typedef ColorPickerStore
+ * @property {ChangeValues} changeValues
+ * @property {string} color
+ * @property {string} colorRgb
+ * @property {ColorValues} colorValues
+ * @property {boolean} disableAlpha
+ * @property {InputType} inputType
+ * @property {() => void} increment
+ * @property {() => void} decrement
+ * @property {(color: string) => void} onChange
+ * @property {(inputType: InputType) => void} setInputType
+ * @property {boolean} showPreview
+ */
+
+/**
+ * Retrieves the color using the primary color translation format.
+ *
+ * @param {string} color color to transform.
+ * @returns {string} The color.
+ */
+function getColor(color) {
 	return ui.color(color).toRgbString();
 }
 
 /**
- * @param {State} state
- * @return {string}
+ * Retrieves the color value for a particular inputType.
+ * @param {string} color
+ * @param {InputType} inputType
+ * @return {string | undefined} The formatted color value.
  */
 const getColorValue = (color, inputType) => {
 	let colorValue = color;
@@ -31,6 +72,10 @@ const getColorValue = (color, inputType) => {
 	return colorValue;
 };
 
+/**
+ * @param {object} props
+ * @return {{ store: ColorPickerStore, width: number }}
+ */
 export function useColorPicker(props) {
 	const {
 		// @todo: Add support to interpret initial alpha + color.
@@ -82,16 +127,16 @@ export function useColorPicker(props) {
 	const changeValues = {
 		rgb: (next) => {
 			let nextState = { ...colorValues.rgb(), ...next };
-			nextState = getColor(nextState, disableAlpha);
+			nextState = getColor(nextState);
 			handleOnChange(nextState);
 		},
 		hex: (next) => {
-			const nextState = getColor(next, disableAlpha);
+			const nextState = getColor(next);
 			handleOnChange(nextState);
 		},
 		hsl: (next) => {
 			let nextState = { ...colorValues.hsl(), ...next };
-			nextState = getColor(nextState, disableAlpha);
+			nextState = getColor(nextState);
 			handleOnChange(nextState);
 		},
 	};
@@ -140,18 +185,18 @@ export function useColorPicker(props) {
 		...otherProps,
 		width,
 		store: {
+			changeValues,
 			color: getColor(color),
 			colorRgb: ui.color(color).toRgb(),
 			colorValue: getColorValue(color, inputType),
-			disableAlpha,
-			inputType,
-			increment,
+			colorValues,
 			decrement,
+			disableAlpha,
+			increment,
+			inputType,
 			onChange: handleOnChange,
 			setInputType,
 			showPreview,
-			colorValues,
-			changeValues,
 		},
 	};
 }
