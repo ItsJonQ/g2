@@ -29,17 +29,26 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render css props + provided css 1`] = `
-<div
-  class="components-olaf wp-components-olaf olaf css-y278hy"
-  data-g2-c16t="true"
-  data-g2-component="Olaf"
-/>
+<div>
+  <div
+    class="components-olaf wp-components-olaf olaf css-w4hnsq"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  />
+</div>
 `;
 
 exports[`props should render css props 1`] = `
-<div
-  class="components-olaf wp-components-olaf olaf css-er5ts4"
-  data-g2-c16t="true"
-  data-g2-component="Olaf"
-/>
+<div>
+  <div
+    class="components-olaf wp-components-olaf olaf css-hs2bux"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  />
+  <div
+    class="components-olaf wp-components-olaf olaf css-1nqjm19"
+    data-g2-c16t="true"
+    data-g2-component="Olaf"
+  />
+</div>
 `;
