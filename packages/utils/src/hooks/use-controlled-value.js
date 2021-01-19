@@ -4,10 +4,12 @@ import { useState } from 'react';
 /**
  * Simplified and improved implementation of useControlledState.
  *
+ * @template T
  * @param {object} props
- * @param {string|number} [props.defaultValue]
- * @param {string|number} [props.value]
- * @param {() => void} [props.onChange]
+ * @param {T} [props.defaultValue]
+ * @param {T} [props.value]
+ * @param {(value: T) => void} [props.onChange]
+ * @return {[T, (value: T) => void]}
  */
 export function useControlledValue({
 	defaultValue,
