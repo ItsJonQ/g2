@@ -23,9 +23,10 @@ import {
 } from '@wp-g2/components';
 import { FiMoreHorizontal } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
-import { createStore, shallowCompare } from '@wp-g2/substate';
 import { is } from '@wp-g2/utils';
 import React from 'react';
+import createStore from 'zustand';
+import shallowCompare from 'zustand/shallow';
 
 export const Wrapper = ({ children, title }) => {
 	return (

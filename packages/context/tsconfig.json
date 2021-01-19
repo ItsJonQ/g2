@@ -6,9 +6,5 @@
 		"noImplicitAny": false
 	},
 	"include": ["src/**/*"],
-	"references": [
-		{ "path": "../substate" },
-		{ "path": "../styles" },
-		{ "path": "../utils" }
-	]
+	"references": [{ "path": "../styles" }, { "path": "../utils" }]
 }

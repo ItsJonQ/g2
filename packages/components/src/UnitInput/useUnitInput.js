@@ -4,24 +4,6 @@ import { noop } from 'lodash';
 import { useUnitInputState } from './useUnitInputState';
 
 /**
- * @typedef UnitStore
- * @property {string} [cssProp]
- * @property {string} value
- * @property {string | number} [parsedValue]
- * @property {string} [unit]
- * @property {import('react').Ref<HTMLInputElement | undefined>} inputRef
- *
- * @property {(value?: string) => void} commit
- * @property {(unit: string) => void} changeUnit
- * @property {(value: string) => void} sync
- * @property {(value: string) => boolean} validate
- *
- * @property {(value: string) => boolean} getIsValidCSSValue
- */
-
-/** @typedef {import('@wp-g2/substate').UseStore<UnitStore>} UnitInputState */
-
-/**
  * @typedef OwnProps
  * @property {import('../TextInput/types').TextInputArrow} [arrows] Renders specified incrementer/decrementer arrows.
  * @property {boolean} [allowEmptyValue] Allow for values to be an empty string.

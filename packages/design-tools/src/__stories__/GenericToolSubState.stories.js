@@ -18,8 +18,9 @@ import {
 } from '@wp-g2/components';
 import { Schema } from '@wp-g2/protokit';
 import { css, styled, ui } from '@wp-g2/styles';
-import { createStore, shallowCompare } from '@wp-g2/substate';
 import React from 'react';
+import createStore from 'zustand';
+import shallowCompare from 'zustand/shallow';
 
 export default {
 	title: 'DesignTools/GenericTool/SubState/PerformanceTest',

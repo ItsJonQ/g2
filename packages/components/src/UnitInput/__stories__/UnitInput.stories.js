@@ -1,6 +1,6 @@
-import { createStore } from '@wp-g2/substate';
 import { isValidCSSValueForProp } from '@wp-g2/utils';
 import React from 'react';
+import createStore from 'zustand';
 
 import { FormGroup, ListGroup } from '../../index';
 import { UnitInput } from '../index';

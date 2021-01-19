@@ -1,6 +1,5 @@
 import { __ } from '@wordpress/i18n';
 import { ui } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
 import React from 'react';
 
 import { FormGroup } from '../FormGroup';

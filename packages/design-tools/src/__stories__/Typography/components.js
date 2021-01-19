@@ -9,8 +9,8 @@ import {
 	View,
 } from '@wp-g2/components';
 import { ui } from '@wp-g2/styles';
-import { createStore } from '@wp-g2/substate';
 import React from 'react';
+import createStore from 'zustand';
 
 export const typographyOptionKeys = {
 	fontFamily: {
