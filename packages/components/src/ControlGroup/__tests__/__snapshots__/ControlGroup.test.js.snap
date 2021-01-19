@@ -12,10 +12,6 @@ exports[`props should render correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: -1px;
   --wp-g2-flex-item-margin-bottom: 0;
   --wp-g2-flex-item-margin-right: calc(4px * 2);
@@ -25,6 +21,10 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -60,10 +60,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -74,6 +70,10 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -325,10 +325,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -339,6 +335,10 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -576,10 +576,6 @@ exports[`props should render mixed control types 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: -1px;
   --wp-g2-flex-item-margin-bottom: 0;
   --wp-g2-flex-item-margin-right: calc(4px * 2);
@@ -589,6 +585,10 @@ exports[`props should render mixed control types 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -634,10 +634,6 @@ exports[`props should render mixed control types 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -648,6 +644,10 @@ exports[`props should render mixed control types 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -958,10 +958,6 @@ exports[`props should render mixed control types 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -972,6 +968,10 @@ exports[`props should render mixed control types 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1121,10 +1121,6 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -1135,6 +1131,10 @@ exports[`props should render mixed control types 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;

@@ -1,4 +1,4 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 import * as baseFieldStyles from '../BaseField/BaseField.styles';
 
@@ -7,6 +7,7 @@ export const SelectDropdown = css`
 `;
 
 export const MenuWrapper = css`
+	${ui.zIndex('Dropdown')};
 	outline: none;
 `;
 

@@ -153,10 +153,6 @@ exports[`props should render correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-display: block;
@@ -168,6 +164,10 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: normal;
   -ms-flex-align: normal;
   align-items: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -646,10 +646,6 @@ exports[`props should render correctly without description and icon 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-display: block;
@@ -661,6 +657,10 @@ exports[`props should render correctly without description and icon 1`] = `
   -webkit-box-align: normal;
   -ms-flex-align: normal;
   align-items: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;

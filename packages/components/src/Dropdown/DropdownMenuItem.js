@@ -1,5 +1,6 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import React from 'react';
+import { noop } from 'lodash';
+import React, { useCallback } from 'react';
 
 import { MenuItem } from '../Menu';
 import { useDropdownContext } from './Dropdown.Context';
@@ -9,10 +10,31 @@ import { useDropdownContext } from './Dropdown.Context';
  * @param {import('react').Ref<any>} forwardedRef
  */
 function DropdownMenuItem(props, forwardedRef) {
-	const { ...otherProps } = useContextSystem(props, 'DropdownMenuItem');
-	const { menu } = useDropdownContext();
+	const { onClick = noop, ...otherProps } = useContextSystem(
+		props,
+		'DropdownMenuItem',
+	);
+	const { hideOnClickItem, menu } = useDropdownContext();
 
-	return <MenuItem {...otherProps} {...menu} ref={forwardedRef} />;
+	const handleOnClick = useCallback(
+		(...args) => {
+			onClick(...args);
+
+			if (hideOnClickItem) {
+				menu.hide();
+			}
+		},
+		[onClick, hideOnClickItem, menu],
+	);
+
+	return (
+		<MenuItem
+			{...otherProps}
+			{...menu}
+			onClick={handleOnClick}
+			ref={forwardedRef}
+		/>
+	);
 }
 
 /**

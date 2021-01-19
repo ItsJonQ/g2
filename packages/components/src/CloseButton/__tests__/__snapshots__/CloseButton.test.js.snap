@@ -2,10 +2,6 @@
 
 exports[`props should render correctly 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -16,6 +12,10 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -369,10 +369,6 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render size 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -383,6 +379,10 @@ exports[`props should render size 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -743,10 +743,6 @@ exports[`props should render size 1`] = `
 
 exports[`props should render variant 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -757,6 +753,10 @@ exports[`props should render variant 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;

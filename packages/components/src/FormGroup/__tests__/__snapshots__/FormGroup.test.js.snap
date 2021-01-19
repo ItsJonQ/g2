@@ -97,10 +97,6 @@ exports[`props should render alignLabel 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -111,6 +107,10 @@ exports[`props should render alignLabel 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -387,10 +387,6 @@ exports[`props should render correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -401,6 +397,10 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -680,10 +680,6 @@ exports[`props should render label without prop correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -694,6 +690,10 @@ exports[`props should render label without prop correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -968,10 +968,6 @@ exports[`props should render vertically 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
@@ -982,6 +978,10 @@ exports[`props should render vertically 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;

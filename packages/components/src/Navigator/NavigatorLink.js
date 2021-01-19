@@ -5,6 +5,7 @@ import {
 	useContextSystem,
 } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
+import { noop } from 'lodash';
 import React from 'react';
 
 import * as linkStyles from '../Link/Link.styles';
@@ -20,6 +21,7 @@ function NavigatorLink(props, forwardedRef) {
 		href,
 		isBack,
 		isPlain,
+		onClick = noop,
 		params,
 		showArrow,
 		to,
@@ -40,6 +42,7 @@ function NavigatorLink(props, forwardedRef) {
 	);
 
 	const handleOnClick = (event) => {
+		onClick(event);
 		if (isBack) {
 			event.preventDefault();
 			if (to) {
