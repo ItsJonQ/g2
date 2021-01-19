@@ -1,7 +1,6 @@
 {
 	"extends": "../../tsconfig.legacy.base.json",
 	"references": [
-		{ "path": "../substate" },
 		{ "path": "../context" },
 		{ "path": "../utils" },
 		{ "path": "../create-styles" },

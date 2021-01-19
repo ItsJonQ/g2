@@ -17,9 +17,13 @@ import {
 	VStack,
 } from '@wp-g2/components';
 import { ui } from '@wp-g2/styles';
-import { createStore, useSubState } from '@wp-g2/substate';
 import { noop } from '@wp-g2/utils';
 import React from 'react';
+import createStore from 'zustand';
+
+function useSubState(createState) {
+	return React.useRef(createStore(createState)).current;
+}
 
 export default {
 	title: 'DesignTools/DataFlow',

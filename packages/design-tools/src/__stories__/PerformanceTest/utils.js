@@ -11,8 +11,12 @@ import {
 	VStack,
 } from '@wp-g2/components';
 import { faker } from '@wp-g2/protokit';
-import { createStore, useSubState } from '@wp-g2/substate';
 import React from 'react';
+import createStore from 'zustand';
+
+function useSubState(createState) {
+	return React.useRef(createStore(createState)).current;
+}
 
 const ids = [...Array(120)].fill(0).map((v, i) => i);
 const calcXY = () => [

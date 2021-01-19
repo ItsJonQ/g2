@@ -19,7 +19,6 @@
     "@popperjs/core": "^2.5.4",
     "@wp-g2/context": "^0.0.138",
     "@wp-g2/styles": "^0.0.138",
-    "@wp-g2/substate": "^0.0.138",
     "@wp-g2/utils": "^0.0.138",
     "csstype": "^3.0.3",
     "downshift": "^6.0.15",

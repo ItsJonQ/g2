@@ -50,11 +50,11 @@ import {
 } from '@wp-g2/components';
 import { FiCornerUpLeft } from '@wp-g2/icons';
 import { ui } from '@wp-g2/styles';
-import { shallowCompare } from '@wp-g2/substate';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 import { Composite, CompositeItem, useCompositeState } from 'reakit';
 import CSSUnit from 'units-css';
+import shallowCompare from 'zustand/shallow';
 
 import {
 	colorOptionKeys,
