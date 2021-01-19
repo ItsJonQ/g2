@@ -14,6 +14,10 @@
 
 ## Usage
 
+```
+npm install @wp-g2/create-styles @wordpress/data @wordpress/is-shallow-equal
+```
+
 ```jsx
 import React from 'react';
 import { createStyleSystem } from '@wp-g2/create-styles';
