@@ -8,5 +8,5 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ```
-npm install @wp-g2/components @wordpress/data @wordpress/is-shallow-equal
+npm install @wp-g2/components @wordpress/i18n @wordpress/data @wordpress/icons @wordpress/is-shallow-equal
 ```
