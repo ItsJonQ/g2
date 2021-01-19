@@ -12,6 +12,14 @@ import { useColorPicker } from './useColorPicker';
 
 const { ColorPickerView } = styles;
 
+/**
+ * @typedef {import('./useColorPicker').ColorPickerProps} Props
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function ColorPicker(props, forwardedRef) {
 	const { className, store, width, ...otherProps } = useColorPicker(props);
 	const contextProps = store;

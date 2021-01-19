@@ -73,8 +73,19 @@ const getColorValue = (color, inputType) => {
 };
 
 /**
- * @param {object} props
- * @return {{ store: ColorPickerStore, width: number }}
+ * @typedef ColorPickerProps
+ * @property {number} alpha
+ * @property {string} color
+ * @property {boolean} disableAlpha
+ * @property {InputType} format
+ * @property {InputType} inputType
+ * @property {(color: string, data: object) => void} onChange
+ * @property {boolean} showPreview
+ * @property {number|string} width
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<ColorPickerProps, 'div'>} props
  */
 export function useColorPicker(props) {
 	const {
