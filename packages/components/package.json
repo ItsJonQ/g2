@@ -28,7 +28,7 @@
     "history": "^4.9.0",
     "lodash": "^4.17.19",
     "path-to-regexp": "^1.7.0",
-    "react-colorful": "4.1.1",
+    "react-colorful": "4.4.4",
     "react-textarea-autosize": "^8.2.0",
     "react-use-gesture": "^9.0.0",
     "reakit": "1.1.0"

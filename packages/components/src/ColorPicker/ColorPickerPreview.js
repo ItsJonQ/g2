@@ -1,5 +1,4 @@
 import { __ } from '@wordpress/i18n';
-import { shallowCompare } from '@wp-g2/substate';
 import { useClipboard } from '@wp-g2/utils';
 import React from 'react';
 
@@ -10,13 +9,7 @@ import { useColorPickerContext } from './ColorPicker.Context';
 import * as styles from './ColorPicker.styles';
 
 export const ColorPickerPreview = React.memo(() => {
-	const { store } = useColorPickerContext();
-
-	const [color, showPreview] = store(
-		(state) => [state.getColorValue(), state.showPreview],
-		shallowCompare,
-	);
-
+	const { colorValue: color, showPreview } = useColorPickerContext();
 	const { hasCopied, onCopy } = useClipboard(color);
 
 	if (!showPreview) return null;

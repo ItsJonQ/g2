@@ -12,11 +12,20 @@ import { useColorPicker } from './useColorPicker';
 
 const { ColorPickerView } = styles;
 
+/**
+ * @typedef {import('./useColorPicker').ColorPickerProps} Props
+ */
+
+/**
+ * @param {import('@wp-g2/create-styles').ViewOwnProps<Props, 'div'>} props
+ * @param {import('react').Ref<any>} forwardedRef
+ */
 function ColorPicker(props, forwardedRef) {
-	const { onChange, store, width, ...otherProps } = useColorPicker(props);
+	const { className, store, width, ...otherProps } = useColorPicker(props);
+	const contextProps = store;
+	const { disableAlpha } = store;
 
-	const contextProps = React.useMemo(() => ({ store }), [store]);
-
+	const classes = cx(disableAlpha && styles.disableAlpha, className);
 	const vStackClasses = cx(css({ width }));
 
 	return (
@@ -26,8 +35,12 @@ function ColorPicker(props, forwardedRef) {
 				className={vStackClasses}
 				isExpanded={false}
 			>
-				<ColorPickerView {...otherProps} ref={forwardedRef}>
-					<ColorPickerElement onChange={onChange} width={width} />
+				<ColorPickerView
+					{...otherProps}
+					className={classes}
+					ref={forwardedRef}
+				>
+					<ColorPickerElement width={width} />
 				</ColorPickerView>
 				<VStack alignment="top" isExpanded={false}>
 					<ColorPickerSelect />

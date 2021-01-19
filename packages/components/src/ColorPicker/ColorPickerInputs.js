@@ -1,5 +1,4 @@
 import { __ } from '@wordpress/i18n';
-import { shallowCompare } from '@wp-g2/substate';
 import { interpolate, is, roundClamp } from '@wp-g2/utils';
 import React from 'react';
 
@@ -58,15 +57,13 @@ export const ColorInputSlider = React.memo(
 		type = 'rgb',
 		...otherProps
 	}) => {
-		const { store } = useColorPickerContext();
-		const [value, setValue, disableAlpha] = store(
-			(state) => [
-				state[type]()[prop],
-				state.change[type],
-				state.disableAlpha,
-			],
-			shallowCompare,
-		);
+		const {
+			changeValues,
+			colorValues,
+			disableAlpha,
+		} = useColorPickerContext();
+		const value = colorValues[type]()[prop];
+		const setValue = changeValues[type];
 
 		const handleOnChange = React.useCallback(
 			(next) => {
@@ -193,8 +190,7 @@ export const ColorPickerHexInputs = React.memo(() => {
 });
 
 export const ColorPickerInputs = React.memo(() => {
-	const { store } = useColorPickerContext();
-	const inputType = store((state) => state.inputType, shallowCompare);
+	const { inputType } = useColorPickerContext();
 
 	switch (inputType) {
 		case 'hex':
