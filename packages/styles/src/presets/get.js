@@ -1,5 +1,3 @@
-import warning from '@wordpress/warning';
-
 import { get } from '../core';
 export { get } from '../core';
 export { createToken } from '../system';
@@ -9,13 +7,6 @@ export function getTokenValue(token) {
 	const rawValue = window
 		.getComputedStyle(document.documentElement)
 		.getPropertyValue(cssVariable);
-
-	warning(
-		`@wp-g2/styles, ui.getTokenValue
-❗️This function is for debugging only.
-The "${token}" value is a live CSS variable, and cannot be reliably depended upon.
-ui.getTokenValue('${token}') = ${rawValue};`,
-	);
 
 	return rawValue;
 }
