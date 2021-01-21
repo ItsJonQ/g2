@@ -278,7 +278,7 @@ export function useTextInputState(props) {
 		defaultValue,
 		dragAxis = 'y',
 		incrementFromNonNumericValue = false,
-		isCommitOnBlurOrEnter = true,
+		isCommitOnBlurOrEnter = false,
 		isFocused: isFocusedProp = false,
 		onChange: onChangeProp = noop,
 		value: valueProp,
