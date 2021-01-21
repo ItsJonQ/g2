@@ -30,7 +30,7 @@
     "react-colorful": "4.4.4",
     "react-textarea-autosize": "^8.2.0",
     "react-use-gesture": "^9.0.0",
-    "reakit": "1.1.0"
+    "reakit": "^1.3.4"
   },
   "devDependencies": {
     "@emotion/jest": "^11.0.0",
