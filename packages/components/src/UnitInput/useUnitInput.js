@@ -26,6 +26,7 @@ export function useUnitInput(props) {
 		arrows = false,
 		allowEmptyValue = false,
 		cssProp,
+		isCommitOnBlurOrEnter = true,
 		fallbackUnit = 'px',
 		incrementFromNonNumericValue = true,
 		onChange = noop,
@@ -46,5 +47,6 @@ export function useUnitInput(props) {
 		...otherProps,
 		...unitState,
 		arrows,
+		isCommitOnBlurOrEnter,
 	};
 }
