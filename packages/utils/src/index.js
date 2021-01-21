@@ -17,4 +17,3 @@ export * from './simple-equal';
 export * from './unit-values';
 export * from './validation';
 export * from './values';
-export * from './warning';

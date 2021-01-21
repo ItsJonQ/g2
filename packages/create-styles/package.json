@@ -34,7 +34,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "reakit-utils": "^0.15.0"
+    "reakit-utils": "^0.15.1"
   },
   "gitHead": "9536f69d764f89429aa66f4368914ea7936ca4c7"
 }
