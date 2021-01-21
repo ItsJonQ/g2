@@ -18,6 +18,7 @@ function SelectDropdown(props, forwardedRef) {
 		items,
 		label,
 		labelProps,
+		menuProps,
 		placeholder,
 		popoverProps,
 		popoverRef,
@@ -33,18 +34,20 @@ function SelectDropdown(props, forwardedRef) {
 			<Select as="button" {...referenceProps}>
 				<Truncate>{referenceProps.children}</Truncate>
 			</Select>
-			<Portal>
-				<View {...popoverProps}>
-					<SelectDropdownLabel {...labelProps} />
-					{isOpen && (
-						<DropdownMenuCard {...dropdownMenuProps}>
-							{items.map((item) => (
-								<SelectDropdownItem {...item} />
-							))}
-						</DropdownMenuCard>
-					)}
-				</View>
-			</Portal>
+			<SelectDropdownLabel {...labelProps} />
+			<View {...popoverProps}>
+				<DropdownMenuCard {...dropdownMenuProps}>
+					<div {...menuProps}>
+						{isOpen && (
+							<>
+								{items.map((item) => (
+									<SelectDropdownItem {...item} />
+								))}
+							</>
+						)}
+					</div>
+				</DropdownMenuCard>
+			</View>
 		</View>
 	);
 }

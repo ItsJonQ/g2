@@ -14,4 +14,8 @@ export const DropdownMenu = css`
 	width: 100%;
 `;
 
+export const hidden = css`
+	display: none;
+`;
+
 export const inline = baseFieldStyles.inline;
