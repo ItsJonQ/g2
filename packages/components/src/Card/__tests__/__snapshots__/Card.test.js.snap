@@ -259,6 +259,16 @@ exports[`props should render CardInnerBody 1`] = `
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -342,6 +352,18 @@ exports[`props should render CardInnerBody 1`] = `
   border-color: var(--wp-g2-button-primary-border-color);
   color: #ffffff;
   color: var(--wp-g2-button-primary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
@@ -651,7 +673,6 @@ exports[`props should render CardInnerBody 1`] = `
         data-g2-c16t="true"
         data-g2-component="Button"
         data-icon="false"
-        type="button"
       >
         <span
           class="components-flex-item wp-components-flex-item emotion-6"
@@ -987,6 +1008,16 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1070,6 +1101,18 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-button-primary-border-color);
   color: #ffffff;
   color: var(--wp-g2-button-primary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
@@ -1379,7 +1422,6 @@ exports[`props should render correctly 1`] = `
         data-g2-c16t="true"
         data-g2-component="Button"
         data-icon="false"
-        type="button"
       >
         <span
           class="components-flex-item wp-components-flex-item emotion-6"

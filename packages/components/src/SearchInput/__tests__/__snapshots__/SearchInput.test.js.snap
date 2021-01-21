@@ -331,6 +331,16 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,6 +437,18 @@ exports[`props should render correctly 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -711,7 +733,6 @@ exports[`props should render correctly 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-7"
@@ -1222,6 +1243,16 @@ exports[`props should render isLoading 1`] = `
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1318,6 +1349,18 @@ exports[`props should render isLoading 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
@@ -1630,7 +1673,6 @@ exports[`props should render isLoading 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-8"
@@ -1999,6 +2041,16 @@ exports[`props should render placeholder 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2095,6 +2147,18 @@ exports[`props should render placeholder 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -2379,7 +2443,6 @@ exports[`props should render placeholder 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-7"
@@ -2748,6 +2811,16 @@ exports[`props should render prefix 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2844,6 +2917,18 @@ exports[`props should render prefix 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -3131,7 +3216,6 @@ exports[`props should render prefix 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-7"
@@ -3500,6 +3584,16 @@ exports[`props should render suffix 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3596,6 +3690,18 @@ exports[`props should render suffix 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -3883,7 +3989,6 @@ exports[`props should render suffix 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-7"
@@ -4252,6 +4357,16 @@ exports[`props should render value 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4348,6 +4463,18 @@ exports[`props should render value 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -4632,7 +4759,6 @@ exports[`props should render value 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-7"

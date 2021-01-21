@@ -60,7 +60,7 @@ export function useTextInput(props) {
 		gap = 2.5,
 		id: idProp,
 		incrementFromNonNumericValue = false,
-		isCommitOnBlurOrEnter = true,
+		isCommitOnBlurOrEnter = false,
 		isFocused: isFocusedProp,
 		isInline = false,
 		isResizable = false,
