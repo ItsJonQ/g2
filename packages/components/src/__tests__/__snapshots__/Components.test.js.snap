@@ -2911,6 +2911,16 @@ exports[`props should render Badge with css prop 2`] = `
 
 exports[`props should render BaseButton 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2981,6 +2991,18 @@ exports[`props should render BaseButton 1`] = `
   user-select: none;
   width: auto;
   text-align: center;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -3079,7 +3101,6 @@ exports[`props should render BaseButton 1`] = `
   data-g2-component="BaseButton"
   data-icon="false"
   id="BaseButton"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -3091,6 +3112,16 @@ exports[`props should render BaseButton 1`] = `
 
 exports[`props should render BaseButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3161,6 +3192,18 @@ exports[`props should render BaseButton with css prop 1`] = `
   user-select: none;
   width: auto;
   text-align: center;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -3259,7 +3302,6 @@ exports[`props should render BaseButton with css prop 1`] = `
   data-g2-component="BaseButton"
   data-icon="false"
   id="BaseButton"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -3271,6 +3313,16 @@ exports[`props should render BaseButton with css prop 1`] = `
 
 exports[`props should render BaseButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3345,6 +3397,18 @@ exports[`props should render BaseButton with css prop 2`] = `
   padding: 27px;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -3441,7 +3505,6 @@ exports[`props should render BaseButton with css prop 2`] = `
   data-g2-component="BaseButton"
   data-icon="false"
   id="BaseButton"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -3789,6 +3852,16 @@ exports[`props should render BaseModal 1`] = `null`;
 
 exports[`props should render Button 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3872,6 +3945,18 @@ exports[`props should render Button 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -4023,7 +4108,6 @@ exports[`props should render Button 1`] = `
   data-g2-component="Button"
   data-icon="false"
   id="Button"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -4035,6 +4119,16 @@ exports[`props should render Button 1`] = `
 
 exports[`props should render Button with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4118,6 +4212,18 @@ exports[`props should render Button with css prop 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -4269,7 +4375,6 @@ exports[`props should render Button with css prop 1`] = `
   data-g2-component="Button"
   data-icon="false"
   id="Button"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -4281,6 +4386,16 @@ exports[`props should render Button with css prop 1`] = `
 
 exports[`props should render Button with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4368,6 +4483,18 @@ exports[`props should render Button with css prop 2`] = `
   padding: 27px;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -4517,7 +4644,6 @@ exports[`props should render Button with css prop 2`] = `
   data-g2-component="Button"
   data-icon="false"
   id="Button"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -6477,6 +6603,16 @@ exports[`props should render CheckboxGroup 1`] = `null`;
 
 exports[`props should render ClipboardButton 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6560,6 +6696,18 @@ exports[`props should render ClipboardButton 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -6711,7 +6859,6 @@ exports[`props should render ClipboardButton 1`] = `
   data-g2-component="ClipboardButton"
   data-icon="false"
   id="ClipboardButton"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -6723,6 +6870,16 @@ exports[`props should render ClipboardButton 1`] = `
 
 exports[`props should render ClipboardButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6806,6 +6963,18 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -6957,7 +7126,6 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   data-g2-component="ClipboardButton"
   data-icon="false"
   id="ClipboardButton"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -6969,6 +7137,16 @@ exports[`props should render ClipboardButton with css prop 1`] = `
 
 exports[`props should render ClipboardButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7056,6 +7234,18 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   padding: 27px;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -7205,7 +7395,6 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   data-g2-component="ClipboardButton"
   data-icon="false"
   id="ClipboardButton"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -7217,6 +7406,16 @@ exports[`props should render ClipboardButton with css prop 2`] = `
 
 exports[`props should render CloseButton 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7310,6 +7509,18 @@ exports[`props should render CloseButton 1`] = `
   color: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -7547,7 +7758,6 @@ exports[`props should render CloseButton 1`] = `
   data-g2-component="CloseButton"
   data-icon="true"
   id="CloseButton"
-  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item emotion-1"
@@ -7585,6 +7795,16 @@ exports[`props should render CloseButton 1`] = `
 
 exports[`props should render CloseButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7678,6 +7898,18 @@ exports[`props should render CloseButton with css prop 1`] = `
   color: var(--wp-g2-color-text);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -7915,7 +8147,6 @@ exports[`props should render CloseButton with css prop 1`] = `
   data-g2-component="CloseButton"
   data-icon="true"
   id="CloseButton"
-  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item emotion-1"
@@ -7953,6 +8184,16 @@ exports[`props should render CloseButton with css prop 1`] = `
 
 exports[`props should render CloseButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8050,6 +8291,18 @@ exports[`props should render CloseButton with css prop 2`] = `
   padding: 27px;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -8285,7 +8538,6 @@ exports[`props should render CloseButton with css prop 2`] = `
   data-g2-component="CloseButton"
   data-icon="true"
   id="CloseButton"
-  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item emotion-1"
@@ -8808,6 +9060,16 @@ exports[`props should render ColorCircle with css prop 2`] = `
 
 exports[`props should render ColorControl 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8917,6 +9179,18 @@ exports[`props should render ColorControl 1`] = `
   padding-left: calc(var(--wp-g2-grid-base) * 1);
   padding-right: calc(4px * 1);
   padding-right: calc(var(--wp-g2-grid-base) * 1);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -9309,7 +9583,6 @@ exports[`props should render ColorControl 1`] = `
   data-g2-component="ColorControl"
   data-icon="false"
   id="ColorControl"
-  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item emotion-1"
@@ -9361,6 +9634,16 @@ exports[`props should render ColorControl 1`] = `
 
 exports[`props should render ColorControl with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9470,6 +9753,18 @@ exports[`props should render ColorControl with css prop 1`] = `
   padding-left: calc(var(--wp-g2-grid-base) * 1);
   padding-right: calc(4px * 1);
   padding-right: calc(var(--wp-g2-grid-base) * 1);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -9862,7 +10157,6 @@ exports[`props should render ColorControl with css prop 1`] = `
   data-g2-component="ColorControl"
   data-icon="false"
   id="ColorControl"
-  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item emotion-1"
@@ -9914,6 +10208,16 @@ exports[`props should render ColorControl with css prop 1`] = `
 
 exports[`props should render ColorControl with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10027,6 +10331,18 @@ exports[`props should render ColorControl with css prop 2`] = `
   padding: 27px;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -10417,7 +10733,6 @@ exports[`props should render ColorControl with css prop 2`] = `
   data-g2-component="ColorControl"
   data-icon="false"
   id="ColorControl"
-  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item emotion-1"
@@ -12336,6 +12651,16 @@ exports[`props should render DropdownMenuItem 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12431,6 +12756,18 @@ exports[`props should render DropdownMenuItem 1`] = `
   transition: background 100ms linear,border-color 100ms linear;
   transition: background var(--wp-g2-transition-duration-fastest) linear,border-color var(--wp-g2-transition-duration-fastest) linear;
   width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 @media (prefers-reduced-motion) {
@@ -12618,8 +12955,6 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
   data-g2-component="DropdownMenuItem"
   data-icon="false"
   id="DropdownMenuItem"
-  role="button"
-  tabindex="0"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -12641,6 +12976,16 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12736,6 +13081,18 @@ exports[`props should render DropdownMenuItem with css prop 1`] = `
   transition: background 100ms linear,border-color 100ms linear;
   transition: background var(--wp-g2-transition-duration-fastest) linear,border-color var(--wp-g2-transition-duration-fastest) linear;
   width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 @media (prefers-reduced-motion) {
@@ -12923,8 +13280,6 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
   data-g2-component="DropdownMenuItem"
   data-icon="false"
   id="DropdownMenuItem"
-  role="button"
-  tabindex="0"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -12946,6 +13301,16 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13043,6 +13408,18 @@ exports[`props should render DropdownMenuItem with css prop 2`] = `
   width: 100%;
   background: red;
   padding: 27px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 @media (prefers-reduced-motion) {
@@ -13230,8 +13607,6 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
   data-g2-component="DropdownMenuItem"
   data-icon="false"
   id="DropdownMenuItem"
-  role="button"
-  tabindex="0"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -13243,6 +13618,16 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
 
 exports[`props should render DropdownTrigger 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13326,6 +13711,18 @@ exports[`props should render DropdownTrigger 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -13477,7 +13874,6 @@ exports[`props should render DropdownTrigger 1`] = `
   data-g2-component="DropdownTrigger"
   data-icon="false"
   id="DropdownTrigger"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -13489,6 +13885,16 @@ exports[`props should render DropdownTrigger 1`] = `
 
 exports[`props should render DropdownTrigger with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13572,6 +13978,18 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -13723,7 +14141,6 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   data-g2-component="DropdownTrigger"
   data-icon="false"
   id="DropdownTrigger"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -13735,6 +14152,16 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
 
 exports[`props should render DropdownTrigger with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13822,6 +14249,18 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   padding: 27px;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -13971,7 +14410,6 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   data-g2-component="DropdownTrigger"
   data-icon="false"
   id="DropdownTrigger"
-  type="button"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -15619,6 +16057,16 @@ exports[`props should render FontSizeControl 1`] = `
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15707,6 +16155,18 @@ exports[`props should render FontSizeControl 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13>*+*:not(marquee) {
@@ -16001,7 +16461,6 @@ exports[`props should render FontSizeControl 1`] = `
         >
           <button
             aria-busy="false"
-            aria-disabled="true"
             class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
             data-active="false"
             data-destructive="false"
@@ -16010,8 +16469,6 @@ exports[`props should render FontSizeControl 1`] = `
             data-g2-component="Button"
             data-icon="false"
             disabled=""
-            style="pointer-events: none;"
-            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item emotion-14"
@@ -16692,6 +17149,16 @@ exports[`props should render FontSizeControl with css prop 1`] = `
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16780,6 +17247,18 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13>*+*:not(marquee) {
@@ -17074,7 +17553,6 @@ exports[`props should render FontSizeControl with css prop 1`] = `
         >
           <button
             aria-busy="false"
-            aria-disabled="true"
             class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
             data-active="false"
             data-destructive="false"
@@ -17083,8 +17561,6 @@ exports[`props should render FontSizeControl with css prop 1`] = `
             data-g2-component="Button"
             data-icon="false"
             disabled=""
-            style="pointer-events: none;"
-            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item emotion-14"
@@ -17767,6 +18243,16 @@ exports[`props should render FontSizeControl with css prop 2`] = `
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17855,6 +18341,18 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13.emotion-13>*+*:not(marquee) {
@@ -18149,7 +18647,6 @@ exports[`props should render FontSizeControl with css prop 2`] = `
         >
           <button
             aria-busy="false"
-            aria-disabled="true"
             class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
             data-active="false"
             data-destructive="false"
@@ -18158,8 +18655,6 @@ exports[`props should render FontSizeControl with css prop 2`] = `
             data-g2-component="Button"
             data-icon="false"
             disabled=""
-            style="pointer-events: none;"
-            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item emotion-14"
@@ -20639,6 +21134,16 @@ exports[`props should render MenuItem 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20734,6 +21239,18 @@ exports[`props should render MenuItem 1`] = `
   transition: background 100ms linear,border-color 100ms linear;
   transition: background var(--wp-g2-transition-duration-fastest) linear,border-color var(--wp-g2-transition-duration-fastest) linear;
   width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 @media (prefers-reduced-motion) {
@@ -20921,8 +21438,6 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
   data-g2-component="MenuItem"
   data-icon="false"
   id="MenuItem"
-  role="button"
-  tabindex="0"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -20944,6 +21459,16 @@ exports[`props should render MenuItem with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21039,6 +21564,18 @@ exports[`props should render MenuItem with css prop 1`] = `
   transition: background 100ms linear,border-color 100ms linear;
   transition: background var(--wp-g2-transition-duration-fastest) linear,border-color var(--wp-g2-transition-duration-fastest) linear;
   width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 @media (prefers-reduced-motion) {
@@ -21226,8 +21763,6 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
   data-g2-component="MenuItem"
   data-icon="false"
   id="MenuItem"
-  role="button"
-  tabindex="0"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -21239,6 +21774,16 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
 
 exports[`props should render MenuItem with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -21360,6 +21905,18 @@ exports[`props should render MenuItem with css prop 2`] = `
   transition: none!important;
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -21533,8 +22090,6 @@ a:active>.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0,
   data-g2-component="MenuItem"
   data-icon="false"
   id="MenuItem"
-  role="button"
-  tabindex="0"
 >
   <span
     class="components-elevation wp-components-elevation emotion-1"
@@ -22196,6 +22751,16 @@ exports[`props should render ModalHeader 1`] = `
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22281,6 +22846,18 @@ exports[`props should render ModalHeader 1`] = `
   border-color: transparent;
   color: #007cba;
   color: var(--wp-g2-link-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
@@ -22447,7 +23024,6 @@ exports[`props should render ModalHeader 1`] = `
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-3"
@@ -22584,6 +23160,16 @@ exports[`props should render ModalHeader with css prop 1`] = `
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22669,6 +23255,18 @@ exports[`props should render ModalHeader with css prop 1`] = `
   border-color: transparent;
   color: #007cba;
   color: var(--wp-g2-link-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
@@ -22835,7 +23433,6 @@ exports[`props should render ModalHeader with css prop 1`] = `
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-3"
@@ -22974,6 +23571,16 @@ exports[`props should render ModalHeader with css prop 2`] = `
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23059,6 +23666,18 @@ exports[`props should render ModalHeader with css prop 2`] = `
   border-color: transparent;
   color: #007cba;
   color: var(--wp-g2-link-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
@@ -23225,7 +23844,6 @@ exports[`props should render ModalHeader with css prop 2`] = `
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-3"
@@ -23248,6 +23866,16 @@ exports[`props should render ModalTitle 1`] = `null`;
 
 exports[`props should render ModalTrigger 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23331,6 +23959,18 @@ exports[`props should render ModalTrigger 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -23496,6 +24136,16 @@ exports[`props should render ModalTrigger 1`] = `
 
 exports[`props should render NavigatorButton 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23579,6 +24229,18 @@ exports[`props should render NavigatorButton 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -23742,6 +24404,16 @@ exports[`props should render NavigatorButton 1`] = `
 
 exports[`props should render NavigatorButton with css prop 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23825,6 +24497,18 @@ exports[`props should render NavigatorButton with css prop 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -23988,6 +24672,16 @@ exports[`props should render NavigatorButton with css prop 1`] = `
 
 exports[`props should render NavigatorButton with css prop 2`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24073,6 +24767,18 @@ exports[`props should render NavigatorButton with css prop 2`] = `
   color: var(--wp-g2-button-secondary-text-color);
   background: red;
   padding: 27px;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -25437,6 +26143,16 @@ exports[`props should render SearchInput 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25533,6 +26249,18 @@ exports[`props should render SearchInput 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -25817,7 +26545,6 @@ exports[`props should render SearchInput 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item emotion-7"
@@ -30442,6 +31169,16 @@ exports[`props should render Stepper 1`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30549,6 +31286,18 @@ exports[`props should render Stepper 1`] = `
   font-size: var(--wp-g2-font-size);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
@@ -30783,6 +31532,16 @@ exports[`props should render Stepper 1`] = `
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30890,6 +31649,18 @@ exports[`props should render Stepper 1`] = `
   font-size: var(--wp-g2-font-size);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
@@ -31017,7 +31788,6 @@ exports[`props should render Stepper 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
-    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item emotion-2"
@@ -31060,7 +31830,6 @@ exports[`props should render Stepper 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
-    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item emotion-2"
@@ -31163,6 +31932,16 @@ exports[`props should render Stepper with css prop 1`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31270,6 +32049,18 @@ exports[`props should render Stepper with css prop 1`] = `
   font-size: var(--wp-g2-font-size);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
@@ -31504,6 +32295,16 @@ exports[`props should render Stepper with css prop 1`] = `
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31611,6 +32412,18 @@ exports[`props should render Stepper with css prop 1`] = `
   font-size: var(--wp-g2-font-size);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
@@ -31738,7 +32551,6 @@ exports[`props should render Stepper with css prop 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
-    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item emotion-2"
@@ -31781,7 +32593,6 @@ exports[`props should render Stepper with css prop 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
-    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item emotion-2"
@@ -31886,6 +32697,16 @@ exports[`props should render Stepper with css prop 2`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31993,6 +32814,18 @@ exports[`props should render Stepper with css prop 2`] = `
   font-size: var(--wp-g2-font-size);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
@@ -32227,6 +33060,16 @@ exports[`props should render Stepper with css prop 2`] = `
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32334,6 +33177,18 @@ exports[`props should render Stepper with css prop 2`] = `
   font-size: var(--wp-g2-font-size);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5>*+*:not(marquee) {
@@ -32461,7 +33316,6 @@ exports[`props should render Stepper with css prop 2`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
-    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item emotion-2"
@@ -32504,7 +33358,6 @@ exports[`props should render Stepper with css prop 2`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
-    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item emotion-2"
