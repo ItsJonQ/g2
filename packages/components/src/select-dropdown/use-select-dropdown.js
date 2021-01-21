@@ -109,7 +109,6 @@ export function useSelectDropdown(props) {
 		getLabelProps,
 		getMenuProps,
 		getToggleButtonProps,
-		highlightedIndex,
 		isOpen,
 		selectedItem,
 	} = useSelect({
@@ -177,7 +176,7 @@ export function useSelectDropdown(props) {
 	const popoverProps = {
 		...ui.$('SelectDropdownPopover'),
 		'aria-hidden': !isOpen,
-		className: styles.MenuWrapper,
+		className: styles.Popover,
 		ref: popoverRef,
 		style: {
 			maxWidth: isInline ? maxWidthProp : sizes.width,

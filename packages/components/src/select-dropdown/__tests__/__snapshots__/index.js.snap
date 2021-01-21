@@ -414,6 +414,7 @@ exports[`props should render correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  z-index: 1000000;
   outline: none;
 }
 
@@ -452,6 +453,11 @@ exports[`props should render correctly 1`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
   display: none;
   width: 100%;
   min-width: 200px;

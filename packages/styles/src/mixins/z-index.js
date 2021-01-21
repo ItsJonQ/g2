@@ -1,9 +1,14 @@
 // Z-Index System
+
+/**
+ * Roughly matching the z-index layers index from @wordpress/base-styles
+ * https://github.com/WordPress/gutenberg/blob/master/packages/base-styles/_z-index.scss
+ */
 const Z_INDEX_REGISTRY = {
-	Tooltip: 999999,
-	Popover: 9999,
-	Dropdown: 9998,
-	Modal: 999,
+	Tooltip: 1000002,
+	Popover: 1000000,
+	Dropdown: 1000000,
+	Modal: 100000,
 	ControlFocus: 1,
 };
 
