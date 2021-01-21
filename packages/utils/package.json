@@ -1,6 +1,6 @@
 {
     "name": "@wp-g2/utils",
-    "version": "0.0.141",
+    "version": "0.0.142",
     "description": "Utilities for G2 Components.",
     "main": "dist/cjs/index.js",
     "module": "dist/es/index.js",
