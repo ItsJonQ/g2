@@ -29,7 +29,7 @@
     "website:serve": "yarn --cwd ./packages/website serve",
     "website:docs": "yarn --cwd ./packages/website generate:scripts",
     "website:test": "yarn website:build && yarn website:serve",
-    "website:deploy": "git push origin master:website --force",
+    "website:deploy": "git push origin main:website --force",
     "version": "npm run build",
     "precommit": "zero pre-commit",
     "storybook": "start-storybook -p 6006",
@@ -38,7 +38,7 @@
     "remake:component": "remake component --output=packages/components/src",
     "remake": "npm run remake:component",
     "bump": "lerna version",
-    "postbump": "git push origin master:release --force"
+    "postbump": "git push origin main:release --force"
   },
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "repository": {

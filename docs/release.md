@@ -4,13 +4,13 @@ This guide goes over the release process for this project. The majority of the r
 
 ## Prerequisites
 
--   Ability to push to `master`
+-   Ability to push to `main`
 
 ## Instructions
 
 ### Be on the latest
 
-Locally, make sure you're on the latest `master` branch.
+Locally, make sure you're on the latest `main` branch.
 
 Perform a `git pull` (just in case).
 
@@ -85,7 +85,7 @@ Maybe `0.0.140` -> `0.0.141`.
 
 Check the [`release` action](https://github.com/ItsJonQ/g2/actions?query=workflow%3Arelease) to see if your release was successful.
 
-If, for any reason, `yarn run bump` did not successfully publish the new version of the `@wp-g2` packages, you can try pushing the latest `master` branch into the `release` branch.
+If, for any reason, `yarn run bump` did not successfully publish the new version of the `@wp-g2` packages, you can try pushing the latest `main` branch into the `release` branch.
 
 To do this, run the following command in your terminal:
 
