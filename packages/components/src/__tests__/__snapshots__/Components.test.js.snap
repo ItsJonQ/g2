@@ -11547,7 +11547,7 @@ exports[`props should render DropdownMenu 1`] = `
   outline: none;
   padding: 0;
   position: relative;
-  z-index: 9998;
+  z-index: 1000000;
   min-width: 200px;
   opacity: 0;
   -webkit-transform-origin: top center;
@@ -11607,7 +11607,7 @@ exports[`props should render DropdownMenu with css prop 1`] = `
   outline: none;
   padding: 0;
   position: relative;
-  z-index: 9998;
+  z-index: 1000000;
   min-width: 200px;
   opacity: 0;
   -webkit-transform-origin: top center;
@@ -11667,7 +11667,7 @@ exports[`props should render DropdownMenu with css prop 2`] = `
   outline: none;
   padding: 0;
   position: relative;
-  z-index: 9998;
+  z-index: 1000000;
   min-width: 200px;
   opacity: 0;
   -webkit-transform-origin: top center;
@@ -11738,6 +11738,11 @@ exports[`props should render DropdownMenuCard 1`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
 }
 
 @media (prefers-reduced-motion) {
@@ -11982,6 +11987,11 @@ exports[`props should render DropdownMenuCard with css prop 1`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
 }
 
 @media (prefers-reduced-motion) {
@@ -12226,6 +12236,11 @@ exports[`props should render DropdownMenuCard with css prop 2`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
   background: red;
   padding: 27px;
 }
@@ -27748,6 +27763,7 @@ exports[`props should render SelectDropdown 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  z-index: 1000000;
   outline: none;
 }
 
@@ -27786,6 +27802,11 @@ exports[`props should render SelectDropdown 1`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
   display: none;
   width: 100%;
   min-width: 200px;
@@ -28513,6 +28534,7 @@ exports[`props should render SelectDropdown with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  z-index: 1000000;
   outline: none;
 }
 
@@ -28551,6 +28573,11 @@ exports[`props should render SelectDropdown with css prop 1`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
   display: none;
   width: 100%;
   min-width: 200px;
@@ -29280,6 +29307,7 @@ exports[`props should render SelectDropdown with css prop 2`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  z-index: 1000000;
   outline: none;
 }
 
@@ -29318,6 +29346,11 @@ exports[`props should render SelectDropdown with css prop 2`] = `
   outline: none;
   border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
+  z-index: 1000000;
+  max-height: 50vh;
+  min-height: 24px;
+  outline: none;
+  position: absolute;
   display: none;
   width: 100%;
   min-width: 200px;

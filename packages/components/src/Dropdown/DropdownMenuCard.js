@@ -3,6 +3,7 @@ import {
 	ContextSystemProvider,
 	useContextSystem,
 } from '@wp-g2/context';
+import { cx } from '@wp-g2/styles';
 import React from 'react';
 
 import { Card } from '../Card';
@@ -14,14 +15,18 @@ import * as styles from './Dropdown.styles';
  * @param {import('react').Ref<any>} forwardedRef
  */
 function DropdownMenuCard(props, forwardedRef) {
-	const { children, elevation = 3, ...otherProps } = useContextSystem(
-		props,
-		'DropdownMenuCard',
-	);
+	const {
+		children,
+		className,
+		elevation = 3,
+		...otherProps
+	} = useContextSystem(props, 'DropdownMenuCard');
+
+	const classes = cx(styles.Card, className);
 
 	return (
 		<Card
-			className={styles.Card}
+			className={classes}
 			elevation={elevation}
 			{...otherProps}
 			ref={forwardedRef}
