@@ -1,25 +1,4 @@
-import {
-	isArray,
-	isBoolean,
-	isDate,
-	isEmpty,
-	isFunction,
-	isMap,
-	isNaN,
-	isNil,
-	isNull,
-	isNumber,
-	isObject,
-	isObjectLike,
-	isPlainObject,
-	isRegExp,
-	isSet,
-	isString,
-	isSymbol,
-	isUndefined,
-	isWeakMap,
-	isWeakSet,
-} from 'lodash';
+import _ from 'lodash';
 
 /**
  * Checks to see if a value is a numeric value (`number` or `string`).
@@ -57,7 +36,7 @@ const numericZero = (o) => {
  *
  * @return {o is Exclude<T, undefined | null>} Whether value is defined.
  */
-const defined = (o) => !isNil(o);
+const defined = (o) => !_.isNil(o);
 
 /**
  * Checks if a value is empty, null, or undefined.
@@ -88,31 +67,31 @@ export const is = {
 	// _.isPlainObject(TemplateStringsArray) -> false
 	// _.isPlainObject is also `false` for the rest of the values that `Interpolation` covers except for `ObjectInterpolation` :)
 	/** @type {(o: TemplateStringsArray | import('create-emotion').Interpolation) => o is import('create-emotion').ObjectInterpolation} */
-	objectInterpolation: (o) => isPlainObject(o),
+	objectInterpolation: (o) => _.isPlainObject(o),
 
 	/**
 	 * Re-exports from lodash
 	 */
-	array: isArray,
-	boolean: isBoolean,
-	date: isDate,
-	empty: isEmpty,
-	function: isFunction,
-	map: isMap,
+	array: _.isArray,
+	boolean: _.isBoolean,
+	date: _.isDate,
+	empty: _.isEmpty,
+	function: _.isFunction,
+	map: _.isMap,
 	nan: isNaN,
-	nil: isNil,
-	number: isNumber,
-	null: isNull,
-	object: isObject,
-	objectLike: isObjectLike,
-	plainObject: isPlainObject,
-	regExp: isRegExp,
-	set: isSet,
-	string: isString,
-	symbol: isSymbol,
-	undefined: isUndefined,
-	weakSet: isWeakSet,
-	weakMap: isWeakMap,
+	nil: _.isNil,
+	number: _.isNumber,
+	null: _.isNull,
+	object: _.isObject,
+	objectLike: _.isObjectLike,
+	plainObject: _.isPlainObject,
+	regExp: _.isRegExp,
+	set: _.isSet,
+	string: _.isString,
+	symbol: _.isSymbol,
+	undefined: _.isUndefined,
+	weakSet: _.isWeakSet,
+	weakMap: _.isWeakMap,
 };
 
 export default is;
