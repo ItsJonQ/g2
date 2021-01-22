@@ -14,9 +14,6 @@ export function useBaseDragHandlers({
 	const [dragState, setDragState] = useState(
 		/** @type {undefined | 'x' | 'y'} */ (undefined),
 	);
-
-	/** @type {import('react').MutableRefObject<number | undefined>} */
-	const dragRef = useRef();
 	const threshold = 10;
 
 	useEffect(() => {
@@ -40,13 +37,6 @@ export function useBaseDragHandlers({
 		}
 	}, [dragState]);
 
-	useEffect(() => {
-		return () => {
-			if (!dragRef.current) return;
-			cancelAnimationFrame(dragRef.current);
-		};
-	}, []);
-
 	const dragGestures = useDrag(
 		(state) => {
 			const [x, y] = state.delta;
@@ -63,17 +53,11 @@ export function useBaseDragHandlers({
 			boost = shouldIncrement ? boost : boost * -1;
 			boost = boost - 1;
 
-			if (dragRef.current) {
-				cancelAnimationFrame(dragRef.current);
+			if (shouldIncrement) {
+				increment(boost);
+			} else {
+				decrement(boost);
 			}
-
-			dragRef.current = requestAnimationFrame(() => {
-				if (shouldIncrement) {
-					increment(boost);
-				} else {
-					decrement(boost);
-				}
-			});
 		},
 		{ axis: dragAxis, threshold },
 	);
@@ -94,7 +78,7 @@ export function useBaseDragHandlers({
 		onMouseUp: handleOnMouseUp,
 	};
 
-	const gestureRef = useRef(gestures);
+	// const gestureRef = useRef(gestures);
 
-	return gestureRef.current;
+	return gestures;
 }

@@ -14,7 +14,9 @@ export const _default = () => {
 	return <TextInput placeholder="Into The Unknown" />;
 };
 
-export const number = () => {
+export const Number = () => {
+	const [value, setValue] = React.useState(0);
+
 	return (
 		<Container
 			css={`
@@ -22,12 +24,18 @@ export const number = () => {
 			`}
 			width={480}
 		>
-			<TextInput type="number" />
+			<TextInput
+				max={100}
+				min={0}
+				onChange={setValue}
+				type="number"
+				value={value}
+			/>
 		</Container>
 	);
 };
 
-export const numberWithExternalChange = () => {
+export const NumberWithExternalChange = () => {
 	const [value, setValue] = React.useState();
 	return (
 		<div>
