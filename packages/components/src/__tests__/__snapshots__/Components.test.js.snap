@@ -28023,6 +28023,7 @@ exports[`props should render SelectDropdown 1`] = `
     data-g2-component="SelectWrapper"
   >
     <button
+      aria-expanded="false"
       aria-haspopup="listbox"
       class="emotion-2"
       data-g2-c16t="true"
@@ -28794,6 +28795,7 @@ exports[`props should render SelectDropdown with css prop 1`] = `
     data-g2-component="SelectWrapper"
   >
     <button
+      aria-expanded="false"
       aria-haspopup="listbox"
       class="emotion-2"
       data-g2-c16t="true"
@@ -29567,6 +29569,7 @@ exports[`props should render SelectDropdown with css prop 2`] = `
     data-g2-component="SelectWrapper"
   >
     <button
+      aria-expanded="false"
       aria-haspopup="listbox"
       class="emotion-2"
       data-g2-c16t="true"

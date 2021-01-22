@@ -193,6 +193,7 @@ export function useSelectDropdown(props) {
 	const referenceProps = {
 		...ui.$('SelectDropdownReference'),
 		..._referenceProps,
+		'aria-expanded': !!isOpen,
 		children: itemToString(selectedItem) || placeholder,
 		error,
 		id,
