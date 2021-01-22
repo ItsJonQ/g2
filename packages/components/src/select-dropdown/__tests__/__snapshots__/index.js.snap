@@ -457,7 +457,6 @@ exports[`props should render correctly 1`] = `
   max-height: 50vh;
   min-height: 24px;
   outline: none;
-  position: absolute;
   display: none;
   width: 100%;
   min-width: 200px;
