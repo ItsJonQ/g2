@@ -17,7 +17,6 @@ export const Card = css`
 	max-height: 50vh;
 	min-height: 24px;
 	outline: none;
-	position: absolute;
 `;
 
 export const Scrollable = css`
