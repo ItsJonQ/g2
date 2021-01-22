@@ -1,6 +1,4 @@
-import * as _ from 'lodash';
-
-const {
+import {
 	isArray,
 	isBoolean,
 	isDate,
@@ -21,7 +19,7 @@ const {
 	isUndefined,
 	isWeakMap,
 	isWeakSet,
-} = _;
+} from 'lodash';
 
 /**
  * Checks to see if a value is a numeric value (`number` or `string`).
