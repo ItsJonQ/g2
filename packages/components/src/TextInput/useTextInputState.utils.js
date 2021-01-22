@@ -78,7 +78,5 @@ export function useBaseDragHandlers({
 		onMouseUp: handleOnMouseUp,
 	};
 
-	// const gestureRef = useRef(gestures);
-
 	return gestures;
 }
