@@ -176,7 +176,7 @@ export function useSelectDropdown(props) {
 	const popoverProps = {
 		...ui.$('SelectDropdownPopover'),
 		'aria-hidden': !isOpen,
-		className: styles.Popover,
+		className: cx(styles.Popover, !isOpen && styles.popoverHidden),
 		ref: popoverRef,
 		style: {
 			maxWidth: isInline ? maxWidthProp : sizes.width,

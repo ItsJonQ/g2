@@ -35,19 +35,21 @@ function SelectDropdown(props, forwardedRef) {
 				<Truncate>{referenceProps.children}</Truncate>
 			</Select>
 			<SelectDropdownLabel {...labelProps} />
-			<View {...popoverProps}>
-				<DropdownMenuCard {...dropdownMenuProps}>
-					<div {...menuProps}>
-						{isOpen && (
-							<>
-								{items.map((item) => (
-									<SelectDropdownItem {...item} />
-								))}
-							</>
-						)}
-					</div>
-				</DropdownMenuCard>
-			</View>
+			<Portal>
+				<View {...popoverProps}>
+					<DropdownMenuCard {...dropdownMenuProps}>
+						<div {...menuProps}>
+							{isOpen && (
+								<>
+									{items.map((item) => (
+										<SelectDropdownItem {...item} />
+									))}
+								</>
+							)}
+						</div>
+					</DropdownMenuCard>
+				</View>
+			</Portal>
 		</View>
 	);
 }
