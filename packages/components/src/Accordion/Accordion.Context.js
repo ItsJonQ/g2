@@ -3,24 +3,26 @@ import { createContext, useContext } from 'react';
 
 /**
  * @typedef AccordionContext
+ * @property {(next: string | string[]) => void} add
  * @property {boolean} allowMultiple
  * @property {string[]} current
  * @property {(id: string) => boolean} getIsVisible
- * @property {(next: string | string[]) => void} add
- * @property {(next: string | string[]) => void} set
+ * @property {boolean} isWithinContext
  * @property {(next: string | string[]) => void} remove
+ * @property {(next: string | string[]) => void} set
  */
 
 /**
  * @type {import('react').Context<AccordionContext>}
  */
 export const AccordionContext = createContext({
+	add: noop,
 	allowMultiple: false,
 	current: [],
 	getIsVisible: noop,
-	add: noop,
-	set: noop,
+	isWithinContext: false,
 	remove: noop,
+	set: noop,
 });
 
 export const useAccordionContext = () => useContext(AccordionContext);

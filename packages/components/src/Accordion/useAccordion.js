@@ -34,6 +34,7 @@ const setCurrentState = (prev = [], next) => {
  * @typedef State
  * @property {boolean} allowMultiple
  * @property {string[]} current
+ * @property {boolean} isWithinContext
  */
 
 /**
@@ -44,6 +45,7 @@ function useInitialState({ allowMultiple = false, current }) {
 	const initialState = useSealedState({
 		allowMultiple,
 		current: setCurrentState([], current),
+		isWithinContext: true,
 	});
 
 	return initialState;
@@ -134,7 +136,7 @@ export function useAccordionState(props) {
 
 	const initialState = useInitialState(otherProps);
 
-	const [{ allowMultiple, current }, dispatch] = useReducer(
+	const [{ allowMultiple, current, isWithinContext }, dispatch] = useReducer(
 		reducer,
 		initialState,
 	);
@@ -166,10 +168,11 @@ export function useAccordionState(props) {
 	}, [current, onChange]);
 
 	return {
+		add,
 		allowMultiple,
 		current,
 		getIsVisible,
-		add,
+		isWithinContext,
 		remove,
 		set,
 	};
@@ -212,11 +215,11 @@ export function useAccordion({ id, visible: visibleProp }) {
 		add,
 		allowMultiple,
 		getIsVisible,
+		isWithinContext,
 		remove,
 		set,
 	} = useAccordionContext();
 
-	const isWithinContext = set !== noop;
 	const visible = isWithinContext ? getIsVisible(id) : visibleProp;
 
 	const setVisible = useCallback(
