@@ -216,10 +216,12 @@ export function useAccordion({ id, visible: visibleProp }) {
 		set,
 	} = useAccordionContext();
 
-	const visible = getIsVisible(id);
+	const isWithinContext = set !== noop;
+	const visible = isWithinContext ? getIsVisible(id) : visibleProp;
 
 	const setVisible = useCallback(
 		(/** @type {boolean} */ nextVisible) => {
+			if (!isWithinContext) return;
 			if (!id) return;
 
 			if (nextVisible) {
@@ -234,12 +236,12 @@ export function useAccordion({ id, visible: visibleProp }) {
 				}
 			}
 		},
-		[add, allowMultiple, remove, set, id],
+		[isWithinContext, id, allowMultiple, add, set, remove],
 	);
 
 	useUpdateEffect(() => {
 		setVisible(visibleProp);
-	}, [visibleProp]);
+	}, [setVisible, visibleProp]);
 
 	return [visible, setVisible];
 }
