@@ -3,11 +3,12 @@ import { noop } from '@wp-g2/utils';
 import React from 'react';
 
 import { ControlLabel } from '../ControlLabel';
-import { Grid } from '../Grid';
+import { HStack } from '../HStack';
 import { Slider } from '../Slider';
 import { TextInput } from '../TextInput';
+import { View } from '../View';
 import { VStack } from '../VStack';
-import { getSliderTemplateColumns } from './font-size-control-utils';
+import * as styles from './font-size-control-styles';
 
 function FontSizeControlSlider(props) {
 	const {
@@ -23,8 +24,6 @@ function FontSizeControlSlider(props) {
 
 	if (!withSlider) return null;
 
-	const templateColumns = getSliderTemplateColumns();
-
 	const controlProps = {
 		disabled,
 		min,
@@ -37,10 +36,14 @@ function FontSizeControlSlider(props) {
 	return (
 		<VStack spacing={0}>
 			<ControlLabel>{label}</ControlLabel>
-			<Grid templateColumns={templateColumns}>
-				<Slider {...controlProps} />
-				<TextInput {...controlProps} type="number" />
-			</Grid>
+			<HStack wrap>
+				<View className={styles.SliderWrapper}>
+					<Slider {...controlProps} />
+				</View>
+				<View>
+					<TextInput {...controlProps} type="number" />
+				</View>
+			</HStack>
 		</VStack>
 	);
 }
