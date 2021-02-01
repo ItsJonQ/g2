@@ -15511,20 +15511,35 @@ exports[`props should render FontSizeControl 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  display: -ms-grid;
-  display: grid;
-  gap: calc(4px * 3);
-  gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: minmax(0,1fr) minmax(auto,140px);
-  grid-template-columns: minmax(0,1fr) minmax(auto,140px);
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: calc(calc(4px * 2) * -1);
+  margin-bottom: calc(calc(var(--wp-g2-grid-base) * 2) * -1);
+  --wp-g2-h-stack-spacing: calc(4px * 2);
+  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -15539,6 +15554,21 @@ exports[`props should render FontSizeControl 1`] = `
   transition: none!important;
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*:not(marquee) {
+  margin-bottom: calc(4px * 2);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 2);
+  margin-right: calc(4px * 2);
+  margin-right: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*:last-child:not(marquee) {
+  margin-right: 0;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+}
+
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -15550,20 +15580,8 @@ exports[`props should render FontSizeControl 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  display: -ms-grid;
-  display: grid;
-  gap: calc(4px * 3);
-  gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  width: calc(100% * 0.25 - (calc(4px * 2) * 2));
+  width: calc(100% * 0.25 - (calc(var(--wp-g2-grid-base) * 2) * 2));
 }
 
 @media (prefers-reduced-motion) {
@@ -16054,6 +16072,10 @@ exports[`props should render FontSizeControl 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  min-width: calc(100% * 0.25);
 }
 
 @media (prefers-reduced-motion) {
@@ -16375,14 +16397,12 @@ exports[`props should render FontSizeControl 1`] = `
     data-g2-component="VStack"
   >
     <div
-      class="components-grid wp-components-grid emotion-2"
+      class="components-flex wp-components-flex components-h-stack wp-components-h-stack emotion-2"
       data-g2-c16t="true"
-      data-g2-component="Grid"
+      data-g2-component="HStack"
     >
       <div
-        class="components-grid wp-components-grid emotion-3"
-        data-g2-c16t="true"
-        data-g2-component="Grid"
+        class="emotion-3"
       >
         <div
           class="components-form-group wp-components-form-group emotion-4"
@@ -16468,34 +16488,34 @@ exports[`props should render FontSizeControl 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="emotion-12"
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <button
+          aria-busy="false"
+          class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
+          data-active="false"
+          data-destructive="false"
+          data-focused="false"
+          data-g2-c16t="true"
+          data-g2-component="Button"
+          data-icon="false"
+          disabled=""
         >
-          <button
-            aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
-            data-active="false"
-            data-destructive="false"
-            data-focused="false"
+          <span
+            class="components-flex-item wp-components-flex-item emotion-14"
             data-g2-c16t="true"
-            data-g2-component="Button"
-            data-icon="false"
-            disabled=""
+            data-g2-component="ButtonContent"
           >
-            <span
-              class="components-flex-item wp-components-flex-item emotion-14"
-              data-g2-c16t="true"
-              data-g2-component="ButtonContent"
-            >
-              Reset
-            </span>
-            <span
-              class="components-elevation wp-components-elevation emotion-15"
-              data-g2-c16t="true"
-              data-g2-component="ButtonElevation"
-            />
-          </button>
-        </div>
+            Reset
+          </span>
+          <span
+            class="components-elevation wp-components-elevation emotion-15"
+            data-g2-c16t="true"
+            data-g2-component="ButtonElevation"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -16603,20 +16623,35 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  display: -ms-grid;
-  display: grid;
-  gap: calc(4px * 3);
-  gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: minmax(0,1fr) minmax(auto,140px);
-  grid-template-columns: minmax(0,1fr) minmax(auto,140px);
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: calc(calc(4px * 2) * -1);
+  margin-bottom: calc(calc(var(--wp-g2-grid-base) * 2) * -1);
+  --wp-g2-h-stack-spacing: calc(4px * 2);
+  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -16631,6 +16666,21 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   transition: none!important;
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*:not(marquee) {
+  margin-bottom: calc(4px * 2);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 2);
+  margin-right: calc(4px * 2);
+  margin-right: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*:last-child:not(marquee) {
+  margin-right: 0;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+}
+
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -16642,20 +16692,8 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  display: -ms-grid;
-  display: grid;
-  gap: calc(4px * 3);
-  gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  width: calc(100% * 0.25 - (calc(4px * 2) * 2));
+  width: calc(100% * 0.25 - (calc(var(--wp-g2-grid-base) * 2) * 2));
 }
 
 @media (prefers-reduced-motion) {
@@ -17146,6 +17184,10 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  min-width: calc(100% * 0.25);
 }
 
 @media (prefers-reduced-motion) {
@@ -17467,14 +17509,12 @@ exports[`props should render FontSizeControl with css prop 1`] = `
     data-g2-component="VStack"
   >
     <div
-      class="components-grid wp-components-grid emotion-2"
+      class="components-flex wp-components-flex components-h-stack wp-components-h-stack emotion-2"
       data-g2-c16t="true"
-      data-g2-component="Grid"
+      data-g2-component="HStack"
     >
       <div
-        class="components-grid wp-components-grid emotion-3"
-        data-g2-c16t="true"
-        data-g2-component="Grid"
+        class="emotion-3"
       >
         <div
           class="components-form-group wp-components-form-group emotion-4"
@@ -17560,34 +17600,34 @@ exports[`props should render FontSizeControl with css prop 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="emotion-12"
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <button
+          aria-busy="false"
+          class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
+          data-active="false"
+          data-destructive="false"
+          data-focused="false"
+          data-g2-c16t="true"
+          data-g2-component="Button"
+          data-icon="false"
+          disabled=""
         >
-          <button
-            aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
-            data-active="false"
-            data-destructive="false"
-            data-focused="false"
+          <span
+            class="components-flex-item wp-components-flex-item emotion-14"
             data-g2-c16t="true"
-            data-g2-component="Button"
-            data-icon="false"
-            disabled=""
+            data-g2-component="ButtonContent"
           >
-            <span
-              class="components-flex-item wp-components-flex-item emotion-14"
-              data-g2-c16t="true"
-              data-g2-component="ButtonContent"
-            >
-              Reset
-            </span>
-            <span
-              class="components-elevation wp-components-elevation emotion-15"
-              data-g2-c16t="true"
-              data-g2-component="ButtonElevation"
-            />
-          </button>
-        </div>
+            Reset
+          </span>
+          <span
+            class="components-elevation wp-components-elevation emotion-15"
+            data-g2-c16t="true"
+            data-g2-component="ButtonElevation"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -17697,20 +17737,35 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  display: -ms-grid;
-  display: grid;
-  gap: calc(4px * 3);
-  gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: minmax(0,1fr) minmax(auto,140px);
-  grid-template-columns: minmax(0,1fr) minmax(auto,140px);
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --wp-g2-flex-gap: calc(4px * 2);
+  --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
+  --wp-g2-flex-item-margin-bottom: 0;
+  --wp-g2-flex-item-margin-right: calc(4px * 2);
+  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
+  --wp-g2-flex-item-margin-left: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: calc(calc(4px * 2) * -1);
+  margin-bottom: calc(calc(var(--wp-g2-grid-base) * 2) * -1);
+  --wp-g2-h-stack-spacing: calc(4px * 2);
+  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -17725,6 +17780,21 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   transition: none!important;
 }
 
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*:not(marquee) {
+  margin-bottom: calc(4px * 2);
+  margin-bottom: calc(var(--wp-g2-grid-base) * 2);
+  margin-right: calc(4px * 2);
+  margin-right: calc(var(--wp-g2-grid-base) * 2);
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*:last-child:not(marquee) {
+  margin-right: 0;
+}
+
+.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+  min-width: 0;
+}
+
 .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
@@ -17736,20 +17806,8 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  display: -ms-grid;
-  display: grid;
-  gap: calc(4px * 3);
-  gap: calc(var(--wp-g2-grid-base) * 3);
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  width: calc(100% * 0.25 - (calc(4px * 2) * 2));
+  width: calc(100% * 0.25 - (calc(var(--wp-g2-grid-base) * 2) * 2));
 }
 
 @media (prefers-reduced-motion) {
@@ -18240,6 +18298,10 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  min-width: calc(100% * 0.25);
 }
 
 @media (prefers-reduced-motion) {
@@ -18561,14 +18623,12 @@ exports[`props should render FontSizeControl with css prop 2`] = `
     data-g2-component="VStack"
   >
     <div
-      class="components-grid wp-components-grid emotion-2"
+      class="components-flex wp-components-flex components-h-stack wp-components-h-stack emotion-2"
       data-g2-c16t="true"
-      data-g2-component="Grid"
+      data-g2-component="HStack"
     >
       <div
-        class="components-grid wp-components-grid emotion-3"
-        data-g2-c16t="true"
-        data-g2-component="Grid"
+        class="emotion-3"
       >
         <div
           class="components-form-group wp-components-form-group emotion-4"
@@ -18654,34 +18714,34 @@ exports[`props should render FontSizeControl with css prop 2`] = `
             </div>
           </div>
         </div>
-        <div
-          class="emotion-12"
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <button
+          aria-busy="false"
+          class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
+          data-active="false"
+          data-destructive="false"
+          data-focused="false"
+          data-g2-c16t="true"
+          data-g2-component="Button"
+          data-icon="false"
+          disabled=""
         >
-          <button
-            aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-13"
-            data-active="false"
-            data-destructive="false"
-            data-focused="false"
+          <span
+            class="components-flex-item wp-components-flex-item emotion-14"
             data-g2-c16t="true"
-            data-g2-component="Button"
-            data-icon="false"
-            disabled=""
+            data-g2-component="ButtonContent"
           >
-            <span
-              class="components-flex-item wp-components-flex-item emotion-14"
-              data-g2-c16t="true"
-              data-g2-component="ButtonContent"
-            >
-              Reset
-            </span>
-            <span
-              class="components-elevation wp-components-elevation emotion-15"
-              data-g2-c16t="true"
-              data-g2-component="ButtonElevation"
-            />
-          </button>
-        </div>
+            Reset
+          </span>
+          <span
+            class="components-elevation wp-components-elevation emotion-15"
+            data-g2-c16t="true"
+            data-g2-component="ButtonElevation"
+          />
+        </button>
       </div>
     </div>
   </div>

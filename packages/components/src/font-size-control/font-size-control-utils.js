@@ -1,11 +1,9 @@
 import { __ } from '@wordpress/i18n';
-import { ui } from '@wp-g2/styles';
 import { createUnitValue, parseUnitValue } from '@wp-g2/utils';
 
 const DEFAULT_FONT_SIZE = 'default';
 const CUSTOM_FONT_SIZE = 'custom';
 const MAX_FONT_SIZE_DISPLAY = '25px';
-const ASIDE_CONTROL_WIDTH = 70;
 
 export function hasUnit(value) {
 	const [, unit] = parseUnitValue(value);
@@ -82,14 +80,4 @@ export function getInputValue(fontSizes = [], value) {
 	const inputValue = (isPixelValue && noUnitsValue) || '';
 
 	return inputValue;
-}
-
-export function getSelectTemplateColumns(withNumberInput) {
-	return withNumberInput
-		? `minmax(0, 1fr) minmax(auto, ${ui.value.px(ASIDE_CONTROL_WIDTH * 2)})`
-		: `minmax(0, 2fr) minmax(auto, ${ui.value.px(ASIDE_CONTROL_WIDTH)})`;
-}
-
-export function getSliderTemplateColumns() {
-	return `2fr minmax(auto, ${ui.value.px(ASIDE_CONTROL_WIDTH)})`;
 }
