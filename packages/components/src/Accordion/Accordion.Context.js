@@ -18,9 +18,7 @@ export const AccordionContext = createContext({
 	allowMultiple: false,
 	current: [],
 	getIsVisible: noop,
-	add: noop,
-	set: noop,
-	remove: noop,
+	dispatch: noop,
 });
 
 export const useAccordionContext = () => useContext(AccordionContext);
