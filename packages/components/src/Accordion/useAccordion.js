@@ -169,6 +169,7 @@ export function useAccordionState(props) {
 
 	// Synchronize props + state
 	useUpdateEffect(() => {
+		// @todo: Handle sync for collapsing items for an incoming `current` prop change.
 		set(dispatch, props.current, allowMultiple);
 	}, [props.current]);
 
