@@ -34,6 +34,7 @@ const setCurrentState = (prev = [], next) => {
  * @typedef State
  * @property {boolean} allowMultiple
  * @property {string[]} current
+ * @property {boolean} isWithinContext
  */
 
 /**
@@ -44,6 +45,7 @@ function useInitialState({ allowMultiple = false, current }) {
 	const initialState = useSealedState({
 		allowMultiple,
 		current: setCurrentState([], current),
+		isWithinContext: true,
 	});
 
 	return initialState;
@@ -156,7 +158,7 @@ export function useAccordionState(props) {
 
 	const initialState = useInitialState(otherProps);
 
-	const [{ allowMultiple, current }, dispatch] = useReducer(
+	const [{ allowMultiple, current, isWithinContext }, dispatch] = useReducer(
 		reducer,
 		initialState,
 	);
@@ -167,6 +169,7 @@ export function useAccordionState(props) {
 
 	// Synchronize props + state
 	useUpdateEffect(() => {
+		// @todo: Handle sync for collapsing items for an incoming `current` prop change.
 		set(dispatch, props.current, allowMultiple);
 	}, [props.current]);
 
@@ -178,6 +181,7 @@ export function useAccordionState(props) {
 		allowMultiple,
 		current,
 		getIsVisible,
+		isWithinContext,
 		dispatch,
 	};
 }
@@ -215,12 +219,18 @@ export function useAccordionProps(props) {
  * @return {[boolean, (id: string) => boolean ]}
  */
 export function useAccordion({ id, visible: visibleProp }) {
-	const { allowMultiple, dispatch, getIsVisible } = useAccordionContext();
+	const {
+		allowMultiple,
+		dispatch,
+		getIsVisible,
+		isWithinContext,
+	} = useAccordionContext();
 
-	const visible = getIsVisible(id);
+	const visible = isWithinContext ? getIsVisible(id) : visibleProp;
 
 	const setVisible = useCallback(
 		(/** @type {boolean} */ nextVisible) => {
+			if (!isWithinContext) return;
 			if (!id) return;
 
 			if (nextVisible) {
@@ -235,12 +245,12 @@ export function useAccordion({ id, visible: visibleProp }) {
 				}
 			}
 		},
-		[id, allowMultiple, dispatch],
+		[id, allowMultiple, dispatch, isWithinContext],
 	);
 
 	useUpdateEffect(() => {
 		setVisible(visibleProp);
-	}, [visibleProp]);
+	}, [setVisible, visibleProp]);
 
 	return [visible, setVisible];
 }
