@@ -3,7 +3,7 @@ import React from 'react';
 import { Colors, Typography } from './components';
 
 export default {
-	title: 'Design/Start',
+	title: 'Design/System',
 };
 
 export const _colors = () => <Colors />;

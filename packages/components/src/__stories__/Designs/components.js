@@ -15,10 +15,6 @@ import {
 	VStack,
 } from '../../index';
 
-export default {
-	title: 'Design/Colors',
-};
-
 const GRADES = [100, 300, 500, 700, 900];
 const ALPHAS = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
