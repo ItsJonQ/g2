@@ -34,8 +34,6 @@ exports[`props should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {

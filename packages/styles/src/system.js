@@ -143,8 +143,10 @@ import {
  | 'blueRgba90'
 
  // Theme tokens that pop up throughout the codebase
- | 'FlexGap'
- | 'FlexItemDisplay'
+ | 'flexGap'
+ | 'flexItemDisplay'
+ | 'surfaceBackgroundSize'
+ | 'surfaceBackgroundSizeDotted'
 } GeneratedDesignTokens
  */
 

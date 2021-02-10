@@ -15475,8 +15475,6 @@ exports[`props should render FontSizeControl 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 3);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 3);
 }
 
 @media (prefers-reduced-motion) {
@@ -15538,8 +15536,6 @@ exports[`props should render FontSizeControl 1`] = `
   width: 100%;
   margin-bottom: calc(calc(4px * 2) * -1);
   margin-bottom: calc(calc(var(--wp-g2-grid-base) * 2) * -1);
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -15927,8 +15923,6 @@ exports[`props should render FontSizeControl 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 0);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 0);
   height: 24px;
   margin: 0 -6px 0 0!important;
   opacity: 0.6;
@@ -16587,8 +16581,6 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 3);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 3);
 }
 
 @media (prefers-reduced-motion) {
@@ -16650,8 +16642,6 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   width: 100%;
   margin-bottom: calc(calc(4px * 2) * -1);
   margin-bottom: calc(calc(var(--wp-g2-grid-base) * 2) * -1);
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -17039,8 +17029,6 @@ exports[`props should render FontSizeControl with css prop 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 0);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 0);
   height: 24px;
   margin: 0 -6px 0 0!important;
   opacity: 0.6;
@@ -17701,8 +17689,6 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 3);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 3);
 }
 
 @media (prefers-reduced-motion) {
@@ -17764,8 +17750,6 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   width: 100%;
   margin-bottom: calc(calc(4px * 2) * -1);
   margin-bottom: calc(calc(var(--wp-g2-grid-base) * 2) * -1);
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -18153,8 +18137,6 @@ exports[`props should render FontSizeControl with css prop 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 0);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 0);
   height: 24px;
   margin: 0 -6px 0 0!important;
   opacity: 0.6;
@@ -19008,8 +18990,6 @@ exports[`props should render HStack 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -19075,8 +19055,6 @@ exports[`props should render HStack with css prop 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -19142,8 +19120,6 @@ exports[`props should render HStack with css prop 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
   background: red;
   padding: 27px;
 }
@@ -19963,8 +19939,6 @@ exports[`props should render ListGroup 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -20030,8 +20004,6 @@ exports[`props should render ListGroup with css prop 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -20097,8 +20069,6 @@ exports[`props should render ListGroup with css prop 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
   background: red;
   padding: 27px;
 }
@@ -20166,8 +20136,6 @@ exports[`props should render ListGroupFooter 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -20233,8 +20201,6 @@ exports[`props should render ListGroupFooter with css prop 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -20300,8 +20266,6 @@ exports[`props should render ListGroupFooter with css prop 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
   background: red;
   padding: 27px;
 }
@@ -20369,8 +20333,6 @@ exports[`props should render ListGroupHeader 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -20436,8 +20398,6 @@ exports[`props should render ListGroupHeader with css prop 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -20503,8 +20463,6 @@ exports[`props should render ListGroupHeader with css prop 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
   background: red;
   padding: 27px;
 }
@@ -20572,8 +20530,6 @@ exports[`props should render ListGroups 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 6);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 6);
 }
 
 @media (prefers-reduced-motion) {
@@ -20639,8 +20595,6 @@ exports[`props should render ListGroups with css prop 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 6);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 6);
 }
 
 @media (prefers-reduced-motion) {
@@ -20706,8 +20660,6 @@ exports[`props should render ListGroups with css prop 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 6);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 6);
   background: red;
   padding: 27px;
 }
@@ -34428,8 +34380,6 @@ exports[`props should render VStack 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -34495,8 +34445,6 @@ exports[`props should render VStack with css prop 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
 }
 
 @media (prefers-reduced-motion) {
@@ -34562,8 +34510,6 @@ exports[`props should render VStack with css prop 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  --wp-g2-h-stack-spacing: calc(4px * 2);
-  --wp-g2-h-stack-spacing: calc(var(--wp-g2-grid-base) * 2);
   background: red;
   padding: 27px;
 }
