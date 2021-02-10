@@ -43,7 +43,7 @@ const theme = createTheme(({ get, theme }) => {
     buttonControlActiveStateColor: get("colorText"),
     cardBorderRadius: "12px",
     controlBorderRadius: "8px",
-    colorAdmin: "#3E58E1",
+    colorAdmin: "#3858E9",
     controlBorderColor: get("colorText"),
     controlBorderColorHover: get("colorText"),
     controlBorderColorSubtle: "transparent",
@@ -312,12 +312,12 @@ const AccessiblitySection = () => {
             </View>
             <ThemeProvider
               theme={{
-                colorAdmin: "#3E58E1",
+                colorAdmin: "#3858E9",
                 cardBorderRadius: "4px",
-                buttonPrimaryColor: "#3E58E1",
-                buttonPrimaryBorderColor: "#3E58E1",
-                menuItemFocusBorderColor: "#3E58E1",
-                menuItemFocusTextColor: "#3E58E1",
+                buttonPrimaryColor: "#3858E9",
+                buttonPrimaryBorderColor: "#3858E9",
+                menuItemFocusBorderColor: "#3858E9",
+                menuItemFocusTextColor: "#3858E9",
                 fontSize: "13px",
               }}
             >
