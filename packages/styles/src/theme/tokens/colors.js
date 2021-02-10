@@ -127,7 +127,7 @@ export const WORDPRESS_COLORS = {
 
 export const G2_COLORS = {
 	black: '#000000',
-	blueberry: '#3858E9',
+	blueberry: '#3E58E1',
 	blueberryDark: '#1D35B4',
 	greens: '#33F078',
 	grey: '#40464D',
