@@ -98,9 +98,9 @@ exports[`props should render correctly 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -128,9 +128,9 @@ exports[`props should render correctly 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -255,9 +255,9 @@ exports[`props should render max 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -285,9 +285,9 @@ exports[`props should render max 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -412,9 +412,9 @@ exports[`props should render min 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -442,9 +442,9 @@ exports[`props should render min 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -571,9 +571,9 @@ exports[`props should render size 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -601,9 +601,9 @@ exports[`props should render size 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -728,9 +728,9 @@ exports[`props should render unit value 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -758,9 +758,9 @@ exports[`props should render unit value 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -885,9 +885,9 @@ exports[`props should render value 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -915,9 +915,9 @@ exports[`props should render value 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 

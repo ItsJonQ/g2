@@ -716,7 +716,7 @@ exports[`props should render variant 1`] = `
   font-size: calc(1 * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 

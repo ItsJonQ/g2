@@ -269,7 +269,7 @@ exports[`props should render children 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -648,7 +648,7 @@ exports[`props should render correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -1028,7 +1028,7 @@ exports[`props should render disabled 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -1410,7 +1410,7 @@ exports[`props should render readOnly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -1791,7 +1791,7 @@ exports[`props should render required 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -2178,7 +2178,7 @@ exports[`props should render size 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 

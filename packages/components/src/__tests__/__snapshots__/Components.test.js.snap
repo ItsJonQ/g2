@@ -27258,7 +27258,7 @@ exports[`props should render Select 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -27682,7 +27682,7 @@ exports[`props should render SelectDropdown 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -28159,7 +28159,7 @@ exports[`props should render SelectDropdown with css prop 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -28638,7 +28638,7 @@ exports[`props should render SelectDropdown with css prop 2`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -28963,9 +28963,9 @@ exports[`props should render Slider 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -28993,9 +28993,9 @@ exports[`props should render Slider 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -29120,9 +29120,9 @@ exports[`props should render Slider with css prop 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -29150,9 +29150,9 @@ exports[`props should render Slider with css prop 1`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -29279,9 +29279,9 @@ exports[`props should render Slider with css prop 2`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-webkit-slider-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -29309,9 +29309,9 @@ exports[`props should render Slider with css prop 2`] = `
 }
 
 *:disabled.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0::-moz-range-thumb {
-  background: #8a8b8c;
+  background: #717171;
   background: var(--wp-g2-color-text-muted);
-  border-color: #8a8b8c;
+  border-color: #717171;
   border-color: var(--wp-g2-color-text-muted);
 }
 
@@ -32574,7 +32574,7 @@ exports[`props should render Subheading 1`] = `
   font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
   font-weight: 600;
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
   text-transform: uppercase;
 }
@@ -32619,7 +32619,7 @@ exports[`props should render Subheading with css prop 1`] = `
   font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
   font-weight: 600;
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
   text-transform: uppercase;
 }
@@ -32664,7 +32664,7 @@ exports[`props should render Subheading with css prop 2`] = `
   font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
   font-weight: 600;
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
   text-transform: uppercase;
   background: red;
