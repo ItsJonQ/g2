@@ -42,7 +42,7 @@ const COLOR_PROPS = {
 	colorText: '#1e1e1e',
 	colorTextInverted: get('white'),
 	colorTextHeading: '#050505',
-	colorTextMuted: '#8a8b8c',
+	colorTextMuted: '#717171',
 	...generateColorAdminColors('#007cba'),
 	...generateColorDestructiveColors('#D94F4F'),
 };
