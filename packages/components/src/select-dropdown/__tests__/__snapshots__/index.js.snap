@@ -324,7 +324,7 @@ exports[`props should render correctly 1`] = `
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
