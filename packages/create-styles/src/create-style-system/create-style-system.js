@@ -11,6 +11,8 @@ import { createToken, DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
 
+/** @typedef {Omit<import('../components/theme-provider/theme-provider').ThemeProviderProps, 'compiler' | 'globalStyles'>} WrappedThemeProviderProps */
+
 /**
  * @template {Record<string, string | number>} TConfig
  * @template {Record<string, string | number>} TDarkConfig
@@ -27,7 +29,7 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {(value: keyof (TConfig & TDarkConfig & THCConfig & TDarkHCConfig) | TGeneratedTokens) => string} get The primary function to retrieve Style system variables.
  * @property {import('./polymorphic-component').CreateStyled} styled A set of styled components.
  * @property {import('react').ComponentType} View The base <View /> component.
- * @property {import('react').ComponentType<import('react').ComponentProps<BaseThemeProvider>>} ThemeProvider The component (Provider) used to adjust design tokens.
+ * @property {import('react').ComponentType<WrappedThemeProviderProps>} ThemeProvider The component (Provider) used to adjust design tokens.
  * @property {import('../css-custom-properties').RootStore} rootStore
  */
 
@@ -129,9 +131,7 @@ export function createStyleSystem(options = defaultOptions) {
 	/**
 	 * An enhanced (base) ThemeProvider with injectGlobal from the custom Emotion instance.
 	 */
-	const ThemeProvider = (
-		/** @type {import('react').ComponentProps<BaseThemeProvider>} */ props,
-	) => (
+	const ThemeProvider = (/** @type {WrappedThemeProviderProps} */ props) => (
 		<BaseThemeProvider
 			{...props}
 			compiler={compiler}

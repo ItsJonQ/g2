@@ -26,17 +26,17 @@ import {
  * @typedef ThemeProviderProps
  * @property {import('react').ReactNode} children Children to render.
  * @property {import('../../create-compiler').Compiler} compiler The style compiler.
- * @property {string} className Optional className to render on the provider.
- * @property {boolean} isGlobal Determines if the theme styles are rendered globally or scoped locally.
+ * @property {string} [className] Optional className to render on the provider.
+ * @property {boolean} [isGlobal=false] Determines if the theme styles are rendered globally or scoped locally.
  * @property {import('../../create-style-system/generate-theme').GenerateThemeResults} globalStyles Styles to apply globally.
- * @property {boolean} isDark Determines if dark-mode styles should be rendered.
- * @property {boolean} isColorBlind Determines if color-blind-mode styles should be rendered.
- * @property {boolean} isReducedMotion Determines if reduced-motion-mode styles should be rendered.
- * @property {boolean} isHighContrast Determines if high-contrast-mode styles should be rendered.
- * @property {Record<string, string>} theme Custom theme properties.
- * @property {Record<string, string>} darkTheme Custom dark theme properties.
- * @property {Record<string, string>} highContrastTheme Custom high contrast theme properties.
- * @property {Record<string, string>} darkHighContrastTheme Custom dark & high contrast theme properties.
+ * @property {boolean} [isDark=false] Determines if dark-mode styles should be rendered.
+ * @property {boolean} [isColorBlind=false] Determines if color-blind-mode styles should be rendered.
+ * @property {boolean} [isReducedMotion=false] Determines if reduced-motion-mode styles should be rendered.
+ * @property {boolean} [isHighContrast=false] Determines if high-contrast-mode styles should be rendered.
+ * @property {Record<string, string>} [theme={}] Custom theme properties.
+ * @property {Record<string, string>} [darkTheme={}] Custom dark theme properties.
+ * @property {Record<string, string>} [highContrastTheme={}] Custom high contrast theme properties.
+ * @property {Record<string, string>} [darkHighContrastTheme={}] Custom dark & high contrast theme properties.
  */
 
 /**
@@ -64,10 +64,10 @@ function ThemeProvider(
 		className,
 		isGlobal = false,
 		globalStyles,
-		isDark,
-		isColorBlind,
-		isReducedMotion,
-		isHighContrast,
+		isDark = false,
+		isColorBlind = false,
+		isReducedMotion = false,
+		isHighContrast = false,
 		theme = {},
 		darkTheme = {},
 		highContrastTheme = {},
