@@ -11,12 +11,12 @@ import { CONNECT_STATIC_NAMESPACE } from './constants';
  * The hope is that we can improve render performance by removing functional
  * component wrappers.
  *
- * @template P
+ * @template {import('@wp-g2/create-styles').ViewOwnProps<{}, any>} P
  * @param {import('react').ForwardRefRenderFunction<import('@wp-g2/create-styles').ElementTypeFromViewOwnProps<P>, P>} Component The component to register into the Context system.
  * @param {Array<string>|string} namespace The namespace to register the component under.
  * @param {object} options
  * @param {boolean} [options.memo=true]
- * @return {import('@wp-g2/create-styles').PolymorphicComponent<import('@wp-g2/create-styles').ElementTypeFromViewOwnProps<P>, P>}
+ * @return {import('@wp-g2/create-styles').PolymorphicComponent<import('@wp-g2/create-styles').ElementTypeFromViewOwnProps<P>, import('@wp-g2/create-styles').PropsFromViewOwnProps<P>>}
  */
 export function contextConnect(Component, namespace, options = {}) {
 	const { memo = true } = options;
