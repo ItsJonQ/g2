@@ -1,4 +1,5 @@
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { clamp } from 'lodash';
 import React from 'react';
 
 import { Card, View } from '../../index';
@@ -12,7 +13,6 @@ export const _default = () => {
 	const [expanded, setExpanded] = React.useState(false);
 	const [dragging, setDragging] = React.useState(false);
 	const y = useMotionValue(0);
-	// const dy = useMotionValue(expanded ? -400 : 0);
 	const dy = y;
 	const opacity = useTransform(dy, [0, -50, -400], [0, 0, 1]);
 
@@ -68,7 +68,7 @@ export const _default = () => {
 					right: 10,
 					y: dy,
 				}}
-				transition={{ type: 'spring', bounce: 0.3, duration: 0.3 }}
+				transition={{ type: 'spring', bounce: 0.3, duration: 0.4 }}
 				variants={variants}
 			>
 				<div style={{ position: 'relative' }}>
@@ -76,24 +76,25 @@ export const _default = () => {
 						dragMomentum={false}
 						onPan={(event, info) => {
 							setDragging(true);
-							if (dy.get() < -440) return;
-							dy.set(dy.get() + info.delta.y);
+							dy.set(clamp(dy.get() + info.delta.y, -450, 250));
 						}}
 						onPanEnd={(event, info) => {
 							const { y } = info.offset;
 							let isExpanded;
 							if (expanded) {
-								isExpanded = y < 30;
+								isExpanded = y < 100;
 							} else {
-								isExpanded = y < -30;
+								isExpanded = y < -100;
 								if (y > 50) {
 									setDismissed(true);
 								}
 							}
 
 							if (info.velocity.y) {
-								isExpanded = info.velocity.y < 0;
-								if (info.velocity.y > 1000) {
+								if (Math.abs(info.velocity.y) > 100) {
+									isExpanded = info.velocity.y < 0;
+								}
+								if (info.velocity.y > 1400) {
 									setDismissed(true);
 								}
 							}
@@ -103,11 +104,12 @@ export const _default = () => {
 						}}
 						style={{
 							width: '100%',
-							height: 28,
+							height: 50,
 							position: 'absolute',
 							top: 0,
 							left: 0,
 							zIndex: 3,
+							userSelect: 'none',
 						}}
 					>
 						<View
@@ -123,7 +125,7 @@ export const _default = () => {
 							}}
 						/>
 					</motion.div>
-					<Card css={{ height: 600 }} />
+					<Card css={{ height: 600 }} elevation={5} />
 				</div>
 			</motion.div>
 			<motion.div
@@ -137,6 +139,7 @@ export const _default = () => {
 					background: 'rgba(0,0,0,0.5)',
 					pointerEvents: expanded ? null : 'none',
 					opacity,
+					userSelect: 'none',
 				}}
 			/>
 		</Card>
