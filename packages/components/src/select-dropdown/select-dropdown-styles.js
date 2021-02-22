@@ -11,7 +11,7 @@ export const Popover = css`
 	opacity: 1;
 	outline: none;
 	transition: 40ms opacity linear;
-	transition-delay: 20ms; // Allows for the popover to reposition without being seen.
+	transition-delay: 20ms;
 `;
 
 export const popoverHidden = css`
