@@ -1,6 +1,6 @@
 import { clearSelection } from '@wp-g2/utils';
 import { noop } from 'lodash';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useDrag } from 'react-use-gesture';
 
 import * as styles from './TextInput.styles';

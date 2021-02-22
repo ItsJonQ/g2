@@ -1,0 +1,4 @@
+**/__stories__/**/*.js
+**/__tests__/**/*.js
+**/__fixtures__/**/*.js
+*.stories.js

@@ -48,7 +48,6 @@ export const Backdrop = css`
 	display: block;
 	left: 0;
 	pointer-events: none;
-	pointer-events: none;
 	position: absolute;
 	top: ${ui.get('switchPaddingOffset')};
 	transition: all ${ui.get('transitionDurationFast')} linear;

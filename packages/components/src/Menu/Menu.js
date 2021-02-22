@@ -1,9 +1,8 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx } from '@wp-g2/styles';
 import React from 'react';
-import { Menu as ReakitMenu, useMenuState } from 'reakit';
+import { Menu as ReakitMenu } from 'reakit';
 
-import { useDropdownContext } from '../Dropdown';
 import { usePopoverResizeUpdater } from '../Popover/Popover.utils';
 import { View } from '../View';
 import { MenuContext } from './Menu.Context';
