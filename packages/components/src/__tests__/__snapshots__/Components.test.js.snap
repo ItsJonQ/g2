@@ -32889,7 +32889,6 @@ exports[`props should render Switch 1`] = `
   display: block;
   left: 0;
   pointer-events: none;
-  pointer-events: none;
   position: absolute;
   top: 6px;
   top: var(--wp-g2-switch-padding-offset);
