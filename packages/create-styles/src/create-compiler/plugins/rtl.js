@@ -6,9 +6,11 @@ import rtlcss from 'rtlcss';
 
 import { STYLIS_CONTEXTS } from './utils';
 
-let isRtl = false;
-if (typeof window !== 'undefined') {
-	isRtl = window?.document?.documentElement?.dir === 'rtl';
+export function getRtl() {
+	if (typeof window !== 'undefined') {
+		return window?.document?.dir === 'rtl';
+	}
+	return false;
 }
 
 // We need to apply cssjanus as early as possible to capture the noflip directives if used
@@ -32,7 +34,7 @@ export const STYLIS_PROPERTY_CONTEXT = STYLIS_CONTEXTS.PREPARATION;
 function stylisRTLPlugin(context, content) {
 	if (context === STYLIS_PROPERTY_CONTEXT) {
 		// pass four undefineds to let TS know which overload we're using
-		return isRtl
+		return getRtl()
 			? rtlcss.process(content, undefined, undefined, undefined)
 			: undefined;
 	}
