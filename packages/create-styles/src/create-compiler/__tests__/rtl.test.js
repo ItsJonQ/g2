@@ -16,4 +16,12 @@ describe('getRtl', () => {
 		document.documentElement.setAttribute('dir', 'ltr');
 		expect(getRtl()).toBe(false);
 	});
+
+	test('should return true when document is rtl', () => {
+		document.dir = 'rtl';
+		expect(getRtl()).toBe(true);
+
+		document.documentElement.setAttribute('dir', 'rtl');
+		expect(getRtl()).toBe(true);
+	});
 });
