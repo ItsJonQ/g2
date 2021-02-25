@@ -24,7 +24,7 @@ import { compileInterpolatedStyles } from './utils';
  * @returns {import('./polymorphic-component').CreateStyled} A set of styled components.
  */
 export function createStyledComponents({ compiler, core }) {
-	const { css, cx } = compiler;
+	const { css, cx, generateInterpolationName } = compiler;
 
 	/**
 	 * That's all a <Box /> is :). A core.div.
@@ -40,8 +40,10 @@ export function createStyledComponents({ compiler, core }) {
 		} = options;
 
 		return (...interpolatedProps) => {
+			const interpolationName = generateInterpolationName();
+			/** @type {import('react').ForwardRefRenderFunction<any, any>} */
 			const render = ({ as: asProp, className, ...props }, ref) => {
-				// Combine all of te props together.
+				// Combine all of the props together.
 				const mergedProps = { ...extraProps, ...props, ref };
 
 				const baseTag = asProp || tagName;
@@ -55,7 +57,12 @@ export function createStyledComponents({ compiler, core }) {
 				const classes = cx(css(...interpolatedStyles), className);
 
 				return (
-					<Box as={baseTag} {...mergedProps} className={classes} />
+					<Box
+						as={baseTag}
+						{...mergedProps}
+						className={classes}
+						data-interpolation-name={interpolationName}
+					/>
 				);
 			};
 
@@ -87,6 +94,9 @@ export function createStyledComponents({ compiler, core }) {
 						: options,
 				)(...interpolatedProps);
 			};
+
+			// @ts-ignore internal property
+			StyledComponent.__interpolationName__ = interpolationName;
 
 			if (typeof tagName !== 'string') {
 				/*

@@ -161,5 +161,9 @@ export const createCoreElement = (tagName, options) => {
 		SystemComponent.displayName = displayName;
 	}
 
+	// @ts-ignore internal property
+	SystemComponent.__interpolationName__ = tagName;
+
+	// @ts-ignore
 	return SystemComponent;
 };

@@ -137,6 +137,15 @@ export function transformValuesToVariablesString(
 }
 
 /**
+ *
+ * @param {any} value
+ * @return {value is import('../create-style-system/polymorphic-component').PolymorphicComponent<any, any>}
+ */
+function isPolymorphicComponent(value) {
+	return value && typeof value.__interpolationName__ !== 'undefined';
+}
+
+/**
  * Resolves and compiles interpolated CSS styles for styled-components.
  * Allows for prop (function) interpolation within the style rules.
  *
@@ -144,14 +153,17 @@ export function transformValuesToVariablesString(
  * https://mxstbr.blog/2016/11/styled-components-magic-explained/
  *
  * @template TProps
- * @param {(string | ((props: TProps) => string))[]} interpolatedStyles The interpolated styles from a Styled component.
+ * @param {(string | ((props: TProps) => string) | import('../create-style-system/polymorphic-component').PolymorphicComponent<any, any>)[]} interpolatedStyles The interpolated styles from a Styled component.
  * @param {TProps} props Incoming component props.
  * @returns {string[]} Compiled CSS style rules.
  */
 export function compileInterpolatedStyles(interpolatedStyles, props) {
-	const compiledStyles = interpolatedStyles.map((a) =>
-		typeof a === 'function' ? a(props) : a,
-	);
+	const compiledStyles = interpolatedStyles.map((a) => {
+		if (isPolymorphicComponent(a)) {
+			return `[data-interpolation-name="${a.__interpolationName__}"]`;
+		}
+		return typeof a === 'function' ? a(props) : a;
+	});
 
 	return compiledStyles;
 }

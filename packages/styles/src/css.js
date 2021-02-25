@@ -60,11 +60,20 @@ export function getScaleStyles(styles = {}) {
 }
 
 /**
+ *
+ * @param {any} value
+ * @return {value is import('@wp-g2/create-styles').PolymorphicComponent<any, any>}
+ */
+function isPolymorphicComponent(value) {
+	return value && typeof value.__interpolationName__ !== 'undefined';
+}
+
+/**
  * Enhances the (create-system enhanced) CSS function to account for
  * scale functions within the Style system.
  *
  * @param {TemplateStringsArray | import('create-emotion').Interpolation<undefined>} template
- * @param {(import('create-emotion').Interpolation<undefined> | import('./presets/style-query').StyleQuery)[]} args The styles to compile.
+ * @param {(import('create-emotion').Interpolation<undefined> | import('./presets/style-query').StyleQuery | import('@wp-g2/create-styles').PolymorphicComponent<any, any>)[]} args The styles to compile.
  * @returns {ReturnType<compile>} The compiled styles.
  */
 export function css(template, ...args) {
@@ -82,9 +91,18 @@ export function css(template, ...args) {
 		}
 
 		const nextArgs = args.map((arg) => {
+			if (!arg) {
+				return arg;
+			}
+
 			if (arg instanceof StyleQuery) {
 				return arg.getSelector();
 			}
+
+			if (isPolymorphicComponent(arg)) {
+				return `[data-interpolation-name="${arg.__interpolationName__}"]`;
+			}
+
 			return arg;
 		});
 

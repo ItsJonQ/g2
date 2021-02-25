@@ -48,6 +48,9 @@ export function contextConnect(Component, namespace, options = {}) {
 	WrappedComponent.displayName = displayName;
 	WrappedComponent[CONNECT_STATIC_NAMESPACE] = uniq(mergedNamespace);
 
+	// @ts-ignore internal property
+	WrappedComponent.__interpolationName__ = displayName;
+
 	// @ts-ignore
 	return WrappedComponent;
 }

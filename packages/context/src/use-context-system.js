@@ -30,6 +30,7 @@ export function useContextSystem(props, namespace) {
 	// @ts-ignore We fill in the missing properties below
 	const finalComponentProps = {
 		[CONNECTED_NAMESPACE]: true,
+		'data-interpolation-name': displayName,
 	};
 
 	const nextNs = ns(displayName);
