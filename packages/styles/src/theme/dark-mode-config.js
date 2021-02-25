@@ -13,6 +13,7 @@ const DARK_MODE_PROPS = {
 	colorScrollbarThumbHover: 'rgba(255, 255, 255, 0.5)',
 	colorScrollbarTrack: 'rgba(0, 0, 0, 0.04)',
 	colorText: '#E4E6EB',
+	colorTextMuted: '#7a7a7a',
 	colorTextInverted: '#050505',
 	colorTextHeading: '#ffffff',
 	controlBackgroundColor: get('colorBodyBackground'),

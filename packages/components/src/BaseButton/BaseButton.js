@@ -2,13 +2,13 @@ import { chevronDown } from '@wordpress/icons';
 import { contextConnect } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
-import { Button as ReakitButton } from 'reakit';
 import { Radio as ReakitRadio } from 'reakit';
 
 import { useButtonGroupContext } from '../ButtonGroup';
 import { Elevation } from '../Elevation';
 import { FlexItem } from '../Flex';
 import { Icon } from '../Icon';
+import { View } from '../View';
 import * as styles from './BaseButton.styles';
 import LoadingOverlay from './BaseButtonLoadingOverlay';
 import { useBaseButton } from './useBaseButton';
@@ -42,7 +42,7 @@ function BaseButton(props, forwardedRef) {
 	const { buttonGroup } = useButtonGroupContext();
 	const buttonGroupState = buttonGroup || {};
 
-	const BaseComponent = buttonGroup ? ReakitRadio : ReakitButton;
+	const BaseComponent = buttonGroup ? ReakitRadio : View;
 	const as = asProp || (href ? 'a' : 'button');
 
 	return (

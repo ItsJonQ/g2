@@ -389,7 +389,7 @@ exports[`props should render correctly 1`] = `
 <div
   aria-activedescendant="segmented-1"
   aria-label="SegmentControl"
-  class="components-segmented-control wp-components-segmented-control emotion-0"
+  class="components-segmented-control wp-components-segmented-control ic-qksk6y ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SegmentedControl"
   id="segmented"
@@ -404,34 +404,34 @@ exports[`props should render correctly 1`] = `
     tabindex="-1"
   />
   <div
-    class="emotion-1"
+    class="ic-otytyz ic-192yz5d emotion-1"
     data-g2-component="SegmentedControlBackdrop"
     role="presentation"
     style="transform: translateX(NaNpx); transition: none; width: 0px;"
   />
   <div
-    class="emotion-2"
+    class="ic-1blhbvo ic-192yz5d emotion-2"
     data-active="true"
     data-g2-component="SegmentedControlButtonLabel"
   >
     <button
       aria-checked="true"
       aria-selected="true"
-      class="emotion-3"
+      class="ic-1c3kh7b ic-192yz5d emotion-3"
       data-value="olaf"
       id="segmented-1"
       role="radio"
       tabindex="-1"
     >
       <div
-        class="emotion-4"
+        class="ic-151osxh ic-192yz5d emotion-4"
         data-g2-component="SegmentedControlButtonContent"
       >
         O
       </div>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="ic-1iv4r3z ic-192yz5d emotion-5"
         data-g2-component="SegmentedControlButtonContentPlaceholder"
       >
         O
@@ -439,32 +439,32 @@ exports[`props should render correctly 1`] = `
     </button>
     <div
       aria-hidden="true"
-      class="emotion-6"
+      class="ic-lqthxd ic-192yz5d emotion-6"
       data-g2-component="SegmentedControlButtonSeparator"
     />
   </div>
   <div
-    class="emotion-2"
+    class="ic-1blhbvo ic-192yz5d emotion-2"
     data-active="false"
     data-g2-component="SegmentedControlButtonLabel"
   >
     <button
       aria-checked="false"
-      class="emotion-8"
+      class="ic-1c3kh7b ic-192yz5d emotion-8"
       data-value="samantha"
       id="segmented-2"
       role="radio"
       tabindex="-1"
     >
       <div
-        class="emotion-4"
+        class="ic-151osxh ic-192yz5d emotion-4"
         data-g2-component="SegmentedControlButtonContent"
       >
         S
       </div>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="ic-1iv4r3z ic-192yz5d emotion-5"
         data-g2-component="SegmentedControlButtonContentPlaceholder"
       >
         S
@@ -472,7 +472,7 @@ exports[`props should render correctly 1`] = `
     </button>
     <div
       aria-hidden="true"
-      class="emotion-6"
+      class="ic-lqthxd ic-192yz5d emotion-6"
       data-g2-component="SegmentedControlButtonSeparator"
     />
   </div>

@@ -29,7 +29,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <img
-  class="components-image wp-components-image emotion-0"
+  class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Image"
   src="/olaf.png"
@@ -127,19 +127,19 @@ exports[`props should render with custom aspectRatio 1`] = `
 }
 
 <div
-  class="components-aspect-ratio wp-components-aspect-ratio emotion-0"
+  class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >
   <img
-    class="components-image wp-components-image emotion-1"
+    class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Image"
     src="/olaf.png"
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-1blhbvo ic-192yz5d emotion-2"
   />
 </div>
 `;
@@ -178,7 +178,7 @@ exports[`props should render with custom dimensions 1`] = `
 }
 
 <img
-  class="components-image wp-components-image emotion-0"
+  class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Image"
   height="275"
@@ -280,19 +280,19 @@ exports[`props should render with custom fit 1`] = `
 }
 
 <div
-  class="components-aspect-ratio wp-components-aspect-ratio emotion-0"
+  class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="AspectRatio"
 >
   <img
-    class="components-image wp-components-image emotion-1"
+    class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Image"
     src="/olaf.png"
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-1blhbvo ic-192yz5d emotion-2"
   />
 </div>
 `;

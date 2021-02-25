@@ -2,6 +2,16 @@
 
 exports[`props should render correctly 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,6 +95,18 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -269,7 +291,7 @@ exports[`props should render correctly 1`] = `
   aria-controls="popover"
   aria-expanded="false"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -279,14 +301,14 @@ exports[`props should render correctly 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -295,6 +317,16 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render gutter 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -378,6 +410,18 @@ exports[`props should render gutter 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -562,7 +606,7 @@ exports[`props should render gutter 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -572,14 +616,14 @@ exports[`props should render gutter 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -588,6 +632,16 @@ exports[`props should render gutter 1`] = `
 
 exports[`props should render label 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -671,6 +725,18 @@ exports[`props should render label 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -855,7 +921,7 @@ exports[`props should render label 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -865,14 +931,14 @@ exports[`props should render label 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -881,6 +947,16 @@ exports[`props should render label 1`] = `
 
 exports[`props should render maxWidth 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -964,6 +1040,18 @@ exports[`props should render maxWidth 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -1148,7 +1236,7 @@ exports[`props should render maxWidth 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1158,14 +1246,14 @@ exports[`props should render maxWidth 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1174,6 +1262,16 @@ exports[`props should render maxWidth 1`] = `
 
 exports[`props should render placement 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1257,6 +1355,18 @@ exports[`props should render placement 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -1441,7 +1551,7 @@ exports[`props should render placement 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1451,14 +1561,14 @@ exports[`props should render placement 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1467,6 +1577,16 @@ exports[`props should render placement 1`] = `
 
 exports[`props should render visible 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1550,6 +1670,18 @@ exports[`props should render visible 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -1734,7 +1866,7 @@ exports[`props should render visible 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1744,14 +1876,14 @@ exports[`props should render visible 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1760,6 +1892,16 @@ exports[`props should render visible 1`] = `
 
 exports[`props should render without animation 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1843,6 +1985,18 @@ exports[`props should render without animation 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -2027,7 +2181,7 @@ exports[`props should render without animation 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -2037,14 +2191,14 @@ exports[`props should render without animation 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -2053,6 +2207,16 @@ exports[`props should render without animation 1`] = `
 
 exports[`props should render without content 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2136,6 +2300,18 @@ exports[`props should render without content 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -2320,7 +2496,7 @@ exports[`props should render without content 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -2330,14 +2506,14 @@ exports[`props should render without content 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -2346,6 +2522,16 @@ exports[`props should render without content 1`] = `
 
 exports[`props should render without modal 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2429,6 +2615,18 @@ exports[`props should render without modal 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -2613,7 +2811,7 @@ exports[`props should render without modal 1`] = `
   aria-controls="popover"
   aria-expanded="true"
   aria-haspopup="dialog"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -2623,14 +2821,14 @@ exports[`props should render without modal 1`] = `
   type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Show Yourself
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

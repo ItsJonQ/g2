@@ -1,7 +1,7 @@
 import { hasNamespace, useContextSystem } from '@wp-g2/context';
-import { css, cx, ui } from '@wp-g2/styles';
+import { ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
-import React, { useMemo } from 'react';
+import React from 'react';
 
 import { FlexItem, useFlex } from '../Flex';
 import { getAlignmentProps } from './HStack.utils';
@@ -37,17 +37,8 @@ export function useHStack(props) {
 		return child;
 	});
 
-	const classes = useMemo(() => {
-		return cx(
-			css({
-				[ui.createToken('HStackSpacing')]: ui.space(spacing),
-			}),
-			className,
-		);
-	}, [className, spacing]);
-
 	const propsForFlex = {
-		className: classes,
+		className,
 		children: clonedChildren,
 		direction,
 		justify: 'center',

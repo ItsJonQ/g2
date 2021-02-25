@@ -5,10 +5,9 @@ import { createContext, useContext } from 'react';
  * @typedef AccordionContext
  * @property {boolean} allowMultiple
  * @property {string[]} current
+ * @property {import('react').Dispatch<Action>} dispatch
  * @property {(id: string) => boolean} getIsVisible
- * @property {(next: string | string[]) => void} add
- * @property {(next: string | string[]) => void} set
- * @property {(next: string | string[]) => void} remove
+ * @property {boolean} isWithinContext
  */
 
 /**
@@ -17,10 +16,9 @@ import { createContext, useContext } from 'react';
 export const AccordionContext = createContext({
 	allowMultiple: false,
 	current: [],
+	dispatch: noop,
 	getIsVisible: noop,
-	add: noop,
-	set: noop,
-	remove: noop,
+	isWithinContext: false,
 });
 
 export const useAccordionContext = () => useContext(AccordionContext);

@@ -20,7 +20,7 @@ exports[`props should render correctly 1`] = `
   font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
   font-weight: 600;
   display: block;
-  color: #8a8b8c;
+  color: #717171;
   color: var(--wp-g2-color-text-muted);
   text-transform: uppercase;
 }
@@ -38,7 +38,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text components-subheading wp-components-subheading ic-lxw478 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Subheading"
 >

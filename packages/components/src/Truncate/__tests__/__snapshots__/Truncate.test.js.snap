@@ -31,7 +31,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate emotion-0"
+  class="components-truncate wp-components-truncate ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -70,7 +70,7 @@ exports[`props should render custom ellipsis 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate emotion-0"
+  class="components-truncate wp-components-truncate ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -105,7 +105,7 @@ exports[`props should render custom ellipsizeMode 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate emotion-0"
+  class="components-truncate wp-components-truncate ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -144,7 +144,7 @@ exports[`props should render limit 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate emotion-0"
+  class="components-truncate wp-components-truncate ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >
@@ -183,7 +183,7 @@ exports[`props should render numberOfLines 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate emotion-0"
+  class="components-truncate wp-components-truncate ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Truncate"
 >

@@ -27,6 +27,16 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,6 +120,18 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
@@ -329,7 +351,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-collapsible wp-components-collapsible emotion-0"
+  class="components-collapsible wp-components-collapsible ic-cks6qv ic-192yz5d emotion-0"
   data-expanded="false"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
@@ -338,7 +360,7 @@ exports[`props should render correctly 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="false"
-    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-collapsible-trigger wp-components-collapsible-trigger emotion-1"
+    class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-collapsible-trigger wp-components-collapsible-trigger ic-1cnobt5 ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-1"
     data-active="false"
     data-destructive="false"
     data-focused="false"
@@ -348,20 +370,20 @@ exports[`props should render correctly 1`] = `
     type="button"
   >
     <span
-      class="components-flex-item wp-components-flex-item emotion-2"
+      class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
       Show/Hide
     </span>
     <span
-      class="components-elevation wp-components-elevation emotion-3"
+      class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="ButtonElevation"
     />
   </button>
   <div
-    class="emotion-4 components-collapsible-content wp-components-collapsible-content"
+    class="emotion-4 components-collapsible-content wp-components-collapsible-content ic-psfhp3"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     hidden=""
@@ -369,7 +391,7 @@ exports[`props should render correctly 1`] = `
     style="display: none;"
   >
     <div
-      class="components-animated wp-components-animated emotion-5"
+      class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-5"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: 0px; opacity: 0; display: none;"
@@ -407,6 +429,16 @@ exports[`props should render visible 1`] = `
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -490,6 +522,18 @@ exports[`props should render visible 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1>*+*:not(marquee) {
@@ -709,7 +753,7 @@ exports[`props should render visible 1`] = `
 }
 
 <div
-  class="components-collapsible wp-components-collapsible emotion-0"
+  class="components-collapsible wp-components-collapsible ic-cks6qv ic-192yz5d emotion-0"
   data-expanded="true"
   data-g2-c16t="true"
   data-g2-component="Collapsible"
@@ -718,7 +762,7 @@ exports[`props should render visible 1`] = `
     aria-busy="false"
     aria-controls="collapsible"
     aria-expanded="true"
-    class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-collapsible-trigger wp-components-collapsible-trigger emotion-1"
+    class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-collapsible-trigger wp-components-collapsible-trigger ic-1cnobt5 ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-1"
     data-active="false"
     data-destructive="false"
     data-focused="false"
@@ -728,26 +772,26 @@ exports[`props should render visible 1`] = `
     type="button"
   >
     <span
-      class="components-flex-item wp-components-flex-item emotion-2"
+      class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="ButtonContent"
     >
       Show/Hide
     </span>
     <span
-      class="components-elevation wp-components-elevation emotion-3"
+      class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="ButtonElevation"
     />
   </button>
   <div
-    class="emotion-4 components-collapsible-content wp-components-collapsible-content"
+    class="emotion-4 components-collapsible-content wp-components-collapsible-content ic-psfhp3"
     data-g2-c16t="true"
     data-g2-component="CollapsibleContent"
     id="collapsible"
   >
     <div
-      class="components-animated wp-components-animated emotion-5"
+      class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-5"
       data-g2-c16t="true"
       data-g2-component="CollapsibleInnerContent"
       style="height: auto; opacity: 1; display: block;"

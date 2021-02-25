@@ -5,11 +5,11 @@ import React from 'react';
 
 import { Button } from '../Button';
 import { FormGroup } from '../FormGroup';
-import { Grid } from '../Grid';
+import { HStack } from '../HStack';
 import { SelectDropdown } from '../select-dropdown';
 import { TextInput } from '../TextInput';
 import { View } from '../View';
-import { getSelectTemplateColumns } from './font-size-control-utils';
+import * as styles from './font-size-control-styles';
 
 function FontSizeControlSelect(props, forwardedRef) {
 	const {
@@ -31,36 +31,32 @@ function FontSizeControlSelect(props, forwardedRef) {
 		...otherProps
 	} = useContextSystem(props, 'FontSizeControlSelect');
 
-	const templateColumns = getSelectTemplateColumns(withNumberInput);
-	const subControlsTemplateColumns = withNumberInput ? '1fr 1fr' : '1fr';
-
 	const renderItem = React.useCallback(
 		({ name, style }) => <span style={style}>{name}</span>,
 		[],
 	);
 
 	return (
-		<Grid alignment="bottom" templateColumns={templateColumns}>
+		<HStack alignment="left" wrap>
 			{withSelect && (
-				<FormGroup label={label}>
-					<SelectDropdown
-						disabled={disabled}
-						max={260}
-						onChange={onChange}
-						options={options}
-						ref={forwardedRef}
-						renderItem={renderItem}
-						size={size}
-						value={value}
-						{...otherProps}
-					/>
-				</FormGroup>
+				<View className={styles.SelectDropdownWrapper}>
+					<FormGroup label={label}>
+						<SelectDropdown
+							disabled={disabled}
+							max={260}
+							onChange={onChange}
+							options={options}
+							ref={forwardedRef}
+							renderItem={renderItem}
+							size={size}
+							value={value}
+							{...otherProps}
+						/>
+					</FormGroup>
+				</View>
 			)}
-			<Grid
-				alignment="bottom"
-				templateColumns={subControlsTemplateColumns}
-			>
-				{withNumberInput && (
+			{withNumberInput && (
+				<View className={styles.NumberInputWrapper}>
 					<FormGroup label={customLabel}>
 						<TextInput
 							disabled={disabled}
@@ -72,14 +68,14 @@ function FontSizeControlSelect(props, forwardedRef) {
 							value={inputValue}
 						/>
 					</FormGroup>
-				)}
-				<View>
-					<Button disabled={isDefaultValue} isBlock onClick={onReset}>
-						{__('Reset')}
-					</Button>
 				</View>
-			</Grid>
-		</Grid>
+			)}
+			<View className={styles.ResetButtonWrapper}>
+				<Button disabled={isDefaultValue} isBlock onClick={onReset}>
+					{__('Reset')}
+				</Button>
+			</View>
+		</HStack>
 	);
 }
 

@@ -1,7 +1,7 @@
 import { is } from '@wp-g2/utils';
 import { kebabCase } from 'lodash';
 
-import { NAMESPACE } from './constants';
+import { INTERPOLATION_CLASS_NAME, NAMESPACE } from './constants';
 
 /**
  * @type {{
@@ -137,6 +137,15 @@ export function transformValuesToVariablesString(
 }
 
 /**
+ *
+ * @param {any} value
+ * @return {value is import('../create-style-system/polymorphic-component').PolymorphicComponent<any, any>}
+ */
+function isPolymorphicComponent(value) {
+	return value && typeof value[INTERPOLATION_CLASS_NAME] !== 'undefined';
+}
+
+/**
  * Resolves and compiles interpolated CSS styles for styled-components.
  * Allows for prop (function) interpolation within the style rules.
  *
@@ -144,14 +153,17 @@ export function transformValuesToVariablesString(
  * https://mxstbr.blog/2016/11/styled-components-magic-explained/
  *
  * @template TProps
- * @param {(string | ((props: TProps) => string))[]} interpolatedStyles The interpolated styles from a Styled component.
+ * @param {(string | ((props: TProps) => string) | import('../create-style-system/polymorphic-component').PolymorphicComponent<any, any>)[]} interpolatedStyles The interpolated styles from a Styled component.
  * @param {TProps} props Incoming component props.
  * @returns {string[]} Compiled CSS style rules.
  */
 export function compileInterpolatedStyles(interpolatedStyles, props) {
-	const compiledStyles = interpolatedStyles.map((a) =>
-		typeof a === 'function' ? a(props) : a,
-	);
+	const compiledStyles = interpolatedStyles.map((a) => {
+		if (isPolymorphicComponent(a)) {
+			return `.${a[INTERPOLATION_CLASS_NAME]}`;
+		}
+		return typeof a === 'function' ? a(props) : a;
+	});
 
 	return compiledStyles;
 }

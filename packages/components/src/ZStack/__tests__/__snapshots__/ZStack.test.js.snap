@@ -83,26 +83,26 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-z-stack wp-components-z-stack emotion-0"
+  class="components-z-stack wp-components-z-stack ic-a51kok ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
 </div>
@@ -191,26 +191,26 @@ exports[`props should render isLayered 1`] = `
 }
 
 <div
-  class="components-z-stack wp-components-z-stack emotion-0"
+  class="components-z-stack wp-components-z-stack ic-a51kok ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
 </div>
@@ -299,26 +299,26 @@ exports[`props should render isReversed 1`] = `
 }
 
 <div
-  class="components-z-stack wp-components-z-stack emotion-0"
+  class="components-z-stack wp-components-z-stack ic-a51kok ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
 </div>
@@ -407,26 +407,26 @@ exports[`props should render offset 1`] = `
 }
 
 <div
-  class="components-z-stack wp-components-z-stack emotion-0"
+  class="components-z-stack wp-components-z-stack ic-a51kok ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="ZStack"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 0;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="ZStackItem"
     style="z-index: 1;"
   >
     <div
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
     />
   </div>
 </div>

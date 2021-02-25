@@ -2,6 +2,16 @@
 
 exports[`props should render (Flex) gap 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,6 +95,18 @@ exports[`props should render (Flex) gap 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -266,24 +288,23 @@ exports[`props should render (Flex) gap 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -292,6 +313,16 @@ exports[`props should render (Flex) gap 1`] = `
 
 exports[`props should render as link (href) 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -375,6 +406,18 @@ exports[`props should render as link (href) 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -556,7 +599,7 @@ exports[`props should render as link (href) 1`] = `
 
 <a
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -566,14 +609,14 @@ exports[`props should render as link (href) 1`] = `
   href="#"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -582,6 +625,16 @@ exports[`props should render as link (href) 1`] = `
 
 exports[`props should render correctly 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -665,6 +718,18 @@ exports[`props should render correctly 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -846,24 +911,23 @@ exports[`props should render correctly 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -872,6 +936,16 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render disabled 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -955,6 +1029,18 @@ exports[`props should render disabled 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -1136,8 +1222,7 @@ exports[`props should render disabled 1`] = `
 
 <button
   aria-busy="false"
-  aria-disabled="true"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1145,18 +1230,16 @@ exports[`props should render disabled 1`] = `
   data-g2-component="Button"
   data-icon="false"
   disabled=""
-  style="pointer-events: none;"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1165,6 +1248,16 @@ exports[`props should render disabled 1`] = `
 
 exports[`props should render elevation 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1248,6 +1341,18 @@ exports[`props should render elevation 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -1429,24 +1534,23 @@ exports[`props should render elevation 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1455,6 +1559,16 @@ exports[`props should render elevation 1`] = `
 
 exports[`props should render hasCaret 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1538,6 +1652,18 @@ exports[`props should render hasCaret 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -1792,29 +1918,28 @@ exports[`props should render hasCaret 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonCaret"
   >
     <div
-      class="components-icon wp-components-icon emotion-3"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -1835,7 +1960,7 @@ exports[`props should render hasCaret 1`] = `
     </div>
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-4"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1844,6 +1969,16 @@ exports[`props should render hasCaret 1`] = `
 
 exports[`props should render icon 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1927,6 +2062,18 @@ exports[`props should render icon 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -2186,22 +2333,21 @@ exports[`props should render icon 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="true"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonIcon"
   >
     <div
-      class="components-icon wp-components-icon emotion-2"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -2209,14 +2355,14 @@ exports[`props should render icon 1`] = `
     </div>
   </span>
   <span
-    class="components-flex-item wp-components-flex-item emotion-3"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-4"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -2225,6 +2371,16 @@ exports[`props should render icon 1`] = `
 
 exports[`props should render isControl 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2319,6 +2475,18 @@ exports[`props should render isControl 1`] = `
   font-family: var(--wp-g2-font-family);
   font-size: 13px;
   font-size: var(--wp-g2-font-size);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -2514,24 +2682,23 @@ exports[`props should render isControl 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -2540,6 +2707,16 @@ exports[`props should render isControl 1`] = `
 
 exports[`props should render isDestructive 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2625,6 +2802,18 @@ exports[`props should render isDestructive 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -2806,24 +2995,23 @@ exports[`props should render isDestructive 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="true"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -2832,6 +3020,16 @@ exports[`props should render isDestructive 1`] = `
 
 exports[`props should render isLoading 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2915,6 +3113,18 @@ exports[`props should render isLoading 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -3372,8 +3582,7 @@ exports[`props should render isLoading 1`] = `
 
 <button
   aria-busy="true"
-  aria-disabled="true"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -3381,29 +3590,27 @@ exports[`props should render isLoading 1`] = `
   data-g2-component="Button"
   data-icon="false"
   disabled=""
-  style="pointer-events: none;"
-  type="button"
 >
   <div
     aria-hidden="true"
-    class="components-flex wp-components-flex emotion-1"
+    class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Flex"
   >
     <div
       aria-busy="true"
-      class="components-spinner wp-components-spinner emotion-2"
+      class="components-spinner wp-components-spinner ic-134ljdn ic-1blhbvo ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Spinner"
       style="height: 16px; width: 16px;"
     >
       <div
         aria-hidden="true"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         style="transform: scale(0.4444444444444444);"
       >
         <div
-          class="emotion-4"
+          class="ic-151osxh ic-192yz5d emotion-4"
           style="color: currentColor;"
         >
           <div
@@ -3447,14 +3654,14 @@ exports[`props should render isLoading 1`] = `
     </div>
   </div>
   <span
-    class="components-flex-item wp-components-flex-item emotion-5"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-5"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-6"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-6"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -3463,6 +3670,16 @@ exports[`props should render isLoading 1`] = `
 
 exports[`props should render isNarrow 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3550,6 +3767,18 @@ exports[`props should render isNarrow 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -3731,24 +3960,23 @@ exports[`props should render isNarrow 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -3757,6 +3985,16 @@ exports[`props should render isNarrow 1`] = `
 
 exports[`props should render isRounded 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3843,6 +4081,18 @@ exports[`props should render isRounded 1`] = `
   color: var(--wp-g2-button-secondary-text-color);
 }
 
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
+}
+
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
@@ -4022,24 +4272,23 @@ exports[`props should render isRounded 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -4048,6 +4297,16 @@ exports[`props should render isRounded 1`] = `
 
 exports[`props should render isSubtle 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4135,6 +4394,18 @@ exports[`props should render isSubtle 1`] = `
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -4330,24 +4601,23 @@ exports[`props should render isSubtle 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -4356,6 +4626,16 @@ exports[`props should render isSubtle 1`] = `
 
 exports[`props should render prefix 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4439,6 +4719,18 @@ exports[`props should render prefix 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -4660,17 +4952,16 @@ exports[`props should render prefix 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonPrefix"
   >
@@ -4679,14 +4970,14 @@ exports[`props should render prefix 1`] = `
     </span>
   </span>
   <span
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-3"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -4695,6 +4986,16 @@ exports[`props should render prefix 1`] = `
 
 exports[`props should render size 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4784,6 +5085,18 @@ exports[`props should render size 1`] = `
   padding-right: var(--wp-g2-control-padding-x);
   min-height: calc(30px * 0.8);
   min-height: var(--wp-g2-control-height-small);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -4970,24 +5283,23 @@ exports[`props should render size 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -4996,6 +5308,16 @@ exports[`props should render size 1`] = `
 
 exports[`props should render suffix 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5079,6 +5401,18 @@ exports[`props should render suffix 1`] = `
   border-color: var(--wp-g2-button-secondary-border-color);
   color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -5300,24 +5634,23 @@ exports[`props should render suffix 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonSuffix"
   >
@@ -5326,7 +5659,7 @@ exports[`props should render suffix 1`] = `
     </span>
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-3"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -5335,6 +5668,16 @@ exports[`props should render suffix 1`] = `
 
 exports[`props should render variant 1`] = `
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5418,6 +5761,18 @@ exports[`props should render variant 1`] = `
   border-color: var(--wp-g2-button-primary-border-color);
   color: #ffffff;
   color: var(--wp-g2-button-primary-text-color);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
@@ -5603,24 +5958,23 @@ exports[`props should render variant 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
-  type="button"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     Let It Go
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-2"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

@@ -51,7 +51,7 @@ export type Props = Omit<BaseFieldProps, 'isClickable' | 'isSubtle'> &
 		/**
 		 * Fires the `onChange` callback after pressing `ENTER` or focusing away.
 		 *
-		 * @default 2.5
+		 * @default false
 		 */
 		isCommitOnBlurOrEnter?: boolean;
 		/**

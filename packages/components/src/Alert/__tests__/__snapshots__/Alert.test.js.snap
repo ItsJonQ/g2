@@ -216,6 +216,16 @@ exports[`props should render as dismissable 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -310,6 +320,18 @@ exports[`props should render as dismissable 1`] = `
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   color: currentColor;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -543,39 +565,39 @@ exports[`props should render as dismissable 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
 >
   <div
-    class="components-alert wp-components-alert emotion-1"
+    class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Alert"
   >
     <div
-      class="components-flex wp-components-flex emotion-2"
+      class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-3"
+        class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="emotion-4"
+          class="ic-192yz5d emotion-4"
           data-g2-component="AlertContent"
         >
           I like warm hugs
         </div>
       </div>
       <div
-        class="emotion-5"
+        class="ic-1blhbvo ic-192yz5d emotion-5"
       >
         <button
           aria-busy="false"
-          class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-6"
+          class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-6"
           data-active="false"
           data-destructive="false"
           data-focused="false"
@@ -583,15 +605,14 @@ exports[`props should render as dismissable 1`] = `
           data-g2-component="CloseButton"
           data-icon="true"
           title="Dismiss"
-          type="button"
         >
           <span
-            class="components-flex-item wp-components-flex-item emotion-7"
+            class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
             data-g2-c16t="true"
             data-g2-component="ButtonIcon"
           >
             <div
-              class="components-icon wp-components-icon emotion-8"
+              class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-8"
               data-g2-c16t="true"
               data-g2-component="Icon"
             >
@@ -612,7 +633,7 @@ exports[`props should render as dismissable 1`] = `
             </div>
           </span>
           <span
-            class="components-elevation wp-components-elevation emotion-9"
+            class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-9"
             data-g2-c16t="true"
             data-g2-component="ButtonElevation"
           />
@@ -774,28 +795,28 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
 >
   <div
-    class="components-alert wp-components-alert emotion-1"
+    class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Alert"
   >
     <div
-      class="components-flex wp-components-flex emotion-2"
+      class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-3"
+        class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="emotion-0"
+          class="ic-192yz5d emotion-0"
           data-g2-component="AlertContent"
         >
           I like warm hugs
@@ -1023,6 +1044,16 @@ exports[`props should render with status 1`] = `
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1117,6 +1148,18 @@ exports[`props should render with status 1`] = `
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
   color: currentColor;
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
@@ -1627,43 +1670,43 @@ exports[`props should render with status 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="ic-192yz5d emotion-0"
   data-g2-component="Alerts"
 >
   <div
-    class="components-animated wp-components-animated emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="components-alert wp-components-alert emotion-2"
+      class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="components-flex wp-components-flex emotion-3"
+        class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-4"
+          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="emotion-5"
+            class="ic-192yz5d emotion-5"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="emotion-6"
+          class="ic-1blhbvo ic-192yz5d emotion-6"
         >
           <button
             aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-7"
+            class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-7"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -1671,15 +1714,14 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
-            type="button"
           >
             <span
-              class="components-flex-item wp-components-flex-item emotion-8"
+              class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
               <div
-                class="components-icon wp-components-icon emotion-9"
+                class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-9"
                 data-g2-c16t="true"
                 data-g2-component="Icon"
               >
@@ -1700,7 +1742,7 @@ exports[`props should render with status 1`] = `
               </div>
             </span>
             <span
-              class="components-elevation wp-components-elevation emotion-10"
+              class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-10"
               data-g2-c16t="true"
               data-g2-component="ButtonElevation"
             />
@@ -1710,39 +1752,39 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="components-alert wp-components-alert emotion-12"
+      class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-12"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="components-flex wp-components-flex emotion-3"
+        class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-4"
+          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="emotion-5"
+            class="ic-192yz5d emotion-5"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="emotion-16"
+          class="ic-1blhbvo ic-192yz5d emotion-16"
         >
           <button
             aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-7"
+            class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-7"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -1750,15 +1792,14 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
-            type="button"
           >
             <span
-              class="components-flex-item wp-components-flex-item emotion-8"
+              class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
               <div
-                class="components-icon wp-components-icon emotion-9"
+                class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-9"
                 data-g2-c16t="true"
                 data-g2-component="Icon"
               >
@@ -1779,7 +1820,7 @@ exports[`props should render with status 1`] = `
               </div>
             </span>
             <span
-              class="components-elevation wp-components-elevation emotion-10"
+              class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-10"
               data-g2-c16t="true"
               data-g2-component="ButtonElevation"
             />
@@ -1789,39 +1830,39 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="components-alert wp-components-alert emotion-22"
+      class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-22"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="components-flex wp-components-flex emotion-3"
+        class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-4"
+          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="emotion-5"
+            class="ic-192yz5d emotion-5"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="emotion-26"
+          class="ic-1blhbvo ic-192yz5d emotion-26"
         >
           <button
             aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-7"
+            class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-7"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -1829,15 +1870,14 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
-            type="button"
           >
             <span
-              class="components-flex-item wp-components-flex-item emotion-8"
+              class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
               <div
-                class="components-icon wp-components-icon emotion-9"
+                class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-9"
                 data-g2-c16t="true"
                 data-g2-component="Icon"
               >
@@ -1858,7 +1898,7 @@ exports[`props should render with status 1`] = `
               </div>
             </span>
             <span
-              class="components-elevation wp-components-elevation emotion-10"
+              class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-10"
               data-g2-c16t="true"
               data-g2-component="ButtonElevation"
             />
@@ -1868,39 +1908,39 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="components-alert wp-components-alert emotion-32"
+      class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-32"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="components-flex wp-components-flex emotion-3"
+        class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-4"
+          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="emotion-5"
+            class="ic-192yz5d emotion-5"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="emotion-36"
+          class="ic-1blhbvo ic-192yz5d emotion-36"
         >
           <button
             aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-7"
+            class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-7"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -1908,15 +1948,14 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
-            type="button"
           >
             <span
-              class="components-flex-item wp-components-flex-item emotion-8"
+              class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
               <div
-                class="components-icon wp-components-icon emotion-9"
+                class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-9"
                 data-g2-c16t="true"
                 data-g2-component="Icon"
               >
@@ -1937,7 +1976,7 @@ exports[`props should render with status 1`] = `
               </div>
             </span>
             <span
-              class="components-elevation wp-components-elevation emotion-10"
+              class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-10"
               data-g2-c16t="true"
               data-g2-component="ButtonElevation"
             />
@@ -1947,39 +1986,39 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
   >
     <div
-      class="components-alert wp-components-alert emotion-42"
+      class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-42"
       data-g2-c16t="true"
       data-g2-component="Alert"
     >
       <div
-        class="components-flex wp-components-flex emotion-3"
+        class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Flex"
       >
         <div
-          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-4"
+          class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="FlexBlock"
         >
           <div
-            class="emotion-5"
+            class="ic-192yz5d emotion-5"
             data-g2-component="AlertContent"
           >
             I like warm hugs
           </div>
         </div>
         <div
-          class="emotion-46"
+          class="ic-1blhbvo ic-192yz5d emotion-46"
         >
           <button
             aria-busy="false"
-            class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-7"
+            class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-7"
             data-active="false"
             data-destructive="false"
             data-focused="false"
@@ -1987,15 +2026,14 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
-            type="button"
           >
             <span
-              class="components-flex-item wp-components-flex-item emotion-8"
+              class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
               data-g2-c16t="true"
               data-g2-component="ButtonIcon"
             >
               <div
-                class="components-icon wp-components-icon emotion-9"
+                class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-9"
                 data-g2-c16t="true"
                 data-g2-component="Icon"
               >
@@ -2016,7 +2054,7 @@ exports[`props should render with status 1`] = `
               </div>
             </span>
             <span
-              class="components-elevation wp-components-elevation emotion-10"
+              class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-10"
               data-g2-c16t="true"
               data-g2-component="ButtonElevation"
             />
@@ -2242,33 +2280,33 @@ exports[`props should render with title 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
 >
   <div
-    class="components-alert wp-components-alert emotion-1"
+    class="components-alert wp-components-alert ic-wb5ugd ic-otytyz ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Alert"
   >
     <div
-      class="components-flex wp-components-flex emotion-2"
+      class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Flex"
     >
       <div
-        class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-3"
+        class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="FlexBlock"
       >
         <div
-          class="components-spacer wp-components-spacer emotion-4"
+          class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="Spacer"
         >
           <div
-            class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading emotion-5"
+            class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading ic-1ng8wck ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-5"
             data-g2-c16t="true"
             data-g2-component="Heading"
           >
@@ -2276,7 +2314,7 @@ exports[`props should render with title 1`] = `
           </div>
         </div>
         <div
-          class="emotion-0"
+          class="ic-192yz5d emotion-0"
           data-g2-component="AlertContent"
         >
           I like warm hugs

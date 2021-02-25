@@ -36,7 +36,7 @@ exports[`props should render borderBottom 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -80,7 +80,7 @@ exports[`props should render borderLeft 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -124,7 +124,7 @@ exports[`props should render borderRight 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -168,7 +168,7 @@ exports[`props should render borderTop 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -212,7 +212,7 @@ exports[`props should render borders 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -254,7 +254,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >
@@ -298,7 +298,7 @@ exports[`props should render variants 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface emotion-0"
+  class="components-surface wp-components-surface ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Surface"
 >

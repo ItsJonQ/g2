@@ -1,11 +1,6 @@
 import { useContextSystem } from '@wp-g2/context';
 import { css, cx, ui } from '@wp-g2/styles';
-import {
-	mergeRefs,
-	noop,
-	useResizeAware,
-	useUpdateEffect,
-} from '@wp-g2/utils';
+import { mergeRefs, noop, useResizeAware, useUpdateEffect } from '@wp-g2/utils';
 import { useSelect } from 'downshift';
 import { useState } from 'react';
 import { useCallback, useEffect, useRef } from 'react';
@@ -114,7 +109,6 @@ export function useSelectDropdown(props) {
 		getLabelProps,
 		getMenuProps,
 		getToggleButtonProps,
-		highlightedIndex,
 		isOpen,
 		selectedItem,
 	} = useSelect({
@@ -164,30 +158,30 @@ export function useSelectDropdown(props) {
 		onClose();
 	}, [focusSelectButton, onClose]);
 
-	const _popoverProps = getMenuProps({
-		...ui.$('SelectDropdownPopover'),
+	const menuProps = getMenuProps({
 		className: styles.MenuWrapper,
 		'aria-hidden': !isOpen,
+	});
+
+	// We need this here, because the null active descendant is not
+	// fully ARIA compliant.
+	if (
+		menuProps['aria-activedescendant'] &&
+		menuProps['aria-activedescendant'].slice(0, 'downshift-null'.length) ===
+			'downshift-null'
+	) {
+		delete menuProps['aria-activedescendant'];
+	}
+
+	const popoverProps = {
+		...ui.$('SelectDropdownPopover'),
+		'aria-hidden': !isOpen,
+		className: cx(styles.Popover, !isOpen && styles.popoverHidden),
+		ref: popoverRef,
 		style: {
 			maxWidth: isInline ? maxWidthProp : sizes.width,
 			width: isInline ? null : '100%',
 		},
-	});
-	// We need this here, because the null active descendant is not
-	// fully ARIA compliant.
-	if (
-		_popoverProps['aria-activedescendant'] &&
-		_popoverProps['aria-activedescendant'].slice(
-			0,
-			'downshift-null'.length,
-		) === 'downshift-null'
-	) {
-		delete _popoverProps['aria-activedescendant'];
-	}
-
-	const popoverProps = {
-		..._popoverProps,
-		ref: mergeRefs([_popoverProps.ref, popoverRef]),
 	};
 
 	const _referenceProps = getToggleButtonProps({
@@ -199,6 +193,7 @@ export function useSelectDropdown(props) {
 	const referenceProps = {
 		...ui.$('SelectDropdownReference'),
 		..._referenceProps,
+		'aria-expanded': !!isOpen,
 		children: itemToString(selectedItem) || placeholder,
 		error,
 		id,
@@ -234,7 +229,11 @@ export function useSelectDropdown(props) {
 
 	const dropdownMenuProps = {
 		...ui.$('SelectDropdownMenu'),
-		className: cx(styles.DropdownMenu, css({ minWidth })),
+		className: cx(
+			!isOpen && styles.hidden,
+			styles.DropdownMenu,
+			css({ minWidth }),
+		),
 	};
 
 	/**
@@ -254,6 +253,7 @@ export function useSelectDropdown(props) {
 		labelProps,
 		popoverProps,
 		resizer,
+		menuProps,
 		referenceProps,
 		items: enhancedItems,
 		isOpen,

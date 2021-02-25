@@ -13,7 +13,8 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "bootstrap:tooling": "npm install --prefix tooling/vscode-snippets",
     "lint:eslint": "eslint \"./packages/**/*.js\" --fix",
-    "lint": "zero lint && npm run lint:eslint",
+    "lint:css": "stylelint './packages/components/src/**/*.js'",
+    "lint": "zero lint && npm run lint:eslint && npm run lint:css",
     "start": "npm run storybook",
     "docs:generate": "yarn --cwd ./packages/website generate:props && node scripts/generateComponentReadMe.js",
     "dev": "zero test",
@@ -29,7 +30,7 @@
     "website:serve": "yarn --cwd ./packages/website serve",
     "website:docs": "yarn --cwd ./packages/website generate:scripts",
     "website:test": "yarn website:build && yarn website:serve",
-    "website:deploy": "git push origin master:website --force",
+    "website:deploy": "git push origin main:website --force",
     "version": "npm run build",
     "precommit": "zero pre-commit",
     "storybook": "start-storybook -p 6006",
@@ -38,7 +39,7 @@
     "remake:component": "remake component --output=packages/components/src",
     "remake": "npm run remake:component",
     "bump": "lerna version",
-    "postbump": "git push origin master:release --force"
+    "postbump": "git push origin main:release --force"
   },
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "repository": {
@@ -91,6 +92,8 @@
     "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "stylelint": "13.11.0",
+    "stylelint-config-standard": "20.0.0",
     "typescript": "^4.0.5",
     "yup": "0.29.3",
     "zustand": "^3.3.1"

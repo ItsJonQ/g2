@@ -1,6 +1,6 @@
 import { clearSelection } from '@wp-g2/utils';
 import { noop } from 'lodash';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useDrag } from 'react-use-gesture';
 
 import * as styles from './TextInput.styles';
@@ -14,9 +14,6 @@ export function useBaseDragHandlers({
 	const [dragState, setDragState] = useState(
 		/** @type {undefined | 'x' | 'y'} */ (undefined),
 	);
-
-	/** @type {import('react').MutableRefObject<number | undefined>} */
-	const dragRef = useRef();
 	const threshold = 10;
 
 	useEffect(() => {
@@ -40,13 +37,6 @@ export function useBaseDragHandlers({
 		}
 	}, [dragState]);
 
-	useEffect(() => {
-		return () => {
-			if (!dragRef.current) return;
-			cancelAnimationFrame(dragRef.current);
-		};
-	}, []);
-
 	const dragGestures = useDrag(
 		(state) => {
 			const [x, y] = state.delta;
@@ -63,26 +53,30 @@ export function useBaseDragHandlers({
 			boost = shouldIncrement ? boost : boost * -1;
 			boost = boost - 1;
 
-			if (dragRef.current) {
-				cancelAnimationFrame(dragRef.current);
+			if (shouldIncrement) {
+				increment(boost);
+			} else {
+				decrement(boost);
 			}
-
-			dragRef.current = requestAnimationFrame(() => {
-				if (shouldIncrement) {
-					increment(boost);
-				} else {
-					decrement(boost);
-				}
-			});
 		},
 		{ axis: dragAxis, threshold },
 	);
 
-	const gestures = isTypeNumeric
+	const handleOnMouseUp = useCallback(() => setDragState(false), []);
+
+	const baseGestures = isTypeNumeric
 		? dragGestures()
-		: { onMouseDown: noop, onTouchStart: noop };
+		: {
+				onPointerDown: noop,
+				onPointerMove: noop,
+				onPointerUp: noop,
+				onPointerCancel: noop,
+		  };
 
-	const gestureRef = useRef(gestures);
+	const gestures = {
+		...baseGestures,
+		onMouseUp: handleOnMouseUp,
+	};
 
-	return gestureRef.current;
+	return gestures;
 }

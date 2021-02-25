@@ -30,7 +30,7 @@ exports[`props should render alignment 1`] = `
 }
 
 <div
-  class="components-container wp-components-container emotion-0"
+  class="components-container wp-components-container ic-9b1yfq ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Container"
 >
@@ -69,7 +69,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-container wp-components-container emotion-0"
+  class="components-container wp-components-container ic-9b1yfq ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Container"
 >
@@ -107,7 +107,7 @@ exports[`props should render width 1`] = `
 }
 
 <div
-  class="components-container wp-components-container emotion-0"
+  class="components-container wp-components-container ic-9b1yfq ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Container"
 >

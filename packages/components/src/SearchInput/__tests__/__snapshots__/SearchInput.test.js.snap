@@ -331,6 +331,16 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,6 +437,18 @@ exports[`props should render correctly 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -652,20 +674,20 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input components-search-input wp-components-search-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input components-search-input wp-components-search-input ic-7g465o ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-3"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -688,7 +710,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <input
     autocomplete="off"
-    class="emotion-4"
+    class="ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="SearchInput"
     id="search"
@@ -698,12 +720,12 @@ exports[`props should render correctly 1`] = `
     value=""
   />
   <div
-    class="emotion-5"
+    class="ic-192yz5d emotion-5"
   >
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-6"
+      class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-6"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -711,15 +733,14 @@ exports[`props should render correctly 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item emotion-7"
+        class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
         data-g2-c16t="true"
         data-g2-component="ButtonIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-8"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-8"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -740,7 +761,7 @@ exports[`props should render correctly 1`] = `
         </div>
       </span>
       <span
-        class="components-elevation wp-components-elevation emotion-9"
+        class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-9"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -1222,6 +1243,16 @@ exports[`props should render isLoading 1`] = `
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1318,6 +1349,18 @@ exports[`props should render isLoading 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
@@ -1543,27 +1586,27 @@ exports[`props should render isLoading 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input components-search-input wp-components-search-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input components-search-input wp-components-search-input ic-7g465o ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
       aria-busy="true"
-      class="components-spinner wp-components-spinner emotion-2"
+      class="components-spinner wp-components-spinner ic-134ljdn ic-otytyz ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Spinner"
       style="height: 16px; width: 16px;"
     >
       <div
         aria-hidden="true"
-        class="emotion-3"
+        class="ic-1blhbvo ic-192yz5d emotion-3"
         style="transform: scale(0.4444444444444444);"
       >
         <div
-          class="emotion-4"
+          class="ic-1c3kh7b ic-192yz5d emotion-4"
         >
           <div
             class="InnerBar1"
@@ -1607,7 +1650,7 @@ exports[`props should render isLoading 1`] = `
   </div>
   <input
     autocomplete="off"
-    class="emotion-5"
+    class="ic-192yz5d emotion-5"
     data-g2-c16t="true"
     data-g2-component="SearchInput"
     id="search"
@@ -1617,12 +1660,12 @@ exports[`props should render isLoading 1`] = `
     value=""
   />
   <div
-    class="emotion-6"
+    class="ic-192yz5d emotion-6"
   >
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-7"
+      class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-7"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -1630,15 +1673,14 @@ exports[`props should render isLoading 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item emotion-8"
+        class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
         data-g2-c16t="true"
         data-g2-component="ButtonIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-9"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-9"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -1659,7 +1701,7 @@ exports[`props should render isLoading 1`] = `
         </div>
       </span>
       <span
-        class="components-elevation wp-components-elevation emotion-10"
+        class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-10"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -1999,6 +2041,16 @@ exports[`props should render placeholder 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2095,6 +2147,18 @@ exports[`props should render placeholder 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -2320,20 +2384,20 @@ exports[`props should render placeholder 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input components-search-input wp-components-search-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input components-search-input wp-components-search-input ic-7g465o ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-3"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -2356,7 +2420,7 @@ exports[`props should render placeholder 1`] = `
   </div>
   <input
     autocomplete="off"
-    class="emotion-4"
+    class="ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="SearchInput"
     id="search"
@@ -2366,12 +2430,12 @@ exports[`props should render placeholder 1`] = `
     value=""
   />
   <div
-    class="emotion-5"
+    class="ic-192yz5d emotion-5"
   >
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-6"
+      class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-6"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -2379,15 +2443,14 @@ exports[`props should render placeholder 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item emotion-7"
+        class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
         data-g2-c16t="true"
         data-g2-component="ButtonIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-8"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-8"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -2408,7 +2471,7 @@ exports[`props should render placeholder 1`] = `
         </div>
       </span>
       <span
-        class="components-elevation wp-components-elevation emotion-9"
+        class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-9"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -2748,6 +2811,16 @@ exports[`props should render prefix 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2844,6 +2917,18 @@ exports[`props should render prefix 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -3069,20 +3154,20 @@ exports[`props should render prefix 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input components-search-input wp-components-search-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input components-search-input wp-components-search-input ic-7g465o ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-3"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -3108,7 +3193,7 @@ exports[`props should render prefix 1`] = `
   </span>
   <input
     autocomplete="off"
-    class="emotion-4"
+    class="ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="SearchInput"
     id="search"
@@ -3118,12 +3203,12 @@ exports[`props should render prefix 1`] = `
     value=""
   />
   <div
-    class="emotion-5"
+    class="ic-192yz5d emotion-5"
   >
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-6"
+      class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-6"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3131,15 +3216,14 @@ exports[`props should render prefix 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item emotion-7"
+        class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
         data-g2-c16t="true"
         data-g2-component="ButtonIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-8"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-8"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -3160,7 +3244,7 @@ exports[`props should render prefix 1`] = `
         </div>
       </span>
       <span
-        class="components-elevation wp-components-elevation emotion-9"
+        class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-9"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -3500,6 +3584,16 @@ exports[`props should render suffix 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3596,6 +3690,18 @@ exports[`props should render suffix 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -3821,20 +3927,20 @@ exports[`props should render suffix 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input components-search-input wp-components-search-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input components-search-input wp-components-search-input ic-7g465o ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-3"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -3857,7 +3963,7 @@ exports[`props should render suffix 1`] = `
   </div>
   <input
     autocomplete="off"
-    class="emotion-4"
+    class="ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="SearchInput"
     id="search"
@@ -3870,12 +3976,12 @@ exports[`props should render suffix 1`] = `
     suffix
   </span>
   <div
-    class="emotion-5"
+    class="ic-192yz5d emotion-5"
   >
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-6"
+      class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-6"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -3883,15 +3989,14 @@ exports[`props should render suffix 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item emotion-7"
+        class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
         data-g2-c16t="true"
         data-g2-component="ButtonIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-8"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-8"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -3912,7 +4017,7 @@ exports[`props should render suffix 1`] = `
         </div>
       </span>
       <span
-        class="components-elevation wp-components-elevation emotion-9"
+        class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-9"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />
@@ -4252,6 +4357,16 @@ exports[`props should render value 1`] = `
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family: var(--wp-g2-font-family);
+  font-size: 13px;
+  font-size: var(--wp-g2-font-size);
+  font-weight: normal;
+  font-weight: var(--wp-g2-font-weight);
+  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4348,6 +4463,18 @@ exports[`props should render value 1`] = `
   min-height: var(--wp-g2-control-height-xx-small);
   padding: calc(4px * 0);
   padding: calc(var(--wp-g2-grid-base) * 0);
+}
+
+@media (prefers-reduced-motion) {
+  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+    -webkit-transition: none!important;
+    transition: none!important;
+  }
+}
+
+[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  -webkit-transition: none!important;
+  transition: none!important;
 }
 
 .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
@@ -4573,20 +4700,20 @@ exports[`props should render value 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input components-search-input wp-components-search-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input components-search-input wp-components-search-input ic-7g465o ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-3"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -4609,7 +4736,7 @@ exports[`props should render value 1`] = `
   </div>
   <input
     autocomplete="off"
-    class="emotion-4"
+    class="ic-192yz5d emotion-4"
     data-g2-c16t="true"
     data-g2-component="SearchInput"
     id="search"
@@ -4619,12 +4746,12 @@ exports[`props should render value 1`] = `
     value="q"
   />
   <div
-    class="emotion-5"
+    class="ic-192yz5d emotion-5"
   >
     <button
       aria-busy="false"
       aria-label="Clear"
-      class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button emotion-6"
+      class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-6"
       data-active="false"
       data-destructive="false"
       data-focused="false"
@@ -4632,15 +4759,14 @@ exports[`props should render value 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
-      type="button"
     >
       <span
-        class="components-flex-item wp-components-flex-item emotion-7"
+        class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
         data-g2-c16t="true"
         data-g2-component="ButtonIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-8"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-8"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -4661,7 +4787,7 @@ exports[`props should render value 1`] = `
         </div>
       </span>
       <span
-        class="components-elevation wp-components-elevation emotion-9"
+        class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-9"
         data-g2-c16t="true"
         data-g2-component="ButtonElevation"
       />

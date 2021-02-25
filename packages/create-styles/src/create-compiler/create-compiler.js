@@ -5,7 +5,7 @@ import mitt from 'mitt';
 import { RootStore } from '../css-custom-properties';
 import { createCSS } from './create-css';
 import { createPlugins } from './plugins';
-import { breakpoints } from './utils';
+import { breakpoints, generateInterpolationName } from './utils';
 
 const defaultOptions = {
 	key: 'css',
@@ -17,6 +17,7 @@ const defaultOptions = {
  * @typedef {import('create-emotion').Emotion & {
  *	breakpoints: typeof breakpoints,
  *	__events: import('mitt').Emitter,
+ *  generateInterpolationName(): string,
  * }} Compiler
  */
 
@@ -79,6 +80,7 @@ export function createCompiler(options) {
 		 * to subscribe to and sync style injection.
 		 */
 		__events: mitt(),
+		generateInterpolationName,
 	};
 
 	/**

@@ -73,7 +73,6 @@ exports[`props should render checked 1`] = `
   display: block;
   left: 0;
   pointer-events: none;
-  pointer-events: none;
   position: absolute;
   top: 6px;
   top: var(--wp-g2-switch-padding-offset);
@@ -167,7 +166,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -183,12 +182,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -271,7 +270,6 @@ exports[`props should render correctly 1`] = `
   display: block;
   left: 0;
   pointer-events: none;
-  pointer-events: none;
   position: absolute;
   top: 6px;
   top: var(--wp-g2-switch-padding-offset);
@@ -365,7 +363,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -380,12 +378,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -468,7 +466,6 @@ exports[`props should render defaultValue 1`] = `
   display: block;
   left: 0;
   pointer-events: none;
-  pointer-events: none;
   position: absolute;
   top: 6px;
   top: var(--wp-g2-switch-padding-offset);
@@ -562,7 +559,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -578,12 +575,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -668,7 +665,6 @@ exports[`props should render disabled 1`] = `
   display: block;
   left: 0;
   pointer-events: none;
-  pointer-events: none;
   position: absolute;
   top: 6px;
   top: var(--wp-g2-switch-padding-offset);
@@ -762,7 +758,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -780,12 +776,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -868,7 +864,6 @@ exports[`props should render label 1`] = `
   display: block;
   left: 0;
   pointer-events: none;
-  pointer-events: none;
   position: absolute;
   top: 6px;
   top: var(--wp-g2-switch-padding-offset);
@@ -962,7 +957,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -977,12 +972,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -1070,7 +1065,6 @@ exports[`props should render size 1`] = `
   box-shadow: 0 0 0 0 rgba(0,0,0,0);
   display: block;
   left: 0;
-  pointer-events: none;
   pointer-events: none;
   position: absolute;
   top: 6px;
@@ -1176,7 +1170,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -1191,12 +1185,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span
@@ -1278,7 +1272,6 @@ exports[`props should render type 1`] = `
   box-shadow: 0 0 0 0 rgba(0,0,0,0);
   display: block;
   left: 0;
-  pointer-events: none;
   pointer-events: none;
   position: absolute;
   top: 6px;
@@ -1373,7 +1366,7 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
 }
 
 <label
-  class="components-switch wp-components-switch emotion-0"
+  class="components-switch wp-components-switch ic-15uwfk7 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Switch"
   for="switch"
@@ -1389,12 +1382,12 @@ input:checked~.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emoti
   />
   <div
     aria-hidden="true"
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
     data-g2-component="SwitchBackdrop"
   />
   <div
     aria-hidden="true"
-    class="emotion-3"
+    class="ic-192yz5d emotion-3"
     data-g2-component="SwitchToggle"
   />
   <span

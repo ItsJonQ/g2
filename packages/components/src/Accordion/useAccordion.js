@@ -34,6 +34,7 @@ const setCurrentState = (prev = [], next) => {
  * @typedef State
  * @property {boolean} allowMultiple
  * @property {string[]} current
+ * @property {boolean} isWithinContext
  */
 
 /**
@@ -44,18 +45,10 @@ function useInitialState({ allowMultiple = false, current }) {
 	const initialState = useSealedState({
 		allowMultiple,
 		current: setCurrentState([], current),
+		isWithinContext: true,
 	});
 
 	return initialState;
-}
-
-/**
- * @template {(...args: any[]) => any} T
- * @param {T} fn
- * @returns {T}
- */
-function useAction(fn) {
-	return useCallback(fn, []);
 }
 
 /** @typedef {string | string[]} Payload */
@@ -71,6 +64,8 @@ function useAction(fn) {
 	| SetAction
 } Action
  */
+
+/** @typedef {import('react').Dispatch<Action>} AccordionDispatch */
 
 /**
  * @param {State} state
@@ -119,6 +114,35 @@ function reducer(state, action) {
 }
 
 /**
+ * @param {AccordionDispatch} dispatch
+ * @param {Payload} payload
+ */
+export function add(dispatch, payload) {
+	dispatch({ type: 'add', payload });
+}
+
+/**
+ * @param {AccordionDispatch} dispatch
+ * @param {Payload} payload
+ */
+export function remove(dispatch, payload) {
+	dispatch({ type: 'remove', payload });
+}
+
+/**
+ * @param {AccordionDispatch} dispatch
+ * @param {Payload} payload
+ * @param {boolean} allowMultiple
+ */
+export function set(dispatch, payload, allowMultiple) {
+	if (allowMultiple) {
+		add(dispatch, payload);
+	} else {
+		dispatch({ type: 'set', payload });
+	}
+}
+
+/**
  * @typedef {State & { onChange: (current: State['current']) => void }} OwnProps
  */
 
@@ -134,23 +158,10 @@ export function useAccordionState(props) {
 
 	const initialState = useInitialState(otherProps);
 
-	const [{ allowMultiple, current }, dispatch] = useReducer(
+	const [{ allowMultiple, current, isWithinContext }, dispatch] = useReducer(
 		reducer,
 		initialState,
 	);
-
-	// Actions
-	const add = useAction((/** @type {Payload} */ next) => {
-		dispatch({ type: 'add', payload: next });
-	});
-	const remove = useAction((/** @type {Payload} */ next) => {
-		dispatch({ type: 'remove', payload: next });
-	});
-	const set = useAction((/** @type {Payload} */ next) => {
-		if (allowMultiple) return add(next);
-
-		dispatch({ type: 'set', payload: next });
-	});
 
 	// Selectors
 	const getIsVisible = (/** @type {string} */ id) =>
@@ -158,8 +169,9 @@ export function useAccordionState(props) {
 
 	// Synchronize props + state
 	useUpdateEffect(() => {
-		set(props.current);
-	}, [set, props.current]);
+		// @todo: Handle sync for collapsing items for an incoming `current` prop change.
+		set(dispatch, props.current, allowMultiple);
+	}, [props.current]);
 
 	useUpdateEffect(() => {
 		onChange(current);
@@ -169,9 +181,8 @@ export function useAccordionState(props) {
 		allowMultiple,
 		current,
 		getIsVisible,
-		add,
-		remove,
-		set,
+		isWithinContext,
+		dispatch,
 	};
 }
 
@@ -209,37 +220,37 @@ export function useAccordionProps(props) {
  */
 export function useAccordion({ id, visible: visibleProp }) {
 	const {
-		add,
 		allowMultiple,
+		dispatch,
 		getIsVisible,
-		remove,
-		set,
+		isWithinContext,
 	} = useAccordionContext();
 
-	const visible = getIsVisible(id);
+	const visible = isWithinContext ? getIsVisible(id) : visibleProp;
 
 	const setVisible = useCallback(
 		(/** @type {boolean} */ nextVisible) => {
+			if (!isWithinContext) return;
 			if (!id) return;
 
 			if (nextVisible) {
 				if (allowMultiple) {
-					add(id);
+					add(dispatch, id);
 				} else {
-					set(id);
+					set(dispatch, id, allowMultiple);
 				}
 			} else {
 				if (allowMultiple) {
-					remove(id);
+					remove(dispatch, id);
 				}
 			}
 		},
-		[add, allowMultiple, remove, set, id],
+		[id, allowMultiple, dispatch, isWithinContext],
 	);
 
 	useUpdateEffect(() => {
 		setVisible(visibleProp);
-	}, [visibleProp]);
+	}, [setVisible, visibleProp]);
 
 	return [visible, setVisible];
 }
