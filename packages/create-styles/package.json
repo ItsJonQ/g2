@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@emotion/core": "^10.1.1",
+    "@emotion/hash": "^0.8.0",
     "@emotion/is-prop-valid": "^0.8.8",
     "@wp-g2/utils": "^0.0.158",
     "create-emotion": "^10.0.27",
