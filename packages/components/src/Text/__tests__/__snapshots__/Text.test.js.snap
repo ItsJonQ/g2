@@ -36,7 +36,7 @@ exports[`props should render align 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -79,7 +79,7 @@ exports[`props should render as another element 1`] = `
 }
 
 <div
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -123,7 +123,7 @@ exports[`props should render color 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -166,7 +166,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -209,7 +209,7 @@ exports[`props should render custom size 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -256,7 +256,7 @@ exports[`props should render display 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -306,7 +306,7 @@ exports[`props should render highlighted words 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -373,7 +373,7 @@ exports[`props should render highlighted words with highlightCaseSensitive 1`] =
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -421,7 +421,7 @@ exports[`props should render highlighted words with undefined passed 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -465,7 +465,7 @@ exports[`props should render isBlock 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -509,7 +509,7 @@ exports[`props should render lineHeight 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -554,7 +554,7 @@ exports[`props should render optimizeReadabilityFor 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -597,7 +597,7 @@ exports[`props should render size 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -644,7 +644,7 @@ exports[`props should render truncate 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -688,7 +688,7 @@ exports[`props should render upperCase 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -733,7 +733,7 @@ exports[`props should render variant 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >
@@ -775,7 +775,7 @@ exports[`props should render weight 1`] = `
 }
 
 <span
-  class="components-truncate wp-components-truncate components-text wp-components-text emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Text"
 >

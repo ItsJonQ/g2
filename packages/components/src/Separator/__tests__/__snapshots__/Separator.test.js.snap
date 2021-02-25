@@ -16,7 +16,7 @@ exports[`props should render correctly 1`] = `
 
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
+  class="components-divider wp-components-divider components-separator wp-components-separator ic-8rd3ix ic-d9awm7 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
@@ -39,7 +39,7 @@ exports[`props should render margin 1`] = `
 
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
+  class="components-divider wp-components-divider components-separator wp-components-separator ic-8rd3ix ic-d9awm7 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
@@ -62,7 +62,7 @@ exports[`props should render marginBottom 1`] = `
 
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
+  class="components-divider wp-components-divider components-separator wp-components-separator ic-8rd3ix ic-d9awm7 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"
@@ -85,7 +85,7 @@ exports[`props should render marginTop 1`] = `
 
 <hr
   aria-orientation="horizontal"
-  class="components-divider wp-components-divider components-separator wp-components-separator emotion-0"
+  class="components-divider wp-components-divider components-separator wp-components-separator ic-8rd3ix ic-d9awm7 emotion-0"
   data-g2-c16t="true"
   data-g2-component="Separator"
   role="separator"

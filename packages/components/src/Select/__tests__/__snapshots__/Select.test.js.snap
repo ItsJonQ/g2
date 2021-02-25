@@ -324,12 +324,12 @@ exports[`props should render children 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
   <select
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -345,17 +345,17 @@ exports[`props should render children 1`] = `
     </optgroup>
   </select>
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-otytyz ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-4"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -703,12 +703,12 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
   <select
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -725,17 +725,17 @@ exports[`props should render correctly 1`] = `
     </option>
   </select>
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-otytyz ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-4"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -1083,13 +1083,13 @@ exports[`props should render disabled 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
   disabled=""
 >
   <select
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Select"
     disabled=""
@@ -1107,17 +1107,17 @@ exports[`props should render disabled 1`] = `
     </option>
   </select>
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-otytyz ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-4"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -1465,12 +1465,12 @@ exports[`props should render readOnly 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
   <select
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -1488,17 +1488,17 @@ exports[`props should render readOnly 1`] = `
     </option>
   </select>
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-otytyz ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-4"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -1846,12 +1846,12 @@ exports[`props should render required 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
   <select
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -1869,17 +1869,17 @@ exports[`props should render required 1`] = `
     </option>
   </select>
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-otytyz ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-4"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >
@@ -2233,12 +2233,12 @@ exports[`props should render size 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectWrapper"
 >
   <select
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="Select"
     id="select"
@@ -2255,17 +2255,17 @@ exports[`props should render size 1`] = `
     </option>
   </select>
   <div
-    class="components-flex-item wp-components-flex-item emotion-2"
+    class="components-flex-item wp-components-flex-item ic-otytyz ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   >
     <span
-      class="components-truncate wp-components-truncate components-text wp-components-text emotion-3"
+      class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="Text"
     >
       <div
-        class="components-icon wp-components-icon emotion-4"
+        class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
         data-g2-c16t="true"
         data-g2-component="Icon"
       >

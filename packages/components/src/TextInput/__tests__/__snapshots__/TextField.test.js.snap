@@ -174,13 +174,13 @@ exports[`props should render align 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -365,13 +365,13 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -556,13 +556,13 @@ exports[`props should render defaultValue 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -747,14 +747,14 @@ exports[`props should render disabled 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
   disabled=""
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     disabled=""
@@ -940,13 +940,13 @@ exports[`props should render gap 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -1131,13 +1131,13 @@ exports[`props should render isRounded 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -1322,13 +1322,13 @@ exports[`props should render justify 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -1548,13 +1548,13 @@ exports[`props should render multiline 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <textarea
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -1738,7 +1738,7 @@ exports[`props should render prefix 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
@@ -1747,7 +1747,7 @@ exports[`props should render prefix 1`] = `
   </span>
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -1932,13 +1932,13 @@ exports[`props should render seamless 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -2130,13 +2130,13 @@ exports[`props should render size 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -2321,13 +2321,13 @@ exports[`props should render suffix 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"
@@ -2515,13 +2515,13 @@ exports[`props should render value 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-0"
+  class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="TextInputWrapper"
 >
   <input
     autocomplete="off"
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="TextInput"
     id="text-input"

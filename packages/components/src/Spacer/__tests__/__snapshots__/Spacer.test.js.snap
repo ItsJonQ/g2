@@ -29,7 +29,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -66,7 +66,7 @@ exports[`props should render margin 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -101,7 +101,7 @@ exports[`props should render marginBottom 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -138,7 +138,7 @@ exports[`props should render marginLeft 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -175,7 +175,7 @@ exports[`props should render marginRight 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -212,7 +212,7 @@ exports[`props should render marginTop 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -251,7 +251,7 @@ exports[`props should render marginX 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -290,7 +290,7 @@ exports[`props should render marginY 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -327,7 +327,7 @@ exports[`props should render padding 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -364,7 +364,7 @@ exports[`props should render paddingBottom 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -401,7 +401,7 @@ exports[`props should render paddingLeft 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -438,7 +438,7 @@ exports[`props should render paddingRight 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -475,7 +475,7 @@ exports[`props should render paddingTop 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -514,7 +514,7 @@ exports[`props should render paddingX 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />
@@ -553,7 +553,7 @@ exports[`props should render paddingY 1`] = `
 }
 
 <div
-  class="components-spacer wp-components-spacer emotion-0"
+  class="components-spacer wp-components-spacer ic-1m0v961 ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Spacer"
 />

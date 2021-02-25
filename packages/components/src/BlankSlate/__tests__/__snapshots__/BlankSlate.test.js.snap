@@ -402,12 +402,12 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate is-small emotion-0"
+  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate ic-10u706d is-small ic-1vr61kr ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="BlankSlate"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="CardContent"
   >
     <iframe
@@ -418,22 +418,22 @@ exports[`props should render correctly 1`] = `
       tabindex="-1"
     />
     <div
-      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body emotion-2"
+      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body ic-1reds0m ic-y3p1xi ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >
       <div
-        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack emotion-3"
+        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack ic-osizff ic-15rn87 ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="VStack"
       >
         <div
-          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading emotion-4"
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading ic-1ng8wck ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="Heading"
         >
           <div
-            class="components-icon wp-components-icon emotion-5"
+            class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-5"
             data-g2-c16t="true"
             data-g2-component="Icon"
           >
@@ -466,7 +466,7 @@ exports[`props should render correctly 1`] = `
           Twitter Embed
         </div>
         <span
-          class="components-truncate wp-components-truncate components-text wp-components-text emotion-6"
+          class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-6"
           data-g2-c16t="true"
           data-g2-component="Text"
         >
@@ -479,12 +479,12 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="components-elevation wp-components-elevation emotion-7"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-7"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="components-elevation wp-components-elevation emotion-8"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-8"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
@@ -816,12 +816,12 @@ exports[`props should render correctly without description and icon 1`] = `
 }
 
 <div
-  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate is-small emotion-0"
+  class="components-surface wp-components-surface components-card wp-components-card components-blank-slate wp-components-blank-slate ic-10u706d is-small ic-1vr61kr ic-15506ld ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="BlankSlate"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
     data-g2-component="CardContent"
   >
     <iframe
@@ -832,17 +832,17 @@ exports[`props should render correctly without description and icon 1`] = `
       tabindex="-1"
     />
     <div
-      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body emotion-2"
+      class="components-scrollable wp-components-scrollable components-card-body wp-components-card-body ic-1reds0m ic-y3p1xi ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="CardBody"
     >
       <div
-        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack emotion-3"
+        class="components-flex wp-components-flex components-h-stack wp-components-h-stack components-v-stack wp-components-v-stack ic-osizff ic-15rn87 ic-17cs4ki ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="VStack"
       >
         <div
-          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading emotion-4"
+          class="components-truncate wp-components-truncate components-text wp-components-text components-heading wp-components-heading ic-1ng8wck ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="Heading"
         >
@@ -855,12 +855,12 @@ exports[`props should render correctly without description and icon 1`] = `
     </div>
   </div>
   <div
-    class="components-elevation wp-components-elevation emotion-5"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-5"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />
   <div
-    class="components-elevation wp-components-elevation emotion-6"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-6"
     data-g2-c16t="true"
     data-g2-component="CardElevation"
   />

@@ -148,21 +148,21 @@ exports[`props should render + wrap non Flex children 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Flex"
 >
   <div
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="emotion-2"
+    class="ic-192yz5d emotion-2"
   />
   <div />
   <div
-    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-3"
+    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -292,17 +292,17 @@ exports[`props should render align 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Flex"
 >
   <div
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-2"
+    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -432,17 +432,17 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Flex"
 >
   <div
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-2"
+    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -572,17 +572,17 @@ exports[`props should render justify 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Flex"
 >
   <div
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="FlexItem"
   />
   <div
-    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block emotion-2"
+    class="components-flex-item wp-components-flex-item components-flex-block wp-components-flex-block ic-1e1meti ic-1p3tlc8 ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="FlexBlock"
   />
@@ -672,16 +672,16 @@ exports[`props should render spacing 1`] = `
 }
 
 <div
-  class="components-flex wp-components-flex emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Flex"
   spacing="5"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;

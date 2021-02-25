@@ -62,18 +62,18 @@ exports[`props should render align 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -136,15 +136,15 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -207,18 +207,18 @@ exports[`props should render custom columns 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -283,18 +283,18 @@ exports[`props should render custom rows 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -357,18 +357,18 @@ exports[`props should render custom templateColumns 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -433,18 +433,18 @@ exports[`props should render custom templateRows 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -507,18 +507,18 @@ exports[`props should render gap 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -582,18 +582,18 @@ exports[`props should render isInline 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;
@@ -660,18 +660,18 @@ exports[`props should render justify 1`] = `
 }
 
 <div
-  class="components-grid wp-components-grid emotion-0"
+  class="components-grid wp-components-grid ic-17spdce ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Grid"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   />
 </div>
 `;

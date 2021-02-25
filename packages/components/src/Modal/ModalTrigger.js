@@ -8,7 +8,7 @@ import { useModalContext } from './Modal.Context';
 function ModalTrigger(props, forwardedRef) {
 	const { as = Button, ...otherProps } = useContextSystem(
 		props,
-		forwardedRef,
+		'ModalTrigger',
 	);
 
 	const { dialog } = useModalContext();

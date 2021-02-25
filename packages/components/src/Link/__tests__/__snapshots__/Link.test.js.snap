@@ -44,7 +44,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <a
-  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 components-link wp-components-link ic-euc9in ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Link"
   href="#"
@@ -90,7 +90,7 @@ exports[`props should render isPlain 1`] = `
 }
 
 <a
-  class="components-truncate wp-components-truncate components-text wp-components-text components-link wp-components-link emotion-0"
+  class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 components-link wp-components-link ic-euc9in ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Link"
   href="#"

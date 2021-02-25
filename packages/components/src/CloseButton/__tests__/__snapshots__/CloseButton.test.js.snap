@@ -346,7 +346,7 @@ exports[`props should render correctly 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -355,12 +355,12 @@ exports[`props should render correctly 1`] = `
   data-icon="true"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonIcon"
   >
     <div
-      class="components-icon wp-components-icon emotion-2"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -381,7 +381,7 @@ exports[`props should render correctly 1`] = `
     </div>
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-3"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -741,7 +741,7 @@ exports[`props should render size 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -750,12 +750,12 @@ exports[`props should render size 1`] = `
   data-icon="true"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonIcon"
   >
     <div
-      class="components-icon wp-components-icon emotion-2"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -776,7 +776,7 @@ exports[`props should render size 1`] = `
     </div>
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-3"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />
@@ -1139,7 +1139,7 @@ exports[`props should render variant 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-close-button wp-components-close-button ic-pztd8e ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -1148,12 +1148,12 @@ exports[`props should render variant 1`] = `
   data-icon="true"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonIcon"
   >
     <div
-      class="components-icon wp-components-icon emotion-2"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -1174,7 +1174,7 @@ exports[`props should render variant 1`] = `
     </div>
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-3"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

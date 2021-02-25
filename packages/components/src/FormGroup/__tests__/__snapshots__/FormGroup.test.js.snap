@@ -259,12 +259,12 @@ exports[`props should render alignLabel 1`] = `
 }
 
 <div
-  class="components-form-group wp-components-form-group emotion-0"
+  class="components-form-group wp-components-form-group ic-1tpea9i ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label emotion-1"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label ic-k1x6d ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -272,13 +272,13 @@ exports[`props should render alignLabel 1`] = `
     First name
   </label>
   <div
-    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-2"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
     <input
       autocomplete="off"
-      class="emotion-3"
+      class="ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
@@ -549,12 +549,12 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-form-group wp-components-form-group emotion-0"
+  class="components-form-group wp-components-form-group ic-1tpea9i ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label emotion-1"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label ic-k1x6d ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -562,13 +562,13 @@ exports[`props should render correctly 1`] = `
     First name
   </label>
   <div
-    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-2"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
     <input
       autocomplete="off"
-      class="emotion-3"
+      class="ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
@@ -842,24 +842,24 @@ exports[`props should render label without prop correctly 1`] = `
 }
 
 <div
-  class="components-form-group wp-components-form-group emotion-0"
+  class="components-form-group wp-components-form-group ic-1tpea9i ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label emotion-1"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label ic-k1x6d ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
   />
   <div
-    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-2"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
     <input
       autocomplete="off"
-      class="emotion-3"
+      class="ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
@@ -1130,12 +1130,12 @@ exports[`props should render vertically 1`] = `
 }
 
 <div
-  class="components-form-group wp-components-form-group emotion-0"
+  class="components-form-group wp-components-form-group ic-1tpea9i ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="FormGroup"
 >
   <label
-    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label emotion-1"
+    class="components-truncate wp-components-truncate components-text wp-components-text components-control-label wp-components-control-label ic-k1x6d ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ControlLabel"
     for="fname"
@@ -1143,13 +1143,13 @@ exports[`props should render vertically 1`] = `
     First name
   </label>
   <div
-    class="components-flex wp-components-flex components-base-field wp-components-base-field components-text-input wp-components-text-input emotion-2"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-text-input wp-components-text-input ic-19funlj ic-192yz5d emotion-2"
     data-g2-c16t="true"
     data-g2-component="TextInputWrapper"
   >
     <input
       autocomplete="off"
-      class="emotion-3"
+      class="ic-192yz5d emotion-3"
       data-g2-c16t="true"
       data-g2-component="TextInput"
       id="fname"
