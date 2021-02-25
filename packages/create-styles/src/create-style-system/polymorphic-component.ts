@@ -34,7 +34,7 @@ export type PolymorphicComponent<T extends As, O> = {
 
 export type CreatePolymorphicComponent<T extends As, P> = (
 	template: TemplateStringsArray,
-	...styles: Interpolation<undefined>[]
+	...styles: (Interpolation<undefined> | PolymorphicComponent<any, any>)[]
 ) => PolymorphicComponent<T, P>;
 
 export type ForwardedRef<TElement extends HTMLElement> =
