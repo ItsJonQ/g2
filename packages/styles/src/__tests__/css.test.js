@@ -4,7 +4,6 @@ import React from 'react';
 
 import { css, getScaleStyles } from '../css';
 import { space } from '../mixins/space';
-import { $ as getStyleQuery } from '../presets/style-query';
 import { styled } from '../system';
 
 describe('css', () => {
@@ -18,32 +17,6 @@ describe('css', () => {
 	beforeEach(() => {
 		// clean up generated styles and elements
 		document.head.innerHTML = '';
-		document.body.innerHTML = '';
-	});
-
-	it('should interpolate style queries', () => {
-		const classes = css`
-			color: red;
-			${getStyleQuery('TestComponent')} {
-				color: black;
-			}
-		`;
-
-		const rule = getLastAppliedCssRule();
-
-		/**
-		 * Generate the following:
-		 * <View className={classes}>
-		 * 	<TestComponent />
-		 * </View>
-		 */
-		const container = document.createElement('div');
-		const testElement = document.createElement('div');
-		container.className = classes;
-		testElement.dataset.g2Component = 'TestComponent';
-		container.appendChild(testElement);
-
-		expect(testElement.matches(rule.selectorText)).toBe(true);
 	});
 
 	it('should interpolate styled components from core components', () => {

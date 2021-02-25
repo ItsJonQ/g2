@@ -18,7 +18,7 @@ import { css } from '../style-system';
  * within a component as well as declaring CSS rules using a "chaining"
  * API, similar to jQuery.
  */
-export class StyleQuery {
+class StyleQuery {
 	constructor(ComponentName) {
 		this[COMPONENT_NAMESPACE] = ComponentName;
 

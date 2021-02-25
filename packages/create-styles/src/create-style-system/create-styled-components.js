@@ -2,6 +2,7 @@ import hash from '@emotion/hash';
 import { getDisplayName, hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
+import { INTERPOLATION_CLASS_NAME } from './constants';
 import { tags } from './tags';
 import { compileInterpolatedStyles } from './utils';
 
@@ -98,7 +99,7 @@ export function createStyledComponents({ compiler, core }) {
 			};
 
 			// @ts-ignore internal property
-			StyledComponent.__interpolationClassName__ = interpolationClassName;
+			StyledComponent[INTERPOLATION_CLASS_NAME] = interpolationClassName;
 
 			if (typeof tagName !== 'string') {
 				/*

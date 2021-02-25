@@ -1,7 +1,7 @@
 import { is } from '@wp-g2/utils';
 import { kebabCase } from 'lodash';
 
-import { NAMESPACE } from './constants';
+import { INTERPOLATION_CLASS_NAME, NAMESPACE } from './constants';
 
 /**
  * @type {{
@@ -142,7 +142,7 @@ export function transformValuesToVariablesString(
  * @return {value is import('../create-style-system/polymorphic-component').PolymorphicComponent<any, any>}
  */
 function isPolymorphicComponent(value) {
-	return value && typeof value.__interpolationClassName__ !== 'undefined';
+	return value && typeof value[INTERPOLATION_CLASS_NAME] !== 'undefined';
 }
 
 /**
@@ -160,7 +160,7 @@ function isPolymorphicComponent(value) {
 export function compileInterpolatedStyles(interpolatedStyles, props) {
 	const compiledStyles = interpolatedStyles.map((a) => {
 		if (isPolymorphicComponent(a)) {
-			return `.${a.__interpolationClassName__}`;
+			return `.${a[INTERPOLATION_CLASS_NAME]}`;
 		}
 		return typeof a === 'function' ? a(props) : a;
 	});

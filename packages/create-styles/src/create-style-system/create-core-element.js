@@ -4,7 +4,10 @@ import { mergeRefs } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
 
 import { useHydrateGlobalStyles } from '../hooks';
-import { REDUCED_MOTION_MODE_ATTR } from './constants';
+import {
+	INTERPOLATION_CLASS_NAME,
+	REDUCED_MOTION_MODE_ATTR,
+} from './constants';
 import { DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
 
 const shouldForwardProp = isPropValid;
@@ -165,7 +168,7 @@ export const createCoreElement = (tagName, options) => {
 	}
 
 	// @ts-ignore internal property
-	SystemComponent.__interpolationClassName__ = interpolationClassName;
+	SystemComponent[INTERPOLATION_CLASS_NAME] = interpolationClassName;
 
 	// @ts-ignore
 	return SystemComponent;
