@@ -142,7 +142,7 @@ export function transformValuesToVariablesString(
  * @return {value is import('../create-style-system/polymorphic-component').PolymorphicComponent<any, any>}
  */
 function isPolymorphicComponent(value) {
-	return value && typeof value.__interpolationName__ !== 'undefined';
+	return value && typeof value.__interpolationClassName__ !== 'undefined';
 }
 
 /**
@@ -160,7 +160,7 @@ function isPolymorphicComponent(value) {
 export function compileInterpolatedStyles(interpolatedStyles, props) {
 	const compiledStyles = interpolatedStyles.map((a) => {
 		if (isPolymorphicComponent(a)) {
-			return `[data-interpolation-name="${a.__interpolationName__}"]`;
+			return `.${a.__interpolationClassName__}`;
 		}
 		return typeof a === 'function' ? a(props) : a;
 	});

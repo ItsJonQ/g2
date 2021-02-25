@@ -1,3 +1,4 @@
+import hash from '@emotion/hash';
 import isPropValid from '@emotion/is-prop-valid';
 import { mergeRefs } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
@@ -68,6 +69,7 @@ export const createCoreElement = (tagName, options) => {
 	};
 
 	const compiledBaseStyles = css(baseStyles);
+	const interpolationClassName = `ic-${hash(tagName)}`;
 
 	/**
 	 * @param {any} props
@@ -116,6 +118,7 @@ export const createCoreElement = (tagName, options) => {
 			compiledBaseStyles,
 			className,
 			cssProp && css(cssProp),
+			interpolationClassName,
 		);
 
 		/**
@@ -162,7 +165,7 @@ export const createCoreElement = (tagName, options) => {
 	}
 
 	// @ts-ignore internal property
-	SystemComponent.__interpolationName__ = tagName;
+	SystemComponent.__interpolationClassName__ = interpolationClassName;
 
 	// @ts-ignore
 	return SystemComponent;

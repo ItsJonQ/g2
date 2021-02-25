@@ -1,3 +1,4 @@
+import hash from '@emotion/hash';
 import { getDisplayName, hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
@@ -40,7 +41,9 @@ export function createStyledComponents({ compiler, core }) {
 		} = options;
 
 		return (...interpolatedProps) => {
-			const interpolationName = generateInterpolationName();
+			const interpolationClassName = `ic-${hash(
+				generateInterpolationName(),
+			)}`;
 			/** @type {import('react').ForwardRefRenderFunction<any, any>} */
 			const render = ({ as: asProp, className, ...props }, ref) => {
 				// Combine all of the props together.
@@ -54,15 +57,14 @@ export function createStyledComponents({ compiler, core }) {
 					props,
 				);
 
-				const classes = cx(css(...interpolatedStyles), className);
+				const classes = cx(
+					css(...interpolatedStyles),
+					className,
+					interpolationClassName,
+				);
 
 				return (
-					<Box
-						as={baseTag}
-						{...mergedProps}
-						className={classes}
-						data-interpolation-name={interpolationName}
-					/>
+					<Box as={baseTag} {...mergedProps} className={classes} />
 				);
 			};
 
@@ -96,7 +98,7 @@ export function createStyledComponents({ compiler, core }) {
 			};
 
 			// @ts-ignore internal property
-			StyledComponent.__interpolationName__ = interpolationName;
+			StyledComponent.__interpolationClassName__ = interpolationClassName;
 
 			if (typeof tagName !== 'string') {
 				/*

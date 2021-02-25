@@ -71,9 +71,7 @@ describe('css', () => {
 	});
 
 	it('should interpolate styled components', () => {
-		const Component = ({ className, ...props }) => (
-			<div className={className} {...props} />
-		);
+		const Component = ({ className }) => <div className={className} />;
 		const StyledComponent = styled(Component)``;
 
 		const classes = css`

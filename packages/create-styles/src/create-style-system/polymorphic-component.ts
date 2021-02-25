@@ -29,7 +29,7 @@ export type PolymorphicComponent<T extends As, O> = {
 	): JSX.Element | null;
 	(props: ViewOwnProps<O, T>): JSX.Element | null;
 	displayName?: string;
-	__interpolationName__: string;
+	__interpolationClassName__: string;
 };
 
 export type CreatePolymorphicComponent<T extends As, P> = (

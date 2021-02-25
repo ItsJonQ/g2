@@ -1,3 +1,4 @@
+import hash from '@emotion/hash';
 import { uniq } from 'lodash';
 import React, { forwardRef } from 'react';
 
@@ -49,7 +50,7 @@ export function contextConnect(Component, namespace, options = {}) {
 	WrappedComponent[CONNECT_STATIC_NAMESPACE] = uniq(mergedNamespace);
 
 	// @ts-ignore internal property
-	WrappedComponent.__interpolationName__ = displayName;
+	WrappedComponent.__interpolationClassName__ = `ic-${hash(displayName)}`;
 
 	// @ts-ignore
 	return WrappedComponent;

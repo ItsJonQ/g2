@@ -65,7 +65,7 @@ export function getScaleStyles(styles = {}) {
  * @return {value is import('@wp-g2/create-styles').PolymorphicComponent<any, any>}
  */
 function isPolymorphicComponent(value) {
-	return value && typeof value.__interpolationName__ !== 'undefined';
+	return value && typeof value.__interpolationClassName__ !== 'undefined';
 }
 
 /**
@@ -100,7 +100,7 @@ export function css(template, ...args) {
 			}
 
 			if (isPolymorphicComponent(arg)) {
-				return `[data-interpolation-name="${arg.__interpolationName__}"]`;
+				return `.${arg.__interpolationClassName__}`;
 			}
 
 			return arg;
