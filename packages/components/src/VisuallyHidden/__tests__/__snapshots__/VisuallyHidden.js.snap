@@ -30,7 +30,7 @@ exports[`props should render correctly 1`] = `
   style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
 >
   <div
-    class="emotion-0"
+    class="ic-192yz5d emotion-0"
   />
 </span>
 `;

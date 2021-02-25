@@ -555,7 +555,7 @@ exports[`props should render correctly 1`] = `
 
 <button
   aria-busy="false"
-  class="components-flex wp-components-flex components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control emotion-0"
+  class="components-flex wp-components-flex ic-17cs4ki components-base-button wp-components-base-button components-button wp-components-button components-color-control wp-components-color-control ic-i7kfop ic-i0z4gr ic-1d6ec17 ic-192yz5d emotion-0"
   data-active="false"
   data-destructive="false"
   data-focused="false"
@@ -564,12 +564,12 @@ exports[`props should render correctly 1`] = `
   data-icon="false"
 >
   <span
-    class="components-flex-item wp-components-flex-item emotion-1"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ButtonPrefix"
   >
     <div
-      class="components-color-circle wp-components-color-circle emotion-2"
+      class="components-color-circle wp-components-color-circle ic-17lizqw ic-lqthxd ic-192yz5d emotion-2"
       data-active="false"
       data-g2-c16t="true"
       data-g2-component="ColorCircle"
@@ -577,11 +577,11 @@ exports[`props should render correctly 1`] = `
     >
       <div
         aria-hidden="true"
-        class="emotion-3"
+        class="ic-1iv4r3z ic-192yz5d emotion-3"
         data-g2-component="CheckboxIcon"
       >
         <div
-          class="components-icon wp-components-icon emotion-4"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-4"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -604,14 +604,14 @@ exports[`props should render correctly 1`] = `
     </div>
   </span>
   <span
-    class="components-flex-item wp-components-flex-item emotion-5"
+    class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-5"
     data-g2-c16t="true"
     data-g2-component="ButtonContent"
   >
     I like warm hugs
   </span>
   <span
-    class="components-elevation wp-components-elevation emotion-6"
+    class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-6"
     data-g2-c16t="true"
     data-g2-component="ButtonElevation"
   />

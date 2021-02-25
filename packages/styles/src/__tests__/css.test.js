@@ -1,6 +1,10 @@
+import { render } from '@testing-library/react';
+import { contextConnect, useContextSystem } from '@wp-g2/context';
+import React from 'react';
+
 import { css, getScaleStyles } from '../css';
 import { space } from '../mixins/space';
-import { $ as getStyleQuery } from '../presets/style-query';
+import { styled } from '../system';
 
 describe('css', () => {
 	const getLastAppliedCssRule = () => {
@@ -13,32 +17,136 @@ describe('css', () => {
 	beforeEach(() => {
 		// clean up generated styles and elements
 		document.head.innerHTML = '';
-		document.body.innerHTML = '';
 	});
 
-	it('should interpolate style queries', () => {
+	it('should interpolate styled components from core components', () => {
+		const StyledA = styled.div`
+			background-color: blue;
+		`;
+
 		const classes = css`
 			color: red;
-			${getStyleQuery('TestComponent')} {
-				color: black;
+			${StyledA} {
+				color: blue;
 			}
 		`;
 
 		const rule = getLastAppliedCssRule();
 
-		/**
-		 * Generate the following:
-		 * <View className={classes}>
-		 * 	<TestComponent />
-		 * </View>
-		 */
-		const container = document.createElement('div');
-		const testElement = document.createElement('div');
-		container.className = classes;
-		testElement.dataset.g2Component = 'TestComponent';
-		container.appendChild(testElement);
+		const { container } = render(
+			<div className={classes}>
+				<StyledA />
+			</div>,
+		);
+		const styledA = container.firstChild.firstChild;
 
-		expect(testElement.matches(rule.selectorText)).toBe(true);
+		expect(styledA.matches(rule.selectorText)).toBe(true);
+	});
+
+	it('should interpolate styled components', () => {
+		const Component = ({ className }) => <div className={className} />;
+		const StyledComponent = styled(Component)``;
+
+		const classes = css`
+			color: red;
+			${StyledComponent} {
+				color: blue;
+			}
+		`;
+
+		const rule = getLastAppliedCssRule();
+
+		const { container } = render(
+			<div className={classes}>
+				<StyledComponent />
+			</div>,
+		);
+		const styledComponent = container.firstChild.firstChild;
+		expect(styledComponent.matches(rule.selectorText)).toBe(true);
+	});
+
+	it('should interpolate styled components inside of styled component styles', () => {
+		const StyledA = styled.div``;
+		const StyledB = styled.div`
+			${StyledA} {
+				color: blue;
+			}
+		`;
+
+		const { container } = render(
+			<StyledB>
+				<StyledA />
+			</StyledB>,
+		);
+		const rule = getLastAppliedCssRule();
+
+		const styledA = container.firstChild.firstChild;
+		expect(styledA.matches(rule.selectorText)).toBe(true);
+	});
+
+	it('should interpolate context-connected components', () => {
+		const TestConnectedStyledComponent = (props, forwardedRef) => {
+			const connectedProps = useContextSystem(
+				props,
+				'TestConnectedStyledComponent',
+			);
+			return <div {...connectedProps} ref={forwardedRef} />;
+		};
+
+		const Connected = contextConnect(
+			TestConnectedStyledComponent,
+			'TestConnectedStyledComponent',
+		);
+
+		const classes = css`
+			color: red;
+			${Connected} {
+				color: blue;
+			}
+		`;
+
+		const rule = getLastAppliedCssRule();
+
+		const { container } = render(
+			<div className={classes}>
+				<Connected />
+			</div>,
+		);
+
+		const connected = container.firstChild.firstChild;
+		expect(connected.matches(rule.selectorText)).toBe(true);
+	});
+
+	it('should interpolate context-connected-components in styled', () => {
+		const TestConnectedStyledComponent = (props, forwardedRef) => {
+			const connectedProps = useContextSystem(
+				props,
+				'TestConnectedStyledComponent',
+			);
+			return <div {...connectedProps} ref={forwardedRef} />;
+		};
+
+		const Connected = contextConnect(
+			TestConnectedStyledComponent,
+			'TestConnectedStyledComponent',
+		);
+
+		const Container = styled.div`
+			color: red;
+			${Connected} {
+				color: blue;
+			}
+		`;
+
+		const { container } = render(
+			<Container>
+				<Connected />
+			</Container>,
+		);
+		const rule = getLastAppliedCssRule();
+
+		const connected = container.firstChild.firstChild;
+		expect(connected.matches(rule.selectorText)).toBe(true);
 	});
 });
 

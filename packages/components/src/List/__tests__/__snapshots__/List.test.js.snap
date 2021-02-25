@@ -64,12 +64,12 @@ exports[`props should render correctly 1`] = `
 }
 
 <ul
-  class="components-list wp-components-list emotion-0"
+  class="components-list wp-components-list ic-w1vbzf ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="List"
 >
   <li
-    class="components-list-item wp-components-list-item emotion-1"
+    class="components-list-item wp-components-list-item ic-1a4ydmo ic-1blhbvo ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ListItem"
   >
@@ -145,12 +145,12 @@ exports[`props should render ordered list 1`] = `
 }
 
 <ol
-  class="components-list wp-components-list emotion-0"
+  class="components-list wp-components-list ic-w1vbzf ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="List"
 >
   <li
-    class="components-list-item wp-components-list-item emotion-1"
+    class="components-list-item wp-components-list-item ic-1a4ydmo ic-1blhbvo ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="ListItem"
   >

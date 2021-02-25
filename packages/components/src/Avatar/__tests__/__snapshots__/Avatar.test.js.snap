@@ -111,15 +111,15 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -344,15 +344,15 @@ exports[`props should render with a border 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -360,20 +360,20 @@ exports[`props should render with a border 1`] = `
     </div>
   </div>
   <div
-    class="components-aspect-ratio wp-components-aspect-ratio emotion-3"
+    class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="components-image wp-components-image emotion-4"
+      class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="emotion-5"
+      class="ic-1blhbvo ic-192yz5d emotion-5"
     />
   </div>
 </div>
@@ -593,15 +593,15 @@ exports[`props should render with a custom color 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -609,20 +609,20 @@ exports[`props should render with a custom color 1`] = `
     </div>
   </div>
   <div
-    class="components-aspect-ratio wp-components-aspect-ratio emotion-3"
+    class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="components-image wp-components-image emotion-4"
+      class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="emotion-5"
+      class="ic-1blhbvo ic-192yz5d emotion-5"
     />
   </div>
 </div>
@@ -741,15 +741,15 @@ exports[`props should render with a custom size 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -872,15 +872,15 @@ exports[`props should render with a custom small size + square 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -1003,15 +1003,15 @@ exports[`props should render with a custom xSmall size + square 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -1235,15 +1235,15 @@ exports[`props should render with an alternate shape 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -1251,20 +1251,20 @@ exports[`props should render with an alternate shape 1`] = `
     </div>
   </div>
   <div
-    class="components-aspect-ratio wp-components-aspect-ratio emotion-3"
+    class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="components-image wp-components-image emotion-4"
+      class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="emotion-5"
+      class="ic-1blhbvo ic-192yz5d emotion-5"
     />
   </div>
 </div>
@@ -1383,15 +1383,15 @@ exports[`props should render with an alternate size 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -1614,15 +1614,15 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -1630,20 +1630,20 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
     </div>
   </div>
   <div
-    class="components-aspect-ratio wp-components-aspect-ratio emotion-3"
+    class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="components-image wp-components-image emotion-4"
+      class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="emotion-5"
+      class="ic-1blhbvo ic-192yz5d emotion-5"
     />
   </div>
 </div>
@@ -1862,15 +1862,15 @@ exports[`props should render with image src 1`] = `
 }
 
 <div
-  class="components-avatar wp-components-avatar emotion-0"
+  class="components-avatar wp-components-avatar ic-lqmo3z ic-151osxh ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Avatar"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials emotion-2"
+      class="components-truncate wp-components-truncate components-text wp-components-text components-initials wp-components-initials ic-1kpqv96 ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="AvatarInitials"
     >
@@ -1878,20 +1878,20 @@ exports[`props should render with image src 1`] = `
     </div>
   </div>
   <div
-    class="components-aspect-ratio wp-components-aspect-ratio emotion-3"
+    class="components-aspect-ratio wp-components-aspect-ratio ic-14bo70j ic-otytyz ic-192yz5d emotion-3"
     data-g2-c16t="true"
     data-g2-component="AspectRatio"
   >
     <img
       alt="Elsa Oldenburg"
-      class="components-image wp-components-image emotion-4"
+      class="components-image wp-components-image ic-h82ilj ic-1c3kh7b ic-192yz5d emotion-4"
       data-g2-c16t="true"
       data-g2-component="AvatarImage"
       src="/elsa.png"
     />
     <div
       aria-hidden="true"
-      class="emotion-5"
+      class="ic-1blhbvo ic-192yz5d emotion-5"
     />
   </div>
 </div>

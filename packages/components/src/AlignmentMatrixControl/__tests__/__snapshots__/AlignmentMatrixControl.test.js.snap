@@ -207,19 +207,19 @@ exports[`props should render correctly 1`] = `
 
 <div
   aria-label="Alignment Matrix Control"
-  class="components-alignment-matrix-control wp-components-alignment-matrix-control emotion-0"
+  class="components-alignment-matrix-control wp-components-alignment-matrix-control ic-o4vf4i ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="AlignmentMatrixControl"
   id="alignment-matrix-control"
   role="grid"
 >
   <div
-    class="emotion-1"
+    class="ic-1blhbvo ic-192yz5d emotion-1"
     id="alignment-matrix-control-1"
     role="row"
   >
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-top-left"
       role="gridcell"
       tabindex="-1"
@@ -231,12 +231,12 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-top-left"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-top-center"
       role="gridcell"
       tabindex="-1"
@@ -248,12 +248,12 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-top-center"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-top-right"
       role="gridcell"
       tabindex="-1"
@@ -265,18 +265,18 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-top-right"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
   </div>
   <div
-    class="emotion-1"
+    class="ic-1blhbvo ic-192yz5d emotion-1"
     id="alignment-matrix-control-5"
     role="row"
   >
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-center-left"
       role="gridcell"
       tabindex="-1"
@@ -288,12 +288,12 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-center-left"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-center-center"
       role="gridcell"
       tabindex="0"
@@ -305,12 +305,12 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-center-center"
-        class="emotion-12"
+        class="ic-1c3kh7b ic-192yz5d emotion-12"
         role="presentation"
       />
     </span>
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-center-right"
       role="gridcell"
       tabindex="-1"
@@ -322,18 +322,18 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-center-right"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
   </div>
   <div
-    class="emotion-1"
+    class="ic-1blhbvo ic-192yz5d emotion-1"
     id="alignment-matrix-control-9"
     role="row"
   >
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-bottom-left"
       role="gridcell"
       tabindex="-1"
@@ -345,12 +345,12 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-bottom-left"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-bottom-center"
       role="gridcell"
       tabindex="-1"
@@ -362,12 +362,12 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-bottom-center"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>
     <span
-      class="emotion-2"
+      class="ic-151osxh ic-192yz5d emotion-2"
       id="alignment-matrix-control-bottom-right"
       role="gridcell"
       tabindex="-1"
@@ -379,7 +379,7 @@ exports[`props should render correctly 1`] = `
       </span>
       <span
         aria-describedby="alignment-matrix-control-bottom-right"
-        class="emotion-3"
+        class="ic-1c3kh7b ic-192yz5d emotion-3"
         role="presentation"
       />
     </span>

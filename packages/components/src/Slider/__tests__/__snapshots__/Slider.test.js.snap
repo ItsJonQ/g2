@@ -145,7 +145,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <input
-  class="components-slider wp-components-slider emotion-0"
+  class="components-slider wp-components-slider ic-1km1xno ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -302,7 +302,7 @@ exports[`props should render max 1`] = `
 }
 
 <input
-  class="components-slider wp-components-slider emotion-0"
+  class="components-slider wp-components-slider ic-1km1xno ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -459,7 +459,7 @@ exports[`props should render min 1`] = `
 }
 
 <input
-  class="components-slider wp-components-slider emotion-0"
+  class="components-slider wp-components-slider ic-1km1xno ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -618,7 +618,7 @@ exports[`props should render size 1`] = `
 }
 
 <input
-  class="components-slider wp-components-slider emotion-0"
+  class="components-slider wp-components-slider ic-1km1xno ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -775,7 +775,7 @@ exports[`props should render unit value 1`] = `
 }
 
 <input
-  class="components-slider wp-components-slider emotion-0"
+  class="components-slider wp-components-slider ic-1km1xno ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"
@@ -932,7 +932,7 @@ exports[`props should render value 1`] = `
 }
 
 <input
-  class="components-slider wp-components-slider emotion-0"
+  class="components-slider wp-components-slider ic-1km1xno ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="Slider"
   id="slider"

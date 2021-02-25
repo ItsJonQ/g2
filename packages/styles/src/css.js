@@ -1,8 +1,7 @@
-import { responsive } from '@wp-g2/create-styles';
+import { INTERPOLATION_CLASS_NAME, responsive } from '@wp-g2/create-styles';
 import { is } from '@wp-g2/utils';
 
 import { space } from './mixins/space';
-import { StyleQuery } from './presets/style-query';
 import { compiler } from './system';
 const { css: compile } = compiler;
 
@@ -60,11 +59,20 @@ export function getScaleStyles(styles = {}) {
 }
 
 /**
+ *
+ * @param {any} value
+ * @return {value is import('@wp-g2/create-styles').PolymorphicComponent<any, any>}
+ */
+function isPolymorphicComponent(value) {
+	return value && typeof value[INTERPOLATION_CLASS_NAME] !== 'undefined';
+}
+
+/**
  * Enhances the (create-system enhanced) CSS function to account for
  * scale functions within the Style system.
  *
  * @param {TemplateStringsArray | import('create-emotion').Interpolation<undefined>} template
- * @param {(import('create-emotion').Interpolation<undefined> | import('./presets/style-query').StyleQuery)[]} args The styles to compile.
+ * @param {(import('create-emotion').Interpolation<undefined> | import('@wp-g2/create-styles').PolymorphicComponent<any, any>)[]} args The styles to compile.
  * @returns {ReturnType<compile>} The compiled styles.
  */
 export function css(template, ...args) {
@@ -82,9 +90,14 @@ export function css(template, ...args) {
 		}
 
 		const nextArgs = args.map((arg) => {
-			if (arg instanceof StyleQuery) {
-				return arg.getSelector();
+			if (!arg) {
+				return arg;
 			}
+
+			if (isPolymorphicComponent(arg)) {
+				return `.${arg[INTERPOLATION_CLASS_NAME]}`;
+			}
+
 			return arg;
 		});
 

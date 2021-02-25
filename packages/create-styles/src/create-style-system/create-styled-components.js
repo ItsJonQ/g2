@@ -1,6 +1,8 @@
+import hash from '@emotion/hash';
 import { getDisplayName, hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
+import { INTERPOLATION_CLASS_NAME } from './constants';
 import { tags } from './tags';
 import { compileInterpolatedStyles } from './utils';
 
@@ -24,7 +26,7 @@ import { compileInterpolatedStyles } from './utils';
  * @returns {import('./polymorphic-component').CreateStyled} A set of styled components.
  */
 export function createStyledComponents({ compiler, core }) {
-	const { css, cx } = compiler;
+	const { css, cx, generateInterpolationName } = compiler;
 
 	/**
 	 * That's all a <Box /> is :). A core.div.
@@ -40,8 +42,12 @@ export function createStyledComponents({ compiler, core }) {
 		} = options;
 
 		return (...interpolatedProps) => {
+			const interpolationClassName = `ic-${hash(
+				generateInterpolationName(),
+			)}`;
+			/** @type {import('react').ForwardRefRenderFunction<any, any>} */
 			const render = ({ as: asProp, className, ...props }, ref) => {
-				// Combine all of te props together.
+				// Combine all of the props together.
 				const mergedProps = { ...extraProps, ...props, ref };
 
 				const baseTag = asProp || tagName;
@@ -52,7 +58,11 @@ export function createStyledComponents({ compiler, core }) {
 					props,
 				);
 
-				const classes = cx(css(...interpolatedStyles), className);
+				const classes = cx(
+					css(...interpolatedStyles),
+					className,
+					interpolationClassName,
+				);
 
 				return (
 					<Box as={baseTag} {...mergedProps} className={classes} />
@@ -87,6 +97,9 @@ export function createStyledComponents({ compiler, core }) {
 						: options,
 				)(...interpolatedProps);
 			};
+
+			// @ts-ignore internal property
+			StyledComponent[INTERPOLATION_CLASS_NAME] = interpolationClassName;
 
 			if (typeof tagName !== 'string') {
 				/*

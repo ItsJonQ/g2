@@ -117,15 +117,15 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-arrow-indicator wp-components-arrow-indicator emotion-0"
+  class="components-arrow-indicator wp-components-arrow-indicator ic-ig3mah ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="ArrowIndicator"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-icon wp-components-icon emotion-2"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >
@@ -263,15 +263,15 @@ exports[`props should render with a custom size 1`] = `
 }
 
 <div
-  class="components-arrow-indicator wp-components-arrow-indicator emotion-0"
+  class="components-arrow-indicator wp-components-arrow-indicator ic-ig3mah ic-otytyz ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="ArrowIndicator"
 >
   <div
-    class="emotion-1"
+    class="ic-192yz5d emotion-1"
   >
     <div
-      class="components-icon wp-components-icon emotion-2"
+      class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="Icon"
     >

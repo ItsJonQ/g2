@@ -29,11 +29,12 @@ export type PolymorphicComponent<T extends As, O> = {
 	): JSX.Element | null;
 	(props: ViewOwnProps<O, T>): JSX.Element | null;
 	displayName?: string;
+	__interpolationClassName__: string;
 };
 
 export type CreatePolymorphicComponent<T extends As, P> = (
 	template: TemplateStringsArray,
-	...styles: Interpolation<undefined>[]
+	...styles: (Interpolation<undefined> | PolymorphicComponent<any, any>)[]
 ) => PolymorphicComponent<T, P>;
 
 export type ForwardedRef<TElement extends HTMLElement> =

@@ -1,3 +1,5 @@
+import hash from '@emotion/hash';
+import { INTERPOLATION_CLASS_NAME } from '@wp-g2/create-styles';
 import { uniq } from 'lodash';
 import React, { forwardRef } from 'react';
 
@@ -47,6 +49,9 @@ export function contextConnect(Component, namespace, options = {}) {
 
 	WrappedComponent.displayName = displayName;
 	WrappedComponent[CONNECT_STATIC_NAMESPACE] = uniq(mergedNamespace);
+
+	// @ts-ignore internal property
+	WrappedComponent[INTERPOLATION_CLASS_NAME] = `ic-${hash(displayName)}`;
 
 	// @ts-ignore
 	return WrappedComponent;

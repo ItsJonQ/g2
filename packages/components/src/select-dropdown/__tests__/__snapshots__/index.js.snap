@@ -404,7 +404,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-select-dropdown wp-components-select-dropdown emotion-0"
+  class="components-select-dropdown wp-components-select-dropdown ic-69e0bf ic-192yz5d emotion-0"
   data-g2-c16t="true"
   data-g2-component="SelectDropdown"
 >
@@ -416,36 +416,36 @@ exports[`props should render correctly 1`] = `
     tabindex="-1"
   />
   <div
-    class="components-flex wp-components-flex components-base-field wp-components-base-field components-select wp-components-select emotion-1"
+    class="components-flex wp-components-flex components-base-field wp-components-base-field ic-172ogxm ic-17cs4ki components-select wp-components-select ic-gutgg1 ic-192yz5d emotion-1"
     data-g2-c16t="true"
     data-g2-component="SelectWrapper"
   >
     <button
       aria-expanded="false"
       aria-haspopup="listbox"
-      class="emotion-2"
+      class="ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="SelectDropdownReference"
       value=""
     >
       <span
-        class="components-truncate wp-components-truncate emotion-3"
+        class="components-truncate wp-components-truncate ic-1m45iq3 ic-192yz5d emotion-3"
         data-g2-c16t="true"
         data-g2-component="Truncate"
       />
     </button>
     <div
-      class="components-flex-item wp-components-flex-item emotion-4"
+      class="components-flex-item wp-components-flex-item ic-lqthxd ic-192yz5d ic-1p3tlc8 ic-192yz5d emotion-4"
       data-g2-c16t="true"
       data-g2-component="FlexItem"
     >
       <span
-        class="components-truncate wp-components-truncate components-text wp-components-text emotion-5"
+        class="components-truncate wp-components-truncate components-text wp-components-text ic-7u3orf ic-1m45iq3 ic-192yz5d emotion-5"
         data-g2-c16t="true"
         data-g2-component="Text"
       >
         <div
-          class="components-icon wp-components-icon emotion-6"
+          class="components-icon wp-components-icon ic-2q44rw ic-192yz5d emotion-6"
           data-g2-c16t="true"
           data-g2-component="Icon"
         >
@@ -468,7 +468,7 @@ exports[`props should render correctly 1`] = `
     </div>
   </div>
   <label
-    class="emotion-7"
+    class="ic-192yz5d emotion-7"
     data-g2-component="SelectDropdownLabel"
     for="downshift-0-toggle-button"
     id="downshift-0-label"

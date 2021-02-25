@@ -1,3 +1,4 @@
+import hash from '@emotion/hash';
 import { css, cx } from '@wp-g2/styles';
 import { memoize } from '@wp-g2/utils';
 import { kebabCase, uniq } from 'lodash';
@@ -49,12 +50,15 @@ export function useContextSystem(props, namespace) {
 		? Object.assign({}, otherContextProps, props)
 		: props;
 
+	const interpolationClassName = `ic-${hash(displayName)}`;
+
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider
 		contextCSS && css(contextCSS),
 		initialMergedProps.css && css(initialMergedProps.css),
 		memoizedGetStyledClassNameFromKey(displayName),
 		props.className,
+		interpolationClassName,
 	);
 
 	// Provides the ability to customize the render of the component.
