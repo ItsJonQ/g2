@@ -1,4 +1,3 @@
-import hash from '@emotion/hash';
 import isPropValid from '@emotion/is-prop-valid';
 import { mergeRefs } from '@wp-g2/utils';
 import React, { forwardRef } from 'react';
@@ -8,7 +7,10 @@ import {
 	INTERPOLATION_CLASS_NAME,
 	REDUCED_MOTION_MODE_ATTR,
 } from './constants';
-import { DEFAULT_STYLE_SYSTEM_OPTIONS } from './utils';
+import {
+	DEFAULT_STYLE_SYSTEM_OPTIONS,
+	getInterpolatedClassName,
+} from './utils';
 
 const shouldForwardProp = isPropValid;
 
@@ -72,7 +74,7 @@ export const createCoreElement = (tagName, options) => {
 	};
 
 	const compiledBaseStyles = css(baseStyles);
-	const interpolationClassName = `ic-${hash(tagName)}`;
+	const interpolationClassName = getInterpolatedClassName(tagName);
 
 	/**
 	 * @param {any} props

@@ -1,10 +1,9 @@
-import hash from '@emotion/hash';
 import { getDisplayName, hoistNonReactStatics, is } from '@wp-g2/utils';
 import React from 'react';
 
 import { INTERPOLATION_CLASS_NAME } from './constants';
 import { tags } from './tags';
-import { compileInterpolatedStyles } from './utils';
+import { compileInterpolatedStyles, getInterpolatedClassName } from './utils';
 
 /**
  * @typedef CreateStyledComponentsProps
@@ -42,9 +41,9 @@ export function createStyledComponents({ compiler, core }) {
 		} = options;
 
 		return (...interpolatedProps) => {
-			const interpolationClassName = `ic-${hash(
+			const interpolationClassName = getInterpolatedClassName(
 				generateInterpolationName(),
-			)}`;
+			);
 			/** @type {import('react').ForwardRefRenderFunction<any, any>} */
 			const render = ({ as: asProp, className, ...props }, ref) => {
 				// Combine all of the props together.

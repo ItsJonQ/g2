@@ -1,3 +1,4 @@
+import hash from '@emotion/hash';
 import { is } from '@wp-g2/utils';
 import { kebabCase } from 'lodash';
 
@@ -166,4 +167,15 @@ export function compileInterpolatedStyles(interpolatedStyles, props) {
 	});
 
 	return compiledStyles;
+}
+
+/**
+ * Creates an interpolated className. This is used when styled components are
+ * interpolated in the template literal.
+ *
+ * @param {string} displayName The displayName of the component.
+ * @returns {string} The interpolated className.
+ */
+export function getInterpolatedClassName(displayName) {
+	return typeof displayName === 'string' ? `ic-${hash(displayName)}` : '';
 }

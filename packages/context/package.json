@@ -16,7 +16,7 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@emotion/hash": "^0.8.0",
+    "@wp-g2/create-styles": "^0.0.159",
     "@wp-g2/styles": "^0.0.159",
     "@wp-g2/utils": "^0.0.159",
     "lodash": "^4.17.19"
