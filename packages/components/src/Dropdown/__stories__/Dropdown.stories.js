@@ -3,6 +3,7 @@ import { useDialogState } from 'reakit';
 
 import {
 	Button,
+	Divider,
 	Modal,
 	ModalBody,
 	ModalFooter,
@@ -57,6 +58,7 @@ export const _default = () => {
 				<DropdownMenuItem>One</DropdownMenuItem>
 				<DropdownMenuItem>Two</DropdownMenuItem>
 				<DropdownMenuItem>Three</DropdownMenuItem>
+				<Divider />
 				<DropdownMenuItem>Three</DropdownMenuItem>
 				<DropdownMenuItem>Three</DropdownMenuItem>
 				<DropdownMenuItem>Three</DropdownMenuItem>

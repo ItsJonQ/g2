@@ -1,5 +1,7 @@
 import { css, ui } from '@wp-g2/styles';
 
+import { Divider } from '../Divider';
+
 export const DropdownMenu = css`
 	${ui.zIndex('Dropdown', 9998)};
 	min-width: 200px;
@@ -9,6 +11,11 @@ export const DropdownMenu = css`
 
 	&[data-enter] {
 		opacity: 1;
+	}
+
+	${Divider} {
+		margin-left: ${ui.space(-1)};
+		margin-right: ${ui.space(-1)};
 	}
 `;
 
