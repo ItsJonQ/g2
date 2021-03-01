@@ -11576,6 +11576,13 @@ exports[`props should render DropdownMenu 1`] = `
   opacity: 1;
 }
 
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 .ic-d9awm7 {
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
+  margin-right: calc(4px * -1);
+  margin-right: calc(var(--wp-g2-grid-base) * -1);
+}
+
 <div
   class="components-menu wp-components-menu components-dropdown-menu wp-components-dropdown-menu ic-r9058m ic-x721pi ic-192yz5d emotion-0"
   data-g2-c16t="true"
@@ -11634,6 +11641,13 @@ exports[`props should render DropdownMenu with css prop 1`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-enter] {
   opacity: 1;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 .ic-d9awm7 {
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
+  margin-right: calc(4px * -1);
+  margin-right: calc(var(--wp-g2-grid-base) * -1);
 }
 
 <div
@@ -11696,6 +11710,13 @@ exports[`props should render DropdownMenu with css prop 2`] = `
 
 .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-enter] {
   opacity: 1;
+}
+
+.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 .ic-d9awm7 {
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
+  margin-right: calc(4px * -1);
+  margin-right: calc(var(--wp-g2-grid-base) * -1);
 }
 
 <div

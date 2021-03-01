@@ -4,7 +4,6 @@ import { is } from '@wp-g2/utils';
 import React, { useMemo } from 'react';
 import { Separator } from 'reakit';
 
-import { useDropdownContext } from '../Dropdown';
 import * as styles from './Divider.styles';
 
 function Divider(props, forwardedRef) {
@@ -12,9 +11,6 @@ function Divider(props, forwardedRef) {
 		props,
 		'Divider',
 	);
-
-	const { menu: dropdownMenu } = useDropdownContext();
-	const isWithinDropdown = !!dropdownMenu;
 
 	const classes = useMemo(() => {
 		const sx = {};
@@ -29,20 +25,14 @@ function Divider(props, forwardedRef) {
 			margin-top: ${ui.space(m)};
 		`;
 
-		sx.dropdown = css`
-			margin-left: ${ui.space(-1)};
-			margin-right: ${ui.space(-1)};
-		`;
-
 		return cx(
 			styles.Divider,
 			!is.defined(m) && is.defined(mb) && sx.mb,
 			!is.defined(m) && is.defined(mt) && sx.mt,
 			is.defined(m) && sx.m,
-			isWithinDropdown && sx.dropdown,
 			className,
 		);
-	}, [className, isWithinDropdown, m, mb, mt]);
+	}, [className, m, mb, mt]);
 
 	return <Separator {...otherProps} className={classes} ref={forwardedRef} />;
 }
