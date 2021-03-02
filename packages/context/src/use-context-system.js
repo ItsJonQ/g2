@@ -25,6 +25,12 @@ export function useContextSystem(props, namespace) {
 	const contextSystemProps = useComponentsContext();
 	const displayName = Array.isArray(namespace) ? namespace[0] : namespace;
 
+	if (process.env.NODE_ENV === 'development') {
+		if (typeof namespace === 'undefined') {
+			console.warn('useContextSystem', 'Please provide a namespace.');
+		}
+	}
+
 	const contextProps = contextSystemProps?.[displayName] || {};
 
 	/** @type {ConnectedProps<P>} */

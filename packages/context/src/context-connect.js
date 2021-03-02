@@ -35,6 +35,12 @@ export function contextConnect(Component, namespace, options = {}) {
 		? namespace[0]
 		: namespace || WrappedComponent.name;
 
+	if (process.env.NODE_ENV === 'development') {
+		if (typeof namespace === 'undefined') {
+			console.warn('contextConnect', 'Please provide a namespace.');
+		}
+	}
+
 	let mergedNamespace = WrappedComponent[CONNECT_STATIC_NAMESPACE] || [
 		displayName,
 	];
