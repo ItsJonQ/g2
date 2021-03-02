@@ -1,6 +1,5 @@
 import { chevronLeft, chevronRight } from '@wordpress/icons';
 import {
-	Animated,
 	Button,
 	Container,
 	HStack,
@@ -70,16 +69,11 @@ const Example = () => {
 						<NavigatorButton icon={chevronRight} to="Core" />
 					</HStack>
 
-					<Animated layout>
-						<NavigatorScreens>
-							{screens.map((screen) => (
-								<NavigatorScreen
-									{...screen}
-									key={screen.path}
-								/>
-							))}
-						</NavigatorScreens>
-					</Animated>
+					<NavigatorScreens>
+						{screens.map((screen) => (
+							<NavigatorScreen {...screen} key={screen.path} />
+						))}
+					</NavigatorScreens>
 				</Navigator>
 			</Surface>
 		</Container>

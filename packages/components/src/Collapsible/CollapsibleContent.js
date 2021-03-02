@@ -1,28 +1,13 @@
 import { contextConnect, useContextSystem } from '@wp-g2/context';
 import { cx, ui } from '@wp-g2/styles';
 import React from 'react';
+import { animated } from 'react-spring/web.cjs';
 import { DisclosureContent } from 'reakit';
 
-import { Animated } from '../Animated';
+import { View } from '../View';
 import { useCollapsibleContext } from './Collapsible.Context';
 import * as styles from './Collapsible.styles';
-
-const animationVariants = {
-	visible: {
-		height: 'auto',
-		opacity: 1,
-		transitionEnd: {
-			display: 'block',
-		},
-	},
-	hidden: {
-		height: 0,
-		opacity: 0,
-		transitionEnd: {
-			display: 'none',
-		},
-	},
-};
+import { useCollapsibleHeightAnimation } from './Collapsible.utils';
 
 function CollapsibleContent(props, forwardedRef) {
 	const { children, className, ...otherProps } = useContextSystem(
@@ -34,6 +19,10 @@ function CollapsibleContent(props, forwardedRef) {
 	const isVisible = disclosure?.visible;
 	const classes = cx(styles.CollapsibleContent, className);
 
+	const [contentRef, animatedHeight] = useCollapsibleHeightAnimation({
+		isVisible,
+	});
+
 	return (
 		<DisclosureContent
 			className={classes}
@@ -41,16 +30,14 @@ function CollapsibleContent(props, forwardedRef) {
 			{...otherProps}
 			{...disclosure}
 		>
-			<Animated
-				animate={isVisible ? 'visible' : 'hidden'}
-				className={cx(styles.innerContent)}
-				initial={false}
-				transition={{ duration: 0.2 }}
-				variants={animationVariants}
-				{...ui.$('CollapsibleInnerContent')}
-			>
-				{children}
-			</Animated>
+			<View as={animated.div} ref={contentRef} style={animatedHeight}>
+				<View
+					className={styles.innerContent}
+					{...ui.$('CollapsibleInnerContent')}
+				>
+					{children}
+				</View>
+			</View>
 		</DisclosureContent>
 	);
 }

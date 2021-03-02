@@ -23,6 +23,7 @@
     "@wp-g2/utils": "^0.0.159",
     "framer-motion": "^2.1.0",
     "react-icons": "^3.10.0",
+    "react-spring": "^8.0.20",
     "react-use-gesture": "^9.0.0",
     "units-css": "^0.4.0"
   },

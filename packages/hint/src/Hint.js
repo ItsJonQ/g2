@@ -1,5 +1,4 @@
 import {
-	Animated,
 	Badge,
 	Button,
 	Card,
@@ -166,44 +165,26 @@ export function Hint({
 							)}
 							{hasIssues &&
 								issues.map((issue, index) => (
-									<Animated
+									<ReakitMenuItem
+										{...menu}
+										as={MenuItem}
+										css={[ui.padding(1)]}
 										key={index}
-										onHoverEnd={() => {
-											if (issue.node) {
-												issue.node.style.outline = null;
-											}
-										}}
-										onHoverStart={() => {
-											if (issue.node) {
-												issue.node.style.outline =
-													'1px solid rgba(255, 60, 60)';
-											}
-										}}
 									>
-										<ReakitMenuItem
-											{...menu}
-											as={MenuItem}
-											css={[ui.padding(1)]}
-										>
-											<Panel>
-												<PanelHeader
-													css={[ui.padding.y(1)]}
-													title={
-														issue.title ||
-														issue.name
-													}
-												/>
-												<PanelBody>
-													<Text
-														size={12}
-														variant="muted"
-													>
-														{issue.message}
-													</Text>
-												</PanelBody>
-											</Panel>
-										</ReakitMenuItem>
-									</Animated>
+										<Panel>
+											<PanelHeader
+												css={[ui.padding.y(1)]}
+												title={
+													issue.title || issue.name
+												}
+											/>
+											<PanelBody>
+												<Text size={12} variant="muted">
+													{issue.message}
+												</Text>
+											</PanelBody>
+										</Panel>
+									</ReakitMenuItem>
 								))}
 						</Scrollable>
 					</View>
