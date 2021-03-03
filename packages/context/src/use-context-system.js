@@ -1,4 +1,4 @@
-import hash from '@emotion/hash';
+import { getInterpolatedClassName } from '@wp-g2/create-styles';
 import { css, cx } from '@wp-g2/styles';
 import { memoize } from '@wp-g2/utils';
 import { kebabCase, uniq } from 'lodash';
@@ -25,6 +25,12 @@ export function useContextSystem(props, namespace) {
 	const contextSystemProps = useComponentsContext();
 	const displayName = Array.isArray(namespace) ? namespace[0] : namespace;
 
+	if (process.env.NODE_ENV === 'development') {
+		if (typeof namespace === 'undefined') {
+			console.warn('useContextSystem', 'Please provide a namespace.');
+		}
+	}
+
 	const contextProps = contextSystemProps?.[displayName] || {};
 
 	/** @type {ConnectedProps<P>} */
@@ -50,7 +56,7 @@ export function useContextSystem(props, namespace) {
 		? Object.assign({}, otherContextProps, props)
 		: props;
 
-	const interpolationClassName = `ic-${hash(displayName)}`;
+	const interpolationClassName = getInterpolatedClassName(displayName);
 
 	const classes = cx(
 		// Resolve custom CSS from ContextSystemProvider

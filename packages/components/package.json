@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/components",
-  "version": "0.0.159",
+  "version": "0.0.160-alpha.0",
   "description": "React components for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -17,8 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "@popperjs/core": "^2.5.4",
-    "@wp-g2/context": "^0.0.159",
-    "@wp-g2/styles": "^0.0.159",
+    "@wp-g2/context": "^0.0.160-alpha.0",
+    "@wp-g2/styles": "^0.0.160-alpha.0",
     "@wp-g2/utils": "^0.0.159",
     "csstype": "^3.0.3",
     "downshift": "^6.0.15",

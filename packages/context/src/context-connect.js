@@ -1,5 +1,7 @@
-import hash from '@emotion/hash';
-import { INTERPOLATION_CLASS_NAME } from '@wp-g2/create-styles';
+import {
+	getInterpolatedClassName,
+	INTERPOLATION_CLASS_NAME,
+} from '@wp-g2/create-styles';
 import { uniq } from 'lodash';
 import React, { forwardRef } from 'react';
 
@@ -33,6 +35,12 @@ export function contextConnect(Component, namespace, options = {}) {
 		? namespace[0]
 		: namespace || WrappedComponent.name;
 
+	if (process.env.NODE_ENV === 'development') {
+		if (typeof namespace === 'undefined') {
+			console.warn('contextConnect', 'Please provide a namespace.');
+		}
+	}
+
 	let mergedNamespace = WrappedComponent[CONNECT_STATIC_NAMESPACE] || [
 		displayName,
 	];
@@ -51,7 +59,9 @@ export function contextConnect(Component, namespace, options = {}) {
 	WrappedComponent[CONNECT_STATIC_NAMESPACE] = uniq(mergedNamespace);
 
 	// @ts-ignore internal property
-	WrappedComponent[INTERPOLATION_CLASS_NAME] = `ic-${hash(displayName)}`;
+	WrappedComponent[INTERPOLATION_CLASS_NAME] = getInterpolatedClassName(
+		displayName,
+	);
 
 	// @ts-ignore
 	return WrappedComponent;

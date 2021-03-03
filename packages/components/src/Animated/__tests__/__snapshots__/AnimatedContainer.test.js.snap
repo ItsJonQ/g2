@@ -27,7 +27,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
 >

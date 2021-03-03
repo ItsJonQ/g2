@@ -565,7 +565,7 @@ exports[`props should render as dismissable 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
@@ -795,7 +795,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
@@ -1674,7 +1674,7 @@ exports[`props should render with status 1`] = `
   data-g2-component="Alerts"
 >
   <div
-    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
@@ -1752,7 +1752,7 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
@@ -1830,7 +1830,7 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
@@ -1908,7 +1908,7 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
@@ -1986,7 +1986,7 @@ exports[`props should render with status 1`] = `
     </div>
   </div>
   <div
-    class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+    class="components-animated wp-components-animated ic-pgzw5f emotion-0"
     data-g2-c16t="true"
     data-g2-component="Animated"
     style="opacity: 1; transform: none;"
@@ -2280,7 +2280,7 @@ exports[`props should render with title 1`] = `
 }
 
 <div
-  class="components-animated wp-components-animated ic-pgzw5f ic-0 emotion-0"
+  class="components-animated wp-components-animated ic-pgzw5f emotion-0"
   data-g2-c16t="true"
   data-g2-component="Animated"
   style="opacity: 0; transform: scale(0.9) translateZ(0);"
