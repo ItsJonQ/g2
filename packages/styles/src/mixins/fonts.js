@@ -23,7 +23,11 @@ export function getFontSize(size = BASE_FONT_SIZE) {
 		return getFontSize(PRESET_FONT_SIZES[size]);
 	}
 
-	if (typeof size !== 'number') return size;
+	if (typeof size !== 'number') {
+		const parsed = parseInt(size, 10);
+		if (Number.isNaN(parsed)) return size;
+		size = parsed;
+	}
 
 	const ratio = /** @type {number} */ (size) / BASE_FONT_SIZE;
 	return `calc(${ratio} * ${get('fontSize')})`;
