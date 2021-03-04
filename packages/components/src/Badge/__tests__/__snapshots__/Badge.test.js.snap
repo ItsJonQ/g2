@@ -73,8 +73,8 @@ exports[`props should render color 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(0.7692307692307693 * 13px);
-  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-size: calc((10 / 13) * 13px);
+  font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
   display: block;
@@ -176,8 +176,8 @@ exports[`props should render correctly 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(0.7692307692307693 * 13px);
-  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-size: calc((10 / 13) * 13px);
+  font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
   display: block;
@@ -276,8 +276,8 @@ exports[`props should render display 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(0.7692307692307693 * 13px);
-  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-size: calc((10 / 13) * 13px);
+  font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
   display: block;
@@ -379,8 +379,8 @@ exports[`props should render isBold 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(0.7692307692307693 * 13px);
-  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-size: calc((10 / 13) * 13px);
+  font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
   display: block;
@@ -488,8 +488,8 @@ exports[`props should render isRounded 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(0.7692307692307693 * 13px);
-  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-size: calc((10 / 13) * 13px);
+  font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
   display: block;
@@ -591,8 +591,8 @@ exports[`props should render truncate 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(0.7692307692307693 * 13px);
-  font-size: calc(0.7692307692307693 * var(--wp-g2-font-size));
+  font-size: calc((10 / 13) * 13px);
+  font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
   display: block;

@@ -73,8 +73,8 @@ exports[`props should render color 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
+  font-size: calc((13 / 13) * 13px);
+  font-size: calc((13 / 13) * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   line-height: 1;
@@ -176,8 +176,8 @@ exports[`props should render correctly 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
+  font-size: calc((13 / 13) * 13px);
+  font-size: calc((13 / 13) * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   line-height: 1;
@@ -276,8 +276,8 @@ exports[`props should render display 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
+  font-size: calc((13 / 13) * 13px);
+  font-size: calc((13 / 13) * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   line-height: 1;
@@ -379,8 +379,8 @@ exports[`props should render href 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
+  font-size: calc((13 / 13) * 13px);
+  font-size: calc((13 / 13) * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   line-height: 1;
@@ -483,8 +483,8 @@ exports[`props should render onRemove 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
+  font-size: calc((13 / 13) * 13px);
+  font-size: calc((13 / 13) * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   line-height: 1;
@@ -586,8 +586,8 @@ exports[`props should render removeButtonText 1`] = `
   line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc(1 * 13px);
-  font-size: calc(1 * var(--wp-g2-font-size));
+  font-size: calc((13 / 13) * 13px);
+  font-size: calc((13 / 13) * var(--wp-g2-font-size));
   font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   line-height: 1;
