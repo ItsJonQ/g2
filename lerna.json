@@ -1,6 +1,6 @@
 {
 	"packages": ["packages/*"],
-	"version": "0.0.160-alpha.0",
+	"version": "0.0.160",
 	"npmClient": "yarn",
 	"useWorkspaces": true,
 	"registry": "https://registry.npmjs.org/"
