@@ -1,6 +1,6 @@
 {
   "name": "@wp-g2/context",
-  "version": "0.0.160",
+  "version": "0.0.161",
   "description": "Context system for G2 Components.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -16,9 +16,9 @@
   "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
   "license": "MIT",
   "dependencies": {
-    "@wp-g2/create-styles": "^0.0.160",
-    "@wp-g2/styles": "^0.0.160",
-    "@wp-g2/utils": "^0.0.159",
+    "@wp-g2/create-styles": "^0.0.161",
+    "@wp-g2/styles": "^0.0.161",
+    "@wp-g2/utils": "^0.0.161",
     "lodash": "^4.17.19"
   },
   "peerDependencies": {
