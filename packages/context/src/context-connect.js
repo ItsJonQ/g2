@@ -16,7 +16,7 @@ import { CONNECT_STATIC_NAMESPACE } from './constants';
  * component wrappers.
  *
  * @template {import('@wp-g2/create-styles').ViewOwnProps<{}, any>} P
- * @param {(props: P, ref: import('react').Ref<any>) => JSX.Element} Component The component to register into the Context system.
+ * @param {(props: P, ref: import('react').Ref<any>) => JSX.Element | null} Component The component to register into the Context system.
  * @param {Array<string>|string} namespace The namespace to register the component under.
  * @param {object} options
  * @param {boolean} [options.memo=true]
