@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { contextConnect, useContextSystem } from '@wp-g2/context';
-import { css, cx, getZIndex, reducedMotion, space } from '@wp-g2/styles';
+import { css, cx, getZIndex, reducedMotion, space, ui } from '@wp-g2/styles';
 import React from 'react';
 import { Dialog, DialogBackdrop, useDialogState } from 'reakit';
 
@@ -35,13 +35,13 @@ function BaseModal(props, forwardedRef) {
 	const backdropStyles = css`
 		background: rgba(0, 0, 0, 0.5);
 		bottom: 0;
-		left: 0;
+		${ui.start(0)}
 		opacity: 0;
 		overflow-y: auto;
 		padding: ${space(4)};
 		perspective: 800px;
 		position: fixed;
-		right: 0;
+		${ui.end(0)}
 		top: 0;
 		transition: ${backdropTransition};
 		z-index: ${zIndex || getZIndex('Modal')};
@@ -59,10 +59,9 @@ function BaseModal(props, forwardedRef) {
 
 	const dialogWrapperStyles = css`
 		bottom: ${space(4)};
-		left: ${space(4)};
+		${ui.start(space(4))}
 		position: absolute;
-		right: ${space(4)};
-		top: ${space(4)};
+		${ui.end(space(4))}
 	`;
 
 	const contextProps = {

@@ -66,10 +66,10 @@ exports[`props should render correctly 1`] = `
   display: inline-block;
   vertical-align: middle;
   color: currentColor;
-  margin-left: calc(4px * 1);
-  margin-left: calc(var(--wp-g2-grid-base) * 1);
-  margin-top: calc(4px * -1);
-  margin-top: calc(var(--wp-g2-grid-base) * -1);
+  margin-right: calc(4px * 1);
+  margin-right: calc(var(--wp-g2-grid-base) * 1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {

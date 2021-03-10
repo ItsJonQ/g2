@@ -2,7 +2,7 @@ import { css, ui } from '@wp-g2/styles';
 
 export const BaseField = css`
 	${ui.background.control};
-	${ui.borderRadius.round};
+	${ui.borderRadius.round()};
 	border: 1px solid;
 	border-color: ${ui.get('controlBorderColor')};
 	box-shadow: ${ui.get('controlBoxShadow')};

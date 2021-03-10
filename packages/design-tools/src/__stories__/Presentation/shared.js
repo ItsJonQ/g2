@@ -33,15 +33,19 @@ export const Wrapper = ({ children, title }) => {
 		<>
 			<Surface
 				css={[
-					ui.position.full,
-					ui.position.fixed,
+					ui.position.full(),
+					ui.position.fixed(),
 					ui.zIndex(0),
 					{ pointerEvents: 'none' },
 				]}
 				variant="secondary"
 			/>
 			<Container
-				css={[ui.position.relative, ui.zIndex(1), ui.margin.top('5vh')]}
+				css={[
+					ui.position.relative(),
+					ui.zIndex(1),
+					ui.margin.top('5vh'),
+				]}
 			>
 				<Spacer mb={6}>
 					<Heading>{title}</Heading>

@@ -161,10 +161,10 @@ const ExampleBlock = ({ content, type }) => {
 
 const BlockDragIndexLine = () => {
 	return (
-		<View css={[ui.position.relative]}>
+		<View css={[ui.position.relative()]}>
 			<View
 				css={[
-					ui.position.top,
+					ui.position.top(),
 					ui.borderRadius.round,
 					{
 						height: 3,

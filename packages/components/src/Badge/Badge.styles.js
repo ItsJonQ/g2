@@ -25,7 +25,7 @@ export const text = css`
 `;
 
 export const rounded = css`
-	${ui.borderRadius.circle};
+	${ui.borderRadius.circle()};
 	justify-content: center;
 	min-width: 18px;
 `;

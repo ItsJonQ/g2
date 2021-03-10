@@ -15,6 +15,6 @@ export const DebuggerView = styled.div`
 	white-space: nowrap;
 
 	& + & {
-		margin-left: ${ui.space(0.5)};
+		${ui.margin.start(ui.space(0.5))}
 	}
 `;

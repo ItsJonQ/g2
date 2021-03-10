@@ -283,7 +283,7 @@ exports[`props should render with a border 1`] = `
   height: auto;
   max-width: 100%;
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -532,7 +532,7 @@ exports[`props should render with a custom color 1`] = `
   height: auto;
   max-width: 100%;
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -1174,7 +1174,7 @@ exports[`props should render with an alternate shape 1`] = `
   height: auto;
   max-width: 100%;
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -1553,7 +1553,7 @@ exports[`props should render with animateOnImageLoad disabled 1`] = `
   height: auto;
   max-width: 100%;
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -1801,7 +1801,7 @@ exports[`props should render with image src 1`] = `
   height: auto;
   max-width: 100%;
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;

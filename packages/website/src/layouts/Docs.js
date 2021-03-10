@@ -40,7 +40,7 @@ export default function Layout(props) {
               gap={10}
               templateColumns="220px minmax(0, 1fr) 160px"
             >
-              <View as="aside" css={[ui.position.relative]}>
+              <View as="aside" css={[ui.position.relative()]}>
                 <DocsNavigation path={props.path} />
               </View>
               <View as="main">
@@ -57,7 +57,7 @@ export default function Layout(props) {
                 </View>
                 <SiteFooter />
               </View>
-              <View as="aside" css={[ui.position.relative]}>
+              <View as="aside" css={[ui.position.relative()]}>
                 <DocsTableOfContents headings={headings} />
               </View>
             </Grid>

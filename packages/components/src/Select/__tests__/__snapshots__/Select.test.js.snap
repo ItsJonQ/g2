@@ -19,16 +19,16 @@ exports[`props should render children 1`] = `
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -144,9 +144,10 @@ exports[`props should render children 1`] = `
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
-  padding-right: 24px;
+  padding-right: 8px;
+  padding-left: 30px;
+  padding-left: calc(4px * 24);
+  padding-left: calc(var(--wp-g2-grid-base) * 24);
 }
 
 @media (prefers-reduced-motion) {
@@ -221,7 +222,7 @@ exports[`props should render children 1`] = `
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -398,16 +399,16 @@ exports[`props should render correctly 1`] = `
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -523,9 +524,10 @@ exports[`props should render correctly 1`] = `
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
-  padding-right: 24px;
+  padding-right: 8px;
+  padding-left: 30px;
+  padding-left: calc(4px * 24);
+  padding-left: calc(var(--wp-g2-grid-base) * 24);
 }
 
 @media (prefers-reduced-motion) {
@@ -600,7 +602,7 @@ exports[`props should render correctly 1`] = `
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -778,16 +780,16 @@ exports[`props should render disabled 1`] = `
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -903,9 +905,10 @@ exports[`props should render disabled 1`] = `
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
-  padding-right: 24px;
+  padding-right: 8px;
+  padding-left: 30px;
+  padding-left: calc(4px * 24);
+  padding-left: calc(var(--wp-g2-grid-base) * 24);
 }
 
 @media (prefers-reduced-motion) {
@@ -980,7 +983,7 @@ exports[`props should render disabled 1`] = `
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -1160,16 +1163,16 @@ exports[`props should render readOnly 1`] = `
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1285,9 +1288,10 @@ exports[`props should render readOnly 1`] = `
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
-  padding-right: 24px;
+  padding-right: 8px;
+  padding-left: 30px;
+  padding-left: calc(4px * 24);
+  padding-left: calc(var(--wp-g2-grid-base) * 24);
 }
 
 @media (prefers-reduced-motion) {
@@ -1362,7 +1366,7 @@ exports[`props should render readOnly 1`] = `
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -1541,16 +1545,16 @@ exports[`props should render required 1`] = `
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1666,9 +1670,10 @@ exports[`props should render required 1`] = `
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
-  padding-right: 24px;
+  padding-right: 8px;
+  padding-left: 30px;
+  padding-left: calc(4px * 24);
+  padding-left: calc(var(--wp-g2-grid-base) * 24);
 }
 
 @media (prefers-reduced-motion) {
@@ -1743,7 +1748,7 @@ exports[`props should render required 1`] = `
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -1922,16 +1927,16 @@ exports[`props should render size 1`] = `
   --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -2047,15 +2052,16 @@ exports[`props should render size 1`] = `
   width: 100%;
   font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
-  padding-left: 8px;
-  padding-right: 30px;
+  padding-right: 8px;
+  padding-left: 30px;
   min-height: calc(calc(30px * 0.8) - 2px);
   min-height: calc(var(--wp-g2-control-height-small) - 2px);
   padding-bottom: calc((calc(30px * 0.8) - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height-small) - 2px - 18px) / 2);
   padding-top: calc((calc(30px * 0.8) - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height-small) - 2px - 18px) / 2);
-  padding-right: 24px;
+  padding-left: calc(4px * 24);
+  padding-left: calc(var(--wp-g2-grid-base) * 24);
 }
 
 @media (prefers-reduced-motion) {
@@ -2130,7 +2136,7 @@ exports[`props should render size 1`] = `
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 

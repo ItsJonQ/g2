@@ -256,8 +256,8 @@ exports[`props should render correctly 1`] = `
   width: 20px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: calc(4px * 2);
-  margin-right: calc(var(--wp-g2-grid-base) * 2);
+  margin-left: calc(4px * 2);
+  margin-left: calc(var(--wp-g2-grid-base) * 2);
   position: relative;
   top: -3px;
 }

@@ -7,13 +7,11 @@ export const focus = css`
 `;
 
 export const multiline = css`
-	padding-left: 0;
-	padding-right: 0;
+	${ui.padding.x(0)}
 `;
 
 export const inputMultiline = css`
-	padding-left: 8px;
-	padding-right: 8px;
+	${ui.padding.x('8px')}
 `;
 
 export const inputFontSize = css`

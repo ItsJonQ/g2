@@ -48,7 +48,7 @@ function DropZone({ accept = ItemTypes.DONE, dropName = 'Todos' }) {
 	return (
 		<View
 			css={[
-				ui.position.full,
+				ui.position.full(),
 				ui.alignment.content.center,
 				ui.background.blue,
 				isActive && ui.background.green,
@@ -140,7 +140,10 @@ function Example() {
 				<DraggableProvider>
 					<HStack direction={['column', 'row']}>
 						<VStack
-							css={[{ width: [null, 240] }, ui.position.relative]}
+							css={[
+								{ width: [null, 240] },
+								ui.position.relative(),
+							]}
 						>
 							<Heading>Pending</Heading>
 							<DropZone
@@ -168,7 +171,7 @@ function Example() {
 							</AnimatedContainer>
 						</VStack>
 						<Spacer>
-							<VStack css={[ui.position.relative]}>
+							<VStack css={[ui.position.relative()]}>
 								<Heading>Added</Heading>
 								<DropZone
 									accept={ItemTypes.TODO}

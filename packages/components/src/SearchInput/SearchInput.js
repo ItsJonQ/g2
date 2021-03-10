@@ -94,7 +94,7 @@ const SearchPrefix = React.memo(({ isLoading = false, prefix }) => {
 				css={[
 					ui.alignment.content.center,
 					ui.opacity(0.5),
-					ui.margin.right(-1),
+					ui.margin.end(-1),
 				]}
 			>
 				{isLoading ? (

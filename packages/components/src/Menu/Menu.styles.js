@@ -96,8 +96,7 @@ export const MenuHeader = css`
 	display: flex;
 	min-height: ${ui.get('menuItemHeight')};
 	padding-bottom: ${ui.space(1)};
-	padding-left: ${ui.get('controlPaddingX')};
-	padding-right: ${ui.get('controlPaddingX')};
+	${ui.padding.x(ui.get('controlPaddingX'))}
 	padding-top: ${ui.space(1)};
 `;
 
@@ -110,9 +109,9 @@ export const offset = css`
 `;
 
 export const showArrow = css`
-	${ui.padding.right(1)};
+	${ui.padding.end(1)};
 `;
 
 export const showBackArrow = css`
-	${ui.padding.left(1)};
+	${ui.padding.start(1)};
 `;

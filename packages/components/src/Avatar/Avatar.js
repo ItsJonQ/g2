@@ -55,7 +55,7 @@ function Avatar(props, forwardedRef) {
 	return (
 		<AvatarView {...otherProps} className={classes} ref={forwardedRef}>
 			{shouldRenderInitials && (
-				<View css={css([ui.position.absolute, ui.alignment.center])}>
+				<View css={css([ui.position.absolute(), ui.alignment.center])}>
 					<Initials
 						{...ui.$('AvatarInitials')}
 						align="center"

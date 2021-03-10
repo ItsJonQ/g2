@@ -6,6 +6,7 @@ export * from './styled';
 export * from './hooks';
 export * from './mixins';
 export * from './namespaces';
+export * from './rtl';
 export {
 	config,
 	createTheme,

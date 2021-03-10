@@ -18,7 +18,7 @@ export const TagView = styled.div`
 `;
 
 export const RemoveButtonView = styled.div`
-	margin-right: -4px;
+	${ui.margin.end('-4px')}
 `;
 
 export const text = css`

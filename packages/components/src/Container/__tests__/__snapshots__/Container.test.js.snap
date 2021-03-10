@@ -14,7 +14,7 @@ exports[`props should render alignment 1`] = `
   margin: 0;
   max-width: 1280px;
   width: 100%;
-  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (prefers-reduced-motion) {
@@ -91,7 +91,7 @@ exports[`props should render width 1`] = `
   margin: 0;
   max-width: 960px;
   width: 100%;
-  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (prefers-reduced-motion) {

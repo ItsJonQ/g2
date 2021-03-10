@@ -23,9 +23,6 @@ export function useFlexItem(props) {
 
 	sx.Base = css({
 		display: displayProp || ui.get('FlexItemDisplay'),
-		// marginBottom: ui.get('FlexItemMarginBottom'),
-		// marginLeft: ui.get('FlexItemMarginLeft'),
-		// marginRight: ui.get('FlexItemMarginRight'),
 	});
 
 	const classes = cx(

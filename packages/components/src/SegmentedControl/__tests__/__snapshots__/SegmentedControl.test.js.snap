@@ -81,7 +81,7 @@ exports[`props should render correctly 1`] = `
   box-shadow: var(--wp-g2-segmented-control-backdrop-box-shadow);
   height: calc(30px - 4px);
   height: calc(var(--wp-g2-control-height) - 4px);
-  left: 0;
+  right: 0;
   position: absolute;
   -webkit-transition: all 160ms ease;
   -webkit-transition: all var(--wp-g2-transition-duration-fast) ease;
@@ -225,7 +225,7 @@ exports[`props should render correctly 1`] = `
   margin: 0;
   font-size: 12px;
   font-size: var(--wp-g2-segmented-control-font-size);
-  left: 50%;
+  right: 50%;
   line-height: 1;
   position: absolute;
   top: 50%;
@@ -292,7 +292,7 @@ exports[`props should render correctly 1`] = `
   background: var(--wp-g2-color-divider);
   height: calc(100% - 4px - 4px);
   position: absolute;
-  right: 0;
+  left: 0;
   top: 4px;
   -webkit-transition: background 200ms linear;
   -webkit-transition: background var(--wp-g2-transition-duration) linear;

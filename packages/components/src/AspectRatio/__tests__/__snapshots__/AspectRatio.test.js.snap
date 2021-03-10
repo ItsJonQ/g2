@@ -31,7 +31,7 @@ exports[`props should render correctly 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -112,7 +112,7 @@ exports[`props should render with custom ratio 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -194,7 +194,7 @@ exports[`props should render with custom width 1`] = `
 
 .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
   height: 100%;
-  left: 0;
+  right: 0;
   position: absolute;
   top: 0;
   width: 100%;

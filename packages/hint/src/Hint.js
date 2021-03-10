@@ -104,8 +104,8 @@ export function Hint({
 		<>
 			<Card
 				css={[
-					ui.position.bottomRight,
-					ui.position.fixed,
+					ui.position.bottomEnd(),
+					ui.position.fixed(),
 					ui.zIndex('Hint', 999999),
 					ui.padding(1),
 					ui.offset({ x: -16, y: -16 }),
@@ -115,8 +115,8 @@ export function Hint({
 					css={[
 						ui.background.white,
 						ui.borderRadius.circle,
-						ui.position.topRight,
-						ui.margin.right(-1),
+						ui.position.topEnd(),
+						ui.margin.end(-1),
 						ui.margin.top(-1),
 						{ pointerEvents: 'none', zIndex: 3 },
 						ui.scale(hasIssues ? 1 : 0),

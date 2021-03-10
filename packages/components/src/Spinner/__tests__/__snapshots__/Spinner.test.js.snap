@@ -44,7 +44,7 @@ exports[`props should render color 1`] = `
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 36px;
-  left: 0;
+  right: 0;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -83,7 +83,7 @@ exports[`props should render color 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 54px;
-  left: 50%;
+  right: 50%;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -111,7 +111,7 @@ exports[`props should render color 1`] = `
   background: currentColor;
   border-radius: 50px;
   height: 16%;
-  left: 49%;
+  right: 49%;
   opacity: 0;
   position: absolute;
   top: 43%;
@@ -315,7 +315,7 @@ exports[`props should render correctly 1`] = `
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 36px;
-  left: 0;
+  right: 0;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -354,7 +354,7 @@ exports[`props should render correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 54px;
-  left: 50%;
+  right: 50%;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -382,7 +382,7 @@ exports[`props should render correctly 1`] = `
   background: currentColor;
   border-radius: 50px;
   height: 16%;
-  left: 49%;
+  right: 49%;
   opacity: 0;
   position: absolute;
   top: 43%;
@@ -585,7 +585,7 @@ exports[`props should render size 1`] = `
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 36px;
-  left: 0;
+  right: 0;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -624,7 +624,7 @@ exports[`props should render size 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 54px;
-  left: 50%;
+  right: 50%;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -652,7 +652,7 @@ exports[`props should render size 1`] = `
   background: currentColor;
   border-radius: 50px;
   height: 16%;
-  left: 49%;
+  right: 49%;
   opacity: 0;
   position: absolute;
   top: 43%;

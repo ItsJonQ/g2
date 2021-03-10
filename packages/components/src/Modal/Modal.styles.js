@@ -6,7 +6,7 @@ export const ModalHeader = css`
 
 export const ModalTitle = css`
 	font-weight: 600;
-	left: 50%;
+	${ui.start('50%')}
 	line-height: 1;
 	margin: 0;
 	max-width: 60%;
@@ -17,7 +17,7 @@ export const ModalTitle = css`
 
 export const ModalCloseButtonView = styled.div`
 	position: absolute;
-	right: ${ui.space(2)};
+	${ui.end(ui.space(2))}
 	top: 50%;
 
 	transform: translate(0, -50%);

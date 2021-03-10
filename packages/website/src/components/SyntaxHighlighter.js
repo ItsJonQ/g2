@@ -18,7 +18,7 @@ export function SyntaxHighlighter({
   const language = langProp || matches?.groups?.lang || ""
 
   return (
-    <View className="SyntaxHighlighter" css={[ui.position.relative]}>
+    <View className="SyntaxHighlighter" css={[ui.position.relative()]}>
       {copy && <CopyToClipboardButton value={code} />}
       <Highlight
         {...defaultProps}

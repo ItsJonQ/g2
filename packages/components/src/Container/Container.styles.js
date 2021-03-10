@@ -1,14 +1,13 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const left = css`
-	margin-right: auto;
+	${ui.margin.end('auto')}
 `;
 
 export const right = css`
-	margin-left: auto;
+	${ui.margin.start('auto')}
 `;
 
 export const center = css`
-	margin-left: auto;
-	margin-right: auto;
+	${ui.margin.x('auto')}
 `;

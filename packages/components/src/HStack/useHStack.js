@@ -1,6 +1,7 @@
 import { hasNamespace, useContextSystem } from '@wp-g2/context';
 import { ui } from '@wp-g2/styles';
 import { getValidChildren } from '@wp-g2/utils';
+import { reverse } from 'lodash';
 import React from 'react';
 
 import { FlexItem, useFlex } from '../Flex';
@@ -40,7 +41,7 @@ export function useHStack(props) {
 	const propsForFlex = {
 		className,
 		children: clonedChildren,
-		direction,
+		direction: ui.direction(direction),
 		justify: 'center',
 		...align,
 		...otherProps,

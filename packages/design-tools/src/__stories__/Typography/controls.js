@@ -49,7 +49,7 @@ import {
 	VStack,
 } from '@wp-g2/components';
 import { FiCornerUpLeft } from '@wp-g2/icons';
-import { ui } from '@wp-g2/styles';
+import { ui, css } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 import React from 'react';
 import { Composite, CompositeItem, useCompositeState } from 'reakit';
@@ -926,8 +926,12 @@ export const ColorNavigator = ({ prop = 'backgroundColor' }) => {
 			<Navigator initialPath="Theme">
 				<HStack
 					css={[
-						ui.position.absolute,
-						{ top: 0, right: 4, width: 'auto' },
+						ui.position.absolute(),
+						css`
+							top: 0;
+							${ui.end(4)}
+							width: auto;
+						`,
 						ui.zIndex(10),
 					]}
 				>
@@ -962,7 +966,7 @@ export const ColorNavigatorSelect = ({ prop = 'backgroundColor' }) => {
 					<option label="Core" value="core" />
 				</Select>
 			</FormGroup>
-			<View css={[ui.position.relative, ui.margin.x(-2)]}>
+			<View css={[ui.position.relative(), ui.margin.x(-2)]}>
 				{value === 'theme' && <ThemePalette prop={prop} />}
 				{value === 'core' && <CorePalette prop={prop} />}
 			</View>
@@ -1121,7 +1125,7 @@ export const PanelOverlay = React.memo(() => {
 				ui.borderRadius(8),
 				ui.opacity(visible ? 0.8 : 0),
 				{ cursor: 'pointer', pointerEvents: visible ? null : 'none' },
-				ui.position.full,
+				ui.position.full(),
 				ui.zIndex(1),
 			]}
 			onClick={off}

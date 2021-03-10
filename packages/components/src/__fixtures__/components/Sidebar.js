@@ -51,7 +51,7 @@ export const Sidebar = ({ children }) => {
 		>
 			<View
 				css={[
-					ui.position.fixed,
+					ui.position.fixed(),
 					{ top: 8, left: 8 },
 					ui.frame.width(240),
 				]}

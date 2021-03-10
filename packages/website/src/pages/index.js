@@ -294,10 +294,13 @@ const AccessiblitySection = () => {
         <Surface
           css={[ui.padding(10), { borderRadius: 20, overflow: "hidden" }]}
         >
-          <View aria-hidden css={[ui.position.relative, ui.padding.bottom(20)]}>
+          <View
+            aria-hidden
+            css={[ui.position.relative(), ui.padding.bottom(20)]}
+          >
             <View
               css={[
-                ui.position.bottom,
+                ui.position.bottom(),
                 { right: "50%", transform: "translateX(60%)" },
                 ui.zIndex(3),
               ]}
@@ -434,14 +437,14 @@ const ThemableSection = () => {
       <View
         aria-hidden
         css={[
-          ui.position.relative,
+          ui.position.relative(),
           { overflow: "hidden" },
           ui.frame.height(500),
         ]}
       >
         <View
           css={[
-            ui.position.topLeft,
+            ui.position.topStart(),
             { pointerEvents: "none", userSelect: "none" },
           ]}
         >

@@ -105,9 +105,9 @@ export function DocsNavigation({ path }) {
   }, [])
 
   return (
-    <View css={[ui.position.sticky, { top: 100 }, { marginTop: 20 }]}>
+    <View css={[ui.position.sticky(), { top: 100 }, { marginTop: 20 }]}>
       <Scrollable
-        css={[ui.frame.height("70vh"), ui.padding.right(3)]}
+        css={[ui.frame.height("70vh"), ui.padding.end(3)]}
         ref={scrollableRef}
       >
         {sections.map((section, index) => (

@@ -8,7 +8,7 @@ export const RadioWrapperView = styled.div`
 
 export const Radio = css`
 	${checkboxStyles.Checkbox};
-	${ui.borderRadius.circle};
+	${ui.borderRadius.circle()};
 
 	box-shadow: ${ui.get('radioBoxShadow')};
 	height: ${ui.get('radioSize')};
@@ -17,7 +17,7 @@ export const Radio = css`
 	width: ${ui.get('radioSize')};
 
 	&:checked {
-		${ui.border.control.focus};
+		${ui.border.control.focus()};
 
 		background: transparent;
 	}
@@ -29,7 +29,7 @@ export const RadioIconView = styled.div`
 
 export const RadioDotView = styled.div`
 	${ui.background.admin};
-	${ui.borderRadius.circle};
+	${ui.borderRadius.circle()};
 	height: ${ui.get('radioDotSize')};
 	width: ${ui.get('radioDotSize')};
 `;

@@ -20,16 +20,14 @@ export const Body = css`
 `;
 
 export const InnerBody = css`
-	margin-left: calc(${ui.get('cardPadding')} * -1);
-	margin-right: calc(${ui.get('cardPadding')} * -1);
+	${ui.margin.x(`calc(${ui.get('cardPadding')} * -1)`)}
 `;
 
 export const headerFooter = css`
 	border-color: ${ui.get('colorDivider')};
 	min-height: ${ui.get('cardHeaderHeight')};
 	padding-bottom: ${ui.get('cardHeaderFooterPaddingY')};
-	padding-left: ${ui.get('cardPaddingX')};
-	padding-right: ${ui.get('cardPaddingX')};
+	${ui.padding.x(ui.get('controlPaddingX'))}
 	padding-top: ${ui.get('cardHeaderFooterPaddingY')};
 `;
 

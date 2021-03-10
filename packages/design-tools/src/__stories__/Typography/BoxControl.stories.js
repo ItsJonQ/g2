@@ -36,7 +36,7 @@ const Example = () => {
 	const [showAll, setShowAll] = React.useState(true);
 
 	return (
-		<Container css={[ui.position.relative]} width={320}>
+		<Container css={[ui.position.relative()]} width={320}>
 			<Surface border css={ui.padding(5)}>
 				<FormGroup label="Padding">
 					<HStack alignment="top" spacing={3}>

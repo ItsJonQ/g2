@@ -4,7 +4,7 @@ export const ListView = styled.ul`
 	list-style: disc outside none;
 	margin: 0;
 	padding: 0;
-	padding-left: ${ui.space(4)};
+	${ui.padding.start(ui.space(4))}
 `;
 
 export const ListItemView = styled.li`
@@ -18,5 +18,5 @@ export const ListItemView = styled.li`
 
 export const ordered = css`
 	list-style: decimal outside none;
-	padding-left: ${ui.space(6)};
+	${ui.padding.start(ui.space(6))}
 `;

@@ -31,9 +31,9 @@ export const ColorPickerView = styled.div`
 	.react-colorful__alpha-gradient {
 		content: '';
 		position: absolute;
-		left: 0;
+		${ui.start(0)}
 		top: 0;
-		right: 0;
+		${ui.end(0)}
 		bottom: 0;
 		pointer-events: none;
 		border-radius: inherit;
@@ -71,9 +71,9 @@ export const ColorPickerView = styled.div`
 
 	.react-colorful__interactive {
 		position: absolute;
-		left: 0;
+		${ui.start(0)}
 		top: 0;
-		right: 0;
+		${ui.end(0)}
 		bottom: 0;
 		border-radius: inherit;
 		outline: none;

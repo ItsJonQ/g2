@@ -39,14 +39,14 @@ export const inputHidden = css`
 `;
 
 export const Backdrop = css`
-	${ui.borderRadius.circle};
+	${ui.borderRadius.circle()};
 
 	background: ${ui.get('switchBackdropBackgroundColor')};
 	border: 1px solid ${ui.get('switchBackdropBorderColor')};
 	bottom: ${ui.get('switchPaddingOffset')};
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	display: block;
-	left: 0;
+	${ui.start(0)}
 	pointer-events: none;
 	position: absolute;
 	top: ${ui.get('switchPaddingOffset')};
@@ -70,7 +70,7 @@ export const Toggle = css`
 	box-shadow: ${ui.get('switchToggleBoxShadow')};
 	height: ${getToggleHeight('controlHeight')};
 	pointer-events: none;
-	right: initial;
+	${ui.end('initial')}
 	transform: translate(0, 0);
 	transition: all ${ui.get('transitionDurationFast')} linear;
 	width: ${getToggleHeight('controlHeight')};
@@ -83,8 +83,8 @@ export const Toggle = css`
 
 	input:checked ~ & {
 		background: ${ui.get('switchToggleBackgroundColorActive')};
-		left: initial;
-		right: ${getTogglePositionX()};
+		${ui.start('initial')}
+		${ui.end(getTogglePositionX())}
 	}
 `;
 
@@ -109,7 +109,7 @@ export const toggleSmall = css`
 `;
 
 export const formGroup = css`
-	margin-left: auto;
+	${ui.margin.start('auto')}
 `;
 
 export const backdropError = css`

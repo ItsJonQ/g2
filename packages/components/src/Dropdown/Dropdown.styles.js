@@ -14,8 +14,7 @@ export const DropdownMenu = css`
 	}
 
 	${Divider} {
-		margin-left: ${ui.space(-1)};
-		margin-right: ${ui.space(-1)};
+		${ui.margin.x(ui.space(-1))}
 	}
 `;
 

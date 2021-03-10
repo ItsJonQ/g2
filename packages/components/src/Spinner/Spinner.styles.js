@@ -10,7 +10,7 @@ export const ContainerView = styled.div`
 
 export const BarsWrapperView = styled.div`
 	height: ${ui.value.px(WRAPPER_SIZE)};
-	left: 0;
+	${ui.start(0)}
 	opacity: 0.6;
 	position: absolute;
 	top: 0;
@@ -22,7 +22,7 @@ export const BarsView = styled.div`
 	color: currentColor;
 	display: inline-flex;
 	height: 54px;
-	left: 50%;
+	${ui.start('50%')}
 	padding: 10px;
 	position: absolute;
 	top: 50%;
@@ -34,7 +34,7 @@ export const BarsView = styled.div`
 		background: currentColor;
 		border-radius: 50px;
 		height: 16%;
-		left: 49%;
+		${ui.start('49%')}
 		opacity: 0;
 		position: absolute;
 		top: 43%;

@@ -23,8 +23,7 @@ function HelpTip(props, forwardedRef) {
 				as={as || 'span'}
 				css={css`
 					cursor: pointer;
-					padding-left: ${ui.space(1)};
-					padding-right: ${ui.space(1)};
+					${ui.padding.x(ui.space(1))}
 					vertical-align: middle;
 				`}
 				onClick={handleOnClick}

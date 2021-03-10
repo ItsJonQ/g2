@@ -41,6 +41,7 @@ export function useElevation(props) {
 			bottom: offset,
 			boxShadow: getBoxShadow(value),
 			opacity: ui.get('elevationIntensity'),
+			// no need for RTL support here as both left and right are the same
 			left: offset,
 			right: offset,
 			top: offset,

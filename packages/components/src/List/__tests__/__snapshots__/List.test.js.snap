@@ -15,8 +15,8 @@ exports[`props should render correctly 1`] = `
   list-style: disc outside none;
   margin: 0;
   padding: 0;
-  padding-left: calc(4px * 4);
-  padding-left: calc(var(--wp-g2-grid-base) * 4);
+  padding-right: calc(4px * 4);
+  padding-right: calc(var(--wp-g2-grid-base) * 4);
 }
 
 @media (prefers-reduced-motion) {
@@ -93,11 +93,11 @@ exports[`props should render ordered list 1`] = `
   list-style: disc outside none;
   margin: 0;
   padding: 0;
-  padding-left: calc(4px * 4);
-  padding-left: calc(var(--wp-g2-grid-base) * 4);
+  padding-right: calc(4px * 4);
+  padding-right: calc(var(--wp-g2-grid-base) * 4);
   list-style: decimal outside none;
-  padding-left: calc(4px * 6);
-  padding-left: calc(var(--wp-g2-grid-base) * 6);
+  padding-right: calc(4px * 6);
+  padding-right: calc(var(--wp-g2-grid-base) * 6);
 }
 
 @media (prefers-reduced-motion) {

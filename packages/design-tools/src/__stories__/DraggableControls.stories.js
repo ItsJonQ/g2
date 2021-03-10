@@ -131,7 +131,7 @@ const JoystickControl = ({ circlePositionX, circlePositionY }) => {
 					css={css([
 						ui.alignment.content.center,
 						ui.frame.height('100%'),
-						ui.position.relative,
+						ui.position.relative(),
 						ui.zIndex(2),
 					])}
 				>

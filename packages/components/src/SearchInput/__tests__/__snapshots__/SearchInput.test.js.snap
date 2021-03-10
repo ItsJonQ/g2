@@ -19,16 +19,16 @@ exports[`props should render correctly 1`] = `
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -145,8 +145,8 @@ exports[`props should render correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  margin-right: calc(4px * -1);
-  margin-right: calc(var(--wp-g2-grid-base) * -1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {
@@ -348,16 +348,16 @@ exports[`props should render correctly 1`] = `
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -419,10 +419,10 @@ exports[`props should render correctly 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
-  padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
-  padding-right: var(--wp-g2-button-padding-x);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
   border-color: #007cba;
@@ -789,16 +789,16 @@ exports[`props should render isLoading 1`] = `
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -915,8 +915,8 @@ exports[`props should render isLoading 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  margin-right: calc(4px * -1);
-  margin-right: calc(var(--wp-g2-grid-base) * -1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {
@@ -974,7 +974,7 @@ exports[`props should render isLoading 1`] = `
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 36px;
-  left: 0;
+  right: 0;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -1013,7 +1013,7 @@ exports[`props should render isLoading 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 54px;
-  left: 50%;
+  right: 50%;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -1041,7 +1041,7 @@ exports[`props should render isLoading 1`] = `
   background: currentColor;
   border-radius: 50px;
   height: 16%;
-  left: 49%;
+  right: 49%;
   opacity: 0;
   position: absolute;
   top: 43%;
@@ -1260,16 +1260,16 @@ exports[`props should render isLoading 1`] = `
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1331,10 +1331,10 @@ exports[`props should render isLoading 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
-  padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
-  padding-right: var(--wp-g2-button-padding-x);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
   border-color: #007cba;
@@ -1729,16 +1729,16 @@ exports[`props should render placeholder 1`] = `
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1855,8 +1855,8 @@ exports[`props should render placeholder 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  margin-right: calc(4px * -1);
-  margin-right: calc(var(--wp-g2-grid-base) * -1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {
@@ -2058,16 +2058,16 @@ exports[`props should render placeholder 1`] = `
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2129,10 +2129,10 @@ exports[`props should render placeholder 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
-  padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
-  padding-right: var(--wp-g2-button-padding-x);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
   border-color: #007cba;
@@ -2499,16 +2499,16 @@ exports[`props should render prefix 1`] = `
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -2625,8 +2625,8 @@ exports[`props should render prefix 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  margin-right: calc(4px * -1);
-  margin-right: calc(var(--wp-g2-grid-base) * -1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {
@@ -2828,16 +2828,16 @@ exports[`props should render prefix 1`] = `
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2899,10 +2899,10 @@ exports[`props should render prefix 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
-  padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
-  padding-right: var(--wp-g2-button-padding-x);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
   border-color: #007cba;
@@ -3272,16 +3272,16 @@ exports[`props should render suffix 1`] = `
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -3398,8 +3398,8 @@ exports[`props should render suffix 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  margin-right: calc(4px * -1);
-  margin-right: calc(var(--wp-g2-grid-base) * -1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {
@@ -3601,16 +3601,16 @@ exports[`props should render suffix 1`] = `
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3672,10 +3672,10 @@ exports[`props should render suffix 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
-  padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
-  padding-right: var(--wp-g2-button-padding-x);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
   border-color: #007cba;
@@ -4045,16 +4045,16 @@ exports[`props should render value 1`] = `
   --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -4171,8 +4171,8 @@ exports[`props should render value 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.5;
-  margin-right: calc(4px * -1);
-  margin-right: calc(var(--wp-g2-grid-base) * -1);
+  margin-left: calc(4px * -1);
+  margin-left: calc(var(--wp-g2-grid-base) * -1);
 }
 
 @media (prefers-reduced-motion) {
@@ -4374,16 +4374,16 @@ exports[`props should render value 1`] = `
   --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
-  --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
-  --wp-g2-flex-item-margin-left: 0;
+  --wp-g2-flex-item-margin-right: 0;
+  --wp-g2-flex-item-margin-left: calc(4px * 2);
+  --wp-g2-flex-item-margin-left: var(--wp-g2-flex-gap);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4445,10 +4445,10 @@ exports[`props should render value 1`] = `
   color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
-  padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
-  padding-right: var(--wp-g2-button-padding-x);
+  padding-left: 12px;
+  padding-left: var(--wp-g2-control-padding-x);
+  padding-right: 12px;
+  padding-right: var(--wp-g2-control-padding-x);
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
   border-color: #007cba;

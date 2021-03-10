@@ -57,7 +57,7 @@ export const GlassCard = ({
           padding,
         },
         label && ui.padding.top(7),
-        ui.position.relative,
+        ui.position.relative(),
         css,
       ]}
       elevation={3}
@@ -65,7 +65,7 @@ export const GlassCard = ({
       {label && (
         <View
           css={[
-            ui.position.topLeft,
+            ui.position.topStart(),
             ui.offset({ x: 20, y: 10 }),
             ui.opacity(0.3),
           ]}

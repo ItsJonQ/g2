@@ -24,7 +24,7 @@ export function SiteSearch() {
       }
       visible={visible}
     >
-      <HStack css={[ui.position.top, ui.offset.y(-30)]}>
+      <HStack css={[ui.position.top(), ui.offset.y(-30)]}>
         <Badge isBold truncate={false}>
           Jump Search
         </Badge>

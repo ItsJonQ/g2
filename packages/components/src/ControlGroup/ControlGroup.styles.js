@@ -1,8 +1,7 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const first = css`
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0;
+	${ui.borderRadius.end(0)}
 `;
 
 export const middle = css`
@@ -10,18 +9,17 @@ export const middle = css`
 `;
 
 export const last = css`
-	border-bottom-left-radius: 0;
-	border-top-left-radius: 0;
+	${ui.borderRadius.start(0)}
 `;
 
 export const firstRow = css`
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+	${ui.borderRadius.bottomStart(0)}
+	${ui.borderRadius.bottomEnd(0)}
 `;
 
 export const lastRow = css`
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	${ui.borderRadius.topStart(0)}
+	${ui.borderRadius.topEnd(0)}
 `;
 
 export const itemFocus = css`
@@ -34,7 +32,7 @@ export const itemFocus = css`
 
 export const itemGrid = css`
 	> * + *:not(marquee) {
-		margin-left: -1px;
+		${ui.margin.start('-1px')}
 		width: calc(100% + 1px);
 	}
 `;

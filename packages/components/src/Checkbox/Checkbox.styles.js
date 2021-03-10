@@ -13,8 +13,8 @@ export const CheckboxWrapperView = styled.div`
 `;
 
 export const Checkbox = css`
-	${ui.border.control.subtle};
-	${ui.borderRadius.round};
+	${ui.border.control.subtle()};
+	${ui.borderRadius.round()};
 
 	appearance: none;
 	box-shadow: ${ui.get('checkboxBoxShadow')};
@@ -36,12 +36,12 @@ export const Checkbox = css`
 	}
 
 	&:focus {
-		${ui.border.control.focus};
+		${ui.border.control.focus()};
 	}
 
 	&:checked {
 		${ui.background.admin};
-		${ui.border.control.focus};
+		${ui.border.control.focus()};
 	}
 
 	&:disabled {
@@ -54,11 +54,11 @@ export const CheckboxIcon = css`
 	${ui.alignment.content.center};
 
 	bottom: 0;
-	left: 0;
+	${ui.start(0)}
 	opacity: 0;
 	pointer-events: none;
 	position: absolute;
-	right: 0;
+	${ui.end(0)}
 	top: 0;
 	transition: opacity ${ui.get('transitionDurationFastest')} linear;
 

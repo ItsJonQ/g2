@@ -33,7 +33,7 @@ export function useFlex(props) {
 		...otherProps
 	} = useContextSystem(props, 'Flex');
 
-	const direction = useResponsiveValue(directionProp);
+	const direction = ui.direction(useResponsiveValue(directionProp));
 
 	const isColumn =
 		typeof direction === 'string' && !!direction.includes('column');
@@ -62,33 +62,40 @@ export function useFlex(props) {
 			marginBottom: wrap ? `calc(${ui.space(gap)} * -1)` : null,
 		});
 
-		sx.Items = css({
-			/**
-			 * Workaround to optimize DOM rendering.
-			 * We'll enhance alignment with naive parent flex assumptions.
-			 *
-			 * Trade-off:
-			 * Far less DOM less. However, UI rendering is not as reliable.
-			 */
-			'> * + *:not(marquee)': {
-				marginTop: isColumn ? ui.space(gap) : undefined,
-				marginRight: !isColumn && isReverse ? ui.space(gap) : undefined,
-				marginLeft: !isColumn && !isReverse ? ui.space(gap) : undefined,
-			},
-		});
-
-		sx.WrapItems = css({
-			'> *:not(marquee)': {
-				marginBottom: ui.space(gap),
-				marginLeft: !isColumn && isReverse ? ui.space(gap) : undefined,
-				marginRight:
+		/**
+		 * Workaround to optimize DOM rendering.
+		 * We'll enhance alignment with naive parent flex assumptions.
+		 *
+		 * Trade-off:
+		 * Far less DOM less. However, UI rendering is not as reliable.
+		 */
+		sx.Items = css`
+			> * + *:not(marquee) {
+				margin-top: ${isColumn ? ui.space(gap) : undefined};
+				${ui.margin.end(
+					!isColumn && isReverse ? ui.space(gap) : undefined,
+				)}
+				${ui.margin.start(
 					!isColumn && !isReverse ? ui.space(gap) : undefined,
-			},
-			'> *:last-child:not(marquee)': {
-				marginLeft: !isColumn && isReverse ? 0 : undefined,
-				marginRight: !isColumn && !isReverse ? 0 : undefined,
-			},
-		});
+				)}
+			}
+		`;
+
+		sx.WrapItems = css`
+			> *:not(marquee) {
+				margin-bottom: ui.space(gap);
+				${ui.margin.start(
+					!isColumn && isReverse ? ui.space(gap) : undefined,
+				)}
+				${ui.margin.end(
+					!isColumn && !isReverse ? ui.space(gap) : undefined,
+				)}
+			}
+			> *:last-child:not(marquee) {
+				${ui.margin.start(!isColumn && isReverse ? 0 : undefined)}
+				${ui.margin.end(!isColumn && !isReverse ? 0 : undefined)}
+			}
+		`;
 
 		return cx(
 			styles.Flex,

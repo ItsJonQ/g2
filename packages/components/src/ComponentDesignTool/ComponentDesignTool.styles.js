@@ -1,4 +1,4 @@
-import { css } from '@wp-g2/styles';
+import { css, ui } from '@wp-g2/styles';
 
 export const ElementOutline = css`
 	display: none;
@@ -23,7 +23,7 @@ export const RulerX = css`
 `;
 
 export const RulerY = css`
-	border-left: 1px solid orangered;
+	${ui.border.start('1px solid orangered')}
 	left: 50%;
 	opacity: 0.5;
 	position: absolute;
@@ -87,7 +87,7 @@ export const LabelL = css`
 
 export const LabelR = css`
 	${Label};
-	right: 0;
+	${ui.end(0)}
 	top: 50%;
 	transform: translate(120%, -50%);
 `;
@@ -96,7 +96,7 @@ export const ParentSizeLabel = css`
 	${BaseLabel};
 	background: #7b62ff;
 	bottom: 0;
-	right: 0;
+	${ui.end(0)}
 	transform: translateY(120%);
 	white-space: nowrap;
 `;

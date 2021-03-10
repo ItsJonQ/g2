@@ -9,7 +9,7 @@ export const UnitInputSelect = css`
 
 export const UnitInputSelectUnit = css`
 	${textInputStyles.inputFontSize};
-	${ui.borderRadius.round};
+	${ui.borderRadius.round()};
 
 	border: 1px solid transparent;
 	border-radius: ${ui.get('controlBorderRadius')};
@@ -32,7 +32,7 @@ export const UnitInputSelectElement = css`
 	border: none;
 	cursor: pointer;
 	height: 100%;
-	left: 0;
+	${ui.start(0)}
 	opacity: 0;
 	position: absolute;
 	top: 0;

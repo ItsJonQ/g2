@@ -19,8 +19,7 @@ export const Button = css`
 	min-height: ${ui.get('controlHeight')};
 	outline: none;
 	padding-bottom: ${ui.space(1)};
-	padding-left: ${ui.get('controlPaddingX')};
-	padding-right: ${ui.get('controlPaddingX')};
+	${ui.padding.x(ui.get('controlPaddingX'))}
 	padding-top: ${ui.space(1)};
 	position: relative;
 	text-decoration: none;
@@ -70,7 +69,7 @@ export const block = css`
 `;
 
 export const rounded = css`
-	${ui.borderRadius.circle};
+	${ui.borderRadius.circle()};
 `;
 
 export const large = css`
@@ -138,17 +137,17 @@ export const PrefixSuffix = css`
 `;
 
 export const CaretWrapper = css`
-	margin-left: 0 !important;
+	${ui.margin.start('0 !important')}
 	position: relative;
-	right: ${ui.space(-2)};
+	${ui.end(ui.space(-2))}
 `;
 
 export const LoadingOverlay = css`
 	bottom: 0;
-	left: 0;
+	${ui.start(0)}
 	pointer-events: none;
 	position: absolute;
-	right: 0;
+	${ui.end(0)}
 	top: 0;
 `;
 
@@ -211,8 +210,7 @@ export const subtleControl = css`
 `;
 
 export const narrow = css`
-	padding-left: ${ui.get('controlPaddingX')};
-	padding-right: ${ui.get('controlPaddingX')};
+	${ui.padding.x(ui.get('controlPaddingX'))}
 `;
 
 export const currentColor = css`

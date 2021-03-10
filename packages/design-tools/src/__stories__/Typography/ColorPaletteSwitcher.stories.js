@@ -11,7 +11,7 @@ import {
 	Surface,
 	View,
 } from '@wp-g2/components';
-import { ui } from '@wp-g2/styles';
+import { ui, css } from '@wp-g2/styles';
 import React from 'react';
 
 import { themeColorPaletteStore } from './components';
@@ -56,13 +56,17 @@ const NavigatorButton = ({ icon, ...props }) => {
 
 const Example = () => {
 	return (
-		<Container css={[ui.position.relative]} width={320}>
+		<Container css={[ui.position.relative()]} width={320}>
 			<Surface border>
 				<Navigator initialPath="Theme">
 					<HStack
 						css={[
-							ui.position.absolute,
-							{ top: 0, right: 4, width: 'auto' },
+							ui.position.absolute(),
+							css`
+								top: 0;
+								${ui.end(4)};
+								width: auto;
+							`,
 							ui.zIndex(10),
 						]}
 					>

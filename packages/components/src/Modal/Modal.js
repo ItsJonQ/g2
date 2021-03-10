@@ -32,7 +32,7 @@ function Modal(props, forwardedRef) {
 	`;
 
 	const baseStyles = css`
-		left: 50%;
+		${ui.start('50%')}
 		max-width: 100%;
 		opacity: 0;
 		outline: none;

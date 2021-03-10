@@ -24,7 +24,6 @@ export function createPlugins({
 	skipSupportedBrowsers = isProd,
 }) {
 	return [
-		rtlPlugin,
 		cssVariablesPlugin({ skipSupportedBrowsers, rootStore }),
 		specificityPlugin({ level: specificityLevel, key }),
 		// @ts-ignore styled-griddie imports StylisPlugin from `styled-components` which has different types from the actual one we're using here

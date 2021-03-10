@@ -1,5 +1,5 @@
 import { useContextSystem } from '@wp-g2/context';
-import { css, cx, ui } from '@wp-g2/styles';
+import { cx, ui } from '@wp-g2/styles';
 import { is, noop, useControlledValue, useResizeAware } from '@wp-g2/utils';
 import React from 'react';
 import { useCallback, useRef, useState } from 'react';
@@ -123,9 +123,7 @@ export function useSelect(props) {
 		shouldRenderPlaceholder && styles.placeholder,
 		multiple && ScrollableStyles.scrollableScrollbar,
 		TextInputStyles[size],
-		css({
-			paddingRight: sizes.width || 0 + paddingRight,
-		}),
+		ui.padding.end(sizes.width || 0 + paddingRight),
 	);
 
 	let content = renderContent({ children, options });

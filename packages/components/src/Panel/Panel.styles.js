@@ -33,8 +33,7 @@ export const borderless = css`
 `;
 
 export const seamless = css`
-	padding-left: 0;
-	padding-right: 0;
+	${ui.padding.x(0)}
 `;
 
 export const PanelBodyView = styled.div`

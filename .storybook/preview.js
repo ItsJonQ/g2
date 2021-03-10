@@ -88,9 +88,9 @@ const Themer = React.memo(
 		return (
 			<View
 				css={[
+					ui.start(8),
 					{
 						position: 'fixed',
-						left: 8,
 						bottom: 8,
 					},
 					ui.zIndex('PreviewThemer', 10),
@@ -113,7 +113,7 @@ const Themer = React.memo(
 										<Text
 											variant="muted"
 											isBlock
-											css={ui.padding.left(2)}
+											css={ui.padding.start(2)}
 										>
 											Theme:
 										</Text>

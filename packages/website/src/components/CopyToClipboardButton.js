@@ -14,7 +14,7 @@ export function CopyToClipboardButton({ onClick, value, ...props }) {
   return (
     <View
       className="LiveEditorCopyButtonWrapper"
-      css={[ui.position.topRight, ui.offset(-8, 8), { zIndex: 5 }]}
+      css={[ui.position.topEnd(), ui.offset(-8, 8), { zIndex: 5 }]}
     >
       <Button onClick={handleOnClick} size="small" variant="primary" {...props}>
         {hasCopied ? "Copied!" : "Copy"}

@@ -191,7 +191,7 @@ const ColorSetting = ({
 
 	return (
 		<Collapsible
-			css={[ui.position.relative, ui.zIndex(visible ? 10 : 0)]}
+			css={[ui.position.relative(), ui.zIndex(visible ? 10 : 0)]}
 			onVisibleChange={handleOnVisibleChange}
 			visible={visible}
 		>
@@ -273,14 +273,14 @@ const Example = () => {
 			</View>
 
 			<Container
-				css={[ui.position.relative, { minHeight: '80vh' }]}
+				css={[ui.position.relative(), { minHeight: '80vh' }]}
 				width={270}
 			>
 				<Surface
 					css={[
 						ui.opacity(visible ? 0.8 : 0),
 						{ pointerEvents: visible ? null : 'none' },
-						ui.position.full,
+						ui.position.full(),
 						ui.zIndex(1),
 						{ minHeight: '80vh' },
 					]}

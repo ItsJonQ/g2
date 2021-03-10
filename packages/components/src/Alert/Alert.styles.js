@@ -9,7 +9,7 @@ export const AlertView = styled.div`
 `;
 
 export const CloseButtonWrapper = styled.div`
-	margin-right: ${ui.space(-1)};
+	${ui.margin.end(ui.space(-1))}
 	margin-top: ${ui.space(-1)};
 `;
 

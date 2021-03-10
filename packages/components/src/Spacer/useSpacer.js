@@ -1,5 +1,5 @@
 import { useContextSystem } from '@wp-g2/context';
-import { css, cx, space } from '@wp-g2/styles';
+import { css, cx, space, ui } from '@wp-g2/styles';
 import { is } from '@wp-g2/utils';
 
 export function useSpacer(props) {
@@ -33,16 +33,15 @@ export function useSpacer(props) {
 			`,
 		is.defined(ml) &&
 			css`
-				margin-left: ${space(ml)};
+				${ui.margin.start(space(ml))}
 			`,
 		is.defined(mr) &&
 			css`
-				margin-right: ${space(mr)};
+				${ui.margin.end(space(mr))}
 			`,
 		is.defined(mx) &&
 			css`
-				margin-left: ${space(mx)};
-				margin-right: ${space(mx)};
+				${ui.margin.x(space(mx))}
 			`,
 		is.defined(my) &&
 			css`
@@ -63,16 +62,15 @@ export function useSpacer(props) {
 			`,
 		is.defined(pl) &&
 			css`
-				padding-left: ${space(pl)};
+				${ui.padding.start(space(pl))}
 			`,
 		is.defined(pr) &&
 			css`
-				padding-right: ${space(pr)};
+				${ui.padding.end(space(pr))}
 			`,
 		is.defined(px) &&
 			css`
-				padding-left: ${space(px)};
-				padding-right: ${space(px)};
+				${ui.padding.x(space(px))}
 			`,
 		is.defined(py) &&
 			css`

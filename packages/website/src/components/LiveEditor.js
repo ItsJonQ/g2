@@ -85,7 +85,7 @@ export function LiveCodeEditor({ children, file = "example.js" }) {
               </ComponentInspector>
             </CardBody>
           </Card>
-          <Card css={[ui.position.relative]}>
+          <Card css={[ui.position.relative()]}>
             <CopyToClipboardButton value={code} />
             <VisuallyHidden>
               <Text as="label" htmlFor={id}>

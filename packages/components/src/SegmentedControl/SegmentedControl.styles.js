@@ -35,7 +35,7 @@ export const BackdropView = styled.div`
 	border-radius: ${ui.get('controlBorderRadius')};
 	box-shadow: ${ui.get('segmentedControlBackdropBoxShadow')};
 	height: calc(${ui.get('controlHeight')} - 4px);
-	left: 0;
+	${ui.start(0)}
 	position: absolute;
 	transition: all ${ui.get('transitionDurationFast')} ease;
 	z-index: 1;
@@ -86,7 +86,7 @@ export const ButtonView = styled.button`
 
 export const ButtonContentView = styled.div`
 	font-size: ${ui.get('segmentedControlFontSize')};
-	left: 50%;
+	${ui.start('50%')}
 	line-height: 1;
 	position: absolute;
 	top: 50%;
@@ -102,7 +102,7 @@ export const SeparatorView = styled.div`
 	background: ${ui.get('colorDivider')};
 	height: calc(100% - 4px - 4px);
 	position: absolute;
-	right: 0;
+	${ui.end(0)}
 	top: 4px;
 	transition: background ${ui.get('transitionDuration')} linear;
 	width: 1px;

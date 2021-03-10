@@ -130,7 +130,7 @@ const Example = () => {
 	return (
 		<>
 			<Container
-				css={css([ui.position.relative, ui.zIndex(2)])}
+				css={css([ui.position.relative(), ui.zIndex(2)])}
 				width={600}
 			>
 				<VStack>

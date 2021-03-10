@@ -9,8 +9,8 @@ export const base = css`
 `;
 
 export const select = css`
-	padding-left: 8px;
-	padding-right: 30px;
+	${ui.padding.start('8px')}
+	${ui.padding.end('30px')}
 `;
 
 export const ArrowWrapperView = styled(FlexItem)`
@@ -21,7 +21,7 @@ export const ArrowWrapperView = styled(FlexItem)`
 	padding: 0 5px;
 	pointer-events: none;
 	position: absolute;
-	right: 0;
+	${ui.end(0)}
 	top: 0;
 `;
 
@@ -30,11 +30,11 @@ export const placeholder = css`
 `;
 
 export const arrowPadding = css`
-	padding-right: ${ui.value.px(ARROW_WRAPPER_WIDTH)};
+	${ui.padding.end(ui.value.px(ARROW_WRAPPER_WIDTH))}
 `;
 
 export const Suffix = css`
 	pointer-events: none;
 	position: absolute;
-	right: 0;
+	${ui.end(0)}
 `;

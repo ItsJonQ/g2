@@ -42,7 +42,7 @@ export const TabIndicatorView = styled.div`
 	background: ${ui.color.admin};
 	bottom: -1px;
 	height: 2px;
-	left: 0;
+	${ui.start(0)}
 	position: absolute;
 	transition: all ${ui.get('transitionDuration')} ease;
 	z-index: 1;

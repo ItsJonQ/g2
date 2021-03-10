@@ -362,7 +362,10 @@ const GlobalStylesHeader = (props) => {
 					</NavigatorLink>
 				)}
 			</View>
-			<Heading css={[ui.position.bottom, ui.offset({ y: -12 })]} size={5}>
+			<Heading
+				css={[ui.position.bottom(), ui.offset({ y: -12 })]}
+				size={5}
+			>
 				{title}
 			</Heading>
 		</Surface>

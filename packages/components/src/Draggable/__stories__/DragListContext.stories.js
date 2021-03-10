@@ -31,11 +31,11 @@ const blockSchema = new Schema(() => ({
 
 const BlockDragIndexLine = () => {
 	return (
-		<View css={[ui.position.relative]}>
+		<View css={[ui.position.relative()]}>
 			<View
 				css={[
-					ui.position.top,
-					ui.borderRadius.round,
+					ui.position.top(),
+					ui.borderRadius.round(),
 					{
 						height: 3,
 						width: '100%',

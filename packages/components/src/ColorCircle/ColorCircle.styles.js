@@ -1,7 +1,7 @@
 import { css, styled, ui } from '@wp-g2/styles';
 
 export const ColorCircleView = styled.div`
-	${ui.borderRadius.circle};
+	${ui.borderRadius.circle()};
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 	outline: none;
 	position: relative;
@@ -29,11 +29,11 @@ export const interactive = css`
 	cursor: pointer;
 
 	&::before {
-		${ui.borderRadius.circle};
+		${ui.borderRadius.circle()};
 		border: 2px solid ${ui.color.admin};
 		content: '';
 		height: calc(100% + 8px);
-		left: -4px;
+		${ui.start('-4px')}
 		position: absolute;
 		top: -4px;
 		width: calc(100% + 8px);
@@ -67,12 +67,11 @@ export const CheckboxIconView = styled.div`
 	${ui.alignment.content.center};
 	bottom: 0;
 
-	left: 0;
+	${ui.start(0)}
 	opacity: 0;
 	pointer-events: none;
 	position: absolute;
-	right: 0;
-	top: 0;
+	${ui.end(0)}
 	transition: opacity ${ui.get('transitionDurationFastest')} linear;
 
 	[data-active='true'] > & {

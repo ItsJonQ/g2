@@ -121,8 +121,8 @@ exports[`props should render marginLeft 1`] = `
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
-  margin-left: calc(4px * 5);
-  margin-left: calc(var(--wp-g2-grid-base) * 5);
+  margin-right: calc(4px * 5);
+  margin-right: calc(var(--wp-g2-grid-base) * 5);
 }
 
 @media (prefers-reduced-motion) {
@@ -158,8 +158,8 @@ exports[`props should render marginRight 1`] = `
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
-  margin-right: calc(4px * 5);
-  margin-right: calc(var(--wp-g2-grid-base) * 5);
+  margin-left: calc(4px * 5);
+  margin-left: calc(var(--wp-g2-grid-base) * 5);
 }
 
 @media (prefers-reduced-motion) {
@@ -384,8 +384,8 @@ exports[`props should render paddingLeft 1`] = `
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
-  padding-left: calc(4px * 5);
-  padding-left: calc(var(--wp-g2-grid-base) * 5);
+  padding-right: calc(4px * 5);
+  padding-right: calc(var(--wp-g2-grid-base) * 5);
 }
 
 @media (prefers-reduced-motion) {
@@ -421,8 +421,8 @@ exports[`props should render paddingRight 1`] = `
   margin: 0;
   margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
-  padding-right: calc(4px * 5);
-  padding-right: calc(var(--wp-g2-grid-base) * 5);
+  padding-left: calc(4px * 5);
+  padding-left: calc(var(--wp-g2-grid-base) * 5);
 }
 
 @media (prefers-reduced-motion) {
