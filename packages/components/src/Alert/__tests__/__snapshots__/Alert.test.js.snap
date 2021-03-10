@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render as dismissable 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -15,18 +15,18 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -51,23 +51,23 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-[data-system-ui-color-blind-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-color-blind-mode="true"] .emotion-1 {
   background-image: repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(70, 180, 80, 0.1) 10px,rgba(70, 180, 80, 0.1) 20px);
   background-image: repeating-linear-gradient(45deg,transparent,transparent 10px,var(--wp-g2-color-background-green) 10px,var(--wp-g2-color-background-green) 20px);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -103,27 +103,27 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
+.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+.emotion-2>* {
   min-width: 0;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -146,18 +146,18 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -173,18 +173,18 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -204,18 +204,18 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -323,74 +323,74 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
+.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+.emotion-6>* {
   min-width: 0;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+.emotion-6 svg {
   display: block;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+.emotion-6:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-tertiary-border-color-hover);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+.emotion-6:focus,
+.emotion-6[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color-focus);
   border-color: #007cba;
@@ -399,7 +399,7 @@ exports[`props should render as dismissable 1`] = `
   color: var(--wp-g2-button-tertiary-text-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-tertiary-color-active);
   border-color: #007cba;
@@ -408,42 +408,42 @@ exports[`props should render as dismissable 1`] = `
   color: var(--wp-g2-button-tertiary-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+.emotion-6[data-destructive='true'] {
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:hover,
+.emotion-6[data-destructive='true']:focus {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+.emotion-6[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   border-color: transparent;
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   border-color: #007cba;
   border-color: var(--wp-g2-button-primary-border-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   color: currentColor;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -464,18 +464,18 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -483,7 +483,7 @@ exports[`props should render as dismissable 1`] = `
   user-select: none;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -506,22 +506,22 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -553,13 +553,13 @@ exports[`props should render as dismissable 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -645,7 +645,7 @@ exports[`props should render as dismissable 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -659,18 +659,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -693,18 +693,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -740,27 +740,27 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
+.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+.emotion-2>* {
   min-width: 0;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -783,13 +783,13 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -828,7 +828,7 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render with status 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -842,18 +842,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -878,24 +878,24 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-[data-system-ui-color-blind-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-color-blind-mode="true"] .emotion-2 {
   background-image: linear-gradient(45deg,rgba(255, 185, 0, 0.1) 25%,transparent 25%,transparent 75%,rgba(255, 185, 0, 0.1) 75%,rgba(255, 185, 0, 0.1), linear-gradient(-45deg,rgba(255, 185, 0, 0.1) 25%,transparent 25%,transparent 75%,rgba(255, 185, 0, 0.1) 75%,rgba(255, 185, 0, 0.1)));
   background-image: linear-gradient(45deg,var(--wp-g2-yellow-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-yellow-rgba-10) 75%,var(--wp-g2-yellow-rgba-10)),linear-gradient(-45deg,var(--wp-g2-yellow-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-yellow-rgba-10) 75%,var(--wp-g2-yellow-rgba-10));
   background-size: 10px 10px;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -931,27 +931,27 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>*+*:not(marquee) {
+.emotion-3>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3>* {
+.emotion-3>* {
   min-width: 0;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -974,18 +974,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1001,18 +1001,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1032,18 +1032,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1151,74 +1151,74 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
+.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+.emotion-7>* {
   min-width: 0;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:hover,
+.emotion-7:active,
+.emotion-7:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[disabled]:not([aria-busy='true']),
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-7[disabled]:not([aria-busy='true']),
+.emotion-7[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:focus {
+.emotion-7[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-icon='true'] {
+.emotion-7[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active {
+.emotion-7:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover {
+.emotion-7:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-tertiary-border-color-hover);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-focused='true'] {
+.emotion-7:focus,
+.emotion-7[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-tertiary-color-focus);
   border-color: #007cba;
@@ -1227,7 +1227,7 @@ exports[`props should render with status 1`] = `
   color: var(--wp-g2-button-tertiary-text-color-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active {
+.emotion-7:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-tertiary-color-active);
   border-color: #007cba;
@@ -1236,42 +1236,42 @@ exports[`props should render with status 1`] = `
   color: var(--wp-g2-button-tertiary-text-color-active);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true'] {
+.emotion-7[data-destructive='true'] {
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:hover,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:focus {
+.emotion-7[data-destructive='true']:hover,
+.emotion-7[data-destructive='true']:focus {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:active {
+.emotion-7[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:hover,
+.emotion-7:active,
+.emotion-7:focus {
   border-color: transparent;
   border-color: var(--wp-g2-control-border-color-subtle);
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:focus {
   border-color: #007cba;
   border-color: var(--wp-g2-button-primary-border-color-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   color: currentColor;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1292,18 +1292,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1311,7 +1311,7 @@ exports[`props should render with status 1`] = `
   user-select: none;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1334,22 +1334,22 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 svg {
+.emotion-9 svg {
   display: block;
 }
 
-.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10 {
+.emotion-10 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1381,18 +1381,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10 {
+  .emotion-10 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-10 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+.emotion-12 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1417,23 +1417,23 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+  .emotion-12 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-12 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-[data-system-ui-color-blind-mode="true"] .emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12.emotion-12 {
+[data-system-ui-color-blind-mode="true"] .emotion-12 {
   background-image: repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(70, 180, 80, 0.1) 10px,rgba(70, 180, 80, 0.1) 20px);
   background-image: repeating-linear-gradient(45deg,transparent,transparent 10px,var(--wp-g2-color-background-green) 10px,var(--wp-g2-color-background-green) 20px);
 }
 
-.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16 {
+.emotion-16 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1453,18 +1453,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-16.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16 {
+  .emotion-16 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-16.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16.emotion-16 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-16 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22 {
+.emotion-22 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1489,24 +1489,24 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22 {
+  .emotion-22 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-22 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-[data-system-ui-color-blind-mode="true"] .emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22.emotion-22 {
+[data-system-ui-color-blind-mode="true"] .emotion-22 {
   background-image: linear-gradient(45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1), linear-gradient(-45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1)));
   background-image: linear-gradient(45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10)),linear-gradient(-45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10));
   background-size: 10px 10px;
 }
 
-.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26 {
+.emotion-26 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1526,18 +1526,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-26.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26 {
+  .emotion-26 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-26.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26.emotion-26 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-26 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32 {
+.emotion-32 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1562,18 +1562,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-32.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32 {
+  .emotion-32 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-32.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32.emotion-32 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-32 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36 {
+.emotion-36 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1593,18 +1593,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-36.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36 {
+  .emotion-36 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-36.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36.emotion-36 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-36 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42 {
+.emotion-42 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1627,18 +1627,18 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-42.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42 {
+  .emotion-42 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-42.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42.emotion-42 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-42 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46 {
+.emotion-46 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1658,13 +1658,13 @@ exports[`props should render with status 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-46.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46 {
+  .emotion-46 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-46.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46.emotion-46 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-46 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -2067,7 +2067,7 @@ exports[`props should render with status 1`] = `
 `;
 
 exports[`props should render with title 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2081,18 +2081,18 @@ exports[`props should render with title 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2115,18 +2115,18 @@ exports[`props should render with title 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2162,27 +2162,27 @@ exports[`props should render with title 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>*+*:not(marquee) {
+.emotion-2>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>* {
+.emotion-2>* {
   min-width: 0;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2205,18 +2205,18 @@ exports[`props should render with title 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2232,18 +2232,18 @@ exports[`props should render with title 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2268,13 +2268,13 @@ exports[`props should render with title 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render color 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -21,18 +21,18 @@ exports[`props should render color 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -55,18 +55,18 @@ exports[`props should render color 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -94,18 +94,18 @@ exports[`props should render color 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>div {
+.emotion-2>div {
   -webkit-animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   background: currentColor;
@@ -118,7 +118,7 @@ exports[`props should render color 1`] = `
   width: 6%;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar1 {
+.emotion-2 .InnerBar1 {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
   -webkit-transform: rotate(0deg) translate(0,-130%);
@@ -126,7 +126,7 @@ exports[`props should render color 1`] = `
   transform: rotate(0deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar2 {
+.emotion-2 .InnerBar2 {
   -webkit-animation-delay: -0.9167s;
   animation-delay: -0.9167s;
   -webkit-transform: rotate(30deg) translate(0,-130%);
@@ -134,7 +134,7 @@ exports[`props should render color 1`] = `
   transform: rotate(30deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar3 {
+.emotion-2 .InnerBar3 {
   -webkit-animation-delay: -0.833s;
   animation-delay: -0.833s;
   -webkit-transform: rotate(60deg) translate(0,-130%);
@@ -142,7 +142,7 @@ exports[`props should render color 1`] = `
   transform: rotate(60deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar4 {
+.emotion-2 .InnerBar4 {
   -webkit-animation-delay: -0.7497s;
   animation-delay: -0.7497s;
   -webkit-transform: rotate(90deg) translate(0,-130%);
@@ -150,7 +150,7 @@ exports[`props should render color 1`] = `
   transform: rotate(90deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar5 {
+.emotion-2 .InnerBar5 {
   -webkit-animation-delay: -0.667s;
   animation-delay: -0.667s;
   -webkit-transform: rotate(120deg) translate(0,-130%);
@@ -158,7 +158,7 @@ exports[`props should render color 1`] = `
   transform: rotate(120deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar6 {
+.emotion-2 .InnerBar6 {
   -webkit-animation-delay: -0.5837s;
   animation-delay: -0.5837s;
   -webkit-transform: rotate(150deg) translate(0,-130%);
@@ -166,7 +166,7 @@ exports[`props should render color 1`] = `
   transform: rotate(150deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar7 {
+.emotion-2 .InnerBar7 {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
   -webkit-transform: rotate(180deg) translate(0,-130%);
@@ -174,7 +174,7 @@ exports[`props should render color 1`] = `
   transform: rotate(180deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar8 {
+.emotion-2 .InnerBar8 {
   -webkit-animation-delay: -0.4167s;
   animation-delay: -0.4167s;
   -webkit-transform: rotate(210deg) translate(0,-130%);
@@ -182,7 +182,7 @@ exports[`props should render color 1`] = `
   transform: rotate(210deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar9 {
+.emotion-2 .InnerBar9 {
   -webkit-animation-delay: -0.333s;
   animation-delay: -0.333s;
   -webkit-transform: rotate(240deg) translate(0,-130%);
@@ -190,7 +190,7 @@ exports[`props should render color 1`] = `
   transform: rotate(240deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar10 {
+.emotion-2 .InnerBar10 {
   -webkit-animation-delay: -0.2497s;
   animation-delay: -0.2497s;
   -webkit-transform: rotate(270deg) translate(0,-130%);
@@ -198,7 +198,7 @@ exports[`props should render color 1`] = `
   transform: rotate(270deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar11 {
+.emotion-2 .InnerBar11 {
   -webkit-animation-delay: -0.167s;
   animation-delay: -0.167s;
   -webkit-transform: rotate(300deg) translate(0,-130%);
@@ -206,7 +206,7 @@ exports[`props should render color 1`] = `
   transform: rotate(300deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar12 {
+.emotion-2 .InnerBar12 {
   -webkit-animation-delay: -0.0833s;
   animation-delay: -0.0833s;
   -webkit-transform: rotate(330deg) translate(0,-130%);
@@ -272,7 +272,7 @@ exports[`props should render color 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -292,18 +292,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -326,18 +326,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -365,18 +365,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>div {
+.emotion-2>div {
   -webkit-animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   background: currentColor;
@@ -389,7 +389,7 @@ exports[`props should render correctly 1`] = `
   width: 6%;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar1 {
+.emotion-2 .InnerBar1 {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
   -webkit-transform: rotate(0deg) translate(0,-130%);
@@ -397,7 +397,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(0deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar2 {
+.emotion-2 .InnerBar2 {
   -webkit-animation-delay: -0.9167s;
   animation-delay: -0.9167s;
   -webkit-transform: rotate(30deg) translate(0,-130%);
@@ -405,7 +405,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(30deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar3 {
+.emotion-2 .InnerBar3 {
   -webkit-animation-delay: -0.833s;
   animation-delay: -0.833s;
   -webkit-transform: rotate(60deg) translate(0,-130%);
@@ -413,7 +413,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(60deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar4 {
+.emotion-2 .InnerBar4 {
   -webkit-animation-delay: -0.7497s;
   animation-delay: -0.7497s;
   -webkit-transform: rotate(90deg) translate(0,-130%);
@@ -421,7 +421,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(90deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar5 {
+.emotion-2 .InnerBar5 {
   -webkit-animation-delay: -0.667s;
   animation-delay: -0.667s;
   -webkit-transform: rotate(120deg) translate(0,-130%);
@@ -429,7 +429,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(120deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar6 {
+.emotion-2 .InnerBar6 {
   -webkit-animation-delay: -0.5837s;
   animation-delay: -0.5837s;
   -webkit-transform: rotate(150deg) translate(0,-130%);
@@ -437,7 +437,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(150deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar7 {
+.emotion-2 .InnerBar7 {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
   -webkit-transform: rotate(180deg) translate(0,-130%);
@@ -445,7 +445,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(180deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar8 {
+.emotion-2 .InnerBar8 {
   -webkit-animation-delay: -0.4167s;
   animation-delay: -0.4167s;
   -webkit-transform: rotate(210deg) translate(0,-130%);
@@ -453,7 +453,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(210deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar9 {
+.emotion-2 .InnerBar9 {
   -webkit-animation-delay: -0.333s;
   animation-delay: -0.333s;
   -webkit-transform: rotate(240deg) translate(0,-130%);
@@ -461,7 +461,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(240deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar10 {
+.emotion-2 .InnerBar10 {
   -webkit-animation-delay: -0.2497s;
   animation-delay: -0.2497s;
   -webkit-transform: rotate(270deg) translate(0,-130%);
@@ -469,7 +469,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(270deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar11 {
+.emotion-2 .InnerBar11 {
   -webkit-animation-delay: -0.167s;
   animation-delay: -0.167s;
   -webkit-transform: rotate(300deg) translate(0,-130%);
@@ -477,7 +477,7 @@ exports[`props should render correctly 1`] = `
   transform: rotate(300deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar12 {
+.emotion-2 .InnerBar12 {
   -webkit-animation-delay: -0.0833s;
   animation-delay: -0.0833s;
   -webkit-transform: rotate(330deg) translate(0,-130%);
@@ -542,7 +542,7 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render size 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -562,18 +562,18 @@ exports[`props should render size 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -596,18 +596,18 @@ exports[`props should render size 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -635,18 +635,18 @@ exports[`props should render size 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2>div {
+.emotion-2>div {
   -webkit-animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   background: currentColor;
@@ -659,7 +659,7 @@ exports[`props should render size 1`] = `
   width: 6%;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar1 {
+.emotion-2 .InnerBar1 {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
   -webkit-transform: rotate(0deg) translate(0,-130%);
@@ -667,7 +667,7 @@ exports[`props should render size 1`] = `
   transform: rotate(0deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar2 {
+.emotion-2 .InnerBar2 {
   -webkit-animation-delay: -0.9167s;
   animation-delay: -0.9167s;
   -webkit-transform: rotate(30deg) translate(0,-130%);
@@ -675,7 +675,7 @@ exports[`props should render size 1`] = `
   transform: rotate(30deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar3 {
+.emotion-2 .InnerBar3 {
   -webkit-animation-delay: -0.833s;
   animation-delay: -0.833s;
   -webkit-transform: rotate(60deg) translate(0,-130%);
@@ -683,7 +683,7 @@ exports[`props should render size 1`] = `
   transform: rotate(60deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar4 {
+.emotion-2 .InnerBar4 {
   -webkit-animation-delay: -0.7497s;
   animation-delay: -0.7497s;
   -webkit-transform: rotate(90deg) translate(0,-130%);
@@ -691,7 +691,7 @@ exports[`props should render size 1`] = `
   transform: rotate(90deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar5 {
+.emotion-2 .InnerBar5 {
   -webkit-animation-delay: -0.667s;
   animation-delay: -0.667s;
   -webkit-transform: rotate(120deg) translate(0,-130%);
@@ -699,7 +699,7 @@ exports[`props should render size 1`] = `
   transform: rotate(120deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar6 {
+.emotion-2 .InnerBar6 {
   -webkit-animation-delay: -0.5837s;
   animation-delay: -0.5837s;
   -webkit-transform: rotate(150deg) translate(0,-130%);
@@ -707,7 +707,7 @@ exports[`props should render size 1`] = `
   transform: rotate(150deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar7 {
+.emotion-2 .InnerBar7 {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
   -webkit-transform: rotate(180deg) translate(0,-130%);
@@ -715,7 +715,7 @@ exports[`props should render size 1`] = `
   transform: rotate(180deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar8 {
+.emotion-2 .InnerBar8 {
   -webkit-animation-delay: -0.4167s;
   animation-delay: -0.4167s;
   -webkit-transform: rotate(210deg) translate(0,-130%);
@@ -723,7 +723,7 @@ exports[`props should render size 1`] = `
   transform: rotate(210deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar9 {
+.emotion-2 .InnerBar9 {
   -webkit-animation-delay: -0.333s;
   animation-delay: -0.333s;
   -webkit-transform: rotate(240deg) translate(0,-130%);
@@ -731,7 +731,7 @@ exports[`props should render size 1`] = `
   transform: rotate(240deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar10 {
+.emotion-2 .InnerBar10 {
   -webkit-animation-delay: -0.2497s;
   animation-delay: -0.2497s;
   -webkit-transform: rotate(270deg) translate(0,-130%);
@@ -739,7 +739,7 @@ exports[`props should render size 1`] = `
   transform: rotate(270deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar11 {
+.emotion-2 .InnerBar11 {
   -webkit-animation-delay: -0.167s;
   animation-delay: -0.167s;
   -webkit-transform: rotate(300deg) translate(0,-130%);
@@ -747,7 +747,7 @@ exports[`props should render size 1`] = `
   transform: rotate(300deg) translate(0,-130%);
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 .InnerBar12 {
+.emotion-2 .InnerBar12 {
   -webkit-animation-delay: -0.0833s;
   animation-delay: -0.0833s;
   -webkit-transform: rotate(330deg) translate(0,-130%);

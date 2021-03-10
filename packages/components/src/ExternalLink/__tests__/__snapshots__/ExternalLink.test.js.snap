@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -27,23 +27,23 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   color: #007cba;
   color: var(--wp-g2-link-color-hover);
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -73,18 +73,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 svg {
+.emotion-1 svg {
   display: block;
 }
 
