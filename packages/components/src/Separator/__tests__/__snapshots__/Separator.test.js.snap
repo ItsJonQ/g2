@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
@@ -24,7 +24,7 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render margin 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
@@ -47,7 +47,7 @@ exports[`props should render margin 1`] = `
 `;
 
 exports[`props should render marginBottom 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
@@ -70,7 +70,7 @@ exports[`props should render marginBottom 1`] = `
 `;
 
 exports[`props should render marginTop 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;

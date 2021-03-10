@@ -18,7 +18,7 @@ const isProd = process.env.NODE_ENV === 'production';
  * @return {import('@emotion/stylis').Plugin[]}
  */
 export function createPlugins({
-	specificityLevel = 7,
+	specificityLevel = 1,
 	key = 'css',
 	rootStore,
 	skipSupportedBrowsers = isProd,

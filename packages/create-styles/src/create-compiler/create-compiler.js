@@ -9,7 +9,7 @@ import { breakpoints, generateInterpolationName } from './utils';
 
 const defaultOptions = {
 	key: 'css',
-	specificityLevel: 7,
+	specificityLevel: 1,
 	rootStore: new RootStore(),
 };
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`props should render correctly 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -65,63 +65,63 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0>* {
   min-width: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0:focus,
+.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
+.emotion-0 input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-reveal {
+.emotion-0 input[type='search']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search'] ::-webkit-search-decoration,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-cancel-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-decoration {
+.emotion-0 input[type='search'] ::-webkit-search-decoration,
+.emotion-0 input[type='search']::-webkit-search-cancel-button,
+.emotion-0 input[type='search']::-webkit-search-results-button,
+.emotion-0 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -150,18 +150,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -183,18 +183,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -217,22 +217,22 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
+.emotion-3 svg {
   display: block;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -275,35 +275,35 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
 @media (min-width:36em) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-outer-spin-button,
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-inner-spin-button {
+.emotion-4::-webkit-outer-spin-button,
+.emotion-4::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4[type='number'] {
+.emotion-4[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -319,18 +319,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -440,74 +440,74 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
+.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+.emotion-6>* {
   min-width: 0;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+.emotion-6 svg {
   display: block;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+.emotion-6:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+.emotion-6:focus,
+.emotion-6[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
   border-color: #007cba;
@@ -516,7 +516,7 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
   border-color: #007cba;
@@ -525,34 +525,34 @@ exports[`props should render correctly 1`] = `
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+.emotion-6[data-destructive='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'][data-focused='true'] {
+.emotion-6[data-destructive='true']:hover,
+.emotion-6[data-destructive='true']:active,
+.emotion-6[data-destructive='true']:focus,
+.emotion-6[data-destructive='true'][data-focused='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+.emotion-6[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: calc(30px * 0.4);
   min-width: var(--wp-g2-control-height-xx-small);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -573,18 +573,18 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -592,7 +592,7 @@ exports[`props should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -615,22 +615,22 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -662,13 +662,13 @@ exports[`props should render correctly 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -771,7 +771,7 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render isLoading 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -835,63 +835,63 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0>* {
   min-width: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0:focus,
+.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
+.emotion-0 input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-reveal {
+.emotion-0 input[type='search']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search'] ::-webkit-search-decoration,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-cancel-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-decoration {
+.emotion-0 input[type='search'] ::-webkit-search-decoration,
+.emotion-0 input[type='search']::-webkit-search-cancel-button,
+.emotion-0 input[type='search']::-webkit-search-results-button,
+.emotion-0 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -920,18 +920,18 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -951,18 +951,18 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -985,18 +985,18 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1024,18 +1024,18 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4>div {
+.emotion-4>div {
   -webkit-animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   animation: ComponentsUISpinnerFadeAnimation 1000ms linear infinite;
   background: currentColor;
@@ -1048,7 +1048,7 @@ exports[`props should render isLoading 1`] = `
   width: 6%;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar1 {
+.emotion-4 .InnerBar1 {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
   -webkit-transform: rotate(0deg) translate(0,-130%);
@@ -1056,7 +1056,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(0deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar2 {
+.emotion-4 .InnerBar2 {
   -webkit-animation-delay: -0.9167s;
   animation-delay: -0.9167s;
   -webkit-transform: rotate(30deg) translate(0,-130%);
@@ -1064,7 +1064,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(30deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar3 {
+.emotion-4 .InnerBar3 {
   -webkit-animation-delay: -0.833s;
   animation-delay: -0.833s;
   -webkit-transform: rotate(60deg) translate(0,-130%);
@@ -1072,7 +1072,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(60deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar4 {
+.emotion-4 .InnerBar4 {
   -webkit-animation-delay: -0.7497s;
   animation-delay: -0.7497s;
   -webkit-transform: rotate(90deg) translate(0,-130%);
@@ -1080,7 +1080,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(90deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar5 {
+.emotion-4 .InnerBar5 {
   -webkit-animation-delay: -0.667s;
   animation-delay: -0.667s;
   -webkit-transform: rotate(120deg) translate(0,-130%);
@@ -1088,7 +1088,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(120deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar6 {
+.emotion-4 .InnerBar6 {
   -webkit-animation-delay: -0.5837s;
   animation-delay: -0.5837s;
   -webkit-transform: rotate(150deg) translate(0,-130%);
@@ -1096,7 +1096,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(150deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar7 {
+.emotion-4 .InnerBar7 {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
   -webkit-transform: rotate(180deg) translate(0,-130%);
@@ -1104,7 +1104,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(180deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar8 {
+.emotion-4 .InnerBar8 {
   -webkit-animation-delay: -0.4167s;
   animation-delay: -0.4167s;
   -webkit-transform: rotate(210deg) translate(0,-130%);
@@ -1112,7 +1112,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(210deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar9 {
+.emotion-4 .InnerBar9 {
   -webkit-animation-delay: -0.333s;
   animation-delay: -0.333s;
   -webkit-transform: rotate(240deg) translate(0,-130%);
@@ -1120,7 +1120,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(240deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar10 {
+.emotion-4 .InnerBar10 {
   -webkit-animation-delay: -0.2497s;
   animation-delay: -0.2497s;
   -webkit-transform: rotate(270deg) translate(0,-130%);
@@ -1128,7 +1128,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(270deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar11 {
+.emotion-4 .InnerBar11 {
   -webkit-animation-delay: -0.167s;
   animation-delay: -0.167s;
   -webkit-transform: rotate(300deg) translate(0,-130%);
@@ -1136,7 +1136,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(300deg) translate(0,-130%);
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 .InnerBar12 {
+.emotion-4 .InnerBar12 {
   -webkit-animation-delay: -0.0833s;
   animation-delay: -0.0833s;
   -webkit-transform: rotate(330deg) translate(0,-130%);
@@ -1144,7 +1144,7 @@ exports[`props should render isLoading 1`] = `
   transform: rotate(330deg) translate(0,-130%);
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1187,35 +1187,35 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
 @media (min-width:36em) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5::-webkit-outer-spin-button,
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5::-webkit-inner-spin-button {
+.emotion-5::-webkit-outer-spin-button,
+.emotion-5::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5[type='number'] {
+.emotion-5[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1231,18 +1231,18 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1352,74 +1352,74 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>*+*:not(marquee) {
+.emotion-7>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7>* {
+.emotion-7>* {
   min-width: 0;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:hover,
+.emotion-7:active,
+.emotion-7:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[disabled]:not([aria-busy='true']),
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-7[disabled]:not([aria-busy='true']),
+.emotion-7[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus {
+.emotion-7:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:focus {
+.emotion-7[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-icon='true'] {
+.emotion-7[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active {
+.emotion-7:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:hover {
+.emotion-7:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:focus,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-focused='true'] {
+.emotion-7:focus,
+.emotion-7[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
   border-color: #007cba;
@@ -1428,7 +1428,7 @@ exports[`props should render isLoading 1`] = `
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7:active {
+.emotion-7:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
   border-color: #007cba;
@@ -1437,34 +1437,34 @@ exports[`props should render isLoading 1`] = `
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true'] {
+.emotion-7[data-destructive='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:hover,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:active,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:focus,
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true'][data-focused='true'] {
+.emotion-7[data-destructive='true']:hover,
+.emotion-7[data-destructive='true']:active,
+.emotion-7[data-destructive='true']:focus,
+.emotion-7[data-destructive='true'][data-focused='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-destructive='true']:active {
+.emotion-7[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7[data-icon='true'] {
+.emotion-7[data-icon='true'] {
   min-width: calc(30px * 0.4);
   min-width: var(--wp-g2-control-height-xx-small);
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1485,18 +1485,18 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1504,7 +1504,7 @@ exports[`props should render isLoading 1`] = `
   user-select: none;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1527,22 +1527,22 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 svg {
+.emotion-9 svg {
   display: block;
 }
 
-.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10 {
+.emotion-10 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1574,13 +1574,13 @@ exports[`props should render isLoading 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10 {
+  .emotion-10 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10.emotion-10 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-10 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -1711,7 +1711,7 @@ exports[`props should render isLoading 1`] = `
 `;
 
 exports[`props should render placeholder 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1775,63 +1775,63 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0>* {
   min-width: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0:focus,
+.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
+.emotion-0 input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-reveal {
+.emotion-0 input[type='search']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search'] ::-webkit-search-decoration,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-cancel-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-decoration {
+.emotion-0 input[type='search'] ::-webkit-search-decoration,
+.emotion-0 input[type='search']::-webkit-search-cancel-button,
+.emotion-0 input[type='search']::-webkit-search-results-button,
+.emotion-0 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1860,18 +1860,18 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1893,18 +1893,18 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1927,22 +1927,22 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
+.emotion-3 svg {
   display: block;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -1985,35 +1985,35 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
 @media (min-width:36em) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-outer-spin-button,
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-inner-spin-button {
+.emotion-4::-webkit-outer-spin-button,
+.emotion-4::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4[type='number'] {
+.emotion-4[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2029,18 +2029,18 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2150,74 +2150,74 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
+.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+.emotion-6>* {
   min-width: 0;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+.emotion-6 svg {
   display: block;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+.emotion-6:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+.emotion-6:focus,
+.emotion-6[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
   border-color: #007cba;
@@ -2226,7 +2226,7 @@ exports[`props should render placeholder 1`] = `
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
   border-color: #007cba;
@@ -2235,34 +2235,34 @@ exports[`props should render placeholder 1`] = `
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+.emotion-6[data-destructive='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'][data-focused='true'] {
+.emotion-6[data-destructive='true']:hover,
+.emotion-6[data-destructive='true']:active,
+.emotion-6[data-destructive='true']:focus,
+.emotion-6[data-destructive='true'][data-focused='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+.emotion-6[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: calc(30px * 0.4);
   min-width: var(--wp-g2-control-height-xx-small);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2283,18 +2283,18 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2302,7 +2302,7 @@ exports[`props should render placeholder 1`] = `
   user-select: none;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2325,22 +2325,22 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2372,13 +2372,13 @@ exports[`props should render placeholder 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -2481,7 +2481,7 @@ exports[`props should render placeholder 1`] = `
 `;
 
 exports[`props should render prefix 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2545,63 +2545,63 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0>* {
   min-width: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0:focus,
+.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
+.emotion-0 input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-reveal {
+.emotion-0 input[type='search']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search'] ::-webkit-search-decoration,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-cancel-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-decoration {
+.emotion-0 input[type='search'] ::-webkit-search-decoration,
+.emotion-0 input[type='search']::-webkit-search-cancel-button,
+.emotion-0 input[type='search']::-webkit-search-results-button,
+.emotion-0 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2630,18 +2630,18 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2663,18 +2663,18 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2697,22 +2697,22 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
+.emotion-3 svg {
   display: block;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2755,35 +2755,35 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
 @media (min-width:36em) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-outer-spin-button,
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-inner-spin-button {
+.emotion-4::-webkit-outer-spin-button,
+.emotion-4::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4[type='number'] {
+.emotion-4[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2799,18 +2799,18 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2920,74 +2920,74 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
+.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+.emotion-6>* {
   min-width: 0;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+.emotion-6 svg {
   display: block;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+.emotion-6:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+.emotion-6:focus,
+.emotion-6[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
   border-color: #007cba;
@@ -2996,7 +2996,7 @@ exports[`props should render prefix 1`] = `
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
   border-color: #007cba;
@@ -3005,34 +3005,34 @@ exports[`props should render prefix 1`] = `
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+.emotion-6[data-destructive='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'][data-focused='true'] {
+.emotion-6[data-destructive='true']:hover,
+.emotion-6[data-destructive='true']:active,
+.emotion-6[data-destructive='true']:focus,
+.emotion-6[data-destructive='true'][data-focused='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+.emotion-6[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: calc(30px * 0.4);
   min-width: var(--wp-g2-control-height-xx-small);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3053,18 +3053,18 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3072,7 +3072,7 @@ exports[`props should render prefix 1`] = `
   user-select: none;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3095,22 +3095,22 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3142,13 +3142,13 @@ exports[`props should render prefix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -3254,7 +3254,7 @@ exports[`props should render prefix 1`] = `
 `;
 
 exports[`props should render suffix 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3318,63 +3318,63 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0>* {
   min-width: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0:focus,
+.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
+.emotion-0 input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-reveal {
+.emotion-0 input[type='search']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search'] ::-webkit-search-decoration,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-cancel-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-decoration {
+.emotion-0 input[type='search'] ::-webkit-search-decoration,
+.emotion-0 input[type='search']::-webkit-search-cancel-button,
+.emotion-0 input[type='search']::-webkit-search-results-button,
+.emotion-0 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3403,18 +3403,18 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3436,18 +3436,18 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3470,22 +3470,22 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
+.emotion-3 svg {
   display: block;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3528,35 +3528,35 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
 @media (min-width:36em) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-outer-spin-button,
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-inner-spin-button {
+.emotion-4::-webkit-outer-spin-button,
+.emotion-4::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4[type='number'] {
+.emotion-4[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3572,18 +3572,18 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3693,74 +3693,74 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
+.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+.emotion-6>* {
   min-width: 0;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+.emotion-6 svg {
   display: block;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+.emotion-6:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+.emotion-6:focus,
+.emotion-6[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
   border-color: #007cba;
@@ -3769,7 +3769,7 @@ exports[`props should render suffix 1`] = `
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
   border-color: #007cba;
@@ -3778,34 +3778,34 @@ exports[`props should render suffix 1`] = `
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+.emotion-6[data-destructive='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'][data-focused='true'] {
+.emotion-6[data-destructive='true']:hover,
+.emotion-6[data-destructive='true']:active,
+.emotion-6[data-destructive='true']:focus,
+.emotion-6[data-destructive='true'][data-focused='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+.emotion-6[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: calc(30px * 0.4);
   min-width: var(--wp-g2-control-height-xx-small);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3826,18 +3826,18 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3845,7 +3845,7 @@ exports[`props should render suffix 1`] = `
   user-select: none;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3868,22 +3868,22 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3915,13 +3915,13 @@ exports[`props should render suffix 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
@@ -4027,7 +4027,7 @@ exports[`props should render suffix 1`] = `
 `;
 
 exports[`props should render value 1`] = `
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+.emotion-0 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4091,63 +4091,63 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+  .emotion-0 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-0 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>*+*:not(marquee) {
+.emotion-0>*+*:not(marquee) {
   margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0>* {
+.emotion-0>* {
   min-width: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[disabled] {
+.emotion-0[disabled] {
   opacity: 0.6;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:hover {
+.emotion-0:hover {
   border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0:focus,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0[data-focused='true'] {
+.emotion-0:focus,
+.emotion-0[data-focused='true'] {
   border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-clear {
+.emotion-0 input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-ms-reveal {
+.emotion-0 input[type='search']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search'] ::-webkit-search-decoration,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-cancel-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-button,
-.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0.emotion-0 input[type='search']::-webkit-search-results-decoration {
+.emotion-0 input[type='search'] ::-webkit-search-decoration,
+.emotion-0 input[type='search']::-webkit-search-cancel-button,
+.emotion-0 input[type='search']::-webkit-search-results-button,
+.emotion-0 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
-.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+.emotion-1 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4176,18 +4176,18 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+  .emotion-1 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1.emotion-1 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-1 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+.emotion-2 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4209,18 +4209,18 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+  .emotion-2 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2.emotion-2 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-2 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+.emotion-3 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4243,22 +4243,22 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+  .emotion-3 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-3 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3.emotion-3 svg {
+.emotion-3 svg {
   display: block;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+.emotion-4 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4301,35 +4301,35 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-4 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
 @media (min-width:36em) {
-  .emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4 {
+  .emotion-4 {
     font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-outer-spin-button,
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4::-webkit-inner-spin-button {
+.emotion-4::-webkit-outer-spin-button,
+.emotion-4::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4.emotion-4[type='number'] {
+.emotion-4[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+.emotion-5 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4345,18 +4345,18 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+  .emotion-5 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5.emotion-5 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-5 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+.emotion-6 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4466,74 +4466,74 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+  .emotion-6 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-6 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>*+*:not(marquee) {
+.emotion-6>*+*:not(marquee) {
   margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6>* {
+.emotion-6>* {
   min-width: 0;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:hover,
+.emotion-6:active,
+.emotion-6:focus {
   -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
   transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[disabled]:not([aria-busy='true']),
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
+.emotion-6[disabled]:not([aria-busy='true']),
+.emotion-6[aria-disabled='true']:not([aria-busy='true']) {
   opacity: 0.5;
   cursor: auto;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus {
+.emotion-6:focus {
   box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus {
+.emotion-6[data-destructive='true']:focus {
   box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6 svg {
+.emotion-6 svg {
   display: block;
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:hover {
+.emotion-6:hover {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
   border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-focused='true'] {
+.emotion-6:focus,
+.emotion-6[data-focused='true'] {
   background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
   border-color: #007cba;
@@ -4542,7 +4542,7 @@ exports[`props should render value 1`] = `
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6:active {
+.emotion-6:active {
   background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
   border-color: #007cba;
@@ -4551,34 +4551,34 @@ exports[`props should render value 1`] = `
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'] {
+.emotion-6[data-destructive='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:hover,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:focus,
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true'][data-focused='true'] {
+.emotion-6[data-destructive='true']:hover,
+.emotion-6[data-destructive='true']:active,
+.emotion-6[data-destructive='true']:focus,
+.emotion-6[data-destructive='true'][data-focused='true'] {
   border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
   color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-destructive='true']:active {
+.emotion-6[data-destructive='true']:active {
   color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
-.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6.emotion-6[data-icon='true'] {
+.emotion-6[data-icon='true'] {
   min-width: calc(30px * 0.4);
   min-width: var(--wp-g2-control-height-xx-small);
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+.emotion-7 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4599,18 +4599,18 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+  .emotion-7 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-7 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7.emotion-7 svg {
+.emotion-7 svg {
   display: block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4618,7 +4618,7 @@ exports[`props should render value 1`] = `
   user-select: none;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+.emotion-8 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4641,22 +4641,22 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+  .emotion-8 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-8 {
   -webkit-transition: none!important;
   transition: none!important;
 }
 
-.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8.emotion-8 svg {
+.emotion-8 svg {
   display: block;
 }
 
-.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+.emotion-9 {
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4688,13 +4688,13 @@ exports[`props should render value 1`] = `
 }
 
 @media (prefers-reduced-motion) {
-  .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+  .emotion-9 {
     -webkit-transition: none!important;
     transition: none!important;
   }
 }
 
-[data-system-ui-reduced-motion-mode="true"] .emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9.emotion-9 {
+[data-system-ui-reduced-motion-mode="true"] .emotion-9 {
   -webkit-transition: none!important;
   transition: none!important;
 }
