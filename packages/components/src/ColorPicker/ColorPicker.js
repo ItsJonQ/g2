@@ -40,7 +40,7 @@ function ColorPicker(props, forwardedRef) {
 					className={classes}
 					ref={forwardedRef}
 				>
-					<ColorPickerElement width={width} />
+					<ColorPickerElement />
 				</ColorPickerView>
 				<VStack alignment="top" isExpanded={false}>
 					<ColorPickerSelect />

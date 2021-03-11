@@ -3,7 +3,7 @@ import { RgbaColorPicker } from 'react-colorful';
 
 import { useColorPickerContext } from './ColorPicker.Context';
 
-export const ColorPickerElement = React.memo(({ width }) => {
+export const ColorPickerElement = React.memo(() => {
 	const { colorRgb, onChange } = useColorPickerContext();
 
 	/**
@@ -14,11 +14,7 @@ export const ColorPickerElement = React.memo(({ width }) => {
 
 	return (
 		<div onMouseDown={handleOnFocusInteractiveControl}>
-			<RgbaColorPicker
-				color={colorRgb}
-				onChange={onChange}
-				width={width}
-			/>
+			<RgbaColorPicker color={colorRgb} onChange={onChange} />
 		</div>
 	);
 });
