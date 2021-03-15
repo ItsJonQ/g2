@@ -3101,6 +3101,7 @@ exports[`props should render BaseButton 1`] = `
   data-g2-component="BaseButton"
   data-icon="false"
   id="BaseButton"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -3302,6 +3303,7 @@ exports[`props should render BaseButton with css prop 1`] = `
   data-g2-component="BaseButton"
   data-icon="false"
   id="BaseButton"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -3505,6 +3507,7 @@ exports[`props should render BaseButton with css prop 2`] = `
   data-g2-component="BaseButton"
   data-icon="false"
   id="BaseButton"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -4108,6 +4111,7 @@ exports[`props should render Button 1`] = `
   data-g2-component="Button"
   data-icon="false"
   id="Button"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -4375,6 +4379,7 @@ exports[`props should render Button with css prop 1`] = `
   data-g2-component="Button"
   data-icon="false"
   id="Button"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -4644,6 +4649,7 @@ exports[`props should render Button with css prop 2`] = `
   data-g2-component="Button"
   data-icon="false"
   id="Button"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -6859,6 +6865,7 @@ exports[`props should render ClipboardButton 1`] = `
   data-g2-component="ClipboardButton"
   data-icon="false"
   id="ClipboardButton"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -7126,6 +7133,7 @@ exports[`props should render ClipboardButton with css prop 1`] = `
   data-g2-component="ClipboardButton"
   data-icon="false"
   id="ClipboardButton"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -7395,6 +7403,7 @@ exports[`props should render ClipboardButton with css prop 2`] = `
   data-g2-component="ClipboardButton"
   data-icon="false"
   id="ClipboardButton"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -7758,6 +7767,7 @@ exports[`props should render CloseButton 1`] = `
   data-g2-component="CloseButton"
   data-icon="true"
   id="CloseButton"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -8147,6 +8157,7 @@ exports[`props should render CloseButton with css prop 1`] = `
   data-g2-component="CloseButton"
   data-icon="true"
   id="CloseButton"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -8538,6 +8549,7 @@ exports[`props should render CloseButton with css prop 2`] = `
   data-g2-component="CloseButton"
   data-icon="true"
   id="CloseButton"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -9583,6 +9595,7 @@ exports[`props should render ColorControl 1`] = `
   data-g2-component="ColorControl"
   data-icon="false"
   id="ColorControl"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -10157,6 +10170,7 @@ exports[`props should render ColorControl with css prop 1`] = `
   data-g2-component="ColorControl"
   data-icon="false"
   id="ColorControl"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -10733,6 +10747,7 @@ exports[`props should render ColorControl with css prop 2`] = `
   data-g2-component="ColorControl"
   data-icon="false"
   id="ColorControl"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -12988,6 +13003,7 @@ a:active>.emotion-0,
   data-g2-component="DropdownMenuItem"
   data-icon="false"
   id="DropdownMenuItem"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -13313,6 +13329,7 @@ a:active>.emotion-0,
   data-g2-component="DropdownMenuItem"
   data-icon="false"
   id="DropdownMenuItem"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -13640,6 +13657,7 @@ a:active>.emotion-0,
   data-g2-component="DropdownMenuItem"
   data-icon="false"
   id="DropdownMenuItem"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -13907,6 +13925,7 @@ exports[`props should render DropdownTrigger 1`] = `
   data-g2-component="DropdownTrigger"
   data-icon="false"
   id="DropdownTrigger"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -14174,6 +14193,7 @@ exports[`props should render DropdownTrigger with css prop 1`] = `
   data-g2-component="DropdownTrigger"
   data-icon="false"
   id="DropdownTrigger"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -14443,6 +14463,7 @@ exports[`props should render DropdownTrigger with css prop 2`] = `
   data-g2-component="DropdownTrigger"
   data-icon="false"
   id="DropdownTrigger"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -16517,6 +16538,7 @@ exports[`props should render FontSizeControl 1`] = `
           data-g2-component="Button"
           data-icon="false"
           disabled=""
+          type="button"
         >
           <span
             class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-14"
@@ -17623,6 +17645,7 @@ exports[`props should render FontSizeControl with css prop 1`] = `
           data-g2-component="Button"
           data-icon="false"
           disabled=""
+          type="button"
         >
           <span
             class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-14"
@@ -18731,6 +18754,7 @@ exports[`props should render FontSizeControl with css prop 2`] = `
           data-g2-component="Button"
           data-icon="false"
           disabled=""
+          type="button"
         >
           <span
             class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-14"
@@ -21483,6 +21507,7 @@ a:active>.emotion-0,
   data-g2-component="MenuItem"
   data-icon="false"
   id="MenuItem"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -21808,6 +21833,7 @@ a:active>.emotion-0,
   data-g2-component="MenuItem"
   data-icon="false"
   id="MenuItem"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -22135,6 +22161,7 @@ a:active>.emotion-0,
   data-g2-component="MenuItem"
   data-icon="false"
   id="MenuItem"
+  type="button"
 >
   <span
     class="components-elevation wp-components-elevation ic-i1zzlu ic-192yz5d emotion-1"
@@ -23069,6 +23096,7 @@ exports[`props should render ModalHeader 1`] = `
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-3"
@@ -23478,6 +23506,7 @@ exports[`props should render ModalHeader with css prop 1`] = `
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-3"
@@ -23889,6 +23918,7 @@ exports[`props should render ModalHeader with css prop 2`] = `
       data-g2-c16t="true"
       data-g2-component="Button"
       data-icon="false"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-3"
@@ -27132,6 +27162,7 @@ exports[`props should render SearchInput 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
@@ -31511,6 +31542,7 @@ exports[`props should render Stepper 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
+    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
@@ -31553,6 +31585,7 @@ exports[`props should render Stepper 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
+    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
@@ -32274,6 +32307,7 @@ exports[`props should render Stepper with css prop 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
+    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
@@ -32316,6 +32350,7 @@ exports[`props should render Stepper with css prop 1`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
+    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
@@ -33039,6 +33074,7 @@ exports[`props should render Stepper with css prop 2`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
+    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"
@@ -33081,6 +33117,7 @@ exports[`props should render Stepper with css prop 2`] = `
     data-g2-c16t="true"
     data-g2-component="StepperButton"
     data-icon="true"
+    type="button"
   >
     <span
       class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-2"

@@ -1020,6 +1020,7 @@ exports[`props should render removeButtonText 1`] = `
       data-g2-component="TagRemoveButton"
       data-icon="true"
       title="Remove"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-4"

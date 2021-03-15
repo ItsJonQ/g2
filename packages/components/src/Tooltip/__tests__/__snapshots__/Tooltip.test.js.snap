@@ -297,6 +297,7 @@ exports[`props should render animatedDuration 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -610,6 +611,7 @@ exports[`props should render correctly 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -923,6 +925,7 @@ exports[`props should render gutter 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1236,6 +1239,7 @@ exports[`props should render placement 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1549,6 +1553,7 @@ exports[`props should render visible 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1862,6 +1867,7 @@ exports[`props should render without animation 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -2177,6 +2183,7 @@ exports[`props should render without content 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -2490,6 +2497,7 @@ exports[`props should render without modal 1`] = `
   data-g2-component="Button"
   data-icon="false"
   tabindex="0"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
