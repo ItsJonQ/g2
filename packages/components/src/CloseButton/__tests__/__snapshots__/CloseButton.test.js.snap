@@ -353,6 +353,7 @@ exports[`props should render correctly 1`] = `
   data-g2-c16t="true"
   data-g2-component="CloseButton"
   data-icon="true"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -748,6 +749,7 @@ exports[`props should render size 1`] = `
   data-g2-c16t="true"
   data-g2-component="CloseButton"
   data-icon="true"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1146,6 +1148,7 @@ exports[`props should render variant 1`] = `
   data-g2-c16t="true"
   data-g2-component="CloseButton"
   data-icon="true"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"

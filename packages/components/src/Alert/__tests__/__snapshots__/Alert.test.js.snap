@@ -605,6 +605,7 @@ exports[`props should render as dismissable 1`] = `
           data-g2-component="CloseButton"
           data-icon="true"
           title="Dismiss"
+          type="button"
         >
           <span
             class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
@@ -1714,6 +1715,7 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
+            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
@@ -1792,6 +1794,7 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
+            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
@@ -1870,6 +1873,7 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
+            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
@@ -1948,6 +1952,7 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
+            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
@@ -2026,6 +2031,7 @@ exports[`props should render with status 1`] = `
             data-g2-component="CloseButton"
             data-icon="true"
             title="Dismiss"
+            type="button"
           >
             <span
               class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"

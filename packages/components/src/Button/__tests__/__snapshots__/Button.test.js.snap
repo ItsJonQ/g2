@@ -295,6 +295,7 @@ exports[`props should render (Flex) gap 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -918,6 +919,7 @@ exports[`props should render correctly 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1230,6 +1232,7 @@ exports[`props should render disabled 1`] = `
   data-g2-component="Button"
   data-icon="false"
   disabled=""
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1541,6 +1544,7 @@ exports[`props should render elevation 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -1925,6 +1929,7 @@ exports[`props should render hasCaret 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -2340,6 +2345,7 @@ exports[`props should render icon 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="true"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -2689,6 +2695,7 @@ exports[`props should render isControl 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -3002,6 +3009,7 @@ exports[`props should render isDestructive 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -3590,6 +3598,7 @@ exports[`props should render isLoading 1`] = `
   data-g2-component="Button"
   data-icon="false"
   disabled=""
+  type="button"
 >
   <div
     aria-hidden="true"
@@ -3967,6 +3976,7 @@ exports[`props should render isNarrow 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -4279,6 +4289,7 @@ exports[`props should render isRounded 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -4608,6 +4619,7 @@ exports[`props should render isSubtle 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -4959,6 +4971,7 @@ exports[`props should render prefix 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -5290,6 +5303,7 @@ exports[`props should render size 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -5641,6 +5655,7 @@ exports[`props should render suffix 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"
@@ -5965,6 +5980,7 @@ exports[`props should render variant 1`] = `
   data-g2-c16t="true"
   data-g2-component="Button"
   data-icon="false"
+  type="button"
 >
   <span
     class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-1"

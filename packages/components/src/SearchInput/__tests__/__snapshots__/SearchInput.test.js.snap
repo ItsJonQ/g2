@@ -733,6 +733,7 @@ exports[`props should render correctly 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
@@ -1673,6 +1674,7 @@ exports[`props should render isLoading 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-8"
@@ -2443,6 +2445,7 @@ exports[`props should render placeholder 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
@@ -3216,6 +3219,7 @@ exports[`props should render prefix 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
@@ -3989,6 +3993,7 @@ exports[`props should render suffix 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"
@@ -4759,6 +4764,7 @@ exports[`props should render value 1`] = `
       data-g2-component="Button"
       data-icon="true"
       tabindex="-1"
+      type="button"
     >
       <span
         class="components-flex-item wp-components-flex-item ic-1p3tlc8 ic-192yz5d emotion-7"

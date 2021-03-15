@@ -49,6 +49,7 @@ export function useBaseButton(props) {
 	const as = href ? 'a' : 'button';
 	const { styles: controlGroupStyles } = useControlGroupContext();
 	const isIconOnly = !!icon && !children;
+	const type = as === 'button' ? 'button' : undefined;
 
 	const classes = cx(
 		flexClassName,
@@ -73,6 +74,7 @@ export function useBaseButton(props) {
 	return {
 		...flexProps,
 		as,
+		type,
 		href,
 		children,
 		disabled,
