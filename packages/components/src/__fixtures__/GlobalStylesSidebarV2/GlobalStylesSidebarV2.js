@@ -10,7 +10,11 @@ import {
 	NavigatorScreens,
 	View,
 } from '../../index';
-import { ColorsScreen, GlobalStylesScreen } from './screens';
+import {
+	ColorsPaletteScreen,
+	ColorsScreen,
+	GlobalStylesScreen,
+} from './screens';
 import { AppProvider } from './state/AppState';
 
 const ANIMATION_SPEED = 0.1;
@@ -30,14 +34,24 @@ const GlobalStylesHeader = () => {
 const screens = [
 	{
 		component: GlobalStylesScreen,
-		path: 'GlobalStyles',
+		path: '/',
 		title: 'Global Styles',
 	},
 	{
 		component: ColorsScreen,
-		path: 'Colors',
+		path: '/colors',
 		title: 'Colors',
 	},
+	{
+		component: ColorsPaletteScreen,
+		path: '/colors/palette',
+		title: 'Palette',
+	},
+	// {
+	// 	component: ColorsElementsScreen,
+	// 	path: '/colors/elements/:id',
+	// 	title: 'Elements',
+	// },
 ];
 
 const Sidebar = ({ children }) => {
@@ -65,7 +79,7 @@ const Sidebar = ({ children }) => {
 };
 
 const Example = (props) => {
-	const initialPath = 'Colors';
+	const initialPath = '/';
 	return (
 		<AppProvider>
 			<Navigator initialPath={initialPath}>
@@ -77,6 +91,7 @@ const Example = (props) => {
 							animationEnterDelay={0}
 							animationEnterDuration={ANIMATION_SPEED}
 							animationExitDuration={ANIMATION_SPEED}
+							exact
 							key={screen.path}
 						/>
 					))}

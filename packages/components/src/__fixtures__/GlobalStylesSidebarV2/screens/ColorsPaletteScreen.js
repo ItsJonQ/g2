@@ -14,7 +14,7 @@ import { Screen, ScreenHeader } from '../components';
 const Header = () => {
 	return (
 		<VStack spacing={5}>
-			<ScreenHeader back="/" title="Color" />
+			<ScreenHeader title="Palette" />
 			<Text variant="muted">
 				Manages the available colors to use across the site and its
 				blocks.
@@ -27,14 +27,11 @@ const Palette = () => {
 	return (
 		<ListGroup>
 			<ListGroupHeader>Palette</ListGroupHeader>
-			<NavigatorLink to="/colors/palette">
-				<MenuItem>Hello</MenuItem>
-			</NavigatorLink>
 		</ListGroup>
 	);
 };
 
-export const ColorsScreen = () => {
+export const ColorsPaletteScreen = () => {
 	return (
 		<Screen>
 			<CardBody>
