@@ -27,20 +27,11 @@ export const Sidebar = ({ children }) => {
 		'G2/Components/Sidebar/DarkenedSidebar',
 		false,
 	);
-	const [outlinedControls, setOutlinedControls] = useLocalState(
-		'G2/Components/Sidebar/outlinedControls',
-		false,
-	);
+
 	const [darkMode, setDarkMode] = useLocalState(
 		'G2/Components/Sidebar/darkMode',
 		false,
 	);
-
-	const theme = {
-		controlBackgroundColor: outlinedControls && ui.get('surfaceColor'),
-		controlBorderColor: outlinedControls && ui.get('surfaceBorderColor'),
-		controlSurfaceBoxShadow: outlinedControls ? 'none' : null,
-	};
 
 	return (
 		<ContextSystemProvider
@@ -67,22 +58,13 @@ export const Sidebar = ({ children }) => {
 								onChange={setDarkenedSidebar}
 							/>
 						</FormGroup>
-						<FormGroup
-							label="Outlined Controls"
-							templateColumns="1fr 1fr"
-						>
-							<Switch
-								checked={outlinedControls}
-								onChange={setOutlinedControls}
-							/>
-						</FormGroup>
 						<FormGroup label="Dark Mode" templateColumns="1fr 1fr">
 							<Switch checked={darkMode} onChange={setDarkMode} />
 						</FormGroup>
 					</CardBody>
 				</Card>
 			</View>
-			<ThemeProvider isDark={darkMode} theme={theme}>
+			<ThemeProvider isDark={darkMode}>
 				<Surface
 					css={`
 						width: 280px;
