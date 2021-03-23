@@ -10,6 +10,7 @@ import {
 	NavigatorScreens,
 	View,
 } from '../../index';
+import { URLSync, useInitialPath } from './components';
 import {
 	ColorsElementScreen,
 	ColorsPaletteScreen,
@@ -80,11 +81,12 @@ const Sidebar = ({ children }) => {
 };
 
 const Example = (props) => {
-	const initialPath = '/colors/palette';
+	const initialPath = useInitialPath();
 
 	return (
 		<AppProvider>
 			<Navigator initialPath={initialPath}>
+				<URLSync />
 				<GlobalStylesHeader />
 				<NavigatorScreens css={[ui.frame.height('auto')]}>
 					{screens.map((screen) => (

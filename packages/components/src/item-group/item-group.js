@@ -9,7 +9,7 @@ import { ItemGroupContext, useItemGroupContext } from './context';
  */
 import { useItemGroup } from './use-item-group';
 
-function ItemGroup(props) {
+function ItemGroup(props, ref) {
 	const { bordered, separated, size: sizeProp, ...otherProps } = useItemGroup(
 		props,
 	);
@@ -26,7 +26,7 @@ function ItemGroup(props) {
 
 	return (
 		<ItemGroupContext.Provider value={contextValue}>
-			<View {...otherProps} />
+			<View {...otherProps} ref={ref} />
 		</ItemGroupContext.Provider>
 	);
 }
