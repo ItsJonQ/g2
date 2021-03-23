@@ -18,6 +18,13 @@ const createPalette = ({ colors, title }) => ({
 	colors,
 });
 
+const createElement = ({ color, title }) => ({
+	id: faker.random.uuid(),
+	title,
+	color,
+	slug: _.kebabCase(title),
+});
+
 // App State
 const initialState = {
 	color: {
@@ -31,10 +38,10 @@ const initialState = {
 				],
 			}),
 		],
-		elements: {
-			background: COLOR_MAIN,
-			text: COLOR_TEXT,
-		},
+		elements: [
+			createElement({ title: 'Background', color: COLOR_MAIN }),
+			createElement({ title: 'Text', color: COLOR_TEXT }),
+		],
 	},
 	typography: {
 		fontFamily: 'Helvetica Neue',

@@ -11,6 +11,7 @@ import {
 	View,
 } from '../../index';
 import {
+	ColorsElementScreen,
 	ColorsPaletteScreen,
 	ColorsScreen,
 	GlobalStylesScreen,
@@ -47,11 +48,11 @@ const screens = [
 		path: '/colors/palette',
 		title: 'Palette',
 	},
-	// {
-	// 	component: ColorsElementsScreen,
-	// 	path: '/colors/elements/:id',
-	// 	title: 'Elements',
-	// },
+	{
+		component: ColorsElementScreen,
+		path: '/colors/elements/:id',
+		title: 'Elements',
+	},
 ];
 
 const Sidebar = ({ children }) => {
@@ -79,7 +80,7 @@ const Sidebar = ({ children }) => {
 };
 
 const Example = (props) => {
-	const initialPath = '/';
+	const initialPath = '/colors';
 	return (
 		<AppProvider>
 			<Navigator initialPath={initialPath}>
