@@ -78,7 +78,6 @@ function NavigatorLink(props, forwardedRef) {
 		);
 	}
 
-	console.log(to);
 	return (
 		<NavLink
 			{...otherProps}

@@ -15,6 +15,7 @@ import {
 	Text,
 	View,
 	VStack,
+	ZStack,
 } from '../../../index';
 import { Screen, ScreenHeader } from '../components';
 import { useAppState } from '../state/AppState';
@@ -40,15 +41,29 @@ const NavLink = (props) => {
 };
 
 const Palette = () => {
+	const { get } = useAppState();
+	const theme = get('color.palettes[0].colors');
+	const colors = _.take(theme, 3);
+
+	console.log(colors);
+
 	return (
 		<ListGroup>
 			<ListGroupHeader>Palette</ListGroupHeader>
 			<ItemGroup bordered separated>
 				<NavLink to="/colors/palette">
 					<HStack>
-						<View>
-							<ColorCircle color="red" size="small" />
-						</View>
+						<Spacer>
+							<ZStack isLayered={false} offset={4}>
+								{colors.map((color) => (
+									<ColorCircle
+										color={color.color}
+										key={color.id}
+										size="small"
+									/>
+								))}
+							</ZStack>
+						</Spacer>
 						<View>
 							<Text variant="muted">23 colors</Text>
 						</View>
