@@ -18,7 +18,7 @@ const Header = () => {
 	const title = _.startCase(id);
 	return (
 		<VStack spacing={5}>
-			<ScreenHeader title={title} />
+			<ScreenHeader back="/colors" title={title} />
 			<Text variant="muted">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
 				congue finibus ante vel maximus.

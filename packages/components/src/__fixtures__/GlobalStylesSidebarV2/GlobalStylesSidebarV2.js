@@ -80,7 +80,8 @@ const Sidebar = ({ children }) => {
 };
 
 const Example = (props) => {
-	const initialPath = '/colors';
+	const initialPath = '/colors/palette';
+
 	return (
 		<AppProvider>
 			<Navigator initialPath={initialPath}>
