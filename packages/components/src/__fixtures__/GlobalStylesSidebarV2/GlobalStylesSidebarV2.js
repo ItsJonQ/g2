@@ -10,7 +10,7 @@ import {
 	NavigatorScreens,
 	View,
 } from '../../index';
-import { URLSync, useInitialPath } from './components';
+import { Inspector, URLSync, useInitialPath } from './components';
 import {
 	ColorsElementScreen,
 	ColorsPaletteScreen,
@@ -86,6 +86,7 @@ const Example = (props) => {
 	return (
 		<AppProvider>
 			<Navigator initialPath={initialPath}>
+				<Inspector />
 				<URLSync />
 				<GlobalStylesHeader />
 				<NavigatorScreens css={[ui.frame.height('auto')]}>

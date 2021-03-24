@@ -45,8 +45,6 @@ const Palette = () => {
 	const theme = get('color.palettes[0].colors');
 	const colors = _.take(theme, 3);
 
-	console.log(colors);
-
 	return (
 		<ListGroup>
 			<ListGroupHeader>Palette</ListGroupHeader>
