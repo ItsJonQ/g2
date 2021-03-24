@@ -94,7 +94,7 @@ export const ButtonContentView = styled.div`
 `;
 
 export const buttonActive = css`
-	color: ${ui.get('controlTextActiveColor')};
+	color: ${ui.get('segmentedControlButtonActiveTextColor')};
 	font-weight: bold;
 `;
 

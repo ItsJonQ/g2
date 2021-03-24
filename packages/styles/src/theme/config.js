@@ -310,13 +310,14 @@ const RADIO_PROPS = {
 };
 
 const SEGMENTED_CONTROL_PROPS = {
-	segmentedControlFontSize: '12px',
+	segmentedControlBackdropBackgroundColor: get('colorText'),
+	segmentedControlBackdropBorderColor: get('colorText'),
+	segmentedControlBackdropBoxShadow: 'transparent',
 	segmentedControlBackgroundColor: get('controlBackgroundColor'),
 	segmentedControlBorderColor: get('controlBorderColor'),
-	segmentedControlBackdropBackgroundColor: get('controlSurfaceColor'),
-	segmentedControlBackdropBorderColor: get('controlBorderColor'),
-	segmentedControlBackdropBoxShadow: 'transparent',
-	segmentedControlButtonColorActive: get('controlBackgroundColor'),
+	segmentedControlButtonActiveTextColor: get('colorTextInverted'),
+	segmentedControlButtonColorActive: 'transparent',
+	segmentedControlFontSize: '12px',
 };
 
 const SLIDER_PROPS = {

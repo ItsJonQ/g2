@@ -2,13 +2,17 @@ import React from 'react';
 
 import {
 	CardBody,
+	ColorCircle,
+	HStack,
 	ListGroup,
 	ListGroupHeader,
+	ListGroups,
 	SegmentedControl,
 	Text,
 	VStack,
 } from '../../../index';
 import { Screen, ScreenHeader } from '../components';
+import { useAppState } from '../state';
 
 const Header = () => {
 	return (
@@ -22,16 +26,35 @@ const Header = () => {
 	);
 };
 
-const Palette = () => {
+const Palette = ({ colors = [], title }) => {
 	return (
 		<ListGroup>
-			<SegmentedControl
-				options={[
-					{ value: 'solids', label: 'Solids' },
-					{ value: 'gradients', label: 'Gradients' },
-				]}
-			/>
+			<ListGroupHeader>{title}</ListGroupHeader>
+			<HStack alignment="left" wrap>
+				{colors.map((color) => (
+					<ColorCircle color={color.color} key={color.id} />
+				))}
+			</HStack>
 		</ListGroup>
+	);
+};
+
+const Palettes = () => {
+	const [palettes] = useAppState('color.palettes');
+	return (
+		<ListGroups>
+			<ListGroup>
+				<SegmentedControl
+					options={[
+						{ value: 'solids', label: 'Solids' },
+						{ value: 'gradients', label: 'Gradients' },
+					]}
+				/>
+			</ListGroup>
+			{palettes.map((palette) => (
+				<Palette key={palette.id} {...palette} />
+			))}
+		</ListGroups>
 	);
 };
 
@@ -41,7 +64,7 @@ export const ColorsPaletteScreen = () => {
 			<CardBody>
 				<VStack spacing={8}>
 					<Header />
-					<Palette />
+					<Palettes />
 				</VStack>
 			</CardBody>
 		</Screen>

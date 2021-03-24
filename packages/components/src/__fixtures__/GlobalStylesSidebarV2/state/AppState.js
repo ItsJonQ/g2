@@ -37,6 +37,36 @@ const initialState = {
 					createPaletteColor({ slug: 'accent', color: COLOR_ACCENT }),
 				],
 			}),
+
+			createPalette({
+				title: 'Default',
+				colors: [
+					createPaletteColor({ slug: 'black', color: '#000' }),
+					createPaletteColor({ slug: 'gray', color: '#AEB8C2' }),
+					createPaletteColor({ slug: 'white', color: '#fff' }),
+					createPaletteColor({ slug: 'pink', color: '#E992A7' }),
+					createPaletteColor({ slug: 'red', color: '#BE3E37' }),
+					createPaletteColor({ slug: 'orange', color: '#ED732D' }),
+					createPaletteColor({ slug: 'yellow', color: '#F1BC40' }),
+					createPaletteColor({
+						slug: 'lightGreen',
+						color: '#91D9B6',
+					}),
+					createPaletteColor({ slug: 'green', color: '#5FCC8C' }),
+					createPaletteColor({ slug: 'sky', color: '#9BCFF7' }),
+					createPaletteColor({ slug: 'blue', color: '#4291DD' }),
+					createPaletteColor({ slug: 'purple', color: '#9055D9' }),
+				],
+			}),
+
+			createPalette({
+				title: 'Custom',
+				colors: [
+					createPaletteColor({ slug: 'cyan', color: '#19C9D5' }),
+					createPaletteColor({ slug: 'royal', color: '#3858E9' }),
+					createPaletteColor({ slug: 'tangerine', color: '#F38435' }),
+				],
+			}),
 		],
 		elements: [
 			createElement({ title: 'Background', color: COLOR_MAIN }),
@@ -49,7 +79,23 @@ const initialState = {
 };
 
 export const AppState = React.createContext({});
-export const useAppState = () => React.useContext(AppState);
+export const useAppState = (get) => {
+	const appState = React.useContext(AppState);
+	const { set } = appState;
+
+	const setFn = React.useCallback(
+		(value) => {
+			if (!get) return;
+			set(get, value);
+		},
+		[get, set],
+	);
+
+	if (get) {
+		return [appState.get(get), setFn];
+	}
+	return appState;
+};
 
 export const AppProvider = ({ children }) => {
 	const [appState, setAppState] = React.useState(initialState);
