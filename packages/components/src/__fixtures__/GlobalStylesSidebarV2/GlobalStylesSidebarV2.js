@@ -11,28 +11,28 @@ import {
 	View,
 } from '../../index';
 import { Inspector, URLSync, useInitialPath } from './components';
+import { ANIMATION_SPEED } from './constants';
 import {
 	ColorsElementScreen,
 	ColorsPaletteScreen,
 	ColorsScreen,
 	GlobalStylesScreen,
+	TypographyScreen,
 } from './screens';
 import { AppProvider } from './state/AppState';
 
-const ANIMATION_SPEED = 0.1;
+/**
+ * This is the "root" Component (or app) for Global Styles.
+ */
 
 export default {
 	title: 'Examples/WIP/GlobalStylesSidebarV2',
 };
 
-const GlobalStylesHeader = () => {
-	return (
-		<CardHeader>
-			<Heading size={5}>Global Styles</Heading>
-		</CardHeader>
-	);
-};
-
+/**
+ * These are the "routes" that bind navigation paths with components for the
+ * indivudal screens.
+ */
 const screens = [
 	{
 		component: GlobalStylesScreen,
@@ -54,7 +54,26 @@ const screens = [
 		path: '/colors/elements/:id',
 		title: 'Elements',
 	},
+	{
+		component: TypographyScreen,
+		path: '/typography',
+		title: 'Typography',
+	},
 ];
+
+/**
+ * GlobalStylesHeaer and Sidebar can largely be ignored.
+ * These components exist to scaffold/bootstrap the Global Styles Sidebar
+ * app into a simluated Gutenberg UI environment.
+ */
+
+const GlobalStylesHeader = () => {
+	return (
+		<CardHeader>
+			<Heading size={5}>Global Styles</Heading>
+		</CardHeader>
+	);
+};
 
 const Sidebar = ({ children }) => {
 	return (
@@ -80,14 +99,37 @@ const Sidebar = ({ children }) => {
 	);
 };
 
-const Example = (props) => {
+/**
+ * Used for development purposes only.
+ */
+const DevOnlyComponents = () => {
+	return (
+		<>
+			<Inspector />
+			<URLSync />
+		</>
+	);
+};
+
+/**
+ * This is the main GlobalStylesSidebar app.
+ *
+ * The "AppProvider" is for prototyping purposes only.
+ * It's designed to simulate the data flow from WP data.
+ *
+ * The components to pay attention to would be the setup/relationship
+ * between the NavigatorScreens, NavigatorScree, and routes.
+ */
+const App = () => {
+	/**
+	 * Gets the (potential) initial path from the browser URL.
+	 */
 	const initialPath = useInitialPath();
 
 	return (
 		<AppProvider>
 			<Navigator initialPath={initialPath}>
-				<Inspector />
-				<URLSync />
+				<DevOnlyComponents />
 				<GlobalStylesHeader />
 				<NavigatorScreens css={[ui.frame.height('auto')]}>
 					{screens.map((screen) => (
@@ -106,12 +148,14 @@ const Example = (props) => {
 	);
 };
 
+/**
+ * Mounting for Storybook.
+ */
+
 export const GlobalStylesSidebar = () => {
 	return (
-		<div>
-			<Sidebar>
-				<Example />
-			</Sidebar>
-		</div>
+		<Sidebar>
+			<App />
+		</Sidebar>
 	);
 };

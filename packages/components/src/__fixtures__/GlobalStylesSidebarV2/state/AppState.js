@@ -18,10 +18,10 @@ const createPalette = ({ colors, title }) => ({
 	colors,
 });
 
-const createElement = ({ color, title }) => ({
+const createElement = ({ title, ...rest }) => ({
+	...rest,
 	id: faker.random.uuid(),
 	title,
-	color,
 	slug: _.kebabCase(title),
 });
 
@@ -75,6 +75,12 @@ const initialState = {
 	},
 	typography: {
 		fontFamily: 'Helvetica Neue',
+		elements: [
+			createElement({ title: 'Headings', fontFamily: 'Helvetica Neue' }),
+			createElement({ title: 'Text', fontFamily: 'Helvetica Neue' }),
+			createElement({ title: 'Links', fontFamily: 'Helvetica Neue' }),
+			createElement({ title: 'Captions', fontFamily: 'Helvetica Neue' }),
+		],
 	},
 };
 

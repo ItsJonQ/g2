@@ -8,7 +8,8 @@ export const GlobalStylesScreen = () => {
 		<Screen>
 			<StylePreview />
 			<CardBody>
-				<SettingLink title="Colors" to="Colors" />
+				<SettingLink title="Colors" to="/colors" />
+				<SettingLink title="Typography" to="/typography" />
 			</CardBody>
 		</Screen>
 	);
