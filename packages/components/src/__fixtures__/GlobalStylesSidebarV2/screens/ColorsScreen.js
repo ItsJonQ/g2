@@ -5,40 +5,18 @@ import {
 	CardBody,
 	ColorCircle,
 	HStack,
-	Item,
 	ItemGroup,
 	ListGroup,
 	ListGroupHeader,
 	ListGroups,
-	NavigatorLink,
 	Spacer,
 	Text,
 	View,
 	VStack,
 	ZStack,
 } from '../../../index';
-import { Screen, ScreenHeader } from '../components';
-import { useAppState } from '../state/AppState';
-
-const Header = () => {
-	return (
-		<VStack spacing={5}>
-			<ScreenHeader back="/" title="Color" />
-			<Text variant="muted">
-				Manages the available colors to use across the site and its
-				blocks.
-			</Text>
-		</VStack>
-	);
-};
-
-const NavLink = (props) => {
-	return (
-		<Item action>
-			<NavigatorLink {...props} />
-		</Item>
-	);
-};
+import { NavLink, Screen, ScreenHeader } from '../components';
+import { useAppState } from '../state';
 
 const Palette = () => {
 	const { get } = useAppState();
@@ -110,7 +88,13 @@ export const ColorsScreen = () => {
 		<Screen>
 			<CardBody>
 				<VStack spacing={8}>
-					<Header />
+					<ScreenHeader
+						back="/"
+						description={
+							'Manages the available colors to use across the site and its blocks.'
+						}
+						title="Color"
+					/>
 					<ListGroups>
 						<Palette />
 						<Elements />

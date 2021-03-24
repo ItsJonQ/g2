@@ -1,27 +1,42 @@
-import { FiChevronLeft, FiDroplet, FiGrid, FiPlus, FiType } from '@wp-g2/icons';
+import { FiChevronLeft } from '@wp-g2/icons';
 import React from 'react';
 
 import {
-	CardBody,
+	Button,
 	Heading,
 	HStack,
 	Icon,
 	NavigatorLink,
 	Spacer,
+	Text,
 	View,
+	VStack,
 } from '../../../index';
 
-export const ScreenHeader = ({ back, title }) => {
+export const ScreenHeader = ({ back, description, title }) => {
 	return (
-		<HStack spacing={4}>
-			<View>
-				<NavigatorLink isBack to={back}>
-					<Icon icon={<FiChevronLeft />} variant="muted" />
-				</NavigatorLink>
-			</View>
-			<Spacer>
-				<Heading size={5}>{title}</Heading>
-			</Spacer>
-		</HStack>
+		<VStack spacing={5}>
+			<HStack spacing={2}>
+				<View>
+					<NavigatorLink isBack to={back}>
+						<Button
+							icon={
+								<Icon
+									icon={<FiChevronLeft />}
+									variant="muted"
+								/>
+							}
+							isControl
+							isSubtle
+							size="small"
+						/>
+					</NavigatorLink>
+				</View>
+				<Spacer>
+					<Heading size={5}>{title}</Heading>
+				</Spacer>
+			</HStack>
+			{description && <Text variant="muted">{description}</Text>}
+		</VStack>
 	);
 };

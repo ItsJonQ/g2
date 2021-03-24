@@ -76,10 +76,25 @@ const initialState = {
 	typography: {
 		fontFamily: 'Helvetica Neue',
 		elements: [
-			createElement({ title: 'Headings', fontFamily: 'Helvetica Neue' }),
-			createElement({ title: 'Text', fontFamily: 'Helvetica Neue' }),
-			createElement({ title: 'Links', fontFamily: 'Helvetica Neue' }),
-			createElement({ title: 'Captions', fontFamily: 'Helvetica Neue' }),
+			createElement({
+				title: 'Headings',
+				styles: { fontFamily: 'Helvetica Neue', fontWeight: 600 },
+			}),
+			createElement({
+				title: 'Text',
+				styles: { fontFamily: 'Helvetica Neue' },
+			}),
+			createElement({
+				title: 'Links',
+				styles: {
+					fontFamily: 'Helvetica Neue',
+					textDecoration: 'underline',
+				},
+			}),
+			createElement({
+				title: 'Captions',
+				styles: { fontFamily: 'Helvetica Neue' },
+			}),
 		],
 	},
 };

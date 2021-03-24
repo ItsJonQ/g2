@@ -7,9 +7,10 @@ import { Screen, ScreenHeader } from '../components';
 const Header = () => {
 	const { id } = useNavigatorParams();
 	const title = _.startCase(id);
+
 	return (
 		<ScreenHeader
-			back="/colors"
+			back="/typography"
 			description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
 				congue finibus ante vel maximus.`}
 			title={title}
@@ -17,7 +18,7 @@ const Header = () => {
 	);
 };
 
-export const ColorsElementScreen = () => {
+export const TypographyElementScreen = () => {
 	return (
 		<Screen>
 			<CardBody>

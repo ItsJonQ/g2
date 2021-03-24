@@ -17,6 +17,7 @@ import {
 	ColorsPaletteScreen,
 	ColorsScreen,
 	GlobalStylesScreen,
+	TypographyElementScreen,
 	TypographyScreen,
 } from './screens';
 import { AppProvider } from './state/AppState';
@@ -52,12 +53,17 @@ const screens = [
 	{
 		component: ColorsElementScreen,
 		path: '/colors/elements/:id',
-		title: 'Elements',
+		title: 'Color Element',
 	},
 	{
 		component: TypographyScreen,
 		path: '/typography',
 		title: 'Typography',
+	},
+	{
+		component: TypographyElementScreen,
+		path: '/typography/elements/:id',
+		title: 'Typography Element',
 	},
 ];
 

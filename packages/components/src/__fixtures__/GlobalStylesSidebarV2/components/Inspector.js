@@ -27,7 +27,6 @@ export const Inspector = () => {
 	const currentPath = location?.pathname;
 	const handleOnRouteChange = (next) => navigator.push(next);
 	const appState = useAppState();
-	console.log(appState);
 
 	return (
 		<div style={{ position: 'fixed', top: 16, left: 16 }}>

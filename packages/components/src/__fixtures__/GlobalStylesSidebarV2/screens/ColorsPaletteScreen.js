@@ -8,23 +8,10 @@ import {
 	ListGroupHeader,
 	ListGroups,
 	SegmentedControl,
-	Text,
 	VStack,
 } from '../../../index';
 import { Screen, ScreenHeader } from '../components';
 import { useAppState } from '../state';
-
-const Header = () => {
-	return (
-		<VStack spacing={5}>
-			<ScreenHeader back="/colors" title="Palette" />
-			<Text variant="muted">
-				Manages the available colors to use across the site and its
-				blocks.
-			</Text>
-		</VStack>
-	);
-};
 
 const Palette = ({ colors = [], title }) => {
 	return (
@@ -63,7 +50,12 @@ export const ColorsPaletteScreen = () => {
 		<Screen>
 			<CardBody>
 				<VStack spacing={8}>
-					<Header />
+					<ScreenHeader
+						back="/colors"
+						description={`Manages the available colors to use across the site and its
+				blocks.`}
+						title="Palette"
+					/>
 					<Palettes />
 				</VStack>
 			</CardBody>
