@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import ReactJson from 'react-json-view';
 
 import {
 	Card,
@@ -16,7 +17,14 @@ import {
 } from '../../../index';
 import { useAppState } from '../state';
 
-const routes = ['/', '/colors', '/colors/palette', '/typography'].map((o) => ({
+const routes = [
+	'/',
+	'/colors',
+	'/colors/palette',
+	'/colors/elements/background',
+	'/typography',
+	'/typography/elements/headings',
+].map((o) => ({
 	value: o,
 	label: o,
 }));
@@ -46,16 +54,23 @@ export const Inspector = () => {
 						<PanelHeader>State</PanelHeader>
 						<PanelBody>
 							<View
-								as="pre"
 								css={{
 									fontFamily: 'monospace',
 									maxWidth: '100%',
 									maxHeight: 300,
 									overflowY: 'auto',
-									fontSize: 10,
+									fontSize: 12,
+									lineHeight: 1,
 								}}
 							>
-								{JSON.stringify(appState, null, 2)}
+								<ReactJson
+									displayDataTypes={false}
+									displayObjectSize={false}
+									enableClipboard={false}
+									src={JSON.parse(
+										JSON.stringify(appState, null, 2),
+									)}
+								/>
 							</View>
 						</PanelBody>
 					</Panel>

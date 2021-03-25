@@ -137,18 +137,25 @@ const App = () => {
 			<Navigator initialPath={initialPath}>
 				<DevOnlyComponents />
 				<GlobalStylesHeader />
-				<NavigatorScreens css={[ui.frame.height('auto')]}>
-					{screens.map((screen) => (
-						<NavigatorScreen
-							{...screen}
-							animationEnterDelay={0}
-							animationEnterDuration={ANIMATION_SPEED}
-							animationExitDuration={ANIMATION_SPEED}
-							exact
-							key={screen.path}
-						/>
-					))}
-				</NavigatorScreens>
+				<View
+					css={{
+						overflowY: 'auto',
+						height: 'calc(100vh - 50px)',
+					}}
+				>
+					<NavigatorScreens css={[ui.frame.height('auto')]}>
+						{screens.map((screen) => (
+							<NavigatorScreen
+								{...screen}
+								animationEnterDelay={0}
+								animationEnterDuration={ANIMATION_SPEED}
+								animationExitDuration={ANIMATION_SPEED}
+								exact
+								key={screen.path}
+							/>
+						))}
+					</NavigatorScreens>
+				</View>
 			</Navigator>
 		</AppProvider>
 	);
