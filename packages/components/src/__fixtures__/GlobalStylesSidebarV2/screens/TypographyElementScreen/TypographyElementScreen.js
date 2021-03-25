@@ -226,8 +226,6 @@ export const TypographyElementScreen = () => {
 									/>
 								</FormGroup>
 							</RenderComponent>
-						</Grid>
-						<Grid>
 							<RenderComponent
 								prop={getIsDefined('letterSpacing')}
 							>
