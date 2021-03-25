@@ -143,18 +143,20 @@ const App = () => {
 						height: 'calc(100vh - 50px)',
 					}}
 				>
-					<NavigatorScreens css={[ui.frame.height('auto')]}>
-						{screens.map((screen) => (
-							<NavigatorScreen
-								{...screen}
-								animationEnterDelay={0}
-								animationEnterDuration={ANIMATION_SPEED}
-								animationExitDuration={ANIMATION_SPEED}
-								exact
-								key={screen.path}
-							/>
-						))}
-					</NavigatorScreens>
+					<View>
+						<NavigatorScreens css={[ui.frame.height('auto')]}>
+							{screens.map((screen) => (
+								<NavigatorScreen
+									{...screen}
+									animationEnterDelay={0}
+									animationEnterDuration={ANIMATION_SPEED}
+									animationExitDuration={ANIMATION_SPEED}
+									exact
+									key={screen.path}
+								/>
+							))}
+						</NavigatorScreens>
+					</View>
 				</View>
 			</Navigator>
 		</AppProvider>
