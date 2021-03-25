@@ -13,7 +13,7 @@ import {
 	VStack,
 } from '../../../index';
 
-export const ScreenHeader = ({ back, description, title }) => {
+export const ScreenHeader = ({ action, back, description, title }) => {
 	return (
 		<VStack spacing={5}>
 			<HStack spacing={2}>
@@ -35,6 +35,7 @@ export const ScreenHeader = ({ back, description, title }) => {
 				<Spacer>
 					<Heading size={5}>{title}</Heading>
 				</Spacer>
+				<View>{action}</View>
 			</HStack>
 			{description && <Text variant="muted">{description}</Text>}
 		</VStack>

@@ -78,28 +78,35 @@ const initialState = {
 		elements: [
 			createElement({
 				title: 'Headings',
-				styles: { fontFamily: 'Helvetica Neue', fontWeight: 600 },
+				styles: {
+					fontFamily: 'Helvetica Neue',
+					fontWeight: 600,
+					fontSize: '18px',
+					lineHeight: 1.2,
+				},
 			}),
 			createElement({
 				title: 'Text',
-				styles: { fontFamily: 'Helvetica Neue' },
+				styles: { fontFamily: 'Helvetica Neue', fontSize: '14px' },
 			}),
 			createElement({
 				title: 'Links',
 				styles: {
 					fontFamily: 'Helvetica Neue',
+					fontSize: '14px',
 					textDecoration: 'underline',
 				},
 			}),
 			createElement({
 				title: 'Captions',
-				styles: { fontFamily: 'Helvetica Neue' },
+				styles: { fontFamily: 'Helvetica Neue', fontSize: '11px' },
 			}),
 		],
 	},
 };
 
 export const AppState = React.createContext({});
+
 export const useAppState = (get) => {
 	const appState = React.useContext(AppState);
 	const { set } = appState;
@@ -118,6 +125,8 @@ export const useAppState = (get) => {
 	return appState;
 };
 
+export const useStyleAttribute = useAppState;
+
 export const AppProvider = ({ children }) => {
 	const [appState, setAppState] = React.useState(initialState);
 	const contextValue = {
@@ -126,7 +135,10 @@ export const AppProvider = ({ children }) => {
 		set: (key, value) =>
 			setAppState((prev) => {
 				const next = _.set(prev, key, value);
-				return next;
+				console.group('setAppState');
+				console.table({ key, value });
+				console.groupEnd();
+				return { ...prev, ...next };
 			}),
 		get: (values) => _.get(appState, values),
 	};
@@ -135,5 +147,3 @@ export const AppProvider = ({ children }) => {
 		<AppState.Provider value={contextValue}>{children}</AppState.Provider>
 	);
 };
-
-export const THING = 'hello';
