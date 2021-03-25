@@ -126,7 +126,8 @@ function useStyleAttributesForScreen() {
 	const getAttribute = (attr) => attributes.styles[attr];
 	const setAttribute = (attr) => (next) => {
 		const path = getPath(attr);
-		set(path, next);
+		const value = _.isUndefined(next) ? null : next;
+		set(path, value);
 	};
 	const toggleAttribute = (attr, defaultValue = undefined) => {
 		const path = getPath(attr);
