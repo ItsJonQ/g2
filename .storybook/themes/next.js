@@ -15,6 +15,7 @@ const theme = createTheme(({ get, theme, space }) => {
 		menuItemHeight: '32px',
 		segmentedControlBackdropBackgroundColor: get('colorText'),
 		segmentedControlButtonColorActive: 'transparent',
+		segmentedControlBackdropBoxShadow: '0 0 6px 1px rgba(0, 0, 0, 0.1)',
 		segmentedControlButtonActiveTextColor: get('colorTextInverted'),
 		sliderThumbBackgroundColor: get('colorAdmin'),
 		sliderThumbBorderColor: 'transparent',
