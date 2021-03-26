@@ -129,6 +129,9 @@ export const useStyleAttribute = useAppState;
 
 export const AppProvider = ({ children }) => {
 	const [appState, setAppState] = React.useState(initialState);
+	const [colorPickerKey, setColorPickerKey] = React.useState(null);
+	const [showColorPicker, setShowColorPicker] = React.useState(false);
+
 	const contextValue = {
 		...appState,
 		setAppState,
@@ -141,6 +144,13 @@ export const AppProvider = ({ children }) => {
 				return { ...prev, ...next };
 			}),
 		get: (values) => _.get(appState, values),
+
+		// Show color picker
+		colorPickerKey,
+		setColorPickerKey,
+		showColorPicker,
+		setShowColorPicker,
+		toggleShowColorPicker: () => setShowColorPicker((prev) => !prev),
 	};
 
 	return (

@@ -86,6 +86,7 @@ const Example = () => {
 									value={controlValue}
 									options={controlOptions}
 									onChange={setFontSize}
+									showSeparator={false}
 								/>
 							) : (
 								<SelectDropdown

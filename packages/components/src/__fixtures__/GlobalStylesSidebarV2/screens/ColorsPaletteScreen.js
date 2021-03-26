@@ -13,13 +13,26 @@ import {
 import { Screen, ScreenHeader } from '../components';
 import { useAppState } from '../state';
 
-const Palette = ({ colors = [], title }) => {
+const Palette = ({ colors = [], title, _key, index }) => {
+	const appState = useAppState();
+
+	const handleOnClick = (i) => () => {
+		appState.setColorPickerKey(
+			`color.palettes[${index}].colors[${i}].color`,
+		);
+		appState.setShowColorPicker(true);
+	};
+
 	return (
 		<ListGroup>
 			<ListGroupHeader>{title}</ListGroupHeader>
 			<HStack alignment="left" wrap>
-				{colors.map((color) => (
-					<ColorCircle color={color.color} key={color.id} />
+				{colors.map((color, index) => (
+					<ColorCircle
+						color={color.color}
+						key={color.id}
+						onClick={handleOnClick(index)}
+					/>
 				))}
 			</HStack>
 		</ListGroup>
@@ -38,8 +51,13 @@ const Palettes = () => {
 					]}
 				/>
 			</ListGroup>
-			{palettes.map((palette) => (
-				<Palette key={palette.id} {...palette} />
+			{palettes.map((palette, index) => (
+				<Palette
+					key={palette.id}
+					{...palette}
+					_key={palette.id}
+					index={index}
+				/>
 			))}
 		</ListGroups>
 	);

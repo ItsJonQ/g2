@@ -10,7 +10,12 @@ import {
 	NavigatorScreens,
 	View,
 } from '../../index';
-import { Inspector, URLSync, useInitialPath } from './components';
+import {
+	ColorPickerModal,
+	Inspector,
+	URLSync,
+	useInitialPath,
+} from './components';
 import { ANIMATION_SPEED } from './constants';
 import {
 	ColorsElementScreen,
@@ -134,6 +139,7 @@ const App = () => {
 
 	return (
 		<AppProvider>
+			<ColorPickerModal />
 			<Navigator initialPath={initialPath}>
 				<DevOnlyComponents />
 				<GlobalStylesHeader />

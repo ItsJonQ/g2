@@ -39,8 +39,8 @@ export const Inspector = () => {
 	return (
 		<div style={{ position: 'fixed', top: 16, left: 16 }}>
 			<motion.div drag dragMomentum={false}>
-				<Card css={{ minWidth: 400 }}>
-					<CardHeader>Inspector</CardHeader>
+				<Card css={{ minWidth: 400 }} size="small">
+					<CardHeader size="small">Inspector</CardHeader>
 					<CardBody>
 						<FormGroup horizontal label="Go to">
 							<Select
