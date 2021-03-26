@@ -87,7 +87,10 @@ const Link = forwardRef(
 						context.location,
 					);
 
-					const href = location ? history.createHref(location) : '';
+					let href = location ? history.createHref(location) : '';
+					if (to) {
+						href = undefined;
+					}
 					const props = {
 						...rest,
 						href,

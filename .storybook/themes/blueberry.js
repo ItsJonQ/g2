@@ -63,7 +63,10 @@ const theme = createTheme(({ get, space, theme }) => {
 
 	const SEGMENTED_CONTROL_PROPS = {
 		segmentedControlFontSize: '12px',
+		segmentedControlBackdropBackgroundColor: get('surfaceColor'),
+		segmentedControlBackdropBorderColor: get('surfaceColor'),
 		segmentedControlBackdropBoxShadow: get('controlSurfaceBoxShadow'),
+		segmentedControlButtonActiveTextColor: get('colorAdmin'),
 	};
 
 	const SLIDER_PROPS = {

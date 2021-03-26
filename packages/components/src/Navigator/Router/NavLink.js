@@ -86,7 +86,7 @@ const NavLink = forwardRef(
 						props.innerRef = innerRef;
 					}
 
-					return <Link {...props} />;
+					return <Link {...props} to={to} />;
 				}}
 			</RouterContext.Consumer>
 		);

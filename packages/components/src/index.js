@@ -46,6 +46,7 @@ export * from './HStack';
 export * from './Icon';
 export * from './Image';
 export * from './Initials';
+export * from './item-group';
 export * from './Link';
 export * from './List';
 export * from './ListGroup';

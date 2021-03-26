@@ -21,6 +21,7 @@ function SegmentControl(props, forwardedRef) {
 		options = [],
 		onChange = noop,
 		size = 'medium',
+		showSeparator: showSeparatorProp = true,
 		value,
 		...otherProps
 	} = useContextSystem(props, 'SegmentedControl');
@@ -69,7 +70,8 @@ function SegmentControl(props, forwardedRef) {
 				containerWidth={sizes.width}
 			/>
 			{options.map((option, index) => {
-				const showSeparator = getShowSeparator(radio, index);
+				const showSeparator =
+					showSeparatorProp && getShowSeparator(radio, index);
 				return (
 					<Button
 						{...radio}
