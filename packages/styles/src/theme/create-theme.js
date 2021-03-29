@@ -1,5 +1,5 @@
 import { get } from '@wp-g2/create-styles';
-import { colorize, getComputedColor, is } from '@wp-g2/utils';
+import { colorize, getComputedColor } from '@wp-g2/utils';
 
 import { space } from '../mixins/space';
 import { config } from './config';
