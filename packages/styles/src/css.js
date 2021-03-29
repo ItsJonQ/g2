@@ -45,10 +45,11 @@ export function getScaleValue(key, value) {
 /**
  * Transform a style object with scaled values from the Style system.
  *
- * @param {object} styles The style object to transform.
- * @returns {object} The style object with scaled values.
+ * @param {import('@emotion/serialize').ObjectInterpolation<any>} styles The style object to transform.
+ * @returns {import('@emotion/serialize').ObjectInterpolation<any>} The style object with scaled values.
  */
 export function getScaleStyles(styles = {}) {
+	/** @type {Record<string, string>} */
 	const next = {};
 
 	for (const k in styles) {
