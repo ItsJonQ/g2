@@ -3,14 +3,11 @@ import { REDUCED_MOTION_MODE_ATTR } from '@wp-g2/create-styles';
 import { colorize } from '@wp-g2/utils';
 
 /**
- * @template T
- * @param {T | number} value
- * @return {T | string}
+ * @param {number} value
+ * @return {string}
  */
 export function space(value) {
-	return typeof value === 'number'
-		? `calc(${get('gridBase')} * ${value})`
-		: value;
+	return `calc(${get('gridBase')} * ${value})`;
 }
 
 export function getIsReducedMotion() {
