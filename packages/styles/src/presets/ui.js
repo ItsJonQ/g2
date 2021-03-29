@@ -1,3 +1,5 @@
+import { get } from '../core';
+import { createToken } from '../system';
 import { alignment } from './alignments';
 import { animation } from './animations';
 import { background } from './backgrounds';
@@ -8,7 +10,6 @@ import { css } from './css';
 import { frame } from './dimensions';
 import { flow } from './flow';
 import { font } from './fonts';
-import { createToken, get, getTokenValue } from './get';
 import { active, focus, hover } from './interactions';
 import { mode } from './modes';
 import { opacity } from './opacity';
@@ -37,7 +38,6 @@ export const ui = {
 	font,
 	frame,
 	get,
-	getTokenValue,
 	hover,
 	margin,
 	mode,
