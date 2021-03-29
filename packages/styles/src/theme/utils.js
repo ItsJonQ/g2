@@ -19,7 +19,7 @@ export function getIsReducedMotion() {
  * @return {Record<string, import('tinycolor2').ColorInput>}
  */
 export function createTextColors(colors) {
-	/** @type {Record<string, string>} */
+	/** @type {Record<string, import('tinycolor2').ColorInput>} */
 	const colorSet = {};
 	const entries = Object.entries(colors);
 	const light = entries[0][1];
