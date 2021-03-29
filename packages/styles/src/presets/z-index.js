@@ -3,10 +3,9 @@ import { css } from '../style-system';
 
 /**
  * @param {import('../mixins/z-index').ZIndexNamespace} namespace
- * @param {number} value
  */
-export function zIndex(namespace, value) {
-	return css({ zIndex: getZIndex(namespace, value) });
+export function zIndex(namespace) {
+	return css({ zIndex: getZIndex(namespace) });
 }
 
 zIndex.get = getZIndexRegistry;
