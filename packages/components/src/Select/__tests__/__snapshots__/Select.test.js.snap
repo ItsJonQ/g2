@@ -5,21 +5,16 @@ exports[`props should render children 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -34,14 +29,10 @@ exports[`props should render children 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,16 +41,12 @@ exports[`props should render children 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
@@ -79,7 +66,6 @@ exports[`props should render children 1`] = `
 }
 
 .emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -92,15 +78,12 @@ exports[`props should render children 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-0:focus,
 .emotion-0[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -108,11 +91,8 @@ exports[`props should render children 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -120,29 +100,23 @@ exports[`props should render children 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
@@ -163,7 +137,6 @@ exports[`props should render children 1`] = `
 
 @media (min-width:36em) {
   .emotion-1 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -182,11 +155,8 @@ exports[`props should render children 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -198,11 +168,8 @@ exports[`props should render children 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -253,23 +220,15 @@ exports[`props should render children 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -289,11 +248,8 @@ exports[`props should render children 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -384,21 +340,16 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -413,14 +364,10 @@ exports[`props should render correctly 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -429,16 +376,12 @@ exports[`props should render correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
@@ -458,7 +401,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -471,15 +413,12 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-0:focus,
 .emotion-0[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -487,11 +426,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -499,29 +435,23 @@ exports[`props should render correctly 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
@@ -542,7 +472,6 @@ exports[`props should render correctly 1`] = `
 
 @media (min-width:36em) {
   .emotion-1 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -561,11 +490,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -577,11 +503,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -632,23 +555,15 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -668,11 +583,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -764,21 +676,16 @@ exports[`props should render disabled 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -793,14 +700,10 @@ exports[`props should render disabled 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -809,16 +712,12 @@ exports[`props should render disabled 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
@@ -838,7 +737,6 @@ exports[`props should render disabled 1`] = `
 }
 
 .emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -851,15 +749,12 @@ exports[`props should render disabled 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-0:focus,
 .emotion-0[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -867,11 +762,8 @@ exports[`props should render disabled 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -879,29 +771,23 @@ exports[`props should render disabled 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
@@ -922,7 +808,6 @@ exports[`props should render disabled 1`] = `
 
 @media (min-width:36em) {
   .emotion-1 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -941,11 +826,8 @@ exports[`props should render disabled 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -957,11 +839,8 @@ exports[`props should render disabled 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -1012,23 +891,15 @@ exports[`props should render disabled 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -1048,11 +919,8 @@ exports[`props should render disabled 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -1146,21 +1014,16 @@ exports[`props should render readOnly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -1175,14 +1038,10 @@ exports[`props should render readOnly 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1191,16 +1050,12 @@ exports[`props should render readOnly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
@@ -1220,7 +1075,6 @@ exports[`props should render readOnly 1`] = `
 }
 
 .emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -1233,15 +1087,12 @@ exports[`props should render readOnly 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-0:focus,
 .emotion-0[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -1249,11 +1100,8 @@ exports[`props should render readOnly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -1261,29 +1109,23 @@ exports[`props should render readOnly 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
@@ -1304,7 +1146,6 @@ exports[`props should render readOnly 1`] = `
 
 @media (min-width:36em) {
   .emotion-1 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -1323,11 +1164,8 @@ exports[`props should render readOnly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -1339,11 +1177,8 @@ exports[`props should render readOnly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -1394,23 +1229,15 @@ exports[`props should render readOnly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -1430,11 +1257,8 @@ exports[`props should render readOnly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -1527,21 +1351,16 @@ exports[`props should render required 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -1556,14 +1375,10 @@ exports[`props should render required 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1572,16 +1387,12 @@ exports[`props should render required 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
@@ -1601,7 +1412,6 @@ exports[`props should render required 1`] = `
 }
 
 .emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -1614,15 +1424,12 @@ exports[`props should render required 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-0:focus,
 .emotion-0[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -1630,11 +1437,8 @@ exports[`props should render required 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -1642,29 +1446,23 @@ exports[`props should render required 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
@@ -1685,7 +1483,6 @@ exports[`props should render required 1`] = `
 
 @media (min-width:36em) {
   .emotion-1 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -1704,11 +1501,8 @@ exports[`props should render required 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -1720,11 +1514,8 @@ exports[`props should render required 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -1775,23 +1566,15 @@ exports[`props should render required 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -1811,11 +1594,8 @@ exports[`props should render required 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -1908,21 +1688,16 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -1937,14 +1712,10 @@ exports[`props should render size 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1953,16 +1724,12 @@ exports[`props should render size 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   cursor: pointer;
@@ -1982,7 +1749,6 @@ exports[`props should render size 1`] = `
 }
 
 .emotion-0>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -1995,15 +1761,12 @@ exports[`props should render size 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-0:focus,
 .emotion-0[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -2011,11 +1774,8 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -2023,37 +1783,28 @@ exports[`props should render size 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
-  min-height: calc(calc(30px * 0.8) - 2px);
   min-height: calc(var(--wp-g2-control-height-small) - 2px);
-  padding-bottom: calc((calc(30px * 0.8) - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height-small) - 2px - 18px) / 2);
-  padding-top: calc((calc(30px * 0.8) - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height-small) - 2px - 18px) / 2);
   padding-right: 24px;
 }
@@ -2072,7 +1823,6 @@ exports[`props should render size 1`] = `
 
 @media (min-width:36em) {
   .emotion-1 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -2091,11 +1841,8 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -2107,11 +1854,8 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -2162,23 +1906,15 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -2198,11 +1934,8 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;

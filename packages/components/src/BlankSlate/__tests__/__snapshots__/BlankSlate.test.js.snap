@@ -5,24 +5,17 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   position: relative;
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color);
   outline: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -42,11 +35,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 100%;
@@ -68,11 +58,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 100%;
@@ -80,9 +67,7 @@ exports[`props should render correctly 1`] = `
   overflow-y: auto;
   height: auto;
   max-height: 100%;
-  padding: calc(4px * 3) calc(4px * 3);
   padding: var(--wp-g2-card-padding);
-  padding: calc(4px * 6);
   padding: calc(var(--wp-g2-grid-base) * 6);
 }
 
@@ -109,36 +94,29 @@ exports[`props should render correctly 1`] = `
   }
 
   .emotion-2::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.04);
     background: var(--wp-g2-color-scrollbar-track);
     border-radius: 8px;
   }
 
   .emotion-2::-webkit-scrollbar-thumb {
     background-clip: padding-box;
-    background-color: rgba(0, 0, 0, 0.2);
     background-color: var(--wp-g2-color-scrollbar-thumb);
     border: 2px solid rgba(0,0,0,0);
     border-radius: 7px;
   }
 
   .emotion-2:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
     background-color: var(--wp-g2-color-scrollbar-thumb-hover);
   }
 }
 
 .emotion-2:first-of-type {
-  border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
-  border-top-right-radius: 2px;
   border-top-right-radius: var(--wp-g2-card-border-radius);
 }
 
 .emotion-2:last-of-type {
-  border-bottom-left-radius: 2px;
   border-bottom-left-radius: var(--wp-g2-card-border-radius);
-  border-bottom-right-radius: 2px;
   border-bottom-right-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -146,21 +124,16 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-display: block;
-  --wp-g2-flex-item-margin-bottom: calc(4px * 2);
   --wp-g2-flex-item-margin-bottom: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-right: 0;
   --wp-g2-flex-item-margin-left: 0;
@@ -190,7 +163,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-3>*+*:not(marquee) {
-  margin-top: calc(4px * 2);
   margin-top: calc(var(--wp-g2-grid-base) * 2);
 }
 
@@ -202,22 +174,14 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  color: #050505;
   color: var(--wp-g2-color-text-heading);
-  font-size: calc(2.44 * 13px);
   font-size: var(--wp-g2-font-size-h-1);
-  font-weight: 600;
   font-weight: var(--wp-g2-font-weight-heading);
   display: block;
 }
@@ -238,11 +202,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -256,7 +217,6 @@ exports[`props should render correctly 1`] = `
   width: 20px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: calc(4px * 2);
   margin-right: calc(var(--wp-g2-grid-base) * 2);
   position: relative;
   top: -3px;
@@ -282,20 +242,13 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
 }
 
@@ -315,11 +268,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
@@ -331,16 +281,12 @@ exports[`props should render correctly 1`] = `
   border-radius: inherit;
   bottom: 0;
   box-shadow: 0 1px 2px 0 rgba(0 ,0,0,0.05);
-  opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
   right: 0;
   top: 0;
-  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -360,11 +306,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
@@ -376,16 +319,12 @@ exports[`props should render correctly 1`] = `
   border-radius: inherit;
   bottom: 0;
   box-shadow: 0 2px 4px 0 rgba(0 ,0,0,0.1);
-  opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
   right: 0;
   top: 0;
-  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -496,24 +435,17 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  background-color: #ffffff;
   background-color: var(--wp-g2-surface-color);
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   position: relative;
   --wp-g2-surface-background-size: 16px;
   --wp-g2-surface-background-size-dotted: 15px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color);
   outline: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -533,11 +465,8 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 100%;
@@ -559,11 +488,8 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   height: 100%;
@@ -571,9 +497,7 @@ exports[`props should render correctly without description and icon 1`] = `
   overflow-y: auto;
   height: auto;
   max-height: 100%;
-  padding: calc(4px * 3) calc(4px * 3);
   padding: var(--wp-g2-card-padding);
-  padding: calc(4px * 6);
   padding: calc(var(--wp-g2-grid-base) * 6);
 }
 
@@ -600,36 +524,29 @@ exports[`props should render correctly without description and icon 1`] = `
   }
 
   .emotion-2::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.04);
     background: var(--wp-g2-color-scrollbar-track);
     border-radius: 8px;
   }
 
   .emotion-2::-webkit-scrollbar-thumb {
     background-clip: padding-box;
-    background-color: rgba(0, 0, 0, 0.2);
     background-color: var(--wp-g2-color-scrollbar-thumb);
     border: 2px solid rgba(0,0,0,0);
     border-radius: 7px;
   }
 
   .emotion-2:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
     background-color: var(--wp-g2-color-scrollbar-thumb-hover);
   }
 }
 
 .emotion-2:first-of-type {
-  border-top-left-radius: 2px;
   border-top-left-radius: var(--wp-g2-card-border-radius);
-  border-top-right-radius: 2px;
   border-top-right-radius: var(--wp-g2-card-border-radius);
 }
 
 .emotion-2:last-of-type {
-  border-bottom-left-radius: 2px;
   border-bottom-left-radius: var(--wp-g2-card-border-radius);
-  border-bottom-right-radius: 2px;
   border-bottom-right-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -637,21 +554,16 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-display: block;
-  --wp-g2-flex-item-margin-bottom: calc(4px * 2);
   --wp-g2-flex-item-margin-bottom: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-right: 0;
   --wp-g2-flex-item-margin-left: 0;
@@ -681,7 +593,6 @@ exports[`props should render correctly without description and icon 1`] = `
 }
 
 .emotion-3>*+*:not(marquee) {
-  margin-top: calc(4px * 2);
   margin-top: calc(var(--wp-g2-grid-base) * 2);
 }
 
@@ -693,22 +604,14 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  color: #050505;
   color: var(--wp-g2-color-text-heading);
-  font-size: calc(2.44 * 13px);
   font-size: var(--wp-g2-font-size-h-1);
-  font-weight: 600;
   font-weight: var(--wp-g2-font-weight-heading);
   display: block;
 }
@@ -729,11 +632,8 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
@@ -745,16 +645,12 @@ exports[`props should render correctly without description and icon 1`] = `
   border-radius: inherit;
   bottom: 0;
   box-shadow: 0 1px 2px 0 rgba(0 ,0,0,0.05);
-  opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
   right: 0;
   top: 0;
-  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
 }
 
@@ -774,11 +670,8 @@ exports[`props should render correctly without description and icon 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
@@ -790,16 +683,12 @@ exports[`props should render correctly without description and icon 1`] = `
   border-radius: inherit;
   bottom: 0;
   box-shadow: 0 2px 4px 0 rgba(0 ,0,0,0.1);
-  opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: 0;
   right: 0;
   top: 0;
-  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  border-radius: 2px;
   border-radius: var(--wp-g2-card-border-radius);
 }
 

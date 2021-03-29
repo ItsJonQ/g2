@@ -5,11 +5,8 @@ exports[`props should render as another Component 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
@@ -40,11 +37,8 @@ exports[`props should render as another HTML tag 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
@@ -65,20 +59,13 @@ exports[`props should render as another HTML tag 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
 }
 
@@ -114,11 +101,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }
@@ -149,11 +133,8 @@ exports[`props should render with auto animations 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
 }

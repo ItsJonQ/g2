@@ -5,11 +5,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
@@ -18,7 +15,6 @@ exports[`props should render correctly 1`] = `
   display: flex;
   --wp-g2-flex-gap: -1px;
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -63,21 +59,16 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -101,34 +92,25 @@ exports[`props should render correctly 1`] = `
   appearance: none;
   background-color: transparent;
   border-color: transparent;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 0 0 0.5px transparent;
   box-shadow: 0 0 0 var(--wp-g2-control-box-shadow-focus-size) transparent;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   height: auto;
   line-height: 1;
-  min-height: 30px;
   min-height: var(--wp-g2-control-height);
   outline: none;
-  padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
-  padding-left: 12px;
   padding-left: var(--wp-g2-control-padding-x);
-  padding-right: 12px;
   padding-right: var(--wp-g2-control-padding-x);
-  padding-top: calc(4px * 1);
   padding-top: calc(var(--wp-g2-grid-base) * 1);
   position: relative;
   -webkit-text-decoration: none;
@@ -142,18 +124,12 @@ exports[`props should render correctly 1`] = `
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   text-align: center;
-  color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
 }
 
@@ -170,7 +146,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-1>*+*:not(marquee) {
-  margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
@@ -181,9 +156,7 @@ exports[`props should render correctly 1`] = `
 .emotion-1:hover,
 .emotion-1:active,
 .emotion-1:focus {
-  -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
-  transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
@@ -194,17 +167,14 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
 .emotion-1[data-destructive='true']:focus {
-  box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
 .emotion-1[data-icon='true'] {
-  min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
@@ -213,40 +183,29 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-1:active {
-  color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
 .emotion-1:hover {
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
 .emotion-1:focus,
 .emotion-1[data-focused='true'] {
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-focus);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
 .emotion-1:active {
-  background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-active);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
 .emotion-1[data-destructive='true'] {
-  border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
-  color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
@@ -254,14 +213,11 @@ exports[`props should render correctly 1`] = `
 .emotion-1[data-destructive='true']:active,
 .emotion-1[data-destructive='true']:focus,
 .emotion-1[data-destructive='true'][data-focused='true'] {
-  border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
-  color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
 .emotion-1[data-destructive='true']:active {
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
@@ -269,11 +225,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -285,7 +238,6 @@ exports[`props should render correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   opacity: 1;
   white-space: nowrap;
@@ -307,11 +259,8 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
@@ -323,14 +272,11 @@ exports[`props should render correctly 1`] = `
   border-radius: inherit;
   bottom: -1px;
   box-shadow: 0 0px 0px 0 rgba(0 ,0,0,0);
-  opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: -1px;
   right: -1px;
   top: -1px;
-  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
 }
 
@@ -350,21 +296,16 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -388,34 +329,25 @@ exports[`props should render correctly 1`] = `
   appearance: none;
   background-color: transparent;
   border-color: transparent;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 0 0 0.5px transparent;
   box-shadow: 0 0 0 var(--wp-g2-control-box-shadow-focus-size) transparent;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   height: auto;
   line-height: 1;
-  min-height: 30px;
   min-height: var(--wp-g2-control-height);
   outline: none;
-  padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
-  padding-left: 12px;
   padding-left: var(--wp-g2-control-padding-x);
-  padding-right: 12px;
   padding-right: var(--wp-g2-control-padding-x);
-  padding-top: calc(4px * 1);
   padding-top: calc(var(--wp-g2-grid-base) * 1);
   position: relative;
   -webkit-text-decoration: none;
@@ -429,18 +361,12 @@ exports[`props should render correctly 1`] = `
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   text-align: center;
-  color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
 }
 
@@ -457,7 +383,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-4>*+*:not(marquee) {
-  margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
@@ -468,9 +393,7 @@ exports[`props should render correctly 1`] = `
 .emotion-4:hover,
 .emotion-4:active,
 .emotion-4:focus {
-  -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
-  transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
@@ -481,17 +404,14 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-4:focus {
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
 .emotion-4[data-destructive='true']:focus {
-  box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
 .emotion-4[data-icon='true'] {
-  min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
@@ -500,40 +420,29 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-4:active {
-  color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
 .emotion-4:hover {
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
 .emotion-4:focus,
 .emotion-4[data-focused='true'] {
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-focus);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
 .emotion-4:active {
-  background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-active);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
 .emotion-4[data-destructive='true'] {
-  border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
-  color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
@@ -541,14 +450,11 @@ exports[`props should render correctly 1`] = `
 .emotion-4[data-destructive='true']:active,
 .emotion-4[data-destructive='true']:focus,
 .emotion-4[data-destructive='true'][data-focused='true'] {
-  border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
-  color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
 .emotion-4[data-destructive='true']:active {
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
@@ -613,11 +519,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
@@ -626,7 +529,6 @@ exports[`props should render mixed control types 1`] = `
   display: flex;
   --wp-g2-flex-gap: -1px;
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -671,21 +573,16 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 0);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 0);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -700,14 +597,10 @@ exports[`props should render mixed control types 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -716,16 +609,12 @@ exports[`props should render mixed control types 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   border-bottom-right-radius: 0;
@@ -747,7 +636,6 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-1>*+*:not(marquee) {
-  margin-left: calc(4px * 0);
   margin-left: calc(var(--wp-g2-grid-base) * 0);
 }
 
@@ -760,15 +648,12 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-1:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-1:focus,
 .emotion-1[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -776,11 +661,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -788,29 +670,23 @@ exports[`props should render mixed control types 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
   padding-left: 8px;
   padding-right: 30px;
@@ -831,7 +707,6 @@ exports[`props should render mixed control types 1`] = `
 
 @media (min-width:36em) {
   .emotion-2 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -850,11 +725,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -866,11 +738,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-align-items: center;
@@ -921,23 +790,15 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  font-size: calc((13 / 13) * 13px);
   font-size: calc((13 / 13) * var(--wp-g2-font-size));
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   display: block;
-  color: #717171;
   color: var(--wp-g2-color-text-muted);
 }
 
@@ -957,11 +818,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -995,21 +853,16 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 2.5);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2.5);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -1024,14 +877,10 @@ exports[`props should render mixed control types 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: #ffffff;
   background: var(--wp-g2-control-background-color);
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border: 1px solid;
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color);
-  box-shadow: transparent;
   box-shadow: var(--wp-g2-control-box-shadow);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1040,16 +889,12 @@ exports[`props should render mixed control types 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   outline: none;
   padding: 0 8px;
   position: relative;
-  -webkit-transition: border-color 100ms ease;
   -webkit-transition: border-color var(--wp-g2-transition-duration-fastest) ease;
-  transition: border-color 100ms ease;
   transition: border-color var(--wp-g2-transition-duration-fastest) ease;
   width: 100%;
   border-radius: 0;
@@ -1068,7 +913,6 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-6>*+*:not(marquee) {
-  margin-left: calc(4px * 2.5);
   margin-left: calc(var(--wp-g2-grid-base) * 2.5);
 }
 
@@ -1081,15 +925,12 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-6:hover {
-  border-color: #757575;
   border-color: var(--wp-g2-control-border-color-hover);
 }
 
 .emotion-6:focus,
 .emotion-6[data-focused='true'] {
-  border-color: #007cba;
   border-color: var(--wp-g2-color-admin);
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
@@ -1097,11 +938,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   -webkit-appearance: none;
@@ -1109,29 +947,23 @@ exports[`props should render mixed control types 1`] = `
   appearance: none;
   background: transparent;
   border: none;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   box-shadow: none;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   display: block;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   line-height: 18px;
-  min-height: calc(30px - 2px);
   min-height: calc(var(--wp-g2-control-height) - 2px);
   outline: none;
   padding: 0;
-  padding-bottom: calc((30px - 2px - 18px) / 2);
   padding-bottom: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
-  padding-top: calc((30px - 2px - 18px) / 2);
   padding-top: calc((var(--wp-g2-control-height) - 2px - 18px) / 2);
   resize: none;
   text-align: left;
   width: 100%;
-  font-size: 16px;
   font-size: var(--wp-g2-font-size-input-mobile);
 }
 
@@ -1149,7 +981,6 @@ exports[`props should render mixed control types 1`] = `
 
 @media (min-width:36em) {
   .emotion-7 {
-    font-size: 13px;
     font-size: var(--wp-g2-font-size);
   }
 }
@@ -1168,21 +999,16 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  --wp-g2-flex-gap: calc(4px * 2);
   --wp-g2-flex-gap: calc(var(--wp-g2-grid-base) * 2);
   --wp-g2-flex-item-margin-bottom: 0;
-  --wp-g2-flex-item-margin-right: calc(4px * 2);
   --wp-g2-flex-item-margin-right: var(--wp-g2-flex-gap);
   --wp-g2-flex-item-margin-left: 0;
   -webkit-align-items: center;
@@ -1206,34 +1032,25 @@ exports[`props should render mixed control types 1`] = `
   appearance: none;
   background-color: transparent;
   border-color: transparent;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 0 0 0.5px transparent;
   box-shadow: 0 0 0 var(--wp-g2-control-box-shadow-focus-size) transparent;
   box-sizing: border-box;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   height: auto;
   line-height: 1;
-  min-height: 30px;
   min-height: var(--wp-g2-control-height);
   outline: none;
-  padding-bottom: calc(4px * 1);
   padding-bottom: calc(var(--wp-g2-grid-base) * 1);
-  padding-left: 12px;
   padding-left: var(--wp-g2-control-padding-x);
-  padding-right: 12px;
   padding-right: var(--wp-g2-control-padding-x);
-  padding-top: calc(4px * 1);
   padding-top: calc(var(--wp-g2-grid-base) * 1);
   position: relative;
   -webkit-text-decoration: none;
@@ -1247,18 +1064,12 @@ exports[`props should render mixed control types 1`] = `
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   text-align: center;
-  color: #007cba;
   color: var(--wp-g2-button-text-color);
   font-weight: 600;
-  padding-left: calc(12px * calc(4/3));
   padding-left: var(--wp-g2-button-padding-x);
-  padding-right: calc(12px * calc(4/3));
   padding-right: var(--wp-g2-button-padding-x);
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color);
 }
 
@@ -1275,7 +1086,6 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-8>*+*:not(marquee) {
-  margin-left: calc(4px * 2);
   margin-left: calc(var(--wp-g2-grid-base) * 2);
 }
 
@@ -1286,9 +1096,7 @@ exports[`props should render mixed control types 1`] = `
 .emotion-8:hover,
 .emotion-8:active,
 .emotion-8:focus {
-  -webkit-transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   -webkit-transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
-  transition: all 200ms cubic-bezier(0.12,0.8,0.32,1);
   transition: all var(--wp-g2-transition-duration) cubic-bezier(0.12,0.8,0.32,1);
 }
 
@@ -1299,17 +1107,14 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-8:focus {
-  box-shadow: 0 0 0 0.5px #007cba;
   box-shadow: var(--wp-g2-control-box-shadow-focus);
 }
 
 .emotion-8[data-destructive='true']:focus {
-  box-shadow: 0 0 0 0.5px #D94F4F;
   box-shadow: var(--wp-g2-control-destructive-box-shadow-focus);
 }
 
 .emotion-8[data-icon='true'] {
-  min-width: 30px;
   min-width: var(--wp-g2-control-height);
 }
 
@@ -1318,40 +1123,29 @@ exports[`props should render mixed control types 1`] = `
 }
 
 .emotion-8:active {
-  color: #007cba;
   color: var(--wp-g2-button-text-color-active);
 }
 
 .emotion-8:hover {
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-hover);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-hover);
 }
 
 .emotion-8:focus,
 .emotion-8[data-focused='true'] {
-  background-color: transparent;
   background-color: var(--wp-g2-button-secondary-color-focus);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-focus);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color-focus);
 }
 
 .emotion-8:active {
-  background-color: rgba(0, 0, 0, 0.05);
   background-color: var(--wp-g2-button-secondary-color-active);
-  border-color: #007cba;
   border-color: var(--wp-g2-button-secondary-border-color-active);
-  color: #007cba;
   color: var(--wp-g2-button-secondary-text-color-active);
 }
 
 .emotion-8[data-destructive='true'] {
-  border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
-  color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
@@ -1359,14 +1153,11 @@ exports[`props should render mixed control types 1`] = `
 .emotion-8[data-destructive='true']:active,
 .emotion-8[data-destructive='true']:focus,
 .emotion-8[data-destructive='true'][data-focused='true'] {
-  border-color: #D94F4F;
   border-color: var(--wp-g2-color-destructive);
-  color: #D94F4F;
   color: var(--wp-g2-color-destructive);
 }
 
 .emotion-8[data-destructive='true']:active {
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
 }
 
@@ -1374,11 +1165,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
@@ -1390,7 +1178,6 @@ exports[`props should render mixed control types 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
   opacity: 1;
   white-space: nowrap;
@@ -1412,11 +1199,8 @@ exports[`props should render mixed control types 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   background: transparent;
@@ -1428,14 +1212,11 @@ exports[`props should render mixed control types 1`] = `
   border-radius: inherit;
   bottom: -1px;
   box-shadow: 0 0px 0px 0 rgba(0 ,0,0,0);
-  opacity: 1;
   opacity: var(--wp-g2-elevation-intensity);
   left: -1px;
   right: -1px;
   top: -1px;
-  -webkit-transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   -webkit-transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
-  transition: box-shadow 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
   transition: box-shadow var(--wp-g2-transition-duration) var(--wp-g2-transition-timing-function);
 }
 

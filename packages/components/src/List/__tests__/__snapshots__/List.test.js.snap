@@ -5,17 +5,13 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   list-style: disc outside none;
   margin: 0;
   padding: 0;
-  padding-left: calc(4px * 4);
   padding-left: calc(var(--wp-g2-grid-base) * 4);
 }
 
@@ -35,15 +31,11 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin: 0;
-  margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
 }
 
@@ -83,20 +75,15 @@ exports[`props should render ordered list 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   list-style: disc outside none;
   margin: 0;
   padding: 0;
-  padding-left: calc(4px * 4);
   padding-left: calc(var(--wp-g2-grid-base) * 4);
   list-style: decimal outside none;
-  padding-left: calc(4px * 6);
   padding-left: calc(var(--wp-g2-grid-base) * 6);
 }
 
@@ -116,15 +103,11 @@ exports[`props should render ordered list 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   margin: 0;
-  margin-bottom: calc(4px * 2);
   margin-bottom: calc(var(--wp-g2-grid-base) * 2);
 }
 

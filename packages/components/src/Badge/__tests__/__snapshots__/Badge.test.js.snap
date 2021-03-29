@@ -5,16 +5,11 @@ exports[`props should render color 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
   cursor: default;
   display: -webkit-box;
@@ -29,9 +24,7 @@ exports[`props should render color 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   max-width: 120px;
-  background: rgba(220, 50, 50, 0.2);
   background: var(--wp-g2-red-rgba-20);
-  color: #841e1e;
   color: var(--wp-g2-color-background-red-text);
 }
 
@@ -48,7 +41,6 @@ exports[`props should render color 1`] = `
 }
 
 [data-system-ui-color-blind-mode="true"] .emotion-0 {
-  background-image: linear-gradient(45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1), linear-gradient(-45deg,rgba(220, 50, 50, 0.1) 25%,transparent 25%,transparent 75%,rgba(220, 50, 50, 0.1) 75%,rgba(220, 50, 50, 0.1)));
   background-image: linear-gradient(45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10)),linear-gradient(-45deg,var(--wp-g2-red-rgba-10) 25%,transparent 25%,transparent 75%,var(--wp-g2-red-rgba-10) 75%,var(--wp-g2-red-rgba-10));
   background-size: 10px 10px;
 }
@@ -57,23 +49,17 @@ exports[`props should render color 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc((10 / 13) * 13px);
   font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
@@ -114,16 +100,11 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
   cursor: default;
   display: -webkit-box;
@@ -138,9 +119,7 @@ exports[`props should render correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   max-width: 120px;
-  background: rgba(134, 144, 155, 0.2);
   background: var(--wp-g2-dark-gray-rgba-20);
-  color: #191E23;
   color: var(--wp-g2-color-background-dark-gray-text);
 }
 
@@ -160,23 +139,17 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc((10 / 13) * 13px);
   font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
@@ -217,16 +190,11 @@ exports[`props should render display 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
   cursor: default;
   display: -webkit-box;
@@ -238,9 +206,7 @@ exports[`props should render display 1`] = `
   padding: 0 4px;
   display: block;
   max-width: 120px;
-  background: rgba(134, 144, 155, 0.2);
   background: var(--wp-g2-dark-gray-rgba-20);
-  color: #191E23;
   color: var(--wp-g2-color-background-dark-gray-text);
 }
 
@@ -260,23 +226,17 @@ exports[`props should render display 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc((10 / 13) * 13px);
   font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
@@ -317,16 +277,11 @@ exports[`props should render isBold 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
   cursor: default;
   display: -webkit-box;
@@ -341,9 +296,7 @@ exports[`props should render isBold 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   max-width: 120px;
-  background: rgba(134, 144, 155, 0.7);
   background: var(--wp-g2-dark-gray-rgba-70);
-  color: #ffffff;
   color: var(--wp-g2-white);
 }
 
@@ -363,23 +316,17 @@ exports[`props should render isBold 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc((10 / 13) * 13px);
   font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
@@ -420,16 +367,11 @@ exports[`props should render isRounded 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
   cursor: default;
   display: -webkit-box;
@@ -444,9 +386,7 @@ exports[`props should render isRounded 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   max-width: 120px;
-  background: rgba(134, 144, 155, 0.2);
   background: var(--wp-g2-dark-gray-rgba-20);
-  color: #191E23;
   color: var(--wp-g2-color-background-dark-gray-text);
   border-radius: 99999px;
   -webkit-box-pack: center;
@@ -472,23 +412,17 @@ exports[`props should render isRounded 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc((10 / 13) * 13px);
   font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;
@@ -529,16 +463,11 @@ exports[`props should render truncate 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  border-radius: 2px;
   border-radius: var(--wp-g2-control-border-radius);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 0 0 1px var(--wp-g2-surface-border-color) inset;
   cursor: default;
   display: -webkit-box;
@@ -553,9 +482,7 @@ exports[`props should render truncate 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   max-width: 120px;
-  background: rgba(134, 144, 155, 0.2);
   background: var(--wp-g2-dark-gray-rgba-20);
-  color: #191E23;
   color: var(--wp-g2-color-background-dark-gray-text);
 }
 
@@ -575,23 +502,17 @@ exports[`props should render truncate 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
   color: currentColor;
-  font-size: calc((10 / 13) * 13px);
   font-size: calc((10 / 13) * var(--wp-g2-font-size));
   font-weight: 700;
   line-height: 1;

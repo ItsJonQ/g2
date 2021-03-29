@@ -5,22 +5,14 @@ exports[`props should render as another element 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  color: #050505;
   color: var(--wp-g2-color-text-heading);
-  font-size: calc(1.95 * 13px);
   font-size: var(--wp-g2-font-size-h-2);
-  font-weight: 600;
   font-weight: var(--wp-g2-font-weight-heading);
   display: block;
 }
@@ -51,22 +43,14 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  color: #050505;
   color: var(--wp-g2-color-text-heading);
-  font-size: calc(1.56 * 13px);
   font-size: var(--wp-g2-font-size-h-3);
-  font-weight: 600;
   font-weight: var(--wp-g2-font-weight-heading);
   display: block;
 }
@@ -97,22 +81,14 @@ exports[`props should render size 1`] = `
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   font-family: var(--wp-g2-font-family);
-  font-size: 13px;
   font-size: var(--wp-g2-font-size);
-  font-weight: normal;
   font-weight: var(--wp-g2-font-weight);
   margin: 0;
-  color: #1e1e1e;
   color: var(--wp-g2-color-text);
-  line-height: 1.2;
   line-height: var(--wp-g2-font-line-height-base);
-  color: #050505;
   color: var(--wp-g2-color-text-heading);
-  font-size: calc(1.95 * 13px);
   font-size: var(--wp-g2-font-size-h-2);
-  font-weight: 600;
   font-weight: var(--wp-g2-font-weight-heading);
   display: block;
 }

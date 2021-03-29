@@ -2,7 +2,6 @@
 
 exports[`props should render correctly 1`] = `
 .emotion-0 {
-  border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
   height: 0;
@@ -21,15 +20,12 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render margin 1`] = `
 .emotion-0 {
-  border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
   height: 0;
   margin: 0;
   width: auto;
-  margin-bottom: calc(4px * 7);
   margin-bottom: calc(var(--wp-g2-grid-base) * 7);
-  margin-top: calc(4px * 7);
   margin-top: calc(var(--wp-g2-grid-base) * 7);
 }
 
@@ -44,13 +40,11 @@ exports[`props should render margin 1`] = `
 
 exports[`props should render marginBottom 1`] = `
 .emotion-0 {
-  border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
   height: 0;
   margin: 0;
   width: auto;
-  margin-bottom: calc(4px * 5);
   margin-bottom: calc(var(--wp-g2-grid-base) * 5);
 }
 
@@ -65,13 +59,11 @@ exports[`props should render marginBottom 1`] = `
 
 exports[`props should render marginTop 1`] = `
 .emotion-0 {
-  border-color: rgba(0, 0, 0, 0.1);
   border-color: var(--wp-g2-color-divider);
   border-width: 0 0 1px 0;
   height: 0;
   margin: 0;
   width: auto;
-  margin-top: calc(4px * 5);
   margin-top: calc(var(--wp-g2-grid-base) * 5);
 }
 
