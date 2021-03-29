@@ -39,7 +39,7 @@
  * @returns {string} The combined CSS string value.
  */
 export function flow(...args) {
-	/** @type {(string | number)[]} */
+	/** @type {FlowValue[]} */
 	const results = [];
 
 	for (const arg of args) {

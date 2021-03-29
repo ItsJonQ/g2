@@ -3,8 +3,8 @@ import { getFontSize } from '../mixins';
 import { css, cx } from '../style-system';
 
 /**
- *
  * @param {import('create-emotion').ObjectInterpolation<any>['color']} color
+ * @return {string}
  */
 function getFontColor(color) {
 	return css({ color });
