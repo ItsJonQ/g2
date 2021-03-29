@@ -2,7 +2,6 @@ import React from 'react';
 
 import { ThemeProvider as BaseThemeProvider } from '../components/theme-provider';
 import { createCompiler } from '../create-compiler';
-import { createRootStore } from '../css-custom-properties';
 import { createCoreElement } from './create-core-element';
 import { createCoreElements } from './create-core-elements';
 import { createStyledComponents } from './create-styled-components';
@@ -30,7 +29,6 @@ const defaultOptions = DEFAULT_STYLE_SYSTEM_OPTIONS;
  * @property {import('./polymorphic-component').CreateStyled} styled A set of styled components.
  * @property {import('react').ComponentType} View The base <View /> component.
  * @property {import('react').ComponentType<WrappedThemeProviderProps>} ThemeProvider The component (Provider) used to adjust design tokens.
- * @property {import('../css-custom-properties').RootStore} rootStore
  */
 
 /**
@@ -86,15 +84,11 @@ export function createStyleSystem(options = defaultOptions) {
 		highContrastModeConfig,
 	});
 
-	const rootStore = createRootStore(globalStyles.globalVariables);
-	rootStore.setState(globalStyles.globalVariables);
-
 	/**
 	 * Compiler (Custom Emotion instance).
 	 */
 	const compiler = createCompiler({
 		...compilerOptions,
-		rootStore,
 	});
 	const { css, cx } = compiler;
 
@@ -152,7 +146,6 @@ export function createStyleSystem(options = defaultOptions) {
 		styled,
 		View,
 		ThemeProvider,
-		rootStore,
 	};
 
 	return styleSystem;
