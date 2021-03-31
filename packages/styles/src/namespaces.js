@@ -10,7 +10,7 @@ export const COMPONENT_NAMESPACE = 'data-g2-component';
  * ```
  *
  * @param {string} componentName The name for the component.
- * @returns {object} A props object with the namespaced HTML attribute.
+ * @return {{ [COMPONENT_NAMESPACE]: string }} A props object with the namespaced HTML attribute.
  */
 export function ns(componentName) {
 	return { [COMPONENT_NAMESPACE]: componentName };

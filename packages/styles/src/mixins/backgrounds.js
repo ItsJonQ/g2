@@ -1,4 +1,4 @@
-import { upperFirst } from 'lodash';
+import _, { upperFirst } from 'lodash';
 
 import { get } from '../core';
 import { css } from '../style-system';
@@ -6,12 +6,27 @@ import { SUPPORTED_COLORS } from '../theme';
 import { colorBlindMode } from './color-blind-mode';
 
 /**
+ * @param {any} color
+ * @return {asserts color is import('../theme').SupportedColors}
+ */
+function assertIsSupportedColor(color) {
+	if (!SUPPORTED_COLORS.includes(color)) {
+		throw new Error(
+			`'color' must be one of the supported colors: ${SUPPORTED_COLORS.join(
+				', ',
+			)}`,
+		);
+	}
+}
+
+/**
  *
  * @param {import('../theme').SupportedColors} color
  * @param {{ isBold?: boolean, isSubtle?: boolean }} options
  */
 export function getBackgroundColor(color, options = {}) {
-	if (!SUPPORTED_COLORS.includes(color)) return '';
+	assertIsSupportedColor(color);
+
 	const { isBold, isSubtle } = options;
 
 	const baseBackground = isBold
@@ -95,7 +110,8 @@ export function getBackgroundColor(color, options = {}) {
 }
 
 export function getBackgroundColorText(color, options = {}) {
-	if (!SUPPORTED_COLORS.includes(color)) return '';
+	assertIsSupportedColor(color);
+
 	const { isBold } = options;
 
 	const value = isBold

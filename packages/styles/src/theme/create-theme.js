@@ -1,5 +1,5 @@
 import { get } from '@wp-g2/create-styles';
-import { colorize, getComputedColor, is } from '@wp-g2/utils';
+import { colorize, getComputedColor } from '@wp-g2/utils';
 
 import { space } from '../mixins/space';
 import { config } from './config';
@@ -12,8 +12,6 @@ const baseTheme = Object.freeze(Object.assign({}, config));
  * @return {Record<string, string>}
  */
 export function createTheme(callback) {
-	if (typeof callback !== 'function') return {};
-
 	const props = {
 		get,
 		theme: baseTheme,
@@ -22,8 +20,6 @@ export function createTheme(callback) {
 	};
 
 	const customConfig = callback(props);
-
-	if (!is.plainObject(customConfig)) return {};
 
 	let colorAdminColors = {};
 

@@ -4,7 +4,7 @@ import { css } from '../style-system';
 import { toPx } from './units';
 
 /**
- * @param {string | number | any} value
+ * @param {any} value
  * @return {value is string | number}
  */
 function isValidOffset(value) {
