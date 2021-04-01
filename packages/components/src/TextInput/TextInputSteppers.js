@@ -136,6 +136,7 @@ const _UpDownArrows = ({
 				onMouseDown={handleOnMouseDownIncrement}
 				onMouseLeave={handleOnClearTimers}
 				onMouseUp={handleOnClearTimers}
+				type="button"
 				{...ui.$('TextInputStepperUp')}
 				height={`calc(100% - 4px)`}
 				icon={plus}
@@ -150,6 +151,7 @@ const _UpDownArrows = ({
 				onMouseDown={handleOnMouseDownDecrement}
 				onMouseLeave={handleOnClearTimers}
 				onMouseUp={handleOnClearTimers}
+				type="button"
 				{...ui.$('TextInputStepperDown')}
 				height={`calc(100% - 4px)`}
 				icon={minus}

@@ -426,6 +426,7 @@ exports[`props should render correctly 1`] = `
       class="ic-192yz5d emotion-2"
       data-g2-c16t="true"
       data-g2-component="SelectDropdownReference"
+      type="button"
       value=""
     >
       <span
