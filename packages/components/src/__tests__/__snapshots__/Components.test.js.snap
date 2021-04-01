@@ -28379,6 +28379,7 @@ exports[`props should render SelectDropdown 1`] = `
       data-g2-c16t="true"
       data-g2-component="SelectDropdownReference"
       id="SelectDropdown"
+      type="button"
       value=""
     >
       <span
@@ -28856,6 +28857,7 @@ exports[`props should render SelectDropdown with css prop 1`] = `
       data-g2-c16t="true"
       data-g2-component="SelectDropdownReference"
       id="SelectDropdown"
+      type="button"
       value=""
     >
       <span
@@ -29335,6 +29337,7 @@ exports[`props should render SelectDropdown with css prop 2`] = `
       data-g2-c16t="true"
       data-g2-component="SelectDropdownReference"
       id="SelectDropdown"
+      type="button"
       value=""
     >
       <span

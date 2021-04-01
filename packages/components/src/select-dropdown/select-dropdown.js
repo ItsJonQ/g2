@@ -31,7 +31,7 @@ function SelectDropdown(props, forwardedRef) {
 	return (
 		<View {...otherProps} ref={forwardedRef}>
 			{resizer}
-			<Select as="button" {...referenceProps}>
+			<Select as="button" type="button" {...referenceProps}>
 				<Truncate>{referenceProps.children}</Truncate>
 			</Select>
 			<SelectDropdownLabel {...labelProps} />
