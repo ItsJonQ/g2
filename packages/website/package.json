@@ -57,7 +57,7 @@
     "redent": "^3.0.0",
     "remark": "^12.0.1",
     "remark-frontmatter": "^2.0.0",
-    "remark-html": "^12.0.0",
+    "remark-html": "^13.0.2",
     "remark-parse": "^8.0.3",
     "remark-strip-html": "^1.0.1",
     "ts-morph": "^8.1.1",
